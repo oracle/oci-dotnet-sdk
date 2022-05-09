@@ -34,7 +34,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "DIRECT_FIELD_MAP")]
             DirectFieldMap,
             [EnumMember(Value = "RULE_BASED_FIELD_MAP")]
-            RuleBasedFieldMap
+            RuleBasedFieldMap,
+            [EnumMember(Value = "CONDITIONAL_COMPOSITE_FIELD_MAP")]
+            ConditionalCompositeFieldMap,
+            [EnumMember(Value = "NAMED_ENTITY_MAP")]
+            NamedEntityMap,
+            [EnumMember(Value = "RULE_BASED_ENTITY_MAP")]
+            RuleBasedEntityMap
         };
 
         
@@ -69,11 +75,20 @@ namespace Oci.DataintegrationService.Models
                 case "RULE_BASED_FIELD_MAP":
                     obj = new RuleBasedFieldMap();
                     break;
+                case "RULE_BASED_ENTITY_MAP":
+                    obj = new RuleBasedEntityMap();
+                    break;
+                case "NAMED_ENTITY_MAP":
+                    obj = new NamedEntityMap();
+                    break;
                 case "DIRECT_FIELD_MAP":
                     obj = new DirectFieldMap();
                     break;
                 case "COMPOSITE_FIELD_MAP":
                     obj = new CompositeFieldMap();
+                    break;
+                case "CONDITIONAL_COMPOSITE_FIELD_MAP":
+                    obj = new ConditionalCompositeFieldMap();
                     break;
                 case "DIRECT_NAMED_FIELD_MAP":
                     obj = new DirectNamedFieldMap();

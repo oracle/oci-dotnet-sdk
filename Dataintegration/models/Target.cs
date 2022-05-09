@@ -41,6 +41,24 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPredefinedShape")]
         public System.Nullable<bool> IsPredefinedShape { get; set; }
+        
+        /// <value>
+        /// Specifies if entity name is the same as source.
+        /// </value>
+        [JsonProperty(PropertyName = "isUseSameSourceName")]
+        public System.Nullable<bool> IsUseSameSourceName { get; set; }
+        
+        /// <value>
+        /// Prefix for the entity Name.
+        /// </value>
+        [JsonProperty(PropertyName = "targetEntityNamePrefix")]
+        public string TargetEntityNamePrefix { get; set; }
+        
+        /// <value>
+        /// Suffix for the entity Name.
+        /// </value>
+        [JsonProperty(PropertyName = "targetEntityNameSuffix")]
+        public string TargetEntityNameSuffix { get; set; }
                 ///
         /// <value>
         /// Specifies the data property.
@@ -76,6 +94,12 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "writeOperationConfig")]
         public WriteOperationConfig WriteOperationConfig { get; set; }
+        
+        /// <value>
+        /// A numeric loading order number for the target.
+        /// </value>
+        [JsonProperty(PropertyName = "loadOrder")]
+        public System.Nullable<int> LoadOrder { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "TARGET_OPERATOR";

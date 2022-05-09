@@ -42,7 +42,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "BICC_CONNECTION")]
             BiccConnection,
             [EnumMember(Value = "AMAZON_S3_CONNECTION")]
-            AmazonS3Connection
+            AmazonS3Connection,
+            [EnumMember(Value = "BIP_CONNECTION")]
+            BipConnection
         };
 
         
@@ -154,6 +156,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "ORACLEDB_CONNECTION":
                     obj = new ConnectionFromOracleDetails();
+                    break;
+                case "BIP_CONNECTION":
+                    obj = new ConnectionFromBipDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

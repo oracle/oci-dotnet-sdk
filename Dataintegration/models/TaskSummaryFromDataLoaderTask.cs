@@ -24,6 +24,21 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "dataFlow")]
         public DataFlow DataFlow { get; set; }
         
+        [JsonProperty(PropertyName = "conditionalCompositeFieldMap")]
+        public ConditionalCompositeFieldMap ConditionalCompositeFieldMap { get; set; }
+        
+        /// <value>
+        /// Defines whether Data Loader task is used for single load or multiple
+        /// </value>
+        [JsonProperty(PropertyName = "isSingleLoad")]
+        public System.Nullable<bool> IsSingleLoad { get; set; }
+        
+        /// <value>
+        /// Defines the number of entities being loaded in parallel at a time for a Data Loader task
+        /// </value>
+        [JsonProperty(PropertyName = "parallelLoadLimit")]
+        public System.Nullable<int> ParallelLoadLimit { get; set; }
+        
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "DATA_LOADER_TASK";
     }

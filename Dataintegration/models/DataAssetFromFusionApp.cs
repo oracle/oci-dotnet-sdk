@@ -28,7 +28,7 @@ namespace Oci.DataintegrationService.Models
         public string ServiceUrl { get; set; }
         
         [JsonProperty(PropertyName = "defaultConnection")]
-        public ConnectionFromBICCDetails DefaultConnection { get; set; }
+        public ConnectionDetails DefaultConnection { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "FUSION_APP_DATA_ASSET";

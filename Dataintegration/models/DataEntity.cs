@@ -36,7 +36,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "SQL_ENTITY")]
             SqlEntity,
             [EnumMember(Value = "DATA_STORE_ENTITY")]
-            DataStoreEntity
+            DataStoreEntity,
+            [EnumMember(Value = "DERIVED_ENTITY")]
+            DerivedEntity
         };
 
         

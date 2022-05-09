@@ -28,7 +28,16 @@ namespace Oci.DataintegrationService.Models
         public string ServiceUrl { get; set; }
         
         [JsonProperty(PropertyName = "defaultConnection")]
-        public CreateConnectionFromBICC DefaultConnection { get; set; }
+        public CreateConnectionDetails DefaultConnection { get; set; }
+        
+        [JsonProperty(PropertyName = "stagingDataAsset")]
+        public DataAssetSummaryFromObjectStorage StagingDataAsset { get; set; }
+        
+        [JsonProperty(PropertyName = "stagingConnection")]
+        public ConnectionSummaryFromObjectStorage StagingConnection { get; set; }
+        
+        [JsonProperty(PropertyName = "bucketSchema")]
+        public Schema BucketSchema { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "FUSION_APP_DATA_ASSET";

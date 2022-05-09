@@ -88,7 +88,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "UPGRADING")]
             Upgrading,
             [EnumMember(Value = "INACCESSIBLE")]
-            Inaccessible
+            Inaccessible,
+            [EnumMember(Value = "STANDBY")]
+            Standby
         };
 
         /// <value>
@@ -208,6 +210,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "ocpuCount")]
         public System.Nullable<float> OcpuCount { get; set; }
+        
+        /// <value>
+        /// An array of CPU values that an Autonomous Database can be scaled to.
+        /// </value>
+        [JsonProperty(PropertyName = "provisionableCpus")]
+        public System.Collections.Generic.List<float> ProvisionableCpus { get; set; }
         
         /// <value>
         /// The quantity of data in the database, in terabytes.

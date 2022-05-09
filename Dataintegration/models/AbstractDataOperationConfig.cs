@@ -34,6 +34,21 @@ namespace Oci.DataintegrationService.Models
         };
 
         
+        /// <value>
+        /// This map is used for passing extra metatdata configuration that is required by read / write operation.
+        /// </value>
+        [JsonProperty(PropertyName = "metadataConfigProperties")]
+        public System.Collections.Generic.Dictionary<string, string> MetadataConfigProperties { get; set; }
+        
+        /// <value>
+        /// this map is used for passing BIP report parameter values.
+        /// </value>
+        [JsonProperty(PropertyName = "derivedAttributes")]
+        public System.Collections.Generic.Dictionary<string, string> DerivedAttributes { get; set; }
+        
+        [JsonProperty(PropertyName = "callAttribute")]
+        public BipCallAttribute CallAttribute { get; set; }
+        
     }
 
     public class AbstractDataOperationConfigModelConverter : JsonConverter

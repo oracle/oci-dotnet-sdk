@@ -32,7 +32,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "ORACLE_READ_ATTRIBUTE")]
             OracleReadAttribute,
             [EnumMember(Value = "BICC_READ_ATTRIBUTE")]
-            BiccReadAttribute
+            BiccReadAttribute,
+            [EnumMember(Value = "BIP_READ_ATTRIBUTE")]
+            BipReadAttribute
         };
 
         
@@ -63,6 +65,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "BICC_READ_ATTRIBUTE":
                     obj = new BiccReadAttributes();
+                    break;
+                case "BIP_READ_ATTRIBUTE":
+                    obj = new BipReadAttributes();
                     break;
                 case "ORACLEREADATTRIBUTE":
                     obj = new OracleReadAttribute();

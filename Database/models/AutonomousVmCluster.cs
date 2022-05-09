@@ -211,7 +211,8 @@ namespace Oci.DatabaseService.Models
         public System.Double DataStorageSizeInGBs { get; set; }
         
         /// <value>
-        /// The data storage available in TBs
+        /// **Deprecated.** Use `availableAutonomousDataStorageSizeInTBs` for Autonomous Databases data storage available, in TBs.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "availableDataStorageSizeInTBs")]
         public System.Double AvailableDataStorageSizeInTBs { get; set; }
@@ -252,6 +253,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// CPU cores that are not released to available pool after an Autonomous Database is terminated (Requires Autonomous Container Database restart).
+        /// </value>
+        [JsonProperty(PropertyName = "reclaimableCpus")]
+        public System.Nullable<int> ReclaimableCpus { get; set; }
+        
+        /// <value>
+        /// The number of Autonomous Container Databases that can be created with the currently available local storage.
+        /// </value>
+        [JsonProperty(PropertyName = "availableContainerDatabases")]
+        public System.Nullable<int> AvailableContainerDatabases { get; set; }
+        
+        /// <value>
+        /// The data disk group size available for Autonomous Databases, in TBs.
+        /// </value>
+        [JsonProperty(PropertyName = "availableAutonomousDataStorageSizeInTBs")]
+        public System.Double AvailableAutonomousDataStorageSizeInTBs { get; set; }
         
     }
 }

@@ -39,6 +39,8 @@ namespace Oci.DataintegrationService.Models
             ProjectionOperator,
             [EnumMember(Value = "TARGET_OPERATOR")]
             TargetOperator,
+            [EnumMember(Value = "FLATTEN_OPERATOR")]
+            FlattenOperator,
             [EnumMember(Value = "DISTINCT_OPERATOR")]
             DistinctOperator,
             [EnumMember(Value = "SORT_OPERATOR")]
@@ -51,6 +53,10 @@ namespace Oci.DataintegrationService.Models
             MinusOperator,
             [EnumMember(Value = "MERGE_OPERATOR")]
             MergeOperator,
+            [EnumMember(Value = "FUNCTION_OPERATOR")]
+            FunctionOperator,
+            [EnumMember(Value = "SPLIT_OPERATOR")]
+            SplitOperator,
             [EnumMember(Value = "START_OPERATOR")]
             StartOperator,
             [EnumMember(Value = "END_OPERATOR")]
@@ -62,7 +68,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "EXPRESSION_OPERATOR")]
             ExpressionOperator,
             [EnumMember(Value = "LOOKUP_OPERATOR")]
-            LookupOperator
+            LookupOperator,
+            [EnumMember(Value = "PIVOT_OPERATOR")]
+            PivotOperator
         };
 
         
@@ -109,7 +117,7 @@ namespace Oci.DataintegrationService.Models
         /// An array of output ports.
         /// </value>
         [JsonProperty(PropertyName = "outputPorts")]
-        public System.Collections.Generic.List<OutputPort> OutputPorts { get; set; }
+        public System.Collections.Generic.List<TypedObject> OutputPorts { get; set; }
         
         /// <value>
         /// The status of an object that can be set to value 1 for shallow references across objects, other values reserved.
@@ -160,6 +168,9 @@ namespace Oci.DataintegrationService.Models
                 case "TASK_OPERATOR":
                     obj = new TaskOperator();
                     break;
+                case "FLATTEN_OPERATOR":
+                    obj = new Flatten();
+                    break;
                 case "AGGREGATOR_OPERATOR":
                     obj = new Aggregator();
                     break;
@@ -181,6 +192,9 @@ namespace Oci.DataintegrationService.Models
                 case "EXPRESSION_OPERATOR":
                     obj = new ExpressionOperator();
                     break;
+                case "FUNCTION_OPERATOR":
+                    obj = new Function();
+                    break;
                 case "INTERSECT_OPERATOR":
                     obj = new Intersect();
                     break;
@@ -196,11 +210,17 @@ namespace Oci.DataintegrationService.Models
                 case "LOOKUP_OPERATOR":
                     obj = new Lookup();
                     break;
+                case "PIVOT_OPERATOR":
+                    obj = new Pivot();
+                    break;
                 case "START_OPERATOR":
                     obj = new StartOperator();
                     break;
                 case "MERGE_OPERATOR":
                     obj = new MergeOperator();
+                    break;
+                case "SPLIT_OPERATOR":
+                    obj = new Split();
                     break;
                 case "MINUS_OPERATOR":
                     obj = new Minus();
