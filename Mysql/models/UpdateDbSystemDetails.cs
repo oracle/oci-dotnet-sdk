@@ -42,8 +42,12 @@ namespace Oci.MysqlService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// If the policy is to enable high availability of the instance, by
-        /// maintaining secondary/failover capacity as necessary.
+        /// Specifies if the DB System is highly available.
+        /// <br/>
+        /// Set to true to enable high availability. Two secondary MySQL instances are created and placed in the unused
+        /// availability or fault domains, depending on your region and subnet type.
+        /// Set to false to disable high availability. The secondary MySQL instances are removed and the MySQL instance
+        /// in the preferred location is used.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isHighlyAvailable")]

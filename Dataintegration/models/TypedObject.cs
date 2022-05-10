@@ -50,7 +50,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "PROXY_FIELD")]
             ProxyField,
             [EnumMember(Value = "PARAMETER")]
-            Parameter
+            Parameter,
+            [EnumMember(Value = "PIVOT_FIELD")]
+            PivotField,
+            [EnumMember(Value = "MACRO_PIVOT_FIELD")]
+            MacroPivotField,
+            [EnumMember(Value = "CONDITIONAL_OUTPUT_PORT")]
+            ConditionalOutputPort
         };
 
         
@@ -130,6 +136,9 @@ namespace Oci.DataintegrationService.Models
                 case "INPUT_PORT":
                     obj = new InputPort();
                     break;
+                case "CONDITIONAL_OUTPUT_PORT":
+                    obj = new ConditionalOutputPort();
+                    break;
                 case "PROXY_FIELD":
                     obj = new ProxyField();
                     break;
@@ -141,6 +150,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "PARAMETER":
                     obj = new Parameter();
+                    break;
+                case "PIVOT_FIELD":
+                    obj = new PivotField();
                     break;
                 case "OUTPUT_FIELD":
                     obj = new OutputField();

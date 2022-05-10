@@ -188,6 +188,12 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "stepId")]
         public string StepId { get; set; }
         
+        /// <value>
+        /// A map of the configuration provider input bindings of the run.
+        /// </value>
+        [JsonProperty(PropertyName = "inputs")]
+        public System.Collections.Generic.Dictionary<string, ParameterValue> Inputs { get; set; }
+        
         [JsonProperty(PropertyName = "metadata")]
         public ObjectMetadata Metadata { get; set; }
         

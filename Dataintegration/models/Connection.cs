@@ -42,7 +42,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "BICC_CONNECTION")]
             BiccConnection,
             [EnumMember(Value = "AMAZON_S3_CONNECTION")]
-            AmazonS3Connection
+            AmazonS3Connection,
+            [EnumMember(Value = "BIP_CONNECTION")]
+            BipConnection
         };
 
         
@@ -151,6 +153,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "AMAZON_S3_CONNECTION":
                     obj = new ConnectionFromAmazonS3();
+                    break;
+                case "BIP_CONNECTION":
+                    obj = new ConnectionFromBIP();
                     break;
                 case "MYSQL_CONNECTION":
                     obj = new ConnectionFromMySQL();

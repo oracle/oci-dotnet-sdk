@@ -272,5 +272,53 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// CPU cores available for allocation to Autonomous Databases.
+        /// </value>
+        [JsonProperty(PropertyName = "availableCpus")]
+        public System.Nullable<float> AvailableCpus { get; set; }
+        
+        /// <value>
+        /// CPU cores that are not released to available pool after an Autonomous Database is terminated (Requires Autonomous Container Database restart).
+        /// </value>
+        [JsonProperty(PropertyName = "reclaimableCpus")]
+        public System.Nullable<float> ReclaimableCpus { get; set; }
+        
+        /// <value>
+        /// The number of Autonomous Container Databases that can be created with the currently available local storage.
+        /// </value>
+        [JsonProperty(PropertyName = "availableContainerDatabases")]
+        public System.Nullable<int> AvailableContainerDatabases { get; set; }
+        
+        /// <value>
+        /// The total number of Autonomous Container Databases that can be created with the allocated local storage.
+        /// </value>
+        [JsonProperty(PropertyName = "totalContainerDatabases")]
+        public System.Nullable<int> TotalContainerDatabases { get; set; }
+        
+        /// <value>
+        /// The data disk group size available for Autonomous Databases, in TBs.
+        /// </value>
+        [JsonProperty(PropertyName = "availableAutonomousDataStorageSizeInTBs")]
+        public System.Double AvailableAutonomousDataStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// The data disk group size allocated for Autonomous Databases, in TBs.
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousDataStorageSizeInTBs")]
+        public System.Double AutonomousDataStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// The local node storage allocated in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "dbNodeStorageSizeInGBs")]
+        public System.Nullable<int> DbNodeStorageSizeInGBs { get; set; }
+        
+        /// <value>
+        /// The amount of memory (in GBs) enabled per each OCPU core.
+        /// </value>
+        [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
+        public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
+        
     }
 }

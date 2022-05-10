@@ -67,7 +67,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "MYSQL_CONNECTION")]
             MysqlConnection,
             [EnumMember(Value = "GENERIC_JDBC_CONNECTION")]
-            GenericJdbcConnection
+            GenericJdbcConnection,
+            [EnumMember(Value = "BIP_CONNECTION")]
+            BipConnection,
+            [EnumMember(Value = "BICC_CONNECTION")]
+            BiccConnection,
+            [EnumMember(Value = "AMAZON_S3_CONNECTION")]
+            AmazonS3Connection
         };
 
         /// <value>

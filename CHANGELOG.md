@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 38.0.0 - 2022-05-10
+### Added
+- Support for getting usage information for autonomous databases and Cloud at Customer autonomous databases in the Database service
+- Support for the "standby" lifecycle state on autonomous databases in the Database service
+- Support for BIP connections and dataflow operators in the Data Integration service
+ 
+### Breaking Changes
+- The data type of property `DefaultConnection` was changed from `ConnectionSummaryFromBICC` to `ConnectionSummary` in the DataAssetSummaryFromFusionApp model in the Data Integration service
+- The data type of property `DefaultConnection` was changed from `ConnectionFromBICCDetails` to `ConnectionDetails` in the DataAssetFromFusionApp model in the Data Integration service
+- The data type of property `DefaultConnection` was changed from `CreateConnectionFromBICC` to `CreateConnectionDetails` in the CreateDataAssetFromFusionApp model in the Data Integration service
+
 ## 37.1.0 - 2022-05-03
 ### Added
 - Support for the Application Dependency Management service

@@ -72,7 +72,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "UPGRADING")]
             Upgrading,
             [EnumMember(Value = "INACCESSIBLE")]
-            Inaccessible
+            Inaccessible,
+            [EnumMember(Value = "STANDBY")]
+            Standby
         };
 
         /// <value>

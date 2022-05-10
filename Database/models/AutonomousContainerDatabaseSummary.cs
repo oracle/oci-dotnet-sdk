@@ -322,5 +322,29 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
         
+        /// <value>
+        /// Sum of OCPUs available on the Autonomous VM Cluster + Sum of Fractional OCPUs available in the Autonomous Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "availableCpus")]
+        public System.Nullable<float> AvailableCpus { get; set; }
+        
+        /// <value>
+        /// The number of CPU cores allocated to the Autonomous VM cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "totalCpus")]
+        public System.Nullable<int> TotalCpus { get; set; }
+        
+        /// <value>
+        /// CPU cores that are not released to available pool after an Autonomous Database is terminated (Requires Autonomous Container Database restart).
+        /// </value>
+        [JsonProperty(PropertyName = "reclaimableCpus")]
+        public System.Nullable<float> ReclaimableCpus { get; set; }
+        
+        /// <value>
+        /// An array of CPU values that can be used to successfully provision a single Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "provisionableCpus")]
+        public System.Collections.Generic.List<float> ProvisionableCpus { get; set; }
+        
     }
 }

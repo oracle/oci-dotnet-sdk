@@ -67,7 +67,25 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "MYSQL_DATA_ASSET")]
             MysqlDataAsset,
             [EnumMember(Value = "GENERIC_JDBC_DATA_ASSET")]
-            GenericJdbcDataAsset
+            GenericJdbcDataAsset,
+            [EnumMember(Value = "FUSION_APP_DATA_ASSET")]
+            FusionAppDataAsset,
+            [EnumMember(Value = "AMAZON_S3_DATA_ASSET")]
+            AmazonS3DataAsset,
+            [EnumMember(Value = "SCHEMA")]
+            Schema,
+            [EnumMember(Value = "INTEGRATION_TASK")]
+            IntegrationTask,
+            [EnumMember(Value = "DATA_LOADER_TASK")]
+            DataLoaderTask,
+            [EnumMember(Value = "SQL_TASK")]
+            SqlTask,
+            [EnumMember(Value = "OCI_DATAFLOW_TASK")]
+            OciDataflowTask,
+            [EnumMember(Value = "PIPELINE_TASK")]
+            PipelineTask,
+            [EnumMember(Value = "REST_TASK")]
+            RestTask
         };
 
         /// <value>
