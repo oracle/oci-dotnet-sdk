@@ -84,6 +84,9 @@ namespace Oci.DevopsService.Models
                 case "GITLAB":
                     obj = new UpdateGitlabTriggerDetails();
                     break;
+                case "BITBUCKET_CLOUD":
+                    obj = new UpdateBitbucketCloudTriggerDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

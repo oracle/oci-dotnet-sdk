@@ -149,6 +149,9 @@ namespace Oci.DevopsService.Models
                 case "DEVOPS_CODE_REPOSITORY":
                     obj = new DevopsCodeRepositoryTriggerCreateResult();
                     break;
+                case "BITBUCKET_CLOUD":
+                    obj = new BitbucketCloudTriggerCreateResult();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

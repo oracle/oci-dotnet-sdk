@@ -8,10 +8,12 @@
 
 
 using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Oci.Common;
+using Oci.Common.Model;
 using Oci.Common.Auth;
 using Oci.Common.Retry;
 using Oci.ThreatintelligenceService.Requests;
@@ -86,6 +88,8 @@ namespace Oci.ThreatintelligenceService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -94,9 +98,23 @@ namespace Oci.ThreatintelligenceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Threatintel",
+                    OperationName = "GetIndicator",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20210831/Indicator/GetIndicator",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetIndicatorResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -126,6 +144,8 @@ namespace Oci.ThreatintelligenceService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -134,9 +154,23 @@ namespace Oci.ThreatintelligenceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Threatintel",
+                    OperationName = "ListIndicatorCounts",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20210831/IndicatorCountCollection/ListIndicatorCounts",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListIndicatorCountsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -167,6 +201,8 @@ namespace Oci.ThreatintelligenceService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -175,9 +211,23 @@ namespace Oci.ThreatintelligenceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Threatintel",
+                    OperationName = "ListIndicators",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20210831/IndicatorSummaryCollection/ListIndicators",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListIndicatorsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -209,6 +259,8 @@ namespace Oci.ThreatintelligenceService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -217,9 +269,23 @@ namespace Oci.ThreatintelligenceService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Threatintel",
+                    OperationName = "ListThreatTypes",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20210831/ThreatTypesCollection/ListThreatTypes",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListThreatTypesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {

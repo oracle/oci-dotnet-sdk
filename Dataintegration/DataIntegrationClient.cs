@@ -8,10 +8,12 @@
 
 
 using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Oci.Common;
+using Oci.Common.Model;
 using Oci.Common.Auth;
 using Oci.Common.Retry;
 using Oci.DataintegrationService.Requests;
@@ -87,6 +89,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -95,9 +99,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ChangeCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Workspace/ChangeCompartment",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ChangeCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -128,6 +146,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -136,9 +156,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ChangeDisApplicationCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DisApplication/ChangeDisApplicationCompartment",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ChangeDisApplicationCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -169,6 +203,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -177,9 +213,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateApplication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/CreateApplication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateApplicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -209,6 +259,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -217,9 +269,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateConnection",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Connection/CreateConnection",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateConnectionResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -249,6 +315,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -257,9 +325,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateConnectionValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ConnectionValidation/CreateConnectionValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateConnectionValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -289,6 +371,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -297,9 +381,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateDataAsset",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataAsset/CreateDataAsset",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateDataAssetResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -330,6 +428,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -338,9 +438,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateDataFlow",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataFlow/CreateDataFlow",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateDataFlowResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -371,6 +485,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -379,9 +495,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateDataFlowValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataFlowValidation/CreateDataFlowValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateDataFlowValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -412,6 +542,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -420,9 +552,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateDisApplication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DisApplication/CreateDisApplication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateDisApplicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -452,6 +598,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -460,9 +608,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateEntityShape",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataEntity/CreateEntityShape",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateEntityShapeResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -492,6 +654,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -500,9 +664,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateExternalPublication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ExternalPublication/CreateExternalPublication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateExternalPublicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -532,6 +710,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -540,9 +720,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateExternalPublicationValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ExternalPublicationValidation/CreateExternalPublicationValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateExternalPublicationValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -574,6 +768,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -582,9 +778,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateFolder",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Folder/CreateFolder",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateFolderResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -616,6 +826,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -624,9 +836,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateFunctionLibrary",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/FunctionLibrary/CreateFunctionLibrary",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateFunctionLibraryResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -656,6 +882,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -664,9 +892,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreatePatch",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/CreatePatch",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreatePatchResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -697,6 +939,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -705,9 +949,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreatePipeline",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Pipeline/CreatePipeline",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreatePipelineResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -738,6 +996,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -746,9 +1006,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreatePipelineValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/PipelineValidation/CreatePipelineValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreatePipelineValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -779,6 +1053,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -787,9 +1063,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateProject",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Project/CreateProject",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateProjectResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -819,6 +1109,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -827,9 +1119,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateSchedule",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Schedule/CreateSchedule",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateScheduleResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -860,6 +1166,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -868,9 +1176,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateTask",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Task/CreateTask",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateTaskResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -900,6 +1222,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -908,9 +1232,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateTaskRun",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskRun/CreateTaskRun",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateTaskRunResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -940,6 +1278,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -948,9 +1288,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateTaskSchedule",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskSchedule/CreateTaskSchedule",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateTaskScheduleResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -980,6 +1334,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -988,9 +1344,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateTaskValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskValidation/CreateTaskValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateTaskValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1021,6 +1391,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1029,9 +1401,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateUserDefinedFunction",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/UserDefinedFunction/CreateUserDefinedFunction",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateUserDefinedFunctionResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1062,6 +1448,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1070,9 +1458,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateUserDefinedFunctionValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/UserDefinedFunctionValidation/CreateUserDefinedFunctionValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateUserDefinedFunctionValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1103,6 +1505,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1111,9 +1515,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "CreateWorkspace",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Workspace/CreateWorkspace",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateWorkspaceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1143,6 +1561,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1151,9 +1571,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteApplication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/DeleteApplication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteApplicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1183,6 +1617,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1191,9 +1627,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteConnection",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Connection/DeleteConnection",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteConnectionResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1223,6 +1673,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1231,9 +1683,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteConnectionValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ConnectionValidation/DeleteConnectionValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteConnectionValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1263,6 +1729,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1271,9 +1739,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteDataAsset",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataAsset/DeleteDataAsset",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteDataAssetResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1303,6 +1785,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1311,9 +1795,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteDataFlow",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataFlow/DeleteDataFlow",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteDataFlowResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1343,6 +1841,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1351,9 +1851,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteDataFlowValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataFlowValidation/DeleteDataFlowValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteDataFlowValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1383,6 +1897,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1391,9 +1907,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteDisApplication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DisApplication/DeleteDisApplication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteDisApplicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1423,6 +1953,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1431,9 +1963,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteExternalPublication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ExternalPublication/DeleteExternalPublication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteExternalPublicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1464,6 +2010,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1472,9 +2020,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteExternalPublicationValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ExternalPublicationValidation/DeleteExternalPublicationValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteExternalPublicationValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1504,6 +2066,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1512,9 +2076,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteFolder",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Folder/DeleteFolder",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteFolderResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1544,6 +2122,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1552,9 +2132,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteFunctionLibrary",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/FunctionLibrary/DeleteFunctionLibrary",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteFunctionLibraryResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1584,6 +2178,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1592,9 +2188,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeletePatch",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/DeletePatch",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeletePatchResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1624,6 +2234,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1632,9 +2244,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeletePipeline",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Pipeline/DeletePipeline",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeletePipelineResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1664,6 +2290,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1672,9 +2300,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeletePipelineValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/PipelineValidation/DeletePipelineValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeletePipelineValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1704,6 +2346,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1712,9 +2356,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteProject",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Project/DeleteProject",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteProjectResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1744,6 +2402,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1752,9 +2412,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteSchedule",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Schedule/DeleteSchedule",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteScheduleResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1784,6 +2458,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1792,9 +2468,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteTask",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Task/DeleteTask",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteTaskResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1824,6 +2514,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1832,9 +2524,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteTaskRun",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskRun/DeleteTaskRun",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteTaskRunResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1864,6 +2570,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1872,9 +2580,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteTaskSchedule",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskSchedule/DeleteTaskSchedule",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteTaskScheduleResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1905,6 +2627,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1913,9 +2637,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteTaskValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskValidation/DeleteTaskValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteTaskValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1945,6 +2683,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1953,9 +2693,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteUserDefinedFunction",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/UserDefinedFunction/DeleteUserDefinedFunction",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteUserDefinedFunctionResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1985,6 +2739,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1993,9 +2749,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteUserDefinedFunctionValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/UserDefinedFunctionValidation/DeleteUserDefinedFunctionValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteUserDefinedFunctionValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2025,6 +2795,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2033,9 +2805,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "DeleteWorkspace",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Workspace/DeleteWorkspace",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteWorkspaceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2065,6 +2851,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2073,9 +2861,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetApplication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/GetApplication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetApplicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2105,6 +2907,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2113,9 +2917,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetConnection",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Connection/GetConnection",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetConnectionResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2145,6 +2963,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2153,9 +2973,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetConnectionValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ConnectionValidation/GetConnectionValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetConnectionValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2187,6 +3021,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2195,9 +3031,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetCountStatistic",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Project/GetCountStatistic",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetCountStatisticResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2227,6 +3077,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2235,9 +3087,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetDataAsset",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataAsset/GetDataAsset",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetDataAssetResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2267,6 +3133,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2275,9 +3143,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetDataEntity",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataEntity/GetDataEntity",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetDataEntityResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2307,6 +3189,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2315,9 +3199,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetDataFlow",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataFlow/GetDataFlow",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetDataFlowResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2347,6 +3245,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2355,9 +3255,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetDataFlowValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataFlowValidation/GetDataFlowValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetDataFlowValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2387,6 +3301,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2395,9 +3311,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetDependentObject",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/GetDependentObject",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetDependentObjectResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2427,6 +3357,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2435,9 +3367,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetDisApplication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DisApplication/GetDisApplication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetDisApplicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2467,6 +3413,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2475,9 +3423,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetExternalPublication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ExternalPublication/GetExternalPublication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetExternalPublicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2507,6 +3469,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2515,9 +3479,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetExternalPublicationValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ExternalPublicationValidation/GetExternalPublicationValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetExternalPublicationValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2547,6 +3525,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2555,9 +3535,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetFolder",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Folder/GetFolder",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetFolderResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2587,6 +3581,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2595,9 +3591,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetFunctionLibrary",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/FunctionLibrary/GetFunctionLibrary",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetFunctionLibraryResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2627,6 +3637,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2635,9 +3647,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetPatch",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/GetPatch",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetPatchResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2667,6 +3693,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2675,9 +3703,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetPipeline",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Pipeline/GetPipeline",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetPipelineResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2707,6 +3749,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2715,9 +3759,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetPipelineValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/PipelineValidation/GetPipelineValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetPipelineValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2747,6 +3805,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2755,9 +3815,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetProject",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Project/GetProject",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetProjectResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2787,6 +3861,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2795,9 +3871,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetPublishedObject",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/GetPublishedObject",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetPublishedObjectResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2827,6 +3917,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2835,9 +3927,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetReference",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Reference/GetReference",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetReferenceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2867,6 +3973,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2875,9 +3983,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetSchedule",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Schedule/GetSchedule",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetScheduleResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2907,6 +4029,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2915,9 +4039,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetSchema",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Schema/GetSchema",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetSchemaResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2947,6 +4085,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2955,9 +4095,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetTask",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Task/GetTask",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetTaskResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -2987,6 +4141,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -2995,9 +4151,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetTaskRun",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskRun/GetTaskRun",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetTaskRunResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3027,6 +4197,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3035,9 +4207,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetTaskSchedule",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskSchedule/GetTaskSchedule",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetTaskScheduleResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3068,6 +4254,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3076,9 +4264,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetTaskValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskValidation/GetTaskValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetTaskValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3108,6 +4310,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3116,9 +4320,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetUserDefinedFunction",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/UserDefinedFunction/GetUserDefinedFunction",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetUserDefinedFunctionResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3148,6 +4366,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3156,9 +4376,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetUserDefinedFunctionValidation",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/UserDefinedFunctionValidation/GetUserDefinedFunctionValidation",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetUserDefinedFunctionValidationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3188,6 +4422,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3196,9 +4432,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetWorkRequest",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/WorkRequest/GetWorkRequest",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3228,6 +4478,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3236,9 +4488,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "GetWorkspace",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Workspace/GetWorkspace",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetWorkspaceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3268,6 +4534,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3276,9 +4544,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListApplications",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/ListApplications",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListApplicationsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3308,6 +4590,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3316,9 +4600,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListConnectionValidations",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ConnectionValidation/ListConnectionValidations",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListConnectionValidationsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3348,6 +4646,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3356,9 +4656,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListConnections",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Connection/ListConnections",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListConnectionsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3389,6 +4703,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3397,9 +4713,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListDataAssets",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataAsset/ListDataAssets",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListDataAssetsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3430,6 +4760,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3438,9 +4770,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListDataEntities",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataEntity/ListDataEntities",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListDataEntitiesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3470,6 +4816,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3478,9 +4826,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListDataFlowValidations",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataFlowValidation/ListDataFlowValidations",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListDataFlowValidationsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3511,6 +4873,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3519,9 +4883,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListDataFlows",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataFlow/ListDataFlows",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListDataFlowsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3551,6 +4929,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3559,9 +4939,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListDependentObjects",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/ListDependentObjects",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListDependentObjectsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3591,6 +4985,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3599,9 +4995,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListDisApplications",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DisApplication/ListDisApplications",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListDisApplicationsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3632,6 +5042,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3640,9 +5052,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListExternalPublicationValidations",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ExternalPublicationValidation/ListExternalPublicationValidations",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListExternalPublicationValidationsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3672,6 +5098,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3680,9 +5108,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListExternalPublications",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ExternalPublication/ListExternalPublications",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListExternalPublicationsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3713,6 +5155,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3721,9 +5165,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListFolders",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Folder/ListFolders",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListFoldersResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3754,6 +5212,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3762,9 +5222,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListFunctionLibraries",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/FunctionLibrary/ListFunctionLibraries",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListFunctionLibrariesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3794,6 +5268,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3802,9 +5278,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListPatchChanges",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/ListPatchChanges",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListPatchChangesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3834,6 +5324,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3842,9 +5334,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListPatches",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/ListPatches",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListPatchesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3874,6 +5380,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3882,9 +5390,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListPipelineValidations",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/PipelineValidation/ListPipelineValidations",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListPipelineValidationsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3915,6 +5437,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3923,9 +5447,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListPipelines",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Pipeline/ListPipelines",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListPipelinesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3956,6 +5494,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -3964,9 +5504,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListProjects",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Project/ListProjects",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListProjectsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -3996,6 +5550,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4004,9 +5560,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListPublishedObjects",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/ListPublishedObjects",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListPublishedObjectsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4036,6 +5606,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4044,9 +5616,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListReferences",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Reference/ListReferences",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListReferencesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4077,6 +5663,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4085,9 +5673,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListSchedules",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Schedule/ListSchedules",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListSchedulesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4117,6 +5719,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4125,9 +5729,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListSchemas",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Schema/ListSchemas",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListSchemasResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4157,6 +5775,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4165,9 +5785,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListTaskRunLogs",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskRunLogSummary/ListTaskRunLogs",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListTaskRunLogsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4197,6 +5831,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4205,9 +5841,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListTaskRuns",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskRun/ListTaskRuns",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListTaskRunsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4238,6 +5888,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4246,9 +5898,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListTaskSchedules",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskSchedule/ListTaskSchedules",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListTaskSchedulesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4279,6 +5945,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4287,9 +5955,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListTaskValidations",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskValidation/ListTaskValidations",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListTaskValidationsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4320,6 +6002,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4328,9 +6012,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListTasks",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Task/ListTasks",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListTasksResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4360,6 +6058,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4368,9 +6068,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListUserDefinedFunctionValidations",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/UserDefinedFunctionValidation/ListUserDefinedFunctionValidations",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListUserDefinedFunctionValidationsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4401,6 +6115,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4409,9 +6125,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListUserDefinedFunctions",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/UserDefinedFunction/ListUserDefinedFunctions",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListUserDefinedFunctionsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4442,6 +6172,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4450,9 +6182,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListWorkRequestErrors",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/WorkRequest/ListWorkRequestErrors",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4483,6 +6229,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4491,9 +6239,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListWorkRequestLogs",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/WorkRequest/ListWorkRequestLogs",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4524,6 +6286,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4532,9 +6296,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListWorkRequests",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/WorkRequest/ListWorkRequests",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4565,6 +6343,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4573,9 +6353,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "ListWorkspaces",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Workspace/ListWorkspaces",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListWorkspacesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4606,6 +6400,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4614,9 +6410,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "StartWorkspace",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Workspace/StartWorkspace",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<StartWorkspaceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4647,6 +6457,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4655,9 +6467,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "StopWorkspace",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Workspace/StopWorkspace",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<StopWorkspaceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4687,6 +6513,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4695,9 +6523,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateApplication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Application/UpdateApplication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateApplicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4727,6 +6569,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4735,9 +6579,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateConnection",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Connection/UpdateConnection",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateConnectionResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4767,6 +6625,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4775,9 +6635,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateDataAsset",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataAsset/UpdateDataAsset",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateDataAssetResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4807,6 +6681,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4815,9 +6691,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateDataFlow",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DataFlow/UpdateDataFlow",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateDataFlowResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4847,6 +6737,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4855,9 +6747,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateDisApplication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DisApplication/UpdateDisApplication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateDisApplicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4887,6 +6793,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4895,9 +6803,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateExternalPublication",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/ExternalPublication/UpdateExternalPublication",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateExternalPublicationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4927,6 +6849,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4935,9 +6859,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateFolder",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Folder/UpdateFolder",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateFolderResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -4967,6 +6905,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -4975,9 +6915,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateFunctionLibrary",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/FunctionLibrary/UpdateFunctionLibrary",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateFunctionLibraryResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -5007,6 +6961,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -5015,9 +6971,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdatePipeline",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Pipeline/UpdatePipeline",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdatePipelineResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -5047,6 +7017,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -5055,9 +7027,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateProject",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Project/UpdateProject",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateProjectResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -5087,6 +7073,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -5095,9 +7083,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateReference",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Reference/UpdateReference",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateReferenceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -5127,6 +7129,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -5135,9 +7139,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateSchedule",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Schedule/UpdateSchedule",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateScheduleResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -5167,6 +7185,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -5175,9 +7195,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateTask",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Task/UpdateTask",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateTaskResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -5207,6 +7241,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -5215,9 +7251,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateTaskRun",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskRun/UpdateTaskRun",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateTaskRunResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -5247,6 +7297,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -5255,9 +7307,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateTaskSchedule",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/TaskSchedule/UpdateTaskSchedule",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateTaskScheduleResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -5287,6 +7353,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -5295,9 +7363,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateUserDefinedFunction",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/UserDefinedFunction/UpdateUserDefinedFunction",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateUserDefinedFunctionResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -5327,6 +7409,8 @@ namespace Oci.DataintegrationService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -5335,9 +7419,23 @@ namespace Oci.DataintegrationService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataIntegration",
+                    OperationName = "UpdateWorkspace",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Workspace/UpdateWorkspace",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateWorkspaceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {

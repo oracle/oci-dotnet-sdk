@@ -47,7 +47,7 @@ namespace Oci.Common
         {
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
             this.restClient = new RestClient(authProvider, clientConfigurationToUse, requestSigner);
-            this.restClient.SetDefaultUserAgent(GetUserAgent(clientConfigurationToUse.ClientUserAgent));
+            this.restClient.SetDefaultUserAgent(BuildUserAgent(clientConfigurationToUse.ClientUserAgent));
         }
 
         /// <summary>Disposes the rest client.</summary>
@@ -79,12 +79,9 @@ namespace Oci.Common
         }
 
         /// <summary>Retrieves the endpoint Uri.</summary>
-        public Uri GetEndpoint()
-        {
-            return this.restClient.GetEndpoint();
-        }
+        public Uri GetEndpoint() => this.restClient.GetEndpoint();
 
-        private string GetUserAgent(string clientUserAgent)
+        private string BuildUserAgent(string clientUserAgent)
         {
             // User agent string will only be configured once and cannot be modified after that.
             if (userAgent == null)
@@ -93,5 +90,7 @@ namespace Oci.Common
             }
             return userAgent;
         }
+
+        public string GetUserAgent() => userAgent;
     }
 }

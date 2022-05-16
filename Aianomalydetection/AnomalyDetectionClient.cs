@@ -8,10 +8,12 @@
 
 
 using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Oci.Common;
+using Oci.Common.Model;
 using Oci.Common.Auth;
 using Oci.Common.Retry;
 using Oci.AianomalydetectionService.Requests;
@@ -86,6 +88,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -94,9 +98,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "CancelWorkRequest",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CancelWorkRequestResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -126,6 +144,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -134,9 +154,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ChangeAiPrivateEndpointCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ChangeAiPrivateEndpointCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -166,6 +200,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -174,9 +210,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ChangeDataAssetCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ChangeDataAssetCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -206,6 +256,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -214,9 +266,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ChangeModelCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ChangeModelCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -246,6 +312,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -254,9 +322,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ChangeProjectCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ChangeProjectCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -286,6 +368,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -294,9 +378,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "CreateAiPrivateEndpoint",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateAiPrivateEndpointResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -327,6 +425,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -335,9 +435,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "CreateDataAsset",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateDataAssetResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -368,6 +482,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -376,9 +492,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "CreateModel",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateModelResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -409,6 +539,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -417,9 +549,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "CreateProject",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<CreateProjectResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -449,6 +595,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -457,9 +605,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "DeleteAiPrivateEndpoint",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteAiPrivateEndpointResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -489,6 +651,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -497,9 +661,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "DeleteDataAsset",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteDataAssetResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -529,6 +707,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -537,9 +717,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "DeleteModel",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteModelResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -569,6 +763,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -577,9 +773,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "DeleteProject",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DeleteProjectResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -609,6 +819,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -617,9 +829,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "DetectAnomalies",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<DetectAnomaliesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -649,6 +875,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -657,9 +885,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "GetAiPrivateEndpoint",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetAiPrivateEndpointResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -689,6 +931,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -697,9 +941,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "GetDataAsset",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetDataAssetResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -729,6 +987,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -737,9 +997,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "GetModel",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetModelResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -769,6 +1043,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -777,9 +1053,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "GetProject",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetProjectResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -809,6 +1099,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -817,9 +1109,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "GetWorkRequest",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<GetWorkRequestResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -850,6 +1156,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -858,9 +1166,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ListAiPrivateEndpoints",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListAiPrivateEndpointsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -891,6 +1213,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -899,9 +1223,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ListDataAssets",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListDataAssetsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -932,6 +1270,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -940,9 +1280,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ListModels",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListModelsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -973,6 +1327,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -981,9 +1337,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ListProjects",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListProjectsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1014,6 +1384,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1022,9 +1394,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ListWorkRequestErrors",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListWorkRequestErrorsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1055,6 +1441,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1063,9 +1451,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ListWorkRequestLogs",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListWorkRequestLogsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1096,6 +1498,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1104,9 +1508,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ListWorkRequests",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<ListWorkRequestsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1136,6 +1554,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1144,9 +1564,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "UpdateAiPrivateEndpoint",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateAiPrivateEndpointResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1176,6 +1610,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1184,9 +1620,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "UpdateDataAsset",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateDataAssetResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1216,6 +1666,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1224,9 +1676,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "UpdateModel",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateModelResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {
@@ -1256,6 +1722,8 @@ namespace Oci.AianomalydetectionService
 
             try
             {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
                 if (retryingClient != null)
                 {
                     responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
@@ -1264,9 +1732,23 @@ namespace Oci.AianomalydetectionService
                 {
                     responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
                 }
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage);
-
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "UpdateProject",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
                 return Converter.FromHttpResponseMessage<UpdateProjectResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
             }
             catch (Exception e)
             {

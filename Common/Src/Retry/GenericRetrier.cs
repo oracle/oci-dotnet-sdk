@@ -22,7 +22,10 @@ namespace Oci.Common.Retry
     {
         private readonly RetryConfiguration retryConfiguration;
         private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
-
+        public RetryConfiguration GetRetryConfiguration()
+        {
+            return this.retryConfiguration;
+        }
         public GenericRetrier(RetryConfiguration retryConfiguration)
         {
             this.retryConfiguration = retryConfiguration;
@@ -52,7 +55,7 @@ namespace Oci.Common.Retry
                 sleepDurationProvider: (retryCount, response, context) => TimeSpan.FromSeconds(retryConfiguration.GetNextDelayInSeconds(retryCount)),
                 onRetryAsync: async (response, timespan, retryAttempt, context) =>
                 {
-                    logger.Info($"Retry Attempt: {retryAttempt}");
+                    logger.Info($"Retry Attempt: #{retryAttempt}");
                     await Task.CompletedTask.ConfigureAwait(false);
                 }
             );
@@ -89,10 +92,18 @@ namespace Oci.Common.Retry
                 }
                 catch (OciException e)
                 {
-                    logger.Info($"Checking if {statusCode}: {e.ServiceCode} should be retried.");
-                    return retryConfiguration.RetryableStatusCodeFamilies.Contains(responseFamily) ||
+                    bool shouldRetry = retryConfiguration.RetryableStatusCodeFamilies.Contains(responseFamily) ||
                         retryConfiguration.RetryableErrors.Contains(new Tuple<int, string>(statusCode, "")) ||
                         retryConfiguration.RetryableErrors.Contains(new Tuple<int, string>(statusCode, e.ServiceCode));
+                    if (shouldRetry)
+                    {
+                        logger.Debug($"{statusCode}: {e.ServiceCode} matches the RetryConfiguration being used and will be retried!");
+                    }
+                    else
+                    {
+                        logger.Debug($"{statusCode}: {e.ServiceCode} does not match the RetryConfiguration being used and will not be retried!");
+                    }
+                    return shouldRetry;
                 }
             }
             return false;

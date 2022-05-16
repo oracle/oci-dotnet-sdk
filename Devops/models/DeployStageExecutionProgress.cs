@@ -149,6 +149,9 @@ namespace Oci.DevopsService.Models
                 case "OKE_BLUE_GREEN_TRAFFIC_SHIFT":
                     obj = new OkeBlueGreenTrafficShiftDeployStageExecutionProgress();
                     break;
+                case "OKE_HELM_CHART_DEPLOYMENT":
+                    obj = new OkeHelmChartDeploymentStageExecutionProgress();
+                    break;
                 case "INVOKE_FUNCTION":
                     obj = new InvokeFunctionDeployStageExecutionProgress();
                     break;

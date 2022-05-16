@@ -112,7 +112,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "LOAD_BALANCER_TRAFFIC_SHIFT")]
             LoadBalancerTrafficShift,
             [EnumMember(Value = "MANUAL_APPROVAL")]
-            ManualApproval
+            ManualApproval,
+            [EnumMember(Value = "OKE_HELM_CHART_DEPLOYMENT")]
+            OkeHelmChartDeployment
         };
 
         
@@ -238,6 +240,9 @@ namespace Oci.DevopsService.Models
                     break;
                 case "WAIT":
                     obj = new WaitDeployStage();
+                    break;
+                case "OKE_HELM_CHART_DEPLOYMENT":
+                    obj = new OkeHelmChartDeployStage();
                     break;
                 case "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_DEPLOYMENT":
                     obj = new ComputeInstanceGroupBlueGreenDeployStage();

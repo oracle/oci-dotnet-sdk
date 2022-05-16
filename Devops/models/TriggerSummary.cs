@@ -130,6 +130,9 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["triggerSource"].Value<string>();
             switch (discriminator)
             {
+                case "BITBUCKET_CLOUD":
+                    obj = new BitbucketCloudTriggerSummary();
+                    break;
                 case "GITLAB":
                     obj = new GitlabTriggerSummary();
                     break;

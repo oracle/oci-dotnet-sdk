@@ -16,8 +16,8 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the configuration needed when the target OCI resource, OKE cluster resides
-    ///  in the customer's private network.
+    /// Specifies the configuration needed when the target OCI resource, i.e., OKE cluster, resides
+    ///  in customer's private network.
     /// 
     /// </summary>
     [JsonConverter(typeof(NetworkChannelModelConverter))]

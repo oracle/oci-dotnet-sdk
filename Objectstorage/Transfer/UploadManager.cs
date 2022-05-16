@@ -261,7 +261,8 @@ namespace Oci.ObjectstorageService.Transfer
                 if (manifest != null)
                 {
                     logger.Error($"Failed to upload object using multi-part uploads.  Failed part numbers = '{string.Join(" ", manifest.ListFailedParts())}'" +
-                        $".  Successful parts = '{string.Join(" ", manifest.ListCompletedParts())}', Upload Id = '{manifest.UploadId}'");
+                        $".  Successful parts = '{string.Join(" ", manifest.ListCompletedParts())}', Upload Id = '{manifest.UploadId}'" +
+                        $". {TransferConstants.UPLOAD_MANAGER_DEBUG_INFORMATION_LOG}");
                 }
                 if (_configuration.DisableAutoAbort)
                 {

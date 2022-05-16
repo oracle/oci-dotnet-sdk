@@ -24,6 +24,8 @@ namespace Oci.OperatoraccesscontrolService.Models
       Preapproved,
       [EnumMember(Value = "APPROVED")]
       Approved,
+      [EnumMember(Value = "MOREINFO")]
+      Moreinfo,
       [EnumMember(Value = "REJECTED")]
       Rejected,
       [EnumMember(Value = "DEPLOYED")]

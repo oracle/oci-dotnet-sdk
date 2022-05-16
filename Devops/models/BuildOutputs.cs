@@ -30,5 +30,8 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "artifactOverrideParameters")]
         public DeployArtifactOverrideArgumentCollection ArtifactOverrideParameters { get; set; }
         
+        [JsonProperty(PropertyName = "vulnerabilityAuditSummaryCollection")]
+        public VulnerabilityAuditSummaryCollection VulnerabilityAuditSummaryCollection { get; set; }
+        
     }
 }

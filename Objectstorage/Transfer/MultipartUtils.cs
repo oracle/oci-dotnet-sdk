@@ -59,7 +59,7 @@ namespace Oci.ObjectstorageService.Transfer
         {
             if (contentLength > MAX_SUPPORTED_CONTENT_LENGTH)
             {
-                throw new ArgumentException("Object Size greater than 10TiB is not supported");
+                throw new ArgumentException("Object Size greater than 10TiB is not supported.");
             }
             long min = configuration.LengthPerUploadPartInMiB * MiB;
             return contentLength >= min;

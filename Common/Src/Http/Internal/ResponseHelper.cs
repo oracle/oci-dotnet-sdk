@@ -52,7 +52,7 @@ namespace Oci.Common.Http.Internal
         /// </summary>
         /// <param name="responseMessage">An HttpResponseMessage.</param>
         /// <exception>Throws OciException if error code and message are retrieved, or throws any exception from ReadEntityInternal.</exception>
-        public static void HandleNonSuccessfulResponse(HttpResponseMessage responseMessage)
+        public static void HandleNonSuccessfulResponse(HttpResponseMessage responseMessage, ApiDetails apiDetails = null)
         {
             var responseOpcRequestId = HeaderUtils.GetFirstorDefaultHeaderValue(responseMessage.Headers, "opc-request-id");
             try
@@ -62,7 +62,8 @@ namespace Oci.Common.Http.Internal
                     responseMessage.StatusCode,
                     errorCodeAndMessage?.Message ?? responseMessage.ReasonPhrase ?? DEFAULT_OCI_EXCEPTION_MESSAGE,
                     errorCodeAndMessage?.Code ?? DEFAULT_OCI_EXCEPTION_SERVICE_CODE,
-                    responseOpcRequestId);
+                    responseOpcRequestId,
+                    apiDetails);
             }
             catch (Exception e)
             {

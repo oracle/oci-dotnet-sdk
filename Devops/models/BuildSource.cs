@@ -41,6 +41,8 @@ namespace Oci.DevopsService.Models
             Github,
             [EnumMember(Value = "GITLAB")]
             Gitlab,
+            [EnumMember(Value = "BITBUCKET_CLOUD")]
+            BitbucketCloud,
             [EnumMember(Value = "DEVOPS_CODE_REPOSITORY")]
             DevopsCodeRepository
         };
@@ -90,6 +92,9 @@ namespace Oci.DevopsService.Models
             {
                 case "GITHUB":
                     obj = new GithubBuildSource();
+                    break;
+                case "BITBUCKET_CLOUD":
+                    obj = new BitbucketCloudBuildSource();
                     break;
                 case "DEVOPS_CODE_REPOSITORY":
                     obj = new DevopsCodeRepositoryBuildSource();

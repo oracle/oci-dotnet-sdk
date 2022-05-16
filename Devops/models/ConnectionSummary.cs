@@ -125,6 +125,9 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["connectionType"].Value<string>();
             switch (discriminator)
             {
+                case "BITBUCKET_CLOUD_APP_PASSWORD":
+                    obj = new BitbucketCloudAppPasswordConnectionSummary();
+                    break;
                 case "GITHUB_ACCESS_TOKEN":
                     obj = new GithubAccessTokenConnectionSummary();
                     break;

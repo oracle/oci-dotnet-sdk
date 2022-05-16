@@ -77,7 +77,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "GENERIC_FILE")]
             GenericFile,
             [EnumMember(Value = "DOCKER_IMAGE")]
-            DockerImage
+            DockerImage,
+            [EnumMember(Value = "HELM_CHART")]
+            HelmChart
         };
 
         /// <value>

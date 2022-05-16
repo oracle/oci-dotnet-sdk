@@ -61,7 +61,7 @@ namespace Oci.ObjectstorageService.Transfer
         {
             if (value < MINIMUM_ALLOWED_LENGTH_PER_PART_MB || value > MAXIMUM_ALLOWED_LENGTH_PER_PART_MB)
             {
-                throw new ArgumentException($"Length must be in between {MINIMUM_ALLOWED_LENGTH_PER_PART_MB} - {MAXIMUM_ALLOWED_LENGTH_PER_PART_MB}");
+                throw new ArgumentException($"Length must be in between {MINIMUM_ALLOWED_LENGTH_PER_PART_MB} - {MAXIMUM_ALLOWED_LENGTH_PER_PART_MB}. {TransferConstants.UPLOAD_MANAGER_DEBUG_INFORMATION_LOG}");
             }
         }
     }

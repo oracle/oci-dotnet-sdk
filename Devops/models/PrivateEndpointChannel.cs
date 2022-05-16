@@ -22,7 +22,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// The OCID of the subnet where Virtual Network Interface Cards (VNIC) resources are created for private endpoint access.
+        /// The OCID of the subnet where VNIC resources will be created for private endpoint.
         /// </value>
         /// <remarks>
         /// Required

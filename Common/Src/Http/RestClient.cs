@@ -138,7 +138,7 @@ namespace Oci.Common.Http
         /// <param name="httpRequest">The HttpRequestMessage sent.</param>
         /// <param name="HttpResponseMessage">The HttpResponseMessage to be checked.</param>
         /// <exception>Throws OciException, HttpRequestException, InvalidOperationException, or OperationCanceledException depending on the type of error.</exception>
-        public void CheckHttpResponseMessage(HttpRequestMessage httpRequest, HttpResponseMessage httpResponse)
+        public void CheckHttpResponseMessage(HttpRequestMessage httpRequest, HttpResponseMessage httpResponse, ApiDetails apiDetails = null)
         {
             var opcRequestId = httpRequest.Headers.Contains("opc-request-id") ?
                 httpRequest.Headers.GetValues("opc-request-id").FirstOrDefault() : string.Empty;
@@ -149,7 +149,7 @@ namespace Oci.Common.Http
                 // Check for success immediately to avoid unnecessary processing of failure responses.
                 if (!httpResponse.IsSuccessStatusCode)
                 {
-                    ResponseHelper.HandleNonSuccessfulResponse(httpResponse);
+                    ResponseHelper.HandleNonSuccessfulResponse(httpResponse, apiDetails);
                 }
             }
             catch (HttpRequestException ex)

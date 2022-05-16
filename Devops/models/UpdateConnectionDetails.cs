@@ -76,6 +76,9 @@ namespace Oci.DevopsService.Models
                 case "GITLAB_ACCESS_TOKEN":
                     obj = new UpdateGitlabAccessTokenConnectionDetails();
                     break;
+                case "BITBUCKET_CLOUD_APP_PASSWORD":
+                    obj = new UpdateBitbucketCloudAppPasswordConnectionDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

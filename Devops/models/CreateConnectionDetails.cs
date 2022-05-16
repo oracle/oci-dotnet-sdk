@@ -83,6 +83,9 @@ namespace Oci.DevopsService.Models
                 case "GITHUB_ACCESS_TOKEN":
                     obj = new CreateGithubAccessTokenConnectionDetails();
                     break;
+                case "BITBUCKET_CLOUD_APP_PASSWORD":
+                    obj = new CreateBitbucketCloudAppPasswordConnectionDetails();
+                    break;
                 case "GITLAB_ACCESS_TOKEN":
                     obj = new CreateGitlabAccessTokenConnectionDetails();
                     break;
