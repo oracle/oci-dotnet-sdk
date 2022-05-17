@@ -72,7 +72,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "GITHUB_ACCESS_TOKEN")]
             GithubAccessToken,
             [EnumMember(Value = "GITLAB_ACCESS_TOKEN")]
-            GitlabAccessToken
+            GitlabAccessToken,
+            [EnumMember(Value = "BITBUCKET_CLOUD_APP_PASSWORD")]
+            BitbucketCloudAppPassword
         };
 
         
@@ -149,6 +151,9 @@ namespace Oci.DevopsService.Models
                     break;
                 case "GITHUB_ACCESS_TOKEN":
                     obj = new GithubAccessTokenConnection();
+                    break;
+                case "BITBUCKET_CLOUD_APP_PASSWORD":
+                    obj = new BitbucketCloudAppPasswordConnection();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

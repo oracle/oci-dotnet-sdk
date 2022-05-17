@@ -164,6 +164,9 @@ namespace Oci.DevopsService.Models
                 case "INVOKE_FUNCTION":
                     obj = new InvokeFunctionDeployStageSummary();
                     break;
+                case "OKE_HELM_CHART_DEPLOYMENT":
+                    obj = new OkeHelmChartDeployStageSummary();
+                    break;
                 case "OKE_CANARY_TRAFFIC_SHIFT":
                     obj = new OkeCanaryTrafficShiftDeployStageSummary();
                     break;

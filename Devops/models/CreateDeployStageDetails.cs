@@ -125,6 +125,9 @@ namespace Oci.DevopsService.Models
                 case "COMPUTE_INSTANCE_GROUP_CANARY_APPROVAL":
                     obj = new CreateComputeInstanceGroupCanaryApprovalDeployStageDetails();
                     break;
+                case "OKE_HELM_CHART_DEPLOYMENT":
+                    obj = new CreateOkeHelmChartDeployStageDetails();
+                    break;
                 case "MANUAL_APPROVAL":
                     obj = new CreateManualApprovalDeployStageDetails();
                     break;

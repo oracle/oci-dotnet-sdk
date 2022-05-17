@@ -53,6 +53,7 @@ namespace Oci.Common.Auth
         */
         private string tenancyId;
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        private const string IP_DEBUG_INFORMATION_LOG = "Instance principals authentication can only be used on OCI compute instances. Please confirm this code is running on an OCI compute instance. See https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm for more info.";
         public Region Region { get; set; }
         protected IFederationClient federationClient;
         protected ISessionKeySupplier sessionKeySupplier;
@@ -133,7 +134,7 @@ namespace Oci.Common.Auth
                 }
                 if (response == null || !response.IsSuccessStatusCode)
                 {
-                    logger.Debug("Received non successful response while trying to get the region of the instance");
+                    logger.Debug($"Received non successful response while trying to get the region of the instance. {IP_DEBUG_INFORMATION_LOG}");
                     ResponseHelper.HandleNonSuccessfulResponse(response);
                 }
 
@@ -156,7 +157,7 @@ namespace Oci.Common.Auth
                 }
                 catch (ArgumentNullException e)
                 {
-                    throw new ArgumentNullException($"Either the service, regionId, realm, template, regionId, endpointPrefix, or secondLevelDomain value is empty", e);
+                    throw new ArgumentNullException($"Either the service, regionId, realm, template, regionId, endpointPrefix, or secondLevelDomain value is empty. {IP_DEBUG_INFORMATION_LOG}", e);
                 }
             }
         }
@@ -180,7 +181,7 @@ namespace Oci.Common.Auth
                 tenancyId = AuthUtils.GetTenantIdFromCertificate(leafCertificateSupplier.GetCertificateAndKeyPair().Certificate);
                 if (String.IsNullOrEmpty(tenancyId))
                 {
-                    throw new ArgumentNullException("TenancyId not found in the leaf certificate");
+                    throw new ArgumentNullException($"TenancyId not found in the leaf certificate. {IP_DEBUG_INFORMATION_LOG}");
                 }
                 logger.Info($"Tenancy id is {tenancyId}");
             }

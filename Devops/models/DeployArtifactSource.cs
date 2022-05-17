@@ -32,7 +32,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "OCIR")]
             Ocir,
             [EnumMember(Value = "GENERIC_ARTIFACT")]
-            GenericArtifact
+            GenericArtifact,
+            [EnumMember(Value = "HELM_CHART")]
+            HelmChart
         };
 
         
@@ -60,6 +62,9 @@ namespace Oci.DevopsService.Models
             {
                 case "GENERIC_ARTIFACT":
                     obj = new GenericDeployArtifactSource();
+                    break;
+                case "HELM_CHART":
+                    obj = new HelmRepositoryDeployArtifactSource();
                     break;
                 case "OCIR":
                     obj = new OcirDeployArtifactSource();

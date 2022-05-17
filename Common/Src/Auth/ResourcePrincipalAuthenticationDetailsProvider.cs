@@ -25,6 +25,8 @@ namespace Oci.Common.Auth
         private const string OCI_RESOURCE_PRINCIPAL_PRIVATE_PEM = "OCI_RESOURCE_PRINCIPAL_PRIVATE_PEM";
         private const string OCI_RESOURCE_PRINCIPAL_PRIVATE_PEM_PASSPHRASE = "OCI_RESOURCE_PRINCIPAL_PRIVATE_PEM_PASSPHRASE";
         private const string OCI_RESOURCE_PRINCIPAL_REGION_ENV_VAR_NAME = "OCI_RESOURCE_PRINCIPAL_REGION";
+        private const string RP_DEBUG_INFORMATION_LOG = "Resource principals authentication can only be used in certain OCI services. Please check that the OCI service you're running this code from supports Resource principals. See https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdk_authentication_methods.htm#sdk_authentication_methods_resource_principal for more info.";
+
 
         /// <summary>
         /// A Resource Principals Authentication Details Provider implmentation.
@@ -42,7 +44,7 @@ namespace Oci.Common.Auth
             var OciResourcePrincipalVersion = Environment.GetEnvironmentVariable(OCI_RESOURCE_PRINCIPAL_VERSION);
             if (OciResourcePrincipalVersion == null)
             {
-                throw new ArgumentNullException($"Environment variable {OCI_RESOURCE_PRINCIPAL_VERSION} missing!");
+                throw new ArgumentNullException($"Environment variable {OCI_RESOURCE_PRINCIPAL_VERSION} missing! {RP_DEBUG_INFORMATION_LOG}");
             }
             logger.Debug($"Getting ResourcePrincipalAuthenticationDetailsProvider for version {OciResourcePrincipalVersion}");
             switch (OciResourcePrincipalVersion)
@@ -69,7 +71,7 @@ namespace Oci.Common.Auth
             string ociResourcePrincipalPrivateKey = Environment.GetEnvironmentVariable(OCI_RESOURCE_PRINCIPAL_PRIVATE_PEM);
             if (ociResourcePrincipalPrivateKey == null)
             {
-                throw new ArgumentNullException($"Environment variable {OCI_RESOURCE_PRINCIPAL_PRIVATE_PEM} is missing!");
+                throw new ArgumentNullException($"Environment variable {OCI_RESOURCE_PRINCIPAL_PRIVATE_PEM} is missing! {RP_DEBUG_INFORMATION_LOG}");
             }
             string ociResourcePrincipalPassphrase = Environment.GetEnvironmentVariable(OCI_RESOURCE_PRINCIPAL_PRIVATE_PEM_PASSPHRASE);
 
@@ -93,7 +95,7 @@ namespace Oci.Common.Auth
             string ociResourcePrincipalRPST = Environment.GetEnvironmentVariable(OCI_RESOURCE_PRINCIPAL_RPST);
             if (ociResourcePrincipalRPST == null)
             {
-                throw new ArgumentNullException($"Environment variable {OCI_RESOURCE_PRINCIPAL_RPST} is missing!");
+                throw new ArgumentNullException($"Environment variable {OCI_RESOURCE_PRINCIPAL_RPST} is missing! {RP_DEBUG_INFORMATION_LOG}");
             }
             if (Path.IsPathRooted(ociResourcePrincipalRPST))
             {
@@ -107,7 +109,7 @@ namespace Oci.Common.Auth
             string ociResourcePrincipalRegion = Environment.GetEnvironmentVariable(OCI_RESOURCE_PRINCIPAL_REGION_ENV_VAR_NAME);
             if (ociResourcePrincipalRegion == null)
             {
-                throw new ArgumentNullException($"Environment variable {OCI_RESOURCE_PRINCIPAL_REGION_ENV_VAR_NAME} is missing!");
+                throw new ArgumentNullException($"Environment variable {OCI_RESOURCE_PRINCIPAL_REGION_ENV_VAR_NAME} is missing! {RP_DEBUG_INFORMATION_LOG}");
             }
             Region region = Region.FromRegionCodeOrId(ociResourcePrincipalRegion);
             return new ResourcePrincipalAuthenticationDetailsProvider(federationClient, sessionKeySupplier, region);

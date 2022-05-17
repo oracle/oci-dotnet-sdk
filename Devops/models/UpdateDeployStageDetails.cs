@@ -78,6 +78,9 @@ namespace Oci.DevopsService.Models
                 case "OKE_CANARY_DEPLOYMENT":
                     obj = new UpdateOkeCanaryDeployStageDetails();
                     break;
+                case "OKE_HELM_CHART_DEPLOYMENT":
+                    obj = new UpdateOkeHelmChartDeployStageDetails();
+                    break;
                 case "COMPUTE_INSTANCE_GROUP_ROLLING_DEPLOYMENT":
                     obj = new UpdateComputeInstanceGroupDeployStageDetails();
                     break;

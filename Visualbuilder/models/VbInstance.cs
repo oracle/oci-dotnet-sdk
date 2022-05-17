@@ -178,5 +178,15 @@ namespace Oci.VisualbuilderService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConsumptionModelEnum> ConsumptionModel { get; set; }
         
+        [JsonProperty(PropertyName = "idcsInfo")]
+        public IdcsInfoDetails IdcsInfo { get; set; }
+        
+        /// <value>
+        /// A list of associated attachments to other services
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "attachments")]
+        public System.Collections.Generic.List<AttachmentDetails> Attachments { get; set; }
+        
     }
 }

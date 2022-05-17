@@ -72,7 +72,7 @@ namespace Oci.Common.Auth
                 logger.Info("Choosing Configuration authentication details provider");
                 if (keySupplier == null)
                 {
-                    string pemFilePath = configFile.GetValue(ConfigUtils.KEY_FILE) ?? throw new InvalidDataException($"missing {ConfigUtils.KEY_FILE} in config");
+                    string pemFilePath = configFile.GetValue(ConfigUtils.KEY_FILE) ?? throw new InvalidDataException($"missing {ConfigUtils.KEY_FILE} in config. {CONFIG_FILE_DEBUG_INFORMATION_LOG}");
                     SecureString passPhrase = StringUtils.StringToSecureString(configFile.GetValue(ConfigUtils.PASS_PHRASE));
                     SetupConfigFileAuthenticationDetailsProvider(configFile, new FilePrivateKeySupplier(pemFilePath, passPhrase));
                 }
@@ -95,9 +95,9 @@ namespace Oci.Common.Auth
         private void SetupConfigFileAuthenticationDetailsProvider(ConfigFile configFile, FilePrivateKeySupplier keySupplier)
         {
             var provider = new SimpleAuthenticationDetailsProvider();
-            provider.Fingerprint = configFile.GetValue(ConfigUtils.FINGERPRINT) ?? throw new InvalidDataException($"missing {ConfigUtils.FINGERPRINT} in config");
-            provider.TenantId = configFile.GetValue(ConfigUtils.TENANCY) ?? throw new InvalidDataException($"missing {ConfigUtils.TENANCY} in config");
-            provider.UserId = configFile.GetValue(ConfigUtils.USER) ?? throw new InvalidDataException($"missing {ConfigUtils.USER} in config");
+            provider.Fingerprint = configFile.GetValue(ConfigUtils.FINGERPRINT) ?? throw new InvalidDataException($"missing {ConfigUtils.FINGERPRINT} in config. {CONFIG_FILE_DEBUG_INFORMATION_LOG}");
+            provider.TenantId = configFile.GetValue(ConfigUtils.TENANCY) ?? throw new InvalidDataException($"missing {ConfigUtils.TENANCY} in config. {CONFIG_FILE_DEBUG_INFORMATION_LOG}");
+            provider.UserId = configFile.GetValue(ConfigUtils.USER) ?? throw new InvalidDataException($"missing {ConfigUtils.USER} in config. {CONFIG_FILE_DEBUG_INFORMATION_LOG}");
             provider.PrivateKeySupplier = keySupplier;
             Oci.Common.Region region;
             ConfigUtils.SetRegion(configFile, out region);
@@ -108,5 +108,6 @@ namespace Oci.Common.Auth
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private IBasicAuthenticationDetailsProvider authProvider;
 
+        private const string CONFIG_FILE_DEBUG_INFORMATION_LOG = "For more information about OCI configuration file and how to get required information, see https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm";
     }
 }

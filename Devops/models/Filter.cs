@@ -48,6 +48,9 @@ namespace Oci.DevopsService.Models
                 case "DEVOPS_CODE_REPOSITORY":
                     obj = new DevopsCodeRepositoryFilter();
                     break;
+                case "BITBUCKET_CLOUD":
+                    obj = new BitbucketCloudFilter();
+                    break;
                 case "GITLAB":
                     obj = new GitlabFilter();
                     break;

@@ -41,6 +41,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "shapeFamily")]
         public string ShapeFamily { get; set; }
+                ///
+        /// <value>
+        /// The shape type for the virtual machine DB system. Shape type is determined by CPU hardware. Valid values are `AMD` and `INTEL`.
+        /// </value>
+        ///
+        public enum ShapeTypeEnum {
+            [EnumMember(Value = "AMD")]
+            Amd,
+            [EnumMember(Value = "INTEL")]
+            Intel
+        };
+
+        /// <value>
+        /// The shape type for the virtual machine DB system. Shape type is determined by CPU hardware. Valid values are `AMD` and `INTEL`.
+        /// </value>
+        [JsonProperty(PropertyName = "shapeType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ShapeTypeEnum> ShapeType { get; set; }
         
         /// <value>
         /// Deprecated. Use `name` instead of `shape`.
