@@ -33,5 +33,8 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "mutualTls")]
         public MutualTlsDetails MutualTls { get; set; }
         
+        [JsonProperty(PropertyName = "usagePlans")]
+        public UsagePlansPolicy UsagePlans { get; set; }
+        
     }
 }

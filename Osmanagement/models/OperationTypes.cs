@@ -23,6 +23,18 @@ namespace Oci.OsmanagementService.Models
       [EnumMember(Value = "REMOVE")]
       Remove,
       [EnumMember(Value = "UPDATEALL")]
-      Updateall
+      Updateall,
+      [EnumMember(Value = "ENABLEMODULESTREAM")]
+      Enablemodulestream,
+      [EnumMember(Value = "DISABLEMODULESTREAM")]
+      Disablemodulestream,
+      [EnumMember(Value = "SWITCHMODULESTREAM")]
+      Switchmodulestream,
+      [EnumMember(Value = "INSTALLMODULESTREAMPROFILE")]
+      Installmodulestreamprofile,
+      [EnumMember(Value = "REMOVEMODULESTREAMPROFILE")]
+      Removemodulestreamprofile,
+      [EnumMember(Value = "COMPOUND")]
+      Compound
   }
 }

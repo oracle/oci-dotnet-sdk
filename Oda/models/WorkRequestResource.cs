@@ -40,12 +40,30 @@ namespace Oci.OdaService.Models
             Start,
             [EnumMember(Value = "CHANGE_COMPARTMENT")]
             ChangeCompartment,
+            [EnumMember(Value = "CHANGE_CUST_ENC_KEY")]
+            ChangeCustEncKey,
+            [EnumMember(Value = "DEACT_CUST_ENC_KEY")]
+            DeactCustEncKey,
             [EnumMember(Value = "CREATE_ASSOCIATION")]
             CreateAssociation,
             [EnumMember(Value = "DELETE_ASSOCIATION")]
             DeleteAssociation,
             [EnumMember(Value = "UPDATE_ENTITLEMENTS_FOR_CACCT")]
-            UpdateEntitlementsForCacct
+            UpdateEntitlementsForCacct,
+            [EnumMember(Value = "CREATE_ODA_INSTANCE_ATTACHMENT")]
+            CreateOdaInstanceAttachment,
+            [EnumMember(Value = "UPDATE_ODA_INSTANCE_ATTACHMENT")]
+            UpdateOdaInstanceAttachment,
+            [EnumMember(Value = "DELETE_ODA_INSTANCE_ATTACHMENT")]
+            DeleteOdaInstanceAttachment,
+            [EnumMember(Value = "CREATE_IMPORTED_PACKAGE")]
+            CreateImportedPackage,
+            [EnumMember(Value = "UPDATE_IMPORTED_PACKAGE")]
+            UpdateImportedPackage,
+            [EnumMember(Value = "DELETE_IMPORTED_PACKAGE")]
+            DeleteImportedPackage,
+            [EnumMember(Value = "EXPORT")]
+            Export
         };
 
         /// <value>

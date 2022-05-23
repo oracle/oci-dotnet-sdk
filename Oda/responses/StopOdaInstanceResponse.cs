@@ -16,8 +16,8 @@ namespace Oci.OdaService.Responses
     {
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the asynchronous request. You can use this to query status of
-        /// the operation.
+        /// Unique Oracle-assigned identifier for the asynchronous request. You can use this to query status
+        /// of the operation.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
@@ -25,10 +25,8 @@ namespace Oci.OdaService.Responses
 
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. The request id consists of 3 components.
-        /// The first is the request ID provided by the client in the request headers and the remaining 2 are
-        /// generated for tracing requests.
-        /// If you need to contact Oracle about a particular request, please provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact
+        /// Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

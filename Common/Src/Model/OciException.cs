@@ -75,7 +75,7 @@ namespace Oci.Common.Model
                     + $"\nTroubleshooting Tips: See {troubleShootingLink} for more information about resolving this error.";
                 string ApiReferenceLinkMessage = $"Also see {ApiDetails.ApiReferenceLink} for details on this operation's requirements.";
                 string loggingMessage = "To get more info on the failing request, you can enable debug level logs as mentioned in the `Enabling Logging` section in https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/dotnetsdkgettingstarted.htm.";
-                string errorMessageFooter = "If you are unable to resolve this {ApiDetails.ServiceName} issue, please contact Oracle support and provide them this full error message.";
+                string errorMessageFooter = $"If you are unable to resolve this {ApiDetails.ServiceName} issue, please contact Oracle support and provide them this full error message.";
 
                 if (String.IsNullOrEmpty(ApiDetails.ApiReferenceLink))
                 {

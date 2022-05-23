@@ -16,8 +16,8 @@ namespace Oci.OdaService.Responses
     {
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you contact Oracle
-        /// about this request, provide this request ID.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact
+        /// Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
@@ -32,6 +32,14 @@ namespace Oci.OdaService.Responses
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]
         public string OpcNextPage { get; set; }
+
+
+        /// <value>
+        /// The total number of results that match the query.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-total-items")]
+        public System.Nullable<int> OpcTotalItems { get; set; }
 
         /// <value>
         /// A list of WorkRequestSummary instances.

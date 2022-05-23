@@ -136,5 +136,17 @@ namespace Oci.OsmanagementService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OsFamilies> OsFamily { get; set; }
         
+        /// <value>
+        /// The parent of this work request, if one exists.
+        /// </value>
+        [JsonProperty(PropertyName = "parentId")]
+        public string ParentId { get; set; }
+        
+        /// <value>
+        /// A list of the IDs of any children of this work request
+        /// </value>
+        [JsonProperty(PropertyName = "childrenIds")]
+        public System.Collections.Generic.List<string> ChildrenIds { get; set; }
+        
     }
 }
