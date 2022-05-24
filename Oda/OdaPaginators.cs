@@ -50,6 +50,55 @@ namespace Oci.OdaService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListOdaInstanceAttachments operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListOdaInstanceAttachmentsResponse> ListOdaInstanceAttachmentsResponseEnumerator(ListOdaInstanceAttachmentsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListOdaInstanceAttachmentsRequest, ListOdaInstanceAttachmentsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOdaInstanceAttachments(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the OdaInstanceAttachmentSummary objects
+        /// contained in responses from the ListOdaInstanceAttachments operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<OdaInstanceAttachmentSummary> ListOdaInstanceAttachmentsRecordEnumerator(ListOdaInstanceAttachmentsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListOdaInstanceAttachmentsRequest, ListOdaInstanceAttachmentsResponse, OdaInstanceAttachmentSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOdaInstanceAttachments(request, retryConfiguration, cancellationToken),
+                response => response.OdaInstanceAttachmentCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListOdaInstances operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

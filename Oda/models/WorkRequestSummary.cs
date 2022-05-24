@@ -72,6 +72,10 @@ namespace Oci.OdaService.Models
             StartOdaInstance,
             [EnumMember(Value = "CHANGE_ODA_INSTANCE_COMPARTMENT")]
             ChangeOdaInstanceCompartment,
+            [EnumMember(Value = "CHANGE_CUST_ENC_KEY")]
+            ChangeCustEncKey,
+            [EnumMember(Value = "DEACT_CUST_ENC_KEY")]
+            DeactCustEncKey,
             [EnumMember(Value = "CREATE_ASSOCIATION")]
             CreateAssociation,
             [EnumMember(Value = "DELETE_ASSOCIATION")]
@@ -79,7 +83,41 @@ namespace Oci.OdaService.Models
             [EnumMember(Value = "UPDATE_ENTITLEMENTS_FOR_CACCT")]
             UpdateEntitlementsForCacct,
             [EnumMember(Value = "LOOKUP_ODA_INSTANCES_FOR_CACCT")]
-            LookupOdaInstancesForCacct
+            LookupOdaInstancesForCacct,
+            [EnumMember(Value = "CREATE_ODA_INSTANCE_ATTACHMENT")]
+            CreateOdaInstanceAttachment,
+            [EnumMember(Value = "UPDATE_ODA_INSTANCE_ATTACHMENT")]
+            UpdateOdaInstanceAttachment,
+            [EnumMember(Value = "DELETE_ODA_INSTANCE_ATTACHMENT")]
+            DeleteOdaInstanceAttachment,
+            [EnumMember(Value = "CREATE_IMPORTED_PACKAGE")]
+            CreateImportedPackage,
+            [EnumMember(Value = "UPDATE_IMPORTED_PACKAGE")]
+            UpdateImportedPackage,
+            [EnumMember(Value = "DELETE_IMPORTED_PACKAGE")]
+            DeleteImportedPackage,
+            [EnumMember(Value = "IMPORT_BOT")]
+            ImportBot,
+            [EnumMember(Value = "CREATE_SKILL")]
+            CreateSkill,
+            [EnumMember(Value = "CLONE_SKILL")]
+            CloneSkill,
+            [EnumMember(Value = "EXTEND_SKILL")]
+            ExtendSkill,
+            [EnumMember(Value = "VERSION_SKILL")]
+            VersionSkill,
+            [EnumMember(Value = "EXPORT_SKILL")]
+            ExportSkill,
+            [EnumMember(Value = "CREATE_DIGITAL_ASSISTANT")]
+            CreateDigitalAssistant,
+            [EnumMember(Value = "CLONE_DIGITAL_ASSISTANT")]
+            CloneDigitalAssistant,
+            [EnumMember(Value = "EXTEND_DIGITAL_ASSISTANT")]
+            ExtendDigitalAssistant,
+            [EnumMember(Value = "VERSION_DIGITAL_ASSISTANT")]
+            VersionDigitalAssistant,
+            [EnumMember(Value = "EXPORT_DIGITAL_ASSISTANT")]
+            ExportDigitalAssistant
         };
 
         /// <value>

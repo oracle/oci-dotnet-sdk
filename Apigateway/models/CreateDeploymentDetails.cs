@@ -67,6 +67,10 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "pathPrefix")]
         public string PathPrefix { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Specification is required.")]
         [JsonProperty(PropertyName = "specification")]
         public ApiSpecification Specification { get; set; }
         

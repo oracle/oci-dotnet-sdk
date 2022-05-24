@@ -16,6 +16,15 @@ namespace Oci.OdaService.Responses
     {
 
         /// <value>
+        /// Unique Oracle-assigned identifier for the request. If you need to contact
+        /// Oracle about a particular request, please provide the request ID.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
+        public string OpcRequestId { get; set; }
+
+
+        /// <value>
         /// When you are paging through a list, if this header appears in the response,
         /// then there might be additional items still to get. Include this value as the
         /// `page` query parameter for the subsequent GET request.
@@ -26,12 +35,11 @@ namespace Oci.OdaService.Responses
 
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you contact Oracle
-        /// about this request, provide this request ID.
+        /// The total number of results that match the query.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
-        public string OpcRequestId { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-total-items")]
+        public System.Nullable<int> OpcTotalItems { get; set; }
 
         /// <value>
         /// A list of WorkRequestError instances.

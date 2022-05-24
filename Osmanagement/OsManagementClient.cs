@@ -1000,6 +1000,127 @@ namespace Oci.OsmanagementService
         }
 
         /// <summary>
+        /// Disables a module stream on a managed instance.  After the stream is
+        /// disabled, it is no longer possible to install the profiles that are
+        /// contained by the stream.  All installed profiles must be removed prior
+        /// to disabling a module stream.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/DisableModuleStreamOnManagedInstance.cs.html">here</a> to see an example of how to use DisableModuleStreamOnManagedInstance API.</example>
+        public async Task<DisableModuleStreamOnManagedInstanceResponse> DisableModuleStreamOnManagedInstance(DisableModuleStreamOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called disableModuleStreamOnManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/actions/moduleStreams/disable".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "DisableModuleStreamOnManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ModuleStreamDetails/DisableModuleStreamOnManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<DisableModuleStreamOnManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DisableModuleStreamOnManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Enables a module stream on a managed instance.  After the stream is
+        /// enabled, it is possible to install the profiles that are contained
+        /// by the stream.  Enabling a stream that is already enabled will
+        /// succeed.  Attempting to enable a different stream for a module that
+        /// already has a stream enabled results in an error.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/EnableModuleStreamOnManagedInstance.cs.html">here</a> to see an example of how to use EnableModuleStreamOnManagedInstance API.</example>
+        public async Task<EnableModuleStreamOnManagedInstanceResponse> EnableModuleStreamOnManagedInstance(EnableModuleStreamOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called enableModuleStreamOnManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/actions/moduleStreams/enable".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "EnableModuleStreamOnManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ModuleStreamDetails/EnableModuleStreamOnManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<EnableModuleStreamOnManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"EnableModuleStreamOnManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Returns a specific erratum.
         /// 
         /// </summary>
@@ -1166,6 +1287,120 @@ namespace Oci.OsmanagementService
             catch (Exception e)
             {
                 logger.Error($"GetManagedInstanceGroup failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieve a detailed description of a module stream from a software source.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/GetModuleStream.cs.html">here</a> to see an example of how to use GetModuleStream API.</example>
+        public async Task<GetModuleStreamResponse> GetModuleStream(GetModuleStreamRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getModuleStream");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/softwareSources/{softwareSourceId}/modules/{moduleName}/streams/{streamName}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "GetModuleStream",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ModuleStream/GetModuleStream",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetModuleStreamResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetModuleStream failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieve a detailed description of a module stream profile from a software source.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/GetModuleStreamProfile.cs.html">here</a> to see an example of how to use GetModuleStreamProfile API.</example>
+        public async Task<GetModuleStreamProfileResponse> GetModuleStreamProfile(GetModuleStreamProfileRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getModuleStreamProfile");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/softwareSources/{softwareSourceId}/modules/{moduleName}/streams/{streamName}/profiles/{profileName}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "GetModuleStreamProfile",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ModuleStreamProfile/GetModuleStreamProfile",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetModuleStreamProfileResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetModuleStreamProfile failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1621,6 +1856,65 @@ namespace Oci.OsmanagementService
             catch (Exception e)
             {
                 logger.Error($"InstallAllWindowsUpdatesOnManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Installs a profile for an module stream.  The stream must be
+        /// enabled before a profile can be installed.  If a module stream
+        /// defines multiple profiles, each one can be installed independently.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/InstallModuleStreamProfileOnManagedInstance.cs.html">here</a> to see an example of how to use InstallModuleStreamProfileOnManagedInstance API.</example>
+        public async Task<InstallModuleStreamProfileOnManagedInstanceResponse> InstallModuleStreamProfileOnManagedInstance(InstallModuleStreamProfileOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called installModuleStreamProfileOnManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/actions/streamProfiles/install".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "InstallModuleStreamProfileOnManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ModuleStreamProfileDetails/InstallModuleStreamProfileOnManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<InstallModuleStreamProfileOnManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"InstallModuleStreamProfileOnManagedInstance failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2253,6 +2547,305 @@ namespace Oci.OsmanagementService
         }
 
         /// <summary>
+        /// Retrieve a list of module stream profiles from a software source.
+        /// Filters may be applied to select a subset of module stream profiles
+        /// based on the filter criteria.
+        /// &lt;br/&gt;
+        /// The \&quot;moduleName\&quot;, \&quot;streamName\&quot;, and \&quot;profileName\&quot; attributes combine
+        /// to form a set of filters on the list of module stream profiles.  If
+        /// a \&quot;moduleName\&quot; is provided, only profiles that belong to that module
+        /// are returned.  If both a \&quot;moduleName\&quot; and \&quot;streamName\&quot; are given,
+        /// only profiles belonging to that module stream are returned.  Finally,
+        /// if all three are given then only the particular profile indicated
+        /// by the triple is returned.  It is not valid to supply a \&quot;streamName\&quot;
+        /// without a \&quot;moduleName\&quot;.  It is also not valid to supply a \&quot;profileName\&quot;
+        /// without a \&quot;streamName\&quot;.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListModuleStreamProfiles.cs.html">here</a> to see an example of how to use ListModuleStreamProfiles API.</example>
+        public async Task<ListModuleStreamProfilesResponse> ListModuleStreamProfiles(ListModuleStreamProfilesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listModuleStreamProfiles");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/softwareSources/{softwareSourceId}/streamProfiles".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "ListModuleStreamProfiles",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ModuleStreamProfileSummary/ListModuleStreamProfiles",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListModuleStreamProfilesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListModuleStreamProfiles failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieve a list of module stream profiles, along with a summary of their
+        /// of their status, from a managed instance.  Filters may be applied to
+        /// select a subset of profiles based on the filter criteria.
+        /// &lt;br/&gt;
+        /// The \&quot;moduleName\&quot;, \&quot;streamName\&quot;, and \&quot;profileName\&quot; attributes combine
+        /// to form a set of filters on the list of module stream profiles.  If
+        /// a \&quot;modulName\&quot; is provided, only profiles that belong to that module
+        /// are returned.  If both a \&quot;moduleName\&quot; and \&quot;streamName\&quot; are given,
+        /// only profiles belonging to that module stream are returned.  Finally,
+        /// if all three are given then only the particular profile indicated
+        /// by the triple is returned.  It is not valid to supply a \&quot;streamName\&quot;
+        /// without a \&quot;moduleName\&quot;.  It is also not valid to supply a \&quot;profileName\&quot;
+        /// without a \&quot;streamName\&quot;.
+        /// &lt;br/&gt;
+        /// The \&quot;status\&quot; attribute filters against the state of a module stream
+        /// profile.  Valid values are \&quot;INSTALLED\&quot; and \&quot;AVAILABLE\&quot;.  If the
+        /// attribute is set to \&quot;INSTALLED\&quot;, only module stream profiles that
+        /// are installed are included in the result set.  If the attribute is
+        /// set to \&quot;AVAILABLE\&quot;, only module stream profiles that are not
+        /// installed are included in the result set.  If the attribute is not
+        /// defined, the request is not subject to this filter.
+        /// &lt;br/&gt;
+        /// When sorting by display name, the result set is sorted first by
+        /// module name, then by stream name, and finally by profile name.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListModuleStreamProfilesOnManagedInstance.cs.html">here</a> to see an example of how to use ListModuleStreamProfilesOnManagedInstance API.</example>
+        public async Task<ListModuleStreamProfilesOnManagedInstanceResponse> ListModuleStreamProfilesOnManagedInstance(ListModuleStreamProfilesOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listModuleStreamProfilesOnManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/streamProfiles".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "ListModuleStreamProfilesOnManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ManagedInstance/ListModuleStreamProfilesOnManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListModuleStreamProfilesOnManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListModuleStreamProfilesOnManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieve a list of module streams from a software source.
+        /// Filters may be applied to select a subset of module streams
+        /// based on the filter criteria.
+        /// &lt;br/&gt;
+        /// The &#39;moduleName&#39; attribute filters against the name of a module.
+        /// It accepts strings of the format \&quot;&lt;module&gt;\&quot;.  If this attribute
+        /// is defined, only streams that belong to the specified module are
+        /// included in the result set.  If it is not defined, the request is
+        /// not subject to this filter.  The &#39;streamName&#39; attribute filters
+        /// against the name of a stream of a module.  If this attribute is
+        /// defined, only the particular module stream that matches both the
+        /// module and stream names is included in the result set.  It is
+        /// not valid to supply &#39;streamName&#39; without also supplying a
+        /// &#39;moduleName&#39;.
+        /// &lt;br/&gt;
+        /// When sorting by display name, the result set is sorted first by
+        /// module name, then by stream name.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListModuleStreams.cs.html">here</a> to see an example of how to use ListModuleStreams API.</example>
+        public async Task<ListModuleStreamsResponse> ListModuleStreams(ListModuleStreamsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listModuleStreams");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/softwareSources/{softwareSourceId}/moduleStreams".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "ListModuleStreams",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ModuleStreamSummary/ListModuleStreams",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListModuleStreamsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListModuleStreams failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieve a list of module streams, along with a summary of their
+        /// status, from a managed instance.  Filters may be applied to select
+        /// a subset of module streams based on the filter criteria.
+        /// &lt;br/&gt;
+        /// The &#39;moduleName&#39; attribute filters against the name of a module.
+        /// It accepts strings of the format \&quot;&lt;module&gt;\&quot;.  If this attribute
+        /// is defined, only streams that belong to the specified module are
+        /// included in the result set.  If it is not defined, the request is
+        /// not subject to this filter.
+        /// &lt;br/&gt;
+        /// The \&quot;status\&quot; attribute filters against the state of a module stream.
+        /// Valid values are \&quot;ENABLED\&quot;, \&quot;DISABLED\&quot;, and \&quot;ACTIVE\&quot;.  If the
+        /// attribute is set to \&quot;ENABLED\&quot;, only module streams that are enabled
+        /// are included in the result set.  If the attribute is set to \&quot;DISABLED\&quot;,
+        /// only module streams that are not enabled are included in the result
+        /// set.  If the attribute is set to \&quot;ACTIVE\&quot;, only module streams that
+        /// are active are included in the result set.  If the attribute is not
+        /// defined, the request is not subject to this filter.
+        /// &lt;br/&gt;
+        /// When sorting by the display name, the result set is sorted first
+        /// by the module name and then by the stream name.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ListModuleStreamsOnManagedInstance.cs.html">here</a> to see an example of how to use ListModuleStreamsOnManagedInstance API.</example>
+        public async Task<ListModuleStreamsOnManagedInstanceResponse> ListModuleStreamsOnManagedInstance(ListModuleStreamsOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listModuleStreamsOnManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/moduleStreams".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "ListModuleStreamsOnManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ManagedInstance/ListModuleStreamsOnManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListModuleStreamsOnManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListModuleStreamsOnManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Returns a list of installed packages on the Managed Instance.
         /// 
         /// </summary>
@@ -2821,6 +3414,181 @@ namespace Oci.OsmanagementService
         }
 
         /// <summary>
+        /// Perform an operation involving modules, streams, and profiles on a
+        /// managed instance.  Each operation may enable or disable an arbitrary
+        /// amount of module streams, and install or remove an arbitrary number
+        /// of module stream profiles.  When the operation is complete, the
+        /// state of the modules, streams, and profiles on the managed instance
+        /// will match the state indicated in the operation.
+        /// &lt;br/&gt;
+        /// Each module stream specified in the list of module streams to enable
+        /// will be in the \&quot;ENABLED\&quot; state upon completion of the operation.
+        /// If there was already a stream of that module enabled, any work
+        /// required to switch from the current stream to the new stream is
+        /// performed implicitly.
+        /// &lt;br/&gt;
+        /// Each module stream specified in the list of module streams to disable
+        /// will be in the \&quot;DISABLED\&quot; state upon completion of the operation.
+        /// Any profiles that are installed for the module stream will be removed
+        /// as part of the operation.
+        /// &lt;br/&gt;
+        /// Each module stream profile specified in the list of profiles to install
+        /// will be in the \&quot;INSTALLED\&quot; state upon completion of the operation,
+        /// indicating that any packages that are part of the profile are installed
+        /// on the managed instance.  If the module stream containing the profile
+        /// is not enabled, it will be enabled as part of the operation.  There
+        /// is an exception when attempting to install a stream of a profile when
+        /// another stream of the same module is enabled.  It is an error to attempt
+        /// to install a profile of another module stream, unless enabling the
+        /// new module stream is explicitly included in this operation.
+        /// &lt;br/&gt;
+        /// Each module stream profile specified in the list of profiles to remove
+        /// will be in the \&quot;AVAILABLE\&quot; state upon completion of the operation.
+        /// The status of packages within the profile after the operation is
+        /// complete is defined by the package manager on the managed instance.
+        /// &lt;br/&gt;
+        /// Operations that contain one or more elements that are not allowed
+        /// are rejected.
+        /// &lt;br/&gt;
+        /// The result of this request is a WorkRequest object.  The returned
+        /// WorkRequest is the parent of a structure of other WorkRequests.  Taken
+        /// as a whole, this structure indicates the entire set of work to be
+        /// performed to complete the operation.
+        /// &lt;br/&gt;
+        /// This interface can also be used to perform a dry run of the operation
+        /// rather than committing it to a managed instance.  If a dry run is
+        /// requested, the OS Management Service will evaluate the operation
+        /// against the current module, stream, and profile state on the managed
+        /// instance.  It will calculate the impact of the operation on all
+        /// modules, streams, and profiles on the managed instance, including those
+        /// that are implicitly impacted by the operation.
+        /// &lt;br/&gt;
+        /// The WorkRequest resulting from a dry run behaves differently than
+        /// a WorkRequest resulting from a committable operation.  Dry run
+        /// WorkRequests are always singletons and never have children.  The
+        /// impact of the operation is returned using the log and error
+        /// facilities of WorkRequests.  The impact of operations that are
+        /// allowed by the OS Management Service are communicated as one or
+        /// more work request log entries.  Operations that are not allowed
+        /// by the OS Management Service are communicated as one or more
+        /// work requst error entries.  Each entry, for either logs or errors,
+        /// contains a structured message containing the results of one
+        /// or more operations.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/ManageModuleStreamsOnManagedInstance.cs.html">here</a> to see an example of how to use ManageModuleStreamsOnManagedInstance API.</example>
+        public async Task<ManageModuleStreamsOnManagedInstanceResponse> ManageModuleStreamsOnManagedInstance(ManageModuleStreamsOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called manageModuleStreamsOnManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/actions/moduleStreams/manage".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "ManageModuleStreamsOnManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ManagedInstance/ManageModuleStreamsOnManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ManageModuleStreamsOnManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ManageModuleStreamsOnManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Removes a profile for a module stream that is installed on a managed instance.
+        /// If a module stream is provided, rather than a fully qualified profile, all
+        /// profiles that have been installed for the module stream will be removed.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/RemoveModuleStreamProfileFromManagedInstance.cs.html">here</a> to see an example of how to use RemoveModuleStreamProfileFromManagedInstance API.</example>
+        public async Task<RemoveModuleStreamProfileFromManagedInstanceResponse> RemoveModuleStreamProfileFromManagedInstance(RemoveModuleStreamProfileFromManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called removeModuleStreamProfileFromManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/actions/streamProfiles/remove".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "RemoveModuleStreamProfileFromManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ModuleStreamProfileDetails/RemoveModuleStreamProfileFromManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<RemoveModuleStreamProfileFromManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RemoveModuleStreamProfileFromManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Removes an installed package from a managed instance.
         /// 
         /// </summary>
@@ -3104,6 +3872,66 @@ namespace Oci.OsmanagementService
             catch (Exception e)
             {
                 logger.Error($"SkipNextScheduledJobExecution failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Enables a new stream for a module that already has a stream enabled.
+        /// If any profiles or packages from the original module are installed,
+        /// switching to a new stream will remove the existing packages and
+        /// install their counterparts in the new stream.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagement/SwitchModuleStreamOnManagedInstance.cs.html">here</a> to see an example of how to use SwitchModuleStreamOnManagedInstance API.</example>
+        public async Task<SwitchModuleStreamOnManagedInstanceResponse> SwitchModuleStreamOnManagedInstance(SwitchModuleStreamOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called switchModuleStreamOnManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/actions/moduleStreams/switch".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OsManagement",
+                    OperationName = "SwitchModuleStreamOnManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/os-management/20190801/ModuleStreamDetails/SwitchModuleStreamOnManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<SwitchModuleStreamOnManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"SwitchModuleStreamOnManagedInstance failed with error: {e.Message}");
                 throw;
             }
         }

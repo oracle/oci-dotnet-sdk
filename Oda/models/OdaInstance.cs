@@ -142,12 +142,20 @@ namespace Oci.OdaService.Models
             Stopping,
             [EnumMember(Value = "CHANGING_COMPARTMENT")]
             ChangingCompartment,
+            [EnumMember(Value = "ACTIVATING_CUSTOMER_ENCRYPTION_KEY")]
+            ActivatingCustomerEncryptionKey,
+            [EnumMember(Value = "UPDATING_CUSTOMER_ENCRYPTION_KEY")]
+            UpdatingCustomerEncryptionKey,
+            [EnumMember(Value = "DEACTIVATING_CUSTOMER_ENCRYPTION_KEY")]
+            DeactivatingCustomerEncryptionKey,
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETE_PENDING")]
             DeletePending,
             [EnumMember(Value = "RECOVERING")]
             Recovering,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
             [EnumMember(Value = "PURGING")]
             Purging,
             [EnumMember(Value = "QUEUED")]
@@ -182,6 +190,60 @@ namespace Oci.OdaService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// Should this Digital Assistant instance use role-based authorization via an identity domain (true) or use the default policy-based authorization via IAM policies (false)
+        /// </value>
+        [JsonProperty(PropertyName = "isRoleBasedAccess")]
+        public System.Nullable<bool> IsRoleBasedAccess { get; set; }
+        
+        /// <value>
+        /// If isRoleBasedAccess is set to true, this property specifies the identity domain that is to be used to implement this type of authorzation. Digital Assistant will create an Identity Application instance and Application Roles within this identity domain. The caller may then perform and user roll mappings they like to grant access to users within the identity domain.
+        /// </value>
+        [JsonProperty(PropertyName = "identityDomain")]
+        public string IdentityDomain { get; set; }
+        
+        /// <value>
+        /// If isRoleBasedAccess is set to true, this property specifies the GUID of the Identity Application instance Digital Assistant has created inside the user-specified identity domain. This identity application instance may be used to host user roll mappings to grant access to this Digital Assistant instance for users within the identity domain.
+        /// </value>
+        [JsonProperty(PropertyName = "identityAppGuid")]
+        public string IdentityAppGuid { get; set; }
+        
+        /// <value>
+        /// If isRoleBasedAccess is set to true, this property specifies the URL for the administration console used to manage the Identity Application instance Digital Assistant has created inside the user-specified identity domain.
+        /// </value>
+        [JsonProperty(PropertyName = "identityAppConsoleUrl")]
+        public string IdentityAppConsoleUrl { get; set; }
+        
+        /// <value>
+        /// A list of package names imported into this instance (if any). Use importedPackageIds field to get the details of the imported packages.
+        /// </value>
+        [JsonProperty(PropertyName = "importedPackageNames")]
+        public System.Collections.Generic.List<string> ImportedPackageNames { get; set; }
+        
+        /// <value>
+        /// A list of package ids imported into this instance (if any). Use GetImportedPackage to get the details of the imported packages.
+        /// </value>
+        [JsonProperty(PropertyName = "importedPackageIds")]
+        public System.Collections.Generic.List<string> ImportedPackageIds { get; set; }
+        
+        /// <value>
+        /// A list of attachment types for this instance (if any). Use attachmentIds to get the details of the attachments.
+        /// </value>
+        [JsonProperty(PropertyName = "attachmentTypes")]
+        public System.Collections.Generic.List<string> AttachmentTypes { get; set; }
+        
+        /// <value>
+        /// A list of attachment identifiers for this instance (if any). Use GetOdaInstanceAttachment to get the details of the attachments.
+        /// </value>
+        [JsonProperty(PropertyName = "attachmentIds")]
+        public System.Collections.Generic.List<string> AttachmentIds { get; set; }
+        
+        /// <value>
+        /// A list of restricted operations (across all attachments) for this instance (if any). Use GetOdaInstanceAttachment to get the details of the attachments.
+        /// </value>
+        [JsonProperty(PropertyName = "restrictedOperations")]
+        public System.Collections.Generic.List<RestrictedOperation> RestrictedOperations { get; set; }
         
     }
 }

@@ -217,6 +217,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Servicemesh",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Adm", "Adm\OCI.DotNetSDK.Adm.csproj", "{F1C25ADD-C1A2-4EDB-972C-0FC83DF54BCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Licensemanager", "Licensemanager\OCI.DotNetSDK.Licensemanager.csproj", "{2A1E1B29-59E7-4747-B516-8452FC65F328}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2105,5 +2107,17 @@ Global
         {F1C25ADD-C1A2-4EDB-972C-0FC83DF54BCA}.Release|x64.Build.0 = Release|Any CPU
         {F1C25ADD-C1A2-4EDB-972C-0FC83DF54BCA}.Release|x86.ActiveCfg = Release|Any CPU
         {F1C25ADD-C1A2-4EDB-972C-0FC83DF54BCA}.Release|x86.Build.0 = Release|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Debug|x64.Build.0 = Debug|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Debug|x86.Build.0 = Debug|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Release|Any CPU.Build.0 = Release|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Release|x64.ActiveCfg = Release|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Release|x64.Build.0 = Release|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Release|x86.ActiveCfg = Release|Any CPU
+        {2A1E1B29-59E7-4747-B516-8452FC65F328}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

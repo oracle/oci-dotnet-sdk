@@ -128,12 +128,20 @@ namespace Oci.OdaService.Models
             Stopping,
             [EnumMember(Value = "CHANGING_COMPARTMENT")]
             ChangingCompartment,
+            [EnumMember(Value = "ACTIVATING_CUSTOMER_ENCRYPTION_KEY")]
+            ActivatingCustomerEncryptionKey,
+            [EnumMember(Value = "UPDATING_CUSTOMER_ENCRYPTION_KEY")]
+            UpdatingCustomerEncryptionKey,
+            [EnumMember(Value = "DEACTIVATING_CUSTOMER_ENCRYPTION_KEY")]
+            DeactivatingCustomerEncryptionKey,
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETE_PENDING")]
             DeletePending,
             [EnumMember(Value = "RECOVERING")]
             Recovering,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
             [EnumMember(Value = "PURGING")]
             Purging,
             [EnumMember(Value = "QUEUED")]
@@ -156,7 +164,7 @@ namespace Oci.OdaService.Models
         public string StateMessage { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Simple key-value pair that is applied without any predefined name, type, or scope.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -168,6 +176,30 @@ namespace Oci.OdaService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// Should this Digital Assistant instance use role-based authorization via an identity domain (true) or use the default policy-based authorization via IAM policies (false)
+        /// </value>
+        [JsonProperty(PropertyName = "isRoleBasedAccess")]
+        public System.Nullable<bool> IsRoleBasedAccess { get; set; }
+        
+        /// <value>
+        /// If isRoleBasedAccess is set to true, this property specifies the identity domain that is to be used to implement this type of authorzation. Digital Assistant will create an Identity Application instance and Application Roles within this identity domain. The caller may then perform and user roll mappings they like to grant access to users within the identity domain.
+        /// </value>
+        [JsonProperty(PropertyName = "identityDomain")]
+        public string IdentityDomain { get; set; }
+        
+        /// <value>
+        /// A list of package names imported into this instance (if any).
+        /// </value>
+        [JsonProperty(PropertyName = "importedPackageNames")]
+        public System.Collections.Generic.List<string> ImportedPackageNames { get; set; }
+        
+        /// <value>
+        /// A list of attachment types for this instance (if any).
+        /// </value>
+        [JsonProperty(PropertyName = "attachmentTypes")]
+        public System.Collections.Generic.List<string> AttachmentTypes { get; set; }
         
     }
 }

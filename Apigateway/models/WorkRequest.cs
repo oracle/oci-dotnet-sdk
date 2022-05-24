@@ -66,7 +66,19 @@ namespace Oci.ApigatewayService.Models
             [EnumMember(Value = "CREATE_SDK")]
             CreateSdk,
             [EnumMember(Value = "DELETE_SDK")]
-            DeleteSdk
+            DeleteSdk,
+            [EnumMember(Value = "CREATE_USAGE_PLAN")]
+            CreateUsagePlan,
+            [EnumMember(Value = "UPDATE_USAGE_PLAN")]
+            UpdateUsagePlan,
+            [EnumMember(Value = "DELETE_USAGE_PLAN")]
+            DeleteUsagePlan,
+            [EnumMember(Value = "CREATE_SUBSCRIBER")]
+            CreateSubscriber,
+            [EnumMember(Value = "UPDATE_SUBSCRIBER")]
+            UpdateSubscriber,
+            [EnumMember(Value = "DELETE_SUBSCRIBER")]
+            DeleteSubscriber
         };
 
         /// <value>

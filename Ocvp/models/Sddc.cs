@@ -602,6 +602,13 @@ namespace Oci.OcvpService.Models
         public System.Nullable<bool> IsShieldedInstanceEnabled { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Capacity Reservation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "capacityReservationId")]
+        public string CapacityReservationId { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
