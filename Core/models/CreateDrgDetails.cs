@@ -20,7 +20,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to contain the DRG.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to contain the DRG.
         /// </value>
         /// <remarks>
         /// Required

@@ -45,7 +45,7 @@ namespace Oci.CoreService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment the DRG is in. The DRG route table
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment the DRG is in. The DRG route table
         /// is always in the same compartment as the DRG.
         /// 
         /// </value>
@@ -57,7 +57,7 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DRG the DRG that contains this route table.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG the DRG that contains this route table.
         /// 
         /// </value>
         /// <remarks>
@@ -132,7 +132,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the import route distribution used to specify how incoming route advertisements from
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the import route distribution used to specify how incoming route advertisements from
         /// referenced attachments are inserted into the DRG route table.
         /// 
         /// </value>

@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the set of DHCP options.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the set of DHCP options.
         /// </value>
         /// <remarks>
         /// Required

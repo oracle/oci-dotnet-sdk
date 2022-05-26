@@ -76,7 +76,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<DestinationTypeEnum> DestinationType { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the next hop DRG attachment responsible
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the next hop DRG attachment responsible
         /// for reaching the network destination.
         /// <br/>
         /// A value of `BLACKHOLE` means traffic for this route is discarded without notification.

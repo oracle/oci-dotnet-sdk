@@ -28,7 +28,7 @@ namespace Oci.DatabasemanagementService.Models
         public MetricDataPoint StorageUsed { get; set; }
         
         /// <value>
-        /// A list of the storage metrics grouped by TableSpace for a specific database.
+        /// A list of the storage metrics grouped by TableSpace for a specific Managed Database.
         /// </value>
         [JsonProperty(PropertyName = "storageUsedByTableSpace")]
         public System.Collections.Generic.List<MetricDataPoint> StorageUsedByTableSpace { get; set; }

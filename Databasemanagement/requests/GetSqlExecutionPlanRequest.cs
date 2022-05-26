@@ -62,7 +62,9 @@ namespace Oci.DatabasemanagementService.Requests
             [EnumMember(Value = "USING_SQL_PROFILE")]
             UsingSqlProfile,
             [EnumMember(Value = "USING_NEW_INDICES")]
-            UsingNewIndices
+            UsingNewIndices,
+            [EnumMember(Value = "USING_PARALLEL_EXECUTION")]
+            UsingParallelExecution
         };
 
         /// <value>

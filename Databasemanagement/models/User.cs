@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The summary of a specific User.
+    /// The summary of a specific user resource.
     /// </summary>
     public class User 
     {
@@ -80,7 +80,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// The date the account was locked if account status was LOCKED.
+        /// The date the account was locked, if the status of the account is LOCKED.
         /// </value>
         [JsonProperty(PropertyName = "timeLocked")]
         public System.Nullable<System.DateTime> TimeLocked { get; set; }
@@ -128,7 +128,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The User resource profile name.
+        /// The profile name of the user.
         /// </value>
         /// <remarks>
         /// Required

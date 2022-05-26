@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The response object representing activityMetric details for a specific database at a particular time.
+    /// The response object representing activityMetric details for a specific Managed Database at a particular time.
     /// </summary>
     public class ActivityTimeSeriesMetrics 
     {

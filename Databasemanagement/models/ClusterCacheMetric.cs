@@ -24,7 +24,7 @@ namespace Oci.DatabasemanagementService.Models
     {
         
         /// <value>
-        /// A list of cluster cache metrics for a specific database.
+        /// A list of cluster cache metrics for a specific Managed Database.
         /// </value>
         /// <remarks>
         /// Required

@@ -116,7 +116,13 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The User resource profile name.
+        /// The date the account was locked, if the status of the account is LOCKED.
+        /// </value>
+        [JsonProperty(PropertyName = "timeLocked")]
+        public System.Nullable<System.DateTime> TimeLocked { get; set; }
+        
+        /// <value>
+        /// The profile name of the user.
         /// </value>
         /// <remarks>
         /// Required

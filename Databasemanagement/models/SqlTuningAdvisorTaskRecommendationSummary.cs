@@ -115,5 +115,11 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "implementActionSql")]
         public string ImplementActionSql { get; set; }
         
+        /// <value>
+        /// Indicates whether a SQL Profile recommendation uses parallel execution.
+        /// </value>
+        [JsonProperty(PropertyName = "isParallelExecution")]
+        public System.Nullable<bool> IsParallelExecution { get; set; }
+        
     }
 }

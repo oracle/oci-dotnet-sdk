@@ -24,5 +24,8 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "cpuUtilization")]
         public MetricDataPoint CpuUtilization { get; set; }
         
+        [JsonProperty(PropertyName = "cpuStatistics")]
+        public MetricStatisticsDefinition CpuStatistics { get; set; }
+        
     }
 }

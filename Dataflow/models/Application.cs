@@ -103,6 +103,9 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "driverShape")]
         public string DriverShape { get; set; }
         
+        [JsonProperty(PropertyName = "driverShapeConfig")]
+        public ShapeConfig DriverShapeConfig { get; set; }
+        
         /// <value>
         /// The input used for spark-submit command. For more details see https://spark.apache.org/docs/latest/submitting-applications.html#launching-applications-with-spark-submit.
         /// Supported options include ``--class``, ``--file``, ``--jars``, ``--conf``, ``--py-files``, and main application file with arguments.
@@ -121,6 +124,9 @@ namespace Oci.DataflowService.Models
         [Required(ErrorMessage = "ExecutorShape is required.")]
         [JsonProperty(PropertyName = "executorShape")]
         public string ExecutorShape { get; set; }
+        
+        [JsonProperty(PropertyName = "executorShapeConfig")]
+        public ShapeConfig ExecutorShapeConfig { get; set; }
         
         /// <value>
         /// An Oracle Cloud Infrastructure URI of the file containing the application to execute.

@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the cross-connect group.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the cross-connect group.
         /// </value>
         /// <remarks>
         /// Required
