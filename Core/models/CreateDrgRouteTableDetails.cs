@@ -60,7 +60,7 @@ namespace Oci.CoreService.Models
         public string DrgId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the import route distribution used to specify how incoming route advertisements through
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the import route distribution used to specify how incoming route advertisements through
         /// referenced attachments are inserted into the DRG route table.
         /// 
         /// </value>

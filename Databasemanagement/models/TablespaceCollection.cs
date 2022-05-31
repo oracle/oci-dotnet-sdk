@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A collection of tablespaces for a specific database.
+    /// A collection of tablespaces for a specific Managed Database.
     /// </summary>
     public class TablespaceCollection 
     {

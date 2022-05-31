@@ -35,6 +35,13 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<EncryptionInTransitType> EncryptionInTransitType { get; set; }
         
+        /// <value>
+        /// Whether to enable Oracle Cloud Agent to perform the iSCSI login and logout commands after the volume attach or detach operations for non multipath-enabled iSCSI attachments.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAgentAutoIscsiLoginEnabled")]
+        public System.Nullable<bool> IsAgentAutoIscsiLoginEnabled { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "iscsi";
     }

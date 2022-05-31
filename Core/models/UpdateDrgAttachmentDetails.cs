@@ -28,7 +28,7 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DRG route table that is assigned to this attachment.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table that is assigned to this attachment.
         /// <br/>
         /// The DRG route table manages traffic inside the DRG.
         /// <br/>
@@ -70,7 +70,7 @@ namespace Oci.CoreService.Models
         public string ExportDrgRouteDistributionId { get; set; }
         
         /// <value>
-        /// This is the [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the route table that is used to route the traffic as it enters a VCN through this attachment.
+        /// This is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table that is used to route the traffic as it enters a VCN through this attachment.
         /// <br/>
         /// For information about why you would associate a route table with a DRG attachment, see:
         /// <br/>

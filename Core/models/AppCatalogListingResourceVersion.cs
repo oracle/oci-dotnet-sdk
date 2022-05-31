@@ -49,8 +49,8 @@ namespace Oci.CoreService.Models
         /// <value>
         /// List of regions that this listing resource version is available.
         /// <br/>
-        /// For information about Regions, see
-        /// [Regions](https://docs.cloud.oracle.com/#General/Concepts/regions.htm).
+        /// For information about regions, see
+        /// [Regions and Availability Domains](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm).
         /// <br/>
         /// Example: [&quot;us-ashburn-1&quot;, &quot;us-phoenix-1&quot;]
         /// </value>
@@ -60,7 +60,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// Array of shapes compatible with this resource.
         /// <br/>
-        /// You may enumerate all available shapes by calling {@link #listShapes(ListShapesRequest) listShapes}.
+        /// You can enumerate all available shapes by calling {@link #listShapes(ListShapesRequest) listShapes}.
         /// <br/>
         /// Example: [&quot;VM.Standard1.1&quot;, &quot;VM.Standard1.2&quot;]
         /// </value>

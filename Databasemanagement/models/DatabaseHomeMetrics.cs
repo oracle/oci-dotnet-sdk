@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The response containing the metric collection for a specific database.
+    /// The response containing the metric collection for a specific Managed Database.
     /// </summary>
     public class DatabaseHomeMetrics 
     {

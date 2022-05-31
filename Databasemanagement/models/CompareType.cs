@@ -21,6 +21,8 @@ namespace Oci.DatabasemanagementService.Models
       [EnumMember(Value = "HOUR")]
       Hour,
       [EnumMember(Value = "DAY")]
-      Day
+      Day,
+      [EnumMember(Value = "WEEK")]
+      Week
   }
 }

@@ -54,10 +54,6 @@ namespace Oci.ContainerengineService.Models
         /// <value>
         /// The version of Kubernetes to install on the nodes in the node pool.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "KubernetesVersion is required.")]
         [JsonProperty(PropertyName = "kubernetesVersion")]
         public string KubernetesVersion { get; set; }
         

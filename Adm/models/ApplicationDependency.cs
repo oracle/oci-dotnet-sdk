@@ -22,7 +22,7 @@ namespace Oci.AdmService.Models
     {
         
         /// <value>
-        /// Unique Group Artifact Version (GAV) identifier (Group:Artifact:Version).
+        /// Unique Group Artifact Version (GAV) identifier (Group:Artifact:Version), e.g. org.graalvm.nativeimage:svm:21.1.0.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AdmService.Models
         public string Gav { get; set; }
         
         /// <value>
-        /// Unique identifier of an Application Dependency node.
+        /// Unique identifier of an Application Dependency node, e.g. nodeId1.
         /// </value>
         /// <remarks>
         /// Required

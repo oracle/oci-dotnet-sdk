@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The response containing the CPU, Storage, Wait, DB Time, and Memory metrics for a specific database.
+    /// The response containing the CPU, Storage, Wait, DB Time, and Memory metrics for a specific Managed Database.
     /// </summary>
     public class DatabaseHomeMetricDefinition 
     {
         
         /// <value>
-        /// A list of the active session metrics for CPU and Wait time for a specific database.
+        /// A list of the active session metrics for CPU and Wait time for a specific Managed Database.
         /// </value>
         /// <remarks>
         /// Required

@@ -22,16 +22,28 @@ namespace Oci.DatabasemanagementService.Models
     {
         
         /// <value>
-        /// A list of the Input/Output Operations Per Second metrics grouped by IOType for a specific database.
+        /// The Input/Output Operations Per Second metrics grouped by IOType for a specific Managed Database.
         /// </value>
         [JsonProperty(PropertyName = "iops")]
         public System.Collections.Generic.List<MetricDataPoint> Iops { get; set; }
         
         /// <value>
-        /// A list of the IOThroughput metrics grouped for a specific database.
+        /// The IOThroughput metrics grouped by IOType for a specific Managed Database.
         /// </value>
         [JsonProperty(PropertyName = "ioThroughput")]
         public System.Collections.Generic.List<MetricDataPoint> IoThroughput { get; set; }
+        
+        /// <value>
+        /// The Input/Output metric statistics such as min, max, mean, lowerQuartile, and upperQuartile.
+        /// </value>
+        [JsonProperty(PropertyName = "iopsStatistics")]
+        public System.Collections.Generic.List<MetricStatisticsDefinition> IopsStatistics { get; set; }
+        
+        /// <value>
+        /// The IOThroughput metric statistics such as min, max, mean, lowerQuartile, and upperQuartile.
+        /// </value>
+        [JsonProperty(PropertyName = "ioThroughputStatistics")]
+        public System.Collections.Generic.List<MetricStatisticsDefinition> IoThroughputStatistics { get; set; }
         
     }
 }

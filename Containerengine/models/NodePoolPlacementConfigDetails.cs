@@ -48,5 +48,12 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "capacityReservationId")]
         public string CapacityReservationId { get; set; }
         
+        /// <value>
+        /// A list of fault domains in which to place nodes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "faultDomains")]
+        public System.Collections.Generic.List<string> FaultDomains { get; set; }
+        
     }
 }

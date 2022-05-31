@@ -22,7 +22,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the route table the DRG attachment is using.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the DRG attachment is using.
         /// <br/>
         /// For information about why you would associate a route table with a DRG attachment, see:
         /// <br/>
@@ -34,7 +34,7 @@ namespace Oci.CoreService.Models
         public string RouteTableId { get; set; }
                 ///
         /// <value>
-        /// Indicates whether the VCN CIDRs or the individual subnet CIDRs are imported from the attachment. 
+        /// Indicates whether the VCN CIDRs or the individual subnet CIDRs are imported from the attachment.
         /// Routes from the VCN ingress route table are always imported.
         /// 
         /// </value>
@@ -47,7 +47,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Indicates whether the VCN CIDRs or the individual subnet CIDRs are imported from the attachment. 
+        /// Indicates whether the VCN CIDRs or the individual subnet CIDRs are imported from the attachment.
         /// Routes from the VCN ingress route table are always imported.
         /// 
         /// </value>

@@ -42,7 +42,7 @@ namespace Oci.DatabasemanagementService.Models
         public string ObjectName { get; set; }
         
         /// <value>
-        /// The number of rows returned in the result. Only applicable for QUERY SqlType.
+        /// The number of rows returned in the result for the Query SqlType.
         /// </value>
         [JsonProperty(PropertyName = "rowCount")]
         public System.Nullable<int> RowCount { get; set; }

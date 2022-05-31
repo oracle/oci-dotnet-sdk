@@ -22,7 +22,7 @@ namespace Oci.DatabasemanagementService.Models
     {
         
         /// <value>
-        /// A list of the memory usage metrics grouped by memorypool for a specific database.
+        /// The Memory Usage metrics grouped by memorypool for a specific Managed Database.
         /// </value>
         [JsonProperty(PropertyName = "memoryUsage")]
         public System.Collections.Generic.List<MetricDataPoint> MemoryUsage { get; set; }

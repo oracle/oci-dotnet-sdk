@@ -17,7 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The response object representing time series metric details
-    /// for a specific database at a particular time.
+    /// for a specific Managed Database at a particular time.
     /// 
     /// </summary>
     public class TimeSeriesMetricDefinition 
