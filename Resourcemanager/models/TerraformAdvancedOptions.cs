@@ -43,7 +43,6 @@ namespace Oci.ResourcemanagerService.Models
                 ///
         /// <value>
         /// Enables detailed logs at the specified verbosity for running the job (operation).
-        /// Used with the following operations: `PLAN`, `APPLY`, `DESTROY`.
         /// 
         /// </value>
         ///
@@ -62,7 +61,6 @@ namespace Oci.ResourcemanagerService.Models
 
         /// <value>
         /// Enables detailed logs at the specified verbosity for running the job (operation).
-        /// Used with the following operations: `PLAN`, `APPLY`, `DESTROY`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "detailedLogLevel")]

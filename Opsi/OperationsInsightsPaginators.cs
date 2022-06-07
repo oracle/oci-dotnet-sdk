@@ -785,6 +785,55 @@ namespace Oci.OpsiService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListOpsiDataObjects operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListOpsiDataObjectsResponse> ListOpsiDataObjectsResponseEnumerator(ListOpsiDataObjectsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListOpsiDataObjectsRequest, ListOpsiDataObjectsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOpsiDataObjects(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the OpsiDataObjectSummary objects
+        /// contained in responses from the ListOpsiDataObjects operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<OpsiDataObjectSummary> ListOpsiDataObjectsRecordEnumerator(ListOpsiDataObjectsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListOpsiDataObjectsRequest, ListOpsiDataObjectsResponse, OpsiDataObjectSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOpsiDataObjects(request, retryConfiguration, cancellationToken),
+                response => response.OpsiDataObjectsCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListSqlPlans operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

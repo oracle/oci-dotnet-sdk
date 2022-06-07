@@ -45,7 +45,11 @@ namespace Oci.ResourcemanagerService.Models
             [EnumMember(Value = "TERRAFORM_OBJECT_STORAGE_CONFIG_SOURCE_NO_TF_FILE_PRESENT")]
             TerraformObjectStorageConfigSourceNoTfFilePresent,
             [EnumMember(Value = "TERRAFORM_OBJECT_STORAGE_CONFIG_SOURCE_UNSUPPORTED_OBJECT_SIZE")]
-            TerraformObjectStorageConfigSourceUnsupportedObjectSize
+            TerraformObjectStorageConfigSourceUnsupportedObjectSize,
+            [EnumMember(Value = "CUSTOM_TERRAFORM_PROVIDER_BUCKET_NOT_FOUND")]
+            CustomTerraformProviderBucketNotFound,
+            [EnumMember(Value = "CUSTOM_TERRAFORM_PROVIDER_UNSUPPORTED_OBJECT_SIZE")]
+            CustomTerraformProviderUnsupportedObjectSize
         };
 
         /// <value>

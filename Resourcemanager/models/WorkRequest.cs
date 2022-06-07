@@ -31,7 +31,13 @@ namespace Oci.ResourcemanagerService.Models
             [EnumMember(Value = "CREATE_STACK_FROM_COMPARTMENT")]
             CreateStackFromCompartment,
             [EnumMember(Value = "DRIFT_DETECTION")]
-            DriftDetection
+            DriftDetection,
+            [EnumMember(Value = "CREATE_PRIVATE_ENDPOINT")]
+            CreatePrivateEndpoint,
+            [EnumMember(Value = "UPDATE_PRIVATE_ENDPOINT")]
+            UpdatePrivateEndpoint,
+            [EnumMember(Value = "DELETE_PRIVATE_ENDPOINT")]
+            DeletePrivateEndpoint
         };
 
         /// <value>

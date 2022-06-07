@@ -69,6 +69,9 @@ namespace Oci.ResourcemanagerService.Models
         public System.Nullable<ConfigurationSourceProvider.LifecycleStateEnum> LifecycleState { get; set; }
         
         
+        [JsonProperty(PropertyName = "privateServerConfigDetails")]
+        public PrivateServerConfigDetails PrivateServerConfigDetails { get; set; }
+        
         /// <value>
         /// Free-form tags associated with this resource. Each tag is a key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
