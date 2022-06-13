@@ -22,7 +22,7 @@ namespace Oci.DatabasetoolsService.Models
     {
         
         /// <value>
-        /// Array of WorkRequestError.
+        /// Array of Work Request Error items.
         /// </value>
         /// <remarks>
         /// Required

@@ -24,7 +24,7 @@ namespace Oci.DatabasetoolsService.Models
         
         
         /// <value>
-        /// A short code that defines the result of the validation, meant for programmatic parsing.
+        /// A short code that defines the result of the validation, meant for programmatic parsing. The value OK indicates that the validation was successful.
         /// </value>
         /// <remarks>
         /// Required
@@ -79,6 +79,9 @@ namespace Oci.DatabasetoolsService.Models
             {
                 case "ORACLE_DATABASE":
                     obj = new ValidateDatabaseToolsConnectionOracleDatabaseResult();
+                    break;
+                case "MYSQL":
+                    obj = new ValidateDatabaseToolsConnectionMySqlResult();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

@@ -128,9 +128,27 @@ namespace Oci.Common.Auth
                 httpRequestMsg.Headers.Add(Constants.AUTHORIZATION_HEADER, AUTHORIZATION_HEADER_VALUE);
 
                 HttpResponseMessage response = null;
-                using (var httpClient = new HttpClient())
+                try
                 {
-                    response = httpClient.SendAsync(httpRequestMsg).Result;
+                    using (var httpClient = new HttpClient())
+                    {
+                        response = httpClient.SendAsync(httpRequestMsg).Result;
+                    }
+                }
+                catch (Exception ex) when (ex is HttpRequestException || ex is AggregateException)
+                {
+                    logger.Debug($"Received Exception: {ex}");
+                    AggregateException ae = ex is AggregateException ? (AggregateException) ex : new AggregateException(ex);
+                    ae.Handle((e) =>
+                    {
+                        if (e is HttpRequestException)
+                        {
+                            response = new HttpResponseMessage();
+                            response.StatusCode = System.Net.HttpStatusCode.BadRequest;
+                            return true;
+                        }
+                        return false;
+                    });
                 }
                 if (response == null || !response.IsSuccessStatusCode)
                 {

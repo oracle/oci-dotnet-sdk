@@ -74,19 +74,19 @@ namespace Oci.DatabasetoolsService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources their `lifecycleState` matches the specified `lifecycleState`.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the entire display name given.
+        /// A filter to return only resources that match the entire specified display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the entire name given.
+        /// A filter to return only resources that match the entire specified name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
         public string Name { get; set; }

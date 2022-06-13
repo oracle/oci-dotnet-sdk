@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// Contains the details for the compartment to move the DatabaseToolsConnection to.
+    /// Contains the details for the compartment to move the `DatabaseToolsConnection` to.
     /// </summary>
     public class ChangeDatabaseToolsConnectionCompartmentDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to move the DatabaseToolsConnection to.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to move the `DatabaseToolsConnection` to.
         /// </value>
         /// <remarks>
         /// Required

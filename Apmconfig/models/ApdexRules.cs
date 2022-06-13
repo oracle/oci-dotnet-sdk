@@ -24,7 +24,7 @@ namespace Oci.ApmconfigService.Models
     {
         
         /// <value>
-        /// The name by which the rule set is displayed to the end user.
+        /// The name by which a configuration entity is displayed to the end user.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

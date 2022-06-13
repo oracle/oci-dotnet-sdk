@@ -24,7 +24,7 @@ namespace Oci.ApmconfigService.Models
     {
         
         /// <value>
-        /// The name of the metric group.
+        /// The name by which a configuration entity is displayed to the end user.
         /// </value>
         /// <remarks>
         /// Required

@@ -42,7 +42,7 @@ namespace Oci.DatabasetoolsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A description of the DatabaseToolsPrivateEndpoint.
+        /// A description of the Database Tools private endpoint.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

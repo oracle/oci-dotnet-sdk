@@ -39,5 +39,11 @@ namespace Oci.IdentityService.Requests
         [Required(ErrorMessage = "UpdateTagNamespaceDetails is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
         public UpdateTagNamespaceDetails UpdateTagNamespaceDetails { get; set; }
+        
+        /// <value>
+        /// Whether to override locks (if any exist).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLockOverride")]
+        public System.Nullable<bool> IsLockOverride { get; set; }
     }
 }

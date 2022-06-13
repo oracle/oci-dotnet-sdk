@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// DatabaseToolsConnection of an Oracle Database.
+    /// Database Tools connection of an Oracle Database.
     /// </summary>
     public class DatabaseToolsConnectionOracleDatabase : DatabaseToolsConnection
     {
@@ -25,13 +25,13 @@ namespace Oci.DatabasetoolsService.Models
         public DatabaseToolsRelatedResource RelatedResource { get; set; }
         
         /// <value>
-        /// Connect descriptor or Easy Connect Naming method to connect to the database.
+        /// The connect descriptor or Easy Connect Naming method used to connect to the database.
         /// </value>
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
         
         /// <value>
-        /// Database user name.
+        /// The database user name.
         /// </value>
         [JsonProperty(PropertyName = "userName")]
         public string UserName { get; set; }
@@ -40,13 +40,13 @@ namespace Oci.DatabasetoolsService.Models
         public DatabaseToolsUserPassword UserPassword { get; set; }
         
         /// <value>
-        /// Advanced connection properties key-value pair (e.g., oracle.net.ssl_server_dn_match).
+        /// The advanced connection properties key-value pair (for example, `oracle.net.ssl_server_dn_match`).
         /// </value>
         [JsonProperty(PropertyName = "advancedProperties")]
         public System.Collections.Generic.Dictionary<string, string> AdvancedProperties { get; set; }
         
         /// <value>
-        /// Oracle wallet or Java Keystores containing trusted certificates for authenticating the server's public certificate and
+        /// The Oracle wallet or Java Keystores containing trusted certificates for authenticating the server's public certificate and
         /// the client private key and associated certificates required for client authentication.
         /// 
         /// </value>
@@ -54,7 +54,7 @@ namespace Oci.DatabasetoolsService.Models
         public System.Collections.Generic.List<DatabaseToolsKeyStore> KeyStores { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DatabaseToolsPrivateEndpoint used to access the database in the Customer VCN.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Tools private endpoint used to access the database in the customer VCN.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointId")]
         public string PrivateEndpointId { get; set; }

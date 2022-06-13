@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// List of DatabaseToolsEndpointServiceSummary items.
+    /// List of `DatabaseToolsEndpointServiceSummary` items.
     /// </summary>
     public class DatabaseToolsEndpointServiceCollection 
     {
         
         /// <value>
-        /// Array of DatabaseToolsEndpointServiceSummary.
+        /// Array of `DatabaseToolsEndpointServiceSummary` items.
         /// </value>
         /// <remarks>
         /// Required

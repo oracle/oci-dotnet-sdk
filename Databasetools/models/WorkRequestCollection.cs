@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// List of WorkRequestSummary items.
+    /// List of `WorkRequestSummary` items.
     /// </summary>
     public class WorkRequestCollection 
     {
         
         /// <value>
-        /// Array of WorkRequestSummary.
+        /// Array of `WorkRequestSummary` items.
         /// </value>
         /// <remarks>
         /// Required

@@ -22,7 +22,7 @@ namespace Oci.ApmconfigService.Models
     {
         
         /// <value>
-        /// The name by which the span filter can be displayed in the UI.
+        /// The name by which a configuration entity is displayed to the end user.
         /// </value>
         /// <remarks>
         /// Required

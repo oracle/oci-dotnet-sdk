@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// Contains the details for the compartment to move the DatabaseToolsPrivateEndpoint to.
+    /// Contains the details for the compartment to move the Database Tools private endpoint to.
     /// </summary>
     public class ChangeDatabaseToolsPrivateEndpointCompartmentDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to move the DatabaseConnectionProfile to.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to move the `DatabaseConnectionProfile` to.
         /// </value>
         /// <remarks>
         /// Required

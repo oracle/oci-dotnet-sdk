@@ -93,6 +93,9 @@ namespace Oci.ApmconfigService.Models
                 case "SPAN_FILTER":
                     obj = new SpanFilterSummary();
                     break;
+                case "OPTIONS":
+                    obj = new OptionsSummary();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

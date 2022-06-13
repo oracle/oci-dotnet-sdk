@@ -20,7 +20,7 @@ namespace Oci.DatabasetoolsService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a DatabaseToolsConnection.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a Database Tools connection.
         /// </value>
         /// <remarks>
         /// Required

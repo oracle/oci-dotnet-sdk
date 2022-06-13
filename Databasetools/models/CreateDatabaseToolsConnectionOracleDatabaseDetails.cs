@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// The information about new DatabaseToolsConnection for an Oracle Database
+    /// Details of the new Database Tools connection for an Oracle Database.
     /// </summary>
     public class CreateDatabaseToolsConnectionOracleDatabaseDetails : CreateDatabaseToolsConnectionDetails
     {
@@ -25,13 +25,13 @@ namespace Oci.DatabasetoolsService.Models
         public CreateDatabaseToolsRelatedResourceDetails RelatedResource { get; set; }
         
         /// <value>
-        /// Connect descriptor or Easy Connect Naming method to connect to the database.
+        /// The connect descriptor or Easy Connect Naming method use to connect to the database.
         /// </value>
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
         
         /// <value>
-        /// Database user name.
+        /// The database user name.
         /// </value>
         [JsonProperty(PropertyName = "userName")]
         public string UserName { get; set; }
@@ -40,7 +40,7 @@ namespace Oci.DatabasetoolsService.Models
         public DatabaseToolsUserPasswordDetails UserPassword { get; set; }
         
         /// <value>
-        /// Advanced connection properties key-value pair (e.g., oracle.net.ssl_server_dn_match).
+        /// The advanced connection properties key-value pair (e.g., `oracle.net.ssl_server_dn_match`).
         /// </value>
         [JsonProperty(PropertyName = "advancedProperties")]
         public System.Collections.Generic.Dictionary<string, string> AdvancedProperties { get; set; }
@@ -54,7 +54,7 @@ namespace Oci.DatabasetoolsService.Models
         public System.Collections.Generic.List<DatabaseToolsKeyStoreDetails> KeyStores { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DatabaseToolsPrivateEndpoint used to access the database in the Customer VCN.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Tools private endpoint used to access the database in the customer VCN.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointId")]
         public string PrivateEndpointId { get; set; }

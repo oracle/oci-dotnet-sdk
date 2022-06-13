@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasetoolsService.Models
 {
   /// <summary>
-  /// Possible key store type.
+  /// The key store type.
   /// </summary>
   public enum KeyStoreType {
       [EnumMember(Value = "JAVA_KEY_STORE")]

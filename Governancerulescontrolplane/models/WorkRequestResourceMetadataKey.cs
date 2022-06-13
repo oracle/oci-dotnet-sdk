@@ -10,13 +10,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.DatabasetoolsService.Models
+namespace Oci.GovernancerulescontrolplaneService.Models
 {
   /// <summary>
-  /// Possible service capabilities.
+  /// Possible Metadata keys for workRequest resource metadata
   /// </summary>
-  public enum ServiceCapability {
-      [EnumMember(Value = "PRIVATE_ENDPOINT_SUPPORTED")]
-      PrivateEndpointSupported
+  public enum WorkRequestResourceMetadataKey {
+      [EnumMember(Value = "IS_DRY_RUN")]
+      IsDryRun
   }
 }

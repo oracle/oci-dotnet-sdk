@@ -13,10 +13,12 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasetoolsService.Models
 {
   /// <summary>
-  /// Possible connection type.
+  /// The connection type.
   /// </summary>
   public enum ConnectionType {
       [EnumMember(Value = "ORACLE_DATABASE")]
-      OracleDatabase
+      OracleDatabase,
+      [EnumMember(Value = "MYSQL")]
+      Mysql
   }
 }

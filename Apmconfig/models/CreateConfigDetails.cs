@@ -67,6 +67,9 @@ namespace Oci.ApmconfigService.Models
                 case "METRIC_GROUP":
                     obj = new CreateMetricGroupDetails();
                     break;
+                case "OPTIONS":
+                    obj = new CreateOptionsDetails();
+                    break;
                 case "APDEX":
                     obj = new CreateApdexRulesDetails();
                     break;

@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 39.0.0 - 2022-06-14
+### Added
+- Support for the Web Application Acceleration (WAA) service
+- Support for the Governance Rules service
+- Support for the OneSubscription service
+- Support for resource locking in the Identity service
+- Support for quota resource locking in the Limits service
+- Support for returning the backup with the requested changes in the MySQL Database service
+- Support for time zone in Cloud Autonomous VM (CAVM) clusters in the Database service
+- Support for configuration options in the Application Performance Monitoring service
+- Support for MySQL connections in the Database Tools service
+ 
+### Breaking Changes
+- The models `DatabaseToolsAllowedNetworkSources`, `DatabaseToolsVirtualSource`, and `ServiceCapability` were removed from the Database Tools service
+- The property `SecretId` was made a required property in the `DatabaseToolsUserPasswordSecretIdDetails` model in the Database Tools service
+
 ## 38.4.0 - 2022-06-07
 ### Added
 - Support for calling Oracle Cloud Infrastructure services in the eu-paris-1 region

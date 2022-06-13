@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasetoolsService.Models
 {
   /// <summary>
-  /// Possible sort orders.
+  /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).
   /// </summary>
   public enum SortOrder {
       [EnumMember(Value = "ASC")]

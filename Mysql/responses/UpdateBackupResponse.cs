@@ -24,6 +24,18 @@ namespace Oci.MysqlService.Responses
         public string OpcRequestId { get; set; }
 
 
+        /// <value>
+        /// For optimistic concurrency control. See `if-match`.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
+        public string Etag { get; set; }
+
+        /// <value>
+        /// The returned Backup instance, or null if {@link #isNotModified()} is true.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public Backup Backup { get; set; }
 
         /// <value>
         /// Flag to indicate whether or not the object was modified.  If this is true,

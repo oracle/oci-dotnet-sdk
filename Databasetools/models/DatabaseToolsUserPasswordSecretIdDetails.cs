@@ -24,6 +24,10 @@ namespace Oci.DatabasetoolsService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the secret containing the user password.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SecretId is required.")]
         [JsonProperty(PropertyName = "secretId")]
         public string SecretId { get; set; }
         

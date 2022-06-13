@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// Summary of the DatabaseToolsConnection.
+    /// Summary of the Database Tools connection.
     /// </summary>
     [JsonConverter(typeof(DatabaseToolsConnectionSummaryModelConverter))]
     public class DatabaseToolsConnectionSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DatabaseToolsConnection.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `DatabaseToolsConnection`.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DatabasetoolsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the containing Compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the Database Tools connection.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.DatabasetoolsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The current state of the DatabaseToolsConnection.
+        /// The current state of the Database Tools connection.
         /// </value>
         /// <remarks>
         /// Required
@@ -70,7 +70,7 @@ namespace Oci.DatabasetoolsService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The time the DatabaseToolsConnection was created. An RFC3339 formatted datetime string
+        /// The time the Database Tools connection was created. An RFC3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required
@@ -80,7 +80,7 @@ namespace Oci.DatabasetoolsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the DatabaseToolsConnection was updated. An RFC3339 formatted datetime string
+        /// The time the Database Tools connection was updated. An RFC3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required
@@ -135,6 +135,9 @@ namespace Oci.DatabasetoolsService.Models
             {
                 case "ORACLE_DATABASE":
                     obj = new DatabaseToolsConnectionOracleDatabaseSummary();
+                    break;
+                case "MYSQL":
+                    obj = new DatabaseToolsConnectionMySqlSummary();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

@@ -85,6 +85,9 @@ namespace Oci.ApmconfigService.Models
             var discriminator = jsonObject["configType"].Value<string>();
             switch (discriminator)
             {
+                case "OPTIONS":
+                    obj = new Options();
+                    break;
                 case "METRIC_GROUP":
                     obj = new MetricGroup();
                     break;

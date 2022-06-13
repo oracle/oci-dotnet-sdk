@@ -57,7 +57,7 @@ namespace Oci.DatabasetoolsService.Models
         public string Identifier { get; set; }
         
         /// <value>
-        /// The URI path that the user can do a GET on to access the resource metadata
+        /// The URI path that the user can use for a GET operation to access the resource metadata.
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }

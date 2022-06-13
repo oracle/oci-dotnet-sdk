@@ -71,6 +71,12 @@ namespace Oci.LimitsService.Models
         public System.Collections.Generic.List<string> Statements { get; set; }
         
         /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
+        /// <value>
         /// The description you assign to the quota.
         /// </value>
         /// <remarks>

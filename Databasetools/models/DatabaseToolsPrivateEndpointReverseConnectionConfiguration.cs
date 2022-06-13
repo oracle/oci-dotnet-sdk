@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// Reverse connection configuration details of Private Endpoint.
+    /// Reverse connection configuration details of the private endpoint.
     /// </summary>
     public class DatabaseToolsPrivateEndpointReverseConnectionConfiguration 
     {

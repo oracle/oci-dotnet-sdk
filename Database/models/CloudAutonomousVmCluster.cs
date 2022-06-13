@@ -146,6 +146,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// The time zone of the Cloud Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterTimeZone")]
+        public string ClusterTimeZone { get; set; }
+        
+        /// <value>
         /// Additional information about the current lifecycle state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]

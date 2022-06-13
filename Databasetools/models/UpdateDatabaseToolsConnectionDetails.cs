@@ -65,6 +65,9 @@ namespace Oci.DatabasetoolsService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "MYSQL":
+                    obj = new UpdateDatabaseToolsConnectionMySqlDetails();
+                    break;
                 case "ORACLE_DATABASE":
                     obj = new UpdateDatabaseToolsConnectionOracleDatabaseDetails();
                     break;
