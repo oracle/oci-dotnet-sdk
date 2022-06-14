@@ -1,0 +1,19 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\General.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{03410A4B-A16B-4006-9DC2-9CAFA922F9F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <PackageId>OCI.DotNetSDK.Onesubscription</PackageId>
+    <RootNamespace>Oci.OnesubscriptionService</RootNamespace>
+    <Authors>Oracle Cloud Infrastructure</Authors>
+    <Company>Oracle</Company>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Onesubscription</PackageTags>
+    <Description>Oracle Cloud Infrastructure Cloud Onesubscription Service</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>
+  </ItemGroup>
+</Project>

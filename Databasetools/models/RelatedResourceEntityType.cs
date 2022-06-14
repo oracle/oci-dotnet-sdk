@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasetoolsService.Models
 {
   /// <summary>
-  /// Possible related resource entity type
+  /// The related Oracle Database type, either an Autonomous Database, a container database (CDB), or a pluggable database (PDB).
   /// </summary>
   public enum RelatedResourceEntityType {
       [EnumMember(Value = "AUTONOMOUSDATABASE")]

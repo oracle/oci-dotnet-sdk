@@ -68,7 +68,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Moves a DatabaseToolsConnection into a different compartment within the same tenancy.
+        /// Moves the specified Database Tools connection to a different compartment in the same tenancy.
         /// For information about moving resources between compartments, see
         /// [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
         /// 
@@ -127,7 +127,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Moves a DatabaseToolsPrivateEndpoint into a different compartment within the same tenancy.
+        /// Moves a Database Tools private endpoint into a different compartment in the same tenancy.
         /// For information about moving resources between compartments, see
         /// [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
         /// 
@@ -186,7 +186,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Creates a new DatabaseToolsConnection.
+        /// Creates a new Database Tools connection.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -243,7 +243,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Creates a new DatabaseToolsPrivateEndpoint.
+        /// Creates a new Database Tools private endpoint.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -300,7 +300,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Deletes a DatabaseToolsConnection resource by identifier
+        /// Deletes the specified Database Tools connection resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -356,7 +356,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Deletes a DatabaseToolsPrivateEndpoint resource by identifier
+        /// Deletes the specified Database Tools private endpoint.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -412,7 +412,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Gets a DatabaseToolsConnection by identifier
+        /// Gets details of the specified Database Tools connection.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -468,7 +468,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Gets a DatabaseToolsEndpointService by identifier
+        /// Gets details for the specified Database Tools endpoint service.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -524,7 +524,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Gets a DatabaseToolsPrivateEndpoint by identifier
+        /// Gets details of a specified Database Tools private endpoint.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -580,7 +580,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Gets the status of the work request with the given ID.
+        /// Gets the status of the specified work request.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -636,7 +636,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Returns a list of DatabaseToolsConnections.
+        /// Returns a list of Database Tools connections.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -693,7 +693,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Returns a list of DatabaseToolsEndpointServices.
+        /// Returns a list of Database Tools endpoint services.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -750,7 +750,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Returns a list of DatabaseToolsPrivateEndpoints.
+        /// Returns a list of Database Tools private endpoints.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -807,7 +807,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Return a (paginated) list of errors for a given work request.
+        /// Returns a paginated list of errors for the specified work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -864,7 +864,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Return a (paginated) list of logs for a given work request.
+        /// Returns a paginated list of logs for the specified work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -978,7 +978,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Updates the DatabaseToolsConnection
+        /// Updates the specified Database Tools connection.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1034,7 +1034,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Updates the DatabaseToolsPrivateEndpoint
+        /// Updates the specified Database Tools private endpoint.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1090,7 +1090,7 @@ namespace Oci.DatabasetoolsService
         }
 
         /// <summary>
-        /// Validate the DatabaseToolsConnection information details by establishing a connection to the database.
+        /// Validates the Database Tools connection details by establishing a connection to the database.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

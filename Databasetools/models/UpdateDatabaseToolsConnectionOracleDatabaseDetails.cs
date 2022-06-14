@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// The information about new DatabaseToolsConnection for an Oracle Database.
+    /// The update details for a Database Tools Oracle Database connection.
     /// </summary>
     public class UpdateDatabaseToolsConnectionOracleDatabaseDetails : UpdateDatabaseToolsConnectionDetails
     {
@@ -25,13 +25,13 @@ namespace Oci.DatabasetoolsService.Models
         public UpdateDatabaseToolsRelatedResourceDetails RelatedResource { get; set; }
         
         /// <value>
-        /// Connect descriptor or Easy Connect Naming method to connect to the database.
+        /// The connect descriptor or Easy Connect Naming method used to connect to the database.
         /// </value>
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
         
         /// <value>
-        /// Database user name.
+        /// The database user name.
         /// </value>
         [JsonProperty(PropertyName = "userName")]
         public string UserName { get; set; }
@@ -40,7 +40,7 @@ namespace Oci.DatabasetoolsService.Models
         public DatabaseToolsUserPasswordDetails UserPassword { get; set; }
         
         /// <value>
-        /// Advanced connection properties key-value pair (e.g., oracle.net.ssl_server_dn_match).
+        /// The advanced connection properties key-value pair (e.g., `oracle.net.ssl_server_dn_match`).
         /// </value>
         [JsonProperty(PropertyName = "advancedProperties")]
         public System.Collections.Generic.Dictionary<string, string> AdvancedProperties { get; set; }

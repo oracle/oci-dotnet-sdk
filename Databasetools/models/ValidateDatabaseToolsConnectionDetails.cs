@@ -48,6 +48,9 @@ namespace Oci.DatabasetoolsService.Models
                 case "ORACLE_DATABASE":
                     obj = new ValidateDatabaseToolsConnectionOracleDatabaseDetails();
                     break;
+                case "MYSQL":
+                    obj = new ValidateDatabaseToolsConnectionMySqlDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

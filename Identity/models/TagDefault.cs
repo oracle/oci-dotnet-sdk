@@ -145,5 +145,11 @@ namespace Oci.IdentityService.Models
         [JsonProperty(PropertyName = "isRequired")]
         public System.Nullable<bool> IsRequired { get; set; }
         
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
     }
 }

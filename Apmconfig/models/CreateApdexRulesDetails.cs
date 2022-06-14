@@ -31,7 +31,7 @@ namespace Oci.ApmconfigService.Models
         public System.Collections.Generic.List<Apdex> Rules { get; set; }
         
         /// <value>
-        /// The name by which this rule set is displayed to the end user.
+        /// The name by which a configuration entity is displayed to the end user.
         /// </value>
         /// <remarks>
         /// Required

@@ -289,6 +289,118 @@ namespace Oci.ApmconfigService
         }
 
         /// <summary>
+        /// Returns all metrics associated with the specified namespace.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmconfig/RetrieveNamespaceMetrics.cs.html">here</a> to see an example of how to use RetrieveNamespaceMetrics API.</example>
+        public async Task<RetrieveNamespaceMetricsResponse> RetrieveNamespaceMetrics(RetrieveNamespaceMetricsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called retrieveNamespaceMetrics");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/actions/retrieveNamespaceMetrics".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Config",
+                    OperationName = "RetrieveNamespaceMetrics",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/apm-config/20210201/MetricGroup/RetrieveNamespaceMetrics",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<RetrieveNamespaceMetricsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RetrieveNamespaceMetrics failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns all namespaces available in APM.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmconfig/RetrieveNamespaces.cs.html">here</a> to see an example of how to use RetrieveNamespaces API.</example>
+        public async Task<RetrieveNamespacesResponse> RetrieveNamespaces(RetrieveNamespacesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called retrieveNamespaces");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/actions/retrieveNamespaces".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Config",
+                    OperationName = "RetrieveNamespaces",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/apm-config/20210201/MetricGroup/RetrieveNamespaces",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<RetrieveNamespacesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RetrieveNamespaces failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Updates the details of the configuration item identified by the OCID.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -340,6 +452,64 @@ namespace Oci.ApmconfigService
             catch (Exception e)
             {
                 logger.Error($"UpdateConfig failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Validates the Span Filter pattern (filterText) for syntactic correctness.
+        /// Returns 204 on success, 422 when validation fails.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/apmconfig/ValidateSpanFilterPattern.cs.html">here</a> to see an example of how to use ValidateSpanFilterPattern API.</example>
+        public async Task<ValidateSpanFilterPatternResponse> ValidateSpanFilterPattern(ValidateSpanFilterPatternRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called validateSpanFilterPattern");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/actions/validateSpanFilterPattern".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Config",
+                    OperationName = "ValidateSpanFilterPattern",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/apm-config/20210201/SpanFilter/ValidateSpanFilterPattern",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ValidateSpanFilterPatternResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ValidateSpanFilterPattern failed with error: {e.Message}");
                 throw;
             }
         }

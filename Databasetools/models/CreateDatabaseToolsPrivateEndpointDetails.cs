@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// The information about new DatabaseToolsPrivateEndpoint.
+    /// The details for the new Database Tools private endpoint.
     /// </summary>
     public class CreateDatabaseToolsPrivateEndpointDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the containing Compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the Database Tools private endpoint.
         /// </value>
         /// <remarks>
         /// Required
@@ -56,13 +56,13 @@ namespace Oci.DatabasetoolsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A description of the DatabaseToolsPrivateEndpoint.
+        /// A description of the Database Tools private endpoint.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DatabaseToolsEndpointService.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `DatabaseToolsEndpointService`.
         /// </value>
         /// <remarks>
         /// Required

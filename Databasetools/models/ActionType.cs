@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasetoolsService.Models
 {
   /// <summary>
-  /// Possible types of actions.
+  /// The type of action.
   /// </summary>
   public enum ActionType {
       [EnumMember(Value = "CREATED")]

@@ -20,6 +20,9 @@ namespace Oci.Common.Http.Internal
         private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public static string DEFAULT_OCI_EXCEPTION_MESSAGE = "Unknown Message";
         public static string DEFAULT_OCI_EXCEPTION_SERVICE_CODE = "Unknown Service Code";
+        public static string INSTANCE_PRINCIPAL_FAILURE_MESSAGE = "Failed to initiate Instance Principal call";
+        public static string NOT_APPLICABLE = "N/A";
+        public static int INSTANCE_PRINCIPAL_FAILURE_CODE = 502;
 
         /// <summary>Reads content from HttpResponseMessage and converts it into SDK response object.</summary>
         /// <param name="response">An HttpResponseMessage.</param>
@@ -52,8 +55,22 @@ namespace Oci.Common.Http.Internal
         /// </summary>
         /// <param name="responseMessage">An HttpResponseMessage.</param>
         /// <exception>Throws OciException if error code and message are retrieved, or throws any exception from ReadEntityInternal.</exception>
-        public static void HandleNonSuccessfulResponse(HttpResponseMessage responseMessage, ApiDetails apiDetails = null)
+        public static void HandleNonSuccessfulResponse(HttpResponseMessage responseMessage, ApiDetails apiDetails = null, [System.Runtime.CompilerServices.CallerMemberName] string caller = null)
         {
+            if(caller == "AutoDetectEndpointUsingMetadataUrl")
+            {
+                if( responseMessage == null
+                    || INSTANCE_PRINCIPAL_FAILURE_CODE == (int)responseMessage.StatusCode
+                    || System.Net.HttpStatusCode.BadRequest == responseMessage.StatusCode)
+                {
+                    throw new OciException(
+                        responseMessage.StatusCode,
+                        INSTANCE_PRINCIPAL_FAILURE_MESSAGE,
+                        NOT_APPLICABLE,
+                        NOT_APPLICABLE);
+                }
+            }
+
             var responseOpcRequestId = HeaderUtils.GetFirstorDefaultHeaderValue(responseMessage.Headers, "opc-request-id");
             try
             {

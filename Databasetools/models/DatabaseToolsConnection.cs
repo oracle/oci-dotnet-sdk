@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// Description of DatabaseToolsConnection.
+    /// Description of the Database Tools connection.
     /// </summary>
     [JsonConverter(typeof(DatabaseToolsConnectionModelConverter))]
     public class DatabaseToolsConnection 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DatabaseToolsConnection.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Tools connection.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DatabasetoolsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the containing Compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the Database Tools connection.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.DatabasetoolsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The current state of the DatabaseToolsConnection.
+        /// The current state of the Database Tools connection.
         /// </value>
         /// <remarks>
         /// Required
@@ -64,13 +64,13 @@ namespace Oci.DatabasetoolsService.Models
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
+        /// A message describing the current state in more detail. For example, this message can be used to provide actionable information for a resource in the Failed state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The time the DatabaseToolsConnection was created. An RFC3339 formatted datetime string
+        /// The time the Database Tools connection was created. An RFC3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required
@@ -80,7 +80,7 @@ namespace Oci.DatabasetoolsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the DatabaseToolsConnection was updated. An RFC3339 formatted datetime string
+        /// The time the DatabaseToolsConnection was updated. An RFC3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required
@@ -135,6 +135,9 @@ namespace Oci.DatabasetoolsService.Models
             {
                 case "ORACLE_DATABASE":
                     obj = new DatabaseToolsConnectionOracleDatabase();
+                    break;
+                case "MYSQL":
+                    obj = new DatabaseToolsConnectionMySql();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

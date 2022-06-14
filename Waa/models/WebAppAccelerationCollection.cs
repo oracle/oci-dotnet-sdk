@@ -13,25 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatabasetoolsService.Models
+namespace Oci.WaaService.Models
 {
     /// <summary>
-    /// A VCN [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) and a list of CIDR blocks.
+    /// Result of a WebAppAcceleration list operation.
     /// </summary>
-    public class DatabaseToolsVirtualSource 
+    public class WebAppAccelerationCollection 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a VCN.
+        /// List of WebAppAccelerations.
         /// </value>
-        [JsonProperty(PropertyName = "vcnId")]
-        public string VcnId { get; set; }
-        
-        /// <value>
-        /// A list of CIDR blocks.
-        /// </value>
-        [JsonProperty(PropertyName = "ipRanges")]
-        public System.Collections.Generic.List<string> IpRanges { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<WebAppAccelerationSummary> Items { get; set; }
         
     }
 }

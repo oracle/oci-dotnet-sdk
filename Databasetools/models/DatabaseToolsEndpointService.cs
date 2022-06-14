@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// Description of DatabaseToolsEndpointService.
+    /// Description of Database Tools Endpoint Service.
     /// </summary>
     public class DatabaseToolsEndpointService 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DatabaseToolsEndpointService.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Tools Endpoint Service.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +44,7 @@ namespace Oci.DatabasetoolsService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the containing Compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the Database Tools Endpoint Service.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -71,7 +71,7 @@ namespace Oci.DatabasetoolsService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
-        /// The time the DatabaseToolsEndpointService was created. An RFC3339 formatted datetime string
+        /// The time the Database Tools Endpoint Service was created. An RFC3339 formatted datetime string
         /// </value>
         /// <remarks>
         /// Required
@@ -81,13 +81,13 @@ namespace Oci.DatabasetoolsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the DatabaseToolsEndpointService was updated. An RFC3339 formatted datetime string
+        /// The time the Database Tools Endpoint Service was updated. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the DatabaseToolsEndpointService.
+        /// The current state of the Database Tools Endpoint Service.
         /// </value>
         /// <remarks>
         /// Required
@@ -104,7 +104,7 @@ namespace Oci.DatabasetoolsService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// A description of the DatabaseToolsEndpointService.
+        /// A description of the Database Tools Endpoint Service.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

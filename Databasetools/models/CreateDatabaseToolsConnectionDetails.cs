@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// The information about new DatabaseToolsConnection.
+    /// Details for the new Database Tools connection.
     /// </summary>
     [JsonConverter(typeof(CreateDatabaseToolsConnectionDetailsModelConverter))]
     public class CreateDatabaseToolsConnectionDetails 
@@ -33,7 +33,7 @@ namespace Oci.DatabasetoolsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the containing Compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment containing the Database Tools connection.
         /// </value>
         /// <remarks>
         /// Required
@@ -79,6 +79,9 @@ namespace Oci.DatabasetoolsService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "MYSQL":
+                    obj = new CreateDatabaseToolsConnectionMySqlDetails();
+                    break;
                 case "ORACLE_DATABASE":
                     obj = new CreateDatabaseToolsConnectionOracleDatabaseDetails();
                     break;

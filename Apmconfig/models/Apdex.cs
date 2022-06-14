@@ -95,7 +95,7 @@ namespace Oci.ApmconfigService.Models
         public System.Nullable<bool> IsApplyToErrorSpans { get; set; }
         
         /// <value>
-        /// A user-friendly name that provides a short description of this rule.
+        /// The name by which a configuration entity is displayed to the end user.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

@@ -21,6 +21,8 @@ namespace Oci.ApmconfigService.Models
       [EnumMember(Value = "METRIC_GROUP")]
       MetricGroup,
       [EnumMember(Value = "APDEX")]
-      Apdex
+      Apdex,
+      [EnumMember(Value = "OPTIONS")]
+      Options
   }
 }

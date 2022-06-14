@@ -30,7 +30,7 @@ namespace Oci.DatabasetoolsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their subnetId matches the given subnetId.
+        /// A filter to return only resources their `subnetId` matches the specified `subnetId`.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subnetId")]
         public string SubnetId { get; set; }
@@ -80,19 +80,19 @@ namespace Oci.DatabasetoolsService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their type matches the given type.
+        /// A filter to return only resources their `endpointServiceId` matches the specified `endpointServiceId`.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "endpointServiceId")]
         public string EndpointServiceId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources their `lifecycleState` matches the specified `lifecycleState`.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the entire display name given.
+        /// A filter to return only resources that match the entire specified display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }

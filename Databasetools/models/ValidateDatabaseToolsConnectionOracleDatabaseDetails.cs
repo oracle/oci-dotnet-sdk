@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// Connection validation details for Oracle Database.
+    /// Connection validation details for the Oracle Database.
     /// </summary>
     public class ValidateDatabaseToolsConnectionOracleDatabaseDetails : ValidateDatabaseToolsConnectionDetails
     {

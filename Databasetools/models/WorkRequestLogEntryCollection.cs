@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// List of WorkRequestLog items.
+    /// List of work request log items.
     /// </summary>
     public class WorkRequestLogEntryCollection 
     {
         
         /// <value>
-        /// Array of WorkRequestLog.
+        /// Array of work request log items.
         /// </value>
         /// <remarks>
         /// Required

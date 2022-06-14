@@ -68,6 +68,12 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CloudExadataInfrastructureId is required.")]
         [JsonProperty(PropertyName = "cloudExadataInfrastructureId")]
         public string CloudExadataInfrastructureId { get; set; }
+        
+        /// <value>
+        /// The time zone to use for the Cloud Autonomous VM cluster. For details, see [DB System Time Zones](https://docs.cloud.oracle.com/Content/Database/References/timezones.htm).
+        /// </value>
+        [JsonProperty(PropertyName = "clusterTimeZone")]
+        public string ClusterTimeZone { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle PaaS and IaaS services in the cloud.

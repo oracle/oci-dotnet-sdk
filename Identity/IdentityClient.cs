@@ -188,6 +188,120 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
+        /// Add a resource lock to a tag default.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/AddTagDefaultLock.cs.html">here</a> to see an example of how to use AddTagDefaultLock API.</example>
+        public async Task<AddTagDefaultLockResponse> AddTagDefaultLock(AddTagDefaultLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called addTagDefaultLock");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/tagDefaults/{tagDefaultId}/actions/addLock".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Identity",
+                    OperationName = "AddTagDefaultLock",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity/20160918/TagDefault/AddTagDefaultLock",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<AddTagDefaultLockResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AddTagDefaultLock failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Add a resource lock to a tag namespace.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/AddTagNamespaceLock.cs.html">here</a> to see an example of how to use AddTagNamespaceLock API.</example>
+        public async Task<AddTagNamespaceLockResponse> AddTagNamespaceLock(AddTagNamespaceLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called addTagNamespaceLock");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/tagNamespaces/{tagNamespaceId}/actions/addLock".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Identity",
+                    OperationName = "AddTagNamespaceLock",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity/20160918/TagNamespace/AddTagNamespaceLock",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<AddTagNamespaceLockResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AddTagNamespaceLock failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Adds the specified user to the specified group and returns a &#x60;UserGroupMembership&#x60; object with its own OCID.
         /// &lt;br/&gt;
         /// After you send your request, the new object&#39;s &#x60;lifecycleState&#x60; will temporarily be CREATING. Before using the
@@ -3274,7 +3388,6 @@ namespace Oci.IdentityService
         /// tag from all resources in your tenancy.
         /// &lt;br/&gt;
         /// These things happen immediately:
-        /// \u00A0
         ///   * If the tag was a cost-tracking tag, it no longer counts against your 10 cost-tracking
         ///   tags limit, whether you first disabled it or not.
         ///   * If the tag was used with dynamic groups, none of the rules that contain the tag will
@@ -7269,6 +7382,120 @@ namespace Oci.IdentityService
             catch (Exception e)
             {
                 logger.Error($"RecoverCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Remove a resource lock from a tag default.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/RemoveTagDefaultLock.cs.html">here</a> to see an example of how to use RemoveTagDefaultLock API.</example>
+        public async Task<RemoveTagDefaultLockResponse> RemoveTagDefaultLock(RemoveTagDefaultLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called removeTagDefaultLock");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/tagDefaults/{tagDefaultId}/actions/removeLock".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Identity",
+                    OperationName = "RemoveTagDefaultLock",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity/20160918/TagDefault/RemoveTagDefaultLock",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<RemoveTagDefaultLockResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RemoveTagDefaultLock failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Remove a resource lock from a tag namespace.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identity/RemoveTagNamespaceLock.cs.html">here</a> to see an example of how to use RemoveTagNamespaceLock API.</example>
+        public async Task<RemoveTagNamespaceLockResponse> RemoveTagNamespaceLock(RemoveTagNamespaceLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called removeTagNamespaceLock");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/tagNamespaces/{tagNamespaceId}/actions/removeLock".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Identity",
+                    OperationName = "RemoveTagNamespaceLock",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity/20160918/TagNamespace/RemoveTagNamespaceLock",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<RemoveTagNamespaceLockResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RemoveTagNamespaceLock failed with error: {e.Message}");
                 throw;
             }
         }

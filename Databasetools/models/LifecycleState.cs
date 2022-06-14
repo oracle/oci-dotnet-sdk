@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasetoolsService.Models
 {
   /// <summary>
-  /// Possible lifecycle states.
+  /// The lifecycle state.
   /// </summary>
   public enum LifecycleState {
       [EnumMember(Value = "CREATING")]
