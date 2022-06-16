@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingService.Models
 {
     /// <summary>
-    /// Represents a label.
+    /// It represents a label.
     /// </summary>
     public class Label 
     {

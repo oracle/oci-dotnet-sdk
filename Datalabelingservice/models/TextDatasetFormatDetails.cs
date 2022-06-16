@@ -16,10 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingService.Models
 {
     /// <summary>
-    /// Indicates the dataset is comprised of txt files.
+    /// It indicates the dataset is comprised of TXT files.
     /// </summary>
     public class TextDatasetFormatDetails : DatasetFormatDetails
     {
+        
+        [JsonProperty(PropertyName = "textFileTypeMetadata")]
+        public TextFileTypeMetadata TextFileTypeMetadata { get; set; }
         
         [JsonProperty(PropertyName = "formatType")]
         private readonly string formatType = "TEXT";

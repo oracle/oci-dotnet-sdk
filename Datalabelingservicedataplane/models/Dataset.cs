@@ -23,7 +23,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
     {
         
         /// <value>
-        /// The OCID of the dataset.
+        /// The OCID of the Dataset.
         /// </value>
         /// <remarks>
         /// Required
@@ -49,7 +49,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A user-provided description of the dataset
+        /// A user provided description of the dataset
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -65,7 +65,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the resource was updated, in the timestamp format defined by RFC3339.
+        /// The date and time the resource was last updated, in the timestamp format defined by RFC3339.
         /// </value>
         /// <remarks>
         /// Required
@@ -76,10 +76,10 @@ namespace Oci.DatalabelingservicedataplaneService.Models
                 ///
         /// <value>
         /// The state of a dataset.
-        /// CREATING - The dataset is being created.  It transitions to ACTIVE when it is ready for labeling.
+        /// CREATING - The dataset is being created.  It will transition to ACTIVE when it is ready for labeling.
         /// ACTIVE   - The dataset is ready for labeling.
-        /// UPDATING - The dataset is being updated.  It, and its related resources, might be unavailable for other updates until it returns to ACTIVE.
-        /// NEEDS_ATTENTION - A dataset updaten operation has failed due to validation or other errors, and needs attention.
+        /// UPDATING - The dataset is being updated.  It and its related resources may be unavailable for other updates until it returns to ACTIVE.
+        /// NEEDS_ATTENTION - A dataset updation operation has failed due to validation or other errors and needs attention.
         /// DELETING - The dataset and its related resources are being deleted.
         /// DELETED  - The dataset has been deleted and is no longer available.
         /// FAILED   - The dataset has failed due to validation or other errors.
@@ -105,10 +105,10 @@ namespace Oci.DatalabelingservicedataplaneService.Models
 
         /// <value>
         /// The state of a dataset.
-        /// CREATING - The dataset is being created.  It transitions to ACTIVE when it is ready for labeling.
+        /// CREATING - The dataset is being created.  It will transition to ACTIVE when it is ready for labeling.
         /// ACTIVE   - The dataset is ready for labeling.
-        /// UPDATING - The dataset is being updated.  It, and its related resources, might be unavailable for other updates until it returns to ACTIVE.
-        /// NEEDS_ATTENTION - A dataset updaten operation has failed due to validation or other errors, and needs attention.
+        /// UPDATING - The dataset is being updated.  It and its related resources may be unavailable for other updates until it returns to ACTIVE.
+        /// NEEDS_ATTENTION - A dataset updation operation has failed due to validation or other errors and needs attention.
         /// DELETING - The dataset and its related resources are being deleted.
         /// DELETED  - The dataset has been deleted and is no longer available.
         /// FAILED   - The dataset has failed due to validation or other errors.

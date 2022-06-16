@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingService.Models
 {
     /// <summary>
-    /// Initial Generate Records configuration, generates records from the Dataset's source.
+    /// The initial generate records configuration. It generates records from the dataset's source.
     /// </summary>
     public class InitialRecordGenerationConfiguration 
     {
         
         /// <value>
-        /// the maximum number of records to generate.
+        /// The maximum number of records to generate.
         /// </value>
         [JsonProperty(PropertyName = "limit")]
         public System.Nullable<decimal> Limit { get; set; }

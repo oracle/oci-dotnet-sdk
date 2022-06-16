@@ -23,7 +23,7 @@ namespace Oci.DatalabelingService.Models
     {
         
         /// <value>
-        /// Namespace of the bucket that contains the dataset data source
+        /// The namespace of the bucket that contains the dataset data source.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DatalabelingService.Models
         public string Namespace { get; set; }
         
         /// <value>
-        /// The object storage bucket that contains the dataset data source
+        /// The object storage bucket that contains the dataset data source.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DatalabelingService.Models
         public string Bucket { get; set; }
         
         /// <value>
-        /// A common path prefix shared by the objects that make up the dataset. Records will not be generated for objects whose name match exactly with prefix.
+        /// A common path prefix shared by the objects that make up the dataset. Except for the CSV file type, records are not generated for the objects whose names exactly match with the prefix.
         /// </value>
         [JsonProperty(PropertyName = "prefix")]
         public string Prefix { get; set; }
