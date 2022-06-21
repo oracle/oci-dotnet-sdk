@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatalabelingservicedataplaneService.Models
 {
     /// <summary>
-    /// The initial generate records configuration It generates records from the dataset's source.
+    /// The initial generate records configuration. It generates records from the dataset's source.
     /// </summary>
     public class InitialRecordGenerationConfiguration 
     {

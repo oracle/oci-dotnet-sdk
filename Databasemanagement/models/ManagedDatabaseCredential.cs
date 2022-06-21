@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The credential to connect to the managed database in order to get optimizer statistics gathering & advisor task details.
+    /// The credential used to connect to the Managed Database and obtain the details of the optimizer statistics tasks.
     /// </summary>
     [JsonConverter(typeof(ManagedDatabaseCredentialModelConverter))]
     public class ManagedDatabaseCredential 
     {
                 ///
         /// <value>
-        /// The type of the credential has access to retrieve optimizer statistics gathering & advisor task details.
+        /// Indicates the type of credential required to retrieve the details of the optimizer statistics tasks.
         /// </value>
         ///
         public enum CredentialTypeEnum {
@@ -35,7 +35,7 @@ namespace Oci.DatabasemanagementService.Models
 
         
         /// <value>
-        /// The user to connect to the database.
+        /// The user name used to connect to the database.
         /// </value>
         /// <remarks>
         /// Required

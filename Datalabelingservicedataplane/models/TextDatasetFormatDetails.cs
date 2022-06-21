@@ -21,6 +21,9 @@ namespace Oci.DatalabelingservicedataplaneService.Models
     public class TextDatasetFormatDetails : DatasetFormatDetails
     {
         
+        [JsonProperty(PropertyName = "textFileTypeMetadata")]
+        public TextFileTypeMetadata TextFileTypeMetadata { get; set; }
+        
         [JsonProperty(PropertyName = "formatType")]
         private readonly string formatType = "TEXT";
     }

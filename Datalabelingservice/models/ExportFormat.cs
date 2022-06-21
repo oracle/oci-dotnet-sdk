@@ -39,7 +39,9 @@ namespace Oci.DatalabelingService.Models
             [EnumMember(Value = "YOLO")]
             Yolo,
             [EnumMember(Value = "PASCAL_VOC")]
-            PascalVoc
+            PascalVoc,
+            [EnumMember(Value = "JSONL_COMPACT_PLUS_CONTENT")]
+            JsonlCompactPlusContent
         };
 
         /// <value>

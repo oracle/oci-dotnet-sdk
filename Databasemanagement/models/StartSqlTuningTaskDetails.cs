@@ -90,33 +90,27 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "statementTimeLimitInMinutes")]
         public System.Nullable<int> StatementTimeLimitInMinutes { get; set; }
         
+        [JsonProperty(PropertyName = "sqlTuningSet")]
+        public SqlTuningSetInput SqlTuningSet { get; set; }
+        
         /// <value>
-        /// The array of the details of SQL statement on which tuning is performed.
+        /// The details of the SQL statement on which tuning is performed.
+        /// To obtain the details of the SQL statement, you must provide either the sqlTuningSet
+        /// or the tuple of sqlDetails/timeStarted/timeEnded.
+        /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SqlDetails is required.")]
         [JsonProperty(PropertyName = "sqlDetails")]
         public System.Collections.Generic.List<SqlTuningTaskSqlDetail> SqlDetails { get; set; }
         
         /// <value>
         /// The start time of the period in which SQL statements are running.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TimeStarted is required.")]
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
         /// The end time of the period in which SQL statements are running.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TimeEnded is required.")]
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
         
