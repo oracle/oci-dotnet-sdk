@@ -211,7 +211,7 @@ namespace Oci.DatabaseService.Models
         public System.Double DataStorageSizeInGBs { get; set; }
         
         /// <value>
-        /// **Deprecated.** Use `availableAutonomousDataStorageSizeInTBs` for Autonomous Databases data storage available, in TBs.
+        /// **Deprecated.** Use `availableAutonomousDataStorageSizeInTBs` for Autonomous Databases' data storage availability in TBs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availableDataStorageSizeInTBs")]
@@ -255,7 +255,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// CPU cores that are not released to available pool after an Autonomous Database is terminated (Requires Autonomous Container Database restart).
+        /// CPU cores that continue to be included in the count of OCPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available OCPUs at its parent AVMC level by restarting the Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "reclaimableCpus")]
         public System.Nullable<int> ReclaimableCpus { get; set; }

@@ -45,5 +45,19 @@ namespace Oci.ContainerengineService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Duration after which OKE will give up eviction of the pods on the node.
+        /// PT0M will indicate you want to delete the node without cordon and drain. Default PT60M, Min PT0M, Max: PT60M. Format ISO 8601 e.g PT30M
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "overrideEvictionGraceDuration")]
+        public string OverrideEvictionGraceDuration { get; set; }
+        
+        /// <value>
+        /// If the underlying compute instance should be deleted if you cannot evict all the pods in grace period
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isForceDeletionAfterOverrideGraceDuration")]
+        public System.Nullable<bool> IsForceDeletionAfterOverrideGraceDuration { get; set; }
     }
 }

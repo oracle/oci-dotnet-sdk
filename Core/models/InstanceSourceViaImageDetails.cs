@@ -42,6 +42,25 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
         
+        /// <value>
+        /// The number of volume performance units (VPUs) that will be applied to this volume per GB,
+        /// representing the Block Volume service's elastic performance options.
+        /// See [Block Volume Performance Levels](https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/blockvolumeperformance.htm#perf_levels) for more information.
+        /// <br/>
+        /// Allowed values:
+        /// <br/>
+        ///   * `10`: Represents Balanced option.
+        /// <br/>
+        ///   * `20`: Represents Higher Performance option.
+        /// <br/>
+        ///   * `30`-`120`: Represents the Ultra High Performance option.
+        /// <br/>
+        /// For volumes with the auto-tuned performance feature enabled, this is set to the default (minimum) VPUs/GB.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "bootVolumeVpusPerGB")]
+        public System.Nullable<long> BootVolumeVpusPerGB { get; set; }
+        
         [JsonProperty(PropertyName = "sourceType")]
         private readonly string sourceType = "image";
     }

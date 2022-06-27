@@ -28,6 +28,19 @@ namespace Oci.ContainerengineService.Models
         public string Id { get; set; }
         
         /// <value>
+        /// The state of the nodepool.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<NodePoolLifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Details about the state of the nodepool.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
         /// The OCID of the compartment in which the node pool exists.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
@@ -153,6 +166,9 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
+        [JsonProperty(PropertyName = "nodeEvictionNodePoolSettings")]
+        public NodeEvictionNodePoolSettings NodeEvictionNodePoolSettings { get; set; }
         
     }
 }

@@ -62,7 +62,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<bool> IsExplicitlyAssigned { get; set; }
                 ///
         /// <value>
-        /// Lifecycle state of the subscription mapping.
+        /// Lifecycle state of the subscriptionMapping.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -83,7 +83,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         };
 
         /// <value>
-        /// Lifecycle state of the subscription mapping.
+        /// Lifecycle state of the subscriptionMapping.
         /// </value>
         /// <remarks>
         /// Required

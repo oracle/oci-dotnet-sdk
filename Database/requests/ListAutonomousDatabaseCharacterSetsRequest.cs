@@ -25,5 +25,32 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Specifies whether this request is for Autonomous Database on Shared infrastructure. By default, this request will be for Autonomous Database on Dedicated Exadata Infrastructure.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isShared")]
+        public System.Nullable<bool> IsShared { get; set; }
+        
+        ///
+        /// <value>
+        /// Specifies whether this request pertains to database character sets or national character sets.
+        /// 
+        /// </value>
+        ///
+        public enum CharacterSetTypeEnum {
+            [EnumMember(Value = "DATABASE")]
+            Database,
+            [EnumMember(Value = "NATIONAL")]
+            National
+        };
+
+        /// <value>
+        /// Specifies whether this request pertains to database character sets or national character sets.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "characterSetType")]
+        public System.Nullable<CharacterSetTypeEnum> CharacterSetType { get; set; }
     }
 }
