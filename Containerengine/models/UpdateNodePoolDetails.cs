@@ -117,5 +117,8 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        [JsonProperty(PropertyName = "nodeEvictionNodePoolSettings")]
+        public NodeEvictionNodePoolSettings NodeEvictionNodePoolSettings { get; set; }
+        
     }
 }

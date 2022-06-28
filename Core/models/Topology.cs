@@ -32,7 +32,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "VCN")]
             Vcn,
             [EnumMember(Value = "SUBNET")]
-            Subnet
+            Subnet,
+            [EnumMember(Value = "PATH")]
+            Path
         };
 
         

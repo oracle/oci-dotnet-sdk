@@ -93,6 +93,54 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Collections.Generic.List<string> OrderIds { get; set; }
         
         /// <value>
+        /// Denotes any program that is associated with the subscription.
+        /// </value>
+        [JsonProperty(PropertyName = "programType")]
+        public string ProgramType { get; set; }
+        
+        /// <value>
+        /// The country code for the customer associated with the subscription.
+        /// </value>
+        [JsonProperty(PropertyName = "customerCountryCode")]
+        public string CustomerCountryCode { get; set; }
+        
+        /// <value>
+        /// The currency code for the customer associated with the subscription.
+        /// </value>
+        [JsonProperty(PropertyName = "cloudAmountCurrency")]
+        public string CloudAmountCurrency { get; set; }
+        
+        /// <value>
+        /// Customer service identifier for the customer associated with the subscription.
+        /// </value>
+        [JsonProperty(PropertyName = "csiNumber")]
+        public string CsiNumber { get; set; }
+        
+        /// <value>
+        /// Tier for the subscription, such as if it is a free promotion subscription or a paid subscription.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionTier")]
+        public string SubscriptionTier { get; set; }
+        
+        /// <value>
+        /// Denotes if the subscription is a government subscription or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isGovernmentSubscription")]
+        public System.Nullable<bool> IsGovernmentSubscription { get; set; }
+        
+        /// <value>
+        /// List of promotions related to the subscription.
+        /// </value>
+        [JsonProperty(PropertyName = "promotion")]
+        public System.Collections.Generic.List<Promotion> Promotion { get; set; }
+        
+        /// <value>
+        /// Purchase entitlement id associated with the subscription.
+        /// </value>
+        [JsonProperty(PropertyName = "purchaseEntitlementId")]
+        public string PurchaseEntitlementId { get; set; }
+        
+        /// <value>
         /// Subscription start time.
         /// </value>
         [JsonProperty(PropertyName = "startDate")]

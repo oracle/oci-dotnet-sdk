@@ -407,5 +407,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "scanListenerPortTcpSsl")]
         public System.Nullable<int> ScanListenerPortTcpSsl { get; set; }
         
+        [JsonProperty(PropertyName = "dataCollectionOptions")]
+        public DataCollectionOptions DataCollectionOptions { get; set; }
+        
     }
 }

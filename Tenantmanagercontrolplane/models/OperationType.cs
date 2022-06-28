@@ -47,6 +47,10 @@ namespace Oci.TenantmanagercontrolplaneService.Models
       [EnumMember(Value = "RESTORE_TENANCY")]
       RestoreTenancy,
       [EnumMember(Value = "LOG_TENANCY_TERMINATION_REQUEST")]
-      LogTenancyTerminationRequest
+      LogTenancyTerminationRequest,
+      [EnumMember(Value = "SELF_OPT_IN")]
+      SelfOptIn,
+      [EnumMember(Value = "SELF_OPT_OUT")]
+      SelfOptOut
   }
 }
