@@ -100,6 +100,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
@@ -128,7 +131,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -165,6 +168,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum MaintenanceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "VMDB_REBOOT_MIGRATION")]
             VmdbRebootMigration
         };
@@ -173,7 +179,7 @@ namespace Oci.DatabaseService.Models
         /// The type of database node maintenance.
         /// </value>
         [JsonProperty(PropertyName = "maintenanceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MaintenanceTypeEnum> MaintenanceType { get; set; }
         
         /// <value>

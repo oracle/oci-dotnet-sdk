@@ -39,7 +39,7 @@ namespace Oci.ThreatintelligenceService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IndicatorType> Type { get; set; }
         
         /// <value>
@@ -78,7 +78,7 @@ namespace Oci.ThreatintelligenceService.Models
         /// The state of the indicator.  It will always be ACTIVE.  This field is added for consistency.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

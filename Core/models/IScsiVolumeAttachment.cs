@@ -88,7 +88,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "encryptionInTransitType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EncryptionInTransitType> EncryptionInTransitType { get; set; }
         
         /// <value>

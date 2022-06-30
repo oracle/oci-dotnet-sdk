@@ -42,6 +42,9 @@ namespace Oci.OspgatewayService.Models
         /// </value>
         ///
         public enum PlanTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FREE_TIER")]
             FreeTier,
             [EnumMember(Value = "PAYG")]
@@ -52,7 +55,7 @@ namespace Oci.OspgatewayService.Models
         /// Subscription plan type.
         /// </value>
         [JsonProperty(PropertyName = "planType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PlanTypeEnum> PlanType { get; set; }
         
         /// <value>
@@ -114,6 +117,9 @@ namespace Oci.OspgatewayService.Models
         /// </value>
         ///
         public enum UpgradeStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROMO")]
             Promo,
             [EnumMember(Value = "SUBMITTED")]
@@ -128,7 +134,7 @@ namespace Oci.OspgatewayService.Models
         /// Status of the upgrade.
         /// </value>
         [JsonProperty(PropertyName = "upgradeState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UpgradeStateEnum> UpgradeState { get; set; }
                 ///
         /// <value>
@@ -136,6 +142,9 @@ namespace Oci.OspgatewayService.Models
         /// </value>
         ///
         public enum UpgradeStateDetailsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "TAX_ERROR")]
             TaxError,
             [EnumMember(Value = "UPGRADE_ERROR")]
@@ -146,7 +155,7 @@ namespace Oci.OspgatewayService.Models
         /// This field is used to describe the Upgrade State in case of error (E.g. Upgrade failure caused by interfacing Tax details- TaxError)
         /// </value>
         [JsonProperty(PropertyName = "upgradeStateDetails")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UpgradeStateDetailsEnum> UpgradeStateDetails { get; set; }
         
         [JsonProperty(PropertyName = "taxInfo")]

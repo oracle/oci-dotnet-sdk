@@ -16,6 +16,9 @@ namespace Oci.ContainerengineService.Models
   /// The types of work request operations.
   /// </summary>
   public enum WorkRequestOperationType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CLUSTER_CREATE")]
       ClusterCreate,
       [EnumMember(Value = "CLUSTER_UPDATE")]

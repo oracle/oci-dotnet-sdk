@@ -39,6 +39,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum TunnelSaStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INITIATING")]
             Initiating,
             [EnumMember(Value = "LISTENING")]
@@ -57,7 +60,7 @@ namespace Oci.CoreService.Models
         /// The IPSec tunnel's phase one status.
         /// </value>
         [JsonProperty(PropertyName = "tunnelSaStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TunnelSaStatusEnum> TunnelSaStatus { get; set; }
         
         /// <value>

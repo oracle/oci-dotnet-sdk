@@ -19,6 +19,9 @@ namespace Oci.ManagementagentService.Models
     /// 
   /// </summary>
   public enum ArchitectureTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "X86_64")]
       X8664,
       [EnumMember(Value = "SPARC")]

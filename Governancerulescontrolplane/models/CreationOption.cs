@@ -16,6 +16,9 @@ namespace Oci.GovernancerulescontrolplaneService.Models
   /// The type of option used to create the governance rule, could be one of TEMPLATE or CLONE.
   /// </summary>
   public enum CreationOption {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "TEMPLATE")]
       Template,
       [EnumMember(Value = "CLONE")]

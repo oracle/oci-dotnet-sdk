@@ -68,6 +68,9 @@ namespace Oci.VisualbuilderService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "UPDATING")]
@@ -92,7 +95,7 @@ namespace Oci.VisualbuilderService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -163,6 +166,9 @@ namespace Oci.VisualbuilderService.Models
         /// </value>
         ///
         public enum ConsumptionModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UCM")]
             Ucm,
             [EnumMember(Value = "GOV")]
@@ -175,7 +181,7 @@ namespace Oci.VisualbuilderService.Models
         /// The entitlement used for billing purposes.
         /// </value>
         [JsonProperty(PropertyName = "consumptionModel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConsumptionModelEnum> ConsumptionModel { get; set; }
         
         [JsonProperty(PropertyName = "idcsInfo")]

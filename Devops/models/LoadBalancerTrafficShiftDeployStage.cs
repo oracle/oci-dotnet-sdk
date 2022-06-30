@@ -40,6 +40,9 @@ namespace Oci.DevopsService.Models
         /// </value>
         ///
         public enum TrafficShiftTargetEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AUTO_SELECT")]
             AutoSelect,
             [EnumMember(Value = "BLUE")]
@@ -56,7 +59,7 @@ namespace Oci.DevopsService.Models
         /// </remarks>
         [Required(ErrorMessage = "TrafficShiftTarget is required.")]
         [JsonProperty(PropertyName = "trafficShiftTarget")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TrafficShiftTargetEnum> TrafficShiftTarget { get; set; }
         
         /// <remarks>

@@ -92,6 +92,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum PatchTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PUBLISH")]
             Publish,
             [EnumMember(Value = "REFRESH")]
@@ -104,7 +107,7 @@ namespace Oci.DataintegrationService.Models
         /// The type of the patch applied or being applied on the application.
         /// </value>
         [JsonProperty(PropertyName = "patchType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PatchTypeEnum> PatchType { get; set; }
                 ///
         /// <value>
@@ -112,6 +115,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum PatchStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "QUEUED")]
             Queued,
             [EnumMember(Value = "SUCCESSFUL")]
@@ -126,7 +132,7 @@ namespace Oci.DataintegrationService.Models
         /// Status of the patch applied or being applied on the application
         /// </value>
         [JsonProperty(PropertyName = "patchStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PatchStatusEnum> PatchStatus { get; set; }
         
         /// <value>

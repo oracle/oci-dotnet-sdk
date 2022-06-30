@@ -36,6 +36,9 @@ namespace Oci.StackmonitoringService.Models
         /// </value>
         ///
         public enum LogTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INFO")]
             Info,
             [EnumMember(Value = "WARNING")]
@@ -54,7 +57,7 @@ namespace Oci.StackmonitoringService.Models
         /// </remarks>
         [Required(ErrorMessage = "LogType is required.")]
         [JsonProperty(PropertyName = "logType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LogTypeEnum> LogType { get; set; }
         
         /// <value>

@@ -18,6 +18,9 @@ namespace Oci.OceService.Models
     /// 
   /// </summary>
   public enum LicenseType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "NEW")]
       New,
       [EnumMember(Value = "BYOL")]

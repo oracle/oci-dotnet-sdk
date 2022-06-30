@@ -58,6 +58,9 @@ namespace Oci.FilestorageService.Models
         /// </value>
         ///
         public enum AccessEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "READ_WRITE")]
             ReadWrite,
             [EnumMember(Value = "READ_ONLY")]
@@ -70,7 +73,7 @@ namespace Oci.FilestorageService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "access")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AccessEnum> Access { get; set; }
                 ///
         /// <value>
@@ -84,6 +87,9 @@ namespace Oci.FilestorageService.Models
         /// </value>
         ///
         public enum IdentitySquashEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NONE")]
             None,
             [EnumMember(Value = "ROOT")]
@@ -102,7 +108,7 @@ namespace Oci.FilestorageService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "identitySquash")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IdentitySquashEnum> IdentitySquash { get; set; }
         
         /// <value>

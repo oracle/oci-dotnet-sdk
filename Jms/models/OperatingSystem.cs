@@ -30,7 +30,7 @@ namespace Oci.JmsService.Models
         /// </remarks>
         [Required(ErrorMessage = "Family is required.")]
         [JsonProperty(PropertyName = "family")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsFamily> Family { get; set; }
         
         /// <value>

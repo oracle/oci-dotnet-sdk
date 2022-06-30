@@ -61,7 +61,7 @@ namespace Oci.GovernancerulescontrolplaneService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<GovernanceRuleType> Type { get; set; }
         
         /// <value>
@@ -74,7 +74,7 @@ namespace Oci.GovernancerulescontrolplaneService.Models
         /// </remarks>
         [Required(ErrorMessage = "CreationOption is required.")]
         [JsonProperty(PropertyName = "creationOption")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CreationOption> CreationOption { get; set; }
         
         /// <value>
@@ -109,7 +109,7 @@ namespace Oci.GovernancerulescontrolplaneService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<GovernanceRuleLifecycleState> LifecycleState { get; set; }
         
         /// <value>

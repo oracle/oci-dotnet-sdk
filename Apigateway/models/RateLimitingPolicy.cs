@@ -36,6 +36,9 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         ///
         public enum RateKeyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CLIENT_IP")]
             ClientIp,
             [EnumMember(Value = "TOTAL")]
@@ -50,7 +53,7 @@ namespace Oci.ApigatewayService.Models
         /// </remarks>
         [Required(ErrorMessage = "RateKey is required.")]
         [JsonProperty(PropertyName = "rateKey")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RateKeyEnum> RateKey { get; set; }
         
     }

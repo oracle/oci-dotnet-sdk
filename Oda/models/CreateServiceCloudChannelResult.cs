@@ -75,7 +75,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "ClientType is required.")]
         [JsonProperty(PropertyName = "clientType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ServiceCloudClientType> ClientType { get; set; }
         
         [JsonProperty(PropertyName = "type")]

@@ -64,7 +64,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "ReasonCategory is required.")]
         [JsonProperty(PropertyName = "reasonCategory")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ReasonKeywords> ReasonCategory { get; set; }
         
         /// <value>

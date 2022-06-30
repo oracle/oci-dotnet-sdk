@@ -80,6 +80,9 @@ namespace Oci.OsmanagementService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NORMAL")]
             Normal,
             [EnumMember(Value = "UNREACHABLE")]
@@ -94,14 +97,14 @@ namespace Oci.OsmanagementService.Models
         /// status of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
         /// The Operating System type of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "osFamily")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsFamilies> OsFamily { get; set; }
         
         /// <value>

@@ -51,7 +51,7 @@ namespace Oci.DatacatalogService.Models
         /// Type of a rule.
         /// </value>
         [JsonProperty(PropertyName = "ruleType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RuleType> RuleType { get; set; }
         
         /// <value>
@@ -117,7 +117,7 @@ namespace Oci.DatacatalogService.Models
         /// Origin type of the rule.
         /// </value>
         [JsonProperty(PropertyName = "originType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RuleOriginType> OriginType { get; set; }
         
         /// <value>
@@ -137,7 +137,7 @@ namespace Oci.DatacatalogService.Models
         /// State of the rule.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
     }

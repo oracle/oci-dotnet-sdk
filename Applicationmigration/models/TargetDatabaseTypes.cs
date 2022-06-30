@@ -16,6 +16,9 @@ namespace Oci.ApplicationmigrationService.Models
   /// The type of the target database associated with the target instance.
   /// </summary>
   public enum TargetDatabaseTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "DATABASE_SYSTEM")]
       DatabaseSystem,
       [EnumMember(Value = "NOT_SET")]

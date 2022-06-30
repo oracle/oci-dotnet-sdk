@@ -46,6 +46,9 @@ namespace Oci.LimitsService.Models
         /// </value>
         ///
         public enum ScopeTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "GLOBAL")]
             Global,
             [EnumMember(Value = "REGION")]
@@ -59,7 +62,7 @@ namespace Oci.LimitsService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scopeType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ScopeTypeEnum> ScopeType { get; set; }
         
         /// <value>

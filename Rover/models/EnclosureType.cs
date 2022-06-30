@@ -16,6 +16,9 @@ namespace Oci.RoverService.Models
   /// Type of enclosure the node is shipped in.
   /// </summary>
   public enum EnclosureType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "RUGGADIZED")]
       Ruggadized,
       [EnumMember(Value = "NON_RUGGADIZED")]

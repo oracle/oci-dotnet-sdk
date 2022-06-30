@@ -58,11 +58,14 @@ namespace Oci.MarketplaceService.Models
         /// The listing's package type.
         /// </value>
         [JsonProperty(PropertyName = "packageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageTypeEnum> PackageType { get; set; }
                 ///
         ///
         public enum PricingTypesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FREE")]
             Free,
             [EnumMember(Value = "BYOL")]
@@ -74,11 +77,14 @@ namespace Oci.MarketplaceService.Models
         /// <value>
         /// Summary of the pricing types available across all packages in the listing.
         /// </value>
-        [JsonProperty(PropertyName = "pricingTypes", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "pricingTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<PricingTypesEnum> PricingTypes { get; set; }
                 ///
         ///
         public enum CompatibleArchitecturesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "X86")]
             X86,
             [EnumMember(Value = "ARM")]
@@ -88,7 +94,7 @@ namespace Oci.MarketplaceService.Models
         /// <value>
         /// The list of compatible architectures supported by the listing
         /// </value>
-        [JsonProperty(PropertyName = "compatibleArchitectures", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "compatibleArchitectures", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<CompatibleArchitecturesEnum> CompatibleArchitectures { get; set; }
         
         /// <value>
@@ -123,7 +129,7 @@ namespace Oci.MarketplaceService.Models
         /// The publisher category to which the listing belongs. The publisher category informs where the listing appears for use.
         /// </value>
         [JsonProperty(PropertyName = "listingType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ListingType> ListingType { get; set; }
         
     }

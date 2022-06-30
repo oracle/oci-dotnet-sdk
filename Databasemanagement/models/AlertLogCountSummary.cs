@@ -27,6 +27,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum CategoryEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UNKNOWN")]
             Unknown,
             [EnumMember(Value = "INCIDENT_ERROR")]
@@ -59,7 +62,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "Category is required.")]
         [JsonProperty(PropertyName = "category")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CategoryEnum> Category { get; set; }
         
         /// <value>

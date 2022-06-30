@@ -27,6 +27,9 @@ namespace Oci.ServicemanagerproxyService.Models
         /// </value>
         ///
         public enum EnvironmentTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INSTANCE_URL_PROD")]
             InstanceUrlProd,
             [EnumMember(Value = "INSTANCE_URL_TEST")]
@@ -45,7 +48,7 @@ namespace Oci.ServicemanagerproxyService.Models
         /// </remarks>
         [Required(ErrorMessage = "EnvironmentType is required.")]
         [JsonProperty(PropertyName = "environmentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EnvironmentTypeEnum> EnvironmentType { get; set; }
         
         /// <value>

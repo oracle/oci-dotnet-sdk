@@ -16,6 +16,9 @@ namespace Oci.CoreService.Models
   /// The layer 3 IP MTU to use with this virtual circuit.
   /// </summary>
   public enum VirtualCircuitIpMtu {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "MTU_1500")]
       Mtu1500,
       [EnumMember(Value = "MTU_9000")]

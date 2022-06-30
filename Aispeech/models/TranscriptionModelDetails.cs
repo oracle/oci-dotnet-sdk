@@ -26,6 +26,9 @@ namespace Oci.AispeechService.Models
         /// </value>
         ///
         public enum DomainEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "GENERIC")]
             Generic
         };
@@ -34,7 +37,7 @@ namespace Oci.AispeechService.Models
         /// Domain for input files.
         /// </value>
         [JsonProperty(PropertyName = "domain")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DomainEnum> Domain { get; set; }
                 ///
         /// <value>
@@ -42,6 +45,9 @@ namespace Oci.AispeechService.Models
         /// </value>
         ///
         public enum LanguageCodeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "en-US")]
             EnUs,
             [EnumMember(Value = "es-ES")]
@@ -54,7 +60,7 @@ namespace Oci.AispeechService.Models
         /// Locale value as per given in [https://datatracker.ietf.org/doc/html/rfc5646].
         /// </value>
         [JsonProperty(PropertyName = "languageCode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LanguageCodeEnum> LanguageCode { get; set; }
         
     }

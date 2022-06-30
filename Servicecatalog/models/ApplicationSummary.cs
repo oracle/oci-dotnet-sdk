@@ -73,14 +73,14 @@ namespace Oci.ServicecatalogService.Models
         /// Summary of the pricing types available across all packages in the application.
         /// </value>
         [JsonProperty(PropertyName = "pricingType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PricingTypeEnum> PricingType { get; set; }
         
         /// <value>
         /// The type of the packages withing the application.
         /// </value>
         [JsonProperty(PropertyName = "packageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageTypeEnum> PackageType { get; set; }
         
     }

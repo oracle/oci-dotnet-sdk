@@ -47,7 +47,7 @@ namespace Oci.CloudguardService.Models
         /// Owner of ResponderRecipe
         /// </value>
         [JsonProperty(PropertyName = "owner")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OwnerType> Owner { get; set; }
         
         /// <value>
@@ -94,7 +94,7 @@ namespace Oci.CloudguardService.Models
         /// The current state of the Example.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

@@ -16,6 +16,9 @@ namespace Oci.OdaService.Models
   /// The valid set of Grant Types.
   /// </summary>
   public enum AuthenticationGrantType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CLIENT_CREDENTIALS")]
       ClientCredentials,
       [EnumMember(Value = "AUTHORIZATION_CODE")]

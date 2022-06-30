@@ -25,7 +25,7 @@ namespace Oci.OsmanagementService.Models
         /// system architecture
         /// </value>
         [JsonProperty(PropertyName = "architecture")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ArchTypes> Architecture { get; set; }
         
         /// <value>
@@ -38,7 +38,7 @@ namespace Oci.OsmanagementService.Models
         /// The Operating System type of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "osFamily")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsFamilies> OsFamily { get; set; }
         
         /// <value>

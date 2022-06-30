@@ -48,7 +48,7 @@ namespace Oci.NetworkloadbalancerService.Models
         /// IP version associated with this IP address.
         /// </value>
         [JsonProperty(PropertyName = "ipVersion")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IpVersion> IpVersion { get; set; }
         
         [JsonProperty(PropertyName = "reservedIp")]

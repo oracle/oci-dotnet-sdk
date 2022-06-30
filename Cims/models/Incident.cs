@@ -53,7 +53,7 @@ namespace Oci.CimsService.Models
         /// The kind of support ticket, such as a technical support request.
         /// </value>
         [JsonProperty(PropertyName = "problemType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProblemType> ProblemType { get; set; }
         
         /// <value>

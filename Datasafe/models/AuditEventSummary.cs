@@ -76,6 +76,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum DatabaseTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DATABASE_CLOUD_SERVICE")]
             DatabaseCloudService,
             [EnumMember(Value = "AUTONOMOUS_DATABASE")]
@@ -96,7 +99,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "DatabaseType is required.")]
         [JsonProperty(PropertyName = "databaseType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseTypeEnum> DatabaseType { get; set; }
                 ///
         /// <value>
@@ -104,6 +107,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum TargetClassEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DATABASE")]
             Database
         };
@@ -112,7 +118,7 @@ namespace Oci.DatasafeService.Models
         /// Class of the target that was audited.
         /// </value>
         [JsonProperty(PropertyName = "targetClass")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TargetClassEnum> TargetClass { get; set; }
         
         /// <value>
@@ -152,6 +158,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum OperationStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SUCCESS")]
             Success,
             [EnumMember(Value = "FAILURE")]
@@ -162,7 +171,7 @@ namespace Oci.DatasafeService.Models
         /// Indicates whether the operation was a success or a failure.
         /// </value>
         [JsonProperty(PropertyName = "operationStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationStatusEnum> OperationStatus { get; set; }
         
         /// <value>
@@ -264,6 +273,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum AuditLocationEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AUDIT_TABLE")]
             AuditTable
         };
@@ -272,7 +284,7 @@ namespace Oci.DatasafeService.Models
         /// The location of the audit. Currently the value is audit table.
         /// </value>
         [JsonProperty(PropertyName = "auditLocation")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuditLocationEnum> AuditLocation { get; set; }
         
         /// <value>
@@ -298,6 +310,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum AuditTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STANDARD")]
             Standard,
             [EnumMember(Value = "FINE_GRAINED")]
@@ -320,7 +335,7 @@ namespace Oci.DatasafeService.Models
         /// Type of auditing.
         /// </value>
         [JsonProperty(PropertyName = "auditType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuditTypeEnum> AuditType { get; set; }
         
         /// <value>

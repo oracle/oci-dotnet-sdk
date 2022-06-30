@@ -49,7 +49,7 @@ namespace Oci.LicensemanagerService.Models
         /// </remarks>
         [Required(ErrorMessage = "Category is required.")]
         [JsonProperty(PropertyName = "category")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProductCategory> Category { get; set; }
         
     }

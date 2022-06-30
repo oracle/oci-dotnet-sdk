@@ -26,6 +26,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum CompletionTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NO_CHAIN")]
             NoChain,
             [EnumMember(Value = "CHAIN")]
@@ -38,7 +41,7 @@ namespace Oci.MysqlService.Models
         /// (\"completion_type\")
         /// </value>
         [JsonProperty(PropertyName = "completionType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CompletionTypeEnum> CompletionType { get; set; }
                 ///
         /// <value>
@@ -46,6 +49,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum DefaultAuthenticationPluginEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "mysql_native_password")]
             MysqlNativePassword,
             [EnumMember(Value = "sha256_password")]
@@ -58,7 +64,7 @@ namespace Oci.MysqlService.Models
         /// (\"default_authentication_plugin\")
         /// </value>
         [JsonProperty(PropertyName = "defaultAuthenticationPlugin")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DefaultAuthenticationPluginEnum> DefaultAuthenticationPlugin { get; set; }
                 ///
         /// <value>
@@ -66,6 +72,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum TransactionIsolationEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "READ-UNCOMMITTED")]
             ReadUncommitted,
             [EnumMember(Value = "READ-COMMITED")]
@@ -82,7 +91,7 @@ namespace Oci.MysqlService.Models
         /// (\"transaction_isolation\")
         /// </value>
         [JsonProperty(PropertyName = "transactionIsolation")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TransactionIsolationEnum> TransactionIsolation { get; set; }
         
         /// <value>
@@ -143,6 +152,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum GroupReplicationConsistencyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "EVENTUAL")]
             Eventual,
             [EnumMember(Value = "BEFORE_ON_PRIMARY_FAILOVER")]
@@ -188,7 +200,7 @@ namespace Oci.MysqlService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "groupReplicationConsistency")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<GroupReplicationConsistencyEnum> GroupReplicationConsistency { get; set; }
         
         /// <value>
@@ -242,6 +254,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum BinlogRowMetadataEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FULL")]
             Full,
             [EnumMember(Value = "MINIMAL")]
@@ -254,7 +269,7 @@ namespace Oci.MysqlService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "binlogRowMetadata")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BinlogRowMetadataEnum> BinlogRowMetadata { get; set; }
         
         /// <value>

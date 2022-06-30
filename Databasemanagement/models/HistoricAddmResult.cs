@@ -61,6 +61,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INITIAL")]
             Initial,
             [EnumMember(Value = "EXECUTING")]
@@ -77,7 +80,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The status of the ADDM task.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
@@ -95,6 +98,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum HowCreatedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AUTO")]
             Auto,
             [EnumMember(Value = "MANUAL")]
@@ -105,7 +111,7 @@ namespace Oci.DatabasemanagementService.Models
         /// A description of how the task was created.
         /// </value>
         [JsonProperty(PropertyName = "howCreated")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<HowCreatedEnum> HowCreated { get; set; }
         
         /// <value>

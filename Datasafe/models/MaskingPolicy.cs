@@ -76,7 +76,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MaskingLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -159,6 +159,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum RecompileEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SERIAL")]
             Serial,
             [EnumMember(Value = "PARALLEL")]
@@ -178,7 +181,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "Recompile is required.")]
         [JsonProperty(PropertyName = "recompile")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RecompileEnum> Recompile { get; set; }
         
         /// <value>

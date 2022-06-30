@@ -16,6 +16,9 @@ namespace Oci.CertificatesService.Models
   /// The current revocation state of the certificate.
   /// </summary>
   public enum RevocationReason {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "UNSPECIFIED")]
       Unspecified,
       [EnumMember(Value = "KEY_COMPROMISE")]

@@ -75,6 +75,9 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         ///
         public enum BucketListingActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "Deny")]
             Deny,
             [EnumMember(Value = "ListObjects")]
@@ -88,7 +91,7 @@ namespace Oci.ObjectstorageService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bucketListingAction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BucketListingActionEnum> BucketListingAction { get; set; }
                 ///
         /// <value>
@@ -96,6 +99,9 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         ///
         public enum AccessTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ObjectRead")]
             ObjectRead,
             [EnumMember(Value = "ObjectWrite")]
@@ -118,7 +124,7 @@ namespace Oci.ObjectstorageService.Models
         /// </remarks>
         [Required(ErrorMessage = "AccessType is required.")]
         [JsonProperty(PropertyName = "accessType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AccessTypeEnum> AccessType { get; set; }
         
         /// <value>

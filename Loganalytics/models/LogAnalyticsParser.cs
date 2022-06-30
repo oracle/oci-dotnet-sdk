@@ -203,6 +203,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "XML")]
             Xml,
             [EnumMember(Value = "JSON")]
@@ -219,7 +222,7 @@ namespace Oci.LoganalyticsService.Models
         /// The parser type. Default value is REGEX.
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>

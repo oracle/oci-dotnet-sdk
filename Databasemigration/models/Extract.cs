@@ -27,7 +27,7 @@ namespace Oci.DatabasemigrationService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "performanceProfile")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExtractPerformanceProfile> PerformanceProfile { get; set; }
         
         /// <value>

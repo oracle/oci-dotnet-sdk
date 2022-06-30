@@ -61,7 +61,7 @@ namespace Oci.NetworkloadbalancerService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -76,7 +76,7 @@ namespace Oci.NetworkloadbalancerService.Models
         /// IP version associated with the NLB.
         /// </value>
         [JsonProperty(PropertyName = "nlbIpVersion")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NlbIpVersion> NlbIpVersion { get; set; }
         
         /// <value>

@@ -74,6 +74,9 @@ namespace Oci.AppmgmtcontrolService.Models
         /// </value>
         ///
         public enum MonitoringStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLED")]
             Enabled,
             [EnumMember(Value = "DISABLED")]
@@ -84,7 +87,7 @@ namespace Oci.AppmgmtcontrolService.Models
         /// Monitoring status. Can be either enabled or disabled.
         /// </value>
         [JsonProperty(PropertyName = "monitoringState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MonitoringStateEnum> MonitoringState { get; set; }
                 ///
         /// <value>
@@ -92,6 +95,9 @@ namespace Oci.AppmgmtcontrolService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "UPDATING")]
@@ -112,7 +118,7 @@ namespace Oci.AppmgmtcontrolService.Models
         /// The current state of the monitored instance.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

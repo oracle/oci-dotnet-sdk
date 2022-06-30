@@ -49,6 +49,9 @@ namespace Oci.AianomalydetectionService.Models
         /// </value>
         ///
         public enum ReductionMethodEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DELETE_ROW")]
             DeleteRow,
             [EnumMember(Value = "AVERAGE_ROW")]
@@ -66,7 +69,7 @@ namespace Oci.AianomalydetectionService.Models
         /// </remarks>
         [Required(ErrorMessage = "ReductionMethod is required.")]
         [JsonProperty(PropertyName = "reductionMethod")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ReductionMethodEnum> ReductionMethod { get; set; }
         
     }

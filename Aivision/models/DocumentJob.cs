@@ -61,14 +61,14 @@ namespace Oci.AivisionService.Models
         /// The document language, abbreviated according to ISO 639-2.
         /// </value>
         [JsonProperty(PropertyName = "language")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DocumentLanguage> Language { get; set; }
         
         /// <value>
         /// The type of document.
         /// </value>
         [JsonProperty(PropertyName = "documentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DocumentType> DocumentType { get; set; }
         
         [JsonProperty(PropertyName = "inputLocation")]
@@ -114,6 +114,9 @@ namespace Oci.AivisionService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SUCCEEDED")]
             Succeeded,
             [EnumMember(Value = "FAILED")]
@@ -136,7 +139,7 @@ namespace Oci.AivisionService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -150,6 +153,9 @@ namespace Oci.AivisionService.Models
         /// </value>
         ///
         public enum LifecycleDetailsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PARTIALLY_SUCCEEDED")]
             PartiallySucceeded,
             [EnumMember(Value = "COMPLETELY_FAILED")]
@@ -160,7 +166,7 @@ namespace Oci.AivisionService.Models
         /// The detailed status of FAILED state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleDetailsEnum> LifecycleDetails { get; set; }
         
     }

@@ -29,7 +29,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConditionOperatorName> Name { get; set; }
         
         /// <value>

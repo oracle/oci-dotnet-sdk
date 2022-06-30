@@ -33,6 +33,9 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         ///
         public enum ExecutionPlanStrategyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AUTO_APPROVED")]
             AutoApproved
         };
@@ -48,7 +51,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </remarks>
         [Required(ErrorMessage = "ExecutionPlanStrategy is required.")]
         [JsonProperty(PropertyName = "executionPlanStrategy")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExecutionPlanStrategyEnum> ExecutionPlanStrategy { get; set; }
         
         [JsonProperty(PropertyName = "operation")]

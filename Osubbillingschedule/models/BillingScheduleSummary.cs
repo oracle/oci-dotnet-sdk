@@ -49,6 +49,9 @@ namespace Oci.OsubbillingscheduleService.Models
         /// </value>
         ///
         public enum InvoiceStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INVOICED")]
             Invoiced,
             [EnumMember(Value = "NOT_INVOICED")]
@@ -60,7 +63,7 @@ namespace Oci.OsubbillingscheduleService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "invoiceStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InvoiceStatusEnum> InvoiceStatus { get; set; }
         
         /// <value>

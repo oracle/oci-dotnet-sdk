@@ -55,7 +55,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "AuditPolicyCategory is required.")]
         [JsonProperty(PropertyName = "auditPolicyCategory")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuditPolicyCategory> AuditPolicyCategory { get; set; }
                 ///
         /// <value>
@@ -63,6 +63,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum EnableStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLED")]
             Enabled,
             [EnumMember(Value = "DISABLED")]
@@ -79,7 +82,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "EnableStatus is required.")]
         [JsonProperty(PropertyName = "enableStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EnableStatusEnum> EnableStatus { get; set; }
         
         /// <value>
@@ -143,6 +146,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum EnabledEntitiesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALL_USERS")]
             AllUsers,
             [EnumMember(Value = "INCLUDE_USERS")]
@@ -165,7 +171,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "EnabledEntities is required.")]
         [JsonProperty(PropertyName = "enabledEntities")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EnabledEntitiesEnum> EnabledEntities { get; set; }
         
     }

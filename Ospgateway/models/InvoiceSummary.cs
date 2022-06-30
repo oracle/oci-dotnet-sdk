@@ -54,6 +54,9 @@ namespace Oci.OspgatewayService.Models
         /// </value>
         ///
         public enum InvoiceStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OPEN")]
             Open,
             [EnumMember(Value = "PAST_DUE")]
@@ -68,7 +71,7 @@ namespace Oci.OspgatewayService.Models
         /// Invoice status
         /// </value>
         [JsonProperty(PropertyName = "invoiceStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InvoiceStatusEnum> InvoiceStatus { get; set; }
                 ///
         /// <value>
@@ -76,6 +79,9 @@ namespace Oci.OspgatewayService.Models
         /// </value>
         ///
         public enum InvoiceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "HARDWARE")]
             Hardware,
             [EnumMember(Value = "SUBSCRIPTION")]
@@ -98,7 +104,7 @@ namespace Oci.OspgatewayService.Models
         /// Type of invoice
         /// </value>
         [JsonProperty(PropertyName = "invoiceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InvoiceTypeEnum> InvoiceType { get; set; }
         
         /// <value>

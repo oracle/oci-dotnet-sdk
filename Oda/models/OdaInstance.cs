@@ -60,6 +60,9 @@ namespace Oci.OdaService.Models
         /// </value>
         ///
         public enum ShapeNameEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DEVELOPMENT")]
             Development,
             [EnumMember(Value = "PRODUCTION")]
@@ -74,7 +77,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "ShapeName is required.")]
         [JsonProperty(PropertyName = "shapeName")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ShapeNameEnum> ShapeName { get; set; }
         
         /// <value>
@@ -106,6 +109,9 @@ namespace Oci.OdaService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "UPDATING")]
@@ -126,7 +132,7 @@ namespace Oci.OdaService.Models
         /// The current state of the Digital Assistant instance.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
@@ -134,6 +140,9 @@ namespace Oci.OdaService.Models
         /// </value>
         ///
         public enum LifecycleSubStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "STARTING")]
@@ -166,7 +175,7 @@ namespace Oci.OdaService.Models
         /// The current sub-state of the Digital Assistant instance.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleSubState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleSubStateEnum> LifecycleSubState { get; set; }
         
         /// <value>

@@ -111,7 +111,7 @@ namespace Oci.IdentityService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Domain.TypeEnum> Type { get; set; }
         
         /// <value>
@@ -156,7 +156,7 @@ namespace Oci.IdentityService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Domain.LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
@@ -165,6 +165,9 @@ namespace Oci.IdentityService.Models
         /// </value>
         ///
         public enum LifecycleDetailsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DEACTIVATING")]
             Deactivating,
             [EnumMember(Value = "ACTIVATING")]
@@ -178,7 +181,7 @@ namespace Oci.IdentityService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleDetailsEnum> LifecycleDetails { get; set; }
         
         /// <value>

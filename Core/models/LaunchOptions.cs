@@ -36,6 +36,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BootVolumeTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ISCSI")]
             Iscsi,
             [EnumMember(Value = "SCSI")]
@@ -60,7 +63,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bootVolumeType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BootVolumeTypeEnum> BootVolumeType { get; set; }
                 ///
         /// <value>
@@ -73,6 +76,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum FirmwareEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BIOS")]
             Bios,
             [EnumMember(Value = "UEFI_64")]
@@ -88,7 +94,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "firmware")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FirmwareEnum> Firmware { get; set; }
                 ///
         /// <value>
@@ -101,6 +107,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum NetworkTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "E1000")]
             E1000,
             [EnumMember(Value = "VFIO")]
@@ -118,7 +127,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "networkType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NetworkTypeEnum> NetworkType { get; set; }
                 ///
         /// <value>
@@ -134,6 +143,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum RemoteDataVolumeTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ISCSI")]
             Iscsi,
             [EnumMember(Value = "SCSI")]
@@ -158,7 +170,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "remoteDataVolumeType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RemoteDataVolumeTypeEnum> RemoteDataVolumeType { get; set; }
         
         /// <value>

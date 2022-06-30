@@ -39,7 +39,7 @@ namespace Oci.WaasService.Models
         /// </remarks>
         [Required(ErrorMessage = "OperationType is required.")]
         [JsonProperty(PropertyName = "operationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkRequestOperationTypes> OperationType { get; set; }
         
         /// <value>
@@ -50,7 +50,7 @@ namespace Oci.WaasService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkRequestStatusValues> Status { get; set; }
         
         /// <value>

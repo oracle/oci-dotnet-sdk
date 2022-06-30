@@ -51,7 +51,7 @@ namespace Oci.OsmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "UpdateType is required.")]
         [JsonProperty(PropertyName = "updateType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UpdateTypes> UpdateType { get; set; }
         
     }

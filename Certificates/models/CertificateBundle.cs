@@ -119,7 +119,7 @@ namespace Oci.CertificatesService.Models
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Stages is required.")]
-        [JsonProperty(PropertyName = "stages", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "stages", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<VersionStage> Stages { get; set; }
         
         [JsonProperty(PropertyName = "revocationStatus")]
@@ -129,6 +129,7 @@ namespace Oci.CertificatesService.Models
 
     public class CertificateBundleModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -154,7 +155,14 @@ namespace Oci.CertificatesService.Models
                     obj = new CertificateBundleWithPrivateKey();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under CertificateBundle! Returning null value.");
+            }
             return obj;
         }
     }

@@ -16,6 +16,9 @@ namespace Oci.CloudguardService.Models
   /// The status of the dataMaskRule.
   /// </summary>
   public enum DataMaskRuleStatus {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ENABLED")]
       Enabled,
       [EnumMember(Value = "DISABLED")]

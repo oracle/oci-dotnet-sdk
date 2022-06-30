@@ -35,14 +35,14 @@ namespace Oci.DatasafeService.Models
         /// The status of the alert.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlertStatus> Status { get; set; }
         
         /// <value>
         /// Severity level of the alert.
         /// </value>
         [JsonProperty(PropertyName = "severity")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlertSeverity> Severity { get; set; }
         
         /// <value>
@@ -78,6 +78,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum OperationStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SUCCEEDED")]
             Succeeded,
             [EnumMember(Value = "FAILED")]
@@ -88,7 +91,7 @@ namespace Oci.DatasafeService.Models
         /// The result of the operation (event) that triggered alert.
         /// </value>
         [JsonProperty(PropertyName = "operationStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationStatusEnum> OperationStatus { get; set; }
         
         /// <value>
@@ -113,7 +116,7 @@ namespace Oci.DatasafeService.Models
         /// Type of the alert. Indicates the Data Safe feature triggering the alert.
         /// </value>
         [JsonProperty(PropertyName = "alertType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlertType> AlertType { get; set; }
         
         /// <value>
@@ -153,7 +156,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlertLifecycleState> LifecycleState { get; set; }
         
         /// <value>

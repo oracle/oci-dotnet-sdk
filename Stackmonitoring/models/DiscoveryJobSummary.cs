@@ -36,6 +36,9 @@ namespace Oci.StackmonitoringService.Models
         /// </value>
         ///
         public enum ResourceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "WEBLOGIC_DOMAIN")]
             WeblogicDomain,
             [EnumMember(Value = "EBS_INSTANCE")]
@@ -48,7 +51,7 @@ namespace Oci.StackmonitoringService.Models
         /// Resource Type
         /// </value>
         [JsonProperty(PropertyName = "resourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceTypeEnum> ResourceType { get; set; }
         
         /// <value>
@@ -69,6 +72,9 @@ namespace Oci.StackmonitoringService.Models
         /// </value>
         ///
         public enum DiscoveryTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ADD")]
             Add,
             [EnumMember(Value = "ADD_WITH_RETRY")]
@@ -82,7 +88,7 @@ namespace Oci.StackmonitoringService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "discoveryType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DiscoveryTypeEnum> DiscoveryType { get; set; }
                 ///
         /// <value>
@@ -90,6 +96,9 @@ namespace Oci.StackmonitoringService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SUCCESS")]
             Success,
             [EnumMember(Value = "FAILURE")]
@@ -108,7 +117,7 @@ namespace Oci.StackmonitoringService.Models
         /// Specifies the status of the discovery job
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
@@ -139,7 +148,7 @@ namespace Oci.StackmonitoringService.Models
         /// The current state of the DiscoveryJob Resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

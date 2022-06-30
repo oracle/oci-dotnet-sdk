@@ -29,7 +29,7 @@ namespace Oci.MarketplaceService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Publication.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -75,7 +75,7 @@ namespace Oci.MarketplaceService.Models
         /// The listing's package type.
         /// </value>
         [JsonProperty(PropertyName = "packageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageTypeEnum> PackageType { get; set; }
         
         /// <value>
@@ -92,7 +92,7 @@ namespace Oci.MarketplaceService.Models
         /// </remarks>
         [Required(ErrorMessage = "ListingType is required.")]
         [JsonProperty(PropertyName = "listingType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ListingType> ListingType { get; set; }
         
         /// <value>

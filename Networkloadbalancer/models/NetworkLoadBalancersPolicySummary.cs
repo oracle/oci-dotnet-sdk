@@ -16,6 +16,9 @@ namespace Oci.NetworkloadbalancerService.Models
   /// Summary of network load balancing policy
   /// </summary>
   public enum NetworkLoadBalancersPolicySummary {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "TWO_TUPLE")]
       TwoTuple,
       [EnumMember(Value = "THREE_TUPLE")]

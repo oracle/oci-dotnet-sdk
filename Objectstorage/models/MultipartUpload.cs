@@ -84,7 +84,7 @@ namespace Oci.ObjectstorageService.Models
         /// The storage tier that the object is stored in.
         /// </value>
         [JsonProperty(PropertyName = "storageTier")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StorageTier> StorageTier { get; set; }
         
     }

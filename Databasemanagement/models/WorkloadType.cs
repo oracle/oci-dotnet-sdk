@@ -16,6 +16,9 @@ namespace Oci.DatabasemanagementService.Models
   /// A list of supported workload types.
   /// </summary>
   public enum WorkloadType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "OLTP")]
       Oltp,
       [EnumMember(Value = "DW")]

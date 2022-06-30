@@ -36,6 +36,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum WafFeatureEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROTECTION_RULES")]
             ProtectionRules,
             [EnumMember(Value = "JS_CHALLENGE")]
@@ -58,7 +61,7 @@ namespace Oci.WaasService.Models
         /// The specific Web Application Firewall feature that blocked the requests, such as JavaScript Challenge or Access Control.
         /// </value>
         [JsonProperty(PropertyName = "wafFeature")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WafFeatureEnum> WafFeature { get; set; }
         
         /// <value>

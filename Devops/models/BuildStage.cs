@@ -26,6 +26,9 @@ namespace Oci.DevopsService.Models
         /// </value>
         ///
         public enum ImageEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OL7_X86_64_STANDARD_10")]
             Ol7X8664Standard10
         };
@@ -38,7 +41,7 @@ namespace Oci.DevopsService.Models
         /// </remarks>
         [Required(ErrorMessage = "Image is required.")]
         [JsonProperty(PropertyName = "image")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ImageEnum> Image { get; set; }
         
         /// <value>

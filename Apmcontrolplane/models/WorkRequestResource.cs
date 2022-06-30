@@ -43,7 +43,7 @@ namespace Oci.ApmcontrolplaneService.Models
         /// </remarks>
         [Required(ErrorMessage = "ActionType is required.")]
         [JsonProperty(PropertyName = "actionType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionTypes> ActionType { get; set; }
         
         /// <value>

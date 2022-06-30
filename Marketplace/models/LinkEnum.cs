@@ -16,6 +16,9 @@ namespace Oci.MarketplaceService.Models
   /// Possible values for a link type.
   /// </summary>
   public enum LinkEnum {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "SELF")]
       Self,
       [EnumMember(Value = "CANONICAL")]

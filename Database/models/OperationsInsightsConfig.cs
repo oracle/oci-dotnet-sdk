@@ -26,6 +26,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum OperationsInsightsStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLING")]
             Enabling,
             [EnumMember(Value = "ENABLED")]
@@ -48,7 +51,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "OperationsInsightsStatus is required.")]
         [JsonProperty(PropertyName = "operationsInsightsStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationsInsightsStatusEnum> OperationsInsightsStatus { get; set; }
         
         /// <value>

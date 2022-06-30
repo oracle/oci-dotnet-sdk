@@ -26,6 +26,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum BlockActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SHOW_ERROR_PAGE")]
             ShowErrorPage,
             [EnumMember(Value = "SET_RESPONSE_CODE")]
@@ -36,7 +39,7 @@ namespace Oci.WaasService.Models
         /// If `action` is set to `BLOCK`, this specifies how the traffic is blocked when detected as malicious by a protection rule. If unspecified, defaults to `SET_RESPONSE_CODE`.
         /// </value>
         [JsonProperty(PropertyName = "blockAction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BlockActionEnum> BlockAction { get; set; }
         
         /// <value>
@@ -107,6 +110,9 @@ namespace Oci.WaasService.Models
                 ///
         ///
         public enum AllowedHttpMethodsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OPTIONS")]
             Options,
             [EnumMember(Value = "GET")]
@@ -132,7 +138,7 @@ namespace Oci.WaasService.Models
         /// <value>
         /// The list of allowed HTTP methods. If unspecified, default to `[OPTIONS, GET, HEAD, POST]`. This setting only applies if a corresponding protection rule is enabled, such as the \"Restrict HTTP Request Methods\" rule (key: 911100).
         /// </value>
-        [JsonProperty(PropertyName = "allowedHttpMethods", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "allowedHttpMethods", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<AllowedHttpMethodsEnum> AllowedHttpMethods { get; set; }
         
         /// <value>

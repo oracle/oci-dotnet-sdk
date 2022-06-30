@@ -29,6 +29,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum NumaNodesPerSocketEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NPS1")]
             Nps1,
             [EnumMember(Value = "NPS2")]
@@ -40,7 +43,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "numaNodesPerSocket")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NumaNodesPerSocketEnum> NumaNodesPerSocket { get; set; }
         
         /// <value>

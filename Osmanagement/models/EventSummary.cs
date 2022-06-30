@@ -55,7 +55,7 @@ namespace Oci.OsmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "EventType is required.")]
         [JsonProperty(PropertyName = "eventType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EventType> EventType { get; set; }
         
         /// <value>

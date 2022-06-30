@@ -55,6 +55,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum DbWorkloadEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OLTP")]
             Oltp,
             [EnumMember(Value = "DW")]
@@ -75,7 +78,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dbWorkload")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DbWorkloadEnum> DbWorkload { get; set; }
         
         /// <value>

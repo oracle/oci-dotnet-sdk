@@ -51,7 +51,7 @@ namespace Oci.MarketplaceService.Models
         /// Reason the account is ineligible to launch paid listings
         /// </value>
         [JsonProperty(PropertyName = "ineligibilityReason")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IneligibilityReasonEnum> IneligibilityReason { get; set; }
         
     }

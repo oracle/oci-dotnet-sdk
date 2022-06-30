@@ -86,7 +86,7 @@ namespace Oci.BudgetService.Models
         /// </remarks>
         [Required(ErrorMessage = "ResetPeriod is required.")]
         [JsonProperty(PropertyName = "resetPeriod")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResetPeriod> ResetPeriod { get; set; }
         
         /// <value>
@@ -100,7 +100,7 @@ namespace Oci.BudgetService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "processingPeriodType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProcessingPeriodType> ProcessingPeriodType { get; set; }
         
         /// <value>
@@ -108,7 +108,7 @@ namespace Oci.BudgetService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "targetType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TargetType> TargetType { get; set; }
         
         /// <value>
@@ -128,7 +128,7 @@ namespace Oci.BudgetService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

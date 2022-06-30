@@ -69,7 +69,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "FilterType is required.")]
         [JsonProperty(PropertyName = "filterType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConditionFilterType> FilterType { get; set; }
         
         /// <value>

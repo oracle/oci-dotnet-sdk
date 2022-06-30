@@ -16,6 +16,9 @@ namespace Oci.DatasafeService.Models
   /// The type of the format entry.
   /// </summary>
   public enum FormatEntryType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "DELETE_ROWS")]
       DeleteRows,
       [EnumMember(Value = "DETERMINISTIC_SUBSTITUTION")]

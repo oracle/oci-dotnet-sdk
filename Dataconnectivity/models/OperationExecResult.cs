@@ -26,6 +26,9 @@ namespace Oci.DataconnectivityService.Models
         /// </value>
         ///
         public enum ExecutionStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FAILED")]
             Failed,
             [EnumMember(Value = "SUCCESS")]
@@ -40,7 +43,7 @@ namespace Oci.DataconnectivityService.Models
         /// Status of the operation job for particular set of input.
         /// </value>
         [JsonProperty(PropertyName = "executionStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExecutionStatusEnum> ExecutionStatus { get; set; }
         
         /// <value>

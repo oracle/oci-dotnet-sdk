@@ -102,6 +102,9 @@ namespace Oci.OceService.Models
         /// </value>
         ///
         public enum InstanceUsageTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PRIMARY")]
             Primary,
             [EnumMember(Value = "NONPRIMARY")]
@@ -112,7 +115,7 @@ namespace Oci.OceService.Models
         /// Instance type based on its usage
         /// </value>
         [JsonProperty(PropertyName = "instanceUsageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InstanceUsageTypeEnum> InstanceUsageType { get; set; }
         
         /// <value>
@@ -147,7 +150,7 @@ namespace Oci.OceService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "upgradeSchedule")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OceInstance.UpgradeScheduleEnum> UpgradeSchedule { get; set; }
         
         /// <value>
@@ -161,6 +164,9 @@ namespace Oci.OceService.Models
         /// </value>
         ///
         public enum InstanceAccessTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PUBLIC")]
             Public,
             [EnumMember(Value = "PRIVATE")]
@@ -171,14 +177,14 @@ namespace Oci.OceService.Models
         /// Flag indicating whether the instance access is private or public
         /// </value>
         [JsonProperty(PropertyName = "instanceAccessType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InstanceAccessTypeEnum> InstanceAccessType { get; set; }
         
         /// <value>
         /// Flag indicating whether the instance license is new cloud or bring your own license
         /// </value>
         [JsonProperty(PropertyName = "instanceLicenseType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LicenseType> InstanceLicenseType { get; set; }
         
         /// <value>
@@ -197,14 +203,14 @@ namespace Oci.OceService.Models
         /// The current state of the instance lifecycle.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
         /// Details of the current state of the instance lifecycle
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleDetails> LifecycleDetails { get; set; }
         
         /// <value>

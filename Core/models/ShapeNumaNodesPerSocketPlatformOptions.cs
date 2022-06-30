@@ -24,6 +24,9 @@ namespace Oci.CoreService.Models
                 ///
         ///
         public enum AllowedValuesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NPS0")]
             Nps0,
             [EnumMember(Value = "NPS1")]
@@ -38,7 +41,7 @@ namespace Oci.CoreService.Models
         /// The supported values for this platform configuration property.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "allowedValues", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "allowedValues", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<AllowedValuesEnum> AllowedValues { get; set; }
         
         /// <value>

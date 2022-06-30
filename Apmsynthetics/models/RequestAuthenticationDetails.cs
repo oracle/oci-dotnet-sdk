@@ -25,7 +25,7 @@ namespace Oci.ApmsyntheticsService.Models
         /// Request http oauth scheme.
         /// </value>
         [JsonProperty(PropertyName = "oauthScheme")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OAuthSchemes> OauthScheme { get; set; }
         
         /// <value>
@@ -62,7 +62,7 @@ namespace Oci.ApmsyntheticsService.Models
         /// Request method.
         /// </value>
         [JsonProperty(PropertyName = "authRequestMethod")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RequestMethods> AuthRequestMethod { get; set; }
         
         /// <value>

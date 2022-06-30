@@ -36,6 +36,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AVAILABLE")]
             Available,
             [EnumMember(Value = "INVALID")]
@@ -52,7 +55,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The status of the file. INVALID status is used when the file number is not in use, for example, a file in a tablespace that was removed.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
                 ///
         /// <value>
@@ -60,6 +63,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum OnlineStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SYSOFF")]
             Sysoff,
             [EnumMember(Value = "SYSTEM")]
@@ -76,7 +82,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The online status of the file.
         /// </value>
         [JsonProperty(PropertyName = "onlineStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OnlineStatusEnum> OnlineStatus { get; set; }
         
         /// <value>
@@ -90,6 +96,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum LostWriteProtectEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLED")]
             Enabled,
             [EnumMember(Value = "PROTECT_OFF")]
@@ -102,7 +111,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The lost write protection status of the file.
         /// </value>
         [JsonProperty(PropertyName = "lostWriteProtect")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LostWriteProtectEnum> LostWriteProtect { get; set; }
                 ///
         /// <value>
@@ -110,6 +119,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum SharedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SHARED")]
             Shared,
             [EnumMember(Value = "LOCAL_FOR_RIM")]
@@ -122,7 +134,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Type of tablespace this file belongs to. If it's for a shared tablespace, for a local temporary tablespace for RIM (read-only) instances, or for local temporary tablespace for all instance types.
         /// </value>
         [JsonProperty(PropertyName = "shared")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SharedEnum> Shared { get; set; }
         
         /// <value>

@@ -54,6 +54,9 @@ namespace Oci.DataconnectivityService.Models
         /// </value>
         ///
         public enum NetworkValidationStatusEnumEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "REACHABLE")]
             Reachable,
             [EnumMember(Value = "NOT_REACHABLE")]
@@ -66,7 +69,7 @@ namespace Oci.DataconnectivityService.Models
         /// Exception or error message encountered while testing network reachability for the data asset.
         /// </value>
         [JsonProperty(PropertyName = "networkValidationStatusEnum")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NetworkValidationStatusEnumEnum> NetworkValidationStatusEnum { get; set; }
         
     }

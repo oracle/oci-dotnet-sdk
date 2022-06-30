@@ -16,6 +16,9 @@ namespace Oci.HealthchecksService.Models
   /// The protocols for ping probes.
   /// </summary>
   public enum PingProbeProtocol {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ICMP")]
       Icmp,
       [EnumMember(Value = "TCP")]

@@ -26,6 +26,9 @@ namespace Oci.DataintegrationService.Models
                 ///
         ///
         public enum DaysEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SUNDAY")]
             Sunday,
             [EnumMember(Value = "MONDAY")]
@@ -45,7 +48,7 @@ namespace Oci.DataintegrationService.Models
         /// <value>
         /// A list of days of the week to be scheduled. i.e. execute on Monday and Thursday.
         /// </value>
-        [JsonProperty(PropertyName = "days", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "days", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<DaysEnum> Days { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]

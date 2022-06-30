@@ -16,6 +16,9 @@ namespace Oci.DatasafeService.Models
   /// Represents the category to which an audit policy belongs. An audit policy can belong to a single category.
   /// </summary>
   public enum AuditPolicyCategory {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "BASIC_ACTIVITY")]
       BasicActivity,
       [EnumMember(Value = "ADMIN_USER_ACTIVITY")]

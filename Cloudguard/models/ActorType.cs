@@ -16,6 +16,9 @@ namespace Oci.CloudguardService.Models
   /// Actor type who performed the operation
   /// </summary>
   public enum ActorType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CLOUD_GUARD_SERVICE")]
       CloudGuardService,
       [EnumMember(Value = "CORRELATION")]

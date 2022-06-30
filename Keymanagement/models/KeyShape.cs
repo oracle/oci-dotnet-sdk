@@ -26,6 +26,9 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         ///
         public enum AlgorithmEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AES")]
             Aes,
             [EnumMember(Value = "RSA")]
@@ -42,7 +45,7 @@ namespace Oci.KeymanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "Algorithm is required.")]
         [JsonProperty(PropertyName = "algorithm")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
         
         /// <value>
@@ -64,6 +67,9 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         ///
         public enum CurveIdEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NIST_P256")]
             NistP256,
             [EnumMember(Value = "NIST_P384")]
@@ -76,7 +82,7 @@ namespace Oci.KeymanagementService.Models
         /// Supported curve IDs for ECDSA keys.
         /// </value>
         [JsonProperty(PropertyName = "curveId")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CurveIdEnum> CurveId { get; set; }
         
     }

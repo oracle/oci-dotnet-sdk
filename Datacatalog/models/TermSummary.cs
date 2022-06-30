@@ -89,7 +89,7 @@ namespace Oci.DatacatalogService.Models
         /// Status of the approval process workflow for this business term in the glossary.
         /// </value>
         [JsonProperty(PropertyName = "workflowStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TermWorkflowStatus> WorkflowStatus { get; set; }
         
         /// <value>
@@ -102,7 +102,7 @@ namespace Oci.DatacatalogService.Models
         /// State of the term.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
     }

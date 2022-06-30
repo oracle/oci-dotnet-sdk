@@ -76,6 +76,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
@@ -96,7 +99,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
@@ -104,6 +107,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum FilterTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "VTAP")]
             Vtap
         };
@@ -112,7 +118,7 @@ namespace Oci.CoreService.Models
         /// Indicates which service will use this capture filter
         /// </value>
         [JsonProperty(PropertyName = "filterType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FilterTypeEnum> FilterType { get; set; }
         
         /// <value>

@@ -56,6 +56,9 @@ namespace Oci.CimsService.Models
         /// </value>
         ///
         public enum ScopeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AD")]
             Ad,
             [EnumMember(Value = "REGION")]
@@ -70,7 +73,7 @@ namespace Oci.CimsService.Models
         /// The scope of the service category or resource.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ScopeEnum> Scope { get; set; }
                 ///
         /// <value>
@@ -78,6 +81,9 @@ namespace Oci.CimsService.Models
         /// </value>
         ///
         public enum UnitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "COUNT")]
             Count,
             [EnumMember(Value = "GB")]
@@ -90,7 +96,7 @@ namespace Oci.CimsService.Models
         /// The unit to use to measure the service category or resource.
         /// </value>
         [JsonProperty(PropertyName = "unit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UnitEnum> Unit { get; set; }
         
     }

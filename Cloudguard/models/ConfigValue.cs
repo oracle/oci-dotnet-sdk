@@ -29,7 +29,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "ListType is required.")]
         [JsonProperty(PropertyName = "listType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConfigurationListItemType> ListType { get; set; }
         
         /// <value>

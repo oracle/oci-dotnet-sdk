@@ -32,6 +32,9 @@ namespace Oci.StreamingService.Models
         /// </value>
         ///
         public enum KeyStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "CREATING")]
@@ -50,7 +53,7 @@ namespace Oci.StreamingService.Models
         /// Life cycle State of the custom key
         /// </value>
         [JsonProperty(PropertyName = "keyState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<KeyStateEnum> KeyState { get; set; }
         
     }

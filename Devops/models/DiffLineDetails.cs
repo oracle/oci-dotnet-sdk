@@ -44,6 +44,9 @@ namespace Oci.DevopsService.Models
         /// </value>
         ///
         public enum ConflictMarkerEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BASE")]
             Base,
             [EnumMember(Value = "TARGET")]
@@ -58,7 +61,7 @@ namespace Oci.DevopsService.Models
         /// Indicates whether a line in a conflicted section of the difference is from the base version, the target version, or if its just a marker indicating the beginning, middle, or end of a conflicted section.
         /// </value>
         [JsonProperty(PropertyName = "conflictMarker")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConflictMarkerEnum> ConflictMarker { get; set; }
         
     }

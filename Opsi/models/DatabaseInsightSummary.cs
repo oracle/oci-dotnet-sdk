@@ -110,7 +110,7 @@ namespace Oci.OpsiService.Models
         /// Indicates the status of a database insight in Operations Insights
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceStatus> Status { get; set; }
         
         /// <value>
@@ -129,7 +129,7 @@ namespace Oci.OpsiService.Models
         /// The current state of the database.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -148,6 +148,7 @@ namespace Oci.OpsiService.Models
 
     public class DatabaseInsightSummaryModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -179,7 +180,14 @@ namespace Oci.OpsiService.Models
                     obj = new EmManagedExternalDatabaseInsightSummary();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under DatabaseInsightSummary! Returning null value.");
+            }
             return obj;
         }
     }

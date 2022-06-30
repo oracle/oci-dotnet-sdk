@@ -16,6 +16,9 @@ namespace Oci.ManagementdashboardService.Models
   /// Determines how the saved search is displayed in a dashboard.
   /// </summary>
   public enum SavedSearchTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "SEARCH_SHOW_IN_DASHBOARD")]
       SearchShowInDashboard,
       [EnumMember(Value = "SEARCH_DONT_SHOW_IN_DASHBOARD")]

@@ -98,7 +98,7 @@ namespace Oci.DataflowService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PrivateEndpointLifecycleState> LifecycleState { get; set; }
         
         /// <value>

@@ -16,6 +16,9 @@ namespace Oci.MarketplaceService.Models
   /// The possible values for a listing package's pricing strategy.
   /// </summary>
   public enum PricingStrategyEnum {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "PER_OCPU_LINEAR")]
       PerOcpuLinear,
       [EnumMember(Value = "PER_OCPU_MIN_BILLING")]

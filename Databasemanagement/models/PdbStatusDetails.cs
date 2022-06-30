@@ -25,7 +25,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The status of the PDBs with this count.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseStatus> Status { get; set; }
         
         /// <value>

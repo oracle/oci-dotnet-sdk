@@ -16,6 +16,9 @@ namespace Oci.DatasafeService.Models
   /// The feature name (type) that pertains to the alert.
   /// </summary>
   public enum AlertType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "AUDITING")]
       Auditing,
       [EnumMember(Value = "SECURITY_ASSESSMENT")]

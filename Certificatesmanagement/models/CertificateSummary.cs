@@ -79,7 +79,7 @@ namespace Oci.CertificatesmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CertificateLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -112,28 +112,28 @@ namespace Oci.CertificatesmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "ConfigType is required.")]
         [JsonProperty(PropertyName = "configType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CertificateConfigType> ConfigType { get; set; }
         
         /// <value>
         /// The algorithm used to create key pairs.
         /// </value>
         [JsonProperty(PropertyName = "keyAlgorithm")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<KeyAlgorithm> KeyAlgorithm { get; set; }
         
         /// <value>
         /// The algorithm used to sign the public key certificate.
         /// </value>
         [JsonProperty(PropertyName = "signatureAlgorithm")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SignatureAlgorithm> SignatureAlgorithm { get; set; }
         
         /// <value>
         /// The name of the profile used to create the certificate, which depends on the type of certificate you need.
         /// </value>
         [JsonProperty(PropertyName = "certificateProfileType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CertificateProfileType> CertificateProfileType { get; set; }
         
         /// <value>

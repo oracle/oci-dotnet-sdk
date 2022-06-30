@@ -16,6 +16,9 @@ namespace Oci.CimsService.Models
   /// The unit to use to measure the service category or resource.
   /// </summary>
   public enum Unit {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "COUNT")]
       Count,
       [EnumMember(Value = "GB")]

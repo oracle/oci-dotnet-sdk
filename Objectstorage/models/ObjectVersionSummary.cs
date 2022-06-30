@@ -73,14 +73,14 @@ namespace Oci.ObjectstorageService.Models
         /// The storage tier that the object is stored in.
         /// </value>
         [JsonProperty(PropertyName = "storageTier")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StorageTier> StorageTier { get; set; }
         
         /// <value>
         /// Archival state of an object. This field is set only for objects in Archive tier.
         /// </value>
         [JsonProperty(PropertyName = "archivalState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ArchivalState> ArchivalState { get; set; }
         
         /// <value>

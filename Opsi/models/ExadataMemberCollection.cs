@@ -59,7 +59,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "ExadataType is required.")]
         [JsonProperty(PropertyName = "exadataType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExadataType> ExadataType { get; set; }
         
         /// <value>
@@ -70,7 +70,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "ExadataRackType is required.")]
         [JsonProperty(PropertyName = "exadataRackType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExadataRackType> ExadataRackType { get; set; }
         
         /// <value>

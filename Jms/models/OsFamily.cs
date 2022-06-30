@@ -16,6 +16,9 @@ namespace Oci.JmsService.Models
   /// Operating System types.
   /// </summary>
   public enum OsFamily {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "LINUX")]
       Linux,
       [EnumMember(Value = "WINDOWS")]

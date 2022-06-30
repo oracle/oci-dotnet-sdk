@@ -145,6 +145,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum StorageVolumePerformanceModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BALANCED")]
             Balanced,
             [EnumMember(Value = "HIGH_PERFORMANCE")]
@@ -156,7 +159,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "storageVolumePerformanceMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StorageVolumePerformanceModeEnum> StorageVolumePerformanceMode { get; set; }
         
         /// <value>
@@ -254,6 +257,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum DatabaseEditionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STANDARD_EDITION")]
             StandardEdition,
             [EnumMember(Value = "ENTERPRISE_EDITION")]
@@ -273,7 +279,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "DatabaseEdition is required.")]
         [JsonProperty(PropertyName = "databaseEdition")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseEditionEnum> DatabaseEdition { get; set; }
         
         /// <value>
@@ -293,6 +299,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
@@ -323,7 +332,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -346,6 +355,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum DiskRedundancyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "HIGH")]
             High,
             [EnumMember(Value = "NORMAL")]
@@ -359,7 +371,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "diskRedundancy")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DiskRedundancyEnum> DiskRedundancy { get; set; }
         
         /// <value>
@@ -439,6 +451,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LicenseModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LICENSE_INCLUDED")]
             LicenseIncluded,
             [EnumMember(Value = "BRING_YOUR_OWN_LICENSE")]
@@ -450,7 +465,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         [JsonProperty(PropertyName = "maintenanceWindow")]

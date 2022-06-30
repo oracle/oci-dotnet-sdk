@@ -51,7 +51,7 @@ namespace Oci.JmsService.Models
         /// The security status of the Java Runtime.
         /// </value>
         [JsonProperty(PropertyName = "securityStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JreSecurityStatus> SecurityStatus { get; set; }
         
         /// <value>
@@ -89,7 +89,7 @@ namespace Oci.JmsService.Models
         /// The lifecycle state of the installation site.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
     }

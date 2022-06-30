@@ -26,6 +26,9 @@ namespace Oci.BlockchainService.Models
         /// </value>
         ///
         public enum OperationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATE_PLATFORM")]
             CreatePlatform,
             [EnumMember(Value = "UPDATE_PLATFORM")]
@@ -54,14 +57,14 @@ namespace Oci.BlockchainService.Models
         /// </remarks>
         [Required(ErrorMessage = "OperationType is required.")]
         [JsonProperty(PropertyName = "operationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
         
         /// <value>
         /// status of current work request.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkRequest.StatusEnum> Status { get; set; }
         
         /// <value>

@@ -133,6 +133,9 @@ namespace Oci.MonitoringService.Models
         /// </value>
         ///
         public enum SeverityEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CRITICAL")]
             Critical,
             [EnumMember(Value = "ERROR")]
@@ -153,7 +156,7 @@ namespace Oci.MonitoringService.Models
         /// </remarks>
         [Required(ErrorMessage = "Severity is required.")]
         [JsonProperty(PropertyName = "severity")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SeverityEnum> Severity { get; set; }
         
         /// <value>
@@ -213,7 +216,7 @@ namespace Oci.MonitoringService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Alarm.LifecycleStateEnum> LifecycleState { get; set; }
         
     }

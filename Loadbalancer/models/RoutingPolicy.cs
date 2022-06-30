@@ -42,6 +42,9 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         ///
         public enum ConditionLanguageVersionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "V1")]
             V1
         };
@@ -55,7 +58,7 @@ namespace Oci.LoadbalancerService.Models
         /// </remarks>
         [Required(ErrorMessage = "ConditionLanguageVersion is required.")]
         [JsonProperty(PropertyName = "conditionLanguageVersion")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConditionLanguageVersionEnum> ConditionLanguageVersion { get; set; }
         
         /// <value>

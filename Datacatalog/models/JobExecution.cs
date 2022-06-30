@@ -41,7 +41,7 @@ namespace Oci.DatacatalogService.Models
         /// Type of the job execution.
         /// </value>
         [JsonProperty(PropertyName = "jobType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobType> JobType { get; set; }
         
         /// <value>
@@ -66,7 +66,7 @@ namespace Oci.DatacatalogService.Models
         /// Status of the job execution, such as running, paused, or completed.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobExecutionState> LifecycleState { get; set; }
         
         /// <value>

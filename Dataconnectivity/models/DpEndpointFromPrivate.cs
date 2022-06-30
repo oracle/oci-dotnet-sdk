@@ -66,6 +66,9 @@ namespace Oci.DataconnectivityService.Models
         /// </value>
         ///
         public enum StateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "INACTIVE")]
@@ -76,7 +79,7 @@ namespace Oci.DataconnectivityService.Models
         /// Specifies the private endpoint state.
         /// </value>
         [JsonProperty(PropertyName = "state")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StateEnum> State { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]

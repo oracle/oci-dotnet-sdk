@@ -26,6 +26,9 @@ namespace Oci.BdsService.Models
         /// </value>
         ///
         public enum ActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CHANGE_SHAPE_SCALE_UP")]
             ChangeShapeScaleUp,
             [EnumMember(Value = "CHANGE_SHAPE_SCALE_DOWN")]
@@ -40,7 +43,7 @@ namespace Oci.BdsService.Models
         /// </remarks>
         [Required(ErrorMessage = "Action is required.")]
         [JsonProperty(PropertyName = "action")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
         
         /// <remarks>

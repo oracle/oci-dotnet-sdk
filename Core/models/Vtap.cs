@@ -86,6 +86,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
@@ -106,7 +109,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
@@ -114,6 +117,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum LifecycleStateDetailsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "RUNNING")]
             Running,
             [EnumMember(Value = "STOPPED")]
@@ -124,7 +130,7 @@ namespace Oci.CoreService.Models
         /// The VTAP's current running state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleStateDetails")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateDetailsEnum> LifecycleStateDetails { get; set; }
         
         /// <value>
@@ -177,6 +183,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum EncapsulationProtocolEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "VXLAN")]
             Vxlan
         };
@@ -186,7 +195,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "encapsulationProtocol")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EncapsulationProtocolEnum> EncapsulationProtocol { get; set; }
         
         /// <value>
@@ -212,6 +221,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum SourceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "VNIC")]
             Vnic,
             [EnumMember(Value = "SUBNET")]
@@ -231,7 +243,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SourceTypeEnum> SourceType { get; set; }
                 ///
         /// <value>
@@ -239,6 +251,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum TrafficModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DEFAULT")]
             Default,
             [EnumMember(Value = "PRIORITY")]
@@ -249,7 +264,7 @@ namespace Oci.CoreService.Models
         /// Used to control the priority of traffic. It is an optional field. If it not passed, the value is DEFAULT
         /// </value>
         [JsonProperty(PropertyName = "trafficMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TrafficModeEnum> TrafficMode { get; set; }
         
         /// <value>
@@ -264,6 +279,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum TargetTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "VNIC")]
             Vnic,
             [EnumMember(Value = "NETWORK_LOAD_BALANCER")]
@@ -277,7 +295,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "targetType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TargetTypeEnum> TargetType { get; set; }
         
         /// <value>

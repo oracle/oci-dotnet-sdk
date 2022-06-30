@@ -16,6 +16,9 @@ namespace Oci.MysqlService.Models
   /// Possible operation types.
   /// </summary>
   public enum WorkRequestOperationType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CREATE_DBSYSTEM")]
       CreateDbsystem,
       [EnumMember(Value = "UPDATE_DBSYSTEM")]

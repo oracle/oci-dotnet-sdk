@@ -41,6 +41,9 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         ///
         public enum TimeUnitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YEARS")]
             Years,
             [EnumMember(Value = "DAYS")]
@@ -55,7 +58,7 @@ namespace Oci.ObjectstorageService.Models
         /// </remarks>
         [Required(ErrorMessage = "TimeUnit is required.")]
         [JsonProperty(PropertyName = "timeUnit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TimeUnitEnum> TimeUnit { get; set; }
         
     }

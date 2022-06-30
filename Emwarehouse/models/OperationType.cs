@@ -16,6 +16,9 @@ namespace Oci.EmwarehouseService.Models
   /// Possible operation types.
   /// </summary>
   public enum OperationType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CREATE_EM_WAREHOUSE")]
       CreateEmWarehouse,
       [EnumMember(Value = "UPDATE_EM_WAREHOUSE")]

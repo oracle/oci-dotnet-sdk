@@ -71,7 +71,7 @@ namespace Oci.AnalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AnalyticsInstanceLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -83,7 +83,7 @@ namespace Oci.AnalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "FeatureSet is required.")]
         [JsonProperty(PropertyName = "featureSet")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FeatureSet> FeatureSet { get; set; }
         
         /// <remarks>
@@ -98,7 +98,7 @@ namespace Oci.AnalyticsService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LicenseType> LicenseType { get; set; }
         
         /// <value>

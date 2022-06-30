@@ -16,6 +16,9 @@ namespace Oci.ManagementagentService.Models
   /// Supported platform types.
   /// </summary>
   public enum PlatformTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "LINUX")]
       Linux,
       [EnumMember(Value = "WINDOWS")]

@@ -86,7 +86,7 @@ namespace Oci.CertificatesmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CertificateAuthorityLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -125,7 +125,7 @@ namespace Oci.CertificatesmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "ConfigType is required.")]
         [JsonProperty(PropertyName = "configType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CertificateAuthorityConfigType> ConfigType { get; set; }
         
         [JsonProperty(PropertyName = "subject")]
@@ -135,7 +135,7 @@ namespace Oci.CertificatesmanagementService.Models
         /// The algorithm used to sign public key certificates that the CA issues.
         /// </value>
         [JsonProperty(PropertyName = "signingAlgorithm")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SignatureAlgorithm> SigningAlgorithm { get; set; }
         
         /// <value>

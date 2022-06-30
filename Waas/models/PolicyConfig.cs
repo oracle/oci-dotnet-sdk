@@ -41,6 +41,9 @@ namespace Oci.WaasService.Models
                 ///
         ///
         public enum TlsProtocolsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "TLS_V1")]
             TlsV1,
             [EnumMember(Value = "TLS_V1_1")]
@@ -64,7 +67,7 @@ namespace Oci.WaasService.Models
         /// <br/>
         /// Enabled TLS protocols must go in a row. For example if `TLS_v1_1` and `TLS_V1_3` are enabled, `TLS_V1_2` must be enabled too.
         /// </value>
-        [JsonProperty(PropertyName = "tlsProtocols", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "tlsProtocols", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<TlsProtocolsEnum> TlsProtocols { get; set; }
         
         /// <value>
@@ -88,6 +91,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum ClientAddressHeaderEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "X_FORWARDED_FOR")]
             XForwardedFor,
             [EnumMember(Value = "X_CLIENT_IP")]
@@ -108,7 +114,7 @@ namespace Oci.WaasService.Models
         /// Example: X-Client-Ip: 11.1.1.1, 13.3.3.3In the case of multiple headers with the same name, only the first header will be used. It is assumed that CDN sets the correct client IP address to prevent spoofing.- **X_FORWARDED_FOR:** Corresponds to X-Forwarded-For header name.- **X_CLIENT_IP:** Corresponds to X-Client-Ip header name.- **X_REAL_IP:** Corresponds to X-Real-Ip header name.- **CLIENT_IP:** Corresponds to Client-Ip header name.- **TRUE_CLIENT_IP:** Corresponds to True-Client-Ip header name.
         /// </value>
         [JsonProperty(PropertyName = "clientAddressHeader")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ClientAddressHeaderEnum> ClientAddressHeader { get; set; }
         
         /// <value>
@@ -129,6 +135,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum CipherGroupEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DEFAULT")]
             Default
         };
@@ -138,7 +147,7 @@ namespace Oci.WaasService.Models
         /// - **DEFAULT:** Cipher group supports TLS 1.0, TLS 1.1, TLS 1.2, TLS 1.3 protocols. It has the following ciphers enabled: `ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:!DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA`
         /// </value>
         [JsonProperty(PropertyName = "cipherGroup")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CipherGroupEnum> CipherGroup { get; set; }
         
         /// <value>

@@ -92,7 +92,7 @@ namespace Oci.LoggingService.Models
         /// The log group object state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LogGroupLifecycleState> LifecycleState { get; set; }
         
     }

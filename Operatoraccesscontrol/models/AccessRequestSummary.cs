@@ -75,14 +75,14 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// resourceType for which the AccessRequest is applicable
         /// </value>
         [JsonProperty(PropertyName = "resourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceTypes> ResourceType { get; set; }
         
         /// <value>
         /// The current state of the AccessRequest.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AccessRequestLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
@@ -119,7 +119,7 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// Priority assigned to the access request by the operator
         /// </value>
         [JsonProperty(PropertyName = "severity")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AccessRequestSeverities> Severity { get; set; }
         
         /// <value>

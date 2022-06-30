@@ -59,6 +59,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum SslModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "VERIFY_IDENTITY")]
             VerifyIdentity,
             [EnumMember(Value = "VERIFY_CA")]
@@ -77,7 +80,7 @@ namespace Oci.MysqlService.Models
         /// </remarks>
         [Required(ErrorMessage = "SslMode is required.")]
         [JsonProperty(PropertyName = "sslMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SslModeEnum> SslMode { get; set; }
         
         [JsonProperty(PropertyName = "sslCaCertificate")]

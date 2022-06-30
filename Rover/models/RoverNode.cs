@@ -51,7 +51,7 @@ namespace Oci.RoverService.Models
         /// The type of node indicating if it belongs to a cluster
         /// </value>
         [JsonProperty(PropertyName = "nodeType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NodeType> NodeType { get; set; }
         
         /// <value>
@@ -64,7 +64,7 @@ namespace Oci.RoverService.Models
         /// The type of enclosure rover node is shipped in.
         /// </value>
         [JsonProperty(PropertyName = "enclosureType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EnclosureType> EnclosureType { get; set; }
         
         /// <value>
@@ -97,7 +97,7 @@ namespace Oci.RoverService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -162,6 +162,9 @@ namespace Oci.RoverService.Models
         /// </value>
         ///
         public enum ShippingPreferenceEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ORACLE_SHIPPED")]
             OracleShipped,
             [EnumMember(Value = "CUSTOMER_PICKUP")]
@@ -172,7 +175,7 @@ namespace Oci.RoverService.Models
         /// Preference for device delivery.
         /// </value>
         [JsonProperty(PropertyName = "shippingPreference")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ShippingPreferenceEnum> ShippingPreference { get; set; }
         
         /// <value>

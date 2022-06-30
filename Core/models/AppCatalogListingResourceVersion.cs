@@ -75,6 +75,9 @@ namespace Oci.CoreService.Models
                 ///
         ///
         public enum AllowedActionsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SNAPSHOT")]
             Snapshot,
             [EnumMember(Value = "BOOT_VOLUME_DETACH")]
@@ -94,7 +97,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// Allowed actions for the listing resource.
         /// </value>
-        [JsonProperty(PropertyName = "allowedActions", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "allowedActions", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<AllowedActionsEnum> AllowedActions { get; set; }
         
     }

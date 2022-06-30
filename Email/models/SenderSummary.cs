@@ -55,7 +55,7 @@ namespace Oci.EmailService.Models
         /// The current status of the approved sender.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Sender.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

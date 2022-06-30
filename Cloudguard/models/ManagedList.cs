@@ -71,7 +71,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "ListType is required.")]
         [JsonProperty(PropertyName = "listType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ManagedListType> ListType { get; set; }
         
         /// <value>
@@ -84,7 +84,7 @@ namespace Oci.CloudguardService.Models
         /// provider of the feed
         /// </value>
         [JsonProperty(PropertyName = "feedProvider")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FeedProviderType> FeedProvider { get; set; }
         
         /// <value>
@@ -109,7 +109,7 @@ namespace Oci.CloudguardService.Models
         /// The current state of the resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

@@ -113,7 +113,7 @@ namespace Oci.LoganalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EmBridgeLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
@@ -132,7 +132,7 @@ namespace Oci.LoganalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "LastImportProcessingStatus is required.")]
         [JsonProperty(PropertyName = "lastImportProcessingStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EmBridgeLatestImportProcessingStatus> LastImportProcessingStatus { get; set; }
         
         /// <value>

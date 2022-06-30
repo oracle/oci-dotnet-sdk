@@ -38,6 +38,9 @@ namespace Oci.OspgatewayService.Models
         /// </value>
         ///
         public enum CreditCardTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "VISA")]
             Visa,
             [EnumMember(Value = "AMEX")]
@@ -58,7 +61,7 @@ namespace Oci.OspgatewayService.Models
         /// Echeck card type
         /// </value>
         [JsonProperty(PropertyName = "creditCardType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CreditCardTypeEnum> CreditCardType { get; set; }
         
         /// <value>

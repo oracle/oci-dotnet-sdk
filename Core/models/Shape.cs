@@ -26,6 +26,9 @@ namespace Oci.CoreService.Models
                 ///
         ///
         public enum BaselineOcpuUtilizationsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BASELINE_1_8")]
             Baseline18,
             [EnumMember(Value = "BASELINE_1_2")]
@@ -38,7 +41,7 @@ namespace Oci.CoreService.Models
         /// For a subcore burstable VM, the supported baseline OCPU utilization for instances that use this shape.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "baselineOcpuUtilizations", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "baselineOcpuUtilizations", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<BaselineOcpuUtilizationsEnum> BaselineOcpuUtilizations { get; set; }
         
         /// <value>
@@ -196,6 +199,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BillingTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALWAYS_FREE")]
             AlwaysFree,
             [EnumMember(Value = "LIMITED_FREE")]
@@ -209,7 +215,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "billingType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BillingTypeEnum> BillingType { get; set; }
         
         /// <value>

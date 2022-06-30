@@ -82,6 +82,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum PriorityEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NONE")]
             None,
             [EnumMember(Value = "LOW")]
@@ -96,7 +99,7 @@ namespace Oci.LoganalyticsService.Models
         /// The label priority. Valid values are (NONE, LOW, HIGH). NONE is default.
         /// </value>
         [JsonProperty(PropertyName = "priority")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PriorityEnum> Priority { get; set; }
         
         /// <value>
@@ -110,6 +113,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INFO")]
             Info,
             [EnumMember(Value = "PROBLEM")]
@@ -120,7 +126,7 @@ namespace Oci.LoganalyticsService.Models
         /// The label type.  Valid values are (INFO, PROBLEM). INFO is default.
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>

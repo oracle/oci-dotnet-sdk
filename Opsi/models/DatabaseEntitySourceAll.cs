@@ -16,6 +16,9 @@ namespace Oci.OpsiService.Models
   /// Source of the database entity.
   /// </summary>
   public enum DatabaseEntitySourceAll {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "AUTONOMOUS_DATABASE")]
       AutonomousDatabase,
       [EnumMember(Value = "EM_MANAGED_EXTERNAL_DATABASE")]

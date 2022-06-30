@@ -26,6 +26,9 @@ namespace Oci.CloudguardService.Models
                 ///
         ///
         public enum CompositeOperatorEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AND")]
             And,
             [EnumMember(Value = "OR")]
@@ -33,7 +36,7 @@ namespace Oci.CloudguardService.Models
         };
 
         [JsonProperty(PropertyName = "compositeOperator")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CompositeOperatorEnum> CompositeOperator { get; set; }
         
         [JsonProperty(PropertyName = "rightOperand")]

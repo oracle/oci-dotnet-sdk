@@ -28,6 +28,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BackupTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FULL")]
             Full,
             [EnumMember(Value = "INCREMENTAL")]
@@ -42,7 +45,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "BackupType is required.")]
         [JsonProperty(PropertyName = "backupType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BackupTypeEnum> BackupType { get; set; }
         
         /// <value>
@@ -59,6 +62,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum PeriodEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ONE_HOUR")]
             OneHour,
             [EnumMember(Value = "ONE_DAY")]
@@ -79,7 +85,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "Period is required.")]
         [JsonProperty(PropertyName = "period")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PeriodEnum> Period { get; set; }
                 ///
         /// <value>
@@ -110,6 +116,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum OffsetTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STRUCTURED")]
             Structured,
             [EnumMember(Value = "NUMERIC_SECONDS")]
@@ -143,7 +152,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "offsetType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OffsetTypeEnum> OffsetType { get; set; }
         
         /// <value>
@@ -157,6 +166,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum DayOfWeekEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MONDAY")]
             Monday,
             [EnumMember(Value = "TUESDAY")]
@@ -177,7 +189,7 @@ namespace Oci.CoreService.Models
         /// The day of the week to schedule the volume backup.
         /// </value>
         [JsonProperty(PropertyName = "dayOfWeek")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DayOfWeekEnum> DayOfWeek { get; set; }
         
         /// <value>
@@ -191,6 +203,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum MonthEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "JANUARY")]
             January,
             [EnumMember(Value = "FEBRUARY")]
@@ -221,7 +236,7 @@ namespace Oci.CoreService.Models
         /// The month of the year to schedule the volume backup.
         /// </value>
         [JsonProperty(PropertyName = "month")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MonthEnum> Month { get; set; }
         
         /// <value>
@@ -239,6 +254,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum TimeZoneEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UTC")]
             Utc,
             [EnumMember(Value = "REGIONAL_DATA_CENTER_TIME")]
@@ -249,7 +267,7 @@ namespace Oci.CoreService.Models
         /// Specifies what time zone is the schedule in
         /// </value>
         [JsonProperty(PropertyName = "timeZone")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TimeZoneEnum> TimeZone { get; set; }
         
     }

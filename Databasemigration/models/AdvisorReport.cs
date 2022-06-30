@@ -34,7 +34,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "Result is required.")]
         [JsonProperty(PropertyName = "result")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AdvisorResults> Result { get; set; }
         
         /// <value>

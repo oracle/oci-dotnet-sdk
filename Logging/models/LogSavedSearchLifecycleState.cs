@@ -23,6 +23,9 @@ namespace Oci.LoggingService.Models
     /// 
   /// </summary>
   public enum LogSavedSearchLifecycleState {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CREATING")]
       Creating,
       [EnumMember(Value = "ACTIVE")]

@@ -23,6 +23,9 @@ namespace Oci.AutoscalingService.Models
                 ///
         ///
         public enum ActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STOP")]
             Stop,
             [EnumMember(Value = "START")]
@@ -38,7 +41,7 @@ namespace Oci.AutoscalingService.Models
         /// </remarks>
         [Required(ErrorMessage = "Action is required.")]
         [JsonProperty(PropertyName = "action")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
         
         [JsonProperty(PropertyName = "actionType")]

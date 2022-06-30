@@ -36,6 +36,9 @@ namespace Oci.ArtifactsService.Models
         /// </value>
         ///
         public enum FormatEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "TEXT_MARKDOWN")]
             TextMarkdown,
             [EnumMember(Value = "TEXT_PLAIN")]
@@ -50,7 +53,7 @@ namespace Oci.ArtifactsService.Models
         /// </remarks>
         [Required(ErrorMessage = "Format is required.")]
         [JsonProperty(PropertyName = "format")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FormatEnum> Format { get; set; }
         
     }

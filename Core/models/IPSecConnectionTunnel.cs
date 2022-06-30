@@ -66,6 +66,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UP")]
             Up,
             [EnumMember(Value = "DOWN")]
@@ -80,7 +83,7 @@ namespace Oci.CoreService.Models
         /// The status of the tunnel based on IPSec protocol characteristics.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
                 ///
         /// <value>
@@ -89,6 +92,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum IkeVersionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "V1")]
             V1,
             [EnumMember(Value = "V2")]
@@ -100,7 +106,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ikeVersion")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IkeVersionEnum> IkeVersion { get; set; }
                 ///
         /// <value>
@@ -108,6 +114,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
@@ -126,7 +135,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -149,6 +158,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum RoutingEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BGP")]
             Bgp,
             [EnumMember(Value = "STATIC")]
@@ -162,7 +174,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "routing")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RoutingEnum> Routing { get; set; }
         
         /// <value>
@@ -187,6 +199,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum OracleCanInitiateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INITIATOR_OR_RESPONDER")]
             InitiatorOrResponder,
             [EnumMember(Value = "RESPONDER_ONLY")]
@@ -198,7 +213,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "oracleCanInitiate")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OracleCanInitiateEnum> OracleCanInitiate { get; set; }
                 ///
         /// <value>
@@ -217,6 +232,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum NatTranslationEnabledEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLED")]
             Enabled,
             [EnumMember(Value = "DISABLED")]
@@ -240,7 +258,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "natTranslationEnabled")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NatTranslationEnabledEnum> NatTranslationEnabled { get; set; }
                 ///
         /// <value>
@@ -251,6 +269,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum DpdModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INITIATE_AND_RESPOND")]
             InitiateAndRespond,
             [EnumMember(Value = "RESPOND_ONLY")]
@@ -264,7 +285,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dpdMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DpdModeEnum> DpdMode { get; set; }
         
         /// <value>

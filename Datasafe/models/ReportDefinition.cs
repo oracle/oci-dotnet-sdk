@@ -52,6 +52,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum CategoryEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CUSTOM_REPORTS")]
             CustomReports,
             [EnumMember(Value = "SUMMARY")]
@@ -64,7 +67,7 @@ namespace Oci.DatasafeService.Models
         /// Specifies the name of the category that this report belongs to.
         /// </value>
         [JsonProperty(PropertyName = "category")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CategoryEnum> Category { get; set; }
         
         /// <value>
@@ -77,7 +80,7 @@ namespace Oci.DatasafeService.Models
         /// Specifies the name of a resource that provides data for the report. For example alerts, events.
         /// </value>
         [JsonProperty(PropertyName = "dataSource")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ReportDefinitionDataSource> DataSource { get; set; }
         
         /// <value>
@@ -152,7 +155,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ReportDefinitionLifecycleState> LifecycleState { get; set; }
         
         /// <value>

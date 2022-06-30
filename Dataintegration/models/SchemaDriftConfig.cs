@@ -26,6 +26,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum ExtraColumnHandlingEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALLOW")]
             Allow,
             [EnumMember(Value = "NULL_FILLUP")]
@@ -38,7 +41,7 @@ namespace Oci.DataintegrationService.Models
         /// The setting for how to handle extra columns/fields.  NULL_FILLUP means that nulls will be loaded into the target for extra columns.
         /// </value>
         [JsonProperty(PropertyName = "extraColumnHandling")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExtraColumnHandlingEnum> ExtraColumnHandling { get; set; }
                 ///
         /// <value>
@@ -46,6 +49,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum MissingColumnHandlingEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALLOW")]
             Allow,
             [EnumMember(Value = "NULL_SELECT")]
@@ -58,7 +64,7 @@ namespace Oci.DataintegrationService.Models
         /// The setting for how to handle missing columns/fields.  NULL_SELECT means that null values will be selected from the source for missing columns.
         /// </value>
         [JsonProperty(PropertyName = "missingColumnHandling")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MissingColumnHandlingEnum> MissingColumnHandling { get; set; }
                 ///
         /// <value>
@@ -66,6 +72,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum DataTypeChangeHandlingEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALLOW")]
             Allow,
             [EnumMember(Value = "DO_CAST_IF_POSSIBLE")]
@@ -78,7 +87,7 @@ namespace Oci.DataintegrationService.Models
         /// The setting for how to handle columns/fields with changed data types.
         /// </value>
         [JsonProperty(PropertyName = "dataTypeChangeHandling")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataTypeChangeHandlingEnum> DataTypeChangeHandling { get; set; }
         
         /// <value>

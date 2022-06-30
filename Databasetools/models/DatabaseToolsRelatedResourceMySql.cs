@@ -29,7 +29,7 @@ namespace Oci.DatabasetoolsService.Models
         /// </remarks>
         [Required(ErrorMessage = "EntityType is required.")]
         [JsonProperty(PropertyName = "entityType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RelatedResourceEntityTypeMySql> EntityType { get; set; }
         
         /// <value>

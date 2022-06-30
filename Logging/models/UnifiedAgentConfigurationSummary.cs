@@ -96,7 +96,7 @@ namespace Oci.LoggingService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LogLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -117,7 +117,7 @@ namespace Oci.LoggingService.Models
         /// </remarks>
         [Required(ErrorMessage = "ConfigurationType is required.")]
         [JsonProperty(PropertyName = "configurationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UnifiedAgentServiceConfigurationTypes> ConfigurationType { get; set; }
         
         /// <value>
@@ -128,7 +128,7 @@ namespace Oci.LoggingService.Models
         /// </remarks>
         [Required(ErrorMessage = "ConfigurationState is required.")]
         [JsonProperty(PropertyName = "configurationState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UnifiedAgentServiceConfigurationStates> ConfigurationState { get; set; }
         
     }

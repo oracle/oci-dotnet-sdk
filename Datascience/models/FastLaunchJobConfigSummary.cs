@@ -71,6 +71,9 @@ namespace Oci.DatascienceService.Models
         /// </value>
         ///
         public enum ShapeSeriesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AMD_ROME")]
             AmdRome,
             [EnumMember(Value = "INTEL_SKYLAKE")]
@@ -90,7 +93,7 @@ namespace Oci.DatascienceService.Models
         /// </remarks>
         [Required(ErrorMessage = "ShapeSeries is required.")]
         [JsonProperty(PropertyName = "shapeSeries")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ShapeSeriesEnum> ShapeSeries { get; set; }
                 ///
         /// <value>
@@ -99,6 +102,9 @@ namespace Oci.DatascienceService.Models
         /// </value>
         ///
         public enum ManagedEgressSupportEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "REQUIRED")]
             Required,
             [EnumMember(Value = "SUPPORTED")]
@@ -116,7 +122,7 @@ namespace Oci.DatascienceService.Models
         /// </remarks>
         [Required(ErrorMessage = "ManagedEgressSupport is required.")]
         [JsonProperty(PropertyName = "managedEgressSupport")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ManagedEgressSupportEnum> ManagedEgressSupport { get; set; }
         
     }

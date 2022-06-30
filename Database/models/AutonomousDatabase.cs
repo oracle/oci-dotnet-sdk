@@ -47,6 +47,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
@@ -99,7 +102,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -259,6 +262,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum InfrastructureTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CLOUD")]
             Cloud,
             [EnumMember(Value = "CLOUD_AT_CUSTOMER")]
@@ -269,7 +275,7 @@ namespace Oci.DatabaseService.Models
         /// The infrastructure type this resource belongs to.
         /// </value>
         [JsonProperty(PropertyName = "infrastructureType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InfrastructureTypeEnum> InfrastructureType { get; set; }
         
         /// <value>
@@ -321,6 +327,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LicenseModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LICENSE_INCLUDED")]
             LicenseIncluded,
             [EnumMember(Value = "BRING_YOUR_OWN_LICENSE")]
@@ -335,7 +344,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         /// <value>
@@ -427,6 +436,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum DbWorkloadEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OLTP")]
             Oltp,
             [EnumMember(Value = "DW")]
@@ -447,7 +459,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dbWorkload")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DbWorkloadEnum> DbWorkload { get; set; }
         
         /// <value>
@@ -512,6 +524,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum DataSafeStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "REGISTERING")]
             Registering,
             [EnumMember(Value = "REGISTERED")]
@@ -528,7 +543,7 @@ namespace Oci.DatabaseService.Models
         /// Status of the Data Safe registration for this Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "dataSafeStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataSafeStatusEnum> DataSafeStatus { get; set; }
                 ///
         /// <value>
@@ -536,6 +551,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum OperationsInsightsStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLING")]
             Enabling,
             [EnumMember(Value = "ENABLED")]
@@ -554,7 +572,7 @@ namespace Oci.DatabaseService.Models
         /// Status of Operations Insights for this Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "operationsInsightsStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationsInsightsStatusEnum> OperationsInsightsStatus { get; set; }
                 ///
         /// <value>
@@ -562,6 +580,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum DatabaseManagementStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLING")]
             Enabling,
             [EnumMember(Value = "ENABLED")]
@@ -580,7 +601,7 @@ namespace Oci.DatabaseService.Models
         /// Status of Database Management for this Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "databaseManagementStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseManagementStatusEnum> DatabaseManagementStatus { get; set; }
         
         /// <value>
@@ -624,6 +645,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum OpenModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "READ_ONLY")]
             ReadOnly,
             [EnumMember(Value = "READ_WRITE")]
@@ -634,7 +658,7 @@ namespace Oci.DatabaseService.Models
         /// The `DATABASE OPEN` mode. You can open the database in `READ_ONLY` or `READ_WRITE` mode.
         /// </value>
         [JsonProperty(PropertyName = "openMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OpenModeEnum> OpenMode { get; set; }
                 ///
         /// <value>
@@ -642,6 +666,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum RefreshableStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "REFRESHING")]
             Refreshing,
             [EnumMember(Value = "NOT_REFRESHING")]
@@ -652,7 +679,7 @@ namespace Oci.DatabaseService.Models
         /// The refresh status of the clone. REFRESHING indicates that the clone is currently being refreshed with data from the source Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "refreshableStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RefreshableStatusEnum> RefreshableStatus { get; set; }
                 ///
         /// <value>
@@ -660,6 +687,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum RefreshableModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AUTOMATIC")]
             Automatic,
             [EnumMember(Value = "MANUAL")]
@@ -670,7 +700,7 @@ namespace Oci.DatabaseService.Models
         /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "refreshableMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RefreshableModeEnum> RefreshableMode { get; set; }
         
         /// <value>
@@ -684,6 +714,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum PermissionLevelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "RESTRICTED")]
             Restricted,
             [EnumMember(Value = "UNRESTRICTED")]
@@ -694,7 +727,7 @@ namespace Oci.DatabaseService.Models
         /// The Autonomous Database permission level. Restricted mode allows access only to admin users.
         /// </value>
         [JsonProperty(PropertyName = "permissionLevel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PermissionLevelEnum> PermissionLevel { get; set; }
         
         /// <value>
@@ -750,6 +783,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum RoleEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PRIMARY")]
             Primary,
             [EnumMember(Value = "STANDBY")]
@@ -763,7 +799,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "role")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RoleEnum> Role { get; set; }
         
         /// <value>
@@ -808,6 +844,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum DataguardRegionTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PRIMARY_DG_REGION")]
             PrimaryDgRegion,
             [EnumMember(Value = "REMOTE_STANDBY_DG_REGION")]
@@ -818,7 +857,7 @@ namespace Oci.DatabaseService.Models
         /// The Autonomous Data Guard region type of the Autonomous Database. For Autonomous Databases on shared Exadata infrastructure, Data Guard associations have designated primary and standby regions, and these region types do not change when the database changes roles. The standby regions in Data Guard associations can be the same region designated as the primary region, or they can be remote regions. Certain database administrative operations may be available only in the primary region of the Data Guard association, and cannot be performed when the database using the \"primary\" role is operating in a remote Data Guard standby region.
         /// </value>
         [JsonProperty(PropertyName = "dataguardRegionType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataguardRegionTypeEnum> DataguardRegionType { get; set; }
         
         /// <value>
@@ -858,6 +897,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum AutonomousMaintenanceScheduleTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "EARLY")]
             Early,
             [EnumMember(Value = "REGULAR")]
@@ -870,7 +912,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "autonomousMaintenanceScheduleType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AutonomousMaintenanceScheduleTypeEnum> AutonomousMaintenanceScheduleType { get; set; }
         
         /// <value>
@@ -915,6 +957,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum DatabaseEditionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STANDARD_EDITION")]
             StandardEdition,
             [EnumMember(Value = "ENTERPRISE_EDITION")]
@@ -926,7 +971,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "databaseEdition")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseEditionEnum> DatabaseEdition { get; set; }
         
     }

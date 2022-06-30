@@ -73,7 +73,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The subtype of the Oracle Database where the job has to be executed. Only applicable when managedDatabaseGroupId is provided.
         /// </value>
         [JsonProperty(PropertyName = "databaseSubType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseSubType> DatabaseSubType { get; set; }
         
         /// <value>
@@ -84,7 +84,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "ScheduleType is required.")]
         [JsonProperty(PropertyName = "scheduleType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Job.ScheduleTypeEnum> ScheduleType { get; set; }
         
         [JsonProperty(PropertyName = "scheduleDetails")]
@@ -98,7 +98,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "JobType is required.")]
         [JsonProperty(PropertyName = "jobType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobTypes> JobType { get; set; }
         
         /// <value>
@@ -109,7 +109,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Job.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

@@ -50,7 +50,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The time window used for metrics comparison.
         /// </value>
         [JsonProperty(PropertyName = "compareType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CompareType> CompareType { get; set; }
         
         [JsonProperty(PropertyName = "fleetSummary")]

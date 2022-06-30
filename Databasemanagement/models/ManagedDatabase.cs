@@ -59,7 +59,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "DatabaseType is required.")]
         [JsonProperty(PropertyName = "databaseType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseType> DatabaseType { get; set; }
         
         /// <value>
@@ -72,28 +72,28 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "DatabaseSubType is required.")]
         [JsonProperty(PropertyName = "databaseSubType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseSubType> DatabaseSubType { get; set; }
         
         /// <value>
         /// The infrastructure used to deploy the Oracle Database.
         /// </value>
         [JsonProperty(PropertyName = "deploymentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DeploymentType> DeploymentType { get; set; }
         
         /// <value>
         /// The management option used when enabling Database Management.
         /// </value>
         [JsonProperty(PropertyName = "managementOption")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ManagementOption> ManagementOption { get; set; }
         
         /// <value>
         /// The workload type of the Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "workloadType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkloadType> WorkloadType { get; set; }
         
         /// <value>
@@ -136,7 +136,7 @@ namespace Oci.DatabasemanagementService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "databaseStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseStatus> DatabaseStatus { get; set; }
         
         /// <value>

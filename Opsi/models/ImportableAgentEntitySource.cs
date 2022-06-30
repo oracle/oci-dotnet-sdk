@@ -16,6 +16,9 @@ namespace Oci.OpsiService.Models
   /// Source of the importable agent entity.
   /// </summary>
   public enum ImportableAgentEntitySource {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "MACS_MANAGED_EXTERNAL_HOST")]
       MacsManagedExternalHost
   }

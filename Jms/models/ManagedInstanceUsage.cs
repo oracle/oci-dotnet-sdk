@@ -44,7 +44,7 @@ namespace Oci.JmsService.Models
         /// </remarks>
         [Required(ErrorMessage = "ManagedInstanceType is required.")]
         [JsonProperty(PropertyName = "managedInstanceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ManagedInstanceType> ManagedInstanceType { get; set; }
         
         /// <value>

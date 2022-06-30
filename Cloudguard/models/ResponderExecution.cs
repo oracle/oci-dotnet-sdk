@@ -49,7 +49,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "ResponderRuleType is required.")]
         [JsonProperty(PropertyName = "responderRuleType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResponderType> ResponderRuleType { get; set; }
         
         /// <value>
@@ -146,7 +146,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "ResponderExecutionStatus is required.")]
         [JsonProperty(PropertyName = "responderExecutionStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResponderExecutionStates> ResponderExecutionStatus { get; set; }
         
         /// <value>
@@ -157,7 +157,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "ResponderExecutionMode is required.")]
         [JsonProperty(PropertyName = "responderExecutionMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResponderExecutionModes> ResponderExecutionMode { get; set; }
         
         /// <value>

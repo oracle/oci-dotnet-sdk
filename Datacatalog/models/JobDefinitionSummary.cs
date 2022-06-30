@@ -64,14 +64,14 @@ namespace Oci.DatacatalogService.Models
         /// Type of the job definition.
         /// </value>
         [JsonProperty(PropertyName = "jobType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobType> JobType { get; set; }
         
         /// <value>
         /// Lifecycle state of the job definition.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -112,14 +112,14 @@ namespace Oci.DatacatalogService.Models
         /// Status of the latest job execution, such as running, paused, or completed.
         /// </value>
         [JsonProperty(PropertyName = "jobExecutionState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobExecutionState> JobExecutionState { get; set; }
         
         /// <value>
         /// Type of job schedule for the latest job executed.
         /// </value>
         [JsonProperty(PropertyName = "scheduleType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobScheduleType> ScheduleType { get; set; }
         
         /// <value>

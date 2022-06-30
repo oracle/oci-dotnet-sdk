@@ -32,6 +32,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum AuthenticationEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -42,7 +45,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the proxy is required to supply the client credentials (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "authentication")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuthenticationEnum> Authentication { get; set; }
                 ///
         /// <value>
@@ -50,6 +53,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum FlagsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROXY_MAY_ACTIVATE_ALL_CLIENT_ROLES")]
             ProxyMayActivateAllClientRoles,
             [EnumMember(Value = "NO_CLIENT_ROLES_MAY_BE_ACTIVATED")]
@@ -64,7 +70,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The flags associated with the proxy/client pair.
         /// </value>
         [JsonProperty(PropertyName = "flags")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FlagsEnum> Flags { get; set; }
         
     }

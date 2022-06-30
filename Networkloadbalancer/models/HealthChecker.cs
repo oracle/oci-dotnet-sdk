@@ -33,7 +33,7 @@ namespace Oci.NetworkloadbalancerService.Models
         /// </remarks>
         [Required(ErrorMessage = "Protocol is required.")]
         [JsonProperty(PropertyName = "protocol")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<HealthCheckProtocols> Protocol { get; set; }
         
         /// <value>

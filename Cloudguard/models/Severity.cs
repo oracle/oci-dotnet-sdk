@@ -16,6 +16,9 @@ namespace Oci.CloudguardService.Models
   /// Indication that represents the threat level of a Sighting
   /// </summary>
   public enum Severity {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CRITICAL")]
       Critical,
       [EnumMember(Value = "HIGH")]

@@ -16,6 +16,9 @@ namespace Oci.DatasafeService.Models
   /// The type of the object to which a masking column belongs.
   /// </summary>
   public enum ObjectType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "TABLE")]
       Table,
       [EnumMember(Value = "EDITIONING_VIEW")]

@@ -16,6 +16,9 @@ namespace Oci.CertificatesmanagementService.Models
   /// The algorithm used to sign the public key certificate.
   /// </summary>
   public enum SignatureAlgorithm {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "SHA256_WITH_RSA")]
       Sha256WithRsa,
       [EnumMember(Value = "SHA384_WITH_RSA")]

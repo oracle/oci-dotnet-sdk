@@ -49,7 +49,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "ActorType is required.")]
         [JsonProperty(PropertyName = "actorType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActorType> ActorType { get; set; }
         
         /// <value>
@@ -80,14 +80,14 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleDetail is required.")]
         [JsonProperty(PropertyName = "lifecycleDetail")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProblemLifecycleDetail> LifecycleDetail { get; set; }
         
         /// <value>
         /// Event status
         /// </value>
         [JsonProperty(PropertyName = "eventStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EventStatus> EventStatus { get; set; }
         
         /// <value>

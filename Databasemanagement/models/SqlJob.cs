@@ -26,6 +26,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum SqlTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "QUERY")]
             Query,
             [EnumMember(Value = "DML")]
@@ -40,7 +43,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The type of SQL. This is a mandatory field for the EXECUTE_SQL operationType.
         /// </value>
         [JsonProperty(PropertyName = "sqlType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SqlTypeEnum> SqlType { get; set; }
         
         /// <value>
@@ -54,6 +57,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum OperationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "EXECUTE_SQL")]
             ExecuteSql
         };
@@ -66,7 +72,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "OperationType is required.")]
         [JsonProperty(PropertyName = "operationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
         
         /// <value>
@@ -82,6 +88,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum RoleEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NORMAL")]
             Normal,
             [EnumMember(Value = "SYSDBA")]
@@ -92,7 +101,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The role of the database user. Indicates whether the database user is a normal user or sysdba.
         /// </value>
         [JsonProperty(PropertyName = "role")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RoleEnum> Role { get; set; }
         
         [JsonProperty(PropertyName = "jobType")]

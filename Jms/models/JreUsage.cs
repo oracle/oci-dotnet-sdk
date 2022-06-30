@@ -43,7 +43,7 @@ namespace Oci.JmsService.Models
         /// The security status of the Java Runtime.
         /// </value>
         [JsonProperty(PropertyName = "securityStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JreSecurityStatus> SecurityStatus { get; set; }
         
         /// <value>

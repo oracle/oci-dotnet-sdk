@@ -25,7 +25,7 @@ namespace Oci.AivisionService.Models
         /// The language of the document image, abbreviated according to ISO 639-2.
         /// </value>
         [JsonProperty(PropertyName = "language")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DocumentLanguage> Language { get; set; }
         
         [JsonProperty(PropertyName = "featureType")]

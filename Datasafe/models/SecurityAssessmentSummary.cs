@@ -45,7 +45,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SecurityAssessmentLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -167,6 +167,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum TriggeredByEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "USER")]
             User,
             [EnumMember(Value = "SYSTEM")]
@@ -177,7 +180,7 @@ namespace Oci.DatasafeService.Models
         /// Indicates whether the security assessment was created by system or by a user.
         /// </value>
         [JsonProperty(PropertyName = "triggeredBy")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TriggeredByEnum> TriggeredBy { get; set; }
         
         /// <value>
@@ -199,6 +202,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LATEST")]
             Latest,
             [EnumMember(Value = "SAVED")]
@@ -224,7 +230,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
         [JsonProperty(PropertyName = "statistics")]

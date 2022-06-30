@@ -65,6 +65,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NOT_STARTED")]
             NotStarted,
             [EnumMember(Value = "QUEUED")]
@@ -85,7 +88,7 @@ namespace Oci.DataintegrationService.Models
         /// status
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
@@ -129,6 +132,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum TaskTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INTEGRATION_TASK")]
             IntegrationTask,
             [EnumMember(Value = "DATA_LOADER_TASK")]
@@ -147,7 +153,7 @@ namespace Oci.DataintegrationService.Models
         /// The type of the task for the run.
         /// </value>
         [JsonProperty(PropertyName = "taskType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TaskTypeEnum> TaskType { get; set; }
         
         /// <value>
@@ -167,6 +173,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum ReRunTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BEGINNING")]
             Beginning,
             [EnumMember(Value = "FAILED")]
@@ -179,7 +188,7 @@ namespace Oci.DataintegrationService.Models
         /// Supported re-run types
         /// </value>
         [JsonProperty(PropertyName = "reRunType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ReRunTypeEnum> ReRunType { get; set; }
         
         /// <value>

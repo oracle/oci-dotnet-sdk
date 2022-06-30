@@ -16,6 +16,9 @@ namespace Oci.ManagementagentService.Models
   /// Supported install types.
   /// </summary>
   public enum InstallTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "AGENT")]
       Agent,
       [EnumMember(Value = "GATEWAY")]

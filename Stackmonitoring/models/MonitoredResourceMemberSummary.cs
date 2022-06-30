@@ -61,7 +61,7 @@ namespace Oci.StackmonitoringService.Models
         /// The current state of the Resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceLifecycleState> LifecycleState { get; set; }
         
         /// <value>

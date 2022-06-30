@@ -51,7 +51,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "UsageUnit is required.")]
         [JsonProperty(PropertyName = "usageUnit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UsageUnit> UsageUnit { get; set; }
         
         /// <value>

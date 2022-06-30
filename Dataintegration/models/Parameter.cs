@@ -56,6 +56,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum OutputAggregationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MIN")]
             Min,
             [EnumMember(Value = "MAX")]
@@ -70,7 +73,7 @@ namespace Oci.DataintegrationService.Models
         /// The output aggregation type.
         /// </value>
         [JsonProperty(PropertyName = "outputAggregationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OutputAggregationTypeEnum> OutputAggregationType { get; set; }
         
         /// <value>

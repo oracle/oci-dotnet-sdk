@@ -29,6 +29,9 @@ namespace Oci.AispeechService.Models
         /// </value>
         ///
         public enum ModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MASK")]
             Mask,
             [EnumMember(Value = "REMOVE")]
@@ -48,7 +51,7 @@ namespace Oci.AispeechService.Models
         /// </remarks>
         [Required(ErrorMessage = "Mode is required.")]
         [JsonProperty(PropertyName = "mode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ModeEnum> Mode { get; set; }
         
         [JsonProperty(PropertyName = "type")]

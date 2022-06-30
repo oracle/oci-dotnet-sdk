@@ -16,6 +16,9 @@ namespace Oci.LicensemanagerService.Models
   /// The resource unit.
   /// </summary>
   public enum ResourceUnit {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "OCPU")]
       Ocpu
   }

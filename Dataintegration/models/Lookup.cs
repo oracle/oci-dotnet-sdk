@@ -35,6 +35,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum MultiMatchStrategyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "RETURN_ANY")]
             ReturnAny,
             [EnumMember(Value = "RETURN_FIRST")]
@@ -51,7 +54,7 @@ namespace Oci.DataintegrationService.Models
         /// if there are multiple records found in the lookup input what action should be performed. The default value for this field is RETURN_ANY.
         /// </value>
         [JsonProperty(PropertyName = "multiMatchStrategy")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MultiMatchStrategyEnum> MultiMatchStrategy { get; set; }
         
         /// <value>

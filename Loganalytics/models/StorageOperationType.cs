@@ -17,6 +17,9 @@ namespace Oci.LoganalyticsService.Models
     /// 
   /// </summary>
   public enum StorageOperationType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "OFFBOARD_TENANCY")]
       OffboardTenancy,
       [EnumMember(Value = "PURGE_STORAGE_DATA")]

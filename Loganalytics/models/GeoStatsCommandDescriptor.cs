@@ -28,6 +28,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum IncludeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CLIENT")]
             Client,
             [EnumMember(Value = "SERVER")]
@@ -41,7 +44,7 @@ namespace Oci.LoganalyticsService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "include")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IncludeEnum> Include { get; set; }
         
         /// <value>

@@ -36,6 +36,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum InterfaceStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UP")]
             Up,
             [EnumMember(Value = "DOWN")]
@@ -46,7 +49,7 @@ namespace Oci.CoreService.Models
         /// Indicates whether Oracle's side of the interface is up or down.
         /// </value>
         [JsonProperty(PropertyName = "interfaceState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InterfaceStateEnum> InterfaceState { get; set; }
         
         /// <value>
@@ -69,6 +72,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum LightLevelIndicatorEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NO_LIGHT")]
             NoLight,
             [EnumMember(Value = "LOW_WARN")]
@@ -92,7 +98,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lightLevelIndicator")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LightLevelIndicatorEnum> LightLevelIndicator { get; set; }
                 ///
         /// <value>
@@ -108,6 +114,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum EncryptionStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UP")]
             Up,
             [EnumMember(Value = "DOWN")]
@@ -132,7 +141,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "encryptionStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EncryptionStatusEnum> EncryptionStatus { get; set; }
         
         /// <value>

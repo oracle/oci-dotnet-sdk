@@ -29,21 +29,21 @@ namespace Oci.MarketplaceService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PricingTypeEnum> Type { get; set; }
         
         /// <value>
         /// The type of pricing for a PAYGO model, eg PER_OCPU_LINEAR, PER_OCPU_MIN_BILLING, PER_INSTANCE.  Null if type is not PAYGO.
         /// </value>
         [JsonProperty(PropertyName = "payGoStrategy")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PricingStrategyEnum> PayGoStrategy { get; set; }
         
         /// <value>
         /// The currency of the pricing model.
         /// </value>
         [JsonProperty(PropertyName = "currency")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PricingCurrencyEnum> Currency { get; set; }
         
         /// <value>

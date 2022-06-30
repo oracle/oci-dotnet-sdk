@@ -52,6 +52,9 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         ///
         public enum OperatorEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "EXACT_MATCH")]
             ExactMatch,
             [EnumMember(Value = "FORCE_LONGEST_PREFIX_MATCH")]
@@ -83,7 +86,7 @@ namespace Oci.LoadbalancerService.Models
         /// </remarks>
         [Required(ErrorMessage = "Operator is required.")]
         [JsonProperty(PropertyName = "operator")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperatorEnum> Operator { get; set; }
         
         [JsonProperty(PropertyName = "attributeName")]

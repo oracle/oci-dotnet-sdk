@@ -38,6 +38,9 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         ///
         public enum AuthorEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ORACLE")]
             Oracle,
             [EnumMember(Value = "PARTNER")]
@@ -50,7 +53,7 @@ namespace Oci.MarketplaceService.Models
         /// Who authored the agreement.
         /// </value>
         [JsonProperty(PropertyName = "author")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuthorEnum> Author { get; set; }
         
         /// <value>

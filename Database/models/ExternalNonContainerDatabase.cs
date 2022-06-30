@@ -83,6 +83,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "NOT_CONNECTED")]
@@ -107,7 +110,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -145,6 +148,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum DatabaseEditionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STANDARD_EDITION")]
             StandardEdition,
             [EnumMember(Value = "ENTERPRISE_EDITION")]
@@ -160,7 +166,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "databaseEdition")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseEditionEnum> DatabaseEdition { get; set; }
         
         /// <value>
@@ -195,6 +201,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum DatabaseConfigurationEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "RAC")]
             Rac,
             [EnumMember(Value = "SINGLE_INSTANCE")]
@@ -205,7 +214,7 @@ namespace Oci.DatabaseService.Models
         /// The Oracle Database configuration
         /// </value>
         [JsonProperty(PropertyName = "databaseConfiguration")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseConfigurationEnum> DatabaseConfiguration { get; set; }
         
         [JsonProperty(PropertyName = "databaseManagementConfig")]

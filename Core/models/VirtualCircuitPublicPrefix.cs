@@ -44,6 +44,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum VerificationStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "IN_PROGRESS")]
             InProgress,
             [EnumMember(Value = "COMPLETED")]
@@ -65,7 +68,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "VerificationState is required.")]
         [JsonProperty(PropertyName = "verificationState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<VerificationStateEnum> VerificationState { get; set; }
         
     }

@@ -73,6 +73,9 @@ namespace Oci.OnesubscriptionService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROMOTION")]
             Promotion,
             [EnumMember(Value = "DO_NOT_BILL")]
@@ -110,7 +113,7 @@ namespace Oci.OnesubscriptionService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
     }

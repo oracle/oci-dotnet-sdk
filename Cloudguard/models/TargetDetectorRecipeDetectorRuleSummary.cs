@@ -57,7 +57,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "Detector is required.")]
         [JsonProperty(PropertyName = "detector")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DetectorEnum> Detector { get; set; }
         
         /// <value>
@@ -74,6 +74,9 @@ namespace Oci.CloudguardService.Models
                 ///
         ///
         public enum ManagedListTypesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CIDR_BLOCK")]
             CidrBlock,
             [EnumMember(Value = "USERS")]
@@ -103,7 +106,7 @@ namespace Oci.CloudguardService.Models
         /// <value>
         /// List of cloudguard managed list types related to this rule
         /// </value>
-        [JsonProperty(PropertyName = "managedListTypes", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "managedListTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<ManagedListTypesEnum> ManagedListTypes { get; set; }
         
         [JsonProperty(PropertyName = "detectorDetails")]
@@ -125,7 +128,7 @@ namespace Oci.CloudguardService.Models
         /// The current state of the target detector recipe rule
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

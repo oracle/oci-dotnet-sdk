@@ -25,7 +25,7 @@ namespace Oci.DatabasetoolsService.Models
         /// The key store type.
         /// </value>
         [JsonProperty(PropertyName = "keyStoreType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<KeyStoreType> KeyStoreType { get; set; }
         
         [JsonProperty(PropertyName = "keyStoreContent")]

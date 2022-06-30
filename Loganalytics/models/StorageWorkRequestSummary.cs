@@ -84,7 +84,7 @@ namespace Oci.LoganalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkRequestStatus> Status { get; set; }
         
         /// <value>
@@ -117,7 +117,7 @@ namespace Oci.LoganalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "DataType is required.")]
         [JsonProperty(PropertyName = "dataType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StorageDataType> DataType { get; set; }
         
         /// <value>
@@ -165,7 +165,7 @@ namespace Oci.LoganalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "OperationType is required.")]
         [JsonProperty(PropertyName = "operationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StorageOperationType> OperationType { get; set; }
         
     }

@@ -39,6 +39,9 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         ///
         public enum UnitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MINUTE")]
             Minute,
             [EnumMember(Value = "HOUR")]
@@ -60,7 +63,7 @@ namespace Oci.ApigatewayService.Models
         /// </remarks>
         [Required(ErrorMessage = "Unit is required.")]
         [JsonProperty(PropertyName = "unit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UnitEnum> Unit { get; set; }
                 ///
         /// <value>
@@ -69,6 +72,9 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         ///
         public enum ResetPolicyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CALENDAR")]
             Calendar
         };
@@ -82,7 +88,7 @@ namespace Oci.ApigatewayService.Models
         /// </remarks>
         [Required(ErrorMessage = "ResetPolicy is required.")]
         [JsonProperty(PropertyName = "resetPolicy")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResetPolicyEnum> ResetPolicy { get; set; }
                 ///
         /// <value>
@@ -93,6 +99,9 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         ///
         public enum OperationOnBreachEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "REJECT")]
             Reject,
             [EnumMember(Value = "ALLOW")]
@@ -110,7 +119,7 @@ namespace Oci.ApigatewayService.Models
         /// </remarks>
         [Required(ErrorMessage = "OperationOnBreach is required.")]
         [JsonProperty(PropertyName = "operationOnBreach")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationOnBreachEnum> OperationOnBreach { get; set; }
         
     }

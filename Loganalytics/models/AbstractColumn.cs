@@ -56,7 +56,7 @@ namespace Oci.LoganalyticsService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "subSystem")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SubSystemName> SubSystem { get; set; }
         
         /// <value>
@@ -106,7 +106,7 @@ namespace Oci.LoganalyticsService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "valueType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ValueType> ValueType { get; set; }
         
         /// <value>
@@ -127,6 +127,7 @@ namespace Oci.LoganalyticsService.Models
 
     public class AbstractColumnModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -164,7 +165,14 @@ namespace Oci.LoganalyticsService.Models
                     obj = new ChartDataColumn();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under AbstractColumn! Returning null value.");
+            }
             return obj;
         }
     }

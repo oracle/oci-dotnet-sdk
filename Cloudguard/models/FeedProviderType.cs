@@ -16,6 +16,9 @@ namespace Oci.CloudguardService.Models
   /// provider of the feed (Oracle/Customer)
   /// </summary>
   public enum FeedProviderType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CUSTOMER")]
       Customer,
       [EnumMember(Value = "ORACLE")]

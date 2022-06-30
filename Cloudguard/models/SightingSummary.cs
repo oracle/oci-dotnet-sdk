@@ -83,7 +83,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "ClassificationStatus is required.")]
         [JsonProperty(PropertyName = "classificationStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ClassificationStatus> ClassificationStatus { get; set; }
         
         /// <value>
@@ -144,7 +144,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "Severity is required.")]
         [JsonProperty(PropertyName = "severity")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Severity> Severity { get; set; }
         
         /// <value>
@@ -155,7 +155,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "Confidence is required.")]
         [JsonProperty(PropertyName = "confidence")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Confidence> Confidence { get; set; }
         
         /// <value>

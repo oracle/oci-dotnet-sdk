@@ -26,6 +26,9 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         ///
         public enum KtyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "RSA")]
             Rsa
         };
@@ -38,7 +41,7 @@ namespace Oci.ApigatewayService.Models
         /// </remarks>
         [Required(ErrorMessage = "Kty is required.")]
         [JsonProperty(PropertyName = "kty")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<KtyEnum> Kty { get; set; }
                 ///
         /// <value>
@@ -46,6 +49,9 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         ///
         public enum UseEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "sig")]
             Sig
         };
@@ -54,11 +60,14 @@ namespace Oci.ApigatewayService.Models
         /// The intended use of the public key.
         /// </value>
         [JsonProperty(PropertyName = "use")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UseEnum> Use { get; set; }
                 ///
         ///
         public enum KeyOpsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "verify")]
             Verify
         };
@@ -66,7 +75,7 @@ namespace Oci.ApigatewayService.Models
         /// <value>
         /// The operations for which this key is to be used.
         /// </value>
-        [JsonProperty(PropertyName = "key_ops", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "key_ops", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<KeyOpsEnum> KeyOps { get; set; }
         
         /// <value>

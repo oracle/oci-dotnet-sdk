@@ -34,13 +34,14 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "InfrastructureType is required.")]
         [JsonProperty(PropertyName = "infrastructureType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InfrastructureType> InfrastructureType { get; set; }
         
     }
 
     public class DatabaseDetailsModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -69,7 +70,14 @@ namespace Oci.DatasafeService.Models
                     obj = new DatabaseCloudServiceDetails();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under DatabaseDetails! Returning null value.");
+            }
             return obj;
         }
     }

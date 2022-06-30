@@ -103,7 +103,7 @@ namespace Oci.ContainerengineService.Models
         /// The state of the cluster masters.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ClusterLifecycleState> LifecycleState { get; set; }
         
         /// <value>

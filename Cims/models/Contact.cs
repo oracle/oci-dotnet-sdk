@@ -44,6 +44,9 @@ namespace Oci.CimsService.Models
         /// </value>
         ///
         public enum ContactTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PRIMARY")]
             Primary,
             [EnumMember(Value = "ALTERNATE")]
@@ -60,7 +63,7 @@ namespace Oci.CimsService.Models
         /// The type of contact, such as primary or alternate.
         /// </value>
         [JsonProperty(PropertyName = "contactType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ContactTypeEnum> ContactType { get; set; }
         
     }

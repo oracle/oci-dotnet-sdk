@@ -16,6 +16,9 @@ namespace Oci.MarketplaceService.Models
   /// Possible values for the pricing currency code.
   /// </summary>
   public enum PricingCurrencyEnum {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "USD")]
       Usd,
       [EnumMember(Value = "CAD")]

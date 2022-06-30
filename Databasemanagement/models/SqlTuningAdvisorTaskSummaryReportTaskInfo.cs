@@ -61,7 +61,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The status of the SQL Tuning Advisor task. This is not defined for Auto SQL Tuning tasks.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SqlTuningTaskStatusTypes> Status { get; set; }
         
         /// <value>

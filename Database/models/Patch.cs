@@ -44,6 +44,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LastActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "APPLY")]
             Apply,
             [EnumMember(Value = "PRECHECK")]
@@ -54,11 +57,14 @@ namespace Oci.DatabaseService.Models
         /// Action that is currently being performed or was completed last.
         /// </value>
         [JsonProperty(PropertyName = "lastAction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LastActionEnum> LastAction { get; set; }
                 ///
         ///
         public enum AvailableActionsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "APPLY")]
             Apply,
             [EnumMember(Value = "PRECHECK")]
@@ -68,7 +74,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// Actions that can possibly be performed using this patch.
         /// </value>
-        [JsonProperty(PropertyName = "availableActions", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "availableActions", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<AvailableActionsEnum> AvailableActions { get; set; }
         
         /// <value>
@@ -84,6 +90,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AVAILABLE")]
             Available,
             [EnumMember(Value = "SUCCESS")]
@@ -98,7 +107,7 @@ namespace Oci.DatabaseService.Models
         /// The current state of the patch as a result of lastAction.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

@@ -93,7 +93,7 @@ namespace Oci.CertificatesService.Models
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Stages is required.")]
-        [JsonProperty(PropertyName = "stages", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "stages", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<VersionStage> Stages { get; set; }
         
         [JsonProperty(PropertyName = "revocationStatus")]

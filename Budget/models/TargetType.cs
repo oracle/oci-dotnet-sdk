@@ -16,6 +16,9 @@ namespace Oci.BudgetService.Models
   /// The type of target on which the budget is applied. Valid values are COMPARTMENT or TAG.
   /// </summary>
   public enum TargetType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "COMPARTMENT")]
       Compartment,
       [EnumMember(Value = "TAG")]

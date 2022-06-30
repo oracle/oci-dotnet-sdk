@@ -25,7 +25,7 @@ namespace Oci.OspgatewayService.Models
         /// Credit card type.
         /// </value>
         [JsonProperty(PropertyName = "creditCardType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CreditCardType> CreditCardType { get; set; }
         
         /// <value>

@@ -24,6 +24,9 @@ namespace Oci.AutoscalingService.Models
                 ///
         ///
         public enum MetricTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CPU_UTILIZATION")]
             CpuUtilization,
             [EnumMember(Value = "MEMORY_UTILIZATION")]
@@ -35,7 +38,7 @@ namespace Oci.AutoscalingService.Models
         /// </remarks>
         [Required(ErrorMessage = "MetricType is required.")]
         [JsonProperty(PropertyName = "metricType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MetricTypeEnum> MetricType { get; set; }
         
         /// <remarks>

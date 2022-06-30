@@ -29,7 +29,7 @@ namespace Oci.MarketplaceService.Models
         /// </remarks>
         [Required(ErrorMessage = "CurrencyCode is required.")]
         [JsonProperty(PropertyName = "currencyCode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PricingCurrencyEnum> CurrencyCode { get; set; }
         
         /// <value>

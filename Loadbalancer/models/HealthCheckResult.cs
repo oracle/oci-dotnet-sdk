@@ -64,6 +64,9 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         ///
         public enum HealthCheckStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OK")]
             Ok,
             [EnumMember(Value = "INVALID_STATUS_CODE")]
@@ -91,7 +94,7 @@ namespace Oci.LoadbalancerService.Models
         /// </remarks>
         [Required(ErrorMessage = "HealthCheckStatus is required.")]
         [JsonProperty(PropertyName = "healthCheckStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<HealthCheckStatusEnum> HealthCheckStatus { get; set; }
         
     }

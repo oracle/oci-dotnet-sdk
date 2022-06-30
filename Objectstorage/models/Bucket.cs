@@ -109,6 +109,9 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         ///
         public enum PublicAccessTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NoPublicAccess")]
             NoPublicAccess,
             [EnumMember(Value = "ObjectRead")]
@@ -126,7 +129,7 @@ namespace Oci.ObjectstorageService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "publicAccessType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PublicAccessTypeEnum> PublicAccessType { get; set; }
                 ///
         /// <value>
@@ -138,6 +141,9 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         ///
         public enum StorageTierEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "Standard")]
             Standard,
             [EnumMember(Value = "Archive")]
@@ -152,7 +158,7 @@ namespace Oci.ObjectstorageService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "storageTier")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StorageTierEnum> StorageTier { get; set; }
         
         /// <value>
@@ -240,6 +246,9 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         ///
         public enum VersioningEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "Enabled")]
             Enabled,
             [EnumMember(Value = "Suspended")]
@@ -254,7 +263,7 @@ namespace Oci.ObjectstorageService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "versioning")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<VersioningEnum> Versioning { get; set; }
                 ///
         /// <value>
@@ -265,6 +274,9 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         ///
         public enum AutoTieringEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "Disabled")]
             Disabled,
             [EnumMember(Value = "InfrequentAccess")]
@@ -278,7 +290,7 @@ namespace Oci.ObjectstorageService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "autoTiering")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AutoTieringEnum> AutoTiering { get; set; }
         
     }

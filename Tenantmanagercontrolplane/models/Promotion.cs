@@ -44,6 +44,9 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INITIALIZED")]
             Initialized,
             [EnumMember(Value = "ACTIVE")]
@@ -56,7 +59,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         /// Current status of the promotion related to the subscription if there is one.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>

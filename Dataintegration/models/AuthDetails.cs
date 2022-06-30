@@ -41,6 +41,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum ModelTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NO_AUTH_DETAILS")]
             NoAuthDetails,
             [EnumMember(Value = "RESOURCE_PRINCIPAL_AUTH_DETAILS")]
@@ -51,7 +54,7 @@ namespace Oci.DataintegrationService.Models
         /// The authentication mode to be used for Generic REST invocation.
         /// </value>
         [JsonProperty(PropertyName = "modelType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ModelTypeEnum> ModelType { get; set; }
         
     }

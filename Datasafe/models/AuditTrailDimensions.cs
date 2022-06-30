@@ -31,7 +31,7 @@ namespace Oci.DatasafeService.Models
         /// The current state of the audit trail.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuditTrailLifecycleState> LifecycleState { get; set; }
         
         /// <value>

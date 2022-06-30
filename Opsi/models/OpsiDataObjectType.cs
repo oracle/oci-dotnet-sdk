@@ -16,6 +16,9 @@ namespace Oci.OpsiService.Models
   /// Type of OPSI data object.
   /// </summary>
   public enum OpsiDataObjectType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "DATABASE_INSIGHTS_DATA_OBJECT")]
       DatabaseInsightsDataObject,
       [EnumMember(Value = "HOST_INSIGHTS_DATA_OBJECT")]

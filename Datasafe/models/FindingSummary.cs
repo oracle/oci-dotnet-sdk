@@ -26,6 +26,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum SeverityEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "HIGH")]
             High,
             [EnumMember(Value = "MEDIUM")]
@@ -44,7 +47,7 @@ namespace Oci.DatasafeService.Models
         /// The severity of the finding.
         /// </value>
         [JsonProperty(PropertyName = "severity")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SeverityEnum> Severity { get; set; }
         
         /// <value>

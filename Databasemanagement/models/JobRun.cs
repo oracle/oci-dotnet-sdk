@@ -88,6 +88,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum RunStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "COMPLETED")]
             Completed,
             [EnumMember(Value = "FAILED")]
@@ -104,7 +107,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "RunStatus is required.")]
         [JsonProperty(PropertyName = "runStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RunStatusEnum> RunStatus { get; set; }
         
         /// <value>

@@ -26,6 +26,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum BlockActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SET_RESPONSE_CODE")]
             SetResponseCode,
             [EnumMember(Value = "SHOW_ERROR_PAGE")]
@@ -38,7 +41,7 @@ namespace Oci.WaasService.Models
         /// The method used to block requests that fail the challenge, if `action` is set to `BLOCK`. If unspecified, defaults to `SHOW_ERROR_PAGE`.
         /// </value>
         [JsonProperty(PropertyName = "blockAction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BlockActionEnum> BlockAction { get; set; }
         
         /// <value>

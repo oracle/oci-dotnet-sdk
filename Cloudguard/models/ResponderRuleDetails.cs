@@ -44,7 +44,7 @@ namespace Oci.CloudguardService.Models
         /// Execution Mode for ResponderRule
         /// </value>
         [JsonProperty(PropertyName = "mode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResponderModeTypes> Mode { get; set; }
         
     }

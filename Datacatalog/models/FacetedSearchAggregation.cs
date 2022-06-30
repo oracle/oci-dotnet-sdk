@@ -47,6 +47,9 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         ///
         public enum PropertyTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CUSTOM_PROPERTY")]
             CustomProperty,
             [EnumMember(Value = "DEFAULT_PROPERTY")]
@@ -60,7 +63,7 @@ namespace Oci.DatacatalogService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "propertyType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PropertyTypeEnum> PropertyType { get; set; }
         
     }

@@ -41,6 +41,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum DiscoveryTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALL")]
             All,
             [EnumMember(Value = "NEW")]
@@ -64,7 +67,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "DiscoveryType is required.")]
         [JsonProperty(PropertyName = "discoveryType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DiscoveryTypeEnum> DiscoveryType { get; set; }
         
         /// <value>
@@ -115,7 +118,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DiscoveryLifecycleState> LifecycleState { get; set; }
         
         /// <value>

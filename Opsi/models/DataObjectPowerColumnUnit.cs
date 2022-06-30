@@ -26,6 +26,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum UnitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AMP")]
             Amp,
             [EnumMember(Value = "WATT")]
@@ -42,7 +45,7 @@ namespace Oci.OpsiService.Models
         /// Power unit.
         /// </value>
         [JsonProperty(PropertyName = "unit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UnitEnum> Unit { get; set; }
         
         [JsonProperty(PropertyName = "unitCategory")]

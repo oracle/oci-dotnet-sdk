@@ -37,6 +37,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum NetworkTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CLIENT")]
             Client,
             [EnumMember(Value = "BACKUP")]
@@ -51,7 +54,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "NetworkType is required.")]
         [JsonProperty(PropertyName = "networkType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NetworkTypeEnum> NetworkType { get; set; }
         
         /// <value>

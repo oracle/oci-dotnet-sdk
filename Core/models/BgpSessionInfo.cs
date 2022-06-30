@@ -115,6 +115,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BgpStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UP")]
             Up,
             [EnumMember(Value = "DOWN")]
@@ -126,7 +129,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bgpState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BgpStateEnum> BgpState { get; set; }
                 ///
         /// <value>
@@ -135,6 +138,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BgpIpv6StateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UP")]
             Up,
             [EnumMember(Value = "DOWN")]
@@ -146,7 +152,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bgpIpv6State")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BgpIpv6StateEnum> BgpIpv6State { get; set; }
         
     }

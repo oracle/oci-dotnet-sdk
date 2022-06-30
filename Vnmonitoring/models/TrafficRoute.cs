@@ -26,6 +26,9 @@ namespace Oci.VnmonitoringService.Models
         /// </value>
         ///
         public enum ReachabilityStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "REACHABLE")]
             Reachable,
             [EnumMember(Value = "UNREACHABLE")]
@@ -42,7 +45,7 @@ namespace Oci.VnmonitoringService.Models
         /// </remarks>
         [Required(ErrorMessage = "ReachabilityStatus is required.")]
         [JsonProperty(PropertyName = "reachabilityStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ReachabilityStatusEnum> ReachabilityStatus { get; set; }
         
         /// <value>

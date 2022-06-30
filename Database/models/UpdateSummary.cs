@@ -51,6 +51,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LastActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ROLLING_APPLY")]
             RollingApply,
             [EnumMember(Value = "NON_ROLLING_APPLY")]
@@ -65,7 +68,7 @@ namespace Oci.DatabaseService.Models
         /// The update action.
         /// </value>
         [JsonProperty(PropertyName = "lastAction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LastActionEnum> LastAction { get; set; }
                 ///
         /// <value>
@@ -73,6 +76,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum AvailableActionsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ROLLING_APPLY")]
             RollingApply,
             [EnumMember(Value = "NON_ROLLING_APPLY")]
@@ -86,7 +92,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The possible actions performed by the update operation on the infrastructure components.
         /// </value>
-        [JsonProperty(PropertyName = "availableActions", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "availableActions", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<AvailableActionsEnum> AvailableActions { get; set; }
                 ///
         /// <value>
@@ -94,6 +100,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum UpdateTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "GI_UPGRADE")]
             GiUpgrade,
             [EnumMember(Value = "GI_PATCH")]
@@ -110,7 +119,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "UpdateType is required.")]
         [JsonProperty(PropertyName = "updateType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UpdateTypeEnum> UpdateType { get; set; }
         
         /// <value>
@@ -125,6 +134,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AVAILABLE")]
             Available,
             [EnumMember(Value = "SUCCESS")]
@@ -139,7 +151,7 @@ namespace Oci.DatabaseService.Models
         /// The current state of the maintenance update. Dependent on value of `lastAction`.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

@@ -16,6 +16,9 @@ namespace Oci.AianomalydetectionService.Models
   /// Possible data sources
   /// </summary>
   public enum DataSourceType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ORACLE_OBJECT_STORAGE")]
       OracleObjectStorage,
       [EnumMember(Value = "ORACLE_ATP")]

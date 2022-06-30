@@ -19,6 +19,9 @@ namespace Oci.CertificatesmanagementService.Models
     /// 
   /// </summary>
   public enum VersionStage {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CURRENT")]
       Current,
       [EnumMember(Value = "PENDING")]

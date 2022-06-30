@@ -16,6 +16,9 @@ namespace Oci.DatascienceService.Models
   /// The type of model deployment.
   /// </summary>
   public enum ModelDeploymentType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "SINGLE_MODEL")]
       SingleModel
   }

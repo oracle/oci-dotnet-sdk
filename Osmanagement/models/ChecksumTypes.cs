@@ -16,6 +16,9 @@ namespace Oci.OsmanagementService.Models
   /// Possible checksum types
   /// </summary>
   public enum ChecksumTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "SHA1")]
       Sha1,
       [EnumMember(Value = "SHA256")]

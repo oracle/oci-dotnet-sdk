@@ -27,6 +27,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum MessageUrgencyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "IMMEDIATE")]
             Immediate,
             [EnumMember(Value = "SOON")]
@@ -45,7 +48,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "MessageUrgency is required.")]
         [JsonProperty(PropertyName = "messageUrgency")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MessageUrgencyEnum> MessageUrgency { get; set; }
                 ///
         /// <value>
@@ -53,6 +56,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum MessageTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UNKNOWN")]
             Unknown,
             [EnumMember(Value = "INCIDENT_ERROR")]
@@ -75,7 +81,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "MessageType is required.")]
         [JsonProperty(PropertyName = "messageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MessageTypeEnum> MessageType { get; set; }
         
         /// <value>

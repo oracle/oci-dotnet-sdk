@@ -16,6 +16,9 @@ namespace Oci.OpsiService.Models
   /// Possible statuses of a resource in Operations Insights.
   /// </summary>
   public enum ResourceStatus {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "DISABLED")]
       Disabled,
       [EnumMember(Value = "ENABLED")]

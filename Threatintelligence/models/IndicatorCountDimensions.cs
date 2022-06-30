@@ -31,7 +31,7 @@ namespace Oci.ThreatintelligenceService.Models
         /// The indicator type that corresponds to the count.
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IndicatorType> Type { get; set; }
         
     }

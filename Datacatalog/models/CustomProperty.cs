@@ -42,7 +42,7 @@ namespace Oci.DatacatalogService.Models
         /// Data type of the custom property
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CustomPropertyDataType> DataType { get; set; }
         
         /// <value>
@@ -115,7 +115,7 @@ namespace Oci.DatacatalogService.Models
         /// The current state of the custom property.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

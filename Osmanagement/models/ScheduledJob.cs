@@ -57,7 +57,7 @@ namespace Oci.OsmanagementService.Models
         /// the type of scheduling this Scheduled Job follows
         /// </value>
         [JsonProperty(PropertyName = "scheduleType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ScheduleTypes> ScheduleType { get; set; }
         
         /// <value>
@@ -76,7 +76,7 @@ namespace Oci.OsmanagementService.Models
         /// the interval period for a recurring Scheduled Job (only if schedule type is RECURRING)
         /// </value>
         [JsonProperty(PropertyName = "intervalType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IntervalTypes> IntervalType { get; set; }
         
         /// <value>
@@ -101,14 +101,14 @@ namespace Oci.OsmanagementService.Models
         /// the type of operation this Scheduled Job performs
         /// </value>
         [JsonProperty(PropertyName = "operationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationTypes> OperationType { get; set; }
         
         /// <value>
         /// Type of the update (only if operation type is UPDATEALL)
         /// </value>
         [JsonProperty(PropertyName = "updateType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageUpdateTypes> UpdateType { get; set; }
         
         /// <value>
@@ -127,7 +127,7 @@ namespace Oci.OsmanagementService.Models
         /// The current state of the Scheduled Job.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
@@ -156,7 +156,7 @@ namespace Oci.OsmanagementService.Models
         /// The Operating System type of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "osFamily")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsFamilies> OsFamily { get; set; }
         
         /// <value>

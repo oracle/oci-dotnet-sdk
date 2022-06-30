@@ -16,6 +16,9 @@ namespace Oci.CoreService.Models
   /// Type of encryption cipher suite to use for the MACsec connection.
   /// </summary>
   public enum MacsecEncryptionCipher {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "AES128_GCM")]
       Aes128Gcm,
       [EnumMember(Value = "AES128_GCM_XPN")]

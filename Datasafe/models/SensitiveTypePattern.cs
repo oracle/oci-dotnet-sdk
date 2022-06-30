@@ -46,6 +46,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum SearchTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OR")]
             Or,
             [EnumMember(Value = "AND")]
@@ -58,7 +61,7 @@ namespace Oci.DatasafeService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "searchType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SearchTypeEnum> SearchType { get; set; }
         
         /// <value>

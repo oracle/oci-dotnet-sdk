@@ -39,7 +39,7 @@ namespace Oci.ManagementagentService.Models
         /// </remarks>
         [Required(ErrorMessage = "PlatformType is required.")]
         [JsonProperty(PropertyName = "platformType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PlatformTypes> PlatformType { get; set; }
         
         /// <value>
@@ -52,14 +52,14 @@ namespace Oci.ManagementagentService.Models
         /// The installation package type
         /// </value>
         [JsonProperty(PropertyName = "packageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageTypes> PackageType { get; set; }
         
         /// <value>
         /// The installation package target architecture type
         /// </value>
         [JsonProperty(PropertyName = "packageArchitectureType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ArchitectureTypes> PackageArchitectureType { get; set; }
         
         /// <value>
@@ -94,7 +94,7 @@ namespace Oci.ManagementagentService.Models
         /// The current state of Management Agent Image
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
     }

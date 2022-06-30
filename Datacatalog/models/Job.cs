@@ -55,7 +55,7 @@ namespace Oci.DatacatalogService.Models
         /// Lifecycle state for job.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -75,7 +75,7 @@ namespace Oci.DatacatalogService.Models
         /// Type of the job.
         /// </value>
         [JsonProperty(PropertyName = "jobType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobType> JobType { get; set; }
         
         /// <value>
@@ -102,7 +102,7 @@ namespace Oci.DatacatalogService.Models
         /// Type of job schedule that is inferred from the scheduling properties.
         /// </value>
         [JsonProperty(PropertyName = "scheduleType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobScheduleType> ScheduleType { get; set; }
         
         /// <value>

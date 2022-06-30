@@ -37,14 +37,14 @@ namespace Oci.ApmsyntheticsService.Models
         /// Request HTTP method.
         /// </value>
         [JsonProperty(PropertyName = "requestMethod")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RequestMethods> RequestMethod { get; set; }
         
         /// <value>
         /// Request http authentication scheme.
         /// </value>
         [JsonProperty(PropertyName = "reqAuthenticationScheme")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RequestAuthenticationSchemes> ReqAuthenticationScheme { get; set; }
         
         [JsonProperty(PropertyName = "reqAuthenticationDetails")]

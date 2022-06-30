@@ -16,6 +16,9 @@ namespace Oci.ApplicationmigrationService.Models
   /// Possible source environment types.
   /// </summary>
   public enum SourceTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "OCIC")]
       Ocic,
       [EnumMember(Value = "INTERNAL_COMPUTE")]

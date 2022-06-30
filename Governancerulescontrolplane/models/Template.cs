@@ -28,6 +28,7 @@ namespace Oci.GovernancerulescontrolplaneService.Models
 
     public class TemplateModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -56,7 +57,14 @@ namespace Oci.GovernancerulescontrolplaneService.Models
                     obj = new AllowedRegionsTemplate();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under Template! Returning null value.");
+            }
             return obj;
         }
     }

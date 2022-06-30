@@ -26,6 +26,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum WeekOfMonthEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FIRST")]
             First,
             [EnumMember(Value = "SECOND")]
@@ -44,7 +47,7 @@ namespace Oci.DataintegrationService.Models
         /// This holds the week of the month in which the schedule should be triggered.
         /// </value>
         [JsonProperty(PropertyName = "weekOfMonth")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WeekOfMonthEnum> WeekOfMonth { get; set; }
         
         /// <value>
@@ -61,6 +64,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum DayOfWeekEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SUNDAY")]
             Sunday,
             [EnumMember(Value = "MONDAY")]
@@ -81,7 +87,7 @@ namespace Oci.DataintegrationService.Models
         /// This holds the day of the week on which the schedule should be triggered.
         /// </value>
         [JsonProperty(PropertyName = "dayOfWeek")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DayOfWeekEnum> DayOfWeek { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]

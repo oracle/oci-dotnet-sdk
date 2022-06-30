@@ -55,7 +55,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "AlertPolicyType is required.")]
         [JsonProperty(PropertyName = "alertPolicyType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlertPolicyType> AlertPolicyType { get; set; }
         
         /// <value>
@@ -68,7 +68,7 @@ namespace Oci.DatasafeService.Models
         /// Severity level of the alert raised by this policy.
         /// </value>
         [JsonProperty(PropertyName = "severity")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlertSeverity> Severity { get; set; }
         
         /// <value>
@@ -109,7 +109,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlertPolicyLifecycleState> LifecycleState { get; set; }
         
         /// <value>

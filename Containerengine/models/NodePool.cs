@@ -31,7 +31,7 @@ namespace Oci.ContainerengineService.Models
         /// The state of the nodepool.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NodePoolLifecycleState> LifecycleState { get; set; }
         
         /// <value>

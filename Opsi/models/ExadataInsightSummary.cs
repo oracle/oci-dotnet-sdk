@@ -63,14 +63,14 @@ namespace Oci.OpsiService.Models
         /// Operations Insights internal representation of the the Exadata system type.
         /// </value>
         [JsonProperty(PropertyName = "exadataType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExadataType> ExadataType { get; set; }
         
         /// <value>
         /// Operations Insights internal representation of the the Exadata system rack type.
         /// </value>
         [JsonProperty(PropertyName = "exadataRackType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExadataRackType> ExadataRackType { get; set; }
         
         /// <value>
@@ -110,7 +110,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceStatus> Status { get; set; }
         
         /// <value>
@@ -137,7 +137,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExadataInsightLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -150,6 +150,7 @@ namespace Oci.OpsiService.Models
 
     public class ExadataInsightSummaryModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -172,7 +173,14 @@ namespace Oci.OpsiService.Models
                     obj = new EmManagedExternalExadataInsightSummary();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under ExadataInsightSummary! Returning null value.");
+            }
             return obj;
         }
     }

@@ -16,6 +16,9 @@ namespace Oci.CloudguardService.Models
   /// Possible Responder activity types
   /// </summary>
   public enum ResponderActivityType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "STARTED")]
       Started,
       [EnumMember(Value = "COMPLETED")]

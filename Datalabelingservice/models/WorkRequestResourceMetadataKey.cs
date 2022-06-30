@@ -16,6 +16,9 @@ namespace Oci.DatalabelingService.Models
   /// Possible Metadata keys for workRequest resource metadata
   /// </summary>
   public enum WorkRequestResourceMetadataKey {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "NAMESPACE")]
       Namespace,
       [EnumMember(Value = "BUCKET")]

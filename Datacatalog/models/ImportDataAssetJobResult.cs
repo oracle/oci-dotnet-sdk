@@ -53,7 +53,7 @@ namespace Oci.DatacatalogService.Models
         /// The status of the import job execution.
         /// </value>
         [JsonProperty(PropertyName = "importJobExecutionStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobExecutionState> ImportJobExecutionStatus { get; set; }
         
     }

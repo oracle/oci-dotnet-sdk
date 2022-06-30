@@ -76,7 +76,7 @@ namespace Oci.ResourcemanagerService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
@@ -117,6 +117,7 @@ namespace Oci.ResourcemanagerService.Models
 
     public class ConfigurationSourceProviderModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -142,7 +143,14 @@ namespace Oci.ResourcemanagerService.Models
                     obj = new GitlabAccessTokenConfigurationSourceProvider();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under ConfigurationSourceProvider! Returning null value.");
+            }
             return obj;
         }
     }

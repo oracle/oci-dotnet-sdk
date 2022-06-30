@@ -52,6 +52,9 @@ namespace Oci.NetworkfirewallService.Models
         /// </value>
         ///
         public enum ActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALLOW")]
             Allow,
             [EnumMember(Value = "DROP")]
@@ -76,7 +79,7 @@ namespace Oci.NetworkfirewallService.Models
         /// </remarks>
         [Required(ErrorMessage = "Action is required.")]
         [JsonProperty(PropertyName = "action")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
                 ///
         /// <value>
@@ -88,6 +91,9 @@ namespace Oci.NetworkfirewallService.Models
         /// </value>
         ///
         public enum InspectionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INTRUSION_DETECTION")]
             IntrusionDetection,
             [EnumMember(Value = "INTRUSION_PREVENTION")]
@@ -102,7 +108,7 @@ namespace Oci.NetworkfirewallService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "inspection")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InspectionEnum> Inspection { get; set; }
         
     }

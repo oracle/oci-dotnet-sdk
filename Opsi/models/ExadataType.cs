@@ -16,6 +16,9 @@ namespace Oci.OpsiService.Models
   /// Operations Insights internal representation of the the Exadata system type.
   /// </summary>
   public enum ExadataType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "DBMACHINE")]
       Dbmachine,
       [EnumMember(Value = "EXACS")]

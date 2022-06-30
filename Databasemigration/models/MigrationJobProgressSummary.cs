@@ -31,7 +31,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "CurrentPhase is required.")]
         [JsonProperty(PropertyName = "currentPhase")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OdmsJobPhases> CurrentPhase { get; set; }
         
         /// <value>
@@ -43,7 +43,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "CurrentStatus is required.")]
         [JsonProperty(PropertyName = "currentStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobPhaseStatus> CurrentStatus { get; set; }
         
         /// <value>

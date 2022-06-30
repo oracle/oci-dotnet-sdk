@@ -43,14 +43,14 @@ namespace Oci.ApmsyntheticsService.Models
         /// Type of protocol.
         /// </value>
         [JsonProperty(PropertyName = "protocol")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Protocol> Protocol { get; set; }
         
         /// <value>
         /// Type of probe mode when TCP protocol is selected.
         /// </value>
         [JsonProperty(PropertyName = "probeMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProbeMode> ProbeMode { get; set; }
         
     }

@@ -84,7 +84,7 @@ namespace Oci.GoldengateService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -92,7 +92,7 @@ namespace Oci.GoldengateService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleSubState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleSubState> LifecycleSubState { get; set; }
         
         /// <value>
@@ -150,7 +150,7 @@ namespace Oci.GoldengateService.Models
         /// </remarks>
         [Required(ErrorMessage = "LicenseModel is required.")]
         [JsonProperty(PropertyName = "licenseModel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LicenseModel> LicenseModel { get; set; }
         
         /// <value>
@@ -254,7 +254,7 @@ namespace Oci.GoldengateService.Models
         /// </remarks>
         [Required(ErrorMessage = "DeploymentType is required.")]
         [JsonProperty(PropertyName = "deploymentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DeploymentType> DeploymentType { get; set; }
         
         [JsonProperty(PropertyName = "oggData")]

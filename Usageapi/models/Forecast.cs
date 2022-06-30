@@ -26,6 +26,9 @@ namespace Oci.UsageapiService.Models
         /// </value>
         ///
         public enum ForecastTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BASIC")]
             Basic
         };
@@ -34,7 +37,7 @@ namespace Oci.UsageapiService.Models
         /// BASIC uses the exponential smoothing (ETS) model to project future usage/costs based on history data. The basis for projections is a periodic set of equivalent historical days for which the projection is being made.
         /// </value>
         [JsonProperty(PropertyName = "forecastType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ForecastTypeEnum> ForecastType { get; set; }
         
         /// <value>

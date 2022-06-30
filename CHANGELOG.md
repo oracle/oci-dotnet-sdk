@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 39.3.0 - 2022-07-05
+### Added
+- Support for backup policies returned as part of the database system list operation in the MySQL Database service
+ 
+### Changed
+- Instead of throwing an exception when the API returns an Unknown enum, the OCI Dotnet SDK will now return a UKNOWN_ENUM_VALUE (null) instead to support Forward Enum Compatibility
+
 ## 39.2.0 - 2022-06-27
 ### Added
 - Support for the Network Monitoring service

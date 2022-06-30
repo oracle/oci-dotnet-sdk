@@ -56,6 +56,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BackendHealthStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OK")]
             Ok,
             [EnumMember(Value = "WARNING")]
@@ -74,7 +77,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "BackendHealthStatus is required.")]
         [JsonProperty(PropertyName = "backendHealthStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BackendHealthStatusEnum> BackendHealthStatus { get; set; }
         
     }

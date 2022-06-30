@@ -16,6 +16,9 @@ namespace Oci.OperatoraccesscontrolService.Models
   /// Levels of priorities associated with an access request
   /// </summary>
   public enum AccessRequestSeverities {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "S1")]
       S1,
       [EnumMember(Value = "S2")]

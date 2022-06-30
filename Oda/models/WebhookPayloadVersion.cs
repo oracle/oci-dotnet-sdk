@@ -16,6 +16,9 @@ namespace Oci.OdaService.Models
   /// The payload version defines the expected structure of the payloads sent and received by the Webhook channel.
   /// </summary>
   public enum WebhookPayloadVersion {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "1.0")]
       _10,
       [EnumMember(Value = "1.1")]

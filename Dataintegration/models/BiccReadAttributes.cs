@@ -32,6 +32,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum ExtractStrategyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FULL")]
             Full,
             [EnumMember(Value = "INCREMENTAL")]
@@ -42,7 +45,7 @@ namespace Oci.DataintegrationService.Models
         /// Extraction Strategy - FULL|INCREMENTAL
         /// </value>
         [JsonProperty(PropertyName = "extractStrategy")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExtractStrategyEnum> ExtractStrategy { get; set; }
         
         [JsonProperty(PropertyName = "externalStorage")]

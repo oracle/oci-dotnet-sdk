@@ -16,6 +16,9 @@ namespace Oci.OdaService.Models
   /// The type of OSVC service.
   /// </summary>
   public enum OsvcServiceType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "OSVC")]
       Osvc,
       [EnumMember(Value = "FUSION")]

@@ -17,6 +17,9 @@ namespace Oci.AnalyticsService.Models
     /// 
   /// </summary>
   public enum WorkRequestOperationType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CREATE_ANALYTICS_INSTANCE")]
       CreateAnalyticsInstance,
       [EnumMember(Value = "DELETE_ANALYTICS_INSTANCE")]

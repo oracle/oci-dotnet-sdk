@@ -70,6 +70,9 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         ///
         public enum InputTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENUM")]
             Enum,
             [EnumMember(Value = "EMAIL")]
@@ -89,7 +92,7 @@ namespace Oci.ApigatewayService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "inputType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InputTypeEnum> InputType { get; set; }
         
         /// <value>

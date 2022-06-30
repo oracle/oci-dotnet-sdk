@@ -33,7 +33,7 @@ namespace Oci.ApplicationmigrationService.Models
         /// The type of the application.
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MigrationTypes> Type { get; set; }
         
         /// <value>

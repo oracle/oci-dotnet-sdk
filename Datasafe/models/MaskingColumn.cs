@@ -53,7 +53,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MaskingColumnLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -108,7 +108,7 @@ namespace Oci.DatasafeService.Models
         /// The type of the object that contains the database column.
         /// </value>
         [JsonProperty(PropertyName = "objectType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ObjectType> ObjectType { get; set; }
         
         /// <value>

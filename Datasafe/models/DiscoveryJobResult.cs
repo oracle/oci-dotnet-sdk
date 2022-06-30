@@ -44,6 +44,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum DiscoveryTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NEW")]
             New,
             [EnumMember(Value = "MODIFIED")]
@@ -64,7 +67,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "DiscoveryType is required.")]
         [JsonProperty(PropertyName = "discoveryType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DiscoveryTypeEnum> DiscoveryType { get; set; }
         
         /// <value>
@@ -114,6 +117,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum ObjectTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "TABLE")]
             Table,
             [EnumMember(Value = "EDITIONING_VIEW")]
@@ -128,7 +134,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "ObjectType is required.")]
         [JsonProperty(PropertyName = "objectType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ObjectTypeEnum> ObjectType { get; set; }
         
         /// <value>
@@ -161,6 +167,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum RelationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NONE")]
             None,
             [EnumMember(Value = "APP_DEFINED")]
@@ -180,7 +189,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "RelationType is required.")]
         [JsonProperty(PropertyName = "relationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RelationTypeEnum> RelationType { get; set; }
         
         /// <value>
@@ -225,6 +234,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum PlannedActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NONE")]
             None,
             [EnumMember(Value = "ACCEPT")]
@@ -248,7 +260,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "PlannedAction is required.")]
         [JsonProperty(PropertyName = "plannedAction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PlannedActionEnum> PlannedAction { get; set; }
         
         /// <value>

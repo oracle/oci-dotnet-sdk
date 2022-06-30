@@ -29,7 +29,7 @@ namespace Oci.OptimizerService.Models
         /// </remarks>
         [Required(ErrorMessage = "Importance is required.")]
         [JsonProperty(PropertyName = "importance")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Importance> Importance { get; set; }
         
         /// <value>

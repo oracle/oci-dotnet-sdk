@@ -45,6 +45,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum AssignedEntityTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PRIVATE_IP")]
             PrivateIp,
             [EnumMember(Value = "NAT_GATEWAY")]
@@ -57,7 +60,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "assignedEntityType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AssignedEntityTypeEnum> AssignedEntityType { get; set; }
         
         /// <value>
@@ -125,6 +128,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
@@ -147,7 +153,7 @@ namespace Oci.CoreService.Models
         /// The public IP's current state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
@@ -169,6 +175,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum LifetimeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "EPHEMERAL")]
             Ephemeral,
             [EnumMember(Value = "RESERVED")]
@@ -193,7 +202,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifetime")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifetimeEnum> Lifetime { get; set; }
         
         /// <value>
@@ -224,6 +233,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum ScopeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "REGION")]
             Region,
             [EnumMember(Value = "AVAILABILITY_DOMAIN")]
@@ -244,7 +256,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scope")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ScopeEnum> Scope { get; set; }
         
         /// <value>

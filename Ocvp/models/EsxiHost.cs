@@ -102,7 +102,7 @@ namespace Oci.OcvpService.Models
         /// The current state of the ESXi host.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
@@ -115,7 +115,7 @@ namespace Oci.OcvpService.Models
         /// </remarks>
         [Required(ErrorMessage = "CurrentSku is required.")]
         [JsonProperty(PropertyName = "currentSku")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Sku> CurrentSku { get; set; }
         
         /// <value>
@@ -129,7 +129,7 @@ namespace Oci.OcvpService.Models
         /// </remarks>
         [Required(ErrorMessage = "NextSku is required.")]
         [JsonProperty(PropertyName = "nextSku")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Sku> NextSku { get; set; }
         
         /// <value>

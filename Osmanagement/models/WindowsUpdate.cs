@@ -57,7 +57,7 @@ namespace Oci.OsmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "UpdateType is required.")]
         [JsonProperty(PropertyName = "updateType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UpdateTypes> UpdateType { get; set; }
         
         /// <value>
@@ -70,11 +70,14 @@ namespace Oci.OsmanagementService.Models
         /// Indicates whether the update can be installed using OSMS.
         /// </value>
         [JsonProperty(PropertyName = "isEligibleForInstallation")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IsEligibleForInstallation> IsEligibleForInstallation { get; set; }
                 ///
         ///
         public enum InstallationRequirementsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "EULA_ACCEPTANCE_REQUIRED")]
             EulaAcceptanceRequired,
             [EnumMember(Value = "SOFTWARE_MEDIA_REQUIRED")]
@@ -86,7 +89,7 @@ namespace Oci.OsmanagementService.Models
         /// <value>
         /// List of requirements forinstalling on a managed instances
         /// </value>
-        [JsonProperty(PropertyName = "installationRequirements", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "installationRequirements", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<InstallationRequirementsEnum> InstallationRequirements { get; set; }
         
         /// <value>

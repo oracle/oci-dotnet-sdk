@@ -51,7 +51,7 @@ namespace Oci.OsmanagementService.Models
         /// the type of scheduling this Scheduled Job follows
         /// </value>
         [JsonProperty(PropertyName = "scheduleType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ScheduleTypes> ScheduleType { get; set; }
         
         /// <value>
@@ -82,14 +82,14 @@ namespace Oci.OsmanagementService.Models
         /// the type of operation this Scheduled Job performs
         /// </value>
         [JsonProperty(PropertyName = "operationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationTypes> OperationType { get; set; }
         
         /// <value>
         /// The current state of the Scheduled Job.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
@@ -110,7 +110,7 @@ namespace Oci.OsmanagementService.Models
         /// The Operating System type of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "osFamily")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsFamilies> OsFamily { get; set; }
         
         /// <value>

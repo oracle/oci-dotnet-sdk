@@ -61,7 +61,7 @@ namespace Oci.BudgetService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlertType> Type { get; set; }
         
         /// <value>
@@ -83,7 +83,7 @@ namespace Oci.BudgetService.Models
         /// </remarks>
         [Required(ErrorMessage = "ThresholdType is required.")]
         [JsonProperty(PropertyName = "thresholdType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ThresholdType> ThresholdType { get; set; }
         
         /// <value>
@@ -94,7 +94,7 @@ namespace Oci.BudgetService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

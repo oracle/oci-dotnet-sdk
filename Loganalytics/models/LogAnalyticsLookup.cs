@@ -68,6 +68,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "Lookup")]
             Lookup,
             [EnumMember(Value = "Dictionary")]
@@ -78,7 +81,7 @@ namespace Oci.LoganalyticsService.Models
         /// The lookup type.  Valid values are LOOKUP or DICTIONARY.
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>

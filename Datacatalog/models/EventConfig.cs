@@ -49,7 +49,7 @@ namespace Oci.DatacatalogService.Models
         /// Status of the configuration.
         /// </value>
         [JsonProperty(PropertyName = "eventConfigStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EventConfigStatus> EventConfigStatus { get; set; }
         
         /// <value>

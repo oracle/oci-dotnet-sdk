@@ -39,7 +39,7 @@ namespace Oci.CertificatesService.Models
         /// </remarks>
         [Required(ErrorMessage = "RevocationReason is required.")]
         [JsonProperty(PropertyName = "revocationReason")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RevocationReason> RevocationReason { get; set; }
         
     }

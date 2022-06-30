@@ -39,7 +39,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "SecurityRating is required.")]
         [JsonProperty(PropertyName = "securityRating")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SecurityRating> SecurityRating { get; set; }
         
         /// <value>

@@ -35,6 +35,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum ConditionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "URL_IS")]
             UrlIs,
             [EnumMember(Value = "URL_STARTS_WITH")]
@@ -62,7 +65,7 @@ namespace Oci.WaasService.Models
         /// </remarks>
         [Required(ErrorMessage = "Condition is required.")]
         [JsonProperty(PropertyName = "condition")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConditionEnum> Condition { get; set; }
         
         /// <value>

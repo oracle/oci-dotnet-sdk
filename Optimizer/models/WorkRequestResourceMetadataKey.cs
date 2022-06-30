@@ -16,6 +16,9 @@ namespace Oci.OptimizerService.Models
   /// Keys for work request resource metadata.
   /// </summary>
   public enum WorkRequestResourceMetadataKey {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "OPERATION_NAME")]
       OperationName
   }

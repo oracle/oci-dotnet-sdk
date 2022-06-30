@@ -31,7 +31,7 @@ namespace Oci.AnalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "CapacityType is required.")]
         [JsonProperty(PropertyName = "capacityType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CapacityType> CapacityType { get; set; }
         
         /// <value>

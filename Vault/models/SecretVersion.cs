@@ -26,6 +26,9 @@ namespace Oci.VaultService.Models
         /// </value>
         ///
         public enum ContentTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BASE64")]
             Base64
         };
@@ -34,7 +37,7 @@ namespace Oci.VaultService.Models
         /// The content type of the secret version's secret contents.
         /// </value>
         [JsonProperty(PropertyName = "contentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ContentTypeEnum> ContentType { get; set; }
         
         /// <value>
@@ -52,6 +55,9 @@ namespace Oci.VaultService.Models
                 ///
         ///
         public enum StagesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CURRENT")]
             Current,
             [EnumMember(Value = "PENDING")]
@@ -73,7 +79,7 @@ namespace Oci.VaultService.Models
         /// one in use. Only secret versions marked `DEPRECATED` can be scheduled for deletion.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "stages", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "stages", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<StagesEnum> Stages { get; set; }
         
         /// <value>

@@ -87,7 +87,7 @@ namespace Oci.WaaService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WebAppAcceleration.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -135,6 +135,7 @@ namespace Oci.WaaService.Models
 
     public class WebAppAccelerationSummaryModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -157,7 +158,14 @@ namespace Oci.WaaService.Models
                     obj = new WebAppAccelerationLoadBalancerSummary();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under WebAppAccelerationSummary! Returning null value.");
+            }
             return obj;
         }
     }

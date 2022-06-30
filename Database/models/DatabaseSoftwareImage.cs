@@ -67,6 +67,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
@@ -93,7 +96,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -117,6 +120,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum ImageTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "GRID_IMAGE")]
             GridImage,
             [EnumMember(Value = "DATABASE_IMAGE")]
@@ -131,7 +137,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "ImageType is required.")]
         [JsonProperty(PropertyName = "imageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ImageTypeEnum> ImageType { get; set; }
                 ///
         /// <value>
@@ -139,6 +145,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum ImageShapeFamilyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "VM_BM_SHAPE")]
             VmBmShape,
             [EnumMember(Value = "EXADATA_SHAPE")]
@@ -155,7 +164,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "ImageShapeFamily is required.")]
         [JsonProperty(PropertyName = "imageShapeFamily")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ImageShapeFamilyEnum> ImageShapeFamily { get; set; }
         
         /// <value>

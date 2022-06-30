@@ -59,7 +59,7 @@ namespace Oci.OptimizerService.Models
         /// </remarks>
         [Required(ErrorMessage = "TagValueType is required.")]
         [JsonProperty(PropertyName = "tagValueType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TagValueType> TagValueType { get; set; }
         
         /// <value>

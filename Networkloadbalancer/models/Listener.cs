@@ -74,14 +74,14 @@ namespace Oci.NetworkloadbalancerService.Models
         /// </remarks>
         [Required(ErrorMessage = "Protocol is required.")]
         [JsonProperty(PropertyName = "protocol")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ListenerProtocols> Protocol { get; set; }
         
         /// <value>
         /// IP version associated with the listener.
         /// </value>
         [JsonProperty(PropertyName = "ipVersion")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IpVersion> IpVersion { get; set; }
         
     }

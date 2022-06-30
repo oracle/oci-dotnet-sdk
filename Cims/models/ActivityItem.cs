@@ -44,6 +44,9 @@ namespace Oci.CimsService.Models
         /// </value>
         ///
         public enum ActivityTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NOTES")]
             Notes,
             [EnumMember(Value = "PROBLEM_DESCRIPTION")]
@@ -58,7 +61,7 @@ namespace Oci.CimsService.Models
         /// The type of activity occuring on the support ticket.
         /// </value>
         [JsonProperty(PropertyName = "activityType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActivityTypeEnum> ActivityType { get; set; }
                 ///
         /// <value>
@@ -66,6 +69,9 @@ namespace Oci.CimsService.Models
         /// </value>
         ///
         public enum ActivityAuthorEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CUSTOMER")]
             Customer,
             [EnumMember(Value = "ORACLE")]
@@ -76,7 +82,7 @@ namespace Oci.CimsService.Models
         /// The person who updates the activity on the support ticket.
         /// </value>
         [JsonProperty(PropertyName = "activityAuthor")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActivityAuthorEnum> ActivityAuthor { get; set; }
         
         [JsonProperty(PropertyName = "type")]

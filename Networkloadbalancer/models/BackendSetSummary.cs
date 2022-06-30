@@ -51,7 +51,7 @@ namespace Oci.NetworkloadbalancerService.Models
         /// </remarks>
         [Required(ErrorMessage = "Policy is required.")]
         [JsonProperty(PropertyName = "policy")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NetworkLoadBalancingPolicy> Policy { get; set; }
         
         /// <value>
@@ -67,7 +67,7 @@ namespace Oci.NetworkloadbalancerService.Models
         /// IP version associated with the backend set.
         /// </value>
         [JsonProperty(PropertyName = "ipVersion")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IpVersion> IpVersion { get; set; }
         
         /// <value>

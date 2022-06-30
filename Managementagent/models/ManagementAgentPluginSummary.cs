@@ -50,7 +50,7 @@ namespace Oci.ManagementagentService.Models
         /// <value>
         /// Supported Platform Types
         /// </value>
-        [JsonProperty(PropertyName = "supportedPlatformTypes", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "supportedPlatformTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<PlatformTypes> SupportedPlatformTypes { get; set; }
         
         /// <value>
@@ -79,7 +79,7 @@ namespace Oci.ManagementagentService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
     }

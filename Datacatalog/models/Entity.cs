@@ -84,7 +84,7 @@ namespace Oci.DatacatalogService.Models
         /// The current state of the data entity.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -172,7 +172,7 @@ namespace Oci.DatacatalogService.Models
         /// Status of the object as updated by the harvest process.
         /// </value>
         [JsonProperty(PropertyName = "harvestStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<HarvestStatus> HarvestStatus { get; set; }
         
         /// <value>

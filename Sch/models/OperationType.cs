@@ -17,6 +17,9 @@ namespace Oci.SchService.Models
     /// 
   /// </summary>
   public enum OperationType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CREATE_SERVICE_CONNECTOR")]
       CreateServiceConnector,
       [EnumMember(Value = "UPDATE_SERVICE_CONNECTOR")]

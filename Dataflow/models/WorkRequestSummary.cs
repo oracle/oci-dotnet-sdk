@@ -53,7 +53,7 @@ namespace Oci.DataflowService.Models
         /// </remarks>
         [Required(ErrorMessage = "Operation is required.")]
         [JsonProperty(PropertyName = "operation")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkRequestOperation> Operation { get; set; }
         
         /// <value>
@@ -83,7 +83,7 @@ namespace Oci.DataflowService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkRequestStatus> Status { get; set; }
         
         /// <value>
