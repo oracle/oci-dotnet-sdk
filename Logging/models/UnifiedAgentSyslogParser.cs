@@ -29,6 +29,9 @@ namespace Oci.LoggingService.Models
                 ///
         ///
         public enum MessageFormatEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "RFC3164")]
             Rfc3164,
             [EnumMember(Value = "RFC5424")]
@@ -38,7 +41,7 @@ namespace Oci.LoggingService.Models
         };
 
         [JsonProperty(PropertyName = "messageFormat")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MessageFormatEnum> MessageFormat { get; set; }
         
         [JsonProperty(PropertyName = "isWithPriority")]
@@ -49,6 +52,9 @@ namespace Oci.LoggingService.Models
                 ///
         ///
         public enum SyslogParserTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STRING")]
             String,
             [EnumMember(Value = "REGEXP")]
@@ -56,7 +62,7 @@ namespace Oci.LoggingService.Models
         };
 
         [JsonProperty(PropertyName = "syslogParserType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SyslogParserTypeEnum> SyslogParserType { get; set; }
         
         [JsonProperty(PropertyName = "parserType")]

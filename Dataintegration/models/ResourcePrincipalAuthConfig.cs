@@ -26,6 +26,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum ResourcePrincipalSourceEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "WORKSPACE")]
             Workspace,
             [EnumMember(Value = "APPLICATION")]
@@ -36,7 +39,7 @@ namespace Oci.DataintegrationService.Models
         /// The OCI resource type that will supply the authentication token
         /// </value>
         [JsonProperty(PropertyName = "resourcePrincipalSource")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourcePrincipalSourceEnum> ResourcePrincipalSource { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]

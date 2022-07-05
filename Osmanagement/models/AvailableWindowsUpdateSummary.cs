@@ -51,14 +51,14 @@ namespace Oci.OsmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "UpdateType is required.")]
         [JsonProperty(PropertyName = "updateType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UpdateTypes> UpdateType { get; set; }
         
         /// <value>
         /// Indicates whether the update can be installed using OSMS.
         /// </value>
         [JsonProperty(PropertyName = "isEligibleForInstallation")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IsEligibleForInstallation> IsEligibleForInstallation { get; set; }
         
         /// <value>

@@ -68,6 +68,9 @@ namespace Oci.DevopsService.Models
         /// </value>
         ///
         public enum DeployArtifactTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DEPLOYMENT_SPEC")]
             DeploymentSpec,
             [EnumMember(Value = "JOB_SPEC")]
@@ -90,7 +93,7 @@ namespace Oci.DevopsService.Models
         /// </remarks>
         [Required(ErrorMessage = "DeployArtifactType is required.")]
         [JsonProperty(PropertyName = "deployArtifactType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DeployArtifactTypeEnum> DeployArtifactType { get; set; }
                 ///
         /// <value>
@@ -98,6 +101,9 @@ namespace Oci.DevopsService.Models
         /// </value>
         ///
         public enum ArgumentSubstitutionModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NONE")]
             None,
             [EnumMember(Value = "SUBSTITUTE_PLACEHOLDERS")]
@@ -112,7 +118,7 @@ namespace Oci.DevopsService.Models
         /// </remarks>
         [Required(ErrorMessage = "ArgumentSubstitutionMode is required.")]
         [JsonProperty(PropertyName = "argumentSubstitutionMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ArgumentSubstitutionModeEnum> ArgumentSubstitutionMode { get; set; }
         
         /// <remarks>
@@ -139,6 +145,9 @@ namespace Oci.DevopsService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "UPDATING")]
@@ -157,7 +166,7 @@ namespace Oci.DevopsService.Models
         /// Current state of the deployment artifact.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

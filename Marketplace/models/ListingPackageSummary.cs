@@ -37,7 +37,7 @@ namespace Oci.MarketplaceService.Models
         /// The specified package's type.
         /// </value>
         [JsonProperty(PropertyName = "packageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageTypeEnum> PackageType { get; set; }
         
         [JsonProperty(PropertyName = "pricing")]

@@ -28,7 +28,7 @@ namespace Oci.AnalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "ActionResult is required.")]
         [JsonProperty(PropertyName = "actionResult")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkRequestActionResult> ActionResult { get; set; }
         
         /// <value>
@@ -40,7 +40,7 @@ namespace Oci.AnalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "ResourceType is required.")]
         [JsonProperty(PropertyName = "resourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkRequestResourceType> ResourceType { get; set; }
         
         /// <value>

@@ -87,7 +87,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The current lifecycle state of the private endpoint.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
     }

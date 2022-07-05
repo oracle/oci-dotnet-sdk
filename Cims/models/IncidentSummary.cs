@@ -57,7 +57,7 @@ namespace Oci.CimsService.Models
         /// </remarks>
         [Required(ErrorMessage = "ProblemType is required.")]
         [JsonProperty(PropertyName = "problemType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProblemType> ProblemType { get; set; }
         
     }

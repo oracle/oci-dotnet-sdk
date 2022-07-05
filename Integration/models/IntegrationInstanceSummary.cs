@@ -56,6 +56,9 @@ namespace Oci.IntegrationService.Models
         /// </value>
         ///
         public enum IntegrationInstanceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STANDARD")]
             Standard,
             [EnumMember(Value = "ENTERPRISE")]
@@ -70,7 +73,7 @@ namespace Oci.IntegrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "IntegrationInstanceType is required.")]
         [JsonProperty(PropertyName = "integrationInstanceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IntegrationInstanceTypeEnum> IntegrationInstanceType { get; set; }
         
         /// <value>
@@ -90,6 +93,9 @@ namespace Oci.IntegrationService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "UPDATING")]
@@ -110,7 +116,7 @@ namespace Oci.IntegrationService.Models
         /// The current state of the Integration Instance.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -176,6 +182,9 @@ namespace Oci.IntegrationService.Models
         /// </value>
         ///
         public enum ConsumptionModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UCM")]
             Ucm,
             [EnumMember(Value = "GOV")]
@@ -188,7 +197,7 @@ namespace Oci.IntegrationService.Models
         /// The entitlement used for billing purposes.
         /// </value>
         [JsonProperty(PropertyName = "consumptionModel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConsumptionModelEnum> ConsumptionModel { get; set; }
         
         [JsonProperty(PropertyName = "networkEndpointDetails")]

@@ -49,6 +49,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum UserCategoryEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CRITICAL")]
             Critical,
             [EnumMember(Value = "HIGH")]
@@ -63,7 +66,7 @@ namespace Oci.DatasafeService.Models
         /// The user category based on the privileges and other details of the user.
         /// </value>
         [JsonProperty(PropertyName = "userCategory")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UserCategoryEnum> UserCategory { get; set; }
                 ///
         /// <value>
@@ -71,6 +74,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum AccountStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OPEN")]
             Open,
             [EnumMember(Value = "LOCKED")]
@@ -87,7 +93,7 @@ namespace Oci.DatasafeService.Models
         /// The user account status.
         /// </value>
         [JsonProperty(PropertyName = "accountStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AccountStatusEnum> AccountStatus { get; set; }
         
         /// <value>
@@ -117,6 +123,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum AuthenticationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PASSWORD")]
             Password,
             [EnumMember(Value = "NONE")]
@@ -127,7 +136,7 @@ namespace Oci.DatasafeService.Models
         /// The user authentication method.
         /// </value>
         [JsonProperty(PropertyName = "authenticationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuthenticationTypeEnum> AuthenticationType { get; set; }
         
         /// <value>
@@ -144,6 +153,9 @@ namespace Oci.DatasafeService.Models
                 ///
         ///
         public enum UserTypesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ADMIN_PRIVILEGED")]
             AdminPrivileged,
             [EnumMember(Value = "APPLICATION")]
@@ -166,11 +178,14 @@ namespace Oci.DatasafeService.Models
         /// 'Non-privileged': The user is a non-privileged user.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "userTypes", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "userTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<UserTypesEnum> UserTypes { get; set; }
                 ///
         ///
         public enum AdminRolesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PDB_DBA")]
             PdbDba,
             [EnumMember(Value = "DBA")]
@@ -184,7 +199,7 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// The admin roles granted to the user.
         /// </value>
-        [JsonProperty(PropertyName = "adminRoles", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "adminRoles", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<AdminRolesEnum> AdminRoles { get; set; }
         
     }

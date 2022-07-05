@@ -80,7 +80,7 @@ namespace Oci.LicensemanagerService.Models
         /// </remarks>
         [Required(ErrorMessage = "UnitType is required.")]
         [JsonProperty(PropertyName = "unitType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceUnit> UnitType { get; set; }
         
     }

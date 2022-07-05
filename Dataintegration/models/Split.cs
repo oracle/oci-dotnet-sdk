@@ -26,6 +26,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum DataRoutingStrategyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FIRST")]
             First,
             [EnumMember(Value = "ALL")]
@@ -36,7 +39,7 @@ namespace Oci.DataintegrationService.Models
         /// Specify how to handle data that matches a split condition. Either data that matches the first condition should be removed from further processing by other conditions, or all matched data should be evaluated for all conditions.
         /// </value>
         [JsonProperty(PropertyName = "dataRoutingStrategy")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataRoutingStrategyEnum> DataRoutingStrategy { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]

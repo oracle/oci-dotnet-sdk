@@ -16,6 +16,9 @@ namespace Oci.OpsiService.Models
   /// Possible AWR report format type
   /// </summary>
   public enum AwrReportFormatType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "HTML")]
       Html,
       [EnumMember(Value = "TEXT")]

@@ -118,6 +118,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum Ipv4BgpStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UP")]
             Up,
             [EnumMember(Value = "DOWN")]
@@ -128,7 +131,7 @@ namespace Oci.CoreService.Models
         /// The state of the Ipv4 BGP session.
         /// </value>
         [JsonProperty(PropertyName = "ipv4BgpStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Ipv4BgpStatusEnum> Ipv4BgpStatus { get; set; }
                 ///
         /// <value>
@@ -136,6 +139,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum Ipv6BgpStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UP")]
             Up,
             [EnumMember(Value = "DOWN")]
@@ -146,7 +152,7 @@ namespace Oci.CoreService.Models
         /// The state of the Ipv6 BGP session.
         /// </value>
         [JsonProperty(PropertyName = "ipv6BgpStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Ipv6BgpStatusEnum> Ipv6BgpStatus { get; set; }
         
         /// <value>

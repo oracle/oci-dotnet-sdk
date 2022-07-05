@@ -16,6 +16,9 @@ namespace Oci.OperatoraccesscontrolService.Models
   /// Possible lifecycle states for an operator action. Operator action lifecycles are controlled by Oracle.
   /// </summary>
   public enum OperatorActionLifecycleStates {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ACTIVE")]
       Active,
       [EnumMember(Value = "INACTIVE")]

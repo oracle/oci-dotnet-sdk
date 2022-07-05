@@ -37,7 +37,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The type of Oracle Database installation.
         /// </value>
         [JsonProperty(PropertyName = "databaseType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseType> DatabaseType { get; set; }
         
         /// <value>
@@ -46,14 +46,14 @@ namespace Oci.DatabasemanagementService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "databaseSubType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseSubType> DatabaseSubType { get; set; }
         
         /// <value>
         /// The infrastructure used to deploy the Oracle Database.
         /// </value>
         [JsonProperty(PropertyName = "deploymentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DeploymentType> DeploymentType { get; set; }
         
         /// <value>
@@ -66,7 +66,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The workload type of the Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "workloadType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkloadType> WorkloadType { get; set; }
         
         /// <value>

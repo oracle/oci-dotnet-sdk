@@ -65,6 +65,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum DataPropertyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "TRUNCATE")]
             Truncate,
             [EnumMember(Value = "MERGE")]
@@ -83,7 +86,7 @@ namespace Oci.DataintegrationService.Models
         /// Specifies the data property.
         /// </value>
         [JsonProperty(PropertyName = "dataProperty")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataPropertyEnum> DataProperty { get; set; }
         
         [JsonProperty(PropertyName = "schemaDriftConfig")]

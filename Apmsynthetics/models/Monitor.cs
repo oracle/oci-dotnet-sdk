@@ -49,7 +49,7 @@ namespace Oci.ApmsyntheticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "MonitorType is required.")]
         [JsonProperty(PropertyName = "monitorType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MonitorTypes> MonitorType { get; set; }
         
         /// <value>
@@ -102,7 +102,7 @@ namespace Oci.ApmsyntheticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MonitorStatus> Status { get; set; }
         
         /// <value>

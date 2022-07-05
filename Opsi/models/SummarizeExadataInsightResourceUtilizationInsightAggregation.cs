@@ -47,6 +47,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum ExadataResourceMetricEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CPU")]
             Cpu,
             [EnumMember(Value = "STORAGE")]
@@ -69,7 +72,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "ExadataResourceMetric is required.")]
         [JsonProperty(PropertyName = "exadataResourceMetric")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExadataResourceMetricEnum> ExadataResourceMetric { get; set; }
                 ///
         /// <value>
@@ -77,6 +80,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum ExadataResourceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DATABASE")]
             Database,
             [EnumMember(Value = "HOST")]
@@ -95,7 +101,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "ExadataResourceType is required.")]
         [JsonProperty(PropertyName = "exadataResourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExadataResourceTypeEnum> ExadataResourceType { get; set; }
         
         /// <value>

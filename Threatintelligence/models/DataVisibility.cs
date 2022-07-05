@@ -36,6 +36,9 @@ namespace Oci.ThreatintelligenceService.Models
         /// </value>
         ///
         public enum TlpNameEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "TLP_INTERNAL_AUDIT")]
             TlpInternalAudit,
             [EnumMember(Value = "TLP_WHITE")]
@@ -56,7 +59,7 @@ namespace Oci.ThreatintelligenceService.Models
         /// </remarks>
         [Required(ErrorMessage = "TlpName is required.")]
         [JsonProperty(PropertyName = "tlpName")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TlpNameEnum> TlpName { get; set; }
         
     }

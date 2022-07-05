@@ -51,7 +51,7 @@ namespace Oci.LoganalyticsService.Models
         /// Schedule misfire retry policy.
         /// </value>
         [JsonProperty(PropertyName = "misfirePolicy")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MisfirePolicyEnum> MisfirePolicy { get; set; }
         
         /// <value>
@@ -66,6 +66,7 @@ namespace Oci.LoganalyticsService.Models
 
     public class ScheduleModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -91,7 +92,14 @@ namespace Oci.LoganalyticsService.Models
                     obj = new FixedFrequencySchedule();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under Schedule! Returning null value.");
+            }
             return obj;
         }
     }

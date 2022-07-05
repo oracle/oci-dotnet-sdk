@@ -79,7 +79,7 @@ namespace Oci.OsmanagementService.Models
         /// Type of the erratum.
         /// </value>
         [JsonProperty(PropertyName = "advisoryType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UpdateTypes> AdvisoryType { get; set; }
         
         /// <value>

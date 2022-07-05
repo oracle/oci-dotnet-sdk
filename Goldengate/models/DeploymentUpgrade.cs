@@ -78,7 +78,7 @@ namespace Oci.GoldengateService.Models
         /// </remarks>
         [Required(ErrorMessage = "DeploymentUpgradeType is required.")]
         [JsonProperty(PropertyName = "deploymentUpgradeType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DeploymentUpgradeType> DeploymentUpgradeType { get; set; }
         
         /// <value>
@@ -121,7 +121,7 @@ namespace Oci.GoldengateService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -129,7 +129,7 @@ namespace Oci.GoldengateService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleSubState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleSubState> LifecycleSubState { get; set; }
         
         /// <value>

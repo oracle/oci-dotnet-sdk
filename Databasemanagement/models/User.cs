@@ -36,6 +36,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OPEN")]
             Open,
             [EnumMember(Value = "EXPIRED")]
@@ -76,7 +79,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
@@ -160,6 +163,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum EditionsEnabledEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -170,7 +176,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether editions have been enabled for the corresponding user (Y) or not (N).
         /// </value>
         [JsonProperty(PropertyName = "editionsEnabled")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EditionsEnabledEnum> EditionsEnabled { get; set; }
                 ///
         /// <value>
@@ -178,6 +184,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum AuthenticationEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NONE")]
             None,
             [EnumMember(Value = "EXTERNAL")]
@@ -192,7 +201,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The authentication mechanism for the user.
         /// </value>
         [JsonProperty(PropertyName = "authentication")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuthenticationEnum> Authentication { get; set; }
                 ///
         /// <value>
@@ -202,6 +211,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum ProxyConnectEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -214,7 +226,7 @@ namespace Oci.DatabasemanagementService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "proxyConnect")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProxyConnectEnum> ProxyConnect { get; set; }
                 ///
         /// <value>
@@ -222,6 +234,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum CommonEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -232,7 +247,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether a given user is common(Y) or local(N).
         /// </value>
         [JsonProperty(PropertyName = "common")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CommonEnum> Common { get; set; }
         
         /// <value>
@@ -248,6 +263,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum OracleMaintainedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -258,7 +276,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the user was created and is maintained by Oracle-supplied scripts (such as catalog.sql or catproc.sql).
         /// </value>
         [JsonProperty(PropertyName = "oracleMaintained")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OracleMaintainedEnum> OracleMaintained { get; set; }
                 ///
         /// <value>
@@ -266,6 +284,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum InheritedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -276,7 +297,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the user definition is inherited from another container (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "inherited")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InheritedEnum> Inherited { get; set; }
         
         /// <value>
@@ -290,6 +311,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum ImplicitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -300,7 +324,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the user is a common user created by an implicit application (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "implicit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ImplicitEnum> Implicit { get; set; }
                 ///
         /// <value>
@@ -308,6 +332,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum AllSharedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -318,7 +345,7 @@ namespace Oci.DatabasemanagementService.Models
         /// In a sharded database, indicates whether the user is created with shard DDL enabled (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "allShared")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AllSharedEnum> AllShared { get; set; }
                 ///
         /// <value>
@@ -326,6 +353,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum ExternalSharedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -336,7 +366,7 @@ namespace Oci.DatabasemanagementService.Models
         /// In a federated sharded database, indicates whether the user is an external shard user (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "externalShared")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExternalSharedEnum> ExternalShared { get; set; }
         
         /// <value>

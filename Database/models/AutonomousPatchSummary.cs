@@ -69,6 +69,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AVAILABLE")]
             Available,
             [EnumMember(Value = "SUCCESS")]
@@ -83,7 +86,7 @@ namespace Oci.DatabaseService.Models
         /// The current state of the patch as a result of lastAction.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -111,6 +114,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum PatchModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "RELEASE_UPDATES")]
             ReleaseUpdates,
             [EnumMember(Value = "RELEASE_UPDATE_REVISIONS")]
@@ -121,7 +127,7 @@ namespace Oci.DatabaseService.Models
         /// Database patching model preference. See [My Oracle Support note 2285040.1](https://support.oracle.com/rs?type=doc&id=2285040.1) for information on the Release Update (RU) and Release Update Revision (RUR) patching models.
         /// </value>
         [JsonProperty(PropertyName = "patchModel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PatchModelEnum> PatchModel { get; set; }
         
         /// <value>

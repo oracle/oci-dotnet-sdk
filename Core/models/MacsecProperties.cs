@@ -29,7 +29,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "State is required.")]
         [JsonProperty(PropertyName = "state")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MacsecState> State { get; set; }
         
         [JsonProperty(PropertyName = "primaryKey")]
@@ -39,7 +39,7 @@ namespace Oci.CoreService.Models
         /// Type of encryption cipher suite to use for the MACsec connection.
         /// </value>
         [JsonProperty(PropertyName = "encryptionCipher")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MacsecEncryptionCipher> EncryptionCipher { get; set; }
         
     }

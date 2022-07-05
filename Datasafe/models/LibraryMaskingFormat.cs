@@ -87,7 +87,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MaskingLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -110,7 +110,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "Source is required.")]
         [JsonProperty(PropertyName = "source")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LibraryMaskingFormatSource> Source { get; set; }
         
         /// <value>

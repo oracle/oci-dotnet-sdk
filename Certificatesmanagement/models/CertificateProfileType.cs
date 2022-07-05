@@ -16,6 +16,9 @@ namespace Oci.CertificatesmanagementService.Models
   /// The name of the profile used to create the certificate, which depends on the type of certificate you need.
   /// </summary>
   public enum CertificateProfileType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "TLS_SERVER_OR_CLIENT")]
       TlsServerOrClient,
       [EnumMember(Value = "TLS_SERVER")]

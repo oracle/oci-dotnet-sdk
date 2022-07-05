@@ -35,7 +35,7 @@ namespace Oci.CloudguardService.Models
         /// Recommendation type
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RecommendationType> Type { get; set; }
         
         /// <value>
@@ -78,7 +78,7 @@ namespace Oci.CloudguardService.Models
         /// The Risk Level
         /// </value>
         [JsonProperty(PropertyName = "riskLevel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
         
         /// <value>
@@ -99,7 +99,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -110,7 +110,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleDetail is required.")]
         [JsonProperty(PropertyName = "lifecycleDetail")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RecommendationLifecycleDetail> LifecycleDetail { get; set; }
         
         /// <value>

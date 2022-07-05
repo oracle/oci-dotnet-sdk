@@ -53,7 +53,7 @@ namespace Oci.DatasafeService.Models
         /// The current state of Data Safe.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

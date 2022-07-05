@@ -66,6 +66,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum ProblemTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MISSING")]
             Missing,
             [EnumMember(Value = "STALE")]
@@ -80,7 +83,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "ProblemType is required.")]
         [JsonProperty(PropertyName = "problemType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProblemTypeEnum> ProblemType { get; set; }
         
         /// <value>

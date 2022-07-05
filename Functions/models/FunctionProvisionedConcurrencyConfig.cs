@@ -40,6 +40,7 @@ namespace Oci.FunctionsService.Models
 
     public class FunctionProvisionedConcurrencyConfigModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -65,7 +66,14 @@ namespace Oci.FunctionsService.Models
                     obj = new ConstantProvisionedConcurrencyConfig();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under FunctionProvisionedConcurrencyConfig! Returning null value.");
+            }
             return obj;
         }
     }

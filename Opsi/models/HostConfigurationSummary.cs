@@ -82,7 +82,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "PlatformType is required.")]
         [JsonProperty(PropertyName = "platformType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PlatformTypeEnum> PlatformType { get; set; }
         
         /// <value>
@@ -247,6 +247,7 @@ namespace Oci.OpsiService.Models
 
     public class HostConfigurationSummaryModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -272,7 +273,14 @@ namespace Oci.OpsiService.Models
                     obj = new EmManagedExternalHostConfigurationSummary();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under HostConfigurationSummary! Returning null value.");
+            }
             return obj;
         }
     }

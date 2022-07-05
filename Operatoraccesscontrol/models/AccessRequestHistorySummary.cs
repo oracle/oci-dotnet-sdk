@@ -25,7 +25,7 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// The current state of the AccessRequest.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AccessRequestLifecycleStates> LifecycleState { get; set; }
         
         /// <value>

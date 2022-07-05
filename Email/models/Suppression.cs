@@ -59,6 +59,9 @@ namespace Oci.EmailService.Models
         /// </value>
         ///
         public enum ReasonEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UNKNOWN")]
             Unknown,
             [EnumMember(Value = "HARDBOUNCE")]
@@ -77,7 +80,7 @@ namespace Oci.EmailService.Models
         /// The reason that the email address was suppressed. For more information on the types of bounces, see [Suppression List](https://docs.us-phoenix-1.oraclecloud.com/Content/Email/Concepts/overview.htm#components).
         /// </value>
         [JsonProperty(PropertyName = "reason")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ReasonEnum> Reason { get; set; }
         
         /// <value>

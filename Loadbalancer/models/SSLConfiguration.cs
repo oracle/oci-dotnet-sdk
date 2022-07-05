@@ -86,6 +86,9 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         ///
         public enum ServerOrderPreferenceEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLED")]
             Enabled,
             [EnumMember(Value = "DISABLED")]
@@ -101,7 +104,7 @@ namespace Oci.LoadbalancerService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "serverOrderPreference")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ServerOrderPreferenceEnum> ServerOrderPreference { get; set; }
         
         /// <value>

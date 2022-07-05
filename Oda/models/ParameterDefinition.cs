@@ -36,6 +36,9 @@ namespace Oci.OdaService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STRING")]
             String,
             [EnumMember(Value = "URI")]
@@ -54,7 +57,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
@@ -104,6 +107,9 @@ namespace Oci.OdaService.Models
         /// </value>
         ///
         public enum DirectionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INPUT")]
             Input,
             [EnumMember(Value = "OUTPUT")]
@@ -114,7 +120,7 @@ namespace Oci.OdaService.Models
         /// Is this parameter an input parameter, output parameter, or both?
         /// </value>
         [JsonProperty(PropertyName = "direction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DirectionEnum> Direction { get; set; }
         
         /// <value>

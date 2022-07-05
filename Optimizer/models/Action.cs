@@ -30,7 +30,7 @@ namespace Oci.OptimizerService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionType> Type { get; set; }
         
         /// <value>

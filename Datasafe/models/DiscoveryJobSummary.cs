@@ -89,7 +89,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DiscoveryLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -100,7 +100,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "DiscoveryType is required.")]
         [JsonProperty(PropertyName = "discoveryType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DiscoveryJob.DiscoveryTypeEnum> DiscoveryType { get; set; }
         
         /// <value>

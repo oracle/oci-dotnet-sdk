@@ -86,6 +86,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "ACTIVE")]
@@ -110,7 +113,7 @@ namespace Oci.MysqlService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -128,6 +131,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum BackupTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FULL")]
             Full,
             [EnumMember(Value = "INCREMENTAL")]
@@ -142,7 +148,7 @@ namespace Oci.MysqlService.Models
         /// </remarks>
         [Required(ErrorMessage = "BackupType is required.")]
         [JsonProperty(PropertyName = "backupType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BackupTypeEnum> BackupType { get; set; }
                 ///
         /// <value>
@@ -151,6 +157,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum CreationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MANUAL")]
             Manual,
             [EnumMember(Value = "AUTOMATIC")]
@@ -168,7 +177,7 @@ namespace Oci.MysqlService.Models
         /// </remarks>
         [Required(ErrorMessage = "CreationType is required.")]
         [JsonProperty(PropertyName = "creationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CreationTypeEnum> CreationType { get; set; }
         
         /// <value>

@@ -26,6 +26,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum ManagementStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLING")]
             Enabling,
             [EnumMember(Value = "ENABLED")]
@@ -52,7 +55,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "ManagementStatus is required.")]
         [JsonProperty(PropertyName = "managementStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ManagementStatusEnum> ManagementStatus { get; set; }
                 ///
         /// <value>
@@ -60,6 +63,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum ManagementTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BASIC")]
             Basic,
             [EnumMember(Value = "ADVANCED")]
@@ -74,7 +80,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "ManagementType is required.")]
         [JsonProperty(PropertyName = "managementType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ManagementTypeEnum> ManagementType { get; set; }
         
     }

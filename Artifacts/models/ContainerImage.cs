@@ -102,6 +102,9 @@ namespace Oci.ArtifactsService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AVAILABLE")]
             Available,
             [EnumMember(Value = "DELETED")]
@@ -118,7 +121,7 @@ namespace Oci.ArtifactsService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

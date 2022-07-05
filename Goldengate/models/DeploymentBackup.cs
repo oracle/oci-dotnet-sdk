@@ -78,7 +78,7 @@ namespace Oci.GoldengateService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -114,7 +114,7 @@ namespace Oci.GoldengateService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "backupType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DeploymentBackupType> BackupType { get; set; }
         
         /// <value>

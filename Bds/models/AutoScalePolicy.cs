@@ -27,6 +27,9 @@ namespace Oci.BdsService.Models
         /// </value>
         ///
         public enum PolicyTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "THRESHOLD_BASED")]
             ThresholdBased,
             [EnumMember(Value = "SCHEDULE_BASED")]
@@ -43,7 +46,7 @@ namespace Oci.BdsService.Models
         /// </remarks>
         [Required(ErrorMessage = "PolicyType is required.")]
         [JsonProperty(PropertyName = "policyType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PolicyTypeEnum> PolicyType { get; set; }
         
         /// <value>

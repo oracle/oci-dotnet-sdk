@@ -26,6 +26,9 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         ///
         public enum OperationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CHANGE_STACK_COMPARTMENT")]
             ChangeStackCompartment,
             [EnumMember(Value = "CREATE_STACK_FROM_COMPARTMENT")]
@@ -48,7 +51,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </remarks>
         [Required(ErrorMessage = "OperationType is required.")]
         [JsonProperty(PropertyName = "operationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
                 ///
         /// <value>
@@ -56,6 +59,9 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACCEPTED")]
             Accepted,
             [EnumMember(Value = "IN_PROGRESS")]
@@ -74,7 +80,7 @@ namespace Oci.ResourcemanagerService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>

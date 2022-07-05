@@ -81,21 +81,21 @@ namespace Oci.DatabasemanagementService.Models
         /// The type of Oracle Database installation.
         /// </value>
         [JsonProperty(PropertyName = "databaseType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseType> DatabaseType { get; set; }
         
         /// <value>
         /// The subtype of the Oracle Database. Indicates whether the database is a Container Database, Pluggable Database, or a Non-container Database.
         /// </value>
         [JsonProperty(PropertyName = "databaseSubType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseSubType> DatabaseSubType { get; set; }
         
         /// <value>
         /// A list of the supported infrastructure that can be used to deploy the database.
         /// </value>
         [JsonProperty(PropertyName = "deploymentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DeploymentType> DeploymentType { get; set; }
         
         /// <value>
@@ -108,7 +108,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The workload type of the Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "workloadType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkloadType> WorkloadType { get; set; }
         
         /// <value>
@@ -139,7 +139,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobExecution.StatusEnum> Status { get; set; }
         
         /// <value>

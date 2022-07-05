@@ -38,6 +38,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum IntervalTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DAILY")]
             Daily,
             [EnumMember(Value = "HOURLY")]
@@ -54,7 +57,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The interval type for a recurring scheduled job. For a non-recurring (one time) job, NEVER must be specified as the interval type.
         /// </value>
         [JsonProperty(PropertyName = "intervalType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IntervalTypeEnum> IntervalType { get; set; }
         
         /// <value>

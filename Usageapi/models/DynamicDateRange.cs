@@ -23,6 +23,9 @@ namespace Oci.UsageapiService.Models
                 ///
         ///
         public enum DynamicDateRangeTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LAST_7_DAYS")]
             Last7Days,
             [EnumMember(Value = "LAST_CALENDAR_WEEK")]
@@ -44,7 +47,7 @@ namespace Oci.UsageapiService.Models
         /// </remarks>
         [Required(ErrorMessage = "DynamicDateRangeType is required.")]
         [JsonProperty(PropertyName = "dynamicDateRangeType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DynamicDateRangeTypeEnum> DynamicDateRangeType { get; set; }
         
         [JsonProperty(PropertyName = "dateRangeType")]

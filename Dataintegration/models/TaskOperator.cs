@@ -32,6 +32,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum RetryDelayUnitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SECONDS")]
             Seconds,
             [EnumMember(Value = "MINUTES")]
@@ -46,7 +49,7 @@ namespace Oci.DataintegrationService.Models
         /// The unit for the retry delay.
         /// </value>
         [JsonProperty(PropertyName = "retryDelayUnit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RetryDelayUnitEnum> RetryDelayUnit { get; set; }
         
         /// <value>
@@ -66,6 +69,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum ExpectedDurationUnitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SECONDS")]
             Seconds,
             [EnumMember(Value = "MINUTES")]
@@ -80,7 +86,7 @@ namespace Oci.DataintegrationService.Models
         /// The expected duration unit of measure.
         /// </value>
         [JsonProperty(PropertyName = "expectedDurationUnit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExpectedDurationUnitEnum> ExpectedDurationUnit { get; set; }
                 ///
         /// <value>
@@ -88,6 +94,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum TaskTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PIPELINE_TASK")]
             PipelineTask,
             [EnumMember(Value = "INTEGRATION_TASK")]
@@ -106,7 +115,7 @@ namespace Oci.DataintegrationService.Models
         /// The type of the task referenced in the task property.
         /// </value>
         [JsonProperty(PropertyName = "taskType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TaskTypeEnum> TaskType { get; set; }
         
         [JsonProperty(PropertyName = "task")]
@@ -121,6 +130,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum TriggerRuleEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALL_SUCCESS")]
             AllSuccess,
             [EnumMember(Value = "ALL_FAILED")]
@@ -137,7 +149,7 @@ namespace Oci.DataintegrationService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "triggerRule")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TriggerRuleEnum> TriggerRule { get; set; }
         
         [JsonProperty(PropertyName = "configProviderDelegate")]

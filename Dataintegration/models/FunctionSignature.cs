@@ -32,6 +32,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum ModelTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DIS_FUNCTION_SIGNATURE")]
             DisFunctionSignature
         };
@@ -40,7 +43,7 @@ namespace Oci.DataintegrationService.Models
         /// The type of the object.
         /// </value>
         [JsonProperty(PropertyName = "modelType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ModelTypeEnum> ModelType { get; set; }
         
         /// <value>

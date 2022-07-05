@@ -27,6 +27,7 @@ namespace Oci.AianomalydetectionService.Models
 
     public class DataSourceDetailsModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -55,7 +56,14 @@ namespace Oci.AianomalydetectionService.Models
                     obj = new DataSourceDetailsATP();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under DataSourceDetails! Returning null value.");
+            }
             return obj;
         }
     }

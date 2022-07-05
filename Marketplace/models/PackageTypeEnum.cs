@@ -16,6 +16,9 @@ namespace Oci.MarketplaceService.Models
   /// Possible values for a package type.
   /// </summary>
   public enum PackageTypeEnum {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ORCHESTRATION")]
       Orchestration,
       [EnumMember(Value = "IMAGE")]

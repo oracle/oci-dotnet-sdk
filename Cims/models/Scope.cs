@@ -16,6 +16,9 @@ namespace Oci.CimsService.Models
   /// The scope of the service category or resource.
   /// </summary>
   public enum Scope {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "AD")]
       Ad,
       [EnumMember(Value = "REGION")]

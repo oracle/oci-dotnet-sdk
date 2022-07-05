@@ -61,6 +61,9 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         ///
         public enum ResourceDriftStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NOT_CHECKED")]
             NotChecked,
             [EnumMember(Value = "IN_SYNC")]
@@ -77,7 +80,7 @@ namespace Oci.ResourcemanagerService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "resourceDriftStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceDriftStatusEnum> ResourceDriftStatus { get; set; }
         
         /// <value>

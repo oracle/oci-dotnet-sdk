@@ -39,7 +39,7 @@ namespace Oci.BlockchainService.Models
         /// </remarks>
         [Required(ErrorMessage = "Role is required.")]
         [JsonProperty(PropertyName = "role")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PeerRole.RoleEnum> Role { get; set; }
         
         /// <value>
@@ -69,7 +69,7 @@ namespace Oci.BlockchainService.Models
         /// </remarks>
         [Required(ErrorMessage = "Ad is required.")]
         [JsonProperty(PropertyName = "ad")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AvailabilityDomain.AdsEnum> Ad { get; set; }
                 ///
         /// <value>
@@ -77,6 +77,9 @@ namespace Oci.BlockchainService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "INACTIVE")]
@@ -89,7 +92,7 @@ namespace Oci.BlockchainService.Models
         /// The current state of the peer.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
     }

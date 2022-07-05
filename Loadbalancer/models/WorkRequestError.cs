@@ -23,6 +23,9 @@ namespace Oci.LoadbalancerService.Models
                 ///
         ///
         public enum ErrorCodeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BAD_INPUT")]
             BadInput,
             [EnumMember(Value = "INTERNAL_ERROR")]
@@ -34,7 +37,7 @@ namespace Oci.LoadbalancerService.Models
         /// </remarks>
         [Required(ErrorMessage = "ErrorCode is required.")]
         [JsonProperty(PropertyName = "errorCode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ErrorCodeEnum> ErrorCode { get; set; }
         
         /// <value>

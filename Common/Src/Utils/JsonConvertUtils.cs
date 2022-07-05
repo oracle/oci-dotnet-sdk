@@ -5,9 +5,11 @@
 
 using System;
 using System.IO;
+using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using Newtonsoft.Json.Converters;
 
 namespace Oci.Common.Utils
 {
@@ -74,6 +76,33 @@ namespace Oci.Common.Utils
         {
             var bytes = ((MemoryStream)value).ToArray();
             serializer.Serialize(writer, bytes);
+        }
+    }
+
+    public class ResponseEnumConverter : StringEnumConverter
+    {
+        protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            try
+            {
+                return base.ReadJson(reader, objectType, existingValue, serializer);
+            }
+            catch
+            {
+                Type enumType = IsNullableType(objectType) ? Nullable.GetUnderlyingType(objectType) : objectType;
+                logger.Warn($"Received unknown value '{existingValue}' for enum '{objectType}', returning UnknownEnumValue");
+                string unknownEnumValue = Enum.GetNames(enumType).Where(n => string.Equals(n, "UnknownEnumValue", StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+                if (unknownEnumValue == null)
+                {
+                    throw new ArgumentException($"UnknownEnumValue enum value not found in enum {objectType}");
+                }
+                return Enum.Parse(enumType, unknownEnumValue);
+            }
+        }
+        private bool IsNullableType(Type t)
+        {
+            return (t.IsGenericType && t.GetGenericTypeDefinition() == typeof(Nullable<>));
         }
     }
 }

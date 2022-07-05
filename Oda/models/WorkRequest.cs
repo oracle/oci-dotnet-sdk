@@ -56,6 +56,9 @@ namespace Oci.OdaService.Models
         /// </value>
         ///
         public enum RequestActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATE_ODA_INSTANCE")]
             CreateOdaInstance,
             [EnumMember(Value = "UPGRADE_ODA_INSTANCE")]
@@ -130,7 +133,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "RequestAction is required.")]
         [JsonProperty(PropertyName = "requestAction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RequestActionEnum> RequestAction { get; set; }
                 ///
         /// <value>
@@ -138,6 +141,9 @@ namespace Oci.OdaService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACCEPTED")]
             Accepted,
             [EnumMember(Value = "IN_PROGRESS")]
@@ -160,7 +166,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>

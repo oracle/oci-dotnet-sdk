@@ -46,7 +46,7 @@ namespace Oci.JmsService.Models
         /// </remarks>
         [Required(ErrorMessage = "Operation is required.")]
         [JsonProperty(PropertyName = "operation")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationType> Operation { get; set; }
         
         /// <value>

@@ -83,11 +83,11 @@ namespace Oci.HealthchecksService.Models
         public System.Nullable<int> TimeoutInSeconds { get; set; }
         
         [JsonProperty(PropertyName = "protocol")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<HttpProbeProtocol> Protocol { get; set; }
         
         [JsonProperty(PropertyName = "method")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<HttpProbeMethod> Method { get; set; }
         
         /// <value>

@@ -36,6 +36,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum OperatorEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "IN")]
             In,
             [EnumMember(Value = "EQ")]
@@ -70,7 +73,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "Operator is required.")]
         [JsonProperty(PropertyName = "operator")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperatorEnum> Operator { get; set; }
         
         /// <value>

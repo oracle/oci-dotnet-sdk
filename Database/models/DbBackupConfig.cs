@@ -45,6 +45,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum AutoBackupWindowEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SLOT_ONE")]
             SlotOne,
             [EnumMember(Value = "SLOT_TWO")]
@@ -77,7 +80,7 @@ namespace Oci.DatabaseService.Models
         /// Example: SLOT_TWO
         /// </value>
         [JsonProperty(PropertyName = "autoBackupWindow")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AutoBackupWindowEnum> AutoBackupWindow { get; set; }
         
         /// <value>

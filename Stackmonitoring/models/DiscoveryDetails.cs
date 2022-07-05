@@ -36,6 +36,9 @@ namespace Oci.StackmonitoringService.Models
         /// </value>
         ///
         public enum ResourceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "WEBLOGIC_DOMAIN")]
             WeblogicDomain,
             [EnumMember(Value = "EBS_INSTANCE")]
@@ -52,7 +55,7 @@ namespace Oci.StackmonitoringService.Models
         /// </remarks>
         [Required(ErrorMessage = "ResourceType is required.")]
         [JsonProperty(PropertyName = "resourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceTypeEnum> ResourceType { get; set; }
         
         /// <value>

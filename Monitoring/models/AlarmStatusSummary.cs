@@ -61,6 +61,9 @@ namespace Oci.MonitoringService.Models
         /// </value>
         ///
         public enum SeverityEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CRITICAL")]
             Critical,
             [EnumMember(Value = "ERROR")]
@@ -81,7 +84,7 @@ namespace Oci.MonitoringService.Models
         /// </remarks>
         [Required(ErrorMessage = "Severity is required.")]
         [JsonProperty(PropertyName = "severity")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SeverityEnum> Severity { get; set; }
         
         /// <value>
@@ -104,6 +107,9 @@ namespace Oci.MonitoringService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FIRING")]
             Firing,
             [EnumMember(Value = "OK")]
@@ -122,7 +128,7 @@ namespace Oci.MonitoringService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>

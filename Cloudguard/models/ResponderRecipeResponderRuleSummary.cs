@@ -47,7 +47,7 @@ namespace Oci.CloudguardService.Models
         /// Type of Responder
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResponderType> Type { get; set; }
         
         /// <value>
@@ -58,6 +58,9 @@ namespace Oci.CloudguardService.Models
                 ///
         ///
         public enum SupportedModesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AUTOACTION")]
             Autoaction,
             [EnumMember(Value = "USERACTION")]
@@ -67,7 +70,7 @@ namespace Oci.CloudguardService.Models
         /// <value>
         /// Supported Execution Modes
         /// </value>
-        [JsonProperty(PropertyName = "supportedModes", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "supportedModes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<SupportedModesEnum> SupportedModes { get; set; }
         
         [JsonProperty(PropertyName = "details")]
@@ -99,7 +102,7 @@ namespace Oci.CloudguardService.Models
         /// The current state of the ResponderRule.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

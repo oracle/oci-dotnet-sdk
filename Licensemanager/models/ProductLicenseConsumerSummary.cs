@@ -80,7 +80,7 @@ namespace Oci.LicensemanagerService.Models
         /// </remarks>
         [Required(ErrorMessage = "ResourceUnitType is required.")]
         [JsonProperty(PropertyName = "resourceUnitType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceUnit> ResourceUnitType { get; set; }
         
         /// <value>
@@ -101,7 +101,7 @@ namespace Oci.LicensemanagerService.Models
         /// </remarks>
         [Required(ErrorMessage = "LicenseUnitType is required.")]
         [JsonProperty(PropertyName = "licenseUnitType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LicenseUnit> LicenseUnitType { get; set; }
         
         /// <value>

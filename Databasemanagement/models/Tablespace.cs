@@ -36,6 +36,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UNDO")]
             Undo,
             [EnumMember(Value = "LOST_WRITE_PROTECTION")]
@@ -54,7 +57,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
                 ///
         /// <value>
@@ -62,6 +65,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ONLINE")]
             Online,
             [EnumMember(Value = "OFFLINE")]
@@ -74,7 +80,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The status of the tablespace.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
@@ -88,6 +94,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum LoggingEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LOGGING")]
             Logging,
             [EnumMember(Value = "NOLOGGING")]
@@ -98,7 +107,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The default logging attribute.
         /// </value>
         [JsonProperty(PropertyName = "logging")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LoggingEnum> Logging { get; set; }
         
         /// <value>
@@ -112,6 +121,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum ExtentManagementEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LOCAL")]
             Local,
             [EnumMember(Value = "DICTIONARY")]
@@ -122,7 +134,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the extents in the tablespace are Locally managed or Dictionary managed.
         /// </value>
         [JsonProperty(PropertyName = "extentManagement")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExtentManagementEnum> ExtentManagement { get; set; }
                 ///
         /// <value>
@@ -130,6 +142,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum AllocationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SYSTEM")]
             System,
             [EnumMember(Value = "UNIFORM")]
@@ -142,7 +157,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The type of extent allocation in effect for the tablespace.
         /// </value>
         [JsonProperty(PropertyName = "allocationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AllocationTypeEnum> AllocationType { get; set; }
         
         /// <value>
@@ -156,6 +171,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum SegmentSpaceManagementEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MANUAL")]
             Manual,
             [EnumMember(Value = "AUTO")]
@@ -166,7 +184,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the free and used segment space in the tablespace is managed using free lists (MANUAL) or bitmaps (AUTO).
         /// </value>
         [JsonProperty(PropertyName = "segmentSpaceManagement")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SegmentSpaceManagementEnum> SegmentSpaceManagement { get; set; }
                 ///
         /// <value>
@@ -174,6 +192,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum DefaultTableCompressionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLED")]
             Enabled,
             [EnumMember(Value = "DISABLED")]
@@ -184,7 +205,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether default table compression is enabled or disabled.
         /// </value>
         [JsonProperty(PropertyName = "defaultTableCompression")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DefaultTableCompressionEnum> DefaultTableCompression { get; set; }
                 ///
         /// <value>
@@ -192,6 +213,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum RetentionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "GUARANTEE")]
             Guarantee,
             [EnumMember(Value = "NOGUARANTEE")]
@@ -204,7 +228,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether undo retention guarantee is enabled for the tablespace.
         /// </value>
         [JsonProperty(PropertyName = "retention")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RetentionEnum> Retention { get; set; }
         
         /// <value>
@@ -218,6 +242,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum PredicateEvaluationEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "HOST")]
             Host,
             [EnumMember(Value = "STORAGE")]
@@ -228,7 +255,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether predicates are evaluated by Host or by Storage.
         /// </value>
         [JsonProperty(PropertyName = "predicateEvaluation")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PredicateEvaluationEnum> PredicateEvaluation { get; set; }
         
         /// <value>
@@ -242,6 +269,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum CompressForEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BASIC")]
             Basic,
             [EnumMember(Value = "ADVANCED")]
@@ -264,7 +294,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The operation type for which default compression is enabled.
         /// </value>
         [JsonProperty(PropertyName = "compressFor")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CompressForEnum> CompressFor { get; set; }
                 ///
         /// <value>
@@ -272,6 +302,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum DefaultInMemoryEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLED")]
             Enabled,
             [EnumMember(Value = "DISABLED")]
@@ -282,7 +315,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the In-Memory Column Store (IM column store) is by default enabled or disabled for tables in the tablespace.
         /// </value>
         [JsonProperty(PropertyName = "defaultInMemory")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DefaultInMemoryEnum> DefaultInMemory { get; set; }
                 ///
         /// <value>
@@ -290,6 +323,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum DefaultInMemoryPriorityEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LOW")]
             Low,
             [EnumMember(Value = "MEDIUM")]
@@ -306,7 +342,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates the default priority for In-Memory Column Store (IM column store) population for the tablespace.
         /// </value>
         [JsonProperty(PropertyName = "defaultInMemoryPriority")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DefaultInMemoryPriorityEnum> DefaultInMemoryPriority { get; set; }
                 ///
         /// <value>
@@ -314,6 +350,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum DefaultInMemoryDistributeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AUTO")]
             Auto,
             [EnumMember(Value = "BY_ROWID_RANGE")]
@@ -328,7 +367,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates how the IM column store is distributed by default for the tablespace in an Oracle Real Application Clusters (Oracle RAC) environment.
         /// </value>
         [JsonProperty(PropertyName = "defaultInMemoryDistribute")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DefaultInMemoryDistributeEnum> DefaultInMemoryDistribute { get; set; }
                 ///
         /// <value>
@@ -336,6 +375,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum DefaultInMemoryCompressionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NO_MEMCOMPRESS")]
             NoMemcompress,
             [EnumMember(Value = "FOR_DML")]
@@ -354,7 +396,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates the default compression level for the IM column store for the tablespace.
         /// </value>
         [JsonProperty(PropertyName = "defaultInMemoryCompression")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DefaultInMemoryCompressionEnum> DefaultInMemoryCompression { get; set; }
                 ///
         /// <value>
@@ -362,6 +404,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum DefaultInMemoryDuplicateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NO_DUPLICATE")]
             NoDuplicate,
             [EnumMember(Value = "DUPLICATE")]
@@ -374,7 +419,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates the duplicate setting for the IM column store in an Oracle RAC environment.
         /// </value>
         [JsonProperty(PropertyName = "defaultInMemoryDuplicate")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DefaultInMemoryDuplicateEnum> DefaultInMemoryDuplicate { get; set; }
                 ///
         /// <value>
@@ -382,6 +427,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum SharedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SHARED")]
             Shared,
             [EnumMember(Value = "LOCAL_ON_LEAF")]
@@ -394,7 +442,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the tablespace is for shared tablespace, or for local temporary tablespace for leaf (read-only) instances, or for local temporary tablespace for all instance types.
         /// </value>
         [JsonProperty(PropertyName = "shared")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SharedEnum> Shared { get; set; }
                 ///
         /// <value>
@@ -402,6 +450,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum DefaultIndexCompressionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLED")]
             Enabled,
             [EnumMember(Value = "DISABLED")]
@@ -412,7 +463,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether default index compression is enabled or disabled.
         /// </value>
         [JsonProperty(PropertyName = "defaultIndexCompression")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DefaultIndexCompressionEnum> DefaultIndexCompression { get; set; }
                 ///
         /// <value>
@@ -420,6 +471,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum IndexCompressForEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ADVANCED_LOW")]
             AdvancedLow,
             [EnumMember(Value = "ADVANCED_HIGH")]
@@ -432,7 +486,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The operation type for which default index compression is enabled.
         /// </value>
         [JsonProperty(PropertyName = "indexCompressFor")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IndexCompressForEnum> IndexCompressFor { get; set; }
         
         /// <value>
@@ -446,6 +500,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum DefaultInMemoryServiceEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DEFAULT")]
             Default,
             [EnumMember(Value = "NONE")]
@@ -460,7 +517,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates how the IM column store is populated on various instances by default for the tablespace.
         /// </value>
         [JsonProperty(PropertyName = "defaultInMemoryService")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DefaultInMemoryServiceEnum> DefaultInMemoryService { get; set; }
         
         /// <value>
@@ -474,6 +531,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum LostWriteProtectEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLED")]
             Enabled,
             [EnumMember(Value = "PROTECT_OFF")]
@@ -486,7 +546,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The lost write protection setting for the tablespace.
         /// </value>
         [JsonProperty(PropertyName = "lostWriteProtect")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LostWriteProtectEnum> LostWriteProtect { get; set; }
         
         /// <value>

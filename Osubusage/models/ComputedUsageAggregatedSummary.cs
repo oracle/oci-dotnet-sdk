@@ -84,6 +84,9 @@ namespace Oci.OsubusageService.Models
         /// </value>
         ///
         public enum PricingModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PAY_AS_YOU_GO")]
             PayAsYouGo,
             [EnumMember(Value = "MONTHLY")]
@@ -101,7 +104,7 @@ namespace Oci.OsubusageService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "pricingModel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PricingModelEnum> PricingModel { get; set; }
         
         /// <value>

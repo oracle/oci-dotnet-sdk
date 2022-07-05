@@ -16,6 +16,9 @@ namespace Oci.TenantmanagercontrolplaneService.Models
   /// Possible lifecycle states for the OrganizationTenancy.
   /// </summary>
   public enum OrganizationTenancyLifecycleState {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CREATING")]
       Creating,
       [EnumMember(Value = "ACTIVE")]

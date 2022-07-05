@@ -26,6 +26,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum ActionTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "IN_PROGRESS")]
             InProgress,
             [EnumMember(Value = "CREATED")]
@@ -44,7 +47,7 @@ namespace Oci.WaasService.Models
         /// How the work request affects the resource.
         /// </value>
         [JsonProperty(PropertyName = "actionType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionTypeEnum> ActionType { get; set; }
         
         /// <value>

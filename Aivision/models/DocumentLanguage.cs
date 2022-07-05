@@ -16,6 +16,9 @@ namespace Oci.AivisionService.Models
   /// The language of the document, abbreviated according to ISO 639-2.
   /// </summary>
   public enum DocumentLanguage {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ENG")]
       Eng,
       [EnumMember(Value = "CES")]

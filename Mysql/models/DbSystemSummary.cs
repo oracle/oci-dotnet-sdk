@@ -126,7 +126,7 @@ namespace Oci.MysqlService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DbSystem.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -176,13 +176,27 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        [JsonProperty(PropertyName = "backupPolicy")]
+        public BackupPolicy BackupPolicy { get; set; }
+        
+        /// <value>
+        /// The shape of the primary instances of the DB System. The shape
+        /// determines resources allocated to a DB System - CPU cores
+        /// and memory for VM shapes; CPU cores, memory and storage for non-VM
+        /// (or bare metal) shapes. To get a list of shapes, use (the
+        /// {@link #listShapes(ListShapesRequest) listShapes} operation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shapeName")]
+        public string ShapeName { get; set; }
+        
         /// <value>
         /// Whether to run the DB System with InnoDB Redo Logs and the Double Write Buffer enabled or disabled,
         /// and whether to enable or disable syncing of the Binary Logs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "crashRecovery")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CrashRecoveryStatus> CrashRecovery { get; set; }
         
     }

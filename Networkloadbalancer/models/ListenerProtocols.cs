@@ -16,6 +16,9 @@ namespace Oci.NetworkloadbalancerService.Models
   /// Protocols supported for the listener of the network load balancer.
   /// </summary>
   public enum ListenerProtocols {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ANY")]
       Any,
       [EnumMember(Value = "TCP")]

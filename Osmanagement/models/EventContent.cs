@@ -25,7 +25,7 @@ namespace Oci.OsmanagementService.Models
         /// Status of the event content
         /// </value>
         [JsonProperty(PropertyName = "contentAvailability")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ContentAvailability> ContentAvailability { get; set; }
         
         /// <value>

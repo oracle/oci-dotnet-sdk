@@ -36,6 +36,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BOOLEAN")]
             Boolean,
             [EnumMember(Value = "STRING")]
@@ -58,7 +61,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
@@ -111,6 +114,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum IsSystemModifiableEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "IMMEDIATE")]
             Immediate,
             [EnumMember(Value = "DEFERRED")]
@@ -127,7 +133,7 @@ namespace Oci.DatabasemanagementService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isSystemModifiable")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IsSystemModifiableEnum> IsSystemModifiable { get; set; }
         
         /// <value>
@@ -150,6 +156,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum IsModifiedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MODIFIED")]
             Modified,
             [EnumMember(Value = "FALSE")]
@@ -161,7 +170,7 @@ namespace Oci.DatabasemanagementService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isModified")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IsModifiedEnum> IsModified { get; set; }
         
         /// <value>
@@ -229,6 +238,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum ConstraintEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UNIQUE")]
             Unique,
             [EnumMember(Value = "IDENTICAL")]
@@ -247,7 +259,7 @@ namespace Oci.DatabasemanagementService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "constraint")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConstraintEnum> Constraint { get; set; }
         
         /// <value>

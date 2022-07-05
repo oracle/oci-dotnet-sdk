@@ -51,7 +51,7 @@ namespace Oci.CloudguardService.Models
         /// The Risk Level
         /// </value>
         [JsonProperty(PropertyName = "riskLevel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
         
         /// <value>
@@ -100,21 +100,21 @@ namespace Oci.CloudguardService.Models
         /// The current state of the Problem.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProblemLifecycleState> LifecycleState { get; set; }
         
         /// <value>
         /// The lifecycleDetail will give more detail on the substate of the lifecycleState.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetail")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProblemLifecycleDetail> LifecycleDetail { get; set; }
         
         /// <value>
         /// Id of detector associated with the Problem.
         /// </value>
         [JsonProperty(PropertyName = "detectorId")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DetectorEnum> DetectorId { get; set; }
         
         /// <value>

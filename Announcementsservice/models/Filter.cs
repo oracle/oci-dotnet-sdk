@@ -26,6 +26,9 @@ namespace Oci.AnnouncementsService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "COMPARTMENT_ID")]
             CompartmentId,
             [EnumMember(Value = "PLATFORM_TYPE")]
@@ -48,7 +51,7 @@ namespace Oci.AnnouncementsService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>

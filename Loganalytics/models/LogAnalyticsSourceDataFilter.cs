@@ -107,6 +107,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum FilterTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MASK")]
             Mask,
             [EnumMember(Value = "HASH_MASK")]
@@ -121,7 +124,7 @@ namespace Oci.LoganalyticsService.Models
         /// The filter type.
         /// </value>
         [JsonProperty(PropertyName = "filterType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FilterTypeEnum> FilterType { get; set; }
         
     }

@@ -36,6 +36,9 @@ namespace Oci.ApigatewayService.Models
                 ///
         ///
         public enum MethodsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ANY")]
             Any,
             [EnumMember(Value = "HEAD")]
@@ -58,7 +61,7 @@ namespace Oci.ApigatewayService.Models
         /// A list of allowed methods on this route.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "methods", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "methods", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<MethodsEnum> Methods { get; set; }
         
         [JsonProperty(PropertyName = "requestPolicies")]

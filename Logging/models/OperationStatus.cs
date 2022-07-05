@@ -16,6 +16,9 @@ namespace Oci.LoggingService.Models
   /// The status of a work request.
   /// </summary>
   public enum OperationStatus {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ACCEPTED")]
       Accepted,
       [EnumMember(Value = "IN_PROGRESS")]

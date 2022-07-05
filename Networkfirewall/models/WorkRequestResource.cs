@@ -43,7 +43,7 @@ namespace Oci.NetworkfirewallService.Models
         /// </remarks>
         [Required(ErrorMessage = "ActionType is required.")]
         [JsonProperty(PropertyName = "actionType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionType> ActionType { get; set; }
         
         /// <value>
@@ -66,7 +66,7 @@ namespace Oci.NetworkfirewallService.Models
         /// Additional information that helps to explain the resource.
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
         
     }

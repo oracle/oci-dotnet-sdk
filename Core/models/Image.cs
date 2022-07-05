@@ -109,6 +109,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum LaunchModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NATIVE")]
             Native,
             [EnumMember(Value = "EMULATED")]
@@ -128,7 +131,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "launchMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LaunchModeEnum> LaunchMode { get; set; }
         
         [JsonProperty(PropertyName = "launchOptions")]
@@ -136,6 +139,9 @@ namespace Oci.CoreService.Models
                 ///
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "IMPORTING")]
@@ -155,7 +161,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -190,6 +196,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum ListingTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "COMMUNITY")]
             Community,
             [EnumMember(Value = "NONE")]
@@ -200,7 +209,7 @@ namespace Oci.CoreService.Models
         /// The listing type of the image. The default value is \"NONE\".
         /// </value>
         [JsonProperty(PropertyName = "listingType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ListingTypeEnum> ListingType { get; set; }
         
         /// <value>

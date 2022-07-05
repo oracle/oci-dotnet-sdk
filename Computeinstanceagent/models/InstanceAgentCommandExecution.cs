@@ -52,6 +52,9 @@ namespace Oci.ComputeinstanceagentService.Models
         /// </value>
         ///
         public enum DeliveryStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "VISIBLE")]
             Visible,
             [EnumMember(Value = "PENDING")]
@@ -78,7 +81,7 @@ namespace Oci.ComputeinstanceagentService.Models
         /// </remarks>
         [Required(ErrorMessage = "DeliveryState is required.")]
         [JsonProperty(PropertyName = "deliveryState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DeliveryStateEnum> DeliveryState { get; set; }
                 ///
         /// <value>
@@ -93,6 +96,9 @@ namespace Oci.ComputeinstanceagentService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACCEPTED")]
             Accepted,
             [EnumMember(Value = "IN_PROGRESS")]
@@ -122,7 +128,7 @@ namespace Oci.ComputeinstanceagentService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

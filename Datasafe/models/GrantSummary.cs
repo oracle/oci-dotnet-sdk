@@ -42,6 +42,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum PrivilegeTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SYSTEM_PRIVILEGE")]
             SystemPrivilege,
             [EnumMember(Value = "OBJECT_PRIVILEGE")]
@@ -56,7 +59,7 @@ namespace Oci.DatasafeService.Models
         /// The type of a user grant.
         /// </value>
         [JsonProperty(PropertyName = "privilegeType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PrivilegeTypeEnum> PrivilegeType { get; set; }
                 ///
         /// <value>
@@ -64,6 +67,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum PrivilegeCategoryEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CRITICAL")]
             Critical,
             [EnumMember(Value = "HIGH")]
@@ -78,7 +84,7 @@ namespace Oci.DatasafeService.Models
         /// The privilege category.
         /// </value>
         [JsonProperty(PropertyName = "privilegeCategory")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PrivilegeCategoryEnum> PrivilegeCategory { get; set; }
         
         /// <value>

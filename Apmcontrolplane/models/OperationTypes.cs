@@ -16,6 +16,9 @@ namespace Oci.ApmcontrolplaneService.Models
   /// Possibly types of operations that the work request may process.
   /// </summary>
   public enum OperationTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CREATE_APM_DOMAIN")]
       CreateApmDomain,
       [EnumMember(Value = "UPDATE_APM_DOMAIN")]

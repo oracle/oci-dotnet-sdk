@@ -16,6 +16,9 @@ namespace Oci.ApmsyntheticsService.Models
   /// Content type of script.
   /// </summary>
   public enum ContentTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "SIDE")]
       Side,
       [EnumMember(Value = "JS")]

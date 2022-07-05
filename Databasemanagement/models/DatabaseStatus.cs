@@ -16,6 +16,9 @@ namespace Oci.DatabasemanagementService.Models
   /// The status of the Oracle Database. Indicates whether the status of the database is UP, DOWN, or UNKNOWN at the current time.
   /// </summary>
   public enum DatabaseStatus {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "UP")]
       Up,
       [EnumMember(Value = "DOWN")]

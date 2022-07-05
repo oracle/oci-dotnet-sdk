@@ -29,7 +29,7 @@ namespace Oci.AivisionService.Models
         /// </remarks>
         [Required(ErrorMessage = "LanguageCode is required.")]
         [JsonProperty(PropertyName = "languageCode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DocumentLanguage> LanguageCode { get; set; }
         
         /// <value>

@@ -16,6 +16,9 @@ namespace Oci.ThreatintelligenceService.Models
   /// The set of supported indicator types.
   /// </summary>
   public enum IndicatorType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "DOMAIN_NAME")]
       DomainName,
       [EnumMember(Value = "FILE_NAME")]

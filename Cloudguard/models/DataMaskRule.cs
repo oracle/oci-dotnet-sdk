@@ -73,7 +73,7 @@ namespace Oci.CloudguardService.Models
         /// <value>
         /// Data Mask Categories
         /// </value>
-        [JsonProperty(PropertyName = "dataMaskCategories", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "dataMaskCategories", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<DataMaskCategory> DataMaskCategories { get; set; }
         
         /// <value>
@@ -92,14 +92,14 @@ namespace Oci.CloudguardService.Models
         /// The status of the dataMaskRule.
         /// </value>
         [JsonProperty(PropertyName = "dataMaskRuleStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataMaskRuleStatus> DataMaskRuleStatus { get; set; }
         
         /// <value>
         /// The current state of the DataMaskRule.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

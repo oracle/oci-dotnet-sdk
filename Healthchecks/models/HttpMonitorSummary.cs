@@ -92,7 +92,7 @@ namespace Oci.HealthchecksService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         [JsonProperty(PropertyName = "protocol")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<HttpProbeProtocol> Protocol { get; set; }
         
     }

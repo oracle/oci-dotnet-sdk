@@ -16,6 +16,9 @@ namespace Oci.OdaService.Models
   /// The type of Service Cloud clients.
   /// </summary>
   public enum ServiceCloudClientType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "WSDL")]
       Wsdl,
       [EnumMember(Value = "REST")]

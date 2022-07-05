@@ -49,7 +49,7 @@ namespace Oci.LicensemanagerService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Status> Status { get; set; }
         
         /// <value>
@@ -69,7 +69,7 @@ namespace Oci.LicensemanagerService.Models
         /// The current product license state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifeCycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -100,7 +100,7 @@ namespace Oci.LicensemanagerService.Models
         /// </remarks>
         [Required(ErrorMessage = "LicenseUnit is required.")]
         [JsonProperty(PropertyName = "licenseUnit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LicenseUnit> LicenseUnit { get; set; }
         
         /// <value>

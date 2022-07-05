@@ -65,7 +65,7 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// resourceType for which the OperatorControlAssignment is applicable
         /// </value>
         [JsonProperty(PropertyName = "resourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceTypes> ResourceType { get; set; }
         
         /// <value>
@@ -126,7 +126,7 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// The current lifcycle state of the OperatorControl.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperatorControlAssignmentLifecycleStates> LifecycleState { get; set; }
         
         /// <value>

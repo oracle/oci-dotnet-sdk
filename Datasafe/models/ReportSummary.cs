@@ -58,6 +58,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum MimeTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PDF")]
             Pdf,
             [EnumMember(Value = "XLS")]
@@ -68,7 +71,7 @@ namespace Oci.DatasafeService.Models
         /// Specifies the format of report to be excel or pdf
         /// </value>
         [JsonProperty(PropertyName = "mimeType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MimeTypeEnum> MimeType { get; set; }
         
         /// <value>
@@ -99,7 +102,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ReportLifecycleState> LifecycleState { get; set; }
         
         /// <value>

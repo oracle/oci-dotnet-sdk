@@ -39,7 +39,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "GrantType is required.")]
         [JsonProperty(PropertyName = "grantType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuthenticationGrantType> GrantType { get; set; }
         
         /// <value>
@@ -50,7 +50,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "IdentityProvider is required.")]
         [JsonProperty(PropertyName = "identityProvider")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuthenticationIdentityProvider> IdentityProvider { get; set; }
         
         /// <value>
@@ -71,7 +71,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

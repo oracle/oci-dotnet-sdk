@@ -61,7 +61,7 @@ namespace Oci.CertificatesmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AssociationLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -102,7 +102,7 @@ namespace Oci.CertificatesmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "AssociationType is required.")]
         [JsonProperty(PropertyName = "associationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AssociationType> AssociationType { get; set; }
         
     }

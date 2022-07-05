@@ -64,7 +64,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MigrationTypes> Type { get; set; }
         
         /// <value>
@@ -73,7 +73,7 @@ namespace Oci.DatabasemigrationService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "waitAfter")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OdmsJobPhases> WaitAfter { get; set; }
         
         /// <value>
@@ -193,7 +193,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MigrationLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
@@ -201,7 +201,7 @@ namespace Oci.DatabasemigrationService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MigrationStatus> LifecycleDetails { get; set; }
         
         /// <value>

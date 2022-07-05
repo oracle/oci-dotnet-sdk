@@ -50,6 +50,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum PlanStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "COMPLETE")]
             Complete,
             [EnumMember(Value = "PARTIAL")]
@@ -65,7 +68,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "PlanStatus is required.")]
         [JsonProperty(PropertyName = "planStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PlanStatusEnum> PlanStatus { get; set; }
         
     }

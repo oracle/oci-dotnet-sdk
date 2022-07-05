@@ -101,6 +101,9 @@ namespace Oci.DevopsService.Models
         /// </value>
         ///
         public enum RepositoryTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MIRRORED")]
             Mirrored,
             [EnumMember(Value = "HOSTED")]
@@ -114,7 +117,7 @@ namespace Oci.DevopsService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "repositoryType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RepositoryTypeEnum> RepositoryType { get; set; }
         
         [JsonProperty(PropertyName = "mirrorRepositoryConfig")]
@@ -137,6 +140,9 @@ namespace Oci.DevopsService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "CREATING")]
@@ -149,7 +155,7 @@ namespace Oci.DevopsService.Models
         /// The current state of the repository.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -178,6 +184,9 @@ namespace Oci.DevopsService.Models
                 ///
         ///
         public enum TriggerBuildEventsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PUSH")]
             Push,
             [EnumMember(Value = "COMMIT_UPDATES")]
@@ -190,7 +199,7 @@ namespace Oci.DevopsService.Models
         /// COMMIT_UPDATES - Build is triggered when new commits are mirrored into a repository.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "triggerBuildEvents", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "triggerBuildEvents", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<TriggerBuildEventsEnum> TriggerBuildEvents { get; set; }
         
         /// <value>

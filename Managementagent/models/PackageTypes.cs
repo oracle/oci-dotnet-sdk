@@ -19,6 +19,9 @@ namespace Oci.ManagementagentService.Models
     /// 
   /// </summary>
   public enum PackageTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "RPM")]
       Rpm,
       [EnumMember(Value = "ZIP")]

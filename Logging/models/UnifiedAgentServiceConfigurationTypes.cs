@@ -16,6 +16,9 @@ namespace Oci.LoggingService.Models
   /// Type of Unified Agent service configuration.
   /// </summary>
   public enum UnifiedAgentServiceConfigurationTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "LOGGING")]
       Logging
   }

@@ -45,6 +45,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
@@ -65,7 +68,7 @@ namespace Oci.DatabaseService.Models
         /// The current state of the VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -185,6 +188,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LicenseModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LICENSE_INCLUDED")]
             LicenseIncluded,
             [EnumMember(Value = "BRING_YOUR_OWN_LICENSE")]
@@ -196,7 +202,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         /// <value>

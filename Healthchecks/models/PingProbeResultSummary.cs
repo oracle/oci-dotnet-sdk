@@ -90,6 +90,9 @@ namespace Oci.HealthchecksService.Models
         /// </value>
         ///
         public enum ErrorCategoryEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NONE")]
             None,
             [EnumMember(Value = "DNS")]
@@ -113,7 +116,7 @@ namespace Oci.HealthchecksService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "errorCategory")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ErrorCategoryEnum> ErrorCategory { get; set; }
         
         /// <value>
@@ -123,7 +126,7 @@ namespace Oci.HealthchecksService.Models
         public string ErrorMessage { get; set; }
         
         [JsonProperty(PropertyName = "protocol")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PingProbeProtocol> Protocol { get; set; }
         
         [JsonProperty(PropertyName = "connection")]

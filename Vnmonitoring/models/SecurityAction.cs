@@ -53,13 +53,14 @@ namespace Oci.VnmonitoringService.Models
         /// </remarks>
         [Required(ErrorMessage = "ActionType is required.")]
         [JsonProperty(PropertyName = "actionType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionTypeEnum> ActionType { get; set; }
         
     }
 
     public class SecurityActionModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -85,7 +86,14 @@ namespace Oci.VnmonitoringService.Models
                     obj = new DeniedSecurityAction();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under SecurityAction! Returning null value.");
+            }
             return obj;
         }
     }

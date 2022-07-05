@@ -56,6 +56,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum PatternEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LINEAR")]
             Linear,
             [EnumMember(Value = "MONTHLY_SEASONS")]
@@ -82,7 +85,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "Pattern is required.")]
         [JsonProperty(PropertyName = "pattern")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PatternEnum> Pattern { get; set; }
         
         /// <value>

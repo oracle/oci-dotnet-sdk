@@ -16,6 +16,9 @@ namespace Oci.OsmanagementService.Models
   /// Indicates whether the update can be installed using OSMS.
   /// </summary>
   public enum IsEligibleForInstallation {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "INSTALLABLE")]
       Installable,
       [EnumMember(Value = "NOT_INSTALLABLE")]

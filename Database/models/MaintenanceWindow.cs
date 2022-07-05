@@ -27,6 +27,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum PreferenceEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NO_PREFERENCE")]
             NoPreference,
             [EnumMember(Value = "CUSTOM_PREFERENCE")]
@@ -41,7 +44,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "Preference is required.")]
         [JsonProperty(PropertyName = "preference")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PreferenceEnum> Preference { get; set; }
                 ///
         /// <value>
@@ -52,6 +55,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum PatchingModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ROLLING")]
             Rolling,
             [EnumMember(Value = "NONROLLING")]
@@ -65,7 +71,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "patchingMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PatchingModeEnum> PatchingMode { get; set; }
         
         /// <value>

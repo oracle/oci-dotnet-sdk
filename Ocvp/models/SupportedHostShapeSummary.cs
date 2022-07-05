@@ -41,7 +41,7 @@ namespace Oci.OcvpService.Models
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "SupportedOperations is required.")]
-        [JsonProperty(PropertyName = "supportedOperations", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "supportedOperations", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<OperationTypes> SupportedOperations { get; set; }
         
         /// <value>
@@ -73,7 +73,7 @@ namespace Oci.OcvpService.Models
         /// The supported SDDC types for the shape.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "supportedSddcTypes", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "supportedSddcTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<SddcTypes> SupportedSddcTypes { get; set; }
         
         /// <value>

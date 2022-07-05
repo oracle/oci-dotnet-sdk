@@ -16,6 +16,9 @@ namespace Oci.OpsiService.Models
   /// Possible Metadata keys for workRequest resource metadata
   /// </summary>
   public enum WorkRequestResourceMetadataKey {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "RELATED_RESOURCE_IDS")]
       RelatedResourceIds,
       [EnumMember(Value = "RESOURCE_NAME")]

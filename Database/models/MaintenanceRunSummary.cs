@@ -64,6 +64,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SCHEDULED")]
             Scheduled,
             [EnumMember(Value = "IN_PROGRESS")]
@@ -93,7 +96,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -129,6 +132,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum TargetResourceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AUTONOMOUS_EXADATA_INFRASTRUCTURE")]
             AutonomousExadataInfrastructure,
             [EnumMember(Value = "AUTONOMOUS_CONTAINER_DATABASE")]
@@ -149,7 +155,7 @@ namespace Oci.DatabaseService.Models
         /// The type of the target resource on which the maintenance run occurs.
         /// </value>
         [JsonProperty(PropertyName = "targetResourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TargetResourceTypeEnum> TargetResourceType { get; set; }
         
         /// <value>
@@ -163,6 +169,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum MaintenanceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PLANNED")]
             Planned,
             [EnumMember(Value = "UNPLANNED")]
@@ -173,7 +182,7 @@ namespace Oci.DatabaseService.Models
         /// Maintenance type.
         /// </value>
         [JsonProperty(PropertyName = "maintenanceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MaintenanceTypeEnum> MaintenanceType { get; set; }
         
         /// <value>
@@ -187,6 +196,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum MaintenanceSubtypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "QUARTERLY")]
             Quarterly,
             [EnumMember(Value = "HARDWARE")]
@@ -205,7 +217,7 @@ namespace Oci.DatabaseService.Models
         /// Maintenance sub-type.
         /// </value>
         [JsonProperty(PropertyName = "maintenanceSubtype")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MaintenanceSubtypeEnum> MaintenanceSubtype { get; set; }
         
         /// <value>
@@ -222,6 +234,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum PatchingModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ROLLING")]
             Rolling,
             [EnumMember(Value = "NONROLLING")]
@@ -235,7 +250,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "patchingMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PatchingModeEnum> PatchingMode { get; set; }
         
         /// <value>
@@ -281,6 +296,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum PatchingStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PATCHING")]
             Patching,
             [EnumMember(Value = "WAITING")]
@@ -293,7 +311,7 @@ namespace Oci.DatabaseService.Models
         /// The status of the patching operation.
         /// </value>
         [JsonProperty(PropertyName = "patchingStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PatchingStatusEnum> PatchingStatus { get; set; }
         
         /// <value>

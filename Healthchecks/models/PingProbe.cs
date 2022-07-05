@@ -83,7 +83,7 @@ namespace Oci.HealthchecksService.Models
         public System.Nullable<int> TimeoutInSeconds { get; set; }
         
         [JsonProperty(PropertyName = "protocol")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PingProbeProtocol> Protocol { get; set; }
         
     }

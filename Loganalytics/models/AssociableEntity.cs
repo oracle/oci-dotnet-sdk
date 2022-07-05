@@ -63,6 +63,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum EligibilityStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ELIGIBLE")]
             Eligible,
             [EnumMember(Value = "INELIGIBLE")]
@@ -74,7 +77,7 @@ namespace Oci.LoganalyticsService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "eligibilityStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EligibilityStatusEnum> EligibilityStatus { get; set; }
         
         /// <value>

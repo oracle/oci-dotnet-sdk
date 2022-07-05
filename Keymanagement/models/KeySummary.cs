@@ -74,6 +74,9 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "ENABLING")]
@@ -112,7 +115,7 @@ namespace Oci.KeymanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -147,6 +150,9 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         ///
         public enum ProtectionModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "HSM")]
             Hsm,
             [EnumMember(Value = "SOFTWARE")]
@@ -162,7 +168,7 @@ namespace Oci.KeymanagementService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "protectionMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
                 ///
         /// <value>
@@ -170,6 +176,9 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         ///
         public enum AlgorithmEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AES")]
             Aes,
             [EnumMember(Value = "RSA")]
@@ -182,7 +191,7 @@ namespace Oci.KeymanagementService.Models
         /// The algorithm used by a key's key versions to encrypt or decrypt data.
         /// </value>
         [JsonProperty(PropertyName = "algorithm")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
         
     }

@@ -51,6 +51,7 @@ namespace Oci.VnmonitoringService.Models
 
     public class TrafficNodeModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -76,7 +77,14 @@ namespace Oci.VnmonitoringService.Models
                     obj = new AccessDeniedTrafficNode();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under TrafficNode! Returning null value.");
+            }
             return obj;
         }
     }

@@ -94,14 +94,14 @@ namespace Oci.JmsService.Models
         /// The lifecycle state of the installation site.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
         /// The type of the source of events.
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ManagedInstanceType> ManagedInstanceType { get; set; }
         
         /// <value>

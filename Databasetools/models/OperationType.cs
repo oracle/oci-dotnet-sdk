@@ -16,6 +16,9 @@ namespace Oci.DatabasetoolsService.Models
   /// Possible operation types.
   /// </summary>
   public enum OperationType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CREATE_DATABASE_TOOLS_CONNECTION")]
       CreateDatabaseToolsConnection,
       [EnumMember(Value = "UPDATE_DATABASE_TOOLS_CONNECTION")]

@@ -31,14 +31,14 @@ namespace Oci.LoggingService.Models
         /// The type of work the work request is doing.
         /// </value>
         [JsonProperty(PropertyName = "operationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationTypes> OperationType { get; set; }
         
         /// <value>
         /// The current status of the work request.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>

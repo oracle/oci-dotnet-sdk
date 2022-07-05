@@ -71,7 +71,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "ObjectType is required.")]
         [JsonProperty(PropertyName = "objectType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ObjectType> ObjectType { get; set; }
         
         /// <value>

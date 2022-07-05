@@ -60,6 +60,9 @@ namespace Oci.MysqlService.Models
                 ///
         ///
         public enum ModesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "READ")]
             Read,
             [EnumMember(Value = "WRITE")]
@@ -69,7 +72,7 @@ namespace Oci.MysqlService.Models
         /// <value>
         /// The access modes from the client that this endpoint supports.
         /// </value>
-        [JsonProperty(PropertyName = "modes", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "modes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<ModesEnum> Modes { get; set; }
                 ///
         /// <value>
@@ -79,6 +82,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "INACTIVE")]
@@ -93,7 +99,7 @@ namespace Oci.MysqlService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>

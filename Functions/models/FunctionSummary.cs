@@ -58,7 +58,7 @@ namespace Oci.FunctionsService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Function.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

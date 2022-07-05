@@ -40,6 +40,9 @@ namespace Oci.DnsService.Models
         /// </value>
         ///
         public enum ZoneTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PRIMARY")]
             Primary,
             [EnumMember(Value = "SECONDARY")]
@@ -55,7 +58,7 @@ namespace Oci.DnsService.Models
         /// </remarks>
         [Required(ErrorMessage = "ZoneType is required.")]
         [JsonProperty(PropertyName = "zoneType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ZoneTypeEnum> ZoneType { get; set; }
         
         /// <value>
@@ -85,7 +88,7 @@ namespace Oci.DnsService.Models
         /// </remarks>
         [Required(ErrorMessage = "Scope is required.")]
         [JsonProperty(PropertyName = "scope")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Scope> Scope { get; set; }
         
         /// <value>
@@ -178,6 +181,9 @@ namespace Oci.DnsService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "CREATING")]
@@ -200,7 +206,7 @@ namespace Oci.DnsService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

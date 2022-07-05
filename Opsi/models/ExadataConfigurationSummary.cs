@@ -71,7 +71,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "ExadataType is required.")]
         [JsonProperty(PropertyName = "exadataType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExadataType> ExadataType { get; set; }
         
         /// <value>
@@ -82,7 +82,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "ExadataRackType is required.")]
         [JsonProperty(PropertyName = "exadataRackType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExadataRackType> ExadataRackType { get; set; }
         
         /// <value>
@@ -111,6 +111,7 @@ namespace Oci.OpsiService.Models
 
     public class ExadataConfigurationSummaryModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -133,7 +134,14 @@ namespace Oci.OpsiService.Models
                     obj = new ExadataDatabaseMachineConfigurationSummary();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under ExadataConfigurationSummary! Returning null value.");
+            }
             return obj;
         }
     }

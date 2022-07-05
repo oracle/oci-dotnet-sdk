@@ -28,6 +28,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BOOTSTRAPPING")]
             Bootstrapping,
             [EnumMember(Value = "ENABLED")]
@@ -45,7 +48,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -62,6 +65,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum ObjectiveEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LOW_LATENCY")]
             LowLatency,
             [EnumMember(Value = "HIGH_THROUGHPUT")]
@@ -80,7 +86,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "objective")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ObjectiveEnum> Objective { get; set; }
         
         /// <value>

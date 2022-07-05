@@ -32,6 +32,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum GrantOptionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -42,7 +45,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the privilege is granted with the GRANT option (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "grantOption")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<GrantOptionEnum> GrantOption { get; set; }
                 ///
         /// <value>
@@ -50,6 +53,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum InitialGroupEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -60,7 +66,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the consumer group is designated as the default for this user or role (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "initialGroup")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InitialGroupEnum> InitialGroup { get; set; }
         
     }

@@ -16,6 +16,9 @@ namespace Oci.DatabasetoolsService.Models
   /// The related MySQL Server type.
   /// </summary>
   public enum RelatedResourceEntityTypeMySql {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "MYSQLDBSYSTEM")]
       Mysqldbsystem
   }

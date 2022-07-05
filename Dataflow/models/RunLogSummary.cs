@@ -57,6 +57,9 @@ namespace Oci.DataflowService.Models
         /// </value>
         ///
         public enum SourceEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "APPLICATION")]
             Application,
             [EnumMember(Value = "DRIVER")]
@@ -74,7 +77,7 @@ namespace Oci.DataflowService.Models
         /// </remarks>
         [Required(ErrorMessage = "Source is required.")]
         [JsonProperty(PropertyName = "source")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SourceEnum> Source { get; set; }
         
         /// <value>
@@ -90,6 +93,9 @@ namespace Oci.DataflowService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STDERR")]
             Stderr,
             [EnumMember(Value = "STDOUT")]
@@ -105,7 +111,7 @@ namespace Oci.DataflowService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
     }

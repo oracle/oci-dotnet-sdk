@@ -16,6 +16,9 @@ namespace Oci.OpsiService.Models
   /// Exadata rack type.
   /// </summary>
   public enum ExadataRackType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "FULL")]
       Full,
       [EnumMember(Value = "HALF")]

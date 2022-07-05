@@ -32,7 +32,7 @@ namespace Oci.ApplicationmigrationService.Models
         /// The type of source environment.
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SourceTypes> Type { get; set; }
         
         /// <value>
@@ -64,7 +64,7 @@ namespace Oci.ApplicationmigrationService.Models
         /// The current state of the source.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SourceLifecycleStates> LifecycleState { get; set; }
         
         /// <value>

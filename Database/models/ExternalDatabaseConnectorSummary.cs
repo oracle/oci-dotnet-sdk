@@ -85,7 +85,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExternalDatabaseConnector.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -148,6 +148,7 @@ namespace Oci.DatabaseService.Models
 
     public class ExternalDatabaseConnectorSummaryModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -170,7 +171,14 @@ namespace Oci.DatabaseService.Models
                     obj = new ExternalMacsConnectorSummary();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under ExternalDatabaseConnectorSummary! Returning null value.");
+            }
             return obj;
         }
     }

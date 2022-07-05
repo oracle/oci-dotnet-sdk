@@ -68,6 +68,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NOT_STARTED")]
             NotStarted,
             [EnumMember(Value = "QUEUED")]
@@ -88,7 +91,7 @@ namespace Oci.DataintegrationService.Models
         /// The status of the task run.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
@@ -138,6 +141,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum ExpectedDurationUnitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SECONDS")]
             Seconds,
             [EnumMember(Value = "MINUTES")]
@@ -152,7 +158,7 @@ namespace Oci.DataintegrationService.Models
         /// The expected duration unit of measure.
         /// </value>
         [JsonProperty(PropertyName = "expectedDurationUnit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExpectedDurationUnitEnum> ExpectedDurationUnit { get; set; }
         
         /// <value>
@@ -205,6 +211,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum AuthModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OBO")]
             Obo,
             [EnumMember(Value = "RESOURCE_PRINCIPAL")]
@@ -217,7 +226,7 @@ namespace Oci.DataintegrationService.Models
         /// The autorization mode for when the task was executed.
         /// </value>
         [JsonProperty(PropertyName = "authMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuthModeEnum> AuthMode { get; set; }
         
         /// <value>
@@ -237,6 +246,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum TaskTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INTEGRATION_TASK")]
             IntegrationTask,
             [EnumMember(Value = "DATA_LOADER_TASK")]
@@ -255,7 +267,7 @@ namespace Oci.DataintegrationService.Models
         /// The type of task run.
         /// </value>
         [JsonProperty(PropertyName = "taskType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TaskTypeEnum> TaskType { get; set; }
         
         /// <value>

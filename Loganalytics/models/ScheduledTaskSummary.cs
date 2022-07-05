@@ -40,7 +40,7 @@ namespace Oci.LoganalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "TaskType is required.")]
         [JsonProperty(PropertyName = "taskType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TaskType> TaskType { get; set; }
         
         /// <value>
@@ -83,7 +83,7 @@ namespace Oci.LoganalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ScheduledTask.LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
@@ -91,6 +91,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum TaskStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "READY")]
             Ready,
             [EnumMember(Value = "PAUSED")]
@@ -105,14 +108,14 @@ namespace Oci.LoganalyticsService.Models
         /// Status of the scheduled task.
         /// </value>
         [JsonProperty(PropertyName = "taskStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TaskStatusEnum> TaskStatus { get; set; }
         
         /// <value>
         /// reason for taskStatus PAUSED.
         /// </value>
         [JsonProperty(PropertyName = "pauseReason")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ScheduledTask.PauseReasonEnum> PauseReason { get; set; }
         
         /// <value>
@@ -154,6 +157,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum LastExecutionStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FAILED")]
             Failed,
             [EnumMember(Value = "SUCCEEDED")]
@@ -164,7 +170,7 @@ namespace Oci.LoganalyticsService.Models
         /// The most recent task execution status.
         /// </value>
         [JsonProperty(PropertyName = "lastExecutionStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LastExecutionStatusEnum> LastExecutionStatus { get; set; }
         
         /// <value>

@@ -24,7 +24,7 @@ namespace Oci.CloudguardService.Models
         /// <value>
         /// Types of Targets
         /// </value>
-        [JsonProperty(PropertyName = "values", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "values", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<TargetResourceType> Values { get; set; }
         
         [JsonProperty(PropertyName = "kind")]

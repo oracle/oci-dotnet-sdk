@@ -16,6 +16,9 @@ namespace Oci.OsmanagementService.Models
   /// Possible schedule types
   /// </summary>
   public enum ScheduleTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ONETIME")]
       Onetime,
       [EnumMember(Value = "RECURRING")]

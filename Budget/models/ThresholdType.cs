@@ -16,6 +16,9 @@ namespace Oci.BudgetService.Models
   /// The type of threshold. Valid values are PERCENTAGE or ABSOLUTE.
   /// </summary>
   public enum ThresholdType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "PERCENTAGE")]
       Percentage,
       [EnumMember(Value = "ABSOLUTE")]

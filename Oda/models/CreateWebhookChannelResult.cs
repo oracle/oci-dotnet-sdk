@@ -51,7 +51,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "PayloadVersion is required.")]
         [JsonProperty(PropertyName = "payloadVersion")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WebhookPayloadVersion> PayloadVersion { get; set; }
         
         /// <value>

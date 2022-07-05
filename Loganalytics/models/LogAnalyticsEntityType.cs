@@ -70,7 +70,7 @@ namespace Oci.LoganalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "CloudType is required.")]
         [JsonProperty(PropertyName = "cloudType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EntityCloudType> CloudType { get; set; }
         
         /// <value>
@@ -89,7 +89,7 @@ namespace Oci.LoganalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EntityLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
@@ -120,6 +120,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum ManagementAgentEligibilityStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ELIGIBLE")]
             Eligible,
             [EnumMember(Value = "INELIGIBLE")]
@@ -133,7 +136,7 @@ namespace Oci.LoganalyticsService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "managementAgentEligibilityStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ManagementAgentEligibilityStatusEnum> ManagementAgentEligibilityStatus { get; set; }
         
     }

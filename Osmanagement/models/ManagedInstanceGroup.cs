@@ -67,7 +67,7 @@ namespace Oci.OsmanagementService.Models
         /// The current state of the Software Source.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
@@ -88,7 +88,7 @@ namespace Oci.OsmanagementService.Models
         /// The Operating System type of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "osFamily")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsFamilies> OsFamily { get; set; }
         
     }

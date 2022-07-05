@@ -101,7 +101,7 @@ namespace Oci.LoggingService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LogSavedSearchLifecycleState> LifecycleState { get; set; }
         
     }

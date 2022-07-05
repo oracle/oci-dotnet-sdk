@@ -27,6 +27,9 @@ namespace Oci.ResourcesearchService.Models
         /// </value>
         ///
         public enum FieldTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "IDENTIFIER")]
             Identifier,
             [EnumMember(Value = "STRING")]
@@ -54,7 +57,7 @@ namespace Oci.ResourcesearchService.Models
         /// </remarks>
         [Required(ErrorMessage = "FieldType is required.")]
         [JsonProperty(PropertyName = "fieldType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FieldTypeEnum> FieldType { get; set; }
         
         /// <value>

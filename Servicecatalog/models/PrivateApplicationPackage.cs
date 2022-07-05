@@ -78,6 +78,7 @@ namespace Oci.ServicecatalogService.Models
 
     public class PrivateApplicationPackageModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -100,7 +101,14 @@ namespace Oci.ServicecatalogService.Models
                     obj = new PrivateApplicationStackPackage();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under PrivateApplicationPackage! Returning null value.");
+            }
             return obj;
         }
     }

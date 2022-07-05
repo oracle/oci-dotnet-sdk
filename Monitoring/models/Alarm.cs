@@ -182,6 +182,9 @@ namespace Oci.MonitoringService.Models
         /// </value>
         ///
         public enum SeverityEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CRITICAL")]
             Critical,
             [EnumMember(Value = "ERROR")]
@@ -202,7 +205,7 @@ namespace Oci.MonitoringService.Models
         /// </remarks>
         [Required(ErrorMessage = "Severity is required.")]
         [JsonProperty(PropertyName = "severity")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SeverityEnum> Severity { get; set; }
         
         /// <value>
@@ -224,6 +227,9 @@ namespace Oci.MonitoringService.Models
         /// </value>
         ///
         public enum MessageFormatEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "RAW")]
             Raw,
             [EnumMember(Value = "PRETTY_JSON")]
@@ -240,7 +246,7 @@ namespace Oci.MonitoringService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "messageFormat")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MessageFormatEnum> MessageFormat { get; set; }
         
         /// <value>
@@ -309,6 +315,9 @@ namespace Oci.MonitoringService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "DELETING")]
@@ -327,7 +336,7 @@ namespace Oci.MonitoringService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

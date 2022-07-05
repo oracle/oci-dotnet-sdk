@@ -16,6 +16,9 @@ namespace Oci.DatabasetoolsService.Models
   /// The related Oracle Database type, either an Autonomous Database, a container database (CDB), or a pluggable database (PDB).
   /// </summary>
   public enum RelatedResourceEntityType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "AUTONOMOUSDATABASE")]
       Autonomousdatabase,
       [EnumMember(Value = "DATABASE")]

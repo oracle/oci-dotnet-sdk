@@ -16,6 +16,9 @@ namespace Oci.CloudguardService.Models
   /// Filter type can be config filter or condition filter
   /// </summary>
   public enum ConditionFilterType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CONDITION")]
       Condition,
       [EnumMember(Value = "CONFIG")]

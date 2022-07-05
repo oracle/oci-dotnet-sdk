@@ -71,6 +71,9 @@ namespace Oci.SecretsService.Models
                 ///
         ///
         public enum StagesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CURRENT")]
             Current,
             [EnumMember(Value = "PENDING")]
@@ -86,7 +89,7 @@ namespace Oci.SecretsService.Models
         /// <value>
         /// A list of possible rotation states for the secret bundle.
         /// </value>
-        [JsonProperty(PropertyName = "stages", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "stages", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<StagesEnum> Stages { get; set; }
         
     }

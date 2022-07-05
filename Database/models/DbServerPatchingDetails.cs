@@ -33,6 +33,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum PatchingStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SCHEDULED")]
             Scheduled,
             [EnumMember(Value = "MAINTENANCE_IN_PROGRESS")]
@@ -47,7 +50,7 @@ namespace Oci.DatabaseService.Models
         /// The status of the patching operation.
         /// </value>
         [JsonProperty(PropertyName = "patchingStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PatchingStatusEnum> PatchingStatus { get; set; }
         
         /// <value>

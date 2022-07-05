@@ -16,6 +16,9 @@ namespace Oci.NetworkloadbalancerService.Models
   /// Mode specifying the IP version of NLB.
   /// </summary>
   public enum NlbIpVersion {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "IPV4")]
       Ipv4,
       [EnumMember(Value = "IPV4_AND_IPV6")]

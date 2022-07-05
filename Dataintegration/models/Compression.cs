@@ -26,6 +26,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum CodecEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NONE")]
             None,
             [EnumMember(Value = "AUTO")]
@@ -46,7 +49,7 @@ namespace Oci.DataintegrationService.Models
         /// Compression algorithm
         /// </value>
         [JsonProperty(PropertyName = "codec")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CodecEnum> Codec { get; set; }
         
     }

@@ -39,6 +39,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum ActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DETECT")]
             Detect,
             [EnumMember(Value = "BLOCK")]
@@ -50,7 +53,7 @@ namespace Oci.WaasService.Models
         /// `DETECT` - Logs the request when the criteria of the custom protection rule are met. `BLOCK` - Blocks the request when the criteria of the custom protection rule are met.
         /// </value>
         [JsonProperty(PropertyName = "action")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
         
         /// <value>

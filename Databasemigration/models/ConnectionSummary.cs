@@ -53,7 +53,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "DatabaseType is required.")]
         [JsonProperty(PropertyName = "databaseType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseConnectionTypes> DatabaseType { get; set; }
         
         /// <value>
@@ -61,7 +61,7 @@ namespace Oci.DatabasemigrationService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "manualDatabaseSubType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseManualConnectionSubTypes> ManualDatabaseSubType { get; set; }
         
         /// <value>
@@ -116,7 +116,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>

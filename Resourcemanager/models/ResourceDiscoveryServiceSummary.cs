@@ -36,6 +36,9 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         ///
         public enum DiscoveryScopeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "TENANCY")]
             Tenancy,
             [EnumMember(Value = "COMPARTMENT")]
@@ -49,7 +52,7 @@ namespace Oci.ResourcemanagerService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "discoveryScope")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DiscoveryScopeEnum> DiscoveryScope { get; set; }
         
     }

@@ -45,6 +45,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum ActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CACHE")]
             Cache,
             [EnumMember(Value = "BYPASS_CACHE")]
@@ -62,7 +65,7 @@ namespace Oci.WaasService.Models
         /// </remarks>
         [Required(ErrorMessage = "Action is required.")]
         [JsonProperty(PropertyName = "action")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
         
         /// <value>

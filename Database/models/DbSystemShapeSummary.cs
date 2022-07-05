@@ -47,6 +47,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum ShapeTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AMD")]
             Amd,
             [EnumMember(Value = "INTEL")]
@@ -57,7 +60,7 @@ namespace Oci.DatabaseService.Models
         /// The shape type for the virtual machine DB system. Shape type is determined by CPU hardware. Valid values are `AMD` and `INTEL`.
         /// </value>
         [JsonProperty(PropertyName = "shapeType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ShapeTypeEnum> ShapeType { get; set; }
         
         /// <value>

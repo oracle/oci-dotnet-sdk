@@ -58,6 +58,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum RecommendationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STATISTICS")]
             Statistics,
             [EnumMember(Value = "INDEX")]
@@ -82,7 +85,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "RecommendationType is required.")]
         [JsonProperty(PropertyName = "recommendationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RecommendationTypeEnum> RecommendationType { get; set; }
         
         /// <value>

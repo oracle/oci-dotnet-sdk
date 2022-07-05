@@ -34,6 +34,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum CircuitTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "Single_mode_LC")]
             SingleModeLc,
             [EnumMember(Value = "Single_mode_SC")]
@@ -44,7 +47,7 @@ namespace Oci.CoreService.Models
         /// The type of cross-connect fiber, termination, and optical specification.
         /// </value>
         [JsonProperty(PropertyName = "circuitType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CircuitTypeEnum> CircuitType { get; set; }
         
         /// <value>

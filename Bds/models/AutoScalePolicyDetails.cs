@@ -65,7 +65,7 @@ namespace Oci.BdsService.Models
         /// </remarks>
         [Required(ErrorMessage = "TriggerType is required.")]
         [JsonProperty(PropertyName = "triggerType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TriggerTypeEnum> TriggerType { get; set; }
                 ///
         /// <value>
@@ -87,13 +87,14 @@ namespace Oci.BdsService.Models
         /// </remarks>
         [Required(ErrorMessage = "ActionType is required.")]
         [JsonProperty(PropertyName = "actionType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionTypeEnum> ActionType { get; set; }
         
     }
 
     public class AutoScalePolicyDetailsModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -125,7 +126,14 @@ namespace Oci.BdsService.Models
                     obj = new MetricBasedHorizontalScalingPolicyDetails();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under AutoScalePolicyDetails! Returning null value.");
+            }
             return obj;
         }
     }

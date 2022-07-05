@@ -81,6 +81,9 @@ namespace Oci.BastionService.Models
         /// </value>
         ///
         public enum KeyTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PUB")]
             Pub
         };
@@ -89,7 +92,7 @@ namespace Oci.BastionService.Models
         /// The type of the key used to connect to the session. PUB is a standard public key in OpenSSH format.
         /// </value>
         [JsonProperty(PropertyName = "keyType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<KeyTypeEnum> KeyType { get; set; }
         
         /// <remarks>
@@ -131,7 +134,7 @@ namespace Oci.BastionService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SessionLifecycleState> LifecycleState { get; set; }
         
         /// <value>

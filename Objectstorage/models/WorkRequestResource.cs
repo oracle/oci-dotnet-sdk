@@ -24,6 +24,9 @@ namespace Oci.ObjectstorageService.Models
         /// </value>
         ///
         public enum ActionTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATED")]
             Created,
             [EnumMember(Value = "UPDATED")]
@@ -44,7 +47,7 @@ namespace Oci.ObjectstorageService.Models
         /// The status of the work request.
         /// </value>
         [JsonProperty(PropertyName = "actionType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionTypeEnum> ActionType { get; set; }
         
         /// <value>

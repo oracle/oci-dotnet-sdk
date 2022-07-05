@@ -16,6 +16,9 @@ namespace Oci.OspgatewayService.Models
   /// Credit card type.
   /// </summary>
   public enum CreditCardType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "VISA")]
       Visa,
       [EnumMember(Value = "AMEX")]

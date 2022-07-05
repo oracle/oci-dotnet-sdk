@@ -55,14 +55,14 @@ namespace Oci.CimsService.Models
         /// The scope of the incident.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Scope> Scope { get; set; }
         
         /// <value>
         /// The unit to use to measure the service category or resource.
         /// </value>
         [JsonProperty(PropertyName = "unit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Unit> Unit { get; set; }
         
         /// <value>

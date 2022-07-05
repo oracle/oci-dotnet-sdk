@@ -16,6 +16,9 @@ namespace Oci.DatabasetoolsService.Models
   /// The key store type.
   /// </summary>
   public enum KeyStoreTypeMySql {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CLIENT_CERTIFICATE_PEM")]
       ClientCertificatePem,
       [EnumMember(Value = "CLIENT_PRIVATE_KEY_PEM")]

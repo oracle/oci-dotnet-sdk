@@ -119,6 +119,7 @@ namespace Oci.DataintegrationService.Models
 
     public class DataAssetModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -162,7 +163,14 @@ namespace Oci.DataintegrationService.Models
                     obj = new DataAssetFromMySQL();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under DataAsset! Returning null value.");
+            }
             return obj;
         }
     }

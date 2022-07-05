@@ -16,6 +16,9 @@ namespace Oci.OdaService.Models
   /// The valid set of Translation Services to use for translation.
   /// </summary>
   public enum TranslationService {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "GOOGLE")]
       Google,
       [EnumMember(Value = "MICROSOFT")]

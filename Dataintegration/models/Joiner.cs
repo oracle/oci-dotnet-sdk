@@ -26,6 +26,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum JoinTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INNER")]
             Inner,
             [EnumMember(Value = "FULL")]
@@ -40,7 +43,7 @@ namespace Oci.DataintegrationService.Models
         /// joinType
         /// </value>
         [JsonProperty(PropertyName = "joinType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JoinTypeEnum> JoinType { get; set; }
         
         [JsonProperty(PropertyName = "joinCondition")]

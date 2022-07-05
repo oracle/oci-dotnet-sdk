@@ -16,6 +16,9 @@ namespace Oci.DatabasetoolsService.Models
   /// The key store type.
   /// </summary>
   public enum KeyStoreType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "JAVA_KEY_STORE")]
       JavaKeyStore,
       [EnumMember(Value = "JAVA_TRUST_STORE")]

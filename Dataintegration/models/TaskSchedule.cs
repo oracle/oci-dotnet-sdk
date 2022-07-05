@@ -95,6 +95,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum RetryDelayUnitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SECONDS")]
             Seconds,
             [EnumMember(Value = "MINUTES")]
@@ -109,7 +112,7 @@ namespace Oci.DataintegrationService.Models
         /// The unit for the retry delay.
         /// </value>
         [JsonProperty(PropertyName = "retryDelayUnit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RetryDelayUnitEnum> RetryDelayUnit { get; set; }
         
         /// <value>
@@ -147,6 +150,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum AuthModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "OBO")]
             Obo,
             [EnumMember(Value = "RESOURCE_PRINCIPAL")]
@@ -159,7 +165,7 @@ namespace Oci.DataintegrationService.Models
         /// The authorization mode for the task.
         /// </value>
         [JsonProperty(PropertyName = "authMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuthModeEnum> AuthMode { get; set; }
         
         /// <value>
@@ -173,6 +179,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum ExpectedDurationUnitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SECONDS")]
             Seconds,
             [EnumMember(Value = "MINUTES")]
@@ -187,7 +196,7 @@ namespace Oci.DataintegrationService.Models
         /// The expected duration unit of the task execution.
         /// </value>
         [JsonProperty(PropertyName = "expectedDurationUnit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExpectedDurationUnitEnum> ExpectedDurationUnit { get; set; }
         
         [JsonProperty(PropertyName = "lastRunDetails")]

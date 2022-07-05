@@ -16,6 +16,9 @@ namespace Oci.DatasafeService.Models
   /// The current sub-state of the audit trail.
   /// </summary>
   public enum AuditTrailStatus {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "STARTING")]
       Starting,
       [EnumMember(Value = "COLLECTING")]

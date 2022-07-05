@@ -103,7 +103,7 @@ namespace Oci.CloudguardService.Models
         /// Risk Level associated with resource profile
         /// </value>
         [JsonProperty(PropertyName = "riskLevel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
         
         /// <value>

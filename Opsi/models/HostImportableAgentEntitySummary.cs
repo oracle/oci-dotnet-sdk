@@ -39,6 +39,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum PlatformTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LINUX")]
             Linux,
             [EnumMember(Value = "SOLARIS")]
@@ -60,7 +63,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "PlatformType is required.")]
         [JsonProperty(PropertyName = "platformType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PlatformTypeEnum> PlatformType { get; set; }
         
         [JsonProperty(PropertyName = "entitySource")]

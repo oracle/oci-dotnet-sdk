@@ -16,6 +16,9 @@ namespace Oci.LoganalyticsService.Models
   /// Possible operation types.
   /// </summary>
   public enum LogAnalyticsOperationTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CREATE_LOG_ANALYTICS")]
       CreateLogAnalytics,
       [EnumMember(Value = "DELETE_LOG_ANALYTICS")]

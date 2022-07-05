@@ -43,7 +43,7 @@ namespace Oci.MysqlService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<HeatWaveClusterMemoryEstimateStatus> Status { get; set; }
         
         /// <value>

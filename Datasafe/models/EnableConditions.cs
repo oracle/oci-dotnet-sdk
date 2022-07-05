@@ -26,6 +26,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum EntitySelectionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INCLUDE")]
             Include,
             [EnumMember(Value = "EXCLUDE")]
@@ -40,7 +43,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "EntitySelection is required.")]
         [JsonProperty(PropertyName = "entitySelection")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EntitySelectionEnum> EntitySelection { get; set; }
                 ///
         /// <value>
@@ -48,6 +51,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum EntityTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "USER")]
             User,
             [EnumMember(Value = "ROLE")]
@@ -64,7 +70,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "EntityType is required.")]
         [JsonProperty(PropertyName = "entityType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EntityTypeEnum> EntityType { get; set; }
                 ///
         /// <value>
@@ -72,6 +78,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum OperationStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SUCCESS")]
             Success,
             [EnumMember(Value = "FAILURE")]
@@ -88,7 +97,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "OperationStatus is required.")]
         [JsonProperty(PropertyName = "operationStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationStatusEnum> OperationStatus { get; set; }
         
         /// <value>

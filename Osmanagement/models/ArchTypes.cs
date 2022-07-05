@@ -16,6 +16,9 @@ namespace Oci.OsmanagementService.Models
   /// Possible CPU architecture types
   /// </summary>
   public enum ArchTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "IA_32")]
       Ia32,
       [EnumMember(Value = "X86_64")]

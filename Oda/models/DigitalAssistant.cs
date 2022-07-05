@@ -90,7 +90,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -101,7 +101,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleDetails is required.")]
         [JsonProperty(PropertyName = "lifecycleDetails")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BotPublishState> LifecycleDetails { get; set; }
         
         /// <value>
@@ -124,7 +124,7 @@ namespace Oci.OdaService.Models
         /// The multilingual mode for the resource.
         /// </value>
         [JsonProperty(PropertyName = "multilingualMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BotMultilingualMode> MultilingualMode { get; set; }
         
         /// <value>

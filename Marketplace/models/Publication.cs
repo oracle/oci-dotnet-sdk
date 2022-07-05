@@ -26,6 +26,9 @@ namespace Oci.MarketplaceService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "ACTIVE")]
@@ -42,7 +45,7 @@ namespace Oci.MarketplaceService.Models
         /// The lifecycle state of the publication.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -100,7 +103,7 @@ namespace Oci.MarketplaceService.Models
         /// The listing's package type.
         /// </value>
         [JsonProperty(PropertyName = "packageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageTypeEnum> PackageType { get; set; }
         
         /// <value>
@@ -111,7 +114,7 @@ namespace Oci.MarketplaceService.Models
         /// </remarks>
         [Required(ErrorMessage = "ListingType is required.")]
         [JsonProperty(PropertyName = "listingType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ListingType> ListingType { get; set; }
         
         /// <value>

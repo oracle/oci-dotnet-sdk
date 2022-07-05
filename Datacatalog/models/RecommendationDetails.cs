@@ -40,7 +40,7 @@ namespace Oci.DatacatalogService.Models
         /// </remarks>
         [Required(ErrorMessage = "RecommendationType is required.")]
         [JsonProperty(PropertyName = "recommendationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RecommendationType> RecommendationType { get; set; }
         
         /// <value>
@@ -51,7 +51,7 @@ namespace Oci.DatacatalogService.Models
         /// </remarks>
         [Required(ErrorMessage = "RecommendationStatus is required.")]
         [JsonProperty(PropertyName = "recommendationStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RecommendationStatus> RecommendationStatus { get; set; }
         
         /// <value>
@@ -76,7 +76,7 @@ namespace Oci.DatacatalogService.Models
         /// Type of the source object; the one for which a recommendation is made.
         /// </value>
         [JsonProperty(PropertyName = "sourceObjectType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RecommendationResourceType> SourceObjectType { get; set; }
         
         /// <value>
@@ -95,7 +95,7 @@ namespace Oci.DatacatalogService.Models
         /// Type of the target object; the one which has been recommended.
         /// </value>
         [JsonProperty(PropertyName = "targetObjectType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RecommendationResourceType> TargetObjectType { get; set; }
         
         /// <value>

@@ -29,6 +29,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum SqlScriptTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STORED_PROCEDURE")]
             StoredProcedure,
             [EnumMember(Value = "SQL_CODE")]
@@ -39,7 +42,7 @@ namespace Oci.DataintegrationService.Models
         /// Indicates whether the task is invoking a custom SQL script or stored procedure.
         /// </value>
         [JsonProperty(PropertyName = "sqlScriptType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SqlScriptTypeEnum> SqlScriptType { get; set; }
         
         /// <value>

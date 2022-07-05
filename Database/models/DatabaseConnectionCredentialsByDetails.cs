@@ -62,6 +62,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum RoleEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SYSDBA")]
             Sysdba,
             [EnumMember(Value = "NORMAL")]
@@ -76,7 +79,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "Role is required.")]
         [JsonProperty(PropertyName = "role")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RoleEnum> Role { get; set; }
         
         [JsonProperty(PropertyName = "credentialType")]

@@ -69,14 +69,14 @@ namespace Oci.ApplicationmigrationService.Models
         /// The type of application being migrated.
         /// </value>
         [JsonProperty(PropertyName = "applicationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MigrationTypes> ApplicationType { get; set; }
         
         /// <value>
         /// The current state of the migration.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MigrationLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
@@ -89,7 +89,7 @@ namespace Oci.ApplicationmigrationService.Models
         /// The current state of the overall migration process.
         /// </value>
         [JsonProperty(PropertyName = "migrationState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MigrationStates> MigrationState { get; set; }
         
         /// <value>

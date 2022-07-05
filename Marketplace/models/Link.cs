@@ -25,7 +25,7 @@ namespace Oci.MarketplaceService.Models
         /// Reference links to the previous page, next page, and other pages.
         /// </value>
         [JsonProperty(PropertyName = "rel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LinkEnum> Rel { get; set; }
         
         /// <value>

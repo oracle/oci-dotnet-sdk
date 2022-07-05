@@ -56,6 +56,9 @@ namespace Oci.OdaService.Models
         /// </value>
         ///
         public enum AttachmentTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FUSION")]
             Fusion
         };
@@ -68,7 +71,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "AttachmentType is required.")]
         [JsonProperty(PropertyName = "attachmentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AttachmentTypeEnum> AttachmentType { get; set; }
         
         /// <value>
@@ -103,6 +106,9 @@ namespace Oci.OdaService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ATTACHING")]
             Attaching,
             [EnumMember(Value = "ACTIVE")]
@@ -123,7 +129,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

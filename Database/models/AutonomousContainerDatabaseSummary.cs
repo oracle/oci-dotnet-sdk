@@ -64,6 +64,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum ServiceLevelAgreementTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STANDARD")]
             Standard,
             [EnumMember(Value = "MISSION_CRITICAL")]
@@ -80,7 +83,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "ServiceLevelAgreementType is required.")]
         [JsonProperty(PropertyName = "serviceLevelAgreementType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ServiceLevelAgreementTypeEnum> ServiceLevelAgreementType { get; set; }
         
         /// <value>
@@ -101,6 +104,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum InfrastructureTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CLOUD")]
             Cloud,
             [EnumMember(Value = "CLOUD_AT_CUSTOMER")]
@@ -111,7 +117,7 @@ namespace Oci.DatabaseService.Models
         /// The infrastructure type this resource belongs to.
         /// </value>
         [JsonProperty(PropertyName = "infrastructureType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InfrastructureTypeEnum> InfrastructureType { get; set; }
         
         /// <value>
@@ -150,6 +156,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROVISIONING")]
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
@@ -186,7 +195,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -206,6 +215,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum PatchModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "RELEASE_UPDATES")]
             ReleaseUpdates,
             [EnumMember(Value = "RELEASE_UPDATE_REVISIONS")]
@@ -220,7 +232,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "PatchModel is required.")]
         [JsonProperty(PropertyName = "patchModel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PatchModelEnum> PatchModel { get; set; }
         
         /// <value>
@@ -274,6 +286,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum RoleEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PRIMARY")]
             Primary,
             [EnumMember(Value = "STANDBY")]
@@ -286,7 +301,7 @@ namespace Oci.DatabaseService.Models
         /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "role")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RoleEnum> Role { get; set; }
         
         /// <value>

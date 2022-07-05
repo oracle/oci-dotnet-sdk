@@ -16,6 +16,9 @@ namespace Oci.AianomalydetectionService.Models
   /// Possible data sources
   /// </summary>
   public enum InfluxVersion {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "V_1_8")]
       V18,
       [EnumMember(Value = "V_2_0")]

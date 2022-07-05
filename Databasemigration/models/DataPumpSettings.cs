@@ -28,7 +28,7 @@ namespace Oci.DatabasemigrationService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "jobMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataPumpJobMode> JobMode { get; set; }
         
         [JsonProperty(PropertyName = "dataPumpParameters")]

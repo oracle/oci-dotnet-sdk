@@ -80,7 +80,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The subtype of the Oracle Database where the job has to be executed. Applicable only when managedDatabaseGroupId is provided.
         /// </value>
         [JsonProperty(PropertyName = "databaseSubType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseSubType> DatabaseSubType { get; set; }
                 ///
         /// <value>
@@ -102,7 +102,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "ScheduleType is required.")]
         [JsonProperty(PropertyName = "scheduleType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ScheduleTypeEnum> ScheduleType { get; set; }
         
                 ///
@@ -125,7 +125,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -170,6 +170,7 @@ namespace Oci.DatabasemanagementService.Models
 
     public class JobModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -192,7 +193,14 @@ namespace Oci.DatabasemanagementService.Models
                     obj = new SqlJob();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under Job! Returning null value.");
+            }
             return obj;
         }
     }

@@ -36,6 +36,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum DataTypeNameEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NUMBER")]
             Number,
             [EnumMember(Value = "TIMESTAMP")]
@@ -48,7 +51,7 @@ namespace Oci.OpsiService.Models
         /// Type of the column in a data object query result set.
         /// </value>
         [JsonProperty(PropertyName = "dataTypeName")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataTypeNameEnum> DataTypeName { get; set; }
         
     }

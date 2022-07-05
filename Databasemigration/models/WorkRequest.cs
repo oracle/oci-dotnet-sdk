@@ -31,7 +31,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "OperationType is required.")]
         [JsonProperty(PropertyName = "operationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationTypes> OperationType { get; set; }
         
         /// <value>
@@ -43,7 +43,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "Status is required.")]
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>

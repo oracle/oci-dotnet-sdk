@@ -16,6 +16,9 @@ namespace Oci.OspgatewayService.Models
   /// Payment method
   /// </summary>
   public enum PaymentMethod {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CREDIT_CARD")]
       CreditCard,
       [EnumMember(Value = "PAYPAL")]

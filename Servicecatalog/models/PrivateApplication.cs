@@ -27,6 +27,9 @@ namespace Oci.ServicecatalogService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "UPDATING")]
@@ -47,7 +50,7 @@ namespace Oci.ServicecatalogService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -104,7 +107,7 @@ namespace Oci.ServicecatalogService.Models
         /// </remarks>
         [Required(ErrorMessage = "PackageType is required.")]
         [JsonProperty(PropertyName = "packageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageTypeEnum> PackageType { get; set; }
         
         /// <value>

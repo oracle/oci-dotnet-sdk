@@ -35,7 +35,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "Format is required.")]
         [JsonProperty(PropertyName = "format")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AwrReportFormatType> Format { get; set; }
         
     }

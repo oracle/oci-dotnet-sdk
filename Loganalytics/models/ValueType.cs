@@ -16,6 +16,9 @@ namespace Oci.LoganalyticsService.Models
   /// Data type for fields, columns or parameters.
   /// </summary>
   public enum ValueType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "BOOLEAN")]
       Boolean,
       [EnumMember(Value = "STRING")]

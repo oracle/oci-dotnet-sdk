@@ -76,7 +76,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "ChannelService is required.")]
         [JsonProperty(PropertyName = "channelService")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsvcServiceType> ChannelService { get; set; }
         
         /// <value>

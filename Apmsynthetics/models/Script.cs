@@ -51,7 +51,7 @@ namespace Oci.ApmsyntheticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "ContentType is required.")]
         [JsonProperty(PropertyName = "contentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ContentTypes> ContentType { get; set; }
         
         /// <value>

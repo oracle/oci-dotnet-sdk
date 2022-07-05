@@ -28,6 +28,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AMD_MILAN_BM")]
             AmdMilanBm,
             [EnumMember(Value = "AMD_ROME_BM")]
@@ -49,7 +52,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
         [JsonProperty(PropertyName = "secureBootOptions")]

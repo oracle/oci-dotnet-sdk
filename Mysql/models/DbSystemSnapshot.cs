@@ -211,7 +211,7 @@ namespace Oci.MysqlService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "crashRecovery")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CrashRecoveryStatus> CrashRecovery { get; set; }
         
     }

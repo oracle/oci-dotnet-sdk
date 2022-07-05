@@ -65,7 +65,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "InfrastructureType is required.")]
         [JsonProperty(PropertyName = "infrastructureType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InfrastructureType> InfrastructureType { get; set; }
         
         /// <value>
@@ -76,7 +76,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "DatabaseType is required.")]
         [JsonProperty(PropertyName = "databaseType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseType> DatabaseType { get; set; }
         
         /// <value>
@@ -93,7 +93,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TargetDatabaseLifecycleState> LifecycleState { get; set; }
         
         /// <value>

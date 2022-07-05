@@ -44,6 +44,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NFS")]
             Nfs,
             [EnumMember(Value = "RECOVERY_APPLIANCE")]
@@ -54,7 +57,7 @@ namespace Oci.DatabaseService.Models
         /// Type of the backup destination.
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
@@ -87,6 +90,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum NfsMountTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SELF_MOUNT")]
             SelfMount,
             [EnumMember(Value = "AUTOMATED_MOUNT")]
@@ -97,7 +103,7 @@ namespace Oci.DatabaseService.Models
         /// NFS Mount type for backup destination.
         /// </value>
         [JsonProperty(PropertyName = "nfsMountType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NfsMountTypeEnum> NfsMountType { get; set; }
         
         /// <value>
@@ -117,6 +123,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "FAILED")]
@@ -129,7 +138,7 @@ namespace Oci.DatabaseService.Models
         /// The current lifecycle state of the backup destination.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

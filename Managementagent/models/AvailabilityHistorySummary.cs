@@ -39,7 +39,7 @@ namespace Oci.ManagementagentService.Models
         /// </remarks>
         [Required(ErrorMessage = "AvailabilityStatus is required.")]
         [JsonProperty(PropertyName = "availabilityStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AvailabilityStatus> AvailabilityStatus { get; set; }
         
         /// <value>

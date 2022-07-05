@@ -27,6 +27,7 @@ namespace Oci.ContainerengineService.Models
 
     public class NodeSourceDetailsModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -49,7 +50,14 @@ namespace Oci.ContainerengineService.Models
                     obj = new NodeSourceViaImageDetails();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under NodeSourceDetails! Returning null value.");
+            }
             return obj;
         }
     }

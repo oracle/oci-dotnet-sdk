@@ -47,7 +47,7 @@ namespace Oci.ManagementagentService.Models
         /// Platform Type
         /// </value>
         [JsonProperty(PropertyName = "platformType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PlatformTypes> PlatformType { get; set; }
         
         /// <value>
@@ -145,14 +145,14 @@ namespace Oci.ManagementagentService.Models
         /// The current availability status of managementAgent
         /// </value>
         [JsonProperty(PropertyName = "availabilityStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AvailabilityStatus> AvailabilityStatus { get; set; }
         
         /// <value>
         /// The current state of managementAgent
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
@@ -171,7 +171,7 @@ namespace Oci.ManagementagentService.Models
         /// The install type, either AGENT or GATEWAY
         /// </value>
         [JsonProperty(PropertyName = "installType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InstallTypes> InstallType { get; set; }
         
         /// <value>

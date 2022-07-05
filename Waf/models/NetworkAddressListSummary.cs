@@ -76,7 +76,7 @@ namespace Oci.WafService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NetworkAddressList.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -136,6 +136,7 @@ namespace Oci.WafService.Models
 
     public class NetworkAddressListSummaryModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -161,7 +162,14 @@ namespace Oci.WafService.Models
                     obj = new NetworkAddressListAddressesSummary();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under NetworkAddressListSummary! Returning null value.");
+            }
             return obj;
         }
     }

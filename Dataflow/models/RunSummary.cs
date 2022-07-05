@@ -108,7 +108,7 @@ namespace Oci.DataflowService.Models
         /// </remarks>
         [Required(ErrorMessage = "Language is required.")]
         [JsonProperty(PropertyName = "language")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ApplicationLanguage> Language { get; set; }
         
         /// <value>
@@ -127,7 +127,7 @@ namespace Oci.DataflowService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RunLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -194,7 +194,7 @@ namespace Oci.DataflowService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ApplicationType> Type { get; set; }
         
     }

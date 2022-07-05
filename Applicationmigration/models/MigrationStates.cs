@@ -16,6 +16,9 @@ namespace Oci.ApplicationmigrationService.Models
   /// Migration process state
   /// </summary>
   public enum MigrationStates {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "DISCOVERING_APPLICATION")]
       DiscoveringApplication,
       [EnumMember(Value = "DISCOVERY_FAILED")]

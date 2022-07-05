@@ -17,6 +17,9 @@ namespace Oci.LoganalyticsService.Models
     /// 
   /// </summary>
   public enum QueryOperationType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "EXECUTE_QUERY_JOB")]
       ExecuteQueryJob,
       [EnumMember(Value = "EXECUTE_PURGE_JOB")]

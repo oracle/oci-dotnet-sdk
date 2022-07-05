@@ -64,7 +64,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DiscoveryLifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -81,7 +81,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "Source is required.")]
         [JsonProperty(PropertyName = "source")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SensitiveTypeSource> Source { get; set; }
         
         /// <value>
@@ -143,6 +143,7 @@ namespace Oci.DatasafeService.Models
 
     public class SensitiveTypeModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -168,7 +169,14 @@ namespace Oci.DatasafeService.Models
                     obj = new SensitiveCategory();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under SensitiveType! Returning null value.");
+            }
             return obj;
         }
     }

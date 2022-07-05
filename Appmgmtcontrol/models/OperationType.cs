@@ -16,6 +16,9 @@ namespace Oci.AppmgmtcontrolService.Models
   /// Possible operation types.
   /// </summary>
   public enum OperationType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ACTIVATE_RESOURCE_MONITORING_PLUGIN")]
       ActivateResourceMonitoringPlugin,
       [EnumMember(Value = "PUBLISH_TOP_PROCESSES_METRICS")]

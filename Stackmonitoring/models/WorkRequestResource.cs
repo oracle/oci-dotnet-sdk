@@ -43,7 +43,7 @@ namespace Oci.StackmonitoringService.Models
         /// </remarks>
         [Required(ErrorMessage = "ActionType is required.")]
         [JsonProperty(PropertyName = "actionType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionType> ActionType { get; set; }
         
         /// <value>

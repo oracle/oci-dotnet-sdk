@@ -16,6 +16,9 @@ namespace Oci.LicensemanagerService.Models
   /// The product license unit.
   /// </summary>
   public enum LicenseUnit {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "OCPU")]
       Ocpu,
       [EnumMember(Value = "NAMED_USER_PLUS")]

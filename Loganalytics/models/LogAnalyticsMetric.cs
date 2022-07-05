@@ -109,6 +109,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum MetricTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "COUNT")]
             Count,
             [EnumMember(Value = "SUM")]
@@ -129,7 +132,7 @@ namespace Oci.LoganalyticsService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "metricType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MetricTypeEnum> MetricType { get; set; }
         
         /// <value>
@@ -144,6 +147,9 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         ///
         public enum OperatorEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CONTAINS_IGNORE_CASE")]
             ContainsIgnoreCase,
             [EnumMember(Value = "IN_IGNORE_CASE")]
@@ -158,7 +164,7 @@ namespace Oci.LoganalyticsService.Models
         /// The metric operator.
         /// </value>
         [JsonProperty(PropertyName = "operator")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperatorEnum> Operator { get; set; }
         
         /// <value>

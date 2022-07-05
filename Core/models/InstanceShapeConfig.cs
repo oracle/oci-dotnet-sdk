@@ -49,6 +49,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BaselineOcpuUtilizationEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "BASELINE_1_8")]
             Baseline18,
             [EnumMember(Value = "BASELINE_1_2")]
@@ -68,7 +71,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "baselineOcpuUtilization")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BaselineOcpuUtilizationEnum> BaselineOcpuUtilization { get; set; }
         
         /// <value>

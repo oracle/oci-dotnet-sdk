@@ -26,6 +26,9 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "TERRAFORM_CONSOLE")]
             TerraformConsole
         };
@@ -34,7 +37,7 @@ namespace Oci.ResourcemanagerService.Models
         /// Specifies the log type for the log entry.
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
                 ///
         /// <value>
@@ -42,6 +45,9 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         ///
         public enum LevelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "TRACE")]
             Trace,
             [EnumMember(Value = "DEBUG")]
@@ -60,7 +66,7 @@ namespace Oci.ResourcemanagerService.Models
         /// Specifies the severity level of the log entry.
         /// </value>
         [JsonProperty(PropertyName = "level")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LevelEnum> Level { get; set; }
         
         /// <value>

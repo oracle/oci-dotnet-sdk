@@ -41,14 +41,14 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         /// Lifecycle state of the OrganizationTenancy.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OrganizationTenancyLifecycleState> LifecycleState { get; set; }
         
         /// <value>
         /// Role of the OrganizationTenancy.
         /// </value>
         [JsonProperty(PropertyName = "role")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OrganizationTenancyRole> Role { get; set; }
         
         /// <value>

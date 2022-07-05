@@ -23,6 +23,9 @@ namespace Oci.DevopsService.Models
                 ///
         ///
         public enum EventsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PUSH")]
             Push,
             [EnumMember(Value = "PULL_REQUEST_CREATED")]
@@ -38,7 +41,7 @@ namespace Oci.DevopsService.Models
         /// <value>
         /// The events, for example, PUSH, PULL_REQUEST_MERGE.
         /// </value>
-        [JsonProperty(PropertyName = "events", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "events", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<EventsEnum> Events { get; set; }
         
         [JsonProperty(PropertyName = "include")]

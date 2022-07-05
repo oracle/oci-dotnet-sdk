@@ -44,6 +44,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum MatchingStrategyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NAME_OR_TAGS")]
             NameOrTags,
             [EnumMember(Value = "TAGS_ONLY")]
@@ -56,7 +59,7 @@ namespace Oci.DataintegrationService.Models
         /// The pattern matching strategy.
         /// </value>
         [JsonProperty(PropertyName = "matchingStrategy")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MatchingStrategyEnum> MatchingStrategy { get; set; }
         
         /// <value>
@@ -70,6 +73,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum RuleTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INCLUDE")]
             Include,
             [EnumMember(Value = "EXCLUDE")]
@@ -80,7 +86,7 @@ namespace Oci.DataintegrationService.Models
         /// The rule type.
         /// </value>
         [JsonProperty(PropertyName = "ruleType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RuleTypeEnum> RuleType { get; set; }
         
         /// <value>

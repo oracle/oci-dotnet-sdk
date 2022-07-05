@@ -124,14 +124,14 @@ namespace Oci.LicensemanagerService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifeCycleState> LifecycleState { get; set; }
         
         /// <value>
         /// The product license unit.
         /// </value>
         [JsonProperty(PropertyName = "licenseUnit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LicenseUnit> LicenseUnit { get; set; }
         
         /// <value>

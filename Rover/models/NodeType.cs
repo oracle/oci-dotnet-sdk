@@ -16,6 +16,9 @@ namespace Oci.RoverService.Models
   /// Possible rover node types.
   /// </summary>
   public enum NodeType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "STANDALONE")]
       Standalone,
       [EnumMember(Value = "CLUSTERED")]

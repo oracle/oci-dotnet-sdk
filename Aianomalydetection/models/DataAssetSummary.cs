@@ -77,7 +77,7 @@ namespace Oci.AianomalydetectionService.Models
         /// The current state of the data asset.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataAsset.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -98,7 +98,7 @@ namespace Oci.AianomalydetectionService.Models
         /// </remarks>
         [Required(ErrorMessage = "DataSourceType is required.")]
         [JsonProperty(PropertyName = "dataSourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataSourceType> DataSourceType { get; set; }
         
         /// <value>

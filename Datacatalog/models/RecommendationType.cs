@@ -18,6 +18,9 @@ namespace Oci.DatacatalogService.Models
     /// 
   /// </summary>
   public enum RecommendationType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "LINK_GLOSSARY_TERM")]
       LinkGlossaryTerm
   }

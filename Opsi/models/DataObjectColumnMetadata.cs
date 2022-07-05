@@ -36,6 +36,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum CategoryEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DIMENSION")]
             Dimension,
             [EnumMember(Value = "METRIC")]
@@ -48,7 +51,7 @@ namespace Oci.OpsiService.Models
         /// Category of the column.
         /// </value>
         [JsonProperty(PropertyName = "category")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CategoryEnum> Category { get; set; }
                 ///
         /// <value>
@@ -56,6 +59,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum DataTypeNameEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NUMBER")]
             Number,
             [EnumMember(Value = "TIMESTAMP")]
@@ -68,7 +74,7 @@ namespace Oci.OpsiService.Models
         /// Type of a data object column.
         /// </value>
         [JsonProperty(PropertyName = "dataTypeName")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataTypeNameEnum> DataTypeName { get; set; }
         
         /// <value>

@@ -44,6 +44,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum MapTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MAPBYNAME")]
             Mapbyname,
             [EnumMember(Value = "MAPBYPOSITION")]
@@ -56,7 +59,7 @@ namespace Oci.DataintegrationService.Models
         /// mapType
         /// </value>
         [JsonProperty(PropertyName = "mapType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MapTypeEnum> MapType { get; set; }
         
         /// <value>

@@ -63,7 +63,7 @@ namespace Oci.DatacatalogService.Models
         /// State of the attribute.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -244,7 +244,7 @@ namespace Oci.DatacatalogService.Models
         /// <value>
         /// Rule types associated with attribute.
         /// </value>
-        [JsonProperty(PropertyName = "associatedRuleTypes", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "associatedRuleTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<RuleType> AssociatedRuleTypes { get; set; }
         
     }

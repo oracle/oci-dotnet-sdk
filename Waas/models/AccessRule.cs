@@ -60,6 +60,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum ActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALLOW")]
             Allow,
             [EnumMember(Value = "DETECT")]
@@ -96,7 +99,7 @@ namespace Oci.WaasService.Models
         /// </remarks>
         [Required(ErrorMessage = "Action is required.")]
         [JsonProperty(PropertyName = "action")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionEnum> Action { get; set; }
                 ///
         /// <value>
@@ -104,6 +107,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum BlockActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SET_RESPONSE_CODE")]
             SetResponseCode,
             [EnumMember(Value = "SHOW_ERROR_PAGE")]
@@ -114,7 +120,7 @@ namespace Oci.WaasService.Models
         /// The method used to block requests if `action` is set to `BLOCK` and the access criteria are met. If unspecified, defaults to `SET_RESPONSE_CODE`.
         /// </value>
         [JsonProperty(PropertyName = "blockAction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BlockActionEnum> BlockAction { get; set; }
         
         /// <value>
@@ -143,6 +149,9 @@ namespace Oci.WaasService.Models
                 ///
         ///
         public enum BypassChallengesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "JS_CHALLENGE")]
             JsChallenge,
             [EnumMember(Value = "DEVICE_FINGERPRINT_CHALLENGE")]
@@ -164,7 +173,7 @@ namespace Oci.WaasService.Models
         /// <br/>
         /// - **CAPTCHA:** Bypasses CAPTCHA Challenge.
         /// </value>
-        [JsonProperty(PropertyName = "bypassChallenges", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "bypassChallenges", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<BypassChallengesEnum> BypassChallenges { get; set; }
         
         /// <value>
@@ -182,6 +191,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum RedirectResponseCodeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "MOVED_PERMANENTLY")]
             MovedPermanently,
             [EnumMember(Value = "FOUND")]
@@ -196,7 +208,7 @@ namespace Oci.WaasService.Models
         /// - **FOUND:** Used for designating the temporary movement of a page (numerical code - 302).
         /// </value>
         [JsonProperty(PropertyName = "redirectResponseCode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RedirectResponseCodeEnum> RedirectResponseCode { get; set; }
         
         /// <value>

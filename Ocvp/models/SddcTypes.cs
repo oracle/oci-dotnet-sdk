@@ -16,6 +16,9 @@ namespace Oci.OcvpService.Models
   /// Possible SDDC types.
   /// </summary>
   public enum SddcTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "PRODUCTION")]
       Production,
       [EnumMember(Value = "NON_PRODUCTION")]

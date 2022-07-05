@@ -16,6 +16,9 @@ namespace Oci.CloudguardService.Models
   /// Indicates the classification status of the Sighitng
   /// </summary>
   public enum ClassificationStatus {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "FALSE_POSITIVE")]
       FalsePositive,
       [EnumMember(Value = "FALSE_NEGATIVE")]

@@ -71,7 +71,7 @@ namespace Oci.OsmanagementService.Models
         /// The architecture type supported by the Software Source
         /// </value>
         [JsonProperty(PropertyName = "archType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ArchTypes> ArchType { get; set; }
         
         /// <value>
@@ -100,7 +100,7 @@ namespace Oci.OsmanagementService.Models
         /// The yum repository checksum type used by this software source
         /// </value>
         [JsonProperty(PropertyName = "checksumType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ChecksumTypes> ChecksumType { get; set; }
         
         /// <value>
@@ -144,6 +144,9 @@ namespace Oci.OsmanagementService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "NORMAL")]
             Normal,
             [EnumMember(Value = "UNREACHABLE")]
@@ -158,14 +161,14 @@ namespace Oci.OsmanagementService.Models
         /// status of the software source.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
         /// The current state of the Software Source.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>

@@ -16,6 +16,9 @@ namespace Oci.CimsService.Models
   /// The kind of support ticket, such as a technical support request.
   /// </summary>
   public enum ProblemType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "LIMIT")]
       Limit,
       [EnumMember(Value = "LEGACY_LIMIT")]

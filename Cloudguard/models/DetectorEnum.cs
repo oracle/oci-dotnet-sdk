@@ -16,6 +16,9 @@ namespace Oci.CloudguardService.Models
   /// Possible detector types.
   /// </summary>
   public enum DetectorEnum {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "IAAS_ACTIVITY_DETECTOR")]
       IaasActivityDetector,
       [EnumMember(Value = "IAAS_CONFIGURATION_DETECTOR")]

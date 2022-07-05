@@ -57,6 +57,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BgpManagementEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CUSTOMER_MANAGED")]
             CustomerManaged,
             [EnumMember(Value = "PROVIDER_MANAGED")]
@@ -71,7 +74,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bgpManagement")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BgpManagementEnum> BgpManagement { get; set; }
                 ///
         /// <value>
@@ -79,6 +82,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BgpSessionStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UP")]
             Up,
             [EnumMember(Value = "DOWN")]
@@ -89,7 +95,7 @@ namespace Oci.CoreService.Models
         /// The state of the Ipv4 BGP session associated with the virtual circuit.
         /// </value>
         [JsonProperty(PropertyName = "bgpSessionState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BgpSessionStateEnum> BgpSessionState { get; set; }
                 ///
         /// <value>
@@ -97,6 +103,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BgpIpv6SessionStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "UP")]
             Up,
             [EnumMember(Value = "DOWN")]
@@ -107,7 +116,7 @@ namespace Oci.CoreService.Models
         /// The state of the Ipv6 BGP session associated with the virtual circuit.
         /// </value>
         [JsonProperty(PropertyName = "bgpIpv6SessionState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BgpIpv6SessionStateEnum> BgpIpv6SessionState { get; set; }
         
         /// <value>
@@ -127,6 +136,9 @@ namespace Oci.CoreService.Models
                 ///
         ///
         public enum RoutingPolicyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ORACLE_SERVICE_NETWORK")]
             OracleServiceNetwork,
             [EnumMember(Value = "REGIONAL")]
@@ -144,7 +156,7 @@ namespace Oci.CoreService.Models
         /// By default, routing information is shared for all routes in the same market.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "routingPolicy", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "routingPolicy", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<RoutingPolicyEnum> RoutingPolicy { get; set; }
                 ///
         /// <value>
@@ -153,6 +165,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BgpAdminStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLED")]
             Enabled,
             [EnumMember(Value = "DISABLED")]
@@ -164,7 +179,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bgpAdminState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BgpAdminStateEnum> BgpAdminState { get; set; }
         
         /// <value>
@@ -242,6 +257,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PENDING_PROVIDER")]
             PendingProvider,
             [EnumMember(Value = "VERIFYING")]
@@ -267,7 +285,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -314,6 +332,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum ProviderStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "INACTIVE")]
@@ -329,7 +350,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "providerState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProviderStateEnum> ProviderState { get; set; }
         
         /// <value>
@@ -362,6 +383,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum ServiceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "COLOCATED")]
             Colocated,
             [EnumMember(Value = "LAYER2")]
@@ -375,7 +399,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "serviceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ServiceTypeEnum> ServiceType { get; set; }
         
         /// <value>
@@ -394,6 +418,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PUBLIC")]
             Public,
             [EnumMember(Value = "PRIVATE")]
@@ -406,14 +433,14 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
         /// The layer 3 IP MTU to use on this virtual circuit.
         /// </value>
         [JsonProperty(PropertyName = "ipMtu")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<VirtualCircuitIpMtu> IpMtu { get; set; }
         
     }

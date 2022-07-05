@@ -31,7 +31,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PhaseExtractTypes> Type { get; set; }
         
         /// <value>

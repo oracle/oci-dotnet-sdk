@@ -37,13 +37,14 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "Source is required.")]
         [JsonProperty(PropertyName = "source")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SourceEnum> Source { get; set; }
         
     }
 
     public class ImageCapabilitySchemaDescriptorModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -72,7 +73,14 @@ namespace Oci.CoreService.Models
                     obj = new BooleanImageCapabilitySchemaDescriptor();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under ImageCapabilitySchemaDescriptor! Returning null value.");
+            }
             return obj;
         }
     }

@@ -44,7 +44,7 @@ namespace Oci.OptimizerService.Models
         /// </remarks>
         [Required(ErrorMessage = "ActionType is required.")]
         [JsonProperty(PropertyName = "actionType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<WorkRequestActionType> ActionType { get; set; }
         
         /// <value>
@@ -67,7 +67,7 @@ namespace Oci.OptimizerService.Models
         /// Additional information about the resource.
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
         
     }

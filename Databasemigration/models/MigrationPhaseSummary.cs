@@ -31,7 +31,7 @@ namespace Oci.DatabasemigrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OdmsJobPhases> Name { get; set; }
         
         /// <value>
@@ -39,7 +39,7 @@ namespace Oci.DatabasemigrationService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "recommendedAction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OdmsPhaseActions> RecommendedAction { get; set; }
         
         /// <value>

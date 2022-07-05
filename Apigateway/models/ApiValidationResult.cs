@@ -36,6 +36,9 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         ///
         public enum ResultEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ERROR")]
             Error,
             [EnumMember(Value = "WARNING")]
@@ -54,7 +57,7 @@ namespace Oci.ApigatewayService.Models
         /// </remarks>
         [Required(ErrorMessage = "Result is required.")]
         [JsonProperty(PropertyName = "result")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResultEnum> Result { get; set; }
         
     }

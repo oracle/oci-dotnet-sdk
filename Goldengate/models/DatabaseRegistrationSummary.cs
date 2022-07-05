@@ -81,7 +81,7 @@ namespace Oci.GoldengateService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -157,6 +157,9 @@ namespace Oci.GoldengateService.Models
         /// </value>
         ///
         public enum SessionModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DIRECT")]
             Direct,
             [EnumMember(Value = "REDIRECT")]
@@ -168,7 +171,7 @@ namespace Oci.GoldengateService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sessionMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SessionModeEnum> SessionMode { get; set; }
         
         /// <value>

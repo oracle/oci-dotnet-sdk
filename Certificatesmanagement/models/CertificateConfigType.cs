@@ -17,6 +17,9 @@ namespace Oci.CertificatesmanagementService.Models
     /// 
   /// </summary>
   public enum CertificateConfigType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ISSUED_BY_INTERNAL_CA")]
       IssuedByInternalCa,
       [EnumMember(Value = "MANAGED_EXTERNALLY_ISSUED_BY_INTERNAL_CA")]

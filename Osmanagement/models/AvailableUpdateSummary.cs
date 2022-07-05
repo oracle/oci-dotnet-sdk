@@ -45,7 +45,7 @@ namespace Oci.OsmanagementService.Models
         /// The purpose of this update.
         /// </value>
         [JsonProperty(PropertyName = "updateType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UpdateTypes> UpdateType { get; set; }
         
         /// <value>

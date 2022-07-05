@@ -92,6 +92,9 @@ namespace Oci.BlockchainService.Models
         /// </value>
         ///
         public enum PlatformRoleEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FOUNDER")]
             Founder,
             [EnumMember(Value = "PARTICIPANT")]
@@ -106,7 +109,7 @@ namespace Oci.BlockchainService.Models
         /// </remarks>
         [Required(ErrorMessage = "PlatformRole is required.")]
         [JsonProperty(PropertyName = "platformRole")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PlatformRoleEnum> PlatformRole { get; set; }
                 ///
         /// <value>
@@ -114,6 +117,9 @@ namespace Oci.BlockchainService.Models
         /// </value>
         ///
         public enum ComputeShapeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STANDARD")]
             Standard,
             [EnumMember(Value = "ENTERPRISE_SMALL")]
@@ -136,7 +142,7 @@ namespace Oci.BlockchainService.Models
         /// </remarks>
         [Required(ErrorMessage = "ComputeShape is required.")]
         [JsonProperty(PropertyName = "computeShape")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ComputeShapeEnum> ComputeShape { get; set; }
                 ///
         /// <value>
@@ -144,6 +150,9 @@ namespace Oci.BlockchainService.Models
         /// </value>
         ///
         public enum PlatformShapeTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DEFAULT")]
             Default,
             [EnumMember(Value = "CUSTOM")]
@@ -154,7 +163,7 @@ namespace Oci.BlockchainService.Models
         /// Type of Platform shape - DEFAULT or CUSTOM
         /// </value>
         [JsonProperty(PropertyName = "platformShapeType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PlatformShapeTypeEnum> PlatformShapeType { get; set; }
                 ///
         /// <value>
@@ -162,6 +171,9 @@ namespace Oci.BlockchainService.Models
         /// </value>
         ///
         public enum LoadBalancerShapeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LB_100_MBPS")]
             Lb100Mbps,
             [EnumMember(Value = "LB_400_MBPS")]
@@ -172,7 +184,7 @@ namespace Oci.BlockchainService.Models
         /// Type of Load Balancer shape - LB_100_MBPS or LB_400_MBPS. Default is LB_100_MBPS.
         /// </value>
         [JsonProperty(PropertyName = "loadBalancerShape")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LoadBalancerShapeEnum> LoadBalancerShape { get; set; }
         
         /// <value>
@@ -186,6 +198,9 @@ namespace Oci.BlockchainService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "UPDATING")]
@@ -208,7 +223,7 @@ namespace Oci.BlockchainService.Models
         /// The current state of the Platform Instance.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

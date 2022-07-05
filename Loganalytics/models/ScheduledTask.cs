@@ -68,7 +68,7 @@ namespace Oci.LoganalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "TaskType is required.")]
         [JsonProperty(PropertyName = "taskType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TaskType> TaskType { get; set; }
         
         /// <value>
@@ -107,7 +107,7 @@ namespace Oci.LoganalyticsService.Models
         /// Status of the scheduled task.
         /// </value>
         [JsonProperty(PropertyName = "taskStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TaskStatusEnum> TaskStatus { get; set; }
                 ///
         /// <value>
@@ -135,7 +135,7 @@ namespace Oci.LoganalyticsService.Models
         /// reason for taskStatus PAUSED.
         /// </value>
         [JsonProperty(PropertyName = "pauseReason")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PauseReasonEnum> PauseReason { get; set; }
         
         /// <value>
@@ -209,7 +209,7 @@ namespace Oci.LoganalyticsService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -230,6 +230,7 @@ namespace Oci.LoganalyticsService.Models
 
     public class ScheduledTaskModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -252,7 +253,14 @@ namespace Oci.LoganalyticsService.Models
                     obj = new StandardTask();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under ScheduledTask! Returning null value.");
+            }
             return obj;
         }
     }

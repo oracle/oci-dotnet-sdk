@@ -31,7 +31,7 @@ namespace Oci.CloudguardService.Models
         /// type of operator
         /// </value>
         [JsonProperty(PropertyName = "operator")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperatorType> Operator { get; set; }
         
         /// <value>
@@ -44,7 +44,7 @@ namespace Oci.CloudguardService.Models
         /// type of value
         /// </value>
         [JsonProperty(PropertyName = "valueType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConditionValueType> ValueType { get; set; }
         
         [JsonProperty(PropertyName = "kind")]

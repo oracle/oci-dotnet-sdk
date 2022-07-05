@@ -69,7 +69,7 @@ namespace Oci.RoverService.Models
         /// Type of cluster.
         /// </value>
         [JsonProperty(PropertyName = "clusterType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ClusterType> ClusterType { get; set; }
         
         /// <value>
@@ -80,7 +80,7 @@ namespace Oci.RoverService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

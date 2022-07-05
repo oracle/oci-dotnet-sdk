@@ -77,7 +77,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         /// Lifecycle state of the subscription.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SubscriptionLifecycleState> LifecycleState { get; set; }
         
         /// <value>

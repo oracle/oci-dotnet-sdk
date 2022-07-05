@@ -17,6 +17,9 @@ namespace Oci.GoldengateService.Models
     /// 
   /// </summary>
   public enum DeploymentBackupType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "INCREMENTAL")]
       Incremental,
       [EnumMember(Value = "FULL")]

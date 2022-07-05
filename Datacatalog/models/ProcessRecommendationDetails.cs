@@ -40,7 +40,7 @@ namespace Oci.DatacatalogService.Models
         /// </remarks>
         [Required(ErrorMessage = "RecommendationStatus is required.")]
         [JsonProperty(PropertyName = "recommendationStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RecommendationStatus> RecommendationStatus { get; set; }
         
         /// <value>

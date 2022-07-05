@@ -26,6 +26,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum CreateArrayIndexEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALLOW")]
             Allow,
             [EnumMember(Value = "DO_NOT_ALLOW")]
@@ -40,7 +43,7 @@ namespace Oci.DataintegrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "CreateArrayIndex is required.")]
         [JsonProperty(PropertyName = "createArrayIndex")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CreateArrayIndexEnum> CreateArrayIndex { get; set; }
                 ///
         /// <value>
@@ -48,6 +51,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum RetainAllAttributesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALLOW")]
             Allow,
             [EnumMember(Value = "DO_NOT_ALLOW")]
@@ -62,7 +68,7 @@ namespace Oci.DataintegrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "RetainAllAttributes is required.")]
         [JsonProperty(PropertyName = "retainAllAttributes")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RetainAllAttributesEnum> RetainAllAttributes { get; set; }
                 ///
         /// <value>
@@ -70,6 +76,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum IgnoreNullValuesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALLOW")]
             Allow,
             [EnumMember(Value = "DO_NOT_ALLOW")]
@@ -84,7 +93,7 @@ namespace Oci.DataintegrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "IgnoreNullValues is required.")]
         [JsonProperty(PropertyName = "ignoreNullValues")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IgnoreNullValuesEnum> IgnoreNullValues { get; set; }
                 ///
         /// <value>
@@ -92,6 +101,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum RetainParentNameLineageEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ALLOW")]
             Allow,
             [EnumMember(Value = "DO_NOT_ALLOW")]
@@ -106,7 +118,7 @@ namespace Oci.DataintegrationService.Models
         /// </remarks>
         [Required(ErrorMessage = "RetainParentNameLineage is required.")]
         [JsonProperty(PropertyName = "retainParentNameLineage")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RetainParentNameLineageEnum> RetainParentNameLineage { get; set; }
         
     }

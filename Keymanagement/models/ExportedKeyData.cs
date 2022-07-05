@@ -85,6 +85,9 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         ///
         public enum AlgorithmEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "RSA_OAEP_AES_SHA256")]
             RsaOaepAesSha256,
             [EnumMember(Value = "RSA_OAEP_SHA256")]
@@ -106,7 +109,7 @@ namespace Oci.KeymanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "Algorithm is required.")]
         [JsonProperty(PropertyName = "algorithm")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
         
     }

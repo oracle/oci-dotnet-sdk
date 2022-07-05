@@ -67,7 +67,7 @@ namespace Oci.ServicecatalogService.Models
         /// </remarks>
         [Required(ErrorMessage = "PackageType is required.")]
         [JsonProperty(PropertyName = "packageType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageTypeEnum> PackageType { get; set; }
         
         /// <value>

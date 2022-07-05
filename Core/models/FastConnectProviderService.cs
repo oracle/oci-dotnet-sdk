@@ -50,6 +50,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum PrivatePeeringBgpManagementEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CUSTOMER_MANAGED")]
             CustomerManaged,
             [EnumMember(Value = "PROVIDER_MANAGED")]
@@ -67,7 +70,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "PrivatePeeringBgpManagement is required.")]
         [JsonProperty(PropertyName = "privatePeeringBgpManagement")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PrivatePeeringBgpManagementEnum> PrivatePeeringBgpManagement { get; set; }
         
         /// <value>
@@ -98,6 +101,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum PublicPeeringBgpManagementEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CUSTOMER_MANAGED")]
             CustomerManaged,
             [EnumMember(Value = "PROVIDER_MANAGED")]
@@ -115,11 +121,14 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "PublicPeeringBgpManagement is required.")]
         [JsonProperty(PropertyName = "publicPeeringBgpManagement")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PublicPeeringBgpManagementEnum> PublicPeeringBgpManagement { get; set; }
                 ///
         ///
         public enum SupportedVirtualCircuitTypesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PUBLIC")]
             Public,
             [EnumMember(Value = "PRIVATE")]
@@ -130,7 +139,7 @@ namespace Oci.CoreService.Models
         /// An array of virtual circuit types supported by this service.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "supportedVirtualCircuitTypes", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "supportedVirtualCircuitTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<SupportedVirtualCircuitTypesEnum> SupportedVirtualCircuitTypes { get; set; }
                 ///
         /// <value>
@@ -140,6 +149,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum CustomerAsnManagementEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CUSTOMER_MANAGED")]
             CustomerManaged,
             [EnumMember(Value = "PROVIDER_MANAGED")]
@@ -158,7 +170,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "CustomerAsnManagement is required.")]
         [JsonProperty(PropertyName = "customerAsnManagement")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CustomerAsnManagementEnum> CustomerAsnManagement { get; set; }
                 ///
         /// <value>
@@ -167,6 +179,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum ProviderServiceKeyManagementEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CUSTOMER_MANAGED")]
             CustomerManaged,
             [EnumMember(Value = "PROVIDER_MANAGED")]
@@ -184,7 +199,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "ProviderServiceKeyManagement is required.")]
         [JsonProperty(PropertyName = "providerServiceKeyManagement")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProviderServiceKeyManagementEnum> ProviderServiceKeyManagement { get; set; }
                 ///
         /// <value>
@@ -193,6 +208,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum BandwithShapeManagementEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CUSTOMER_MANAGED")]
             CustomerManaged,
             [EnumMember(Value = "PROVIDER_MANAGED")]
@@ -210,7 +228,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "BandwithShapeManagement is required.")]
         [JsonProperty(PropertyName = "bandwithShapeManagement")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BandwithShapeManagementEnum> BandwithShapeManagement { get; set; }
         
         /// <value>
@@ -230,6 +248,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LAYER2")]
             Layer2,
             [EnumMember(Value = "LAYER3")]
@@ -245,7 +266,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
     }

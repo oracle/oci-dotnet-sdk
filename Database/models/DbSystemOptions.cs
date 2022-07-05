@@ -29,6 +29,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum StorageManagementEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ASM")]
             Asm,
             [EnumMember(Value = "LVM")]
@@ -42,7 +45,7 @@ namespace Oci.DatabaseService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "storageManagement")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StorageManagementEnum> StorageManagement { get; set; }
         
     }

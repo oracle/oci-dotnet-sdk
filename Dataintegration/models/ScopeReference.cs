@@ -36,6 +36,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum ReferenceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DIRECT_REF")]
             DirectRef,
             [EnumMember(Value = "BOUND_ENTITY_SHAPE")]
@@ -52,7 +55,7 @@ namespace Oci.DataintegrationService.Models
         /// The reference type for this reference.  Set to null for a direct reference, for indirect references set to a type of association such as \"BOUND_ENTITY_SHAPE\".   Current known reference type values are \"BOUND_ENTITY_SHAPE\", \"BOUND_ENTITY_SHAPE_FIELD\", \"OCI_FUNCTION_INPUT_SHAPE\", \"OCI_FUNCTION_OUTPUT_SHAPE\"
         /// </value>
         [JsonProperty(PropertyName = "referenceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ReferenceTypeEnum> ReferenceType { get; set; }
         
         /// <value>

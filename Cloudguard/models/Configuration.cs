@@ -35,7 +35,7 @@ namespace Oci.CloudguardService.Models
         /// Status of Cloud Guard Tenant
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CloudGuardStatus> Status { get; set; }
         
         /// <value>

@@ -49,7 +49,7 @@ namespace Oci.DatacatalogService.Models
         /// The data type of the custom property
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CustomPropertyDataType> DataType { get; set; }
         
         /// <value>

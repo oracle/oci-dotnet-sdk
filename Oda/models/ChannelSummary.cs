@@ -56,7 +56,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "Category is required.")]
         [JsonProperty(PropertyName = "category")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ChannelCategory> Category { get; set; }
         
         /// <value>
@@ -67,7 +67,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ChannelType> Type { get; set; }
         
         /// <value>
@@ -78,7 +78,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

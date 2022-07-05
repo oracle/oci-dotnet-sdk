@@ -43,7 +43,7 @@ namespace Oci.MarketplaceService.Models
         /// The data type of the variable.
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OrchestrationVariableTypeEnum> DataType { get; set; }
         
         /// <value>

@@ -32,6 +32,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum AdminOptionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -42,7 +45,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the role is granted with the ADMIN OPTION (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "adminOption")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AdminOptionEnum> AdminOption { get; set; }
                 ///
         /// <value>
@@ -50,6 +53,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum DelegateOptionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -60,7 +66,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the role is granted with the DELEGATE OPTION (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "delegateOption")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DelegateOptionEnum> DelegateOption { get; set; }
                 ///
         /// <value>
@@ -68,6 +74,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum DefaultRoleEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -78,7 +87,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the role is designated as a DEFAULT ROLE for the user (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "defaultRole")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DefaultRoleEnum> DefaultRole { get; set; }
                 ///
         /// <value>
@@ -89,6 +98,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum CommonEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -102,7 +114,7 @@ namespace Oci.DatabasemanagementService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "common")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CommonEnum> Common { get; set; }
                 ///
         /// <value>
@@ -110,6 +122,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum InheritedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "YES")]
             Yes,
             [EnumMember(Value = "NO")]
@@ -120,7 +135,7 @@ namespace Oci.DatabasemanagementService.Models
         /// Indicates whether the granted role is inherited from another container (YES) or not (NO).
         /// </value>
         [JsonProperty(PropertyName = "inherited")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<InheritedEnum> Inherited { get; set; }
         
     }

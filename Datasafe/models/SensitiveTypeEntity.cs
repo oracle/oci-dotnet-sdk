@@ -18,6 +18,9 @@ namespace Oci.DatasafeService.Models
     /// 
   /// </summary>
   public enum SensitiveTypeEntity {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "SENSITIVE_TYPE")]
       SensitiveType,
       [EnumMember(Value = "SENSITIVE_CATEGORY")]

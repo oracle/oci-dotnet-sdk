@@ -26,6 +26,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum UnitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PERCENTAGE")]
             Percentage,
             [EnumMember(Value = "COUNT")]
@@ -60,7 +63,7 @@ namespace Oci.OpsiService.Models
         /// Other standard column unit.
         /// </value>
         [JsonProperty(PropertyName = "unit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UnitEnum> Unit { get; set; }
         
         [JsonProperty(PropertyName = "unitCategory")]

@@ -16,6 +16,9 @@ namespace Oci.OdaService.Models
   /// The valid set of multilingual modes.
   /// </summary>
   public enum BotMultilingualMode {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "NATIVE")]
       Native,
       [EnumMember(Value = "TRANSLATION")]

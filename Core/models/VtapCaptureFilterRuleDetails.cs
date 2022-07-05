@@ -28,6 +28,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum TrafficDirectionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INGRESS")]
             Ingress,
             [EnumMember(Value = "EGRESS")]
@@ -43,7 +46,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "TrafficDirection is required.")]
         [JsonProperty(PropertyName = "trafficDirection")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TrafficDirectionEnum> TrafficDirection { get; set; }
                 ///
         /// <value>
@@ -52,6 +55,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum RuleActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "INCLUDE")]
             Include,
             [EnumMember(Value = "EXCLUDE")]
@@ -63,7 +69,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ruleAction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RuleActionEnum> RuleAction { get; set; }
         
         /// <value>

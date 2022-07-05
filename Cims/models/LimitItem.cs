@@ -44,6 +44,9 @@ namespace Oci.CimsService.Models
         /// </value>
         ///
         public enum LimitStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "APPROVED")]
             Approved,
             [EnumMember(Value = "PARTIALLY_APPROVED")]
@@ -56,7 +59,7 @@ namespace Oci.CimsService.Models
         /// The status of the request.
         /// </value>
         [JsonProperty(PropertyName = "limitStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LimitStatusEnum> LimitStatus { get; set; }
         
         [JsonProperty(PropertyName = "type")]

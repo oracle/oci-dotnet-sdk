@@ -57,6 +57,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum ProtocolEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "TCP")]
             Tcp,
             [EnumMember(Value = "TCPS")]
@@ -71,7 +74,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "Protocol is required.")]
         [JsonProperty(PropertyName = "protocol")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProtocolEnum> Protocol { get; set; }
         
     }

@@ -53,6 +53,9 @@ namespace Oci.UsageapiService.Models
         /// </value>
         ///
         public enum GranularityEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "HOURLY")]
             Hourly,
             [EnumMember(Value = "DAILY")]
@@ -76,7 +79,7 @@ namespace Oci.UsageapiService.Models
         /// </remarks>
         [Required(ErrorMessage = "Granularity is required.")]
         [JsonProperty(PropertyName = "granularity")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<GranularityEnum> Granularity { get; set; }
         
         /// <value>
@@ -99,6 +102,9 @@ namespace Oci.UsageapiService.Models
         /// </value>
         ///
         public enum QueryTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "USAGE")]
             Usage,
             [EnumMember(Value = "COST")]
@@ -121,7 +127,7 @@ namespace Oci.UsageapiService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "queryType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<QueryTypeEnum> QueryType { get; set; }
         
         /// <value>
@@ -152,6 +158,9 @@ namespace Oci.UsageapiService.Models
         /// </value>
         ///
         public enum DateRangeNameEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LAST_SEVEN_DAYS")]
             LastSevenDays,
             [EnumMember(Value = "LAST_TEN_DAYS")]
@@ -178,7 +187,7 @@ namespace Oci.UsageapiService.Models
         /// The UI date range, for example, LAST_THREE_MONTHS. Conflicts with timeUsageStarted and timeUsageEnded.
         /// </value>
         [JsonProperty(PropertyName = "dateRangeName")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DateRangeNameEnum> DateRangeName { get; set; }
         
     }

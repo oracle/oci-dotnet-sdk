@@ -150,14 +150,14 @@ namespace Oci.DatacatalogService.Models
         /// The current state of the folder.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
         /// Status of the object as updated by the harvest process.
         /// </value>
         [JsonProperty(PropertyName = "harvestStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<HarvestStatus> HarvestStatus { get; set; }
         
         /// <value>

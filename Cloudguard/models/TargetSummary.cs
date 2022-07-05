@@ -55,7 +55,7 @@ namespace Oci.CloudguardService.Models
         /// </remarks>
         [Required(ErrorMessage = "TargetResourceType is required.")]
         [JsonProperty(PropertyName = "targetResourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TargetResourceType> TargetResourceType { get; set; }
         
         /// <value>
@@ -94,7 +94,7 @@ namespace Oci.CloudguardService.Models
         /// The current state of the resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>

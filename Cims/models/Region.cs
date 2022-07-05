@@ -16,6 +16,9 @@ namespace Oci.CimsService.Models
   /// The available Oracle Cloud Infrastructure regions supported by the Support Management API.
   /// </summary>
   public enum Region {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "DEV")]
       Dev,
       [EnumMember(Value = "SEA")]

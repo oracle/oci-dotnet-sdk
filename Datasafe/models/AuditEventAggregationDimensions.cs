@@ -47,6 +47,9 @@ namespace Oci.DatasafeService.Models
                 ///
         ///
         public enum TargetClassEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DATABASE")]
             Database
         };
@@ -54,7 +57,7 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// Class of the target that was audited.
         /// </value>
-        [JsonProperty(PropertyName = "targetClass", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "targetClass", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<TargetClassEnum> TargetClass { get; set; }
         
         /// <value>
@@ -83,6 +86,9 @@ namespace Oci.DatasafeService.Models
                 ///
         ///
         public enum AuditTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "STANDARD")]
             Standard,
             [EnumMember(Value = "FINE_GRAINED")]
@@ -104,7 +110,7 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// Type of auditing.
         /// </value>
-        [JsonProperty(PropertyName = "auditType", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "auditType", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<AuditTypeEnum> AuditType { get; set; }
         
         /// <value>

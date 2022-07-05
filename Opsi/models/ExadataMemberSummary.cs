@@ -46,6 +46,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum EntityTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DATABASE")]
             Database,
             [EnumMember(Value = "ILOM_SERVER")]
@@ -72,7 +75,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "EntityType is required.")]
         [JsonProperty(PropertyName = "entityType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EntityTypeEnum> EntityType { get; set; }
         
     }

@@ -26,7 +26,7 @@ namespace Oci.LoganalyticsService.Models
         /// Source that auto-created the entity.
         /// </value>
         [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CreationSourceType> Type { get; set; }
         
         /// <value>

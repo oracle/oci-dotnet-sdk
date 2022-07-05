@@ -16,6 +16,9 @@ namespace Oci.WaasService.Models
   /// An enum value indicating the operation being performed by the work request.
   /// </summary>
   public enum WorkRequestOperationTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CREATE_WAAS_POLICY")]
       CreateWaasPolicy,
       [EnumMember(Value = "UPDATE_WAAS_POLICY")]

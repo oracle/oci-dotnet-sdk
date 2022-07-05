@@ -27,6 +27,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum AutomaticBackupRetentionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DELETE")]
             Delete,
             [EnumMember(Value = "RETAIN")]
@@ -42,7 +45,7 @@ namespace Oci.MysqlService.Models
         /// </remarks>
         [Required(ErrorMessage = "AutomaticBackupRetention is required.")]
         [JsonProperty(PropertyName = "automaticBackupRetention")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AutomaticBackupRetentionEnum> AutomaticBackupRetention { get; set; }
                 ///
         /// <value>
@@ -53,6 +56,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         ///
         public enum FinalBackupEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SKIP_FINAL_BACKUP")]
             SkipFinalBackup,
             [EnumMember(Value = "REQUIRE_FINAL_BACKUP")]
@@ -70,7 +76,7 @@ namespace Oci.MysqlService.Models
         /// </remarks>
         [Required(ErrorMessage = "FinalBackup is required.")]
         [JsonProperty(PropertyName = "finalBackup")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FinalBackupEnum> FinalBackup { get; set; }
         
         /// <value>

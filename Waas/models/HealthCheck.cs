@@ -33,6 +33,9 @@ namespace Oci.WaasService.Models
         /// </value>
         ///
         public enum MethodEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "GET")]
             Get,
             [EnumMember(Value = "HEAD")]
@@ -45,7 +48,7 @@ namespace Oci.WaasService.Models
         /// An HTTP verb (i.e. HEAD, GET, or POST) to use when performing the health check.
         /// </value>
         [JsonProperty(PropertyName = "method")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MethodEnum> Method { get; set; }
         
         /// <value>
@@ -64,6 +67,9 @@ namespace Oci.WaasService.Models
                 ///
         ///
         public enum ExpectedResponseCodeGroupEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "2XX")]
             _2Xx,
             [EnumMember(Value = "3XX")]
@@ -81,7 +87,7 @@ namespace Oci.WaasService.Models
         /// - **4XX:** Client errors response code group.
         /// - **5XX:** Server errors response code group.
         /// </value>
-        [JsonProperty(PropertyName = "expectedResponseCodeGroup", ItemConverterType = typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "expectedResponseCodeGroup", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<ExpectedResponseCodeGroupEnum> ExpectedResponseCodeGroup { get; set; }
         
         /// <value>

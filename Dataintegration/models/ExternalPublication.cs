@@ -50,6 +50,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SUCCESSFUL")]
             Successful,
             [EnumMember(Value = "FAILED")]
@@ -62,7 +65,7 @@ namespace Oci.DataintegrationService.Models
         /// The status of the publishing action to Oracle Cloud Infrastructure Data Flow.
         /// </value>
         [JsonProperty(PropertyName = "status")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>

@@ -63,7 +63,7 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// resourceType for which the OperatorAction is applicable
         /// </value>
         [JsonProperty(PropertyName = "resourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceTypes> ResourceType { get; set; }
         
         /// <value>

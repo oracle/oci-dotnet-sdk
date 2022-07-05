@@ -63,6 +63,9 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         ///
         public enum EndpointTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PUBLIC")]
             Public,
             [EnumMember(Value = "PRIVATE")]
@@ -80,7 +83,7 @@ namespace Oci.ApigatewayService.Models
         /// </remarks>
         [Required(ErrorMessage = "EndpointType is required.")]
         [JsonProperty(PropertyName = "endpointType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EndpointTypeEnum> EndpointType { get; set; }
         
         /// <value>
@@ -115,6 +118,9 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "ACTIVE")]
@@ -133,7 +139,7 @@ namespace Oci.ApigatewayService.Models
         /// The current state of the gateway.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

@@ -126,6 +126,9 @@ namespace Oci.ArtifactsService.Models
         /// </value>
         ///
         public enum SigningAlgorithmEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SHA_224_RSA_PKCS_PSS")]
             Sha224RsaPkcsPss,
             [EnumMember(Value = "SHA_256_RSA_PKCS_PSS")]
@@ -144,7 +147,7 @@ namespace Oci.ArtifactsService.Models
         /// </remarks>
         [Required(ErrorMessage = "SigningAlgorithm is required.")]
         [JsonProperty(PropertyName = "signingAlgorithm")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SigningAlgorithmEnum> SigningAlgorithm { get; set; }
         
         /// <value>

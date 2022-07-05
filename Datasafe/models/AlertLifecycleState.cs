@@ -16,6 +16,9 @@ namespace Oci.DatasafeService.Models
   /// The current state of a alert resource.
   /// </summary>
   public enum AlertLifecycleState {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "UPDATING")]
       Updating,
       [EnumMember(Value = "SUCCEEDED")]

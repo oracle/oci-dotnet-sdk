@@ -59,6 +59,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum DestinationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CIDR_BLOCK")]
             CidrBlock,
             [EnumMember(Value = "SERVICE_CIDR_BLOCK")]
@@ -83,7 +86,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "destinationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DestinationTypeEnum> DestinationType { get; set; }
                 ///
         /// <value>
@@ -93,6 +96,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum DirectionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "EGRESS")]
             Egress,
             [EnumMember(Value = "INGRESS")]
@@ -109,7 +115,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "Direction is required.")]
         [JsonProperty(PropertyName = "direction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DirectionEnum> Direction { get; set; }
         
         [JsonProperty(PropertyName = "icmpOptions")]
@@ -184,6 +190,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum SourceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CIDR_BLOCK")]
             CidrBlock,
             [EnumMember(Value = "SERVICE_CIDR_BLOCK")]
@@ -206,7 +215,7 @@ namespace Oci.CoreService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SourceTypeEnum> SourceType { get; set; }
         
         [JsonProperty(PropertyName = "tcpOptions")]

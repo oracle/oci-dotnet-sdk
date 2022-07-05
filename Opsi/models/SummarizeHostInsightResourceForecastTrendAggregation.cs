@@ -48,6 +48,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum ResourceMetricEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CPU")]
             Cpu,
             [EnumMember(Value = "MEMORY")]
@@ -65,7 +68,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "ResourceMetric is required.")]
         [JsonProperty(PropertyName = "resourceMetric")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceMetricEnum> ResourceMetric { get; set; }
         
         /// <value>
@@ -77,7 +80,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "UsageUnit is required.")]
         [JsonProperty(PropertyName = "usageUnit")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UsageUnit> UsageUnit { get; set; }
                 ///
         /// <value>
@@ -85,6 +88,9 @@ namespace Oci.OpsiService.Models
         /// </value>
         ///
         public enum PatternEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LINEAR")]
             Linear,
             [EnumMember(Value = "MONTHLY_SEASONS")]
@@ -111,7 +117,7 @@ namespace Oci.OpsiService.Models
         /// </remarks>
         [Required(ErrorMessage = "Pattern is required.")]
         [JsonProperty(PropertyName = "pattern")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PatternEnum> Pattern { get; set; }
         
         /// <value>

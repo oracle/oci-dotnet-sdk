@@ -16,6 +16,9 @@ namespace Oci.ObjectstorageService.Models
   /// Archival state of an object which is in Archive tier.
   /// </summary>
   public enum ArchivalState {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "Archived")]
       Archived,
       [EnumMember(Value = "Restoring")]

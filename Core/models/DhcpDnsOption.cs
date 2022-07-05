@@ -52,6 +52,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum ServerTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "VcnLocal")]
             VcnLocal,
             [EnumMember(Value = "VcnLocalPlusInternet")]
@@ -83,7 +86,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "ServerType is required.")]
         [JsonProperty(PropertyName = "serverType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ServerTypeEnum> ServerType { get; set; }
         
         [JsonProperty(PropertyName = "type")]

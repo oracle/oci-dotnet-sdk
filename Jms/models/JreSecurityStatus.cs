@@ -16,6 +16,9 @@ namespace Oci.JmsService.Models
   /// Possible security status of a Java Runtime.
   /// </summary>
   public enum JreSecurityStatus {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "UNKNOWN")]
       Unknown,
       [EnumMember(Value = "UP_TO_DATE")]

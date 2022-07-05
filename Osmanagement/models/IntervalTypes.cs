@@ -16,6 +16,9 @@ namespace Oci.OsmanagementService.Models
   /// Possible schedule intervals
   /// </summary>
   public enum IntervalTypes {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "HOUR")]
       Hour,
       [EnumMember(Value = "DAY")]

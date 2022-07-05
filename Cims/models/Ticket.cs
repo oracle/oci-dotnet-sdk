@@ -32,6 +32,9 @@ namespace Oci.CimsService.Models
         /// </value>
         ///
         public enum SeverityEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "HIGHEST")]
             Highest,
             [EnumMember(Value = "HIGH")]
@@ -48,7 +51,7 @@ namespace Oci.CimsService.Models
         /// </remarks>
         [Required(ErrorMessage = "Severity is required.")]
         [JsonProperty(PropertyName = "severity")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SeverityEnum> Severity { get; set; }
         
         /// <value>
@@ -93,14 +96,14 @@ namespace Oci.CimsService.Models
         /// The current state of the ticket.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
         /// Additional information about the current `lifecycleState`.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleDetails> LifecycleDetails { get; set; }
         
     }

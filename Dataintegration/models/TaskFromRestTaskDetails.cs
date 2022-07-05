@@ -35,6 +35,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum MethodTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "GET")]
             Get,
             [EnumMember(Value = "POST")]
@@ -51,7 +54,7 @@ namespace Oci.DataintegrationService.Models
         /// The REST method to use. This property is deprecated, use ExecuteRestCallConfig's methodType property instead.
         /// </value>
         [JsonProperty(PropertyName = "methodType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MethodTypeEnum> MethodType { get; set; }
         
         /// <value>
@@ -71,6 +74,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum ApiCallModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SYNCHRONOUS")]
             Synchronous,
             [EnumMember(Value = "ASYNC_OCI_WORKREQUEST")]
@@ -83,7 +89,7 @@ namespace Oci.DataintegrationService.Models
         /// The REST invocation pattern to use. ASYNC_OCI_WORKREQUEST is being deprecated as well as cancelEndpoint/MethodType.
         /// </value>
         [JsonProperty(PropertyName = "apiCallMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ApiCallModeEnum> ApiCallMode { get; set; }
         
         [JsonProperty(PropertyName = "cancelEndpoint")]
@@ -94,6 +100,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum CancelMethodTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "GET")]
             Get,
             [EnumMember(Value = "POST")]
@@ -110,7 +119,7 @@ namespace Oci.DataintegrationService.Models
         /// The REST method to use for canceling the original request.
         /// </value>
         [JsonProperty(PropertyName = "cancelMethodType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CancelMethodTypeEnum> CancelMethodType { get; set; }
         
         [JsonProperty(PropertyName = "executeRestCallConfig")]

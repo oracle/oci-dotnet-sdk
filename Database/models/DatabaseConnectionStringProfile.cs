@@ -47,6 +47,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum ConsumerGroupEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "HIGH")]
             High,
             [EnumMember(Value = "MEDIUM")]
@@ -63,7 +66,7 @@ namespace Oci.DatabaseService.Models
         /// Consumer group used by the connection.
         /// </value>
         [JsonProperty(PropertyName = "consumerGroup")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConsumerGroupEnum> ConsumerGroup { get; set; }
                 ///
         /// <value>
@@ -71,6 +74,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum ProtocolEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "TCP")]
             Tcp,
             [EnumMember(Value = "TCPS")]
@@ -85,7 +91,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "Protocol is required.")]
         [JsonProperty(PropertyName = "protocol")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProtocolEnum> Protocol { get; set; }
                 ///
         /// <value>
@@ -93,6 +99,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum TlsAuthenticationEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SERVER")]
             Server,
             [EnumMember(Value = "MUTUAL")]
@@ -103,7 +112,7 @@ namespace Oci.DatabaseService.Models
         /// Specifies whether the TLS handshake is using one-way (`SERVER`) or mutual (`MUTUAL`) authentication.
         /// </value>
         [JsonProperty(PropertyName = "tlsAuthentication")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TlsAuthenticationEnum> TlsAuthentication { get; set; }
                 ///
         /// <value>
@@ -111,6 +120,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum HostFormatEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FQDN")]
             Fqdn,
             [EnumMember(Value = "IP")]
@@ -125,7 +137,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "HostFormat is required.")]
         [JsonProperty(PropertyName = "hostFormat")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<HostFormatEnum> HostFormat { get; set; }
                 ///
         /// <value>
@@ -133,6 +145,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum SessionModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "DIRECT")]
             Direct,
             [EnumMember(Value = "REDIRECT")]
@@ -147,7 +162,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "SessionMode is required.")]
         [JsonProperty(PropertyName = "sessionMode")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SessionModeEnum> SessionMode { get; set; }
                 ///
         /// <value>
@@ -157,6 +172,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum SyntaxFormatEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LONG")]
             Long,
             [EnumMember(Value = "EZCONNECT")]
@@ -175,7 +193,7 @@ namespace Oci.DatabaseService.Models
         /// </remarks>
         [Required(ErrorMessage = "SyntaxFormat is required.")]
         [JsonProperty(PropertyName = "syntaxFormat")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SyntaxFormatEnum> SyntaxFormat { get; set; }
         
     }

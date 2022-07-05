@@ -92,7 +92,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
@@ -103,7 +103,7 @@ namespace Oci.OdaService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleDetails is required.")]
         [JsonProperty(PropertyName = "lifecycleDetails")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BotPublishState> LifecycleDetails { get; set; }
         
         /// <value>

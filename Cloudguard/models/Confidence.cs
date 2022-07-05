@@ -16,6 +16,9 @@ namespace Oci.CloudguardService.Models
   /// Indication that conveys our certainty that a Sighting is a True Positive
   /// </summary>
   public enum Confidence {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CRITICAL")]
       Critical,
       [EnumMember(Value = "HIGH")]
