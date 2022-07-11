@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A base object for all types of Instance Power Action requests.
+    /// A base object for all types of instance power action requests.
     /// </summary>
     [JsonConverter(typeof(InstancePowerActionDetailsModelConverter))]
     public class InstancePowerActionDetails 
@@ -47,6 +47,9 @@ namespace Oci.CoreService.Models
             {
                 case "reset":
                     obj = new ResetActionDetails();
+                    break;
+                case "rebootMigrate":
+                    obj = new RebootMigrateActionDetails();
                     break;
                 case "softreset":
                     obj = new SoftResetActionDetails();

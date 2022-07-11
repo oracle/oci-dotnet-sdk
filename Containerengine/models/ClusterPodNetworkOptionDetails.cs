@@ -13,43 +13,37 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 
-namespace Oci.MysqlService.Models
+namespace Oci.ContainerengineService.Models
 {
     /// <summary>
-    /// Parameters detailing how to provision the initial data of the DB System.
-    /// 
+    /// The CNI type and relevant network details potentially applicable to the node pools of the cluster
     /// </summary>
-    [JsonConverter(typeof(DbSystemSourceModelConverter))]
-    public class DbSystemSource 
+    [JsonConverter(typeof(ClusterPodNetworkOptionDetailsModelConverter))]
+    public class ClusterPodNetworkOptionDetails 
     {
                 ///
         /// <value>
-        /// The specific source identifier.
-        /// 
+        /// The CNI used by the node pools of this cluster
         /// </value>
         ///
-        public enum SourceTypeEnum {
-            [EnumMember(Value = "NONE")]
-            None,
-            [EnumMember(Value = "BACKUP")]
-            Backup,
-            [EnumMember(Value = "PITR")]
-            Pitr,
-            [EnumMember(Value = "IMPORTURL")]
-            Importurl
+        public enum CniTypeEnum {
+            [EnumMember(Value = "OCI_VCN_IP_NATIVE")]
+            OciVcnIpNative,
+            [EnumMember(Value = "FLANNEL_OVERLAY")]
+            FlannelOverlay
         };
 
         
     }
 
-    public class DbSystemSourceModelConverter : JsonConverter
+    public class ClusterPodNetworkOptionDetailsModelConverter : JsonConverter
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
         {
-            return type == typeof(DbSystemSource);
+            return type == typeof(ClusterPodNetworkOptionDetails);
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -59,21 +53,15 @@ namespace Oci.MysqlService.Models
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jsonObject = JObject.Load(reader);
-            var obj = default(DbSystemSource);
-            var discriminator = jsonObject["sourceType"].Value<string>();
+            var obj = default(ClusterPodNetworkOptionDetails);
+            var discriminator = jsonObject["cniType"].Value<string>();
             switch (discriminator)
             {
-                case "BACKUP":
-                    obj = new DbSystemSourceFromBackup();
+                case "FLANNEL_OVERLAY":
+                    obj = new FlannelOverlayClusterPodNetworkOptionDetails();
                     break;
-                case "PITR":
-                    obj = new DbSystemSourceFromPitr();
-                    break;
-                case "NONE":
-                    obj = new DbSystemSourceFromNone();
-                    break;
-                case "IMPORTURL":
-                    obj = new DbSystemSourceImportFromUrl();
+                case "OCI_VCN_IP_NATIVE":
+                    obj = new OciVcnIpNativeClusterPodNetworkOptionDetails();
                     break;
             }
             if (obj != null)
@@ -82,7 +70,7 @@ namespace Oci.MysqlService.Models
             }
             else
             {
-                logger.Warn($"The type {discriminator} is not present under DbSystemSource! Returning null value.");
+                logger.Warn($"The type {discriminator} is not present under ClusterPodNetworkOptionDetails! Returning null value.");
             }
             return obj;
         }

@@ -83,5 +83,12 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "placementConfigs")]
         public System.Collections.Generic.List<NodePoolPlacementConfigDetails> PlacementConfigs { get; set; }
         
+        /// <value>
+        /// The CNI related configuration of pods in the node pool.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nodePoolPodNetworkOptionDetails")]
+        public NodePoolPodNetworkOptionDetails NodePoolPodNetworkOptionDetails { get; set; }
+        
     }
 }

@@ -93,6 +93,12 @@ namespace Oci.OpsiService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the OPSI private endpoint
+        /// </value>
+        [JsonProperty(PropertyName = "opsiPrivateEndpointId")]
+        public string OpsiPrivateEndpointId { get; set; }
+        
+        /// <value>
         /// Indicates the status of a host insight in Operations Insights
         /// </value>
         [JsonProperty(PropertyName = "status")]

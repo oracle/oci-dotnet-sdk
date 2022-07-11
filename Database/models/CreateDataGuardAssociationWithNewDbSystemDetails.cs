@@ -73,6 +73,13 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<StorageVolumePerformanceModeEnum> StorageVolumePerformanceMode { get; set; }
         
         /// <value>
+        /// The number of nodes to launch for the DB system of the standby in the Data Guard association. For a 2-node RAC virtual machine DB system, specify either 1 or 2. If you do not supply this parameter, the default is the node count of the primary DB system.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nodeCount")]
+        public System.Nullable<int> NodeCount { get; set; }
+        
+        /// <value>
         /// The OCID of the subnet the DB system is associated with.
         /// **Subnet Restrictions:**
         /// - For 1- and 2-node RAC DB systems, do not use a subnet that overlaps with 192.168.16.16/28
@@ -106,6 +113,96 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
+        
+        /// <value>
+        /// The time zone of the dataguard standby DB system. For details, see [DB System Time Zones](https://docs.cloud.oracle.com/Content/Database/References/timezones.htm).
+        /// </value>
+        [JsonProperty(PropertyName = "timeZone")]
+        public string TimeZone { get; set; }
+        
+        /// <value>
+        /// A Fault Domain is a grouping of hardware and infrastructure within an availability domain.
+        /// Fault Domains let you distribute your instances so that they are not on the same physical
+        /// hardware within a single availability domain. A hardware failure or maintenance
+        /// that affects one Fault Domain does not affect DB systems in other Fault Domains.
+        /// <br/>
+        /// If you do not specify the Fault Domain, the system selects one for you. To change the Fault
+        /// Domain for a DB system, terminate it and launch a new DB system in the preferred Fault Domain.
+        /// <br/>
+        /// If the node count is greater than 1, you can specify which Fault Domains these nodes will be distributed into.
+        /// The system assigns your nodes automatically to the Fault Domains you specify so that
+        /// no Fault Domain contains more than one node.
+        /// <br/>
+        /// To get a list of Fault Domains, use the
+        /// {@link #listFaultDomains(ListFaultDomainsRequest) listFaultDomains} operation in the
+        /// Identity and Access Management Service API.
+        /// <br/>
+        /// Example: FAULT-DOMAIN-1
+        /// </value>
+        [JsonProperty(PropertyName = "faultDomains")]
+        public System.Collections.Generic.List<string> FaultDomains { get; set; }
+        
+        /// <value>
+        /// The IPv4 address from the provided OCI subnet which needs to be assigned to the VNIC. If not provided, it will
+        /// be auto-assigned with an available IPv4 address from the subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateIp")]
+        public string PrivateIp { get; set; }
+                ///
+        /// <value>
+        /// The Oracle license model that applies to all the databases on the dataguard standby DB system. The default is LICENSE_INCLUDED.
+        /// 
+        /// </value>
+        ///
+        public enum LicenseModelEnum {
+            [EnumMember(Value = "LICENSE_INCLUDED")]
+            LicenseIncluded,
+            [EnumMember(Value = "BRING_YOUR_OWN_LICENSE")]
+            BringYourOwnLicense
+        };
+
+        /// <value>
+        /// The Oracle license model that applies to all the databases on the dataguard standby DB system. The default is LICENSE_INCLUDED.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "licenseModel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
+        
+        /// <value>
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
+        /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "dbSystemFreeformTags")]
+        public System.Collections.Generic.Dictionary<string, string> DbSystemFreeformTags { get; set; }
+        
+        /// <value>
+        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dbSystemDefinedTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DbSystemDefinedTags { get; set; }
+        
+        /// <value>
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
+        /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "databaseFreeformTags")]
+        public System.Collections.Generic.Dictionary<string, string> DatabaseFreeformTags { get; set; }
+        
+        /// <value>
+        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "databaseDefinedTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DatabaseDefinedTags { get; set; }
         
         [JsonProperty(PropertyName = "creationType")]
         private readonly string creationType = "NewDbSystem";
