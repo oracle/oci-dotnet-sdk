@@ -13,25 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.ContainerengineService.Models
+namespace Oci.MysqlService.Models
 {
     /// <summary>
-    /// Options for creating or updating clusters.
+    /// The PITR policy for the DB System.
     /// </summary>
-    public class ClusterOptions 
+    public class PitrPolicy 
     {
         
         /// <value>
-        /// Available Kubernetes versions.
+        /// Specifies if PITR is enabled or disabled.
         /// </value>
-        [JsonProperty(PropertyName = "kubernetesVersions")]
-        public System.Collections.Generic.List<string> KubernetesVersions { get; set; }
-        
-        /// <value>
-        /// Available CNIs and network options for existing and new node pools of the cluster
-        /// </value>
-        [JsonProperty(PropertyName = "clusterPodNetworkOptions")]
-        public System.Collections.Generic.List<ClusterPodNetworkOptionDetails> ClusterPodNetworkOptions { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsEnabled is required.")]
+        [JsonProperty(PropertyName = "isEnabled")]
+        public System.Nullable<bool> IsEnabled { get; set; }
         
     }
 }

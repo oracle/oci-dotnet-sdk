@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// The information about database to be analyzed.
+    /// The information about database to be analyzed. Either an opsiPrivateEndpointId or dbmPrivateEndpointId must be specified. If the dbmPrivateEndpointId is specified, a new Operations Insights private endpoint will be created.
     /// </summary>
     public class CreatePeComanagedDatabaseInsightDetails : CreateDatabaseInsightDetails
     {
@@ -44,12 +44,14 @@ namespace Oci.OpsiService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the OPSI private endpoint
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OpsiPrivateEndpointId is required.")]
         [JsonProperty(PropertyName = "opsiPrivateEndpointId")]
         public string OpsiPrivateEndpointId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database Management private endpoint
+        /// </value>
+        [JsonProperty(PropertyName = "dbmPrivateEndpointId")]
+        public string DbmPrivateEndpointId { get; set; }
         
         /// <value>
         /// Database service name used for connection requests.

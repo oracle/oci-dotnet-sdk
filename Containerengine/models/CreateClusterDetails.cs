@@ -107,5 +107,11 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "imagePolicyConfig")]
         public CreateImagePolicyConfigDetails ImagePolicyConfig { get; set; }
         
+        /// <value>
+        /// Available CNIs and network options for existing and new node pools of the cluster
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPodNetworkOptions")]
+        public System.Collections.Generic.List<ClusterPodNetworkOptionDetails> ClusterPodNetworkOptions { get; set; }
+        
     }
 }

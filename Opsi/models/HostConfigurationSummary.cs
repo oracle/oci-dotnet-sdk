@@ -269,6 +269,9 @@ namespace Oci.OpsiService.Models
                 case "MACS_MANAGED_EXTERNAL_HOST":
                     obj = new MacsManagedExternalHostConfigurationSummary();
                     break;
+                case "PE_COMANAGED_HOST":
+                    obj = new PeComanagedHostConfigurationSummary();
+                    break;
                 case "EM_MANAGED_EXTERNAL_HOST":
                     obj = new EmManagedExternalHostConfigurationSummary();
                     break;

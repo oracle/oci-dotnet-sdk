@@ -84,5 +84,8 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        [JsonProperty(PropertyName = "pitrPolicy")]
+        public PitrPolicy PitrPolicy { get; set; }
+        
     }
 }

@@ -45,13 +45,5 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "preserveBootVolume")]
         public System.Nullable<bool> PreserveBootVolume { get; set; }
-        
-        /// <value>
-        /// Specifies whether to delete or preserve the data volumes when terminating an instance.
-        /// When set to `true`, the boot volume is preserved. The default value is `false`.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "preserveDataVolumes")]
-        public System.Nullable<bool> PreserveDataVolumes { get; set; }
     }
 }

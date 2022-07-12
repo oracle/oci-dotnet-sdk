@@ -100,6 +100,8 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "MOVE_PRIVATE_ENDPOINT")]
       MovePrivateEndpoint,
       [EnumMember(Value = "DELETE_PRIVATE_ENDPOINT")]
-      DeletePrivateEndpoint
+      DeletePrivateEndpoint,
+      [EnumMember(Value = "CHANGE_PE_COMANAGED_DATABASE_INSIGHT_DETAILS")]
+      ChangePeComanagedDatabaseInsightDetails
   }
 }

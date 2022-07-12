@@ -314,5 +314,8 @@ namespace Oci.MysqlService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CrashRecoveryStatus> CrashRecovery { get; set; }
         
+        [JsonProperty(PropertyName = "pointInTimeRecoveryDetails")]
+        public PointInTimeRecoveryDetails PointInTimeRecoveryDetails { get; set; }
+        
     }
 }

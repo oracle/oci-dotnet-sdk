@@ -32,6 +32,12 @@ namespace Oci.OpsiService.Models
         public string ExadataInsightId { get; set; }
         
         /// <value>
+        /// The user-friendly name for the Exadata system. The name does not have to be unique.
+        /// </value>
+        [JsonProperty(PropertyName = "exadataDisplayName")]
+        public string ExadataDisplayName { get; set; }
+        
+        /// <value>
         /// Current utilization
         /// </value>
         /// <remarks>

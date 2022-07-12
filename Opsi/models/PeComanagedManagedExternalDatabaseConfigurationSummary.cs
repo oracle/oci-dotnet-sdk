@@ -32,6 +32,16 @@ namespace Oci.OpsiService.Models
         public string DatabaseId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ParentId is required.")]
+        [JsonProperty(PropertyName = "parentId")]
+        public string ParentId { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the OPSI private endpoint
         /// </value>
         /// <remarks>
@@ -40,6 +50,16 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "OpsiPrivateEndpointId is required.")]
         [JsonProperty(PropertyName = "opsiPrivateEndpointId")]
         public string OpsiPrivateEndpointId { get; set; }
+        
+        /// <value>
+        /// Array of hostname and instance name.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Instances is required.")]
+        [JsonProperty(PropertyName = "instances")]
+        public System.Collections.Generic.List<HostInstanceMap> Instances { get; set; }
         
         [JsonProperty(PropertyName = "entitySource")]
         private readonly string entitySource = "PE_COMANAGED_DATABASE";

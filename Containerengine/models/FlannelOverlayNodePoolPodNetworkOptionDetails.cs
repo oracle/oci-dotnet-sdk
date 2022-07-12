@@ -16,22 +16,12 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerengineService.Models
 {
     /// <summary>
-    /// Options for creating or updating clusters.
+    /// Network options specific to using the flannel (FLANNEL_OVERLAY) CNI
     /// </summary>
-    public class ClusterOptions 
+    public class FlannelOverlayNodePoolPodNetworkOptionDetails : NodePoolPodNetworkOptionDetails
     {
         
-        /// <value>
-        /// Available Kubernetes versions.
-        /// </value>
-        [JsonProperty(PropertyName = "kubernetesVersions")]
-        public System.Collections.Generic.List<string> KubernetesVersions { get; set; }
-        
-        /// <value>
-        /// Available CNIs and network options for existing and new node pools of the cluster
-        /// </value>
-        [JsonProperty(PropertyName = "clusterPodNetworkOptions")]
-        public System.Collections.Generic.List<ClusterPodNetworkOptionDetails> ClusterPodNetworkOptions { get; set; }
-        
+        [JsonProperty(PropertyName = "cniType")]
+        private readonly string cniType = "FLANNEL_OVERLAY";
     }
 }

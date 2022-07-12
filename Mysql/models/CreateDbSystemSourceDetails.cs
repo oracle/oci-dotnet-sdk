@@ -33,6 +33,8 @@ namespace Oci.MysqlService.Models
             None,
             [EnumMember(Value = "BACKUP")]
             Backup,
+            [EnumMember(Value = "PITR")]
+            Pitr,
             [EnumMember(Value = "IMPORTURL")]
             Importurl
         };
@@ -68,6 +70,9 @@ namespace Oci.MysqlService.Models
                     break;
                 case "IMPORTURL":
                     obj = new CreateDbSystemSourceImportFromUrlDetails();
+                    break;
+                case "PITR":
+                    obj = new CreateDbSystemSourceFromPitrDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
