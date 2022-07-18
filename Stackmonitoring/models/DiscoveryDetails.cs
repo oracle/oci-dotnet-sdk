@@ -44,7 +44,13 @@ namespace Oci.StackmonitoringService.Models
             [EnumMember(Value = "EBS_INSTANCE")]
             EbsInstance,
             [EnumMember(Value = "ORACLE_DATABASE")]
-            OracleDatabase
+            OracleDatabase,
+            [EnumMember(Value = "OCI_ORACLE_DB")]
+            OciOracleDb,
+            [EnumMember(Value = "OCI_ORACLE_CDB")]
+            OciOracleCdb,
+            [EnumMember(Value = "OCI_ORACLE_PDB")]
+            OciOraclePdb
         };
 
         /// <value>

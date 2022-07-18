@@ -55,5 +55,17 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "memoryInGBs")]
         public System.Nullable<int> MemoryInGBs { get; set; }
         
+        /// <value>
+        /// The family that the compute shape belongs to.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ShapeSeries is required.")]
+        [JsonProperty(PropertyName = "shapeSeries")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ModelDeploymentShapeSeries> ShapeSeries { get; set; }
+        
     }
 }

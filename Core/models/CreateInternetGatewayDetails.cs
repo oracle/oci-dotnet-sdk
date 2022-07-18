@@ -75,5 +75,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the Internet Gateway is using.
+        /// </value>
+        [JsonProperty(PropertyName = "routeTableId")]
+        public string RouteTableId { get; set; }
+        
     }
 }

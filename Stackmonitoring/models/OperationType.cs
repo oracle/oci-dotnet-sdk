@@ -32,6 +32,8 @@ namespace Oci.StackmonitoringService.Models
       [EnumMember(Value = "DISABLE_EXTERNAL_DATABASE")]
       DisableExternalDatabase,
       [EnumMember(Value = "ADD_SOURCES_TO_AGENT")]
-      AddSourcesToAgent
+      AddSourcesToAgent,
+      [EnumMember(Value = "BULK_ADD_RESOURCES")]
+      BulkAddResources
   }
 }

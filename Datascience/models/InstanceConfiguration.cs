@@ -31,5 +31,8 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "instanceShapeName")]
         public string InstanceShapeName { get; set; }
         
+        [JsonProperty(PropertyName = "modelDeploymentInstanceShapeConfigDetails")]
+        public ModelDeploymentInstanceShapeConfigDetails ModelDeploymentInstanceShapeConfigDetails { get; set; }
+        
     }
 }
