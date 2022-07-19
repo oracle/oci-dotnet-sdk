@@ -161,6 +161,12 @@ namespace Oci.DatabaseService.Models
         public System.Double MaxDataStorageInTBs { get; set; }
         
         /// <value>
+        /// The serial number for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "rackSerialNumber")]
+        public string RackSerialNumber { get; set; }
+        
+        /// <value>
         /// The number of Exadata storage servers for the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "storageCount")]

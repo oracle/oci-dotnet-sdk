@@ -52,7 +52,7 @@ namespace Oci.DatabaseService.Models
         public string CharacterSet { get; set; }
         
         /// <value>
-        /// The character set for the Autonomous Database.  The default is AL32UTF8. Use [List Autonomous Database Character Sets](https://docs.cloud.oracle.com/autonomousDatabaseCharacterSets) to list the allowed values for an Autonomous Database on shared Exadata infrastructure.
+        /// The character set for the Autonomous Database.  The default is AL32UTF8. Use {@link #listAutonomousDatabaseCharacterSets(ListAutonomousDatabaseCharacterSetsRequest) listAutonomousDatabaseCharacterSets} to list the allowed values for an Autonomous Database on shared Exadata infrastructure.
         /// For an Autonomous Database on dedicated Exadata infrastructure, the allowed values are:
         /// AL16UTF16 or UTF8.
         /// 

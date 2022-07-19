@@ -28,5 +28,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "shouldRotate")]
         public System.Nullable<bool> ShouldRotate { get; set; }
         
+        /// <value>
+        /// Grace period in hours to keep the existing wallet valid after rotation.
+        /// </value>
+        [JsonProperty(PropertyName = "gracePeriod")]
+        public System.Nullable<int> GracePeriod { get; set; }
+        
     }
 }
