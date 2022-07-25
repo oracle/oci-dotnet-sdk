@@ -22,7 +22,7 @@ namespace Oci.MediaservicesService.Models
     {
         
         /// <value>
-        /// Stream Distribution Channel display name.
+        /// Stream Distribution Channel display name. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required

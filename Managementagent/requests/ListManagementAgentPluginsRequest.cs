@@ -100,5 +100,11 @@ namespace Oci.ManagementagentService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platformType", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<PlatformTypes> PlatformType { get; set; }
+        
+        /// <value>
+        /// The ManagementAgentID of the agent from which the Management Agents to be filtered.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "agentId")]
+        public string AgentId { get; set; }
     }
 }

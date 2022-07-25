@@ -52,7 +52,7 @@ namespace Oci.MediaservicesService.Models
         public string DistributionChannelId { get; set; }
         
         /// <value>
-        /// Stream Packaging Configuration display name.
+        /// Stream Packaging Configuration display name. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required

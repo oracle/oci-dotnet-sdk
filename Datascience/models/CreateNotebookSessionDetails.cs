@@ -69,5 +69,8 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        [JsonProperty(PropertyName = "notebookSessionRuntimeConfigDetails")]
+        public NotebookSessionRuntimeConfigDetails NotebookSessionRuntimeConfigDetails { get; set; }
+        
     }
 }

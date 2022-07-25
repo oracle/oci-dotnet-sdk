@@ -50,6 +50,19 @@ namespace Oci.ManagementagentService.Models
         public string PluginVersion { get; set; }
         
         /// <value>
+        /// Plugin Status
+        /// </value>
+        [JsonProperty(PropertyName = "pluginStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<PluginStatus> PluginStatus { get; set; }
+        
+        /// <value>
+        /// Status message of the Plugin
+        /// </value>
+        [JsonProperty(PropertyName = "pluginStatusMessage")]
+        public string PluginStatusMessage { get; set; }
+        
+        /// <value>
         /// flag indicating whether the plugin is in enabled mode or disabled mode.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]

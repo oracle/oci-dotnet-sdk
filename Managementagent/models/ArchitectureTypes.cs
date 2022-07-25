@@ -25,6 +25,8 @@ namespace Oci.ManagementagentService.Models
       [EnumMember(Value = "X86_64")]
       X8664,
       [EnumMember(Value = "SPARC")]
-      Sparc
+      Sparc,
+      [EnumMember(Value = "X86")]
+      X86
   }
 }

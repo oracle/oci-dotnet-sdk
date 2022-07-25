@@ -22,7 +22,7 @@ namespace Oci.MediaservicesService.Models
     {
         
         /// <value>
-        /// Stream Distribution channel display name.
+        /// Stream Distribution channel display name. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

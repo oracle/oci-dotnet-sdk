@@ -24,6 +24,15 @@ namespace Oci.ResourcemanagerService.Models
     {
         
         
+        /// <value>
+        /// Specifies whether or not to upgrade provider versions. 
+        /// Within the version constraints of your Terraform configuration, use the latest versions available from the source of Terraform providers. 
+        /// For more information about this option, see [Dependency Lock File (terraform.io)](https://www.terraform.io/language/files/dependency-lock).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isProviderUpgradeRequired")]
+        public System.Nullable<bool> IsProviderUpgradeRequired { get; set; }
+        
     }
 
     public class CreateJobOperationDetailsModelConverter : JsonConverter

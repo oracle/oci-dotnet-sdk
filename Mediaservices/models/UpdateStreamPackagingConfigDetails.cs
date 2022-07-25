@@ -22,7 +22,7 @@ namespace Oci.MediaservicesService.Models
     {
         
         /// <value>
-        /// The name of the stream Packaging Configuration.
+        /// The name of the stream Packaging Configuration. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

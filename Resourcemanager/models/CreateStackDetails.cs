@@ -51,6 +51,9 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "configSource")]
         public CreateConfigSourceDetails ConfigSource { get; set; }
         
+        [JsonProperty(PropertyName = "customTerraformProvider")]
+        public CustomTerraformProvider CustomTerraformProvider { get; set; }
+        
         /// <value>
         /// Terraform variables associated with this resource.
         /// Maximum number of variables supported is 250.

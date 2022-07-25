@@ -130,6 +130,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Nullable<OperatorControlAssignmentLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
+        /// More in detail about the lifeCycleState.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// 
         /// </value>

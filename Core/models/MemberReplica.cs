@@ -30,6 +30,29 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "VolumeReplicaId is required.")]
         [JsonProperty(PropertyName = "volumeReplicaId")]
         public string VolumeReplicaId { get; set; }
+                ///
+        /// <value>
+        /// Membership state of the volume replica in relation to the volume group replica.
+        /// </value>
+        ///
+        public enum MembershipStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ADD_PENDING")]
+            AddPending,
+            [EnumMember(Value = "STABLE")]
+            Stable,
+            [EnumMember(Value = "REMOVE_PENDING")]
+            RemovePending
+        };
+
+        /// <value>
+        /// Membership state of the volume replica in relation to the volume group replica.
+        /// </value>
+        [JsonProperty(PropertyName = "membershipState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<MembershipStateEnum> MembershipState { get; set; }
         
     }
 }

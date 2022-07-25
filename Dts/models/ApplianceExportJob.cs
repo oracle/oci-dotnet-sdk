@@ -177,6 +177,27 @@ namespace Oci.DtsService.Models
         [JsonProperty(PropertyName = "bucketAccessPolicies")]
         public System.Collections.Generic.List<string> BucketAccessPolicies { get; set; }
         
+        [JsonProperty(PropertyName = "returnShippingLabelUri")]
+        public string ReturnShippingLabelUri { get; set; }
+        
+        /// <value>
+        /// Expected return date from customer for the device, time portion should be zero.
+        /// </value>
+        [JsonProperty(PropertyName = "expectedReturnDate")]
+        public System.Nullable<System.DateTime> ExpectedReturnDate { get; set; }
+        
+        /// <value>
+        /// Start time for the window to pickup the device from customer.
+        /// </value>
+        [JsonProperty(PropertyName = "pickupWindowStartTime")]
+        public System.Nullable<System.DateTime> PickupWindowStartTime { get; set; }
+        
+        /// <value>
+        /// End time for the window to pickup the device from customer.
+        /// </value>
+        [JsonProperty(PropertyName = "pickupWindowEndTime")]
+        public System.Nullable<System.DateTime> PickupWindowEndTime { get; set; }
+        
         [JsonProperty(PropertyName = "customerShippingAddress")]
         public ShippingAddress CustomerShippingAddress { get; set; }
         

@@ -11,6 +11,7 @@ using System.Text;
 using Newtonsoft.Json;
 
 using Oci.Common.Auth.Internal;
+using Oci.Common.Utils;
 
 namespace Oci.Common.Auth
 {
@@ -72,7 +73,7 @@ namespace Oci.Common.Auth
                     string jwk = GetStringClaim("jwk");
                     if (!String.IsNullOrEmpty(jwk))
                     {
-                        var jwkObject = JsonConvert.DeserializeObject<JWK>(jwk);
+                        var jwkObject = JsonConvert.DeserializeObject<JWK>(jwk, OciJsonSerializerSettings.GetDefaultJsonSerializerSettings());
                         RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
                         rsa.ImportParameters(
                             new RSAParameters()

@@ -345,7 +345,7 @@ namespace Oci.Common
                 }
                 try
                 {
-                    var regionSchemas = JsonConvert.DeserializeObject<List<RegionSchema>>(content);
+                    var regionSchemas = JsonConvert.DeserializeObject<List<RegionSchema>>(content, OciJsonSerializerSettings.GetDefaultJsonSerializerSettings());
                     if (regionSchemas != null)
                     {
                         foreach (RegionSchema regionSchema in regionSchemas)
@@ -377,7 +377,7 @@ namespace Oci.Common
             logger.Info($"Region metadata schema from OCI_REGION_METADATA env variable is:{regionMetadataEnvVar}");
             if (!String.IsNullOrEmpty(regionMetadataEnvVar))
             {
-                var regionSchema = JsonConvert.DeserializeObject<RegionSchema>(regionMetadataEnvVar);
+                var regionSchema = JsonConvert.DeserializeObject<RegionSchema>(regionMetadataEnvVar, OciJsonSerializerSettings.GetDefaultJsonSerializerSettings());
                 try
                 {
                     if (regionSchema != null && regionSchema.isValid())
@@ -420,7 +420,7 @@ namespace Oci.Common
                     logger.Debug($"Response from IMDS: {regionMetadata}");
                     if (!String.IsNullOrEmpty(regionMetadata))
                     {
-                        RegionSchemaFromIMDS = JsonConvert.DeserializeObject<RegionSchema>(regionMetadata);
+                        RegionSchemaFromIMDS = JsonConvert.DeserializeObject<RegionSchema>(regionMetadata, OciJsonSerializerSettings.GetDefaultJsonSerializerSettings());
                         logger.Debug($"Region read from IMDS Id:{RegionSchemaFromIMDS.regionIdentifier} Realm:{RegionSchemaFromIMDS.realmKey} Domain:{RegionSchemaFromIMDS.realmDomainComponent} Key:{RegionSchemaFromIMDS.regionKey}");
                     }
                 }

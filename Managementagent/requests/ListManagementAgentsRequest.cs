@@ -148,5 +148,18 @@ namespace Oci.ManagementagentService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// if set to true then it fetches resources for all compartments where user has access to else only on the compartment specified.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
+        public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
+        
+        /// <value>
+        /// When the value is \"ACCESSIBLE\", insufficient permissions for a compartment will filter out resources in that compartment without rejecting the request.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "accessLevel")]
+        public string AccessLevel { get; set; }
     }
 }

@@ -57,6 +57,24 @@ namespace Oci.ManagementagentService.Models
         public string Identifier { get; set; }
         
         /// <value>
+        /// The identifier of the source the work request is requesting.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceId")]
+        public string SourceId { get; set; }
+        
+        /// <value>
+        /// The name of the source the work request is requesting.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceName")]
+        public string SourceName { get; set; }
+        
+        /// <value>
+        /// The version of the source the work request is requesting.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceVersion")]
+        public string SourceVersion { get; set; }
+        
+        /// <value>
         /// The URI path that the user can do a GET on to access the resource metadata
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]

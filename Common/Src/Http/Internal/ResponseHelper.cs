@@ -102,7 +102,8 @@ namespace Oci.Common.Http.Internal
                 var jsonSerializerSettings = new JsonSerializerSettings
                 {
                     ContractResolver = new CustomResolver(),
-                    NullValueHandling = NullValueHandling.Ignore
+                    NullValueHandling = NullValueHandling.Ignore,
+                    MaxDepth = OciJsonSerializerSettings.GetDefaultJsonSerializerMaxDepth()
                 };
                 return JsonConvert.DeserializeObject<T>(content, jsonSerializerSettings);
             }

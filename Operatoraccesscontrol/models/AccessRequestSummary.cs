@@ -86,6 +86,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Nullable<AccessRequestLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
+        /// More in detail about the lifeCycleState.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
         /// Time when the access request was created by the operator user in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.Example: '2020-05-22T21:10:29.600Z'
         /// </value>
         [JsonProperty(PropertyName = "timeOfCreation")]

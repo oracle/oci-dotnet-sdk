@@ -114,5 +114,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
+        
+        /// <value>
+        /// The sub-type of the maintenance run.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "maintenanceSubtype")]
+        public System.Nullable<MaintenanceRunSummary.MaintenanceSubtypeEnum> MaintenanceSubtype { get; set; }
     }
 }

@@ -54,7 +54,11 @@ namespace Oci.ResourcemanagerService.Models
         public System.Collections.Generic.List<string> DnsZones { get; set; }
         
         /// <value>
-        /// An array of network security group (NSG) [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the private endpoint.
+        /// The [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of
+        /// [network security groups (NSGs)](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/networksecuritygroups.htm)
+        /// for the private endpoint.
+        /// Order does not matter.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIdList")]
         public System.Collections.Generic.List<string> NsgIdList { get; set; }

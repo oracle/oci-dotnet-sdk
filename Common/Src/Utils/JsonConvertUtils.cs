@@ -105,4 +105,37 @@ namespace Oci.Common.Utils
             return (t.IsGenericType && t.GetGenericTypeDefinition() == typeof(Nullable<>));
         }
     }
+
+    public class OciJsonSerializerSettings
+    {
+        private static readonly int DEFAULT_MAX_DEPTH = 128;
+        private static readonly string OCI_DOTNET_SDK_DEFAULT_SERIALIZER_MAX_DEPTH = "OCI_DOTNET_SDK_DEFAULT_SERIALIZER_MAX_DEPTH";
+        public int MaxDepth { get; set; } = DEFAULT_MAX_DEPTH;
+
+        public JsonSerializerSettings GetJsonSerializerSettings()
+        {
+            return new JsonSerializerSettings
+            {
+                MaxDepth = this.MaxDepth
+            };
+        }
+
+        public static int GetDefaultJsonSerializerMaxDepth()
+        {
+            string defaultMaxDepth = Environment.GetEnvironmentVariable(OCI_DOTNET_SDK_DEFAULT_SERIALIZER_MAX_DEPTH);
+            if (!string.IsNullOrEmpty(defaultMaxDepth))
+            {
+                if (int.TryParse(defaultMaxDepth, out int maxDepth))
+                {
+                    return maxDepth;
+                }
+            }
+            return DEFAULT_MAX_DEPTH;
+        }
+
+        public static JsonSerializerSettings GetDefaultJsonSerializerSettings()
+        {
+            return new JsonSerializerSettings { MaxDepth = GetDefaultJsonSerializerMaxDepth() };
+        }
+    };
 }

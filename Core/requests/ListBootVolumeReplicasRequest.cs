@@ -24,22 +24,20 @@ namespace Oci.CoreService.Requests
         /// <br/>
         /// Example: Uocm:PHX-AD-1
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The OCID of the volume group replica.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "volumeGroupReplicaId")]
+        public string VolumeGroupReplicaId { get; set; }
         
         /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a paginated
