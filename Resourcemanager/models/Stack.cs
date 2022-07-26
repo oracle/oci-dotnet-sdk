@@ -91,6 +91,20 @@ namespace Oci.ResourcemanagerService.Models
         [JsonProperty(PropertyName = "configSource")]
         public ConfigSource ConfigSource { get; set; }
         
+        [JsonProperty(PropertyName = "customTerraformProvider")]
+        public CustomTerraformProvider CustomTerraformProvider { get; set; }
+        
+        /// <value>
+        /// When `true`, the stack sources third-party Terraform providers from
+        /// [Terraform Registry](https://registry.terraform.io/browse/providers) and allows
+        /// {@link #customTerraformProvider(CustomTerraformProviderRequest) customTerraformProvider}.
+        /// For more information about stack sourcing of third-party Terraform providers, see
+        /// [Third-party Provider Configuration](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/terraformconfigresourcemanager.htm#third-party-providers).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isThirdPartyProviderExperienceEnabled")]
+        public System.Nullable<bool> IsThirdPartyProviderExperienceEnabled { get; set; }
+        
         /// <value>
         /// Terraform variables associated with this resource.
         /// Maximum number of variables supported is 250.

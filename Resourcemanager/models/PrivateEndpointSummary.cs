@@ -23,7 +23,7 @@ namespace Oci.ResourcemanagerService.Models
     {
         
         /// <value>
-        /// Unique identifier ([OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)) of the private endpoint.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the private endpoint.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.ResourcemanagerService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing this private endpoint details.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing this private endpoint.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.ResourcemanagerService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// General description of the private endpoint.
+        /// Description of the private endpoint. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -75,6 +75,9 @@ namespace Oci.ResourcemanagerService.Models
         public System.Nullable<bool> IsUsedWithConfigurationSourceProvider { get; set; }
         
         /// <value>
+        /// DNS zones to use for accessing private Git servers. 
+        /// For private Git server instructions, see
+        /// [Private Git Server](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/private-endpoints.htm#private-git).
         /// DNS Proxy forwards any DNS FQDN queries over into the consumer DNS resolver if the DNS FQDN is included in the dns zones list otherwise it goes to service provider VCN resolver.
         /// 
         /// </value>

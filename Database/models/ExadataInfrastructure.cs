@@ -305,6 +305,12 @@ namespace Oci.DatabaseService.Models
         public string DbServerVersion { get; set; }
         
         /// <value>
+        /// The monthly software version of the database servers (dom0) in the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "monthlyDbServerVersion")]
+        public string MonthlyDbServerVersion { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the last maintenance run.
         /// </value>
         [JsonProperty(PropertyName = "lastMaintenanceRunId")]

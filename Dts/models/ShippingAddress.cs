@@ -19,12 +19,20 @@ namespace Oci.DtsService.Models
     public class ShippingAddress 
     {
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Addressee is required.")]
         [JsonProperty(PropertyName = "addressee")]
         public string Addressee { get; set; }
         
         [JsonProperty(PropertyName = "careOf")]
         public string CareOf { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Address1 is required.")]
         [JsonProperty(PropertyName = "address1")]
         public string Address1 { get; set; }
         
@@ -37,15 +45,31 @@ namespace Oci.DtsService.Models
         [JsonProperty(PropertyName = "address4")]
         public string Address4 { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CityOrLocality is required.")]
         [JsonProperty(PropertyName = "cityOrLocality")]
         public string CityOrLocality { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "StateOrRegion is required.")]
         [JsonProperty(PropertyName = "stateOrRegion")]
         public string StateOrRegion { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Zipcode is required.")]
         [JsonProperty(PropertyName = "zipcode")]
         public string Zipcode { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Country is required.")]
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
         

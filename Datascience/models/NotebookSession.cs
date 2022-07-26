@@ -90,6 +90,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "notebookSessionConfigDetails")]
         public NotebookSessionConfigDetails NotebookSessionConfigDetails { get; set; }
         
+        [JsonProperty(PropertyName = "notebookSessionRuntimeConfigDetails")]
+        public NotebookSessionRuntimeConfigDetails NotebookSessionRuntimeConfigDetails { get; set; }
+        
         /// <value>
         /// The URL to interact with the notebook session.
         /// </value>

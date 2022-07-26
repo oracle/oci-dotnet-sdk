@@ -67,6 +67,54 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "ServiceName is required.")]
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
+                ///
+        /// <value>
+        /// Protocol used by the database connection.
+        /// </value>
+        ///
+        public enum ProtocolEnum {
+            [EnumMember(Value = "TCP")]
+            Tcp,
+            [EnumMember(Value = "TCPS")]
+            Tcps
+        };
+
+        /// <value>
+        /// Protocol used by the database connection.
+        /// </value>
+        [JsonProperty(PropertyName = "protocol")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ProtocolEnum> Protocol { get; set; }
+        
+        /// <value>
+        /// The port used to connect to the database.
+        /// </value>
+        [JsonProperty(PropertyName = "port")]
+        public System.Nullable<int> Port { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [secret](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts).
+        /// </value>
+        [JsonProperty(PropertyName = "sslSecretId")]
+        public string SslSecretId { get; set; }
+                ///
+        /// <value>
+        /// The role of the user that will be connecting to the database.
+        /// </value>
+        ///
+        public enum RoleEnum {
+            [EnumMember(Value = "SYSDBA")]
+            Sysdba,
+            [EnumMember(Value = "NORMAL")]
+            Normal
+        };
+
+        /// <value>
+        /// The role of the user that will be connecting to the database.
+        /// </value>
+        [JsonProperty(PropertyName = "role")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RoleEnum> Role { get; set; }
         
     }
 }

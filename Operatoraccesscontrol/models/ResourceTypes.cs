@@ -25,6 +25,8 @@ namespace Oci.OperatoraccesscontrolService.Models
       [EnumMember(Value = "EXADATAINFRASTRUCTURE")]
       Exadatainfrastructure,
       [EnumMember(Value = "AUTONOMOUSVMCLUSTER")]
-      Autonomousvmcluster
+      Autonomousvmcluster,
+      [EnumMember(Value = "CLOUDAUTONOMOUSVMCLUSTER")]
+      Cloudautonomousvmcluster
   }
 }

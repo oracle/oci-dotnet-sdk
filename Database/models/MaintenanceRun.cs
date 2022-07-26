@@ -210,7 +210,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "DATABASE")]
             Database,
             [EnumMember(Value = "ONEOFF")]
-            Oneoff
+            Oneoff,
+            [EnumMember(Value = "SECURITY_MONTHLY")]
+            SecurityMonthly
         };
 
         /// <value>

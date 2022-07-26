@@ -31,6 +31,9 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
         
+        [JsonProperty(PropertyName = "shapeConfig")]
+        public ShapeConfigDetails ShapeConfig { get; set; }
+        
         /// <value>
         /// The size of block volume in GB to be attached to the given node. All details needed for attaching the block volume are managed by the service itself.
         /// 

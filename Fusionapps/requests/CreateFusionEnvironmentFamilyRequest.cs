@@ -30,12 +30,6 @@ namespace Oci.FusionappsService.Requests
         public CreateFusionEnvironmentFamilyDetails CreateFusionEnvironmentFamilyDetails { get; set; }
         
         /// <value>
-        /// For Oracle internal use only.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-provision-option")]
-        public string OpcProvisionOption { get; set; }
-        
-        /// <value>
         /// A token that uniquely identifies a request so it can be retried in case of a timeout or
         /// server error without risk of executing that same action again. Retry tokens expire after 24
         /// hours, but can be invalidated before then due to conflicting operations. For example, if a resource

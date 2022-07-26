@@ -103,7 +103,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "TERMINATED")]
             Terminated,
             [EnumMember(Value = "FAULTY")]
-            Faulty
+            Faulty,
+            [EnumMember(Value = "UPDATE_PENDING")]
+            UpdatePending
         };
 
         /// <value>

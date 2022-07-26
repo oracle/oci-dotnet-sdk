@@ -110,6 +110,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Nullable<OperatorControlAssignmentLifecycleStates> LifecycleState { get; set; }
         
         /// <value>
+        /// More in detail about the lifeCycleState.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
         /// The OCID of the user who created this operator control assignment.
         /// </value>
         [JsonProperty(PropertyName = "assignerId")]

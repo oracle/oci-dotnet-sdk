@@ -22,7 +22,7 @@ namespace Oci.MediaservicesService.Models
     {
         
         /// <value>
-        /// MediaWorkflowConfiguration identifier.
+        /// MediaWorkflowConfiguration identifier. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required

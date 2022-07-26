@@ -22,5 +22,11 @@ namespace Oci.DtsService.Models
         [JsonProperty(PropertyName = "customerShippingAddress")]
         public ShippingAddress CustomerShippingAddress { get; set; }
         
+        /// <value>
+        /// Minimum storage capacity of the device, in terabytes. Valid options are 50, 95 and 150.
+        /// </value>
+        [JsonProperty(PropertyName = "minimumStorageCapacityInTerabytes")]
+        public System.Nullable<int> MinimumStorageCapacityInTerabytes { get; set; }
+        
     }
 }

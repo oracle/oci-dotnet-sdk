@@ -29,14 +29,14 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         ///
         public enum ConfigSourceTypeEnum {
-            [EnumMember(Value = "ZIP_UPLOAD")]
-            ZipUpload,
-            [EnumMember(Value = "GIT_CONFIG_SOURCE")]
-            GitConfigSource,
             [EnumMember(Value = "COMPARTMENT_CONFIG_SOURCE")]
             CompartmentConfigSource,
+            [EnumMember(Value = "GIT_CONFIG_SOURCE")]
+            GitConfigSource,
             [EnumMember(Value = "OBJECT_STORAGE_CONFIG_SOURCE")]
-            ObjectStorageConfigSource
+            ObjectStorageConfigSource,
+            [EnumMember(Value = "ZIP_UPLOAD")]
+            ZipUpload
         };
 
         

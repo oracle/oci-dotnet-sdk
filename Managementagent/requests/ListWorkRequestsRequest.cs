@@ -60,6 +60,12 @@ namespace Oci.ManagementagentService.Requests
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
+        /// The OperationType of the workRequest
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
+        public System.Nullable<OperationTypes> Type { get; set; }
+        
+        /// <value>
         /// Filter for items with timeCreated greater or equal to provided value.
         /// given `timeCreatedGreaterThanOrEqualTo` to the current time, in \"YYYY-MM-ddThh:mmZ\" format with a
         /// Z offset, as defined by RFC 3339.

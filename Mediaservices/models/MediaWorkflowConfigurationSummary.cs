@@ -32,7 +32,7 @@ namespace Oci.MediaservicesService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Name of the MediaWorkflowConfiguration.
+        /// Name of the MediaWorkflowConfiguration. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required

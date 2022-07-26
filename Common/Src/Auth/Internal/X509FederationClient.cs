@@ -269,7 +269,7 @@ namespace Oci.Common.Auth.Internal
             }
 
             var securityTokenContent = response.Content.ReadAsStringAsync().Result;
-            var securityToken = JsonConvert.DeserializeObject<SecurityToken>(securityTokenContent);
+            var securityToken = JsonConvert.DeserializeObject<SecurityToken>(securityTokenContent, OciJsonSerializerSettings.GetDefaultJsonSerializerSettings());
             logger.Info($"Security Token received from the Auth Service");
             return new SecurityTokenAdapter(securityToken.Token, sessionKeySupplier);
         }

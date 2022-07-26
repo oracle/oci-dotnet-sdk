@@ -39,6 +39,12 @@ namespace Oci.DtsService.Models
             Preparing,
             [EnumMember(Value = "FINALIZED")]
             Finalized,
+            [EnumMember(Value = "RETURN_LABEL_REQUESTED")]
+            ReturnLabelRequested,
+            [EnumMember(Value = "RETURN_LABEL_GENERATING")]
+            ReturnLabelGenerating,
+            [EnumMember(Value = "RETURN_LABEL_AVAILABLE")]
+            ReturnLabelAvailable,
             [EnumMember(Value = "RETURN_DELAYED")]
             ReturnDelayed,
             [EnumMember(Value = "RETURN_SHIPPED")]

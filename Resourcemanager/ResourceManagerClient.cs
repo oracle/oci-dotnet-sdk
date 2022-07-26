@@ -478,7 +478,7 @@ namespace Oci.ResourcemanagerService
         }
 
         /// <summary>
-        /// Creates a a private endpoint in the specified compartment.
+        /// Creates a private endpoint in the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1447,7 +1447,8 @@ namespace Oci.ResourcemanagerService
         }
 
         /// <summary>
-        /// Gets the alternative IP address of the private resource. This IP will be used by Resource Manager Service to connect to the private resource.
+        /// Gets the reachable, or alternative, IP address for a nonpublic IP address that is associated with the private endpoint.
+        /// Resource Manager uses this IP address to connect to nonpublic resources through the associated private endpoint.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2023,7 +2024,7 @@ namespace Oci.ResourcemanagerService
 
         /// <summary>
         /// Lists private endpoints according to the specified filter.
-        /// - For &#x60;compartmentId&#x60;, lists all private endpoint in the matching compartment.
+        /// - For &#x60;compartmentId&#x60;, lists all private endpoints in the matching compartment.
         /// - For &#x60;privateEndpointId&#x60;, lists the matching private endpoint.
         /// 
         /// </summary>
