@@ -140,6 +140,9 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["triggerSource"].Value<string>();
             switch (discriminator)
             {
+                case "GITLAB_SERVER":
+                    obj = new GitlabServerTriggerCreateResult();
+                    break;
                 case "GITHUB":
                     obj = new GithubTriggerCreateResult();
                     break;
@@ -151,6 +154,9 @@ namespace Oci.DevopsService.Models
                     break;
                 case "BITBUCKET_CLOUD":
                     obj = new BitbucketCloudTriggerCreateResult();
+                    break;
+                case "BITBUCKET_SERVER":
+                    obj = new BitbucketServerTriggerCreateResult();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

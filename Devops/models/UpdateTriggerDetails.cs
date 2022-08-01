@@ -75,6 +75,12 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["triggerSource"].Value<string>();
             switch (discriminator)
             {
+                case "BITBUCKET_SERVER":
+                    obj = new UpdateBitbucketServerTriggerDetails();
+                    break;
+                case "GITLAB_SERVER":
+                    obj = new UpdateGitlabServerTriggerDetails();
+                    break;
                 case "DEVOPS_CODE_REPOSITORY":
                     obj = new UpdateDevopsCodeRepositoryTriggerDetails();
                     break;

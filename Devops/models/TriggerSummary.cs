@@ -136,11 +136,17 @@ namespace Oci.DevopsService.Models
                 case "GITLAB":
                     obj = new GitlabTriggerSummary();
                     break;
+                case "GITLAB_SERVER":
+                    obj = new GitlabServerTriggerSummary();
+                    break;
                 case "GITHUB":
                     obj = new GithubTriggerSummary();
                     break;
                 case "DEVOPS_CODE_REPOSITORY":
                     obj = new DevopsCodeRepositoryTriggerSummary();
+                    break;
+                case "BITBUCKET_SERVER":
+                    obj = new BitbucketServerTriggerSummary();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

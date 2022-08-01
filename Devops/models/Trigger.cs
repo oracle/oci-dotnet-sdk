@@ -73,8 +73,12 @@ namespace Oci.DevopsService.Models
             Github,
             [EnumMember(Value = "GITLAB")]
             Gitlab,
+            [EnumMember(Value = "GITLAB_SERVER")]
+            GitlabServer,
             [EnumMember(Value = "BITBUCKET_CLOUD")]
             BitbucketCloud,
+            [EnumMember(Value = "BITBUCKET_SERVER")]
+            BitbucketServer,
             [EnumMember(Value = "DEVOPS_CODE_REPOSITORY")]
             DevopsCodeRepository
         };
@@ -167,6 +171,12 @@ namespace Oci.DevopsService.Models
             {
                 case "GITLAB":
                     obj = new GitlabTrigger();
+                    break;
+                case "BITBUCKET_SERVER":
+                    obj = new BitbucketServerTrigger();
+                    break;
+                case "GITLAB_SERVER":
+                    obj = new GitlabServerTrigger();
                     break;
                 case "GITHUB":
                     obj = new GithubTrigger();
