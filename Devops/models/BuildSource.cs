@@ -41,8 +41,12 @@ namespace Oci.DevopsService.Models
             Github,
             [EnumMember(Value = "GITLAB")]
             Gitlab,
+            [EnumMember(Value = "GITLAB_SERVER")]
+            GitlabServer,
             [EnumMember(Value = "BITBUCKET_CLOUD")]
             BitbucketCloud,
+            [EnumMember(Value = "BITBUCKET_SERVER")]
+            BitbucketServer,
             [EnumMember(Value = "DEVOPS_CODE_REPOSITORY")]
             DevopsCodeRepository
         };
@@ -91,11 +95,17 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["connectionType"].Value<string>();
             switch (discriminator)
             {
+                case "BITBUCKET_SERVER":
+                    obj = new BitbucketServerBuildSource();
+                    break;
                 case "GITHUB":
                     obj = new GithubBuildSource();
                     break;
                 case "BITBUCKET_CLOUD":
                     obj = new BitbucketCloudBuildSource();
+                    break;
+                case "GITLAB_SERVER":
+                    obj = new GitlabServerBuildSource();
                     break;
                 case "DEVOPS_CODE_REPOSITORY":
                     obj = new DevopsCodeRepositoryBuildSource();

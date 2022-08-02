@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 41.1.0 - 2022-08-02
+### Added
+- Support for OpenSearch in the Search service
+- Support for child tables in the NoSQL Database Cloud service
+- Support for private repositories in the DevOps service
+
 ## 41.0.0 - 2022-07-27
 ### Added
 - Support for the Fusion Apps as a Service service

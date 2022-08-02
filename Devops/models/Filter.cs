@@ -51,11 +51,17 @@ namespace Oci.DevopsService.Models
                 case "BITBUCKET_CLOUD":
                     obj = new BitbucketCloudFilter();
                     break;
+                case "BITBUCKET_SERVER":
+                    obj = new BitbucketServerFilter();
+                    break;
                 case "GITLAB":
                     obj = new GitlabFilter();
                     break;
                 case "GITHUB":
                     obj = new GithubFilter();
+                    break;
+                case "GITLAB_SERVER":
+                    obj = new GitlabServerFilter();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

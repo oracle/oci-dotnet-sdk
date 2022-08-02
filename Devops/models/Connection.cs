@@ -73,6 +73,10 @@ namespace Oci.DevopsService.Models
             GithubAccessToken,
             [EnumMember(Value = "GITLAB_ACCESS_TOKEN")]
             GitlabAccessToken,
+            [EnumMember(Value = "GITLAB_SERVER_ACCESS_TOKEN")]
+            GitlabServerAccessToken,
+            [EnumMember(Value = "BITBUCKET_SERVER_ACCESS_TOKEN")]
+            BitbucketServerAccessToken,
             [EnumMember(Value = "BITBUCKET_CLOUD_APP_PASSWORD")]
             BitbucketCloudAppPassword
         };
@@ -147,6 +151,9 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["connectionType"].Value<string>();
             switch (discriminator)
             {
+                case "BITBUCKET_SERVER_ACCESS_TOKEN":
+                    obj = new BitbucketServerAccessTokenConnection();
+                    break;
                 case "GITLAB_ACCESS_TOKEN":
                     obj = new GitlabAccessTokenConnection();
                     break;
@@ -155,6 +162,9 @@ namespace Oci.DevopsService.Models
                     break;
                 case "BITBUCKET_CLOUD_APP_PASSWORD":
                     obj = new BitbucketCloudAppPasswordConnection();
+                    break;
+                case "GITLAB_SERVER_ACCESS_TOKEN":
+                    obj = new GitlabServerAccessTokenConnection();
                     break;
             }
             if (obj != null)

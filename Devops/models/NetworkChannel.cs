@@ -30,7 +30,9 @@ namespace Oci.DevopsService.Models
         ///
         public enum NetworkChannelTypeEnum {
             [EnumMember(Value = "PRIVATE_ENDPOINT_CHANNEL")]
-            PrivateEndpointChannel
+            PrivateEndpointChannel,
+            [EnumMember(Value = "SERVICE_VNIC_CHANNEL")]
+            ServiceVnicChannel
         };
 
         
@@ -57,6 +59,9 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["networkChannelType"].Value<string>();
             switch (discriminator)
             {
+                case "SERVICE_VNIC_CHANNEL":
+                    obj = new ServiceVnicChannel();
+                    break;
                 case "PRIVATE_ENDPOINT_CHANNEL":
                     obj = new PrivateEndpointChannel();
                     break;

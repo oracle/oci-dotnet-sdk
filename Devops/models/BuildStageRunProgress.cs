@@ -87,6 +87,9 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "exportedVariables")]
         public ExportedVariableCollection ExportedVariables { get; set; }
         
+        [JsonProperty(PropertyName = "privateAccessConfig")]
+        public NetworkChannel PrivateAccessConfig { get; set; }
+        
         [JsonProperty(PropertyName = "buildPipelineStageType")]
         private readonly string buildPipelineStageType = "BUILD";
     }

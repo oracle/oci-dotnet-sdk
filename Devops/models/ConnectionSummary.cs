@@ -134,6 +134,12 @@ namespace Oci.DevopsService.Models
                 case "GITLAB_ACCESS_TOKEN":
                     obj = new GitlabAccessTokenConnectionSummary();
                     break;
+                case "BITBUCKET_SERVER_ACCESS_TOKEN":
+                    obj = new BitbucketServerTokenConnectionSummary();
+                    break;
+                case "GITLAB_SERVER_ACCESS_TOKEN":
+                    obj = new GitlabServerAccessTokenConnectionSummary();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

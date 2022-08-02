@@ -51,10 +51,6 @@ namespace Oci.NosqlService.Models
         [JsonProperty(PropertyName = "ddlStatement")]
         public string DdlStatement { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TableLimits is required.")]
         [JsonProperty(PropertyName = "tableLimits")]
         public TableLimits TableLimits { get; set; }
         
