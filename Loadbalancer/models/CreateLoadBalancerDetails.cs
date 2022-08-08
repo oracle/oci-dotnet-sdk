@@ -52,7 +52,7 @@ namespace Oci.LoadbalancerService.Models
         /// To get a list of available shapes, use the {@link #listShapes(ListShapesRequest) listShapes}
         /// operation.
         /// <br/>
-        /// Example: 100Mbps
+        /// Example: flexibleNOTE: Starting May 2023, Fixed shapes - 10Mbps, 100Mbps, 400Mbps, 8000Mbps would be deprecated and only shape      allowed would be Flexible
         /// </value>
         /// <remarks>
         /// Required

@@ -47,11 +47,22 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "InventoryLog is required.")]
         [JsonProperty(PropertyName = "inventoryLog")]
         public CustomLog InventoryLog { get; set; }
         
         [JsonProperty(PropertyName = "operationLog")]
         public CustomLog OperationLog { get; set; }
+        
+        /// <value>
+        /// Whether or not advanced features are enabled in this fleet.  By default, this is set to false.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAdvancedFeaturesEnabled")]
+        public System.Nullable<bool> IsAdvancedFeaturesEnabled { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.

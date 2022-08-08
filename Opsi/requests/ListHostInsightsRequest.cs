@@ -44,25 +44,13 @@ namespace Oci.OpsiService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<LifecycleState> LifecycleState { get; set; }
         
-        ///
         /// <value>
         /// Filter by one or more host types.
-        /// Possible value is EXTERNAL-HOST.
-        /// 
-        /// </value>
-        ///
-        public enum HostTypeEnum {
-            [EnumMember(Value = "EXTERNAL-HOST")]
-            ExternalHost
-        };
-
-        /// <value>
-        /// Filter by one or more host types.
-        /// Possible value is EXTERNAL-HOST.
+        /// Possible values are CLOUD-HOST, EXTERNAL-HOST
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostType", Oci.Common.Http.CollectionFormatType.Multi)]
-        public System.Collections.Generic.List<HostTypeEnum> HostType { get; set; }
+        public System.Collections.Generic.List<string> HostType { get; set; }
         
         ///
         /// <value>

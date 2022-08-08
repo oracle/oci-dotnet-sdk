@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AispeechService.Models
 {
     /// <summary>
-    /// An object in Object Storage that contains a list of input files.
+    /// Use this locationType when passing the location of the object storage in the request (where the WAV file is stored).
     /// </summary>
     public class ObjectListFileInputLocation : InputLocation
     {

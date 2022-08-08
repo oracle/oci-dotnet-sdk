@@ -110,5 +110,24 @@ namespace Oci.JmsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "jreSecurityStatus")]
         public System.Nullable<JreSecurityStatus> JreSecurityStatus { get; set; }
+        
+        /// <value>
+        /// Filter the list with path contains the given value.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "pathContains")]
+        public string PathContains { get; set; }
+        
+        /// <value>
+        /// The start of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeStart")]
+        public System.Nullable<System.DateTime> TimeStart { get; set; }
+        
+        /// <value>
+        /// The end of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeEnd")]
+        public System.Nullable<System.DateTime> TimeEnd { get; set; }
     }
 }

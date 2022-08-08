@@ -23,6 +23,8 @@ namespace Oci.OpsiService.Models
       MacsManagedExternalHost,
       [EnumMember(Value = "EM_MANAGED_EXTERNAL_HOST")]
       EmManagedExternalHost,
+      [EnumMember(Value = "MACS_MANAGED_CLOUD_HOST")]
+      MacsManagedCloudHost,
       [EnumMember(Value = "PE_COMANAGED_HOST")]
       PeComanagedHost
   }

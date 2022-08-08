@@ -45,5 +45,12 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "certificateSecretVersion")]
         public System.Nullable<int> CertificateSecretVersion { get; set; }
         
+        /// <value>
+        /// When creating the DNS CNAME record for the custom hostname, this value must be specified in the rdata.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "alias")]
+        public string Alias { get; set; }
+        
     }
 }

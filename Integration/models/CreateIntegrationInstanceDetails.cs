@@ -17,6 +17,10 @@ namespace Oci.IntegrationService.Models
 {
     /// <summary>
     /// The information about new IntegrationInstance.
+    /// Some properties may not be applicable to specific integration types, 
+    /// see [Differences in Instance Management](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/application-integration&id=INTOO-GUID-931B5E33-4FE6-4997-93E5-8748516F46AA__GUID-176E43D5-4116-4828-8120-B929DF2A6B5E) 
+    /// for details.
+    /// 
     /// </summary>
     public class CreateIntegrationInstanceDetails 
     {
@@ -42,18 +46,28 @@ namespace Oci.IntegrationService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Standard or Enterprise type
+        /// Standard or Enterprise type, 
+        /// Oracle Integration Generation 2 uses ENTERPRISE and STANDARD, 
+        /// Oracle Integration 3 uses ENTERPRISEX and STANDARDX
+        /// 
         /// </value>
         ///
         public enum IntegrationInstanceTypeEnum {
             [EnumMember(Value = "STANDARD")]
             Standard,
             [EnumMember(Value = "ENTERPRISE")]
-            Enterprise
+            Enterprise,
+            [EnumMember(Value = "STANDARDX")]
+            Standardx,
+            [EnumMember(Value = "ENTERPRISEX")]
+            Enterprisex
         };
 
         /// <value>
-        /// Standard or Enterprise type
+        /// Standard or Enterprise type, 
+        /// Oracle Integration Generation 2 uses ENTERPRISE and STANDARD, 
+        /// Oracle Integration 3 uses ENTERPRISEX and STANDARDX
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -150,6 +164,24 @@ namespace Oci.IntegrationService.Models
         
         [JsonProperty(PropertyName = "networkEndpointDetails")]
         public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
+                ///
+        /// <value>
+        /// Shape
+        /// </value>
+        ///
+        public enum ShapeEnum {
+            [EnumMember(Value = "DEVELOPMENT")]
+            Development,
+            [EnumMember(Value = "PRODUCTION")]
+            Production
+        };
+
+        /// <value>
+        /// Shape
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ShapeEnum> Shape { get; set; }
         
     }
 }

@@ -40,7 +40,7 @@ namespace Oci.LoadbalancerService.Models
         /// achieve. This bandwidth cannot be always guaranteed. For a guaranteed bandwidth use the minimumBandwidthInMbps
         /// parameter.
         /// <br/>
-        /// The values must be between minimumBandwidthInMbps and 8192 (8Gbps).
+        /// The values must be between minimumBandwidthInMbps and 8000 (8Gbps).
         /// <br/>
         /// Example: 1500
         /// </value>

@@ -60,6 +60,12 @@ namespace Oci.AispeechService.Models
         public System.Nullable<int> FileDurationInSeconds { get; set; }
         
         /// <value>
+        /// Task proccessing duration, which excludes waiting time in the system.
+        /// </value>
+        [JsonProperty(PropertyName = "processingDurationInSeconds")]
+        public System.Nullable<int> ProcessingDurationInSeconds { get; set; }
+        
+        /// <value>
         /// Task started time
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]

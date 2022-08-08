@@ -65,6 +65,9 @@ namespace Oci.OpsiService.Models
                 case "MACS_MANAGED_EXTERNAL_HOST":
                     obj = new UpdateMacsManagedExternalHostInsightDetails();
                     break;
+                case "MACS_MANAGED_CLOUD_HOST":
+                    obj = new UpdateMacsManagedCloudHostInsightDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

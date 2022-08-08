@@ -548,6 +548,12 @@ namespace Oci.OcvpService.Models
         public System.Nullable<System.DateTime> TimeHcxLicenseStatusUpdated { get; set; }
         
         /// <value>
+        /// Indicates whether this SDDC is designated for only single ESXi host.
+        /// </value>
+        [JsonProperty(PropertyName = "isSingleHostSddc")]
+        public System.Nullable<bool> IsSingleHostSddc { get; set; }
+        
+        /// <value>
         /// The date and time the SDDC was created, in the format defined by
         /// [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>

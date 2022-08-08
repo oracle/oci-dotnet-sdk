@@ -589,6 +589,104 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListOptimizerStatisticsCollectionAggregations operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListOptimizerStatisticsCollectionAggregationsResponse> ListOptimizerStatisticsCollectionAggregationsResponseEnumerator(ListOptimizerStatisticsCollectionAggregationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListOptimizerStatisticsCollectionAggregationsRequest, ListOptimizerStatisticsCollectionAggregationsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOptimizerStatisticsCollectionAggregations(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the OptimizerStatisticsCollectionAggregationSummary objects
+        /// contained in responses from the ListOptimizerStatisticsCollectionAggregations operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<OptimizerStatisticsCollectionAggregationSummary> ListOptimizerStatisticsCollectionAggregationsRecordEnumerator(ListOptimizerStatisticsCollectionAggregationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListOptimizerStatisticsCollectionAggregationsRequest, ListOptimizerStatisticsCollectionAggregationsResponse, OptimizerStatisticsCollectionAggregationSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOptimizerStatisticsCollectionAggregations(request, retryConfiguration, cancellationToken),
+                response => response.OptimizerStatisticsCollectionAggregationsCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListOptimizerStatisticsCollectionOperations operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListOptimizerStatisticsCollectionOperationsResponse> ListOptimizerStatisticsCollectionOperationsResponseEnumerator(ListOptimizerStatisticsCollectionOperationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListOptimizerStatisticsCollectionOperationsRequest, ListOptimizerStatisticsCollectionOperationsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOptimizerStatisticsCollectionOperations(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the OptimizerStatisticsCollectionOperationSummary objects
+        /// contained in responses from the ListOptimizerStatisticsCollectionOperations operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<OptimizerStatisticsCollectionOperationSummary> ListOptimizerStatisticsCollectionOperationsRecordEnumerator(ListOptimizerStatisticsCollectionOperationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListOptimizerStatisticsCollectionOperationsRequest, ListOptimizerStatisticsCollectionOperationsResponse, OptimizerStatisticsCollectionOperationSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOptimizerStatisticsCollectionOperations(request, retryConfiguration, cancellationToken),
+                response => response.OptimizerStatisticsCollectionOperationsCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListProxiedForUsers operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

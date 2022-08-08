@@ -78,10 +78,11 @@ namespace Oci.OcvpService.Models
         
         /// <value>
         /// The number of ESXi hosts to create in the SDDC. You can add more hosts later
-        /// (see {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost}).
+        /// (see {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost}). Creating
+        /// a SDDC with a ESXi host count of 1 will be considered a single ESXi host SDDC.
         /// <br/>
-        /// **Note:** If you later delete EXSi hosts from the SDDC to total less than 3,
-        /// you are still billed for the 3 minimum recommended ESXi hosts. Also,
+        /// **Note:** If you later delete EXSi hosts from a production SDDC to total less
+        /// than 3, you are still billed for the 3 minimum recommended ESXi hosts. Also,
         /// you cannot add more VMware workloads to the SDDC until it again has at least
         /// 3 ESXi hosts.
         /// 
@@ -123,6 +124,13 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "isHcxEnterpriseEnabled")]
         public System.Nullable<bool> IsHcxEnterpriseEnabled { get; set; }
+        
+        /// <value>
+        /// Indicates whether this SDDC is designated for only single ESXi host.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSingleHostSddc")]
+        public System.Nullable<bool> IsSingleHostSddc { get; set; }
         
         /// <value>
         /// One or more public SSH keys to be included in the `~/.ssh/authorized_keys` file for

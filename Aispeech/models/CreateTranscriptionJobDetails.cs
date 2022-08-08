@@ -50,7 +50,7 @@ namespace Oci.AispeechService.Models
         };
 
         /// <value>
-        /// Transcription Format. By default JSON format will be considered.
+        /// Transcription Format. By default, the JSON format is used.
         /// </value>
         [JsonProperty(PropertyName = "additionalTranscriptionFormats", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<AdditionalTranscriptionFormatsEnum> AdditionalTranscriptionFormats { get; set; }

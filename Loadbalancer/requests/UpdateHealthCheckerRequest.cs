@@ -69,5 +69,20 @@ namespace Oci.LoadbalancerService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
+        
+        /// <value>
+        /// For optimistic concurrency control. In the PUT or DELETE call for a resource, set the if-match
+        /// parameter to the value of the ETag for the load balancer. This value can be obtained from a GET
+        /// or POST response for any resource of that load balancer.
+        /// <br/>
+        /// For example, the eTag returned by getListener can be specified as the ifMatch for updateRuleSets.
+        /// <br/>
+        /// The resource is updated or deleted only if the ETag you provide matches the resource's current
+        /// ETag value.
+        /// <br/>
+        /// Example: example-etag
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]
+        public string IfMatch { get; set; }
     }
 }

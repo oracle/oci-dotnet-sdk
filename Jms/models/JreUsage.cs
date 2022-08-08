@@ -28,13 +28,13 @@ namespace Oci.JmsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the related fleet.  This property value is present only for /actions/listJreUsage.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the related fleet.
         /// </value>
         [JsonProperty(PropertyName = "fleetId")]
         public string FleetId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the related managed instance. This property value is present only for /actions/listJreUsage.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the related managed instance. This property value is present only for /listJreUsage.
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceId")]
         public string ManagedInstanceId { get; set; }
@@ -87,6 +87,12 @@ namespace Oci.JmsService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
+        
+        /// <value>
+        /// The number of days since this release has been under the security baseline.
+        /// </value>
+        [JsonProperty(PropertyName = "daysUnderSecurityBaseline")]
+        public System.Nullable<int> DaysUnderSecurityBaseline { get; set; }
         
         /// <value>
         /// The operating systems that have this Java Runtime installed.
