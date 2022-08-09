@@ -44,6 +44,9 @@ namespace Oci.ApmsyntheticsService.Models
         [JsonProperty(PropertyName = "isFailureRetried")]
         public System.Nullable<bool> IsFailureRetried { get; set; }
         
+        [JsonProperty(PropertyName = "dnsConfiguration")]
+        public DnsConfiguration DnsConfiguration { get; set; }
+        
     }
 
     public class MonitorConfigurationModelConverter : JsonConverter

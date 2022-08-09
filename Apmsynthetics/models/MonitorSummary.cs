@@ -180,5 +180,36 @@ namespace Oci.ApmsyntheticsService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// If isRunNow is enabled, then the monitor will run now.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsRunNow is required.")]
+        [JsonProperty(PropertyName = "isRunNow")]
+        public System.Nullable<bool> IsRunNow { get; set; }
+        
+        /// <value>
+        /// Scheduling policy on Vantage points.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SchedulingPolicy is required.")]
+        [JsonProperty(PropertyName = "schedulingPolicy")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SchedulingPolicy> SchedulingPolicy { get; set; }
+        
+        /// <value>
+        /// Time interval between 2 runs in round robin batch mode (*SchedulingPolicy - BATCHED_ROUND_ROBIN).
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "BatchIntervalInSeconds is required.")]
+        [JsonProperty(PropertyName = "batchIntervalInSeconds")]
+        public System.Nullable<int> BatchIntervalInSeconds { get; set; }
+        
     }
 }

@@ -34,7 +34,8 @@ namespace Oci.IntegrationService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Source IP addresses or IP address ranges ingress rules.
+        /// Source IP addresses or IP address ranges ingress rules. (ex: \"168.122.59.5\", \"10.20.30.0/26\")
+        /// An invalid IP or CIDR block will result in a 400 response.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "allowlistedIps")]

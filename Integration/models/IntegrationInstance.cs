@@ -52,7 +52,10 @@ namespace Oci.IntegrationService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Standard or Enterprise type
+        /// Standard or Enterprise type, 
+        /// Oracle Integration Generation 2 uses ENTERPRISE and STANDARD, 
+        /// Oracle Integration 3 uses ENTERPRISEX and STANDARDX
+        /// 
         /// </value>
         ///
         public enum IntegrationInstanceTypeEnum {
@@ -62,11 +65,18 @@ namespace Oci.IntegrationService.Models
             [EnumMember(Value = "STANDARD")]
             Standard,
             [EnumMember(Value = "ENTERPRISE")]
-            Enterprise
+            Enterprise,
+            [EnumMember(Value = "STANDARDX")]
+            Standardx,
+            [EnumMember(Value = "ENTERPRISEX")]
+            Enterprisex
         };
 
         /// <value>
-        /// Standard or Enterprise type
+        /// Standard or Enterprise type, 
+        /// Oracle Integration Generation 2 uses ENTERPRISE and STANDARD, 
+        /// Oracle Integration 3 uses ENTERPRISEX and STANDARDX
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -218,6 +228,37 @@ namespace Oci.IntegrationService.Models
         
         [JsonProperty(PropertyName = "networkEndpointDetails")]
         public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "idcsInfo")]
+        public IdcsInfoDetails IdcsInfo { get; set; }
+        
+        /// <value>
+        /// A list of associated attachments to other services
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "attachments")]
+        public System.Collections.Generic.List<AttachmentDetails> Attachments { get; set; }
+                ///
+        /// <value>
+        /// Shape
+        /// </value>
+        ///
+        public enum ShapeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "DEVELOPMENT")]
+            Development,
+            [EnumMember(Value = "PRODUCTION")]
+            Production
+        };
+
+        /// <value>
+        /// Shape
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ShapeEnum> Shape { get; set; }
         
     }
 }

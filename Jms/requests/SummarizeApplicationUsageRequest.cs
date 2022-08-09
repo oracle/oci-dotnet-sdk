@@ -138,5 +138,12 @@ namespace Oci.JmsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<OsFamily> OsFamily { get; set; }
+        
+        /// <value>
+        /// Filter the list with displayName contains the given value.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayNameContains")]
+        public string DisplayNameContains { get; set; }
     }
 }

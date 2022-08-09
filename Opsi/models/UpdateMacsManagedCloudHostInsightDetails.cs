@@ -9,25 +9,19 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 
 namespace Oci.OpsiService.Models
 {
-  /// <summary>
-  /// Displays usage unit ( CORES, GB , PERCENT, MBPS)
-  /// </summary>
-  public enum UsageUnit {
-      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-      [EnumMember(Value = null)]
-      UnknownEnumValue,
-      [EnumMember(Value = "CORES")]
-      Cores,
-      [EnumMember(Value = "GB")]
-      Gb,
-      [EnumMember(Value = "MBPS")]
-      Mbps,
-      [EnumMember(Value = "IOPS")]
-      Iops,
-      [EnumMember(Value = "PERCENT")]
-      Percent
-  }
+    /// <summary>
+    /// The information to be updated.
+    /// </summary>
+    public class UpdateMacsManagedCloudHostInsightDetails : UpdateHostInsightDetails
+    {
+        
+        [JsonProperty(PropertyName = "entitySource")]
+        private readonly string entitySource = "MACS_MANAGED_CLOUD_HOST";
+    }
 }

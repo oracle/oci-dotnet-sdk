@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmsyntheticsService.Models
 {
     /// <summary>
-    /// DVP details of Oracle RM stack.
+    /// Details of the Oracle Resource Manager stack, which is a subtype of the Dedicated Vantage Point stack.
     /// </summary>
     public class OracleRMStack : DvpStackDetails
     {
         
         /// <value>
-        /// Stack [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of DVP RM stack.
+        /// Stack [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Resource Manager stack for dedicated vantage point.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.ApmsyntheticsService.Models
         public string DvpStackId { get; set; }
         
         /// <value>
-        /// Stream [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of DVP RM stack.
+        /// Stream [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Resource Manager stack for dedicated vantage point.
         /// </value>
         /// <remarks>
         /// Required

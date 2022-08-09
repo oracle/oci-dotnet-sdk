@@ -48,6 +48,9 @@ namespace Oci.OpsiService.Models
                 case "MACS_MANAGED_EXTERNAL_HOST":
                     obj = new EnableMacsManagedExternalHostInsightDetails();
                     break;
+                case "MACS_MANAGED_CLOUD_HOST":
+                    obj = new EnableMacsManagedCloudHostInsightDetails();
+                    break;
                 case "EM_MANAGED_EXTERNAL_HOST":
                     obj = new EnableEmManagedExternalHostInsightDetails();
                     break;

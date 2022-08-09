@@ -182,6 +182,12 @@ namespace Oci.OcvpService.Models
         public System.Nullable<float> InitialHostOcpuCount { get; set; }
         
         /// <value>
+        /// Indicates whether this SDDC is designated for only single ESXi host.
+        /// </value>
+        [JsonProperty(PropertyName = "isSingleHostSddc")]
+        public System.Nullable<bool> IsSingleHostSddc { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

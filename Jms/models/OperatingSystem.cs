@@ -63,5 +63,11 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "architecture")]
         public string Architecture { get; set; }
         
+        /// <value>
+        /// Number of instances running the operating system
+        /// </value>
+        [JsonProperty(PropertyName = "managedInstanceCount")]
+        public System.Nullable<int> ManagedInstanceCount { get; set; }
+        
     }
 }

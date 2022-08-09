@@ -103,10 +103,29 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "exadataResourceType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExadataResourceTypeEnum> ExadataResourceType { get; set; }
-        
+                ///
         /// <value>
-        /// Identifies the units of the current resource metric (CORES, GB).
-        /// 
+        /// Displays usage unit ( CORES, GB , PERCENT, MBPS)
+        /// </value>
+        ///
+        public enum UsageUnitEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "CORES")]
+            Cores,
+            [EnumMember(Value = "GB")]
+            Gb,
+            [EnumMember(Value = "MBPS")]
+            Mbps,
+            [EnumMember(Value = "IOPS")]
+            Iops,
+            [EnumMember(Value = "PERCENT")]
+            Percent
+        };
+
+        /// <value>
+        /// Displays usage unit ( CORES, GB , PERCENT, MBPS)
         /// </value>
         /// <remarks>
         /// Required
@@ -114,7 +133,7 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "UsageUnit is required.")]
         [JsonProperty(PropertyName = "usageUnit")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<UsageUnit> UsageUnit { get; set; }
+        public System.Nullable<UsageUnitEnum> UsageUnit { get; set; }
         
         /// <value>
         /// Time duration in milliseconds between data points (one hour or one day).

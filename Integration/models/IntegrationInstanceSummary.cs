@@ -52,7 +52,10 @@ namespace Oci.IntegrationService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Standard or Enterprise type
+        /// Standard or Enterprise type, 
+        /// Oracle Integration Generation 2 uses ENTERPRISE and STANDARD, 
+        /// Oracle Integration 3 uses ENTERPRISEX and STANDARDX
+        /// 
         /// </value>
         ///
         public enum IntegrationInstanceTypeEnum {
@@ -62,11 +65,18 @@ namespace Oci.IntegrationService.Models
             [EnumMember(Value = "STANDARD")]
             Standard,
             [EnumMember(Value = "ENTERPRISE")]
-            Enterprise
+            Enterprise,
+            [EnumMember(Value = "STANDARDX")]
+            Standardx,
+            [EnumMember(Value = "ENTERPRISEX")]
+            Enterprisex
         };
 
         /// <value>
-        /// Standard or Enterprise type
+        /// Standard or Enterprise type, 
+        /// Oracle Integration Generation 2 uses ENTERPRISE and STANDARD, 
+        /// Oracle Integration 3 uses ENTERPRISEX and STANDARDX
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -202,6 +212,43 @@ namespace Oci.IntegrationService.Models
         
         [JsonProperty(PropertyName = "networkEndpointDetails")]
         public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
+        
+        /// <value>
+        /// Simple key-value pair that is applied without any predefined name,
+        /// type or scope. Exists for cross-compatibility only.
+        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "freeformTags")]
+        public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        /// <value>
+        /// Usage of predefined tag keys. These predefined keys are scoped to
+        /// namespaces.
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "definedTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+                ///
+        /// <value>
+        /// Shape
+        /// </value>
+        ///
+        public enum ShapeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "DEVELOPMENT")]
+            Development,
+            [EnumMember(Value = "PRODUCTION")]
+            Production
+        };
+
+        /// <value>
+        /// Shape
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ShapeEnum> Shape { get; set; }
         
     }
 }

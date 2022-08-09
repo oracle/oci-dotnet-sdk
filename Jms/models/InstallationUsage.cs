@@ -24,6 +24,12 @@ namespace Oci.JmsService.Models
     {
         
         /// <value>
+        /// The unique identifier for the installation of a Java Runtime at a specific path on a specific operating system.
+        /// </value>
+        [JsonProperty(PropertyName = "installationKey")]
+        public string InstallationKey { get; set; }
+        
+        /// <value>
         /// The vendor of the Java Runtime that is deployed with the installation.
         /// </value>
         /// <remarks>

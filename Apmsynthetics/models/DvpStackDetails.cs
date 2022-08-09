@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApmsyntheticsService.Models
 {
     /// <summary>
-    /// Details of DVP Stack.
+    /// Details of a Dedicated Vantage Point (DVP) stack in Resource Manager.
     /// </summary>
     [JsonConverter(typeof(DvpStackDetailsModelConverter))]
     public class DvpStackDetails 
@@ -33,7 +33,7 @@ namespace Oci.ApmsyntheticsService.Models
 
         
         /// <value>
-        /// Version of DVP.
+        /// Version of the dedicated vantage point.
         /// </value>
         /// <remarks>
         /// Required

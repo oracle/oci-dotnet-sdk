@@ -30,6 +30,8 @@ namespace Oci.JmsService.Models
       [EnumMember(Value = "UPDATE_FLEET_AGENT_CONFIGURATION")]
       UpdateFleetAgentConfiguration,
       [EnumMember(Value = "DELETE_JAVA_INSTALLATION")]
-      DeleteJavaInstallation
+      DeleteJavaInstallation,
+      [EnumMember(Value = "CREATE_JAVA_INSTALLATION")]
+      CreateJavaInstallation
   }
 }
