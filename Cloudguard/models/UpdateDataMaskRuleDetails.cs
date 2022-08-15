@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// Data mask rule Name. 
+        /// Data mask rule Name.
         /// <br/>
         /// Avoid entering confidential information.
         /// 

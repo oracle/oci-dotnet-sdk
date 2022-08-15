@@ -150,5 +150,11 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        /// <value>
+        /// The recipe attached to targets
+        /// </value>
+        [JsonProperty(PropertyName = "targetIds")]
+        public System.Collections.Generic.List<string> TargetIds { get; set; }
+        
     }
 }

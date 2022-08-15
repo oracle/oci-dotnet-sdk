@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// Managed list display name. 
+        /// Managed list display name.
         /// <br/>
         /// Avoid entering confidential information.
         /// 

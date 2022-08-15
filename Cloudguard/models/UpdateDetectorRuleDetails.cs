@@ -53,5 +53,29 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
         
+        /// <value>
+        /// Description for DetectorRecipeDetectorRule.
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        /// <value>
+        /// Recommendation for DetectorRecipeDetectorRule
+        /// </value>
+        [JsonProperty(PropertyName = "recommendation")]
+        public string Recommendation { get; set; }
+        
+        /// <value>
+        /// The id of the attached DataSource.
+        /// </value>
+        [JsonProperty(PropertyName = "dataSourceId")]
+        public string DataSourceId { get; set; }
+        
+        /// <value>
+        /// Data Source entities mapping for a Detector Rule
+        /// </value>
+        [JsonProperty(PropertyName = "entitiesMappings")]
+        public System.Collections.Generic.List<EntitiesMapping> EntitiesMappings { get; set; }
+        
     }
 }

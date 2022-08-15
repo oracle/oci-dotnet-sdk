@@ -19,14 +19,14 @@ namespace Oci.CloudguardService.Models
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "FALSE_POSITIVE")]
-      FalsePositive,
       [EnumMember(Value = "FALSE_NEGATIVE")]
       FalseNegative,
-      [EnumMember(Value = "TRUE_POSITIVE")]
-      TruePositive,
       [EnumMember(Value = "TRUE_NEGATIVE")]
       TrueNegative,
+      [EnumMember(Value = "FALSE_POSITIVE")]
+      FalsePositive,
+      [EnumMember(Value = "TRUE_POSITIVE")]
+      TruePositive,
       [EnumMember(Value = "NOT_CLASSIFIED")]
       NotClassified
   }

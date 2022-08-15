@@ -35,6 +35,15 @@ namespace Oci.SchService.Models
         [JsonProperty(PropertyName = "logGroupId")]
         public string LogGroupId { get; set; }
         
+        /// <value>
+        /// Identifier of the log source that you want to use for processing data received from the service connector source.
+        /// Applies to `StreamingSource` only.
+        /// Equivalent to `name` at {@link LogAnalyticsSource}.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "logSourceIdentifier")]
+        public string LogSourceIdentifier { get; set; }
+        
         [JsonProperty(PropertyName = "kind")]
         private readonly string kind = "loggingAnalytics";
     }
