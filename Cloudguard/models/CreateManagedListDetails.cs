@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// Managed list display name. 
+        /// Managed list display name.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -51,7 +51,7 @@ namespace Oci.CloudguardService.Models
         public string SourceManagedListId { get; set; }
         
         /// <value>
-        /// Managed list description. 
+        /// Managed list description.
         /// <br/>
         /// Avoid entering confidential information.
         /// 

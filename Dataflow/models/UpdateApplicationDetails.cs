@@ -52,6 +52,9 @@ namespace Oci.DataflowService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ApplicationLanguage> Language { get; set; }
         
+        [JsonProperty(PropertyName = "applicationLogConfig")]
+        public ApplicationLogConfig ApplicationLogConfig { get; set; }
+        
         /// <value>
         /// An Oracle Cloud Infrastructure URI of an archive.zip file containing custom dependencies that may be used to support the execution a Python, Java, or Scala application.
         /// See https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/hdfsconnector.htm#uriformat.

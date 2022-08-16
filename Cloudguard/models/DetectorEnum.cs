@@ -24,6 +24,8 @@ namespace Oci.CloudguardService.Models
       [EnumMember(Value = "IAAS_CONFIGURATION_DETECTOR")]
       IaasConfigurationDetector,
       [EnumMember(Value = "IAAS_THREAT_DETECTOR")]
-      IaasThreatDetector
+      IaasThreatDetector,
+      [EnumMember(Value = "IAAS_LOG_INSIGHT_DETECTOR")]
+      IaasLogInsightDetector
   }
 }

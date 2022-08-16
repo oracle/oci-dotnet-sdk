@@ -143,5 +143,17 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
+        /// <value>
+        /// The id of the attached DataSource.
+        /// </value>
+        [JsonProperty(PropertyName = "dataSourceId")]
+        public string DataSourceId { get; set; }
+        
+        /// <value>
+        /// Data Source entities mapping for a Detector Rule
+        /// </value>
+        [JsonProperty(PropertyName = "entitiesMappings")]
+        public System.Collections.Generic.List<EntitiesMapping> EntitiesMappings { get; set; }
+        
     }
 }

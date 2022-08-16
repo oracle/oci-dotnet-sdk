@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// Detector recipe display name. 
+        /// Detector recipe display name.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -35,7 +35,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Detector recipe description. 
+        /// Detector recipe description.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -44,12 +44,15 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// detector for the rule
+        /// </value>
+        [JsonProperty(PropertyName = "detector")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DetectorEnum> Detector { get; set; }
+        
+        /// <value>
         /// The id of the source detector recipe.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SourceDetectorRecipeId is required.")]
         [JsonProperty(PropertyName = "sourceDetectorRecipeId")]
         public string SourceDetectorRecipeId { get; set; }
         

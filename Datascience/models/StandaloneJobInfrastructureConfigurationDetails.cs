@@ -53,6 +53,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "blockStorageSizeInGBs")]
         public System.Nullable<int> BlockStorageSizeInGBs { get; set; }
         
+        [JsonProperty(PropertyName = "jobShapeConfigDetails")]
+        public JobShapeConfigDetails JobShapeConfigDetails { get; set; }
+        
         [JsonProperty(PropertyName = "jobInfrastructureType")]
         private readonly string jobInfrastructureType = "STANDALONE";
     }

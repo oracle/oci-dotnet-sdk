@@ -41,6 +41,9 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "arguments")]
         public System.Collections.Generic.List<string> Arguments { get; set; }
         
+        [JsonProperty(PropertyName = "applicationLogConfig")]
+        public ApplicationLogConfig ApplicationLogConfig { get; set; }
+        
         /// <value>
         /// The class for the application.
         /// 

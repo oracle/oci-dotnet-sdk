@@ -20,6 +20,7 @@ namespace Oci.DataflowService.Models
     /// set in the associated application:
     ///   - applicationId
     ///   - archiveUri
+    ///   - applicationLogConfig
     ///   - arguments
     ///   - configuration
     ///   - definedTags
@@ -53,6 +54,9 @@ namespace Oci.DataflowService.Models
     /// </summary>
     public class CreateRunDetails 
     {
+        
+        [JsonProperty(PropertyName = "applicationLogConfig")]
+        public ApplicationLogConfig ApplicationLogConfig { get; set; }
         
         /// <value>
         /// The OCID of the associated application. If this value is set, then no value for the execute parameter is required. If this value is not set, then a value for the execute parameter is required, and a new application is created and associated with the new run.

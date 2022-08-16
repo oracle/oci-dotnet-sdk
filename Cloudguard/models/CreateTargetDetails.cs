@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// DetectorTemplate identifier. 
+        /// DetectorTemplate identifier.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -45,7 +45,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The target description. 
+        /// The target description.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -54,7 +54,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// possible type of targets(compartment/HCMCloud/ERPCloud)
+        /// possible type of targets(COMPARTMENT/FACLOUD)
         /// </value>
         /// <remarks>
         /// Required

@@ -183,5 +183,23 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "comment")]
         public string Comment { get; set; }
         
+        /// <value>
+        /// Identifier of the impacted Resource
+        /// </value>
+        [JsonProperty(PropertyName = "impactedResourceId")]
+        public string ImpactedResourceId { get; set; }
+        
+        /// <value>
+        /// DisplayName of the impacted  Resource
+        /// </value>
+        [JsonProperty(PropertyName = "impactedResourceName")]
+        public string ImpactedResourceName { get; set; }
+        
+        /// <value>
+        /// Type of the impacted Resource
+        /// </value>
+        [JsonProperty(PropertyName = "impactedResourceType")]
+        public string ImpactedResourceType { get; set; }
+        
     }
 }

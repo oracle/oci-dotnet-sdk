@@ -52,6 +52,9 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "applicationId")]
         public string ApplicationId { get; set; }
         
+        [JsonProperty(PropertyName = "applicationLogConfig")]
+        public ApplicationLogConfig ApplicationLogConfig { get; set; }
+        
         /// <value>
         /// The class for the application.
         /// 

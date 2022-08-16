@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// DetectorTemplate identifier. 
+        /// Display name of a target.
         /// <br/>
         /// Avoid entering confidential information.
         /// 

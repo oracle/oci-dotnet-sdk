@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// Responder recipe display name. 
+        /// Responder recipe display name.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -35,7 +35,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Responder recipe description. 
+        /// Responder recipe description.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
