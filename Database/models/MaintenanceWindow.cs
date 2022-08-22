@@ -89,6 +89,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CustomActionTimeoutInMins { get; set; }
         
         /// <value>
+        /// If true, enables the monthly patching option.
+        /// </value>
+        [JsonProperty(PropertyName = "isMonthlyPatchingEnabled")]
+        public System.Nullable<bool> IsMonthlyPatchingEnabled { get; set; }
+        
+        /// <value>
         /// Months during the year when maintenance should be performed.
         /// </value>
         [JsonProperty(PropertyName = "months")]

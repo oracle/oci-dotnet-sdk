@@ -43,7 +43,7 @@ namespace Oci.MediaservicesService.Models
         /// </remarks>
         [Required(ErrorMessage = "Parameters is required.")]
         [JsonProperty(PropertyName = "parameters")]
-        public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Object> Parameters { get; set; }
         
         /// <value>
         /// Compartment Identifier.

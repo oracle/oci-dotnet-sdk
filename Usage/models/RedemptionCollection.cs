@@ -13,21 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DevopsService.Models
+namespace Oci.UsageService.Models
 {
     /// <summary>
-    /// The trigger for Bitbucket Cloud as the caller.
+    /// The list of redemption summary for the requested subscription ID and date range.
     /// </summary>
-    public class CreateBitbucketCloudTriggerDetails : CreateTriggerDetails
+    public class RedemptionCollection 
     {
         
         /// <value>
-        /// The OCID of the connection resource used to get details for triggered events.
+        /// The list of redemption summary.
         /// </value>
-        [JsonProperty(PropertyName = "connectionId")]
-        public string ConnectionId { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<RedemptionSummary> Items { get; set; }
         
-        [JsonProperty(PropertyName = "triggerSource")]
-        private readonly string triggerSource = "BITBUCKET_CLOUD";
     }
 }

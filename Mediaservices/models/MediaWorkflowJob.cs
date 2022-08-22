@@ -116,7 +116,7 @@ namespace Oci.MediaservicesService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
-        public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Object> Parameters { get; set; }
         
         /// <value>
         /// Creation time of the job. An RFC3339 formatted datetime string.
@@ -136,7 +136,7 @@ namespace Oci.MediaservicesService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "runnable")]
-        public System.Collections.Generic.Dictionary<string, string> Runnable { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Object> Runnable { get; set; }
         
         /// <value>
         /// A list of JobOutput for the workflowJob.

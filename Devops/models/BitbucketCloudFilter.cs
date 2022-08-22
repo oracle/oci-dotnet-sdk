@@ -45,6 +45,9 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "include")]
         public BitbucketCloudFilterAttributes Include { get; set; }
         
+        [JsonProperty(PropertyName = "exclude")]
+        public BitbucketCloudFilterExclusionAttributes Exclude { get; set; }
+        
         [JsonProperty(PropertyName = "triggerSource")]
         private readonly string triggerSource = "BITBUCKET_CLOUD";
     }

@@ -77,7 +77,7 @@ namespace Oci.MediaservicesService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
-        public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Object> Parameters { get; set; }
         
         /// <value>
         /// The time when the MediaWorkflow was created. An RFC3339 formatted datetime string.

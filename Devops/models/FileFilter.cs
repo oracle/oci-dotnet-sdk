@@ -16,18 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The trigger for Bitbucket Cloud as the caller.
+    /// Attributes to support include/exclude files for triggering build runs.
     /// </summary>
-    public class CreateBitbucketCloudTriggerDetails : CreateTriggerDetails
+    public class FileFilter 
     {
         
         /// <value>
-        /// The OCID of the connection resource used to get details for triggered events.
+        /// The file paths/glob pattern for files.
         /// </value>
-        [JsonProperty(PropertyName = "connectionId")]
-        public string ConnectionId { get; set; }
+        [JsonProperty(PropertyName = "filePaths")]
+        public System.Collections.Generic.List<string> FilePaths { get; set; }
         
-        [JsonProperty(PropertyName = "triggerSource")]
-        private readonly string triggerSource = "BITBUCKET_CLOUD";
     }
 }

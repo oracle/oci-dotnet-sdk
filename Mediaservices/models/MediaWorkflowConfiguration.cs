@@ -63,7 +63,7 @@ namespace Oci.MediaservicesService.Models
         /// </remarks>
         [Required(ErrorMessage = "Parameters is required.")]
         [JsonProperty(PropertyName = "parameters")]
-        public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Object> Parameters { get; set; }
         
         /// <value>
         /// The time when the the MediaWorkflowConfiguration was created. An RFC3339 formatted datetime string.

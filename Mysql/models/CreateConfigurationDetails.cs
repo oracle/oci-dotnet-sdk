@@ -54,6 +54,9 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "shapeName")]
         public string ShapeName { get; set; }
         
+        [JsonProperty(PropertyName = "initVariables")]
+        public InitializationVariables InitVariables { get; set; }
+        
         [JsonProperty(PropertyName = "variables")]
         public ConfigurationVariables Variables { get; set; }
         

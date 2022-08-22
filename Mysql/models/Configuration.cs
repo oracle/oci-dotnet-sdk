@@ -134,6 +134,9 @@ namespace Oci.MysqlService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
+        [JsonProperty(PropertyName = "initVariables")]
+        public InitializationVariables InitVariables { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

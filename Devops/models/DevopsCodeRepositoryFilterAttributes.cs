@@ -27,5 +27,8 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "headRef")]
         public string HeadRef { get; set; }
         
+        [JsonProperty(PropertyName = "fileFilter")]
+        public FileFilter FileFilter { get; set; }
+        
     }
 }

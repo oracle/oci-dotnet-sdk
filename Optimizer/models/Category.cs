@@ -43,6 +43,16 @@ namespace Oci.OptimizerService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The name associated with the compartment.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentName is required.")]
+        [JsonProperty(PropertyName = "compartmentName")]
+        public string CompartmentName { get; set; }
+        
+        /// <value>
         /// The name assigned to the category.
         /// </value>
         /// <remarks>

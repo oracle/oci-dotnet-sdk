@@ -16,16 +16,28 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageService.Models
 {
     /// <summary>
-    /// Email ID information.
+    /// User summary that can redeem rewards.
     /// </summary>
     public class RedeemableUserSummary 
     {
         
         /// <value>
-        /// The email ID of a user that can redeem rewards.
+        /// The email ID of the user that can redeem rewards.
         /// </value>
         [JsonProperty(PropertyName = "emailId")]
         public string EmailId { get; set; }
+        
+        /// <value>
+        /// The first name of the user that can redeem rewards.
+        /// </value>
+        [JsonProperty(PropertyName = "firstName")]
+        public string FirstName { get; set; }
+        
+        /// <value>
+        /// The last name of the user that can redeem rewards.
+        /// </value>
+        [JsonProperty(PropertyName = "lastName")]
+        public string LastName { get; set; }
         
     }
 }

@@ -21,15 +21,15 @@ using Oci.EmwarehouseService.Responses;
 
 namespace Oci.EmwarehouseService
 {
-    /// <summary>Service client instance for EmDataLake.</summary>
-    public class EmDataLakeClient : RegionalClientBase
+    /// <summary>Service client instance for EmWarehouse.</summary>
+    public class EmWarehouseClient : RegionalClientBase
     {
         private readonly RetryConfiguration retryConfiguration;
         private const string basePathWithoutHost = "/20180828";
 
-        public EmDataLakePaginators Paginators { get; }
+        public EmWarehousePaginators Paginators { get; }
 
-        public EmDataLakeWaiters Waiters { get; }
+        public EmWarehouseWaiters Waiters { get; }
 
         /// <summary>
         /// Creates a new service instance using the given authentication provider and/or client configuration and/or endpoint.
@@ -38,12 +38,12 @@ namespace Oci.EmwarehouseService
         /// <param name="authenticationDetailsProvider">The authentication details provider. Required.</param>
         /// <param name="clientConfiguration">The client configuration that contains settings to adjust REST client behaviors. Optional.</param>
         /// <param name="endpoint">The endpoint of the service. If not provided and the client is a regional client, the endpoint will be constructed based on region information. Optional.</param>
-        public EmDataLakeClient(IBasicAuthenticationDetailsProvider authenticationDetailsProvider, ClientConfiguration clientConfiguration = null, string endpoint = null)
+        public EmWarehouseClient(IBasicAuthenticationDetailsProvider authenticationDetailsProvider, ClientConfiguration clientConfiguration = null, string endpoint = null)
             : base(authenticationDetailsProvider, clientConfiguration)
         {
             service = new Service
             {
-                ServiceName = "EMDATALAKE",
+                ServiceName = "EMWAREHOUSE",
                 ServiceEndpointPrefix = "",
                 ServiceEndpointTemplate = "https://operationsinsights.{region}.oci.{secondLevelDomain}"
             };
@@ -63,8 +63,8 @@ namespace Oci.EmwarehouseService
             }
 
             this.retryConfiguration = clientConfigurationToUse.RetryConfiguration;
-            Paginators = new EmDataLakePaginators(this);
-            Waiters = new EmDataLakeWaiters(this);
+            Paginators = new EmWarehousePaginators(this);
+            Waiters = new EmWarehouseWaiters(this);
         }
 
         /// <summary>
@@ -101,10 +101,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "CancelWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/WorkRequest/CancelWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -157,10 +157,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "ChangeEmWarehouseCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouse/ChangeEmWarehouseCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -214,10 +214,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "CreateEmWarehouse",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouse/CreateEmWarehouse",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -270,10 +270,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "DeleteEmWarehouse",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouse/DeleteEmWarehouse",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -326,10 +326,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "GetEmWarehouse",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouse/GetEmWarehouse",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -382,10 +382,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "GetEmWarehouseResourceUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/ResourceUsage/GetEmWarehouseResourceUsage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -438,10 +438,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -495,10 +495,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "ListEmWarehouses",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouseCollection/ListEmWarehouses",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -551,10 +551,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "ListEtlRuns",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EtlRunCollection/ListEtlRuns",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -608,10 +608,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -665,10 +665,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -722,10 +722,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/WorkRequest/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -778,10 +778,10 @@ namespace Oci.EmwarehouseService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmDataLake",
+                    ServiceName = "EmWarehouse",
                     OperationName = "UpdateEmWarehouse",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouse/UpdateEmWarehouse",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

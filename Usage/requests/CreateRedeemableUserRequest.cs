@@ -20,7 +20,7 @@ namespace Oci.UsageService.Requests
     {
         
         /// <value>
-        /// CreateRedeemableUserDetails inforamtion.
+        /// CreateRedeemableUserDetails information.
         /// 
         /// </value>
         /// <remarks>
