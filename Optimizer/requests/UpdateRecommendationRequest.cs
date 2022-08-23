@@ -30,7 +30,7 @@ namespace Oci.OptimizerService.Requests
         public string RecommendationId { get; set; }
         
         /// <value>
-        /// The request object for udpating the recommendation details.
+        /// The request object for updating the recommendation details.
         /// </value>
         /// <remarks>
         /// Required

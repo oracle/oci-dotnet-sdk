@@ -17,7 +17,7 @@ namespace Oci.EmwarehouseService
 {
     /// <summary>
     /// Collection of helper methods that can be used to provide an enumerator interface
-    /// to any list operations of EmDataLake where multiple pages of data may be fetched.
+    /// to any list operations of EmWarehouse where multiple pages of data may be fetched.
     /// Two styles of enumerators are supported:
     /// <list type="bullet">
     /// <item>
@@ -40,11 +40,11 @@ namespace Oci.EmwarehouseService
     /// returned by calling a RecordEnumerator method would iterate over the User records and we don't have to deal with ListUsersResponse objects at all.
     /// In either case, pagination will be automatically handled so we can iterate until there are no more responses or no more resources/records available.
     /// </summary>
-    public class EmDataLakePaginators
+    public class EmWarehousePaginators
     {
-        private readonly EmDataLakeClient client;
+        private readonly EmWarehouseClient client;
 
-        public EmDataLakePaginators(EmDataLakeClient client)
+        public EmWarehousePaginators(EmWarehouseClient client)
         {
             this.client = client;
         }

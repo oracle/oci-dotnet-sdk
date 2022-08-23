@@ -76,7 +76,7 @@ namespace Oci.MediaservicesService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "enableWhenReferencedParameterEquals")]
-        public System.Collections.Generic.Dictionary<string, string> EnableWhenReferencedParameterEquals { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Object> EnableWhenReferencedParameterEquals { get; set; }
         
         /// <value>
         /// Data specifiying how this task is to be run. The data is a JSON object that must conform to the JSON Schema
@@ -85,7 +85,7 @@ namespace Oci.MediaservicesService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
-        public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Object> Parameters { get; set; }
         
     }
 }

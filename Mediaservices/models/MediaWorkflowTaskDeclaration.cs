@@ -55,7 +55,7 @@ namespace Oci.MediaservicesService.Models
         /// </remarks>
         [Required(ErrorMessage = "ParametersSchema is required.")]
         [JsonProperty(PropertyName = "parametersSchema")]
-        public System.Collections.Generic.Dictionary<string, string> ParametersSchema { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Object> ParametersSchema { get; set; }
         
         /// <value>
         /// JSON schema similar to the parameterSchema, but permits parameter values to refer to other parameters using the
@@ -67,7 +67,7 @@ namespace Oci.MediaservicesService.Models
         /// </remarks>
         [Required(ErrorMessage = "ParametersSchemaAllowingReferences is required.")]
         [JsonProperty(PropertyName = "parametersSchemaAllowingReferences")]
-        public System.Collections.Generic.Dictionary<string, string> ParametersSchemaAllowingReferences { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Object> ParametersSchemaAllowingReferences { get; set; }
         
     }
 }

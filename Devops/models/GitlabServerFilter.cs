@@ -47,6 +47,9 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "include")]
         public GitlabServerFilterAttributes Include { get; set; }
         
+        [JsonProperty(PropertyName = "exclude")]
+        public GitlabServerFilterExclusionAttributes Exclude { get; set; }
+        
         [JsonProperty(PropertyName = "triggerSource")]
         private readonly string triggerSource = "GITLAB_SERVER";
     }

@@ -72,7 +72,7 @@ namespace Oci.MediaservicesService.Models
         /// </remarks>
         [Required(ErrorMessage = "Detail is required.")]
         [JsonProperty(PropertyName = "detail")]
-        public System.Collections.Generic.Dictionary<string, string> Detail { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Object> Detail { get; set; }
         
     }
 }

@@ -46,7 +46,7 @@ namespace Oci.MediaservicesService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
-        public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Object> Parameters { get; set; }
         
         /// <value>
         /// The processing to be done in this workflow. Each key of the MediaWorkflowTasks in this array is unique

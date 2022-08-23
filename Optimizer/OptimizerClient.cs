@@ -239,7 +239,7 @@ namespace Oci.OptimizerService
         }
 
         /// <summary>
-        /// Queries the Cloud Advisor resource actions that are supported by the specified recommendation.
+        /// Queries the Cloud Advisor resource actions that are supported.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -980,7 +980,7 @@ namespace Oci.OptimizerService
         }
 
         /// <summary>
-        /// Lists the Cloud Advisor recommendations that are currently supported in the specified category.
+        /// Lists the Cloud Advisor recommendations that are currently supported.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1094,7 +1094,7 @@ namespace Oci.OptimizerService
         }
 
         /// <summary>
-        /// Lists the Cloud Advisor resource actions that are supported by the specified recommendation.
+        /// Lists the Cloud Advisor resource actions that are supported.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

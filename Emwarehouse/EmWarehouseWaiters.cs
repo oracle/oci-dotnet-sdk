@@ -15,13 +15,13 @@ using Oci.EmwarehouseService.Responses;
 namespace Oci.EmwarehouseService
 {
     /// <summary>
-    /// Contains collection of helper methods to produce Oci.Common.Waiters for different resources of EmDataLake.
+    /// Contains collection of helper methods to produce Oci.Common.Waiters for different resources of EmWarehouse.
     /// </summary>
-    public class EmDataLakeWaiters
+    public class EmWarehouseWaiters
     {
-        private readonly EmDataLakeClient client;
+        private readonly EmWarehouseClient client;
 
-        public  EmDataLakeWaiters(EmDataLakeClient client)
+        public  EmWarehouseWaiters(EmWarehouseClient client)
         {
             this.client = client;
         }

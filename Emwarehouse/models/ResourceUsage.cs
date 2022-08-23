@@ -59,5 +59,11 @@ namespace Oci.EmwarehouseService.Models
         [JsonProperty(PropertyName = "emInstances")]
         public System.Collections.Generic.List<EmInstancesDetails> EmInstances { get; set; }
         
+        /// <value>
+        /// schema name
+        /// </value>
+        [JsonProperty(PropertyName = "schemaName")]
+        public string SchemaName { get; set; }
+        
     }
 }

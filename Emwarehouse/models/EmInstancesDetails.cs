@@ -43,5 +43,11 @@ namespace Oci.EmwarehouseService.Models
         [JsonProperty(PropertyName = "emHost")]
         public string EmHost { get; set; }
         
+        /// <value>
+        /// emdDiscoverer url
+        /// </value>
+        [JsonProperty(PropertyName = "emDiscovererUrl")]
+        public string EmDiscovererUrl { get; set; }
+        
     }
 }

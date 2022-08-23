@@ -16,18 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The trigger for Bitbucket Cloud as the caller.
+    /// Attributes to filter GitLab self-hosted server events. File filter criteria - Changes only affecting excluded files will not invoke a build. if both include and exclude filter are used then exclusion filter will be applied on the result set of inclusion filter.
     /// </summary>
-    public class CreateBitbucketCloudTriggerDetails : CreateTriggerDetails
+    public class GitlabServerFilterExclusionAttributes 
     {
         
-        /// <value>
-        /// The OCID of the connection resource used to get details for triggered events.
-        /// </value>
-        [JsonProperty(PropertyName = "connectionId")]
-        public string ConnectionId { get; set; }
+        [JsonProperty(PropertyName = "fileFilter")]
+        public FileFilter FileFilter { get; set; }
         
-        [JsonProperty(PropertyName = "triggerSource")]
-        private readonly string triggerSource = "BITBUCKET_CLOUD";
     }
 }

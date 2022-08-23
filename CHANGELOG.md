@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 43.0.0 - 2022-08-23
+### Added
+- Support for the Enterprise Manager Warehouse service
+- Support for additional configuration variables in the MySQL Database service
+- Support for file filters in the DevOps service
+- Support for support rewards redemption summaries in the Usage service
+- Support for the parent tenancy of an organization to view child tenancy categories, recommendations, and resource actions in the Optimizer service
+- Support for choosing prior versions during infrastructure maintenance on Exadata Cloud at Customer in the Database service
+
+### Breaking Changes
+- `EmDataLakeClient` was renamed to `EmWarehouseClient` in the Enterprise Manager Warehouse service
+- `EmDataLakePaginators` was renamed to `EmWarehousePaginators` in the Enterprise Manager Warehouse service
+- `EmDataLakeWaiters` was renamed to `EmWarehouseWaiters` in the Enterprise Manager Warehouse service
+
 ## 42.1.0 - 2022-08-16
 ### Added
 - Support for Logging Analytics as a streaming source target in the Service Connector Hub service

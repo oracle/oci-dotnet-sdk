@@ -96,5 +96,17 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isResumePatching")]
         public System.Nullable<bool> IsResumePatching { get; set; }
         
+        /// <value>
+        /// The target database server system software version for the patching operation.
+        /// </value>
+        [JsonProperty(PropertyName = "targetDbServerVersion")]
+        public string TargetDbServerVersion { get; set; }
+        
+        /// <value>
+        /// The target storage cell system software version for the patching operation.
+        /// </value>
+        [JsonProperty(PropertyName = "targetStorageServerVersion")]
+        public string TargetStorageServerVersion { get; set; }
+        
     }
 }

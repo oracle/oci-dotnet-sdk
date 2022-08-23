@@ -52,7 +52,7 @@ namespace Oci.UsageService.Models
         public System.Nullable<float> TotalRewardsAvailable { get; set; }
         
         /// <value>
-        /// The redemption code used in the billing center during the reward redemption process
+        /// The redemption code used in the Billing Center during the reward redemption process.
         /// </value>
         [JsonProperty(PropertyName = "redemptionCode")]
         public string RedemptionCode { get; set; }

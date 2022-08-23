@@ -47,6 +47,9 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "include")]
         public GithubFilterAttributes Include { get; set; }
         
+        [JsonProperty(PropertyName = "exclude")]
+        public GithubFilterExclusionAttributes Exclude { get; set; }
+        
         [JsonProperty(PropertyName = "triggerSource")]
         private readonly string triggerSource = "GITHUB";
     }

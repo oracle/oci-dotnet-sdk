@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MysqlService.Models
 {
     /// <summary>
-    /// User controllable service variables.
+    /// User-defined service variables.
     /// </summary>
     public class ConfigurationVariables 
     {
@@ -43,6 +43,33 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "completionType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CompletionTypeEnum> CompletionType { get; set; }
+        
+        /// <value>
+        /// If enabled, the server stores all temporary tables on disk rather than in memory.
+        /// <br/>
+        /// bigTables corresponds to the MySQL server variable [big_tables](https://dev.mysql.com/doc/refman/en/server-system-variables.html#sysvar_big_tables).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "bigTables")]
+        public System.Nullable<bool> BigTables { get; set; }
+        
+        /// <value>
+        /// Set the chunking size for updates to the global memory usage counter Global_connection_memory.
+        /// <br/>
+        /// connectionMemoryChunkSize corresponds to the MySQL system variable [connection_memory_chunk_size](https://dev.mysql.com/doc/refman/en/server-system-variables.html#sysvar_connection_memory_chunk_size).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "connectionMemoryChunkSize")]
+        public System.Nullable<int> ConnectionMemoryChunkSize { get; set; }
+        
+        /// <value>
+        /// Set the maximum amount of memory that can be used by a single user connection.
+        /// <br/>
+        /// connectionMemoryLimit corresponds to the MySQL system variable [connection_memory_limit](https://dev.mysql.com/doc/refman/en/server-system-variables.html#sysvar_connection_memory_limit).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "connectionMemoryLimit")]
+        public System.Nullable<long> ConnectionMemoryLimit { get; set; }
                 ///
         /// <value>
         /// (\"default_authentication_plugin\")
@@ -66,6 +93,24 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "defaultAuthenticationPlugin")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DefaultAuthenticationPluginEnum> DefaultAuthenticationPlugin { get; set; }
+        
+        /// <value>
+        /// Set the total amount of memory that can be used by all user connections.
+        /// <br/>
+        /// globalConnectionMemoryLimit corresponds to the MySQL system variable [global_connection_memory_limit](https://dev.mysql.com/doc/refman/en/server-system-variables.html#sysvar_global_connection_memory_limit).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "globalConnectionMemoryLimit")]
+        public System.Nullable<long> GlobalConnectionMemoryLimit { get; set; }
+        
+        /// <value>
+        /// Determines whether the MySQL server calculates Global_connection_memory.
+        /// <br/>
+        /// globalConnectionMemoryTracking corresponds to the MySQL system variable [global_connection_memory_tracking](https://dev.mysql.com/doc/refman/en/server-system-variables.html#sysvar_global_connection_memory_tracking).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "globalConnectionMemoryTracking")]
+        public System.Nullable<bool> GlobalConnectionMemoryTracking { get; set; }
                 ///
         /// <value>
         /// (\"transaction_isolation\")
@@ -210,6 +255,15 @@ namespace Oci.MysqlService.Models
         public System.Nullable<bool> InnodbFtEnableStopword { get; set; }
         
         /// <value>
+        /// Enables dedicated log writer threads for writing redo log records from the log buffer to the system buffers and flushing the system buffers to the redo log files.
+        /// <br/>
+        /// This is the MySQL variable \"innodb_log_writer_threads\". For more information, please see the [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_writer_threads)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbLogWriterThreads")]
+        public System.Nullable<bool> InnodbLogWriterThreads { get; set; }
+        
+        /// <value>
         /// (\"local_infile\")
         /// </value>
         [JsonProperty(PropertyName = "localInfile")]
@@ -289,7 +343,14 @@ namespace Oci.MysqlService.Models
         public System.Nullable<bool> BinlogTransactionCompression { get; set; }
         
         /// <value>
-        /// (\"innodb_buffer_pool_size\")
+        /// The size (in bytes) of the buffer pool, that is, the memory area where InnoDB caches table and index data.
+        /// <br/>
+        /// innodbBufferPoolSize corresponds to the MySQL server system variable
+        /// [innodb_buffer_pool_size](https://dev.mysql.com/doc/refman/en/innodb-parameters.html#sysvar_innodb_buffer_pool_size).
+        /// <br/>
+        /// The default and maximum values depend on the amount of RAM provisioned by the shape.
+        /// See [Default User Variables](https://docs.cloud.oracle.com/mysql-database/doc/configuring-db-system.html#GUID-B5504C19-F6F4-4DAB-8506-189A4E8F4A6A).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "innodbBufferPoolSize")]
         public System.Nullable<long> InnodbBufferPoolSize { get; set; }
@@ -298,7 +359,32 @@ namespace Oci.MysqlService.Models
         /// (\"innodb_ft_result_cache_limit\")
         /// </value>
         [JsonProperty(PropertyName = "innodbFtResultCacheLimit")]
-        public System.Nullable<int> InnodbFtResultCacheLimit { get; set; }
+        public System.Nullable<long> InnodbFtResultCacheLimit { get; set; }
+        
+        /// <value>
+        /// Sets the size of the transaction cache.
+        /// <br/>
+        /// maxBinlogCacheSize corresponds to the MySQL server system variable [max_binlog_cache_size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_max_binlog_cache_size).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxBinlogCacheSize")]
+        public System.Nullable<long> MaxBinlogCacheSize { get; set; }
+        
+        /// <value>
+        /// (\"max_connect_errors\")
+        /// </value>
+        [JsonProperty(PropertyName = "maxConnectErrors")]
+        public System.Nullable<long> MaxConnectErrors { get; set; }
+        
+        /// <value>
+        /// This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
+        /// <br/>
+        /// maxHeapTableSize corresponds to the MySQL system variable
+        /// [max_heap_table_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxHeapTableSize")]
+        public System.Nullable<long> MaxHeapTableSize { get; set; }
         
         /// <value>
         /// (\"max_connections\")
@@ -313,7 +399,14 @@ namespace Oci.MysqlService.Models
         public System.Nullable<int> MaxPreparedStmtCount { get; set; }
         
         /// <value>
-        /// (\"connect_timeout\")
+        /// The number of seconds that the mysqld server waits for a connect packet before responding with Bad handshake.
+        /// <br/>
+        /// connectTimeout corresponds to the MySQL system variable
+        /// [connect_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_connect_timeout)
+        /// <br/>
+        /// Increasing the connect_timeout value might help if clients frequently encounter errors of the form
+        /// \"Lost connection to MySQL server at 'XXX', system error: errno\".
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "connectTimeout")]
         public System.Nullable<int> ConnectTimeout { get; set; }
@@ -322,7 +415,7 @@ namespace Oci.MysqlService.Models
         /// (\"cte_max_recursion_depth\")
         /// </value>
         [JsonProperty(PropertyName = "cteMaxRecursionDepth")]
-        public System.Nullable<int> CteMaxRecursionDepth { get; set; }
+        public System.Nullable<long> CteMaxRecursionDepth { get; set; }
         
         /// <value>
         /// (\"generated_random_password_length\") DEPRECATED -- variable should not be settable and will be ignored
@@ -337,10 +430,39 @@ namespace Oci.MysqlService.Models
         public System.Nullable<int> InformationSchemaStatsExpiry { get; set; }
         
         /// <value>
+        /// Specifies the percentage of the most recently used pages for each buffer pool to read out and dump.
+        /// <br/>
+        /// innodbBufferPoolDumpPct corresponds to the MySQL InnoDB system variable
+        /// [innodb_buffer_pool_dump_pct](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_buffer_pool_dump_pct).
+        /// <br/>
+        /// The range is 1 to 100. The default value is 25.
+        /// <br/>
+        /// For example, if there are 4 buffer pools with 100 pages each, and innodb_buffer_pool_dump_pct is set to 25,
+        /// the 25 most recently used pages from each buffer pool are dumped.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbBufferPoolDumpPct")]
+        public System.Nullable<int> InnodbBufferPoolDumpPct { get; set; }
+        
+        /// <value>
         /// (\"innodb_buffer_pool_instances\")
         /// </value>
         [JsonProperty(PropertyName = "innodbBufferPoolInstances")]
         public System.Nullable<int> InnodbBufferPoolInstances { get; set; }
+        
+        /// <value>
+        /// innodbDdlBufferSize corresponds to the MySQL system variable [innodb_ddl_buffer_size] (https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ddl_buffer_size)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbDdlBufferSize")]
+        public System.Nullable<long> InnodbDdlBufferSize { get; set; }
+        
+        /// <value>
+        /// innodbDdlThreads corresponds to the MySQL system variable [innodb_ddl_threads] (https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ddl_threads)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbDdlThreads")]
+        public System.Nullable<int> InnodbDdlThreads { get; set; }
         
         /// <value>
         /// (\"innodb_ft_max_token_size\")
@@ -367,25 +489,96 @@ namespace Oci.MysqlService.Models
         public System.Nullable<int> InnodbLockWaitTimeout { get; set; }
         
         /// <value>
-        /// (\"innodb_max_purge_lag\")
+        /// The desired maximum purge lag in terms of transactions.
+        /// <br/>
+        /// InnoDB maintains a list of transactions that have index records delete-marked by UPDATE or DELETE operations. The length of the list is the purge lag.
+        /// <br/>
+        /// If this value is exceeded, a delay is imposed on INSERT, UPDATE, and DELETE operations to allow time for purge to catch up.
+        /// <br/>
+        /// The default value is 0, which means there is no maximum purge lag and no delay.
+        /// <br/>
+        /// innodbMaxPurgeLag corresponds to the MySQL server system variable
+        /// [innodb_max_purge_lag](https://dev.mysql.com/doc/refman/en/innodb-parameters.html#sysvar_innodb_max_purge_lag).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "innodbMaxPurgeLag")]
-        public System.Nullable<int> InnodbMaxPurgeLag { get; set; }
+        public System.Nullable<long> InnodbMaxPurgeLag { get; set; }
         
         /// <value>
-        /// (\"innodb_max_purge_lag_delay\")
+        /// The maximum delay in microseconds for the delay imposed when the innodb_max_purge_lag threshold is exceeded.
+        /// <br/>
+        /// The specified innodb_max_purge_lag_delay value is an upper limit on the delay period.
+        /// <br/>
+        /// innodbMaxPurgeLagDelay corresponds to the MySQL server system variable
+        /// [innodb_max_purge_lag_delay](https://dev.mysql.com/doc/refman/en/innodb-parameters.html#sysvar_innodb_max_purge_lag_delay).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "innodbMaxPurgeLagDelay")]
         public System.Nullable<int> InnodbMaxPurgeLagDelay { get; set; }
         
         /// <value>
+        /// The number of seconds the server waits for activity on an interactive connection before closing it.
+        /// <br/>
+        /// interactiveTimeout corresponds to the MySQL system variable.
+        /// [interactive_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "interactiveTimeout")]
+        public System.Nullable<int> InteractiveTimeout { get; set; }
+        
+        /// <value>
+        /// The number of index pages to sample when estimating cardinality and other statistics for an indexed column,
+        /// such as those calculated by ANALYZE TABLE.
+        /// <br/>
+        /// innodbStatsPersistentSamplePages corresponds to the MySQL InnoDB system variable
+        /// [innodb_stats_persistent_sample_pages](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_stats_persistent_sample_pages)
+        /// <br/>
+        /// innodb_stats_persistent_sample_pages only applies when innodb_stats_persistent is enabled for a table;
+        /// when innodb_stats_persistent is disabled, innodb_stats_transient_sample_pages applies instead.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbStatsPersistentSamplePages")]
+        public System.Nullable<long> InnodbStatsPersistentSamplePages { get; set; }
+        
+        /// <value>
+        /// The number of index pages to sample when estimating cardinality and other statistics for an indexed column,
+        /// such as those calculated by [ANALYZE TABLE](https://dev.mysql.com/doc/refman/8.0/en/analyze-table.html).
+        /// <br/>
+        /// innodbStatsTransientSamplePages corresponds to the MySQL InnoDB system variable
+        /// [innodb_stats_transient_sample_pages](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_stats_transient_sample_pages)
+        /// <br/>
+        /// innodb_stats_transient_sample_pages only applies when innodb_stats_persistent is disabled for a table;
+        /// when innodb_stats_persistent is enabled, innodb_stats_persistent_sample_pages applies instead.
+        /// <br/>
+        /// innodb_stats_persistent is ON by default and cannot be changed. It is possible to override it using the
+        /// STATS_PERSISTENT clause of the [CREATE TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html) and
+        /// [ALTER TABLE](https://dev.mysql.com/doc/refman/8.0/en/alter-table.html) statements.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbStatsTransientSamplePages")]
+        public System.Nullable<long> InnodbStatsTransientSamplePages { get; set; }
+        
+        /// <value>
+        /// The maximum size of one packet or any generated/intermediate string.
+        /// <br/>
+        /// This is the mysql variable \"max_allowed_packet\".
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxAllowedPacket")]
+        public System.Nullable<int> MaxAllowedPacket { get; set; }
+        
+        /// <value>
         /// (\"max_execution_time\")
         /// </value>
         [JsonProperty(PropertyName = "maxExecutionTime")]
-        public System.Nullable<int> MaxExecutionTime { get; set; }
+        public System.Nullable<long> MaxExecutionTime { get; set; }
         
         /// <value>
-        /// (\"mysqlx_connect_timeout\") DEPRECATED -- variable should not be settable and will be ignored
+        /// The number of seconds X Plugin waits for the first packet to be received from newly connected clients.
+        /// <br/>
+        /// mysqlxConnectTimeout corresponds to the MySQL X Plugin system variable
+        /// [mysqlx_connect_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_connect_timeout)
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "mysqlxConnectTimeout")]
         public System.Nullable<int> MysqlxConnectTimeout { get; set; }
@@ -403,13 +596,20 @@ namespace Oci.MysqlService.Models
         public System.Nullable<int> MysqlxIdleWorkerThreadTimeout { get; set; }
         
         /// <value>
-        /// (\"mysqlx_interactive_timeout\") DEPRECATED -- variable should not be settable and will be ignored
+        /// The number of seconds to wait for interactive clients to timeout.
+        /// <br/>
+        /// mysqlxInteractiveTimeout corresponds to the MySQL X Plugin system variable.
+        /// [mysqlx_interactive_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_interactive_timeout)
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "mysqlxInteractiveTimeout")]
         public System.Nullable<int> MysqlxInteractiveTimeout { get; set; }
         
         /// <value>
-        /// (\"mysqlx_max_allowed_packet\") DEPRECATED -- variable should not be settable and will be ignored
+        /// The maximum size of network packets that can be received by X Plugin.
+        /// <br/>
+        /// This is the mysql variable \"mysqlx_max_allowed_packet\".
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "mysqlxMaxAllowedPacket")]
         public System.Nullable<int> MysqlxMaxAllowedPacket { get; set; }
@@ -421,46 +621,98 @@ namespace Oci.MysqlService.Models
         public System.Nullable<int> MysqlxMinWorkerThreads { get; set; }
         
         /// <value>
-        /// (\"mysqlx_read_timeout\") DEPRECATED -- variable should not be settable and will be ignored
+        /// The number of seconds that X Plugin waits for blocking read operations to complete. After this time, if the
+        /// read operation is not successful, X Plugin closes the connection and returns a warning notice with the error
+        /// code ER_IO_READ_ERROR to the client application.
+        /// <br/>
+        /// mysqlxReadTimeout corresponds to the MySQL X Plugin system variable
+        /// [mysqlx_read_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_read_timeout)
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "mysqlxReadTimeout")]
         public System.Nullable<int> MysqlxReadTimeout { get; set; }
         
         /// <value>
-        /// (\"mysqlx_wait_timeout\") DEPRECATED -- variable should not be settable and will be ignored
+        /// The number of seconds that X Plugin waits for activity on a connection.
+        /// <br/>
+        /// mysqlxWaitTimeout corresponds to the MySQL X Plugin system variable.
+        /// [mysqlx_wait_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_wait_timeout)
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "mysqlxWaitTimeout")]
         public System.Nullable<int> MysqlxWaitTimeout { get; set; }
         
         /// <value>
-        /// (\"mysqlx_write_timeout\") DEPRECATED -- variable should not be settable and will be ignored
+        /// The number of seconds that X Plugin waits for blocking write operations to complete. After this time, if the
+        /// write operation is not successful, X Plugin closes the connection.
+        /// <br/>
+        /// mysqlxReadmysqlxWriteTimeoutTimeout corresponds to the MySQL X Plugin system variable
+        /// [mysqlx_write_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_write_timeout)
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "mysqlxWriteTimeout")]
         public System.Nullable<int> MysqlxWriteTimeout { get; set; }
         
         /// <value>
+        /// The number of seconds to wait for more data from a connection before aborting the read.
+        /// <br/>
+        /// netReadTimeout corresponds to the MySQL system variable
+        /// [net_read_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "netReadTimeout")]
+        public System.Nullable<int> NetReadTimeout { get; set; }
+        
+        /// <value>
+        /// The number of seconds to wait for a block to be written to a connection before aborting the write.
+        /// <br/>
+        /// netWriteTimeout corresponds to the MySQL system variable
+        /// [net_write_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "netWriteTimeout")]
+        public System.Nullable<int> NetWriteTimeout { get; set; }
+        
+        /// <value>
         /// (\"parser_max_mem_size\")
         /// </value>
         [JsonProperty(PropertyName = "parserMaxMemSize")]
-        public System.Nullable<int> ParserMaxMemSize { get; set; }
+        public System.Nullable<long> ParserMaxMemSize { get; set; }
         
         /// <value>
         /// (\"query_alloc_block_size\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "queryAllocBlockSize")]
-        public System.Nullable<int> QueryAllocBlockSize { get; set; }
+        public System.Nullable<long> QueryAllocBlockSize { get; set; }
         
         /// <value>
         /// (\"query_prealloc_size\") DEPRECATED -- variable should not be settable and will be ignored
         /// </value>
         [JsonProperty(PropertyName = "queryPreallocSize")]
-        public System.Nullable<int> QueryPreallocSize { get; set; }
+        public System.Nullable<long> QueryPreallocSize { get; set; }
+        
+        /// <value>
+        /// regexpTimeLimit corresponds to the MySQL system variable [regexp_time_limit] (https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_regexp_time_limit)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "regexpTimeLimit")]
+        public System.Nullable<int> RegexpTimeLimit { get; set; }
         
         /// <value>
         /// (\"sql_mode\")
         /// </value>
         [JsonProperty(PropertyName = "sqlMode")]
         public string SqlMode { get; set; }
+        
+        /// <value>
+        /// The maximum size of internal in-memory temporary tables. This variable does not apply to user-created MEMORY tables.
+        /// <br/>
+        /// tmp_table_size corresponds to the MySQL system variable
+        /// [tmp_table_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tmpTableSize")]
+        public System.Nullable<long> TmpTableSize { get; set; }
         
         /// <value>
         /// Set the default compression level for the deflate algorithm. (\"mysqlx_deflate_default_compression_level\")
@@ -503,6 +755,56 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "mysqlZstdDefaultCompressionLevel")]
         public System.Nullable<int> MysqlZstdDefaultCompressionLevel { get; set; }
+        
+        /// <value>
+        /// Each session that must perform a sort allocates a buffer of this size.
+        /// <br/>
+        /// sortBufferSize corresponds to the MySQL system variable [sort_buffer_size](https://dev.mysql.com/doc/refman/en/server-system-variables.html#sysvar_sort_buffer_size)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sortBufferSize")]
+        public System.Nullable<long> SortBufferSize { get; set; }
+        
+        /// <value>
+        /// The number of seconds the server waits for activity on a noninteractive connection before closing it.
+        /// <br/>
+        /// waitTimeout corresponds to the MySQL system variable.
+        /// [wait_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "waitTimeout")]
+        public System.Nullable<int> WaitTimeout { get; set; }
+        
+        /// <value>
+        /// Controls whether the thread pool uses dedicated listener threads. If enabled, a listener thread in each thread group is dedicated to the task of listening
+        /// for network events from clients, ensuring that the maximum number of query worker threads is no more than the value specified by threadPoolMaxTransactionsLimit.
+        /// threadPoolDedicatedListeners corresponds to the MySQL Database Service-specific system variable thread_pool_dedicated_listeners.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "threadPoolDedicatedListeners")]
+        public System.Nullable<bool> ThreadPoolDedicatedListeners { get; set; }
+        
+        /// <value>
+        /// Limits the maximum number of open transactions to the defined value. The default value is 0, which enforces no limit.
+        /// threadPoolMaxTransactionsLimit corresponds to the MySQL Database Service-specific system variable thread_pool_max_transactions_limit.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "threadPoolMaxTransactionsLimit")]
+        public System.Nullable<int> ThreadPoolMaxTransactionsLimit { get; set; }
+        
+        /// <value>
+        /// Initializes the time zone for each client that connects.
+        /// <br/>
+        /// This corresponds to the MySQL System Variable \"time_zone\".
+        /// <br/>
+        /// The values can be given in one of the following formats, none of which are case-sensitive:
+        /// <br/>
+        /// - As a string indicating an offset from UTC of the form [H]H:MM, prefixed with a + or -, such as '+10:00', '-6:00', or '+05:30'. The permitted range is '-13:59' to '+14:00', inclusive.
+        /// - As a named time zone, as defined by the \"IANA Time Zone database\", such as 'Europe/Helsinki', 'US/Eastern', 'MET', or 'UTC'.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeZone")]
+        public string TimeZone { get; set; }
         
     }
 }

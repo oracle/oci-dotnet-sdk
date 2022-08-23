@@ -104,7 +104,7 @@ namespace Oci.OpensearchService
                     ServiceName = "OpensearchClusterBackup",
                     OperationName = "DeleteOpensearchClusterBackup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/opensearch/20180828/OpensearchClusterBackup/DeleteOpensearchClusterBackup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -160,7 +160,7 @@ namespace Oci.OpensearchService
                     ServiceName = "OpensearchClusterBackup",
                     OperationName = "GetOpensearchClusterBackup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/opensearch/20180828/OpensearchClusterBackup/GetOpensearchClusterBackup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -217,7 +217,7 @@ namespace Oci.OpensearchService
                     ServiceName = "OpensearchClusterBackup",
                     OperationName = "ListOpensearchClusterBackups",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/opensearch/20180828/OpensearchClusterBackupCollection/ListOpensearchClusterBackups",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -273,7 +273,7 @@ namespace Oci.OpensearchService
                     ServiceName = "OpensearchClusterBackup",
                     OperationName = "UpdateOpensearchClusterBackup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/opensearch/20180828/OpensearchClusterBackup/UpdateOpensearchClusterBackup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

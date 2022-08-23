@@ -21,6 +21,12 @@ namespace Oci.DevopsService.Models
     public class BitbucketCloudTriggerSummary : TriggerSummary
     {
         
+        /// <value>
+        /// The OCID of the connection resource used to get details for triggered events.
+        /// </value>
+        [JsonProperty(PropertyName = "connectionId")]
+        public string ConnectionId { get; set; }
+        
         [JsonProperty(PropertyName = "triggerSource")]
         private readonly string triggerSource = "BITBUCKET_CLOUD";
     }

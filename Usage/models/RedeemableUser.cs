@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageService.Models
 {
     /// <summary>
-    /// The email object for a user that can redeem rewards.
+    /// The summary of a user that can redeem rewards.
     /// </summary>
     public class RedeemableUser 
     {
@@ -30,6 +30,18 @@ namespace Oci.UsageService.Models
         [Required(ErrorMessage = "EmailId is required.")]
         [JsonProperty(PropertyName = "emailId")]
         public string EmailId { get; set; }
+        
+        /// <value>
+        /// The first name of the user that can redeem rewards.
+        /// </value>
+        [JsonProperty(PropertyName = "firstName")]
+        public string FirstName { get; set; }
+        
+        /// <value>
+        /// The last name of the user that can redeem rewards.
+        /// </value>
+        [JsonProperty(PropertyName = "lastName")]
+        public string LastName { get; set; }
         
     }
 }

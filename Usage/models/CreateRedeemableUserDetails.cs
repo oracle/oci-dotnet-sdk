@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageService.Models
 {
     /// <summary>
-    /// A list of email IDs to be added to the list of users that can redeem rewards.
+    /// A list of new user to be added to the list of user that can redeem rewards.
     /// </summary>
     public class CreateRedeemableUserDetails 
     {
         
         /// <value>
-        /// The list of email IDs to be added to the list of users that can redeem rewards.
+        /// The list of new user to be added to the list of user that can redeem rewards.
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<RedeemableUser> Items { get; set; }

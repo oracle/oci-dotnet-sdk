@@ -39,6 +39,9 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "include")]
         public DevopsCodeRepositoryFilterAttributes Include { get; set; }
         
+        [JsonProperty(PropertyName = "exclude")]
+        public DevopsCodeRepositoryFilterExclusionAttributes Exclude { get; set; }
+        
         [JsonProperty(PropertyName = "triggerSource")]
         private readonly string triggerSource = "DEVOPS_CODE_REPOSITORY";
     }
