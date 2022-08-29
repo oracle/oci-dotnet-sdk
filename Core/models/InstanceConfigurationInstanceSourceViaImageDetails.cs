@@ -45,6 +45,8 @@ namespace Oci.CoreService.Models
         ///   * `20`: Represents Higher Performance option.
         /// <br/>
         ///   * `30`-`120`: Represents the Ultra High Performance option.
+        /// <br/>
+        /// For performance autotune enabled volumes, it would be the Default(Minimum) VPUs/GB.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bootVolumeVpusPerGB")]

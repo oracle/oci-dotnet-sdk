@@ -512,5 +512,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "pointInTimeDataDiskCloneTimestamp")]
         public System.Nullable<System.DateTime> PointInTimeDataDiskCloneTimestamp { get; set; }
         
+        [JsonProperty(PropertyName = "dataCollectionOptions")]
+        public DataCollectionOptions DataCollectionOptions { get; set; }
+        
     }
 }

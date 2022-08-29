@@ -168,6 +168,33 @@ namespace Oci.OcvpService.Models
         public System.Nullable<System.DateTime> GracePeriodEndDate { get; set; }
         
         /// <value>
+        /// The version of VMware software that the Oracle Cloud VMware Solution installed on the ESXi hosts.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "VmwareSoftwareVersion is required.")]
+        [JsonProperty(PropertyName = "vmwareSoftwareVersion")]
+        public string VmwareSoftwareVersion { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the ESXi host that
+        /// will be upgraded.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nonUpgradedEsxiHostId")]
+        public string NonUpgradedEsxiHostId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the ESXi host that
+        /// is newly created to upgrade the original host.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "upgradedReplacementEsxiHostId")]
+        public string UpgradedReplacementEsxiHostId { get; set; }
+        
+        /// <value>
         /// The availability domain of the ESXi host.
         /// 
         /// </value>

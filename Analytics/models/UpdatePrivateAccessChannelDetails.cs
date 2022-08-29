@@ -52,5 +52,19 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "privateSourceDnsZones")]
         public System.Collections.Generic.List<PrivateSourceDnsZone> PrivateSourceDnsZones { get; set; }
         
+        /// <value>
+        /// List of Private Source DB SCAN hosts registered with Private Access Channel for access from Analytics Instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateSourceScanHosts")]
+        public System.Collections.Generic.List<PrivateSourceScanHost> PrivateSourceScanHosts { get; set; }
+        
+        /// <value>
+        /// Network Security Group OCIDs for an Analytics instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "networkSecurityGroupIds")]
+        public System.Collections.Generic.List<string> NetworkSecurityGroupIds { get; set; }
+        
     }
 }

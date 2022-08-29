@@ -204,6 +204,9 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "databaseDefinedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DatabaseDefinedTags { get; set; }
         
+        [JsonProperty(PropertyName = "dataCollectionOptions")]
+        public DataCollectionOptions DataCollectionOptions { get; set; }
+        
         [JsonProperty(PropertyName = "creationType")]
         private readonly string creationType = "NewDbSystem";
     }

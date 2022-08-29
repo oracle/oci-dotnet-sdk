@@ -92,6 +92,8 @@ namespace Oci.CoreService.Models
         ///   * `20`: Represents Higher Performance option.
         /// <br/>
         ///   * `30`-`120`: Represents the Ultra High Performance option.
+        /// <br/>
+        /// For performance autotune enabled volumes, it would be the Default(Minimum) VPUs/GB.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vpusPerGB")]
@@ -105,6 +107,12 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "sourceDetails")]
         public InstanceConfigurationVolumeSourceDetails SourceDetails { get; set; }
+        
+        /// <value>
+        /// The list of autotune policies enabled for this volume.
+        /// </value>
+        [JsonProperty(PropertyName = "autotunePolicies")]
+        public System.Collections.Generic.List<InstanceConfigurationAutotunePolicy> AutotunePolicies { get; set; }
         
     }
 }

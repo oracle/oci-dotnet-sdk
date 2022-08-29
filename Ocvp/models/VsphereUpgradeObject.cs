@@ -13,32 +13,34 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.AnalyticsService.Models
+namespace Oci.OcvpService.Models
 {
     /// <summary>
-    /// Virtual Cloud Network definition.
+    /// Binary object needed for vSphere upgrade
     /// 
     /// </summary>
-    public class VirtualCloudNetwork 
+    public class VsphereUpgradeObject 
     {
         
         /// <value>
-        /// The Virtual Cloud Network OCID.
-        /// 
+        /// Binary object download link.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Id is required.")]
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        [Required(ErrorMessage = "DownloadLink is required.")]
+        [JsonProperty(PropertyName = "downloadLink")]
+        public string DownloadLink { get; set; }
         
         /// <value>
-        /// Source IP addresses or IP address ranges in ingress rules.
-        /// 
+        /// Binary object description.
         /// </value>
-        [JsonProperty(PropertyName = "whitelistedIps")]
-        public System.Collections.Generic.List<string> WhitelistedIps { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LinkDescription is required.")]
+        [JsonProperty(PropertyName = "linkDescription")]
+        public string LinkDescription { get; set; }
         
     }
 }

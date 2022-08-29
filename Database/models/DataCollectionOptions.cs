@@ -29,5 +29,21 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isDiagnosticsEventsEnabled")]
         public System.Nullable<bool> IsDiagnosticsEventsEnabled { get; set; }
         
+        /// <value>
+        /// Indicates whether health monitoring is enabled for the VM cluster / Cloud VM cluster / VMBM DBCS. Enabling health monitoring allows Oracle to collect diagnostic data and share it with its operations and support personnel. You may also receive notifications for some events. Collecting health diagnostics enables Oracle to provide proactive support and enhanced service for your system.
+        /// Optionally enable health monitoring while provisioning a system. You can also disable or enable health monitoring anytime using the `UpdateVmCluster`, `UpdateCloudVmCluster` or `updateDbsystem` API.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isHealthMonitoringEnabled")]
+        public System.Nullable<bool> IsHealthMonitoringEnabled { get; set; }
+        
+        /// <value>
+        /// Indicates whether incident logs and trace collection are enabled for the VM cluster / Cloud VM cluster / VMBM DBCS. Enabling incident logs collection allows Oracle to receive Events service notifications for guest VM issues, collect incident logs and traces, and use them to diagnose issues and resolve them.
+        /// Optionally enable incident logs collection while provisioning a system. You can also disable or enable incident logs collection anytime using the `UpdateVmCluster`, `updateCloudVmCluster` or `updateDbsystem` API.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isIncidentLogsEnabled")]
+        public System.Nullable<bool> IsIncidentLogsEnabled { get; set; }
+        
     }
 }
