@@ -161,6 +161,8 @@ namespace Oci.CoreService.Models
         ///   * `20`: Represents Higher Performance option.
         /// <br/>
         ///   * `30`-`120`: Represents the Ultra High Performance option.
+        /// <br/>
+        /// For performance autotune enabled volumes, It would be the Default(Minimum) VPUs/GB.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vpusPerGB")]
@@ -204,14 +206,15 @@ namespace Oci.CoreService.Models
         public string VolumeGroupId { get; set; }
         
         /// <value>
-        /// Specifies whether the auto-tune performance is enabled for this volume.
+        /// Specifies whether the auto-tune performance is enabled for this volume. This field is deprecated.
+        /// Use the `DetachedVolumeAutotunePolicy` instead to enable the volume for detached autotune.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoTuneEnabled")]
         public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
         
         /// <value>
-        /// The number of Volume Performance Units per GB that this volume is effectively tuned to when it's idle.
+        /// The number of Volume Performance Units per GB that this volume is effectively tuned to.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "autoTunedVpusPerGB")]
@@ -222,6 +225,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "blockVolumeReplicas")]
         public System.Collections.Generic.List<BlockVolumeReplicaInfo> BlockVolumeReplicas { get; set; }
+        
+        /// <value>
+        /// The list of autotune policies enabled for this volume.
+        /// </value>
+        [JsonProperty(PropertyName = "autotunePolicies")]
+        public System.Collections.Generic.List<AutotunePolicy> AutotunePolicies { get; set; }
         
     }
 }

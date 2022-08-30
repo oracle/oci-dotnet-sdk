@@ -119,5 +119,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "maintenanceWindowDetails")]
         public MaintenanceWindow MaintenanceWindowDetails { get; set; }
         
+        [JsonProperty(PropertyName = "dataCollectionOptions")]
+        public DataCollectionOptions DataCollectionOptions { get; set; }
+        
     }
 }

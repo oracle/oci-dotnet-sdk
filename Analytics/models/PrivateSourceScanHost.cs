@@ -16,42 +16,40 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AnalyticsService.Models
 {
     /// <summary>
-    /// Private endpoint configuration details.
+    /// Private source Scan Hostname model.
     /// 
     /// </summary>
-    public class PrivateEndpointDetails : NetworkEndpointDetails
+    public class PrivateSourceScanHost 
     {
         
         /// <value>
-        /// The VCN OCID for the private endpoint.
+        /// Private Source Scan hostname. Ex: db01-scan.corp.example.com, prd-db01-scan.mycompany.com.
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "VcnId is required.")]
-        [JsonProperty(PropertyName = "vcnId")]
-        public string VcnId { get; set; }
+        [Required(ErrorMessage = "ScanHostname is required.")]
+        [JsonProperty(PropertyName = "scanHostname")]
+        public string ScanHostname { get; set; }
         
         /// <value>
-        /// The subnet OCID for the private endpoint.
+        /// Private Source Scan host port. This is the source port where SCAN protocol will get connected (e.g. 1521).
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "SubnetId is required.")]
-        [JsonProperty(PropertyName = "subnetId")]
-        public string SubnetId { get; set; }
+        [Required(ErrorMessage = "ScanPort is required.")]
+        [JsonProperty(PropertyName = "scanPort")]
+        public System.Nullable<int> ScanPort { get; set; }
         
         /// <value>
-        /// Network Security Group OCIDs for an Analytics instance.
+        /// Description of private source scan host zone.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "networkSecurityGroupIds")]
-        public System.Collections.Generic.List<string> NetworkSecurityGroupIds { get; set; }
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
         
-        [JsonProperty(PropertyName = "networkEndpointType")]
-        private readonly string networkEndpointType = "PRIVATE";
     }
 }

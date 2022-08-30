@@ -582,6 +582,27 @@ namespace Oci.OcvpService.Models
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
+        /// The vSphere licenses to be used when upgrade SDDC.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "upgradeLicenses")]
+        public System.Collections.Generic.List<VsphereLicense> UpgradeLicenses { get; set; }
+        
+        /// <value>
+        /// The link of guidance to upgrade vSphere.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "vsphereUpgradeGuide")]
+        public string VsphereUpgradeGuide { get; set; }
+        
+        /// <value>
+        /// The links of binary objects needed for upgrade vSphere.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "vsphereUpgradeObjects")]
+        public System.Collections.Generic.List<VsphereUpgradeObject> VsphereUpgradeObjects { get; set; }
+        
+        /// <value>
         /// The initial compute shape of the SDDC's ESXi hosts.
         /// {@link #listSupportedHostShapes(ListSupportedHostShapesRequest) listSupportedHostShapes}.
         /// 

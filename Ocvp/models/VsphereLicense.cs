@@ -13,32 +13,34 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.AnalyticsService.Models
+namespace Oci.OcvpService.Models
 {
     /// <summary>
-    /// Virtual Cloud Network definition.
+    /// License for vSphere upgrade.
     /// 
     /// </summary>
-    public class VirtualCloudNetwork 
+    public class VsphereLicense 
     {
         
         /// <value>
-        /// The Virtual Cloud Network OCID.
-        /// 
+        /// vSphere license type.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Id is required.")]
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        [Required(ErrorMessage = "LicenseType is required.")]
+        [JsonProperty(PropertyName = "licenseType")]
+        public string LicenseType { get; set; }
         
         /// <value>
-        /// Source IP addresses or IP address ranges in ingress rules.
-        /// 
+        /// vSphere license key value.
         /// </value>
-        [JsonProperty(PropertyName = "whitelistedIps")]
-        public System.Collections.Generic.List<string> WhitelistedIps { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LicenseKey is required.")]
+        [JsonProperty(PropertyName = "licenseKey")]
+        public string LicenseKey { get; set; }
         
     }
 }

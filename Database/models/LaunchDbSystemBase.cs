@@ -316,6 +316,9 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
         
+        [JsonProperty(PropertyName = "dataCollectionOptions")]
+        public DataCollectionOptions DataCollectionOptions { get; set; }
+        
     }
 
     public class LaunchDbSystemBaseModelConverter : JsonConverter

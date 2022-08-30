@@ -23,7 +23,7 @@ namespace Oci.AnalyticsService.Models
     {
         
         /// <value>
-        /// Source IP addresses or IP address ranges igress rules.
+        /// Source IP addresses or IP address ranges in ingress rules.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "whitelistedIps")]
@@ -35,6 +35,13 @@ namespace Oci.AnalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "whitelistedVcns")]
         public System.Collections.Generic.List<VirtualCloudNetwork> WhitelistedVcns { get; set; }
+        
+        /// <value>
+        /// Oracle Cloud Services that are allowed to access this Analytics instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "whitelistedServices", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<AccessControlServiceType> WhitelistedServices { get; set; }
         
         [JsonProperty(PropertyName = "networkEndpointType")]
         private readonly string networkEndpointType = "PUBLIC";
