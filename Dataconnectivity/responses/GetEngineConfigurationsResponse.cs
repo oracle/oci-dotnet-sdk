@@ -12,7 +12,7 @@ using Oci.DataconnectivityService.Models;
 
 namespace Oci.DataconnectivityService.Responses
 {
-    public class DeleteConnectionValidationResponse : Oci.Common.IOciResponse
+    public class GetEngineConfigurationsResponse : Oci.Common.IOciResponse
     {
 
         /// <value>
@@ -23,7 +23,11 @@ namespace Oci.DataconnectivityService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
-
+        /// <value>
+        /// The returned ConfigDetails instance.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public ConfigDetails ConfigDetails { get; set; }
 
     }
 }

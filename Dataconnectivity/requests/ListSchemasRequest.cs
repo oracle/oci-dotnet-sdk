@@ -20,7 +20,7 @@ namespace Oci.DataconnectivityService.Requests
     {
         
         /// <value>
-        /// The registry Ocid.
+        /// The registry OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -59,7 +59,7 @@ namespace Oci.DataconnectivityService.Requests
         
         ///
         /// <value>
-        /// Specifies the field to sort by. Accepts only one field. By default, when you sort by time fields, results are shown in descending order. All other fields default to ascending order. Sorting related parameters are ignored when parameter `query` is present (search operation and sorting order is by relevance score in descending order).
+        /// Specifies the field to sort by. Accepts only one field. By default, when you sort by time fields, results are shown in descending order. All other fields default to ascending order. Sorting related parameters are ignored when parameter `query` is present (search operation and sorting order are by relevance score in descending order).
         /// </value>
         ///
         public enum SortByEnum {
@@ -72,7 +72,7 @@ namespace Oci.DataconnectivityService.Requests
         };
 
         /// <value>
-        /// Specifies the field to sort by. Accepts only one field. By default, when you sort by time fields, results are shown in descending order. All other fields default to ascending order. Sorting related parameters are ignored when parameter `query` is present (search operation and sorting order is by relevance score in descending order).
+        /// Specifies the field to sort by. Accepts only one field. By default, when you sort by time fields, results are shown in descending order. All other fields default to ascending order. Sorting related parameters are ignored when parameter `query` is present (search operation and sorting order are by relevance score in descending order).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
@@ -123,9 +123,15 @@ namespace Oci.DataconnectivityService.Requests
         public System.Collections.Generic.List<string> NameList { get; set; }
         
         /// <value>
-        /// Endpoint Id used for getDataAssetFullDetails.
+        /// Endpoint ID used for getDataAssetFullDetails.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "endpointId")]
         public string EndpointId { get; set; }
+        
+        /// <value>
+        /// Artifact type which needs to be listed while listing Artifacts.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "includeTypes", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> IncludeTypes { get; set; }
     }
 }

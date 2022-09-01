@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Represents reference details of a dcms artifact.
+    /// Represents reference details of a DCMS artifact.
     /// </summary>
     public class ReferenceInfo 
     {
@@ -28,7 +28,7 @@ namespace Oci.DataconnectivityService.Models
         public string ModelType { get; set; }
         
         /// <value>
-        /// Generated key that can be used in API calls to identify referenceinfo.
+        /// Generated key that can be used in API calls to identify the referenceinfo.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
@@ -40,7 +40,7 @@ namespace Oci.DataconnectivityService.Models
         public string ModelVersion { get; set; }
         
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
+        /// Free form text without any restriction on the permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -64,13 +64,13 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectVersion { get; set; }
         
         /// <value>
-        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with an upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
         
         /// <value>
-        /// unique id of dcms artifact that is getting registered.
+        /// The unique ID of the DCMS artifact that is getting registered.
         /// </value>
         /// <remarks>
         /// Required
@@ -80,7 +80,7 @@ namespace Oci.DataconnectivityService.Models
         public string DcmsArtifactId { get; set; }
         
         /// <value>
-        /// unique id of service which is referencing data asset.
+        /// The unique ID of the service that is referencing a data asset.
         /// </value>
         /// <remarks>
         /// Required
@@ -90,7 +90,7 @@ namespace Oci.DataconnectivityService.Models
         public string ServiceArtifactId { get; set; }
         
         /// <value>
-        /// count of how many times a data asset has been registered by a service.
+        /// The number of times a data asset has been registered by a service.
         /// </value>
         [JsonProperty(PropertyName = "referenceCount")]
         public System.Nullable<int> ReferenceCount { get; set; }

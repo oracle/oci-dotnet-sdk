@@ -14,13 +14,13 @@ using Oci.DataconnectivityService.Models;
 namespace Oci.DataconnectivityService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataconnectivity/GetConnectionValidation.cs.html">here</a> to see an example of how to use GetConnectionValidation request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataconnectivity/DeriveEntities.cs.html">here</a> to see an example of how to use DeriveEntities request.
     /// </example>
-    public class GetConnectionValidationRequest : Oci.Common.IOciRequest
+    public class DeriveEntitiesRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
-        /// The registry Ocid.
+        /// The registry OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,14 +30,14 @@ namespace Oci.DataconnectivityService.Requests
         public string RegistryId { get; set; }
         
         /// <value>
-        /// The key of the connection validation.
+        /// The details needed to create the derived entities.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ConnectionValidationKey is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "connectionValidationKey")]
-        public string ConnectionValidationKey { get; set; }
+        [Required(ErrorMessage = "DeriveEntitiesDetails is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public DeriveEntitiesDetails DeriveEntitiesDetails { get; set; }
         
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If
@@ -49,9 +49,10 @@ namespace Oci.DataconnectivityService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// Endpoint Id used for getDataAssetFullDetails.
+        /// A token that uniquely identifies a request so it can be retried in case of a timeout or server error without the risk of executing that same action again.
+        /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "endpointId")]
-        public string EndpointId { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
+        public string OpcRetryToken { get; set; }
     }
 }

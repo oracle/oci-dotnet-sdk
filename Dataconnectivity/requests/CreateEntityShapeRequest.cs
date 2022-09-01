@@ -20,7 +20,7 @@ namespace Oci.DataconnectivityService.Requests
     {
         
         /// <value>
-        /// The registry Ocid.
+        /// The registry OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,7 +50,7 @@ namespace Oci.DataconnectivityService.Requests
         public string SchemaResourceName { get; set; }
         
         /// <value>
-        /// The details needed to create the data entity shape.
+        /// The details required to create the data entity shape.
         /// </value>
         /// <remarks>
         /// Required
@@ -69,7 +69,7 @@ namespace Oci.DataconnectivityService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// A token that uniquely identifies a request so it can be retried in case of a timeout or server error without risk of executing that same action again.
+        /// A token that uniquely identifies a request so it can be retried in case of a timeout or server error without the risk of executing that same action again.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
@@ -109,7 +109,7 @@ namespace Oci.DataconnectivityService.Requests
         public System.Nullable<AuthorizationModeEnum> AuthorizationMode { get; set; }
         
         /// <value>
-        /// Endpoint Id used for getDataAssetFullDetails.
+        /// Endpoint ID used for getDataAssetFullDetails.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "endpointId")]
         public string EndpointId { get; set; }

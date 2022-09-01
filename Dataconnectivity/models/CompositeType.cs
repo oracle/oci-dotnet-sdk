@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// A `CompositeType` represents a type that is composed of a list of sub-types, for example an `Address` type.   The sub-types can be simple `DataType` or other `CompositeType` objects. Typically, a `CompositeType` may represent an arbitrarily deep hierarchy of types.
+    /// A `CompositeType` represents a type that is composed of a list of sub-types, for example an `Address` type. The sub-types can be simple `DataType` or other `CompositeType` objects. Typically, a `CompositeType` may represent an arbitrarily deep hierarchy of types.
     /// </summary>
     public class CompositeType : BaseType
     {

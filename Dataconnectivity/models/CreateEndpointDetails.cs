@@ -16,32 +16,32 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The information about new Endpoint.
+    /// Information about a new endpoint.
     /// </summary>
     public class CreateEndpointDetails 
     {
         
         /// <value>
-        /// VCN Identifier where the subnet resides.
+        /// VCN identifier where the subnet resides.
         /// </value>
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
         
         /// <value>
-        /// Subnet Identifier for customer connected databases
+        /// Subnet identifier for the customer-connected databases.
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
         
         /// <value>
-        /// List of DNS zones to be used by the data assets to be harvested.
+        /// The list of DNS zones to be used by the data assets to be harvested.
         /// Example: custpvtsubnet.oraclevcn.com for data asset: db.custpvtsubnet.oraclevcn.com
         /// </value>
         [JsonProperty(PropertyName = "dnsZones")]
         public System.Collections.Generic.List<string> DnsZones { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Simple key-value pair that is applied without any predefined name, type, or scope. Exists only for cross-compatibility.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -61,7 +61,7 @@ namespace Oci.DataconnectivityService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Data Connectivity Management Registry display name, registries can be renamed
+        /// The Data Connectivity Management registry display name; registries can be renamed.
         /// </value>
         /// <remarks>
         /// Required
@@ -83,7 +83,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> EndpointSize { get; set; }
         
         /// <value>
-        /// List of NSGs to which the Private Endpoint VNIC must be added.
+        /// The list of NSGs to which the private endpoint VNIC must be added.
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }

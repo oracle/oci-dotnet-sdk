@@ -73,6 +73,9 @@ namespace Oci.DataconnectivityService.Models
                 case "PARQUET_FORMAT":
                     obj = new ParquetFormatAttribute();
                     break;
+                case "EXCEL_FORMAT":
+                    obj = new ExcelFormatAttribute();
+                    break;
             }
             if (obj != null)
             {

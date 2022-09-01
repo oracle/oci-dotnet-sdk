@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Data preview row calues.
+    /// Data preview row values.
     /// </summary>
     public class Row 
     {

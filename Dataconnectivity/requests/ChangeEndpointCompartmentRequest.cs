@@ -20,7 +20,7 @@ namespace Oci.DataconnectivityService.Requests
     {
         
         /// <value>
-        /// DCMS Endpoint id
+        /// DCMS endpoint ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DataconnectivityService.Requests
         public string EndpointId { get; set; }
         
         /// <value>
-        /// The details of change compartment action.
+        /// The details of the change compartment action.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.DataconnectivityService.Requests
         public ChangeEndpointCompartmentDetails ChangeEndpointCompartmentDetails { get; set; }
         
         /// <value>
-        /// DCMS registry id
+        /// DCMS registry ID
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "registryId")]
         public string RegistryId { get; set; }
@@ -64,7 +64,7 @@ namespace Oci.DataconnectivityService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// A token that uniquely identifies a request so it can be retried in case of a timeout or server error without risk of executing that same action again.
+        /// A token that uniquely identifies a request so it can be retried in case of a timeout or server error without the risk of executing that same action again.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]

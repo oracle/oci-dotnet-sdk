@@ -32,7 +32,7 @@ namespace Oci.DataconnectivityService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the log message was written. An RFC3339 formatted datetime string
+        /// Time when the log message was written. An RFC3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required

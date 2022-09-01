@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The information about connectivity validation results
+    /// The information about connectivity validation results.
     /// </summary>
     public class ConnectivityValidation 
     {
         
         /// <value>
-        /// Total number of validation messages
+        /// Total number of validation messages.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,19 +32,19 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> TotalMessageCount { get; set; }
         
         /// <value>
-        /// Total number of validation error messages
+        /// Total number of validation error messages.
         /// </value>
         [JsonProperty(PropertyName = "errorMessageCount")]
         public System.Nullable<int> ErrorMessageCount { get; set; }
         
         /// <value>
-        /// Total number of validation warning messages
+        /// Total number of validation warning messages.
         /// </value>
         [JsonProperty(PropertyName = "warnMessageCount")]
         public System.Nullable<int> WarnMessageCount { get; set; }
         
         /// <value>
-        /// Total number of validation information messages
+        /// Total number of validation information messages.
         /// </value>
         [JsonProperty(PropertyName = "infoMessageCount")]
         public System.Nullable<int> InfoMessageCount { get; set; }

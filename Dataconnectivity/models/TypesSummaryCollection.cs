@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// The array of Type summaries
+        /// The array of type summaries.
         /// </value>
         /// <remarks>
         /// Required

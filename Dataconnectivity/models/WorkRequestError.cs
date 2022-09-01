@@ -22,8 +22,8 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// A machine-usable code for the error that occured. Error codes are listed on
-        /// (https://docs.us-phoenix-1.oraclecloud.com/Content/API/References/apierrors.htm)
+        /// A machine-usable code for the error that occured. Error codes are listed in
+        /// (https://docs.us-phoenix-1.oraclecloud.com/Content/API/References/apierrors.htm).
         /// 
         /// </value>
         /// <remarks>

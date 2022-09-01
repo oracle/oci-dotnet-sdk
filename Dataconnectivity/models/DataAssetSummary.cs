@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The summary object for data asset.
+    /// The summary object of the data asset.
     /// </summary>
     public class DataAssetSummary 
     {
         
         /// <value>
-        /// Currently not used on data asset creation. Reserved for future.
+        /// Currently not used while creating a data asset. Reserved for future.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +44,7 @@ namespace Oci.DataconnectivityService.Models
         public string ModelType { get; set; }
         
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
+        /// Free form text without any restriction on the permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectVersion { get; set; }
         
         /// <value>
-        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with an upper case letter or underscore. The value can be modified.
         /// </value>
         /// <remarks>
         /// Required
@@ -82,7 +82,7 @@ namespace Oci.DataconnectivityService.Models
         public string Identifier { get; set; }
         
         /// <value>
-        /// The external key for the object.
+        /// The external key of the object.
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]
         public string ExternalKey { get; set; }

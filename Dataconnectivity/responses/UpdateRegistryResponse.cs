@@ -16,28 +16,29 @@ namespace Oci.DataconnectivityService.Responses
     {
 
         /// <value>
-        /// For optimistic concurrency control. See `if-match`.
+        /// For optimistic concurrency control. See [ETags for Optimistic Concurrency Control](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#eleven).
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
         public string Etag { get; set; }
 
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the asynchronous request. You can use this to query status of the asynchronous operation.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
-        public string OpcWorkRequestId { get; set; }
-
-
-        /// <value>
-        /// Unique Oracle-assigned identifier for the request. If
-        /// you need to contact Oracle about a particular request,
-        /// please provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact
+        /// Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+
+
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/identifiers.htm) of the work request. Use [GetWorkRequest](https://docs.cloud.oracle.com/api/#/en/workrequests/20160918/WorkRequest/GetWorkRequest)
+        /// with this ID to track the status of the request.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
+        public string OpcWorkRequestId { get; set; }
 
         /// <value>
         /// The returned Registry instance.

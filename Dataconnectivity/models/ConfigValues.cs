@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Configuration values can be string, objects, or parameters.
+    /// Configuration values can be a string, objects, or parameters.
     /// </summary>
     public class ConfigValues 
     {

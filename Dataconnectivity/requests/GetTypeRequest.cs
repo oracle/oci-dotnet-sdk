@@ -20,7 +20,7 @@ namespace Oci.DataconnectivityService.Requests
     {
         
         /// <value>
-        /// The registry Ocid.
+        /// The registry OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DataconnectivityService.Requests
         public string RegistryId { get; set; }
         
         /// <value>
-        /// key of the a specefic Type.
+        /// Key of the a specific type.
         /// </value>
         /// <remarks>
         /// Required

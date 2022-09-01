@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// To capture all the statistical data related to profiling
+    /// To capture all the statistical data related to profiling.
     /// </summary>
     public class ProfileStat 
     {
@@ -28,7 +28,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> Confidence { get; set; }
         
         /// <value>
-        /// Value of the confidence of the profile result
+        /// Value of the confidence of the profile result.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Properties used in data asset update operations.
+    /// Properties used in the update data asset operations.
     /// </summary>
     public class UpdateDataAssetDetails 
     {
@@ -34,7 +34,7 @@ namespace Oci.DataconnectivityService.Models
         public string ModelType { get; set; }
         
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
+        /// Free form text without any restriction on the permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -58,25 +58,25 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectVersion { get; set; }
         
         /// <value>
-        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with an upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
         
         /// <value>
-        /// The external key for the object.
+        /// The external key of the object.
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]
         public string ExternalKey { get; set; }
         
         /// <value>
-        /// Additional properties for the data asset.
+        /// Additional properties of the data asset.
         /// </value>
         [JsonProperty(PropertyName = "assetProperties")]
         public System.Collections.Generic.Dictionary<string, string> AssetProperties { get; set; }
         
         /// <value>
-        /// All the properties for the data asset in a key-value map format.
+        /// All the properties of the data asset in a key-value map format.
         /// </value>
         /// <remarks>
         /// Required

@@ -21,6 +21,9 @@ namespace Oci.DataconnectivityService.Models
     [JsonConverter(typeof(OperationModelConverter))]
     public class Operation 
     {
+        
+        [JsonProperty(PropertyName = "operationAttributes")]
+        public AbstractOperationAttributes OperationAttributes { get; set; }
                 ///
         /// <value>
         /// The operation type.
@@ -28,7 +31,9 @@ namespace Oci.DataconnectivityService.Models
         ///
         public enum ModelTypeEnum {
             [EnumMember(Value = "PROCEDURE")]
-            Procedure
+            Procedure,
+            [EnumMember(Value = "API")]
+            Api
         };
 
         
@@ -60,6 +65,9 @@ namespace Oci.DataconnectivityService.Models
             {
                 case "PROCEDURE":
                     obj = new OperationFromProcedure();
+                    break;
+                case "API":
+                    obj = new OperationFromApi();
                     break;
             }
             if (obj != null)

@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// Column Name.
+        /// Column name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

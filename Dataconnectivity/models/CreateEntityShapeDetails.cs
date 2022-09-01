@@ -36,7 +36,9 @@ namespace Oci.DataconnectivityService.Models
             [EnumMember(Value = "DATA_STORE_ENTITY")]
             DataStoreEntity,
             [EnumMember(Value = "SQL_ENTITY")]
-            SqlEntity
+            SqlEntity,
+            [EnumMember(Value = "MESSAGE_ENTITY")]
+            MessageEntity
         };
 
         
@@ -47,7 +49,7 @@ namespace Oci.DataconnectivityService.Models
         public string Key { get; set; }
         
         /// <value>
-        /// The object's model version.
+        /// The model version of the object.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
@@ -56,7 +58,7 @@ namespace Oci.DataconnectivityService.Models
         public ParentReference ParentRef { get; set; }
         
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
+        /// Free form text without any restriction on the permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +74,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectVersion { get; set; }
         
         /// <value>
-        /// The external key for the object.
+        /// The external key of the object.
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]
         public string ExternalKey { get; set; }
@@ -98,7 +100,11 @@ namespace Oci.DataconnectivityService.Models
             [EnumMember(Value = "FILE")]
             File,
             [EnumMember(Value = "SQL")]
-            Sql
+            Sql,
+            [EnumMember(Value = "DATA_STORE")]
+            DataStore,
+            [EnumMember(Value = "MESSAGE")]
+            Message
         };
 
         /// <value>
@@ -139,7 +145,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
         
         /// <value>
-        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with an upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
@@ -177,6 +183,9 @@ namespace Oci.DataconnectivityService.Models
             {
                 case "DATA_STORE_ENTITY":
                     obj = new CreateEntityShapeFromDataStore();
+                    break;
+                case "MESSAGE_ENTITY":
+                    obj = new CreateEntityShapeFromMessage();
                     break;
                 case "TABLE_ENTITY":
                     obj = new CreateEntityShapeFromTable();

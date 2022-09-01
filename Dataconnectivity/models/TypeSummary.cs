@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// unique id of specefic data asset type.
+        /// The unique ID of the specific data asset type.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.DataconnectivityService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// desctription for the specific data asset type.
+        /// Description for the specific data asset type.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

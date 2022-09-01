@@ -20,7 +20,7 @@ namespace Oci.DataconnectivityService.Requests
     {
         
         /// <value>
-        /// The registry Ocid.
+        /// The registry OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,7 +50,7 @@ namespace Oci.DataconnectivityService.Requests
         public string SchemaResourceName { get; set; }
         
         /// <value>
-        /// Job id returned by execute operation job api
+        /// Job ID returned by the execute operation job API.
         /// </value>
         /// <remarks>
         /// Required
@@ -69,7 +69,7 @@ namespace Oci.DataconnectivityService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// Endpoint Id used for getDataAssetFullDetails.
+        /// Endpoint ID used for getDataAssetFullDetails.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "endpointId")]
         public string EndpointId { get; set; }

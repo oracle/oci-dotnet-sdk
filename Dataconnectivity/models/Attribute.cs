@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Registry Attribute Object, to get connector details
+    /// The attribute object fo the registry that can be used to get the connector details.
     /// </summary>
     public class Attribute 
     {
         
         /// <value>
-        /// The name of of the Attribute.
+        /// The name of of the attribute.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,37 +32,37 @@ namespace Oci.DataconnectivityService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// True if Attribute is sensitive.
+        /// True if attribute is sensitive.
         /// </value>
         [JsonProperty(PropertyName = "isSensitive")]
         public System.Nullable<bool> IsSensitive { get; set; }
         
         /// <value>
-        /// True if Attribute is mandatory.
+        /// True if attribute is mandatory.
         /// </value>
         [JsonProperty(PropertyName = "isMandatory")]
         public System.Nullable<bool> IsMandatory { get; set; }
         
         /// <value>
-        /// True if Attribute is generated.
+        /// True if attribute is generated.
         /// </value>
         [JsonProperty(PropertyName = "isGenerated")]
         public System.Nullable<bool> IsGenerated { get; set; }
         
         /// <value>
-        /// True if Attribute is encoded.
+        /// True if attribute is encoded.
         /// </value>
         [JsonProperty(PropertyName = "isBase64Encoded")]
         public System.Nullable<bool> IsBase64Encoded { get; set; }
         
         /// <value>
-        /// List of valid key list
+        /// The list of valid keys.
         /// </value>
         [JsonProperty(PropertyName = "validKeyList")]
         public System.Collections.Generic.List<string> ValidKeyList { get; set; }
         
         /// <value>
-        /// Attribute type details
+        /// The attribute type details.
         /// </value>
         [JsonProperty(PropertyName = "attributeType")]
         public string AttributeType { get; set; }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Properties used in endpoint create operations.
+    /// Properties used in the create operations of the endpoint.
     /// </summary>
     [JsonConverter(typeof(CreateDpEndpointDetailsModelConverter))]
     public class CreateDpEndpointDetails 
@@ -35,7 +35,7 @@ namespace Oci.DataconnectivityService.Models
 
         
         /// <value>
-        /// Generated key that can be used in API calls to identify endpoint. On scenarios where reference to the endpoint is needed, a value can be passed in create.
+        /// Generated key that can be used in API calls to identify the endpoint. In scenarios where reference to the endpoint is required, a value can be passed in create.
         /// </value>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
@@ -50,7 +50,7 @@ namespace Oci.DataconnectivityService.Models
         public ParentReference ParentRef { get; set; }
         
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
+        /// Free form text without any restriction on the permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         /// <remarks>
         /// Required
@@ -60,7 +60,7 @@ namespace Oci.DataconnectivityService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// User-defined description for the endpoint.
+        /// User-defined description of the endpoint.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -78,7 +78,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectVersion { get; set; }
         
         /// <value>
-        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with an upper case letter or underscore. The value can be modified.
         /// </value>
         /// <remarks>
         /// Required
@@ -88,7 +88,7 @@ namespace Oci.DataconnectivityService.Models
         public string Identifier { get; set; }
         
         /// <value>
-        /// List of data assets which belongs to this endpoint
+        /// The list of data assets that belong to the endpoint.
         /// </value>
         [JsonProperty(PropertyName = "dataAssets")]
         public System.Collections.Generic.List<DataAsset> DataAssets { get; set; }

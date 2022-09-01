@@ -20,7 +20,7 @@ namespace Oci.DataconnectivityService.Requests
     {
         
         /// <value>
-        /// The registry Ocid.
+        /// The registry OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.DataconnectivityService.Requests
         public string DataAssetKey { get; set; }
         
         /// <value>
-        /// The information needed to update a data asset.
+        /// The information required to update a data asset.
         /// </value>
         /// <remarks>
         /// Required

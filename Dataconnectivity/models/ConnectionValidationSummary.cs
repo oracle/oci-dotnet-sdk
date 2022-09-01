@@ -50,13 +50,13 @@ namespace Oci.DataconnectivityService.Models
         public ParentReference ParentRef { get; set; }
         
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
+        /// Free form text without any restriction on the permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// Detailed description for the object.
+        /// Detailed description of the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -83,7 +83,7 @@ namespace Oci.DataconnectivityService.Models
         public CreateDataAssetDetails DataAsset { get; set; }
         
         /// <value>
-        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be modified.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with an upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }

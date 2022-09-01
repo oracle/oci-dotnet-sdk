@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Input to perform connector validation. If defines some data integration semantics in a data flow. It may be reading/writing data or transforming the data.
+    /// Input to perform connector validation. Defines the data integration semantics in a data flow. It can be about reading, writing, or transforming the data.
     /// </summary>
     [JsonConverter(typeof(CreateConnectivityValidationDetailsModelConverter))]
     public class CreateConnectivityValidationDetails 
@@ -50,7 +50,7 @@ namespace Oci.DataconnectivityService.Models
         public ParentReference ParentRef { get; set; }
         
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
+        /// Free form text without any restriction on the permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -86,7 +86,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
         
         /// <value>
-        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with an upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }

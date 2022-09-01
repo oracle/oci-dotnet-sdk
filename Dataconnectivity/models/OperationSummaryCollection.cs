@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// This is the collection of operation summaries, it will contain very shallow details of an operation.
+    /// This is the collection of operation summaries, with minimal details of an operation.
     /// </summary>
     public class OperationSummaryCollection 
     {
         
         /// <value>
-        /// The array of operation summary
+        /// The array of operation summary.
         /// </value>
         /// <remarks>
         /// Required

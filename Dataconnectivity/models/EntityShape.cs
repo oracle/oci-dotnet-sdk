@@ -36,7 +36,9 @@ namespace Oci.DataconnectivityService.Models
             [EnumMember(Value = "SQL_ENTITY")]
             SqlEntity,
             [EnumMember(Value = "DATA_STORE_ENTITY")]
-            DataStoreEntity
+            DataStoreEntity,
+            [EnumMember(Value = "MESSAGE_ENTITY")]
+            MessageEntity
         };
 
         
@@ -68,6 +70,9 @@ namespace Oci.DataconnectivityService.Models
             {
                 case "DATA_STORE_ENTITY":
                     obj = new EntityShapeFromDataStore();
+                    break;
+                case "MESSAGE_ENTITY":
+                    obj = new EntityShapeFromMessage();
                     break;
                 case "TABLE_ENTITY":
                     obj = new EntityShapeFromTable();

@@ -28,7 +28,7 @@ namespace Oci.DataconnectivityService.Models
         public string NetworkValidationOutput { get; set; }
         
         /// <value>
-        /// True if the data asset is has a valid network path.
+        /// True if the data asset has a valid network path.
         /// </value>
         /// <remarks>
         /// Required

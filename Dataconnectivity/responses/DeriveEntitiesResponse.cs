@@ -12,16 +12,8 @@ using Oci.DataconnectivityService.Models;
 
 namespace Oci.DataconnectivityService.Responses
 {
-    public class GetConnectionValidationResponse : Oci.Common.IOciResponse
+    public class DeriveEntitiesResponse : Oci.Common.IOciResponse
     {
-
-        /// <value>
-        /// For optimistic concurrency control. See [ETags for Optimistic Concurrency Control](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#eleven).
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
-        public string Etag { get; set; }
-
 
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
@@ -32,10 +24,10 @@ namespace Oci.DataconnectivityService.Responses
         public string OpcRequestId { get; set; }
 
         /// <value>
-        /// The returned ConnectionValidation instance.
+        /// The returned DeriveEntities instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public ConnectionValidation ConnectionValidation { get; set; }
+        public DeriveEntities DeriveEntities { get; set; }
 
     }
 }

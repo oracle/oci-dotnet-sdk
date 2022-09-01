@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// To capture all the histograms data related to profiling
+    /// To capture all the histograms data related to profiling.
     /// </summary>
     public class Histogram 
     {

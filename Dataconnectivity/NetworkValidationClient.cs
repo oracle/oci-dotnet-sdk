@@ -62,7 +62,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// This api is used to get Network Connectivity Status for all the Data Assets attatched to the provided Private endpoint.
+        /// This API is used to get the network connectivity status fofor all the data assets attached to the provided private endpoint.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

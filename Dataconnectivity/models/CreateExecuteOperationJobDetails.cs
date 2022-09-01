@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Input details to execute operation.
+    /// Input details to execute an operation.
     /// </summary>
     public class CreateExecuteOperationJobDetails 
     {
@@ -28,7 +28,7 @@ namespace Oci.DataconnectivityService.Models
         public CallOperationConfig CallOperationConfig { get; set; }
         
         /// <value>
-        /// Collection of input parameters supplied.
+        /// Collection of the input parameters supplied.
         /// </value>
         [JsonProperty(PropertyName = "inputRecords")]
         public System.Collections.Generic.List<OperationInputRecord> InputRecords { get; set; }

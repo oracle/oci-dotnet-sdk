@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Statistical data in profiling results
+    /// Statistical data in profiling results.
     /// </summary>
     public class DataTypeStat 
     {
         
         /// <value>
-        /// Value of the confidence of the profile result
+        /// Value of the confidence of the profile result.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
@@ -34,7 +34,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> Confidence { get; set; }
         
         /// <value>
-        /// How many times that value occurred.
+        /// The number of times the value appeared.
         /// </value>
         [JsonProperty(PropertyName = "freq")]
         public System.Nullable<long> Freq { get; set; }

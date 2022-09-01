@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// The array of DataAsset keys
+        /// The array of DataAsset keys.
         /// </value>
         /// <remarks>
         /// Required

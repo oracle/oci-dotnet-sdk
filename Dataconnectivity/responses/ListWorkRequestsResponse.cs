@@ -16,9 +16,8 @@ namespace Oci.DataconnectivityService.Responses
     {
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If
-        /// you need to contact Oracle about a particular request,
-        /// please provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact
+        /// Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
@@ -26,9 +25,7 @@ namespace Oci.DataconnectivityService.Responses
 
 
         /// <value>
-        /// For pagination of a list of items. When paging through a list, if this header appears in the response,
-        /// then a partial list might have been returned. Include this value as the `page` parameter for the
-        /// subsequent GET request to get the next batch of items.
+        /// Retrieves the next page of results. When this header appears in the response, additional pages of results remain. See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]

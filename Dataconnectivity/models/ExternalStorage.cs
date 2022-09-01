@@ -16,43 +16,43 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// BICC Connector Attribute.Object Storage as External storage where the BICC extracted files are written
+    /// BICC Connector Attribute. Object Storage as External storage where the BICC extracted files are written.
     /// </summary>
     public class ExternalStorage : ConnectorAttribute
     {
         
         /// <value>
-        /// Id of the external stoarge configured in BICC console. Usually its numeric.
+        /// ID of the external stoarge configured in the BICC console. Usually it's numeric.
         /// </value>
         [JsonProperty(PropertyName = "storageId")]
         public string StorageId { get; set; }
         
         /// <value>
-        /// Name of the external storage configured in BICC console
+        /// Name of the external storage configured in the BICC console.
         /// </value>
         [JsonProperty(PropertyName = "storageName")]
         public string StorageName { get; set; }
         
         /// <value>
-        /// Object Storage host Url. DO not give http/https.
+        /// Object Storage host URL. DO not give http/https.
         /// </value>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
         
         /// <value>
-        /// Tenancy OCID for the OOS bucket
+        /// Tenancy OCID of the OOS bucket.
         /// </value>
         [JsonProperty(PropertyName = "tenancyId")]
         public string TenancyId { get; set; }
         
         /// <value>
-        /// Namespace for the OOS bucket
+        /// Namespace of the OOS bucket.
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
         
         /// <value>
-        /// Bucket Name where BICC extracts stores the files
+        /// Bucket name where BICC extracts and stores the files.
         /// </value>
         [JsonProperty(PropertyName = "bucket")]
         public string Bucket { get; set; }

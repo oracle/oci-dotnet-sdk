@@ -34,6 +34,12 @@ namespace Oci.DataconnectivityService.Models
         };
 
         
+        /// <value>
+        /// this map is used for passing BIP report/REST parameter values.
+        /// </value>
+        [JsonProperty(PropertyName = "derivedAttributes")]
+        public System.Collections.Generic.Dictionary<string, string> DerivedAttributes { get; set; }
+        
     }
 
     public class AbstractDataOperationConfigModelConverter : JsonConverter

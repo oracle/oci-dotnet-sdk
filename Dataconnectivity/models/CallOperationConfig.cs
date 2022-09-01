@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Holder for parameters names.
+    /// Holder for parameter names.
     /// </summary>
     public class CallOperationConfig 
     {
         
         /// <value>
-        /// List of names of IN/INOUT parameters.
+        /// The list of names of the IN/INOUT parameters.
         /// </value>
         [JsonProperty(PropertyName = "inFields")]
         public System.Collections.Generic.List<string> InFields { get; set; }
         
         /// <value>
-        /// List of names of OUT/INOUT parameters.
+        /// The list of names of the OUT/INOUT parameters.
         /// </value>
         [JsonProperty(PropertyName = "outFields")]
         public System.Collections.Generic.List<string> OutFields { get; set; }
@@ -37,7 +37,7 @@ namespace Oci.DataconnectivityService.Models
         public AbstractCallAttribute CallAttribute { get; set; }
         
         /// <value>
-        /// List of push down operations.
+        /// The List of push down operations.
         /// </value>
         [JsonProperty(PropertyName = "pushDownOperations")]
         public System.Collections.Generic.List<PushDownOperation> PushDownOperations { get; set; }

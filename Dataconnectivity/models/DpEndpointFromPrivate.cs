@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The endpoint details for a private endpoint.
+    /// The endpoint details of a private endpoint.
     /// </summary>
     public class DpEndpointFromPrivate : DpEndpoint
     {
@@ -32,31 +32,31 @@ namespace Oci.DataconnectivityService.Models
         public string DcmsEndpointId { get; set; }
         
         /// <value>
-        /// The ocid of private endpoint resource.
+        /// The OCID of the private endpoint resource.
         /// </value>
         [JsonProperty(PropertyName = "peId")]
         public string PeId { get; set; }
         
         /// <value>
-        /// The compartmentId of private endpoint resource.
+        /// The compartmentId of the private endpoint resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The IP address of dns proxy.
+        /// The IP address of the DNS proxy.
         /// </value>
         [JsonProperty(PropertyName = "dnsProxyIp")]
         public string DnsProxyIp { get; set; }
         
         /// <value>
-        /// The ocid of private endpoint resource.
+        /// The OCID of the private endpoint resource.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointIp")]
         public string PrivateEndpointIp { get; set; }
         
         /// <value>
-        /// Array of dns zones to be use during private endpoint resolution.
+        /// Array of DNS zones to be used during the private endpoint resolution.
         /// </value>
         [JsonProperty(PropertyName = "dnsZones")]
         public System.Collections.Generic.List<string> DnsZones { get; set; }

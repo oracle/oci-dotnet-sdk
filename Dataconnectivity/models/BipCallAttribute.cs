@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The call attributes impl
+    /// The call attributes impl.
     /// </summary>
     public class BipCallAttribute : AbstractCallAttribute
     {
@@ -25,13 +25,13 @@ namespace Oci.DataconnectivityService.Models
         public Schema StagingBucket { get; set; }
         
         /// <value>
-        /// Parameter to set offset
+        /// The parameter to set offset.
         /// </value>
         [JsonProperty(PropertyName = "offsetParameter")]
         public string OffsetParameter { get; set; }
         
         /// <value>
-        /// Parameter to fetch next set of rows
+        /// The parameter to fetch the next set of rows.
         /// </value>
         [JsonProperty(PropertyName = "fetchNextRowsParameter")]
         public string FetchNextRowsParameter { get; set; }
@@ -43,7 +43,7 @@ namespace Oci.DataconnectivityService.Models
         public Connection StagingConnection { get; set; }
         
         /// <value>
-        /// Prefix for the staging DataAsset
+        /// The prefix for the staging DataAsset.
         /// </value>
         [JsonProperty(PropertyName = "stagingPrefix")]
         public string StagingPrefix { get; set; }

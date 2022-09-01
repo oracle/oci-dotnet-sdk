@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// A summary of profiling results of a specefic attribute.
+    /// A summary of profiling results of a specific attribute.
     /// </summary>
     public class NumericAttribute : AttributeProfileResult
     {

@@ -68,7 +68,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// The Endpoint will be moved to the desired compartment.
+        /// The endpoint will be moved to the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -125,7 +125,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// The registry will be moved to the desired compartment.
+        /// The registry will be moved to the specified compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -182,7 +182,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Attaches list of DataAssets to the given endpoint
+        /// Attaches a list of data assets to the given endpoint.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -462,7 +462,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Provide data preview on live schema
+        /// Provide data preview on live schema.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -518,7 +518,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Execute data profiling on live schema
+        /// Execute data profiling on live schema.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -574,7 +574,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// DeRereferenced a dcms artifact.
+        /// Dereferenced a dcms artifact.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -630,7 +630,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Detaches list of DataAssets to the given endpoint
+        /// Detaches a list of data assets to the given endpoint.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -686,7 +686,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Creates a new Data Connectivity Management Endpoint ready for performing data Connectivity.
+        /// Creates a new Data Connectivity Management endpoint ready to perform data connectivity.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -855,7 +855,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Creates a folder under a specefied registry.
+        /// Creates a folder under a specified registry.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -911,7 +911,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// This endpoint is used to create a connectivity task (like PushdownTask).
+        /// This endpoint is used to create a connectivity task (such as PushdownTask).
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1023,7 +1023,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Creates a new Data Connectivity Management Registry ready for performing data Connectivity Management.
+        /// Creates a new Data Connectivity Management registry ready to perform data connectivity management.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1080,7 +1080,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Execute network validation on selected data assets associated with the provided private endpoint
+        /// Execute network validation on the selected data assets associated with the provided private endpoint.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1192,62 +1192,6 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Deletes a connection validation.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataconnectivity/DeleteConnectionValidation.cs.html">here</a> to see an example of how to use DeleteConnectionValidation API.</example>
-        public async Task<DeleteConnectionValidationResponse> DeleteConnectionValidation(DeleteConnectionValidationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called deleteConnectionValidation");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/registries/{registryId}/connectionValidations/{connectionValidationKey}".Trim('/')));
-            HttpMethod method = new HttpMethod("DELETE");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "DataConnectivityManagement",
-                    OperationName = "DeleteConnectionValidation",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<DeleteConnectionValidationResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"DeleteConnectionValidation failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
         /// Removes a data asset using the specified identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1304,7 +1248,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Deletes a Data Connectivity Management Endpoint resource by identifier
+        /// Deletes a Data Connectivity Management endpoint resource by its identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1472,7 +1416,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Deletes a Data Connectivity Management Registry resource by identifier
+        /// Deletes a Data Connectivity Management registry resource by its identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1523,6 +1467,62 @@ namespace Oci.DataconnectivityService
             catch (Exception e)
             {
                 logger.Error($"DeleteRegistry failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Get the Derived Entities from the EntityFlowMode and reference key of DataObject
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataconnectivity/DeriveEntities.cs.html">here</a> to see an example of how to use DeriveEntities API.</example>
+        public async Task<DeriveEntitiesResponse> DeriveEntities(DeriveEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called deriveEntities");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/registries/{registryId}/actions/deriveEntities".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataConnectivityManagement",
+                    OperationName = "DeriveEntities",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<DeriveEntitiesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeriveEntities failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1579,62 +1579,6 @@ namespace Oci.DataconnectivityService
             catch (Exception e)
             {
                 logger.Error($"GetConnection failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Retrieves a connection validation using the specified identifier.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataconnectivity/GetConnectionValidation.cs.html">here</a> to see an example of how to use GetConnectionValidation API.</example>
-        public async Task<GetConnectionValidationResponse> GetConnectionValidation(GetConnectionValidationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called getConnectionValidation");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/registries/{registryId}/connectionValidations/{connectionValidationKey}".Trim('/')));
-            HttpMethod method = new HttpMethod("GET");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "DataConnectivityManagement",
-                    OperationName = "GetConnectionValidation",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<GetConnectionValidationResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"GetConnectionValidation failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1752,7 +1696,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Gets a Data Connectivity Management Endpoint by identifier
+        /// Gets a Data Connectivity Management endpoint by its identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1808,7 +1752,63 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Get the operation status or operation execution result
+        /// This endpoint is used to fetch connector-specific engine configurations.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataconnectivity/GetEngineConfigurations.cs.html">here</a> to see an example of how to use GetEngineConfigurations API.</example>
+        public async Task<GetEngineConfigurationsResponse> GetEngineConfigurations(GetEngineConfigurationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getEngineConfigurations");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/registries/{registryId}/connections/{connectionKey}/engineConfigurations".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataConnectivityManagement",
+                    OperationName = "GetEngineConfigurations",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetEngineConfigurationsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetEngineConfigurations failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Get the status or the result of the execution.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1920,7 +1920,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Get Status of network reachability check, with the timestamp when the status was last checked, for a given PrivateEndpoint-DataAsset pair
+        /// Get the status of network reachability check, with the timestamp of when the status was last checked, for a given PrivateEndpoint-DataAsset pair.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1976,7 +1976,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Retrieves the details of operation with given resource name.
+        /// Retrieves the details of operation with the given resource name.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2032,7 +2032,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Gets a Data Connectivity Management Registry by identifier
+        /// Retrieves a Data Connectivity Management registry using the specified identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2144,7 +2144,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// This endpoint retrieves dataAsset and connection attributes from DataAssetRegistry
+        /// This endpoint retrieves dataAsset and connection attributes from DataAssetRegistry.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2252,62 +2252,6 @@ namespace Oci.DataconnectivityService
             catch (Exception e)
             {
                 logger.Error($"GetWorkRequest failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Retrieves a list of connection validations within the specified registry.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dataconnectivity/ListConnectionValidations.cs.html">here</a> to see an example of how to use ListConnectionValidations API.</example>
-        public async Task<ListConnectionValidationsResponse> ListConnectionValidations(ListConnectionValidationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called listConnectionValidations");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/registries/{registryId}/connectionValidations".Trim('/')));
-            HttpMethod method = new HttpMethod("GET");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "DataConnectivityManagement",
-                    OperationName = "ListConnectionValidations",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<ListConnectionValidationsResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"ListConnectionValidations failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2483,7 +2427,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Returns a list of Data Connectivity Management Endpoints.
+        /// Returns a list of Data Connectivity Management endpoints.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2540,7 +2484,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Retrieves a list of all folders.
+        /// Retrieves a list of all the folders.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2596,7 +2540,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Lists the summary of operations present in the schema identified by schema name.
+        /// Lists the summary of operations that are present in the schema, identified by the schema name.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2710,7 +2654,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Returns a list of Data Connectivity Management Registries.
+        /// Retrieves a list of Data Connectivity Management registries.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2823,7 +2767,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// This endpoint retrieves list of all the supported connector types
+        /// This endpoint retrieves a list of all the supported connector types.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2880,7 +2824,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Return a (paginated) list of errors for a given work request.
+        /// Returns a (paginated) list of errors for a given work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2937,7 +2881,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Return a (paginated) list of logs for a given work request.
+        /// Returns a (paginated) list of logs for a given work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3163,7 +3107,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Updates the Data Connectivity Management Endpoint
+        /// Updates the Data Connectivity Management endpoint.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3219,7 +3163,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Updates a folder under a specefied registry.
+        /// Updates a folder under a specified registry.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3275,7 +3219,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Updates the Data Connectivity Management Registry
+        /// Updates the Data Connectivity Management Registry.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3331,7 +3275,7 @@ namespace Oci.DataconnectivityService
         }
 
         /// <summary>
-        /// Validates the dataAsset network Reachability.
+        /// Validates the dataAsset network reachability.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

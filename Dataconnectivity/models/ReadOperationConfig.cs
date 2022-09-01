@@ -28,7 +28,7 @@ namespace Oci.DataconnectivityService.Models
         public string Key { get; set; }
         
         /// <value>
-        /// The object's model version.
+        /// The model version of the object.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
@@ -58,7 +58,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
         
         /// <value>
-        /// Specifies if this readOperationConfig operation should trigger raw data preview flow.
+        /// Specifies if the readOperationConfig operation should trigger a raw data preview flow.
         /// </value>
         [JsonProperty(PropertyName = "readRawData")]
         public System.Nullable<bool> ReadRawData { get; set; }

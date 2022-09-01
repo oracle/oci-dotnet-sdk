@@ -28,7 +28,7 @@ namespace Oci.DataconnectivityService.Models
         public string AggregatorKey { get; set; }
         
         /// <value>
-        /// Labels are keywords or labels that you can add to data assets, dataflows etc. You can define your own labels and use them to categorize content.
+        /// Labels are keywords or labels that you can add to data assets, dataflows, and so on. You can define your own labels and use them to categorize content.
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
@@ -46,13 +46,13 @@ namespace Oci.DataconnectivityService.Models
         public string Key { get; set; }
         
         /// <value>
-        /// Specifies whether this object is a favorite or not.
+        /// Specifies whether the object is a favorite.
         /// </value>
         [JsonProperty(PropertyName = "isFavorite")]
         public System.Nullable<bool> IsFavorite { get; set; }
         
         /// <value>
-        /// The id of the user who created the object.
+        /// The ID of the user who created the object.
         /// </value>
         [JsonProperty(PropertyName = "createdByUserId")]
         public string CreatedByUserId { get; set; }
@@ -64,7 +64,7 @@ namespace Oci.DataconnectivityService.Models
         public string CreatedByUserName { get; set; }
         
         /// <value>
-        /// The id of the user who updated the object.
+        /// The ID of the user who updated the object.
         /// </value>
         [JsonProperty(PropertyName = "updatedByUserId")]
         public string UpdatedByUserId { get; set; }

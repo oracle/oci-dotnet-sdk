@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
                 ///
         /// <value>
-        /// Status of the operation job for particular set of input.
+        /// Status of the operation job for a particular set of input.
         /// </value>
         ///
         public enum ExecutionStatusEnum {
@@ -40,14 +40,14 @@ namespace Oci.DataconnectivityService.Models
         };
 
         /// <value>
-        /// Status of the operation job for particular set of input.
+        /// Status of the operation job for a particular set of input.
         /// </value>
         [JsonProperty(PropertyName = "executionStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ExecutionStatusEnum> ExecutionStatus { get; set; }
         
         /// <value>
-        /// Error message if execution of operation is failed.
+        /// Error message when the execution of operation fails.
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
@@ -59,13 +59,13 @@ namespace Oci.DataconnectivityService.Models
         public System.Object Metrics { get; set; }
         
         /// <value>
-        /// List of emitted rows for each OUT/INOUT param.
+        /// The list of emitted rows for each OUT/INOUT parameter.
         /// </value>
         [JsonProperty(PropertyName = "outputValues")]
         public System.Collections.Generic.List<System.Collections.Generic.List<System.Object>> OutputValues { get; set; }
         
         /// <value>
-        /// True, if error message should be displayed on UI.
+        /// True, if the error message must be displayed in the UI.
         /// </value>
         [JsonProperty(PropertyName = "isWhitelistedErrorMessage")]
         public System.Nullable<bool> IsWhitelistedErrorMessage { get; set; }

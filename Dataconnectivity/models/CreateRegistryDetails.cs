@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The information about new Registry.
+    /// The information about a new Registry.
     /// </summary>
     public class CreateRegistryDetails 
     {
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Simple key-value pair that is applied without any predefined name, type, or scope. Exists only for cross-compatibility.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -42,7 +42,7 @@ namespace Oci.DataconnectivityService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Data Connectivity Management Registry display name, registries can be renamed
+        /// The Data Connectivity Management Registry display name; registries can be renamed.
         /// </value>
         /// <remarks>
         /// Required

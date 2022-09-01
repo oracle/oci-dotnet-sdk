@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Validation Result object for a single DataAsset.
+    /// Validation result object for a single data asset.
     /// </summary>
     public class ValidationResult 
     {
         
         /// <value>
-        /// Error text for validation failure
+        /// Error text for validation failure.
         /// </value>
         [JsonProperty(PropertyName = "errorMsg")]
         public string ErrorMsg { get; set; }
                 ///
         /// <value>
-        /// Status of the validatio result execution
+        /// Status of the validation result execution.
         /// </value>
         ///
         public enum StatusEnum {
@@ -42,7 +42,7 @@ namespace Oci.DataconnectivityService.Models
         };
 
         /// <value>
-        /// Status of the validatio result execution
+        /// Status of the validation result execution.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

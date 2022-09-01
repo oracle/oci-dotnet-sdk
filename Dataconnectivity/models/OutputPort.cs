@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
                 ///
         /// <value>
-        /// The port details for the data asset.Type.
+        /// The port details of the data asset type.
         /// </value>
         ///
         public enum PortTypeEnum {
@@ -35,7 +35,7 @@ namespace Oci.DataconnectivityService.Models
         };
 
         /// <value>
-        /// The port details for the data asset.Type.
+        /// The port details of the data asset type.
         /// </value>
         [JsonProperty(PropertyName = "portType")]
         [JsonConverter(typeof(StringEnumConverter))]

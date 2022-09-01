@@ -36,7 +36,11 @@ namespace Oci.DataconnectivityService.Models
             [EnumMember(Value = "DATA_STORE_ENTITY")]
             DataStoreEntity,
             [EnumMember(Value = "SQL_ENTITY")]
-            SqlEntity
+            SqlEntity,
+            [EnumMember(Value = "DERIVED_ENTITY")]
+            DerivedEntity,
+            [EnumMember(Value = "MESSAGE_ENTITY")]
+            MessageEntity
         };
 
         

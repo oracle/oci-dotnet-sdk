@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// Array of column names to profile. If empty all columns in the entity are profiled.
+        /// Array of column names to profile. If empty, all the columns in the entity are profiled.
         /// </value>
         [JsonProperty(PropertyName = "attributes")]
         public System.Collections.Generic.List<string> Attributes { get; set; }
@@ -72,25 +72,25 @@ namespace Oci.DataconnectivityService.Models
         };
 
         /// <value>
-        /// Array of enum Strings basically what all profile functions to run. If empty, all supported functions are run.
+        /// Array of enum strings to decide which profile functions to run. If empty, all the supported functions are run.
         /// </value>
         [JsonProperty(PropertyName = "functions", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<FunctionsEnum> Functions { get; set; }
         
         /// <value>
-        /// The maximum number of value frequencies to return per column. The VFs are sorted descending on frequency and ascending on value and then topN are returned and rest discarded.
+        /// The maximum number of value frequencies to return per column. The VFs are sorted descending on frequency, and ascending on value, and then topN are returned and rest discarded.
         /// </value>
         [JsonProperty(PropertyName = "topNValFreq")]
         public System.Nullable<int> TopNValFreq { get; set; }
         
         /// <value>
-        /// A pattern has to qualify minumum this percentage threshold to be considered a legitimate pattern on its own. All patterns which does not qualify this will be clubbed together into a single 'Others' pattern.
+        /// A pattern has to qualify at least this percentage threshold to be considered a pattern on its own. Patterns that do not qualify are clubbed together into 'Others' pattern.
         /// </value>
         [JsonProperty(PropertyName = "patternThreshold")]
         public System.Nullable<int> PatternThreshold { get; set; }
         
         /// <value>
-        /// A data type has to qualify minimum this percentage threshold to be considered an infrred data type for a column.
+        /// A data type has to qualify at least this percentage threshold to be considered an inferred data type for a column.
         /// </value>
         [JsonProperty(PropertyName = "dataTypeThreshold")]
         public System.Nullable<int> DataTypeThreshold { get; set; }

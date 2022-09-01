@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Holder for IN/INOUT params' values.
+    /// Holder for IN/INOUT parameter values.
     /// </summary>
     public class OperationInputRecord 
     {
         
         /// <value>
-        /// values of IN/INOUT params.
+        /// Values of IN/INOUT parameter.
         /// </value>
         [JsonProperty(PropertyName = "fieldValues")]
         public System.Collections.Generic.List<System.Object> FieldValues { get; set; }

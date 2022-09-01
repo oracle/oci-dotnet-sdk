@@ -21,6 +21,7 @@ namespace Oci.Common.Utils
         public static readonly string AUTH_TYPE_IDENTIFIER = "authentication_type";
         public static readonly string AUTH_TYPE_INSTANCE_PRINCIPAL = "instance_principal";
         public static readonly string REGION_ENV_VAR_NAME = "OCI_REGION";
+        public static readonly string SESSION_TOKEN_FILE = "security_token_file";
 
         /// <summary>
         /// Sets the out variable with the, region id available in the config file. Otherwise,

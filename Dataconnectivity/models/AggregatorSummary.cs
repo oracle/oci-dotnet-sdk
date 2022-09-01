@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// A summary type containing information about the object's aggregator including its type, key, name and description.
+    /// A summary type containing information about the object's aggregator including its type, key, name, and description.
     /// </summary>
     public class AggregatorSummary 
     {

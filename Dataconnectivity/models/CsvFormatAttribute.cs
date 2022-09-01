@@ -63,6 +63,24 @@ namespace Oci.DataconnectivityService.Models
         [JsonProperty(PropertyName = "timestampFormat")]
         public string TimestampFormat { get; set; }
         
+        /// <value>
+        /// Defines whether the quote entire content while performing read/write.
+        /// </value>
+        [JsonProperty(PropertyName = "isQuoteAll")]
+        public System.Nullable<bool> IsQuoteAll { get; set; }
+        
+        /// <value>
+        /// Defines whether the file has a multiline content
+        /// </value>
+        [JsonProperty(PropertyName = "isMultiline")]
+        public System.Nullable<bool> IsMultiline { get; set; }
+        
+        /// <value>
+        /// Defines whether the file has a trailing delimiter
+        /// </value>
+        [JsonProperty(PropertyName = "isTrailingDelimiter")]
+        public System.Nullable<bool> IsTrailingDelimiter { get; set; }
+        
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "CSV_FORMAT";
     }

@@ -30,7 +30,7 @@ namespace Oci.DataconnectivityService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// DCMS registry id
+        /// DCMS registry ID
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "registryId")]
         public string RegistryId { get; set; }
@@ -53,11 +53,39 @@ namespace Oci.DataconnectivityService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
         
+        ///
+        /// <value>
+        /// Lifecycle state of the resource.
+        /// </value>
+        ///
+        public enum LifecycleStateEnum {
+            [EnumMember(Value = "CREATING")]
+            Creating,
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
+            [EnumMember(Value = "DELETING")]
+            Deleting,
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            [EnumMember(Value = "STARTING")]
+            Starting,
+            [EnumMember(Value = "STOPPING")]
+            Stopping,
+            [EnumMember(Value = "STOPPED")]
+            Stopped
+        };
+
         /// <value>
         /// Lifecycle state of the resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
-        public System.Nullable<Registry.LifecycleStateEnum> LifecycleState { get; set; }
+        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         ///
         /// <value>
@@ -79,7 +107,7 @@ namespace Oci.DataconnectivityService.Requests
         
         ///
         /// <value>
-        /// This parameter allows users to specify a sort field.  Default sort order is the descending order of `timeCreated` (most recently created objects at the top).  Sorting related parameters are ignored when parameter `query` is present (search operation and sorting order is by relevance score in descending order).
+        /// This parameter allows users to specify a sort field. Default sort order is the descending order of `timeCreated` (most recently created objects at the top). Sorting related parameters are ignored when parameter `query` is present (search operation and sorting order is by relevance score in descending order).
         /// </value>
         ///
         public enum SortByEnum {
@@ -92,7 +120,7 @@ namespace Oci.DataconnectivityService.Requests
         };
 
         /// <value>
-        /// This parameter allows users to specify a sort field.  Default sort order is the descending order of `timeCreated` (most recently created objects at the top).  Sorting related parameters are ignored when parameter `query` is present (search operation and sorting order is by relevance score in descending order).
+        /// This parameter allows users to specify a sort field. Default sort order is the descending order of `timeCreated` (most recently created objects at the top). Sorting related parameters are ignored when parameter `query` is present (search operation and sorting order is by relevance score in descending order).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

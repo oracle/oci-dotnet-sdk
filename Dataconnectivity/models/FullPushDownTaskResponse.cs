@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The full pushdown task
+    /// The full pushdown task.
     /// </summary>
     public class FullPushDownTaskResponse 
     {
         
         /// <value>
-        /// The type of of FullPushDownTask Response.
+        /// The type of of FullPushDownTask response.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DataconnectivityService.Models
         public string ModelType { get; set; }
         
         /// <value>
-        /// The error message in response object.
+        /// The error message in the response object.
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
