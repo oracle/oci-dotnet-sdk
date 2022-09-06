@@ -48,16 +48,44 @@ namespace Oci.DataconnectivityService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// This parameter allows list registries to deep look at whole tenancy.
+        /// This parameter allows list registries to deep look at the whole tenancy.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDeepLookup")]
         public System.Nullable<bool> IsDeepLookup { get; set; }
         
+        ///
+        /// <value>
+        /// Lifecycle state of the resource.
+        /// </value>
+        ///
+        public enum LifecycleStateEnum {
+            [EnumMember(Value = "CREATING")]
+            Creating,
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
+            [EnumMember(Value = "DELETING")]
+            Deleting,
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            [EnumMember(Value = "STARTING")]
+            Starting,
+            [EnumMember(Value = "STOPPING")]
+            Stopping,
+            [EnumMember(Value = "STOPPED")]
+            Stopped
+        };
+
         /// <value>
         /// Lifecycle state of the resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
-        public System.Nullable<Registry.LifecycleStateEnum> LifecycleState { get; set; }
+        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If

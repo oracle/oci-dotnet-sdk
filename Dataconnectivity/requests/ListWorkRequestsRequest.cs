@@ -39,14 +39,14 @@ namespace Oci.DataconnectivityService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// DCMS registry or endpoint id
+        /// DCMS registry ID
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
-        public string ResourceId { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "registryId")]
+        public string RegistryId { get; set; }
         
         ///
         /// <value>
-        /// Work Request status.
+        /// Work request status.
         /// </value>
         ///
         public enum WorkRequestStatusEnum {
@@ -65,7 +65,7 @@ namespace Oci.DataconnectivityService.Requests
         };
 
         /// <value>
-        /// Work Request status.
+        /// Work request status.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "workRequestStatus")]
         public System.Nullable<WorkRequestStatusEnum> WorkRequestStatus { get; set; }

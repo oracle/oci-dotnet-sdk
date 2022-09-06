@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// Job id to track job status.
+        /// Job ID to track the job status.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DataconnectivityService.Models
         public string ExecuteOperationJobId { get; set; }
                 ///
         /// <value>
-        /// The status of job
+        /// The status of the job.
         /// </value>
         ///
         public enum StatusEnum {
@@ -46,7 +46,7 @@ namespace Oci.DataconnectivityService.Models
         };
 
         /// <value>
-        /// The status of job
+        /// The status of the job.
         /// </value>
         /// <remarks>
         /// Required
@@ -57,7 +57,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// Error message if job creation is failed.
+        /// Error message when the job creation fails.
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }

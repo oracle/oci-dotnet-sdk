@@ -16,19 +16,21 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The call attributes
+    /// The call attributes.
     /// </summary>
     [JsonConverter(typeof(AbstractCallAttributeModelConverter))]
     public class AbstractCallAttribute 
     {
                 ///
         /// <value>
-        /// The operation type
+        /// The operation type.
         /// </value>
         ///
         public enum ModelTypeEnum {
             [EnumMember(Value = "BIPCALLATTRIBUTE")]
-            Bipcallattribute
+            Bipcallattribute,
+            [EnumMember(Value = "GENERIC_REST_CALL_ATTRIBUTE")]
+            GenericRestCallAttribute
         };
 
         
@@ -56,6 +58,9 @@ namespace Oci.DataconnectivityService.Models
             {
                 case "BIPCALLATTRIBUTE":
                     obj = new BipCallAttribute();
+                    break;
+                case "GENERIC_REST_CALL_ATTRIBUTE":
+                    obj = new GenericRestCallAttribute();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

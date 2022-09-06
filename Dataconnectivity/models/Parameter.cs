@@ -31,19 +31,19 @@ namespace Oci.DataconnectivityService.Models
         public System.Object DefaultValue { get; set; }
         
         /// <value>
-        /// The default value of the parameter which can be an object in DIS, such as a data entity.
+        /// The default value of the parameter, which can be an object in DIS, such as a data entity.
         /// </value>
         [JsonProperty(PropertyName = "rootObjectDefaultValue")]
         public System.Object RootObjectDefaultValue { get; set; }
         
         /// <value>
-        /// Specifies whether the parameter is input value.
+        /// Specifies whether the parameter is an input value.
         /// </value>
         [JsonProperty(PropertyName = "isInput")]
         public System.Nullable<bool> IsInput { get; set; }
         
         /// <value>
-        /// Specifies whether the parameter is output value.
+        /// Specifies whether the parameter is an output value.
         /// </value>
         [JsonProperty(PropertyName = "isOutput")]
         public System.Nullable<bool> IsOutput { get; set; }

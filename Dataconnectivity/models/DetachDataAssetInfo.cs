@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// Map of DataAsset name as key and results as value
+        /// Mapping the DataAsset name as the key to the results as the value.
         /// </value>
         /// <remarks>
         /// Required

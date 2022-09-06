@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// This is the collection of Reference details summaries, it may be a collection of lightweight details or full definitions.
+    /// This is the collection of reference details summaries; it can be a collection of lightweight details or full definitions.
     /// </summary>
     public class ReferenceArtifactSummaryCollection 
     {

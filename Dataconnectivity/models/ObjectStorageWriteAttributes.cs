@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// Specifies whether to write output to single-file or not.
+        /// Specifies whether to write the output to a single file.
         /// </value>
         [JsonProperty(PropertyName = "writeToSingleFile")]
         public System.Nullable<bool> WriteToSingleFile { get; set; }

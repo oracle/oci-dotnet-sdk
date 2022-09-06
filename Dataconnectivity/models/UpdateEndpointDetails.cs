@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Simple key-value pair that is applied without any predefined name, type, or scope. Exists only for cross-compatibility.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -42,22 +42,29 @@ namespace Oci.DataconnectivityService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Data Connectivity Management Registry display name, registries can be renamed
+        /// The Data Connectivity Management registry display name; registries can be renamed.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Update Endpoint size for reverse connection capacity.
+        /// Update endpoint size for reverse connection capacity.
         /// </value>
         [JsonProperty(PropertyName = "endpointSize")]
         public System.Nullable<int> EndpointSize { get; set; }
         
         /// <value>
-        /// List of NSGs to which the Private Endpoint VNIC must be added.
+        /// The list of NSGs to which the Private Endpoint VNIC must be added.
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
+        /// <value>
+        /// List of DNS zones to be used by the data assets.
+        /// Example: custpvtsubnet.oraclevcn.com for data asset: db.custpvtsubnet.oraclevcn.com
+        /// </value>
+        [JsonProperty(PropertyName = "dnsZones")]
+        public System.Collections.Generic.List<string> DnsZones { get; set; }
         
     }
 }

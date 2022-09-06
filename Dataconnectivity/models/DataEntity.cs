@@ -21,6 +21,12 @@ namespace Oci.DataconnectivityService.Models
     [JsonConverter(typeof(DataEntityModelConverter))]
     public class DataEntity 
     {
+        
+        /// <value>
+        /// Map<String, String> for entity properties
+        /// </value>
+        [JsonProperty(PropertyName = "entityProperties")]
+        public System.Collections.Generic.Dictionary<string, string> EntityProperties { get; set; }
                 ///
         /// <value>
         /// The data entity type.
@@ -36,7 +42,11 @@ namespace Oci.DataconnectivityService.Models
             [EnumMember(Value = "DATA_STORE_ENTITY")]
             DataStoreEntity,
             [EnumMember(Value = "SQL_ENTITY")]
-            SqlEntity
+            SqlEntity,
+            [EnumMember(Value = "DERIVED_ENTITY")]
+            DerivedEntity,
+            [EnumMember(Value = "MESSAGE_ENTITY")]
+            MessageEntity
         };
 
         
@@ -80,6 +90,9 @@ namespace Oci.DataconnectivityService.Models
                     break;
                 case "FILE_ENTITY":
                     obj = new DataEntityFromFile();
+                    break;
+                case "DERIVED_ENTITY":
+                    obj = new DerivedEntity();
                     break;
             }
             if (obj != null)

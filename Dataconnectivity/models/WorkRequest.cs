@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// A description of workrequest status
+    /// A description of the status of the work request.
     /// </summary>
     public class WorkRequest 
     {
                 ///
         /// <value>
-        /// type of the work request
+        /// Type of the work request.
         /// </value>
         ///
         public enum OperationTypeEnum {
@@ -40,7 +40,7 @@ namespace Oci.DataconnectivityService.Models
         };
 
         /// <value>
-        /// type of the work request
+        /// Type of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -51,7 +51,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
                 ///
         /// <value>
-        /// status of current work request.
+        /// Status of the current work request.
         /// </value>
         ///
         public enum StatusEnum {
@@ -73,7 +73,7 @@ namespace Oci.DataconnectivityService.Models
         };
 
         /// <value>
-        /// status of current work request.
+        /// Status of the current work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -84,7 +84,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// The id of the work request.
+        /// The ID of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -94,10 +94,10 @@ namespace Oci.DataconnectivityService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that contains the work request. Work requests should be scoped to
+        /// The OCID of the compartment that contains the work request. Work requests should be scoped to
         /// the same compartment as the resource the work request affects. If the work request affects multiple resources,
         /// and those resources are not in the same compartment, it is up to the service team to pick the primary
-        /// resource whose compartment should be used
+        /// resource whose compartment should be used.
         /// 
         /// </value>
         /// <remarks>
@@ -118,7 +118,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
         
         /// <value>
-        /// Percentage of the request completed.
+        /// The percentage of the request completed.
         /// </value>
         /// <remarks>
         /// Required

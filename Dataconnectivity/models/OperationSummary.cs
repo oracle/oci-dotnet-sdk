@@ -16,19 +16,21 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The operation summary object
+    /// The operation summary object.
     /// </summary>
     [JsonConverter(typeof(OperationSummaryModelConverter))]
     public class OperationSummary 
     {
                 ///
         /// <value>
-        /// The operation type
+        /// The operation type.
         /// </value>
         ///
         public enum ModelTypeEnum {
             [EnumMember(Value = "PROCEDURE")]
-            Procedure
+            Procedure,
+            [EnumMember(Value = "API")]
+            Api
         };
 
         
@@ -60,6 +62,9 @@ namespace Oci.DataconnectivityService.Models
             {
                 case "PROCEDURE":
                     obj = new OperationSummaryFromProcedure();
+                    break;
+                case "API":
+                    obj = new OperationSummaryFromApi();
                     break;
             }
             if (obj != null)

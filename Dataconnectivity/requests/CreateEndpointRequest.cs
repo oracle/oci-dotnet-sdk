@@ -20,7 +20,7 @@ namespace Oci.DataconnectivityService.Requests
     {
         
         /// <value>
-        /// Details for the new Data Connectivity Management Endpoint.
+        /// Details of the new Data Connectivity Management endpoint.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,17 +30,17 @@ namespace Oci.DataconnectivityService.Requests
         public CreateEndpointDetails CreateEndpointDetails { get; set; }
         
         /// <value>
-        /// DCMS registry id
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "registryId")]
-        public string RegistryId { get; set; }
-        
-        /// <value>
-        /// A token that uniquely identifies a request so it can be retried in case of a timeout or server error without risk of executing that same action again.
+        /// A token that uniquely identifies a request so it can be retried in case of a timeout or server error without the risk of executing that same action again.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
+        
+        /// <value>
+        /// DCMS registry ID
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "registryId")]
+        public string RegistryId { get; set; }
         
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If

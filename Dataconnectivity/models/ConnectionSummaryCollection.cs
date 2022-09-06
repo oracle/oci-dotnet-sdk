@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// This is the collection of connection summaries, it may be a collection of lightweight details or full definitions.
+    /// This is the collection of connection summaries; it can be a collection of lightweight details or full definitions.
     /// </summary>
     public class ConnectionSummaryCollection 
     {

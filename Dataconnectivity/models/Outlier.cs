@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// To capture all the Outlier details related to profiling
+    /// To capture all the Outlier details related to profiling.
     /// </summary>
     public class Outlier 
     {

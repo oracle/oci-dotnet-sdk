@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// A `ConfiguredType` represents a type that has built-in configuration to the type itself. An example is a `SSN` type whose basic type is `VARCHAR`, but the type itself also has a built-in configuration like length=10.
+    /// A `ConfiguredType` represents a type that has built-in configuration to the type itself. An example is an `SSN` type whose basic type is `VARCHAR`, but the type itself also has a built-in configuration, such as length=10.
     /// </summary>
     public class ConfiguredType : BaseType
     {

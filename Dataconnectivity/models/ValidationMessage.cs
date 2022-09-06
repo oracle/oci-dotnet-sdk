@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// level of validation messages
+        /// The level of validation messages.
         /// </value>
         [JsonProperty(PropertyName = "level")]
         public string Level { get; set; }

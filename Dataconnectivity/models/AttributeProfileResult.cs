@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// A summary of profiling results of a specefic attribute.
+    /// A summary of profiling results of a specific attribute.
     /// </summary>
     [JsonConverter(typeof(AttributeProfileResultModelConverter))]
     public class AttributeProfileResult 
@@ -24,7 +24,7 @@ namespace Oci.DataconnectivityService.Models
         
         
         /// <value>
-        /// Name of attribute
+        /// Name of the attribute
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -48,7 +48,7 @@ namespace Oci.DataconnectivityService.Models
         public ProfileStat DuplicateCount { get; set; }
         
         /// <value>
-        /// Top N value frequencies for the column as described already in profile config topNValueFrequency property.
+        /// Top N value frequencies for the column as described already in the topNValueFrequency profile config property.
         /// </value>
         [JsonProperty(PropertyName = "valueFrequencies")]
         public System.Collections.Generic.List<ObjectFreqStat> ValueFrequencies { get; set; }

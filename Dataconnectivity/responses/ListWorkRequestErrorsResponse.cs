@@ -16,22 +16,20 @@ namespace Oci.DataconnectivityService.Responses
     {
 
         /// <value>
-        /// For pagination of a list of items. When paging through a list, if this header appears in the response,
-        /// then there might be additional items still to get. Include this value as the `page` parameter for the
-        /// subsequent GET request.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]
-        public string OpcNextPage { get; set; }
-
-
-        /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a
-        /// particular request, please provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact
+        /// Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+
+
+        /// <value>
+        /// Retrieves the next page of results. When this header appears in the response, additional pages of results remain. See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]
+        public string OpcNextPage { get; set; }
 
         /// <value>
         /// The returned WorkRequestErrorCollection instance.

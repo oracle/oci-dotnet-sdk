@@ -49,7 +49,7 @@ namespace Oci.DataconnectivityService.Models
         public ExternalStorage ExternalStorage { get; set; }
         
         /// <value>
-        /// Date from where extract should start
+        /// Date from where extract should start.
         /// </value>
         [JsonProperty(PropertyName = "initialExtractDate")]
         public System.Nullable<System.DateTime> InitialExtractDate { get; set; }

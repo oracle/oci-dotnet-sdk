@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
                 ///
         /// <value>
-        /// The setting for how to handle extra columns/fields.  NULL_FILLUP means that nulls will be loaded into the target for extra columns.
+        /// The setting to handle extra columns/fields.  NULL_FILLUP means that nulls will be loaded into the target for extra columns.
         /// </value>
         ///
         public enum ExtraColumnHandlingEnum {
@@ -35,14 +35,14 @@ namespace Oci.DataconnectivityService.Models
         };
 
         /// <value>
-        /// The setting for how to handle extra columns/fields.  NULL_FILLUP means that nulls will be loaded into the target for extra columns.
+        /// The setting to handle extra columns/fields.  NULL_FILLUP means that nulls will be loaded into the target for extra columns.
         /// </value>
         [JsonProperty(PropertyName = "extraColumnHandling")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ExtraColumnHandlingEnum> ExtraColumnHandling { get; set; }
                 ///
         /// <value>
-        /// The setting for how to handle missing columns/fields.  NULL_SELECT means that null values will be selected from the source for missing columns.
+        /// The setting to handle missing columns/fields.  NULL_SELECT means that null values will be selected from the source for missing columns.
         /// </value>
         ///
         public enum MissingColumnHandlingEnum {
@@ -55,14 +55,14 @@ namespace Oci.DataconnectivityService.Models
         };
 
         /// <value>
-        /// The setting for how to handle missing columns/fields.  NULL_SELECT means that null values will be selected from the source for missing columns.
+        /// The setting to handle missing columns/fields.  NULL_SELECT means that null values will be selected from the source for missing columns.
         /// </value>
         [JsonProperty(PropertyName = "missingColumnHandling")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MissingColumnHandlingEnum> MissingColumnHandling { get; set; }
                 ///
         /// <value>
-        /// The setting for how to handle columns/fields with changed data types.
+        /// The setting to handle columns/fields with changed data types.
         /// </value>
         ///
         public enum DataTypeChangeHandlingEnum {
@@ -75,7 +75,7 @@ namespace Oci.DataconnectivityService.Models
         };
 
         /// <value>
-        /// The setting for how to handle columns/fields with changed data types.
+        /// The setting to handle columns/fields with changed data types.
         /// </value>
         [JsonProperty(PropertyName = "dataTypeChangeHandling")]
         [JsonConverter(typeof(StringEnumConverter))]

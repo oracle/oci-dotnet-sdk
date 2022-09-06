@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// A reference to the object's parent.
+    /// A reference to the parent object.
     /// </summary>
     public class ParentReference 
     {

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The full pushdown task parameter
+    /// The full pushdown task parameter.
     /// </summary>
     public class CreateFullPushDownTaskDetails 
     {
         
         /// <value>
-        /// The type of of FullPushDownTask.
+        /// The type of FullPushDownTask.
         /// </value>
         /// <remarks>
         /// Required

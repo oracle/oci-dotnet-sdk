@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Represents the info needed for de-referencing a dcms artifact.
+    /// Represents the info required for de-referencing a DCMS artifact.
     /// </summary>
     public class CreateDeReferenceArtifactDetails 
     {
         
         /// <value>
-        /// unique id of service which is referencing data asset.
+        /// The unique ID of the service that is referencing a data asset.
         /// </value>
         /// <remarks>
         /// Required

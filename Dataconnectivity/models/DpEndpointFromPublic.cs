@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The endpoint details for a public endpoint.
+    /// The endpoint details of a public endpoint.
     /// </summary>
     public class DpEndpointFromPublic : DpEndpoint
     {

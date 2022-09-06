@@ -32,7 +32,7 @@ namespace Oci.DataconnectivityService.Models
         public string OperationStatus { get; set; }
         
         /// <value>
-        /// Error message, if whole operation is failed.
+        /// Error message when the whole operation fails.
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
@@ -44,13 +44,13 @@ namespace Oci.DataconnectivityService.Models
         public string OperationName { get; set; }
         
         /// <value>
-        /// List of names of OUT/INOUT params.
+        /// The list of names of OUT/INOUT parameters.
         /// </value>
         [JsonProperty(PropertyName = "outParams")]
         public System.Collections.Generic.List<string> OutParams { get; set; }
         
         /// <value>
-        /// List of operation execution result for each input set.
+        /// The list of operation execution result for each input set.
         /// </value>
         /// <remarks>
         /// Required

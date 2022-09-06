@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// A metadata details of a profiling entity result.
+    /// The metadata details of a profiling entity result.
     /// </summary>
     public class EntityProfileResult 
     {
         
         /// <value>
-        /// Number of columns in the DataFrame (arrow buffer) sent from Java layer. This value is not impacted by the List of attributes to profile as being passed via configuration.
+        /// Number of columns in the DataFrame (arrow buffer) sent from Java layer. This value is not impacted by the list of attributes to profile as being passed via configuration.
         /// </value>
         [JsonProperty(PropertyName = "attributeCount")]
         public System.Nullable<int> AttributeCount { get; set; }
         
         /// <value>
-        /// Number of rows were that were sampled
+        /// Number of rows that are sampled.
         /// </value>
         [JsonProperty(PropertyName = "sampledRowCount")]
         public System.Nullable<int> SampledRowCount { get; set; }

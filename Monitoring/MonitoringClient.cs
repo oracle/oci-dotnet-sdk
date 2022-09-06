@@ -438,6 +438,9 @@ namespace Oci.MonitoringService
 
         /// <summary>
         /// List the status of each alarm in the specified compartment.
+        /// Status is collective, across all metric streams in the alarm.
+        /// To list alarm status for each metric stream, use {@link #retrieveDimensionStates(RetrieveDimensionStatesRequest) retrieveDimensionStates}.
+        /// The alarm attribute &#x60;isNotificationsPerMetricDimensionEnabled&#x60; must be set to &#x60;true&#x60;.
         /// For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
         /// &lt;br/&gt;
         /// This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
@@ -572,7 +575,7 @@ namespace Oci.MonitoringService
         /// &lt;br/&gt;
         /// *A metric group is the combination of a given metric, metric namespace, and tenancy for the purpose of determining limits.
         /// A dimension is a qualifier provided in a metric definition.
-        /// A metric stream is an individual set of aggregated data for a metric, typically specific to a resource.
+        /// A metric stream is an individual set of aggregated data for a metric with zero or more dimension values.
         /// For more information about metric-related concepts, see [Monitoring Concepts](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#concepts).
         /// &lt;br/&gt;
         /// The endpoints for this operation differ from other Monitoring operations. Replace the string &#x60;telemetry&#x60; with &#x60;telemetry-ingestion&#x60; in the endpoint, as in the following example:
@@ -691,6 +694,72 @@ namespace Oci.MonitoringService
             catch (Exception e)
             {
                 logger.Error($"RemoveAlarmSuppression failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the current alarm status of each metric stream, where status is derived from the metric stream&#39;s last associated transition. 
+        /// Optionally filter by status value and one or more dimension key-value pairs.
+        /// This operation is only valid for alarms that have notifications per dimension enabled (&#x60;isNotificationsPerMetricDimensionEnabled&#x3D;true&#x60;).
+        ///  If &#x60;isNotificationsPerMetricDimensionEnabled&#x60; for the alarm is false or null, then no results are returned.
+        /// &lt;br/&gt;
+        /// For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
+        ///  
+        ///  This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+        ///  Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
+        ///  or transactions, per second (TPS) for a given tenancy.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/monitoring/RetrieveDimensionStates.cs.html">here</a> to see an example of how to use RetrieveDimensionStates API.</example>
+        public async Task<RetrieveDimensionStatesResponse> RetrieveDimensionStates(RetrieveDimensionStatesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called retrieveDimensionStates");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/alarms/{alarmId}/actions/retrieveDimensionStates".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Monitoring",
+                    OperationName = "RetrieveDimensionStates",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/monitoring/20180401/AlarmDimensionStatesCollection/RetrieveDimensionStates",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<RetrieveDimensionStatesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RetrieveDimensionStates failed with error: {e.Message}");
                 throw;
             }
         }

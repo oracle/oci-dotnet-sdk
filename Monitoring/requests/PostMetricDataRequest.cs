@@ -37,5 +37,12 @@ namespace Oci.MonitoringService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// The optional Content-Encoding header that defines the content encodings that were applied to the payload.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "content-encoding")]
+        public string ContentEncoding { get; set; }
     }
 }

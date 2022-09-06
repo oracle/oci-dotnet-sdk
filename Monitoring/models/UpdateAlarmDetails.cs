@@ -155,6 +155,13 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "body")]
         public string Body { get; set; }
+        
+        /// <value>
+        /// When set to `true`, splits notifications per metric stream. When set to `false`, groups notifications across metric streams.
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isNotificationsPerMetricDimensionEnabled")]
+        public System.Nullable<bool> IsNotificationsPerMetricDimensionEnabled { get; set; }
                 ///
         /// <value>
         /// The format to use for notification messages sent from this alarm. The formats are:

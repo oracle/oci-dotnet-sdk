@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// List of Registry summaries.
+    /// The list of registry summaries.
     /// </summary>
     public class RegistrySummaryCollection 
     {
         
         /// <value>
-        /// The array of Registry summariess
+        /// The array of registry summaries.
         /// </value>
         /// <remarks>
         /// Required

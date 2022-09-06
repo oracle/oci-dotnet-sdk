@@ -20,7 +20,7 @@ namespace Oci.DataconnectivityService.Requests
     {
         
         /// <value>
-        /// The registry Ocid.
+        /// The registry OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DataconnectivityService.Requests
         public string RegistryId { get; set; }
         
         /// <value>
-        /// The details of change compartment action.
+        /// The details of the change compartment action.
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.DataconnectivityService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// A token that uniquely identifies a request so it can be retried in case of a timeout or server error without risk of executing that same action again.
+        /// A token that uniquely identifies a request so it can be retried in case of a timeout or server error without the risk of executing that same action again.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]

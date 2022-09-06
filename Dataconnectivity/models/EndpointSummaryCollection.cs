@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// List of endpoint summaries.
+    /// The list of endpoint summaries.
     /// </summary>
     public class EndpointSummaryCollection 
     {
         
         /// <value>
-        /// The array of endpoint summariess
+        /// The array of endpoint summaries.
         /// </value>
         /// <remarks>
         /// Required

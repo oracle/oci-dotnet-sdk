@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// Name of the entity for which data preview was requested
+        /// Name of the entity for which data preview is requested.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,19 +32,19 @@ namespace Oci.DataconnectivityService.Models
         public string EntityName { get; set; }
         
         /// <value>
-        /// Total number of rows taken for sampling
+        /// Total number of rows taken for sampling.
         /// </value>
         [JsonProperty(PropertyName = "sampleRowsCount")]
         public System.Nullable<int> SampleRowsCount { get; set; }
         
         /// <value>
-        /// Array of column definition for the preview result
+        /// Array of column definition for the preview result.
         /// </value>
         [JsonProperty(PropertyName = "columns")]
         public System.Collections.Generic.List<Column> Columns { get; set; }
         
         /// <value>
-        /// Array of rows values for the preview result
+        /// Array of row values for the preview result.
         /// </value>
         [JsonProperty(PropertyName = "rows")]
         public System.Collections.Generic.List<Row> Rows { get; set; }

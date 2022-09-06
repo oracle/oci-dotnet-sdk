@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// A work request error summary object.
+    /// The list of work request log summaries.
     /// </summary>
     public class WorkRequestErrorSummary 
     {
         
         /// <value>
-        /// A machine-usable code for the error that occured. Error codes are listed on
-        /// (https://docs.us-phoenix-1.oraclecloud.com/Content/API/References/apierrors.htm)
+        /// A machine-usable code for the error that occured. Error codes are listed in
+        /// (https://docs.us-phoenix-1.oraclecloud.com/Content/API/References/apierrors.htm).
         /// 
         /// </value>
         /// <remarks>

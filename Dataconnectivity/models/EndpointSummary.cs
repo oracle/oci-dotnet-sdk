@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// Summary of a Endpoint.
+    /// Summary of an endpoint.
     /// </summary>
     public class EndpointSummary 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// A unique identifier that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +38,7 @@ namespace Oci.DataconnectivityService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Data Connectivity Management Endpoint display name, Endpoints can be renamed
+        /// Data Connectivity Management Endpoint display name; endpoints can be renamed.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,19 +54,19 @@ namespace Oci.DataconnectivityService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The time the Data Connectivity Management Registry was created. An RFC3339 formatted datetime string
+        /// Time when the Data Connectivity Management registry was created. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the Data Connectivity Management Registry was updated. An RFC3339 formatted datetime string
+        /// Time when the Data Connectivity Management registry was updated. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Simple key-value pair that is applied without any predefined name, type, or scope. Exists only for cross-compatibility.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]

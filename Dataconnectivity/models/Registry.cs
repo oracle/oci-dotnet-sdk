@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// A registry is an organizational construct to keep multiple data Connectivity Management solutions and their resources (data assets, data flows, tasks, and so on) separate from each other, helping you to stay organized. For example, you could have separate registries for development, testing, and production.
+    /// A registry is an organizational construct to keep multiple data connectivity management solutions and their resources (data assets, data flows, tasks, and so on) separate from each other, helping you to stay organized. For example, you could have separate registries for development, testing, and production.
     /// </summary>
     public class Registry 
     {
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Simple key-value pair that is applied without any predefined name, type, or scope. Exists only for cross-compatibility.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -42,7 +42,7 @@ namespace Oci.DataconnectivityService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Data Connectivity Management Registry display name, registries can be renamed
+        /// Data Connectivity Management registry display name; registries can be renamed.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.DataconnectivityService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Name of the user who updated the DCMS Registry.
+        /// Name of the user who updated the DCMS registry.
         /// </value>
         [JsonProperty(PropertyName = "updatedBy")]
         public string UpdatedBy { get; set; }
@@ -64,27 +64,27 @@ namespace Oci.DataconnectivityService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The time the Data Connectivity Management Registry was created. An RFC3339 formatted datetime string
+        /// Time when the Data Connectivity Management registry was created. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the Data Connectivity Management Registry was updated. An RFC3339 formatted datetime string
+        /// Time when the Data Connectivity Management registry was updated. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// Lifecycle states for registries in Data Connectivity Management Service
-        /// CREATING - The resource is being created and may not be usable until the entire metadata is defined
-        /// UPDATING - The resource is being updated and may not be usable until all changes are commited
+        /// Lifecycle states for registries in the Data Connectivity Management Service
+        /// CREATING - The resource is being created and may not be usable until the entire metadata is defined.
+        /// UPDATING - The resource is being updated and may not be usable until all changes are commited.
         /// DELETING - The resource is being deleted and might require deep cleanup of children.
-        /// ACTIVE   - The resource is valid and available for access
+        /// ACTIVE   - The resource is valid and available for access.
         /// INACTIVE - The resource might be incomplete in its definition or might have been made unavailable for
-        ///          administrative reasons
-        /// DELETED  - The resource has been deleted and isn't available
-        /// FAILED   - The resource is in a failed state due to validation or other errors
+        ///          administrative reasons.
+        /// DELETED  - The resource has been deleted and isn't available.
+        /// FAILED   - The resource is in a failed state due to validation or other errors.
         /// 
         /// </value>
         ///
@@ -109,15 +109,15 @@ namespace Oci.DataconnectivityService.Models
         };
 
         /// <value>
-        /// Lifecycle states for registries in Data Connectivity Management Service
-        /// CREATING - The resource is being created and may not be usable until the entire metadata is defined
-        /// UPDATING - The resource is being updated and may not be usable until all changes are commited
+        /// Lifecycle states for registries in the Data Connectivity Management Service
+        /// CREATING - The resource is being created and may not be usable until the entire metadata is defined.
+        /// UPDATING - The resource is being updated and may not be usable until all changes are commited.
         /// DELETING - The resource is being deleted and might require deep cleanup of children.
-        /// ACTIVE   - The resource is valid and available for access
+        /// ACTIVE   - The resource is valid and available for access.
         /// INACTIVE - The resource might be incomplete in its definition or might have been made unavailable for
-        ///          administrative reasons
-        /// DELETED  - The resource has been deleted and isn't available
-        /// FAILED   - The resource is in a failed state due to validation or other errors
+        ///          administrative reasons.
+        /// DELETED  - The resource has been deleted and isn't available.
+        /// FAILED   - The resource is in a failed state due to validation or other errors.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
@@ -131,7 +131,7 @@ namespace Oci.DataconnectivityService.Models
         public string StateMessage { get; set; }
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// A unique identifier that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required

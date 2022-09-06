@@ -28,7 +28,7 @@ namespace Oci.DataconnectivityService.Models
         public string Key { get; set; }
         
         /// <value>
-        /// The object's model version.
+        /// The model version of the object.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
@@ -85,7 +85,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
         
         /// <value>
-        /// The number of rows are rejected based on which operation will error out.
+        /// The number of rows are rejected based on the operation that errors out.
         /// </value>
         [JsonProperty(PropertyName = "rejectLimit")]
         public System.Nullable<int> RejectLimit { get; set; }

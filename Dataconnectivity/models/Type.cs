@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// DataAsset & Connection Registry Attributes
+    /// DataAsset and Connection Registry Attributes
     /// </summary>
     public class Type 
     {
         
         /// <value>
-        /// list of attributes for the dataAsset
+        /// The list of attributes of the data asset.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Collections.Generic.List<Attribute> DataAssetAttributes { get; set; }
         
         /// <value>
-        /// Map of connectionType as key and List of attributes as value
+        /// Mapping the connectionType as the key to the list of attributes as the value.
         /// </value>
         /// <remarks>
         /// Required

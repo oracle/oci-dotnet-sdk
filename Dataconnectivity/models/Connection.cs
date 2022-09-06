@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// Generated key that can be used in API calls to identify connection. On scenarios where reference to the connection is needed, a value can be passed in create.
+        /// Generated key that can be used in API calls to identify the connection. In scenarios where reference to the connection is required, a value can be passed in create.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +44,7 @@ namespace Oci.DataconnectivityService.Models
         public string ModelType { get; set; }
         
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
+        /// Free form text without any restriction on the permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
         
         /// <value>
-        /// Value can only contain upper case letters, underscore, and numbers. It should begin with upper case letter or underscore. The value can be modified.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with an upper case letter or underscore. The value can be modified.
         /// </value>
         /// <remarks>
         /// Required
@@ -85,13 +85,13 @@ namespace Oci.DataconnectivityService.Models
         public Schema PrimarySchema { get; set; }
         
         /// <value>
-        /// The properties for the connection.
+        /// The properties of the connection.
         /// </value>
         [JsonProperty(PropertyName = "connectionProperties")]
         public System.Collections.Generic.List<ConnectionProperty> ConnectionProperties { get; set; }
         
         /// <value>
-        /// All the properties for the connection in a key-value map format.
+        /// All the properties of the connection in a key-value map format.
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, System.Object> Properties { get; set; }
@@ -103,7 +103,7 @@ namespace Oci.DataconnectivityService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// The default property for the connection.
+        /// The default property of the connection.
         /// </value>
         [JsonProperty(PropertyName = "isDefault")]
         public System.Nullable<bool> IsDefault { get; set; }

@@ -20,7 +20,7 @@ namespace Oci.DataconnectivityService.Requests
     {
         
         /// <value>
-        /// DCMS Endpoint id
+        /// DCMS endpoint ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DataconnectivityService.Requests
         public string EndpointId { get; set; }
         
         /// <value>
-        /// DCMS registry id
+        /// DCMS registry ID
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "registryId")]
         public string RegistryId { get; set; }

@@ -31,7 +31,7 @@ namespace Oci.DataconnectivityService.Models
         public string ParameterName { get; set; }
         
         /// <value>
-        /// A user defined description for the object.
+        /// A user-defined description for the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -49,13 +49,13 @@ namespace Oci.DataconnectivityService.Models
         public string ClassFieldName { get; set; }
         
         /// <value>
-        /// Specifies whether the parameter is static or not.
+        /// Specifies whether the parameter is static.
         /// </value>
         [JsonProperty(PropertyName = "isStatic")]
         public System.Nullable<bool> IsStatic { get; set; }
         
         /// <value>
-        /// Specifies whether the parameter is a class field or not.
+        /// Specifies whether the parameter is a class field.
         /// </value>
         [JsonProperty(PropertyName = "isClassFieldValue")]
         public System.Nullable<bool> IsClassFieldValue { get; set; }

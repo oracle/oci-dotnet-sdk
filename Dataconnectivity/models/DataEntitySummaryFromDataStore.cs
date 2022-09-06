@@ -28,7 +28,7 @@ namespace Oci.DataconnectivityService.Models
         public string Key { get; set; }
         
         /// <value>
-        /// The object's model version.
+        /// The model version of the object.
         /// </value>
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
@@ -37,13 +37,13 @@ namespace Oci.DataconnectivityService.Models
         public ParentReference ParentRef { get; set; }
         
         /// <value>
-        /// Free form text without any restriction on permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
+        /// Free form text without any restriction on the permitted characters. Name can have letters, numbers, and special characters. The value is editable and is restricted to 1000 characters.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// Detailed description for the object.
+        /// Detailed description of the object.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -55,7 +55,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectVersion { get; set; }
         
         /// <value>
-        /// The external key for the object
+        /// The external key of the object.
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]
         public string ExternalKey { get; set; }
@@ -86,7 +86,9 @@ namespace Oci.DataconnectivityService.Models
             [EnumMember(Value = "SQL")]
             Sql,
             [EnumMember(Value = "DATA_STORE")]
-            DataStore
+            DataStore,
+            [EnumMember(Value = "MESSAGE")]
+            Message
         };
 
         /// <value>
@@ -127,25 +129,25 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> ObjectStatus { get; set; }
         
         /// <value>
-        /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be modified.
+        /// Value can only contain upper case letters, underscore, and numbers. It should begin with an upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]
         public string Identifier { get; set; }
         
         /// <value>
-        /// Query filter for the extract. It can be Null.
+        /// Query filter for the extract. It can be null.
         /// </value>
         [JsonProperty(PropertyName = "filters")]
         public string Filters { get; set; }
         
         /// <value>
-        /// It shows whether or not effective date is disabled
+        /// It shows whether the effective date is disabled.
         /// </value>
         [JsonProperty(PropertyName = "isEffectiveDateDisabled")]
         public System.Nullable<bool> IsEffectiveDateDisabled { get; set; }
         
         /// <value>
-        /// Is Flex data store. Metadata csv will be generated for flex data store
+        /// Is a flex data store. Metadata CSV will be generated for a flex data store.
         /// </value>
         [JsonProperty(PropertyName = "isFlexDataStore")]
         public System.Nullable<bool> IsFlexDataStore { get; set; }
@@ -157,7 +159,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<bool> IsSilentError { get; set; }
         
         /// <value>
-        /// It shows whether the datastore supports Incremental Extract or not.
+        /// It shows whether the datastore supports incremental extract.
         /// </value>
         [JsonProperty(PropertyName = "supportsIncremental")]
         public System.Nullable<bool> SupportsIncremental { get; set; }

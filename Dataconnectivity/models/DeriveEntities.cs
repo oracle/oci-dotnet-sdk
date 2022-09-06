@@ -16,20 +16,20 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// A list of connection validation summaries.
+    /// The response object for Derived Entities.
     /// </summary>
-    public class ConnectionValidationSummaryCollection 
+    public class DeriveEntities 
     {
         
         /// <value>
-        /// An array of connection validation summaries.
+        /// The array of DerivedEntity
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
-        public System.Collections.Generic.List<ConnectionValidationSummary> Items { get; set; }
+        public System.Collections.Generic.List<DerivedEntity> Items { get; set; }
         
     }
 }

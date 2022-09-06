@@ -44,7 +44,7 @@ namespace Oci.DataconnectivityService.Models
         public string ErrorMessage { get; set; }
         
         /// <value>
-        /// Instant when the network validation was last done for the given DataAsset-PrivateEndpoint pair..
+        /// The timestamp when the network validation was last updated for the given DataAsset-PrivateEndpoint pair.
         /// </value>
         [JsonProperty(PropertyName = "timeLastUpdated")]
         public System.Nullable<System.DateTime> TimeLastUpdated { get; set; }

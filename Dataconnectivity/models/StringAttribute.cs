@@ -31,7 +31,7 @@ namespace Oci.DataconnectivityService.Models
         public ProfileStat MeanLength { get; set; }
         
         /// <value>
-        /// Pattern frequencies for the column as described already in profile config.
+        /// Pattern frequencies for the column as described in the profile config.
         /// </value>
         [JsonProperty(PropertyName = "patternFrequencies")]
         public System.Collections.Generic.List<ObjectFreqStat> PatternFrequencies { get; set; }

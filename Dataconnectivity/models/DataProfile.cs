@@ -22,7 +22,7 @@ namespace Oci.DataconnectivityService.Models
     {
         
         /// <value>
-        /// Entity name for which prodilig is requested.
+        /// Entity name for which profiling is requested.
         /// </value>
         /// <remarks>
         /// Required
@@ -35,7 +35,7 @@ namespace Oci.DataconnectivityService.Models
         public EntityProfileResult EntityProfileResult { get; set; }
         
         /// <value>
-        /// Array of profiling results
+        /// Array of profiling results.
         /// </value>
         [JsonProperty(PropertyName = "attributeProfileResults")]
         public System.Collections.Generic.List<AttributeProfileResult> AttributeProfileResults { get; set; }

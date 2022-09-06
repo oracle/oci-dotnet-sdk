@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// One specific element. Its meaning changes in the context i.e. For ValueFrequency, the value represents a column value. For Patterns the value represents a pattern. For DataType the value represents a data type. For DataType formats (pertaining to date time) the value represent a format.
+    /// One specific element. Its meaning changes according to the context. For example, for ValueFrequency, the value represents a column value. For Patterns the value represents a pattern. For DataType the value represents a data type. For DataType formats (pertaining to date time) the value represents a format.
     /// </summary>
     public class ObjectFreqStat 
     {
         
         /// <value>
-        /// Value of the confidence of the profile result
+        /// Value of the confidence of the profile result.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
@@ -34,7 +34,7 @@ namespace Oci.DataconnectivityService.Models
         public System.Nullable<int> Confidence { get; set; }
         
         /// <value>
-        /// How many times that value occurred.
+        /// The number of times the value appeared.
         /// </value>
         [JsonProperty(PropertyName = "freq")]
         public System.Nullable<long> Freq { get; set; }

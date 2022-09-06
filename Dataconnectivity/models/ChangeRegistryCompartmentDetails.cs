@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataconnectivityService.Models
 {
     /// <summary>
-    /// The information about change compartment action.
+    /// The information about the change compartment action.
     /// </summary>
     public class ChangeRegistryCompartmentDetails 
     {
