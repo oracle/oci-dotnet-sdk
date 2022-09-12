@@ -16,39 +16,32 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApigatewayService.Models
 {
     /// <summary>
-    /// The backend to forward requests to.
-    /// 
+    /// Policy for defining behaviour on validation failure.
     /// </summary>
-    [JsonConverter(typeof(ApiSpecificationRouteBackendModelConverter))]
-    public class ApiSpecificationRouteBackend 
+    [JsonConverter(typeof(ValidationFailurePolicyModelConverter))]
+    public class ValidationFailurePolicy 
     {
                 ///
         /// <value>
-        /// Type of the API backend.
+        /// Type of the Validation failure Policy.
         /// </value>
         ///
         public enum TypeEnum {
-            [EnumMember(Value = "ORACLE_FUNCTIONS_BACKEND")]
-            OracleFunctionsBackend,
-            [EnumMember(Value = "HTTP_BACKEND")]
-            HttpBackend,
-            [EnumMember(Value = "STOCK_RESPONSE_BACKEND")]
-            StockResponseBackend,
-            [EnumMember(Value = "DYNAMIC_ROUTING_BACKEND")]
-            DynamicRoutingBackend
+            [EnumMember(Value = "MODIFY_RESPONSE")]
+            ModifyResponse
         };
 
         
     }
 
-    public class ApiSpecificationRouteBackendModelConverter : JsonConverter
+    public class ValidationFailurePolicyModelConverter : JsonConverter
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
         {
-            return type == typeof(ApiSpecificationRouteBackend);
+            return type == typeof(ValidationFailurePolicy);
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -58,21 +51,12 @@ namespace Oci.ApigatewayService.Models
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jsonObject = JObject.Load(reader);
-            var obj = default(ApiSpecificationRouteBackend);
+            var obj = default(ValidationFailurePolicy);
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
-                case "HTTP_BACKEND":
-                    obj = new HTTPBackend();
-                    break;
-                case "ORACLE_FUNCTIONS_BACKEND":
-                    obj = new OracleFunctionBackend();
-                    break;
-                case "STOCK_RESPONSE_BACKEND":
-                    obj = new StockResponseBackend();
-                    break;
-                case "DYNAMIC_ROUTING_BACKEND":
-                    obj = new DynamicRoutingBackend();
+                case "MODIFY_RESPONSE":
+                    obj = new ModifyResponseValidationFailurePolicy();
                     break;
             }
             if (obj != null)
@@ -81,7 +65,7 @@ namespace Oci.ApigatewayService.Models
             }
             else
             {
-                logger.Warn($"The type {discriminator} is not present under ApiSpecificationRouteBackend! Returning null value.");
+                logger.Warn($"The type {discriminator} is not present under ValidationFailurePolicy! Returning null value.");
             }
             return obj;
         }

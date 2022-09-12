@@ -16,24 +16,17 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// Details for the notebook session shape configuration.
+    /// Details required for importing the artifact from service bucket
     /// </summary>
-    public class NotebookSessionShapeConfigDetails 
+    public class ImportModelArtifactDetails 
     {
         
-        /// <value>
-        /// The total number of OCPUs available to the notebook session instance.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "ocpus")]
-        public System.Nullable<float> Ocpus { get; set; }
-        
-        /// <value>
-        /// The total amount of memory available to the notebook session instance, in gigabytes.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "memoryInGBs")]
-        public System.Nullable<float> MemoryInGBs { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ArtifactImportDetails is required.")]
+        [JsonProperty(PropertyName = "artifactImportDetails")]
+        public ArtifactImportDetails ArtifactImportDetails { get; set; }
         
     }
 }

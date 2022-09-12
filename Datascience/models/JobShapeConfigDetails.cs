@@ -22,14 +22,14 @@ namespace Oci.DatascienceService.Models
     {
         
         /// <value>
-        /// A job run instance of type VM.Standard.E3.Flex allows the ocpu count to be specified.
+        /// The total number of OCPUs available to the job run instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ocpus")]
         public System.Nullable<float> Ocpus { get; set; }
         
         /// <value>
-        /// A job run instance of type VM.Standard.E3.Flex allows memory to be specified. This specifies the size of the memory in GBs.
+        /// The total amount of memory available to the job run instance, in gigabytes.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryInGBs")]

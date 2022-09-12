@@ -13,27 +13,25 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatascienceService.Models
+namespace Oci.ApigatewayService.Models
 {
     /// <summary>
-    /// Details for the notebook session shape configuration.
+    /// Information around the Wildcard expression matching the value for selector of a dynamic authentication/ routing branch.
     /// </summary>
-    public class NotebookSessionShapeConfigDetails 
+    public class WildcardSelectionKey : DynamicSelectionKey
     {
         
         /// <value>
-        /// The total number of OCPUs available to the notebook session instance.
-        /// 
+        /// String describing the expression with wildcards.
         /// </value>
-        [JsonProperty(PropertyName = "ocpus")]
-        public System.Nullable<float> Ocpus { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Expression is required.")]
+        [JsonProperty(PropertyName = "expression")]
+        public string Expression { get; set; }
         
-        /// <value>
-        /// The total amount of memory available to the notebook session instance, in gigabytes.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "memoryInGBs")]
-        public System.Nullable<float> MemoryInGBs { get; set; }
-        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "WILDCARD";
     }
 }

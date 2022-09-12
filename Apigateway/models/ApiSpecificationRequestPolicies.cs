@@ -36,5 +36,8 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "usagePlans")]
         public UsagePlansPolicy UsagePlans { get; set; }
         
+        [JsonProperty(PropertyName = "dynamicAuthentication")]
+        public DynamicAuthenticationPolicy DynamicAuthentication { get; set; }
+        
     }
 }

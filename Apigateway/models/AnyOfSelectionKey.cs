@@ -13,27 +13,21 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatascienceService.Models
+namespace Oci.ApigatewayService.Models
 {
     /// <summary>
-    /// Details for the notebook session shape configuration.
+    /// Information around the set of string values for selector of a dynamic authentication/ routing branch. Selector should match any one of the values present in set of string values.
     /// </summary>
-    public class NotebookSessionShapeConfigDetails 
+    public class AnyOfSelectionKey : DynamicSelectionKey
     {
         
         /// <value>
-        /// The total number of OCPUs available to the notebook session instance.
-        /// 
+        /// Information regarding the set of values of selector for which this branch should be selected.
         /// </value>
-        [JsonProperty(PropertyName = "ocpus")]
-        public System.Nullable<float> Ocpus { get; set; }
+        [JsonProperty(PropertyName = "values")]
+        public System.Collections.Generic.List<string> Values { get; set; }
         
-        /// <value>
-        /// The total amount of memory available to the notebook session instance, in gigabytes.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "memoryInGBs")]
-        public System.Nullable<float> MemoryInGBs { get; set; }
-        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "ANY_OF";
     }
 }
