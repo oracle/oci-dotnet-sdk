@@ -46,6 +46,23 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "tokenQueryParam")]
         public string TokenQueryParam { get; set; }
         
+        /// <value>
+        /// A map where key is a user defined string and value is a context expressions whose values will be sent to the custom auth function. Values should contain an expression.
+        /// Example: {&quot;foo&quot;: &quot;request.header[abc]&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "parameters")]
+        public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }
+        
+        /// <value>
+        /// A list of keys from \"parameters\" attribute value whose values will be added to the cache key.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "cacheKey")]
+        public System.Collections.Generic.List<string> CacheKey { get; set; }
+        
+        [JsonProperty(PropertyName = "validationFailurePolicy")]
+        public ValidationFailurePolicy ValidationFailurePolicy { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "CUSTOM_AUTHENTICATION";
     }

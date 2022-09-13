@@ -16,39 +16,50 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApigatewayService.Models
 {
     /// <summary>
-    /// The backend to forward requests to.
-    /// 
+    /// Information around the values for selector of an authentication/ routing branch.
     /// </summary>
-    [JsonConverter(typeof(ApiSpecificationRouteBackendModelConverter))]
-    public class ApiSpecificationRouteBackend 
+    [JsonConverter(typeof(DynamicSelectionKeyModelConverter))]
+    public class DynamicSelectionKey 
     {
                 ///
         /// <value>
-        /// Type of the API backend.
+        /// Information regarding type of the selection key.
         /// </value>
         ///
         public enum TypeEnum {
-            [EnumMember(Value = "ORACLE_FUNCTIONS_BACKEND")]
-            OracleFunctionsBackend,
-            [EnumMember(Value = "HTTP_BACKEND")]
-            HttpBackend,
-            [EnumMember(Value = "STOCK_RESPONSE_BACKEND")]
-            StockResponseBackend,
-            [EnumMember(Value = "DYNAMIC_ROUTING_BACKEND")]
-            DynamicRoutingBackend
+            [EnumMember(Value = "ANY_OF")]
+            AnyOf,
+            [EnumMember(Value = "WILDCARD")]
+            Wildcard
         };
 
         
+        /// <value>
+        /// Information regarding whether this is the default branch.
+        /// </value>
+        [JsonProperty(PropertyName = "isDefault")]
+        public System.Nullable<bool> IsDefault { get; set; }
+        
+        /// <value>
+        /// Name assigned to the branch.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Name is required.")]
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+        
     }
 
-    public class ApiSpecificationRouteBackendModelConverter : JsonConverter
+    public class DynamicSelectionKeyModelConverter : JsonConverter
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
         {
-            return type == typeof(ApiSpecificationRouteBackend);
+            return type == typeof(DynamicSelectionKey);
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -58,21 +69,15 @@ namespace Oci.ApigatewayService.Models
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jsonObject = JObject.Load(reader);
-            var obj = default(ApiSpecificationRouteBackend);
+            var obj = default(DynamicSelectionKey);
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
-                case "HTTP_BACKEND":
-                    obj = new HTTPBackend();
+                case "WILDCARD":
+                    obj = new WildcardSelectionKey();
                     break;
-                case "ORACLE_FUNCTIONS_BACKEND":
-                    obj = new OracleFunctionBackend();
-                    break;
-                case "STOCK_RESPONSE_BACKEND":
-                    obj = new StockResponseBackend();
-                    break;
-                case "DYNAMIC_ROUTING_BACKEND":
-                    obj = new DynamicRoutingBackend();
+                case "ANY_OF":
+                    obj = new AnyOfSelectionKey();
                     break;
             }
             if (obj != null)
@@ -81,7 +86,7 @@ namespace Oci.ApigatewayService.Models
             }
             else
             {
-                logger.Warn($"The type {discriminator} is not present under ApiSpecificationRouteBackend! Returning null value.");
+                logger.Warn($"The type {discriminator} is not present under DynamicSelectionKey! Returning null value.");
             }
             return obj;
         }

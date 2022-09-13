@@ -27,6 +27,10 @@ namespace Oci.DatascienceService.Models
       NotebookSessionActivate,
       [EnumMember(Value = "NOTEBOOK_SESSION_DEACTIVATE")]
       NotebookSessionDeactivate,
+      [EnumMember(Value = "EXPORT_MODEL_ARTIFACT")]
+      ExportModelArtifact,
+      [EnumMember(Value = "IMPORT_MODEL_ARTIFACT")]
+      ImportModelArtifact,
       [EnumMember(Value = "MODEL_DEPLOYMENT_CREATE")]
       ModelDeploymentCreate,
       [EnumMember(Value = "MODEL_DEPLOYMENT_DELETE")]

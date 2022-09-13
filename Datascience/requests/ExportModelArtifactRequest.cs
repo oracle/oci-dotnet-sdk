@@ -14,9 +14,9 @@ using Oci.DatascienceService.Models;
 namespace Oci.DatascienceService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/CreateModelArtifact.cs.html">here</a> to see an example of how to use CreateModelArtifact request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datascience/ExportModelArtifact.cs.html">here</a> to see an example of how to use ExportModelArtifact request.
     /// </example>
-    public class CreateModelArtifactRequest : Oci.Common.IOciRequest
+    public class ExportModelArtifactRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
@@ -30,20 +30,14 @@ namespace Oci.DatascienceService.Requests
         public string ModelId { get; set; }
         
         /// <value>
-        /// The content length of the body.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "content-length")]
-        public System.Nullable<long> ContentLength { get; set; }
-        
-        /// <value>
-        /// The model artifact to upload.
+        /// Model artifact source details for exporting.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ModelArtifact is required.")]
+        [Required(ErrorMessage = "ExportModelArtifactDetails is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public System.IO.Stream ModelArtifact { get; set; }
+        public ExportModelArtifactDetails ExportModelArtifactDetails { get; set; }
         
         /// <value>
         /// Unique Oracle assigned identifier for the request. If you need to contact Oracle about a particular request, then provide the request ID.
@@ -58,15 +52,6 @@ namespace Oci.DatascienceService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
-        
-        /// <value>
-        /// This header allows you to specify a filename during upload. This file name is used to dispose of the file contents
-        /// while downloading the file. If this optional field is not populated in the request, then the OCID of the model is used for the file
-        /// name when downloading.
-        /// Example: {&quot;Content-Disposition&quot;: &quot;attachment&quot;           &quot;filename&quot;=&quot;model.tar.gz&quot;           &quot;Content-Length&quot;: &quot;2347&quot;           &quot;Content-Type&quot;: &quot;application/gzip&quot;}
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "content-disposition")]
-        public string ContentDisposition { get; set; }
         
         /// <value>
         /// For optimistic concurrency control. In the PUT or DELETE call
