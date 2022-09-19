@@ -146,6 +146,9 @@ namespace Oci.DevopsService.Models
                 case "GITHUB":
                     obj = new GithubTriggerCreateResult();
                     break;
+                case "VBS":
+                    obj = new VbsTriggerCreateResult();
+                    break;
                 case "GITLAB":
                     obj = new GitlabTriggerCreateResult();
                     break;

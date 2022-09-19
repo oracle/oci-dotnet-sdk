@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// Schedule summary for listSchedule.
+    /// Schedule summary for the list schedule.
     /// </summary>
     public class ScheduleSummary 
     {
@@ -32,7 +32,7 @@ namespace Oci.UsageapiService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The unique name of the schedule created by the user
+        /// The unique name of the user-created schedule.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,8 +42,21 @@ namespace Oci.UsageapiService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// In x-obmcs-recurring-time format shown here: https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10
-        /// Describes the frequency of when the schedule will be run
+        /// The description of the schedule.
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        /// <value>
+        /// The date and time of the next job execution.
+        /// </value>
+        [JsonProperty(PropertyName = "timeNextRun")]
+        public System.Nullable<System.DateTime> TimeNextRun { get; set; }
+        
+        /// <value>
+        /// Specifies the frequency according to when the schedule will be run, 
+        /// in the x-obmcs-recurring-time format described in [RFC 5545 section 3.3.10](https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10).
+        /// Supported values are : ONE_TIME, DAILY, WEEKLY and MONTHLY.
         /// 
         /// </value>
         /// <remarks>
@@ -54,7 +67,7 @@ namespace Oci.UsageapiService.Models
         public string ScheduleRecurrences { get; set; }
         
         /// <value>
-        /// The date and time of the first time job execution
+        /// The date and time of the first time job execution.
         /// </value>
         /// <remarks>
         /// Required
@@ -64,7 +77,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<System.DateTime> TimeScheduled { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only. 
+        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -83,7 +96,7 @@ namespace Oci.UsageapiService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
-        /// The lifecycle state of the schedule summary
+        /// The schedule summary lifecycle state.
         /// </value>
         /// <remarks>
         /// Required

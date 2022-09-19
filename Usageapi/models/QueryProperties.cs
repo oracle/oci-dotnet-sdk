@@ -43,7 +43,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<decimal> CompartmentDepth { get; set; }
                 ///
         /// <value>
-        /// The usage granularity. DAILY - Daily data aggregation. MONTHLY - Monthly data aggregation.  
+        /// The usage granularity. DAILY - Daily data aggregation. MONTHLY - Monthly data aggregation.
         /// Allowed values are:
         ///   DAILY
         ///   MONTHLY
@@ -61,7 +61,7 @@ namespace Oci.UsageapiService.Models
         };
 
         /// <value>
-        /// The usage granularity. DAILY - Daily data aggregation. MONTHLY - Monthly data aggregation.  
+        /// The usage granularity. DAILY - Daily data aggregation. MONTHLY - Monthly data aggregation.
         /// Allowed values are:
         ///   DAILY
         ///   MONTHLY
@@ -76,7 +76,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<GranularityEnum> Granularity { get; set; }
                 ///
         /// <value>
-        /// The query usage type. COST by default if it is missing. Usage - Query the usage data. Cost - Query the cost/billing data. 
+        /// The query usage type. COST by default if it is missing. Usage - Query the usage data. Cost - Query the cost/billing data.
         /// Allowed values are:
         ///   USAGE
         ///   COST
@@ -97,7 +97,7 @@ namespace Oci.UsageapiService.Models
         };
 
         /// <value>
-        /// The query usage type. COST by default if it is missing. Usage - Query the usage data. Cost - Query the cost/billing data. 
+        /// The query usage type. COST by default if it is missing. Usage - Query the usage data. Cost - Query the cost/billing data.
         /// Allowed values are:
         ///   USAGE
         ///   COST
@@ -109,7 +109,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<QueryTypeEnum> QueryType { get; set; }
         
         /// <value>
-        /// Specifies whether aggregated by time. If isAggregateByTime is true, all usage/cost over the query time period will be added up.
+        /// Specifies whether aggregated by time. If isAggregateByTime is true, all usage or cost over the query time period will be added up.
         /// </value>
         [JsonProperty(PropertyName = "isAggregateByTime")]
         public System.Nullable<bool> IsAggregateByTime { get; set; }

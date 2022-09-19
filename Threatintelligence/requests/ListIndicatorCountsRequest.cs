@@ -20,7 +20,7 @@ namespace Oci.ThreatintelligenceService.Requests
     {
         
         /// <value>
-        /// The ID of the tenancy to use to filter results.
+        /// The OCID of the tenancy (root compartment) that is used to filter results.
         /// </value>
         /// <remarks>
         /// Required

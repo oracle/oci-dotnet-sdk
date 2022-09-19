@@ -42,7 +42,11 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "FUSION_APP_DATA_ASSET")]
             FusionAppDataAsset,
             [EnumMember(Value = "AMAZON_S3_DATA_ASSET")]
-            AmazonS3DataAsset
+            AmazonS3DataAsset,
+            [EnumMember(Value = "LAKE_HOUSE_DATA_ASSET")]
+            LakeHouseDataAsset,
+            [EnumMember(Value = "REST_DATA_ASSET")]
+            RestDataAsset
         };
 
         
@@ -133,8 +137,14 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "REST_DATA_ASSET":
+                    obj = new UpdateDataAssetFromRest();
+                    break;
                 case "ORACLE_ATP_DATA_ASSET":
                     obj = new UpdateDataAssetFromAtp();
+                    break;
+                case "LAKE_HOUSE_DATA_ASSET":
+                    obj = new UpdateDataAssetFromLakehouse();
                     break;
                 case "ORACLE_ADWC_DATA_ASSET":
                     obj = new UpdateDataAssetFromAdwc();

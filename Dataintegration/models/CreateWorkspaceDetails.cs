@@ -91,5 +91,41 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "isPrivateNetworkEnabled")]
         public System.Nullable<bool> IsPrivateNetworkEnabled { get; set; }
         
+        /// <value>
+        /// DCMS Data Asset Registry ID to which the workspace is associated
+        /// </value>
+        [JsonProperty(PropertyName = "registryId")]
+        public string RegistryId { get; set; }
+        
+        /// <value>
+        /// DCMS Private Endpoint ID associated with workspace if the pvt networking is enabled
+        /// </value>
+        [JsonProperty(PropertyName = "endpointId")]
+        public string EndpointId { get; set; }
+        
+        /// <value>
+        /// DCMS Data Asset Registry display name
+        /// </value>
+        [JsonProperty(PropertyName = "registryName")]
+        public string RegistryName { get; set; }
+        
+        /// <value>
+        /// DCMS Data Asset Registry Compartment Identifier
+        /// </value>
+        [JsonProperty(PropertyName = "registryCompartmentId")]
+        public string RegistryCompartmentId { get; set; }
+        
+        /// <value>
+        /// DCMS Private Endpoint Name
+        /// </value>
+        [JsonProperty(PropertyName = "endpointName")]
+        public string EndpointName { get; set; }
+        
+        /// <value>
+        /// DCMS PRivate Endpoint Compartment Identifier
+        /// </value>
+        [JsonProperty(PropertyName = "endpointCompartmentId")]
+        public string EndpointCompartmentId { get; set; }
+        
     }
 }

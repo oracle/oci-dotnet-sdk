@@ -241,6 +241,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Opa", "Opa\OC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Opensearch", "Opensearch\OCI.DotNetSDK.Opensearch.csproj", "{B9A81633-4EDD-4366-AF67-1D0D85D28155}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Cloudmigrations", "Cloudmigrations\OCI.DotNetSDK.Cloudmigrations.csproj", "{73666A9A-AA19-4473-BDFE-C75B13490952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Cloudbridge", "Cloudbridge\OCI.DotNetSDK.Cloudbridge.csproj", "{2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2273,5 +2277,29 @@ Global
         {B9A81633-4EDD-4366-AF67-1D0D85D28155}.Release|x64.Build.0 = Release|Any CPU
         {B9A81633-4EDD-4366-AF67-1D0D85D28155}.Release|x86.ActiveCfg = Release|Any CPU
         {B9A81633-4EDD-4366-AF67-1D0D85D28155}.Release|x86.Build.0 = Release|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Debug|x64.Build.0 = Debug|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Debug|x86.Build.0 = Debug|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Release|Any CPU.Build.0 = Release|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Release|x64.ActiveCfg = Release|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Release|x64.Build.0 = Release|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Release|x86.ActiveCfg = Release|Any CPU
+        {73666A9A-AA19-4473-BDFE-C75B13490952}.Release|x86.Build.0 = Release|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Debug|x64.Build.0 = Debug|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Debug|x86.Build.0 = Debug|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Release|x64.ActiveCfg = Release|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Release|x64.Build.0 = Release|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Release|x86.ActiveCfg = Release|Any CPU
+        {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

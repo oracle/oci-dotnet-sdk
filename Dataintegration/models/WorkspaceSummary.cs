@@ -116,5 +116,23 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "stateMessage")]
         public string StateMessage { get; set; }
         
+        /// <value>
+        /// Name of the private endpoint associated with the container/workspace. Returns null if there is none.
+        /// </value>
+        [JsonProperty(PropertyName = "endpointName")]
+        public string EndpointName { get; set; }
+        
+        /// <value>
+        /// DCMS endpoint associated with the container/workspace. Returns null if there is none.
+        /// </value>
+        [JsonProperty(PropertyName = "endpointId")]
+        public string EndpointId { get; set; }
+        
+        /// <value>
+        /// DCMS registry associated with the container/workspace. Returns null if there is none.
+        /// </value>
+        [JsonProperty(PropertyName = "registryId")]
+        public string RegistryId { get; set; }
+        
     }
 }

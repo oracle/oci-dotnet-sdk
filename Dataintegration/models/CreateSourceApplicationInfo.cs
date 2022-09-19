@@ -32,6 +32,24 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "applicationKey")]
         public string ApplicationKey { get; set; }
+                ///
+        /// <value>
+        /// Parameter to specify the link between SOURCE and TARGET application after copying. CONNECTED    - Indicate that TARGET application is conneced to SOURCE and can be synced after copy. DISCONNECTED - Indicate that TARGET application is not conneced to SOURCE and can evolve independently.
+        /// </value>
+        ///
+        public enum CopyTypeEnum {
+            [EnumMember(Value = "CONNECTED")]
+            Connected,
+            [EnumMember(Value = "DISCONNECTED")]
+            Disconnected
+        };
+
+        /// <value>
+        /// Parameter to specify the link between SOURCE and TARGET application after copying. CONNECTED    - Indicate that TARGET application is conneced to SOURCE and can be synced after copy. DISCONNECTED - Indicate that TARGET application is not conneced to SOURCE and can evolve independently.
+        /// </value>
+        [JsonProperty(PropertyName = "copyType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<CopyTypeEnum> CopyType { get; set; }
         
     }
 }

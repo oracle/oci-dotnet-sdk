@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ThreatintelligenceService.Models
 {
     /// <summary>
-    /// Dimensions characterizing the group
+    /// The indicator dimension that was counted, such as the indicator type.
     /// </summary>
     public class IndicatorCountDimensions 
     {
         
         /// <value>
-        /// Compartment Identifier
+        /// The compartment OCID that contains the indicator type.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The indicator type that corresponds to the count.
+        /// The indicator type that was counted.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

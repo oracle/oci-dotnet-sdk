@@ -27,6 +27,9 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "flattenField")]
         public DynamicProxyField FlattenField { get; set; }
         
+        [JsonProperty(PropertyName = "materializedFlattenField")]
+        public MaterializedDynamicField MaterializedFlattenField { get; set; }
+        
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "FLATTEN_OPERATOR";
     }

@@ -103,6 +103,8 @@ namespace Oci.LoganalyticsService.Models
             DemoMode,
             [EnumMember(Value = "MACRO")]
             Macro,
+            [EnumMember(Value = "MODULE")]
+            Module,
             [EnumMember(Value = "MULTI_SEARCH")]
             MultiSearch,
             [EnumMember(Value = "HIGHLIGHT")]
@@ -118,7 +120,15 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "NLP")]
             Nlp,
             [EnumMember(Value = "COMPARE")]
-            Compare
+            Compare,
+            [EnumMember(Value = "ADD_INSIGHTS")]
+            AddInsights,
+            [EnumMember(Value = "ANOMALY")]
+            Anomaly,
+            [EnumMember(Value = "DEDUP")]
+            Dedup,
+            [EnumMember(Value = "TIME_CLUSTER")]
+            TimeCluster
         };
 
         
@@ -165,6 +175,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "declaredFields")]
         public System.Collections.Generic.List<AbstractField> DeclaredFields { get; set; }
         
+        /// <value>
+        /// Field denoting if this is a hidden command that is not shown in the query string.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isHidden")]
+        public System.Nullable<bool> IsHidden { get; set; }
+        
     }
 
     public class AbstractCommandDescriptorModelConverter : JsonConverter
@@ -194,29 +211,11 @@ namespace Oci.LoganalyticsService.Models
                 case "HIGHLIGHT":
                     obj = new HighlightCommandDescriptor();
                     break;
-                case "MULTI_SEARCH":
-                    obj = new MultiSearchCommandDescriptor();
-                    break;
-                case "COMPARE":
-                    obj = new CompareCommandDescriptor();
-                    break;
                 case "STATS":
                     obj = new StatsCommandDescriptor();
                     break;
-                case "TIME_COMPARE":
-                    obj = new TimeCompareCommandDescriptor();
-                    break;
                 case "TAIL":
                     obj = new TailCommandDescriptor();
-                    break;
-                case "REGEX":
-                    obj = new RegexCommandDescriptor();
-                    break;
-                case "DELTA":
-                    obj = new DeltaCommandDescriptor();
-                    break;
-                case "LOOKUP":
-                    obj = new LookupCommandDescriptor();
                     break;
                 case "DEMO_MODE":
                     obj = new DemoModeCommandDescriptor();
@@ -227,23 +226,14 @@ namespace Oci.LoganalyticsService.Models
                 case "GEO_STATS":
                     obj = new GeoStatsCommandDescriptor();
                     break;
-                case "JSON_EXTRACT":
-                    obj = new JsonExtractCommandDescriptor();
-                    break;
                 case "MAP":
                     obj = new MapCommandDescriptor();
-                    break;
-                case "EVENT_STATS":
-                    obj = new EventStatsCommandDescriptor();
                     break;
                 case "HIGHLIGHT_GROUPS":
                     obj = new HighlightGroupsCommandDescriptor();
                     break;
-                case "WHERE":
-                    obj = new WhereCommandDescriptor();
-                    break;
-                case "CLUSTER_SPLIT":
-                    obj = new ClusterSplitCommandDescriptor();
+                case "DEDUP":
+                    obj = new DedupCommandDescriptor();
                     break;
                 case "TIME_STATS":
                     obj = new TimeStatsCommandDescriptor();
@@ -251,14 +241,8 @@ namespace Oci.LoganalyticsService.Models
                 case "CLUSTER":
                     obj = new ClusterCommandDescriptor();
                     break;
-                case "CLUSTER_DETAILS":
-                    obj = new ClusterDetailsCommandDescriptor();
-                    break;
                 case "DELETE":
                     obj = new DeleteCommandDescriptor();
-                    break;
-                case "CLUSTER_COMPARE":
-                    obj = new ClusterCompareCommandDescriptor();
                     break;
                 case "SEARCH":
                     obj = new SearchCommandDescriptor();
@@ -266,17 +250,74 @@ namespace Oci.LoganalyticsService.Models
                 case "BUCKET":
                     obj = new BucketCommandDescriptor();
                     break;
-                case "COMMAND":
-                    obj = new CommandDescriptor();
-                    break;
-                case "DISTINCT":
-                    obj = new DistinctCommandDescriptor();
+                case "ADD_INSIGHTS":
+                    obj = new AddInsightsCommandDescriptor();
                     break;
                 case "LINK":
                     obj = new LinkCommandDescriptor();
                     break;
                 case "SORT":
                     obj = new SortCommandDescriptor();
+                    break;
+                case "HIGHLIGHT_ROWS":
+                    obj = new HighlightRowsCommandDescriptor();
+                    break;
+                case "MACRO":
+                    obj = new MacroCommandDescriptor();
+                    break;
+                case "EVAL":
+                    obj = new EvalCommandDescriptor();
+                    break;
+                case "RENAME":
+                    obj = new RenameCommandDescriptor();
+                    break;
+                case "XML_EXTRACT":
+                    obj = new XmlExtractCommandDescriptor();
+                    break;
+                case "MULTI_SEARCH":
+                    obj = new MultiSearchCommandDescriptor();
+                    break;
+                case "COMPARE":
+                    obj = new CompareCommandDescriptor();
+                    break;
+                case "TIME_COMPARE":
+                    obj = new TimeCompareCommandDescriptor();
+                    break;
+                case "MODULE":
+                    obj = new ModuleCommandDescriptor();
+                    break;
+                case "REGEX":
+                    obj = new RegexCommandDescriptor();
+                    break;
+                case "DELTA":
+                    obj = new DeltaCommandDescriptor();
+                    break;
+                case "LOOKUP":
+                    obj = new LookupCommandDescriptor();
+                    break;
+                case "JSON_EXTRACT":
+                    obj = new JsonExtractCommandDescriptor();
+                    break;
+                case "EVENT_STATS":
+                    obj = new EventStatsCommandDescriptor();
+                    break;
+                case "WHERE":
+                    obj = new WhereCommandDescriptor();
+                    break;
+                case "CLUSTER_SPLIT":
+                    obj = new ClusterSplitCommandDescriptor();
+                    break;
+                case "CLUSTER_DETAILS":
+                    obj = new ClusterDetailsCommandDescriptor();
+                    break;
+                case "CLUSTER_COMPARE":
+                    obj = new ClusterCompareCommandDescriptor();
+                    break;
+                case "COMMAND":
+                    obj = new CommandDescriptor();
+                    break;
+                case "DISTINCT":
+                    obj = new DistinctCommandDescriptor();
                     break;
                 case "EXTRACT":
                     obj = new ExtractCommandDescriptor();
@@ -290,11 +331,8 @@ namespace Oci.LoganalyticsService.Models
                 case "FIELDS":
                     obj = new FieldsCommandDescriptor();
                     break;
-                case "HIGHLIGHT_ROWS":
-                    obj = new HighlightRowsCommandDescriptor();
-                    break;
-                case "MACRO":
-                    obj = new MacroCommandDescriptor();
+                case "ANOMALY":
+                    obj = new AnomalyCommandDescriptor();
                     break;
                 case "CLASSIFY":
                     obj = new ClassifyCommandDescriptor();
@@ -311,17 +349,11 @@ namespace Oci.LoganalyticsService.Models
                 case "CREATE_VIEW":
                     obj = new CreateViewCommandDescriptor();
                     break;
+                case "TIME_CLUSTER":
+                    obj = new TimeClusterCommandDescriptor();
+                    break;
                 case "ADD_FIELDS":
                     obj = new AddFieldsCommandDescriptor();
-                    break;
-                case "EVAL":
-                    obj = new EvalCommandDescriptor();
-                    break;
-                case "RENAME":
-                    obj = new RenameCommandDescriptor();
-                    break;
-                case "XML_EXTRACT":
-                    obj = new XmlExtractCommandDescriptor();
                     break;
             }
             if (obj != null)

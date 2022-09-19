@@ -41,6 +41,72 @@ namespace Oci.DataintegrationService.Models
         
         [JsonProperty(PropertyName = "outputShape")]
         public Shape OutputShape { get; set; }
+                ///
+        /// <value>
+        /// The type of the OCI Function object.
+        /// </value>
+        ///
+        public enum ModelTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "OCI_FUNCTION")]
+            OciFunction
+        };
+
+        /// <value>
+        /// The type of the OCI Function object.
+        /// </value>
+        [JsonProperty(PropertyName = "modelType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ModelTypeEnum> ModelType { get; set; }
+        
+        /// <value>
+        /// The key identifying the OCI Function operator object, use this to identiy this instance within the dataflow.
+        /// </value>
+        [JsonProperty(PropertyName = "key")]
+        public string Key { get; set; }
+        
+        [JsonProperty(PropertyName = "parentRef")]
+        public ParentReference ParentRef { get; set; }
+        
+        /// <value>
+        /// The model version of an object.
+        /// </value>
+        [JsonProperty(PropertyName = "modelVersion")]
+        public string ModelVersion { get; set; }
+        
+        /// <value>
+        /// The version of the object that is used to track changes in the object instance.
+        /// </value>
+        [JsonProperty(PropertyName = "objectVersion")]
+        public System.Nullable<int> ObjectVersion { get; set; }
+                ///
+        /// <value>
+        /// The OCI Function payload format.
+        /// </value>
+        ///
+        public enum PayloadFormatEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "JSON")]
+            Json,
+            [EnumMember(Value = "AVRO")]
+            Avro,
+            [EnumMember(Value = "JSONBYTES")]
+            Jsonbytes
+        };
+
+        /// <value>
+        /// The OCI Function payload format.
+        /// </value>
+        [JsonProperty(PropertyName = "payloadFormat")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<PayloadFormatEnum> PayloadFormat { get; set; }
+        
+        [JsonProperty(PropertyName = "fnConfigDef")]
+        public FunctionConfigurationDefinition FnConfigDef { get; set; }
         
     }
 }

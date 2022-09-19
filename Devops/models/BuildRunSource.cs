@@ -40,7 +40,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "BITBUCKET_SERVER")]
             BitbucketServer,
             [EnumMember(Value = "DEVOPS_CODE_REPOSITORY")]
-            DevopsCodeRepository
+            DevopsCodeRepository,
+            [EnumMember(Value = "VBS")]
+            Vbs
         };
 
         
@@ -78,6 +80,9 @@ namespace Oci.DevopsService.Models
                     break;
                 case "DEVOPS_CODE_REPOSITORY":
                     obj = new DevopsCodeRepositoryBuildRunSource();
+                    break;
+                case "VBS":
+                    obj = new VbsBuildRunSource();
                     break;
                 case "MANUAL":
                     obj = new ManualBuildRunSource();

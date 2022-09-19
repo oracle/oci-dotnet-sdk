@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ThreatintelligenceService.Models
 {
     /// <summary>
-    /// a reference to an Indicator resource
+    /// A reference to a threat indicator resource.
     /// </summary>
     public class IndicatorReference : EntityReference
     {
         
         /// <value>
-        /// the OCID of the referenced Indicator
+        /// The unique OCID of the referenced threat indicator.
         /// </value>
         /// <remarks>
         /// Required

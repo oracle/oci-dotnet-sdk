@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ThreatintelligenceService.Models
 {
     /// <summary>
-    /// Information about the source of indicator data.
+    /// Information about the source of threat indicator data.
     /// </summary>
     public class IndicatorSourceSummary 
     {
         
         /// <value>
-        /// The name of the source
+        /// The name of the source.
         /// </value>
         /// <remarks>
         /// Required

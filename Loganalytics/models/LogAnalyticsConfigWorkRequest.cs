@@ -34,10 +34,7 @@ namespace Oci.LoganalyticsService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// The operation type.  There are two classes of operations, association operations and
-        /// lookup operations.  Associations may be created or deleted, and lookup operations include
-        /// append, update and delete.
-        /// 
+        /// The operation type
         /// </value>
         ///
         public enum OperationTypeEnum {
@@ -53,14 +50,15 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "UPDATE_LOOKUP_DATA")]
             UpdateLookupData,
             [EnumMember(Value = "DELETE_LOOKUP")]
-            DeleteLookup
+            DeleteLookup,
+            [EnumMember(Value = "ENABLE_INGEST_TIME_RULE")]
+            EnableIngestTimeRule,
+            [EnumMember(Value = "DISABLE_INGEST_TIME_RULE")]
+            DisableIngestTimeRule
         };
 
         /// <value>
-        /// The operation type.  There are two classes of operations, association operations and
-        /// lookup operations.  Associations may be created or deleted, and lookup operations include
-        /// append, update and delete.
-        /// 
+        /// The operation type
         /// </value>
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

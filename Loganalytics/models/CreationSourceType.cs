@@ -25,6 +25,8 @@ namespace Oci.LoganalyticsService.Models
       EmBridge,
       [EnumMember(Value = "SERVICE_CONNECTOR_HUB")]
       ServiceConnectorHub,
+      [EnumMember(Value = "DISCOVERY")]
+      Discovery,
       [EnumMember(Value = "NONE")]
       None
   }

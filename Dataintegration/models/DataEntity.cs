@@ -83,6 +83,9 @@ namespace Oci.DataintegrationService.Models
                 case "FILE_ENTITY":
                     obj = new DataEntityFromFile();
                     break;
+                case "DERIVED_ENTITY":
+                    obj = new DerivedEntity();
+                    break;
             }
             if (obj != null)
             {

@@ -24,6 +24,10 @@ namespace Oci.DevopsService.Models
         /// <value>
         /// Specifies the OCID of the previous deployment to be redeployed.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "PreviousDeploymentId is required.")]
         [JsonProperty(PropertyName = "previousDeploymentId")]
         public string PreviousDeploymentId { get; set; }
         

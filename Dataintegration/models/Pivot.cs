@@ -24,6 +24,9 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "groupByColumns")]
         public DynamicProxyField GroupByColumns { get; set; }
         
+        [JsonProperty(PropertyName = "materializedGroupByColumns")]
+        public MaterializedDynamicField MaterializedGroupByColumns { get; set; }
+        
         [JsonProperty(PropertyName = "pivotKeys")]
         public PivotKeys PivotKeys { get; set; }
         

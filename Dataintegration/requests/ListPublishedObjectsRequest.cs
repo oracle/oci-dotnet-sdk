@@ -127,7 +127,9 @@ namespace Oci.DataintegrationService.Requests
             [EnumMember(Value = "TIME_CREATED")]
             TimeCreated,
             [EnumMember(Value = "DISPLAY_NAME")]
-            DisplayName
+            DisplayName,
+            [EnumMember(Value = "TIME_UPDATED")]
+            TimeUpdated
         };
 
         /// <value>

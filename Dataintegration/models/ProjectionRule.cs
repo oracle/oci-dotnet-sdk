@@ -36,7 +36,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "TYPED_NAME_PATTERN_RULE")]
             TypedNamePatternRule,
             [EnumMember(Value = "RENAME_RULE")]
-            RenameRule
+            RenameRule,
+            [EnumMember(Value = "GROUPED_NAME_PATTERN_RULE")]
+            GroupedNamePatternRule
         };
 
         
@@ -110,6 +112,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "NAME_PATTERN_RULE":
                     obj = new NamePatternRule();
+                    break;
+                case "GROUPED_NAME_PATTERN_RULE":
+                    obj = new GroupedNamePatternRule();
                     break;
                 case "NAME_LIST_RULE":
                     obj = new NameListRule();

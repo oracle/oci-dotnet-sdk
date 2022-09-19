@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ThreatintelligenceService.Models
 {
     /// <summary>
-    /// An attribute name and list of values.
+    /// An attribute name and list of values with attribution.
     /// </summary>
     public class IndicatorAttribute 
     {
         
         /// <value>
-        /// The name of the attribute
+        /// The name of the attribute.
         /// </value>
         /// <remarks>
         /// Required

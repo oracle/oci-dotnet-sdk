@@ -56,7 +56,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "MACRO_PIVOT_FIELD")]
             MacroPivotField,
             [EnumMember(Value = "CONDITIONAL_OUTPUT_PORT")]
-            ConditionalOutputPort
+            ConditionalOutputPort,
+            [EnumMember(Value = "INPUT_PROXY_FIELD")]
+            InputProxyField,
+            [EnumMember(Value = "MATERIALIZED_DYNAMIC_FIELD")]
+            MaterializedDynamicField,
+            [EnumMember(Value = "DECISION_OUTPUT_PORT")]
+            DecisionOutputPort
         };
 
         
@@ -140,6 +146,12 @@ namespace Oci.DataintegrationService.Models
                 case "CONDITIONAL_OUTPUT_PORT":
                     obj = new ConditionalOutputPort();
                     break;
+                case "DECISION_OUTPUT_PORT":
+                    obj = new DecisionOutputPort();
+                    break;
+                case "MATERIALIZED_DYNAMIC_FIELD":
+                    obj = new MaterializedDynamicField();
+                    break;
                 case "PROXY_FIELD":
                     obj = new ProxyField();
                     break;
@@ -148,6 +160,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "SHAPE_FIELD":
                     obj = new ShapeField();
+                    break;
+                case "INPUT_PROXY_FIELD":
+                    obj = new InputProxyField();
                     break;
                 case "PARAMETER":
                     obj = new Parameter();

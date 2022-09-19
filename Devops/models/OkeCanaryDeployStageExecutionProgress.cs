@@ -21,6 +21,12 @@ namespace Oci.DevopsService.Models
     public class OkeCanaryDeployStageExecutionProgress : DeployStageExecutionProgress
     {
         
+        /// <value>
+        /// The namespace of OKE Canary deployment.
+        /// </value>
+        [JsonProperty(PropertyName = "namespace")]
+        public string Namespace { get; set; }
+        
         [JsonProperty(PropertyName = "deployStageType")]
         private readonly string deployStageType = "OKE_CANARY_DEPLOYMENT";
     }

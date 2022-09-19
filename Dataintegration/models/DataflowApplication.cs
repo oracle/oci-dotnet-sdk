@@ -33,5 +33,8 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
+        [JsonProperty(PropertyName = "configValues")]
+        public ConfigValues ConfigValues { get; set; }
+        
     }
 }

@@ -40,7 +40,13 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "COMPOSITE_TYPE")]
             CompositeType,
             [EnumMember(Value = "DERIVED_TYPE")]
-            DerivedType
+            DerivedType,
+            [EnumMember(Value = "ARRAY_TYPE")]
+            ArrayType,
+            [EnumMember(Value = "MAP_TYPE")]
+            MapType,
+            [EnumMember(Value = "MATERIALIZED_COMPOSITE_TYPE")]
+            MaterializedCompositeType
         };
 
         
@@ -100,6 +106,9 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "ARRAY_TYPE":
+                    obj = new ArrayType();
+                    break;
                 case "CONFIGURED_TYPE":
                     obj = new ConfiguredType();
                     break;
@@ -114,6 +123,12 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "DATA_TYPE":
                     obj = new DataType();
+                    break;
+                case "MATERIALIZED_COMPOSITE_TYPE":
+                    obj = new MaterializedCompositeType();
+                    break;
+                case "MAP_TYPE":
+                    obj = new MapType();
                     break;
                 case "COMPOSITE_TYPE":
                     obj = new CompositeType();

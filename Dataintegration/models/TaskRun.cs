@@ -271,6 +271,12 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<TaskTypeEnum> TaskType { get; set; }
         
         /// <value>
+        /// This field tells the user if there is any logs being fetched in backend for failure. Applicable only for failed pipeline tasks.
+        /// </value>
+        [JsonProperty(PropertyName = "isLogProcessingInProgress")]
+        public System.Nullable<bool> IsLogProcessingInProgress { get; set; }
+        
+        /// <value>
         /// Value can only contain upper case letters, underscore and numbers. It should begin with upper case letter or underscore. The value can be modified.
         /// </value>
         [JsonProperty(PropertyName = "identifier")]

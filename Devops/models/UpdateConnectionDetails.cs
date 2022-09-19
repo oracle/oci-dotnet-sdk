@@ -73,6 +73,9 @@ namespace Oci.DevopsService.Models
                 case "GITHUB_ACCESS_TOKEN":
                     obj = new UpdateGithubAccessTokenConnectionDetails();
                     break;
+                case "VBS_ACCESS_TOKEN":
+                    obj = new UpdateVbsAccessTokenConnectionDetails();
+                    break;
                 case "BITBUCKET_SERVER_ACCESS_TOKEN":
                     obj = new UpdateBitbucketServerAccessTokenConnectionDetails();
                     break;

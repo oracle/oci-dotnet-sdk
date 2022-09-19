@@ -22,7 +22,7 @@ namespace Oci.UsageapiService.Models
     {
         
         /// <value>
-        /// The unique name of the schedule created by the user
+        /// The unique name of the user-created schedule.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.UsageapiService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The tenancy of the customer
+        /// The customer tenancy.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,6 +40,36 @@ namespace Oci.UsageapiService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The description of the schedule.
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+                ///
+        /// <value>
+        /// Specifies supported output file format.
+        /// </value>
+        ///
+        public enum OutputFileFormatEnum {
+            [EnumMember(Value = "CSV")]
+            Csv,
+            [EnumMember(Value = "PDF")]
+            Pdf
+        };
+
+        /// <value>
+        /// Specifies supported output file format.
+        /// </value>
+        [JsonProperty(PropertyName = "outputFileFormat")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OutputFileFormatEnum> OutputFileFormat { get; set; }
+        
+        /// <value>
+        /// The saved report id which can also be used to generate query.
+        /// </value>
+        [JsonProperty(PropertyName = "savedReportId")]
+        public string SavedReportId { get; set; }
         
         /// <remarks>
         /// Required
@@ -49,8 +79,9 @@ namespace Oci.UsageapiService.Models
         public ResultLocation ResultLocation { get; set; }
         
         /// <value>
-        /// In x-obmcs-recurring-time format shown here: https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10
-        /// Describes the frequency of when the schedule will be run
+        /// Specifies the frequency according to when the schedule will be run, 
+        /// in the x-obmcs-recurring-time format described in [RFC 5545 section 3.3.10](https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10).
+        /// Supported values are : ONE_TIME, DAILY, WEEKLY and MONTHLY.
         /// 
         /// </value>
         /// <remarks>
@@ -61,7 +92,7 @@ namespace Oci.UsageapiService.Models
         public string ScheduleRecurrences { get; set; }
         
         /// <value>
-        /// The date and time of the first time job execution
+        /// The date and time of the first time job execution.
         /// </value>
         /// <remarks>
         /// Required
@@ -70,15 +101,11 @@ namespace Oci.UsageapiService.Models
         [JsonProperty(PropertyName = "timeScheduled")]
         public System.Nullable<System.DateTime> TimeScheduled { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "QueryProperties is required.")]
         [JsonProperty(PropertyName = "queryProperties")]
         public QueryProperties QueryProperties { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only. 
+        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]

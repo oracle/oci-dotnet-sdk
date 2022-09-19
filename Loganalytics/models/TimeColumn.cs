@@ -23,7 +23,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// Time span betwwen each series data point.
+        /// Time span between each series data point.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "span")]

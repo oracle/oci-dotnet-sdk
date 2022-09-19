@@ -22,6 +22,12 @@ namespace Oci.DataintegrationService.Models
     {
         
         /// <value>
+        /// OCID of the compartment that this resource belongs to. Defaults to compartment of the Workspace.
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// Currently not used on application creation. Reserved for future.
         /// </value>
         [JsonProperty(PropertyName = "key")]

@@ -42,6 +42,15 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "defaultConnection")]
         public ConnectionFromAtpDetails DefaultConnection { get; set; }
         
+        [JsonProperty(PropertyName = "stagingDataAsset")]
+        public DataAsset StagingDataAsset { get; set; }
+        
+        [JsonProperty(PropertyName = "stagingConnection")]
+        public Connection StagingConnection { get; set; }
+        
+        [JsonProperty(PropertyName = "bucketSchema")]
+        public Schema BucketSchema { get; set; }
+        
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "ORACLE_ATP_DATA_ASSET";
     }

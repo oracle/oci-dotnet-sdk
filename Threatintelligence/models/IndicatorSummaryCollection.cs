@@ -22,7 +22,7 @@ namespace Oci.ThreatintelligenceService.Models
     {
         
         /// <value>
-        /// The list of indicators
+        /// The list of indicator summaries.
         /// </value>
         /// <remarks>
         /// Required

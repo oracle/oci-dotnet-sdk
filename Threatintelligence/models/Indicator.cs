@@ -32,7 +32,7 @@ namespace Oci.ThreatintelligenceService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Type of indicator
+        /// The type of indicator.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +44,13 @@ namespace Oci.ThreatintelligenceService.Models
         
         /// <value>
         /// The value for this indicator.
-        /// Format is dependent upon `type`, e.g. DOMAIN_NAME \"evil.example.com\", MD5_HASH \"44d88612fea8a8f36de82e1278abb02f\", IP_ADDRESS \"2001:db8::1\".
+        /// The value's format is dependent upon its `type`. Examples:
+        /// <br/>
+        /// DOMAIN_NAME \"evil.example.com\"
+        /// <br/>
+        /// MD5_HASH \"44d88612fea8a8f36de82e1278abb02f\"
+        /// <br/>
+        /// IP_ADDRESS \"2001:db8::1\"
         /// 
         /// </value>
         /// <remarks>
@@ -55,13 +61,13 @@ namespace Oci.ThreatintelligenceService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// Confidence is an integer from 0 to 100 that provides a measure of our certainty in the maliciousness of the indicator.  This confidence value is aggregated from the confidence in the threat types, attributes, and relationships to create an overall value for the indicator.
+        /// An integer from 0 to 100 that represents how certain we are that the indicator is malicious and a potential threat if it is detected communicating with your cloud resources. This confidence value is aggregated from the confidence in the threat types, attributes, and relationships to create an overall value for the indicator.
         /// </value>
         [JsonProperty(PropertyName = "confidence")]
         public System.Nullable<int> Confidence { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The OCID of the compartment that contains this indicator.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -77,8 +83,8 @@ namespace Oci.ThreatintelligenceService.Models
         public System.Collections.Generic.List<ThreatType> ThreatTypes { get; set; }
         
         /// <value>
-        /// A map of attribute name (string) to IndicatorAttribute (values and supporting data).
-        /// This provides generic storage for additional data about an indicator.
+        /// A map of attributes with additional information about the indicator.
+        /// Each attribute has a name (string), value (string), and attribution (supporting data).
         /// 
         /// </value>
         /// <remarks>
@@ -89,8 +95,8 @@ namespace Oci.ThreatintelligenceService.Models
         public System.Collections.Generic.List<IndicatorAttribute> Attributes { get; set; }
         
         /// <value>
-        /// A map of relationship name (string) to IndicatorRelationship (related entities and supporting data).
-        /// This provides generic storage for relationships between indicators or other entities.
+        /// A map of relationships between the indicator and other entities.
+        /// Each relationship has a name (string), related entity, and attribution (supporting data).
         /// 
         /// </value>
         /// <remarks>
@@ -101,14 +107,14 @@ namespace Oci.ThreatintelligenceService.Models
         public System.Collections.Generic.List<IndicatorRelationship> Relationships { get; set; }
         
         /// <value>
-        /// The state of the indicator.  It will always be ACTIVE.  This field is added for consistency.
+        /// The state of the indicator. It will always be `ACTIVE`.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// The time the data was first seen for this indicator. An RFC3339 formatted datetime string
+        /// The date and time that the indicator was first detected. An RFC3339 formatted string.
         /// </value>
         /// <remarks>
         /// Required
@@ -118,7 +124,7 @@ namespace Oci.ThreatintelligenceService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The last time this indicator was updated. It starts with the same value as timeCreated and is never empty. An RFC3339 formatted datetime string
+        /// The date and time that this indicator was last updated. The value is the same as `timeCreated` for a new indicator. An RFC3339 formatted string.
         /// </value>
         /// <remarks>
         /// Required
@@ -126,6 +132,23 @@ namespace Oci.ThreatintelligenceService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The date and time that this indicator was last seen. The value is the same as `timeCreated` for a new indicator. An RFC3339 formatted string.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeLastSeen is required.")]
+        [JsonProperty(PropertyName = "timeLastSeen")]
+        public System.Nullable<System.DateTime> TimeLastSeen { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Geodata is required.")]
+        [JsonProperty(PropertyName = "geodata")]
+        public GeodataDetails Geodata { get; set; }
         
     }
 }

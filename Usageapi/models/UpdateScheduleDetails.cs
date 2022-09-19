@@ -16,14 +16,41 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// Details for updating the custom table. Only updating tags is supported
+    /// Details for updating the custom table.
     /// 
     /// </summary>
     public class UpdateScheduleDetails 
     {
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only. 
+        /// The description of the schedule.
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+                ///
+        /// <value>
+        /// Specifies supported output file format.
+        /// </value>
+        ///
+        public enum OutputFileFormatEnum {
+            [EnumMember(Value = "CSV")]
+            Csv,
+            [EnumMember(Value = "PDF")]
+            Pdf
+        };
+
+        /// <value>
+        /// Specifies supported output file format.
+        /// </value>
+        [JsonProperty(PropertyName = "outputFileFormat")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OutputFileFormatEnum> OutputFileFormat { get; set; }
+        
+        [JsonProperty(PropertyName = "resultLocation")]
+        public ResultLocation ResultLocation { get; set; }
+        
+        /// <value>
+        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]

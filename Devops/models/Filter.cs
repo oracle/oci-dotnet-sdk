@@ -45,6 +45,9 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["triggerSource"].Value<string>();
             switch (discriminator)
             {
+                case "VBS":
+                    obj = new VbsFilter();
+                    break;
                 case "DEVOPS_CODE_REPOSITORY":
                     obj = new DevopsCodeRepositoryFilter();
                     break;
