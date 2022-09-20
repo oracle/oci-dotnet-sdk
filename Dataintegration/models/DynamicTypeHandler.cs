@@ -28,7 +28,9 @@ namespace Oci.DataintegrationService.Models
         ///
         public enum ModelTypeEnum {
             [EnumMember(Value = "RULE_TYPE_CONFIGS")]
-            RuleTypeConfigs
+            RuleTypeConfigs,
+            [EnumMember(Value = "FLATTEN_TYPE_HANDLER")]
+            FlattenTypeHandler
         };
 
         
@@ -55,6 +57,9 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "FLATTEN_TYPE_HANDLER":
+                    obj = new FlattenTypeHandler();
+                    break;
                 case "RULE_TYPE_CONFIGS":
                     obj = new RuleTypeConfig();
                     break;

@@ -22,7 +22,7 @@ namespace Oci.UsageapiService.Models
     {
         
         /// <value>
-        /// List of schedule summary.
+        /// Schedule summary list.
         /// </value>
         /// <remarks>
         /// Required

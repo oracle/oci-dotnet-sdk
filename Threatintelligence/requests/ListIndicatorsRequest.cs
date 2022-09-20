@@ -20,7 +20,7 @@ namespace Oci.ThreatintelligenceService.Requests
     {
         
         /// <value>
-        /// The ID of the tenancy to use to filter results.
+        /// The OCID of the tenancy (root compartment) that is used to filter results.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.ThreatintelligenceService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The result set will include indicators that have any of the provided threat types. To filter for multiple threat types repeat the query parameter.
+        /// The threat type of entites to be returned. To filter for multiple threat types, repeat this parameter.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "threatTypeName", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> ThreatTypeName { get; set; }
@@ -60,6 +60,36 @@ namespace Oci.ThreatintelligenceService.Requests
         public System.Nullable<System.DateTime> TimeUpdatedGreaterThanOrEqualTo { get; set; }
         
         /// <value>
+        /// Return indicators updated before the provided time.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeUpdatedLessThan")]
+        public System.Nullable<System.DateTime> TimeUpdatedLessThan { get; set; }
+        
+        /// <value>
+        /// The oldest last seen time of entities to be returned.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeLastSeenGreaterThanOrEqualTo")]
+        public System.Nullable<System.DateTime> TimeLastSeenGreaterThanOrEqualTo { get; set; }
+        
+        /// <value>
+        /// Return indicators last seen before the provided time.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeLastSeenLessThan")]
+        public System.Nullable<System.DateTime> TimeLastSeenLessThan { get; set; }
+        
+        /// <value>
+        /// The oldest created/first seen time of entities to be returned.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeCreatedGreaterThanOrEqualTo")]
+        public System.Nullable<System.DateTime> TimeCreatedGreaterThanOrEqualTo { get; set; }
+        
+        /// <value>
+        /// Return indicators created/first seen before the provided time.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeCreatedLessThan")]
+        public System.Nullable<System.DateTime> TimeCreatedLessThan { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
@@ -86,8 +116,12 @@ namespace Oci.ThreatintelligenceService.Requests
         public enum SortByEnum {
             [EnumMember(Value = "confidence")]
             Confidence,
+            [EnumMember(Value = "timeCreated")]
+            TimeCreated,
             [EnumMember(Value = "timeUpdated")]
-            TimeUpdated
+            TimeUpdated,
+            [EnumMember(Value = "timeLastSeen")]
+            TimeLastSeen
         };
 
         /// <value>

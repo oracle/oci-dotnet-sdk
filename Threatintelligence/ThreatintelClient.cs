@@ -25,7 +25,7 @@ namespace Oci.ThreatintelligenceService
     public class ThreatintelClient : RegionalClientBase
     {
         private readonly RetryConfiguration retryConfiguration;
-        private const string basePathWithoutHost = "/20210831";
+        private const string basePathWithoutHost = "/20220901";
 
         public ThreatintelPaginators Paginators { get; }
 
@@ -68,7 +68,7 @@ namespace Oci.ThreatintelligenceService
         }
 
         /// <summary>
-        /// Gets a detailed indicator by identifier
+        /// Get detailed information about a threat indicator with a given identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -104,7 +104,7 @@ namespace Oci.ThreatintelligenceService
                     ServiceName = "Threatintel",
                     OperationName = "GetIndicator",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20210831/Indicator/GetIndicator",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20220901/Indicator/GetIndicator",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -124,7 +124,7 @@ namespace Oci.ThreatintelligenceService
         }
 
         /// <summary>
-        /// Get the current count of each indicator type.  Results can be sorted ASC or DESC by count.
+        /// Get the current count of each threat indicator type. Indicator counts can be sorted in ascending or descending order.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -160,7 +160,7 @@ namespace Oci.ThreatintelligenceService
                     ServiceName = "Threatintel",
                     OperationName = "ListIndicatorCounts",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20210831/IndicatorCountCollection/ListIndicatorCounts",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20220901/IndicatorCountCollection/ListIndicatorCounts",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -180,7 +180,7 @@ namespace Oci.ThreatintelligenceService
         }
 
         /// <summary>
-        /// Returns a list of IndicatorSummary objects.
+        /// Get a list of threat indicator summaries based on the search criteria.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -217,7 +217,7 @@ namespace Oci.ThreatintelligenceService
                     ServiceName = "Threatintel",
                     OperationName = "ListIndicators",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20210831/IndicatorSummaryCollection/ListIndicators",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20220901/IndicatorSummaryCollection/ListIndicators",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -238,7 +238,7 @@ namespace Oci.ThreatintelligenceService
 
         /// <summary>
         /// Gets a list of threat types that are available to use as parameters when querying indicators.
-        /// This is sorted by threat type name according to the sort order query param.
+        /// The list is sorted by threat type name according to the sort order query param.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -275,7 +275,7 @@ namespace Oci.ThreatintelligenceService
                     ServiceName = "Threatintel",
                     OperationName = "ListThreatTypes",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20210831/ThreatTypesCollection/ListThreatTypes",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20220901/ThreatTypesCollection/ListThreatTypes",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -290,6 +290,62 @@ namespace Oci.ThreatintelligenceService
             catch (Exception e)
             {
                 logger.Error($"ListThreatTypes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Get indicator summaries based on advanced search criteria.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/threatintelligence/SummarizeIndicators.cs.html">here</a> to see an example of how to use SummarizeIndicators API.</example>
+        public async Task<SummarizeIndicatorsResponse> SummarizeIndicators(SummarizeIndicatorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called summarizeIndicators");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/indicators/actions/summarize".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Threatintel",
+                    OperationName = "SummarizeIndicators",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/threat-intel/20220901/Indicator/SummarizeIndicators",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<SummarizeIndicatorsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"SummarizeIndicators failed with error: {e.Message}");
                 throw;
             }
         }

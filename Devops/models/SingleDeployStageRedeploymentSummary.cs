@@ -30,6 +30,10 @@ namespace Oci.DevopsService.Models
         /// <value>
         /// Specifies the OCID of the stage to be redeployed.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DeployStageId is required.")]
         [JsonProperty(PropertyName = "deployStageId")]
         public string DeployStageId { get; set; }
         

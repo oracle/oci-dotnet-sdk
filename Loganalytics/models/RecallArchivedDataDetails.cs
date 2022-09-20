@@ -59,5 +59,17 @@ namespace Oci.LoganalyticsService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StorageDataType> DataType { get; set; }
         
+        /// <value>
+        /// This is a list of comma-separated log sets that recalled data belongs to.
+        /// </value>
+        [JsonProperty(PropertyName = "logSets")]
+        public string LogSets { get; set; }
+        
+        /// <value>
+        /// This is the query that identifies the recalled data.
+        /// </value>
+        [JsonProperty(PropertyName = "query")]
+        public string Query { get; set; }
+        
     }
 }

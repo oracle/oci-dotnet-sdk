@@ -128,6 +128,9 @@ namespace Oci.DevopsService.Models
                 case "BITBUCKET_CLOUD_APP_PASSWORD":
                     obj = new BitbucketCloudAppPasswordConnectionSummary();
                     break;
+                case "VBS_ACCESS_TOKEN":
+                    obj = new VbsAccessTokenConnectionSummary();
+                    break;
                 case "GITHUB_ACCESS_TOKEN":
                     obj = new GithubAccessTokenConnectionSummary();
                     break;

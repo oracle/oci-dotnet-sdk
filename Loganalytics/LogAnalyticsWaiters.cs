@@ -32,6 +32,34 @@ namespace Oci.LoganalyticsService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetIngestTimeRuleRequest, GetIngestTimeRuleResponse> ForIngestTimeRule(GetIngestTimeRuleRequest request, params ConfigLifecycleState[] targetStates)
+        {
+            return this.ForIngestTimeRule(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetIngestTimeRuleRequest, GetIngestTimeRuleResponse> ForIngestTimeRule(GetIngestTimeRuleRequest request, WaiterConfiguration config, params ConfigLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetIngestTimeRuleRequest, GetIngestTimeRuleResponse>(
+                request,
+                request => client.GetIngestTimeRule(request),
+                response => targetStates.Contains(response.IngestTimeRule.LifecycleState.Value),
+                targetStates.Contains(ConfigLifecycleState.Deleted)
+            );
+            return new Waiter<GetIngestTimeRuleRequest, GetIngestTimeRuleResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetLogAnalyticsEmBridgeRequest, GetLogAnalyticsEmBridgeResponse> ForLogAnalyticsEmBridge(GetLogAnalyticsEmBridgeRequest request, params EmBridgeLifecycleStates[] targetStates)
         {
             return this.ForLogAnalyticsEmBridge(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

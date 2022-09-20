@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The object storage location where usage/cost CSVs will be uploaded
+    /// The object storage location where usage or cost CSVs will be uploaded.
     /// </summary>
     public class ObjectStorageLocation : ResultLocation
     {
         
         /// <value>
-        /// The destination Object Store Region specified by customer
+        /// The destination Object Store Region specified by the customer.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.UsageapiService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// The namespace needed to determine object storage bucket.
+        /// The namespace needed to determine the object storage bucket.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.UsageapiService.Models
         public string Namespace { get; set; }
         
         /// <value>
-        /// The bucket name where usage/cost CSVs will be uploaded
+        /// The bucket name where usage or cost CSVs will be uploaded.
         /// </value>
         /// <remarks>
         /// Required

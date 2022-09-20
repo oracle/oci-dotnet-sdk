@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ThreatintelligenceService.Models
 {
     /// <summary>
-    /// A group of indicators with the same dimensions
+    /// A group of indicators with the same dimensions, such as the same indicator type.
     /// </summary>
     public class IndicatorCountSummary 
     {
@@ -29,7 +29,7 @@ namespace Oci.ThreatintelligenceService.Models
         public IndicatorCountDimensions Dimensions { get; set; }
         
         /// <value>
-        /// The count of indicators in the group
+        /// The count of indicators in the group.
         /// </value>
         /// <remarks>
         /// Required

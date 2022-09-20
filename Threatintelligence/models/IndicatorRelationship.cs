@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ThreatintelligenceService.Models
 {
     /// <summary>
-    /// An relationship name and list of releated entities.
+    /// A relationship name and list of releated entities.
     /// </summary>
     public class IndicatorRelationship 
     {
         
         /// <value>
-        /// The name of the attribute
+        /// The name of the attribute.
         /// </value>
         /// <remarks>
         /// Required
@@ -39,7 +39,7 @@ namespace Oci.ThreatintelligenceService.Models
         public EntityReference RelatedEntity { get; set; }
         
         /// <value>
-        /// The array of attribution data that support this SourcedRelationship
+        /// The array of attribution data that support this relationship.
         /// </value>
         /// <remarks>
         /// Required

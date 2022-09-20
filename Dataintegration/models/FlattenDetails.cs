@@ -21,42 +21,53 @@ namespace Oci.DataintegrationService.Models
     public class FlattenDetails 
     {
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "FlattenProjectionPreferences is required.")]
         [JsonProperty(PropertyName = "flattenProjectionPreferences")]
         public FlattenProjectionPreferences FlattenProjectionPreferences { get; set; }
         
         /// <value>
         /// The string of flatten attribute column name where the flatten process starts.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "FlattenAttributeRoot is required.")]
         [JsonProperty(PropertyName = "flattenAttributeRoot")]
         public string FlattenAttributeRoot { get; set; }
         
         /// <value>
-        /// The string of flatten attribute path in flattenAttributeRoot from upper level to leaf/targeted level concatenated with dot(.)
+        /// The string of flatten attribute path in flattenAttributeRoot from upper level to leaf/targeted level concatenated with dot(.).
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "FlattenAttributePath is required.")]
         [JsonProperty(PropertyName = "flattenAttributePath")]
         public string FlattenAttributePath { get; set; }
         
         /// <value>
         /// The array of flatten columns which are the input to flatten.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "FlattenColumns is required.")]
         [JsonProperty(PropertyName = "flattenColumns")]
         public System.Collections.Generic.List<TypedObject> FlattenColumns { get; set; }
+        
+        /// <value>
+        /// The key of the object.
+        /// </value>
+        [JsonProperty(PropertyName = "key")]
+        public string Key { get; set; }
+        
+        /// <value>
+        /// The type of the object.
+        /// </value>
+        [JsonProperty(PropertyName = "modelType")]
+        public string ModelType { get; set; }
+        
+        /// <value>
+        /// The model version of an object.
+        /// </value>
+        [JsonProperty(PropertyName = "modelVersion")]
+        public string ModelVersion { get; set; }
+        
+        [JsonProperty(PropertyName = "parentRef")]
+        public ParentReference ParentRef { get; set; }
+        
+        /// <value>
+        /// The status of an object that can be set to value 1 for shallow references across objects, other values reserved.
+        /// </value>
+        [JsonProperty(PropertyName = "objectStatus")]
+        public System.Nullable<int> ObjectStatus { get; set; }
         
     }
 }

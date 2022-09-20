@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ThreatintelligenceService.Models
 {
     /// <summary>
-    /// The visibility level associated with data and an associated TLP (https://www.cisa.gov/tlp) level.
+    /// The visibility level of attribution data, including its [Traffic Light Protocol (TLP)](https://www.cisa.gov/tlp) color.
     /// </summary>
     public class DataVisibility 
     {
@@ -32,7 +32,7 @@ namespace Oci.ThreatintelligenceService.Models
         public string Name { get; set; }
                 ///
         /// <value>
-        /// The Traffic Light Protocol (TLP) name of the visibility level.
+        /// The Traffic Light Protocol (TLP) color of the visibility level.
         /// </value>
         ///
         public enum TlpNameEnum {
@@ -52,7 +52,7 @@ namespace Oci.ThreatintelligenceService.Models
         };
 
         /// <value>
-        /// The Traffic Light Protocol (TLP) name of the visibility level.
+        /// The Traffic Light Protocol (TLP) color of the visibility level.
         /// </value>
         /// <remarks>
         /// Required

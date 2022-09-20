@@ -177,5 +177,23 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
+        /// <value>
+        /// OCID of the private endpoint associated with the container/workspace.
+        /// </value>
+        [JsonProperty(PropertyName = "endpointId")]
+        public string EndpointId { get; set; }
+        
+        /// <value>
+        /// Name of the private endpoint associated with the container/workspace.
+        /// </value>
+        [JsonProperty(PropertyName = "endpointName")]
+        public string EndpointName { get; set; }
+        
+        /// <value>
+        /// DCMS Registry ID associated with the container/workspace.
+        /// </value>
+        [JsonProperty(PropertyName = "registryId")]
+        public string RegistryId { get; set; }
+        
     }
 }

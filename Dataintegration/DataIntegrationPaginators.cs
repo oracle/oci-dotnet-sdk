@@ -442,6 +442,55 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListDisApplicationTaskRunLineages operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListDisApplicationTaskRunLineagesResponse> ListDisApplicationTaskRunLineagesResponseEnumerator(ListDisApplicationTaskRunLineagesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListDisApplicationTaskRunLineagesRequest, ListDisApplicationTaskRunLineagesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListDisApplicationTaskRunLineages(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the TaskRunLineageSummary objects
+        /// contained in responses from the ListDisApplicationTaskRunLineages operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<TaskRunLineageSummary> ListDisApplicationTaskRunLineagesRecordEnumerator(ListDisApplicationTaskRunLineagesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListDisApplicationTaskRunLineagesRequest, ListDisApplicationTaskRunLineagesResponse, TaskRunLineageSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListDisApplicationTaskRunLineages(request, retryConfiguration, cancellationToken),
+                response => response.TaskRunLineageSummaryCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListDisApplications operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -1030,6 +1079,104 @@ namespace Oci.DataintegrationService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListRuntimeOperators operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListRuntimeOperatorsResponse> ListRuntimeOperatorsResponseEnumerator(ListRuntimeOperatorsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListRuntimeOperatorsRequest, ListRuntimeOperatorsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListRuntimeOperators(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the RuntimeOperatorSummary objects
+        /// contained in responses from the ListRuntimeOperators operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<RuntimeOperatorSummary> ListRuntimeOperatorsRecordEnumerator(ListRuntimeOperatorsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListRuntimeOperatorsRequest, ListRuntimeOperatorsResponse, RuntimeOperatorSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListRuntimeOperators(request, retryConfiguration, cancellationToken),
+                response => response.RuntimeOperatorSummaryCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListRuntimePipelines operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListRuntimePipelinesResponse> ListRuntimePipelinesResponseEnumerator(ListRuntimePipelinesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListRuntimePipelinesRequest, ListRuntimePipelinesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListRuntimePipelines(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the RuntimePipelineSummary objects
+        /// contained in responses from the ListRuntimePipelines operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<RuntimePipelineSummary> ListRuntimePipelinesRecordEnumerator(ListRuntimePipelinesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListRuntimePipelinesRequest, ListRuntimePipelinesResponse, RuntimePipelineSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListRuntimePipelines(request, retryConfiguration, cancellationToken),
+                response => response.RuntimePipelineSummaryCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListSchedules operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -1124,6 +1271,55 @@ namespace Oci.DataintegrationService
                 },
                 request => client.ListSchemas(request, retryConfiguration, cancellationToken),
                 response => response.SchemaSummaryCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListTaskRunLineages operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListTaskRunLineagesResponse> ListTaskRunLineagesResponseEnumerator(ListTaskRunLineagesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListTaskRunLineagesRequest, ListTaskRunLineagesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListTaskRunLineages(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the TaskRunLineageSummary objects
+        /// contained in responses from the ListTaskRunLineages operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<TaskRunLineageSummary> ListTaskRunLineagesRecordEnumerator(ListTaskRunLineagesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListTaskRunLineagesRequest, ListTaskRunLineagesResponse, TaskRunLineageSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListTaskRunLineages(request, retryConfiguration, cancellationToken),
+                response => response.TaskRunLineageSummaryCollection.Items
             );
         }
 

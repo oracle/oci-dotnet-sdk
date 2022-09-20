@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ThreatintelligenceService.Models
 {
     /// <summary>
-    /// Threat type id and text
+    /// The name of a threat type and its ID.
     /// </summary>
     public class ThreatTypeSummary 
     {

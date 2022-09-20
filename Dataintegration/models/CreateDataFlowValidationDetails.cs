@@ -96,5 +96,17 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "keyMap")]
         public System.Collections.Generic.Dictionary<string, string> KeyMap { get; set; }
         
+        /// <value>
+        /// A hash map that maps TypedObject keys to the object itself, for java sdk.
+        /// </value>
+        [JsonProperty(PropertyName = "typedObjectMap")]
+        public System.Collections.Generic.Dictionary<string, TypedObjectWrapper> TypedObjectMap { get; set; }
+        
+        /// <value>
+        /// A hash map that maps TypedObject keys to a field map that maps to the typed object as a target, for java sdk.
+        /// </value>
+        [JsonProperty(PropertyName = "targetFieldMapSummary")]
+        public System.Collections.Generic.Dictionary<string, FieldMapWrapper> TargetFieldMapSummary { get; set; }
+        
     }
 }

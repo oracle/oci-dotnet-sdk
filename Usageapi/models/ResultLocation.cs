@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The location where usage/cost CSVs will be uploaded defined by `locationType`,
+    /// The location where usage or cost CSVs will be uploaded defined by `locationType`,
     /// which corresponds with type-specific characteristics.
     /// 
     /// </summary>
@@ -25,7 +25,7 @@ namespace Oci.UsageapiService.Models
     {
                 ///
         /// <value>
-        /// Defines the type of location where the usage/cost CSVs will be stored
+        /// Defines the type of location where the usage or cost CSVs will be stored.
         /// 
         /// </value>
         ///

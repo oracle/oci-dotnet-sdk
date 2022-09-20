@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The saved dynamic date range (Required when staticDateRange is missing).
+    /// The saved dynamic date range (required when the static date range is missing).
     /// </summary>
     public class DynamicDateRange : DateRange
     {
@@ -28,10 +28,18 @@ namespace Oci.UsageapiService.Models
             UnknownEnumValue,
             [EnumMember(Value = "LAST_7_DAYS")]
             Last7Days,
+            [EnumMember(Value = "LAST_10_DAYS")]
+            Last10Days,
             [EnumMember(Value = "LAST_CALENDAR_WEEK")]
             LastCalendarWeek,
             [EnumMember(Value = "LAST_CALENDAR_MONTH")]
             LastCalendarMonth,
+            [EnumMember(Value = "LAST_2_CALENDAR_MONTHS")]
+            Last2CalendarMonths,
+            [EnumMember(Value = "LAST_3_CALENDAR_MONTHS")]
+            Last3CalendarMonths,
+            [EnumMember(Value = "LAST_6_CALENDAR_MONTHS")]
+            Last6CalendarMonths,
             [EnumMember(Value = "LAST_30_DAYS")]
             Last30Days,
             [EnumMember(Value = "MONTH_TO_DATE")]
@@ -39,7 +47,9 @@ namespace Oci.UsageapiService.Models
             [EnumMember(Value = "LAST_YEAR")]
             LastYear,
             [EnumMember(Value = "YEAR_TODATE")]
-            YearTodate
+            YearTodate,
+            [EnumMember(Value = "ALL")]
+            All
         };
 
         /// <remarks>

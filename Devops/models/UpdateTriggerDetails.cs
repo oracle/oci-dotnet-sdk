@@ -78,6 +78,9 @@ namespace Oci.DevopsService.Models
                 case "BITBUCKET_SERVER":
                     obj = new UpdateBitbucketServerTriggerDetails();
                     break;
+                case "VBS":
+                    obj = new UpdateVbsTriggerDetails();
+                    break;
                 case "GITLAB_SERVER":
                     obj = new UpdateGitlabServerTriggerDetails();
                     break;

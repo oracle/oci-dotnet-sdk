@@ -78,7 +78,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "BITBUCKET_SERVER_ACCESS_TOKEN")]
             BitbucketServerAccessToken,
             [EnumMember(Value = "BITBUCKET_CLOUD_APP_PASSWORD")]
-            BitbucketCloudAppPassword
+            BitbucketCloudAppPassword,
+            [EnumMember(Value = "VBS_ACCESS_TOKEN")]
+            VbsAccessToken
         };
 
         
@@ -165,6 +167,9 @@ namespace Oci.DevopsService.Models
                     break;
                 case "GITLAB_SERVER_ACCESS_TOKEN":
                     obj = new GitlabServerAccessTokenConnection();
+                    break;
+                case "VBS_ACCESS_TOKEN":
+                    obj = new VbsAccessTokenConnection();
                     break;
             }
             if (obj != null)

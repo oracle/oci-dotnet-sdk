@@ -80,6 +80,9 @@ namespace Oci.DevopsService.Models
             var discriminator = jsonObject["connectionType"].Value<string>();
             switch (discriminator)
             {
+                case "VBS_ACCESS_TOKEN":
+                    obj = new CreateVbsAccessTokenConnectionDetails();
+                    break;
                 case "GITLAB_SERVER_ACCESS_TOKEN":
                     obj = new CreateGitlabServerAccessTokenConnectionDetails();
                     break;

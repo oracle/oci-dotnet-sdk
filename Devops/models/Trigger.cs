@@ -79,6 +79,8 @@ namespace Oci.DevopsService.Models
             BitbucketCloud,
             [EnumMember(Value = "BITBUCKET_SERVER")]
             BitbucketServer,
+            [EnumMember(Value = "VBS")]
+            Vbs,
             [EnumMember(Value = "DEVOPS_CODE_REPOSITORY")]
             DevopsCodeRepository
         };
@@ -171,6 +173,9 @@ namespace Oci.DevopsService.Models
             {
                 case "GITLAB":
                     obj = new GitlabTrigger();
+                    break;
+                case "VBS":
+                    obj = new VbsTrigger();
                     break;
                 case "BITBUCKET_SERVER":
                     obj = new BitbucketServerTrigger();

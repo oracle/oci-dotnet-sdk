@@ -23,7 +23,7 @@ namespace Oci.LoganalyticsService.Models
     {
                 ///
         /// <value>
-        /// Indicates which coordinates to show.  Either client, server or both.  Defaults to client.
+        /// Indicates which coordinates to show.  Either client, server, client and server or custom. If custom is specified at least one of  coordinatesField, regionField or countryField is required. Defaults to client.
         /// 
         /// </value>
         ///
@@ -36,11 +36,13 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "SERVER")]
             Server,
             [EnumMember(Value = "CLIENT_AND_SERVER")]
-            ClientAndServer
+            ClientAndServer,
+            [EnumMember(Value = "CUSTOM")]
+            Custom
         };
 
         /// <value>
-        /// Indicates which coordinates to show.  Either client, server or both.  Defaults to client.
+        /// Indicates which coordinates to show.  Either client, server, client and server or custom. If custom is specified at least one of  coordinatesField, regionField or countryField is required. Defaults to client.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "include")]
@@ -48,14 +50,49 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<IncludeEnum> Include { get; set; }
         
         /// <value>
-        /// Group by fields if specified in the query string.
+        /// The city field to use. Only applicable when include = CUSTOM.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "cityField")]
+        public AbstractField CityField { get; set; }
+        
+        /// <value>
+        /// The region field to use. Only applicable when include = CUSTOM.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "regionField")]
+        public AbstractField RegionField { get; set; }
+        
+        /// <value>
+        /// The country field to use. Only applicable when include = CUSTOM.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "countryField")]
+        public AbstractField CountryField { get; set; }
+        
+        /// <value>
+        /// The continent field to use. Only applicable when include = CUSTOM.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "continentField")]
+        public AbstractField ContinentField { get; set; }
+        
+        /// <value>
+        /// The coordinates field to use. Only applicable when include = CUSTOM.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "coordinatesField")]
+        public AbstractField CoordinatesField { get; set; }
+        
+        /// <value>
+        /// Group by fields if specified in the query string.  Required if include = CUSTOM.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "groupByFields")]
         public System.Collections.Generic.List<AbstractField> GroupByFields { get; set; }
         
         /// <value>
-        /// Statistical functions specified in the query string. Atleast 1 is required for a GEOSTATS command.
+        /// Statistical functions specified in the query string. At least 1 is required for a GEOSTATS command.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "functions")]

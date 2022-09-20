@@ -148,6 +148,9 @@ namespace Oci.DevopsService.Models
                 case "BITBUCKET_SERVER":
                     obj = new BitbucketServerTriggerSummary();
                     break;
+                case "VBS":
+                    obj = new VbsTriggerSummary();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

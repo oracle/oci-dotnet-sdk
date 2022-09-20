@@ -25,7 +25,7 @@ namespace Oci.UsageapiService.Models
     {
                 ///
         /// <value>
-        /// Defines whether the schedule date range is STATIC or DYNAMIC
+        /// Defines whether the schedule date range is STATIC or DYNAMIC.
         /// </value>
         ///
         public enum DateRangeTypeEnum {

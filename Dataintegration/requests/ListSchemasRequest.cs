@@ -76,7 +76,9 @@ namespace Oci.DataintegrationService.Requests
             [EnumMember(Value = "TIME_CREATED")]
             TimeCreated,
             [EnumMember(Value = "DISPLAY_NAME")]
-            DisplayName
+            DisplayName,
+            [EnumMember(Value = "TIME_UPDATED")]
+            TimeUpdated
         };
 
         /// <value>
@@ -123,5 +125,11 @@ namespace Oci.DataintegrationService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nameList", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> NameList { get; set; }
+        
+        /// <value>
+        /// Artifact type which needs to be listed while listing Artifacts.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "includeTypes", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> IncludeTypes { get; set; }
     }
 }

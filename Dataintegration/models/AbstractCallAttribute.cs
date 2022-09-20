@@ -28,7 +28,9 @@ namespace Oci.DataintegrationService.Models
         ///
         public enum ModelTypeEnum {
             [EnumMember(Value = "BIP_CALL_ATTRIBUTE")]
-            BipCallAttribute
+            BipCallAttribute,
+            [EnumMember(Value = "GENERIC_REST_CALL_ATTRIBUTE")]
+            GenericRestCallAttribute
         };
 
         
@@ -62,6 +64,9 @@ namespace Oci.DataintegrationService.Models
             {
                 case "BIP_CALL_ATTRIBUTE":
                     obj = new BipCallAttribute();
+                    break;
+                case "GENERIC_REST_CALL_ATTRIBUTE":
+                    obj = new GenericRestCallAttribute();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

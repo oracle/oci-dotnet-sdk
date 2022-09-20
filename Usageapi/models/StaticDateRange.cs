@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The saved static date range (Required when dynamicDateRange is missing).
+    /// The saved static date range (required when the dynamic date range is missing).
     /// </summary>
     public class StaticDateRange : DateRange
     {

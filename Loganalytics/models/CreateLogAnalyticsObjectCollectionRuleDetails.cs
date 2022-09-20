@@ -140,6 +140,40 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
+        /// Timezone to be used when processing log entries whose timestamps do not include an explicit timezone. 
+        /// When this property is not specified, the timezone of the entity specified is used. 
+        /// If the entity is also not specified or do not have a valid timezone then UTC is used.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timezone")]
+        public string Timezone { get; set; }
+        
+        /// <value>
+        /// The logSet to be associated with the processed logs. The logSet feature can be used by customers with high volume of data 
+        /// and this feature has to be enabled for a given tenancy prior to its usage.
+        /// When logSetExtRegex value is provided, it will take precedence over this logSet value and logSet will be computed dynamically 
+        /// using logSetKey and logSetExtRegex.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "logSet")]
+        public string LogSet { get; set; }
+        
+        /// <value>
+        /// An optional parameter to indicate from where the logSet to be extracted using logSetExtRegex. Default value is OBJECT_PATH (e.g. /n/<namespace>/b/<bucketname>/o/<objectname>).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "logSetKey")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LogSetKeyTypes> LogSetKey { get; set; }
+        
+        /// <value>
+        /// The regex to be applied against given logSetKey. Regex has to be in string escaped format.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "logSetExtRegex")]
+        public string LogSetExtRegex { get; set; }
+        
+        /// <value>
         /// The override is used to modify some important configuration properties for objects matching a specific pattern inside the bucket.
         /// Supported propeties for override are: logSourceName, charEncoding, entityId.
         /// Supported matchType for override are \"contains\".

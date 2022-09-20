@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ThreatintelligenceService.Models
 {
     /// <summary>
-    /// List of threat types applicable to indicators.
+    /// List of threat types that can be associated with threat indicators.
     /// </summary>
     public class ThreatTypesCollection 
     {
         
         /// <value>
-        /// The list of threat types that are available to query on
+        /// The list of threat types that can be used to search for threat indicators.
         /// </value>
         /// <remarks>
         /// Required

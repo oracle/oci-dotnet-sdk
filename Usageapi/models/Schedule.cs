@@ -22,7 +22,7 @@ namespace Oci.UsageapiService.Models
     {
         
         /// <value>
-        /// The OCID representing unique shedule
+        /// The OCID representing a unique shedule.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.UsageapiService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The unique name of the schedule created by the user
+        /// The unique name of the schedule created by the user.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.UsageapiService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The tenancy of the customer
+        /// The customer tenancy.
         /// </value>
         /// <remarks>
         /// Required
@@ -59,8 +59,48 @@ namespace Oci.UsageapiService.Models
         public ResultLocation ResultLocation { get; set; }
         
         /// <value>
-        /// In x-obmcs-recurring-time format shown here: https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10
-        /// Describes the frequency of when the schedule will be run
+        /// The description of the schedule.
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        /// <value>
+        /// The date and time of the next job execution.
+        /// </value>
+        [JsonProperty(PropertyName = "timeNextRun")]
+        public System.Nullable<System.DateTime> TimeNextRun { get; set; }
+                ///
+        /// <value>
+        /// Specifies supported output file format.
+        /// </value>
+        ///
+        public enum OutputFileFormatEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "CSV")]
+            Csv,
+            [EnumMember(Value = "PDF")]
+            Pdf
+        };
+
+        /// <value>
+        /// Specifies supported output file format.
+        /// </value>
+        [JsonProperty(PropertyName = "outputFileFormat")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<OutputFileFormatEnum> OutputFileFormat { get; set; }
+        
+        /// <value>
+        /// The saved report id which can also be used to generate query.
+        /// </value>
+        [JsonProperty(PropertyName = "savedReportId")]
+        public string SavedReportId { get; set; }
+        
+        /// <value>
+        /// Specifies the frequency according to when the schedule will be run, 
+        /// in the x-obmcs-recurring-time format described in [RFC 5545 section 3.3.10](https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10).
+        /// Supported values are : ONE_TIME, DAILY, WEEKLY and MONTHLY.
         /// 
         /// </value>
         /// <remarks>
@@ -71,7 +111,7 @@ namespace Oci.UsageapiService.Models
         public string ScheduleRecurrences { get; set; }
         
         /// <value>
-        /// The date and time of the first time job execution
+        /// The date and time of the first time job execution.
         /// </value>
         /// <remarks>
         /// Required
@@ -80,15 +120,11 @@ namespace Oci.UsageapiService.Models
         [JsonProperty(PropertyName = "timeScheduled")]
         public System.Nullable<System.DateTime> TimeScheduled { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "QueryProperties is required.")]
         [JsonProperty(PropertyName = "queryProperties")]
         public QueryProperties QueryProperties { get; set; }
         
         /// <value>
-        /// The date and time of when the schedule was created
+        /// The date and time the schedule was created.
         /// </value>
         /// <remarks>
         /// Required
@@ -98,7 +134,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
                 ///
         /// <value>
-        /// The lifecycle state of the schedule
+        /// The schedule lifecycle state.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -112,7 +148,7 @@ namespace Oci.UsageapiService.Models
         };
 
         /// <value>
-        /// The lifecycle state of the schedule
+        /// The schedule lifecycle state.
         /// </value>
         /// <remarks>
         /// Required
@@ -123,7 +159,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only. 
+        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm). Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]

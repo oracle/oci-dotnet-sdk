@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ThreatintelligenceService.Models
 {
     /// <summary>
-    /// Threat type along with attribution data for its association to an indicator
+    /// A threat type along with attribution data that associates it to a threat indicator.
     /// </summary>
     public class ThreatType 
     {
         
         /// <value>
-        /// The OCID of the threat type
+        /// The OCID of the threat type.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.ThreatintelligenceService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The name of the threat type
+        /// The name of the threat type.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ThreatintelligenceService.Models
 {
     /// <summary>
-    /// a reference to a resource or other entity
+    /// A reference to a resource or other entity.
     /// </summary>
     [JsonConverter(typeof(EntityReferenceModelConverter))]
     public class EntityReference 
     {
                 ///
         /// <value>
-        /// the type of the referenced entity
+        /// The type of the referenced entity.
         /// </value>
         ///
         public enum TypeEnum {
