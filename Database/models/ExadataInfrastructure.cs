@@ -191,6 +191,43 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> ComputeCount { get; set; }
         
         /// <value>
+        /// The requested number of additional compute servers for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "additionalComputeCount")]
+        public System.Nullable<int> AdditionalComputeCount { get; set; }
+                ///
+        /// <value>
+        /// Oracle Exadata System Model specification. The system model determines the amount of compute or storage
+        /// server resources available for use. For more information, please see [System and Shape Configuration Options]
+        /// (https://docs.oracle.com/en/engineered-systems/exadata-cloud-at-customer/ecccm/ecc-system-config-options.html#GUID-9E090174-5C57-4EB1-9243-B470F9F10D6B)
+        /// 
+        /// </value>
+        ///
+        public enum AdditionalComputeSystemModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "X7")]
+            X7,
+            [EnumMember(Value = "X8")]
+            X8,
+            [EnumMember(Value = "X8M")]
+            X8M,
+            [EnumMember(Value = "X9M")]
+            X9M
+        };
+
+        /// <value>
+        /// Oracle Exadata System Model specification. The system model determines the amount of compute or storage
+        /// server resources available for use. For more information, please see [System and Shape Configuration Options]
+        /// (https://docs.oracle.com/en/engineered-systems/exadata-cloud-at-customer/ecccm/ecc-system-config-options.html#GUID-9E090174-5C57-4EB1-9243-B470F9F10D6B)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "additionalComputeSystemModel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AdditionalComputeSystemModelEnum> AdditionalComputeSystemModel { get; set; }
+        
+        /// <value>
         /// The IP address for the first control plane server.
         /// </value>
         [JsonProperty(PropertyName = "cloudControlPlaneServer1")]

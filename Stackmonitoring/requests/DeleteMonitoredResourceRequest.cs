@@ -47,5 +47,11 @@ namespace Oci.StackmonitoringService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to delete the associated children or not for given resource.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDeleteMembers")]
+        public System.Nullable<bool> IsDeleteMembers { get; set; }
     }
 }

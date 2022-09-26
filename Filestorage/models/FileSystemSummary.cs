@@ -93,7 +93,9 @@ namespace Oci.FilestorageService.Models
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETED")]
-            Deleted
+            Deleted,
+            [EnumMember(Value = "FAILED")]
+            Failed
         };
 
         /// <value>
@@ -148,8 +150,8 @@ namespace Oci.FilestorageService.Models
         public SourceDetails SourceDetails { get; set; }
         
         /// <value>
-        /// Specifies whether the file system has been cloned. 
-        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+        /// Specifies whether the file system has been cloned.
+        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningFS.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isCloneParent")]
@@ -158,8 +160,8 @@ namespace Oci.FilestorageService.Models
         /// <value>
         /// Specifies whether the data has finished copying from the source to the clone.
         /// Hydration can take up to several hours to complete depending on the size of the source.
-        /// The source and clone remain available during hydration, but there may be some performance impact. 
-        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm#hydration).
+        /// The source and clone remain available during hydration, but there may be some performance impact.
+        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningFS.htm#hydration).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isHydrated")]

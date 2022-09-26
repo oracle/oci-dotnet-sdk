@@ -17,8 +17,6 @@ namespace Oci.FilestorageService.Models
 {
     /// <summary>
     /// A point-in-time snapshot of a specified file system.
-    /// <br/>
-    /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class Snapshot 
@@ -101,27 +99,66 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+                ///
+        /// <value>
+        /// Specifies generation type of the snapshot.
+        /// 
+        /// </value>
+        ///
+        public enum SnapshotTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "USER")]
+            User,
+            [EnumMember(Value = "POLICY_BASED")]
+            PolicyBased,
+            [EnumMember(Value = "REPLICATION")]
+            Replication
+        };
+
+        /// <value>
+        /// Specifies generation type of the snapshot.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "snapshotType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SnapshotTypeEnum> SnapshotType { get; set; }
+        
+        /// <value>
+        /// The date and time the snapshot was taken, expressed
+        /// in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// This value might be the same or different from `timeCreated` depending
+        /// on the following factors:
+        /// - If the snapshot is created in the original file system directory.
+        /// - If the snapshot is cloned from a file system.
+        /// - If the snapshot is replicated from a file system.
+        /// <br/>
+        /// Example: 2020-08-25T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "snapshotTime")]
+        public System.Nullable<System.DateTime> SnapshotTime { get; set; }
         
         /// <value>
         /// An [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) identifying the parent from which this snapshot was cloned.
         /// If this snapshot was not cloned, then the `provenanceId` is the same as the snapshot `id` value.
         /// If this snapshot was cloned, then the `provenanceId` value is the parent's `provenanceId`.
-        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningFS.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "provenanceId")]
         public string ProvenanceId { get; set; }
         
         /// <value>
-        /// Specifies whether the snapshot has been cloned. 
-        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+        /// Specifies whether the snapshot has been cloned.
+        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningFS.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isCloneSource")]
         public System.Nullable<bool> IsCloneSource { get; set; }
         
         /// <value>
-        /// Additional information about the current 'lifecycleState'.
+        /// Additional information about the current `lifecycleState`.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }

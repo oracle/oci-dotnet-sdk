@@ -84,6 +84,16 @@ namespace Oci.StackmonitoringService.Models
         public string HostName { get; set; }
         
         /// <value>
+        /// External resource is any OCI resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// which is not a Stack Monitoring service resource.
+        /// Currently supports only following resource type identifiers - externalcontainerdatabase,
+        /// externalnoncontainerdatabase, externalpluggabledatabase and OCI compute instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "externalId")]
+        public string ExternalId { get; set; }
+        
+        /// <value>
         /// Management Agent Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         [JsonProperty(PropertyName = "managementAgentId")]

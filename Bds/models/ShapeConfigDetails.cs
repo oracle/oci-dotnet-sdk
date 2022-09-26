@@ -28,10 +28,16 @@ namespace Oci.BdsService.Models
         public System.Nullable<int> Ocpus { get; set; }
         
         /// <value>
-        /// The total amount of memory available to the node, in gigabytes
+        /// The total amount of memory available to the node, in gigabytes.
         /// </value>
         [JsonProperty(PropertyName = "memoryInGBs")]
         public System.Nullable<int> MemoryInGBs { get; set; }
+        
+        /// <value>
+        /// The number of NVMe drives to be used for storage. A single drive has 6.8 TB available.
+        /// </value>
+        [JsonProperty(PropertyName = "nvmes")]
+        public System.Nullable<int> Nvmes { get; set; }
         
     }
 }

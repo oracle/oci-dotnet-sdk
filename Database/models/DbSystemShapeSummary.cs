@@ -164,13 +164,13 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> MinDataStorageInTBs { get; set; }
         
         /// <value>
-        /// The minimum number of database nodes available for this shape.
+        /// The minimum number of compute servers available for this shape.
         /// </value>
         [JsonProperty(PropertyName = "minimumNodeCount")]
         public System.Nullable<int> MinimumNodeCount { get; set; }
         
         /// <value>
-        /// The maximum number of database nodes available for this shape.
+        /// The maximum number of compute servers available for this shape.
         /// </value>
         [JsonProperty(PropertyName = "maximumNodeCount")]
         public System.Nullable<int> MaximumNodeCount { get; set; }

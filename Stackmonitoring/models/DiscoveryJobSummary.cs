@@ -50,7 +50,9 @@ namespace Oci.StackmonitoringService.Models
             [EnumMember(Value = "OCI_ORACLE_CDB")]
             OciOracleCdb,
             [EnumMember(Value = "OCI_ORACLE_PDB")]
-            OciOraclePdb
+            OciOraclePdb,
+            [EnumMember(Value = "HOST")]
+            Host
         };
 
         /// <value>

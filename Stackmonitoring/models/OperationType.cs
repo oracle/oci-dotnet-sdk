@@ -34,6 +34,8 @@ namespace Oci.StackmonitoringService.Models
       [EnumMember(Value = "ADD_SOURCES_TO_AGENT")]
       AddSourcesToAgent,
       [EnumMember(Value = "BULK_ADD_RESOURCES")]
-      BulkAddResources
+      BulkAddResources,
+      [EnumMember(Value = "BULK_DELETE_RESOURCES")]
+      BulkDeleteResources
   }
 }

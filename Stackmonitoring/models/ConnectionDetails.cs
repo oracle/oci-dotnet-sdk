@@ -84,5 +84,11 @@ namespace Oci.StackmonitoringService.Models
         [JsonProperty(PropertyName = "dbId")]
         public string DbId { get; set; }
         
+        /// <value>
+        /// SSL Secret Identifier for TCPS connector in OCI Vault[OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// </value>
+        [JsonProperty(PropertyName = "sslSecretId")]
+        public string SslSecretId { get; set; }
+        
     }
 }

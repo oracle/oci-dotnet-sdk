@@ -77,6 +77,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dbNodeIds")]
         public System.Collections.Generic.List<string> DbNodeIds { get; set; }
+        
+        /// <value>
+        /// The shape of the Db server. The shape determines the amount of CPU, storage, and memory resources available.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        public string Shape { get; set; }
                 ///
         /// <value>
         /// The current state of the Db server.

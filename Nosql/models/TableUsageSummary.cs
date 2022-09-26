@@ -73,5 +73,12 @@ namespace Oci.NosqlService.Models
         [JsonProperty(PropertyName = "storageThrottleCount")]
         public System.Nullable<int> StorageThrottleCount { get; set; }
         
+        /// <value>
+        /// The percentage of allowed per-shard usage for the table shard with the highest usage.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxShardSizeUsageInPercent")]
+        public System.Nullable<int> MaxShardSizeUsageInPercent { get; set; }
+        
     }
 }

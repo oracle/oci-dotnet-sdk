@@ -18,8 +18,6 @@ namespace Oci.FilestorageService.Models
     /// <summary>
     /// A set of file systems to export through one or more mount
     /// targets. Composed of zero or more export resources.
-    /// <br/>
-    /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.      
     /// 
     /// </summary>
     public class ExportSet 
