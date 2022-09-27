@@ -19,8 +19,6 @@ namespace Oci.FilestorageService.Models
     /// Provides access to a collection of file systems through one or more VNICs on a
     /// specified subnet. The set of file systems is controlled through the
     /// referenced export set.
-    /// <br/>
-    /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class MountTarget 

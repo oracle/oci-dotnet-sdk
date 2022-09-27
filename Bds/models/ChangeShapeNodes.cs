@@ -58,10 +58,13 @@ namespace Oci.BdsService.Models
         public ShapeConfigDetails UtilityShapeConfig { get; set; }
         
         /// <value>
-        /// Change shape of the Cloud SQL node to the desired target shape. Only VM_STANDARD shapes are allowed here.
+        /// Change shape of the Cloud SQL node to the desired target shape. Both VM_STANDARD and E4 Flex shapes are allowed here.
         /// </value>
         [JsonProperty(PropertyName = "cloudsql")]
         public string Cloudsql { get; set; }
+        
+        [JsonProperty(PropertyName = "cloudsqlShapeConfig")]
+        public ShapeConfigDetails CloudsqlShapeConfig { get; set; }
         
     }
 }

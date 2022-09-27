@@ -16,7 +16,7 @@ namespace Oci.FilestorageService.Responses
     {
 
         /// <value>
-        /// For list pagination. When this header appears in the response, 
+        /// For list pagination. When this header appears in the response,
         /// additional pages of results remain.
         /// <br/>
         /// For important details about how pagination works,

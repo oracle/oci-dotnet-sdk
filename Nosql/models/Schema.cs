@@ -61,5 +61,8 @@ namespace Oci.NosqlService.Models
         [JsonProperty(PropertyName = "ttl")]
         public System.Nullable<int> Ttl { get; set; }
         
+        [JsonProperty(PropertyName = "identity")]
+        public Identity Identity { get; set; }
+        
     }
 }

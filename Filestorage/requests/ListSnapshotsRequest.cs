@@ -43,7 +43,7 @@ namespace Oci.FilestorageService.Requests
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// For list pagination. The value of the `opc-next-page` response 
+        /// For list pagination. The value of the `opc-next-page` response
         /// header from the previous \"List\" call.
         /// <br/>
         /// For important details about how pagination works,

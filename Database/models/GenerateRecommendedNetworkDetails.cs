@@ -43,6 +43,12 @@ namespace Oci.DatabaseService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// The list of Db server Ids to configure network.
+        /// </value>
+        [JsonProperty(PropertyName = "dbServers")]
+        public System.Collections.Generic.List<string> DbServers { get; set; }
+        
+        /// <value>
         /// The SCAN TCPIP port. Default is 1521.
         /// </value>
         [JsonProperty(PropertyName = "scanListenerPortTcp")]

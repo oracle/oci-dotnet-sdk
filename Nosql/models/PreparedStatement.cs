@@ -29,6 +29,13 @@ namespace Oci.NosqlService.Models
         [JsonProperty(PropertyName = "statement")]
         public string Statement { get; set; }
         
+        /// <value>
+        /// A representation of the query plan as a schema-less JSON object.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "queryPlan")]
+        public System.Object QueryPlan { get; set; }
+        
         [JsonProperty(PropertyName = "usage")]
         public RequestUsage Usage { get; set; }
         

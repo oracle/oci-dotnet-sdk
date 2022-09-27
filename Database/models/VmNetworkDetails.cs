@@ -25,10 +25,6 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The network VLAN ID.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VlanId is required.")]
         [JsonProperty(PropertyName = "vlanId")]
         public string VlanId { get; set; }
                 ///
@@ -60,30 +56,18 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The network netmask.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Netmask is required.")]
         [JsonProperty(PropertyName = "netmask")]
         public string Netmask { get; set; }
         
         /// <value>
         /// The network gateway.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Gateway is required.")]
         [JsonProperty(PropertyName = "gateway")]
         public string Gateway { get; set; }
         
         /// <value>
         /// The network domain name.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DomainName is required.")]
         [JsonProperty(PropertyName = "domainName")]
         public string DomainName { get; set; }
         

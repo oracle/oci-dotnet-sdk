@@ -72,6 +72,10 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "PATCH_BDS")]
       PatchBds,
       [EnumMember(Value = "PATCH_ODH")]
-      PatchOdh
+      PatchOdh,
+      [EnumMember(Value = "STOP_BDS")]
+      StopBds,
+      [EnumMember(Value = "START_BDS")]
+      StartBds
   }
 }

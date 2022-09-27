@@ -26,8 +26,6 @@ namespace Oci.FilestorageService.Models
     /// administrator. If you're an administrator who needs to write
     /// policies to give users access, see [Getting Started with
     /// Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
-    /// <br/>
-    /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class FileSystem 
@@ -105,7 +103,9 @@ namespace Oci.FilestorageService.Models
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETED")]
-            Deleted
+            Deleted,
+            [EnumMember(Value = "FAILED")]
+            Failed
         };
 
         /// <value>
@@ -160,8 +160,8 @@ namespace Oci.FilestorageService.Models
         public SourceDetails SourceDetails { get; set; }
         
         /// <value>
-        /// Specifies whether the file system has been cloned. 
-        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+        /// Specifies whether the file system has been cloned.
+        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningFS.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isCloneParent")]
@@ -170,8 +170,8 @@ namespace Oci.FilestorageService.Models
         /// <value>
         /// Specifies whether the data has finished copying from the source to the clone.
         /// Hydration can take up to several hours to complete depending on the size of the source.
-        /// The source and clone remain available during hydration, but there may be some performance impact. 
-        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm#hydration).
+        /// The source and clone remain available during hydration, but there may be some performance impact.
+        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningFS.htm#hydration).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isHydrated")]
@@ -182,6 +182,22 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// Specifies whether the file system can be used as a target file system for replication.
+        /// For more information, see [Using Replication](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/using-replication.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isTargetable")]
+        public System.Nullable<bool> IsTargetable { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the replication target associated with the file system.
+        /// Empty if the file system is not being used as target in a replication.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicationTargetId")]
+        public string ReplicationTargetId { get; set; }
         
     }
 }

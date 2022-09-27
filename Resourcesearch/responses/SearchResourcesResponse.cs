@@ -16,10 +16,19 @@ namespace Oci.ResourcesearchService.Responses
     {
 
         /// <value>
-        /// Pagination token
+        /// For pagination of a list of items. When paging through a list, if this header appears in the response, then there are additional items still to get. Include this value as the page parameter for the subsequent GET request. For information about pagination, see [ListPagination](https://docs.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]
         public string OpcNextPage { get; set; }
+
+
+        /// <value>
+        /// For pagination of a list of items. When paging through a list, if this header appears in the response, then there are additional items in previous pages to get. Include this value as the page parameter for the subsequent GET request. The absence of this header indicates that you have reached the first page of the list. For more information, see [ListPagination](https://docs.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-previous-page")]
+        public string OpcPreviousPage { get; set; }
 
 
         /// <value>

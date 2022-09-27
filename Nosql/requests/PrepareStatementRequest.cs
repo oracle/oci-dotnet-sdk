@@ -40,6 +40,12 @@ namespace Oci.NosqlService.Requests
         public string Statement { get; set; }
         
         /// <value>
+        /// Include a query execution plan in the result.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isGetQueryPlan")]
+        public System.Nullable<bool> IsGetQueryPlan { get; set; }
+        
+        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

@@ -144,6 +144,62 @@ namespace Oci.FilestorageService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetReplicationRequest, GetReplicationResponse> ForReplication(GetReplicationRequest request, params Replication.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForReplication(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetReplicationRequest, GetReplicationResponse> ForReplication(GetReplicationRequest request, WaiterConfiguration config, params Replication.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetReplicationRequest, GetReplicationResponse>(
+                request,
+                request => client.GetReplication(request),
+                response => targetStates.Contains(response.Replication.LifecycleState.Value),
+                targetStates.Contains(Replication.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetReplicationRequest, GetReplicationResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetReplicationTargetRequest, GetReplicationTargetResponse> ForReplicationTarget(GetReplicationTargetRequest request, params ReplicationTarget.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForReplicationTarget(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetReplicationTargetRequest, GetReplicationTargetResponse> ForReplicationTarget(GetReplicationTargetRequest request, WaiterConfiguration config, params ReplicationTarget.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetReplicationTargetRequest, GetReplicationTargetResponse>(
+                request,
+                request => client.GetReplicationTarget(request),
+                response => targetStates.Contains(response.ReplicationTarget.LifecycleState.Value),
+                targetStates.Contains(ReplicationTarget.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetReplicationTargetRequest, GetReplicationTargetResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetSnapshotRequest, GetSnapshotResponse> ForSnapshot(GetSnapshotRequest request, params Snapshot.LifecycleStateEnum[] targetStates)
         {
             return this.ForSnapshot(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

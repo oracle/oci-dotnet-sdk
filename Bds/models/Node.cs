@@ -62,7 +62,13 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "STOPPED")]
+            Stopped,
+            [EnumMember(Value = "STOPPING")]
+            Stopping,
+            [EnumMember(Value = "STARTING")]
+            Starting
         };
 
         /// <value>
@@ -216,6 +222,18 @@ namespace Oci.BdsService.Models
         /// </value>
         [JsonProperty(PropertyName = "memoryInGBs")]
         public System.Nullable<int> MemoryInGBs { get; set; }
+        
+        /// <value>
+        /// The number of NVMe drives to be used for storage. A single drive has 6.8 TB available.
+        /// </value>
+        [JsonProperty(PropertyName = "nvmes")]
+        public System.Nullable<int> Nvmes { get; set; }
+        
+        /// <value>
+        /// The aggregate size of all local disks, in gigabytes. If the instance does not have any local disks, this field is null.
+        /// </value>
+        [JsonProperty(PropertyName = "localDisksTotalSizeInGBs")]
+        public System.Double LocalDisksTotalSizeInGBs { get; set; }
         
     }
 }

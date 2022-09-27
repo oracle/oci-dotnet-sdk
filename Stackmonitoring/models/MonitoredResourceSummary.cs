@@ -64,6 +64,16 @@ namespace Oci.StackmonitoringService.Models
         public string HostName { get; set; }
         
         /// <value>
+        /// External resource is any OCI resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// which is not a Stack Monitoring service resource.
+        /// Currently supports only following resource type identifiers - externalcontainerdatabase,
+        /// externalnoncontainerdatabase, externalpluggabledatabase and OCI compute instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "externalId")]
+        public string ExternalId { get; set; }
+        
+        /// <value>
         /// Management Agent Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         [JsonProperty(PropertyName = "managementAgentId")]
@@ -87,6 +97,12 @@ namespace Oci.StackmonitoringService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceLifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// List of monitored resource properties
+        /// </value>
+        [JsonProperty(PropertyName = "properties")]
+        public System.Collections.Generic.List<MonitoredResourceProperty> Properties { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
