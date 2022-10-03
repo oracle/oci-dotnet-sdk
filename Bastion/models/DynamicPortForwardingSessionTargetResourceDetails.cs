@@ -9,21 +9,19 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 
 namespace Oci.BastionService.Models
 {
-  /// <summary>
-  /// Possible session types.
-  /// </summary>
-  public enum SessionType {
-      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-      [EnumMember(Value = null)]
-      UnknownEnumValue,
-      [EnumMember(Value = "MANAGED_SSH")]
-      ManagedSsh,
-      [EnumMember(Value = "PORT_FORWARDING")]
-      PortForwarding,
-      [EnumMember(Value = "DYNAMIC_PORT_FORWARDING")]
-      DynamicPortForwarding
-  }
+    /// <summary>
+    /// Details about a dynamic port forwarding session for a target subnet.
+    /// </summary>
+    public class DynamicPortForwardingSessionTargetResourceDetails : TargetResourceDetails
+    {
+        
+        [JsonProperty(PropertyName = "sessionType")]
+        private readonly string sessionType = "DYNAMIC_PORT_FORWARDING";
+    }
 }

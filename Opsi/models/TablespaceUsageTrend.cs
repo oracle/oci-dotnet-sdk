@@ -43,7 +43,7 @@ namespace Oci.OpsiService.Models
         public System.Double Usage { get; set; }
         
         /// <value>
-        /// The maximum allocated amount of the resource metric type  (CPU, STORAGE).
+        /// The maximum allocated amount of the resource metric type  (CPU, STORAGE) for a set of databases.
         /// 
         /// </value>
         /// <remarks>

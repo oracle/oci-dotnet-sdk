@@ -60,6 +60,7 @@ namespace Oci.OpsiService.Models
         /// <value>
         /// Platform type.
         /// Supported platformType(s) for MACS-managed external host insight: [LINUX].
+        /// Supported platformType(s) for MACS-managed cloud host insight: [LINUX].
         /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX].
         /// 
         /// </value>
@@ -81,6 +82,7 @@ namespace Oci.OpsiService.Models
         /// <value>
         /// Platform type.
         /// Supported platformType(s) for MACS-managed external host insight: [LINUX].
+        /// Supported platformType(s) for MACS-managed cloud host insight: [LINUX].
         /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX].
         /// 
         /// </value>

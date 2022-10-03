@@ -124,5 +124,12 @@ namespace Oci.OpsiService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostId")]
         public string HostId { get; set; }
+        
+        /// <value>
+        /// Unique identifier for a process.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "processHash")]
+        public string ProcessHash { get; set; }
     }
 }

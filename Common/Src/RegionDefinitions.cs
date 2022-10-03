@@ -69,5 +69,8 @@ namespace Oci.Common
 
         // OC10
         public static readonly Region AP_DCC_CANBERRA_1 = Register("ap-dcc-canberra-1", Realm.OC10, "wga");
+
+        // OC14
+        public static readonly Region EU_DCC_MILAN_1 = Register("eu-dcc-milan-1", Realm.OC14, "bgy");
     }
 }

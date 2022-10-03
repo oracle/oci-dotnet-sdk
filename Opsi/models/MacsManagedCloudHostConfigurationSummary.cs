@@ -16,9 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// Summary of a MACS-managed cloud host insight resource.
+    /// Configuration Summary of a Macs Managed Cloud host.
     /// </summary>
-    public class MacsManagedCloudHostInsightSummary : HostInsightSummary
+    public class MacsManagedCloudHostConfigurationSummary : HostConfigurationSummary
     {
         
         /// <value>
@@ -40,39 +40,12 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ManagementAgentId is required.")]
         [JsonProperty(PropertyName = "managementAgentId")]
         public string ManagementAgentId { get; set; }
-                ///
+        
         /// <value>
-        /// Platform type.
-        /// Supported platformType(s) for MACS-managed external host insight: [LINUX].
-        /// Supported platformType(s) for MACS-managed cloud host insight: [LINUX].
-        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX].
-        /// 
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of External Database Connector
         /// </value>
-        ///
-        public enum PlatformTypeEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "LINUX")]
-            Linux,
-            [EnumMember(Value = "SOLARIS")]
-            Solaris,
-            [EnumMember(Value = "SUNOS")]
-            Sunos,
-            [EnumMember(Value = "ZLINUX")]
-            Zlinux
-        };
-
-        /// <value>
-        /// Platform type.
-        /// Supported platformType(s) for MACS-managed external host insight: [LINUX].
-        /// Supported platformType(s) for MACS-managed cloud host insight: [LINUX].
-        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX].
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "platformType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<PlatformTypeEnum> PlatformType { get; set; }
+        [JsonProperty(PropertyName = "connectorId")]
+        public string ConnectorId { get; set; }
         
         [JsonProperty(PropertyName = "entitySource")]
         private readonly string entitySource = "MACS_MANAGED_CLOUD_HOST";

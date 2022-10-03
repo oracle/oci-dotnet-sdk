@@ -57,6 +57,12 @@ namespace Oci.BastionService.Models
         [JsonProperty(PropertyName = "targetResourceDisplayName")]
         public string TargetResourceDisplayName { get; set; }
         
+        /// <value>
+        /// The port number to connect to on the target resource.
+        /// </value>
+        [JsonProperty(PropertyName = "targetResourcePort")]
+        public System.Nullable<int> TargetResourcePort { get; set; }
+        
         [JsonProperty(PropertyName = "sessionType")]
         private readonly string sessionType = "MANAGED_SSH";
     }

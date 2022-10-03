@@ -23,12 +23,6 @@ namespace Oci.BastionService.Models
     {
         
         
-        /// <value>
-        /// The port number to connect to on the target resource.
-        /// </value>
-        [JsonProperty(PropertyName = "targetResourcePort")]
-        public System.Nullable<int> TargetResourcePort { get; set; }
-        
     }
 
     public class CreateSessionTargetResourceDetailsModelConverter : JsonConverter
@@ -53,6 +47,9 @@ namespace Oci.BastionService.Models
             {
                 case "MANAGED_SSH":
                     obj = new CreateManagedSshSessionTargetResourceDetails();
+                    break;
+                case "DYNAMIC_PORT_FORWARDING":
+                    obj = new CreateDynamicPortForwardingSessionTargetResourceDetails();
                     break;
                 case "PORT_FORWARDING":
                     obj = new CreatePortForwardingSessionTargetResourceDetails();

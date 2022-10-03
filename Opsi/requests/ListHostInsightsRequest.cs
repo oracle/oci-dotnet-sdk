@@ -56,6 +56,7 @@ namespace Oci.OpsiService.Requests
         /// <value>
         /// Filter by one or more platform types.
         /// Supported platformType(s) for MACS-managed external host insight: [LINUX].
+        /// Supported platformType(s) for MACS-managed cloud host insight: [LINUX].
         /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX].
         /// 
         /// </value>
@@ -74,6 +75,7 @@ namespace Oci.OpsiService.Requests
         /// <value>
         /// Filter by one or more platform types.
         /// Supported platformType(s) for MACS-managed external host insight: [LINUX].
+        /// Supported platformType(s) for MACS-managed cloud host insight: [LINUX].
         /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX].
         /// 
         /// </value>

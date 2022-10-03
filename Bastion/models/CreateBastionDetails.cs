@@ -22,7 +22,7 @@ namespace Oci.BastionService.Models
     {
         
         /// <value>
-        /// The type of bastion. Use `standard`. 
+        /// The type of bastion. Use `standard`.
         /// 
         /// </value>
         /// <remarks>
@@ -83,6 +83,13 @@ namespace Oci.BastionService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxSessionTtlInSeconds")]
         public System.Nullable<int> MaxSessionTtlInSeconds { get; set; }
+        
+        /// <value>
+        /// The desired dns proxy status of the bastion.
+        /// </value>
+        [JsonProperty(PropertyName = "dnsProxyStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<BastionDnsProxyStatus> DnsProxyStatus { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
