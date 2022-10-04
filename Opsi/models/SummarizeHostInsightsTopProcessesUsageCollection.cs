@@ -16,31 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// Host Resource Capacity samples
+    /// Top level response object.
+    /// 
     /// </summary>
-    public class HostResourceCapacityTrendAggregation 
+    public class SummarizeHostInsightsTopProcessesUsageCollection 
     {
         
         /// <value>
-        /// The timestamp in which the current sampling period ends in RFC 3339 format.
+        /// The start timestamp that was passed into the request.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "EndTimestamp is required.")]
-        [JsonProperty(PropertyName = "endTimestamp")]
-        public System.Nullable<System.DateTime> EndTimestamp { get; set; }
+        [Required(ErrorMessage = "Timestamp is required.")]
+        [JsonProperty(PropertyName = "timestamp")]
+        public System.Nullable<System.DateTime> Timestamp { get; set; }
         
         /// <value>
-        /// The maximum allocated amount of the resource metric type  (CPU, STORAGE) for a set of databases.
-        /// 
+        /// List of usage data samples for a top process on a specific date.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Capacity is required.")]
-        [JsonProperty(PropertyName = "capacity")]
-        public System.Double Capacity { get; set; }
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<TopProcessesUsage> Items { get; set; }
         
     }
 }

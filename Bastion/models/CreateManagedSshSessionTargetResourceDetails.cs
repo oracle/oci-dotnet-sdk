@@ -47,6 +47,12 @@ namespace Oci.BastionService.Models
         [JsonProperty(PropertyName = "targetResourcePrivateIpAddress")]
         public string TargetResourcePrivateIpAddress { get; set; }
         
+        /// <value>
+        /// The port number to connect to on the target resource.
+        /// </value>
+        [JsonProperty(PropertyName = "targetResourcePort")]
+        public System.Nullable<int> TargetResourcePort { get; set; }
+        
         [JsonProperty(PropertyName = "sessionType")]
         private readonly string sessionType = "MANAGED_SSH";
     }

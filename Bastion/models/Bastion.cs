@@ -124,6 +124,13 @@ namespace Oci.BastionService.Models
         public System.Nullable<int> MaxSessionsAllowed { get; set; }
         
         /// <value>
+        /// The current dns proxy status of the bastion.
+        /// </value>
+        [JsonProperty(PropertyName = "dnsProxyStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<BastionDnsProxyStatus> DnsProxyStatus { get; set; }
+        
+        /// <value>
         /// The time the bastion was created. Format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2020-01-25T21:10:29.600Z
         /// </value>

@@ -41,11 +41,18 @@ namespace Oci.OpsiService.Models
         public System.Double Usage { get; set; }
         
         /// <value>
-        /// The maximum allocated amount of the resource metric type  (CPU, STORAGE).
+        /// The maximum allocated amount of the resource metric type  (CPU, STORAGE) for a set of databases.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "capacity")]
         public System.Double Capacity { get; set; }
+        
+        /// <value>
+        /// The maximum host CPUs (cores x threads/core) on the underlying infrastructure. This only applies to CPU and does not not apply for Autonomous Databases.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "totalHostCapacity")]
+        public System.Double TotalHostCapacity { get; set; }
         
         /// <value>
         /// Resource utilization in percentage

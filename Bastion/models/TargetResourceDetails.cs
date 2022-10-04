@@ -23,16 +23,6 @@ namespace Oci.BastionService.Models
     {
         
         
-        /// <value>
-        /// The port number to connect to on the target resource.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TargetResourcePort is required.")]
-        [JsonProperty(PropertyName = "targetResourcePort")]
-        public System.Nullable<int> TargetResourcePort { get; set; }
-        
     }
 
     public class TargetResourceDetailsModelConverter : JsonConverter
@@ -56,6 +46,9 @@ namespace Oci.BastionService.Models
             var discriminator = jsonObject["sessionType"].Value<string>();
             switch (discriminator)
             {
+                case "DYNAMIC_PORT_FORWARDING":
+                    obj = new DynamicPortForwardingSessionTargetResourceDetails();
+                    break;
                 case "MANAGED_SSH":
                     obj = new ManagedSshSessionTargetResourceDetails();
                     break;

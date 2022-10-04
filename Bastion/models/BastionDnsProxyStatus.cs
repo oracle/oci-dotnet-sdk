@@ -13,17 +13,15 @@ using System.Runtime.Serialization;
 namespace Oci.BastionService.Models
 {
   /// <summary>
-  /// Possible session types.
+  /// Possible Dns Proxy statuses.
   /// </summary>
-  public enum SessionType {
+  public enum BastionDnsProxyStatus {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "MANAGED_SSH")]
-      ManagedSsh,
-      [EnumMember(Value = "PORT_FORWARDING")]
-      PortForwarding,
-      [EnumMember(Value = "DYNAMIC_PORT_FORWARDING")]
-      DynamicPortForwarding
+      [EnumMember(Value = "DISABLED")]
+      Disabled,
+      [EnumMember(Value = "ENABLED")]
+      Enabled
   }
 }
