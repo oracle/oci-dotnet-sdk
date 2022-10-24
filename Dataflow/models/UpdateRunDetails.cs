@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataflowService.Models
 {
     /// <summary>
-    /// The update run details. Only the tags of a run can be updated.
+    /// The update run details. Only a limited set of properties of a run can be updated.
     /// 
     /// </summary>
     public class UpdateRunDetails 
@@ -36,6 +36,22 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        /// <value>
+        /// The maximum duration in minutes for which an Application should run. Data Flow Run would be terminated
+        /// once it reaches this duration from the time it transitions to `IN_PROGRESS` state.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxDurationInMinutes")]
+        public System.Nullable<long> MaxDurationInMinutes { get; set; }
+        
+        /// <value>
+        /// The timeout value in minutes used to manage Runs. A Run would be stopped after inactivity for this amount of time period.
+        /// Note: This parameter is currently only applicable for Runs of type `SESSION`. Default value is 2880 minutes (2 days)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "idleTimeoutInMinutes")]
+        public System.Nullable<long> IdleTimeoutInMinutes { get; set; }
         
     }
 }

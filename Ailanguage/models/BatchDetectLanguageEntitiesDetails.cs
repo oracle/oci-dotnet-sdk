@@ -22,6 +22,18 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that calls the API, inference will be served from pre trained model
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The endpoint which have to be used for inferencing. If endpointId and compartmentId is provided, then inference will be served from custom model which is mapped to this Endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "endpointId")]
+        public string EndpointId { get; set; }
+        
+        /// <value>
         /// List of Documents for detect entities.
         /// </value>
         /// <remarks>
@@ -29,7 +41,7 @@ namespace Oci.AilanguageService.Models
         /// </remarks>
         [Required(ErrorMessage = "Documents is required.")]
         [JsonProperty(PropertyName = "documents")]
-        public System.Collections.Generic.List<EntityDocument> Documents { get; set; }
+        public System.Collections.Generic.List<TextDocument> Documents { get; set; }
         
     }
 }

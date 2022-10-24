@@ -17,11 +17,19 @@ namespace Oci.AilanguageService.Responses
 
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
-        /// Oracle about a particular request, provide the request ID.
+        /// Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+
+
+        /// <value>
+        /// This API will be retired on Monday, 10 Oct 2022 00:00:00 GMT
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "sunset")]
+        public string Sunset { get; set; }
 
         /// <value>
         /// The returned DetectLanguageTextClassificationResult instance.

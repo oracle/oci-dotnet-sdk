@@ -16,9 +16,9 @@ namespace Oci.AilanguageService.Models
   /// Posible Named Entity Recognition versions.
   /// </summary>
   public enum NerModelVersion {
-      [EnumMember(Value = "V2.1")]
+      [EnumMember(Value = "V2_1")]
       V21,
-      [EnumMember(Value = "V1.1")]
+      [EnumMember(Value = "V1_1")]
       V11
   }
 }

@@ -22,7 +22,7 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
-        /// Unique Document Identifier.
+        /// Document unique identifier defined by the user.
         /// </value>
         /// <remarks>
         /// Required

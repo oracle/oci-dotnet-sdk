@@ -23,6 +23,8 @@ namespace Oci.DataflowService.Models
       [EnumMember(Value = "BATCH")]
       Batch,
       [EnumMember(Value = "STREAMING")]
-      Streaming
+      Streaming,
+      [EnumMember(Value = "SESSION")]
+      Session
   }
 }
