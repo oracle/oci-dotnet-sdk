@@ -26,7 +26,7 @@ namespace Oci.Common.Http.Signing
         private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private readonly Mock<IBasicAuthenticationDetailsProvider> authProviderMock;
         private readonly Mock<RsaKeyParameters> rsaKeyParamMock;
-        private readonly Mock<ISigner> signerMock;
+        private readonly Mock<ISignatureSigner> signerMock;
 
         public DefaultRequestSignerTests()
         {
@@ -36,9 +36,9 @@ namespace Oci.Common.Http.Signing
             rsaKeyParamMock = new Mock<RsaKeyParameters>(true, new BigInteger("1"), new BigInteger("2"));
             authProviderMock.Setup(p => p.GetPrivateKey()).Returns(rsaKeyParamMock.Object);
 
-            signerMock = new Mock<ISigner>();
+            signerMock = new Mock<ISignatureSigner>();
 
-            signerMock.Setup(s => s.GenerateSignature()).Returns(new byte[] { 1, 2, 3, 4, 5 });
+            signerMock.Setup(s => s.sign(It.IsAny<RsaKeyParameters>(), It.IsAny<byte[]>())).Returns(new byte[] { 1, 2, 3, 4, 5 });
         }
 
         [Theory]

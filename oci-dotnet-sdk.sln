@@ -245,6 +245,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Cloudmigratio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Cloudbridge", "Cloudbridge\OCI.DotNetSDK.Cloudbridge.csproj", "{2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Disasterrecovery", "Disasterrecovery\OCI.DotNetSDK.Disasterrecovery.csproj", "{68EEF7BB-695B-4112-A2B9-A8233C3A699E}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2301,5 +2303,17 @@ Global
         {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Release|x64.Build.0 = Release|Any CPU
         {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Release|x86.ActiveCfg = Release|Any CPU
         {2F9976A3-847D-40D3-AC2F-910D9C5A8BCD}.Release|x86.Build.0 = Release|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Debug|x64.Build.0 = Debug|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Debug|x86.Build.0 = Debug|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Release|Any CPU.Build.0 = Release|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Release|x64.ActiveCfg = Release|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Release|x64.Build.0 = Release|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Release|x86.ActiveCfg = Release|Any CPU
+        {68EEF7BB-695B-4112-A2B9-A8233C3A699E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

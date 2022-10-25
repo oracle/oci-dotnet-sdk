@@ -11,8 +11,6 @@ using System.Security.Cryptography;
 using System.Text;
 using Oci.Common.Auth;
 using Oci.Common.Http.Signing.Internal;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
 
 namespace Oci.Common.Http.Signing
 {
@@ -22,12 +20,9 @@ namespace Oci.Common.Http.Signing
     public class DefaultRequestSigner : RequestSigner
     {
         private readonly SigningStrategy signingStrategy;
-        private readonly ISigner signer;
-        private readonly string keyId;
-
+        private readonly ISignatureSigner signer;
         private static readonly string SIGNATURE_VERSION = "1";
         private static readonly string SIGNATURE_ALGORITHM = "rsa-sha256";
-
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         public DefaultRequestSigner(IBasicAuthenticationDetailsProvider authDetailsProvider)
@@ -35,18 +30,15 @@ namespace Oci.Common.Http.Signing
         { }
 
         public DefaultRequestSigner(IBasicAuthenticationDetailsProvider authDetailsProvider, SigningStrategy signingStrategy) :
-            this(authDetailsProvider, signingStrategy, SignerUtilities.GetSigner("SHA-256withRSA"))
+            this(authDetailsProvider, signingStrategy, new SignatureSigner())
         { }
 
-        public DefaultRequestSigner(IBasicAuthenticationDetailsProvider authDetailsProvider, ISigner signer) :
+        public DefaultRequestSigner(IBasicAuthenticationDetailsProvider authDetailsProvider, ISignatureSigner signer) :
             this(authDetailsProvider, SigningStrategy.STANDARD, signer)
         { }
-
-        public DefaultRequestSigner(IBasicAuthenticationDetailsProvider authDetailsProvider, SigningStrategy signingStrategy, ISigner signer) : base(authDetailsProvider)
+        public DefaultRequestSigner(IBasicAuthenticationDetailsProvider authDetailsProvider, SigningStrategy signingStrategy, ISignatureSigner signer) : base(authDetailsProvider)
         {
-            this.keyId = authDetailsProvider.KeyId;
             this.signer = signer;
-            this.signer.Init(true, authDetailsProvider.GetPrivateKey());
             this.signingStrategy = signingStrategy;
         }
 
@@ -103,11 +95,10 @@ namespace Oci.Common.Http.Signing
 
             // Calculate the Signing string.
             var signingString = SigningUtils.CalculateStringToSign(requestMessage, headersToSign);
-            var bytes = Encoding.UTF8.GetBytes(signingString);
-            this.signer.BlockUpdate(bytes, 0, bytes.Length);
-            var signature = Convert.ToBase64String(this.signer.GenerateSignature());
+            var keyId = AuthDetailsProvider.KeyId; // Done first to keep keyId and PrivateKey in sync.
+            var signature = Convert.ToBase64String(signer.sign(AuthDetailsProvider.GetPrivateKey(), Encoding.UTF8.GetBytes(signingString)));
 
-            var authorization = SigningUtils.CalculateAuthorization(headersToSign, SIGNATURE_VERSION, this.keyId, SIGNATURE_ALGORITHM, signature);
+            var authorization = SigningUtils.CalculateAuthorization(headersToSign, SIGNATURE_VERSION, keyId, SIGNATURE_ALGORITHM, signature);
 
             httpHeaders.Add(Constants.AUTHORIZATION_HEADER, authorization);
         }

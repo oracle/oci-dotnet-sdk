@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 47.0.0 - 2022-10-24
+### Added
+- Support for the Disaster Recovery service
+- Support for running code interactively with session applications using statements in the Data Flow service
+- Support for language custom models and language translation in the AI Language service
+ 
+### Breaking Changes
+- The type of property `Documents` was changed from a List of `TextClassificationDocument` to a List of `TextDocument` in `BatchDetectLanguageTextClassificationDetails` model in the AI Language service
+- The type of property `Documents` was changed from a List of `SentimentsDocument` to a List of `TextDocument` in `BatchDetectLanguageSentimentsDetails` model in the AI Language service
+- The type of property `Documents` was changed from a List of `KeyPhraseDocument` to a List of `TextDocument` in `BatchDetectLanguageKeyPhrasesDetails` model in the AI Language service
+- The type of property `Documents` was changed from a List of `EntityDocument` to a List of `TextDocument` in `BatchDetectLanguageEntitiesDetails` model in the AI Language service
+ 
+### Fixed
+- Fixed a race condition in DefaultRequestSigner, due to BlockUpdate in BouncyCastle not being thread safe, when a single client was used to make multiple API calls asynchronously
+
 ## 46.0.0 - 2022-10-04
 ### Added
 - Support for calling Oracle Cloud Infrastructure services in the `eu-dcc-milan-1` region

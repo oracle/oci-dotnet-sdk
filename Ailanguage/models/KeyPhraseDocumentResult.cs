@@ -22,7 +22,7 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
-        /// Document Unique Identifier.
+        /// Document unique identifier defined by the user.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.AilanguageService.Models
         public System.Collections.Generic.List<KeyPhrase> KeyPhrases { get; set; }
         
         /// <value>
-        /// Language code as per [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) standard.
+        /// Language code per the [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) standard.
         /// </value>
         /// <remarks>
         /// Required
