@@ -16,7 +16,8 @@ namespace Oci.GoldengateService.Responses
     {
 
         /// <value>
-        /// A unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please include the request ID.
+        /// A unique Oracle-assigned identifier for the request. If you need to contact Oracle about a
+        /// particular request, please include the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
@@ -24,11 +25,21 @@ namespace Oci.GoldengateService.Responses
 
 
         /// <value>
-        /// For pagination of a list of items. When paging through a list, if this header appears in the response, then a partial list might have been returned. Include this value as the `page` parameter for the subsequent GET request to get the next batch of items.
+        /// For pagination of a list of items. When paging through a list, if this header appears in the
+        /// response, then a partial list might have been returned. Include this value as the `page`
+        /// parameter for the subsequent GET request to get the next batch of items.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]
         public string OpcNextPage { get; set; }
+
+
+        /// <value>
+        /// Deprecation date of this API version.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "sunset")]
+        public string Sunset { get; set; }
 
         /// <value>
         /// The returned DatabaseRegistrationCollection instance.

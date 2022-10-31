@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GoldengateService.Models
 {
     /// <summary>
-    /// Definiton of the additional attributes for default deployment start.
+    /// Definition of the additional attributes for default deployment start.
     /// </summary>
     public class DefaultStartDeploymentDetails : StartDeploymentDetails
     {

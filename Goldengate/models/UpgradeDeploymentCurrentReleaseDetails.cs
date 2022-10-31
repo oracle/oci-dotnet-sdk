@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GoldengateService.Models
 {
     /// <summary>
-    /// Definiton of the additional attributes for a Current Release upgrade.
+    /// Definition of the additional attributes for a Current Release upgrade.
     /// </summary>
     public class UpgradeDeploymentCurrentReleaseDetails : UpgradeDeploymentDetails
     {

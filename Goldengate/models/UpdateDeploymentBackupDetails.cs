@@ -23,7 +23,9 @@ namespace Oci.GoldengateService.Models
     {
         
         /// <value>
-        /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists for cross-compatibility only.
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists
+        /// for cross-compatibility only.
+        /// <br/>
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -31,6 +33,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// Tags defined for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]

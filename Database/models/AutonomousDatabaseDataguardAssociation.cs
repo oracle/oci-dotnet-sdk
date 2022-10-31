@@ -184,7 +184,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<PeerAutonomousDatabaseLifeCycleStateEnum> PeerAutonomousDatabaseLifeCycleState { get; set; }
                 ///
         /// <value>
-        /// The protection mode of this Data Guard association. For more information, see
+        /// The protection mode of this Autonomous Data Guard association. For more information, see
         /// [Oracle Data Guard Protection Modes](http://docs.oracle.com/database/122/SBYDB/oracle-data-guard-protection-modes.htm#SBYDB02000)
         /// in the Oracle Data Guard documentation.
         /// 
@@ -201,7 +201,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The protection mode of this Data Guard association. For more information, see
+        /// The protection mode of this Autonomous Data Guard association. For more information, see
         /// [Oracle Data Guard Protection Modes](http://docs.oracle.com/database/122/SBYDB/oracle-data-guard-protection-modes.htm#SBYDB02000)
         /// in the Oracle Data Guard documentation.
         /// 

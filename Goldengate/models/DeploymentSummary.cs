@@ -59,14 +59,16 @@ namespace Oci.GoldengateService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The time the resource was created. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The time the resource was created. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the resource was last updated. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The time the resource was last updated. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
@@ -89,14 +91,17 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<LifecycleSubState> LifecycleSubState { get; set; }
         
         /// <value>
-        /// Describes the object's current state in detail. For example, it can be used to provide actionable information for a resource in a Failed state.
+        /// Describes the object's current state in detail. For example, it can be used to provide
+        /// actionable information for a resource in a Failed state.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists for cross-compatibility only.
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists
+        /// for cross-compatibility only.
+        /// <br/>
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -104,6 +109,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// Tags defined for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
@@ -168,7 +174,8 @@ namespace Oci.GoldengateService.Models
         public string PublicIpAddress { get; set; }
         
         /// <value>
-        /// The private IP address in the customer's VCN representing the access point for the associated endpoint service in the GoldenGate service VCN.
+        /// The private IP address in the customer's VCN representing the access point for the
+        /// associated endpoint service in the GoldenGate service VCN.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "privateIpAddress")]
@@ -182,7 +189,10 @@ namespace Oci.GoldengateService.Models
         public string DeploymentUrl { get; set; }
         
         /// <value>
-        /// The system tags associated with this resource, if any. The system tags are set by Oracle Cloud Infrastructure services. Each key is predefined and scoped to namespaces.  For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// The system tags associated with this resource, if any. The system tags are set by Oracle
+        /// Cloud Infrastructure services. Each key is predefined and scoped to namespaces.  For more
+        /// information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
         /// Example: {orcl-cloud: {free-tier-retain: true}}
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
@@ -196,15 +206,19 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<bool> IsLatestVersion { get; set; }
         
         /// <value>
-        /// The date the existing version in use will no longer be considered as usable and an upgrade will be required.  This date is typically 6 months after the version was released for use by GGS.  The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The date the existing version in use will no longer be considered as usable
+        /// and an upgrade will be required.  This date is typically 6 months after the
+        /// version was released for use by GGS.  The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpgradeRequired")]
         public System.Nullable<System.DateTime> TimeUpgradeRequired { get; set; }
         
         /// <value>
-        /// The type of deployment, the value determines the exact 'type' of service executed in the Deployment. NOTE: Use of the value OGG is maintained for backward compatibility purposes.  Its use is discouraged
-        ///       in favor of the equivalent DATABASE_ORACLE value.
+        /// The type of deployment, the value determines the exact 'type' of service executed in the Deployment.
+        /// NOTE: Use of the value 'OGG' is maintained for backward compatibility purposes.  Its use is discouraged
+        ///       in favor of the equivalent 'DATABASE_ORACLE' value.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "deploymentType")]

@@ -42,7 +42,10 @@ namespace Oci.GoldengateService.Requests
         public UpdateDeploymentBackupDetails UpdateDeploymentBackupDetails { get; set; }
         
         /// <value>
-        /// For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the etag from a previous GET or POST response for that resource.  The resource is updated or deleted only if the etag you provide matches the resource's current etag value.
+        /// For optimistic concurrency control. In the PUT or DELETE call for a resource, set the
+        /// `if-match` parameter to the value of the etag from a previous GET or POST response for that
+        /// resource.  The resource is updated or deleted only if the etag you provide matches the
+        /// resource's current etag value.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]

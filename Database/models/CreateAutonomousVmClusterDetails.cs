@@ -102,7 +102,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> TotalContainerDatabases { get; set; }
         
         /// <value>
-        /// The number of OCPU cores to enable per VM cluster node.
+        /// The number of CPU cores to enable per VM cluster node.
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
         public System.Nullable<int> CpuCoreCountPerNode { get; set; }

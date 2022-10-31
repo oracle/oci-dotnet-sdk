@@ -35,10 +35,6 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The timestamp specified for the point-in-time clone of the source Autonomous Database. The timestamp must be in the past.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
                 ///
@@ -63,6 +59,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "cloneType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CloneTypeEnum> CloneType { get; set; }
+        
+        /// <value>
+        /// Clone from latest available backup timestamp.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "useLatestAvailableBackupTimeStamp")]
+        public System.Nullable<bool> UseLatestAvailableBackupTimeStamp { get; set; }
         
         [JsonProperty(PropertyName = "source")]
         private readonly string source = "BACKUP_FROM_TIMESTAMP";

@@ -24,7 +24,8 @@ namespace Oci.GoldengateService.Responses
 
 
         /// <value>
-        /// A unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please include the request ID.
+        /// A unique Oracle-assigned identifier for the request. If you need to contact Oracle about a
+        /// particular request, please include the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

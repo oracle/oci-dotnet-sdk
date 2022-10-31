@@ -23,7 +23,8 @@ namespace Oci.GoldengateService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the databaseRegistration being referenced.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the databaseRegistration being
+        /// referenced.
         /// 
         /// </value>
         /// <remarks>
@@ -63,14 +64,16 @@ namespace Oci.GoldengateService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The time the resource was created. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The time the resource was created. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the resource was last updated. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The time the resource was last updated. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
@@ -85,14 +88,17 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// Describes the object's current state in detail. For example, it can be used to provide actionable information for a resource in a Failed state.
+        /// Describes the object's current state in detail. For example, it can be used to provide
+        /// actionable information for a resource in a Failed state.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists for cross-compatibility only.
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists
+        /// for cross-compatibility only.
+        /// <br/>
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -100,6 +106,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// Tags defined for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
@@ -124,7 +131,10 @@ namespace Oci.GoldengateService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// The system tags associated with this resource, if any. The system tags are set by Oracle Cloud Infrastructure services. Each key is predefined and scoped to namespaces.  For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// The system tags associated with this resource, if any. The system tags are set by Oracle
+        /// Cloud Infrastructure services. Each key is predefined and scoped to namespaces.  For more
+        /// information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
         /// Example: {orcl-cloud: {free-tier-retain: true}}
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
@@ -138,21 +148,27 @@ namespace Oci.GoldengateService.Models
         public string DatabaseId { get; set; }
         
         /// <value>
-        /// The username Oracle GoldenGate uses to connect the associated RDBMS.  This username must already exist and be available for use by the database.  It must conform to the security requirements implemented by the database including length, case sensitivity, and so on.
+        /// The username Oracle GoldenGate uses to connect the associated RDBMS.  This username must
+        /// already exist and be available for use by the database.  It must conform to the security
+        /// requirements implemented by the database including length, case sensitivity, and so on.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
         
         /// <value>
-        /// Connect descriptor or Easy Connect Naming method that Oracle GoldenGate uses to connect to a database.
+        /// Connect descriptor or Easy Connect Naming method that Oracle GoldenGate uses to connect to a
+        /// database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
                 ///
         /// <value>
-        /// The mode of the database connection session to be established by the data client. REDIRECT - for a RAC database, DIRECT - for a non-RAC database. Connection to a RAC database involves a redirection received from the SCAN listeners to the database node to connect to. By default the mode would be DIRECT.
+        /// The mode of the database connection session to be established by the data client.
+        /// 'REDIRECT' - for a RAC database, 'DIRECT' - for a non-RAC database.
+        /// Connection to a RAC database involves a redirection received from the SCAN listeners
+        /// to the database node to connect to. By default the mode would be DIRECT.
         /// 
         /// </value>
         ///
@@ -167,7 +183,10 @@ namespace Oci.GoldengateService.Models
         };
 
         /// <value>
-        /// The mode of the database connection session to be established by the data client. REDIRECT - for a RAC database, DIRECT - for a non-RAC database. Connection to a RAC database involves a redirection received from the SCAN listeners to the database node to connect to. By default the mode would be DIRECT.
+        /// The mode of the database connection session to be established by the data client.
+        /// 'REDIRECT' - for a RAC database, 'DIRECT' - for a non-RAC database.
+        /// Connection to a RAC database involves a redirection received from the SCAN listeners
+        /// to the database node to connect to. By default the mode would be DIRECT.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sessionMode")]
@@ -182,7 +201,10 @@ namespace Oci.GoldengateService.Models
         public string AliasName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer GGS Secret being referenced. If provided, this will reference a key which the customer will be required to ensure the policies are established to permit the GoldenGate Service to utilize this Secret
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer GGS Secret being
+        /// referenced.
+        /// If provided, this will reference a key which the customer will be required to ensure
+        /// the policies are established to permit the GoldenGate Service to utilize this Secret
         /// 
         /// </value>
         [JsonProperty(PropertyName = "secretId")]

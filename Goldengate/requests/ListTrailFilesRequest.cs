@@ -59,7 +59,8 @@ namespace Oci.GoldengateService.Requests
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.
+        /// The page token representing the page at which to start retrieving results. This is usually
+        /// retrieved from a previous list call.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]

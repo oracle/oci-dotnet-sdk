@@ -27,10 +27,6 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The user-friendly name for the backup. The name does not have to be unique.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         

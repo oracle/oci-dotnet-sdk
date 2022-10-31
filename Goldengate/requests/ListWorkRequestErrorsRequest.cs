@@ -20,7 +20,7 @@ namespace Oci.GoldengateService.Requests
     {
         
         /// <value>
-        /// The ID of the asynchronous request.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the asynchronous request.
         /// 
         /// </value>
         /// <remarks>
@@ -38,7 +38,8 @@ namespace Oci.GoldengateService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.
+        /// The page token representing the page at which to start retrieving results. This is usually
+        /// retrieved from a previous list call.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]

@@ -163,7 +163,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
         
         /// <value>
-        /// The number of OCPU cores enabled per VM cluster node.
+        /// The number of CPU cores enabled per VM cluster node.
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
         public System.Nullable<int> CpuCoreCountPerNode { get; set; }

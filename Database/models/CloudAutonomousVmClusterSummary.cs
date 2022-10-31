@@ -209,13 +209,13 @@ namespace Oci.DatabaseService.Models
         public System.Double DataStorageSizeInGBs { get; set; }
         
         /// <value>
-        /// The number of CPU cores enabled on the cloud Autonomous VM cluster.
+        /// The number of CPU cores on the cloud Autonomous VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
         
         /// <value>
-        /// The number of CPU cores enabled on the cloud Autonomous VM cluster. Only 1 decimal place is allowed for the fractional part.
+        /// The number of CPU cores on the cloud Autonomous VM cluster. Only 1 decimal place is allowed for the fractional part.
         /// </value>
         [JsonProperty(PropertyName = "ocpuCount")]
         public System.Nullable<float> OcpuCount { get; set; }

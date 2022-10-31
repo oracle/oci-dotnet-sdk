@@ -32,6 +32,61 @@ namespace Oci.GoldengateService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetConnectionRequest, GetConnectionResponse> ForConnection(GetConnectionRequest request, params Connection.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForConnection(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetConnectionRequest, GetConnectionResponse> ForConnection(GetConnectionRequest request, WaiterConfiguration config, params Connection.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetConnectionRequest, GetConnectionResponse>(
+                request,
+                request => client.GetConnection(request),
+                response => targetStates.Contains(response.Connection.LifecycleState.Value),
+                targetStates.Contains(Connection.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetConnectionRequest, GetConnectionResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetConnectionAssignmentRequest, GetConnectionAssignmentResponse> ForConnectionAssignment(GetConnectionAssignmentRequest request, params ConnectionAssignment.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForConnectionAssignment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetConnectionAssignmentRequest, GetConnectionAssignmentResponse> ForConnectionAssignment(GetConnectionAssignmentRequest request, WaiterConfiguration config, params ConnectionAssignment.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetConnectionAssignmentRequest, GetConnectionAssignmentResponse>(
+                request,
+                request => client.GetConnectionAssignment(request),
+                response => targetStates.Contains(response.ConnectionAssignment.LifecycleState.Value)
+            );
+            return new Waiter<GetConnectionAssignmentRequest, GetConnectionAssignmentResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDatabaseRegistrationRequest, GetDatabaseRegistrationResponse> ForDatabaseRegistration(GetDatabaseRegistrationRequest request, params LifecycleState[] targetStates)
         {
             return this.ForDatabaseRegistration(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

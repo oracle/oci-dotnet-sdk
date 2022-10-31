@@ -282,7 +282,8 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
                 ///
         /// <value>
-        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
+        /// 
         /// </value>
         ///
         public enum RoleEnum {
@@ -298,7 +299,8 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The role of the Autonomous Data Guard-enabled Autonomous Container Database.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "role")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -338,7 +340,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
         
         /// <value>
-        /// Sum of OCPUs available on the Autonomous VM Cluster + Sum of fractional OCPUs available in the Autonomous Container Database.
+        /// Sum of OCPUs available on the Autonomous VM Cluster + Sum of reclaimable OCPUs available in the Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "availableCpus")]
         public System.Nullable<float> AvailableCpus { get; set; }

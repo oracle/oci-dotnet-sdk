@@ -42,8 +42,6 @@ namespace Oci.GoldengateService.Models
       GoldengateDeploymentStart,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_STOP")]
       GoldengateDeploymentStop,
-      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_PATCH")]
-      GoldengateDeploymentPatch,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_UPGRADE")]
       GoldengateDeploymentUpgrade,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_BACKUP_CREATE")]
@@ -51,6 +49,22 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_BACKUP_DELETE")]
       GoldengateDeploymentBackupDelete,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_BACKUP_CANCEL")]
-      GoldengateDeploymentBackupCancel
+      GoldengateDeploymentBackupCancel,
+      [EnumMember(Value = "GOLDENGATE_CONNECTION_CREATE")]
+      GoldengateConnectionCreate,
+      [EnumMember(Value = "GOLDENGATE_CONNECTION_UPDATE")]
+      GoldengateConnectionUpdate,
+      [EnumMember(Value = "GOLDENGATE_CONNECTION_DELETE")]
+      GoldengateConnectionDelete,
+      [EnumMember(Value = "GOLDENGATE_CONNECTION_MOVE")]
+      GoldengateConnectionMove,
+      [EnumMember(Value = "GOLDENGATE_CONNECTION_ASSIGNMENT_CREATE")]
+      GoldengateConnectionAssignmentCreate,
+      [EnumMember(Value = "GOLDENGATE_CONNECTION_ASSIGMNENT_DELETE")]
+      GoldengateConnectionAssigmnentDelete,
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_DIAGNOSTIC_COLLECT")]
+      GoldengateDeploymentDiagnosticCollect,
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_PATCH")]
+      GoldengateDeploymentPatch
   }
 }

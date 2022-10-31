@@ -23,7 +23,8 @@ namespace Oci.GoldengateService.Models
     {
         
         /// <value>
-        /// A machine-usable code for the error that occured. Error codes are listed on (https://docs.us-phoenix-1.oraclecloud.com/Content/API/References/apierrors.htm).
+        /// A machine-usable code for the error that occured. Error codes are listed on
+        /// (https://docs.us-phoenix-1.oraclecloud.com/Content/API/References/apierrors.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -45,7 +46,8 @@ namespace Oci.GoldengateService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the error occured.  The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The time the error occured.  The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         /// <remarks>
