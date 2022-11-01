@@ -201,7 +201,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> DatabaseSoftwareImageIncludedPatches { get; set; }
         
         /// <value>
-        /// The patches included in the image and the version of the image
+        /// The patches included in the image and the version of the image.
         /// </value>
         [JsonProperty(PropertyName = "includedPatchesSummary")]
         public string IncludedPatchesSummary { get; set; }

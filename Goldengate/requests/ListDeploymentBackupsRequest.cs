@@ -20,7 +20,7 @@ namespace Oci.GoldengateService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
         /// 
         /// </value>
         /// <remarks>
@@ -31,7 +31,7 @@ namespace Oci.GoldengateService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The ID of the deployment in which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the deployment in which to list resources.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "deploymentId")]
@@ -59,7 +59,8 @@ namespace Oci.GoldengateService.Requests
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.
+        /// The page token representing the page at which to start retrieving results. This is usually
+        /// retrieved from a previous list call.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
@@ -74,7 +75,9 @@ namespace Oci.GoldengateService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order can be provided. Default order for 'timeCreated' is descending.  Default order for 'displayName' is ascending. If no value is specified timeCreated is the default.
+        /// The field to sort by. Only one sort order can be provided. Default order for 'timeCreated' is
+        /// descending.  Default order for 'displayName' is ascending. If no value is specified
+        /// timeCreated is the default.
         /// 
         /// </value>
         ///
@@ -86,7 +89,9 @@ namespace Oci.GoldengateService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order can be provided. Default order for 'timeCreated' is descending.  Default order for 'displayName' is ascending. If no value is specified timeCreated is the default.
+        /// The field to sort by. Only one sort order can be provided. Default order for 'timeCreated' is
+        /// descending.  Default order for 'displayName' is ascending. If no value is specified
+        /// timeCreated is the default.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

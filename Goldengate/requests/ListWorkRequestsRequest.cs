@@ -20,7 +20,7 @@ namespace Oci.GoldengateService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
         /// 
         /// </value>
         /// <remarks>
@@ -31,7 +31,7 @@ namespace Oci.GoldengateService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The ID of the resource in which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resource in which to list resources.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
@@ -45,7 +45,8 @@ namespace Oci.GoldengateService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.
+        /// The page token representing the page at which to start retrieving results. This is usually
+        /// retrieved from a previous list call.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]

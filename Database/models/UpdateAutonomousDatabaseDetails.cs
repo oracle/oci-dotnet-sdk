@@ -29,7 +29,7 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
-        /// The number of OCPU cores to be made available to the Autonomous Database. 
+        /// The number of OCPU cores to be made available to the Autonomous Database.
         /// <br/>
         /// **Note:** This parameter cannot be used with the `ocpuCount` parameter.
         /// 

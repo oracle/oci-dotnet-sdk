@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GoldengateService.Models
 {
     /// <summary>
-    /// The information to update for a DatabaseRegistration.
+    /// The information to update a DatabaseRegistration.
     /// 
     /// </summary>
     public class UpdateDatabaseRegistrationDetails 
@@ -37,7 +37,9 @@ namespace Oci.GoldengateService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists for cross-compatibility only.
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists
+        /// for cross-compatibility only.
+        /// <br/>
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -45,6 +47,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// Tags defined for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
@@ -58,28 +61,36 @@ namespace Oci.GoldengateService.Models
         public string Fqdn { get; set; }
         
         /// <value>
-        /// The username Oracle GoldenGate uses to connect the associated RDBMS.  This username must already exist and be available for use by the database.  It must conform to the security requirements implemented by the database including length, case sensitivity, and so on.
+        /// The username Oracle GoldenGate uses to connect the associated RDBMS.  This username must
+        /// already exist and be available for use by the database.  It must conform to the security
+        /// requirements implemented by the database including length, case sensitivity, and so on.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
         
         /// <value>
-        /// The password Oracle GoldenGate uses to connect the associated RDBMS.  It must conform to the specific security requirements implemented by the database including length, case sensitivity, and so on.
+        /// The password Oracle GoldenGate uses to connect the associated RDBMS.  It must conform to the
+        /// specific security requirements implemented by the database including length, case
+        /// sensitivity, and so on.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
         
         /// <value>
-        /// Connect descriptor or Easy Connect Naming method that Oracle GoldenGate uses to connect to a database.
+        /// Connect descriptor or Easy Connect Naming method that Oracle GoldenGate uses to connect to a
+        /// database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
                 ///
         /// <value>
-        /// The mode of the database connection session to be established by the data client. REDIRECT - for a RAC database, DIRECT - for a non-RAC database. Connection to a RAC database involves a redirection received from the SCAN listeners to the database node to connect to. By default the mode would be DIRECT.
+        /// The mode of the database connection session to be established by the data client.
+        /// 'REDIRECT' - for a RAC database, 'DIRECT' - for a non-RAC database.
+        /// Connection to a RAC database involves a redirection received from the SCAN listeners
+        /// to the database node to connect to. By default the mode would be DIRECT.
         /// 
         /// </value>
         ///
@@ -91,7 +102,10 @@ namespace Oci.GoldengateService.Models
         };
 
         /// <value>
-        /// The mode of the database connection session to be established by the data client. REDIRECT - for a RAC database, DIRECT - for a non-RAC database. Connection to a RAC database involves a redirection received from the SCAN listeners to the database node to connect to. By default the mode would be DIRECT.
+        /// The mode of the database connection session to be established by the data client.
+        /// 'REDIRECT' - for a RAC database, 'DIRECT' - for a non-RAC database.
+        /// Connection to a RAC database involves a redirection received from the SCAN listeners
+        /// to the database node to connect to. By default the mode would be DIRECT.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sessionMode")]
@@ -99,7 +113,8 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<SessionModeEnum> SessionMode { get; set; }
         
         /// <value>
-        /// The wallet contents Oracle GoldenGate uses to make connections to a database.  This attribute is expected to be base64 encoded.
+        /// The wallet contents Oracle GoldenGate uses to make connections to a database.  This
+        /// attribute is expected to be base64 encoded.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "wallet")]

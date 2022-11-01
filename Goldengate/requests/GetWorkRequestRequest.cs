@@ -20,7 +20,7 @@ namespace Oci.GoldengateService.Requests
     {
         
         /// <value>
-        /// The ID of the asynchronous request.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the asynchronous request.
         /// 
         /// </value>
         /// <remarks>

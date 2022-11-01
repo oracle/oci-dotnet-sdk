@@ -82,14 +82,16 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<DeploymentUpgradeType> DeploymentUpgradeType { get; set; }
         
         /// <value>
-        /// The date and time the request was started. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The date and time the request was started. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The date and time the request was finished. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The date and time the request was finished. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
@@ -103,14 +105,16 @@ namespace Oci.GoldengateService.Models
         public string OggVersion { get; set; }
         
         /// <value>
-        /// The time the resource was created. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The time the resource was created. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the resource was last updated. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The time the resource was last updated. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
@@ -133,14 +137,17 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<LifecycleSubState> LifecycleSubState { get; set; }
         
         /// <value>
-        /// Describes the object's current state in detail. For example, it can be used to provide actionable information for a resource in a Failed state.
+        /// Describes the object's current state in detail. For example, it can be used to provide
+        /// actionable information for a resource in a Failed state.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists for cross-compatibility only.
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists
+        /// for cross-compatibility only.
+        /// <br/>
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -148,13 +155,17 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// Tags defined for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// The system tags associated with this resource, if any. The system tags are set by Oracle Cloud Infrastructure services. Each key is predefined and scoped to namespaces.  For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// The system tags associated with this resource, if any. The system tags are set by Oracle
+        /// Cloud Infrastructure services. Each key is predefined and scoped to namespaces.  For more
+        /// information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
         /// Example: {orcl-cloud: {free-tier-retain: true}}
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]

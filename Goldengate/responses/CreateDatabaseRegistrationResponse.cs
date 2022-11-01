@@ -16,7 +16,8 @@ namespace Oci.GoldengateService.Responses
     {
 
         /// <value>
-        /// A unique Oracle-assigned identifier for an asynchronous request. You can use this to query status of the asynchronous operation.
+        /// A unique Oracle-assigned identifier for an asynchronous request. You can use this to query
+        /// status of the asynchronous operation.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
@@ -24,7 +25,8 @@ namespace Oci.GoldengateService.Responses
 
 
         /// <value>
-        /// A unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please include the request ID.
+        /// A unique Oracle-assigned identifier for the request. If you need to contact Oracle about a
+        /// particular request, please include the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
@@ -37,6 +39,14 @@ namespace Oci.GoldengateService.Responses
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
         public string Etag { get; set; }
+
+
+        /// <value>
+        /// Deprecation date of this API version.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "sunset")]
+        public string Sunset { get; set; }
 
         /// <value>
         /// The returned DatabaseRegistration instance.

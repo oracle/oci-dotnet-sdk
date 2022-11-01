@@ -16,7 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GoldengateService.Models
 {
     /// <summary>
-    /// The API operations that create and configure GoldenGate resources do not take effect immediately. In these cases, the operation spawns an asynchronous workflow to fulfill teh request. Work requests provide visibility into the status of these in-progress, long-running asynchronous workflows.
+    /// The API operations that create and configure GoldenGate resources do not take effect
+    /// immediately. In these cases, the operation spawns an asynchronous workflow to fulfill the
+    /// request. Work requests provide visibility into the status of these in-progress, long-running
+    /// asynchronous workflows.
     /// 
     /// </summary>
     public class WorkRequest 
@@ -58,7 +61,10 @@ namespace Oci.GoldengateService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that contains the work request. Work requests should be scoped to the same compartment as the resource the work request affects. If the work request affects multiple resources, and those resources are not in the same compartment, it is up to the service team to pick the primary resource whose compartment should be used.
+        /// The ocid of the compartment that contains the work request. Work requests should be scoped
+        /// to the same compartment as the resource the work request affects. If the work request
+        /// affects multiple resources, and those resources are not in the same compartment, it is up
+        /// to the service team to pick the primary resource whose compartment should be used.
         /// 
         /// </value>
         /// <remarks>
@@ -91,7 +97,8 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<float> PercentComplete { get; set; }
         
         /// <value>
-        /// The date and time the request was created. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The date and time the request was created. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         /// <remarks>
@@ -102,14 +109,16 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
         
         /// <value>
-        /// The date and time the request was started. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The date and time the request was started. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The date and time the request was finished. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The date and time the request was finished. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]

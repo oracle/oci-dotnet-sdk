@@ -36,10 +36,6 @@ namespace Oci.LoganalyticsService.Models
         /// <value>
         /// Compartment Identifier [OCID] (https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
@@ -96,10 +92,6 @@ namespace Oci.LoganalyticsService.Models
         /// <value>
         /// This is the end of the time interval
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TimeDataEnded is required.")]
         [JsonProperty(PropertyName = "timeDataEnded")]
         public System.Nullable<System.DateTime> TimeDataEnded { get; set; }
         
@@ -112,10 +104,6 @@ namespace Oci.LoganalyticsService.Models
         /// <value>
         /// Thie is the type of data to be purged
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DataType is required.")]
         [JsonProperty(PropertyName = "dataType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StorageDataType> DataType { get; set; }
@@ -167,6 +155,20 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StorageOperationType> OperationType { get; set; }
+        
+        /// <value>
+        /// This is the key ID for encryption key.
+        /// </value>
+        [JsonProperty(PropertyName = "keyId")]
+        public string KeyId { get; set; }
+        
+        /// <value>
+        /// The type of customer encryption key. It can be archival, active or all.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "keyType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<EncryptionKeyType> KeyType { get; set; }
         
     }
 }

@@ -48,7 +48,8 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<decimal> SizeInBytes { get; set; }
         
         /// <value>
-        /// The time the resource was last updated. The format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// The time the resource was last updated. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeLastUpdated")]

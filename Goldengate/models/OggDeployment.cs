@@ -23,7 +23,8 @@ namespace Oci.GoldengateService.Models
     {
         
         /// <value>
-        /// The name given to the GoldenGate service deployment. The name must be 1 to 32 characters long, must contain only alphanumeric characters and must start with a letter.
+        /// The name given to the GoldenGate service deployment.
+        /// The name must be 1 to 32 characters long, must contain only alphanumeric characters and must start with a letter.
         /// 
         /// </value>
         /// <remarks>

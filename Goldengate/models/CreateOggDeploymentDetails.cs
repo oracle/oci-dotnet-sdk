@@ -23,7 +23,8 @@ namespace Oci.GoldengateService.Models
     {
         
         /// <value>
-        /// The name given to the GoldenGate service deployment. The name must be 1 to 32 characters long, must contain only alphanumeric characters and must start with a letter.
+        /// The name given to the GoldenGate service deployment.
+        /// The name must be 1 to 32 characters long, must contain only alphanumeric characters and must start with a letter.
         /// 
         /// </value>
         /// <remarks>
@@ -45,7 +46,9 @@ namespace Oci.GoldengateService.Models
         public string AdminUsername { get; set; }
         
         /// <value>
-        /// The password associated with the GoldenGate deployment console username. The password must be 8 to 30 characters long and must contain at least 1 uppercase, 1 lowercase, 1 numeric, and 1 special character. Special characters such as \u2018$\u2019, \u2018^\u2019, or \u2018?\u2019 are not allowed.
+        /// The password associated with the GoldenGate deployment console username.
+        /// The password must be 8 to 30 characters long and must contain at least 1 uppercase, 1 lowercase, 1 numeric,
+        /// and 1 special character. Special characters such as \u2018$\u2019, \u2018^\u2019, or \u2018?\u2019 are not allowed.
         /// 
         /// </value>
         /// <remarks>

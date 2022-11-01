@@ -21,6 +21,12 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "OGG")]
-      Ogg
+      Ogg,
+      [EnumMember(Value = "DATABASE_ORACLE")]
+      DatabaseOracle,
+      [EnumMember(Value = "BIGDATA")]
+      Bigdata,
+      [EnumMember(Value = "DATABASE_MYSQL")]
+      DatabaseMysql
   }
 }

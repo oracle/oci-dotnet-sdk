@@ -31,6 +31,10 @@ namespace Oci.LoganalyticsService.Models
       [EnumMember(Value = "ARCHIVE_STORAGE_DATA")]
       ArchiveStorageData,
       [EnumMember(Value = "CLEANUP_ARCHIVAL_STORAGE_DATA")]
-      CleanupArchivalStorageData
+      CleanupArchivalStorageData,
+      [EnumMember(Value = "ENCRYPT_ACTIVE_DATA")]
+      EncryptActiveData,
+      [EnumMember(Value = "ENCRYPT_ARCHIVAL_DATA")]
+      EncryptArchivalData
   }
 }
