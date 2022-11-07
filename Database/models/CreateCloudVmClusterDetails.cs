@@ -80,6 +80,30 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> OcpuCount { get; set; }
         
         /// <value>
+        /// The memory to be allocated in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "memorySizeInGBs")]
+        public System.Nullable<int> MemorySizeInGBs { get; set; }
+        
+        /// <value>
+        /// The local node storage to be allocated in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "dbNodeStorageSizeInGBs")]
+        public System.Nullable<int> DbNodeStorageSizeInGBs { get; set; }
+        
+        /// <value>
+        /// The data disk group size to be allocated in TBs.
+        /// </value>
+        [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
+        public System.Double DataStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// The list of Db servers.
+        /// </value>
+        [JsonProperty(PropertyName = "dbServers")]
+        public System.Collections.Generic.List<string> DbServers { get; set; }
+        
+        /// <value>
         /// The cluster name for cloud VM cluster. The cluster name must begin with an alphabetic character, and may contain hyphens (-). Underscores (_) are not permitted. The cluster name can be no longer than 11 characters and is not case sensitive.
         /// 
         /// </value>

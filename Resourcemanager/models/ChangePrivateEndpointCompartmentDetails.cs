@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// The details for moving a private endpoint to a different compartment.
+    /// Compartment details for moving a private endpoint.
     /// 
     /// </summary>
     public class ChangePrivateEndpointCompartmentDetails 

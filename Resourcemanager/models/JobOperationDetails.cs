@@ -52,6 +52,12 @@ namespace Oci.ResourcemanagerService.Models
                 case "PLAN":
                     obj = new PlanJobOperationDetails();
                     break;
+                case "APPLY_ROLLBACK":
+                    obj = new ApplyRollbackJobOperationDetails();
+                    break;
+                case "PLAN_ROLLBACK":
+                    obj = new PlanRollbackJobOperationDetails();
+                    break;
                 case "APPLY":
                     obj = new ApplyJobOperationDetails();
                     break;

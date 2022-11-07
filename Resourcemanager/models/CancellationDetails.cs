@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Defines the cancellation details of the job.
+    /// Cancellation details for a job.
     /// 
     /// </summary>
     public class CancellationDetails 

@@ -16,15 +16,12 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// The properties that define a job. Jobs perform the actions that are defined in your configuration.
-    /// - **Plan job**. A plan job takes your Terraform configuration, parses it, and creates an execution plan.
-    /// - **Apply job**. The apply job takes your execution plan, applies it to the associated stack, then executes
-    /// the configuration's instructions.
-    /// - **Destroy job**. To clean up the infrastructure controlled by the stack, you run a destroy job.
-    /// A destroy job does not delete the stack or associated job resources,
-    /// but instead releases the resources managed by the stack.
-    /// - **Import_TF_State job**. An import Terraform state job takes a Terraform state file and sets it as the current
-    /// state of the stack. This is used to migrate local Terraform environments to Resource Manager.
+    /// The properties of a job.
+    /// A job performs the actions that are defined in your Terraform configuration.
+    /// For instructions on managing jobs, see
+    /// [Managing Jobs](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/jobs.htm).
+    /// For more information about jobs, see
+    /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts__jobdefinition).
     /// 
     /// </summary>
     public class Job 
@@ -69,7 +66,11 @@ namespace Oci.ResourcemanagerService.Models
             [EnumMember(Value = "DESTROY")]
             Destroy,
             [EnumMember(Value = "IMPORT_TF_STATE")]
-            ImportTfState
+            ImportTfState,
+            [EnumMember(Value = "PLAN_ROLLBACK")]
+            PlanRollback,
+            [EnumMember(Value = "APPLY_ROLLBACK")]
+            ApplyRollback
         };
 
         /// <value>
@@ -80,8 +81,19 @@ namespace Oci.ResourcemanagerService.Models
         public System.Nullable<OperationEnum> Operation { get; set; }
         
         /// <value>
-        /// Specifies whether or not to upgrade provider versions. 
-        /// Within the version constraints of your Terraform configuration, use the latest versions available from the source of Terraform providers. 
+        /// When `true`, the stack sources third-party Terraform providers from
+        /// [Terraform Registry](https://registry.terraform.io/browse/providers) and allows
+        /// {@link #customTerraformProvider(CustomTerraformProviderRequest) customTerraformProvider}.
+        /// For more information about stack sourcing of third-party Terraform providers, see
+        /// [Third-party Provider Configuration](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/terraformconfigresourcemanager.htm#third-party-providers).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isThirdPartyProviderExperienceEnabled")]
+        public System.Nullable<bool> IsThirdPartyProviderExperienceEnabled { get; set; }
+        
+        /// <value>
+        /// Specifies whether or not to upgrade provider versions.
+        /// Within the version constraints of your Terraform configuration, use the latest versions available from the source of Terraform providers.
         /// For more information about this option, see [Dependency Lock File (terraform.io)](https://www.terraform.io/language/files/dependency-lock).
         /// 
         /// </value>

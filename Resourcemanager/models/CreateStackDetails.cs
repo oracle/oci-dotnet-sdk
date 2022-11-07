@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// The configuration details for creating a stack.
+    /// Creation details for a stack.
     /// 
     /// </summary>
     public class CreateStackDetails 

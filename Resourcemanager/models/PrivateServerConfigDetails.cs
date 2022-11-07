@@ -37,6 +37,10 @@ namespace Oci.ResourcemanagerService.Models
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a certificate associated with the configuration source provider.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CertificateId is required.")]
         [JsonProperty(PropertyName = "certificateId")]
         public string CertificateId { get; set; }
         

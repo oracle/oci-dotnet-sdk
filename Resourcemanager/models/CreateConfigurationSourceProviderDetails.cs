@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// The details for creating a configuration source provider.
+    /// Creation details for a configuration source provider.
     /// 
     /// </summary>
     [JsonConverter(typeof(CreateConfigurationSourceProviderDetailsModelConverter))]

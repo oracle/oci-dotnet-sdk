@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// The configuration details for creating a template.
+    /// Creation details for a template.
     /// 
     /// </summary>
     public class CreateTemplateDetails 

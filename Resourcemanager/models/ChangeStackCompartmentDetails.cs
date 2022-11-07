@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Defines the requirements and properties of changeStackCompartment operation.
+    /// Compartment details for moving a stack.
     /// </summary>
     public class ChangeStackCompartmentDetails 
     {

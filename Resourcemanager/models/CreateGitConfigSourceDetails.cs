@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Details for uploading the configuration Git information.
+    /// Creation details for configuration Git information.
     /// 
     /// </summary>
     public class CreateGitConfigSourceDetails : CreateConfigSourceDetails

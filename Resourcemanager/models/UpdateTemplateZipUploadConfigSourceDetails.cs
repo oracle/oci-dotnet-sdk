@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Updates property details for the configuration .zip file.
+    /// Update details for a configuration zip file.
     /// </summary>
     public class UpdateTemplateZipUploadConfigSourceDetails : UpdateTemplateConfigSourceDetails
     {

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// The details for detecting drift in a stack
+    /// Details for detecting drift in a stack.
     /// 
     /// </summary>
     public class DetectStackDriftDetails 
@@ -33,8 +33,8 @@ namespace Oci.ResourcemanagerService.Models
         public System.Collections.Generic.List<string> ResourceAddresses { get; set; }
         
         /// <value>
-        /// Specifies whether or not to upgrade provider versions. 
-        /// Within the version constraints of your Terraform configuration, use the latest versions available from the source of Terraform providers. 
+        /// Specifies whether or not to upgrade provider versions.
+        /// Within the version constraints of your Terraform configuration, use the latest versions available from the source of Terraform providers.
         /// For more information about this option, see [Dependency Lock File (terraform.io)](https://www.terraform.io/language/files/dependency-lock).
         /// 
         /// </value>

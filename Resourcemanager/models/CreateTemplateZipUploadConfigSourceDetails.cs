@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Property details for uploading the zip file for template.
+    /// Creation details for a zip file used for a template.
     /// 
     /// </summary>
     public class CreateTemplateZipUploadConfigSourceDetails : CreateTemplateConfigSourceDetails

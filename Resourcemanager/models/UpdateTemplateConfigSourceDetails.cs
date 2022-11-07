@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Updates the property details for the configuration source for the template.
+    /// Update details for a configuration source for a template.
     /// 
     /// </summary>
     [JsonConverter(typeof(UpdateTemplateConfigSourceDetailsModelConverter))]

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Returns a listing of all of the specified job's properties and their values.
+    /// Summary information for a job.
     /// </summary>
     public class JobSummary 
     {

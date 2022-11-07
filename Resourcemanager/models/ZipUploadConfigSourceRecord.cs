@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Information about the user-provided file used for the Terraform configuration.
+    /// Information about the user-provided Terraform configuration zip file.
     /// 
     /// </summary>
     public class ZipUploadConfigSourceRecord : ConfigSourceRecord
