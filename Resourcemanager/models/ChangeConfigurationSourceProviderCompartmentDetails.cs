@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// The details for moving a configuration source provider to a different compartment.
+    /// Compartment details for moving a configuration source provider.
     /// 
     /// </summary>
     public class ChangeConfigurationSourceProviderCompartmentDetails 

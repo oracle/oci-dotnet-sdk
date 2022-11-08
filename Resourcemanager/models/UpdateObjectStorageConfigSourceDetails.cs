@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Updates property details for the Object Storage bucket that contains Terraform configuration files.
+    /// Update details for an Object Storage bucket that contains Terraform configuration files.
     /// </summary>
     public class UpdateObjectStorageConfigSourceDetails : UpdateConfigSourceDetails
     {

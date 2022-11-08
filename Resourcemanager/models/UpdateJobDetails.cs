@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Updates the display name, free-form tags, and/or defined tag properties of the job.
+    /// Update details for a job.
     /// 
     /// </summary>
     public class UpdateJobDetails 

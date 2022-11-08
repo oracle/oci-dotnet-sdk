@@ -66,6 +66,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<AddStorageCapacityCloudExadataInfrastructureRequest, AddStorageCapacityCloudExadataInfrastructureResponse> ForAddStorageCapacityCloudExadataInfrastructure(AddStorageCapacityCloudExadataInfrastructureRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForAddStorageCapacityCloudExadataInfrastructure(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<AddStorageCapacityCloudExadataInfrastructureRequest, AddStorageCapacityCloudExadataInfrastructureResponse> ForAddStorageCapacityCloudExadataInfrastructure(AddStorageCapacityCloudExadataInfrastructureRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<AddStorageCapacityCloudExadataInfrastructureRequest, AddStorageCapacityCloudExadataInfrastructureResponse>(() =>
+            {
+                var response = client.AddStorageCapacityCloudExadataInfrastructure(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<AddStorageCapacityExadataInfrastructureRequest, AddStorageCapacityExadataInfrastructureResponse> ForAddStorageCapacityExadataInfrastructure(AddStorageCapacityExadataInfrastructureRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForAddStorageCapacityExadataInfrastructure(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -83,6 +115,38 @@ namespace Oci.DatabaseService
             return new Waiter<AddStorageCapacityExadataInfrastructureRequest, AddStorageCapacityExadataInfrastructureResponse>(() =>
             {
                 var response = client.AddStorageCapacityExadataInfrastructure(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<AddVirtualMachineToCloudVmClusterRequest, AddVirtualMachineToCloudVmClusterResponse> ForAddVirtualMachineToCloudVmCluster(AddVirtualMachineToCloudVmClusterRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForAddVirtualMachineToCloudVmCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<AddVirtualMachineToCloudVmClusterRequest, AddVirtualMachineToCloudVmClusterResponse> ForAddVirtualMachineToCloudVmCluster(AddVirtualMachineToCloudVmClusterRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<AddVirtualMachineToCloudVmClusterRequest, AddVirtualMachineToCloudVmClusterResponse>(() =>
+            {
+                var response = client.AddVirtualMachineToCloudVmCluster(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -4243,6 +4307,38 @@ namespace Oci.DatabaseService
             return new Waiter<RemoteClonePluggableDatabaseRequest, RemoteClonePluggableDatabaseResponse>(() =>
             {
                 var response = client.RemoteClonePluggableDatabase(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RemoveVirtualMachineFromCloudVmClusterRequest, RemoveVirtualMachineFromCloudVmClusterResponse> ForRemoveVirtualMachineFromCloudVmCluster(RemoveVirtualMachineFromCloudVmClusterRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForRemoveVirtualMachineFromCloudVmCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RemoveVirtualMachineFromCloudVmClusterRequest, RemoveVirtualMachineFromCloudVmClusterResponse> ForRemoveVirtualMachineFromCloudVmCluster(RemoveVirtualMachineFromCloudVmClusterRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<RemoveVirtualMachineFromCloudVmClusterRequest, RemoveVirtualMachineFromCloudVmClusterResponse>(() =>
+            {
+                var response = client.RemoveVirtualMachineFromCloudVmCluster(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

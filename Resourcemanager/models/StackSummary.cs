@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Returns a list of properties and the defining property values for the specified stack.
+    /// Summary information for a stack.
     /// 
     /// </summary>
     public class StackSummary 

@@ -40,6 +40,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "ocpuCount")]
         public System.Nullable<float> OcpuCount { get; set; }
+        
+        /// <value>
+        /// The memory to be allocated in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "memorySizeInGBs")]
+        public System.Nullable<int> MemorySizeInGBs { get; set; }
+        
+        /// <value>
+        /// The local node storage to be allocated in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "dbNodeStorageSizeInGBs")]
+        public System.Nullable<int> DbNodeStorageSizeInGBs { get; set; }
+        
+        /// <value>
+        /// The data disk group size to be allocated in TBs.
+        /// </value>
+        [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
+        public System.Double DataStorageSizeInTBs { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to the cloud VM cluster. The default is BRING_YOUR_OWN_LICENSE. Applies to Exadata Cloud Service instances only.

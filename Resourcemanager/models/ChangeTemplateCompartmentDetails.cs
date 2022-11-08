@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// The details for moving a template to a different compartment.
+    /// Compartment details for moving a template.
     /// 
     /// </summary>
     public class ChangeTemplateCompartmentDetails 

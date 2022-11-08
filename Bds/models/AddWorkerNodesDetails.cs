@@ -49,7 +49,9 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = "WORKER")]
             Worker,
             [EnumMember(Value = "COMPUTE_ONLY_WORKER")]
-            ComputeOnlyWorker
+            ComputeOnlyWorker,
+            [EnumMember(Value = "EDGE")]
+            Edge
         };
 
         /// <value>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// The details for creating a configuration source provider of the type `GITHUB_ACCESS_TOKEN`.
+    /// Creation details for a configuration source provider of the type `GITHUB_ACCESS_TOKEN`.
     /// This type corresponds to a configuration source provider in GitHub that is authenticated with a personal access token.
     /// 
     /// </summary>

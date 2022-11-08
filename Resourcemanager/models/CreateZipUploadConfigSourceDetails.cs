@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Property details for uploading the configuration zip file.
+    /// Creation details for a Terraform configuration zip file.
     /// 
     /// </summary>
     public class CreateZipUploadConfigSourceDetails : CreateConfigSourceDetails

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Job details that are specific to the operation type.
+    /// A summary of job details that is specific to the operation type.
     /// 
     /// </summary>
     [JsonConverter(typeof(JobOperationDetailsSummaryModelConverter))]
@@ -46,8 +46,14 @@ namespace Oci.ResourcemanagerService.Models
             var discriminator = jsonObject["operation"].Value<string>();
             switch (discriminator)
             {
+                case "APPLY_ROLLBACK":
+                    obj = new ApplyRollbackJobOperationDetailsSummary();
+                    break;
                 case "IMPORT_TF_STATE":
                     obj = new ImportTfStateJobOperationDetailsSummary();
+                    break;
+                case "PLAN_ROLLBACK":
+                    obj = new PlanRollbackJobOperationDetailsSummary();
                     break;
                 case "PLAN":
                     obj = new PlanJobOperationDetailsSummary();

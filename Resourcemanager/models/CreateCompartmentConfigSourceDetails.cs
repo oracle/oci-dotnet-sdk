@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Property details for uploading the specified compartment as the configuration source.
+    /// Creation details for a configuration source based on the specified compartment.
     /// 
     /// </summary>
     public class CreateCompartmentConfigSourceDetails : CreateConfigSourceDetails

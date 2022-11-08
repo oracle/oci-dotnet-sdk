@@ -30,7 +30,7 @@ namespace Oci.ResourcemanagerService.Requests
         public string StackId { get; set; }
         
         /// <value>
-        /// Updated information provided for the stack.
+        /// The details for updating a stack.
         /// 
         /// </value>
         /// <remarks>

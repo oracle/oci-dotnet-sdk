@@ -66,5 +66,14 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "cloudsqlShapeConfig")]
         public ShapeConfigDetails CloudsqlShapeConfig { get; set; }
         
+        /// <value>
+        /// Change shape of edge nodes to the desired target shape. Both VM_STANDARD and E4 Flex shapes are allowed here.
+        /// </value>
+        [JsonProperty(PropertyName = "edge")]
+        public string Edge { get; set; }
+        
+        [JsonProperty(PropertyName = "edgeShapeConfig")]
+        public ShapeConfigDetails EdgeShapeConfig { get; set; }
+        
     }
 }

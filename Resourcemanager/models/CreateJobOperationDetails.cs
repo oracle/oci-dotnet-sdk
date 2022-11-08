@@ -25,8 +25,8 @@ namespace Oci.ResourcemanagerService.Models
         
         
         /// <value>
-        /// Specifies whether or not to upgrade provider versions. 
-        /// Within the version constraints of your Terraform configuration, use the latest versions available from the source of Terraform providers. 
+        /// Specifies whether or not to upgrade provider versions.
+        /// Within the version constraints of your Terraform configuration, use the latest versions available from the source of Terraform providers.
         /// For more information about this option, see [Dependency Lock File (terraform.io)](https://www.terraform.io/language/files/dependency-lock).
         /// 
         /// </value>
@@ -57,6 +57,12 @@ namespace Oci.ResourcemanagerService.Models
             {
                 case "IMPORT_TF_STATE":
                     obj = new CreateImportTfStateJobOperationDetails();
+                    break;
+                case "PLAN_ROLLBACK":
+                    obj = new CreatePlanRollbackJobOperationDetails();
+                    break;
+                case "APPLY_ROLLBACK":
+                    obj = new CreateApplyRollbackJobOperationDetails();
                     break;
                 case "APPLY":
                     obj = new CreateApplyJobOperationDetails();

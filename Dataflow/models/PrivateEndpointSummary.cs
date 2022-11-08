@@ -138,6 +138,14 @@ namespace Oci.DataflowService.Models
         public string OwnerUserName { get; set; }
         
         /// <value>
+        /// An array of fqdn/port pairs used to create private endpoint. Each object is a simple key-value pair with FQDN as key and port number as value.
+        /// [ { fqdn: \"scan1.oracle.com\", port: \"1521\"}, { fqdn: \"scan2.oracle.com\", port: \"1521\" } ]
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "scanDetails")]
+        public System.Collections.Generic.List<Scan> ScanDetails { get; set; }
+        
+        /// <value>
         /// The OCID of a subnet.
         /// 
         /// </value>

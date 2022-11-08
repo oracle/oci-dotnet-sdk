@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Defines the requirements and properties of a job to create and run against the specified stack.
+    /// Creation details for a job for running inside the specified stack.
     /// 
     /// </summary>
     public class CreateJobDetails 

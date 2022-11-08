@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// Updates the specified template.
+    /// Update details for a template.
     /// 
     /// </summary>
     public class UpdateTemplateDetails 

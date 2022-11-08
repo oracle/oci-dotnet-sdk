@@ -97,7 +97,7 @@ namespace Oci.ResourcemanagerService.Models
         public System.Nullable<bool> IsUsedWithConfigurationSourceProvider { get; set; }
         
         /// <value>
-        /// DNS zones to use for accessing private Git servers. 
+        /// DNS zones to use for accessing private Git servers.
         /// For private Git server instructions, see
         /// [Private Git Server](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/private-endpoints.htm#private-git).
         /// Specify DNS fully qualified domain names (FQDNs); DNS Proxy forwards related DNS FQDN queries to the consumer DNS resolver.

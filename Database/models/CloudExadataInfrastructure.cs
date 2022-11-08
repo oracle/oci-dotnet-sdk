@@ -133,6 +133,67 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> AvailableStorageSizeInGBs { get; set; }
         
         /// <value>
+        /// The total number of CPU cores allocated.
+        /// </value>
+        [JsonProperty(PropertyName = "cpuCount")]
+        public System.Nullable<int> CpuCount { get; set; }
+        
+        /// <value>
+        /// The total number of CPU cores available.
+        /// </value>
+        [JsonProperty(PropertyName = "maxCpuCount")]
+        public System.Nullable<int> MaxCpuCount { get; set; }
+        
+        /// <value>
+        /// The memory allocated in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "memorySizeInGBs")]
+        public System.Nullable<int> MemorySizeInGBs { get; set; }
+        
+        /// <value>
+        /// The total memory available in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "maxMemoryInGBs")]
+        public System.Nullable<int> MaxMemoryInGBs { get; set; }
+        
+        /// <value>
+        /// The local node storage allocated in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "dbNodeStorageSizeInGBs")]
+        public System.Nullable<int> DbNodeStorageSizeInGBs { get; set; }
+        
+        /// <value>
+        /// The total local node storage available in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "maxDbNodeStorageInGBs")]
+        public System.Nullable<int> MaxDbNodeStorageInGBs { get; set; }
+        
+        /// <value>
+        /// Size, in terabytes, of the DATA disk group.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dataStorageSizeInTBs")]
+        public System.Double DataStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// The total available DATA disk group size.
+        /// </value>
+        [JsonProperty(PropertyName = "maxDataStorageInTBs")]
+        public System.Double MaxDataStorageInTBs { get; set; }
+        
+        /// <value>
+        /// The requested number of additional storage servers for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "additionalStorageCount")]
+        public System.Nullable<int> AdditionalStorageCount { get; set; }
+        
+        /// <value>
+        /// The requested number of additional storage servers activated for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "activatedStorageCount")]
+        public System.Nullable<int> ActivatedStorageCount { get; set; }
+        
+        /// <value>
         /// The date and time the cloud Exadata infrastructure resource was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]

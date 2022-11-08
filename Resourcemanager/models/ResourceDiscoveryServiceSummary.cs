@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// A service supported for use with Resource Discovery.
+    /// A service supported for use with [Resource Discovery](https://www.terraform.io/docs/providers/oci/guides/resource_discovery.html#services).
     /// 
     /// </summary>
     public class ResourceDiscoveryServiceSummary 

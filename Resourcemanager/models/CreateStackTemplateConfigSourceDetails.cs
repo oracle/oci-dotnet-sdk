@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ResourcemanagerService.Models
 {
     /// <summary>
-    /// The template to use as the source of the Terraform configuration.
+    /// Creation details for a template to use as the source of the Terraform configuration.
     /// 
     /// </summary>
     public class CreateStackTemplateConfigSourceDetails : CreateConfigSourceDetails
