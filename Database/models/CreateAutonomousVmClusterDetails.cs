@@ -139,5 +139,23 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The SCAN Listener TLS port number. Default value is 2484.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortTls")]
+        public System.Nullable<int> ScanListenerPortTls { get; set; }
+        
+        /// <value>
+        /// The SCAN Listener Non TLS port number. Default value is 1521.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortNonTls")]
+        public System.Nullable<int> ScanListenerPortNonTls { get; set; }
+        
+        /// <value>
+        /// Enable mutual TLS(mTLS) authentication for database at time of provisioning a VMCluster.Default is TLS.
+        /// </value>
+        [JsonProperty(PropertyName = "isMtlsEnabled")]
+        public System.Nullable<bool> IsMtlsEnabled { get; set; }
+        
     }
 }

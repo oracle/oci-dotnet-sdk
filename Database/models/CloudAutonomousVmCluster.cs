@@ -221,6 +221,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> OcpuCount { get; set; }
         
         /// <value>
+        /// The number of OCPU cores enabled per VM cluster node.
+        /// </value>
+        [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
+        public System.Nullable<int> CpuCoreCountPerNode { get; set; }
+        
+        /// <value>
         /// The memory allocated in GBs.
         /// </value>
         [JsonProperty(PropertyName = "memorySizeInGBs")]
@@ -266,6 +272,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "nextMaintenanceRunId")]
         public string NextMaintenanceRunId { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceWindow")]
+        public MaintenanceWindow MaintenanceWindow { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
