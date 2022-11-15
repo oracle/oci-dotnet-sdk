@@ -107,7 +107,9 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = "ODH1")]
             Odh1,
             [EnumMember(Value = "ODH0_9")]
-            Odh09
+            Odh09,
+            [EnumMember(Value = "ODH2_0")]
+            Odh20
         };
 
         /// <value>

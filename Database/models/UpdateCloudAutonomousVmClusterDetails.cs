@@ -33,6 +33,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceWindowDetails")]
+        public MaintenanceWindow MaintenanceWindowDetails { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle PaaS and IaaS services in the cloud.

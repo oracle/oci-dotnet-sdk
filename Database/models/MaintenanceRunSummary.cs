@@ -148,7 +148,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "AUTONOMOUS_VM_CLUSTER")]
             AutonomousVmCluster,
             [EnumMember(Value = "AUTONOMOUS_DATABASE")]
-            AutonomousDatabase
+            AutonomousDatabase,
+            [EnumMember(Value = "CLOUD_AUTONOMOUS_VM_CLUSTER")]
+            CloudAutonomousVmCluster
         };
 
         /// <value>

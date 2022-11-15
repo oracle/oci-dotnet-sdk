@@ -70,10 +70,43 @@ namespace Oci.DatabaseService.Models
         public string CloudExadataInfrastructureId { get; set; }
         
         /// <value>
+        /// The total number of Autonomous Container Databases that can be created.
+        /// </value>
+        [JsonProperty(PropertyName = "totalContainerDatabases")]
+        public System.Nullable<int> TotalContainerDatabases { get; set; }
+        
+        /// <value>
+        /// The number of OCPU cores to enable per VM cluster node.
+        /// </value>
+        [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
+        public System.Nullable<int> CpuCoreCountPerNode { get; set; }
+        
+        /// <value>
+        /// The amount of memory (in GBs) to be enabled per each OCPU core.
+        /// </value>
+        [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
+        public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
+        
+        /// <value>
+        /// The data disk group size to be allocated for Autonomous Databases, in TBs.
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousDataStorageSizeInTBs")]
+        public System.Double AutonomousDataStorageSizeInTBs { get; set; }
+        
+        /// <value>
         /// The time zone to use for the Cloud Autonomous VM cluster. For details, see [DB System Time Zones](https://docs.cloud.oracle.com/Content/Database/References/timezones.htm).
         /// </value>
         [JsonProperty(PropertyName = "clusterTimeZone")]
         public string ClusterTimeZone { get; set; }
+        
+        /// <value>
+        /// The list of Db server.
+        /// </value>
+        [JsonProperty(PropertyName = "dbServers")]
+        public System.Collections.Generic.List<string> DbServers { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceWindowDetails")]
+        public MaintenanceWindow MaintenanceWindowDetails { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle PaaS and IaaS services in the cloud.
