@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApigatewayService.Models
 {
     /// <summary>
-    /// Information around the Wildcard expression matching the value for selector of a dynamic authentication/ routing branch.
+    /// When dynamically routing and dynamically authenticating requests, the route or authentication server associated with a selection key containing a wildcard is used if the context variable in an incoming request matches that key.
     /// </summary>
     public class WildcardSelectionKey : DynamicSelectionKey
     {
         
         /// <value>
-        /// String describing the expression with wildcards.
+        /// A selection key string containing a wildcard to match with the context variable in an incoming request. If the context variable matches the string, the request is sent to the route or authentication server associated with the selection key. Valid wildcards are '*' (zero or more characters) and '+' (one or more characters). The string can only contain one wildcard, and the wildcard must be at the start or the end of the string.
         /// </value>
         /// <remarks>
         /// Required

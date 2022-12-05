@@ -24,6 +24,10 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// The OCID of the on-premises connector.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "OnPremConnectorId is required.")]
         [JsonProperty(PropertyName = "onPremConnectorId")]
         public string OnPremConnectorId { get; set; }
         

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MysqlService.Models
 {
     /// <summary>
-    /// The Maintenance Policy for the DB System.
+    /// The Maintenance Policy for the DB System or Read Replica that this model is included in.
     /// 
     /// </summary>
     public class MaintenanceDetails 
@@ -30,6 +30,8 @@ namespace Oci.MysqlService.Models
         /// \"{day-of-week}\" is a case-insensitive string like \"mon\", \"tue\", &c.
         /// <br/>
         /// \"{time-of-day}\" is the \"Time\" portion of an RFC3339-formatted timestamp. Any second or sub-second time data will be truncated to zero.
+        /// <br/>
+        /// If you set the read replica maintenance window to \"\" or if not specified, the read replica is set same as the DB system maintenance window.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "windowStartTime")]

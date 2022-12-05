@@ -293,5 +293,12 @@ namespace Oci.OpsiService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostId")]
         public string HostId { get; set; }
+        
+        /// <value>
+        /// Optional list of Exadata Insight VM cluster name.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vmclusterName", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> VmclusterName { get; set; }
     }
 }

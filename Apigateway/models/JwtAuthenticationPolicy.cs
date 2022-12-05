@@ -44,6 +44,14 @@ namespace Oci.ApigatewayService.Models
         public string TokenAuthScheme { get; set; }
         
         /// <value>
+        /// The maximum expected time difference between the system clocks
+        /// of the token issuer and the API Gateway.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxClockSkewInSeconds")]
+        public System.Nullable<float> MaxClockSkewInSeconds { get; set; }
+        
+        /// <value>
         /// A list of parties that could have issued the token.
         /// </value>
         /// <remarks>
@@ -68,14 +76,6 @@ namespace Oci.ApigatewayService.Models
         /// </value>
         [JsonProperty(PropertyName = "verifyClaims")]
         public System.Collections.Generic.List<JsonWebTokenClaim> VerifyClaims { get; set; }
-        
-        /// <value>
-        /// The maximum expected time difference between the system clocks
-        /// of the token issuer and the API Gateway.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "maxClockSkewInSeconds")]
-        public System.Nullable<float> MaxClockSkewInSeconds { get; set; }
         
         /// <remarks>
         /// Required

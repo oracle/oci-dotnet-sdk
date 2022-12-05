@@ -85,23 +85,21 @@ namespace Oci.DatasafeService.Requests
         
         ///
         /// <value>
-        /// The field used for sorting. Only one sorting order (sortOrder) can be specified.
-        /// The default order for TIMECREATED is descending. The default order for DISPLAYNAME is ascending.
-        /// The DISPLAYNAME sort order is case sensitive.
+        /// The field to sort by. Only one sort order may be provided.
         /// 
         /// </value>
         ///
         public enum SortByEnum {
+            [EnumMember(Value = "DISPLAYNAME")]
+            Displayname,
             [EnumMember(Value = "TIMECREATED")]
             Timecreated,
-            [EnumMember(Value = "DISPLAYNAME")]
-            Displayname
+            [EnumMember(Value = "TIMEUPDATED")]
+            Timeupdated
         };
 
         /// <value>
-        /// The field used for sorting. Only one sorting order (sortOrder) can be specified.
-        /// The default order for TIMECREATED is descending. The default order for DISPLAYNAME is ascending.
-        /// The DISPLAYNAME sort order is case sensitive.
+        /// The field to sort by. Only one sort order may be provided.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

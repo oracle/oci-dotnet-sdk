@@ -88,8 +88,14 @@ namespace Oci.ResourcemanagerService.Models
                 case "GITLAB_ACCESS_TOKEN":
                     obj = new CreateGitlabAccessTokenConfigurationSourceProviderDetails();
                     break;
+                case "BITBUCKET_CLOUD_USERNAME_APPPASSWORD":
+                    obj = new CreateBitbucketCloudUsernameAppPasswordConfigurationSourceProviderDetails();
+                    break;
                 case "GITHUB_ACCESS_TOKEN":
                     obj = new CreateGithubAccessTokenConfigurationSourceProviderDetails();
+                    break;
+                case "BITBUCKET_SERVER_ACCESS_TOKEN":
+                    obj = new CreateBitbucketServerAccessTokenConfigurationSourceProviderDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

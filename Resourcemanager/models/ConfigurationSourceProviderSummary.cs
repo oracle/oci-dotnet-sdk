@@ -113,6 +113,12 @@ namespace Oci.ResourcemanagerService.Models
                 case "GITLAB_ACCESS_TOKEN":
                     obj = new GitlabAccessTokenConfigurationSourceProviderSummary();
                     break;
+                case "BITBUCKET_CLOUD_USERNAME_APPPASSWORD":
+                    obj = new BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary();
+                    break;
+                case "BITBUCKET_SERVER_ACCESS_TOKEN":
+                    obj = new BitbucketServerAccessTokenConfigurationSourceProviderSummary();
+                    break;
                 case "GITHUB_ACCESS_TOKEN":
                     obj = new GithubAccessTokenConfigurationSourceProviderSummary();
                     break;

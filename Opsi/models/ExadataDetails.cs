@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// Partial information about the exadata which includes id and name.
+    /// Partial information about the exadata which includes id, name and vmclusterNames.
     /// </summary>
     public class ExadataDetails 
     {
@@ -40,6 +40,12 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
+        /// <value>
+        /// Array of vm cluster names. Applicable for ExaCC and ExaCS.
+        /// </value>
+        [JsonProperty(PropertyName = "vmclusterNames")]
+        public System.Collections.Generic.List<string> VmclusterNames { get; set; }
         
     }
 }

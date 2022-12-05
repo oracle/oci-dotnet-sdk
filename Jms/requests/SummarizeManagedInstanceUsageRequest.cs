@@ -139,5 +139,12 @@ namespace Oci.JmsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostnameContains")]
         public string HostnameContains { get; set; }
+        
+        /// <value>
+        /// The library key.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "libraryKey")]
+        public string LibraryKey { get; set; }
     }
 }

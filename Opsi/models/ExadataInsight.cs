@@ -178,6 +178,9 @@ namespace Oci.OpsiService.Models
                 case "EM_MANAGED_EXTERNAL_EXADATA":
                     obj = new EmManagedExternalExadataInsight();
                     break;
+                case "PE_COMANAGED_EXADATA":
+                    obj = new PeComanagedExadataInsight();
+                    break;
             }
             if (obj != null)
             {

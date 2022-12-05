@@ -80,6 +80,9 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "sslCaCertificate")]
         public CaCertificate SslCaCertificate { get; set; }
         
+        [JsonProperty(PropertyName = "anonymousTransactionsHandling")]
+        public AnonymousTransactionsHandling AnonymousTransactionsHandling { get; set; }
+        
         [JsonProperty(PropertyName = "sourceType")]
         private readonly string sourceType = "MYSQL";
     }

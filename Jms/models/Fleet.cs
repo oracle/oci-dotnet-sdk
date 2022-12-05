@@ -111,6 +111,18 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "approximateManagedInstanceCount")]
         public System.Nullable<int> ApproximateManagedInstanceCount { get; set; }
         
+        /// <value>
+        /// The approximate count of all unique Java servers in the Fleet in the past seven days.
+        /// This metric is provided on a best-effort manner, and is not taken into account when computing the resource ETag.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ApproximateJavaServerCount is required.")]
+        [JsonProperty(PropertyName = "approximateJavaServerCount")]
+        public System.Nullable<int> ApproximateJavaServerCount { get; set; }
+        
         [JsonProperty(PropertyName = "inventoryLog")]
         public CustomLog InventoryLog { get; set; }
         
@@ -118,7 +130,8 @@ namespace Oci.JmsService.Models
         public CustomLog OperationLog { get; set; }
         
         /// <value>
-        /// Whether or not advanced features are enabled in this fleet.  By default, this is set to false.
+        /// Whether or not advanced features are enabled in this fleet.
+        /// Deprecated, use `/fleets/{fleetId}/advanceFeatureConfiguration` api instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAdvancedFeaturesEnabled")]

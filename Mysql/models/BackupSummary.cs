@@ -103,6 +103,16 @@ namespace Oci.MysqlService.Models
         public string DbSystemId { get; set; }
         
         /// <value>
+        /// The OCID of the compartment the backup exists in.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// Size of the data volume in GiBs.
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]

@@ -107,6 +107,35 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "statusDetails")]
         public string StatusDetails { get; set; }
+                ///
+        /// <value>
+        /// The type of endpoint that clients and connectors can connect to.
+        /// </value>
+        ///
+        public enum ResourceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "DBSYSTEM")]
+            Dbsystem,
+            [EnumMember(Value = "READ_REPLICA")]
+            ReadReplica,
+            [EnumMember(Value = "LOAD_BALANCER")]
+            LoadBalancer
+        };
+
+        /// <value>
+        /// The type of endpoint that clients and connectors can connect to.
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ResourceTypeEnum> ResourceType { get; set; }
+        
+        /// <value>
+        /// The OCID of the resource that this endpoint is attached to.
+        /// </value>
+        [JsonProperty(PropertyName = "resourceId")]
+        public string ResourceId { get; set; }
         
     }
 }

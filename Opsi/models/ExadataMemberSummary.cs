@@ -64,7 +64,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "ETHERNET_SWITCH")]
             EthernetSwitch,
             [EnumMember(Value = "HOST")]
-            Host
+            Host,
+            [EnumMember(Value = "VM_CLUSTER")]
+            VmCluster
         };
 
         /// <value>

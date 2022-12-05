@@ -58,8 +58,17 @@ namespace Oci.ResourcemanagerService.Models
             var discriminator = jsonObject["configSourceType"].Value<string>();
             switch (discriminator)
             {
+                case "DEVOPS_CONFIG_SOURCE":
+                    obj = new CreateDevOpsConfigSourceDetails();
+                    break;
+                case "BITBUCKET_CLOUD_CONFIG_SOURCE":
+                    obj = new CreateBitbucketCloudConfigSourceDetails();
+                    break;
                 case "ZIP_UPLOAD":
                     obj = new CreateZipUploadConfigSourceDetails();
+                    break;
+                case "BITBUCKET_SERVER_CONFIG_SOURCE":
+                    obj = new CreateBitbucketServerConfigSourceDetails();
                     break;
                 case "GIT_CONFIG_SOURCE":
                     obj = new CreateGitConfigSourceDetails();

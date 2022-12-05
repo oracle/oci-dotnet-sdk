@@ -35,7 +35,9 @@ namespace Oci.ApigatewayService.Models
             [EnumMember(Value = "STOCK_RESPONSE_BACKEND")]
             StockResponseBackend,
             [EnumMember(Value = "DYNAMIC_ROUTING_BACKEND")]
-            DynamicRoutingBackend
+            DynamicRoutingBackend,
+            [EnumMember(Value = "OAUTH2_LOGOUT_BACKEND")]
+            Oauth2LogoutBackend
         };
 
         
@@ -62,6 +64,9 @@ namespace Oci.ApigatewayService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "OAUTH2_LOGOUT_BACKEND":
+                    obj = new OAuth2LogoutBackend();
+                    break;
                 case "HTTP_BACKEND":
                     obj = new HTTPBackend();
                     break;

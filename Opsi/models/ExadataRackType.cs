@@ -26,6 +26,8 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "QUARTER")]
       Quarter,
       [EnumMember(Value = "EIGHTH")]
-      Eighth
+      Eighth,
+      [EnumMember(Value = "FLEX")]
+      Flex
   }
 }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Complete information of a specific release of Java. Includes the artifact details.
+    /// Metadata associated with a specific release of Java. Includes the artifact details.
     /// 
     /// </summary>
     public class JavaRelease 
@@ -112,6 +112,16 @@ namespace Oci.JmsService.Models
         [Required(ErrorMessage = "ReleaseNotesUrl is required.")]
         [JsonProperty(PropertyName = "releaseNotesUrl")]
         public string ReleaseNotesUrl { get; set; }
+        
+        /// <value>
+        /// Artifact content types for the Java version.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ArtifactContentTypes is required.")]
+        [JsonProperty(PropertyName = "artifactContentTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<ArtifactContentType> ArtifactContentTypes { get; set; }
         
     }
 }

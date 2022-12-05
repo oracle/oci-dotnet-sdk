@@ -29,8 +29,14 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         ///
         public enum ConfigSourceRecordTypeEnum {
+            [EnumMember(Value = "BITBUCKET_CLOUD_CONFIG_SOURCE")]
+            BitbucketCloudConfigSource,
+            [EnumMember(Value = "BITBUCKET_SERVER_CONFIG_SOURCE")]
+            BitbucketServerConfigSource,
             [EnumMember(Value = "COMPARTMENT_CONFIG_SOURCE")]
             CompartmentConfigSource,
+            [EnumMember(Value = "DEVOPS_CONFIG_SOURCE")]
+            DevopsConfigSource,
             [EnumMember(Value = "GIT_CONFIG_SOURCE")]
             GitConfigSource,
             [EnumMember(Value = "OBJECT_STORAGE_CONFIG_SOURCE")]
@@ -63,11 +69,20 @@ namespace Oci.ResourcemanagerService.Models
             var discriminator = jsonObject["configSourceRecordType"].Value<string>();
             switch (discriminator)
             {
+                case "DEVOPS_CONFIG_SOURCE":
+                    obj = new DevOpsConfigSourceRecord();
+                    break;
                 case "GIT_CONFIG_SOURCE":
                     obj = new GitConfigSourceRecord();
                     break;
                 case "ZIP_UPLOAD":
                     obj = new ZipUploadConfigSourceRecord();
+                    break;
+                case "BITBUCKET_CLOUD_CONFIG_SOURCE":
+                    obj = new BitbucketCloudConfigSourceRecord();
+                    break;
+                case "BITBUCKET_SERVER_CONFIG_SOURCE":
+                    obj = new BitbucketServerConfigSourceRecord();
                     break;
                 case "OBJECT_STORAGE_CONFIG_SOURCE":
                     obj = new ObjectStorageConfigSourceRecord();

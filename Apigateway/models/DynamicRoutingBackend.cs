@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApigatewayService.Models
 {
     /// <summary>
-    /// Send the request to a Dynamic Routing backend.
+    /// Send the request to the backend dynamically selected based on the incoming request's context.
     /// 
     /// </summary>
     public class DynamicRoutingBackend : ApiSpecificationRouteBackend

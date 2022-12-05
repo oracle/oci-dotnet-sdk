@@ -61,6 +61,13 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "instances")]
         public System.Collections.Generic.List<HostInstanceMap> Instances { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ExadataDetails is required.")]
+        [JsonProperty(PropertyName = "exadataDetails")]
+        public ExadataDetails ExadataDetails { get; set; }
+        
         [JsonProperty(PropertyName = "entitySource")]
         private readonly string entitySource = "PE_COMANAGED_DATABASE";
     }

@@ -31,5 +31,11 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "installationSites")]
         public System.Collections.Generic.List<NewInstallationSite> InstallationSites { get; set; }
         
+        /// <value>
+        /// Optional list of post java installation actions
+        /// </value>
+        [JsonProperty(PropertyName = "postInstallationActions")]
+        public System.Collections.Generic.List<PostInstallationActions> PostInstallationActions { get; set; }
+        
     }
 }

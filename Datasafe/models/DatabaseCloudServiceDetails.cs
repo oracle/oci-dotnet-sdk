@@ -34,8 +34,18 @@ namespace Oci.DatasafeService.Models
         public string DbSystemId { get; set; }
         
         /// <value>
+        /// The port number of the database listener.
+        /// </value>
+        [JsonProperty(PropertyName = "listenerPort")]
+        public System.Nullable<int> ListenerPort { get; set; }
+        
+        /// <value>
         /// The database service name.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ServiceName is required.")]
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
         

@@ -44,6 +44,20 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "javaUsageTrackerProcessingFrequencyInMinutes")]
         public System.Nullable<int> JavaUsageTrackerProcessingFrequencyInMinutes { get; set; }
         
+        /// <value>
+        /// The validity period in days for work requests.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "workRequestValidityPeriodInDays")]
+        public System.Nullable<int> WorkRequestValidityPeriodInDays { get; set; }
+        
+        /// <value>
+        /// Agent polling interval in minutes
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "agentPollingIntervalInMinutes")]
+        public System.Nullable<int> AgentPollingIntervalInMinutes { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

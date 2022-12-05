@@ -30,6 +30,12 @@ namespace Oci.JmsService.Requests
         public string FleetId { get; set; }
         
         /// <value>
+        /// The Fleet-unique identifier of the related Java Runtime.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "jreId")]
+        public string JreId { get; set; }
+        
+        /// <value>
         /// The vendor of the Java Runtime.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "jreVendor")]

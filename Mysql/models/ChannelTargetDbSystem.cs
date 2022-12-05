@@ -54,6 +54,13 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "applierUsername")]
         public string ApplierUsername { get; set; }
         
+        /// <value>
+        /// Replication filter rules to be applied at the DB System Channel target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "filters")]
+        public System.Collections.Generic.List<ChannelFilter> Filters { get; set; }
+        
         [JsonProperty(PropertyName = "targetType")]
         private readonly string targetType = "DBSYSTEM";
     }

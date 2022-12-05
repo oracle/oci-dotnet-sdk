@@ -69,6 +69,18 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "databaseResourceType")]
         public string DatabaseResourceType { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VM Cluster or DB System ID, depending on which configuration the resource belongs to.
+        /// </value>
+        [JsonProperty(PropertyName = "parentId")]
+        public string ParentId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Exadata Infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "rootId")]
+        public string RootId { get; set; }
+        
         [JsonProperty(PropertyName = "entitySource")]
         private readonly string entitySource = "PE_COMANAGED_DATABASE";
     }

@@ -43,6 +43,10 @@ namespace Oci.StackmonitoringService.Models
             WeblogicDomain,
             [EnumMember(Value = "EBS_INSTANCE")]
             EbsInstance,
+            [EnumMember(Value = "SQL_SERVER")]
+            SqlServer,
+            [EnumMember(Value = "APACHE_TOMCAT")]
+            ApacheTomcat,
             [EnumMember(Value = "ORACLE_DATABASE")]
             OracleDatabase,
             [EnumMember(Value = "OCI_ORACLE_DB")]
@@ -52,7 +56,9 @@ namespace Oci.StackmonitoringService.Models
             [EnumMember(Value = "OCI_ORACLE_PDB")]
             OciOraclePdb,
             [EnumMember(Value = "HOST")]
-            Host
+            Host,
+            [EnumMember(Value = "ORACLE_PSFT")]
+            OraclePsft
         };
 
         /// <value>

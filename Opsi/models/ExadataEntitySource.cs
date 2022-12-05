@@ -20,6 +20,8 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "EM_MANAGED_EXTERNAL_EXADATA")]
-      EmManagedExternalExadata
+      EmManagedExternalExadata,
+      [EnumMember(Value = "PE_COMANAGED_EXADATA")]
+      PeComanagedExadata
   }
 }

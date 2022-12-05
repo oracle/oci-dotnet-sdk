@@ -136,5 +136,11 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<ReportLifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// An optional filter to return only resources that match the specified type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
+        public System.Nullable<ReportType> Type { get; set; }
     }
 }

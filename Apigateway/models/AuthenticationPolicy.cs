@@ -38,7 +38,9 @@ namespace Oci.ApigatewayService.Models
             [EnumMember(Value = "CUSTOM_AUTHENTICATION")]
             CustomAuthentication,
             [EnumMember(Value = "JWT_AUTHENTICATION")]
-            JwtAuthentication
+            JwtAuthentication,
+            [EnumMember(Value = "TOKEN_AUTHENTICATION")]
+            TokenAuthentication
         };
 
         
@@ -65,6 +67,9 @@ namespace Oci.ApigatewayService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "TOKEN_AUTHENTICATION":
+                    obj = new TokenAuthenticationPolicy();
+                    break;
                 case "JWT_AUTHENTICATION":
                     obj = new JwtAuthenticationPolicy();
                     break;

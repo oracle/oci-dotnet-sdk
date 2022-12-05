@@ -81,12 +81,18 @@ namespace Oci.ResourcemanagerService.Models
                 ///
         /// <value>
         /// The type of configuration source provider.
+        /// The `BITBUCKET_CLOUD_USERNAME_APPPASSWORD` type corresponds to Bitbucket Cloud.
+        /// The `BITBUCKET_SERVER_ACCESS_TOKEN` type corresponds to Bitbucket Server.
         /// The `GITLAB_ACCESS_TOKEN` type corresponds to GitLab.
         /// The `GITHUB_ACCESS_TOKEN` type corresponds to GitHub.
         /// 
         /// </value>
         ///
         public enum ConfigSourceProviderTypeEnum {
+            [EnumMember(Value = "BITBUCKET_CLOUD_USERNAME_APPPASSWORD")]
+            BitbucketCloudUsernameApppassword,
+            [EnumMember(Value = "BITBUCKET_SERVER_ACCESS_TOKEN")]
+            BitbucketServerAccessToken,
             [EnumMember(Value = "GITLAB_ACCESS_TOKEN")]
             GitlabAccessToken,
             [EnumMember(Value = "GITHUB_ACCESS_TOKEN")]
@@ -96,6 +102,18 @@ namespace Oci.ResourcemanagerService.Models
         
         [JsonProperty(PropertyName = "privateServerConfigDetails")]
         public PrivateServerConfigDetails PrivateServerConfigDetails { get; set; }
+        
+        /// <value>
+        /// Username which is used to authorize the user.
+        /// </value>
+        [JsonProperty(PropertyName = "username")]
+        public string Username { get; set; }
+        
+        /// <value>
+        /// Secret ocid which is used to authorize the user.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
         
         /// <value>
         /// Free-form tags associated with this resource. Each tag is a key-value pair with no predefined name, type, or namespace.
@@ -141,6 +159,12 @@ namespace Oci.ResourcemanagerService.Models
                     break;
                 case "GITLAB_ACCESS_TOKEN":
                     obj = new GitlabAccessTokenConfigurationSourceProvider();
+                    break;
+                case "BITBUCKET_SERVER_ACCESS_TOKEN":
+                    obj = new BitbucketServerAccessTokenConfigurationSourceProvider();
+                    break;
+                case "BITBUCKET_CLOUD_USERNAME_APPPASSWORD":
+                    obj = new BitbucketCloudUsernameAppPasswordConfigurationSourceProvider();
                     break;
             }
             if (obj != null)

@@ -210,7 +210,15 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "ADD_COLUMNS_FROM_SDM")]
             AddColumnsFromSdm,
             [EnumMember(Value = "MASKING_JOB")]
-            MaskingJob
+            MaskingJob,
+            [EnumMember(Value = "CREATE_SCHEDULE")]
+            CreateSchedule,
+            [EnumMember(Value = "REMOVE_SCHEDULE_REPORT")]
+            RemoveScheduleReport,
+            [EnumMember(Value = "UPDATE_ALL_ALERT")]
+            UpdateAllAlert,
+            [EnumMember(Value = "PATCH_TARGET_ALERT_POLICY_ASSOCIATION")]
+            PatchTargetAlertPolicyAssociation
         };
 
         /// <value>

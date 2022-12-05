@@ -41,6 +41,18 @@ namespace Oci.AnnouncementsService.Models
         public string OnsTopicId { get; set; }
         
         /// <value>
+        /// (For announcement subscriptions with Oracle Fusion Applications configured as the service only) The language in which the user prefers to receive emailed announcements. Specify the preference with a value that uses the language tag format (x-obmcs-human-language). For example fr-FR.
+        /// </value>
+        [JsonProperty(PropertyName = "preferredLanguage")]
+        public string PreferredLanguage { get; set; }
+        
+        /// <value>
+        /// The time zone that the user prefers for announcement time stamps. Specify the preference with a value that uses the IANA Time Zone Database format (x-obmcs-time-zone). For example America/Los_Angeles.
+        /// </value>
+        [JsonProperty(PropertyName = "preferredTimeZone")]
+        public string PreferredTimeZone { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

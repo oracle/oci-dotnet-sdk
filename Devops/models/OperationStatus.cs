@@ -30,6 +30,10 @@ namespace Oci.DevopsService.Models
       [EnumMember(Value = "CANCELING")]
       Canceling,
       [EnumMember(Value = "CANCELED")]
-      Canceled
+      Canceled,
+      [EnumMember(Value = "WAITING")]
+      Waiting,
+      [EnumMember(Value = "NEEDS_ATTENTION")]
+      NeedsAttention
   }
 }

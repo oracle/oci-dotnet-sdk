@@ -27,5 +27,11 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }
         
+        /// <value>
+        /// The OCID of the masking work request that resulted in this masking log.
+        /// </value>
+        [JsonProperty(PropertyName = "maskingWorkRequestId")]
+        public string MaskingWorkRequestId { get; set; }
+        
     }
 }

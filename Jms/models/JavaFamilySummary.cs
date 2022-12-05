@@ -17,6 +17,8 @@ namespace Oci.JmsService.Models
 {
     /// <summary>
     /// A summary of the Java release family information.
+    /// A Java release family is typically a major version in the Java version identifier.
+    /// 
     /// </summary>
     public class JavaFamilySummary 
     {

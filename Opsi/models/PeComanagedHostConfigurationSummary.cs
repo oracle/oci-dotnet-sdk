@@ -41,6 +41,13 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "parentId")]
         public string ParentId { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ExadataDetails is required.")]
+        [JsonProperty(PropertyName = "exadataDetails")]
+        public ExadataDetails ExadataDetails { get; set; }
+        
         [JsonProperty(PropertyName = "entitySource")]
         private readonly string entitySource = "PE_COMANAGED_HOST";
     }

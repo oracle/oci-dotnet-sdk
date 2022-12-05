@@ -33,6 +33,18 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "opsiPrivateEndpointId")]
         public string OpsiPrivateEndpointId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VM Cluster or DB System ID, depending on which configuration the resource belongs to.
+        /// </value>
+        [JsonProperty(PropertyName = "parentId")]
+        public string ParentId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the root resource for a composite target. e.g. for ExaCS members the rootId will be the OCID of the Exadata Infrastructure resource.
+        /// </value>
+        [JsonProperty(PropertyName = "rootId")]
+        public string RootId { get; set; }
+        
         [JsonProperty(PropertyName = "entitySource")]
         private readonly string entitySource = "PE_COMANAGED_DATABASE";
     }
