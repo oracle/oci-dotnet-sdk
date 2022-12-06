@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Complete information of a specific Java release family.
+    /// Metadata associated with a specific Java release family.
+    /// A Java release family is typically a major version in the Java version identifier.
     /// 
     /// </summary>
     public class JavaFamily 

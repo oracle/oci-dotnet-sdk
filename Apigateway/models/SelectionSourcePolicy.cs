@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApigatewayService.Models
 {
     /// <summary>
-    /// Information around selector used for branching among routes/ authentication servers while dynamic routing/ authentication.
+    /// The type of selector to use when dynamically routing and dynamically authenticating requests.
     /// </summary>
     [JsonConverter(typeof(SelectionSourcePolicyModelConverter))]
     public class SelectionSourcePolicy 

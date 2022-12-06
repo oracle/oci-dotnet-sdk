@@ -42,5 +42,12 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "releaseVersion")]
         public string ReleaseVersion { get; set; }
         
+        /// <value>
+        /// Artifact content type for the Java version.
+        /// </value>
+        [JsonProperty(PropertyName = "artifactContentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ArtifactContentType> ArtifactContentType { get; set; }
+        
     }
 }

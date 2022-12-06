@@ -24,6 +24,10 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// The OCID of the Data Safe private endpoint.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DatasafePrivateEndpointId is required.")]
         [JsonProperty(PropertyName = "datasafePrivateEndpointId")]
         public string DatasafePrivateEndpointId { get; set; }
         

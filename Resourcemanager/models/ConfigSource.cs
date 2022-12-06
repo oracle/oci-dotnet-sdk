@@ -29,8 +29,14 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         ///
         public enum ConfigSourceTypeEnum {
+            [EnumMember(Value = "BITBUCKET_CLOUD_CONFIG_SOURCE")]
+            BitbucketCloudConfigSource,
+            [EnumMember(Value = "BITBUCKET_SERVER_CONFIG_SOURCE")]
+            BitbucketServerConfigSource,
             [EnumMember(Value = "COMPARTMENT_CONFIG_SOURCE")]
             CompartmentConfigSource,
+            [EnumMember(Value = "DEVOPS_CONFIG_SOURCE")]
+            DevopsConfigSource,
             [EnumMember(Value = "GIT_CONFIG_SOURCE")]
             GitConfigSource,
             [EnumMember(Value = "OBJECT_STORAGE_CONFIG_SOURCE")]
@@ -78,8 +84,17 @@ namespace Oci.ResourcemanagerService.Models
                 case "GIT_CONFIG_SOURCE":
                     obj = new GitConfigSource();
                     break;
+                case "DEVOPS_CONFIG_SOURCE":
+                    obj = new DevOpsConfigSource();
+                    break;
                 case "OBJECT_STORAGE_CONFIG_SOURCE":
                     obj = new ObjectStorageConfigSource();
+                    break;
+                case "BITBUCKET_SERVER_CONFIG_SOURCE":
+                    obj = new BitbucketServerConfigSource();
+                    break;
+                case "BITBUCKET_CLOUD_CONFIG_SOURCE":
+                    obj = new BitbucketCloudConfigSource();
                     break;
                 case "COMPARTMENT_CONFIG_SOURCE":
                     obj = new CompartmentConfigSource();

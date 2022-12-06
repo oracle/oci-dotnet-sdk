@@ -160,6 +160,14 @@ namespace Oci.DatasafeService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The date and time until which the audit events are collected from target database by Data Safe audit trail 
+        /// collection process, in the format defined by RFC3339.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastCollected")]
+        public System.Nullable<System.DateTime> TimeLastCollected { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

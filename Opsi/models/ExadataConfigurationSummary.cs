@@ -107,6 +107,12 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
+        /// <value>
+        /// Array of objects containing VM cluster information.
+        /// </value>
+        [JsonProperty(PropertyName = "vmclusterDetails")]
+        public System.Collections.Generic.List<VmClusterSummary> VmclusterDetails { get; set; }
+        
     }
 
     public class ExadataConfigurationSummaryModelConverter : JsonConverter
@@ -132,6 +138,9 @@ namespace Oci.OpsiService.Models
             {
                 case "EM_MANAGED_EXTERNAL_EXADATA":
                     obj = new ExadataDatabaseMachineConfigurationSummary();
+                    break;
+                case "PE_COMANAGED_EXADATA":
+                    obj = new ExadataExacsConfigurationSummary();
                     break;
             }
             if (obj != null)

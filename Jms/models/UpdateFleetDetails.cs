@@ -40,7 +40,8 @@ namespace Oci.JmsService.Models
         public CustomLog OperationLog { get; set; }
         
         /// <value>
-        /// Whether or not advanced features are enabled in this fleet.  By default, this is set to false.
+        /// Whether or not advanced features are enabled in this fleet.
+        /// Deprecated, use `/fleets/{fleetId}/advanceFeatureConfiguration` api instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAdvancedFeaturesEnabled")]

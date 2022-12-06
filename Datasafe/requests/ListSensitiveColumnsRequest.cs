@@ -233,7 +233,9 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "objectName")]
             ObjectName,
             [EnumMember(Value = "columnName")]
-            ColumnName
+            ColumnName,
+            [EnumMember(Value = "dataType")]
+            DataType
         };
 
         /// <value>

@@ -58,6 +58,22 @@ namespace Oci.MysqlService.Models
       [EnumMember(Value = "RESTART_HEATWAVE_CLUSTER")]
       RestartHeatwaveCluster,
       [EnumMember(Value = "GENERATE_HEATWAVE_CLUSTER_MEMORY_ESTIMATE")]
-      GenerateHeatwaveClusterMemoryEstimate
+      GenerateHeatwaveClusterMemoryEstimate,
+      [EnumMember(Value = "CREATE_REPLICA")]
+      CreateReplica,
+      [EnumMember(Value = "UPDATE_REPLICA")]
+      UpdateReplica,
+      [EnumMember(Value = "DELETE_REPLICA")]
+      DeleteReplica,
+      [EnumMember(Value = "CREATE_CHANNEL")]
+      CreateChannel,
+      [EnumMember(Value = "UPDATE_CHANNEL")]
+      UpdateChannel,
+      [EnumMember(Value = "RESUME_CHANNEL")]
+      ResumeChannel,
+      [EnumMember(Value = "RESET_CHANNEL")]
+      ResetChannel,
+      [EnumMember(Value = "DELETE_CHANNEL")]
+      DeleteChannel
   }
 }

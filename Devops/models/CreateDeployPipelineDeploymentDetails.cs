@@ -24,6 +24,9 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "deploymentArguments")]
         public DeploymentArgumentCollection DeploymentArguments { get; set; }
         
+        [JsonProperty(PropertyName = "deployStageOverrideArguments")]
+        public DeployStageOverrideArgumentCollection DeployStageOverrideArguments { get; set; }
+        
         [JsonProperty(PropertyName = "deployArtifactOverrideArguments")]
         public DeployArtifactOverrideArgumentCollection DeployArtifactOverrideArguments { get; set; }
         

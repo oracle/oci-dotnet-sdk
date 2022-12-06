@@ -32,6 +32,14 @@ namespace Oci.JmsService.Models
       [EnumMember(Value = "DELETE_JAVA_INSTALLATION")]
       DeleteJavaInstallation,
       [EnumMember(Value = "CREATE_JAVA_INSTALLATION")]
-      CreateJavaInstallation
+      CreateJavaInstallation,
+      [EnumMember(Value = "COLLECT_JFR")]
+      CollectJfr,
+      [EnumMember(Value = "REQUEST_CRYPTO_EVENT_ANALYSIS")]
+      RequestCryptoEventAnalysis,
+      [EnumMember(Value = "SCAN_JAVA_SERVER_USAGE")]
+      ScanJavaServerUsage,
+      [EnumMember(Value = "SCAN_LIBRARY_USAGE")]
+      ScanLibraryUsage
   }
 }

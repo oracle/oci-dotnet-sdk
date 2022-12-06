@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApigatewayService.Models
 {
     /// <summary>
-    /// Information around the values for selector of an authentication/ routing branch.
+    /// Base policy for defining how to match the context variable in an incoming request with selection keys when dynamically routing and dynamically authenticating requests.
     /// </summary>
     [JsonConverter(typeof(DynamicSelectionKeyModelConverter))]
     public class DynamicSelectionKey 
     {
                 ///
         /// <value>
-        /// Information regarding type of the selection key.
+        /// Type of the selection key.
         /// </value>
         ///
         public enum TypeEnum {
@@ -35,7 +35,7 @@ namespace Oci.ApigatewayService.Models
 
         
         /// <value>
-        /// Information regarding whether this is the default branch.
+        /// Specifies whether to use the route or authentication server associated with this selection key as the default. The default is used if the value of a context variable in an incoming request does not match any of the other selection key values when dynamically routing and dynamically authenticating requests.
         /// </value>
         [JsonProperty(PropertyName = "isDefault")]
         public System.Nullable<bool> IsDefault { get; set; }

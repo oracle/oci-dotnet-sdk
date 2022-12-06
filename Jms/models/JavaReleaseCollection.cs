@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Collection of information about the Java releases.
+    /// Collection of Java releases information.
     /// </summary>
     public class JavaReleaseCollection 
     {

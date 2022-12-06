@@ -16,13 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Contains summary of the Java release family details.
+    /// Collection of the Java release family summary.
+    /// A Java release family is typically a major version in the Java version identifier.
+    /// 
     /// </summary>
     public class JavaFamilyCollection 
     {
         
         /// <value>
-        /// A list of the Java Release family details.
+        /// A list of the Java Release family summary.
         /// </value>
         /// <remarks>
         /// Required

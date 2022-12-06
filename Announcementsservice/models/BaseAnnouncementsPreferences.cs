@@ -64,6 +64,12 @@ namespace Oci.AnnouncementsService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BaseCreateAnnouncementsPreferencesDetails.PreferenceTypeEnum> PreferenceType { get; set; }
         
+        /// <value>
+        /// The time zone that the user prefers for announcement time stamps. Specify the preference with a value that uses the IANA Time Zone Database format (x-obmcs-time-zone). For example America/Los_Angeles.
+        /// </value>
+        [JsonProperty(PropertyName = "preferredTimeZone")]
+        public string PreferredTimeZone { get; set; }
+        
     }
 
     public class BaseAnnouncementsPreferencesModelConverter : JsonConverter

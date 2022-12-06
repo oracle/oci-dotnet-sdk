@@ -45,7 +45,7 @@ namespace Oci.AnnouncementsService
             {
                 ServiceName = "ANNOUNCEMENTSUBSCRIPTION",
                 ServiceEndpointPrefix = "announcements",
-                ServiceEndpointTemplate = "https://announcements.{region}.oci.{secondLevelDomain}"
+                ServiceEndpointTemplate = "https://announcements.{region}.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();

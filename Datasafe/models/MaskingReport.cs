@@ -143,5 +143,23 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "timeMaskingFinished")]
         public System.Nullable<System.DateTime> TimeMaskingFinished { get; set; }
         
+        /// <value>
+        /// The current state of the masking report.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifecycleState is required.")]
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<MaskingLifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// The date and time the masking report was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

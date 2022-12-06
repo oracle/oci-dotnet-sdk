@@ -24,8 +24,22 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// Array of patch instructions.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<PatchInstruction> Items { get; set; }
+        
+        /// <value>
+        /// The OCID of the compartment that contains the alerts.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
         
     }
 }

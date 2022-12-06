@@ -37,12 +37,20 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// The port number of the database listener.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ListenerPort is required.")]
         [JsonProperty(PropertyName = "listenerPort")]
         public System.Nullable<int> ListenerPort { get; set; }
         
         /// <value>
         /// The service name of the database registered as target database.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ServiceName is required.")]
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
         

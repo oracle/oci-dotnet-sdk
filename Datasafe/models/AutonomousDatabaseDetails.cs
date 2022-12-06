@@ -24,6 +24,10 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// The OCID of the autonomous database registered as a target database in Data Safe.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "AutonomousDatabaseId is required.")]
         [JsonProperty(PropertyName = "autonomousDatabaseId")]
         public string AutonomousDatabaseId { get; set; }
         

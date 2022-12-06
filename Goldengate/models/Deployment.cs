@@ -275,5 +275,8 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "oggData")]
         public OggDeployment OggData { get; set; }
         
+        [JsonProperty(PropertyName = "deploymentDiagnosticData")]
+        public DeploymentDiagnosticData DeploymentDiagnosticData { get; set; }
+        
     }
 }

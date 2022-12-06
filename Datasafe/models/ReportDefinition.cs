@@ -159,6 +159,88 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<ReportDefinitionLifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// Schedule to generate the report periodically in the specified format:
+        /// <version-string>;<version-specific-schedule>
+        /// <br/>
+        /// Allowed version strings - \"v1\"
+        /// v1's version specific schedule -<ss> <mm> <hh> <day-of-week> <day-of-month>
+        /// Each of the above fields potentially introduce constraints. A workrequest is created only
+        /// when clock time satisfies all the constraints. Constraints introduced:
+        /// 1. seconds = <ss> (So, the allowed range for <ss> is [0, 59])
+        /// 2. minutes = <mm> (So, the allowed range for <mm> is [0, 59])
+        /// 3. hours = <hh> (So, the allowed range for <hh> is [0, 23])
+        /// 4. <day-of-week> can be either '*' (without quotes or a number between 1(Monday) and 7(Sunday))
+        /// No constraint introduced when it is '*'. When not, day of week must equal the given value
+        /// 5. <day-of-month> can be either '*' (without quotes or a number between 1 and 28)
+        /// No constraint introduced when it is '*'. When not, day of month must equal the given value
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "schedule")]
+        public string Schedule { get; set; }
+                ///
+        /// <value>
+        /// Specifies the format of report to be excel or pdf
+        /// </value>
+        ///
+        public enum ScheduledReportMimeTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "PDF")]
+            Pdf,
+            [EnumMember(Value = "XLS")]
+            Xls
+        };
+
+        /// <value>
+        /// Specifies the format of report to be excel or pdf
+        /// </value>
+        [JsonProperty(PropertyName = "scheduledReportMimeType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ScheduledReportMimeTypeEnum> ScheduledReportMimeType { get; set; }
+        
+        /// <value>
+        /// Specifies the limit on number of rows in report.
+        /// </value>
+        [JsonProperty(PropertyName = "scheduledReportRowLimit")]
+        public System.Nullable<int> ScheduledReportRowLimit { get; set; }
+        
+        /// <value>
+        /// The name of the report to be scheduled.
+        /// </value>
+        [JsonProperty(PropertyName = "scheduledReportName")]
+        public string ScheduledReportName { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment
+        /// in which the scheduled resource should be created.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "scheduledReportCompartmentId")]
+        public string ScheduledReportCompartmentId { get; set; }
+        
+        /// <value>
+        /// The time span of records in report to be scheduled.
+        /// <period-value><period>
+        /// Allowed period strings - \"H\",\"D\",\"M\",\"Y\"
+        /// Each of the above fields potentially introduce constraints. A workRequest is created only
+        /// when period-value satisfies all the constraints. Constraints introduced:
+        /// 1. period = H (The allowed range for period-value is [1, 23])
+        /// 2. period = D (The allowed range for period-value is [1, 30])
+        /// 3. period = M (The allowed range for period-value is [1, 11])
+        /// 4. period = Y (The minimum period-value is 1)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "recordTimeSpan")]
+        public string RecordTimeSpan { get; set; }
+        
+        /// <value>
+        /// The list of data protection regulations/standards used in the report that will help demonstrate compliance.
+        /// </value>
+        [JsonProperty(PropertyName = "complianceStandards")]
+        public System.Collections.Generic.List<string> ComplianceStandards { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

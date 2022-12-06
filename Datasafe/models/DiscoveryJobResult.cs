@@ -275,6 +275,16 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "isResultApplied")]
         public System.Nullable<bool> IsResultApplied { get; set; }
         
+        /// <value>
+        /// The OCID of the discovery job.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DiscoveryJobId is required.")]
+        [JsonProperty(PropertyName = "discoveryJobId")]
+        public string DiscoveryJobId { get; set; }
+        
         [JsonProperty(PropertyName = "modifiedAttributes")]
         public ModifiedAttributes ModifiedAttributes { get; set; }
         

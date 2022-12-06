@@ -223,7 +223,7 @@ namespace Oci.DatasafeService.Models
         public string ClientIp { get; set; }
         
         /// <value>
-        /// The OCID of the audit trail that generated this audit event.
+        /// The OCID of the audit trail that generated this audit event. To be noted, this field has been deprecated.
         /// </value>
         [JsonProperty(PropertyName = "auditTrailId")]
         public string AuditTrailId { get; set; }

@@ -114,7 +114,9 @@ namespace Oci.AnnouncementsService.Models
             [EnumMember(Value = "END_TIME")]
             EndTime,
             [EnumMember(Value = "NEW_END_TIME")]
-            NewEndTime
+            NewEndTime,
+            [EnumMember(Value = "ESTIMATED_END_TIME")]
+            EstimatedEndTime
         };
 
         /// <value>

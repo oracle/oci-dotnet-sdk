@@ -34,6 +34,12 @@ namespace Oci.DatasafeService.Models
       [EnumMember(Value = "RESUMING")]
       Resuming,
       [EnumMember(Value = "RETRYING")]
-      Retrying
+      Retrying,
+      [EnumMember(Value = "NOT_STARTED")]
+      NotStarted,
+      [EnumMember(Value = "STOPPED_NEEDS_ATTN")]
+      StoppedNeedsAttn,
+      [EnumMember(Value = "STOPPED_FAILED")]
+      StoppedFailed
   }
 }

@@ -28,7 +28,9 @@ namespace Oci.ApigatewayService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "MODIFY_RESPONSE")]
-            ModifyResponse
+            ModifyResponse,
+            [EnumMember(Value = "OAUTH2")]
+            Oauth2
         };
 
         
@@ -57,6 +59,9 @@ namespace Oci.ApigatewayService.Models
             {
                 case "MODIFY_RESPONSE":
                     obj = new ModifyResponseValidationFailurePolicy();
+                    break;
+                case "OAUTH2":
+                    obj = new OAuth2ResponseValidationFailurePolicy();
                     break;
             }
             if (obj != null)

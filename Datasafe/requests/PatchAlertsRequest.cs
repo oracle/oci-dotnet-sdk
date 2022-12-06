@@ -45,5 +45,39 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]
         public string IfMatch { get; set; }
+        
+        /// <value>
+        /// Default is false.
+        /// When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the 'accessLevel' setting.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
+        public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
+        
+        ///
+        /// <value>
+        /// Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED.
+        /// Setting this to ACCESSIBLE returns only those compartments for which the
+        /// user has INSPECT permissions directly or indirectly (permissions can be on a
+        /// resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+        /// 
+        /// </value>
+        ///
+        public enum AccessLevelEnum {
+            [EnumMember(Value = "RESTRICTED")]
+            Restricted,
+            [EnumMember(Value = "ACCESSIBLE")]
+            Accessible
+        };
+
+        /// <value>
+        /// Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED.
+        /// Setting this to ACCESSIBLE returns only those compartments for which the
+        /// user has INSPECT permissions directly or indirectly (permissions can be on a
+        /// resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "accessLevel")]
+        public System.Nullable<AccessLevelEnum> AccessLevel { get; set; }
     }
 }

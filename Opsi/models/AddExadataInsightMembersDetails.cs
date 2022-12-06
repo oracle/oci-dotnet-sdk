@@ -45,6 +45,9 @@ namespace Oci.OpsiService.Models
             var discriminator = jsonObject["entitySource"].Value<string>();
             switch (discriminator)
             {
+                case "PE_COMANAGED_EXADATA":
+                    obj = new AddPeComanagedExadataInsightMembersDetails();
+                    break;
                 case "EM_MANAGED_EXTERNAL_EXADATA":
                     obj = new AddEmManagedExternalExadataInsightMembersDetails();
                     break;

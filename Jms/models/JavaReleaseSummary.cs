@@ -106,5 +106,15 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "releaseNotesUrl")]
         public string ReleaseNotesUrl { get; set; }
         
+        /// <value>
+        /// Artifact content types for the Java version.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ArtifactContentTypes is required.")]
+        [JsonProperty(PropertyName = "artifactContentTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<ArtifactContentType> ArtifactContentTypes { get; set; }
+        
     }
 }
