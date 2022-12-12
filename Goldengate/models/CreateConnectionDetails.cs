@@ -128,6 +128,18 @@ namespace Oci.GoldengateService.Models
             var discriminator = jsonObject["connectionType"].Value<string>();
             switch (discriminator)
             {
+                case "POSTGRESQL":
+                    obj = new CreatePostgresqlConnectionDetails();
+                    break;
+                case "KAFKA_SCHEMA_REGISTRY":
+                    obj = new CreateKafkaSchemaRegistryConnectionDetails();
+                    break;
+                case "AZURE_SYNAPSE_ANALYTICS":
+                    obj = new CreateAzureSynapseConnectionDetails();
+                    break;
+                case "AZURE_DATA_LAKE_STORAGE":
+                    obj = new CreateAzureDataLakeStorageConnectionDetails();
+                    break;
                 case "MYSQL":
                     obj = new CreateMysqlConnectionDetails();
                     break;

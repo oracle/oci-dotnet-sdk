@@ -139,5 +139,12 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
         
+        /// <value>
+        /// Profile of the Big Data Service cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterProfile")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<BdsInstance.ClusterProfileEnum> ClusterProfile { get; set; }
+        
     }
 }

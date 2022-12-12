@@ -67,7 +67,7 @@ namespace Oci.ServicemeshService.Models
         public AccessLoggingConfiguration AccessLogging { get; set; }
         
         [JsonProperty(PropertyName = "mtls")]
-        public CreateIngressGatewayMutualTransportLayerSecurityDetails Mtls { get; set; }
+        public IngressGatewayMutualTransportLayerSecurityDetails Mtls { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.

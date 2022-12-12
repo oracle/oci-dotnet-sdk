@@ -24,6 +24,10 @@ namespace Oci.FusionappsService.Models
         /// <value>
         /// A unique Name for Analytics Warehouse.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
@@ -33,9 +37,6 @@ namespace Oci.FusionappsService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
-        /// <value>
-        /// Admin information to provision Analytics Warehouse Servcie
-        /// </value>
         [JsonProperty(PropertyName = "FawAdminInfo")]
         public FawAdminInfoDetails FawAdminInfo { get; set; }
         

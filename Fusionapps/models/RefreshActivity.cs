@@ -69,6 +69,8 @@ namespace Oci.FusionappsService.Models
             Accepted,
             [EnumMember(Value = "IN_PROGRESS")]
             InProgress,
+            [EnumMember(Value = "NEEDS_ATTENTION")]
+            NeedsAttention,
             [EnumMember(Value = "FAILED")]
             Failed,
             [EnumMember(Value = "SUCCEEDED")]
@@ -150,6 +152,12 @@ namespace Oci.FusionappsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// Details of refresh investigation information, each item represents a different issue.
+        /// </value>
+        [JsonProperty(PropertyName = "refreshIssueDetailsList")]
+        public System.Collections.Generic.List<RefreshIssueDetails> RefreshIssueDetailsList { get; set; }
                 ///
         /// <value>
         /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.

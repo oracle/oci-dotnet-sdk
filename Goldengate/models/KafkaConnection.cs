@@ -33,6 +33,10 @@ namespace Oci.GoldengateService.Models
             UnknownEnumValue,
             [EnumMember(Value = "APACHE_KAFKA")]
             ApacheKafka,
+            [EnumMember(Value = "AZURE_EVENT_HUBS")]
+            AzureEventHubs,
+            [EnumMember(Value = "CONFLUENT_KAFKA")]
+            ConfluentKafka,
             [EnumMember(Value = "OCI_STREAMING")]
             OciStreaming
         };

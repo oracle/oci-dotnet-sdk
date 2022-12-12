@@ -99,7 +99,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "CANCELING")]
             Canceling,
             [EnumMember(Value = "CANCELED")]
-            Canceled
+            Canceled,
+            [EnumMember(Value = "DELETING")]
+            Deleting
         };
 
         /// <value>

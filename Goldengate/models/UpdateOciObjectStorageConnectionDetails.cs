@@ -53,6 +53,13 @@ namespace Oci.GoldengateService.Models
         public string PrivateKeyFile { get; set; }
         
         /// <value>
+        /// The passphrase of the private key.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateKeyPassphrase")]
+        public string PrivateKeyPassphrase { get; set; }
+        
+        /// <value>
         /// The fingerprint of the API Key of the user specified by the userId.
         /// See documentation: https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm
         /// 

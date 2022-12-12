@@ -36,6 +36,42 @@ namespace Oci.ServicemeshService.Requests
         public string WorkRequestId { get; set; }
         
         /// <value>
+        /// A filter to return work requests that match the given resourceId.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
+        public string ResourceId { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the operation status given.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operationStatus")]
+        public System.Nullable<OperationStatus> OperationStatus { get; set; }
+        
+        /// <value>
+        /// The sort order to use, either 'ASC' or 'DESC'.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
+        public System.Nullable<SortOrder> SortOrder { get; set; }
+        
+        ///
+        /// <value>
+        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// 
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "timeAccepted")]
+            TimeAccepted
+        };
+
+        /// <value>
+        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

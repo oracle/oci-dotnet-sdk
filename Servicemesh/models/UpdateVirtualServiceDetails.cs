@@ -44,7 +44,7 @@ namespace Oci.ServicemeshService.Models
         public System.Collections.Generic.List<string> Hosts { get; set; }
         
         [JsonProperty(PropertyName = "mtls")]
-        public CreateMutualTransportLayerSecurityDetails Mtls { get; set; }
+        public VirtualServiceMutualTransportLayerSecurityDetails Mtls { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

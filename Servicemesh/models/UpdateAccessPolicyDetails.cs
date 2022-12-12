@@ -34,7 +34,7 @@ namespace Oci.ServicemeshService.Models
         /// List of applicable rules.
         /// </value>
         [JsonProperty(PropertyName = "rules")]
-        public System.Collections.Generic.List<AccessPolicyRule> Rules { get; set; }
+        public System.Collections.Generic.List<AccessPolicyRuleDetails> Rules { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

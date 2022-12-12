@@ -83,10 +83,6 @@ namespace Oci.ServicemeshService.Models
         /// <value>
         /// The route rules for the ingress gateway.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "RouteRules is required.")]
         [JsonProperty(PropertyName = "routeRules")]
         public System.Collections.Generic.List<IngressGatewayTrafficRouteRule> RouteRules { get; set; }
         

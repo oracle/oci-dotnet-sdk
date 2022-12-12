@@ -251,6 +251,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Containerinst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Aidocument", "Aidocument\OCI.DotNetSDK.Aidocument.csproj", "{436C77C5-AC64-42CD-ABC7-819D211DF171}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Queue", "Queue\OCI.DotNetSDK.Queue.csproj", "{352361C6-92DA-4E77-8738-B2B1A58EBC51}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2343,5 +2345,17 @@ Global
         {436C77C5-AC64-42CD-ABC7-819D211DF171}.Release|x64.Build.0 = Release|Any CPU
         {436C77C5-AC64-42CD-ABC7-819D211DF171}.Release|x86.ActiveCfg = Release|Any CPU
         {436C77C5-AC64-42CD-ABC7-819D211DF171}.Release|x86.Build.0 = Release|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Debug|x64.Build.0 = Debug|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Debug|x86.Build.0 = Debug|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Release|Any CPU.Build.0 = Release|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Release|x64.ActiveCfg = Release|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Release|x64.Build.0 = Release|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Release|x86.ActiveCfg = Release|Any CPU
+        {352361C6-92DA-4E77-8738-B2B1A58EBC51}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

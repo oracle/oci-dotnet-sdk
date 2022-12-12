@@ -2498,6 +2498,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DisablePluggableDatabaseManagementRequest, DisablePluggableDatabaseManagementResponse> ForDisablePluggableDatabaseManagement(DisablePluggableDatabaseManagementRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForDisablePluggableDatabaseManagement(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DisablePluggableDatabaseManagementRequest, DisablePluggableDatabaseManagementResponse> ForDisablePluggableDatabaseManagement(DisablePluggableDatabaseManagementRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<DisablePluggableDatabaseManagementRequest, DisablePluggableDatabaseManagementResponse>(() =>
+            {
+                var response = client.DisablePluggableDatabaseManagement(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<EnableAutonomousDatabaseManagementRequest, EnableAutonomousDatabaseManagementResponse> ForEnableAutonomousDatabaseManagement(EnableAutonomousDatabaseManagementRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForEnableAutonomousDatabaseManagement(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -2835,6 +2867,38 @@ namespace Oci.DatabaseService
             return new Waiter<EnableExternalPluggableDatabaseStackMonitoringRequest, EnableExternalPluggableDatabaseStackMonitoringResponse>(() =>
             {
                 var response = client.EnableExternalPluggableDatabaseStackMonitoring(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<EnablePluggableDatabaseManagementRequest, EnablePluggableDatabaseManagementResponse> ForEnablePluggableDatabaseManagement(EnablePluggableDatabaseManagementRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForEnablePluggableDatabaseManagement(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<EnablePluggableDatabaseManagementRequest, EnablePluggableDatabaseManagementResponse> ForEnablePluggableDatabaseManagement(EnablePluggableDatabaseManagementRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<EnablePluggableDatabaseManagementRequest, EnablePluggableDatabaseManagementResponse>(() =>
+            {
+                var response = client.EnablePluggableDatabaseManagement(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -4179,6 +4243,38 @@ namespace Oci.DatabaseService
             return new Waiter<ModifyDatabaseManagementRequest, ModifyDatabaseManagementResponse>(() =>
             {
                 var response = client.ModifyDatabaseManagement(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ModifyPluggableDatabaseManagementRequest, ModifyPluggableDatabaseManagementResponse> ForModifyPluggableDatabaseManagement(ModifyPluggableDatabaseManagementRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForModifyPluggableDatabaseManagement(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ModifyPluggableDatabaseManagementRequest, ModifyPluggableDatabaseManagementResponse> ForModifyPluggableDatabaseManagement(ModifyPluggableDatabaseManagementRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ModifyPluggableDatabaseManagementRequest, ModifyPluggableDatabaseManagementResponse>(() =>
+            {
+                var response = client.ModifyPluggableDatabaseManagement(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

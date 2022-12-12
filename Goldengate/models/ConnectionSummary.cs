@@ -205,6 +205,12 @@ namespace Oci.GoldengateService.Models
                 case "GOLDENGATE":
                     obj = new GoldenGateConnectionSummary();
                     break;
+                case "KAFKA_SCHEMA_REGISTRY":
+                    obj = new KafkaSchemaRegistryConnectionSummary();
+                    break;
+                case "POSTGRESQL":
+                    obj = new PostgresqlConnectionSummary();
+                    break;
                 case "ORACLE":
                     obj = new OracleConnectionSummary();
                     break;
@@ -216,6 +222,12 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "OCI_OBJECT_STORAGE":
                     obj = new OciObjectStorageConnectionSummary();
+                    break;
+                case "AZURE_DATA_LAKE_STORAGE":
+                    obj = new AzureDataLakeStorageConnectionSummary();
+                    break;
+                case "AZURE_SYNAPSE_ANALYTICS":
+                    obj = new AzureSynapseConnectionSummary();
                     break;
             }
             if (obj != null)

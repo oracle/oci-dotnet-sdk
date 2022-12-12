@@ -13,25 +13,27 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatabasemigrationService.Models
+namespace Oci.QueueService.Models
 {
     /// <summary>
-    /// ODMS Agent token details.
-    /// 
+    /// The stats for a queue and its dead letter queue.
     /// </summary>
-    public class GenerateToken 
+    public class QueueStats 
     {
         
-        /// <value>
-        /// Resource Principals Token in serialized form.
-        /// 
-        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "RptBlob is required.")]
-        [JsonProperty(PropertyName = "rptBlob")]
-        public string RptBlob { get; set; }
+        [Required(ErrorMessage = "Queue is required.")]
+        [JsonProperty(PropertyName = "queue")]
+        public Stats Queue { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Dlq is required.")]
+        [JsonProperty(PropertyName = "dlq")]
+        public Stats Dlq { get; set; }
         
     }
 }

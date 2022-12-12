@@ -80,6 +80,18 @@ namespace Oci.ApmsyntheticsService.Requests
         public string Page { get; set; }
         
         /// <value>
+        /// A filter to return the monitors whose maintenance window is currently active.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isMaintenanceWindowActive")]
+        public System.Nullable<bool> IsMaintenanceWindowActive { get; set; }
+        
+        /// <value>
+        /// A filter to return the monitors whose maintenance window is set.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isMaintenanceWindowSet")]
+        public System.Nullable<bool> IsMaintenanceWindowSet { get; set; }
+        
+        /// <value>
         /// The sort order to use, either ascending (`ASC`) or descending (`DESC`). Default sort order is ascending.
         /// 
         /// </value>
@@ -105,7 +117,9 @@ namespace Oci.ApmsyntheticsService.Requests
             [EnumMember(Value = "status")]
             Status,
             [EnumMember(Value = "monitorType")]
-            MonitorType
+            MonitorType,
+            [EnumMember(Value = "maintenanceWindowTimeStarted")]
+            MaintenanceWindowTimeStarted
         };
 
         /// <value>

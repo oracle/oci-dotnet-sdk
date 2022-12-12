@@ -32,5 +32,11 @@ namespace Oci.FusionappsService.Models
         [JsonProperty(PropertyName = "sourceFusionEnvironmentId")]
         public string SourceFusionEnvironmentId { get; set; }
         
+        /// <value>
+        /// Current time the refresh activity is scheduled to start. An RFC3339 formatted datetime string.
+        /// </value>
+        [JsonProperty(PropertyName = "timeScheduledStart")]
+        public System.Nullable<System.DateTime> TimeScheduledStart { get; set; }
+        
     }
 }

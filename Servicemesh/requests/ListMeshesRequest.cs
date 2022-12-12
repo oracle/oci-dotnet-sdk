@@ -85,7 +85,7 @@ namespace Oci.ServicemeshService.Requests
         /// A filter to return only resources that match the life cycle state given.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
-        public string LifecycleState { get; set; }
+        public System.Nullable<Mesh.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
         /// Unique Mesh identifier.

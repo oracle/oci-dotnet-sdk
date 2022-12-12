@@ -24,10 +24,6 @@ namespace Oci.ServicemeshService.Models
         /// <value>
         /// The OCID of the ingress gateway resource.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "IngressGatewayId is required.")]
         [JsonProperty(PropertyName = "ingressGatewayId")]
         public string IngressGatewayId { get; set; }
         

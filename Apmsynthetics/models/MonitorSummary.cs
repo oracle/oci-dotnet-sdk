@@ -128,7 +128,8 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Nullable<bool> IsRunOnce { get; set; }
         
         /// <value>
-        /// Timeout in seconds. Timeout cannot be more than 30% of repeatIntervalInSeconds time for monitors.
+        /// Timeout in seconds. If isFailureRetried is true, then timeout cannot be more than 30% of repeatIntervalInSeconds time for monitors.
+        /// If isFailureRetried is false, then timeout cannot be more than 50% of repeatIntervalInSeconds time for monitors.
         /// Also, timeoutInSeconds should be a multiple of 60 for Scripted REST, Scripted Browser and Browser monitors.
         /// Monitor will be allowed to run only for timeoutInSeconds time. It would be terminated after that.
         /// 
@@ -149,6 +150,9 @@ namespace Oci.ApmsyntheticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "target")]
         public string Target { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceWindowSchedule")]
+        public MaintenanceWindowSchedule MaintenanceWindowSchedule { get; set; }
         
         /// <value>
         /// The time the resource was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339)

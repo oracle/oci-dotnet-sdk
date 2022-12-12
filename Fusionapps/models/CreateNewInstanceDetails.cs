@@ -21,6 +21,10 @@ namespace Oci.FusionappsService.Models
     public class CreateNewInstanceDetails : CreateServiceAttachmentDetails
     {
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Details is required.")]
         [JsonProperty(PropertyName = "details")]
         public CreateServiceInstanceDetails Details { get; set; }
         

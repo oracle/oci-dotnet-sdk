@@ -126,5 +126,12 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// An array of Network Security Group OCIDs used to define network access for Connections.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nsgIds")]
+        public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
     }
 }

@@ -40,7 +40,7 @@ namespace Oci.ServicemeshService.Models
         /// The route rules for the ingress gateway.
         /// </value>
         [JsonProperty(PropertyName = "routeRules")]
-        public System.Collections.Generic.List<IngressGatewayTrafficRouteRule> RouteRules { get; set; }
+        public System.Collections.Generic.List<IngressGatewayTrafficRouteRuleDetails> RouteRules { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

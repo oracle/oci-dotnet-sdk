@@ -40,7 +40,7 @@ namespace Oci.ServicemeshService.Models
         /// The route rules for the virtual service.
         /// </value>
         [JsonProperty(PropertyName = "routeRules")]
-        public System.Collections.Generic.List<VirtualServiceTrafficRouteRule> RouteRules { get; set; }
+        public System.Collections.Generic.List<VirtualServiceTrafficRouteRuleDetails> RouteRules { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

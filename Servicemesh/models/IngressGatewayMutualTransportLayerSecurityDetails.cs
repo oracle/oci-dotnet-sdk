@@ -16,10 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ServicemeshService.Models
 {
     /// <summary>
-    /// The mTLS authentication mode to use when receiving requests from other virtual services or ingress gateways within the mesh.
+    /// Mutual TLS settings used when sending requests to virtual services within the mesh.
     /// 
     /// </summary>
-    public class CreateMutualTransportLayerSecurityDetails 
+    public class IngressGatewayMutualTransportLayerSecurityDetails 
     {
         
         /// <value>
@@ -31,20 +31,6 @@ namespace Oci.ServicemeshService.Models
         /// </value>
         [JsonProperty(PropertyName = "maximumValidity")]
         public System.Nullable<int> MaximumValidity { get; set; }
-        
-        /// <value>
-        /// DISABLED: Connection is not tunneled.
-        /// PERMISSIVE: Connection can be either plaintext or an mTLS tunnel.
-        /// STRICT: Connection is an mTLS tunnel.  Clients without a valid certificate will be rejected.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Mode is required.")]
-        [JsonProperty(PropertyName = "mode")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<MutualTransportLayerSecurity.ModeEnum> Mode { get; set; }
         
     }
 }

@@ -24,10 +24,6 @@ namespace Oci.ServicemeshService.Models
         /// <value>
         /// The OCID of the virtual service where the request will be routed.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VirtualServiceId is required.")]
         [JsonProperty(PropertyName = "virtualServiceId")]
         public string VirtualServiceId { get; set; }
         

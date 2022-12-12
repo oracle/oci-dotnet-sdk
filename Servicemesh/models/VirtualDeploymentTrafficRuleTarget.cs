@@ -24,10 +24,6 @@ namespace Oci.ServicemeshService.Models
         /// <value>
         /// The OCID of the virtual deployment where the request will be routed.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VirtualDeploymentId is required.")]
         [JsonProperty(PropertyName = "virtualDeploymentId")]
         public string VirtualDeploymentId { get; set; }
         

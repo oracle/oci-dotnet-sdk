@@ -97,10 +97,6 @@ namespace Oci.ServicemeshService.Models
         /// <value>
         /// Array of hostnames and their listener configuration that this gateway will bind to.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Hosts is required.")]
         [JsonProperty(PropertyName = "hosts")]
         public System.Collections.Generic.List<IngressGatewayHost> Hosts { get; set; }
         

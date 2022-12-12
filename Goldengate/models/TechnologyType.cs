@@ -17,6 +17,8 @@ namespace Oci.GoldengateService.Models
     /// 
   /// </summary>
   public enum TechnologyType {
+      [EnumMember(Value = "GOLDENGATE")]
+      Goldengate,
       [EnumMember(Value = "OCI_AUTONOMOUS_DATABASE")]
       OciAutonomousDatabase,
       [EnumMember(Value = "OCI_MYSQL")]
@@ -33,21 +35,39 @@ namespace Oci.GoldengateService.Models
       AmazonRdsOracle,
       [EnumMember(Value = "AMAZON_AURORA_MYSQL")]
       AmazonAuroraMysql,
+      [EnumMember(Value = "AMAZON_AURORA_POSTGRESQL")]
+      AmazonAuroraPostgresql,
       [EnumMember(Value = "AMAZON_RDS_MARIADB")]
       AmazonRdsMariadb,
       [EnumMember(Value = "AMAZON_RDS_MYSQL")]
       AmazonRdsMysql,
+      [EnumMember(Value = "AMAZON_RDS_POSTGRESQL")]
+      AmazonRdsPostgresql,
       [EnumMember(Value = "APACHE_KAFKA")]
       ApacheKafka,
+      [EnumMember(Value = "AZURE_DATA_LAKE_STORAGE")]
+      AzureDataLakeStorage,
+      [EnumMember(Value = "AZURE_EVENT_HUBS")]
+      AzureEventHubs,
       [EnumMember(Value = "AZURE_MYSQL")]
       AzureMysql,
-      [EnumMember(Value = "GOLDENGATE")]
-      Goldengate,
+      [EnumMember(Value = "AZURE_POSTGRESQL")]
+      AzurePostgresql,
+      [EnumMember(Value = "AZURE_SYNAPSE_ANALYTICS")]
+      AzureSynapseAnalytics,
+      [EnumMember(Value = "CONFLUENT_KAFKA")]
+      ConfluentKafka,
+      [EnumMember(Value = "CONFLUENT_SCHEMA_REGISTRY")]
+      ConfluentSchemaRegistry,
       [EnumMember(Value = "GOOGLE_CLOUD_SQL_MYSQL")]
       GoogleCloudSqlMysql,
+      [EnumMember(Value = "GOOGLE_CLOUD_SQL_POSTGRESQL")]
+      GoogleCloudSqlPostgresql,
       [EnumMember(Value = "MARIADB")]
       Mariadb,
       [EnumMember(Value = "MYSQL_SERVER")]
-      MysqlServer
+      MysqlServer,
+      [EnumMember(Value = "POSTGRESQL_SERVER")]
+      PostgresqlServer
   }
 }

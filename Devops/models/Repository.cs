@@ -148,7 +148,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "DELETED")]
-            Deleted
+            Deleted,
+            [EnumMember(Value = "DELETING")]
+            Deleting
         };
 
         /// <value>

@@ -68,7 +68,9 @@ namespace Oci.FusionappsService.Models
             [EnumMember(Value = "REFRESH_FUSION_ENVIRONMENT")]
             RefreshFusionEnvironment,
             [EnumMember(Value = "EXECUTE_COLD_PATCH")]
-            ExecuteColdPatch
+            ExecuteColdPatch,
+            [EnumMember(Value = "DATA_MASK_FUSION_ENVIRONMENT")]
+            DataMaskFusionEnvironment
         };
 
         /// <value>

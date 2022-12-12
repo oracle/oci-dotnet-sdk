@@ -29,6 +29,8 @@ namespace Oci.ServicemeshService.Models
       Succeeded,
       [EnumMember(Value = "WAITING")]
       Waiting,
+      [EnumMember(Value = "NEEDS_ATTENTION")]
+      NeedsAttention,
       [EnumMember(Value = "CANCELING")]
       Canceling,
       [EnumMember(Value = "CANCELED")]

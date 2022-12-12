@@ -28,7 +28,9 @@ namespace Oci.ServicemeshService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "DNS")]
-            Dns
+            Dns,
+            [EnumMember(Value = "DISABLED")]
+            Disabled
         };
 
         
@@ -57,6 +59,9 @@ namespace Oci.ServicemeshService.Models
             {
                 case "DNS":
                     obj = new DnsServiceDiscoveryConfiguration();
+                    break;
+                case "DISABLED":
+                    obj = new DisabledServiceDiscoveryConfiguration();
                     break;
             }
             if (obj != null)

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FusionappsService.Models
 {
     /// <summary>
-    /// Admin information to provision Analytics Warehouse Servcie.
+    /// Admin information to provision Analytics Warehouse Service.
     /// </summary>
     public class FawAdminInfoDetails 
     {
@@ -24,6 +24,10 @@ namespace Oci.FusionappsService.Models
         /// <value>
         /// Password for the ADW to be created in User Tenancy
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "AdwAdminPass is required.")]
         [JsonProperty(PropertyName = "adwAdminPass")]
         public string AdwAdminPass { get; set; }
         
@@ -36,6 +40,10 @@ namespace Oci.FusionappsService.Models
         /// <value>
         /// Email ID to send notification for Analytics Warehouse updates.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "NotificationEmail is required.")]
         [JsonProperty(PropertyName = "notificationEmail")]
         public string NotificationEmail { get; set; }
         

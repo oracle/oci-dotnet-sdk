@@ -28,6 +28,10 @@ namespace Oci.FusionappsService.Models
         /// Specify 0.0.0.0/0 or ::/0 to match all incoming traffic.
         /// Example: &quot;192.168.0.0/16&quot;
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "AttributeValue is required.")]
         [JsonProperty(PropertyName = "attributeValue")]
         public string AttributeValue { get; set; }
         

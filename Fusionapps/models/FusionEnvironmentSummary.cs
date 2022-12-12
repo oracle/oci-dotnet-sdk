@@ -114,6 +114,18 @@ namespace Oci.FusionappsService.Models
         public System.Collections.Generic.List<string> AdditionalLanguagePacks { get; set; }
         
         /// <value>
+        /// The lockbox Id of this fusion environment. If there's no lockbox id, this field will be null
+        /// </value>
+        [JsonProperty(PropertyName = "lockboxId")]
+        public string LockboxId { get; set; }
+        
+        /// <value>
+        /// If it's true, then the Break Glass feature is enabled
+        /// </value>
+        [JsonProperty(PropertyName = "isBreakGlassEnabled")]
+        public System.Nullable<bool> IsBreakGlassEnabled { get; set; }
+        
+        /// <value>
         /// The time the the FusionEnvironment was created. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]

@@ -56,13 +56,10 @@ namespace Oci.ServicemeshService.Models
         
         /// <value>
         /// A list of certificate authority resources to use for creating leaf certificates for mTLS authentication.
-        /// Currently we only support one certificate authority, but this may expand in future releases.
+        /// Currently we only support one certificate authority, but this may expand in future releases. Request with
+        /// more than one certificate authority will be rejected.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CertificateAuthorities is required.")]
         [JsonProperty(PropertyName = "certificateAuthorities")]
         public System.Collections.Generic.List<CertificateAuthority> CertificateAuthorities { get; set; }
         
