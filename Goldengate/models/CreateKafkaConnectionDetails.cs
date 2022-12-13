@@ -105,7 +105,7 @@ namespace Oci.GoldengateService.Models
         public string KeyStorePassword { get; set; }
         
         /// <value>
-        /// The password for the cert inside of of the KeyStore.
+        /// The password for the cert inside of the KeyStore.
         /// In case it differs from the KeyStore password, it should be provided.
         /// 
         /// </value>

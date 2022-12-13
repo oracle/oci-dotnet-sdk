@@ -110,6 +110,13 @@ namespace Oci.BdsService.Models
         public System.Nullable<bool> IsCloudSqlConfigured { get; set; }
         
         /// <value>
+        /// Profile of the Big Data Service cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterProfile")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<BdsInstance.ClusterProfileEnum> ClusterProfile { get; set; }
+        
+        /// <value>
         /// The time the cluster was created, shown as an RFC 3339 formatted datetime string.
         /// </value>
         /// <remarks>

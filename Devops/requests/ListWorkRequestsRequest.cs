@@ -86,5 +86,11 @@ namespace Oci.DevopsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources where their Operation Types matches the parameter operation types
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operationTypeMultiValueQuery", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> OperationTypeMultiValueQuery { get; set; }
     }
 }

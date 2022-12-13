@@ -83,10 +83,6 @@ namespace Oci.ServicemeshService.Models
         /// <value>
         /// The route rules for the virtual service.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "RouteRules is required.")]
         [JsonProperty(PropertyName = "routeRules")]
         public System.Collections.Generic.List<VirtualServiceTrafficRouteRule> RouteRules { get; set; }
         

@@ -35,6 +35,10 @@ namespace Oci.FusionappsService.Models
         /// <value>
         /// Type of the ServiceInstance being attached.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ServiceInstanceType is required.")]
         [JsonProperty(PropertyName = "serviceInstanceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ServiceInstanceTypeEnum> ServiceInstanceType { get; set; }
@@ -42,6 +46,10 @@ namespace Oci.FusionappsService.Models
         /// <value>
         /// The service instance OCID of the instance being attached
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "InstanceId is required.")]
         [JsonProperty(PropertyName = "instanceId")]
         public string InstanceId { get; set; }
         

@@ -24,11 +24,19 @@ namespace Oci.GoldengateService.Models
       Goldengate,
       [EnumMember(Value = "KAFKA")]
       Kafka,
+      [EnumMember(Value = "KAFKA_SCHEMA_REGISTRY")]
+      KafkaSchemaRegistry,
       [EnumMember(Value = "MYSQL")]
       Mysql,
       [EnumMember(Value = "OCI_OBJECT_STORAGE")]
       OciObjectStorage,
       [EnumMember(Value = "ORACLE")]
-      Oracle
+      Oracle,
+      [EnumMember(Value = "AZURE_DATA_LAKE_STORAGE")]
+      AzureDataLakeStorage,
+      [EnumMember(Value = "POSTGRESQL")]
+      Postgresql,
+      [EnumMember(Value = "AZURE_SYNAPSE_ANALYTICS")]
+      AzureSynapseAnalytics
   }
 }

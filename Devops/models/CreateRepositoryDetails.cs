@@ -48,7 +48,10 @@ namespace Oci.DevopsService.Models
         public string DefaultBranch { get; set; }
         
         /// <value>
-        /// Type of repository.
+        /// Type of repository. Allowed values: 
+        /// `MIRRORED` 
+        /// `HOSTED`
+        /// 
         /// </value>
         /// <remarks>
         /// Required

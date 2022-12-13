@@ -23,7 +23,7 @@ namespace Oci.DatabaseService.Models
     {
                 ///
         /// <value>
-        /// ShapeType of the DbSystems,INTEL or AMD
+        /// ShapeType of the DbSystems INTEL , AMD or INTEL_FLEX_X9
         /// </value>
         ///
         public enum ShapeTypeEnum {
@@ -33,11 +33,13 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "AMD")]
             Amd,
             [EnumMember(Value = "INTEL")]
-            Intel
+            Intel,
+            [EnumMember(Value = "INTEL_FLEX_X9")]
+            IntelFlexX9
         };
 
         /// <value>
-        /// ShapeType of the DbSystems,INTEL or AMD
+        /// ShapeType of the DbSystems INTEL , AMD or INTEL_FLEX_X9
         /// </value>
         /// <remarks>
         /// Required

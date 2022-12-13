@@ -106,8 +106,14 @@ namespace Oci.GoldengateService.Models
             var discriminator = jsonObject["connectionType"].Value<string>();
             switch (discriminator)
             {
+                case "POSTGRESQL":
+                    obj = new UpdatePostgresqlConnectionDetails();
+                    break;
                 case "ORACLE":
                     obj = new UpdateOracleConnectionDetails();
+                    break;
+                case "KAFKA_SCHEMA_REGISTRY":
+                    obj = new UpdateKafkaSchemaRegistryConnectionDetails();
                     break;
                 case "OCI_OBJECT_STORAGE":
                     obj = new UpdateOciObjectStorageConnectionDetails();
@@ -118,8 +124,14 @@ namespace Oci.GoldengateService.Models
                 case "KAFKA":
                     obj = new UpdateKafkaConnectionDetails();
                     break;
+                case "AZURE_DATA_LAKE_STORAGE":
+                    obj = new UpdateAzureDataLakeStorageConnectionDetails();
+                    break;
                 case "GOLDENGATE":
                     obj = new UpdateGoldenGateConnectionDetails();
+                    break;
+                case "AZURE_SYNAPSE_ANALYTICS":
+                    obj = new UpdateAzureSynapseConnectionDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

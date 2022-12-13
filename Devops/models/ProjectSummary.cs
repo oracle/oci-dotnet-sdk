@@ -79,7 +79,13 @@ namespace Oci.DevopsService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the deployment.
+        /// A detailed message describing the current state. For example, can be used to provide actionable information for a resource in Failed state.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// The current state of the project.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]

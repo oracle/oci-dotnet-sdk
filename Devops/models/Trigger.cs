@@ -104,7 +104,9 @@ namespace Oci.DevopsService.Models
         ///
         public enum LifecycleStateEnum {
             [EnumMember(Value = "ACTIVE")]
-            Active
+            Active,
+            [EnumMember(Value = "DELETING")]
+            Deleting
         };
 
         /// <value>

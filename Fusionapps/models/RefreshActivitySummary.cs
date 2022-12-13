@@ -124,5 +124,11 @@ namespace Oci.FusionappsService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RefreshActivity.LifecycleDetailsEnum> LifecycleDetails { get; set; }
         
+        /// <value>
+        /// Details of refresh investigation information, each item represents a different issue.
+        /// </value>
+        [JsonProperty(PropertyName = "refreshIssueDetailsList")]
+        public System.Collections.Generic.List<RefreshIssueDetails> RefreshIssueDetailsList { get; set; }
+        
     }
 }

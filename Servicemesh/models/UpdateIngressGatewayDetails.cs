@@ -40,7 +40,7 @@ namespace Oci.ServicemeshService.Models
         public AccessLoggingConfiguration AccessLogging { get; set; }
         
         [JsonProperty(PropertyName = "mtls")]
-        public CreateIngressGatewayMutualTransportLayerSecurityDetails Mtls { get; set; }
+        public IngressGatewayMutualTransportLayerSecurityDetails Mtls { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

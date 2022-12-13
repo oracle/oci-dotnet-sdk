@@ -67,7 +67,7 @@ namespace Oci.ServicemeshService.Models
         /// </remarks>
         [Required(ErrorMessage = "RouteRules is required.")]
         [JsonProperty(PropertyName = "routeRules")]
-        public System.Collections.Generic.List<IngressGatewayTrafficRouteRule> RouteRules { get; set; }
+        public System.Collections.Generic.List<IngressGatewayTrafficRouteRuleDetails> RouteRules { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.

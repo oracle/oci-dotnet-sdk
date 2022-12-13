@@ -67,7 +67,7 @@ namespace Oci.ServicemeshService.Models
         public System.Collections.Generic.List<string> Hosts { get; set; }
         
         [JsonProperty(PropertyName = "mtls")]
-        public CreateMutualTransportLayerSecurityDetails Mtls { get; set; }
+        public VirtualServiceMutualTransportLayerSecurityDetails Mtls { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.

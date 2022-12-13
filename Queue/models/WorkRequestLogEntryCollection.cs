@@ -13,25 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatabasemigrationService.Models
+namespace Oci.QueueService.Models
 {
     /// <summary>
-    /// Pre-Authenticated Request Link for ODMS Agent log use.
-    /// 
+    /// Results of a workRequestLog search. Contains both workRequestLog items and other information, such as metadata.
     /// </summary>
-    public class ParLink 
+    public class WorkRequestLogEntryCollection 
     {
         
         /// <value>
-        /// Pre-Authenticated Request URI.
-        /// 
+        /// List of workRequestLogEntries.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ParLinkProp is required.")]
-        [JsonProperty(PropertyName = "parLink")]
-        public string ParLinkProp { get; set; }
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<WorkRequestLogEntry> Items { get; set; }
         
     }
 }

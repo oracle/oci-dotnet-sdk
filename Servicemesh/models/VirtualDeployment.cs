@@ -74,20 +74,12 @@ namespace Oci.ServicemeshService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ServiceDiscovery is required.")]
         [JsonProperty(PropertyName = "serviceDiscovery")]
         public ServiceDiscoveryConfiguration ServiceDiscovery { get; set; }
         
         /// <value>
         /// The listeners for the virtual deployment
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Listeners is required.")]
         [JsonProperty(PropertyName = "listeners")]
         public System.Collections.Generic.List<VirtualDeploymentListener> Listeners { get; set; }
         

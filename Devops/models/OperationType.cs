@@ -90,6 +90,10 @@ namespace Oci.DevopsService.Models
       [EnumMember(Value = "DELETE_REPOSITORY")]
       DeleteRepository,
       [EnumMember(Value = "MIRROR_REPOSITORY")]
-      MirrorRepository
+      MirrorRepository,
+      [EnumMember(Value = "SCHEDULE_CASCADING_PROJECT_DELETION")]
+      ScheduleCascadingProjectDeletion,
+      [EnumMember(Value = "CANCEL_SCHEDULED_CASCADING_PROJECT_DELETION")]
+      CancelScheduledCascadingProjectDeletion
   }
 }

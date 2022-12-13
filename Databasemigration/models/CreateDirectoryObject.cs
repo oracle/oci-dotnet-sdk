@@ -39,10 +39,6 @@ namespace Oci.DatabasemigrationService.Models
         /// Absolute path of directory on database server
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Path is required.")]
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }
         

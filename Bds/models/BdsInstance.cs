@@ -223,6 +223,35 @@ namespace Oci.BdsService.Models
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
+                ///
+        /// <value>
+        /// Profile of the Big Data Service cluster.
+        /// </value>
+        ///
+        public enum ClusterProfileEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "HADOOP_EXTENDED")]
+            HadoopExtended,
+            [EnumMember(Value = "HADOOP")]
+            Hadoop,
+            [EnumMember(Value = "HIVE")]
+            Hive,
+            [EnumMember(Value = "SPARK")]
+            Spark,
+            [EnumMember(Value = "HBASE")]
+            Hbase,
+            [EnumMember(Value = "TRINO")]
+            Trino
+        };
+
+        /// <value>
+        /// Profile of the Big Data Service cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterProfile")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ClusterProfileEnum> ClusterProfile { get; set; }
         
     }
 }

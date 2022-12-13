@@ -65,6 +65,20 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<bool> IsAdvisorReportAvailable { get; set; }
         
         /// <value>
+        /// The text describing the root cause of the reported issue
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "issue")]
+        public string Issue { get; set; }
+        
+        /// <value>
+        /// The text describing the action required to fix the issue
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "action")]
+        public string Action { get; set; }
+        
+        /// <value>
         /// Summary of phase status results.
         /// 
         /// </value>

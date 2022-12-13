@@ -95,6 +95,12 @@ namespace Oci.DevopsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// A detailed message describing the current state. For example, can be used to provide actionable information for a resource in Failed state.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
                 ///
         /// <value>
         /// The current state of the connection.
@@ -102,7 +108,9 @@ namespace Oci.DevopsService.Models
         ///
         public enum LifecycleStateEnum {
             [EnumMember(Value = "ACTIVE")]
-            Active
+            Active,
+            [EnumMember(Value = "DELETING")]
+            Deleting
         };
 
         /// <value>

@@ -13,69 +13,46 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatabasemigrationService.Models
+namespace Oci.QueueService.Models
 {
     /// <summary>
-    /// ODMS Agent Details
-    /// 
+    /// The information to be updated.
     /// </summary>
-    public class CreateAgentDetails 
+    public class UpdateQueueDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment.
-        /// 
+        /// Queue Identifier
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
-        
-        /// <value>
-        /// ODMS Agent name
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the Stream
-        /// 
+        /// The default visibility of the messages consumed from the queue.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "StreamId is required.")]
-        [JsonProperty(PropertyName = "streamId")]
-        public string StreamId { get; set; }
+        [JsonProperty(PropertyName = "visibilityInSeconds")]
+        public System.Nullable<int> VisibilityInSeconds { get; set; }
         
         /// <value>
-        /// ODMS Agent public key as a Base64 Encoded string.
-        /// 
+        /// The default polling timeout of the messages in the queue, in seconds.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PublicKey is required.")]
-        [JsonProperty(PropertyName = "publicKey")]
-        public string PublicKey { get; set; }
+        [JsonProperty(PropertyName = "timeoutInSeconds")]
+        public System.Nullable<int> TimeoutInSeconds { get; set; }
         
         /// <value>
-        /// ODMS Agent version
+        /// The number of times a message can be delivered to a consumer before being moved to the dead letter queue.
+        /// A value of 0 indicates that the DLQ is not used.
+        /// Changing that value to a lower threshold does not retro-actively move in-flight messages in the dead letter queue.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Version is required.")]
-        [JsonProperty(PropertyName = "version")]
-        public string Version { get; set; }
+        [JsonProperty(PropertyName = "deadLetterQueueDeliveryCount")]
+        public System.Nullable<int> DeadLetterQueueDeliveryCount { get; set; }
+        
+        /// <value>
+        /// Id of the custom master encryption key which will be used to encrypt messages content. String of length 0 means the custom key should be removed from queue
+        /// </value>
+        [JsonProperty(PropertyName = "customEncryptionKeyId")]
+        public string CustomEncryptionKeyId { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
