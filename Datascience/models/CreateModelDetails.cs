@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -91,6 +91,18 @@ namespace Oci.DatascienceService.Models
         /// </value>
         [JsonProperty(PropertyName = "outputSchema")]
         public string OutputSchema { get; set; }
+        
+        /// <value>
+        /// The OCID of the model version set that the model is associated to.
+        /// </value>
+        [JsonProperty(PropertyName = "modelVersionSetId")]
+        public string ModelVersionSetId { get; set; }
+        
+        /// <value>
+        /// The version label can add an additional description of the lifecycle state of the model or the application using/training the model.
+        /// </value>
+        [JsonProperty(PropertyName = "versionLabel")]
+        public string VersionLabel { get; set; }
         
     }
 }

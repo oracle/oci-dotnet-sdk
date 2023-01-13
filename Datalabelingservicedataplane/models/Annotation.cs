@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -135,6 +135,16 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// An integer value used in achieving concurrency control, this field will be used to generate eTags.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifetimeLogicalClock is required.")]
+        [JsonProperty(PropertyName = "lifetimeLogicalClock")]
+        public System.Nullable<int> LifetimeLogicalClock { get; set; }
         
         /// <value>
         /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.

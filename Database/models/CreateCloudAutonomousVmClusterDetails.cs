@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -76,7 +76,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> TotalContainerDatabases { get; set; }
         
         /// <value>
-        /// The number of OCPU cores to enable per VM cluster node.
+        /// The number of OCPU cores to be enabled per VM cluster node.
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
         public System.Nullable<int> CpuCoreCountPerNode { get; set; }
@@ -100,7 +100,7 @@ namespace Oci.DatabaseService.Models
         public string ClusterTimeZone { get; set; }
         
         /// <value>
-        /// The list of Db server.
+        /// The list of database servers.
         /// </value>
         [JsonProperty(PropertyName = "dbServers")]
         public System.Collections.Generic.List<string> DbServers { get; set; }

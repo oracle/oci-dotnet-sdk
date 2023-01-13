@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -245,6 +245,34 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerContacts")]
         public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
+        /// <value>
+        /// The software version of the storage servers (cells) in the cloud Exadata infrastructure.
+        /// Example: 20.1.15
+        /// </value>
+        [JsonProperty(PropertyName = "storageServerVersion")]
+        public string StorageServerVersion { get; set; }
+        
+        /// <value>
+        /// The software version of the database servers (dom0) in the cloud Exadata infrastructure.
+        /// Example: 20.1.15
+        /// </value>
+        [JsonProperty(PropertyName = "dbServerVersion")]
+        public string DbServerVersion { get; set; }
+        
+        /// <value>
+        /// The monthly software version of the storage servers (cells) in the cloud Exadata infrastructure.
+        /// Example: 20.1.15
+        /// </value>
+        [JsonProperty(PropertyName = "monthlyStorageServerVersion")]
+        public string MonthlyStorageServerVersion { get; set; }
+        
+        /// <value>
+        /// The monthly software version of the database servers (dom0) in the cloud Exadata infrastructure.
+        /// Example: 20.1.15
+        /// </value>
+        [JsonProperty(PropertyName = "monthlyDbServerVersion")]
+        public string MonthlyDbServerVersion { get; set; }
         
     }
 }

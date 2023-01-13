@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -98,7 +98,7 @@ namespace Oci.DatabaseService.Models
         public System.Double DataStorageSizeInTBs { get; set; }
         
         /// <value>
-        /// The list of Db servers.
+        /// The list of DB servers.
         /// </value>
         [JsonProperty(PropertyName = "dbServers")]
         public System.Collections.Generic.List<string> DbServers { get; set; }
@@ -227,6 +227,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "scanListenerPortTcpSsl")]
         public System.Nullable<int> ScanListenerPortTcpSsl { get; set; }
+        
+        /// <value>
+        /// The private zone id in which DNS records need to be created.
+        /// </value>
+        [JsonProperty(PropertyName = "privateZoneId")]
+        public string PrivateZoneId { get; set; }
         
         /// <value>
         /// The list of [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the network security groups (NSGs) to which this resource belongs. Setting this to an empty list removes all resources from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).

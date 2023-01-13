@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -28,6 +28,7 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         /// GENERIC  - An extensible entity type that is the base entity type for some annotation formats.
         /// IMAGEOBJECTSELECTION- - This allows the labeler to use specify a bounding polygon on the image to represent an object and apply labels to it.
         /// TEXTSELECTION - This allows the labeler to highlight text, by specifying an offset and a length, and apply labels to it.
+        /// KEYVALUESELECTION - This allows the labeler to apply label the highlighted text from OCR.
         /// 
         /// </value>
         ///
@@ -37,7 +38,9 @@ namespace Oci.DatalabelingservicedataplaneService.Models
             [EnumMember(Value = "IMAGEOBJECTSELECTION")]
             Imageobjectselection,
             [EnumMember(Value = "TEXTSELECTION")]
-            Textselection
+            Textselection,
+            [EnumMember(Value = "KEYVALUESELECTION")]
+            Keyvalueselection
         };
 
         
@@ -69,6 +72,9 @@ namespace Oci.DatalabelingservicedataplaneService.Models
                     break;
                 case "GENERIC":
                     obj = new GenericEntity();
+                    break;
+                case "KEYVALUESELECTION":
+                    obj = new KeyValueSelectionEntity();
                     break;
                 case "TEXTSELECTION":
                     obj = new TextSelectionEntity();
