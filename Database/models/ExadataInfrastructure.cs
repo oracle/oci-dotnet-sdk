@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -189,6 +189,18 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "computeCount")]
         public System.Nullable<int> ComputeCount { get; set; }
+        
+        /// <value>
+        /// Indicates if deployment is Multi-Rack or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isMultiRackDeployment")]
+        public System.Nullable<bool> IsMultiRackDeployment { get; set; }
+        
+        /// <value>
+        /// The base64 encoded Multi-Rack configuration json file.
+        /// </value>
+        [JsonProperty(PropertyName = "multiRackConfigurationFile")]
+        public System.Byte[] MultiRackConfigurationFile { get; set; }
         
         /// <value>
         /// The requested number of additional compute servers for the Exadata infrastructure.

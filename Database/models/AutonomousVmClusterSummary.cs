@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -291,7 +291,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> ScanListenerPortNonTls { get; set; }
         
         /// <value>
-        /// Enable mutual TLS(mTLS) authentication for database at time of provisioning a VMCluster. Default is TLS.
+        /// Enable mutual TLS(mTLS) authentication for database while provisioning a VMCluster. Default is TLS.
         /// </value>
         [JsonProperty(PropertyName = "isMtlsEnabled")]
         public System.Nullable<bool> IsMtlsEnabled { get; set; }

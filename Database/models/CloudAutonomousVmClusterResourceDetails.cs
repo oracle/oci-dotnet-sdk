@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Unallocated resource details of the CAVM
+    /// Unallocated resource details of the Cloud Autonomous VM Cluster.
     /// </summary>
     public class CloudAutonomousVmClusterResourceDetails 
     {
@@ -32,7 +32,7 @@ namespace Oci.DatabaseService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Total unallocated autonomous data storage in the CAVM in TBs.
+        /// Total unallocated autonomous data storage in the Cloud Autonomous VM Cluster in TBs.
         /// </value>
         /// <remarks>
         /// Required

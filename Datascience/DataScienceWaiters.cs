@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -137,6 +137,34 @@ namespace Oci.DatascienceService
                 targetStates.Contains(ModelDeploymentLifecycleState.Deleted)
             );
             return new Waiter<GetModelDeploymentRequest, GetModelDeploymentResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetModelVersionSetRequest, GetModelVersionSetResponse> ForModelVersionSet(GetModelVersionSetRequest request, params ModelVersionSetLifecycleState[] targetStates)
+        {
+            return this.ForModelVersionSet(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetModelVersionSetRequest, GetModelVersionSetResponse> ForModelVersionSet(GetModelVersionSetRequest request, WaiterConfiguration config, params ModelVersionSetLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetModelVersionSetRequest, GetModelVersionSetResponse>(
+                request,
+                request => client.GetModelVersionSet(request),
+                response => targetStates.Contains(response.ModelVersionSet.LifecycleState.Value),
+                targetStates.Contains(ModelVersionSetLifecycleState.Deleted)
+            );
+            return new Waiter<GetModelVersionSetRequest, GetModelVersionSetResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

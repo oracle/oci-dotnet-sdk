@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -35,5 +35,21 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        ///
+        /// <value>
+        /// If provided, the specified fields will be excluded in the response.
+        /// </value>
+        ///
+        public enum ExcludedFieldsEnum {
+            [EnumMember(Value = "multiRackConfigurationFile")]
+            MultiRackConfigurationFile
+        };
+
+        /// <value>
+        /// If provided, the specified fields will be excluded in the response.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "excludedFields", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ExcludedFieldsEnum> ExcludedFields { get; set; }
     }
 }

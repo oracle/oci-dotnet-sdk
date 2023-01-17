@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -67,6 +67,16 @@ namespace Oci.ServicemeshService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPathRewriteEnabled")]
         public System.Nullable<bool> IsPathRewriteEnabled { get; set; }
+        
+        /// <value>
+        /// The maximum duration in milliseconds for the upstream service to respond to a request. 
+        /// If provided, the timeout value overrides the default timeout of 15 seconds for the HTTP based route rules, and disabled (no timeout) when 'isGrpc' is true. 
+        /// The value 0 (zero) indicates that the timeout is disabled. 
+        /// For streaming responses from the upstream service, consider either keeping the timeout disabled or set a sufficiently high value.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "requestTimeoutInMs")]
+        public System.Nullable<long> RequestTimeoutInMs { get; set; }
         
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "HTTP";
