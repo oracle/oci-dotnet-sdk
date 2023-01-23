@@ -200,6 +200,62 @@ namespace Oci.DatascienceService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPipelineRequest, GetPipelineResponse> ForPipeline(GetPipelineRequest request, params PipelineLifecycleState[] targetStates)
+        {
+            return this.ForPipeline(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPipelineRequest, GetPipelineResponse> ForPipeline(GetPipelineRequest request, WaiterConfiguration config, params PipelineLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetPipelineRequest, GetPipelineResponse>(
+                request,
+                request => client.GetPipeline(request),
+                response => targetStates.Contains(response.Pipeline.LifecycleState.Value),
+                targetStates.Contains(PipelineLifecycleState.Deleted)
+            );
+            return new Waiter<GetPipelineRequest, GetPipelineResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPipelineRunRequest, GetPipelineRunResponse> ForPipelineRun(GetPipelineRunRequest request, params PipelineRunLifecycleState[] targetStates)
+        {
+            return this.ForPipelineRun(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPipelineRunRequest, GetPipelineRunResponse> ForPipelineRun(GetPipelineRunRequest request, WaiterConfiguration config, params PipelineRunLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetPipelineRunRequest, GetPipelineRunResponse>(
+                request,
+                request => client.GetPipelineRun(request),
+                response => targetStates.Contains(response.PipelineRun.LifecycleState.Value),
+                targetStates.Contains(PipelineRunLifecycleState.Deleted)
+            );
+            return new Waiter<GetPipelineRunRequest, GetPipelineRunResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetProjectRequest, GetProjectResponse> ForProject(GetProjectRequest request, params ProjectLifecycleState[] targetStates)
         {
             return this.ForProject(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

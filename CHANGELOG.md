@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 51.2.0 - 2023-01-24
+### Added
+- Support for the Cloud Migrations service
+- Support for setting up custom private IPs while creating private endpoints in the Database service
+- Support for machine learning pipelines in the Data Science service
+- Support for personally identifiable information detection in the AI Language service
+
 ## 51.1.0 - 2023-01-17
 ### Added
 - Support for calling Oracle Cloud Infrastructure services in the us-chicago-1 region
