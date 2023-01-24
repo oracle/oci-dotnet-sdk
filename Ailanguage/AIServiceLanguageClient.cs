@@ -258,6 +258,68 @@ namespace Oci.AilanguageService
         }
 
         /// <summary>
+        /// The API extracts pii entities in text records. For each entity, its type and confidence score (between 0 and 1) is returned.  It supports passing a batch of records.
+        /// &lt;br/&gt;
+        /// Limitations:
+        /// - A batch may have up to 100 records.
+        /// - A record may be up to 5000 characters long.
+        /// - The total of characters to process in a request can be up to 20,000 characters.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ailanguage/BatchDetectLanguagePiiEntities.cs.html">here</a> to see an example of how to use BatchDetectLanguagePiiEntities API.</example>
+        public async Task<BatchDetectLanguagePiiEntitiesResponse> BatchDetectLanguagePiiEntities(BatchDetectLanguagePiiEntitiesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called batchDetectLanguagePiiEntities");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/actions/batchDetectLanguagePiiEntities".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AIServiceLanguage",
+                    OperationName = "BatchDetectLanguagePiiEntities",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguagePiiEntities/BatchDetectLanguagePiiEntities",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<BatchDetectLanguagePiiEntitiesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"BatchDetectLanguagePiiEntities failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// The API extracts aspect-based and sentence level sentiment in text records.
         /// &lt;br/&gt;
         /// For aspect-based sentiment analysis, a set of aspects and their respective sentiment is returned for each record. Similarly, for sentence-level sentiment analysis, the sentiment is returned at the sentence level.
@@ -961,9 +1023,12 @@ namespace Oci.AilanguageService
         }
 
         /// <summary>
-        /// The API returns the detected language and a related confidence score (between 0 and 1).
+        /// **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
+        /// We recommend you replace this API with the batch API, [BatchDetectDominantLanguage](https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectDominantLanguage/BatchDetectDominantLanguage).
         /// &lt;br/&gt;
-        /// [List of supported languages.](https://docs.cloud.oracle.com/iaas/language/using/pretrain-models.htm#lang-detect)
+        /// The DetectDominantLanguage API returns the detected language and a related confidence score (between 0 and 1).
+        /// &lt;br/&gt;
+        /// [List of supported languages](https://docs.cloud.oracle.com/iaas/language/using/pretrain-models.htm#lang-detect)
         /// &lt;br/&gt;
         /// Limitations:
         /// - A record may be up to 1000 characters long.
@@ -1023,7 +1088,10 @@ namespace Oci.AilanguageService
         }
 
         /// <summary>
-        /// The API extracts entities in text records. For each entity, its type and confidence score (between 0 and 1) is returned.
+        /// **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
+        /// We recommend you replace this API with the batch API, [BatchDetectLanguageEntities](https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageEntities/BatchDetectLanguageEntities).
+        /// &lt;br/&gt;
+        /// The DetectLanguageEntities API extracts entities in text records. For each entity, its type and confidence score (between 0 and 1) is returned.
         /// &lt;br/&gt;
         /// Limitations:
         /// - A text may be up to 1000 characters long.
@@ -1083,7 +1151,10 @@ namespace Oci.AilanguageService
         }
 
         /// <summary>
-        /// The API extracts key-phrases in text records. For each key-phrase, a score (between 0 and 1) is returned that highlights the importance of the key-phrase in the context of the text.
+        /// **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
+        /// We recommend you replace this API with the batch API, [BatchDetectLanguageKeyPhrases](https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageKeyPhrases/BatchDetectLanguageKeyPhrases).
+        /// &lt;br/&gt;
+        /// The DetectLanguageKeyPhrases API extracts key-phrases in text records. For each key-phrase, a score (between 0 and 1) is returned that highlights the importance of the key-phrase in the context of the text.
         /// &lt;br/&gt;
         /// Limitations:
         /// - A record may be up to 1000 characters long.
@@ -1143,7 +1214,10 @@ namespace Oci.AilanguageService
         }
 
         /// <summary>
-        /// The API extracts aspect-based in text records.
+        /// **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
+        /// We recommend you replace this API with the batch API, [BatchDetectLanguageSentiments](https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageSentiments/BatchDetectLanguageSentiments).
+        /// &lt;br/&gt;
+        /// The DetectLanguageSentiments API extracts aspect-based in text records.
         /// &lt;br/&gt;
         /// For aspect-based sentiment analysis, a set of aspects and their respective sentiment is returned.
         /// &lt;br/&gt;
@@ -1209,7 +1283,10 @@ namespace Oci.AilanguageService
         }
 
         /// <summary>
-        /// The API automatically classifies text into a set of pre-determined classes and sub-classes. A single class/subclass is returned for each record classified.
+        /// **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
+        /// We recommend you replace this API with the batch API, [BatchDetectLanguageTextClassification](https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageTextClassification/BatchDetectLanguageTextClassification).
+        /// &lt;br/&gt;
+        /// The DetectLanguageTextClassification API automatically classifies text into a set of pre-determined classes and sub-classes. A single class/subclass is returned for each record classified.
         /// &lt;br/&gt;
         /// Learn more about text classification [here](https://docs.cloud.oracle.com/iaas/language/using/pretrain-models.htm#text-class).
         /// &lt;br/&gt;

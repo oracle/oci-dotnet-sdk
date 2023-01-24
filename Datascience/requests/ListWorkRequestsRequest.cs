@@ -71,7 +71,17 @@ namespace Oci.DatascienceService.Requests
             [EnumMember(Value = "WORKREQUEST_CANCEL")]
             WorkrequestCancel,
             [EnumMember(Value = "JOB_DELETE")]
-            JobDelete
+            JobDelete,
+            [EnumMember(Value = "PIPELINE_CREATE")]
+            PipelineCreate,
+            [EnumMember(Value = "PIPELINE_DELETE")]
+            PipelineDelete,
+            [EnumMember(Value = "PIPELINE_RUN_CREATE")]
+            PipelineRunCreate,
+            [EnumMember(Value = "PIPELINE_RUN_CANCEL")]
+            PipelineRunCancel,
+            [EnumMember(Value = "PIPELINE_RUN_DELETE")]
+            PipelineRunDelete
         };
 
         /// <value>

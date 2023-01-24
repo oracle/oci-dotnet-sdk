@@ -335,6 +335,12 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
+        /// The private endpoint Ip address for the resource.
+        /// </value>
+        [JsonProperty(PropertyName = "privateEndpointIp")]
+        public string PrivateEndpointIp { get; set; }
+        
+        /// <value>
         /// A valid Oracle Database version for Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
