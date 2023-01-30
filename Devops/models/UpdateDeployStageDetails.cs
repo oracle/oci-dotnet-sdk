@@ -87,6 +87,9 @@ namespace Oci.DevopsService.Models
                 case "OKE_CANARY_APPROVAL":
                     obj = new UpdateOkeCanaryApprovalDeployStageDetails();
                     break;
+                case "SHELL":
+                    obj = new UpdateShellDeployStageDetails();
+                    break;
                 case "OKE_DEPLOYMENT":
                     obj = new UpdateOkeDeployStageDetails();
                     break;

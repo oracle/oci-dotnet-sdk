@@ -215,6 +215,33 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
+                ///
+        /// <value>
+        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value.
+        /// </value>
+        ///
+        public enum ComputeModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ECPU")]
+            Ecpu,
+            [EnumMember(Value = "OCPU")]
+            Ocpu
+        };
+
+        /// <value>
+        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
+        
+        /// <value>
+        /// The compute amount available to the database. Minimum and maximum values depend on the compute model and whether the database is on Shared or Dedicated infrastructure. For an Autonomous Database on Shared infrastructure, the 'ECPU' compute model requires values in multiples of two. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value.
+        /// </value>
+        [JsonProperty(PropertyName = "computeCount")]
+        public System.Nullable<float> ComputeCount { get; set; }
         
         /// <value>
         /// The number of OCPU cores to be made available to the database. 
@@ -975,6 +1002,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "databaseEdition")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseEditionEnum> DatabaseEdition { get; set; }
+        
+        /// <value>
+        /// List of database tools details.
+        /// </value>
+        [JsonProperty(PropertyName = "dbToolsDetails")]
+        public System.Collections.Generic.List<DatabaseTool> DbToolsDetails { get; set; }
         
     }
 }

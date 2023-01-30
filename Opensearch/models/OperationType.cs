@@ -36,6 +36,8 @@ namespace Oci.OpensearchService.Models
       [EnumMember(Value = "MOVE_OPENSEARCH_CLUSTER_BACKUP")]
       MoveOpensearchClusterBackup,
       [EnumMember(Value = "DELETE_OPENSEARCH_CLUSTER_BACKUP")]
-      DeleteOpensearchClusterBackup
+      DeleteOpensearchClusterBackup,
+      [EnumMember(Value = "UPDATE_OPENSEARCH_CLUSTER_SECURITY_CONFIG")]
+      UpdateOpensearchClusterSecurityConfig
   }
 }

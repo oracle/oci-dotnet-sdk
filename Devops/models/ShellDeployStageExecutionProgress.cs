@@ -16,18 +16,12 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the Container Engine for Kubernetes (OKE) cluster Blue-Green deployment stage.
+    /// Specifies the shell stage specific execution details.
     /// </summary>
-    public class OkeBlueGreenDeployStageExecutionProgress : DeployStageExecutionProgress
+    public class ShellDeployStageExecutionProgress : DeployStageExecutionProgress
     {
         
-        /// <value>
-        /// Namespace either environment A or environment B where artifacts are deployed. Example: blue - Name of the namespace where blue artifacts were deployed. green - Name of the namespace where green artifacts were deployed.
-        /// </value>
-        [JsonProperty(PropertyName = "namespace")]
-        public string Namespace { get; set; }
-        
         [JsonProperty(PropertyName = "deployStageType")]
-        private readonly string deployStageType = "OKE_BLUE_GREEN_DEPLOYMENT";
+        private readonly string deployStageType = "SHELL";
     }
 }

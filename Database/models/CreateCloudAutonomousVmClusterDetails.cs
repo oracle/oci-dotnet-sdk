@@ -98,6 +98,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "clusterTimeZone")]
         public string ClusterTimeZone { get; set; }
+                ///
+        /// <value>
+        /// The compute model of the Cloud Autonomous VM Cluster.
+        /// </value>
+        ///
+        public enum ComputeModelEnum {
+            [EnumMember(Value = "ECPU")]
+            Ecpu,
+            [EnumMember(Value = "OCPU")]
+            Ocpu
+        };
+
+        /// <value>
+        /// The compute model of the Cloud Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
         /// The list of database servers.

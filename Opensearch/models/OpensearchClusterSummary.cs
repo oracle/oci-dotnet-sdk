@@ -114,7 +114,7 @@ namespace Oci.OpensearchService.Models
         /// The current state of the cluster.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OpensearchCluster.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -122,6 +122,13 @@ namespace Oci.OpensearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomains")]
         public System.Collections.Generic.List<string> AvailabilityDomains { get; set; }
+        
+        /// <value>
+        /// The security mode of the cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "securityMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SecurityMode> SecurityMode { get; set; }
         
     }
 }

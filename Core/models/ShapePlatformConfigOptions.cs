@@ -67,6 +67,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "numaNodesPerSocketPlatformOptions")]
         public ShapeNumaNodesPerSocketPlatformOptions NumaNodesPerSocketPlatformOptions { get; set; }
         
+        [JsonProperty(PropertyName = "memoryEncryptionOptions")]
+        public ShapeMemoryEncryptionOptions MemoryEncryptionOptions { get; set; }
+        
         [JsonProperty(PropertyName = "symmetricMultiThreadingOptions")]
         public ShapeSymmetricMultiThreadingEnabledPlatformOptions SymmetricMultiThreadingOptions { get; set; }
         

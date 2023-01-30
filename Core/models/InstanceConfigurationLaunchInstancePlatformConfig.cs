@@ -74,6 +74,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "isMeasuredBootEnabled")]
         public System.Nullable<bool> IsMeasuredBootEnabled { get; set; }
         
+        /// <value>
+        /// Whether the instance is a confidential instance. If this value is `true`, the instance is a confidential instance. The default value is `false`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isMemoryEncryptionEnabled")]
+        public System.Nullable<bool> IsMemoryEncryptionEnabled { get; set; }
+        
     }
 
     public class InstanceConfigurationLaunchInstancePlatformConfigModelConverter : JsonConverter

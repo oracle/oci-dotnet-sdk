@@ -50,6 +50,27 @@ namespace Oci.ApmconfigService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a user.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "createdBy")]
+        public string CreatedBy { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a user.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "updatedBy")]
+        public string UpdatedBy { get; set; }
+        
+        /// <value>
+        /// For optimistic concurrency control. See `if-match`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "etag")]
+        public string Etag { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

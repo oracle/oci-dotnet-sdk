@@ -13,21 +13,28 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DevopsService.Models
+namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Specifies the Container Engine for Kubernetes (OKE) cluster Blue-Green deployment traffic shift stage.
+    /// Configuration options for memory encryption.
+    /// 
     /// </summary>
-    public class OkeBlueGreenTrafficShiftDeployStageExecutionProgress : DeployStageExecutionProgress
+    public class ShapeMemoryEncryptionOptions 
     {
         
         /// <value>
-        /// Namespace where traffic is going. Example: blue - Traffic is going to blue namespace. green - Traffic is going to green namespace.
+        /// Whether memory encryption can be enabled.
+        /// 
         /// </value>
-        [JsonProperty(PropertyName = "namespace")]
-        public string Namespace { get; set; }
+        [JsonProperty(PropertyName = "allowedValues")]
+        public System.Collections.Generic.List<bool> AllowedValues { get; set; }
         
-        [JsonProperty(PropertyName = "deployStageType")]
-        private readonly string deployStageType = "OKE_BLUE_GREEN_TRAFFIC_SHIFT";
+        /// <value>
+        /// Whether memory encryption is enabled by default.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDefaultEnabled")]
+        public System.Nullable<bool> IsDefaultEnabled { get; set; }
+        
     }
 }

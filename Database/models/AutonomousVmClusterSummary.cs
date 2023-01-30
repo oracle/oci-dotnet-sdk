@@ -137,6 +137,27 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "cpusEnabled")]
         public System.Nullable<int> CpusEnabled { get; set; }
+                ///
+        /// <value>
+        /// The compute model of the Autonomous VM Cluster.
+        /// </value>
+        ///
+        public enum ComputeModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ECPU")]
+            Ecpu,
+            [EnumMember(Value = "OCPU")]
+            Ocpu
+        };
+
+        /// <value>
+        /// The compute model of the Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
         /// The number of enabled OCPU cores.

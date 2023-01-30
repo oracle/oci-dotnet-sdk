@@ -114,7 +114,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "MANUAL_APPROVAL")]
             ManualApproval,
             [EnumMember(Value = "OKE_HELM_CHART_DEPLOYMENT")]
-            OkeHelmChartDeployment
+            OkeHelmChartDeployment,
+            [EnumMember(Value = "SHELL")]
+            Shell
         };
 
         
@@ -211,6 +213,9 @@ namespace Oci.DevopsService.Models
                     break;
                 case "LOAD_BALANCER_TRAFFIC_SHIFT":
                     obj = new LoadBalancerTrafficShiftDeployStage();
+                    break;
+                case "SHELL":
+                    obj = new ShellDeployStage();
                     break;
                 case "INVOKE_FUNCTION":
                     obj = new InvokeFunctionDeployStage();

@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpensearchService.Models
 {
     /// <summary>
-    /// The configuration to update on an existing OpenSearch cluster.
+    /// The configuration to update on an existing OpenSearch cluster. Software version
+    /// and security config are not allowed to be updated at the same time.
+    /// 
     /// </summary>
     public class UpdateOpensearchClusterDetails 
     {
@@ -33,6 +35,25 @@ namespace Oci.OpensearchService.Models
         
         [JsonProperty(PropertyName = "softwareVersion")]
         public string SoftwareVersion { get; set; }
+        
+        /// <value>
+        /// The security mode of the cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "securityMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<SecurityMode> SecurityMode { get; set; }
+        
+        /// <value>
+        /// The name of the master user that are used to manage security config
+        /// </value>
+        [JsonProperty(PropertyName = "securityMasterUserName")]
+        public string SecurityMasterUserName { get; set; }
+        
+        /// <value>
+        /// The password hash of the master user that are used to manage security config
+        /// </value>
+        [JsonProperty(PropertyName = "securityMasterUserPasswordHash")]
+        public string SecurityMasterUserPasswordHash { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

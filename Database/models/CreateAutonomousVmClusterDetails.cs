@@ -106,6 +106,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
         public System.Nullable<int> CpuCoreCountPerNode { get; set; }
+                ///
+        /// <value>
+        /// The compute model of the Autonomous VM Cluster.
+        /// </value>
+        ///
+        public enum ComputeModelEnum {
+            [EnumMember(Value = "ECPU")]
+            Ecpu,
+            [EnumMember(Value = "OCPU")]
+            Ocpu
+        };
+
+        /// <value>
+        /// The compute model of the Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
         /// The amount of memory (in GBs) to be enabled per each OCPU core.

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ApmconfigService.Models
 {
     /// <summary>
-    /// A description of a configuration item. It specifes all the properties that define the configuration item.
+    /// A description of a configuration item. It specifies all the properties that define the configuration item.
     /// 
     /// </summary>
     [JsonConverter(typeof(ConfigSummaryModelConverter))]
@@ -47,6 +47,27 @@ namespace Oci.ApmconfigService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a user.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "createdBy")]
+        public string CreatedBy { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a user.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "updatedBy")]
+        public string UpdatedBy { get; set; }
+        
+        /// <value>
+        /// For optimistic concurrency control. See `if-match`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "etag")]
+        public string Etag { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
