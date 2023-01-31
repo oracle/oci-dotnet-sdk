@@ -123,6 +123,9 @@ namespace Oci.DevopsService.Models
                 case "COMPUTE_INSTANCE_GROUP_ROLLING_DEPLOYMENT":
                     obj = new ComputeInstanceGroupDeployStageExecutionProgress();
                     break;
+                case "SHELL":
+                    obj = new ShellDeployStageExecutionProgress();
+                    break;
                 case "OKE_CANARY_DEPLOYMENT":
                     obj = new OkeCanaryDeployStageExecutionProgress();
                     break;

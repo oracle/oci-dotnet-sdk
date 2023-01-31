@@ -101,6 +101,9 @@ namespace Oci.DevopsService.Models
                 case "LOAD_BALANCER_TRAFFIC_SHIFT":
                     obj = new CreateLoadBalancerTrafficShiftDeployStageDetails();
                     break;
+                case "SHELL":
+                    obj = new CreateShellDeployStageDetails();
+                    break;
                 case "COMPUTE_INSTANCE_GROUP_BLUE_GREEN_TRAFFIC_SHIFT":
                     obj = new CreateComputeInstanceGroupBlueGreenTrafficShiftDeployStageDetails();
                     break;

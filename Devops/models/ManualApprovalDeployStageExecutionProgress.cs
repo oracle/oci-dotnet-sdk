@@ -21,6 +21,9 @@ namespace Oci.DevopsService.Models
     public class ManualApprovalDeployStageExecutionProgress : DeployStageExecutionProgress
     {
         
+        /// <value>
+        /// Specifies the Canary approval actions.
+        /// </value>
         [JsonProperty(PropertyName = "approvalActions")]
         public System.Collections.Generic.List<ApprovalAction> ApprovalActions { get; set; }
         

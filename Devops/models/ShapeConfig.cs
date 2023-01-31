@@ -16,18 +16,26 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// Specifies the Container Engine for Kubernetes (OKE) cluster Blue-Green deployment stage.
+    /// Determines the size and amount of resources available to the instance.
     /// </summary>
-    public class OkeBlueGreenDeployStageExecutionProgress : DeployStageExecutionProgress
+    public class ShapeConfig 
     {
         
         /// <value>
-        /// Namespace either environment A or environment B where artifacts are deployed. Example: blue - Name of the namespace where blue artifacts were deployed. green - Name of the namespace where green artifacts were deployed.
+        /// The total number of OCPUs available to the instance.
         /// </value>
-        [JsonProperty(PropertyName = "namespace")]
-        public string Namespace { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Ocpus is required.")]
+        [JsonProperty(PropertyName = "ocpus")]
+        public System.Nullable<float> Ocpus { get; set; }
         
-        [JsonProperty(PropertyName = "deployStageType")]
-        private readonly string deployStageType = "OKE_BLUE_GREEN_DEPLOYMENT";
+        /// <value>
+        /// The total amount of memory available to the instance, in gigabytes.
+        /// </value>
+        [JsonProperty(PropertyName = "memoryInGBs")]
+        public System.Nullable<float> MemoryInGBs { get; set; }
+        
     }
 }

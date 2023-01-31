@@ -22,7 +22,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Namespace A for deployment.
+        /// Namespace A for deployment. Example: namespaceA - first Namespace name.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DevopsService.Models
         public string NamespaceA { get; set; }
         
         /// <value>
-        /// Namespace B for deployment.
+        /// Namespace B for deployment. Example: namespaceB - second Namespace name.
         /// </value>
         /// <remarks>
         /// Required

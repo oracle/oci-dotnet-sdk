@@ -82,7 +82,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "DOCKER_IMAGE")]
             DockerImage,
             [EnumMember(Value = "HELM_CHART")]
-            HelmChart
+            HelmChart,
+            [EnumMember(Value = "COMMAND_SPEC")]
+            CommandSpec
         };
 
         /// <value>

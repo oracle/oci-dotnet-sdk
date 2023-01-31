@@ -47,5 +47,23 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "graphStudioUrl")]
         public string GraphStudioUrl { get; set; }
         
+        /// <value>
+        /// The URL of the MongoDB API for the Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "mongoDbUrl")]
+        public string MongoDbUrl { get; set; }
+        
+        /// <value>
+        /// The Oracle REST Data Services (ORDS) URL of the Web Access for the Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "ordsUrl")]
+        public string OrdsUrl { get; set; }
+        
+        /// <value>
+        /// The URL of the Database Transforms for the Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseTransformsUrl")]
+        public string DatabaseTransformsUrl { get; set; }
+        
     }
 }

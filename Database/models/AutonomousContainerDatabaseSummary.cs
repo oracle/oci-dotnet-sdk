@@ -334,25 +334,25 @@ namespace Oci.DatabaseService.Models
         public string KeyStoreWalletName { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) enabled per each OCPU core in Autonomous VM Cluster.
+        /// The amount of memory (in GBs) enabled per each CPU in the Autonomous VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
         
         /// <value>
-        /// Sum of OCPUs available on the Autonomous VM Cluster + Sum of reclaimable OCPUs available in the Autonomous Container Database.
+        /// Sum of CPUs available on the Autonomous VM Cluster + Sum of reclaimable CPUs available in the Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "availableCpus")]
         public System.Nullable<float> AvailableCpus { get; set; }
         
         /// <value>
-        /// The number of CPU cores allocated to the Autonomous VM cluster.
+        /// The number of CPUs allocated to the Autonomous VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "totalCpus")]
         public System.Nullable<int> TotalCpus { get; set; }
         
         /// <value>
-        /// CPU cores that continue to be included in the count of OCPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available OCPUs at its parent AVMC level by restarting the Autonomous Container Database.
+        /// CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "reclaimableCpus")]
         public System.Nullable<float> ReclaimableCpus { get; set; }
@@ -362,6 +362,27 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "provisionableCpus")]
         public System.Collections.Generic.List<float> ProvisionableCpus { get; set; }
+                ///
+        /// <value>
+        /// The compute model of the Autonomous VM Cluster.
+        /// </value>
+        ///
+        public enum ComputeModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ECPU")]
+            Ecpu,
+            [EnumMember(Value = "OCPU")]
+            Ocpu
+        };
+
+        /// <value>
+        /// The compute model of the Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
     }
 }

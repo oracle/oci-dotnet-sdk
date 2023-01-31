@@ -226,6 +226,25 @@ namespace Oci.OpensearchService.Models
         public string SubnetCompartmentId { get; set; }
         
         /// <value>
+        /// The security mode of the cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "securityMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<SecurityMode> SecurityMode { get; set; }
+        
+        /// <value>
+        /// The name of the master user that are used to manage security config
+        /// </value>
+        [JsonProperty(PropertyName = "securityMasterUserName")]
+        public string SecurityMasterUserName { get; set; }
+        
+        /// <value>
+        /// The password hash of the master user that are used to manage security config
+        /// </value>
+        [JsonProperty(PropertyName = "securityMasterUserPasswordHash")]
+        public string SecurityMasterUserPasswordHash { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

@@ -35,6 +35,12 @@ namespace Oci.ApmconfigService.Models
         public string FilterText { get; set; }
         
         /// <value>
+        /// The list of configuration items that reference the span filter.
+        /// </value>
+        [JsonProperty(PropertyName = "inUseBy")]
+        public System.Collections.Generic.List<SpanFilterReference> InUseBy { get; set; }
+        
+        /// <value>
         /// An optional string that describes what the filter is intended or used for.
         /// </value>
         [JsonProperty(PropertyName = "description")]

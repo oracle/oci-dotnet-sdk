@@ -28,7 +28,7 @@ namespace Oci.DevopsService.Models
         public BackendSetIpCollection GreenBackendIps { get; set; }
         
         /// <value>
-        /// Specifies the target or destination backend set.
+        /// Specifies the target or destination backend set. Example: BLUE - Traffic from the existing backends of managed Load Balance Listener to blue Backend IPs, as per rolloutPolicy. GREEN - Traffic from the existing backends of managed Load Balance Listener to blue Backend IPs ser as per rolloutPolicy.
         /// </value>
         [JsonProperty(PropertyName = "trafficShiftTarget")]
         [JsonConverter(typeof(StringEnumConverter))]
