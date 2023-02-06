@@ -56,6 +56,26 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "standbyMaintenanceBufferInDays")]
         public System.Nullable<int> StandbyMaintenanceBufferInDays { get; set; }
+                ///
+        /// <value>
+        /// The next maintenance version preference.
+        /// 
+        /// </value>
+        ///
+        public enum VersionPreferenceEnum {
+            [EnumMember(Value = "NEXT_RELEASE_UPDATE")]
+            NextReleaseUpdate,
+            [EnumMember(Value = "LATEST_RELEASE_UPDATE")]
+            LatestReleaseUpdate
+        };
+
+        /// <value>
+        /// The next maintenance version preference.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "versionPreference")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<VersionPreferenceEnum> VersionPreference { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

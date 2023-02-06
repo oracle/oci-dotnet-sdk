@@ -102,6 +102,14 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "DELETE_PRIVATE_ENDPOINT")]
       DeletePrivateEndpoint,
       [EnumMember(Value = "CHANGE_PE_COMANAGED_DATABASE_INSIGHT_DETAILS")]
-      ChangePeComanagedDatabaseInsightDetails
+      ChangePeComanagedDatabaseInsightDetails,
+      [EnumMember(Value = "UPDATE_OPSI_CONFIGURATION")]
+      UpdateOpsiConfiguration,
+      [EnumMember(Value = "CREATE_OPSI_CONFIGURATION")]
+      CreateOpsiConfiguration,
+      [EnumMember(Value = "MOVE_OPSI_CONFIGURATION")]
+      MoveOpsiConfiguration,
+      [EnumMember(Value = "DELETE_OPSI_CONFIGURATION")]
+      DeleteOpsiConfiguration
   }
 }

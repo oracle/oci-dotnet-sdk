@@ -209,10 +209,6 @@ namespace Oci.DatabaseService.Models
         /// **Note:** This parameter cannot be used with the `ocpuCount` parameter.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
                 ///
@@ -242,6 +238,18 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "computeCount")]
         public System.Nullable<float> ComputeCount { get; set; }
+        
+        /// <value>
+        /// Retention period, in days, for backups.
+        /// </value>
+        [JsonProperty(PropertyName = "backupRetentionPeriodInDays")]
+        public System.Nullable<int> BackupRetentionPeriodInDays { get; set; }
+        
+        /// <value>
+        /// The backup storage to the database.
+        /// </value>
+        [JsonProperty(PropertyName = "totalBackupStorageSizeInGBs")]
+        public System.Double TotalBackupStorageSizeInGBs { get; set; }
         
         /// <value>
         /// The number of OCPU cores to be made available to the database. 
@@ -820,7 +828,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "STANDBY")]
             Standby,
             [EnumMember(Value = "DISABLED_STANDBY")]
-            DisabledStandby
+            DisabledStandby,
+            [EnumMember(Value = "SNAPSHOT_STANDBY")]
+            SnapshotStandby
         };
 
         /// <value>

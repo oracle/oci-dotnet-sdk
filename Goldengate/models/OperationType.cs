@@ -64,6 +64,10 @@ namespace Oci.GoldengateService.Models
       GoldengateConnectionAssigmnentDelete,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_DIAGNOSTIC_COLLECT")]
       GoldengateDeploymentDiagnosticCollect,
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_WALLET_EXPORT")]
+      GoldengateDeploymentWalletExport,
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_WALLET_IMPORT")]
+      GoldengateDeploymentWalletImport,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_PATCH")]
       GoldengateDeploymentPatch
   }

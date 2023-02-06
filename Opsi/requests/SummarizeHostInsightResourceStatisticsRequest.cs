@@ -31,7 +31,6 @@ namespace Oci.OpsiService.Requests
         
         /// <value>
         /// Filter by host resource metric.
-        /// Supported values are CPU, MEMORY, and LOGICAL_MEMORY.
         /// 
         /// </value>
         /// <remarks>

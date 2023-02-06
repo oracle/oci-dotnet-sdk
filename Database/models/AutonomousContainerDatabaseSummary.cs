@@ -209,6 +209,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The date and time the Autonomous Container Database will be reverted to Standby from Snapshot Standby.
+        /// </value>
+        [JsonProperty(PropertyName = "timeSnapshotStandbyRevert")]
+        public System.Nullable<System.DateTime> TimeSnapshotStandbyRevert { get; set; }
                 ///
         /// <value>
         /// Database patch model preference.
@@ -263,6 +269,29 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "standbyMaintenanceBufferInDays")]
         public System.Nullable<int> StandbyMaintenanceBufferInDays { get; set; }
+                ///
+        /// <value>
+        /// The next maintenance version preference.
+        /// 
+        /// </value>
+        ///
+        public enum VersionPreferenceEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "NEXT_RELEASE_UPDATE")]
+            NextReleaseUpdate,
+            [EnumMember(Value = "LATEST_RELEASE_UPDATE")]
+            LatestReleaseUpdate
+        };
+
+        /// <value>
+        /// The next maintenance version preference.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "versionPreference")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<VersionPreferenceEnum> VersionPreference { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
@@ -295,7 +324,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "STANDBY")]
             Standby,
             [EnumMember(Value = "DISABLED_STANDBY")]
-            DisabledStandby
+            DisabledStandby,
+            [EnumMember(Value = "SNAPSHOT_STANDBY")]
+            SnapshotStandby
         };
 
         /// <value>

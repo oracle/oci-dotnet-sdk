@@ -45,6 +45,13 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
         
+        /// <value>
+        /// Helm Diff output
+        /// Example: Helm diff was successfuldata:- greeting: Version 1.0+ greeting: Version 1.1
+        /// </value>
+        [JsonProperty(PropertyName = "helmDiff")]
+        public string HelmDiff { get; set; }
+        
         [JsonProperty(PropertyName = "deployStageType")]
         private readonly string deployStageType = "OKE_HELM_CHART_DEPLOYMENT";
     }

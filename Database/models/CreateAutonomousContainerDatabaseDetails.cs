@@ -65,6 +65,12 @@ namespace Oci.DatabaseService.Models
         public string AutonomousExadataInfrastructureId { get; set; }
         
         /// <value>
+        /// The base version for the Autonomous Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "dbVersion")]
+        public string DbVersion { get; set; }
+        
+        /// <value>
         /// *No longer used.* This parameter is no longer used for Autonomous Database on dedicated Exadata infrasture. Specify a `peerCloudAutonomousVmClusterId` instead. Using this parameter will cause the operation to fail.
         /// 
         /// </value>
@@ -100,6 +106,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "protectionMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
+        
+        /// <value>
+        /// The lag time for my preference based on data loss tolerance in seconds.
+        /// </value>
+        [JsonProperty(PropertyName = "fastStartFailOverLagLimitInSeconds")]
+        public System.Nullable<int> FastStartFailOverLagLimitInSeconds { get; set; }
         
         /// <value>
         /// Indicates whether Automatic Failover is enabled for Autonomous Container Database Dataguard Association
@@ -189,6 +201,26 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "standbyMaintenanceBufferInDays")]
         public System.Nullable<int> StandbyMaintenanceBufferInDays { get; set; }
+                ///
+        /// <value>
+        /// The next maintenance version preference.
+        /// 
+        /// </value>
+        ///
+        public enum VersionPreferenceEnum {
+            [EnumMember(Value = "NEXT_RELEASE_UPDATE")]
+            NextReleaseUpdate,
+            [EnumMember(Value = "LATEST_RELEASE_UPDATE")]
+            LatestReleaseUpdate
+        };
+
+        /// <value>
+        /// The next maintenance version preference.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "versionPreference")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<VersionPreferenceEnum> VersionPreference { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
