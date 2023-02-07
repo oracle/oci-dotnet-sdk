@@ -17,6 +17,7 @@ namespace Oci.Common.Auth
     /// <summary>An implementation of ISupplier that reads private key.</summary>
     public class PrivateKeySupplier : ISupplier<RsaKeyParameters>
     {
+        private RsaKeyParameters privateKey;
         private string privateKeyContent;
         private SecureString passPhrase;
         public PrivateKeySupplier(string keyContent) : this(keyContent, null) { }
@@ -27,9 +28,19 @@ namespace Oci.Common.Auth
             this.passPhrase = StringUtils.StringToSecureString(passPhrase);
         }
 
+        public PrivateKeySupplier(RsaKeyParameters privateKey)
+        {
+            this.privateKey = privateKey;
+        }
+
         /// <summary>Retrieves the private key from a key string.</summary>
         public RsaKeyParameters GetKey()
         {
+            if (this.privateKey != null)
+            {
+                return this.privateKey;
+            }
+
             AsymmetricCipherKeyPair keyPair;
 
             try

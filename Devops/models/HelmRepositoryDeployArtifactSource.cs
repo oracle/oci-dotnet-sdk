@@ -41,6 +41,9 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "deployArtifactVersion")]
         public string DeployArtifactVersion { get; set; }
         
+        [JsonProperty(PropertyName = "helmVerificationKeySource")]
+        public VerificationKeySource HelmVerificationKeySource { get; set; }
+        
         [JsonProperty(PropertyName = "deployArtifactSourceType")]
         private readonly string deployArtifactSourceType = "HELM_CHART";
     }

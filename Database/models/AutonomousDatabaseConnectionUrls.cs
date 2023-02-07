@@ -54,6 +54,12 @@ namespace Oci.DatabaseService.Models
         public string MongoDbUrl { get; set; }
         
         /// <value>
+        /// The URL of the Oracle Machine Learning (OML) Notebook for the Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "machineLearningNotebookUrl")]
+        public string MachineLearningNotebookUrl { get; set; }
+        
+        /// <value>
         /// The Oracle REST Data Services (ORDS) URL of the Web Access for the Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "ordsUrl")]

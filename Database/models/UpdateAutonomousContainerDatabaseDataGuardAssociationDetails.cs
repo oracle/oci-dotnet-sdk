@@ -28,6 +28,36 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "isAutomaticFailoverEnabled")]
         public System.Nullable<bool> IsAutomaticFailoverEnabled { get; set; }
+                ///
+        /// <value>
+        /// The protection mode of this Autonomous Data Guard association. For more information, see
+        /// [Oracle Data Guard Protection Modes](http://docs.oracle.com/database/122/SBYDB/oracle-data-guard-protection-modes.htm#SBYDB02000)
+        /// in the Oracle Data Guard documentation.
+        /// 
+        /// </value>
+        ///
+        public enum ProtectionModeEnum {
+            [EnumMember(Value = "MAXIMUM_AVAILABILITY")]
+            MaximumAvailability,
+            [EnumMember(Value = "MAXIMUM_PERFORMANCE")]
+            MaximumPerformance
+        };
+
+        /// <value>
+        /// The protection mode of this Autonomous Data Guard association. For more information, see
+        /// [Oracle Data Guard Protection Modes](http://docs.oracle.com/database/122/SBYDB/oracle-data-guard-protection-modes.htm#SBYDB02000)
+        /// in the Oracle Data Guard documentation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "protectionMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
+        
+        /// <value>
+        /// The lag time for my preference based on data loss tolerance in seconds.
+        /// </value>
+        [JsonProperty(PropertyName = "fastStartFailOverLagLimitInSeconds")]
+        public System.Nullable<int> FastStartFailOverLagLimitInSeconds { get; set; }
         
     }
 }

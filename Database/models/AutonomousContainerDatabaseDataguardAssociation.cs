@@ -57,7 +57,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "STANDBY")]
             Standby,
             [EnumMember(Value = "DISABLED_STANDBY")]
-            DisabledStandby
+            DisabledStandby,
+            [EnumMember(Value = "SNAPSHOT_STANDBY")]
+            SnapshotStandby
         };
 
         /// <value>
@@ -93,7 +95,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "FAILED")]
             Failed,
             [EnumMember(Value = "UNAVAILABLE")]
-            Unavailable
+            Unavailable,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>
@@ -141,7 +145,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "STANDBY")]
             Standby,
             [EnumMember(Value = "DISABLED_STANDBY")]
-            DisabledStandby
+            DisabledStandby,
+            [EnumMember(Value = "SNAPSHOT_STANDBY")]
+            SnapshotStandby
         };
 
         /// <value>
@@ -177,7 +183,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "FAILED")]
             Failed,
             [EnumMember(Value = "UNAVAILABLE")]
-            Unavailable
+            Unavailable,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>
@@ -213,6 +221,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "protectionMode")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProtectionModeEnum> ProtectionMode { get; set; }
+        
+        /// <value>
+        /// The lag time for my preference based on data loss tolerance in seconds.
+        /// </value>
+        [JsonProperty(PropertyName = "fastStartFailOverLagLimitInSeconds")]
+        public System.Nullable<int> FastStartFailOverLagLimitInSeconds { get; set; }
         
         /// <value>
         /// The lag time between updates to the primary Autonomous Container Database and application of the redo data on the standby Autonomous Container Database,

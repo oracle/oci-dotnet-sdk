@@ -62,5 +62,17 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
+        /// <value>
+        /// Compute used by database tools.
+        /// </value>
+        [JsonProperty(PropertyName = "computeCount")]
+        public System.Nullable<float> ComputeCount { get; set; }
+        
+        /// <value>
+        /// The max idle time, in minutes, after which the VM used by database tools will be terminated.
+        /// </value>
+        [JsonProperty(PropertyName = "maxIdleTimeInMinutes")]
+        public System.Nullable<int> MaxIdleTimeInMinutes { get; set; }
+        
     }
 }
