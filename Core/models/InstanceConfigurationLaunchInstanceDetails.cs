@@ -214,7 +214,7 @@ namespace Oci.CoreService.Models
         public string FaultDomain { get; set; }
         
         /// <value>
-        /// The OCID of dedicated VM host.
+        /// The OCID of the dedicated virtual machine host to place the instance on.
         /// <br/>
         /// Dedicated VM hosts can be used when launching individual instances from an instance configuration. They
         /// cannot be used to launch instance pools.

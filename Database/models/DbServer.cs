@@ -72,6 +72,20 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> VmClusterIds { get; set; }
         
         /// <value>
+        /// The list of [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous VM Clusters associated with the Db server.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousVmClusterIds")]
+        public System.Collections.Generic.List<string> AutonomousVmClusterIds { get; set; }
+        
+        /// <value>
+        /// The list of [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Virtual Machines associated with the Db server.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousVirtualMachineIds")]
+        public System.Collections.Generic.List<string> AutonomousVirtualMachineIds { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Db nodes associated with the Db server.
         /// 
         /// </value>

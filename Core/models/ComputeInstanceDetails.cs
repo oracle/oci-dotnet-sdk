@@ -21,12 +21,18 @@ namespace Oci.CoreService.Models
     public class ComputeInstanceDetails : InstanceConfigurationInstanceDetails
     {
         
+        /// <value>
+        /// Block volume parameters.
+        /// </value>
         [JsonProperty(PropertyName = "blockVolumes")]
         public System.Collections.Generic.List<InstanceConfigurationBlockVolumeDetails> BlockVolumes { get; set; }
         
         [JsonProperty(PropertyName = "launchDetails")]
         public InstanceConfigurationLaunchInstanceDetails LaunchDetails { get; set; }
         
+        /// <value>
+        /// Secondary VNIC parameters.
+        /// </value>
         [JsonProperty(PropertyName = "secondaryVnics")]
         public System.Collections.Generic.List<InstanceConfigurationAttachVnicDetails> SecondaryVnics { get; set; }
         

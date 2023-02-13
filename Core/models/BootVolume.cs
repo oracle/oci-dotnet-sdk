@@ -201,7 +201,7 @@ namespace Oci.CoreService.Models
         public string VolumeGroupId { get; set; }
         
         /// <value>
-        /// The OCID of the Key Management master encryption key assigned to the boot volume.
+        /// The OCID of the Vault service master encryption key assigned to the boot volume.
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }

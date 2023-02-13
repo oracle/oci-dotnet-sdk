@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The Key Management master encryption key associated with this volume.
+    /// The Vault service master encryption key associated with this volume.
     /// 
     /// </summary>
     public class VolumeKmsKey 
     {
         
         /// <value>
-        /// The OCID of the Key Management key assigned to this volume. If the volume is not using Key Management, then the `kmsKeyId` will be a null string.
+        /// The OCID of the Vault service key assigned to this volume. If the volume is not using Vault service, then the `kmsKeyId` will be a null string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]

@@ -58,7 +58,7 @@ namespace Oci.CoreService.Models
         public CreateVnicDetails CreateVnicDetails { get; set; }
         
         /// <value>
-        /// The OCID of the dedicated VM host.
+        /// The OCID of the dedicated virtual machine host to place the instance on.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dedicatedVmHostId")]

@@ -638,6 +638,55 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAutonomousVirtualMachines operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAutonomousVirtualMachinesResponse> ListAutonomousVirtualMachinesResponseEnumerator(ListAutonomousVirtualMachinesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAutonomousVirtualMachinesRequest, ListAutonomousVirtualMachinesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAutonomousVirtualMachines(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AutonomousVirtualMachineSummary objects
+        /// contained in responses from the ListAutonomousVirtualMachines operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AutonomousVirtualMachineSummary> ListAutonomousVirtualMachinesRecordEnumerator(ListAutonomousVirtualMachinesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAutonomousVirtualMachinesRequest, ListAutonomousVirtualMachinesResponse, AutonomousVirtualMachineSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAutonomousVirtualMachines(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListAutonomousVmClusters operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

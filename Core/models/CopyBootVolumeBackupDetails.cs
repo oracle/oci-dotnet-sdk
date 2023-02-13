@@ -40,13 +40,13 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the Key Management key in the destination region which will be the master encryption key
+        /// The OCID of the Vault service key in the destination region which will be the master encryption key
         /// for the copied boot volume backup. If you do not specify this attribute the boot volume backup
         /// will be encrypted with the Oracle-provided encryption key when it is copied to the destination region.
         /// <br/>
         /// 
-        /// For more information about the Key Management service and encryption keys, see
-        /// [Overview of Key Management](https://docs.cloud.oracle.com/iaas/Content/KeyManagement/Concepts/keyoverview.htm) and
+        /// For more information about the Vault service and encryption keys, see
+        /// [Overview of Vault service](https://docs.cloud.oracle.com/iaas/Content/KeyManagement/Concepts/keyoverview.htm) and
         /// [Using Keys](https://docs.cloud.oracle.com/iaas/Content/KeyManagement/Tasks/usingkeys.htm).
         /// 
         /// </value>

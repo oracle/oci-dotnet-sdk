@@ -778,64 +778,6 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Generates a new compute capacity availability report for the availability domain.
-        /// A compute capacity report lets you review capacity availability for the provided shapes.
-        /// 
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/CreateComputeCapacityReport.cs.html">here</a> to see an example of how to use CreateComputeCapacityReport API.</example>
-        public async Task<CreateComputeCapacityReportResponse> CreateComputeCapacityReport(CreateComputeCapacityReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called createComputeCapacityReport");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/computeCapacityReports".Trim('/')));
-            HttpMethod method = new HttpMethod("POST");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "Compute",
-                    OperationName = "CreateComputeCapacityReport",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/ComputeCapacityReport/CreateComputeCapacityReport",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<CreateComputeCapacityReportResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"CreateComputeCapacityReport failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
         /// Creates a new compute capacity reservation in the specified compartment and availability domain.
         /// Compute capacity reservations let you reserve instances in a compartment.
         /// When you launch an instance using this reservation, you are assured that you have enough space for your instance,
@@ -2540,6 +2482,10 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Gets information about the specified instance.
+        /// &lt;br/&gt;
+        /// **Note:** To retrieve public and private IP addresses for an instance, use the {@link #listVnicAttachments(ListVnicAttachmentsRequest) listVnicAttachments}
+        /// operation to get the VNIC ID for the instance, and then call {@link #getVnic(GetVnicRequest) getVnic} with the VNIC ID.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2651,7 +2597,9 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Gets the maximum possible date that a maintenance reboot can be extended.
+        /// Gets the maximum possible date that a maintenance reboot can be extended. For more information, see
+        /// [Infrastructure Maintenance](https://docs.cloud.oracle.com/iaas/Content/Compute/References/infrastructure-maintenance.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2969,7 +2917,8 @@ namespace Oci.CoreService
         /// For more information, see [Performing a Diagnostic Reboot](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/diagnostic-reboot.htm).
         /// &lt;br/&gt;
         /// 
-        /// - **REBOOTMIGRATE** - Powers off the instance, moves it to new hardware, and then powers it back on.
+        /// - **REBOOTMIGRATE** - Powers off the instance, moves it to new hardware, and then powers it back on. For more information, see
+        /// [Infrastructure Maintenance](https://docs.cloud.oracle.com/iaas/Content/Compute/References/infrastructure-maintenance.htm).
         /// &lt;br/&gt;
         /// 
         /// For more information about managing instance lifecycle states, see
@@ -4045,7 +3994,7 @@ namespace Oci.CoreService
         /// [platform images](https://docs.cloud.oracle.com/iaas/Content/Compute/References/images.htm) and
         /// [custom images](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingcustomimages.htm).
         /// The list of platform images includes the three most recently published versions
-        /// of each major distribution.
+        /// of each major distribution. The list does not support filtering based on image tags.
         /// &lt;br/&gt;
         /// The list of images returned is ordered to first show the recent platform images,
         /// then all of the custom images.
@@ -4226,6 +4175,9 @@ namespace Oci.CoreService
         /// Lists the instances in the specified compartment and the specified availability domain.
         /// You can filter the results by specifying an instance name (the list will include all the identically-named
         /// instances in the compartment).
+        /// &lt;br/&gt;
+        /// **Note:** To retrieve public and private IP addresses for an instance, use the {@link #listVnicAttachments(ListVnicAttachmentsRequest) listVnicAttachments}
+        /// operation to get the VNIC ID for the instance, and then call {@link #getVnic(GetVnicRequest) getVnic} with the VNIC ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4516,14 +4468,15 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Terminates the specified instance. Any attached VNICs and volumes are automatically detached
+        /// Terminates (deletes) the specified instance. Any attached VNICs and volumes are automatically detached
         /// when the instance terminates.
-        ///   
+        /// &lt;br/&gt;
         /// To preserve the boot volume associated with the instance, specify &#x60;true&#x60; for &#x60;PreserveBootVolumeQueryParam&#x60;.
         /// To delete the boot volume when the instance is deleted, specify &#x60;false&#x60; or do not specify a value for &#x60;PreserveBootVolumeQueryParam&#x60;.
         /// &lt;br/&gt;
-        /// This is an asynchronous operation. The instance&#39;s &#x60;lifecycleState&#x60; will change to TERMINATING temporarily
-        /// until the instance is completely removed.
+        /// This is an asynchronous operation. The instance&#39;s &#x60;lifecycleState&#x60; changes to TERMINATING temporarily
+        /// until the instance is completely deleted. After the instance is deleted, the record remains visible in the list of instances
+        /// with the state TERMINATED for at least 12 hours, but no further action is needed.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

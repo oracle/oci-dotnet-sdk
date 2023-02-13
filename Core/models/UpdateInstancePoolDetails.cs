@@ -69,6 +69,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The number of instances that should be in the instance pool.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "size")]
         public System.Nullable<int> Size { get; set; }

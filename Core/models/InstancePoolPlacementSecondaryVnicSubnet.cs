@@ -22,7 +22,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The display name of the VNIC. This is also use to match against the instance configuration defined
+        /// The display name of the VNIC. This is also used to match against the instance configuration defined
         /// secondary VNIC.
         /// 
         /// </value>

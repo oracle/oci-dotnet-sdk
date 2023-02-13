@@ -141,6 +141,12 @@ namespace Oci.DatabaseService.Models
         public MaintenanceWindow MaintenanceWindowDetails { get; set; }
         
         /// <value>
+        /// The list of [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Db servers.
+        /// </value>
+        [JsonProperty(PropertyName = "dbServers")]
+        public System.Collections.Generic.List<string> DbServers { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>
