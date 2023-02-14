@@ -37,7 +37,7 @@ namespace Oci.CoreService.Models
         public string ImageId { get; set; }
         
         /// <value>
-        /// The OCID of the Key Management key to assign as the master encryption key for the boot volume.
+        /// The OCID of the Vault service key to assign as the master encryption key for the boot volume.
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }

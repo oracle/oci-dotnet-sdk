@@ -108,7 +108,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> IsHydrated { get; set; }
         
         /// <value>
-        /// The OCID of the Key Management key which is the master encryption key for the volume.
+        /// The OCID of the Vault service key which is the master encryption key for the volume.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]

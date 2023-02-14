@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Parameters for the softReset {@link #instanceAction(InstanceActionRequest) instanceAction}. If omitted, default values are used.
+    /// Parameters for the `softReset` {@link #instanceAction(InstanceActionRequest) instanceAction}. If omitted, default values are used.
     /// 
     /// </summary>
     public class SoftResetActionDetails : InstancePowerActionDetails

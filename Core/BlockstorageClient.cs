@@ -1206,7 +1206,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Removes the specified boot volume&#39;s assigned Key Management encryption key.
+        /// Removes the specified boot volume&#39;s assigned Vault Service encryption key.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1612,7 +1612,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Removes the specified volume&#39;s assigned Key Management encryption key.
+        /// Removes the specified volume&#39;s assigned Vault service encryption key.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1837,7 +1837,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Gets the Key Management encryption key assigned to the specified boot volume.
+        /// Gets the Vault service encryption key assigned to the specified boot volume.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2401,7 +2401,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Gets the Key Management encryption key assigned to the specified volume.
+        /// Gets the Vault service encryption key assigned to the specified volume.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3148,7 +3148,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Updates the specified volume with a new Key Management master encryption key.
+        /// Updates the specified volume with a new Vault service master encryption key.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

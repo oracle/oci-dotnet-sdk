@@ -3264,6 +3264,34 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAutonomousVirtualMachineRequest, GetAutonomousVirtualMachineResponse> ForAutonomousVirtualMachine(GetAutonomousVirtualMachineRequest request, params AutonomousVirtualMachine.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForAutonomousVirtualMachine(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAutonomousVirtualMachineRequest, GetAutonomousVirtualMachineResponse> ForAutonomousVirtualMachine(GetAutonomousVirtualMachineRequest request, WaiterConfiguration config, params AutonomousVirtualMachine.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetAutonomousVirtualMachineRequest, GetAutonomousVirtualMachineResponse>(
+                request,
+                request => client.GetAutonomousVirtualMachine(request),
+                response => targetStates.Contains(response.AutonomousVirtualMachine.LifecycleState.Value),
+                targetStates.Contains(AutonomousVirtualMachine.LifecycleStateEnum.Terminated)
+            );
+            return new Waiter<GetAutonomousVirtualMachineRequest, GetAutonomousVirtualMachineResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetAutonomousVmClusterRequest, GetAutonomousVmClusterResponse> ForAutonomousVmCluster(GetAutonomousVmClusterRequest request, params AutonomousVmCluster.LifecycleStateEnum[] targetStates)
         {
             return this.ForAutonomousVmCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

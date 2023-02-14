@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Parameters for the rebootMigrate {@link #instanceAction(InstanceActionRequest) instanceAction}.
+    /// Parameters for the `rebootMigrate` {@link #instanceAction(InstanceActionRequest) instanceAction}.
     /// 
     /// </summary>
     public class RebootMigrateActionDetails : InstancePowerActionDetails
@@ -31,9 +31,10 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> DeleteLocalStorage { get; set; }
         
         /// <value>
-        /// If present, this parameter will set (or re-set) the scheduled time that the instance will be reboot 
+        /// If present, this parameter will set (or reset) the scheduled time that the instance will be reboot
         /// migrated in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).  This will also change
-        /// the timeRebootMigrationDue field on the instance.  
+        /// the `timeMaintenanceRebootDue` field on the instance.
+        /// <br/>
         /// If not present, the reboot migration will be triggered immediately.
         /// 
         /// </value>

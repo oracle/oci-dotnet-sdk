@@ -240,6 +240,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "availableDataStorageSizeInTBs")]
         public System.Double AvailableDataStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// The number of nodes in the Autonomous VM Cluster.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nodeCount")]
+        public System.Nullable<int> NodeCount { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to the Autonomous VM cluster. The default is LICENSE_INCLUDED.
@@ -280,6 +287,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// The list of [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Db servers.
+        /// </value>
+        [JsonProperty(PropertyName = "dbServers")]
+        public System.Collections.Generic.List<string> DbServers { get; set; }
         
         /// <value>
         /// CPU cores that continue to be included in the count of OCPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available OCPUs at its parent AVMC level by restarting the Autonomous Container Database.

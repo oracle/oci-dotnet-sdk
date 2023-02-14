@@ -493,7 +493,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Create an instance pool.
+        /// Creates an instance pool.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1000,11 +1001,11 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Launches an instance from an instance configuration.
+        /// Creates an instance from an instance configuration.
         /// &lt;br/&gt;
         /// If the instance configuration does not include all of the parameters that are
-        /// required to launch an instance, such as the availability domain and subnet ID, you must
-        /// provide these parameters when you launch an instance from the instance configuration.
+        /// required to create an instance, such as the availability domain and subnet ID, you must
+        /// provide these parameters when you create an instance from the instance configuration.
         /// For more information, see the {@link InstanceConfiguration}
         /// resource.
         /// 

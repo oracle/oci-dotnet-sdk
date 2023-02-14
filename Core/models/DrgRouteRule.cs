@@ -38,7 +38,7 @@ namespace Oci.CoreService.Models
         public string Destination { get; set; }
                 ///
         /// <value>
-        /// The type of destination for the rule. the type is required if `direction` = `EGRESS`.
+        /// The type of destination for the rule.
         /// <br/>
         /// Allowed values:
         /// <br/>
@@ -60,7 +60,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// The type of destination for the rule. the type is required if `direction` = `EGRESS`.
+        /// The type of destination for the rule.
         /// <br/>
         /// Allowed values:
         /// <br/>

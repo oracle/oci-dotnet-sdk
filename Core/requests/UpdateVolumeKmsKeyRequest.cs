@@ -30,7 +30,7 @@ namespace Oci.CoreService.Requests
         public string VolumeId { get; set; }
         
         /// <value>
-        /// Updates the Key Management master encryption key assigned to the specified volume.
+        /// Updates the Vault service master encryption key assigned to the specified volume.
         /// </value>
         /// <remarks>
         /// Required

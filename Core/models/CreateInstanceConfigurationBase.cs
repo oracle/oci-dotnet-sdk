@@ -87,7 +87,6 @@ namespace Oci.CoreService.Models
         /// The following values are supported:
         /// <br/>
         /// * `NONE`: Creates an instance configuration using the list of settings that you specify.
-        /// <br/>
         /// * `INSTANCE`: Creates an instance configuration using an existing instance as a template.
         /// 
         /// </value>

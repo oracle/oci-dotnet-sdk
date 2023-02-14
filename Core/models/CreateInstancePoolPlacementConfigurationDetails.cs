@@ -53,7 +53,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<string> FaultDomains { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the primary subnet to place instances.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the primary subnet to place
+        /// instances.
         /// 
         /// </value>
         /// <remarks>

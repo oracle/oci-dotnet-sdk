@@ -5541,9 +5541,12 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Deletes the specified VCN. The VCN must be empty and have no attached gateways. This is an asynchronous
-        /// operation. The VCN&#39;s &#x60;lifecycleState&#x60; will change to TERMINATING temporarily until the VCN is completely
-        /// removed.
+        /// Deletes the specified VCN. The VCN must be completely empty and have no attached gateways. This is an asynchronous
+        /// operation.
+        /// &lt;br/&gt;
+        /// A deleted VCN&#39;s &#x60;lifecycleState&#x60; changes to TERMINATING and then TERMINATED temporarily until the VCN is completely
+        /// removed. A completely removed VCN does not appear in the results of a &#x60;ListVcns&#x60; operation and can&#39;t be used in a
+        /// &#x60;GetVcn&#x60; operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
