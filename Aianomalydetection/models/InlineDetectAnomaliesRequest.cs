@@ -16,8 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AianomalydetectionService.Models
 {
     /// <summary>
-    /// This is the specialised JSON format that we accept as Training data, with an additional
-    /// field for 'requestType' which is a required field used deciding whether it is an inline
+    /// This is the specialised JSON format that is accepted as training data, with an additional
+    /// field for 'requestType'. This is a required field used deciding whether it is an inline
     /// request or contains embedded data.
     /// 
     /// </summary>

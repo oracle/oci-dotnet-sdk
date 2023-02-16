@@ -52,13 +52,13 @@ namespace Oci.AianomalydetectionService.Models
         public System.Double EstimatedValue { get; set; }
         
         /// <value>
-        /// The value imputed by one of IDP step for missing values in origin data
+        /// The value imputed by an IDP step for missing values in origin data.
         /// </value>
         [JsonProperty(PropertyName = "imputedValue")]
         public System.Double ImputedValue { get; set; }
         
         /// <value>
-        /// A significant score ranged from 0 to 1 to each anomaly point
+        /// A significant score ranged from 0 to 1 to each anomaly point.
         /// </value>
         /// <remarks>
         /// Required

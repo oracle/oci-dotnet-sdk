@@ -16,8 +16,8 @@ using Newtonsoft.Json.Linq;
 namespace Oci.AianomalydetectionService.Models
 {
     /// <summary>
-    /// Base class for the DetectAnomalies call. It contains the identifier that will
-    /// be used for deciding what type of request this is.
+    /// Base class for the DetectAnomalies call. It contains the identifier that is 
+    /// used for deciding what type of request this is.
     /// 
     /// </summary>
     [JsonConverter(typeof(DetectAnomaliesDetailsModelConverter))]
@@ -25,7 +25,7 @@ namespace Oci.AianomalydetectionService.Models
     {
         
         /// <value>
-        /// The OCID of the trained model\u3002
+        /// The OCID of the trained model.
         /// </value>
         /// <remarks>
         /// Required
@@ -35,8 +35,8 @@ namespace Oci.AianomalydetectionService.Models
         public string ModelId { get; set; }
                 ///
         /// <value>
-        /// Type of request. This parameter will be filled autmatically by classes generated
-        /// by the SDK. For raw curl request, user will have to provide this field.
+        /// Type of request. This parameter is automatically populated by classes generated
+        /// by the SDK. For raw curl requests, you must provide this field.
         /// 
         /// </value>
         ///
@@ -47,6 +47,12 @@ namespace Oci.AianomalydetectionService.Models
             Base64Encoded
         };
 
+        
+        /// <value>
+        /// Sensitivity of the algorithm to detect anomalies - higher the value, more anomalies get flagged. The value estimated during training is used by default. You can choose to provide a custom value.
+        /// </value>
+        [JsonProperty(PropertyName = "sensitivity")]
+        public System.Nullable<float> Sensitivity { get; set; }
         
     }
 

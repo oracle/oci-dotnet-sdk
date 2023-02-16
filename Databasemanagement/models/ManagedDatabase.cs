@@ -121,6 +121,20 @@ namespace Oci.DatabasemanagementService.Models
         public System.Collections.Generic.List<ParentGroup> ManagedDatabaseGroups { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the external
+        /// DB system that this Managed Database is part of.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dbSystemId")]
+        public string DbSystemId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the storage DB system.
+        /// </value>
+        [JsonProperty(PropertyName = "storageSystemId")]
+        public string StorageSystemId { get; set; }
+        
+        /// <value>
         /// The date and time the Managed Database was created.
         /// </value>
         /// <remarks>

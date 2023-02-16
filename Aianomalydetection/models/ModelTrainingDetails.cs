@@ -20,6 +20,27 @@ namespace Oci.AianomalydetectionService.Models
     /// </summary>
     public class ModelTrainingDetails 
     {
+                ///
+        /// <value>
+        /// User can choose specific algorithm for training.
+        /// </value>
+        ///
+        public enum AlgorithmHintEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MULTIVARIATE_MSET")]
+            MultivariateMset,
+            [EnumMember(Value = "UNIVARIATE_OCSVM")]
+            UnivariateOcsvm
+        };
+
+        /// <value>
+        /// User can choose specific algorithm for training.
+        /// </value>
+        [JsonProperty(PropertyName = "algorithmHint")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AlgorithmHintEnum> AlgorithmHint { get; set; }
         
         /// <value>
         /// A target model accuracy metric user provides as their requirement
@@ -32,6 +53,12 @@ namespace Oci.AianomalydetectionService.Models
         /// </value>
         [JsonProperty(PropertyName = "trainingFraction")]
         public System.Nullable<float> TrainingFraction { get; set; }
+        
+        /// <value>
+        /// This value would determine the window size of the training algorithm.
+        /// </value>
+        [JsonProperty(PropertyName = "windowSize")]
+        public System.Nullable<int> WindowSize { get; set; }
         
         /// <value>
         /// The list of OCIDs of the data assets to train the model. The dataAssets have to be in the same project where the ai model would reside.

@@ -36,6 +36,33 @@ namespace Oci.AianomalydetectionService.Models
         /// </value>
         [JsonProperty(PropertyName = "multivariateFap")]
         public System.Nullable<float> MultivariateFap { get; set; }
+                ///
+        /// <value>
+        /// Actual algorithm used to train the model
+        /// </value>
+        ///
+        public enum AlgorithmEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MULTIVARIATE_MSET")]
+            MultivariateMset,
+            [EnumMember(Value = "UNIVARIATE_OCSVM")]
+            UnivariateOcsvm
+        };
+
+        /// <value>
+        /// Actual algorithm used to train the model
+        /// </value>
+        [JsonProperty(PropertyName = "algorithm")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
+        
+        /// <value>
+        /// Window size defined during training or deduced by the algorithm.
+        /// </value>
+        [JsonProperty(PropertyName = "windowSize")]
+        public System.Nullable<int> WindowSize { get; set; }
         
         /// <value>
         /// A boolean value to indicate if train goal/targetFap is achieved for trained model
