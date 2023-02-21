@@ -22,6 +22,22 @@ namespace Oci.DatabasemanagementService.Models
       [EnumMember(Value = "CREATE_DB_MANAGEMENT_PRIVATE_ENDPOINT")]
       CreateDbManagementPrivateEndpoint,
       [EnumMember(Value = "DELETE_DB_MANAGEMENT_PRIVATE_ENDPOINT")]
-      DeleteDbManagementPrivateEndpoint
+      DeleteDbManagementPrivateEndpoint,
+      [EnumMember(Value = "CREATE_DB_SYSTEM_DISCOVERY")]
+      CreateDbSystemDiscovery,
+      [EnumMember(Value = "CREATE_DB_SYSTEM")]
+      CreateDbSystem,
+      [EnumMember(Value = "UPDATE_DB_SYSTEM")]
+      UpdateDbSystem,
+      [EnumMember(Value = "DB_SYSTEM_ENABLE_DBMGMT")]
+      DbSystemEnableDbmgmt,
+      [EnumMember(Value = "DB_SYSTEM_DISABLE_DBMGMT")]
+      DbSystemDisableDbmgmt,
+      [EnumMember(Value = "DELETE_DB_SYSTEM")]
+      DeleteDbSystem,
+      [EnumMember(Value = "UPDATE_EXTERNAL_DB_SYSTEM_CONNECTOR")]
+      UpdateExternalDbSystemConnector,
+      [EnumMember(Value = "CHANGE_EXTERNAL_DB_SYSTEM_COMPARTMENT")]
+      ChangeExternalDbSystemCompartment
   }
 }

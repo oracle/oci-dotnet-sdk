@@ -104,7 +104,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "CancelWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/WorkRequest/CancelWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -160,7 +160,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "ChangeAiPrivateEndpointCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/AiPrivateEndpoint/ChangeAiPrivateEndpointCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -216,7 +216,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "ChangeDataAssetCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DataAsset/ChangeDataAssetCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -231,6 +231,62 @@ namespace Oci.AianomalydetectionService
             catch (Exception e)
             {
                 logger.Error($"ChangeDataAssetCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Moves a asynchronous anomaly detect job resource from one compartment to another. When provided, If-Match is checked against ETag values of the resource.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/aianomalydetection/ChangeDetectAnomalyJobCompartment.cs.html">here</a> to see an example of how to use ChangeDetectAnomalyJobCompartment API.</example>
+        public async Task<ChangeDetectAnomalyJobCompartmentResponse> ChangeDetectAnomalyJobCompartment(ChangeDetectAnomalyJobCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called changeDetectAnomalyJobCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/detectAnomalyJobs/{detectAnomalyJobId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ChangeDetectAnomalyJobCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DetectAnomalyJob/ChangeDetectAnomalyJobCompartment",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ChangeDetectAnomalyJobCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeDetectAnomalyJobCompartment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -272,7 +328,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "ChangeModelCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Model/ChangeModelCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -328,7 +384,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "ChangeProjectCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Project/ChangeProjectCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -384,7 +440,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "CreateAiPrivateEndpoint",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/AiPrivateEndpoint/CreateAiPrivateEndpoint",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -441,7 +497,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "CreateDataAsset",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DataAsset/CreateDataAsset",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -456,6 +512,62 @@ namespace Oci.AianomalydetectionService
             catch (Exception e)
             {
                 logger.Error($"CreateDataAsset failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a job to perform anomaly detection.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/aianomalydetection/CreateDetectAnomalyJob.cs.html">here</a> to see an example of how to use CreateDetectAnomalyJob API.</example>
+        public async Task<CreateDetectAnomalyJobResponse> CreateDetectAnomalyJob(CreateDetectAnomalyJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called createDetectAnomalyJob");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/detectAnomalyJobs".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "CreateDetectAnomalyJob",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DetectAnomalyJob/CreateDetectAnomalyJob",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<CreateDetectAnomalyJobResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateDetectAnomalyJob failed with error: {e.Message}");
                 throw;
             }
         }
@@ -498,7 +610,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "CreateModel",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Model/CreateModel",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -555,7 +667,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "CreateProject",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Project/CreateProject",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -611,7 +723,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "DeleteAiPrivateEndpoint",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/AiPrivateEndpoint/DeleteAiPrivateEndpoint",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -667,7 +779,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "DeleteDataAsset",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DataAsset/DeleteDataAsset",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -682,6 +794,62 @@ namespace Oci.AianomalydetectionService
             catch (Exception e)
             {
                 logger.Error($"DeleteDataAsset failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes an accepted, but not started detect anomaly asynchronous job.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/aianomalydetection/DeleteDetectAnomalyJob.cs.html">here</a> to see an example of how to use DeleteDetectAnomalyJob API.</example>
+        public async Task<DeleteDetectAnomalyJobResponse> DeleteDetectAnomalyJob(DeleteDetectAnomalyJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called deleteDetectAnomalyJob");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/detectAnomalyJobs/{detectAnomalyJobId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "DeleteDetectAnomalyJob",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DetectAnomalyJob/DeleteDetectAnomalyJob",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<DeleteDetectAnomalyJobResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteDetectAnomalyJob failed with error: {e.Message}");
                 throw;
             }
         }
@@ -723,7 +891,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "DeleteModel",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Model/DeleteModel",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -779,7 +947,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "DeleteProject",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Project/DeleteProject",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -835,7 +1003,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "DetectAnomalies",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Model/DetectAnomalies",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -891,7 +1059,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "GetAiPrivateEndpoint",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/AiPrivateEndpoint/GetAiPrivateEndpoint",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -947,7 +1115,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "GetDataAsset",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DataAsset/GetDataAsset",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -962,6 +1130,62 @@ namespace Oci.AianomalydetectionService
             catch (Exception e)
             {
                 logger.Error($"GetDataAsset failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a detect anomaly asynchronous job by identifier.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/aianomalydetection/GetDetectAnomalyJob.cs.html">here</a> to see an example of how to use GetDetectAnomalyJob API.</example>
+        public async Task<GetDetectAnomalyJobResponse> GetDetectAnomalyJob(GetDetectAnomalyJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getDetectAnomalyJob");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/detectAnomalyJobs/{detectAnomalyJobId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "GetDetectAnomalyJob",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DetectAnomalyJob/GetDetectAnomalyJob",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetDetectAnomalyJobResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetDetectAnomalyJob failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1003,7 +1227,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "GetModel",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Model/GetModel",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1059,7 +1283,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "GetProject",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Project/GetProject",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1115,7 +1339,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1172,7 +1396,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "ListAiPrivateEndpoints",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/AiPrivateEndpointCollection/ListAiPrivateEndpoints",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1229,7 +1453,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "ListDataAssets",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DataAssetCollection/ListDataAssets",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1244,6 +1468,63 @@ namespace Oci.AianomalydetectionService
             catch (Exception e)
             {
                 logger.Error($"ListDataAssets failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns a list of all the Anomaly Detection jobs in the specified compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/aianomalydetection/ListDetectAnomalyJobs.cs.html">here</a> to see an example of how to use ListDetectAnomalyJobs API.</example>
+        public async Task<ListDetectAnomalyJobsResponse> ListDetectAnomalyJobs(ListDetectAnomalyJobsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listDetectAnomalyJobs");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/detectAnomalyJobs".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "ListDetectAnomalyJobs",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DetectAnomalyJobCollection/ListDetectAnomalyJobs",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListDetectAnomalyJobsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListDetectAnomalyJobs failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1286,7 +1567,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "ListModels",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Model/ListModels",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1343,7 +1624,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "ListProjects",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Project/ListProjects",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1400,7 +1681,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1457,7 +1738,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1514,7 +1795,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/WorkRequest/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1570,7 +1851,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "UpdateAiPrivateEndpoint",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/AiPrivateEndpoint/UpdateAiPrivateEndpoint",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1626,7 +1907,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "UpdateDataAsset",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DataAsset/UpdateDataAsset",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1641,6 +1922,62 @@ namespace Oci.AianomalydetectionService
             catch (Exception e)
             {
                 logger.Error($"UpdateDataAsset failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the detect anomaly asynchronous job by identifier.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/aianomalydetection/UpdateDetectAnomalyJob.cs.html">here</a> to see an example of how to use UpdateDetectAnomalyJob API.</example>
+        public async Task<UpdateDetectAnomalyJobResponse> UpdateDetectAnomalyJob(UpdateDetectAnomalyJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called updateDetectAnomalyJob");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/detectAnomalyJobs/{detectAnomalyJobId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "AnomalyDetection",
+                    OperationName = "UpdateDetectAnomalyJob",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/DetectAnomalyJob/UpdateDetectAnomalyJob",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<UpdateDetectAnomalyJobResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateDetectAnomalyJob failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1682,7 +2019,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "UpdateModel",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Model/UpdateModel",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1738,7 +2075,7 @@ namespace Oci.AianomalydetectionService
                     ServiceName = "AnomalyDetection",
                     OperationName = "UpdateProject",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/anomalydetection/20210101/Project/UpdateProject",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

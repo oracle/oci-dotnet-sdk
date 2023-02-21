@@ -62,5 +62,19 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }
         
+        /// <value>
+        /// The name of the WorkRequest resource entity.
+        /// </value>
+        [JsonProperty(PropertyName = "entityName")]
+        public string EntityName { get; set; }
+        
+        /// <value>
+        /// The dependent resources of this work request resource, these can only be provisioned
+        /// when primary resource successfully completes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "entityDependencies")]
+        public System.Collections.Generic.List<WorkRequestSubResource> EntityDependencies { get; set; }
+        
     }
 }

@@ -60,6 +60,286 @@ namespace Oci.DatabasemanagementService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalAsmRequest, GetExternalAsmResponse> ForExternalAsm(GetExternalAsmRequest request, params ExternalAsm.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalAsm(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalAsmRequest, GetExternalAsmResponse> ForExternalAsm(GetExternalAsmRequest request, WaiterConfiguration config, params ExternalAsm.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalAsmRequest, GetExternalAsmResponse>(
+                request,
+                request => client.GetExternalAsm(request),
+                response => targetStates.Contains(response.ExternalAsm.LifecycleState.Value),
+                targetStates.Contains(ExternalAsm.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalAsmRequest, GetExternalAsmResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalAsmInstanceRequest, GetExternalAsmInstanceResponse> ForExternalAsmInstance(GetExternalAsmInstanceRequest request, params ExternalAsmInstance.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalAsmInstance(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalAsmInstanceRequest, GetExternalAsmInstanceResponse> ForExternalAsmInstance(GetExternalAsmInstanceRequest request, WaiterConfiguration config, params ExternalAsmInstance.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalAsmInstanceRequest, GetExternalAsmInstanceResponse>(
+                request,
+                request => client.GetExternalAsmInstance(request),
+                response => targetStates.Contains(response.ExternalAsmInstance.LifecycleState.Value),
+                targetStates.Contains(ExternalAsmInstance.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalAsmInstanceRequest, GetExternalAsmInstanceResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalClusterRequest, GetExternalClusterResponse> ForExternalCluster(GetExternalClusterRequest request, params ExternalCluster.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalClusterRequest, GetExternalClusterResponse> ForExternalCluster(GetExternalClusterRequest request, WaiterConfiguration config, params ExternalCluster.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalClusterRequest, GetExternalClusterResponse>(
+                request,
+                request => client.GetExternalCluster(request),
+                response => targetStates.Contains(response.ExternalCluster.LifecycleState.Value),
+                targetStates.Contains(ExternalCluster.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalClusterRequest, GetExternalClusterResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalClusterInstanceRequest, GetExternalClusterInstanceResponse> ForExternalClusterInstance(GetExternalClusterInstanceRequest request, params ExternalClusterInstance.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalClusterInstance(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalClusterInstanceRequest, GetExternalClusterInstanceResponse> ForExternalClusterInstance(GetExternalClusterInstanceRequest request, WaiterConfiguration config, params ExternalClusterInstance.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalClusterInstanceRequest, GetExternalClusterInstanceResponse>(
+                request,
+                request => client.GetExternalClusterInstance(request),
+                response => targetStates.Contains(response.ExternalClusterInstance.LifecycleState.Value),
+                targetStates.Contains(ExternalClusterInstance.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalClusterInstanceRequest, GetExternalClusterInstanceResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalDbHomeRequest, GetExternalDbHomeResponse> ForExternalDbHome(GetExternalDbHomeRequest request, params ExternalDbHome.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalDbHome(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalDbHomeRequest, GetExternalDbHomeResponse> ForExternalDbHome(GetExternalDbHomeRequest request, WaiterConfiguration config, params ExternalDbHome.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalDbHomeRequest, GetExternalDbHomeResponse>(
+                request,
+                request => client.GetExternalDbHome(request),
+                response => targetStates.Contains(response.ExternalDbHome.LifecycleState.Value),
+                targetStates.Contains(ExternalDbHome.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalDbHomeRequest, GetExternalDbHomeResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalDbNodeRequest, GetExternalDbNodeResponse> ForExternalDbNode(GetExternalDbNodeRequest request, params ExternalDbNode.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalDbNode(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalDbNodeRequest, GetExternalDbNodeResponse> ForExternalDbNode(GetExternalDbNodeRequest request, WaiterConfiguration config, params ExternalDbNode.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalDbNodeRequest, GetExternalDbNodeResponse>(
+                request,
+                request => client.GetExternalDbNode(request),
+                response => targetStates.Contains(response.ExternalDbNode.LifecycleState.Value),
+                targetStates.Contains(ExternalDbNode.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalDbNodeRequest, GetExternalDbNodeResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalDbSystemRequest, GetExternalDbSystemResponse> ForExternalDbSystem(GetExternalDbSystemRequest request, params ExternalDbSystem.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalDbSystem(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalDbSystemRequest, GetExternalDbSystemResponse> ForExternalDbSystem(GetExternalDbSystemRequest request, WaiterConfiguration config, params ExternalDbSystem.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalDbSystemRequest, GetExternalDbSystemResponse>(
+                request,
+                request => client.GetExternalDbSystem(request),
+                response => targetStates.Contains(response.ExternalDbSystem.LifecycleState.Value),
+                targetStates.Contains(ExternalDbSystem.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalDbSystemRequest, GetExternalDbSystemResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalDbSystemConnectorRequest, GetExternalDbSystemConnectorResponse> ForExternalDbSystemConnector(GetExternalDbSystemConnectorRequest request, params ExternalDbSystemConnector.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalDbSystemConnector(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalDbSystemConnectorRequest, GetExternalDbSystemConnectorResponse> ForExternalDbSystemConnector(GetExternalDbSystemConnectorRequest request, WaiterConfiguration config, params ExternalDbSystemConnector.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalDbSystemConnectorRequest, GetExternalDbSystemConnectorResponse>(
+                request,
+                request => client.GetExternalDbSystemConnector(request),
+                response => targetStates.Contains(response.ExternalDbSystemConnector.LifecycleState.Value),
+                targetStates.Contains(ExternalDbSystemConnector.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalDbSystemConnectorRequest, GetExternalDbSystemConnectorResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalDbSystemDiscoveryRequest, GetExternalDbSystemDiscoveryResponse> ForExternalDbSystemDiscovery(GetExternalDbSystemDiscoveryRequest request, params ExternalDbSystemDiscovery.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalDbSystemDiscovery(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalDbSystemDiscoveryRequest, GetExternalDbSystemDiscoveryResponse> ForExternalDbSystemDiscovery(GetExternalDbSystemDiscoveryRequest request, WaiterConfiguration config, params ExternalDbSystemDiscovery.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalDbSystemDiscoveryRequest, GetExternalDbSystemDiscoveryResponse>(
+                request,
+                request => client.GetExternalDbSystemDiscovery(request),
+                response => targetStates.Contains(response.ExternalDbSystemDiscovery.LifecycleState.Value),
+                targetStates.Contains(ExternalDbSystemDiscovery.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalDbSystemDiscoveryRequest, GetExternalDbSystemDiscoveryResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalListenerRequest, GetExternalListenerResponse> ForExternalListener(GetExternalListenerRequest request, params ExternalListener.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalListener(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalListenerRequest, GetExternalListenerResponse> ForExternalListener(GetExternalListenerRequest request, WaiterConfiguration config, params ExternalListener.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalListenerRequest, GetExternalListenerResponse>(
+                request,
+                request => client.GetExternalListener(request),
+                response => targetStates.Contains(response.ExternalListener.LifecycleState.Value),
+                targetStates.Contains(ExternalListener.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalListenerRequest, GetExternalListenerResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetJobRequest, GetJobResponse> ForJob(GetJobRequest request, params Job.LifecycleStateEnum[] targetStates)
         {
             return this.ForJob(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

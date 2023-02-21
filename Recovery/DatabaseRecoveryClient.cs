@@ -104,7 +104,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "ChangeProtectedDatabaseCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectedDatabase/ChangeProtectedDatabaseCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -160,7 +160,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "ChangeProtectionPolicyCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectionPolicy/ChangeProtectionPolicyCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -216,7 +216,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "ChangeRecoveryServiceSubnetCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/RecoveryServiceSubnet/ChangeRecoveryServiceSubnetCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -273,7 +273,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "CreateProtectedDatabase",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectedDatabase/CreateProtectedDatabase",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -330,7 +330,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "CreateProtectionPolicy",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectionPolicy/CreateProtectionPolicy",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -387,7 +387,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "CreateRecoveryServiceSubnet",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/RecoveryServiceSubnet/CreateRecoveryServiceSubnet",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -443,7 +443,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "DeleteProtectedDatabase",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectedDatabase/DeleteProtectedDatabase",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -501,7 +501,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "DeleteProtectionPolicy",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectionPolicy/DeleteProtectionPolicy",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -557,7 +557,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "DeleteRecoveryServiceSubnet",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/RecoveryServiceSubnet/DeleteRecoveryServiceSubnet",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -613,7 +613,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "FetchProtectedDatabaseConfiguration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectedDatabase/FetchProtectedDatabaseConfiguration",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -669,7 +669,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "GetProtectedDatabase",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectedDatabase/GetProtectedDatabase",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -725,7 +725,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "GetProtectionPolicy",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectionPolicy/GetProtectionPolicy",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -781,7 +781,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "GetRecoveryServiceSubnet",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/RecoveryServiceSubnet/GetRecoveryServiceSubnet",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -837,7 +837,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -894,7 +894,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "ListProtectedDatabases",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectedDatabaseCollection/ListProtectedDatabases",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -951,7 +951,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "ListProtectionPolicies",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectionPolicyCollection/ListProtectionPolicies",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1008,7 +1008,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "ListRecoveryServiceSubnets",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/RecoveryServiceSubnetCollection/ListRecoveryServiceSubnets",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1065,7 +1065,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/WorkRequestErrorCollection/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1122,7 +1122,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/WorkRequestLogEntryCollection/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1179,7 +1179,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/WorkRequestSummaryCollection/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1235,7 +1235,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "UpdateProtectedDatabase",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectedDatabase/UpdateProtectedDatabase",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1291,7 +1291,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "UpdateProtectionPolicy",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/ProtectionPolicy/UpdateProtectionPolicy",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1347,7 +1347,7 @@ namespace Oci.RecoveryService
                     ServiceName = "DatabaseRecovery",
                     OperationName = "UpdateRecoveryServiceSubnet",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/recovery-service/20210216/RecoveryServiceSubnet/UpdateRecoveryServiceSubnet",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
