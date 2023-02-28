@@ -73,5 +73,10 @@ namespace Oci.Common
 
         // OC14
         public static readonly Region EU_DCC_MILAN_1 = Register("eu-dcc-milan-1", Realm.OC14, "bgy");
+        public static readonly Region EU_DCC_MILAN_2 = Register("eu-dcc-milan-2", Realm.OC14, "mxp");
+        public static readonly Region EU_DCC_DUBLIN_2 = Register("eu-dcc-dublin-2", Realm.OC14, "snn");
+        public static readonly Region EU_DCC_RATING_2 = Register("eu-dcc-rating-2", Realm.OC14, "dtm");
+        public static readonly Region EU_DCC_RATING_1 = Register("eu-dcc-rating-1", Realm.OC14, "dus");
+        public static readonly Region EU_DCC_DUBLIN_1 = Register("eu-dcc-dublin-1", Realm.OC14, "ork");
     }
 }
