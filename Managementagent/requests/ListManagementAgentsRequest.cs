@@ -84,6 +84,12 @@ namespace Oci.ManagementagentService.Requests
         public System.Nullable<InstallTypes> InstallType { get; set; }
         
         /// <value>
+        /// Filter to return only results having the particular gatewayId.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "gatewayId", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> GatewayId { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

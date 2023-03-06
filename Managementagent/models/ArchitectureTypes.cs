@@ -16,6 +16,7 @@ namespace Oci.ManagementagentService.Models
   /// Supported architecture types.
     /// X86_64 - Package architecture is x86-64
     /// SPARC - Package architecture is SPARC
+    /// M1 - Package architecture for M1 chipset
     /// 
   /// </summary>
   public enum ArchitectureTypes {
@@ -27,6 +28,8 @@ namespace Oci.ManagementagentService.Models
       [EnumMember(Value = "SPARC")]
       Sparc,
       [EnumMember(Value = "X86")]
-      X86
+      X86,
+      [EnumMember(Value = "M1")]
+      M1
   }
 }

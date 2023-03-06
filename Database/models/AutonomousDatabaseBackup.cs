@@ -73,7 +73,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "INCREMENTAL")]
             Incremental,
             [EnumMember(Value = "FULL")]
-            Full
+            Full,
+            [EnumMember(Value = "LONGTERM")]
+            Longterm
         };
 
         /// <value>
@@ -139,7 +141,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>
@@ -189,6 +193,30 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyVersionId")]
         public string KmsKeyVersionId { get; set; }
+        
+        /// <value>
+        /// Retention period, in days, for long-term backups
+        /// </value>
+        [JsonProperty(PropertyName = "retentionPeriodInDays")]
+        public System.Nullable<int> RetentionPeriodInDays { get; set; }
+        
+        /// <value>
+        /// Timestamp until when the backup will be available
+        /// </value>
+        [JsonProperty(PropertyName = "timeAvailableTill")]
+        public System.Nullable<System.DateTime> TimeAvailableTill { get; set; }
+        
+        /// <value>
+        /// A valid Oracle Database version for Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "dbVersion")]
+        public string DbVersion { get; set; }
+        
+        /// <value>
+        /// The backup size in terrabytes (TB).
+        /// </value>
+        [JsonProperty(PropertyName = "sizeInTBs")]
+        public System.Double SizeInTBs { get; set; }
         
     }
 }

@@ -28,6 +28,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "modelConfigurationDetails")]
         public ModelConfigurationDetails ModelConfigurationDetails { get; set; }
         
+        [JsonProperty(PropertyName = "environmentConfigurationDetails")]
+        public ModelDeploymentEnvironmentConfigurationDetails EnvironmentConfigurationDetails { get; set; }
+        
         [JsonProperty(PropertyName = "deploymentType")]
         private readonly string deploymentType = "SINGLE_MODEL";
     }

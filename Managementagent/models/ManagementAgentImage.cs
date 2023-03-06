@@ -90,6 +90,9 @@ namespace Oci.ManagementagentService.Models
         [JsonProperty(PropertyName = "objectUrl")]
         public string ObjectUrl { get; set; }
         
+        [JsonProperty(PropertyName = "imageObjectStorageDetails")]
+        public ObjectDetails ImageObjectStorageDetails { get; set; }
+        
         /// <value>
         /// The current state of Management Agent Image
         /// </value>

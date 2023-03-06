@@ -115,6 +115,36 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "shapeConfig")]
         public UpdateInstanceShapeConfigDetails ShapeConfig { get; set; }
+                ///
+        /// <value>
+        /// The parameter acts as a fail-safe to prevent unwanted downtime when updating a running instance.
+        /// The default is ALLOW_DOWNTIME.
+        /// * `ALLOW_DOWNTIME` - Compute might reboot the instance while updating the instance if a reboot is required.
+        /// * `AVOID_DOWNTIME` - If the instance is in running state, Compute tries to update the instance without rebooting
+        ///                   it. If the instance requires a reboot to be updated, an error is returned and the instance
+        ///                   is not updated. If the instance is stopped, it is updated and remains in the stopped state.
+        /// 
+        /// </value>
+        ///
+        public enum UpdateOperationConstraintEnum {
+            [EnumMember(Value = "ALLOW_DOWNTIME")]
+            AllowDowntime,
+            [EnumMember(Value = "AVOID_DOWNTIME")]
+            AvoidDowntime
+        };
+
+        /// <value>
+        /// The parameter acts as a fail-safe to prevent unwanted downtime when updating a running instance.
+        /// The default is ALLOW_DOWNTIME.
+        /// * `ALLOW_DOWNTIME` - Compute might reboot the instance while updating the instance if a reboot is required.
+        /// * `AVOID_DOWNTIME` - If the instance is in running state, Compute tries to update the instance without rebooting
+        ///                   it. If the instance requires a reboot to be updated, an error is returned and the instance
+        ///                   is not updated. If the instance is stopped, it is updated and remains in the stopped state.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "updateOperationConstraint")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<UpdateOperationConstraintEnum> UpdateOperationConstraint { get; set; }
         
         [JsonProperty(PropertyName = "instanceOptions")]
         public InstanceOptions InstanceOptions { get; set; }

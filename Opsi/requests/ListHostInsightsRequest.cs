@@ -46,7 +46,7 @@ namespace Oci.OpsiService.Requests
         
         /// <value>
         /// Filter by one or more host types.
-        /// Possible values are CLOUD-HOST, EXTERNAL-HOST
+        /// Possible values are CLOUD-HOST, EXTERNAL-HOST, COMANAGED-VM-HOST, COMANAGED-BM-HOST, COMANAGED-EXACS-HOST
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostType", Oci.Common.Http.CollectionFormatType.Multi)]

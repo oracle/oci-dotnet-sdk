@@ -164,6 +164,15 @@ namespace Oci.DatabaseService.Models
         public string NcharacterSet { get; set; }
         
         /// <value>
+        /// The date and time when the next long-term backup would be created.
+        /// </value>
+        [JsonProperty(PropertyName = "nextLongTermBackupTimeStamp")]
+        public System.Nullable<System.DateTime> NextLongTermBackupTimeStamp { get; set; }
+        
+        [JsonProperty(PropertyName = "longTermBackupSchedule")]
+        public LongTermBackUpScheduleDetails LongTermBackupSchedule { get; set; }
+        
+        /// <value>
         /// Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled.
         /// 
         /// </value>
@@ -238,7 +247,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> ComputeCount { get; set; }
         
         /// <value>
-        /// Retention period, in days, for backups.
+        /// Retention period, in days, for long-term backups
         /// </value>
         [JsonProperty(PropertyName = "backupRetentionPeriodInDays")]
         public System.Nullable<int> BackupRetentionPeriodInDays { get; set; }
