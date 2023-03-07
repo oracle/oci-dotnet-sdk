@@ -147,7 +147,7 @@ namespace Oci.Common.Http
             {
                 logger.Debug("Dumping HttpResponse:\n{0}", httpResponse.ToString());
                 // Check for success immediately to avoid unnecessary processing of failure responses.
-                if (!httpResponse.IsSuccessStatusCode)
+                if (!httpResponse.IsSuccessStatusCode && httpResponse?.StatusCode != System.Net.HttpStatusCode.NotModified)
                 {
                     ResponseHelper.HandleNonSuccessfulResponse(httpResponse, apiDetails);
                 }

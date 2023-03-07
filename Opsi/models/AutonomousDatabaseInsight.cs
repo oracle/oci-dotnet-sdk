@@ -64,6 +64,24 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "dbAdditionalDetails")]
         public System.Object DbAdditionalDetails { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the OPSI private endpoint
+        /// </value>
+        [JsonProperty(PropertyName = "opsiPrivateEndpointId")]
+        public string OpsiPrivateEndpointId { get; set; }
+        
+        /// <value>
+        /// Flag is to identify if advanced features for autonomous database is enabled or not
+        /// </value>
+        [JsonProperty(PropertyName = "isAdvancedFeaturesEnabled")]
+        public System.Nullable<bool> IsAdvancedFeaturesEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "connectionDetails")]
+        public ConnectionDetails ConnectionDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "credentialDetails")]
+        public CredentialDetails CredentialDetails { get; set; }
+        
         [JsonProperty(PropertyName = "entitySource")]
         private readonly string entitySource = "AUTONOMOUS_DATABASE";
     }

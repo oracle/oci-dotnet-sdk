@@ -40,5 +40,17 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "autonomousDatabaseId")]
         public string AutonomousDatabaseId { get; set; }
         
+        /// <value>
+        /// Retention period, in days, for long-term backups
+        /// </value>
+        [JsonProperty(PropertyName = "retentionPeriodInDays")]
+        public System.Nullable<int> RetentionPeriodInDays { get; set; }
+        
+        /// <value>
+        /// Indicates whether the backup is long-term
+        /// </value>
+        [JsonProperty(PropertyName = "isLongTermBackup")]
+        public System.Nullable<bool> IsLongTermBackup { get; set; }
+        
     }
 }

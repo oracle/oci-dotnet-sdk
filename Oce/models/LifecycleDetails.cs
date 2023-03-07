@@ -25,7 +25,7 @@ namespace Oci.OceService.Models
       Failover,
       [EnumMember(Value = "DOWN")]
       Down,
-      [EnumMember(Value = "ACTIVE")]
-      Active
+      [EnumMember(Value = "PRIMARY")]
+      Primary
   }
 }

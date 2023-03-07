@@ -1634,6 +1634,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteAutonomousDatabaseBackupRequest, DeleteAutonomousDatabaseBackupResponse> ForDeleteAutonomousDatabaseBackup(DeleteAutonomousDatabaseBackupRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForDeleteAutonomousDatabaseBackup(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteAutonomousDatabaseBackupRequest, DeleteAutonomousDatabaseBackupResponse> ForDeleteAutonomousDatabaseBackup(DeleteAutonomousDatabaseBackupRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<DeleteAutonomousDatabaseBackupRequest, DeleteAutonomousDatabaseBackupResponse>(() =>
+            {
+                var response = client.DeleteAutonomousDatabaseBackup(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<DeleteAutonomousVmClusterRequest, DeleteAutonomousVmClusterResponse> ForDeleteAutonomousVmCluster(DeleteAutonomousVmClusterRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForDeleteAutonomousVmCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -5391,6 +5423,38 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateAutonomousDatabaseRequest, UpdateAutonomousDatabaseResponse>(() =>
             {
                 var response = client.UpdateAutonomousDatabase(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateAutonomousDatabaseBackupRequest, UpdateAutonomousDatabaseBackupResponse> ForUpdateAutonomousDatabaseBackup(UpdateAutonomousDatabaseBackupRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateAutonomousDatabaseBackup(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateAutonomousDatabaseBackupRequest, UpdateAutonomousDatabaseBackupResponse> ForUpdateAutonomousDatabaseBackup(UpdateAutonomousDatabaseBackupRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateAutonomousDatabaseBackupRequest, UpdateAutonomousDatabaseBackupResponse>(() =>
+            {
+                var response = client.UpdateAutonomousDatabaseBackup(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

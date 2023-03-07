@@ -1023,12 +1023,10 @@ namespace Oci.AilanguageService
         }
 
         /// <summary>
-        /// **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
-        /// We recommend you replace this API with the batch API, [BatchDetectDominantLanguage](https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectDominantLanguage/BatchDetectDominantLanguage).
+        /// This API will be retired on Monday, 10 Oct 2023 00:00:00 GMT
+        /// The API returns the detected language and a related confidence score (between 0 and 1).
         /// &lt;br/&gt;
-        /// The DetectDominantLanguage API returns the detected language and a related confidence score (between 0 and 1).
-        /// &lt;br/&gt;
-        /// [List of supported languages](https://docs.cloud.oracle.com/iaas/language/using/pretrain-models.htm#lang-detect)
+        /// [List of supported languages.](https://docs.cloud.oracle.com/iaas/language/using/pretrain-models.htm#lang-detect)
         /// &lt;br/&gt;
         /// Limitations:
         /// - A record may be up to 1000 characters long.
@@ -1088,10 +1086,8 @@ namespace Oci.AilanguageService
         }
 
         /// <summary>
-        /// **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
-        /// We recommend you replace this API with the batch API, [BatchDetectLanguageEntities](https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageEntities/BatchDetectLanguageEntities).
-        /// &lt;br/&gt;
-        /// The DetectLanguageEntities API extracts entities in text records. For each entity, its type and confidence score (between 0 and 1) is returned.
+        /// This API will be retired on Monday, 10 Oct 2023 00:00:00 GMT
+        /// The API extracts entities in text records. For each entity, its type and confidence score (between 0 and 1) is returned.
         /// &lt;br/&gt;
         /// Limitations:
         /// - A text may be up to 1000 characters long.
@@ -1151,10 +1147,8 @@ namespace Oci.AilanguageService
         }
 
         /// <summary>
-        /// **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
-        /// We recommend you replace this API with the batch API, [BatchDetectLanguageKeyPhrases](https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageKeyPhrases/BatchDetectLanguageKeyPhrases).
-        /// &lt;br/&gt;
-        /// The DetectLanguageKeyPhrases API extracts key-phrases in text records. For each key-phrase, a score (between 0 and 1) is returned that highlights the importance of the key-phrase in the context of the text.
+        /// This API will be retired on Monday, 10 Oct 2023 00:00:00 GMT
+        /// The API extracts key-phrases in text records. For each key-phrase, a score (between 0 and 1) is returned that highlights the importance of the key-phrase in the context of the text.
         /// &lt;br/&gt;
         /// Limitations:
         /// - A record may be up to 1000 characters long.
@@ -1214,10 +1208,8 @@ namespace Oci.AilanguageService
         }
 
         /// <summary>
-        /// **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
-        /// We recommend you replace this API with the batch API, [BatchDetectLanguageSentiments](https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageSentiments/BatchDetectLanguageSentiments).
-        /// &lt;br/&gt;
-        /// The DetectLanguageSentiments API extracts aspect-based in text records.
+        /// This API will be retired on Monday, 10 Oct 2023 00:00:00 GMT
+        /// The API extracts aspect-based in text records.
         /// &lt;br/&gt;
         /// For aspect-based sentiment analysis, a set of aspects and their respective sentiment is returned.
         /// &lt;br/&gt;
@@ -1283,10 +1275,8 @@ namespace Oci.AilanguageService
         }
 
         /// <summary>
-        /// **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
-        /// We recommend you replace this API with the batch API, [BatchDetectLanguageTextClassification](https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageTextClassification/BatchDetectLanguageTextClassification).
-        /// &lt;br/&gt;
-        /// The DetectLanguageTextClassification API automatically classifies text into a set of pre-determined classes and sub-classes. A single class/subclass is returned for each record classified.
+        /// This API will be retired on Monday, 10 Oct 2023 00:00:00 GMT
+        /// The API automatically classifies text into a set of pre-determined classes and sub-classes. A single class/subclass is returned for each record classified.
         /// &lt;br/&gt;
         /// Learn more about text classification [here](https://docs.cloud.oracle.com/iaas/language/using/pretrain-models.htm#text-class).
         /// &lt;br/&gt;

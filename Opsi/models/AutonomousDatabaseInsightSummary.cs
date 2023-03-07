@@ -27,6 +27,12 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "databaseResourceType")]
         public string DatabaseResourceType { get; set; }
         
+        /// <value>
+        /// Flag is to identify if advanced features for autonomous database is enabled or not
+        /// </value>
+        [JsonProperty(PropertyName = "isAdvancedFeaturesEnabled")]
+        public System.Nullable<bool> IsAdvancedFeaturesEnabled { get; set; }
+        
         [JsonProperty(PropertyName = "entitySource")]
         private readonly string entitySource = "AUTONOMOUS_DATABASE";
     }

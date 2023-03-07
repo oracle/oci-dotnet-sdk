@@ -235,5 +235,12 @@ namespace Oci.OpsiService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vmclusterName", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> VmclusterName { get; set; }
+        
+        /// <value>
+        /// Filter by one or more cdb name.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "cdbName", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> CdbName { get; set; }
     }
 }
