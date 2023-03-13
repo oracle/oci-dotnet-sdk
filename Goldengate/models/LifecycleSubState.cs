@@ -33,6 +33,8 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "RESTORING")]
       Restoring,
       [EnumMember(Value = "BACKUP_IN_PROGRESS")]
-      BackupInProgress
+      BackupInProgress,
+      [EnumMember(Value = "ROLLBACK_IN_PROGRESS")]
+      RollbackInProgress
   }
 }

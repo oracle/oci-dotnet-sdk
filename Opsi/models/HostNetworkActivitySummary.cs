@@ -23,6 +23,12 @@ namespace Oci.OpsiService.Models
     {
         
         /// <value>
+        /// Name of the network interface
+        /// </value>
+        [JsonProperty(PropertyName = "interfaceName")]
+        public string InterfaceName { get; set; }
+        
+        /// <value>
         /// All network interfaces read rate in Mbps
         /// </value>
         [JsonProperty(PropertyName = "allNetworkReadInMbps")]

@@ -209,8 +209,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Aivision", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Aispeech", "Aispeech\OCI.DotNetSDK.Aispeech.csproj", "{337C8AEF-BA75-4A0A-A3A1-6D320A26DF90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Dataconnectivity", "Dataconnectivity\OCI.DotNetSDK.Dataconnectivity.csproj", "{81E96F0B-462B-446E-AE24-87175BDEB5D7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Stackmonitoring", "Stackmonitoring\OCI.DotNetSDK.Stackmonitoring.csproj", "{55DC4072-7655-42DF-AD92-80135CC512C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Servicemesh", "Servicemesh\OCI.DotNetSDK.Servicemesh.csproj", "{6A3467B3-0737-442E-9E42-4A499A001E82}"
@@ -256,6 +254,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Recovery", "Recovery\OCI.DotNetSDK.Recovery.csproj", "{A4CD37BD-74C2-4E3F-8F0F-D3F5474A94D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Vbsinst", "Vbsinst\OCI.DotNetSDK.Vbsinst.csproj", "{8CBFD71C-F833-4087-BB12-343845CE53FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Identitydomains", "Identitydomains\OCI.DotNetSDK.Identitydomains.csproj", "{E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
@@ -2385,5 +2385,17 @@ Global
         {8CBFD71C-F833-4087-BB12-343845CE53FC}.Release|x64.Build.0 = Release|Any CPU
         {8CBFD71C-F833-4087-BB12-343845CE53FC}.Release|x86.ActiveCfg = Release|Any CPU
         {8CBFD71C-F833-4087-BB12-343845CE53FC}.Release|x86.Build.0 = Release|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Debug|x64.Build.0 = Debug|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Debug|x86.Build.0 = Debug|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Release|Any CPU.Build.0 = Release|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Release|x64.ActiveCfg = Release|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Release|x64.Build.0 = Release|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Release|x86.ActiveCfg = Release|Any CPU
+        {E2465493-1FCE-4B3F-BC4E-C2B4A5F13A35}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

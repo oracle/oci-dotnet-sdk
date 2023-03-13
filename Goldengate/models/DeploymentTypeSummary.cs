@@ -101,5 +101,12 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "targetTechnologies")]
         public System.Collections.Generic.List<string> TargetTechnologies { get; set; }
         
+        /// <value>
+        /// Version of OGG
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "oggVersion")]
+        public string OggVersion { get; set; }
+        
     }
 }

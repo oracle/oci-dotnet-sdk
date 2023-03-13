@@ -68,7 +68,11 @@ namespace Oci.GoldengateService.Models
       GoldengateDeploymentWalletExport,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_WALLET_IMPORT")]
       GoldengateDeploymentWalletImport,
-      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_PATCH")]
-      GoldengateDeploymentPatch
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_UPGRADE_UPGRADE")]
+      GoldengateDeploymentUpgradeUpgrade,
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_UPGRADE_ROLLBACK")]
+      GoldengateDeploymentUpgradeRollback,
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_UPGRADE_SNOOZE")]
+      GoldengateDeploymentUpgradeSnooze
   }
 }

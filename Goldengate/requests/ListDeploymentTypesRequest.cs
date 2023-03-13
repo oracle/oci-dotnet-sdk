@@ -31,6 +31,20 @@ namespace Oci.GoldengateService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The type of deployment, the value determines the exact 'type' of the service executed in the deployment. Default value is DATABASE_ORACLE.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "deploymentType")]
+        public System.Nullable<DeploymentType> DeploymentType { get; set; }
+        
+        /// <value>
+        /// Allows to query by a specific GoldenGate version.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oggVersion")]
+        public string OggVersion { get; set; }
+        
+        /// <value>
         /// A filter to return only the resources that match the entire 'displayName' given.
         /// 
         /// </value>

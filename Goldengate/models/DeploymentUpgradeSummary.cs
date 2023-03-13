@@ -171,5 +171,67 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        /// <value>
+        /// Version of OGG
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "previousOggVersion")]
+        public string PreviousOggVersion { get; set; }
+        
+        /// <value>
+        /// The time of upgrade schedule. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeSchedule")]
+        public System.Nullable<System.DateTime> TimeSchedule { get; set; }
+        
+        /// <value>
+        /// Indicates if upgrade notifications are snoozed or not.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSnoozed")]
+        public System.Nullable<bool> IsSnoozed { get; set; }
+        
+        /// <value>
+        /// The time the upgrade notifications are snoozed until. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeSnoozedUntil")]
+        public System.Nullable<System.DateTime> TimeSnoozedUntil { get; set; }
+        
+        /// <value>
+        /// The time the resource was released. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeReleased")]
+        public System.Nullable<System.DateTime> TimeReleased { get; set; }
+        
+        /// <value>
+        /// The type of release.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "releaseType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ReleaseType> ReleaseType { get; set; }
+        
+        /// <value>
+        /// Indicates if OGG release contains security fix.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSecurityFix")]
+        public System.Nullable<bool> IsSecurityFix { get; set; }
+        
+        /// <value>
+        /// Indicates if rollback is allowed. In practice only the last upgrade can be rolled back.
+        /// - Manual upgrade is allowed to rollback only until the old version isn't deprecated yet.
+        /// - Automatic upgrade by default is not allowed, unless a serious issue does not justify.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isRollbackAllowed")]
+        public System.Nullable<bool> IsRollbackAllowed { get; set; }
+        
     }
 }

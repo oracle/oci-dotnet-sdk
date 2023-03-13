@@ -227,6 +227,12 @@ namespace Oci.DatabaseService.Models
         public string Version { get; set; }
         
         /// <value>
+        /// The most recent OS Patch Version applied on the DB system.
+        /// </value>
+        [JsonProperty(PropertyName = "osVersion")]
+        public string OsVersion { get; set; }
+        
+        /// <value>
         /// The number of CPU cores enabled on the DB system.
         /// </value>
         /// <remarks>

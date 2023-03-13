@@ -235,6 +235,9 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<bool> IsLatestVersion { get; set; }
         
         /// <value>
+        /// Note: Deprecated: Use timeOfNextMaintenance instead, or related upgrade records 
+        /// to check, when deployment will be forced to upgrade to a newer version.
+        /// Old description:
         /// The date the existing version in use will no longer be considered as usable
         /// and an upgrade will be required.  This date is typically 6 months after the
         /// version was released for use by GGS.  The format is defined by
@@ -277,6 +280,32 @@ namespace Oci.GoldengateService.Models
         
         [JsonProperty(PropertyName = "deploymentDiagnosticData")]
         public DeploymentDiagnosticData DeploymentDiagnosticData { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceWindow")]
+        public MaintenanceWindow MaintenanceWindow { get; set; }
+        
+        /// <value>
+        /// The time of next maintenance schedule. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfNextMaintenance")]
+        public System.Nullable<System.DateTime> TimeOfNextMaintenance { get; set; }
+        
+        /// <value>
+        /// Type of the next maintenance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nextMaintenanceActionType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<MaintenanceActionType> NextMaintenanceActionType { get; set; }
+        
+        /// <value>
+        /// Description of the next maintenance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nextMaintenanceDescription")]
+        public string NextMaintenanceDescription { get; set; }
         
     }
 }

@@ -113,5 +113,12 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "clusterPodNetworkOptions")]
         public System.Collections.Generic.List<ClusterPodNetworkOptionDetails> ClusterPodNetworkOptions { get; set; }
         
+        /// <value>
+        /// Type of cluster
+        /// </value>
+        [JsonProperty(PropertyName = "type")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ClusterType> Type { get; set; }
+        
     }
 }
