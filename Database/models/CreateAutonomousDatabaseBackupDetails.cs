@@ -52,5 +52,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isLongTermBackup")]
         public System.Nullable<bool> IsLongTermBackup { get; set; }
         
+        [JsonProperty(PropertyName = "backupDestinationDetails")]
+        public BackupDestinationDetails BackupDestinationDetails { get; set; }
+        
     }
 }

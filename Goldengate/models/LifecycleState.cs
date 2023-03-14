@@ -43,6 +43,8 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "CANCELED")]
       Canceled,
       [EnumMember(Value = "SUCCEEDED")]
-      Succeeded
+      Succeeded,
+      [EnumMember(Value = "WAITING")]
+      Waiting
   }
 }

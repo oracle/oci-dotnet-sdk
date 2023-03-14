@@ -32,6 +32,34 @@ namespace Oci.ContainerengineService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAddonRequest, GetAddonResponse> ForAddon(GetAddonRequest request, params AddonLifecycleState[] targetStates)
+        {
+            return this.ForAddon(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAddonRequest, GetAddonResponse> ForAddon(GetAddonRequest request, WaiterConfiguration config, params AddonLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetAddonRequest, GetAddonResponse>(
+                request,
+                request => client.GetAddon(request),
+                response => targetStates.Contains(response.Addon.LifecycleState.Value),
+                targetStates.Contains(AddonLifecycleState.Deleted)
+            );
+            return new Waiter<GetAddonRequest, GetAddonResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetClusterRequest, GetClusterResponse> ForCluster(GetClusterRequest request, params ClusterLifecycleState[] targetStates)
         {
             return this.ForCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -81,6 +109,62 @@ namespace Oci.ContainerengineService
                 targetStates.Contains(NodePoolLifecycleState.Deleted)
             );
             return new Waiter<GetNodePoolRequest, GetNodePoolResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetVirtualNodeRequest, GetVirtualNodeResponse> ForVirtualNode(GetVirtualNodeRequest request, params VirtualNodeLifecycleState[] targetStates)
+        {
+            return this.ForVirtualNode(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetVirtualNodeRequest, GetVirtualNodeResponse> ForVirtualNode(GetVirtualNodeRequest request, WaiterConfiguration config, params VirtualNodeLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetVirtualNodeRequest, GetVirtualNodeResponse>(
+                request,
+                request => client.GetVirtualNode(request),
+                response => targetStates.Contains(response.VirtualNode.LifecycleState.Value),
+                targetStates.Contains(VirtualNodeLifecycleState.Deleted)
+            );
+            return new Waiter<GetVirtualNodeRequest, GetVirtualNodeResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetVirtualNodePoolRequest, GetVirtualNodePoolResponse> ForVirtualNodePool(GetVirtualNodePoolRequest request, params VirtualNodePoolLifecycleState[] targetStates)
+        {
+            return this.ForVirtualNodePool(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetVirtualNodePoolRequest, GetVirtualNodePoolResponse> ForVirtualNodePool(GetVirtualNodePoolRequest request, WaiterConfiguration config, params VirtualNodePoolLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetVirtualNodePoolRequest, GetVirtualNodePoolResponse>(
+                request,
+                request => client.GetVirtualNodePool(request),
+                response => targetStates.Contains(response.VirtualNodePool.LifecycleState.Value),
+                targetStates.Contains(VirtualNodePoolLifecycleState.Deleted)
+            );
+            return new Waiter<GetVirtualNodePoolRequest, GetVirtualNodePoolResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

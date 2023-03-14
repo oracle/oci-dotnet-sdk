@@ -131,5 +131,23 @@ namespace Oci.OpsiService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "processHash")]
         public string ProcessHash { get; set; }
+        
+        ///
+        /// <value>
+        /// Choose the type of statistic metric data to be used for forecasting.
+        /// </value>
+        ///
+        public enum StatisticEnum {
+            [EnumMember(Value = "AVG")]
+            Avg,
+            [EnumMember(Value = "MAX")]
+            Max
+        };
+
+        /// <value>
+        /// Choose the type of statistic metric data to be used for forecasting.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "statistic")]
+        public System.Nullable<StatisticEnum> Statistic { get; set; }
     }
 }

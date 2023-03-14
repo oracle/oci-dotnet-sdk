@@ -18,6 +18,8 @@ namespace Oci.GoldengateService.Models
   /// </summary>
   public enum UpgradeDeploymentType {
       [EnumMember(Value = "CURRENT_RELEASE")]
-      CurrentRelease
+      CurrentRelease,
+      [EnumMember(Value = "SPECIFIC_RELEASE")]
+      SpecificRelease
   }
 }

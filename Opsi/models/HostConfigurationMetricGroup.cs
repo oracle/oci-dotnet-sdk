@@ -42,7 +42,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "HOST_NETWORK_CONFIGURATION")]
             HostNetworkConfiguration,
             [EnumMember(Value = "HOST_ENTITES")]
-            HostEntites
+            HostEntites,
+            [EnumMember(Value = "HOST_FILESYSTEM_CONFIGURATION")]
+            HostFilesystemConfiguration
         };
 
         
@@ -84,6 +86,9 @@ namespace Oci.OpsiService.Models
                     break;
                 case "HOST_PRODUCT":
                     obj = new HostProduct();
+                    break;
+                case "HOST_FILESYSTEM_CONFIGURATION":
+                    obj = new HostFilesystemConfiguration();
                     break;
                 case "HOST_NETWORK_CONFIGURATION":
                     obj = new HostNetworkConfiguration();

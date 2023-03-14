@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// Returns list of the Databases with resource statistics like usage,capacity,utilization and usage change percent.
+    /// Returns list of the Databases with resource statistics like usage, capacity, utilization and usage change percent.
     /// </summary>
     public class SummarizeDatabaseInsightResourceStatisticsAggregationCollection 
     {

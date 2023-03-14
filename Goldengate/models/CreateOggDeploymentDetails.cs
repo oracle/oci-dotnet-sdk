@@ -73,5 +73,12 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
         
+        /// <value>
+        /// Version of OGG
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "oggVersion")]
+        public string OggVersion { get; set; }
+        
     }
 }

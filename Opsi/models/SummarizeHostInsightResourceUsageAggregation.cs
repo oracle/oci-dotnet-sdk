@@ -56,7 +56,11 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "MEMORY")]
             Memory,
             [EnumMember(Value = "LOGICAL_MEMORY")]
-            LogicalMemory
+            LogicalMemory,
+            [EnumMember(Value = "STORAGE")]
+            Storage,
+            [EnumMember(Value = "NETWORK")]
+            Network
         };
 
         /// <value>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// The information of the VM Cluster which contains databases.
+    /// The information of the VM Cluster which contains databases. Either an opsiPrivateEndpointId or dbmPrivateEndpointId must be specified. If the dbmPrivateEndpointId is specified, a new Operations Insights private endpoint will be created.
     /// </summary>
     public class CreatePeComanagedExadataVmclusterDetails 
     {
@@ -34,10 +34,6 @@ namespace Oci.OpsiService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the OPSI private endpoint
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OpsiPrivateEndpointId is required.")]
         [JsonProperty(PropertyName = "opsiPrivateEndpointId")]
         public string OpsiPrivateEndpointId { get; set; }
         

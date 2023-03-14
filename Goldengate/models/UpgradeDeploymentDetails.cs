@@ -45,6 +45,9 @@ namespace Oci.GoldengateService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "SPECIFIC_RELEASE":
+                    obj = new UpgradeDeploymentSpecificReleaseDetails();
+                    break;
                 case "CURRENT_RELEASE":
                     obj = new UpgradeDeploymentCurrentReleaseDetails();
                     break;

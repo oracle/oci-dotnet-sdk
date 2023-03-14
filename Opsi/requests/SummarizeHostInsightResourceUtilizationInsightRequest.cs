@@ -31,6 +31,7 @@ namespace Oci.OpsiService.Requests
         
         /// <value>
         /// Filter by host resource metric.
+        /// Supported values are CPU, MEMORY, LOGICAL_MEMORY, STORAGE and NETWORK.
         /// 
         /// </value>
         /// <remarks>
@@ -208,5 +209,17 @@ namespace Oci.OpsiService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vmclusterName", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> VmclusterName { get; set; }
+        
+        /// <value>
+        /// Percent value in which a resource metric is considered highly utilized.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "highUtilizationThreshold")]
+        public System.Nullable<int> HighUtilizationThreshold { get; set; }
+        
+        /// <value>
+        /// Percent value in which a resource metric is considered low utilized.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lowUtilizationThreshold")]
+        public System.Nullable<int> LowUtilizationThreshold { get; set; }
     }
 }

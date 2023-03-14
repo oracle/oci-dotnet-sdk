@@ -36,7 +36,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "HOST_NETWORK_ACTIVITY_SUMMARY")]
             HostNetworkActivitySummary,
             [EnumMember(Value = "HOST_TOP_PROCESSES")]
-            HostTopProcesses
+            HostTopProcesses,
+            [EnumMember(Value = "HOST_FILESYSTEM_USAGE")]
+            HostFilesystemUsage
         };
 
         
@@ -81,6 +83,9 @@ namespace Oci.OpsiService.Models
                     break;
                 case "HOST_CPU_USAGE":
                     obj = new HostCpuUsage();
+                    break;
+                case "HOST_FILESYSTEM_USAGE":
+                    obj = new HostFilesystemUsage();
                     break;
                 case "HOST_NETWORK_ACTIVITY_SUMMARY":
                     obj = new HostNetworkActivitySummary();

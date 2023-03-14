@@ -218,5 +218,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "sizeInTBs")]
         public System.Double SizeInTBs { get; set; }
         
+        [JsonProperty(PropertyName = "backupDestinationDetails")]
+        public BackupDestinationDetails BackupDestinationDetails { get; set; }
+        
     }
 }

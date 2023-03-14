@@ -38,6 +38,8 @@ namespace Oci.CoreService.Models
         public enum TypeEnum {
             [EnumMember(Value = "AMD_MILAN_BM")]
             AmdMilanBm,
+            [EnumMember(Value = "AMD_MILAN_BM_GPU")]
+            AmdMilanBmGpu,
             [EnumMember(Value = "AMD_ROME_BM")]
             AmdRomeBm,
             [EnumMember(Value = "AMD_ROME_BM_GPU")]
@@ -109,6 +111,9 @@ namespace Oci.CoreService.Models
                     break;
                 case "INTEL_VM":
                     obj = new InstanceConfigurationIntelVmLaunchInstancePlatformConfig();
+                    break;
+                case "AMD_MILAN_BM_GPU":
+                    obj = new InstanceConfigurationAmdMilanBmGpuLaunchInstancePlatformConfig();
                     break;
                 case "INTEL_ICELAKE_BM":
                     obj = new InstanceConfigurationIntelIcelakeBmLaunchInstancePlatformConfig();

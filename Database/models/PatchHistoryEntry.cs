@@ -110,6 +110,29 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
+                ///
+        /// <value>
+        /// The type of Patch operation.
+        /// </value>
+        ///
+        public enum PatchTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "OS")]
+            Os,
+            [EnumMember(Value = "DB")]
+            Db,
+            [EnumMember(Value = "GI")]
+            Gi
+        };
+
+        /// <value>
+        /// The type of Patch operation.
+        /// </value>
+        [JsonProperty(PropertyName = "patchType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<PatchTypeEnum> PatchType { get; set; }
         
     }
 }

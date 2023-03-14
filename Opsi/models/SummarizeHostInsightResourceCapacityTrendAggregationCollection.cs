@@ -41,6 +41,26 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "TimeIntervalEnd is required.")]
         [JsonProperty(PropertyName = "timeIntervalEnd")]
         public System.Nullable<System.DateTime> TimeIntervalEnd { get; set; }
+        
+        /// <value>
+        /// Percent value in which a resource metric is considered highly utilized.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "HighUtilizationThreshold is required.")]
+        [JsonProperty(PropertyName = "highUtilizationThreshold")]
+        public System.Nullable<int> HighUtilizationThreshold { get; set; }
+        
+        /// <value>
+        /// Percent value in which a resource metric is considered lowly utilized.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LowUtilizationThreshold is required.")]
+        [JsonProperty(PropertyName = "lowUtilizationThreshold")]
+        public System.Nullable<int> LowUtilizationThreshold { get; set; }
                 ///
         /// <value>
         /// Defines the type of resource metric (CPU, Physical Memory, Logical Memory)
@@ -56,7 +76,11 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "MEMORY")]
             Memory,
             [EnumMember(Value = "LOGICAL_MEMORY")]
-            LogicalMemory
+            LogicalMemory,
+            [EnumMember(Value = "STORAGE")]
+            Storage,
+            [EnumMember(Value = "NETWORK")]
+            Network
         };
 
         /// <value>

@@ -33,6 +33,8 @@ namespace Oci.CoreService.Models
             UnknownEnumValue,
             [EnumMember(Value = "AMD_MILAN_BM")]
             AmdMilanBm,
+            [EnumMember(Value = "AMD_MILAN_BM_GPU")]
+            AmdMilanBmGpu,
             [EnumMember(Value = "AMD_ROME_BM")]
             AmdRomeBm,
             [EnumMember(Value = "AMD_ROME_BM_GPU")]

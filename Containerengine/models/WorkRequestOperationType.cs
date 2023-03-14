@@ -34,6 +34,22 @@ namespace Oci.ContainerengineService.Models
       [EnumMember(Value = "NODEPOOL_RECONCILE")]
       NodepoolReconcile,
       [EnumMember(Value = "WORKREQUEST_CANCEL")]
-      WorkrequestCancel
+      WorkrequestCancel,
+      [EnumMember(Value = "VIRTUALNODEPOOL_CREATE")]
+      VirtualnodepoolCreate,
+      [EnumMember(Value = "VIRTUALNODEPOOL_UPDATE")]
+      VirtualnodepoolUpdate,
+      [EnumMember(Value = "VIRTUALNODEPOOL_DELETE")]
+      VirtualnodepoolDelete,
+      [EnumMember(Value = "VIRTUALNODE_DELETE")]
+      VirtualnodeDelete,
+      [EnumMember(Value = "ENABLE_ADDON")]
+      EnableAddon,
+      [EnumMember(Value = "UPDATE_ADDON")]
+      UpdateAddon,
+      [EnumMember(Value = "DISABLE_ADDON")]
+      DisableAddon,
+      [EnumMember(Value = "RECONCILE_ADDON")]
+      ReconcileAddon
   }
 }

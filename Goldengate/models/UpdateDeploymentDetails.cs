@@ -106,5 +106,8 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "oggData")]
         public UpdateOggDeploymentDetails OggData { get; set; }
         
+        [JsonProperty(PropertyName = "maintenanceWindow")]
+        public UpdateMaintenanceWindowDetails MaintenanceWindow { get; set; }
+        
     }
 }

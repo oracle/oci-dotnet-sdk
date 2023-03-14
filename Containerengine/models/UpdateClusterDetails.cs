@@ -61,5 +61,12 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "imagePolicyConfig")]
         public UpdateImagePolicyConfigDetails ImagePolicyConfig { get; set; }
         
+        /// <value>
+        /// Type of cluster
+        /// </value>
+        [JsonProperty(PropertyName = "type")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ClusterType> Type { get; set; }
+        
     }
 }

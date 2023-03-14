@@ -74,7 +74,11 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "HOST_CPU_STATISTICS")]
             HostCpuStatistics,
             [EnumMember(Value = "HOST_MEMORY_STATISTICS")]
-            HostMemoryStatistics
+            HostMemoryStatistics,
+            [EnumMember(Value = "HOST_STORAGE_STATISTICS")]
+            HostStorageStatistics,
+            [EnumMember(Value = "HOST_NETWORK_STATISTICS")]
+            HostNetworkStatistics
         };
 
         
@@ -101,6 +105,12 @@ namespace Oci.OpsiService.Models
             var discriminator = jsonObject["resourceName"].Value<string>();
             switch (discriminator)
             {
+                case "HOST_NETWORK_STATISTICS":
+                    obj = new HostNetworkStatistics();
+                    break;
+                case "HOST_STORAGE_STATISTICS":
+                    obj = new HostStorageStatistics();
+                    break;
                 case "HOST_MEMORY_STATISTICS":
                     obj = new HostMemoryStatistics();
                     break;

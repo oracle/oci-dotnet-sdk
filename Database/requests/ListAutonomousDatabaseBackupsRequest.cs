@@ -98,6 +98,12 @@ namespace Oci.DatabaseService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A filter to return only backups that matches with the given type of Backup.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
+        public string Type { get; set; }
+        
+        /// <value>
         /// Unique identifier for the request.
         /// 
         /// </value>
