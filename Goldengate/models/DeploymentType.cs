@@ -26,6 +26,8 @@ namespace Oci.GoldengateService.Models
       DatabaseOracle,
       [EnumMember(Value = "BIGDATA")]
       Bigdata,
+      [EnumMember(Value = "DATABASE_MICROSOFT_SQLSERVER")]
+      DatabaseMicrosoftSqlserver,
       [EnumMember(Value = "DATABASE_MYSQL")]
       DatabaseMysql,
       [EnumMember(Value = "DATABASE_POSTGRESQL")]

@@ -241,7 +241,7 @@ namespace Oci.GoldengateService
         }
 
         /// <summary>
-        /// Note: Deprecated. Use the new resource model APIs instead.
+        /// Note: Deprecated. Use the /connections API instead.
         /// Moves the DatabaseRegistration into a different compartment within the same tenancy. When
         /// provided, If-Match is checked against ETag values of the resource.  For information about
         /// moving resources between compartments, see [Moving Resources Between
@@ -592,7 +592,7 @@ namespace Oci.GoldengateService
         }
 
         /// <summary>
-        /// Note: Deprecated. Use the new resource model APIs instead.
+        /// Note: Deprecated. Use the /connections API instead.
         /// Creates a new DatabaseRegistration.
         /// 
         /// </summary>
@@ -876,7 +876,7 @@ namespace Oci.GoldengateService
         }
 
         /// <summary>
-        /// Note: Deprecated. Use the new resource model APIs instead.
+        /// Note: Deprecated. Use the /connections API instead.
         /// Deletes a DatabaseRegistration.
         /// 
         /// </summary>
@@ -1276,7 +1276,7 @@ namespace Oci.GoldengateService
         }
 
         /// <summary>
-        /// Note: Deprecated. Use the new resource model APIs instead.
+        /// Note: Deprecated. Use the /connections API instead.
         /// Retrieves a DatabaseRegistration.
         /// 
         /// </summary>
@@ -1732,7 +1732,7 @@ namespace Oci.GoldengateService
         }
 
         /// <summary>
-        /// Note: Deprecated. Use the new resource model APIs instead.
+        /// Note: Deprecated. Use the /connections API instead.
         /// Lists the DatabaseRegistrations in the compartment.
         /// 
         /// </summary>
@@ -2815,7 +2815,7 @@ namespace Oci.GoldengateService
         }
 
         /// <summary>
-        /// Note: Deprecated. Use the new resource model APIs instead.
+        /// Note: Deprecated. Use the /connections API instead.
         /// Updates the DatabaseRegistration.
         /// 
         /// </summary>

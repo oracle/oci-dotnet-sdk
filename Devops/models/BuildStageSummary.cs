@@ -53,6 +53,9 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "primaryBuildSource")]
         public string PrimaryBuildSource { get; set; }
         
+        [JsonProperty(PropertyName = "buildRunnerShapeConfig")]
+        public BuildRunnerShapeConfig BuildRunnerShapeConfig { get; set; }
+        
         [JsonProperty(PropertyName = "privateAccessConfig")]
         public NetworkChannel PrivateAccessConfig { get; set; }
         

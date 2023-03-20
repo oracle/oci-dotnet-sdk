@@ -71,22 +71,17 @@ namespace Oci.GoldengateService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer vault being
-        /// referenced.
-        /// If provided, this will reference a vault which the customer will be required to ensure
-        /// the policies are established to permit the GoldenGate Service to manage secrets contained
-        /// within this vault.
+        /// Refers to the customer's vault OCID. 
+        /// If provided, it references a vault where GoldenGate can manage secrets. Customers must add policies to permit GoldenGate
+        /// to manage secrets contained within this vault.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer \"Master\" key being
-        /// referenced.
-        /// If provided, this will reference a key which the customer will be required to ensure
-        /// the policies are established to permit the GoldenGate Service to utilize this key to
-        /// manage secrets.
+        /// Refers to the customer's master key OCID. 
+        /// If provided, it references a key to manage secrets. Customers must add policies to permit GoldenGate to use this key.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "keyId")]
@@ -134,17 +129,35 @@ namespace Oci.GoldengateService.Models
                 case "KAFKA_SCHEMA_REGISTRY":
                     obj = new CreateKafkaSchemaRegistryConnectionDetails();
                     break;
-                case "AZURE_SYNAPSE_ANALYTICS":
-                    obj = new CreateAzureSynapseConnectionDetails();
+                case "MICROSOFT_SQLSERVER":
+                    obj = new CreateMicrosoftSqlserverConnectionDetails();
+                    break;
+                case "JAVA_MESSAGE_SERVICE":
+                    obj = new CreateJavaMessageServiceConnectionDetails();
+                    break;
+                case "SNOWFLAKE":
+                    obj = new CreateSnowflakeConnectionDetails();
                     break;
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new CreateAzureDataLakeStorageConnectionDetails();
                     break;
-                case "MYSQL":
-                    obj = new CreateMysqlConnectionDetails();
+                case "MONGODB":
+                    obj = new CreateMongoDbConnectionDetails();
+                    break;
+                case "AMAZON_S3":
+                    obj = new CreateAmazonS3ConnectionDetails();
+                    break;
+                case "HDFS":
+                    obj = new CreateHdfsConnectionDetails();
                     break;
                 case "OCI_OBJECT_STORAGE":
                     obj = new CreateOciObjectStorageConnectionDetails();
+                    break;
+                case "AZURE_SYNAPSE_ANALYTICS":
+                    obj = new CreateAzureSynapseConnectionDetails();
+                    break;
+                case "MYSQL":
+                    obj = new CreateMysqlConnectionDetails();
                     break;
                 case "KAFKA":
                     obj = new CreateKafkaConnectionDetails();
@@ -154,6 +167,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "GOLDENGATE":
                     obj = new CreateGoldenGateConnectionDetails();
+                    break;
+                case "ORACLE_NOSQL":
+                    obj = new CreateOracleNosqlConnectionDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

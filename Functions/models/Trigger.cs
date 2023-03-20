@@ -13,15 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DataintegrationService.Models
+namespace Oci.FunctionsService.Models
 {
     /// <summary>
-    /// The connection details for a Lakehouse connection.
+    /// PBF specific triggers for activating a PBF.
     /// </summary>
-    public class ConnectionFromLakehouse : Connection
+    public class Trigger 
     {
         
-        [JsonProperty(PropertyName = "modelType")]
-        private readonly string modelType = "LAKE_HOUSE_CONNECTION";
+        /// <value>
+        /// A brief descriptive name for the PBF trigger.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Name is required.")]
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+        
     }
 }

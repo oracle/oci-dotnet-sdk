@@ -21,6 +21,8 @@ namespace Oci.GoldengateService.Models
       Goldengate,
       [EnumMember(Value = "OCI_AUTONOMOUS_DATABASE")]
       OciAutonomousDatabase,
+      [EnumMember(Value = "OCI_AUTONOMOUS_JSON_DATABASE")]
+      OciAutonomousJsonDatabase,
       [EnumMember(Value = "OCI_MYSQL")]
       OciMysql,
       [EnumMember(Value = "OCI_OBJECT_STORAGE")]
@@ -31,8 +33,16 @@ namespace Oci.GoldengateService.Models
       OracleDatabase,
       [EnumMember(Value = "ORACLE_EXADATA")]
       OracleExadata,
+      [EnumMember(Value = "ORACLE_NOSQL")]
+      OracleNosql,
+      [EnumMember(Value = "ORACLE_WEBLOGIC_JMS")]
+      OracleWeblogicJms,
       [EnumMember(Value = "AMAZON_RDS_ORACLE")]
       AmazonRdsOracle,
+      [EnumMember(Value = "AMAZON_RDS_SQLSERVER")]
+      AmazonRdsSqlserver,
+      [EnumMember(Value = "AMAZON_S3")]
+      AmazonS3,
       [EnumMember(Value = "AMAZON_AURORA_MYSQL")]
       AmazonAuroraMysql,
       [EnumMember(Value = "AMAZON_AURORA_POSTGRESQL")]
@@ -45,6 +55,8 @@ namespace Oci.GoldengateService.Models
       AmazonRdsPostgresql,
       [EnumMember(Value = "APACHE_KAFKA")]
       ApacheKafka,
+      [EnumMember(Value = "AZURE_COSMOS_DB_FOR_MONGODB")]
+      AzureCosmosDbForMongodb,
       [EnumMember(Value = "AZURE_DATA_LAKE_STORAGE")]
       AzureDataLakeStorage,
       [EnumMember(Value = "AZURE_EVENT_HUBS")]
@@ -53,6 +65,10 @@ namespace Oci.GoldengateService.Models
       AzureMysql,
       [EnumMember(Value = "AZURE_POSTGRESQL")]
       AzurePostgresql,
+      [EnumMember(Value = "AZURE_SQLSERVER_MANAGED_INSTANCE")]
+      AzureSqlserverManagedInstance,
+      [EnumMember(Value = "AZURE_SQLSERVER_NON_MANAGED_INSTANCE")]
+      AzureSqlserverNonManagedInstance,
       [EnumMember(Value = "AZURE_SYNAPSE_ANALYTICS")]
       AzureSynapseAnalytics,
       [EnumMember(Value = "CONFLUENT_KAFKA")]
@@ -63,11 +79,19 @@ namespace Oci.GoldengateService.Models
       GoogleCloudSqlMysql,
       [EnumMember(Value = "GOOGLE_CLOUD_SQL_POSTGRESQL")]
       GoogleCloudSqlPostgresql,
+      [EnumMember(Value = "HDFS")]
+      Hdfs,
       [EnumMember(Value = "MARIADB")]
       Mariadb,
+      [EnumMember(Value = "MICROSOFT_SQLSERVER")]
+      MicrosoftSqlserver,
+      [EnumMember(Value = "MONGODB")]
+      Mongodb,
       [EnumMember(Value = "MYSQL_SERVER")]
       MysqlServer,
       [EnumMember(Value = "POSTGRESQL_SERVER")]
-      PostgresqlServer
+      PostgresqlServer,
+      [EnumMember(Value = "SNOWFLAKE")]
+      Snowflake
   }
 }

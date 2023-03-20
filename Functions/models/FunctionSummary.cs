@@ -58,7 +58,7 @@ namespace Oci.FunctionsService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Function.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -76,6 +76,9 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "imageDigest")]
         public string ImageDigest { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceDetails")]
+        public FunctionSourceDetails SourceDetails { get; set; }
         
         /// <value>
         /// Maximum usable memory for the function (MiB).

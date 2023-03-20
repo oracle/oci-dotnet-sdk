@@ -99,5 +99,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "timeDataGuardRoleChanged")]
         public System.Nullable<System.DateTime> TimeDataGuardRoleChanged { get; set; }
         
+        /// <value>
+        /// The date and time the Disaster Recovery role was switched for the standby Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "timeDisasterRecoveryRoleChanged")]
+        public System.Nullable<System.DateTime> TimeDisasterRecoveryRoleChanged { get; set; }
+        
     }
 }

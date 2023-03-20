@@ -462,7 +462,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Starts a build pipeline run for a predefined build pipeline.
+        /// Starts a build pipeline run for a predefined build pipeline. Please ensure the completion of any work request for creation/updation of Build Pipeline before starting a Build Run.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

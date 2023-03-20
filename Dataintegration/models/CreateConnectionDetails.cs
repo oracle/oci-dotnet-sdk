@@ -45,8 +45,8 @@ namespace Oci.DataintegrationService.Models
             AmazonS3Connection,
             [EnumMember(Value = "BIP_CONNECTION")]
             BipConnection,
-            [EnumMember(Value = "LAKE_HOUSE_CONNECTION")]
-            LakeHouseConnection,
+            [EnumMember(Value = "LAKE_CONNECTION")]
+            LakeConnection,
             [EnumMember(Value = "REST_NO_AUTH_CONNECTION")]
             RestNoAuthConnection,
             [EnumMember(Value = "REST_BASIC_AUTH_CONNECTION")]
@@ -138,9 +138,6 @@ namespace Oci.DataintegrationService.Models
                 case "AMAZON_S3_CONNECTION":
                     obj = new CreateConnectionFromAmazonS3();
                     break;
-                case "LAKE_HOUSE_CONNECTION":
-                    obj = new CreateConnectionFromLakehouse();
-                    break;
                 case "GENERIC_JDBC_CONNECTION":
                     obj = new CreateConnectionFromJdbc();
                     break;
@@ -167,6 +164,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "ORACLE_OBJECT_STORAGE_CONNECTION":
                     obj = new CreateConnectionFromObjectStorage();
+                    break;
+                case "LAKE_CONNECTION":
+                    obj = new CreateConnectionFromLake();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

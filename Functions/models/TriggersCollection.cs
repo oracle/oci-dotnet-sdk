@@ -13,15 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DataintegrationService.Models
+namespace Oci.FunctionsService.Models
 {
     /// <summary>
-    /// The details to create a Lakehouse connection.
+    /// Results of a Trigger search. Contains boh TriggerSummary items and other information, such as metadata.
     /// </summary>
-    public class CreateConnectionFromLakehouse : CreateConnectionDetails
+    public class TriggersCollection 
     {
         
-        [JsonProperty(PropertyName = "modelType")]
-        private readonly string modelType = "LAKE_HOUSE_CONNECTION";
+        /// <value>
+        /// List of TriggerSummary.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<TriggerSummary> Items { get; set; }
+        
     }
 }

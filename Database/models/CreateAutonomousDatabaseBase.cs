@@ -389,7 +389,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "CLONE_TO_REFRESHABLE")]
             CloneToRefreshable,
             [EnumMember(Value = "CROSS_REGION_DATAGUARD")]
-            CrossRegionDataguard
+            CrossRegionDataguard,
+            [EnumMember(Value = "CROSS_REGION_DISASTER_RECOVERY")]
+            CrossRegionDisasterRecovery
         };
 
         
@@ -503,6 +505,9 @@ namespace Oci.DatabaseService.Models
                     break;
                 case "BACKUP_FROM_ID":
                     obj = new CreateAutonomousDatabaseFromBackupDetails();
+                    break;
+                case "CROSS_REGION_DISASTER_RECOVERY":
+                    obj = new CreateCrossRegionDisasterRecoveryDetails();
                     break;
                 case "BACKUP_FROM_TIMESTAMP":
                     obj = new CreateAutonomousDatabaseFromBackupTimestampDetails();

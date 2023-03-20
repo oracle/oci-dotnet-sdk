@@ -836,6 +836,8 @@ namespace Oci.DatabaseService.Models
             Standby,
             [EnumMember(Value = "DISABLED_STANDBY")]
             DisabledStandby,
+            [EnumMember(Value = "BACKUP_COPY")]
+            BackupCopy,
             [EnumMember(Value = "SNAPSHOT_STANDBY")]
             SnapshotStandby
         };
@@ -1025,6 +1027,46 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dbToolsDetails")]
         public System.Collections.Generic.List<DatabaseTool> DbToolsDetails { get; set; }
+        
+        /// <value>
+        /// Indicates the local disaster recovery (DR) type of the Shared Autonomous Database.
+        /// Autonomous Data Guard (ADG) DR type provides business critical DR with a faster recovery time objective (RTO) during failover or switchover.
+        /// Backup-based DR type provides lower cost DR with a slower RTO during failover or switchover.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "localDisasterRecoveryType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DisasterRecoveryConfiguration.DisasterRecoveryTypeEnum> LocalDisasterRecoveryType { get; set; }
+                ///
+        /// <value>
+        /// The disaster recovery (DR) region type of the Autonomous Database. For Shared Autonomous Databases, DR associations have designated primary and standby regions. These region types do not change when the database changes roles. The standby region in DR associations can be the same region as the primary region, or they can be in a remote regions. Some database administration operations may be available only in the primary region of the DR association, and cannot be performed when the database using the primary role is operating in a remote region.
+        /// </value>
+        ///
+        public enum DisasterRecoveryRegionTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "PRIMARY")]
+            Primary,
+            [EnumMember(Value = "REMOTE")]
+            Remote
+        };
+
+        /// <value>
+        /// The disaster recovery (DR) region type of the Autonomous Database. For Shared Autonomous Databases, DR associations have designated primary and standby regions. These region types do not change when the database changes roles. The standby region in DR associations can be the same region as the primary region, or they can be in a remote regions. Some database administration operations may be available only in the primary region of the DR association, and cannot be performed when the database using the primary role is operating in a remote region.
+        /// </value>
+        [JsonProperty(PropertyName = "disasterRecoveryRegionType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DisasterRecoveryRegionTypeEnum> DisasterRecoveryRegionType { get; set; }
+        
+        /// <value>
+        /// The date and time the Disaster Recovery role was switched for the standby Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "timeDisasterRecoveryRoleChanged")]
+        public System.Nullable<System.DateTime> TimeDisasterRecoveryRoleChanged { get; set; }
+        
+        [JsonProperty(PropertyName = "remoteDisasterRecoveryConfiguration")]
+        public DisasterRecoveryConfiguration RemoteDisasterRecoveryConfiguration { get; set; }
         
     }
 }

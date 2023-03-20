@@ -35,6 +35,10 @@ namespace Oci.DevopsService.Models
         /// <value>
         /// Default value of the parameter.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DefaultValue is required.")]
         [JsonProperty(PropertyName = "defaultValue")]
         public string DefaultValue { get; set; }
         

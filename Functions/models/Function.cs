@@ -102,6 +102,9 @@ namespace Oci.FunctionsService.Models
         [JsonProperty(PropertyName = "imageDigest")]
         public string ImageDigest { get; set; }
         
+        [JsonProperty(PropertyName = "sourceDetails")]
+        public FunctionSourceDetails SourceDetails { get; set; }
+        
         /// <value>
         /// Maximum usable memory for the function (MiB).
         /// </value>

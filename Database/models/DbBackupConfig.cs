@@ -88,6 +88,27 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "backupDestinationDetails")]
         public System.Collections.Generic.List<BackupDestinationDetails> BackupDestinationDetails { get; set; }
+                ///
+        /// <value>
+        /// This defines when the backups will be deleted. - IMMEDIATE option keep the backup for predefined time i.e 72 hours and then delete permanently... - RETAIN will keep the backups as per the policy defined for database backups.
+        /// </value>
+        ///
+        public enum BackupDeletionPolicyEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "DELETE_IMMEDIATELY")]
+            DeleteImmediately,
+            [EnumMember(Value = "DELETE_AFTER_RETENTION_PERIOD")]
+            DeleteAfterRetentionPeriod
+        };
+
+        /// <value>
+        /// This defines when the backups will be deleted. - IMMEDIATE option keep the backup for predefined time i.e 72 hours and then delete permanently... - RETAIN will keep the backups as per the policy defined for database backups.
+        /// </value>
+        [JsonProperty(PropertyName = "backupDeletionPolicy")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<BackupDeletionPolicyEnum> BackupDeletionPolicy { get; set; }
         
     }
 }

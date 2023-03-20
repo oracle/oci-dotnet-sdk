@@ -54,6 +54,9 @@ namespace Oci.DataintegrationService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MethodTypeEnum> MethodType { get; set; }
         
+        /// <value>
+        /// Headers data for the request.
+        /// </value>
         [JsonProperty(PropertyName = "headers")]
         public System.Object Headers { get; set; }
         
