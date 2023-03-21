@@ -33,6 +33,9 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "valueElementType")]
         public string ValueElementType { get; set; }
         
+        /// <value>
+        /// Defines whether null values are allowed.
+        /// </value>
         [JsonProperty(PropertyName = "containsNull")]
         public System.Nullable<bool> ContainsNull { get; set; }
         

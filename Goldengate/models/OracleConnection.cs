@@ -52,9 +52,9 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<TechnologyTypeEnum> TechnologyType { get; set; }
         
         /// <value>
-        /// The username Oracle GoldenGate uses to connect the associated RDBMS.  This username must
-        /// already exist and be available for use by the database.  It must conform to the security
-        /// requirements implemented by the database including length, case sensitivity, and so on.
+        /// The username Oracle GoldenGate uses to connect the associated system of the given technology.
+        /// This username must already exist and be available by the system/application to be connected to
+        /// and must conform to the case sensitivty requirments defined in it.
         /// 
         /// </value>
         /// <remarks>
@@ -65,8 +65,7 @@ namespace Oci.GoldengateService.Models
         public string Username { get; set; }
         
         /// <value>
-        /// Connect descriptor or Easy Connect Naming method that Oracle GoldenGate uses to connect to a
-        /// database.
+        /// Connect descriptor or Easy Connect Naming method used to connect to a database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "connectionString")]

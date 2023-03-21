@@ -82,5 +82,61 @@ namespace Oci.FunctionsService
             );
             return new Waiter<GetFunctionRequest, GetFunctionResponse>(config, agent);
         }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPbfListingRequest, GetPbfListingResponse> ForPbfListing(GetPbfListingRequest request, params PbfListing.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForPbfListing(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPbfListingRequest, GetPbfListingResponse> ForPbfListing(GetPbfListingRequest request, WaiterConfiguration config, params PbfListing.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetPbfListingRequest, GetPbfListingResponse>(
+                request,
+                request => client.GetPbfListing(request),
+                response => targetStates.Contains(response.PbfListing.LifecycleState.Value),
+                targetStates.Contains(PbfListing.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetPbfListingRequest, GetPbfListingResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPbfListingVersionRequest, GetPbfListingVersionResponse> ForPbfListingVersion(GetPbfListingVersionRequest request, params PbfListingVersion.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForPbfListingVersion(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPbfListingVersionRequest, GetPbfListingVersionResponse> ForPbfListingVersion(GetPbfListingVersionRequest request, WaiterConfiguration config, params PbfListingVersion.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetPbfListingVersionRequest, GetPbfListingVersionResponse>(
+                request,
+                request => client.GetPbfListingVersion(request),
+                response => targetStates.Contains(response.PbfListingVersion.LifecycleState.Value),
+                targetStates.Contains(PbfListingVersion.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetPbfListingVersionRequest, GetPbfListingVersionResponse>(config, agent);
+        }
     }
 }

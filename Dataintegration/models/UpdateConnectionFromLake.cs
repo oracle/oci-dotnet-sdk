@@ -16,12 +16,12 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// The connection details for a Lakehouse connection.
+    /// The details to update a Lake connection.
     /// </summary>
-    public class ConnectionFromLakehouseDetails : ConnectionDetails
+    public class UpdateConnectionFromLake : UpdateConnectionDetails
     {
         
         [JsonProperty(PropertyName = "modelType")]
-        private readonly string modelType = "LAKE_HOUSE_CONNECTION";
+        private readonly string modelType = "LAKE_CONNECTION";
     }
 }

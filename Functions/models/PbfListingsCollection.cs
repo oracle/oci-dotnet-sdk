@@ -13,15 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DataintegrationService.Models
+namespace Oci.FunctionsService.Models
 {
     /// <summary>
-    /// The connection summary details for a Lakehouse connection.
+    /// Results of a PbfListing search. Contains boh PbfListingSummary items and other information, such as metadata.
     /// </summary>
-    public class ConnectionSummaryFromLakehouse : ConnectionSummary
+    public class PbfListingsCollection 
     {
         
-        [JsonProperty(PropertyName = "modelType")]
-        private readonly string modelType = "LAKE_HOUSE_CONNECTION";
+        /// <value>
+        /// List of PbfListingSummary.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<PbfListingSummary> Items { get; set; }
+        
     }
 }

@@ -102,9 +102,9 @@ namespace Oci.GoldengateService.Models
         public string DatabaseId { get; set; }
         
         /// <value>
-        /// The username Oracle GoldenGate uses to connect the associated RDBMS.  This username must
-        /// already exist and be available for use by the database.  It must conform to the security
-        /// requirements implemented by the database including length, case sensitivity, and so on.
+        /// The username Oracle GoldenGate uses to connect the associated system of the given technology.
+        /// This username must already exist and be available by the system/application to be connected to
+        /// and must conform to the case sensitivty requirments defined in it.
         /// 
         /// </value>
         /// <remarks>
@@ -115,9 +115,8 @@ namespace Oci.GoldengateService.Models
         public string Username { get; set; }
         
         /// <value>
-        /// The password Oracle GoldenGate uses to connect the associated RDBMS.  It must conform to the
-        /// specific security requirements implemented by the database including length, case
-        /// sensitivity, and so on.
+        /// The password Oracle GoldenGate uses to connect the associated system of the given technology.
+        /// It must conform to the specific security requirements including length, case sensitivity, and so on.
         /// 
         /// </value>
         /// <remarks>
@@ -128,8 +127,7 @@ namespace Oci.GoldengateService.Models
         public string Password { get; set; }
         
         /// <value>
-        /// Connect descriptor or Easy Connect Naming method that Oracle GoldenGate uses to connect to a
-        /// database.
+        /// Connect descriptor or Easy Connect Naming method used to connect to a database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "connectionString")]
@@ -181,33 +179,25 @@ namespace Oci.GoldengateService.Models
         public string AliasName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer vault being
-        /// referenced.
-        /// If provided, this will reference a vault which the customer will be required to ensure
-        /// the policies are established to permit the GoldenGate Service to manage secrets contained
-        /// within this vault.
+        /// Refers to the customer's vault OCID. 
+        /// If provided, it references a vault where GoldenGate can manage secrets. Customers must add policies to permit GoldenGate
+        /// to manage secrets contained within this vault.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer \"Master\" key being
-        /// referenced.
-        /// If provided, this will reference a key which the customer will be required to ensure
-        /// the policies are established to permit the GoldenGate Service to utilize this key to
-        /// manage secrets.
+        /// Refers to the customer's master key OCID. 
+        /// If provided, it references a key to manage secrets. Customers must add policies to permit GoldenGate to use this key.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "keyId")]
         public string KeyId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment where the
-        /// the GGS Secret will be created.
-        /// If provided, this will reference a key which the customer will be required to ensure
-        /// the policies are established to permit the GoldenGate Service to utilize this Compartment
-        /// in which to create a Secret.
+        /// The OCID of the compartment where the GoldenGate Secret will be created. 
+        /// If provided, it references a key to manage secrets. Customers must add policies to permit GoldenGate to use this key.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "secretCompartmentId")]

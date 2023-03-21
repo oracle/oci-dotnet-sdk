@@ -56,22 +56,17 @@ namespace Oci.GoldengateService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer vault being
-        /// referenced.
-        /// If provided, this will reference a vault which the customer will be required to ensure
-        /// the policies are established to permit the GoldenGate Service to manage secrets contained
-        /// within this vault.
+        /// Refers to the customer's vault OCID. 
+        /// If provided, it references a vault where GoldenGate can manage secrets. Customers must add policies to permit GoldenGate
+        /// to manage secrets contained within this vault.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer \"Master\" key being
-        /// referenced.
-        /// If provided, this will reference a key which the customer will be required to ensure
-        /// the policies are established to permit the GoldenGate Service to utilize this key to
-        /// manage secrets.
+        /// Refers to the customer's master key OCID. 
+        /// If provided, it references a key to manage secrets. Customers must add policies to permit GoldenGate to use this key.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "keyId")]
@@ -106,29 +101,50 @@ namespace Oci.GoldengateService.Models
             var discriminator = jsonObject["connectionType"].Value<string>();
             switch (discriminator)
             {
+                case "ORACLE":
+                    obj = new UpdateOracleConnectionDetails();
+                    break;
+                case "OCI_OBJECT_STORAGE":
+                    obj = new UpdateOciObjectStorageConnectionDetails();
+                    break;
+                case "MONGODB":
+                    obj = new UpdateMongoDbConnectionDetails();
+                    break;
+                case "AZURE_DATA_LAKE_STORAGE":
+                    obj = new UpdateAzureDataLakeStorageConnectionDetails();
+                    break;
+                case "JAVA_MESSAGE_SERVICE":
+                    obj = new UpdateJavaMessageServiceConnectionDetails();
+                    break;
+                case "GOLDENGATE":
+                    obj = new UpdateGoldenGateConnectionDetails();
+                    break;
                 case "POSTGRESQL":
                     obj = new UpdatePostgresqlConnectionDetails();
                     break;
-                case "ORACLE":
-                    obj = new UpdateOracleConnectionDetails();
+                case "MICROSOFT_SQLSERVER":
+                    obj = new UpdateMicrosoftSqlserverConnectionDetails();
+                    break;
+                case "ORACLE_NOSQL":
+                    obj = new UpdateOracleNosqlConnectionDetails();
                     break;
                 case "KAFKA_SCHEMA_REGISTRY":
                     obj = new UpdateKafkaSchemaRegistryConnectionDetails();
                     break;
-                case "OCI_OBJECT_STORAGE":
-                    obj = new UpdateOciObjectStorageConnectionDetails();
+                case "AMAZON_S3":
+                    obj = new UpdateAmazonS3ConnectionDetails();
+                    break;
+                case "SNOWFLAKE":
+                    obj = new UpdateSnowflakeConnectionDetails();
+                    break;
+                case "HDFS":
+                    obj = new UpdateHdfsConnectionDetails();
                     break;
                 case "MYSQL":
                     obj = new UpdateMysqlConnectionDetails();
                     break;
                 case "KAFKA":
                     obj = new UpdateKafkaConnectionDetails();
-                    break;
-                case "AZURE_DATA_LAKE_STORAGE":
-                    obj = new UpdateAzureDataLakeStorageConnectionDetails();
-                    break;
-                case "GOLDENGATE":
-                    obj = new UpdateGoldenGateConnectionDetails();
                     break;
                 case "AZURE_SYNAPSE_ANALYTICS":
                     obj = new UpdateAzureSynapseConnectionDetails();

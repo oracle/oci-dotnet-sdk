@@ -30,7 +30,7 @@ namespace Oci.DevopsService.Requests
         public string RepositoryId { get; set; }
         
         /// <value>
-        /// The commit or reference name where changes are coming from.
+        /// The commit or reference name that represents the newer changes against the base version.
         /// </value>
         /// <remarks>
         /// Required

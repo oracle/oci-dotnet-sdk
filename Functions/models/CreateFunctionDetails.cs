@@ -48,10 +48,6 @@ namespace Oci.FunctionsService.Models
         /// The image should be in the OCI Registry that is in the same region as the function itself.
         /// Example: phx.ocir.io/ten/functions/function:0.0.1
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Image is required.")]
         [JsonProperty(PropertyName = "image")]
         public string Image { get; set; }
         
@@ -62,6 +58,9 @@ namespace Oci.FunctionsService.Models
         /// </value>
         [JsonProperty(PropertyName = "imageDigest")]
         public string ImageDigest { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceDetails")]
+        public FunctionSourceDetails SourceDetails { get; set; }
         
         /// <value>
         /// Maximum usable memory for the function (MiB).

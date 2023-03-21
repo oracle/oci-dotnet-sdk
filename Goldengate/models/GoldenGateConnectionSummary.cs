@@ -55,6 +55,13 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<int> Port { get; set; }
         
         /// <value>
+        /// The username credential existing in the Oracle GoldenGate used to be connected to.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "username")]
+        public string Username { get; set; }
+        
+        /// <value>
         /// The private IP address of the connection's endpoint in the customer's VCN, typically a
         /// database endpoint or a big data endpoint (e.g. Kafka bootstrap server).
         /// In case the privateIp is provided, the subnetId must also be provided.

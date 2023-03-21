@@ -16,41 +16,41 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataintegrationService.Models
 {
     /// <summary>
-    /// Summary details for the Lakehouse data asset type.
+    /// Summary details for the Lake data asset type.
     /// </summary>
-    public class DataAssetSummaryFromLakehouse : DataAssetSummary
+    public class DataAssetSummaryFromLake : DataAssetSummary
     {
         
         /// <value>
-        /// The Lakehouse Ocid.
+        /// The Lake Ocid.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "LakehouseOcid is required.")]
-        [JsonProperty(PropertyName = "lakehouseOcid")]
-        public string LakehouseOcid { get; set; }
+        [Required(ErrorMessage = "LakeId is required.")]
+        [JsonProperty(PropertyName = "lakeId")]
+        public string LakeId { get; set; }
         
         /// <value>
-        /// The metastoreId for the specified Lakehouse Resource.
+        /// The metastoreId for the specified Lake Resource.
         /// </value>
         [JsonProperty(PropertyName = "metastoreId")]
         public string MetastoreId { get; set; }
         
         /// <value>
-        /// The rangerEndpoint for the specified Lakehouse Resource.
+        /// The lakeProxyEndpoint for the specified Lake Resource.
         /// </value>
-        [JsonProperty(PropertyName = "rangerEndpoint")]
-        public string RangerEndpoint { get; set; }
+        [JsonProperty(PropertyName = "lakeProxyEndpoint")]
+        public string LakeProxyEndpoint { get; set; }
         
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "DefaultConnection is required.")]
         [JsonProperty(PropertyName = "defaultConnection")]
-        public ConnectionSummaryFromLakehouse DefaultConnection { get; set; }
+        public ConnectionSummaryFromLake DefaultConnection { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]
-        private readonly string modelType = "LAKE_HOUSE_DATA_ASSET";
+        private readonly string modelType = "LAKE_DATA_ASSET";
     }
 }

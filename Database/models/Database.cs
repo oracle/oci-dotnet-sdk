@@ -161,6 +161,18 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "lastBackupTimestamp")]
         public System.Nullable<System.DateTime> LastBackupTimestamp { get; set; }
         
+        /// <value>
+        /// The duration when the latest database backup created.
+        /// </value>
+        [JsonProperty(PropertyName = "lastBackupDurationInSeconds")]
+        public System.Nullable<int> LastBackupDurationInSeconds { get; set; }
+        
+        /// <value>
+        /// The date and time when the latest database backup failed.
+        /// </value>
+        [JsonProperty(PropertyName = "lastFailedBackupTimestamp")]
+        public System.Nullable<System.DateTime> LastFailedBackupTimestamp { get; set; }
+        
         [JsonProperty(PropertyName = "dbBackupConfig")]
         public DbBackupConfig DbBackupConfig { get; set; }
         

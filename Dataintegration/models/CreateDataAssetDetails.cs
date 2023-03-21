@@ -43,8 +43,8 @@ namespace Oci.DataintegrationService.Models
             FusionAppDataAsset,
             [EnumMember(Value = "AMAZON_S3_DATA_ASSET")]
             AmazonS3DataAsset,
-            [EnumMember(Value = "LAKE_HOUSE_DATA_ASSET")]
-            LakeHouseDataAsset,
+            [EnumMember(Value = "LAKE_DATA_ASSET")]
+            LakeDataAsset,
             [EnumMember(Value = "REST_DATA_ASSET")]
             RestDataAsset
         };
@@ -137,6 +137,9 @@ namespace Oci.DataintegrationService.Models
                 case "MYSQL_DATA_ASSET":
                     obj = new CreateDataAssetFromMySQL();
                     break;
+                case "LAKE_DATA_ASSET":
+                    obj = new CreateDataAssetFromLake();
+                    break;
                 case "ORACLE_DATA_ASSET":
                     obj = new CreateDataAssetFromOracle();
                     break;
@@ -151,9 +154,6 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "FUSION_APP_DATA_ASSET":
                     obj = new CreateDataAssetFromFusionApp();
-                    break;
-                case "LAKE_HOUSE_DATA_ASSET":
-                    obj = new CreateDataAssetFromLakehouse();
                     break;
                 case "ORACLE_ATP_DATA_ASSET":
                     obj = new CreateDataAssetFromAtp();

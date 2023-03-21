@@ -157,22 +157,17 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer vault being
-        /// referenced.
-        /// If provided, this will reference a vault which the customer will be required to ensure
-        /// the policies are established to permit the GoldenGate Service to manage secrets contained
-        /// within this vault.
+        /// Refers to the customer's vault OCID. 
+        /// If provided, it references a vault where GoldenGate can manage secrets. Customers must add policies to permit GoldenGate
+        /// to manage secrets contained within this vault.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer \"Master\" key being
-        /// referenced.
-        /// If provided, this will reference a key which the customer will be required to ensure
-        /// the policies are established to permit the GoldenGate Service to utilize this key to
-        /// manage secrets.
+        /// Refers to the customer's master key OCID. 
+        /// If provided, it references a key to manage secrets. Customers must add policies to permit GoldenGate to use this key.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "keyId")]
@@ -186,7 +181,8 @@ namespace Oci.GoldengateService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// List of ingress IP addresses, from where the GoldenGate deployment connects to this connection's privateIp.
+        /// List of ingress IP addresses from where the GoldenGate deployment connects to this connection's privateIp. 
+        /// Customers may optionally set up ingress security rules to restrict traffic from these IP addresses.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ingressIps")]
@@ -228,11 +224,11 @@ namespace Oci.GoldengateService.Models
                 case "POSTGRESQL":
                     obj = new PostgresqlConnection();
                     break;
-                case "OCI_OBJECT_STORAGE":
-                    obj = new OciObjectStorageConnection();
+                case "JAVA_MESSAGE_SERVICE":
+                    obj = new JavaMessageServiceConnection();
                     break;
-                case "KAFKA_SCHEMA_REGISTRY":
-                    obj = new KafkaSchemaRegistryConnection();
+                case "SNOWFLAKE":
+                    obj = new SnowflakeConnection();
                     break;
                 case "GOLDENGATE":
                     obj = new GoldenGateConnection();
@@ -240,11 +236,32 @@ namespace Oci.GoldengateService.Models
                 case "MYSQL":
                     obj = new MysqlConnection();
                     break;
+                case "AMAZON_S3":
+                    obj = new AmazonS3Connection();
+                    break;
                 case "ORACLE":
                     obj = new OracleConnection();
                     break;
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new AzureDataLakeStorageConnection();
+                    break;
+                case "MONGODB":
+                    obj = new MongoDbConnection();
+                    break;
+                case "HDFS":
+                    obj = new HdfsConnection();
+                    break;
+                case "OCI_OBJECT_STORAGE":
+                    obj = new OciObjectStorageConnection();
+                    break;
+                case "KAFKA_SCHEMA_REGISTRY":
+                    obj = new KafkaSchemaRegistryConnection();
+                    break;
+                case "MICROSOFT_SQLSERVER":
+                    obj = new MicrosoftSqlserverConnection();
+                    break;
+                case "ORACLE_NOSQL":
+                    obj = new OracleNosqlConnection();
                     break;
                 case "AZURE_SYNAPSE_ANALYTICS":
                     obj = new AzureSynapseConnection();

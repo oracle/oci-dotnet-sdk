@@ -325,6 +325,8 @@ namespace Oci.DatabaseService.Models
             Standby,
             [EnumMember(Value = "DISABLED_STANDBY")]
             DisabledStandby,
+            [EnumMember(Value = "BACKUP_COPY")]
+            BackupCopy,
             [EnumMember(Value = "SNAPSHOT_STANDBY")]
             SnapshotStandby
         };

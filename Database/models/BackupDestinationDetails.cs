@@ -36,7 +36,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "OBJECT_STORE")]
             ObjectStore,
             [EnumMember(Value = "LOCAL")]
-            Local
+            Local,
+            [EnumMember(Value = "DBRS")]
+            Dbrs
         };
 
         /// <value>
@@ -73,6 +75,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "internetProxy")]
         public string InternetProxy { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DBRS policy used for backup.
+        /// </value>
+        [JsonProperty(PropertyName = "dbrsPolicyId")]
+        public string DbrsPolicyId { get; set; }
         
     }
 }

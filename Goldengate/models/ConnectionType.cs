@@ -28,6 +28,10 @@ namespace Oci.GoldengateService.Models
       KafkaSchemaRegistry,
       [EnumMember(Value = "MYSQL")]
       Mysql,
+      [EnumMember(Value = "JAVA_MESSAGE_SERVICE")]
+      JavaMessageService,
+      [EnumMember(Value = "MICROSOFT_SQLSERVER")]
+      MicrosoftSqlserver,
       [EnumMember(Value = "OCI_OBJECT_STORAGE")]
       OciObjectStorage,
       [EnumMember(Value = "ORACLE")]
@@ -37,6 +41,16 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "POSTGRESQL")]
       Postgresql,
       [EnumMember(Value = "AZURE_SYNAPSE_ANALYTICS")]
-      AzureSynapseAnalytics
+      AzureSynapseAnalytics,
+      [EnumMember(Value = "SNOWFLAKE")]
+      Snowflake,
+      [EnumMember(Value = "AMAZON_S3")]
+      AmazonS3,
+      [EnumMember(Value = "HDFS")]
+      Hdfs,
+      [EnumMember(Value = "ORACLE_NOSQL")]
+      OracleNosql,
+      [EnumMember(Value = "MONGODB")]
+      Mongodb
   }
 }
