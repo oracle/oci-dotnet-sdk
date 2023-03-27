@@ -14,9 +14,9 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListInstances.cs.html">here</a> to see an example of how to use ListInstances request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/ListComputeClusters.cs.html">here</a> to see an example of how to use ListComputeClusters request.
     /// </example>
-    public class ListInstancesRequest : Oci.Common.IOciRequest
+    public class ListComputeClustersRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
@@ -36,21 +36,6 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
-        
-        /// <value>
-        /// The OCID of the compute capacity reservation.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "capacityReservationId")]
-        public string CapacityReservationId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compute cluster.
-        /// A compute cluster is a remote direct memory access (RDMA) network group.
-        /// For more information, see [Compute Clusters](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm).
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "computeClusterId")]
-        public string ComputeClusterId { get; set; }
         
         /// <value>
         /// A filter to return only resources that match the given display name exactly.
@@ -135,11 +120,11 @@ namespace Oci.CoreService.Requests
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
         
         /// <value>
-        /// A filter to only return resources that match the given lifecycle state. The state
-        /// value is case-insensitive.
+        /// Unique identifier for the request.
+        /// If you need to contact Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
-        public System.Nullable<Instance.LifecycleStateEnum> LifecycleState { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
+        public string OpcRequestId { get; set; }
     }
 }

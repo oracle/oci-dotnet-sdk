@@ -16,26 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A cluster network is a group of high performance computing (HPC) bare metal instances that are connected
-    /// with an ultra low latency network. For more information about cluster networks, see
-    /// [Managing Cluster Networks](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingclusternetworks.htm).
+    /// A remote direct memory access (RDMA) network group. Compute clusters are groups
+    /// of high performance computing (HPC) bare metal instances that are connected with an ultra low latency network.
+    /// Compute clusters allow you to manage instances in the cluster individually.
+    /// For more information, see [Compute Clusters](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm).
+    /// <br/>
+    /// For details about cluster networks that use intance pools to manage groups of identical instances,
+    /// see {@link ClusterNetwork}.
     /// 
     /// </summary>
-    public class ClusterNetwork 
+    public class ComputeCluster 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the cluster network.
+        /// The availability domain the compute cluster is running in.
+        /// Example: Uocm:PHX-AD-1
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Id is required.")]
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        [Required(ErrorMessage = "AvailabilityDomain is required.")]
+        [JsonProperty(PropertyName = "availabilityDomain")]
+        public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the cluster network.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains this compute cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -45,16 +50,12 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the hpc island used by the cluster network.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
+        /// 
         /// </value>
-        [JsonProperty(PropertyName = "hpcIslandId")]
-        public string HpcIslandId { get; set; }
-        
-        /// <value>
-        /// The list of network block OCIDs of the HPC island.
-        /// </value>
-        [JsonProperty(PropertyName = "networkBlockIds")]
-        public System.Collections.Generic.List<string> NetworkBlockIds { get; set; }
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
@@ -66,14 +67,6 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable.
-        /// Avoid entering confidential information.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "displayName")]
-        public string DisplayName { get; set; }
-        
-        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>
@@ -83,45 +76,31 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The instance pools in the cluster network.
-        /// <br/>
-        /// Each cluster network can have one instance pool.
-        /// 
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of this compute cluster.
         /// </value>
-        [JsonProperty(PropertyName = "instancePools")]
-        public System.Collections.Generic.List<InstancePool> InstancePools { get; set; }
-        
-        [JsonProperty(PropertyName = "placementConfiguration")]
-        public ClusterNetworkPlacementConfigurationDetails PlacementConfiguration { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
                 ///
         /// <value>
-        /// The current state of the cluster network.
+        /// The current state of the compute cluster.
         /// </value>
         ///
         public enum LifecycleStateEnum {
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
             [EnumMember(Value = null)]
             UnknownEnumValue,
-            [EnumMember(Value = "PROVISIONING")]
-            Provisioning,
-            [EnumMember(Value = "SCALING")]
-            Scaling,
-            [EnumMember(Value = "STARTING")]
-            Starting,
-            [EnumMember(Value = "STOPPING")]
-            Stopping,
-            [EnumMember(Value = "TERMINATING")]
-            Terminating,
-            [EnumMember(Value = "STOPPED")]
-            Stopped,
-            [EnumMember(Value = "TERMINATED")]
-            Terminated,
-            [EnumMember(Value = "RUNNING")]
-            Running
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            [EnumMember(Value = "DELETED")]
+            Deleted
         };
 
         /// <value>
-        /// The current state of the cluster network.
+        /// The current state of the compute cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -132,8 +111,8 @@ namespace Oci.CoreService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The date and time the resource was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
-        /// <br/>
+        /// The date and time the compute cluster was created,
+        /// in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         /// <remarks>
@@ -142,18 +121,6 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        
-        /// <value>
-        /// The date and time the resource was updated, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
-        /// <br/>
-        /// Example: 2016-08-25T21:10:29.600Z
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TimeUpdated is required.")]
-        [JsonProperty(PropertyName = "timeUpdated")]
-        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
     }
 }

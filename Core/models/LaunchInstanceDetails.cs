@@ -124,6 +124,13 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) that the instance will be created in.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "computeClusterId")]
+        public string ComputeClusterId { get; set; }
+        
+        /// <value>
         /// Deprecated. Instead use `hostnameLabel` in
         /// {@link CreateVnicDetails}.
         /// If you provide both, the values must match.

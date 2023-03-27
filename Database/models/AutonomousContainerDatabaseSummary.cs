@@ -58,6 +58,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dbUniqueName")]
         public string DbUniqueName { get; set; }
+        
+        /// <value>
+        /// The database name for the Autonomous Container Database. The name must be unique within the Cloud Autonomous VM Cluster, must start with an alphabetic character and followed by 1 to 7 alphanumeric characters.
+        /// </value>
+        [JsonProperty(PropertyName = "dbName")]
+        public string DbName { get; set; }
                 ///
         /// <value>
         /// The service level agreement type of the container database. The default is STANDARD.

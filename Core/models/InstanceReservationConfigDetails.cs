@@ -54,6 +54,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
         
+        [JsonProperty(PropertyName = "clusterConfig")]
+        public ClusterConfigDetails ClusterConfig { get; set; }
+        
         /// <value>
         /// The total number of instances that can be launched from the capacity configuration.
         /// </value>

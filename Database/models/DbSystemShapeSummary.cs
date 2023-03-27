@@ -178,7 +178,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> MaximumNodeCount { get; set; }
         
         /// <value>
-        /// The maximum number of CPU cores per database node that can be enabled for this shape. Only applicable to the flex Exadata shape and ExaCC Elastic shapes.
+        /// The maximum number of CPU cores per database node that can be enabled for this shape. Only applicable to the flex Exadata shape, ExaCC Elastic shapes and VM Flex shapes.
         /// </value>
         [JsonProperty(PropertyName = "availableCoreCountPerNode")]
         public System.Nullable<int> AvailableCoreCountPerNode { get; set; }
