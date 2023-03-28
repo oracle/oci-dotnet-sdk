@@ -31,6 +31,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
         
+        [JsonProperty(PropertyName = "clusterConfig")]
+        public ClusterConfigDetails ClusterConfig { get; set; }
+        
         /// <value>
         /// The shape to use when launching instances using compute capacity reservations. The shape determines the number of CPUs, the amount of memory,
         /// and other resources allocated to the instance.

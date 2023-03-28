@@ -377,6 +377,34 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetComputeClusterRequest, GetComputeClusterResponse> ForComputeCluster(GetComputeClusterRequest request, params ComputeCluster.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForComputeCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetComputeClusterRequest, GetComputeClusterResponse> ForComputeCluster(GetComputeClusterRequest request, WaiterConfiguration config, params ComputeCluster.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetComputeClusterRequest, GetComputeClusterResponse>(
+                request,
+                request => client.GetComputeCluster(request),
+                response => targetStates.Contains(response.ComputeCluster.LifecycleState.Value),
+                targetStates.Contains(ComputeCluster.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetComputeClusterRequest, GetComputeClusterResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetConsoleHistoryRequest, GetConsoleHistoryResponse> ForConsoleHistory(GetConsoleHistoryRequest request, params ConsoleHistory.LifecycleStateEnum[] targetStates)
         {
             return this.ForConsoleHistory(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

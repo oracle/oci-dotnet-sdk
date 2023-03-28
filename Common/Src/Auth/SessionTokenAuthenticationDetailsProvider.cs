@@ -39,7 +39,10 @@ namespace Oci.Common.Auth
             {
                 var signer = new DefaultRequestSigner(this);
                 client = new HttpClient();
-                var url = $"https://auth.{Region.RegionId}.oraclecloud.com/v1/authentication/refresh";
+
+                var url = $"{Region.FormatDefaultRegionEndpoint(new Service { ServiceName = "auth", ServiceEndpointPrefix = "auth" }, this.Region)}/v1/authentication/refresh";
+                logger.Debug($"Url generated for Session Refresh:{url}");
+
                 var httpRequest = new HttpRequestMessage(HttpMethod.Post, new Uri(url));
                 var requestBody = new SessionTokenRequest(this.sessionToken);
                 httpRequest.Content = ContentHelper.CreateHttpContent(requestBody);

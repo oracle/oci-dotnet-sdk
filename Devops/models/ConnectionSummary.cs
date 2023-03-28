@@ -77,6 +77,9 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        [JsonProperty(PropertyName = "lastConnectionValidationResult")]
+        public ConnectionValidationResult LastConnectionValidationResult { get; set; }
+        
         /// <value>
         /// A detailed message describing the current state. For example, can be used to provide actionable information for a resource in Failed state.
         /// </value>
