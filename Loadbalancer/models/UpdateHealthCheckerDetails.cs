@@ -115,5 +115,20 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "responseBodyRegex")]
         public string ResponseBodyRegex { get; set; }
         
+        /// <value>
+        /// Specifies if health checks should always be done using plain text instead of depending on
+        /// whether or not the associated backend set is using SSL.
+        /// <br/>
+        /// If \"true\", health checks will be done using plain text even if the associated backend set is configured
+        /// to use SSL.
+        /// <br/>
+        /// If \"false\", health checks will be done using SSL encryption if the associated backend set is configured
+        /// to use SSL. If the backend set is not so configured the health checks will be done using plain text.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isForcePlainText")]
+        public System.Nullable<bool> IsForcePlainText { get; set; }
+        
     }
 }

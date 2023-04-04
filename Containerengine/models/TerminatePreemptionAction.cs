@@ -13,28 +13,22 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.LoadbalancerService.Models
+namespace Oci.ContainerengineService.Models
 {
     /// <summary>
-    /// Action to forward requests to a given backend set.
-    /// 
+    /// Terminates the preemptible instance when it is interrupted for eviction.
     /// </summary>
-    public class ForwardToBackendSet : Action
+    public class TerminatePreemptionAction : PreemptionAction
     {
         
         /// <value>
-        /// Name of the backend set the listener will forward the traffic to.
-        /// <br/>
-        /// Example: backendSetForImages
+        /// Whether to preserve the boot volume that was used to launch the preemptible instance when the instance is terminated. Defaults to false if not specified.
+        /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "BackendSetName is required.")]
-        [JsonProperty(PropertyName = "backendSetName")]
-        public string BackendSetName { get; set; }
+        [JsonProperty(PropertyName = "isPreserveBootVolume")]
+        public System.Nullable<bool> IsPreserveBootVolume { get; set; }
         
-        [JsonProperty(PropertyName = "name")]
-        private readonly string name = "FORWARD_TO_BACKENDSET";
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "TERMINATE";
     }
 }

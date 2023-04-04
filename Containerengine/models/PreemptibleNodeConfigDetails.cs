@@ -13,28 +13,20 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.LoadbalancerService.Models
+namespace Oci.ContainerengineService.Models
 {
     /// <summary>
-    /// Action to forward requests to a given backend set.
-    /// 
+    /// Configuration options for preemptible nodes.
     /// </summary>
-    public class ForwardToBackendSet : Action
+    public class PreemptibleNodeConfigDetails 
     {
         
-        /// <value>
-        /// Name of the backend set the listener will forward the traffic to.
-        /// <br/>
-        /// Example: backendSetForImages
-        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "BackendSetName is required.")]
-        [JsonProperty(PropertyName = "backendSetName")]
-        public string BackendSetName { get; set; }
+        [Required(ErrorMessage = "PreemptionAction is required.")]
+        [JsonProperty(PropertyName = "preemptionAction")]
+        public PreemptionAction PreemptionAction { get; set; }
         
-        [JsonProperty(PropertyName = "name")]
-        private readonly string name = "FORWARD_TO_BACKENDSET";
     }
 }
