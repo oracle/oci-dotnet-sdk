@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details to perform update all action on alerts.
+    /// The details to update alerts in the specified compartment.
     /// </summary>
     public class AlertsUpdateDetails 
     {
@@ -43,7 +43,7 @@ namespace Oci.DatasafeService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the target associated with alerts.
+        /// The OCID of the target database associated with the alerts.
         /// </value>
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }

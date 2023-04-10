@@ -161,5 +161,40 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
+        /// <value>
+        /// Indicates if the temporary tables created during the masking operation were dropped after masking.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDropTempTablesEnabled")]
+        public System.Nullable<bool> IsDropTempTablesEnabled { get; set; }
+        
+        /// <value>
+        /// Indicates if redo logging was enabled during the masking operation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isRedoLoggingEnabled")]
+        public System.Nullable<bool> IsRedoLoggingEnabled { get; set; }
+        
+        /// <value>
+        /// Indicates if statistics gathering was enabled during the masking operation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isRefreshStatsEnabled")]
+        public System.Nullable<bool> IsRefreshStatsEnabled { get; set; }
+        
+        /// <value>
+        /// Indicates if parallel execution was enabled during the masking operation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "parallelDegree")]
+        public string ParallelDegree { get; set; }
+        
+        /// <value>
+        /// Indicates how invalid objects were recompiled post the masking operation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "recompile")]
+        public string Recompile { get; set; }
+        
     }
 }

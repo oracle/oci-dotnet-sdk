@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatasafeService.Models
 {
   /// <summary>
-  /// The type of the report.
+  /// The type of the audit report.
   /// </summary>
   public enum ReportType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

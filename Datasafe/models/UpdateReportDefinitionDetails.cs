@@ -32,7 +32,7 @@ namespace Oci.DatasafeService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A description of the report definition.
+        /// The description of the report definition.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

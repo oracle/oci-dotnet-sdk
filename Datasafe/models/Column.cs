@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Description of a column
+    /// The description of the column.
     /// </summary>
     public class Column 
     {

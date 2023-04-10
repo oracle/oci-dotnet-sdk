@@ -62,6 +62,12 @@ namespace Oci.DatasafeService.Requests
         public System.Nullable<SeverityEnum> Severity { get; set; }
         
         /// <value>
+        /// An optional filter to return only findings containing the specified reference.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "references")]
+        public System.Nullable<SecurityAssessmentReferences> References { get; set; }
+        
+        /// <value>
         /// For list pagination. The maximum number of items to return per page in a paginated \"List\" call. For details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

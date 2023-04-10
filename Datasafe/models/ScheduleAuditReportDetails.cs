@@ -22,7 +22,7 @@ namespace Oci.DatasafeService.Models
     {
         
         /// <value>
-        /// Specifies the limit on number of rows in report.
+        /// Specifies the limit on the number of rows in the report.
         /// </value>
         [JsonProperty(PropertyName = "rowLimit")]
         public System.Nullable<int> RowLimit { get; set; }

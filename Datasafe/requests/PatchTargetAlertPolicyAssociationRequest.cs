@@ -20,7 +20,7 @@ namespace Oci.DatasafeService.Requests
     {
         
         /// <value>
-        /// The details used to patch target-alert policy associations.
+        /// The details used to patch the target-alert policy associations.
         /// </value>
         /// <remarks>
         /// Required

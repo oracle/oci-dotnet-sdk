@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatasafeService.Models
 {
   /// <summary>
-  /// The type of the object to which a masking column belongs.
+  /// The type of the object to which a column belongs.
   /// </summary>
   public enum ObjectType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

@@ -22,7 +22,7 @@ namespace Oci.DatasafeService.Models
     {
         
         /// <value>
-        /// The OCID of the new compartment to move the target-alert policy association to.
+        /// The OCID of the compartment to move the target-alert policy association to.
         /// </value>
         /// <remarks>
         /// Required

@@ -108,7 +108,8 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpuCoreCountPerNode { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Autonomous VM Cluster.
+        /// The compute model of the Autonomous VM Cluster. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// 
         /// </value>
         ///
         public enum ComputeModelEnum {
@@ -119,14 +120,15 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Autonomous VM Cluster.
+        /// The compute model of the Autonomous VM Cluster. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) to be enabled per each OCPU core.
+        /// The amount of memory (in GBs) to be enabled per each CPU core.
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }

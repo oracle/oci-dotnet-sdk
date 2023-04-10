@@ -25,15 +25,21 @@ namespace Oci.DatasafeService.Models
         /// The category to which the audit policy belongs.
         /// </value>
         [JsonProperty(PropertyName = "auditPolicyCategory")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AuditPolicyCategory> AuditPolicyCategory { get; set; }
         
         /// <value>
-        /// Indicates the audit policy name. Refer to the [documentation](https://docs.oracle.com/en/cloud/paas/data-safe/udscs/audit-policies.html#GUID-361A9A9A-7C21-4F5A-8945-9B3A0C472827) for seeded audit policy names. For custom policies, refer to the user-defined policy name created in the target database.
+        /// The name of the audit policy. Refer to the [documentation](https://docs.oracle.com/en/cloud/paas/data-safe/udscs/audit-policies.html#GUID-361A9A9A-7C21-4F5A-8945-9B3A0C472827) for seeded audit policy names. For custom policies, refer to the user-defined policy name created in the target database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "auditPolicyName")]
         public string AuditPolicyName { get; set; }
+        
+        /// <value>
+        /// The OCID of the target database for which the audit policy will be created.
+        /// </value>
+        [JsonProperty(PropertyName = "targetId")]
+        public string TargetId { get; set; }
         
     }
 }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details for the report schedule.
+    /// The details of the report schedule.
     /// </summary>
     public class ScheduleReportDetails 
     {
@@ -28,7 +28,7 @@ namespace Oci.DatasafeService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Schedule to generate the report periodically in the specified format:
+        /// The schedule to generate the report periodically in the specified format:
         /// <version-string>;<version-specific-schedule>
         /// <br/>
         /// Allowed version strings - \"v1\"
@@ -52,7 +52,7 @@ namespace Oci.DatasafeService.Models
         public string Schedule { get; set; }
                 ///
         /// <value>
-        /// Specifies the format of report to be excel or pdf
+        /// Specifies if the report will be in Excel or PDF format
         /// </value>
         ///
         public enum MimeTypeEnum {
@@ -63,7 +63,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the format of report to be excel or pdf
+        /// Specifies if the report will be in Excel or PDF format
         /// </value>
         /// <remarks>
         /// Required
@@ -74,7 +74,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<MimeTypeEnum> MimeType { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment
+        /// The OCID of the compartment
         /// in which the resource should be created.
         /// 
         /// </value>

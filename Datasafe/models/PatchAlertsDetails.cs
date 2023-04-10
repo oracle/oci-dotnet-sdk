@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details for how to patch alerts.
+    /// The alert details to update the status of one or more alert specified by the alert IDs.
     /// </summary>
     public class PatchAlertsDetails 
     {
         
         /// <value>
-        /// Array of patch instructions.
+        /// Array of alert detail to update the status of the alert specified by the alert ID.
         /// </value>
         /// <remarks>
         /// Required

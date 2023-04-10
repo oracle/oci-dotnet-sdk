@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Collection of audit trail summary.
+    /// Collection of audit trail detail objects.
     /// </summary>
     public class AuditTrailCollection 
     {

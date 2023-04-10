@@ -16,12 +16,15 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details for the report schedule.
+    /// The details of the report schedule.
     /// </summary>
     [JsonConverter(typeof(ReportDetailsModelConverter))]
     public class ReportDetails 
     {
                 ///
+        /// <value>
+        /// The type of the report.
+        /// </value>
         ///
         public enum ReportTypeEnum {
             [EnumMember(Value = "AUDIT")]

@@ -73,7 +73,7 @@ namespace Oci.Common.Auth
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="federationClient"></param>
         /// <param name="sessionKeySupplier"></param>
@@ -184,41 +184,34 @@ namespace Oci.Common.Auth
         protected void AutoDetectCertificatesUsingMetadataUrl()
         {
             logger.Info("Extracting the leaf certificate, tenantId and intermediate certificates");
-            if (leafCertificateSupplier == null)
-            {
-                leafCertificateSupplier = new URLBasedX509CertificateSupplier(
-                    GetMetadataResourceDetails(Constants.INSTANCE_CERT),
-                    GetMetadataResourceDetails(Constants.PRIVATE_KEY_CERT),
-                    null
-                );
-                ((URLBasedX509CertificateSupplier)leafCertificateSupplier).Refresh();
-            }
+            leafCertificateSupplier = new URLBasedX509CertificateSupplier(
+                GetMetadataResourceDetails(Constants.INSTANCE_CERT),
+                GetMetadataResourceDetails(Constants.PRIVATE_KEY_CERT),
+                null
+            );
+            ((URLBasedX509CertificateSupplier)leafCertificateSupplier).Refresh();
 
-            if (String.IsNullOrEmpty(tenancyId))
+            if (string.IsNullOrEmpty(tenancyId))
             {
                 tenancyId = AuthUtils.GetTenantIdFromCertificate(leafCertificateSupplier.GetCertificateAndKeyPair().Certificate);
-                if (String.IsNullOrEmpty(tenancyId))
+                if (string.IsNullOrEmpty(tenancyId))
                 {
                     throw new ArgumentNullException($"TenancyId not found in the leaf certificate. {IP_DEBUG_INFORMATION_LOG}");
                 }
                 logger.Info($"Tenancy id is {tenancyId}");
             }
 
-            if (intermediateCertificateSuppliers == null)
-            {
-                intermediateCertificateSuppliers = new HashSet<IX509CertificateSupplier>();
-                var certificate = new URLBasedX509CertificateSupplier(
-                    GetMetadataResourceDetails(Constants.INTERMEDIATE_KEY_CERT),
-                    null,
-                    null
-                );
-                certificate.Refresh();
-                intermediateCertificateSuppliers.Add(certificate);
-            }
+            intermediateCertificateSuppliers = new HashSet<IX509CertificateSupplier>();
+            var certificate = new URLBasedX509CertificateSupplier(
+                GetMetadataResourceDetails(Constants.INTERMEDIATE_KEY_CERT),
+                null,
+                null
+            );
+            certificate.Refresh();
+            intermediateCertificateSuppliers.Add(certificate);
         }
 
-        private ResourceDetails GetMetadataResourceDetails(
-            string path)
+        private ResourceDetails GetMetadataResourceDetails(string path)
         {
             return new ResourceDetails
             {

@@ -20,7 +20,7 @@ namespace Oci.DatasafeService.Requests
     {
         
         /// <value>
-        /// Details to update alerts within a given compartment.
+        /// The details to update the alerts in the specified compartment.
         /// </value>
         /// <remarks>
         /// Required

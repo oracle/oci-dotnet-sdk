@@ -76,13 +76,13 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> TotalContainerDatabases { get; set; }
         
         /// <value>
-        /// The number of OCPU cores to be enabled per VM cluster node.
+        /// The number of CPU cores to be enabled per VM cluster node.
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
         public System.Nullable<int> CpuCoreCountPerNode { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) to be enabled per each OCPU core.
+        /// The amount of memory (in GBs) to be enabled per each CPU core.
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
@@ -100,7 +100,8 @@ namespace Oci.DatabaseService.Models
         public string ClusterTimeZone { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Cloud Autonomous VM Cluster.
+        /// The compute model of the Cloud Autonomous VM Cluster. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// 
         /// </value>
         ///
         public enum ComputeModelEnum {
@@ -111,7 +112,8 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Cloud Autonomous VM Cluster.
+        /// The compute model of the Cloud Autonomous VM Cluster. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -131,6 +133,8 @@ namespace Oci.DatabaseService.Models
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Database service.
         /// Note that when provisioning an Autonomous Database on [dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null because the attribute is already set at the
         /// Autonomous Exadata Infrastructure level. When using [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
         /// </value>
         ///
@@ -146,6 +150,8 @@ namespace Oci.DatabaseService.Models
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Database service.
         /// Note that when provisioning an Autonomous Database on [dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null because the attribute is already set at the
         /// Autonomous Exadata Infrastructure level. When using [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]

@@ -251,5 +251,13 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A boolean flag indicating whether the search should be case-insensitive.
+        /// The search is case-sensitive by default. Set this parameter to true to do case-insensitive search.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isCaseInSensitive")]
+        public System.Nullable<bool> IsCaseInSensitive { get; set; }
     }
 }

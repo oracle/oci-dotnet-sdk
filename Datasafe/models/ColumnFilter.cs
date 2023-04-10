@@ -87,7 +87,7 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<string> Expressions { get; set; }
         
         /// <value>
-        /// Indicates if the filter is enabled. Values can either be 'true' or 'false'.
+        /// Indicates whether the filter is enabled. Values can either be 'true' or 'false'.
         /// </value>
         /// <remarks>
         /// Required
@@ -97,7 +97,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// Indicates if the filter is hidden. Values can either be 'true' or 'false'.
+        /// Indicates whether the filter is hidden. Values can either be 'true' or 'false'.
         /// </value>
         /// <remarks>
         /// Required

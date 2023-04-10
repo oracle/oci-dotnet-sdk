@@ -36,7 +36,7 @@ namespace Oci.Common.Auth.Internal
         private volatile SecurityTokenAdapter securityTokenAdapter = null;
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public HttpClient Client { get; set; }
-        public FederationRequestSigner FederationSigner { get; set; }
+        public IFederationRequestSigner FederationSigner { get; set; }
 
         public X509FederationClient(
                 string federationEndpoint,
@@ -50,7 +50,8 @@ namespace Oci.Common.Auth.Internal
                 leafCertificateSupplier,
                 sessionKeySupplier,
                 intermediateCertificateSuppliers,
-                DEFAULT_PURPOSE)
+                DEFAULT_PURPOSE,
+                new FederationRequestSigner())
         { }
 
         public X509FederationClient(
@@ -59,7 +60,8 @@ namespace Oci.Common.Auth.Internal
                 IX509CertificateSupplier leafCertificateSupplier,
                 ISessionKeySupplier sessionKeySupplier,
                 HashSet<IX509CertificateSupplier> intermediateCertificateSuppliers,
-                string purpose)
+                string purpose,
+                IFederationRequestSigner federationRequestSigner)
         {
             this.federationEndpoint = federationEndpoint;
             this.leafCertificateSupplier = leafCertificateSupplier ?? throw new NullReferenceException();
@@ -68,6 +70,7 @@ namespace Oci.Common.Auth.Internal
             this.tenancyId = tenancyId ?? throw new NullReferenceException();
             this.securityTokenAdapter = new SecurityTokenAdapter(null, null);
             this.purpose = purpose ?? throw new NullReferenceException();
+            this.FederationSigner = federationRequestSigner;
         }
 
         /// <summary>Gets a security token. If there is already a valid token cached, it will be returned.
@@ -228,11 +231,7 @@ namespace Oci.Common.Auth.Internal
             httpRequestMsg.Content = ContentHelper.CreateHttpContent(requestBody);
 
             var keyId = this.tenancyId + Constants.FED_KEY_PATH + AuthUtils.GetFingerPrint(leafCertificate.Thumbprint);
-            if (FederationSigner == null)
-            {
-                FederationSigner = new FederationRequestSigner((RsaKeyParameters)certificateAndKeyPair.PrivateKey, keyId);
-            }
-            FederationSigner.SignRequest(httpRequestMsg);
+            FederationSigner.SignRequest(httpRequestMsg, (RsaKeyParameters)certificateAndKeyPair.PrivateKey, keyId);
             var requestContent = httpRequestMsg.Content.ReadAsStringAsync().Result;
             logger.Debug($"request content to Auth service is {requestContent}");
 

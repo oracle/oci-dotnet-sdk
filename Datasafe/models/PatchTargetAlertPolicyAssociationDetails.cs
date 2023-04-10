@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The details used to patch alert policy associations.
+    /// The details used to create associations for target databases and audit policies.
     /// </summary>
     public class PatchTargetAlertPolicyAssociationDetails 
     {

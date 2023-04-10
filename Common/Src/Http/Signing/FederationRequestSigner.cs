@@ -19,31 +19,27 @@ namespace Oci.Common.Http.Signing
     /// This class contains the implementation of the federation signing logic that
     /// retrieves the token from Auth Service used in remote requests.
     /// </summary>
-    public class FederationRequestSigner
+    public class FederationRequestSigner : IFederationRequestSigner
     {
         private readonly SigningStrategy signingStrategy = SigningStrategy.STANDARD;
-        private readonly ISigner signer;
-        private readonly string keyId;
+        private readonly ISignatureSigner signer;
 
         private static readonly string SIGNATURE_VERSION = "1";
         private static readonly string SIGNATURE_ALGORITHM = "rsa-sha256";
 
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
-        public FederationRequestSigner(RsaKeyParameters privateKey, string keyId) :
-                                            this(privateKey, keyId, SignerUtilities.GetSigner("SHA-256withRSA"))
+        public FederationRequestSigner() : this(new SignatureSigner())
         { }
 
-        public FederationRequestSigner(RsaKeyParameters privateKey, string keyId, ISigner signer)
+        public FederationRequestSigner(ISignatureSigner signer)
         {
-            this.keyId = keyId;
             this.signer = signer;
-            this.signer.Init(true, privateKey);
         }
 
         /// <summary>This is the main code to sign a request.</summary>
         /// <param name="requestMessage">An HttpRequestMessage to be signed.</param>
-        public void SignRequest(HttpRequestMessage requestMessage)
+        public void SignRequest(HttpRequestMessage requestMessage, RsaKeyParameters privateKey, string keyId)
         {
             HttpMethod httpMethod = requestMessage.Method;
             HttpRequestHeaders httpHeaders = requestMessage.Headers;
@@ -64,12 +60,8 @@ namespace Oci.Common.Http.Signing
             // Calculate the Signing string.
             var signingString = SigningUtils.CalculateStringToSign(requestMessage, headersToSign);
             logger.Debug($"signing string is {signingString}");
-
-            var bytes = Encoding.UTF8.GetBytes(signingString);
-            this.signer.BlockUpdate(bytes, 0, bytes.Length);
-            var signature = Convert.ToBase64String(this.signer.GenerateSignature());
-
-            var authorization = SigningUtils.CalculateAuthorization(headersToSign, SIGNATURE_VERSION, this.keyId, SIGNATURE_ALGORITHM, signature);
+            var signature = Convert.ToBase64String(signer.sign(privateKey, Encoding.UTF8.GetBytes(signingString)));
+            var authorization = SigningUtils.CalculateAuthorization(headersToSign, SIGNATURE_VERSION, keyId, SIGNATURE_ALGORITHM, signature);
 
             httpHeaders.Add(Constants.AUTHORIZATION_HEADER, authorization);
         }

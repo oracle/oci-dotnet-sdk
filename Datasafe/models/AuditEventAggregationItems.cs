@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details of audit events aggregation items.
+    /// The details of audit events aggregation items.
     /// </summary>
     public class AuditEventAggregationItems 
     {

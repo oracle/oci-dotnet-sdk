@@ -30,7 +30,7 @@ namespace Oci.DatasafeService.Requests
         public string ReportDefinitionId { get; set; }
         
         /// <value>
-        /// Details for report schedule. It contains details such as schedule, PDF/XLS and number of rows.
+        /// The details for the audit report schedule. It contains details such as schedule, PDF/XLS and number of rows.
         /// </value>
         /// <remarks>
         /// Required

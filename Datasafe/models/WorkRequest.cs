@@ -213,6 +213,16 @@ namespace Oci.DatasafeService.Models
             AddColumnsFromSdm,
             [EnumMember(Value = "MASKING_JOB")]
             MaskingJob,
+            [EnumMember(Value = "CREATE_DIFFERENCE")]
+            CreateDifference,
+            [EnumMember(Value = "DELETE_DIFFERENCE")]
+            DeleteDifference,
+            [EnumMember(Value = "UPDATE_DIFFERENCE")]
+            UpdateDifference,
+            [EnumMember(Value = "PATCH_DIFFERENCE")]
+            PatchDifference,
+            [EnumMember(Value = "APPLY_DIFFERENCE")]
+            ApplyDifference,
             [EnumMember(Value = "CREATE_SCHEDULE")]
             CreateSchedule,
             [EnumMember(Value = "REMOVE_SCHEDULE_REPORT")]
