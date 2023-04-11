@@ -20,7 +20,7 @@ namespace Oci.DatasafeService.Requests
     {
         
         /// <value>
-        /// Details to patch alerts.
+        /// The alert details to update the status of one or more alert specified by the alert IDs.
         /// </value>
         /// <remarks>
         /// Required

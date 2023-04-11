@@ -92,7 +92,7 @@ namespace Oci.DatasafeService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided.
+        /// The field to sort by. Only one sort parameter may be provided.
         /// 
         /// </value>
         ///
@@ -104,7 +104,7 @@ namespace Oci.DatasafeService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided.
+        /// The field to sort by. Only one sort parameter may be provided.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

@@ -174,7 +174,7 @@ namespace Oci.DatasafeService.Requests
         
         /// <value>
         /// A filter to return masking columns based on whether the assigned masking formats need a
-        /// seed value for masking. A value of true returns those masking columns that are using 
+        /// seed value for masking. A value of true returns those masking columns that are using
         /// Deterministic Encryption or Deterministic Substitution masking format.
         /// 
         /// </value>

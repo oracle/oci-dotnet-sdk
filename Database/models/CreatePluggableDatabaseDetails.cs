@@ -17,7 +17,6 @@ namespace Oci.DatabaseService.Models
 {
     /// <summary>
     /// Parameters for creating a pluggable database in a specified container database (CDB).
-    /// <br/>
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>

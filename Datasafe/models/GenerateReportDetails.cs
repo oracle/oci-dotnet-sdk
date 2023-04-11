@@ -78,7 +78,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<MimeTypeEnum> MimeType { get; set; }
         
         /// <value>
-        /// Specifies the time before which the data needs to be reported.
+        /// Specifies the time until which the data needs to be reported.
         /// </value>
         [JsonProperty(PropertyName = "timeLessThan")]
         public System.Nullable<System.DateTime> TimeLessThan { get; set; }
@@ -90,7 +90,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeGreaterThan { get; set; }
         
         /// <value>
-        /// Specifies the limit on number of rows in report.
+        /// Specifies the limit on the number of rows in the report.
         /// </value>
         [JsonProperty(PropertyName = "rowLimit")]
         public System.Nullable<int> RowLimit { get; set; }

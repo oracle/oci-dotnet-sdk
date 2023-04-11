@@ -476,6 +476,34 @@ namespace Oci.DatasafeService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSdmMaskingPolicyDifferenceRequest, GetSdmMaskingPolicyDifferenceResponse> ForSdmMaskingPolicyDifference(GetSdmMaskingPolicyDifferenceRequest request, params SdmMaskingPolicyDifference.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSdmMaskingPolicyDifference(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSdmMaskingPolicyDifferenceRequest, GetSdmMaskingPolicyDifferenceResponse> ForSdmMaskingPolicyDifference(GetSdmMaskingPolicyDifferenceRequest request, WaiterConfiguration config, params SdmMaskingPolicyDifference.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSdmMaskingPolicyDifferenceRequest, GetSdmMaskingPolicyDifferenceResponse>(
+                request,
+                request => client.GetSdmMaskingPolicyDifference(request),
+                response => targetStates.Contains(response.SdmMaskingPolicyDifference.LifecycleState.Value),
+                targetStates.Contains(SdmMaskingPolicyDifference.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetSdmMaskingPolicyDifferenceRequest, GetSdmMaskingPolicyDifferenceResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetSecurityAssessmentRequest, GetSecurityAssessmentResponse> ForSecurityAssessment(GetSecurityAssessmentRequest request, params SecurityAssessmentLifecycleState[] targetStates)
         {
             return this.ForSecurityAssessment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Collection of report definition summary.
+    /// Collection of report definition objects.
     /// </summary>
     public class ReportDefinitionCollection 
     {

@@ -114,12 +114,6 @@ namespace Oci.DatabaseService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// Additional details about the status of the database, such as the progress of a backup or restore operation. UNPUBLISHED \"HIDDEN\" FIELD. This field is being added to unblock console functionality but will not be published in the SDK or documentation. It will be present in responses, so deprecating will require coordination to ensure we do not break customers if they begin relying on this field. Please see https://confluence.oci.oraclecorp.com/pages/viewpage.action?pageId=58769459 for details regarding the motivation of this field and the longer term plan.
-        /// </value>
-        [JsonProperty(PropertyName = "additionalDatabaseStatus")]
-        public System.Collections.Generic.List<string> AdditionalDatabaseStatus { get; set; }
-        
-        /// <value>
         /// The OCID of the key container that is used as the master encryption key in database transparent data encryption (TDE) operations.
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
@@ -182,6 +176,8 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isLocalDataGuardEnabled
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isFreeTier")]
@@ -249,7 +245,9 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
-        /// The compute amount available to the database. Minimum and maximum values depend on the compute model and whether the database is on Shared or Dedicated infrastructure. For an Autonomous Database on Shared infrastructure, the 'ECPU' compute model requires values in multiples of two. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value.
+        /// The compute amount available to the database. Minimum and maximum values depend on the compute model and whether the database is on Shared or Dedicated infrastructure. 
+        /// For an Autonomous Database on Shared infrastructure, the 'ECPU' compute model requires values in multiples of two. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "computeCount")]
         public System.Nullable<float> ComputeCount { get; set; }
@@ -298,7 +296,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> DataStorageSizeInTBs { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) enabled per each OCPU core in Autonomous VM Cluster.
+        /// The amount of memory (in GBs) enabled per each CPU in the Autonomous VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
@@ -375,6 +373,8 @@ namespace Oci.DatabaseService.Models
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Database service.
         /// Note that when provisioning an Autonomous Database on [dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null because the attribute is already set at the
         /// Autonomous Exadata Infrastructure level. When using [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
         /// </value>
         ///
@@ -393,6 +393,8 @@ namespace Oci.DatabaseService.Models
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Database service.
         /// Note that when provisioning an Autonomous Database on [dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null because the attribute is already set at the
         /// Autonomous Exadata Infrastructure level. When using [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]
@@ -454,7 +456,10 @@ namespace Oci.DatabaseService.Models
         public string PrivateEndpoint { get; set; }
         
         /// <value>
-        /// The private endpoint label for the resource. Setting this to an empty string, after the private endpoint database gets created, will change the same private endpoint database to the public endpoint database.
+        /// The resource's private endpoint label. Setting this to an empty string, after the creation of the private endpoint database, changes the private endpoint database to a public endpoint database.
+        /// <br/>
+        /// This setting cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointLabel")]
         public string PrivateEndpointLabel { get; set; }
@@ -484,6 +489,8 @@ namespace Oci.DatabaseService.Models
         /// - DW - indicates an Autonomous Data Warehouse database
         /// - AJD - indicates an Autonomous JSON Database
         /// - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
         /// </value>
         ///
@@ -508,6 +515,8 @@ namespace Oci.DatabaseService.Models
         /// - DW - indicates an Autonomous Data Warehouse database
         /// - AJD - indicates an Autonomous JSON Database
         /// - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dbWorkload")]
@@ -669,7 +678,10 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeMaintenanceEnd { get; set; }
         
         /// <value>
-        /// Indicates whether the Autonomous Database is a refreshable clone.
+        /// Indicates if the Autonomous Database is a refreshable clone.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isRefreshableClone")]
         public System.Nullable<bool> IsRefreshableClone { get; set; }
@@ -693,7 +705,10 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeOfNextRefresh { get; set; }
                 ///
         /// <value>
-        /// The `DATABASE OPEN` mode. You can open the database in `READ_ONLY` or `READ_WRITE` mode.
+        /// Indicates the Autonomous Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// 
         /// </value>
         ///
         public enum OpenModeEnum {
@@ -707,7 +722,10 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The `DATABASE OPEN` mode. You can open the database in `READ_ONLY` or `READ_WRITE` mode.
+        /// Indicates the Autonomous Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "openMode")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -762,7 +780,10 @@ namespace Oci.DatabaseService.Models
         public string SourceId { get; set; }
                 ///
         /// <value>
-        /// The Autonomous Database permission level. Restricted mode allows access only to admin users.
+        /// The Autonomous Database permission level. Restricted mode allows access only by admin users.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// 
         /// </value>
         ///
         public enum PermissionLevelEnum {
@@ -776,7 +797,10 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Autonomous Database permission level. Restricted mode allows access only to admin users.
+        /// The Autonomous Database permission level. Restricted mode allows access only by admin users.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "permissionLevel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -929,7 +953,18 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> PeerDbIds { get; set; }
         
         /// <value>
-        /// Indicates whether the Autonomous Database requires mTLS connections.
+        /// Specifies if the Autonomous Database requires mTLS connections.
+        /// <br/>
+        /// This may not be updated in parallel with any of the following: licenseModel, databaseEdition, cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, whitelistedIps, openMode, permissionLevel, db-workload, privateEndpointLabel, nsgIds, customerContacts, dbVersion, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+        /// <br/>
+        /// Service Change: The default value of the isMTLSConnectionRequired attribute will change from true to false on July 1, 2023 in the following APIs:
+        /// - CreateAutonomousDatabase
+        /// - GetAutonomousDatabase
+        /// - UpdateAutonomousDatabase
+        /// Details: Prior to the July 1, 2023 change, the isMTLSConnectionRequired attribute default value was true. This applies to Autonomous Databases on shared Exadata infrastructure.
+        /// Does this impact me? If you use or maintain custom scripts or Terraform scripts referencing the CreateAutonomousDatabase, GetAutonomousDatabase, or UpdateAutonomousDatabase APIs, you want to check, and possibly modify, the scripts for the changed default value of the attribute. Should you choose not to leave your scripts unchanged, the API calls containing this attribute will continue to work, but the default value will switch from true to false.
+        /// How do I make this change? Using either OCI SDKs or command line tools, update your custom scripts to explicitly set the isMTLSConnectionRequired attribute to true.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isMtlsConnectionRequired")]
         public System.Nullable<bool> IsMtlsConnectionRequired { get; set; }
@@ -972,7 +1007,10 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<AutonomousMaintenanceScheduleTypeEnum> AutonomousMaintenanceScheduleType { get; set; }
         
         /// <value>
-        /// list of scheduled operations
+        /// The list of scheduled operations.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "scheduledOperations")]
         public System.Collections.Generic.List<ScheduledOperationDetails> ScheduledOperations { get; set; }
@@ -1031,7 +1069,10 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<DatabaseEditionEnum> DatabaseEdition { get; set; }
         
         /// <value>
-        /// List of database tools details.
+        /// The list of database tools details.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, isLocalDataGuardEnabled, or isFreeTier.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "dbToolsDetails")]
         public System.Collections.Generic.List<DatabaseTool> DbToolsDetails { get; set; }

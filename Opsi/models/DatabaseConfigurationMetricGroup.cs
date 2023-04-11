@@ -34,7 +34,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "DB_EXTERNAL_INSTANCE")]
             DbExternalInstance,
             [EnumMember(Value = "DB_OS_CONFIG_INSTANCE")]
-            DbOsConfigInstance
+            DbOsConfigInstance,
+            [EnumMember(Value = "DB_PARAMETERS")]
+            DbParameters
         };
 
         
@@ -72,6 +74,9 @@ namespace Oci.OpsiService.Models
                     break;
                 case "DB_EXTERNAL_INSTANCE":
                     obj = new DBExternalInstance();
+                    break;
+                case "DB_PARAMETERS":
+                    obj = new DBParameters();
                     break;
                 case "DB_EXTERNAL_PROPERTIES":
                     obj = new DBExternalProperties();

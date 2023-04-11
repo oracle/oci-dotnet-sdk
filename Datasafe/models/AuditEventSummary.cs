@@ -32,7 +32,7 @@ namespace Oci.DatasafeService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the audit event. This is the same audited target database resource comparment.
+        /// The OCID of the compartment containing the audit event. This is the same as that of audit profile of the target database resource compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.DatasafeService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Name of the database user whose actions were audited.
+        /// The name of the database user whose actions were audited.
         /// </value>
         [JsonProperty(PropertyName = "dbUserName")]
         public string DbUserName { get; set; }
@@ -103,7 +103,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<DatabaseTypeEnum> DatabaseType { get; set; }
                 ///
         /// <value>
-        /// Class of the target that was audited.
+        /// The class of the target that was audited.
         /// </value>
         ///
         public enum TargetClassEnum {
@@ -115,14 +115,14 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Class of the target that was audited.
+        /// The class of the target that was audited.
         /// </value>
         [JsonProperty(PropertyName = "targetClass")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TargetClassEnum> TargetClass { get; set; }
         
         /// <value>
-        /// Time of audit event occurrence in the target database.
+        /// The time of the audit event occurrence in the target database.
         /// </value>
         /// <remarks>
         /// Required
@@ -132,7 +132,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> AuditEventTime { get; set; }
         
         /// <value>
-        /// Timestamp when this audit event was collected from the target database by Data Safe.
+        /// The timestamp when this audit event was collected from the target database by Data Safe.
         /// </value>
         /// <remarks>
         /// Required
@@ -142,13 +142,13 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeCollected { get; set; }
         
         /// <value>
-        /// Name of the operating system user for the database session.
+        /// The name of the operating system user for the database session.
         /// </value>
         [JsonProperty(PropertyName = "osUserName")]
         public string OsUserName { get; set; }
         
         /// <value>
-        /// Name of the action executed by the user on the target database. i.e ALTER, CREATE, DROP.
+        /// The name of the action executed by the user on the target database. i.e ALTER, CREATE, DROP.
         /// </value>
         [JsonProperty(PropertyName = "operation")]
         public string Operation { get; set; }
@@ -175,7 +175,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<OperationStatusEnum> OperationStatus { get; set; }
         
         /// <value>
-        /// Name of the detail action executed by the user on the target database. i.e ALTER SEQUENCE, CREATE TRIGGER, CREATE INDEX.
+        /// The name of the detail action executed by the user on the target database. i.e ALTER SEQUENCE, CREATE TRIGGER, CREATE INDEX.
         /// </value>
         [JsonProperty(PropertyName = "eventName")]
         public string EventName { get; set; }
@@ -187,37 +187,37 @@ namespace Oci.DatasafeService.Models
         public string ErrorCode { get; set; }
         
         /// <value>
-        /// Detailed message on why the Error occurred.
+        /// The detailed message on why the Error occurred.
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
         
         /// <value>
-        /// Type of object in the source database affected by the action. i.e PL/SQL, SYNONYM, PACKAGE BODY.
+        /// The type of the object in the source database affected by the action. i.e PL/SQL, SYNONYM, PACKAGE BODY.
         /// </value>
         [JsonProperty(PropertyName = "objectType")]
         public string ObjectType { get; set; }
         
         /// <value>
-        /// Name of the object affected by the action.
+        /// The name of the object affected by the action.
         /// </value>
         [JsonProperty(PropertyName = "objectName")]
         public string ObjectName { get; set; }
         
         /// <value>
-        /// Schema name of object affected but the action.
+        /// The schema name of the object affected by the action.
         /// </value>
         [JsonProperty(PropertyName = "objectOwner")]
         public string ObjectOwner { get; set; }
         
         /// <value>
-        /// Name of the host machine from which the session was spawned.
+        /// The name of the host machine from which the session was spawned.
         /// </value>
         [JsonProperty(PropertyName = "clientHostname")]
         public string ClientHostname { get; set; }
         
         /// <value>
-        /// IP address of the host from which the session was spawned.
+        /// The IP address of the host machine from which the session was spawned.
         /// </value>
         [JsonProperty(PropertyName = "clientIp")]
         public string ClientIp { get; set; }
@@ -306,7 +306,7 @@ namespace Oci.DatasafeService.Models
         public string AuditPolicies { get; set; }
                 ///
         /// <value>
-        /// Type of auditing.
+        /// The type of the auditing.
         /// </value>
         ///
         public enum AuditTypeEnum {
@@ -332,7 +332,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Type of auditing.
+        /// The type of the auditing.
         /// </value>
         [JsonProperty(PropertyName = "auditType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details of audit profile aggregation items.
+    /// The details of the audit profile aggregation items.
     /// </summary>
     public class AuditPolicyAggregationItems 
     {
@@ -25,7 +25,7 @@ namespace Oci.DatasafeService.Models
         public AuditPolicyDimensions Dimensions { get; set; }
         
         /// <value>
-        /// Total count of aggregated metric.
+        /// The total count of the aggregated metric.
         /// </value>
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<long> Count { get; set; }

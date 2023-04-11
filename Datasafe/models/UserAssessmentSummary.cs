@@ -164,6 +164,12 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The date and time the user assessment was last run, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastAssessed")]
+        public System.Nullable<System.DateTime> TimeLastAssessed { get; set; }
                 ///
         /// <value>
         /// Indicates whether the user assessment was created by system or user.

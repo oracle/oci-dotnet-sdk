@@ -76,6 +76,31 @@ namespace Oci.DatasafeService.Requests
         public string UserCategory { get; set; }
         
         /// <value>
+        /// A filter to return only items that match the specified user role.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "userRole")]
+        public string UserRole { get; set; }
+        
+        /// <value>
+        /// A filter to return only items that match the specified user profile.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "userProfile")]
+        public string UserProfile { get; set; }
+        
+        /// <value>
+        /// A filter to return only items that match the specified user type. The possible values can be
+        ///   - ADMIN_PRIVILEGED
+        ///   - APPLICATION
+        ///   - PRIVILEGED
+        ///   - SCHEMA
+        ///   - NON_PRIVILEGED
+        /// as specified by '#/definitions/userTypes'.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "userType")]
+        public string UserType { get; set; }
+        
+        /// <value>
         /// A filter to return only items that match the specified user key.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "userKey")]

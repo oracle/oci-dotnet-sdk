@@ -55,6 +55,12 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// The date and time when the security assessment was last run. Conforms to the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastAssessed")]
+        public System.Nullable<System.DateTime> TimeLastAssessed { get; set; }
+        
+        /// <value>
         /// The OCID of the compartment that contains the security assessment.
         /// </value>
         /// <remarks>

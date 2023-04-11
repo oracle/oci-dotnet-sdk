@@ -96,19 +96,19 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<int> DisplayOrder { get; set; }
         
         /// <value>
-        /// Specifies the time at which the report definition was created.
+        /// Specifies the data and time the report definition was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time of the report definition update in Data Safe.
+        /// The date and time the report definition was update.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Additional scim filters used to specialize the report.
+        /// Additional SCIM filters used to define the report.
         /// </value>
         [JsonProperty(PropertyName = "scimFilter")]
         public string ScimFilter { get; set; }
@@ -120,7 +120,7 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<Column> ColumnInfo { get; set; }
         
         /// <value>
-        /// An array of column filter objects. A column Filter object stores all information about a column filter including field name, an operator, one or more expressions, if the filter is enabled, or if the filter is hidden.
+        /// An array of columnFilter objects. A columnFilter object stores all information about a column filter including field name, an operator, one or more expressions, if the filter is enabled, or if the filter is hidden.
         /// </value>
         [JsonProperty(PropertyName = "columnFilters")]
         public System.Collections.Generic.List<ColumnFilter> ColumnFilters { get; set; }
@@ -159,7 +159,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<ReportDefinitionLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// Schedule to generate the report periodically in the specified format:
+        /// The schedule to generate the report periodically in the specified format:
         /// <version-string>;<version-specific-schedule>
         /// <br/>
         /// Allowed version strings - \"v1\"
@@ -179,7 +179,7 @@ namespace Oci.DatasafeService.Models
         public string Schedule { get; set; }
                 ///
         /// <value>
-        /// Specifies the format of report to be excel or pdf
+        /// Specifies the format of the report ( either XLS or PDF )
         /// </value>
         ///
         public enum ScheduledReportMimeTypeEnum {
@@ -193,14 +193,14 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the format of report to be excel or pdf
+        /// Specifies the format of the report ( either XLS or PDF )
         /// </value>
         [JsonProperty(PropertyName = "scheduledReportMimeType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ScheduledReportMimeTypeEnum> ScheduledReportMimeType { get; set; }
         
         /// <value>
-        /// Specifies the limit on number of rows in report.
+        /// Specifies the limit on the number of rows in the report.
         /// </value>
         [JsonProperty(PropertyName = "scheduledReportRowLimit")]
         public System.Nullable<int> ScheduledReportRowLimit { get; set; }
@@ -212,15 +212,14 @@ namespace Oci.DatasafeService.Models
         public string ScheduledReportName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment
-        /// in which the scheduled resource should be created.
+        /// The OCID of the compartment in which the scheduled resource should be created.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scheduledReportCompartmentId")]
         public string ScheduledReportCompartmentId { get; set; }
         
         /// <value>
-        /// The time span of records in report to be scheduled.
+        /// The time span for the records in the report to be scheduled.
         /// <period-value><period>
         /// Allowed period strings - \"H\",\"D\",\"M\",\"Y\"
         /// Each of the above fields potentially introduce constraints. A workRequest is created only
@@ -235,7 +234,7 @@ namespace Oci.DatasafeService.Models
         public string RecordTimeSpan { get; set; }
         
         /// <value>
-        /// The list of data protection regulations/standards used in the report that will help demonstrate compliance.
+        /// The list of the data protection regulations/standards used in the report that will help demonstrate compliance.
         /// </value>
         [JsonProperty(PropertyName = "complianceStandards")]
         public System.Collections.Generic.List<string> ComplianceStandards { get; set; }

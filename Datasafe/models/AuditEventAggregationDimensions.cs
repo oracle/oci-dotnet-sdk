@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details of aggregation dimensions used for summarizing audit events.
+    /// The details of the aggregation dimensions used for summarizing audit events.
     /// </summary>
     public class AuditEventAggregationDimensions 
     {
         
         /// <value>
-        /// Time of audit event occurrence in the target database.
+        /// The time the audit event occurred in the target database.
         /// </value>
         [JsonProperty(PropertyName = "auditEventTime")]
         public System.Collections.Generic.List<System.DateTime> AuditEventTime { get; set; }
@@ -114,7 +114,7 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<AuditTypeEnum> AuditType { get; set; }
         
         /// <value>
-        /// Name of the detail action executed by the user on the target database. i.e ALTER SEQUENCE, CREATE TRIGGER, CREATE INDEX.
+        /// The name of the event executed by the user on the target database. i.e ALTER SEQUENCE, CREATE TRIGGER, CREATE INDEX.
         /// </value>
         [JsonProperty(PropertyName = "eventName")]
         public System.Collections.Generic.List<string> EventName { get; set; }

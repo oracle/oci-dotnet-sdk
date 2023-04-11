@@ -930,6 +930,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateApplicationVipRequest, CreateApplicationVipResponse> ForCreateApplicationVip(CreateApplicationVipRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCreateApplicationVip(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateApplicationVipRequest, CreateApplicationVipResponse> ForCreateApplicationVip(CreateApplicationVipRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CreateApplicationVipRequest, CreateApplicationVipResponse>(() =>
+            {
+                var response = client.CreateApplicationVip(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<CreateAutonomousContainerDatabaseRequest, CreateAutonomousContainerDatabaseResponse> ForCreateAutonomousContainerDatabase(CreateAutonomousContainerDatabaseRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForCreateAutonomousContainerDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1619,6 +1651,38 @@ namespace Oci.DatabaseService
             return new Waiter<DbNodeActionRequest, DbNodeActionResponse>(() =>
             {
                 var response = client.DbNodeAction(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteApplicationVipRequest, DeleteApplicationVipResponse> ForDeleteApplicationVip(DeleteApplicationVipRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForDeleteApplicationVip(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteApplicationVipRequest, DeleteApplicationVipResponse> ForDeleteApplicationVip(DeleteApplicationVipRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<DeleteApplicationVipRequest, DeleteApplicationVipResponse>(() =>
+            {
+                var response = client.DeleteApplicationVip(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3100,6 +3164,34 @@ namespace Oci.DatabaseService
             });
         }
         
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetApplicationVipRequest, GetApplicationVipResponse> ForApplicationVip(GetApplicationVipRequest request, params ApplicationVip.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForApplicationVip(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetApplicationVipRequest, GetApplicationVipResponse> ForApplicationVip(GetApplicationVipRequest request, WaiterConfiguration config, params ApplicationVip.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetApplicationVipRequest, GetApplicationVipResponse>(
+                request,
+                request => client.GetApplicationVip(request),
+                response => targetStates.Contains(response.ApplicationVip.LifecycleState.Value),
+                targetStates.Contains(ApplicationVip.LifecycleStateEnum.Terminated)
+            );
+            return new Waiter<GetApplicationVipRequest, GetApplicationVipResponse>(config, agent);
+        }
         /// <summary>
         /// Creates a waiter using default wait configuration.
         /// </summary>
@@ -4815,6 +4907,70 @@ namespace Oci.DatabaseService
             return new Waiter<RotateAutonomousDatabaseEncryptionKeyRequest, RotateAutonomousDatabaseEncryptionKeyResponse>(() =>
             {
                 var response = client.RotateAutonomousDatabaseEncryptionKey(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RotateAutonomousVmClusterOrdsCertsRequest, RotateAutonomousVmClusterOrdsCertsResponse> ForRotateAutonomousVmClusterOrdsCerts(RotateAutonomousVmClusterOrdsCertsRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForRotateAutonomousVmClusterOrdsCerts(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RotateAutonomousVmClusterOrdsCertsRequest, RotateAutonomousVmClusterOrdsCertsResponse> ForRotateAutonomousVmClusterOrdsCerts(RotateAutonomousVmClusterOrdsCertsRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<RotateAutonomousVmClusterOrdsCertsRequest, RotateAutonomousVmClusterOrdsCertsResponse>(() =>
+            {
+                var response = client.RotateAutonomousVmClusterOrdsCerts(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RotateAutonomousVmClusterSslCertsRequest, RotateAutonomousVmClusterSslCertsResponse> ForRotateAutonomousVmClusterSslCerts(RotateAutonomousVmClusterSslCertsRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForRotateAutonomousVmClusterSslCerts(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RotateAutonomousVmClusterSslCertsRequest, RotateAutonomousVmClusterSslCertsResponse> ForRotateAutonomousVmClusterSslCerts(RotateAutonomousVmClusterSslCertsRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<RotateAutonomousVmClusterSslCertsRequest, RotateAutonomousVmClusterSslCertsResponse>(() =>
+            {
+                var response = client.RotateAutonomousVmClusterSslCerts(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

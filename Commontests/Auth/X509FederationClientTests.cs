@@ -27,7 +27,7 @@ namespace Oci.Common.Auth
 
         private X509FederationClient x509FederationClient;
         private readonly Mock<RsaKeyParameters> rsaKeyParamMock;
-        private readonly Mock<ISigner> signerMock;
+        private readonly Mock<IFederationRequestSigner> signerMock;
 
         public X509FederationClientTests()
         {
@@ -45,14 +45,17 @@ namespace Oci.Common.Auth
             certificate.Setup(p => p.Refresh());
             intermediateCertificateSuppliers.Object.Add(certificate.Object);
 
+            signerMock = new Mock<IFederationRequestSigner>();
+            signerMock.Setup(s => s.SignRequest(It.IsAny<HttpRequestMessage>(), It.IsAny<RsaKeyParameters>(), It.IsAny<string>()));
+
             x509FederationClient = new X509FederationClient("https://auth.us-phoenix-1.oraclecloud.com", "",
                     leafCertificateSupplier.Object,
                     new SessionKey(),
                     intermediateCertificateSuppliers.Object,
-                    "test");
+                    "test",
+                    signerMock.Object);
 
-            signerMock = new Mock<ISigner>();
-            signerMock.Setup(s => s.GenerateSignature()).Returns(new byte[] { 1, 2, 3, 4, 5 });
+
         }
 
         [Fact]
@@ -80,8 +83,6 @@ namespace Oci.Common.Auth
                .ReturnsAsync(response);
 
             x509FederationClient.Client = new HttpClient(handlerMock.Object);
-            x509FederationClient.FederationSigner = new FederationRequestSigner(rsaKeyParamMock.Object, "", signerMock.Object);
-
             Assert.Equal(expectedJwtToken, x509FederationClient.GetSecurityToken());
         }
     }

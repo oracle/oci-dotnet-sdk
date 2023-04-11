@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Description of Report.
+    /// The description of the report.
     /// </summary>
     public class Report 
     {
@@ -85,7 +85,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<MimeTypeEnum> MimeType { get; set; }
         
         /// <value>
-        /// Specifies the time at which the report was generated.
+        /// Specifies the date and time the report was generated.
         /// </value>
         /// <remarks>
         /// Required
@@ -95,7 +95,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeGenerated { get; set; }
         
         /// <value>
-        /// The current state of the report.
+        /// The current state of the audit report.
         /// </value>
         /// <remarks>
         /// Required
@@ -106,7 +106,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<ReportLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// The type of the report.
+        /// The type of the audit report.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

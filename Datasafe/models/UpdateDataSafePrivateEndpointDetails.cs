@@ -24,10 +24,6 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// The display name of the private endpoint.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         

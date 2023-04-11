@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Sorting the data at the column level.
+    /// Sorts the data at the column level.
     /// </summary>
     public class ColumnSorting 
     {

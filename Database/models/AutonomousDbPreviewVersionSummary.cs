@@ -51,6 +51,8 @@ namespace Oci.DatabaseService.Models
         /// - DW - indicates an Autonomous Data Warehouse database
         /// - AJD - indicates an Autonomous JSON Database
         /// - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
         /// </value>
         ///
@@ -75,6 +77,8 @@ namespace Oci.DatabaseService.Models
         /// - DW - indicates an Autonomous Data Warehouse database
         /// - AJD - indicates an Autonomous JSON Database
         /// - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dbWorkload")]

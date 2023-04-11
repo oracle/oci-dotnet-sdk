@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 58.0.0 - 2023-04-11
+### Added
+- Support for rotation of certificates on autonomous VM clusters on Exadata Cloud at Customer in the Database service
+- Support for ACD and OKV wallet naming for autonomous databases and dedicated autonomous databases on Exadata Cloud at Customer in the Database service
+- Support for Exadata cloud service application virtual IPs (VIPs) in the Database service
+- Support for additional manageability features for large sensitive data models and masking policies in the Data Safe service
+- Support for getting user profile details and assignments for databases and fleets in the Data Safe service
+- Support for enabling ADDM spotlight for databases in the Operations Insights service
+ 
+### Breaking Changes
+- The property `AdditionalDatabaseStatus` was removed from the models `AutonomousDatabase`, `AutonomousDatabaseSummary`, `AutonomousDataWarehouse`and `AutonomousDataWarehouseSummary` in the Database service
+- While not to be used directly by customers, there are breaking changes in the internal classes. The type for property `FederationSigner` was changed to `IFederationRequestSigner` in `X509FederationClient` class. The `FederationRequestSigner` class now implements the interface `IFederationRequestSigner` and the `SignRequest` method in the class now accepts two additional required parameters `privateKey` and `keyId`
+ 
+### Fixed
+- An issue with cert rotation and concurrent request with the InstancePrincipalsAuthenticationDetailsProvider was fixed.
+
 ## 57.0.0 - 2023-04-04
 ### Added
 - Support for pre-emptible worker nodes in the Container Engine for Kubernetes service
