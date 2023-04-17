@@ -137,16 +137,6 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// An integer value used in achieving concurrency control, this field will be used to generate eTags.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "LifetimeLogicalClock is required.")]
-        [JsonProperty(PropertyName = "lifetimeLogicalClock")]
-        public System.Nullable<int> LifetimeLogicalClock { get; set; }
-        
-        /// <value>
         /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
         /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

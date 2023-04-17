@@ -141,16 +141,6 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         [JsonProperty(PropertyName = "annotationFormat")]
         public string AnnotationFormat { get; set; }
         
-        /// <value>
-        /// An integer value used in achieving concurrency control, this field will be used to generate eTags.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "LifetimeLogicalClock is required.")]
-        [JsonProperty(PropertyName = "lifetimeLogicalClock")]
-        public System.Nullable<int> LifetimeLogicalClock { get; set; }
-        
         /// <remarks>
         /// Required
         /// </remarks>

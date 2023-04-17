@@ -44,17 +44,5 @@ namespace Oci.OdaService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
-        
-        /// <value>
-        /// A token that uniquely identifies a request so that you can retry the request if there's
-        /// a timeout or server error without the risk of executing that same action again.
-        /// <br/>
-        /// Retry tokens expire after 24 hours, but they can become invalid before then if there are
-        /// conflicting operations. For example, if an instance was deleted and purged from the system,
-        /// then the service might reject a retry of the original creation request.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
-        public string OpcRetryToken { get; set; }
     }
 }

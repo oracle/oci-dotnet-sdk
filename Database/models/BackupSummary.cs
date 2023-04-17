@@ -115,7 +115,11 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "FAILED")]
             Failed,
             [EnumMember(Value = "RESTORING")]
-            Restoring
+            Restoring,
+            [EnumMember(Value = "CANCELING")]
+            Canceling,
+            [EnumMember(Value = "CANCELED")]
+            Canceled
         };
 
         /// <value>

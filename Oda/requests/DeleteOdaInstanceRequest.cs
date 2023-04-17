@@ -30,6 +30,12 @@ namespace Oci.OdaService.Requests
         public string OdaInstanceId { get; set; }
         
         /// <value>
+        /// Retain the ODA instance being deleted for the given number of days before hard-delete/purge.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "retentionTime")]
+        public System.Nullable<int> RetentionTime { get; set; }
+        
+        /// <value>
         /// For optimistic concurrency control in a PUT or DELETE call for
         /// a Digital Assistant instance, set the `if-match` query parameter
         /// to the value of the `ETAG` header from a previous GET or POST

@@ -32,8 +32,8 @@ namespace Oci.OdaService.Requests
         /// <value>
         /// Unique Skill identifier.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "skillId")]
-        public string SkillId { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
+        public string Id { get; set; }
         
         /// <value>
         /// List only Bot resources with this category.

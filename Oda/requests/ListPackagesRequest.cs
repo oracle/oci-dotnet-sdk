@@ -32,6 +32,12 @@ namespace Oci.OdaService.Requests
         public string ResourceType { get; set; }
         
         /// <value>
+        /// List the packages that belong to this compartment.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// List only the information for the package with this name. Package names are unique to a publisher and may not change.
         /// <br/>
         /// Example: My Package
@@ -50,8 +56,8 @@ namespace Oci.OdaService.Requests
         /// <value>
         /// Should we return only the latest version of a package (instead of all versions)?
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLatestSkillOnly")]
-        public System.Nullable<bool> IsLatestSkillOnly { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLatestVersionOnly")]
+        public System.Nullable<bool> IsLatestVersionOnly { get; set; }
         
         /// <value>
         /// The maximum number of items to return per page.

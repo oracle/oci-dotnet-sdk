@@ -46,7 +46,9 @@ namespace Oci.OdaService.Models
             [EnumMember(Value = "URL")]
             Url,
             [EnumMember(Value = "NUMBER")]
-            Number
+            Number,
+            [EnumMember(Value = "BOOLEAN")]
+            Boolean
         };
 
         /// <value>

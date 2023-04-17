@@ -22,7 +22,7 @@ namespace Oci.OdaService.Models
     {
                 ///
         /// <value>
-        /// The action to take against the Digital Assistant instance.
+        /// The action to take against the resource.
         /// </value>
         ///
         public enum ResourceActionEnum {
@@ -31,6 +31,8 @@ namespace Oci.OdaService.Models
             UnknownEnumValue,
             [EnumMember(Value = "CREATE")]
             Create,
+            [EnumMember(Value = "UPDATE")]
+            Update,
             [EnumMember(Value = "DELETE")]
             Delete,
             [EnumMember(Value = "PURGE")]
@@ -70,7 +72,7 @@ namespace Oci.OdaService.Models
         };
 
         /// <value>
-        /// The action to take against the Digital Assistant instance.
+        /// The action to take against the resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -91,7 +93,7 @@ namespace Oci.OdaService.Models
         public string ResourceType { get; set; }
         
         /// <value>
-        /// The identifier of the Digital Assistant instance that is the subject of the request.
+        /// The identifier of the resource that is the subject of the request.
         /// </value>
         /// <remarks>
         /// Required

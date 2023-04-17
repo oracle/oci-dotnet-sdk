@@ -32,8 +32,8 @@ namespace Oci.OdaService.Requests
         /// <value>
         /// Unique Digital Assistant identifier.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "digitalAssistantId")]
-        public string DigitalAssistantId { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
+        public string Id { get; set; }
         
         /// <value>
         /// List only Bot resources with this category.

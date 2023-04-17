@@ -21,6 +21,12 @@ namespace Oci.DatalabelingservicedataplaneService.Models
     public class DocumentMetadata : RecordMetadata
     {
         
+        /// <value>
+        /// Job id ocid of OCR batch call.
+        /// </value>
+        [JsonProperty(PropertyName = "jobId")]
+        public string JobId { get; set; }
+        
         [JsonProperty(PropertyName = "recordType")]
         private readonly string recordType = "DOCUMENT_METADATA";
     }
