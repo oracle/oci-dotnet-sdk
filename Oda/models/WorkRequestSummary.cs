@@ -50,6 +50,16 @@ namespace Oci.OdaService.Models
         [Required(ErrorMessage = "OdaInstanceId is required.")]
         [JsonProperty(PropertyName = "odaInstanceId")]
         public string OdaInstanceId { get; set; }
+        
+        /// <value>
+        /// The identifier of the resource to which this work request pertains.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ResourceId is required.")]
+        [JsonProperty(PropertyName = "resourceId")]
+        public string ResourceId { get; set; }
                 ///
         /// <value>
         /// The type of the operation that's associated with the work request.
@@ -120,7 +130,23 @@ namespace Oci.OdaService.Models
             [EnumMember(Value = "VERSION_DIGITAL_ASSISTANT")]
             VersionDigitalAssistant,
             [EnumMember(Value = "EXPORT_DIGITAL_ASSISTANT")]
-            ExportDigitalAssistant
+            ExportDigitalAssistant,
+            [EnumMember(Value = "CREATE_ODA_PRIVATE_ENDPOINT")]
+            CreateOdaPrivateEndpoint,
+            [EnumMember(Value = "DELETE_ODA_PRIVATE_ENDPOINT")]
+            DeleteOdaPrivateEndpoint,
+            [EnumMember(Value = "UPDATE_ODA_PRIVATE_ENDPOINT")]
+            UpdateOdaPrivateEndpoint,
+            [EnumMember(Value = "CHANGE_ODA_PRIVATE_ENDPOINT_COMPARTMENT")]
+            ChangeOdaPrivateEndpointCompartment,
+            [EnumMember(Value = "CREATE_ODA_PRIVATE_ENDPOINT_SCAN_PROXY")]
+            CreateOdaPrivateEndpointScanProxy,
+            [EnumMember(Value = "DELETE_ODA_PRIVATE_ENDPOINT_SCAN_PROXY")]
+            DeleteOdaPrivateEndpointScanProxy,
+            [EnumMember(Value = "CREATE_ODA_PRIVATE_ENDPOINT_ATTACHMENT")]
+            CreateOdaPrivateEndpointAttachment,
+            [EnumMember(Value = "DELETE_ODA_PRIVATE_ENDPOINT_ATTACHMENT")]
+            DeleteOdaPrivateEndpointAttachment
         };
 
         /// <value>

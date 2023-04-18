@@ -102,6 +102,9 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Record.LifecycleStateEnum> LifecycleState { get; set; }
         
+        [JsonProperty(PropertyName = "recordMetadata")]
+        public RecordMetadata RecordMetadata { get; set; }
+        
         /// <value>
         /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
         /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}

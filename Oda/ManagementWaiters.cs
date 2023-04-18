@@ -144,6 +144,90 @@ namespace Oci.OdaService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOdaPrivateEndpointRequest, GetOdaPrivateEndpointResponse> ForOdaPrivateEndpoint(GetOdaPrivateEndpointRequest request, params OdaPrivateEndpoint.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForOdaPrivateEndpoint(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOdaPrivateEndpointRequest, GetOdaPrivateEndpointResponse> ForOdaPrivateEndpoint(GetOdaPrivateEndpointRequest request, WaiterConfiguration config, params OdaPrivateEndpoint.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetOdaPrivateEndpointRequest, GetOdaPrivateEndpointResponse>(
+                request,
+                request => client.GetOdaPrivateEndpoint(request),
+                response => targetStates.Contains(response.OdaPrivateEndpoint.LifecycleState.Value),
+                targetStates.Contains(OdaPrivateEndpoint.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetOdaPrivateEndpointRequest, GetOdaPrivateEndpointResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOdaPrivateEndpointAttachmentRequest, GetOdaPrivateEndpointAttachmentResponse> ForOdaPrivateEndpointAttachment(GetOdaPrivateEndpointAttachmentRequest request, params OdaPrivateEndpointAttachment.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForOdaPrivateEndpointAttachment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOdaPrivateEndpointAttachmentRequest, GetOdaPrivateEndpointAttachmentResponse> ForOdaPrivateEndpointAttachment(GetOdaPrivateEndpointAttachmentRequest request, WaiterConfiguration config, params OdaPrivateEndpointAttachment.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetOdaPrivateEndpointAttachmentRequest, GetOdaPrivateEndpointAttachmentResponse>(
+                request,
+                request => client.GetOdaPrivateEndpointAttachment(request),
+                response => targetStates.Contains(response.OdaPrivateEndpointAttachment.LifecycleState.Value),
+                targetStates.Contains(OdaPrivateEndpointAttachment.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetOdaPrivateEndpointAttachmentRequest, GetOdaPrivateEndpointAttachmentResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOdaPrivateEndpointScanProxyRequest, GetOdaPrivateEndpointScanProxyResponse> ForOdaPrivateEndpointScanProxy(GetOdaPrivateEndpointScanProxyRequest request, params OdaPrivateEndpointScanProxy.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForOdaPrivateEndpointScanProxy(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetOdaPrivateEndpointScanProxyRequest, GetOdaPrivateEndpointScanProxyResponse> ForOdaPrivateEndpointScanProxy(GetOdaPrivateEndpointScanProxyRequest request, WaiterConfiguration config, params OdaPrivateEndpointScanProxy.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetOdaPrivateEndpointScanProxyRequest, GetOdaPrivateEndpointScanProxyResponse>(
+                request,
+                request => client.GetOdaPrivateEndpointScanProxy(request),
+                response => targetStates.Contains(response.OdaPrivateEndpointScanProxy.LifecycleState.Value),
+                targetStates.Contains(OdaPrivateEndpointScanProxy.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetOdaPrivateEndpointScanProxyRequest, GetOdaPrivateEndpointScanProxyResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetSkillRequest, GetSkillResponse> ForSkill(GetSkillRequest request, params LifecycleState[] targetStates)
         {
             return this.ForSkill(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

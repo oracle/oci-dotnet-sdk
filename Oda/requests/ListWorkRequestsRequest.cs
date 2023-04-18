@@ -42,6 +42,12 @@ namespace Oci.OdaService.Requests
         public string OdaInstanceId { get; set; }
         
         /// <value>
+        /// List only the information for this resource.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
+        public string ResourceId { get; set; }
+        
+        /// <value>
         /// The page at which to start retrieving results.
         /// <br/>
         /// You get this value from the `opc-next-page` header in a previous list request.

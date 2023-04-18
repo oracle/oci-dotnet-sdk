@@ -23,6 +23,13 @@ namespace Oci.OdaService.Models
     {
         
         /// <value>
+        /// The Channel's name. The name can contain only letters, numbers, periods, and underscores. The name must begin with a letter.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+        
+        /// <value>
         /// A short description of the Channel.
         /// </value>
         [JsonProperty(PropertyName = "description")]

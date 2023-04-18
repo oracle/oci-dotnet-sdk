@@ -66,10 +66,6 @@ namespace Oci.OdaService.Models
         /// <value>
         /// The IDPs URL for the page that users authenticate with by entering the user name and password.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AuthorizationEndpointUrl is required.")]
         [JsonProperty(PropertyName = "authorizationEndpointUrl")]
         public string AuthorizationEndpointUrl { get; set; }
         
@@ -131,10 +127,6 @@ namespace Oci.OdaService.Models
         /// <value>
         /// The access-token profile claim to use to identify the user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SubjectClaim is required.")]
         [JsonProperty(PropertyName = "subjectClaim")]
         public string SubjectClaim { get; set; }
         
