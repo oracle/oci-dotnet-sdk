@@ -83,7 +83,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<bool> IsGovernanceEnabled { get; set; }
         
         /// <value>
-        /// The email to notify the user, and that the ONS subscription will be created with.
+        /// Email address to be used to notify the user, and that the ONS subscription will be created with.
         /// </value>
         [JsonProperty(PropertyName = "subscriptionEmail")]
         public string SubscriptionEmail { get; set; }

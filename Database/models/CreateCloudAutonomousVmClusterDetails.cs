@@ -120,6 +120,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
+        /// Enable mutual TLS(mTLS) authentication for database at time of provisioning a VMCluster. This is applicable to database TLS Certificates only. Default is TLS
+        /// </value>
+        [JsonProperty(PropertyName = "isMtlsEnabledVmCluster")]
+        public System.Nullable<bool> IsMtlsEnabledVmCluster { get; set; }
+        
+        /// <value>
         /// The list of database servers.
         /// </value>
         [JsonProperty(PropertyName = "dbServers")]
@@ -127,6 +133,18 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "maintenanceWindowDetails")]
         public MaintenanceWindow MaintenanceWindowDetails { get; set; }
+        
+        /// <value>
+        /// The SCAN Listener TLS port. Default is 2484.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortTls")]
+        public System.Nullable<int> ScanListenerPortTls { get; set; }
+        
+        /// <value>
+        /// The SCAN Listener Non TLS port. Default is 1521.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortNonTls")]
+        public System.Nullable<int> ScanListenerPortNonTls { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle PaaS and IaaS services in the cloud.

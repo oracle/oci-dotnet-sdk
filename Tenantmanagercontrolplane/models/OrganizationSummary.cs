@@ -32,7 +32,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// A display name for the organization.
+        /// A display name for the organization. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -75,7 +75,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<Organization.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Date-time when this organization was created.
+        /// Date and time when the organization was created.
         /// </value>
         /// <remarks>
         /// Required
@@ -85,7 +85,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Date-time when this organization was last updated.
+        /// Date and time when the organization was last updated.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }

@@ -60,6 +60,12 @@ namespace Oci.DatabasemanagementService.Requests
         public System.Nullable<DeploymentType> DeploymentType { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata infrastructure.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "externalExadataInfrastructureId")]
+        public string ExternalExadataInfrastructureId { get; set; }
+        
+        /// <value>
         /// The page token representing the page from where the next set of paginated results
         /// are retrieved. This is usually retrieved from a previous list call.
         /// 

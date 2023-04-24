@@ -250,5 +250,8 @@ namespace Oci.IntegrationService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ShapeEnum> Shape { get; set; }
         
+        [JsonProperty(PropertyName = "privateEndpointOutboundConnection")]
+        public OutboundConnection PrivateEndpointOutboundConnection { get; set; }
+        
     }
 }

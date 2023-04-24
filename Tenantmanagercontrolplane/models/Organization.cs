@@ -54,7 +54,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string ParentName { get; set; }
         
         /// <value>
-        /// OCID of the default Universal Credits Model subscription. Any tenancy joining the organization will automatically get assigned this subscription if a subscription is not explictly assigned.
+        /// OCID of the default Universal Credits Model subscription. Any tenancy joining the organization will automatically get assigned this subscription, if a subscription is not explictly assigned.
         /// </value>
         /// <remarks>
         /// Required
@@ -97,7 +97,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Date-time when this organization was created.
+        /// Date and time when the organization was created.
         /// </value>
         /// <remarks>
         /// Required
@@ -107,7 +107,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Date-time when this organization was last updated.
+        /// Date and time when the organization was last updated.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }

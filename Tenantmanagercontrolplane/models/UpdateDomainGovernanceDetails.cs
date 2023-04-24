@@ -22,7 +22,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
     {
         
         /// <value>
-        /// The email to notify the user, and that the ONS subscription will be created with. The ONS subscription for the previous email will also be deleted.
+        /// Email address to be used to notify the user, and that the ONS subscription will be created with. The ONS subscription for the previous email will also be deleted.
         /// </value>
         [JsonProperty(PropertyName = "subscriptionEmail")]
         public string SubscriptionEmail { get; set; }

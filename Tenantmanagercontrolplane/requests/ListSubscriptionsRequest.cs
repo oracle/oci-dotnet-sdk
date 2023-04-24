@@ -20,7 +20,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// OCID of the compartment. Always a tenancy OCID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }

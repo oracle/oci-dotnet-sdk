@@ -6,8 +6,9 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Text.RegularExpressions;
+
+using Oci.Common.Utils;
 
 namespace Oci.Common.Internal
 {
@@ -31,53 +32,38 @@ namespace Oci.Common.Internal
         /// <summary>Creates the service endpoint</summary>
         /// <param name="service">The service.</param>
         /// <param name="regionId">The region id.</param>
-        /// <param name="secondLevelDomain">The second level domain for the realm this region belongs to.</param>
-        /// <returns>The endpoint (protocol + FQDN) for this service.</returns>
-        [MethodImpl(MethodImplOptions.Synchronized)]
-        public static string CreateEndpoint(Service service, string regionId, string secondLevelDomain)
-        {
-            if (service == null || String.IsNullOrWhiteSpace(regionId) || String.IsNullOrWhiteSpace(secondLevelDomain))
-            {
-                throw new ArgumentNullException();
-            }
-
-            string endpointTemplateToUse;
-
-            // If the region is dotted, return endpoint using the "{service}.{region}" template.
-            if(regionId.Contains("."))
-            {
-                return BuildEndpoint(DOTTED_REGION_ENDPOINT_TEMPLATE, service, regionId);
-            }
-            if (!string.IsNullOrEmpty(service.ServiceEndpointTemplate))
-            {
-                endpointTemplateToUse = service.ServiceEndpointTemplate;
-            }
-            else
-            {
-                endpointTemplateToUse = DEFAULT_ENDPOINT_TEMPLATE;
-            }
-
-            if (!OVERRIDE_REGION_IDS.TryGetValue(regionId, out var regionIdToUse))
-            {
-                regionIdToUse = regionId;
-            }
-
-            return BuildEndpoint(endpointTemplateToUse, regionIdToUse, service.ServiceEndpointPrefix, secondLevelDomain);
-        }
-
-        /// <summary>Creates the service endpoint</summary>
-        /// <param name="service">The service.</param>
-        /// <param name="regionId">The region id.</param>
-        /// <param name="realm">The realm this region belongs to.</param>
+        /// <param name="Realm">The realm to use.</param>
         /// <returns>The endpoint (protocol + FQDN) for this service.</returns>
         [MethodImpl(MethodImplOptions.Synchronized)]
         public static string CreateEndpoint(Service service, string regionId, Realm realm)
         {
-            if (realm == null)
+            if (service == null || String.IsNullOrWhiteSpace(regionId) || realm == null)
             {
                 throw new ArgumentNullException();
             }
-            return CreateEndpoint(service, regionId, realm.SecondLevelDomain);
+            if (!OVERRIDE_REGION_IDS.TryGetValue(regionId, out var regionIdToUse))
+            {
+                regionIdToUse = regionId;
+            }
+            // If the region is dotted, return endpoint using the "{service}.{region}" template.
+            if (regionIdToUse.Contains("."))
+            {
+                return BuildEndpoint(DOTTED_REGION_ENDPOINT_TEMPLATE, service, regionIdToUse);
+            }
+            bool isRealmSpecificEndpointTemplateEnabledByDefault = RealmSpecificEndpointTemplateUtils.IsRealmSpecificEndpointTemplateEnabledByDefault();
+            if (isRealmSpecificEndpointTemplateEnabledByDefault)
+            {
+                bool isRealSpecificTemplateDefined = service?.GetServiceEndpointTemplateForRealmDictionary()?.ContainsKey(realm.RealmId.ToLower()) ?? false;
+                if (isRealSpecificTemplateDefined)
+                {
+                    return GetRealmSpecificEndpointTemplate(service, regionIdToUse, realm);
+                }
+                else
+                {
+                    logger.Debug($"Realm Specific Endpoint template not defined for realm {realm.RealmId}, using non-realm-specific endpoint template instead.");
+                }
+            }
+            return GetServiceEndpointTemplateToUse(service, regionIdToUse, realm);
         }
 
         /// <summary>Creates the service endpoint from region.</summary>
@@ -97,19 +83,19 @@ namespace Oci.Common.Internal
         /// <param name="template">The endpoint template.</param>
         /// <param name="regionId">The region id.</param>
         /// <param name="endpointPrefix">The endpoint prefix.</param>
-        /// <param name="secondLevelDomain">The second level domain.</param>
+        /// <param name="realm">The Realm to use.</param>
         /// <returns>The endpoint (protocol + FQDN) for this service.</returns>
-        public static string BuildEndpoint(string template, string regionId, string endpointPrefix, string secondLevelDomain)
+        public static string BuildEndpoint(string template, string regionId, string endpointPrefix, Realm realm)
         {
             logger.Trace("Called BuildEndpoint");
-            if (template == null || regionId == null || endpointPrefix == null || secondLevelDomain == null)
+            if (template == null || regionId == null || endpointPrefix == null || realm == null)
             {
                 throw new ArgumentNullException();
             }
 
             string endpoint = template.Replace(SERVICE_ENDPOINT_PREFIX_TEMPLATE, endpointPrefix)
                 .Replace(REGION_ID_TEMPLATE, regionId)
-                .Replace(SECOND_LEVEL_DOMAIN_TEMPLATE, secondLevelDomain);
+                .Replace(SECOND_LEVEL_DOMAIN_TEMPLATE, realm.SecondLevelDomain);
             logger.Debug($"Built endpoint: '{endpoint}'");
 
             return endpoint;
@@ -126,14 +112,14 @@ namespace Oci.Common.Internal
         public static string BuildEndpoint(string template, Service service, string region)
         {
             logger.Trace("Called BuildEndpoint - custom region detected");
-            if (template==null || service == null || region == null)
+            if (template == null || service == null || region == null)
             {
                 throw new ArgumentNullException();
             }
 
             string serviceName;
 
-            if(!string.IsNullOrEmpty(service.EndpointServiceName))
+            if (!string.IsNullOrEmpty(service.EndpointServiceName))
             {
                 // If x-obmcs-endpoint-service-name is set in the spec, use that for the {service} portion of this template.
                 serviceName = service.EndpointServiceName;
@@ -145,7 +131,8 @@ namespace Oci.Common.Internal
                 Regex regex = new Regex(@"(https:\/\/|http:\/\/)(\w+)(\..*)");
                 Match match = regex.Match(service.ServiceEndpointTemplate);
                 serviceName = match.Groups[SERVICE_NAME_GROUP_INDEX].Value;
-                if(string.IsNullOrEmpty(serviceName)) {
+                if (string.IsNullOrEmpty(serviceName))
+                {
                     throw new Oci.Common.Model.OciException($"The ServiceEndpointTemplate: \"{service.ServiceEndpointTemplate}\" is formatted incorrectly", new UriFormatException());
                 }
             }
@@ -156,6 +143,37 @@ namespace Oci.Common.Internal
 
             logger.Debug($"Built endpoint: '{endpoint}'");
             return endpoint;
+        }
+
+        public static string GetServiceEndpointTemplateToUse(Service service, string regionId, Realm realm)
+        {
+            string endpointTemplateToUse;
+            if (!string.IsNullOrEmpty(service.ServiceEndpointTemplate))
+            {
+                endpointTemplateToUse = service.ServiceEndpointTemplate;
+            }
+            else
+            {
+                endpointTemplateToUse = DEFAULT_ENDPOINT_TEMPLATE;
+            }
+            return BuildEndpoint(endpointTemplateToUse, regionId, service.ServiceEndpointPrefix, realm);
+        }
+
+        public static string GetRealmSpecificEndpointTemplate(Service service, string regionId, Realm realm)
+        {
+            Dictionary<string, string> serviceEndpointTemplateForRealmDictionary = service.GetServiceEndpointTemplateForRealmDictionary();
+            string endpointTemplateToUse;
+            if (serviceEndpointTemplateForRealmDictionary.ContainsKey(realm.RealmId.ToLower()))
+            {
+                endpointTemplateToUse = serviceEndpointTemplateForRealmDictionary[realm.RealmId.ToLower()];
+            }
+            else
+            {
+                logger.Debug($"Endpoint template not defined for {realm.RealmId} realm, using non-realm-specific endpoint template instead");
+                endpointTemplateToUse = GetServiceEndpointTemplateToUse(service, regionId, realm);
+            }
+            logger.Debug($"Setting endpoint template to: {endpointTemplateToUse}");
+            return BuildEndpoint(endpointTemplateToUse, regionId, service.ServiceEndpointPrefix, realm);
         }
     }
 }

@@ -51,5 +51,8 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
+        [JsonProperty(PropertyName = "exadataInfraInfo")]
+        public ExternalExadataInfraBasicInfo ExadataInfraInfo { get; set; }
+        
     }
 }

@@ -22,7 +22,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
     {
         
         /// <value>
-        /// OCID of the default UCM subscription. Any tenancy joining the organization will automatically get assigned this subscription if a subscription if not explictly assigned.
+        /// OCID of the default Universal Credits Model subscription. Any tenancy joining the organization will automatically get assigned this subscription, if a subscription is not explictly assigned.
         /// </value>
         /// <remarks>
         /// Required

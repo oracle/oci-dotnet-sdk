@@ -32,7 +32,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string SpmSubscriptionId { get; set; }
         
         /// <value>
-        /// Service name for subscription.
+        /// Subscription service name.
         /// </value>
         /// <remarks>
         /// Required

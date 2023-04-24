@@ -146,6 +146,12 @@ namespace Oci.DatabasemanagementService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
+        /// Name of the domain.
+        /// </value>
+        [JsonProperty(PropertyName = "domainName")]
+        public string DomainName { get; set; }
+        
+        /// <value>
         /// The date and time the external DB node was created.
         /// </value>
         /// <remarks>

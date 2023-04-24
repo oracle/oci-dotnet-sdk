@@ -41,6 +41,13 @@ namespace Oci.Common
         private static RegionSchema RegionSchemaFromIMDS = null;
         private static readonly string METADATA_SERVICE_BASE_URL = "http://169.254.169.254/";
         private static readonly string METADATA_SERVICE_API_URL = "opc/v2/instance/regionInfo/";
+        private static readonly string OCI_DEFAULT_REALM_ENV_VAR_NAME = "OCI_DEFAULT_REALM";
+        public static volatile string DefaultRealmFromEnvironmentVariable = getDefaultRealmFromEnvironmentVariable();
+
+        private static string getDefaultRealmFromEnvironmentVariable()
+        {
+            return Environment.GetEnvironmentVariable(OCI_DEFAULT_REALM_ENV_VAR_NAME);
+        }
 
         /// <summary>The region identifier as defined in https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm</summary>
         public string RegionId { get; }
@@ -134,12 +141,9 @@ namespace Oci.Common
             {
                 return FormatDefaultRegionEndpoint(service, region);
             }
-            else
-            {
-                string secondLevelDomain = Realm.GetFallbackRealm();
-                logger.Info($"Read the second level domain:{secondLevelDomain}");
-                return EndpointBuilder.CreateEndpoint(service, regionId, secondLevelDomain);
-            }
+            // Else we need to fall back to OC1 SLD.
+            logger.Debug($"Unknown regionId '{regionId}', will assume it's in Realm OC1");
+            return EndpointBuilder.CreateEndpoint(service, regionId, Realm.OC1);
         }
 
         /// <summary>Returns the Region object from the canonical public region id.</summary>
@@ -307,6 +311,13 @@ namespace Oci.Common
                 RegisterRegionFromInstanceMetadataService();
                 region = GetRegionFromRegionCodeOrIdWithoutRegistering(regionCodeOrId);
             }
+
+            if (!string.IsNullOrEmpty(DefaultRealmFromEnvironmentVariable))
+            {
+                RegisterRegionWithDefaultRealm(regionCodeOrId);
+                region = GetRegionFromRegionCodeOrIdWithoutRegistering(regionCodeOrId);
+            }
+
             return region;
         }
 
@@ -321,6 +332,18 @@ namespace Oci.Common
             if (!HasUsedEnvVar)
             {
                 RegisterRegionFromRegionEnvironmentVariable();
+            }
+        }
+
+        /// <summary>Registers region and sets HasUsedConfigFile status to true</summary>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        private static void RegisterRegionWithDefaultRealm(String regionId)
+        {
+            logger.Info($"Realm domain component from {OCI_DEFAULT_REALM_ENV_VAR_NAME} environment variable is {DefaultRealmFromEnvironmentVariable}");
+            Realm realmFromEnvironmentVariable = Realm.Register("RealmFromEnvironmentVariable", DefaultRealmFromEnvironmentVariable);
+            if (realmFromEnvironmentVariable != null)
+            {
+                Register(regionId, realmFromEnvironmentVariable);
             }
         }
 

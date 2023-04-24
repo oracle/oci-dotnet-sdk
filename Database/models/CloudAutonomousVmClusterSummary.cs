@@ -244,6 +244,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
+        /// Enable mutual TLS(mTLS) authentication for database at time of provisioning a VMCluster. This is applicable to database TLS Certificates only. Default is TLS
+        /// </value>
+        [JsonProperty(PropertyName = "isMtlsEnabledVmCluster")]
+        public System.Nullable<bool> IsMtlsEnabledVmCluster { get; set; }
+        
+        /// <value>
         /// The number of CPU cores enabled per VM cluster node.
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
@@ -302,6 +308,18 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "maintenanceWindow")]
         public MaintenanceWindow MaintenanceWindow { get; set; }
+        
+        /// <value>
+        /// The SCAN Listenenr TLS port. Default is 2484.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortTls")]
+        public System.Nullable<int> ScanListenerPortTls { get; set; }
+        
+        /// <value>
+        /// The SCAN Listener Non TLS port. Default is 1521.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPortNonTls")]
+        public System.Nullable<int> ScanListenerPortNonTls { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

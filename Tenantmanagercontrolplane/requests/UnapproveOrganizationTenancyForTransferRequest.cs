@@ -20,7 +20,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// OCID of the compartment. Always a tenancy OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,7 +55,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
         /// server error, without risk of executing that same action again. Retry tokens expire after 24
         /// hours, but can be invalidated before then due to conflicting operations. For example, if a resource
         /// has been deleted and purged from the system, then a retry of the original creation request
-        /// might be rejected.
+        /// will be rejected.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]

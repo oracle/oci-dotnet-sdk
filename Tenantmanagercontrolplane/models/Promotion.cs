@@ -22,7 +22,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
     {
         
         /// <value>
-        /// How long the promotion related to the subscription, if any, is valid in duration units.
+        /// Specifies how long the promotion related to the subscription, if any, is valid in duration units.
         /// </value>
         [JsonProperty(PropertyName = "duration")]
         public System.Nullable<int> Duration { get; set; }
@@ -34,13 +34,13 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string DurationUnit { get; set; }
         
         /// <value>
-        /// Total amount of credit for the promotion related to the subscription if there is one.
+        /// If a subscription is present, indicates the total amount of promotional subscription credit.
         /// </value>
         [JsonProperty(PropertyName = "amount")]
         public System.Nullable<float> Amount { get; set; }
                 ///
         /// <value>
-        /// Current status of the promotion related to the subscription if there is one.
+        /// If a subscription is present, indicates the current status of the subscription promotion.
         /// </value>
         ///
         public enum StatusEnum {
@@ -56,14 +56,14 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         };
 
         /// <value>
-        /// Current status of the promotion related to the subscription if there is one.
+        /// If a subscription is present, indicates the current status of the subscription promotion.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// Whether or not customer intends to pay once the promotion is done.
+        /// Speficies whether or not the customer intends to pay after the promotion has expired.
         /// </value>
         [JsonProperty(PropertyName = "isIntentToPay")]
         public System.Nullable<bool> IsIntentToPay { get; set; }
@@ -75,13 +75,13 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string CurrencyUnit { get; set; }
         
         /// <value>
-        /// Date-time for when the promotion starts.
+        /// Date and time when the promotion starts.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// Date-time for when the promotion ends.
+        /// Date and time when the promotion ends.
         /// </value>
         [JsonProperty(PropertyName = "timeExpired")]
         public System.Nullable<System.DateTime> TimeExpired { get; set; }

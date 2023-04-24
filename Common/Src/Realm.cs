@@ -100,25 +100,5 @@ namespace Oci.Common
             // If the realm is not yet registered, call constructor.
             return new Realm(realmId, secondlevelDomain);
         }
-
-        /// <summary>Return the custom second level domain if set via OCI_DEFAULT_REALM else return OC1</summary>
-        /// <returns>The Fallback Realm to register an unknown Region.</returns>
-        [MethodImpl(MethodImplOptions.Synchronized)]
-        public static string GetFallbackRealm()
-        {
-            string customSecondLevelDomain = Environment.GetEnvironmentVariable(OCI_DEFAULT_REALM);
-            if (!String.IsNullOrWhiteSpace(customSecondLevelDomain))
-            {
-                // Read a user settable second level domain for the endpoint
-                logger.Info($"Read the second level domain:{customSecondLevelDomain} from the {OCI_DEFAULT_REALM} environment variable");
-            }
-            else
-            {
-                // Else we need to fall back to OC1 SLD.
-                logger.Debug($"{OCI_DEFAULT_REALM} environment variable not set, will assume it's in Realm OC1");
-                customSecondLevelDomain = Realm.OC1.SecondLevelDomain;
-            }
-            return customSecondLevelDomain;
-        }
     }
 }

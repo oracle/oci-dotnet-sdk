@@ -52,7 +52,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string HomeRegion { get; set; }
         
         /// <value>
-        /// The email address of the administrator of the child tenancy.
+        /// Email address of the child tenancy administrator.
         /// </value>
         /// <remarks>
         /// Required
@@ -66,6 +66,13 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         /// </value>
         [JsonProperty(PropertyName = "policyName")]
         public string PolicyName { get; set; }
+        
+        /// <value>
+        /// The governance status of the child tenancy.
+        /// </value>
+        [JsonProperty(PropertyName = "governanceStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<GovernanceStatus> GovernanceStatus { get; set; }
         
     }
 }

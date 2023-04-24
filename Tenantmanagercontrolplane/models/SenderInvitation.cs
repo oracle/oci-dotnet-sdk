@@ -42,6 +42,16 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The list of subjects the invitation contains.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Subjects is required.")]
+        [JsonProperty(PropertyName = "subjects")]
+        public System.Collections.Generic.List<InvitationSubject> Subjects { get; set; }
+        
+        /// <value>
         /// OCID of the corresponding recipient invitation.
         /// </value>
         [JsonProperty(PropertyName = "recipientInvitationId")]
@@ -86,7 +96,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Date-time when this sender invitation was created.
+        /// Date and time when the sender invitation was created.
         /// </value>
         /// <remarks>
         /// Required
@@ -96,7 +106,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Date-time when this sender invitation was last updated.
+        /// Date and time when the sender invitation was last updated.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }

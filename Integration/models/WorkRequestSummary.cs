@@ -38,7 +38,11 @@ namespace Oci.IntegrationService.Models
             [EnumMember(Value = "START_INTEGRATION_INSTANCE")]
             StartIntegrationInstance,
             [EnumMember(Value = "DELETE_INTEGRATION_INSTANCE")]
-            DeleteIntegrationInstance
+            DeleteIntegrationInstance,
+            [EnumMember(Value = "CHANGE_PRIVATE_ENDPOINT_OUTBOUND_CONNECTION")]
+            ChangePrivateEndpointOutboundConnection,
+            [EnumMember(Value = "ENABLE_PROCESS_AUTOMATION")]
+            EnableProcessAutomation
         };
 
         /// <value>

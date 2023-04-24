@@ -4,6 +4,7 @@
  */
 
 using System;
+using System.Runtime.CompilerServices;
 using Oci.Common.Auth;
 using Oci.Common.Http;
 using Oci.Common.Http.Signing;
@@ -72,6 +73,7 @@ namespace Oci.Common
         }
 
         /// <summary>Sets the endpoint in the rest client.</summary>
+        [MethodImpl(MethodImplOptions.Synchronized)]
         public void SetEndpoint(string endpoint)
         {
             logger.Info($"Setting endpoint to {endpoint}");
@@ -92,5 +94,13 @@ namespace Oci.Common
         }
 
         public string GetUserAgent() => userAgent;
+
+        /// <summary>Sets the RealmSpecificEndpointTemplate in the rest client.</summary>
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public void SetRealmSpecificEndpointTemplate(string endpoint)
+        {
+            logger.Info($"Setting SetRealmSpecificEndpointTemplate to {endpoint}");
+            this.restClient.RealmSpecificEndpointTemplate = endpoint;
+        }
     }
 }

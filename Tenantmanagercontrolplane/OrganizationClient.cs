@@ -460,7 +460,7 @@ namespace Oci.TenantmanagercontrolplaneService
         }
 
         /// <summary>
-        /// An asynchronous API to restore tenancy.
+        /// An asynchronous API to restore a tenancy.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -572,7 +572,7 @@ namespace Oci.TenantmanagercontrolplaneService
         }
 
         /// <summary>
-        /// Assign the default subscription to the organization.
+        /// Map the default subscription to the organization.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

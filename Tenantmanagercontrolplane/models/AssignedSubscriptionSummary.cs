@@ -104,5 +104,11 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
+        /// <value>
+        /// Customer service identifier for the customer associated with the subscription.
+        /// </value>
+        [JsonProperty(PropertyName = "csiNumber")]
+        public string CsiNumber { get; set; }
+        
     }
 }

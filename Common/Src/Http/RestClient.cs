@@ -27,6 +27,7 @@ namespace Oci.Common.Http
         private readonly Dictionary<SigningStrategy, RequestSigner> availableRequestSigners;
         private RequestSigner requestSigner;
         private readonly IBasicAuthenticationDetailsProvider authProvider;
+        public string RealmSpecificEndpointTemplate { get; set; }
 
         private void RefreshSigner()
         {
