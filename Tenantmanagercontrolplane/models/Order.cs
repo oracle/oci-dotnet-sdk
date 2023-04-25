@@ -38,7 +38,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string DataCenterRegion { get; set; }
         
         /// <value>
-        /// Administrator email owning the subscription.
+        /// Email address of the administrator who owns the subscription.
         /// </value>
         /// <remarks>
         /// Required

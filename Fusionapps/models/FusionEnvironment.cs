@@ -233,6 +233,9 @@ namespace Oci.FusionappsService.Models
         [JsonProperty(PropertyName = "systemName")]
         public string SystemName { get; set; }
         
+        [JsonProperty(PropertyName = "environmentRole")]
+        public EnvironmentRole EnvironmentRole { get; set; }
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}

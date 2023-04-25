@@ -42,7 +42,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string DomainId { get; set; }
         
         /// <value>
-        /// The email to notify the user, and that the ONS subscription will be created with.
+        /// Email address to be used to notify the user, and that the ONS subscription will be created with.
         /// </value>
         /// <remarks>
         /// Required

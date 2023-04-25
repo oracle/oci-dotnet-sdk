@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
   /// <summary>
-  /// Possible roles for the OrganizationTenancy.
+  /// Possible roles for the organization tenancy.
   /// </summary>
   public enum OrganizationTenancyRole {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

@@ -72,7 +72,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "DISCONNECTED")]
             Disconnected,
             [EnumMember(Value = "MAINTENANCE_IN_PROGRESS")]
-            MaintenanceInProgress
+            MaintenanceInProgress,
+            [EnumMember(Value = "WAITING_FOR_CONNECTIVITY")]
+            WaitingForConnectivity
         };
 
         /// <value>
@@ -381,6 +383,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "isCpsOfflineReportEnabled")]
         public System.Nullable<bool> IsCpsOfflineReportEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "networkBondingModeDetails")]
+        public NetworkBondingModeDetails NetworkBondingModeDetails { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

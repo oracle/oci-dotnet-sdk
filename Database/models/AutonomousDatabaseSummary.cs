@@ -306,6 +306,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Nullable<int> DataStorageSizeInGBs { get; set; }
+        
+        /// <value>
+        /// The storage space consumed by Autonomous Database in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "usedDataStorageSizeInGBs")]
+        public System.Nullable<int> UsedDataStorageSizeInGBs { get; set; }
                 ///
         /// <value>
         /// The infrastructure type this resource belongs to.

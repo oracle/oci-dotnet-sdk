@@ -34,6 +34,10 @@ namespace Oci.DatabasemanagementService.Models
       [EnumMember(Value = "RELATED")]
       Related,
       [EnumMember(Value = "FAILED")]
-      Failed
+      Failed,
+      [EnumMember(Value = "ENABLED")]
+      Enabled,
+      [EnumMember(Value = "DISABLED")]
+      Disabled
   }
 }

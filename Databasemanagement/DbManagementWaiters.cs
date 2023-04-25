@@ -312,6 +312,118 @@ namespace Oci.DatabasemanagementService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalExadataInfrastructureRequest, GetExternalExadataInfrastructureResponse> ForExternalExadataInfrastructure(GetExternalExadataInfrastructureRequest request, params ExternalExadataInfrastructure.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalExadataInfrastructure(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalExadataInfrastructureRequest, GetExternalExadataInfrastructureResponse> ForExternalExadataInfrastructure(GetExternalExadataInfrastructureRequest request, WaiterConfiguration config, params ExternalExadataInfrastructure.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalExadataInfrastructureRequest, GetExternalExadataInfrastructureResponse>(
+                request,
+                request => client.GetExternalExadataInfrastructure(request),
+                response => targetStates.Contains(response.ExternalExadataInfrastructure.LifecycleState.Value),
+                targetStates.Contains(ExternalExadataInfrastructure.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalExadataInfrastructureRequest, GetExternalExadataInfrastructureResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalExadataStorageConnectorRequest, GetExternalExadataStorageConnectorResponse> ForExternalExadataStorageConnector(GetExternalExadataStorageConnectorRequest request, params ExternalExadataStorageConnector.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalExadataStorageConnector(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalExadataStorageConnectorRequest, GetExternalExadataStorageConnectorResponse> ForExternalExadataStorageConnector(GetExternalExadataStorageConnectorRequest request, WaiterConfiguration config, params ExternalExadataStorageConnector.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalExadataStorageConnectorRequest, GetExternalExadataStorageConnectorResponse>(
+                request,
+                request => client.GetExternalExadataStorageConnector(request),
+                response => targetStates.Contains(response.ExternalExadataStorageConnector.LifecycleState.Value),
+                targetStates.Contains(ExternalExadataStorageConnector.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalExadataStorageConnectorRequest, GetExternalExadataStorageConnectorResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalExadataStorageGridRequest, GetExternalExadataStorageGridResponse> ForExternalExadataStorageGrid(GetExternalExadataStorageGridRequest request, params ExternalExadataStorageGrid.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalExadataStorageGrid(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalExadataStorageGridRequest, GetExternalExadataStorageGridResponse> ForExternalExadataStorageGrid(GetExternalExadataStorageGridRequest request, WaiterConfiguration config, params ExternalExadataStorageGrid.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalExadataStorageGridRequest, GetExternalExadataStorageGridResponse>(
+                request,
+                request => client.GetExternalExadataStorageGrid(request),
+                response => targetStates.Contains(response.ExternalExadataStorageGrid.LifecycleState.Value),
+                targetStates.Contains(ExternalExadataStorageGrid.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalExadataStorageGridRequest, GetExternalExadataStorageGridResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalExadataStorageServerRequest, GetExternalExadataStorageServerResponse> ForExternalExadataStorageServer(GetExternalExadataStorageServerRequest request, params ExternalExadataStorageServer.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExternalExadataStorageServer(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalExadataStorageServerRequest, GetExternalExadataStorageServerResponse> ForExternalExadataStorageServer(GetExternalExadataStorageServerRequest request, WaiterConfiguration config, params ExternalExadataStorageServer.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalExadataStorageServerRequest, GetExternalExadataStorageServerResponse>(
+                request,
+                request => client.GetExternalExadataStorageServer(request),
+                response => targetStates.Contains(response.ExternalExadataStorageServer.LifecycleState.Value),
+                targetStates.Contains(ExternalExadataStorageServer.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExternalExadataStorageServerRequest, GetExternalExadataStorageServerResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetExternalListenerRequest, GetExternalListenerResponse> ForExternalListener(GetExternalListenerRequest request, params ExternalListener.LifecycleStateEnum[] targetStates)
         {
             return this.ForExternalListener(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

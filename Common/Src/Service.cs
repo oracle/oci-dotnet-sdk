@@ -4,6 +4,7 @@
  */
 
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace Oci.Common
 {
@@ -16,6 +17,7 @@ namespace Oci.Common
         public string ServiceEndpointPrefix { get; set; }
         public string ServiceEndpointTemplate { get; set; }
         public string EndpointServiceName { get; set; }
+        private readonly Dictionary<string, string> REALM_SPECIFIC_ENDPOINT_TEMPLATE_DICTIONARY = new Dictionary<string, string>();
 
         /// <summary>Returns a string showing service information.</summary>
         /// <returns>A string containing service name, endpoint prfix, and endpoint template.</returns>
@@ -34,6 +36,26 @@ namespace Oci.Common
                 return true;
             }
             return false;
+        }
+
+        /// <summary>
+        /// This method adds service endpoint templates for the realm to a dictionary
+        /// </summary>
+        /// <param name="realmId">The Realm Id for which the Service endpoint template is defined in spec</param>
+        /// <param name="endpoint">The service endpoint to use for this Realm Id</param>
+        ///
+        public void AddServiceEndpointTemplateForRealm(string realmId, string endpoint)
+        {
+            REALM_SPECIFIC_ENDPOINT_TEMPLATE_DICTIONARY.Add(realmId, endpoint);
+        }
+
+        /// <summary>
+        /// This method returns the dictionary of Realm Id to service Endpoints to use for Requests if defined by the service in their spec.
+        /// </summary>
+        /// <returns>A dic</returns>
+        public Dictionary<string, string> GetServiceEndpointTemplateForRealmDictionary()
+        {
+            return REALM_SPECIFIC_ENDPOINT_TEMPLATE_DICTIONARY;
         }
     }
 }

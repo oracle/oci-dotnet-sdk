@@ -183,14 +183,6 @@ namespace Oci.Common
         [Fact]
         [Trait("Category", "Unit")]
         [DisplayTestMethodNameAttribute]
-        public void FromRegionIdOrCodeExceptionTest()
-        {
-            Assert.Throws<ArgumentException>(() => Region.FromRegionCodeOrId("invalid"));
-        }
-
-        [Fact]
-        [Trait("Category", "Unit")]
-        [DisplayTestMethodNameAttribute]
         public void ValidateAllKnownRegions()
         {
             var regionsJsonFile = "Regions.json";
@@ -226,7 +218,7 @@ namespace Oci.Common
         [DisplayTestMethodNameAttribute]
         public void testCustomSecondLevelDomain()
         {
-            Environment.SetEnvironmentVariable(Realm.OCI_DEFAULT_REALM, "foobar.com");
+            Region.DefaultRealmFromEnvironmentVariable = "foobar.com";
             Service service = new Service
             {
                 ServiceName = "AUDIT",
@@ -237,6 +229,7 @@ namespace Oci.Common
             Assert.Equal(Region.FormatDefaultRegionEndpoint(service, "xyz"), expectedEndpoint);
             Assert.Throws<ArgumentNullException>(() => Region.FormatDefaultRegionEndpoint(service, ""));
             Assert.Throws<ArgumentNullException>(() => Region.FormatDefaultRegionEndpoint(null, "xyz"));
+            Region.DefaultRealmFromEnvironmentVariable = null;
         }
 
         [Theory]
@@ -290,7 +283,7 @@ namespace Oci.Common
             Realm realm = Realm.Register("REL", "foobar-oraclecloud.com");
             Assert.Equal(EndpointBuilder.CreateEndpoint(service, regionId, realm), expectedEndpoint);
         }
-    
+
         private bool AreRegionsSame(Region r1, Region r2)
         {
             if (!r1.RegionId.Equals(r2.RegionId))

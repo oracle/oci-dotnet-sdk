@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
   /// <summary>
-  /// Possible lifecycle states for the OrganizationTenancy.
+  /// Possible lifecycle states for the organization tenancy.
   /// </summary>
   public enum OrganizationTenancyLifecycleState {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

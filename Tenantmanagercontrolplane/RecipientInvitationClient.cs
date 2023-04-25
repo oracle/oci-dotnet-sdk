@@ -293,7 +293,7 @@ namespace Oci.TenantmanagercontrolplaneService
         }
 
         /// <summary>
-        /// Updates the RecipientInvitation.
+        /// Updates the recipient invitation.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

@@ -54,6 +54,12 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// The list of subjects this invitation contains.
+        /// </value>
+        [JsonProperty(PropertyName = "subjects")]
+        public System.Collections.Generic.List<InvitationSubject> Subjects { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

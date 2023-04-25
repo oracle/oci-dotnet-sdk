@@ -117,13 +117,13 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string CsiNumber { get; set; }
         
         /// <value>
-        /// Tier for the subscription, such as if it is a free promotion subscription or a paid subscription.
+        /// Tier for the subscription, whether it is a free promotion subscription or a paid subscription.
         /// </value>
         [JsonProperty(PropertyName = "subscriptionTier")]
         public string SubscriptionTier { get; set; }
         
         /// <value>
-        /// Denotes if the subscription is a government subscription or not.
+        /// Denotes whether or not the subscription is a government subscription.
         /// </value>
         [JsonProperty(PropertyName = "isGovernmentSubscription")]
         public System.Nullable<bool> IsGovernmentSubscription { get; set; }
@@ -135,7 +135,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Collections.Generic.List<Promotion> Promotion { get; set; }
         
         /// <value>
-        /// Purchase entitlement id associated with the subscription.
+        /// Purchase entitlement ID associated with the subscription.
         /// </value>
         [JsonProperty(PropertyName = "purchaseEntitlementId")]
         public string PurchaseEntitlementId { get; set; }
