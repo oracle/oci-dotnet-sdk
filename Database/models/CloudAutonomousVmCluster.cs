@@ -339,6 +339,18 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
+        /// The date and time of Database SSL certificate expiration.
+        /// </value>
+        [JsonProperty(PropertyName = "timeDatabaseSslCertificateExpires")]
+        public System.Nullable<System.DateTime> TimeDatabaseSslCertificateExpires { get; set; }
+        
+        /// <value>
+        /// The date and time of ORDS certificate expiration.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOrdsCertificateExpires")]
+        public System.Nullable<System.DateTime> TimeOrdsCertificateExpires { get; set; }
+        
+        /// <value>
         /// CPU cores available for allocation to Autonomous Databases.
         /// </value>
         [JsonProperty(PropertyName = "availableCpus")]

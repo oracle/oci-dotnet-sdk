@@ -309,6 +309,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "shapeConfig")]
         public InstanceShapeConfig ShapeConfig { get; set; }
         
+        /// <value>
+        /// Whether the instance\u2019s OCPUs and memory are distributed across multiple NUMA nodes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCrossNumaNode")]
+        public System.Nullable<bool> IsCrossNumaNode { get; set; }
+        
         [JsonProperty(PropertyName = "sourceDetails")]
         public InstanceSourceDetails SourceDetails { get; set; }
         

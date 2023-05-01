@@ -16,22 +16,32 @@ using Newtonsoft.Json.Converters;
 namespace Oci.StackmonitoringService.Models
 {
     /// <summary>
-    /// Association Resource Details
+    /// Association Resource Details.
+    /// 
     /// </summary>
     public class AssociationResourceDetails 
     {
         
         /// <value>
-        /// Monitored Resource Name
+        /// Monitored Resource Name.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// Monitored Resource Type
+        /// Monitored Resource Type.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
+        
+        /// <value>
+        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
         
     }
 }

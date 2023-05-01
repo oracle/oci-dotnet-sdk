@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.StackmonitoringService.Models
 {
     /// <summary>
-    /// Connection details to connect to the database. HostName, protocol, and port should be specified.
+    /// Connection details for the database.
+    /// 
     /// </summary>
     public class ConnectionDetails 
     {
@@ -57,7 +58,8 @@ namespace Oci.StackmonitoringService.Models
         public System.Nullable<int> Port { get; set; }
         
         /// <value>
-        /// Database connector Identifier
+        /// Database connector Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "connectorId")]
         public string ConnectorId { get; set; }
@@ -79,13 +81,15 @@ namespace Oci.StackmonitoringService.Models
         public string DbUniqueName { get; set; }
         
         /// <value>
-        /// dbId of the database
+        /// dbId of the database.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "dbId")]
         public string DbId { get; set; }
         
         /// <value>
-        /// SSL Secret Identifier for TCPS connector in OCI Vault[OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// SSL Secret Identifier for TCPS connector in OCI Vault[OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "sslSecretId")]
         public string SslSecretId { get; set; }

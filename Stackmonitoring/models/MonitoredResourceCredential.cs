@@ -16,14 +16,17 @@ using Newtonsoft.Json.Linq;
 namespace Oci.StackmonitoringService.Models
 {
     /// <summary>
-    /// Monitored Resource Credential Details
+    /// Monitored Resource Credential Details.
+    /// 
     /// </summary>
     [JsonConverter(typeof(MonitoredResourceCredentialModelConverter))]
     public class MonitoredResourceCredential 
     {
         
         /// <value>
-        /// The source type and source name combination,delimited with (.) separator. {source type}.{source name} and source type max char limit is 63.
+        /// The source type and source name combination, delimited with (.) separator.
+        /// {source type}.{source name} and source type max char limit is 63.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }
@@ -47,7 +50,16 @@ namespace Oci.StackmonitoringService.Models
         public string Description { get; set; }
                 ///
         /// <value>
-        /// Type of credentials specified in the credentials element. Three possible values - EXISTING, PLAINTEXT and ENCRYPTED. * EXISTING  - Credential is already stored in agent and only credential name need to be passed for existing credential. * PLAINTEXT - The credential properties will have credentials in plain text format. * ENCRYPTED - The credential properties will have credentials stored in vault in encrypted format using KMS client which uses master key for encryption. The same master key will be used to decrypt the credentials before passing on to the management agent.
+        /// Type of credentials specified in the credentials element.
+        /// Three possible values - EXISTING, PLAINTEXT and ENCRYPTED.
+        /// * EXISTING  - Credential is already stored in agent and only credential name need
+        ///         to be passed for existing credential.
+        /// * PLAINTEXT - The credential properties will have credentials in plain text format.
+        /// * ENCRYPTED - The credential properties will have credentials stored in vault in
+        ///         encrypted format using KMS client which uses master key for encryption.
+        ///         The same master key will be used to decrypt the credentials before passing
+        ///         on to the management agent.
+        /// 
         /// </value>
         ///
         public enum CredentialTypeEnum {

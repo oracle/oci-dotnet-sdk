@@ -22,7 +22,8 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// Association type to be created between source and destination resources
+        /// Association type between source and destination resources.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,8 @@ namespace Oci.StackmonitoringService.Models
         public string AssociationType { get; set; }
         
         /// <value>
-        /// Source Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Source Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +44,8 @@ namespace Oci.StackmonitoringService.Models
         public string SourceResourceId { get; set; }
         
         /// <value>
-        /// Destination Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Destination Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +55,8 @@ namespace Oci.StackmonitoringService.Models
         public string DestinationResourceId { get; set; }
         
         /// <value>
-        /// The time the the association was created. An RFC3339 formatted datetime string
+        /// The association creation time. An RFC3339 formatted datetime string.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }

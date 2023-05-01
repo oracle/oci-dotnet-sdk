@@ -22,7 +22,8 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -57,7 +58,8 @@ namespace Oci.StackmonitoringService.Models
         public System.Nullable<int> LimitLevel { get; set; }
         
         /// <value>
-        /// List of association types to be searched for finding associated resources
+        /// Association types filter to be searched for finding associated resources.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "associationTypes")]
         public System.Collections.Generic.List<string> AssociationTypes { get; set; }

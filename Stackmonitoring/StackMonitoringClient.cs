@@ -68,7 +68,10 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
-        /// Create an association between two monitored resources.
+        /// Create an association between two monitored resources. Associations can be created 
+        /// between resources from different compartments as long they are in same tenancy.
+        /// User should have required access in both the compartments.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -124,7 +127,9 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
-        /// Moves a MonitoredResource resource from one compartment identifier to another. When provided, If-Match is checked against ETag values of the resource.
+        /// Moves a monitored resource from one compartment to another. 
+        /// When provided, If-Match is checked against ETag values of the resource.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -237,7 +242,9 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
-        /// Creates a new monitored resource for the given resource type
+        /// Creates a new monitored resource for the given resource type with the details and submits 
+        /// a work request for promoting the resource to agent. Once the resource is successfully 
+        /// added to agent, resource state will be marked active.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -350,7 +357,11 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
-        /// Deletes a monitored resource by identifier
+        /// Delete monitored resource by the given identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// By default, only the specified resource is deleted. If the parameter &#39;isDeleteMembers&#39; is set to true, 
+        /// then the member resources will be deleted too. If the operation fails partially, the deleted entries 
+        /// will not be rolled back.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -406,7 +417,8 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
-        /// Disable external database resource monitoring.
+        /// Disable external database resource monitoring. All the references in DBaaS, 
+        /// DBM and resource service will be deleted as part of this operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -576,7 +588,8 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
-        /// Gets a monitored resource by identifier
+        /// Get monitored resource for the given identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -973,7 +986,9 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
-        /// List associated monitored resources.
+        /// List all associated resources recursively up-to a specified level,
+        /// for the monitored resources of type specified.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1029,7 +1044,8 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
-        /// Returns a list of monitored resource associations.
+        /// Search associations in the given compartment based on the search criteria.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1085,7 +1101,8 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
-        /// List resources which are members of the given monitored resource
+        /// List the member resources for the given monitored resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1141,7 +1158,8 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
-        /// Returns a list of monitored resources.
+        /// Gets a list of all monitored resources in a compartment for the given search criteria.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1197,7 +1215,70 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
-        /// Updates the Monitored Resource
+        /// Provided tags will be added or updated in the existing list of tags for the affected resources.
+        /// Resources to be updated are identified based on association types specified. 
+        /// If association types not specified, then tags will be updated only for the resource identified by 
+        /// the given monitored resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/stackmonitoring/UpdateAndPropagateTags.cs.html">here</a> to see an example of how to use UpdateAndPropagateTags API.</example>
+        public async Task<UpdateAndPropagateTagsResponse> UpdateAndPropagateTags(UpdateAndPropagateTagsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called updateAndPropagateTags");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/monitoredResources/{monitoredResourceId}/actions/updateAndPropagateTags".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "StackMonitoring",
+                    OperationName = "UpdateAndPropagateTags",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/stack-monitoring/20210330/MonitoredResource/UpdateAndPropagateTags",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<UpdateAndPropagateTagsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateAndPropagateTags failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Update monitored resource by the given identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// Note that \&quot;properties\&quot; object, if specified, will entirely replace the existing object, 
+        /// as part this operation.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

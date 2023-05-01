@@ -30,6 +30,12 @@ namespace Oci.DatabaseService.Requests
         public string CloudAutonomousVmClusterId { get; set; }
         
         /// <value>
+        /// Request to rotate the SSL certificates on Cloud Autonomous Exadata VM cluster.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public RotateCloudAutonomousVmClusterSslCertsDetails RotateCloudAutonomousVmClusterSslCertsDetails { get; set; }
+        
+        /// <value>
         /// A token that uniquely identifies a request so it can be retried in case of a timeout or
         /// server error without risk of executing that same action again. Retry tokens expire after 24
         /// hours, but can be invalidated before then due to conflicting operations (for example, if a resource

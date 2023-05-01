@@ -23,6 +23,10 @@ namespace Oci.DatascienceService.Models
       [EnumMember(Value = "AMD_ROME")]
       AmdRome,
       [EnumMember(Value = "INTEL_SKYLAKE")]
-      IntelSkylake
+      IntelSkylake,
+      [EnumMember(Value = "NVIDIA_GPU")]
+      NvidiaGpu,
+      [EnumMember(Value = "LEGACY")]
+      Legacy
   }
 }

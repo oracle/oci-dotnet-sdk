@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.StackmonitoringService.Models
 {
     /// <summary>
-    /// Plain text credentials [indicated by the type property in CredentialStore].
+    /// Pre existing credentials [indicated by the type property in CredentialStore].
     /// 
     /// </summary>
     public class PreExistingCredentials : MonitoredResourceCredential

@@ -16,14 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.StackmonitoringService.Models
 {
     /// <summary>
-    /// Encypted credentials [indicated by the type property in CredentialStore].
+    /// Encrypted credentials [indicated by the type property in CredentialStore].
     /// 
     /// </summary>
     public class EncryptedCredentials : MonitoredResourceCredential
     {
         
         /// <value>
-        /// The master key OCID and applicable only for property value type ENCRYPTION. Key OCID is passed as input to Key management service decrypt API to retrieve the encrypted property value text.
+        /// The master key should be created in OCI Vault owned by the client of this API. 
+        /// The user should have permission to access the vault key.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

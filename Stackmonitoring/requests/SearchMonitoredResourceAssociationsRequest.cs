@@ -20,7 +20,8 @@ namespace Oci.StackmonitoringService.Requests
     {
         
         /// <value>
-        /// Search Criteria for the listing the monitored resource associations.
+        /// Search criteria for listing monitored resource associations.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

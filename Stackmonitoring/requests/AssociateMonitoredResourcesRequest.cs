@@ -20,7 +20,8 @@ namespace Oci.StackmonitoringService.Requests
     {
         
         /// <value>
-        /// Associate resources.
+        /// Details to create association between two resources.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

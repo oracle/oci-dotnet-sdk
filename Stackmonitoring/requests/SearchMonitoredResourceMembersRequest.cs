@@ -30,7 +30,8 @@ namespace Oci.StackmonitoringService.Requests
         public string MonitoredResourceId { get; set; }
         
         /// <value>
-        /// Search criteria for the listing the member monitored resources.
+        /// Search criteria for listing member monitored resources.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
