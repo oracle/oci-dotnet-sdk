@@ -16,19 +16,22 @@ using Newtonsoft.Json.Converters;
 namespace Oci.StackmonitoringService.Models
 {
     /// <summary>
-    /// Monitored resource member
+    /// Monitored resource member details.
+    /// 
     /// </summary>
     public class MonitoredResourceMemberSummary 
     {
         
         /// <value>
-        /// Monitored resource identifier
+        /// Monitored resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Monitored resource name
+        /// Monitored Resource Name.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "resourceName")]
         public string ResourceName { get; set; }
@@ -40,13 +43,15 @@ namespace Oci.StackmonitoringService.Models
         public string ResourceDisplayName { get; set; }
         
         /// <value>
-        /// Monitored resource type
+        /// Monitored Resource Type.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
         
         /// <value>
-        /// Monitored Resource Host
+        /// Monitored Resource Host Name.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "hostName")]
         public string HostName { get; set; }
@@ -54,15 +59,22 @@ namespace Oci.StackmonitoringService.Models
         /// <value>
         /// External resource is any OCI resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
         /// which is not a Stack Monitoring service resource.
-        /// Currently supports only following resource type identifiers - externalcontainerdatabase,
-        /// externalnoncontainerdatabase, externalpluggabledatabase and OCI compute instance.
+        /// Currently supports only following resource types - Container database, non-container database, 
+        /// pluggable database and OCI compute instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "externalId")]
         public string ExternalId { get; set; }
         
         /// <value>
-        /// Parent monitored resource identifier
+        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// Parent monitored resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "parentId")]
         public string ParentId { get; set; }

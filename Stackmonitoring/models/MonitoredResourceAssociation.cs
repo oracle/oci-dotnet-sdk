@@ -16,13 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.StackmonitoringService.Models
 {
     /// <summary>
-    /// Association between two monitored resources.
+    /// Association details between two monitored resources.
     /// </summary>
     public class MonitoredResourceAssociation 
     {
         
         /// <value>
-        /// Association Type
+        /// Association Type.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,8 @@ namespace Oci.StackmonitoringService.Models
         public string AssociationType { get; set; }
         
         /// <value>
-        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +44,8 @@ namespace Oci.StackmonitoringService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Tenancy Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Tenancy Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +55,8 @@ namespace Oci.StackmonitoringService.Models
         public string TenantId { get; set; }
         
         /// <value>
-        /// Source Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Source Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +66,8 @@ namespace Oci.StackmonitoringService.Models
         public string SourceResourceId { get; set; }
         
         /// <value>
-        /// Destination Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Destination Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -78,10 +83,42 @@ namespace Oci.StackmonitoringService.Models
         public AssociationResourceDetails DestinationResourceDetails { get; set; }
         
         /// <value>
-        /// The time when the association was created. An RFC3339 formatted datetime string
+        /// The time when the association was created. An RFC3339 formatted datetime string.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+                ///
+        /// <value>
+        /// Association category. Possible values are:
+        /// - System created (SYSTEM), 
+        /// - User created using API (USER_API)
+        /// - User created using tags (USER_TAG_ASSOC).
+        /// 
+        /// </value>
+        ///
+        public enum CategoryEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "SYSTEM")]
+            System,
+            [EnumMember(Value = "USER_API")]
+            UserApi,
+            [EnumMember(Value = "USER_TAG_ASSOC")]
+            UserTagAssoc
+        };
+
+        /// <value>
+        /// Association category. Possible values are:
+        /// - System created (SYSTEM), 
+        /// - User created using API (USER_API)
+        /// - User created using tags (USER_TAG_ASSOC).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "category")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<CategoryEnum> Category { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

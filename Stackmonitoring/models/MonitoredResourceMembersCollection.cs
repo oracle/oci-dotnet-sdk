@@ -22,7 +22,8 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// List of Members.
+        /// List of member resources.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

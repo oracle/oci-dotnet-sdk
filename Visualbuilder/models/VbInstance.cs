@@ -194,5 +194,29 @@ namespace Oci.VisualbuilderService.Models
         [JsonProperty(PropertyName = "attachments")]
         public System.Collections.Generic.List<AttachmentDetails> Attachments { get; set; }
         
+        /// <value>
+        /// The NAT gateway IP address for the VB service VCN
+        /// </value>
+        [JsonProperty(PropertyName = "serviceNatGatewayIp")]
+        public string ServiceNatGatewayIp { get; set; }
+        
+        /// <value>
+        /// The NAT gateway IP address for the VB management VCN
+        /// </value>
+        [JsonProperty(PropertyName = "managementNatGatewayIp")]
+        public string ManagementNatGatewayIp { get; set; }
+        
+        /// <value>
+        /// The Oracle Cloud ID (OCID) of the Visual Builder service VCN
+        /// </value>
+        [JsonProperty(PropertyName = "serviceVcnId")]
+        public string ServiceVcnId { get; set; }
+        
+        /// <value>
+        /// The Oracle Cloud ID (OCID) of the Visual Builder management VCN
+        /// </value>
+        [JsonProperty(PropertyName = "managementVcnId")]
+        public string ManagementVcnId { get; set; }
+        
     }
 }

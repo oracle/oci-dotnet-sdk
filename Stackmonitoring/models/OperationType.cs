@@ -36,6 +36,8 @@ namespace Oci.StackmonitoringService.Models
       [EnumMember(Value = "BULK_ADD_RESOURCES")]
       BulkAddResources,
       [EnumMember(Value = "BULK_DELETE_RESOURCES")]
-      BulkDeleteResources
+      BulkDeleteResources,
+      [EnumMember(Value = "UPDATE_AND_PROPAGATE_TAGS")]
+      UpdateAndPropagateTags
   }
 }

@@ -22,13 +22,15 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// Destination Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Destination Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "destinationResourceId")]
         public string DestinationResourceId { get; set; }
         
         /// <value>
-        /// The field which determines the depth of hierarchy while searching for members
+        /// The field which determines the depth of hierarchy while searching for members.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "limitLevel")]
         public System.Nullable<int> LimitLevel { get; set; }

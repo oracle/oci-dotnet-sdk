@@ -38,5 +38,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "max")]
         public System.Nullable<float> Max { get; set; }
         
+        /// <value>
+        /// The maximum number of cores available per NUMA node.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxPerNumaNode")]
+        public System.Nullable<float> MaxPerNumaNode { get; set; }
+        
     }
 }

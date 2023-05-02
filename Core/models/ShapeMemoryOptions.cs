@@ -59,5 +59,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "maxPerOcpuInGBs")]
         public System.Nullable<float> MaxPerOcpuInGBs { get; set; }
         
+        /// <value>
+        /// The maximum amount of memory per NUMA node, in gigabytes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxPerNumaNodeInGBs")]
+        public System.Nullable<float> MaxPerNumaNodeInGBs { get; set; }
+        
     }
 }

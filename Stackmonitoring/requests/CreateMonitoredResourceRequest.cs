@@ -20,7 +20,8 @@ namespace Oci.StackmonitoringService.Requests
     {
         
         /// <value>
-        /// Details for the new Resource.
+        /// Details for the new monitored resource.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

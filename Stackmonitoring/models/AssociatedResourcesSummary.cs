@@ -22,7 +22,8 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of monitored resource.
+        /// Monitored resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,8 @@ namespace Oci.StackmonitoringService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Name of the monitored resource
+        /// Monitored Resource Name.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -44,13 +46,22 @@ namespace Oci.StackmonitoringService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Type of the monitored resource
+        /// Monitored Resource Type.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
         /// <value>
-        /// Resource Host Name
+        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// Monitored Resource Host Name.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "hostName")]
         public string HostName { get; set; }
@@ -58,8 +69,8 @@ namespace Oci.StackmonitoringService.Models
         /// <value>
         /// External resource is any OCI resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
         /// which is not a Stack Monitoring service resource.
-        /// Currently supports only following resource type identifiers - externalcontainerdatabase,
-        /// externalnoncontainerdatabase, externalpluggabledatabase and OCI compute instance.
+        /// Currently supports only following resource types - Container database, non-container database, 
+        /// pluggable database and OCI compute instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "externalId")]
@@ -79,7 +90,8 @@ namespace Oci.StackmonitoringService.Models
         public System.Nullable<ResourceLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// List of associated monitored resources
+        /// List of associated monitored resources.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "associatedResources")]
         public System.Collections.Generic.List<AssociatedMonitoredResource> AssociatedResources { get; set; }

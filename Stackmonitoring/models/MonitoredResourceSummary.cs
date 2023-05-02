@@ -22,7 +22,8 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of monitored resource.
+        /// Monitored resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,8 @@ namespace Oci.StackmonitoringService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Name of the monitored resource
+        /// Monitored Resource Name.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +50,8 @@ namespace Oci.StackmonitoringService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Type of the monitored resource
+        /// Monitored Resource Type.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +61,8 @@ namespace Oci.StackmonitoringService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// Resource Host Name
+        /// Monitored Resource Host Name.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "hostName")]
         public string HostName { get; set; }
@@ -66,8 +70,6 @@ namespace Oci.StackmonitoringService.Models
         /// <value>
         /// External resource is any OCI resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
         /// which is not a Stack Monitoring service resource.
-        /// Currently supports only following resource type identifiers - externalcontainerdatabase,
-        /// externalnoncontainerdatabase, externalpluggabledatabase and OCI compute instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "externalId")]
@@ -80,13 +82,15 @@ namespace Oci.StackmonitoringService.Models
         public string ManagementAgentId { get; set; }
         
         /// <value>
-        /// Monitored resource creation time. An RFC3339 formatted datetime string
+        /// Monitored resource creation time. An RFC3339 formatted datetime string.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Monitored resource updation time. An RFC3339 formatted datetime string
+        /// Monitored resource update time. An RFC3339 formatted datetime string.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
@@ -99,7 +103,8 @@ namespace Oci.StackmonitoringService.Models
         public System.Nullable<ResourceLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// List of monitored resource properties
+        /// List of monitored resource properties.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.List<MonitoredResourceProperty> Properties { get; set; }

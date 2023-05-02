@@ -22,7 +22,8 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,43 +33,50 @@ namespace Oci.StackmonitoringService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Source Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Source Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "sourceResourceId")]
         public string SourceResourceId { get; set; }
         
         /// <value>
-        /// Source Monitored Resource Name
+        /// Source Monitored Resource Name.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "sourceResourceName")]
         public string SourceResourceName { get; set; }
         
         /// <value>
-        /// Source Monitored Resource Type
+        /// Source Monitored Resource Type.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "sourceResourceType")]
         public string SourceResourceType { get; set; }
         
         /// <value>
-        /// Destination Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Destination Monitored Resource Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "destinationResourceId")]
         public string DestinationResourceId { get; set; }
         
         /// <value>
-        /// Source Monitored Resource Name
+        /// Source Monitored Resource Name.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "destinationResourceName")]
         public string DestinationResourceName { get; set; }
         
         /// <value>
-        /// Source Monitored Resource Type
+        /// Source Monitored Resource Type.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "destinationResourceType")]
         public string DestinationResourceType { get; set; }
         
         /// <value>
-        /// Association type to be created between source and destination resources
+        /// Association type filter to search associated resources.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "associationType")]
         public string AssociationType { get; set; }

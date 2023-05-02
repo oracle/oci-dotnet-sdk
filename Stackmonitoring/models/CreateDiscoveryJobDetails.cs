@@ -67,6 +67,15 @@ namespace Oci.StackmonitoringService.Models
         public DiscoveryDetails DiscoveryDetails { get; set; }
         
         /// <value>
+        /// If this parameter set to true, the specified tags will be applied 
+        /// to all resources discovered in the current request. 
+        /// Default is true.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shouldPropagateTagsToDiscoveredResources")]
+        public System.Nullable<bool> ShouldPropagateTagsToDiscoveredResources { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

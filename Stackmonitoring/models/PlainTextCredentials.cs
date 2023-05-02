@@ -23,7 +23,9 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// The credential properties list. Credential property values will be either in plain text format.
+        /// The credential properties list. Credential property values will be either 
+        /// in plain text format or encrypted for encrypted credentials.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

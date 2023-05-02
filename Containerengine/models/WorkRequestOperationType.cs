@@ -33,6 +33,8 @@ namespace Oci.ContainerengineService.Models
       NodepoolDelete,
       [EnumMember(Value = "NODEPOOL_RECONCILE")]
       NodepoolReconcile,
+      [EnumMember(Value = "NODEPOOL_CYCLING")]
+      NodepoolCycling,
       [EnumMember(Value = "WORKREQUEST_CANCEL")]
       WorkrequestCancel,
       [EnumMember(Value = "VIRTUALNODEPOOL_CREATE")]

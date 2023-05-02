@@ -49,7 +49,9 @@ namespace Oci.StackmonitoringService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// A filter to delete the associated children or not for given resource.
+        /// If this query parameter is specified and set to true, all the member 
+        /// resources will be deleted before deleting the specified resource.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDeleteMembers")]
         public System.Nullable<bool> IsDeleteMembers { get; set; }

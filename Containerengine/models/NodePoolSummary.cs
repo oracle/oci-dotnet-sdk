@@ -158,5 +158,8 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "nodeEvictionNodePoolSettings")]
         public NodeEvictionNodePoolSettings NodeEvictionNodePoolSettings { get; set; }
         
+        [JsonProperty(PropertyName = "nodePoolCyclingDetails")]
+        public NodePoolCyclingDetails NodePoolCyclingDetails { get; set; }
+        
     }
 }

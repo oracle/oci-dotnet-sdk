@@ -16,19 +16,22 @@ using Newtonsoft.Json.Converters;
 namespace Oci.StackmonitoringService.Models
 {
     /// <summary>
-    /// Property of monitored resource
+    /// Property of monitored resource.
+    /// 
     /// </summary>
     public class MonitoredResourceProperty 
     {
         
         /// <value>
-        /// property name
+        /// Property Name.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// property value
+        /// Property Value.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }

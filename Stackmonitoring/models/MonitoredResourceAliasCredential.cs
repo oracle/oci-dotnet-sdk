@@ -22,7 +22,8 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// The source type and source name combination,delimited with (.) separator. Ex. {source type}.{source name} and source type max char limit is 63.
+        /// The source type and source name combination,delimited with (.) separator.
+        /// Example: {source type}.{source name} and source type max char limit is 63.
         /// </value>
         /// <remarks>
         /// Required

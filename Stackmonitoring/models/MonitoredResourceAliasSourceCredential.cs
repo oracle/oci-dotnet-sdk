@@ -16,13 +16,17 @@ using Newtonsoft.Json.Converters;
 namespace Oci.StackmonitoringService.Models
 {
     /// <summary>
-    /// Monitored Resource Alias Reference Source Credential
+    /// Monitored Resource Alias Reference Source Credential.
+    /// 
     /// </summary>
     public class MonitoredResourceAliasSourceCredential 
     {
         
         /// <value>
-        /// The source type and source name combination,delimited with (.) separator. This refers to the pre-existing source which alias cred should point to. Ex. {source type}.{source name} and source type max char limit is 63.
+        /// The source type and source name combination,delimited with (.) separator.
+        /// This refers to the pre-existing source which alias cred should point to.
+        /// Ex. {source type}.{source name} and source type max char limit is 63.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +36,9 @@ namespace Oci.StackmonitoringService.Models
         public string Source { get; set; }
         
         /// <value>
-        /// The name of the pre-existing source credential which alias cred should point to. This should refer to the pre-existing source attribute binded credential name.
+        /// The name of the pre-existing source credential which alias cred should point to.
+        /// This should refer to the pre-existing source attribute which is bound to credential name.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +48,8 @@ namespace Oci.StackmonitoringService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The name of the service owning the credential. Ex stack-monitoring or dbmgmt
+        /// The name of the service owning the credential. 
+        /// Example: stack-monitoring or dbmgmt
         /// </value>
         /// <remarks>
         /// Required

@@ -9,54 +9,61 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using Oci.DatabaseService.Models;
+using Oci.StackmonitoringService.Models;
 
-namespace Oci.DatabaseService.Requests
+namespace Oci.StackmonitoringService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/RotateCloudAutonomousVmClusterOrdsCerts.cs.html">here</a> to see an example of how to use RotateCloudAutonomousVmClusterOrdsCerts request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/stackmonitoring/UpdateAndPropagateTags.cs.html">here</a> to see an example of how to use UpdateAndPropagateTags request.
     /// </example>
-    public class RotateCloudAutonomousVmClusterOrdsCertsRequest : Oci.Common.IOciRequest
+    public class UpdateAndPropagateTagsRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
-        /// The Cloud VM cluster [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of monitored resource.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "CloudAutonomousVmClusterId is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "cloudAutonomousVmClusterId")]
-        public string CloudAutonomousVmClusterId { get; set; }
+        [Required(ErrorMessage = "MonitoredResourceId is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "monitoredResourceId")]
+        public string MonitoredResourceId { get; set; }
         
         /// <value>
-        /// Request to rotate the Oracle REST Data Services (ORDS) certificates on Cloud Autonomous Exadata VM cluster.
+        /// The tags to be updated.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "UpdateAndPropagateTagsDetails is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public RotateCloudAutonomousVmClusterOrdsCertsDetails RotateCloudAutonomousVmClusterOrdsCertsDetails { get; set; }
+        public UpdateAndPropagateTagsDetails UpdateAndPropagateTagsDetails { get; set; }
         
         /// <value>
         /// A token that uniquely identifies a request so it can be retried in case of a timeout or
         /// server error without risk of executing that same action again. Retry tokens expire after 24
-        /// hours, but can be invalidated before then due to conflicting operations (for example, if a resource
+        /// hours, but can be invalidated before then due to conflicting operations. For example, if a resource
         /// has been deleted and purged from the system, then a retry of the original creation request
-        /// may be rejected).
+        /// might be rejected.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
         
         /// <value>
-        /// Unique identifier for the request.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a
+        /// particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match`
-        /// parameter to the value of the etag from a previous GET or POST response for that resource.  The resource
-        /// will be updated or deleted only if the etag you provide matches the resource's current etag value.
+        /// For optimistic concurrency control. In the PUT or DELETE call
+        /// for a resource, set the `if-match` parameter to the value of the
+        /// etag from a previous GET or POST response for that resource.
+        /// The resource will be updated or deleted only if the etag you
+        /// provide matches the resource's current etag value.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]

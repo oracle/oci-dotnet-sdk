@@ -236,5 +236,12 @@ namespace Oci.OpaService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        /// <value>
+        /// A list of associated attachments to other services
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "attachments")]
+        public System.Collections.Generic.List<AttachmentDetails> Attachments { get; set; }
+        
     }
 }

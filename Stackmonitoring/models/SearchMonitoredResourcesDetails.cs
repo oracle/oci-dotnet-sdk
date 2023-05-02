@@ -22,7 +22,8 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,8 @@ namespace Oci.StackmonitoringService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return resources that match exact resource name
+        /// A filter to return resources that match exact resource name.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -44,13 +46,15 @@ namespace Oci.StackmonitoringService.Models
         public string NameContains { get; set; }
         
         /// <value>
-        /// A filter to return resources that match resource type
+        /// A filter to return resources that match resource type.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
         /// <value>
-        /// A filter to return resources with host name match
+        /// A filter to return resources with host name match.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "hostName")]
         public string HostName { get; set; }
@@ -58,15 +62,16 @@ namespace Oci.StackmonitoringService.Models
         /// <value>
         /// External resource is any OCI resource identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
         /// which is not a Stack Monitoring service resource.
-        /// Currently supports only following resource type identifiers - externalcontainerdatabase,
-        /// externalnoncontainerdatabase, externalpluggabledatabase and OCI compute instance.
+        /// Currently supports only following resource types - Container database, non-container database, 
+        /// pluggable database and OCI compute instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "externalId")]
         public string ExternalId { get; set; }
         
         /// <value>
-        /// A filter to return resources with host name pattern
+        /// A filter to return resources with host name pattern.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "hostNameContains")]
         public string HostNameContains { get; set; }
@@ -137,7 +142,10 @@ namespace Oci.StackmonitoringService.Models
         public System.Nullable<System.DateTime> TimeUpdatedLessThan { get; set; }
         
         /// <value>
-        /// Time zone in the form of tz database canonical zone ID.
+        /// Time zone in the form of tz database canonical zone ID. Specifies the preference with
+        /// a value that uses the IANA Time Zone Database format (x-obmcs-time-zone).
+        /// For example - America/Los_Angeles
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "resourceTimeZone")]
         public string ResourceTimeZone { get; set; }
