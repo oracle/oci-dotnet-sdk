@@ -104,7 +104,8 @@ namespace Oci.OcvpService.Models
         public System.Nullable<Sku> InitialSku { get; set; }
         
         /// <value>
-        /// Indicates whether to enable HCX for this SDDC.
+        /// For SDDC with dense compute shapes, this parameter indicates whether to enable HCX Advanced for this SDDC.
+        /// For SDDC with standard compute shapes, this parameter is equivalent to `isHcxEnterpriseEnabled`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isHcxEnabled")]
@@ -295,6 +296,14 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "capacityReservationId")]
         public string CapacityReservationId { get; set; }
+        
+        /// <value>
+        /// A list of datastore info for the SDDC.
+        /// This value is required only when `initialHostShapeName` is a standard shape.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "datastores")]
+        public System.Collections.Generic.List<DatastoreInfo> Datastores { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no

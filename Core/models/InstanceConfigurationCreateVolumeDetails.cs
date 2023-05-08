@@ -45,6 +45,22 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// Specifies whether the auto-tune performance is enabled for this boot volume. This field is deprecated.
+        /// Use the `InstanceConfigurationDetachedVolumeAutotunePolicy` instead to enable the volume for detached autotune.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoTuneEnabled")]
+        public System.Nullable<bool> IsAutoTuneEnabled { get; set; }
+        
+        /// <value>
+        /// The list of block volume replicas to be enabled for this volume
+        /// in the specified destination availability domains.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "blockVolumeReplicas")]
+        public System.Collections.Generic.List<InstanceConfigurationBlockVolumeReplicaDetails> BlockVolumeReplicas { get; set; }
+        
+        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
         /// namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>

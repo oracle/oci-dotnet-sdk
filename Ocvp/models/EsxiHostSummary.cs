@@ -156,7 +156,7 @@ namespace Oci.OcvpService.Models
         public System.Nullable<System.DateTime> GracePeriodEndDate { get; set; }
         
         /// <value>
-        /// The version of VMware software that the Oracle Cloud VMware Solution installed on the ESXi hosts.
+        /// The version of VMware software that Oracle Cloud VMware Solution installed on the ESXi hosts.
         /// 
         /// </value>
         /// <remarks>

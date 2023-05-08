@@ -45,5 +45,18 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DisasterRecoveryTypeEnum> DisasterRecoveryType { get; set; }
         
+        /// <value>
+        /// Time and date stored as an RFC 3339 formatted timestamp string. For example, 2022-01-01T12:00:00.000Z would set a limit for the snapshot standby to be converted back to a cross-region standby database.
+        /// </value>
+        [JsonProperty(PropertyName = "timeSnapshotStandbyEnabledTill")]
+        public System.Nullable<System.DateTime> TimeSnapshotStandbyEnabledTill { get; set; }
+        
+        /// <value>
+        /// Indicates if user wants to convert to a snapshot standby. For example, true would set a standby database to snapshot standby database. False would set a snapshot standby database back to regular standby database.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSnapshotStandby")]
+        public System.Nullable<bool> IsSnapshotStandby { get; set; }
+        
     }
 }

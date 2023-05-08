@@ -96,5 +96,11 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "isSupportShieldedInstances")]
         public System.Nullable<bool> IsSupportShieldedInstances { get; set; }
         
+        /// <value>
+        /// Whether the shape supports \"MONTH\" SKU.
+        /// </value>
+        [JsonProperty(PropertyName = "isSupportMonthlySku")]
+        public System.Nullable<bool> IsSupportMonthlySku { get; set; }
+        
     }
 }
