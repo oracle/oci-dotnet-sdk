@@ -82,6 +82,88 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "autoBackupWindow")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AutoBackupWindowEnum> AutoBackupWindow { get; set; }
+                ///
+        /// <value>
+        /// Time window selected for initiating full backup for the database system. There are twelve available two-hour time windows. If no option is selected, the value is null and a start time between 12:00 AM to 7:00 AM in the region of the database is automatically chosen. For example, if the user selects SLOT_TWO from the enum list, the automatic backup job will start in between 2:00 AM (inclusive) to 4:00 AM (exclusive).
+        /// <br/>
+        /// Example: SLOT_TWO
+        /// </value>
+        ///
+        public enum AutoFullBackupWindowEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "SLOT_ONE")]
+            SlotOne,
+            [EnumMember(Value = "SLOT_TWO")]
+            SlotTwo,
+            [EnumMember(Value = "SLOT_THREE")]
+            SlotThree,
+            [EnumMember(Value = "SLOT_FOUR")]
+            SlotFour,
+            [EnumMember(Value = "SLOT_FIVE")]
+            SlotFive,
+            [EnumMember(Value = "SLOT_SIX")]
+            SlotSix,
+            [EnumMember(Value = "SLOT_SEVEN")]
+            SlotSeven,
+            [EnumMember(Value = "SLOT_EIGHT")]
+            SlotEight,
+            [EnumMember(Value = "SLOT_NINE")]
+            SlotNine,
+            [EnumMember(Value = "SLOT_TEN")]
+            SlotTen,
+            [EnumMember(Value = "SLOT_ELEVEN")]
+            SlotEleven,
+            [EnumMember(Value = "SLOT_TWELVE")]
+            SlotTwelve
+        };
+
+        /// <value>
+        /// Time window selected for initiating full backup for the database system. There are twelve available two-hour time windows. If no option is selected, the value is null and a start time between 12:00 AM to 7:00 AM in the region of the database is automatically chosen. For example, if the user selects SLOT_TWO from the enum list, the automatic backup job will start in between 2:00 AM (inclusive) to 4:00 AM (exclusive).
+        /// <br/>
+        /// Example: SLOT_TWO
+        /// </value>
+        [JsonProperty(PropertyName = "autoFullBackupWindow")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AutoFullBackupWindowEnum> AutoFullBackupWindow { get; set; }
+                ///
+        /// <value>
+        /// Day of the week the full backup should be applied on the database system. If no option is selected, the value is null and we will default to Sunday.
+        /// </value>
+        ///
+        public enum AutoFullBackupDayEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "SUNDAY")]
+            Sunday,
+            [EnumMember(Value = "MONDAY")]
+            Monday,
+            [EnumMember(Value = "TUESDAY")]
+            Tuesday,
+            [EnumMember(Value = "WEDNESDAY")]
+            Wednesday,
+            [EnumMember(Value = "THURSDAY")]
+            Thursday,
+            [EnumMember(Value = "FRIDAY")]
+            Friday,
+            [EnumMember(Value = "SATURDAY")]
+            Saturday
+        };
+
+        /// <value>
+        /// Day of the week the full backup should be applied on the database system. If no option is selected, the value is null and we will default to Sunday.
+        /// </value>
+        [JsonProperty(PropertyName = "autoFullBackupDay")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AutoFullBackupDayEnum> AutoFullBackupDay { get; set; }
+        
+        /// <value>
+        /// If set to true, configures automatic full backups in the local region (the region of the DB system) for the first backup run immediately.
+        /// </value>
+        [JsonProperty(PropertyName = "runImmediateFullBackup")]
+        public System.Nullable<bool> RunImmediateFullBackup { get; set; }
         
         /// <value>
         /// Backup destination details.

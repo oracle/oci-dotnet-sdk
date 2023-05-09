@@ -582,21 +582,21 @@ namespace Oci.OcvpService.Models
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
-        /// The vSphere licenses to be used when upgrade SDDC.
+        /// The vSphere licenses to use when upgrading the SDDC.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "upgradeLicenses")]
         public System.Collections.Generic.List<VsphereLicense> UpgradeLicenses { get; set; }
         
         /// <value>
-        /// The link of guidance to upgrade vSphere.
+        /// The link to guidance for upgrading vSphere.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vsphereUpgradeGuide")]
         public string VsphereUpgradeGuide { get; set; }
         
         /// <value>
-        /// The links of binary objects needed for upgrade vSphere.
+        /// The links to binary objects needed to upgrade vSphere.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vsphereUpgradeObjects")]
@@ -634,6 +634,13 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "capacityReservationId")]
         public string CapacityReservationId { get; set; }
+        
+        /// <value>
+        /// Datastores used for the Sddc.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "datastores")]
+        public System.Collections.Generic.List<DatastoreSummary> Datastores { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no

@@ -21,6 +21,15 @@ namespace Oci.CoreService.Models
     /// </summary>
     public class InstanceConfigurationAvailabilityConfig 
     {
+        
+        /// <value>
+        /// Whether to live migrate supported VM instances to a healthy physical VM host without
+        /// disrupting running instances during infrastructure maintenance events. If null, Oracle
+        /// chooses the best option for migrating the VM during infrastructure maintenance events.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isLiveMigrationPreferred")]
+        public System.Nullable<bool> IsLiveMigrationPreferred { get; set; }
                 ///
         /// <value>
         /// The lifecycle state for an instance when it is recovered after infrastructure maintenance.

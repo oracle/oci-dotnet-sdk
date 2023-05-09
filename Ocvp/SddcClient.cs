@@ -309,6 +309,7 @@ namespace Oci.OcvpService
 
         /// <summary>
         /// Downgrade the specified SDDC from HCX Enterprise to HCX Advanced. 
+        /// SDDC with standard compute shapes will always use HCX Enterprise if HCX is enabled and cannot be downgraded.
         /// Downgrading from HCX Enterprise to HCX Advanced reduces the number of provided license keys from 10 to 3.
         /// Downgrade remains in a &#x60;PENDING&#x60; state until the end of the current billing cycle. You can use {@link #cancelDowngradeHcx(CancelDowngradeHcxRequest) cancelDowngradeHcx} 
         /// to cancel the downgrade while it&#39;s still in a &#x60;PENDING&#x60; state. 
