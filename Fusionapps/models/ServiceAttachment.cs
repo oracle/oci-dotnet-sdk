@@ -32,13 +32,6 @@ namespace Oci.FusionappsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Action
-        /// </value>
-        [JsonProperty(PropertyName = "action")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<CreateServiceAttachmentDetails.ActionEnum> Action { get; set; }
-        
-        /// <value>
         /// Compartment Identifier
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]

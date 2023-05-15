@@ -11,60 +11,36 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
+
 
 namespace Oci.FusionappsService.Models
 {
     /// <summary>
-    /// Information about the service attachment.
+    /// Information about the service attachment to be created.
     /// </summary>
-    [JsonConverter(typeof(CreateServiceAttachmentDetailsModelConverter))]
     public class CreateServiceAttachmentDetails 
     {
-                ///
-        /// <value>
-        /// The operation type - the customer can ask FAaaS to create a new instance or use an existing instance
-        /// </value>
-        ///
-        public enum ActionEnum {
-            [EnumMember(Value = "CREATE_NEW_INSTANCE")]
-            CreateNewInstance,
-            [EnumMember(Value = "ATTACH_EXISTING_INSTANCE")]
-            AttachExistingInstance
-        };
-
         
-    }
-
-    public class CreateServiceAttachmentDetailsModelConverter : JsonConverter
-    {
-        public override bool CanWrite => false;
-        public override bool CanRead => true;
-        public override bool CanConvert(System.Type type)
-        {
-            return type == typeof(CreateServiceAttachmentDetails);
-        }
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-        {
-            throw new System.InvalidOperationException("Use default serialization.");
-        }
-
-        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
-        {
-            var jsonObject = JObject.Load(reader);
-            var obj = default(CreateServiceAttachmentDetails);
-            var discriminator = jsonObject["action"].Value<string>();
-            switch (discriminator)
-            {
-                case "ATTACH_EXISTING_INSTANCE":
-                    obj = new AttachExistingInstanceDetails();
-                    break;
-                case "CREATE_NEW_INSTANCE":
-                    obj = new CreateNewInstanceDetails();
-                    break;
-            }
-            serializer.Populate(jsonObject.CreateReader(), obj);
-            return obj;
-        }
+        /// <value>
+        /// Type of the ServiceInstance being attached.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ServiceInstanceType is required.")]
+        [JsonProperty(PropertyName = "serviceInstanceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ServiceAttachment.ServiceInstanceTypeEnum> ServiceInstanceType { get; set; }
+        
+        /// <value>
+        /// The service instance OCID of the instance being attached
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ServiceInstanceId is required.")]
+        [JsonProperty(PropertyName = "serviceInstanceId")]
+        public string ServiceInstanceId { get; set; }
+        
     }
 }
