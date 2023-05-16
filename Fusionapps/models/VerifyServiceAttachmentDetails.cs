@@ -16,36 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FusionappsService.Models
 {
     /// <summary>
-    /// Admin information to provision Analytics Warehouse Service.
+    /// Information about the service attachment to be verified.
     /// </summary>
-    public class FawAdminInfoDetails 
+    public class VerifyServiceAttachmentDetails 
     {
         
         /// <value>
-        /// Password for the ADW to be created in User Tenancy
+        /// Type of the ServiceInstance being attached.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "AdwAdminPass is required.")]
-        [JsonProperty(PropertyName = "adwAdminPass")]
-        public string AdwAdminPass { get; set; }
+        [Required(ErrorMessage = "ServiceInstanceType is required.")]
+        [JsonProperty(PropertyName = "serviceInstanceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ServiceAttachment.ServiceInstanceTypeEnum> ServiceInstanceType { get; set; }
         
         /// <value>
-        /// Password for the auto-created FAWService user
-        /// </value>
-        [JsonProperty(PropertyName = "fawServicePass")]
-        public string FawServicePass { get; set; }
-        
-        /// <value>
-        /// Email ID to send notification for Analytics Warehouse updates.
+        /// The service instance OCID of the instance being attached
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "NotificationEmail is required.")]
-        [JsonProperty(PropertyName = "notificationEmail")]
-        public string NotificationEmail { get; set; }
+        [Required(ErrorMessage = "ServiceInstanceId is required.")]
+        [JsonProperty(PropertyName = "serviceInstanceId")]
+        public string ServiceInstanceId { get; set; }
         
     }
 }
