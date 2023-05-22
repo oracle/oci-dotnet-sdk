@@ -21,6 +21,9 @@ namespace Oci.LoggingService.Models
     public class UnifiedAgentNoneParser : UnifiedAgentParser
     {
         
+        /// <value>
+        /// Specifies the field name to contain logs.
+        /// </value>
         [JsonProperty(PropertyName = "messageKey")]
         public string MessageKey { get; set; }
         

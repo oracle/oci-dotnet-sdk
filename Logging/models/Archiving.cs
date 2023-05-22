@@ -22,7 +22,7 @@ namespace Oci.LoggingService.Models
     {
         
         /// <value>
-        /// True if archiving enabled. This field is now decrecated, you should use cloud flow to enable archiving.
+        /// True if archiving enabled. This field is now deprecated, you should use Service Connector Hub to enable archiving.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }

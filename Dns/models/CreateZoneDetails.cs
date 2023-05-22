@@ -68,6 +68,14 @@ namespace Oci.DnsService.Models
         [JsonProperty(PropertyName = "externalMasters")]
         public System.Collections.Generic.List<ExternalMaster> ExternalMasters { get; set; }
         
+        /// <value>
+        /// External secondary servers for the zone.
+        /// This field is currently not supported when `zoneType` is `SECONDARY` or `scope` is `PRIVATE`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "externalDownstreams")]
+        public System.Collections.Generic.List<ExternalDownstream> ExternalDownstreams { get; set; }
+        
         [JsonProperty(PropertyName = "migrationSource")]
         private readonly string migrationSource = "NONE";
     }

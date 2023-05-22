@@ -54,7 +54,7 @@ namespace Oci.LoggingService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
-        /// The work request\u2019s compartment OCID.
+        /// The work request's compartment OCID.
         /// </value>
         /// <remarks>
         /// Required

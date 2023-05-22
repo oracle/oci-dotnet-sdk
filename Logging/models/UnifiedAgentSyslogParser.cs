@@ -21,12 +21,21 @@ namespace Oci.LoggingService.Models
     public class UnifiedAgentSyslogParser : UnifiedAgentParser
     {
         
+        /// <value>
+        /// Time format.
+        /// </value>
         [JsonProperty(PropertyName = "timeFormat")]
         public string TimeFormat { get; set; }
         
+        /// <value>
+        /// rfc5424 time format.
+        /// </value>
         [JsonProperty(PropertyName = "rfc5424TimeFormat")]
         public string Rfc5424TimeFormat { get; set; }
                 ///
+        /// <value>
+        /// Message format of syslog.
+        /// </value>
         ///
         public enum MessageFormatEnum {
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -40,16 +49,28 @@ namespace Oci.LoggingService.Models
             Auto
         };
 
+        /// <value>
+        /// Message format of syslog.
+        /// </value>
         [JsonProperty(PropertyName = "messageFormat")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MessageFormatEnum> MessageFormat { get; set; }
         
+        /// <value>
+        /// With priority or not.
+        /// </value>
         [JsonProperty(PropertyName = "isWithPriority")]
         public System.Nullable<bool> IsWithPriority { get; set; }
         
+        /// <value>
+        /// Support colonless ident or not.
+        /// </value>
         [JsonProperty(PropertyName = "isSupportColonlessIdent")]
         public System.Nullable<bool> IsSupportColonlessIdent { get; set; }
                 ///
+        /// <value>
+        /// Syslog parser type.
+        /// </value>
         ///
         public enum SyslogParserTypeEnum {
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -61,6 +82,9 @@ namespace Oci.LoggingService.Models
             Regexp
         };
 
+        /// <value>
+        /// Syslog parser type.
+        /// </value>
         [JsonProperty(PropertyName = "syslogParserType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SyslogParserTypeEnum> SyslogParserType { get; set; }

@@ -21,9 +21,19 @@ namespace Oci.LoggingService.Models
     public class UnifiedAgentMultilineParser : UnifiedAgentParser
     {
         
+        /// <value>
+        /// First line pattern format.
+        /// </value>
         [JsonProperty(PropertyName = "formatFirstline")]
         public string FormatFirstline { get; set; }
         
+        /// <value>
+        /// Mutiline pattern format.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Format is required.")]
         [JsonProperty(PropertyName = "format")]
         public System.Collections.Generic.List<string> Format { get; set; }
         

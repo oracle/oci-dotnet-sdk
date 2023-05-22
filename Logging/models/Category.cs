@@ -28,7 +28,7 @@ namespace Oci.LoggingService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Category display name.
+        /// Category display name. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

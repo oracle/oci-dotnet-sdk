@@ -82,7 +82,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpuCoreCountPerNode { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) to be enabled per each CPU core.
+        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }

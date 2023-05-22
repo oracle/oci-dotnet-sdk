@@ -42,7 +42,7 @@ namespace Oci.LoggingService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
-        /// The OCID of the work request\u2019s compartment.
+        /// The OCID of the work request's compartment.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// Contains details indicating which compartment the resource should move to
+    /// Contains details indicating which compartment the resource should move to.
     /// </summary>
     public class ChangeLogSavedSearchCompartmentDetails 
     {

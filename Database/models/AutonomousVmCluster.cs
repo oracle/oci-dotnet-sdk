@@ -180,7 +180,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> TotalContainerDatabases { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) to be enabled per each CPU core.
+        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
@@ -336,13 +336,13 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsMtlsEnabled { get; set; }
         
         /// <value>
-        /// The date and time of Database SSL certificate expiration.
+        /// The date and time of the Database SSL certificate expiration.
         /// </value>
         [JsonProperty(PropertyName = "timeDatabaseSslCertificateExpires")]
         public System.Nullable<System.DateTime> TimeDatabaseSslCertificateExpires { get; set; }
         
         /// <value>
-        /// The date and time of ORDS certificate expiration.
+        /// The date and time of the ORDS certificate expiration.
         /// </value>
         [JsonProperty(PropertyName = "timeOrdsCertificateExpires")]
         public System.Nullable<System.DateTime> TimeOrdsCertificateExpires { get; set; }

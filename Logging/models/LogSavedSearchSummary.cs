@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// A summary of a log saved search that can be used to save and share a given search result.
+    /// A summary of a LogSavedSearch that can be used to save and share a given search result.
     /// 
     /// </summary>
     public class LogSavedSearchSummary 

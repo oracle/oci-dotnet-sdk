@@ -21,9 +21,20 @@ namespace Oci.LoggingService.Models
     public class UnifiedAgentLoggingConfiguration : UnifiedAgentServiceConfigurationDetails
     {
         
+        /// <value>
+        /// Logging source object.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Sources is required.")]
         [JsonProperty(PropertyName = "sources")]
         public System.Collections.Generic.List<UnifiedAgentLoggingSource> Sources { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Destination is required.")]
         [JsonProperty(PropertyName = "destination")]
         public UnifiedAgentLoggingDestination Destination { get; set; }
         

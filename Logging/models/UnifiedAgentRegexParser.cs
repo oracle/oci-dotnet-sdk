@@ -21,9 +21,19 @@ namespace Oci.LoggingService.Models
     public class UnifiedAgentRegexParser : UnifiedAgentParser
     {
         
+        /// <value>
+        /// Regex pattern.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Expression is required.")]
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
         
+        /// <value>
+        /// Time format.
+        /// </value>
         [JsonProperty(PropertyName = "timeFormat")]
         public string TimeFormat { get; set; }
         

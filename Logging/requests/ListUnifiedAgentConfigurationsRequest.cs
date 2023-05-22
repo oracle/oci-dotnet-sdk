@@ -51,7 +51,7 @@ namespace Oci.LoggingService.Requests
         public string GroupId { get; set; }
         
         /// <value>
-        /// Resource name
+        /// Resource name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }

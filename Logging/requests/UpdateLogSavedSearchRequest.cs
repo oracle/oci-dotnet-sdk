@@ -20,7 +20,7 @@ namespace Oci.LoggingService.Requests
     {
         
         /// <value>
-        /// OCID of the logSavedSearch
+        /// OCID of the logSavedSearch.
         /// 
         /// </value>
         /// <remarks>
