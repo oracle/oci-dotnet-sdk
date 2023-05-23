@@ -16,20 +16,24 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// A set of LogIncludedSummary
+    /// CRI parser.
     /// </summary>
-    public class LogIncludedSearchSummaryCollection 
+    public class UnifiedAgentCriParser : UnifiedAgentParser
     {
         
         /// <value>
-        /// The list of summaries
+        /// If you don't need stream/logtag fields, set this to false.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Items is required.")]
-        [JsonProperty(PropertyName = "items")]
-        public System.Collections.Generic.List<LogIncludedSearchSummary> Items { get; set; }
+        [JsonProperty(PropertyName = "isMergeCriFields")]
+        public System.Nullable<bool> IsMergeCriFields { get; set; }
         
+        /// <value>
+        /// Optional nested JSON Parser for CRI Parser. Supported fields are fieldTimeKey, timeFormat, and isKeepTimeKey.
+        /// </value>
+        [JsonProperty(PropertyName = "nestedParser")]
+        public UnifiedJSONParser NestedParser { get; set; }
+        
+        [JsonProperty(PropertyName = "parserType")]
+        private readonly string parserType = "CRI";
     }
 }

@@ -21,15 +21,31 @@ namespace Oci.LoggingService.Models
     public class UnifiedAgentMultilineGrokParser : UnifiedAgentParser
     {
         
+        /// <value>
+        /// grok name key.
+        /// </value>
         [JsonProperty(PropertyName = "grokNameKey")]
         public string GrokNameKey { get; set; }
         
+        /// <value>
+        /// grok failure key.
+        /// </value>
         [JsonProperty(PropertyName = "grokFailureKey")]
         public string GrokFailureKey { get; set; }
         
+        /// <value>
+        /// Multiline start regexp pattern.
+        /// </value>
         [JsonProperty(PropertyName = "multiLineStartRegexp")]
         public string MultiLineStartRegexp { get; set; }
         
+        /// <value>
+        /// grok pattern object.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Patterns is required.")]
         [JsonProperty(PropertyName = "patterns")]
         public System.Collections.Generic.List<GrokPattern> Patterns { get; set; }
         

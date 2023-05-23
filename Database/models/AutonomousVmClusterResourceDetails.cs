@@ -13,17 +13,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.LoggingService.Models
+namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// A summary of what the OCI included search does.
-    /// 
+    /// Unallocated resource details of the AVM
     /// </summary>
-    public class LogIncludedSearchSummary 
+    public class AutonomousVmClusterResourceDetails 
     {
         
         /// <value>
-        /// The OCID of the resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata infrastructure.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,28 +32,14 @@ namespace Oci.LoggingService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The user-friendly display name. This must be unique within the enclosing resource,
-        /// and it's changeable. Avoid entering confidential information.
-        /// 
+        /// Total unallocated autonomous data storage in the AVM in TBs.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "DisplayName is required.")]
-        [JsonProperty(PropertyName = "displayName")]
-        public string DisplayName { get; set; }
-        
-        /// <value>
-        /// Time the resource was created.
-        /// </value>
-        [JsonProperty(PropertyName = "timeCreated")]
-        public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        
-        /// <value>
-        /// Time the resource was last modified.
-        /// </value>
-        [JsonProperty(PropertyName = "timeLastModified")]
-        public System.Nullable<System.DateTime> TimeLastModified { get; set; }
+        [Required(ErrorMessage = "UnAllocatedAdbStorageInTBs is required.")]
+        [JsonProperty(PropertyName = "unAllocatedAdbStorageInTBs")]
+        public System.Double UnAllocatedAdbStorageInTBs { get; set; }
         
     }
 }

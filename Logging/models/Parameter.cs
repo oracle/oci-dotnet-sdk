@@ -30,9 +30,17 @@ namespace Oci.LoggingService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
+        /// <value>
+        /// The user-friendly display name. This must be unique within the enclosing resource,
+        /// and it's changeable. Avoid entering confidential information.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
                 ///
         /// <value>
-        /// Parameter type. One of integer, string, boolean.
+        /// Parameter type.
         /// </value>
         ///
         public enum TypeEnum {
@@ -44,11 +52,15 @@ namespace Oci.LoggingService.Models
             [EnumMember(Value = "string")]
             String,
             [EnumMember(Value = "boolean")]
-            Boolean
+            Boolean,
+            [EnumMember(Value = "ENUM_STRING")]
+            EnumString,
+            [EnumMember(Value = "RQS_FILTER")]
+            RqsFilter
         };
 
         /// <value>
-        /// Parameter type. One of integer, string, boolean.
+        /// Parameter type.
         /// </value>
         /// <remarks>
         /// Required
@@ -57,6 +69,12 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
+        
+        /// <value>
+        /// Parameter rqsType if applicable.
+        /// </value>
+        [JsonProperty(PropertyName = "rqsType")]
+        public string RqsType { get; set; }
         
         /// <value>
         /// Java regex pattern to validate a parameter value.

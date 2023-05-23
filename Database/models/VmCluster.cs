@@ -212,6 +212,12 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> DbServers { get; set; }
         
         /// <value>
+        /// The name of the availability domain that the VM cluster is located in.
+        /// </value>
+        [JsonProperty(PropertyName = "availabilityDomain")]
+        public string AvailabilityDomain { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

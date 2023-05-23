@@ -21,6 +21,13 @@ namespace Oci.LoggingService.Models
     public class UnifiedAgentWindowsEventSource : UnifiedAgentLoggingSource
     {
         
+        /// <value>
+        /// Windows event log channels.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Channels is required.")]
         [JsonProperty(PropertyName = "channels")]
         public System.Collections.Generic.List<string> Channels { get; set; }
         

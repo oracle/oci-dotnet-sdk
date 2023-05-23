@@ -21,6 +21,9 @@ namespace Oci.LoggingService.Models
     public class UnifiedJSONParser : UnifiedAgentParser
     {
                 ///
+        /// <value>
+        /// Time type of JSON parser.
+        /// </value>
         ///
         public enum TimeTypeEnum {
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -34,10 +37,16 @@ namespace Oci.LoggingService.Models
             String
         };
 
+        /// <value>
+        /// Time type of JSON parser.
+        /// </value>
         [JsonProperty(PropertyName = "timeType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TimeTypeEnum> TimeType { get; set; }
         
+        /// <value>
+        /// Process time value using the specified format.
+        /// </value>
         [JsonProperty(PropertyName = "timeFormat")]
         public string TimeFormat { get; set; }
         

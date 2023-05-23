@@ -132,6 +132,18 @@ namespace Oci.DnsService.Models
         public System.Collections.Generic.List<ExternalMaster> ExternalMasters { get; set; }
         
         /// <value>
+        /// External secondary servers for the zone.
+        /// This field is currently not supported when `zoneType` is `SECONDARY` or `scope` is `PRIVATE`.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ExternalDownstreams is required.")]
+        [JsonProperty(PropertyName = "externalDownstreams")]
+        public System.Collections.Generic.List<ExternalDownstream> ExternalDownstreams { get; set; }
+        
+        /// <value>
         /// The canonical absolute URL of the resource.
         /// </value>
         /// <remarks>

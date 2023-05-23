@@ -32,14 +32,14 @@ namespace Oci.LoggingService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// OCID of the LogSavedSearch
+        /// OCID of the LogSavedSearch.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "logSavedSearchId")]
         public string LogSavedSearchId { get; set; }
         
         /// <value>
-        /// Resource name
+        /// Resource name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
         public string Name { get; set; }

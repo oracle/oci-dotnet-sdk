@@ -29,6 +29,8 @@ namespace Oci.LoggingService.Models
         public enum ParserTypeEnum {
             [EnumMember(Value = "AUDITD")]
             Auditd,
+            [EnumMember(Value = "CRI")]
+            Cri,
             [EnumMember(Value = "JSON")]
             Json,
             [EnumMember(Value = "TSV")]
@@ -64,6 +66,27 @@ namespace Oci.LoggingService.Models
         
         /// <value>
         /// Specify types for converting a field into another type.
+        /// For example,
+        ///   With this configuration:
+        ///       <parse>
+        ///         @type csv
+        ///         keys time,host,req_id,user
+        ///         time_key time
+        ///       </parse>
+        /// <br/>
+        ///   This incoming event:
+        ///     \"2013/02/28 12:00:00,192.168.0.1,111,-\"
+        /// <br/>
+        ///   is parsed as:
+        ///     1362020400 (2013/02/28/ 12:00:00)
+        /// <br/>
+        ///     record:
+        ///     {
+        ///       \"host\"   : \"192.168.0.1\",
+        ///       \"req_id\" : \"111\",
+        ///       \"user\"   : \"-\"
+        ///     }
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "types")]
         public System.Collections.Generic.Dictionary<string, string> Types { get; set; }
@@ -150,6 +173,9 @@ namespace Oci.LoggingService.Models
                     break;
                 case "TSV":
                     obj = new UnifiedAgentTsvParser();
+                    break;
+                case "CRI":
+                    obj = new UnifiedAgentCriParser();
                     break;
                 case "APACHE_ERROR":
                     obj = new UnifiedAgentApacheErrorParser();

@@ -20,7 +20,7 @@ namespace Oci.LoggingService.Requests
     {
         
         /// <value>
-        /// Specification of the Saved Search to create
+        /// Specification of the saved search to create.
         /// </value>
         /// <remarks>
         /// Required

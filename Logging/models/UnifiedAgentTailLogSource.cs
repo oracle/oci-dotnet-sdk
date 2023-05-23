@@ -21,6 +21,13 @@ namespace Oci.LoggingService.Models
     public class UnifiedAgentTailLogSource : UnifiedAgentLoggingSource
     {
         
+        /// <value>
+        /// Absolute paths for log source files. Wildcard can be used.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Paths is required.")]
         [JsonProperty(PropertyName = "paths")]
         public System.Collections.Generic.List<string> Paths { get; set; }
         

@@ -23,7 +23,7 @@ namespace Oci.DatabaseService.Models
     {
                 ///
         /// <value>
-        /// Specify SYSTEM for using Oracle managed certificates. Specify BYOC when you want to bring your own certificate.
+        /// Specify SYSTEM to use Oracle-managed certificates. Specify BYOC when you want to bring your own certificate.
         /// </value>
         ///
         public enum CertificateGenerationTypeEnum {
@@ -34,7 +34,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Specify SYSTEM for using Oracle managed certificates. Specify BYOC when you want to bring your own certificate.
+        /// Specify SYSTEM to use Oracle-managed certificates. Specify BYOC when you want to bring your own certificate.
         /// </value>
         /// <remarks>
         /// Required

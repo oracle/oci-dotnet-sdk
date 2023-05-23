@@ -134,7 +134,7 @@ namespace Oci.LoggingService.Models
         public System.Nullable<System.DateTime> TimeLastModified { get; set; }
         
         /// <value>
-        /// Log retention duration in 30-day increments (30, 60, 90 and so on).
+        /// Log retention duration in 30-day increments (30, 60, 90 and so on until 180).
         /// </value>
         [JsonProperty(PropertyName = "retentionDuration")]
         public System.Nullable<int> RetentionDuration { get; set; }

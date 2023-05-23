@@ -48,19 +48,19 @@ namespace Oci.LoggingService.Requests
         public System.Nullable<LogTypeEnum> LogType { get; set; }
         
         /// <value>
-        /// Service that created the log object.
+        /// Service that created the log object, which is a field of LogSummary.Configuration.Source.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceService")]
         public string SourceService { get; set; }
         
         /// <value>
-        /// Log object resource.
+        /// Log object resource, which is a field of LogSummary.Configuration.Source.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceResource")]
         public string SourceResource { get; set; }
         
         /// <value>
-        /// Resource name
+        /// Resource name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }

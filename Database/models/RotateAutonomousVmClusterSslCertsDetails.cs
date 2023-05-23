@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The details for configuring the ORDS certificates on Autonomous VM Cluster
+    /// Details for configuring the ORDS certificates on Autonomous Exadata VM Cluster
     /// 
     /// </summary>
     public class RotateAutonomousVmClusterSslCertsDetails 
     {
                 ///
         /// <value>
-        /// Specify SYSTEM for using Oracle managed certificates. Specify BYOC when you want to bring your own certificate.
+        /// Specify SYSTEM to use Oracle-managed certificates. Specify BYOC when you want to bring your own certificate.
         /// </value>
         ///
         public enum CertificateGenerationTypeEnum {
@@ -34,7 +34,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Specify SYSTEM for using Oracle managed certificates. Specify BYOC when you want to bring your own certificate.
+        /// Specify SYSTEM to use Oracle-managed certificates. Specify BYOC when you want to bring your own certificate.
         /// </value>
         /// <remarks>
         /// Required

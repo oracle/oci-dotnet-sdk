@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// The update details to update a log saved search.
+    /// The update details to update a LogSavedSearch.
     /// 
     /// </summary>
     public class UpdateLogSavedSearchDetails 

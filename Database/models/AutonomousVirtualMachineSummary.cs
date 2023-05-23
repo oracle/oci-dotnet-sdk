@@ -138,5 +138,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Cloud Autonomous VM Cluster associated with the Autonomous Virtual Machine.
+        /// </value>
+        [JsonProperty(PropertyName = "cloudAutonomousVmClusterId")]
+        public string CloudAutonomousVmClusterId { get; set; }
+        
     }
 }

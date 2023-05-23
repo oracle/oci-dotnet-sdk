@@ -21,9 +21,19 @@ namespace Oci.LoggingService.Models
     public class UnifiedAgentTsvParser : UnifiedAgentParser
     {
         
+        /// <value>
+        /// tsv delimiter.
+        /// </value>
         [JsonProperty(PropertyName = "delimiter")]
         public string Delimiter { get; set; }
         
+        /// <value>
+        /// tsv keys.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Keys is required.")]
         [JsonProperty(PropertyName = "keys")]
         public System.Collections.Generic.List<string> Keys { get; set; }
         
