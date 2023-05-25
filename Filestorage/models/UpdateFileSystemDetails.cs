@@ -59,5 +59,15 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the associated file system snapshot policy, which
+        /// controls the frequency of snapshot creation and retention period of the taken snapshots.
+        /// <br/>
+        /// If string is empty, the policy reference (if any) would be removed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "filesystemSnapshotPolicyId")]
+        public string FilesystemSnapshotPolicyId { get; set; }
+        
     }
 }

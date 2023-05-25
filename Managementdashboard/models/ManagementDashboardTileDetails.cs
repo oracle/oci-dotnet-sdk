@@ -94,7 +94,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Object Nls { get; set; }
         
         /// <value>
-        /// JSON that contains user interface options.
+        /// It defines the visualization type of the widget saved search, the UI options of that visualization type, the binding of data to the visualization.
         /// </value>
         /// <remarks>
         /// Required
@@ -104,7 +104,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Object UiConfig { get; set; }
         
         /// <value>
-        /// Array of JSON that contain data source options.
+        /// It defines how data is fetched. A functional saved search needs a valid dataConfig. See examples on how it can be constructed for various data sources.
         /// </value>
         /// <remarks>
         /// Required

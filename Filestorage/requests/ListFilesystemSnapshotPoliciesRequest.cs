@@ -14,20 +14,42 @@ using Oci.FilestorageService.Models;
 namespace Oci.FilestorageService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/filestorage/ListSnapshots.cs.html">here</a> to see an example of how to use ListSnapshots request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/filestorage/ListFilesystemSnapshotPolicies.cs.html">here</a> to see an example of how to use ListFilesystemSnapshotPolicies request.
     /// </example>
-    public class ListSnapshotsRequest : Oci.Common.IOciRequest
+    public class ListFilesystemSnapshotPoliciesRequest : Oci.Common.IOciRequest
     {
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The name of the availability domain.
+        /// <br/>
+        /// Example: Uocm:PHX-AD-1
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "AvailabilityDomain is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availabilityDomain")]
+        public string AvailabilityDomain { get; set; }
         
         /// <value>
         /// For list pagination. The maximum number of results per page,
         /// or items to return in a paginated \"List\" call.
-        /// 1 is the minimum, 100 is the maximum.
+        /// 1 is the minimum, 1000 is the maximum.
         /// <br/>
         /// For important details about how pagination works,
         /// see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// <br/>
-        /// Example: 100
+        /// Example: 500
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
@@ -42,6 +64,14 @@ namespace Oci.FilestorageService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
+        
+        /// <value>
+        /// A user-friendly name. It does not have to be unique, and it is changeable.
+        /// <br/>
+        /// Example: My resource
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
+        public string DisplayName { get; set; }
         
         ///
         /// <value>
@@ -60,7 +90,9 @@ namespace Oci.FilestorageService.Requests
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive
         };
 
         /// <value>
@@ -79,25 +111,31 @@ namespace Oci.FilestorageService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
         
+        ///
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system snapshot policy
-        /// that is used to create the snapshots.
+        /// The field to sort by. You can provide either value, but not both.
+        /// By default, when you sort by time created, results are shown
+        /// in descending order. When you sort by displayName, results are
+        /// shown in ascending alphanumeric order.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filesystemSnapshotPolicyId")]
-        public string FilesystemSnapshotPolicyId { get; set; }
-        
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "TIMECREATED")]
+            Timecreated,
+            [EnumMember(Value = "DISPLAYNAME")]
+            Displayname
+        };
+
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
+        /// The field to sort by. You can provide either value, but not both.
+        /// By default, when you sort by time created, results are shown
+        /// in descending order. When you sort by displayName, results are
+        /// shown in ascending alphanumeric order.
+        /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
-        public string CompartmentId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fileSystemId")]
-        public string FileSystemId { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
         
         ///
         /// <value>

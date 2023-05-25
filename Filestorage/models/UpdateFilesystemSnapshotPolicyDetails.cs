@@ -16,10 +16,40 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FilestorageService.Models
 {
     /// <summary>
-    /// Details for updating the snapshot.
+    /// Details for updating the file system snapshot policy.
     /// </summary>
-    public class UpdateSnapshotDetails 
+    public class UpdateFilesystemSnapshotPolicyDetails 
     {
+        
+        /// <value>
+        /// A user-friendly name. It does not have to be unique, and it is changeable.
+        /// Avoid entering confidential information.
+        /// <br/>
+        /// Example: policy1
+        /// </value>
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
+        
+        /// <value>
+        /// The prefix to apply to all snapshots created by this policy.
+        /// <br/>
+        /// Example: acme
+        /// </value>
+        [JsonProperty(PropertyName = "policyPrefix")]
+        public string PolicyPrefix { get; set; }
+        
+        /// <value>
+        /// The list of associated snapshot schedules. A maximum of 10 schedules can be associated with a policy.
+        /// <br/>
+        /// If using the CLI, provide the schedule as a list of JSON strings, with the list wrapped in
+        /// quotation marks, i.e.
+        /// ```
+        ///   --schedules '[{\"timeZone\":\"UTC\",\"period\":\"DAILY\",\"hourOfDay\":18},{\"timeZone\":\"UTC\",\"period\":\"HOURLY\"}]'
+        /// ```
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "schedules")]
+        public System.Collections.Generic.List<SnapshotSchedule> Schedules { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
@@ -37,14 +67,6 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-        
-        /// <value>
-        /// The UTC time when this snapshot will be deleted. To remove the expiration time, set this field to the minimum date-time value using Date(0).
-        /// <br/>
-        /// Example: Thu Jan 01 01:00:00 GMT 1970
-        /// </value>
-        [JsonProperty(PropertyName = "expirationTime")]
-        public System.Nullable<System.DateTime> ExpirationTime { get; set; }
         
     }
 }

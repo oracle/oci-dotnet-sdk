@@ -121,6 +121,14 @@ namespace Oci.FilestorageService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parentFileSystemId")]
         public string ParentFileSystemId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system snapshot policy
+        /// that is associated with the file systems.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filesystemSnapshotPolicyId")]
+        public string FilesystemSnapshotPolicyId { get; set; }
+        
         ///
         /// <value>
         /// The field to sort by. You can provide either value, but not both.

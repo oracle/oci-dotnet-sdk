@@ -172,7 +172,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Version of the metadata.
+        /// The version of the metadata defined in the API. This is maintained and enforced by dashboard server. Currently it is 2.0.
         /// </value>
         /// <remarks>
         /// Required
@@ -283,6 +283,12 @@ namespace Oci.ManagementdashboardService.Models
         /// </value>
         [JsonProperty(PropertyName = "drilldownConfig")]
         public System.Collections.Generic.List<System.Object> DrilldownConfig { get; set; }
+        
+        /// <value>
+        /// Contains configuration for enabling features.
+        /// </value>
+        [JsonProperty(PropertyName = "featuresConfig")]
+        public System.Object FeaturesConfig { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

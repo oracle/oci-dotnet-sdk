@@ -53,7 +53,7 @@ namespace Oci.FilestorageService.Models
                 ///
         /// <value>
         /// Type of access to grant clients using the file system
-        /// through this export. If unspecified defaults to `READ_ONLY`.
+        /// through this export. If unspecified defaults to `READ_WRITE`.
         /// 
         /// </value>
         ///
@@ -69,7 +69,7 @@ namespace Oci.FilestorageService.Models
 
         /// <value>
         /// Type of access to grant clients using the file system
-        /// through this export. If unspecified defaults to `READ_ONLY`.
+        /// through this export. If unspecified defaults to `READ_WRITE`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "access")]

@@ -52,7 +52,7 @@ namespace Oci.ManagementdashboardService.Models
         public string ProviderId { get; set; }
         
         /// <value>
-        /// Version of the service that owns this saved search.
+        /// The version of the metadata of the provider. This is useful for provider to version its features and metadata. Any newly created saved search (or dashboard) should use providerVersion 3.0.0.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.ManagementdashboardService.Models
         public string ProviderVersion { get; set; }
         
         /// <value>
-        /// Name of the service (for example, Logging Analytics) that owns the saved search.
+        /// The user friendly name of the service (for example, Logging Analytics) that owns the saved search.
         /// </value>
         /// <remarks>
         /// Required
@@ -123,7 +123,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<SavedSearchTypes> Type { get; set; }
         
         /// <value>
-        /// JSON that contains user interface options.
+        /// It defines the visualization type of the widget saved search, the UI options of that visualization type, the binding of data to the visualization.
         /// </value>
         /// <remarks>
         /// Required
@@ -133,7 +133,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Object UiConfig { get; set; }
         
         /// <value>
-        /// Array of JSON that contain data source options.
+        /// It defines how data is fetched. A functional saved search needs a valid dataConfig. See examples on how it can be constructed for various data sources.
         /// </value>
         /// <remarks>
         /// Required
@@ -153,7 +153,7 @@ namespace Oci.ManagementdashboardService.Models
         public string ScreenImage { get; set; }
         
         /// <value>
-        /// Version of the metadata.
+        /// The version of the metadata defined in the API. This is maintained and enforced by dashboard server. Currently it is 2.0.
         /// </value>
         /// <remarks>
         /// Required
@@ -163,7 +163,7 @@ namespace Oci.ManagementdashboardService.Models
         public string MetadataVersion { get; set; }
         
         /// <value>
-        /// Reference to the HTML file of the widget.
+        /// The UI template that the saved search uses to render itself.
         /// </value>
         /// <remarks>
         /// Required
@@ -173,7 +173,7 @@ namespace Oci.ManagementdashboardService.Models
         public string WidgetTemplate { get; set; }
         
         /// <value>
-        /// Reference to the view model of the widget.
+        /// The View Model that the saved search uses to render itself.
         /// </value>
         /// <remarks>
         /// Required
@@ -201,6 +201,12 @@ namespace Oci.ManagementdashboardService.Models
         /// </value>
         [JsonProperty(PropertyName = "parametersConfig")]
         public System.Collections.Generic.List<System.Object> ParametersConfig { get; set; }
+        
+        /// <value>
+        /// Contains configuration for enabling features.
+        /// </value>
+        [JsonProperty(PropertyName = "featuresConfig")]
+        public System.Object FeaturesConfig { get; set; }
         
         /// <value>
         /// Drill-down configuration to define the destination of a drill-down action.

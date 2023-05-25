@@ -74,6 +74,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "vmNetworks")]
         public System.Collections.Generic.List<VmNetworkDetails> VmNetworks { get; set; }
+        
+        /// <value>
+        /// The SCAN details for DR network
+        /// </value>
+        [JsonProperty(PropertyName = "drScans")]
+        public System.Collections.Generic.List<DrScanDetails> DrScans { get; set; }
                 ///
         /// <value>
         /// The current state of the VM cluster network.

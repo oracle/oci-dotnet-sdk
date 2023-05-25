@@ -139,6 +139,12 @@ namespace Oci.FilestorageService.Models
         public System.Nullable<System.DateTime> SnapshotTime { get; set; }
         
         /// <value>
+        /// The time when this snapshot will be deleted.
+        /// </value>
+        [JsonProperty(PropertyName = "expirationTime")]
+        public System.Nullable<System.DateTime> ExpirationTime { get; set; }
+        
+        /// <value>
         /// An [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) identifying the parent from which this snapshot was cloned.
         /// If this snapshot was not cloned, then the `provenanceId` is the same as the snapshot `id` value.
         /// If this snapshot was cloned, then the `provenanceId` value is the parent's `provenanceId`.
