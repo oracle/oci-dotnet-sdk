@@ -180,5 +180,18 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The time when this snapshot will be deleted.
+        /// </value>
+        [JsonProperty(PropertyName = "expirationTime")]
+        public System.Nullable<System.DateTime> ExpirationTime { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system snapshot policy that created this snapshot.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "filesystemSnapshotPolicyId")]
+        public string FilesystemSnapshotPolicyId { get; set; }
+        
     }
 }

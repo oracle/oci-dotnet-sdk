@@ -39,7 +39,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "CLIENT")]
             Client,
             [EnumMember(Value = "BACKUP")]
-            Backup
+            Backup,
+            [EnumMember(Value = "DISASTER_RECOVERY")]
+            DisasterRecovery
         };
 
         /// <value>

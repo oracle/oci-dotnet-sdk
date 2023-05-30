@@ -38,7 +38,7 @@ namespace Oci.ManagementdashboardService.Models
         public string ProviderId { get; set; }
         
         /// <value>
-        /// Name of the service (for example, Logging Analytics) that owns the dashboard.
+        /// The user friendly name of the service (for example, Logging Analytics) that owns the dashboard.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.ManagementdashboardService.Models
         public string ProviderName { get; set; }
         
         /// <value>
-        /// Version of the service that owns the dashboard.
+        /// The version of the metadata of the provider. This is useful for provider to version its features and metadata. Any newly created saved search (or dashboard) should use providerVersion 3.0.0.
         /// </value>
         /// <remarks>
         /// Required
@@ -118,7 +118,7 @@ namespace Oci.ManagementdashboardService.Models
         public System.Nullable<bool> IsShowInHome { get; set; }
         
         /// <value>
-        /// Version of the metadata.
+        /// The version of the metadata defined in the API. This is maintained and enforced by dashboard server. Currently it is 2.0.
         /// </value>
         /// <remarks>
         /// Required
@@ -202,6 +202,12 @@ namespace Oci.ManagementdashboardService.Models
         /// </value>
         [JsonProperty(PropertyName = "parametersConfig")]
         public System.Collections.Generic.List<System.Object> ParametersConfig { get; set; }
+        
+        /// <value>
+        /// Contains configuration for enabling features.
+        /// </value>
+        [JsonProperty(PropertyName = "featuresConfig")]
+        public System.Object FeaturesConfig { get; set; }
         
         /// <value>
         /// Drill-down configuration to define the destination of a drill-down action.

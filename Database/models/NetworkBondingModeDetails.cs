@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details of bonding mode for Client and Backup networks of an Exadata infrastructure.
+    /// Details of bonding mode for Client and Backup and DR networks of an Exadata infrastructure.
     /// 
     /// </summary>
     public class NetworkBondingModeDetails 
@@ -63,6 +63,27 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "backupNetworkBondingMode")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BackupNetworkBondingModeEnum> BackupNetworkBondingMode { get; set; }
+                ///
+        /// <value>
+        /// The network bonding mode for the Exadata infrastructure.
+        /// </value>
+        ///
+        public enum DrNetworkBondingModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ACTIVE_BACKUP")]
+            ActiveBackup,
+            [EnumMember(Value = "LACP")]
+            Lacp
+        };
+
+        /// <value>
+        /// The network bonding mode for the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "drNetworkBondingMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DrNetworkBondingModeEnum> DrNetworkBondingMode { get; set; }
         
     }
 }

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The Single Client Access Name (SCAN) details.
+    /// The Single Client Access Name (SCAN) details for Disaster recovery network.
     /// 
     /// </summary>
-    public class ScanDetails 
+    public class DrScanDetails 
     {
         
         /// <value>
-        /// The SCAN hostname.
+        /// The Disaster recovery SCAN hostname.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,27 +33,17 @@ namespace Oci.DatabaseService.Models
         public string Hostname { get; set; }
         
         /// <value>
-        /// **Deprecated.** This field is deprecated. You may use 'scanListenerPortTcp' to specify the port.
-        /// The SCAN TCPIP port. Default is 1521.
-        /// 
+        /// The Disaster recovery SCAN TCPIP port. Default is 1521.
         /// </value>
-        [JsonProperty(PropertyName = "port")]
-        public System.Nullable<int> Port { get; set; }
-        
-        /// <value>
-        /// The SCAN TCPIP port. Default is 1521.
-        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ScanListenerPortTcp is required.")]
         [JsonProperty(PropertyName = "scanListenerPortTcp")]
         public System.Nullable<int> ScanListenerPortTcp { get; set; }
         
         /// <value>
-        /// The SCAN TCPIP SSL port. Default is 2484.
-        /// </value>
-        [JsonProperty(PropertyName = "scanListenerPortTcpSsl")]
-        public System.Nullable<int> ScanListenerPortTcpSsl { get; set; }
-        
-        /// <value>
-        /// The list of SCAN IP addresses. Three addresses should be provided.
+        /// The list of Disaster recovery SCAN IP addresses. Three addresses should be provided.
         /// </value>
         /// <remarks>
         /// Required

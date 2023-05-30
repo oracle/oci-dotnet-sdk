@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FilestorageService.Models
 {
     /// <summary>
-    /// Details for creating the file system.
+    /// Details for creating the file system snapshot policy.
     /// </summary>
-    public class CreateFileSystemDetails 
+    public class CreateFilesystemSnapshotPolicyDetails 
     {
         
         /// <value>
-        /// The availability domain to create the file system in.
+        /// The availability domain that the file system snapshot policy is in.
         /// <br/>
         /// Example: Uocm:PHX-AD-1
         /// </value>
@@ -34,7 +34,7 @@ namespace Oci.FilestorageService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to create the file system in.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the file system snapshot policy.
         /// </value>
         /// <remarks>
         /// Required
@@ -47,10 +47,31 @@ namespace Oci.FilestorageService.Models
         /// A user-friendly name. It does not have to be unique, and it is changeable.
         /// Avoid entering confidential information.
         /// <br/>
-        /// Example: My file system
+        /// Example: policy1
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+        
+        /// <value>
+        /// The prefix to apply to all snapshots created by this policy.
+        /// <br/>
+        /// Example: acme
+        /// </value>
+        [JsonProperty(PropertyName = "policyPrefix")]
+        public string PolicyPrefix { get; set; }
+        
+        /// <value>
+        /// The list of associated snapshot schedules. A maximum of 10 schedules can be associated with a policy.
+        /// <br/>
+        /// If using the CLI, provide the schedule as a list of JSON strings, with the list wrapped in
+        /// quotation marks, i.e.
+        /// ```
+        ///   --schedules '[{\"timeZone\":\"UTC\",\"period\":\"DAILY\",\"hourOfDay\":18},{\"timeZone\":\"UTC\",\"period\":\"HOURLY\"}]'
+        /// ```
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "schedules")]
+        public System.Collections.Generic.List<SnapshotSchedule> Schedules { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
@@ -68,31 +89,6 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the KMS key used to encrypt the encryption keys associated with this file system.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "kmsKeyId")]
-        public string KmsKeyId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the snapshot used to create a cloned file system.
-        /// See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningFS.htm).
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "sourceSnapshotId")]
-        public string SourceSnapshotId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the associated file system snapshot policy, which
-        /// controls the frequency of snapshot creation and retention period of the taken snapshots.
-        /// <br/>
-        /// May be unset as a blank value.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "filesystemSnapshotPolicyId")]
-        public string FilesystemSnapshotPolicyId { get; set; }
         
     }
 }

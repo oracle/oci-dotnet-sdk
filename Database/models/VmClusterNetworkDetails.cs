@@ -75,6 +75,12 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<VmNetworkDetails> VmNetworks { get; set; }
         
         /// <value>
+        /// The SCAN details for DR network
+        /// </value>
+        [JsonProperty(PropertyName = "drScans")]
+        public System.Collections.Generic.List<DrScanDetails> DrScans { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

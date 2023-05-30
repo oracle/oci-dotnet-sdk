@@ -116,6 +116,34 @@ namespace Oci.FilestorageService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetFilesystemSnapshotPolicyRequest, GetFilesystemSnapshotPolicyResponse> ForFilesystemSnapshotPolicy(GetFilesystemSnapshotPolicyRequest request, params FilesystemSnapshotPolicy.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForFilesystemSnapshotPolicy(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetFilesystemSnapshotPolicyRequest, GetFilesystemSnapshotPolicyResponse> ForFilesystemSnapshotPolicy(GetFilesystemSnapshotPolicyRequest request, WaiterConfiguration config, params FilesystemSnapshotPolicy.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetFilesystemSnapshotPolicyRequest, GetFilesystemSnapshotPolicyResponse>(
+                request,
+                request => client.GetFilesystemSnapshotPolicy(request),
+                response => targetStates.Contains(response.FilesystemSnapshotPolicy.LifecycleState.Value),
+                targetStates.Contains(FilesystemSnapshotPolicy.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetFilesystemSnapshotPolicyRequest, GetFilesystemSnapshotPolicyResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetMountTargetRequest, GetMountTargetResponse> ForMountTarget(GetMountTargetRequest request, params MountTarget.LifecycleStateEnum[] targetStates)
         {
             return this.ForMountTarget(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
