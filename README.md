@@ -177,9 +177,11 @@ make unit-test
 
 ## Contributing
 
-`oci-dotnet-sdk` is an open source project. See [CONTRIBUTING](/CONTRIBUTING.md) for details.
+This project welcomes contributions from the community. Before submitting a pull request, please [review our contribution guide](./CONTRIBUTING.md)
 
-Oracle gratefully acknowledges the contributions to oci-dotnet-sdk that have been made by the community.
+## Security
+
+Please consult the [security guide](./SECURITY.md) for our responsible security vulnerability disclosure process
 
 ## License
 
