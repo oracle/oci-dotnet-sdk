@@ -13,6 +13,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Oci.Common;
+using Oci.Common.Alloy;
 using Oci.Common.Model;
 using Oci.Common.Auth;
 using Oci.Common.Retry;
@@ -41,6 +42,10 @@ namespace Oci.DatabasetoolsService
         public DatabaseToolsClient(IBasicAuthenticationDetailsProvider authenticationDetailsProvider, ClientConfiguration clientConfiguration = null, string endpoint = null)
             : base(authenticationDetailsProvider, clientConfiguration)
         {
+            if (!AlloyConfiguration.IsServiceEnabled("databasetools"))
+            {
+                throw new ArgumentException("The Alloy configuration disabled this service, this behavior is controlled by AlloyConfiguration.OciEnabledServiceSet variable. Please check if your local alloy_config file has configured the service you're targeting or contact the cloud provider on the availability of this service");
+            }
             service = new Service
             {
                 ServiceName = "DATABASETOOLS",

@@ -47,6 +47,12 @@ namespace Oci.MysqlService.Models
         public System.Nullable<int> ClusterSize { get; set; }
         
         /// <value>
+        /// Lakehouse enabled status for the HeatWave cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "isLakehouseEnabled")]
+        public System.Nullable<bool> IsLakehouseEnabled { get; set; }
+        
+        /// <value>
         /// The current state of the MySQL HeatWave cluster.
         /// </value>
         /// <remarks>

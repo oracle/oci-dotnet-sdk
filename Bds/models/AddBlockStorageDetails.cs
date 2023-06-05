@@ -44,18 +44,20 @@ namespace Oci.BdsService.Models
         public System.Nullable<long> BlockVolumeSizeInGBs { get; set; }
                 ///
         /// <value>
-        /// Worker node types, can either be Worker Data node or Compute only worker node.
+        /// Worker node types.
         /// </value>
         ///
         public enum NodeTypeEnum {
             [EnumMember(Value = "WORKER")]
             Worker,
             [EnumMember(Value = "COMPUTE_ONLY_WORKER")]
-            ComputeOnlyWorker
+            ComputeOnlyWorker,
+            [EnumMember(Value = "KAFKA_BROKER")]
+            KafkaBroker
         };
 
         /// <value>
-        /// Worker node types, can either be Worker Data node or Compute only worker node.
+        /// Worker node types.
         /// </value>
         /// <remarks>
         /// Required

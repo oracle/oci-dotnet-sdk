@@ -30,6 +30,9 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "timezone")]
         public string Timezone { get; set; }
         
+        /// <value>
+        /// Details of a horizontal scaling schedule.
+        /// </value>
         [JsonProperty(PropertyName = "scheduleDetails")]
         public System.Collections.Generic.List<HorizontalScalingScheduleDetails> ScheduleDetails { get; set; }
         

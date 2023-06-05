@@ -51,7 +51,9 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = "COMPUTE_ONLY_WORKER")]
             ComputeOnlyWorker,
             [EnumMember(Value = "EDGE")]
-            Edge
+            Edge,
+            [EnumMember(Value = "KAFKA_BROKER")]
+            KafkaBroker
         };
 
         /// <value>

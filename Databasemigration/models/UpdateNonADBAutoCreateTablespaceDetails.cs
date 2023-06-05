@@ -43,6 +43,14 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "extendSizeInMBs")]
         public System.Nullable<int> ExtendSizeInMBs { get; set; }
         
+        /// <value>
+        /// Size of Oracle database blocks in KB.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "blockSizeInKBs")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DataPumpTablespaceBlockSizesInKb> BlockSizeInKBs { get; set; }
+        
         [JsonProperty(PropertyName = "targetType")]
         private readonly string targetType = "NON_ADB_AUTOCREATE";
     }

@@ -33,5 +33,12 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<MigrationObjectSummary> Items { get; set; }
         
+        /// <value>
+        /// Database objects to exclude/include from migration in CSV format. The items field will be ignored if this field is not null.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "csvText")]
+        public string CsvText { get; set; }
+        
     }
 }

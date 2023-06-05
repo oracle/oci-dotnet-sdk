@@ -46,5 +46,11 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "clusterSize")]
         public System.Nullable<int> ClusterSize { get; set; }
         
+        /// <value>
+        /// Enable/disable Lakehouse for the HeatWave cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "isLakehouseEnabled")]
+        public System.Nullable<bool> IsLakehouseEnabled { get; set; }
+        
     }
 }

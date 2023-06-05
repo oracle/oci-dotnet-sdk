@@ -115,6 +115,13 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "includeObjects")]
         public System.Collections.Generic.List<DatabaseObject> IncludeObjects { get; set; }
         
+        /// <value>
+        /// Database objects to exclude/include from migration in CSV format. The excludeObjects and includeObjects fields will be ignored if this field is not null.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "csvText")]
+        public string CsvText { get; set; }
+        
         [JsonProperty(PropertyName = "goldenGateDetails")]
         public CreateGoldenGateDetails GoldenGateDetails { get; set; }
         

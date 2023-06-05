@@ -100,6 +100,8 @@ namespace Oci.BdsService.Models
             Worker,
             [EnumMember(Value = "COMPUTE_ONLY_WORKER")]
             ComputeOnlyWorker,
+            [EnumMember(Value = "KAFKA_BROKER")]
+            KafkaBroker,
             [EnumMember(Value = "BURSTING")]
             Bursting,
             [EnumMember(Value = "CLOUD_SQL")]
