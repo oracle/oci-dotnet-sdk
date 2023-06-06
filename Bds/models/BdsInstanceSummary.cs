@@ -110,6 +110,16 @@ namespace Oci.BdsService.Models
         public System.Nullable<bool> IsCloudSqlConfigured { get; set; }
         
         /// <value>
+        /// Boolean flag specifying whether Kafka is configured or not.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsKafkaConfigured is required.")]
+        [JsonProperty(PropertyName = "isKafkaConfigured")]
+        public System.Nullable<bool> IsKafkaConfigured { get; set; }
+        
+        /// <value>
         /// Profile of the Big Data Service cluster.
         /// </value>
         [JsonProperty(PropertyName = "clusterProfile")]

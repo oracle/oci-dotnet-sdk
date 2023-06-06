@@ -13,6 +13,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Oci.Common;
+using Oci.Common.Alloy;
 using Oci.Common.Model;
 using Oci.Common.Auth;
 using Oci.Common.Retry;
@@ -41,6 +42,10 @@ namespace Oci.CoreService
         public ComputeManagementClient(IBasicAuthenticationDetailsProvider authenticationDetailsProvider, ClientConfiguration clientConfiguration = null, string endpoint = null)
             : base(authenticationDetailsProvider, clientConfiguration)
         {
+            if (!AlloyConfiguration.IsServiceEnabled("core"))
+            {
+                throw new ArgumentException("The Alloy configuration disabled this service, this behavior is controlled by AlloyConfiguration.OciEnabledServiceSet variable. Please check if your local alloy_config file has configured the service you're targeting or contact the cloud provider on the availability of this service");
+            }
             service = new Service
             {
                 ServiceName = "COMPUTEMANAGEMENT",
@@ -379,6 +384,10 @@ namespace Oci.CoreService
         /// <summary>
         /// Creates a cluster network. For more information about cluster networks, see
         /// [Managing Cluster Networks](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingclusternetworks.htm).
+        /// &lt;br/&gt;
+        /// To determine whether capacity is available for a specific shape before you create a cluster network,
+        /// use the {@link #createComputeCapacityReport(CreateComputeCapacityReportRequest) createComputeCapacityReport}
+        /// operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -494,6 +503,10 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Creates an instance pool.
+        /// &lt;br/&gt;
+        /// To determine whether capacity is available for a specific shape before you create an instance pool,
+        /// use the {@link #createComputeCapacityReport(CreateComputeCapacityReportRequest) createComputeCapacityReport}
+        /// operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1008,6 +1021,10 @@ namespace Oci.CoreService
         /// provide these parameters when you create an instance from the instance configuration.
         /// For more information, see the {@link InstanceConfiguration}
         /// resource.
+        /// &lt;br/&gt;
+        /// To determine whether capacity is available for a specific shape before you create an instance,
+        /// use the {@link #createComputeCapacityReport(CreateComputeCapacityReportRequest) createComputeCapacityReport}
+        /// operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

@@ -59,6 +59,10 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The number of instances that should be in the instance pool.
+        /// <br/>
+        /// To determine whether capacity is available for a specific shape before you resize an instance pool,
+        /// use the {@link #createComputeCapacityReport(CreateComputeCapacityReportRequest) createComputeCapacityReport}
+        /// operation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "size")]

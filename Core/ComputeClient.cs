@@ -13,6 +13,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Oci.Common;
+using Oci.Common.Alloy;
 using Oci.Common.Model;
 using Oci.Common.Auth;
 using Oci.Common.Retry;
@@ -41,6 +42,10 @@ namespace Oci.CoreService
         public ComputeClient(IBasicAuthenticationDetailsProvider authenticationDetailsProvider, ClientConfiguration clientConfiguration = null, string endpoint = null)
             : base(authenticationDetailsProvider, clientConfiguration)
         {
+            if (!AlloyConfiguration.IsServiceEnabled("core"))
+            {
+                throw new ArgumentException("The Alloy configuration disabled this service, this behavior is controlled by AlloyConfiguration.OciEnabledServiceSet variable. Please check if your local alloy_config file has configured the service you're targeting or contact the cloud provider on the availability of this service");
+            }
             service = new Service
             {
                 ServiceName = "COMPUTE",
@@ -834,6 +839,68 @@ namespace Oci.CoreService
             catch (Exception e)
             {
                 logger.Error($"CreateAppCatalogSubscription failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Generates a report of the host capacity within an availability domain that is available for you
+        /// to create compute instances. Host capacity is the physical infrastructure that resources such as compute
+        /// instances run on.
+        /// &lt;br/&gt;
+        /// Use the capacity report to determine whether sufficient capacity is available for a shape before
+        /// you create an instance or change the shape of an instance.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/CreateComputeCapacityReport.cs.html">here</a> to see an example of how to use CreateComputeCapacityReport API.</example>
+        public async Task<CreateComputeCapacityReportResponse> CreateComputeCapacityReport(CreateComputeCapacityReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called createComputeCapacityReport");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/computeCapacityReports".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Compute",
+                    OperationName = "CreateComputeCapacityReport",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/ComputeCapacityReport/CreateComputeCapacityReport",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<CreateComputeCapacityReportResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateComputeCapacityReport failed with error: {e.Message}");
                 throw;
             }
         }
@@ -3256,6 +3323,10 @@ namespace Oci.CoreService
         /// Then, call {@link #createAppCatalogSubscription(CreateAppCatalogSubscriptionRequest) createAppCatalogSubscription}
         /// with the signature. To get the image ID for the LaunchInstance operation, call
         /// {@link #getAppCatalogListingResourceVersion(GetAppCatalogListingResourceVersionRequest) getAppCatalogListingResourceVersion}.
+        /// &lt;br/&gt;
+        /// To determine whether capacity is available for a specific shape before you create an instance,
+        /// use the {@link #createComputeCapacityReport(CreateComputeCapacityReportRequest) createComputeCapacityReport}
+        /// operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

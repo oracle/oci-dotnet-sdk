@@ -23,6 +23,14 @@ namespace Oci.DatabasemigrationService.Models
     {
         
         /// <value>
+        /// Replicat performance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "performanceProfile")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ReplicatPerformanceProfile> PerformanceProfile { get; set; }
+        
+        /// <value>
         /// Number of threads used to read trail files (valid for Parallel Replicat)
         /// 
         /// </value>

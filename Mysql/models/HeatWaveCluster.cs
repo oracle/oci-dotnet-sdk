@@ -57,6 +57,12 @@ namespace Oci.MysqlService.Models
         public System.Nullable<int> ClusterSize { get; set; }
         
         /// <value>
+        /// Lakehouse enabled status for the HeatWave cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "isLakehouseEnabled")]
+        public System.Nullable<bool> IsLakehouseEnabled { get; set; }
+        
+        /// <value>
         /// A HeatWave node is a compute host that is part of a HeatWave cluster.
         /// </value>
         /// <remarks>

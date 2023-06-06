@@ -10,6 +10,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
+using Oci.Common.Alloy;
 using Oci.Common.Auth;
 using Oci.Common.Http;
 using Oci.Common.Http.Signing;
@@ -41,6 +42,13 @@ namespace Oci.Common
         public void SetRegion(Region region)
         {
             this.regionId = region.RegionId;
+            if (AlloyConfiguration.UseOnlyAlloyRegions())
+            {
+                if (!Region.Values().Any(regionSchema => regionSchema.RegionId == regionId))
+                {
+                    throw new ArgumentException($"You're using the {AlloyConfiguration.OciAlloyProvider} Alloy configuration file, the region you're targeting is not declared in this config file. Please check if this is the correct region you're targeting or contact the {AlloyConfiguration.OciAlloyProvider} cloud provider for help. If you want to target both OCI regions and Alloy regions, please set the OCI_ALLOY_REGION_COEXIST env var to True.");
+                }
+            }
             string endpoint = region.GetEndpoint(this.service);
             if (endpoint.Contains("{"))
             {

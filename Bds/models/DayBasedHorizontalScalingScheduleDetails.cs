@@ -21,6 +21,9 @@ namespace Oci.BdsService.Models
     public class DayBasedHorizontalScalingScheduleDetails : HorizontalScalingScheduleDetails
     {
         
+        /// <value>
+        /// Time of day and horizontal scaling configuration.
+        /// </value>
         [JsonProperty(PropertyName = "timeAndHorizontalScalingConfig")]
         public System.Collections.Generic.List<TimeAndHorizontalScalingConfig> TimeAndHorizontalScalingConfig { get; set; }
         

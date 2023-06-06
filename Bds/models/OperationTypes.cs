@@ -76,6 +76,10 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "STOP_BDS")]
       StopBds,
       [EnumMember(Value = "START_BDS")]
-      StartBds
+      StartBds,
+      [EnumMember(Value = "ADD_KAFKA")]
+      AddKafka,
+      [EnumMember(Value = "REMOVE_KAFKA")]
+      RemoveKafka
   }
 }

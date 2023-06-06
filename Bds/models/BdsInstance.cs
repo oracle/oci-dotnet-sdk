@@ -149,6 +149,16 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "isCloudSqlConfigured")]
         public System.Nullable<bool> IsCloudSqlConfigured { get; set; }
         
+        /// <value>
+        /// Boolean flag specifying whether or not Kafka should be configured.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsKafkaConfigured is required.")]
+        [JsonProperty(PropertyName = "isKafkaConfigured")]
+        public System.Nullable<bool> IsKafkaConfigured { get; set; }
+        
         [JsonProperty(PropertyName = "networkConfig")]
         public NetworkConfig NetworkConfig { get; set; }
         
@@ -243,7 +253,9 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = "HBASE")]
             Hbase,
             [EnumMember(Value = "TRINO")]
-            Trino
+            Trino,
+            [EnumMember(Value = "KAFKA")]
+            Kafka
         };
 
         /// <value>

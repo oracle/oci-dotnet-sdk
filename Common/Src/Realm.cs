@@ -7,9 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-using Oci.Common.Internal;
-using Oci.Common.Model;
-using Oci.Common.Utils;
+using Oci.Common.Alloy;
 
 namespace Oci.Common
 {
@@ -22,6 +20,7 @@ namespace Oci.Common
     {
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private static readonly Dictionary<string, Realm> KNOWN_REALMS = new Dictionary<string, Realm>();
+        private static readonly Dictionary<string, Realm> ALLOY_REALMS = new Dictionary<string, Realm>();
 
         /// <summary>The id of a realm.</summary>
         public string RealmId { get; }
@@ -30,7 +29,7 @@ namespace Oci.Common
 
         public static readonly string OCI_DEFAULT_REALM = "OCI_DEFAULT_REALM";
 
-        private Realm(string realmId, string secondlevelDomain)
+        private Realm(string realmId, string secondlevelDomain, bool isAlloyRealm = false)
         {
             if (realmId == null || secondlevelDomain == null)
             {
@@ -39,21 +38,35 @@ namespace Oci.Common
 
             RealmId = realmId;
             SecondLevelDomain = secondlevelDomain;
-            AddRealm(this);
+            AddRealm(this, isAlloyRealm);
         }
 
         [MethodImpl(MethodImplOptions.Synchronized)]
-        private void AddRealm(Realm realm)
+        private void AddRealm(Realm realm, bool isAlloyRealm = false)
         {
-            KNOWN_REALMS.Add(realm.RealmId, realm);
+            if (isAlloyRealm)
+            {
+                ALLOY_REALMS.Add(realm.RealmId, realm);
+            }
+            else
+            {
+                KNOWN_REALMS.Add(realm.RealmId, realm);
+            }
         }
 
-        /// <summary>All known Realms in this versino of SDK.</summary>
+        /// <summary>All known Realms in this version of SDK.</summary>
         [MethodImpl(MethodImplOptions.Synchronized)]
         public static Realm[] Values()
         {
-            Realm[] realms = new Realm[KNOWN_REALMS.Count];
+            if (AlloyConfiguration.UseOnlyAlloyRegions())
+            {
+                Realm[] alloy_realms = new Realm[ALLOY_REALMS.Count];
+                ALLOY_REALMS.Values.CopyTo(alloy_realms, 0);
+                return alloy_realms;
+            }
+            Realm[] realms = new Realm[KNOWN_REALMS.Count + ALLOY_REALMS.Count];
             KNOWN_REALMS.Values.CopyTo(realms, 0);
+            ALLOY_REALMS.Values.CopyTo(realms, KNOWN_REALMS.Count);
             return realms;
         }
 
@@ -71,19 +84,35 @@ namespace Oci.Common
             {
                 throw new ArgumentNullException("Realm Id cannot be null or empty.");
             }
-            if (!KNOWN_REALMS.TryGetValue(realmId, out Realm realm))
+            if (AlloyConfiguration.UseOnlyAlloyRegions())
             {
-                throw new ArgumentNullException($"Unknown realm with Id {realmId}.");
+                if (!ALLOY_REALMS.TryGetValue(realmId, out Realm alloyRealm))
+                {
+                    throw new ArgumentNullException($"Unknown Alloy realm with Id {realmId}.");
+                }
+                return alloyRealm;
             }
-            return realm;
+            else
+            {
+                if (!KNOWN_REALMS.TryGetValue(realmId, out Realm realm))
+                {
+                    if (!ALLOY_REALMS.TryGetValue(realmId, out Realm alloyRealm))
+                    {
+                        throw new ArgumentNullException($"Unknown realm with Id {realmId}.");
+                    }
+                    return alloyRealm;
+                }
+                return realm;
+            }
         }
 
         /// <summary>Register a new Realm. Allow the SDK to be forward compatible with unreleased realms.</summary>
         /// <param name="realmId">The realm id.</param>
         /// <param name="secondlevelDomain">The second level domain of the realm.</param>
+        /// <param name="isAlloyRealm">The bool value denoting if the Realm is an Alloy Realm or not. Set to false by default.</param>
         /// <returns>The registered Realm (or existing one if found).</returns>
         [MethodImpl(MethodImplOptions.Synchronized)]
-        public static Realm Register(string realmId, string secondlevelDomain)
+        public static Realm Register(string realmId, string secondlevelDomain, bool isAlloyRealm = false)
         {
             // Check if this realm is already registered. If found, return the existing realm.
             foreach (var realm in Values())
@@ -98,7 +127,13 @@ namespace Oci.Common
                 }
             }
             // If the realm is not yet registered, call constructor.
-            return new Realm(realmId, secondlevelDomain);
+            return new Realm(realmId, secondlevelDomain, isAlloyRealm);
+        }
+
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public static void ResetAlloyConfig()
+        {
+            ALLOY_REALMS.Clear();
         }
     }
 }

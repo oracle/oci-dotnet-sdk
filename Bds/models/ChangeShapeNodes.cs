@@ -75,5 +75,14 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "edgeShapeConfig")]
         public ShapeConfigDetails EdgeShapeConfig { get; set; }
         
+        /// <value>
+        /// Change shape of Kafka Broker nodes to the desired target shape. Both VM_STANDARD and E4 Flex shapes are allowed here.
+        /// </value>
+        [JsonProperty(PropertyName = "kafkaBroker")]
+        public string KafkaBroker { get; set; }
+        
+        [JsonProperty(PropertyName = "kafkaBrokerShapeConfig")]
+        public ShapeConfigDetails KafkaBrokerShapeConfig { get; set; }
+        
     }
 }
