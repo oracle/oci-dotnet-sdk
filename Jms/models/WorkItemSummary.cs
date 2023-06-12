@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// The LCM work request for a JVM installation site.
+    /// Work item to complete a work request.
     /// </summary>
     public class WorkItemSummary 
     {
@@ -47,6 +47,13 @@ namespace Oci.JmsService.Models
         [Required(ErrorMessage = "InstallationSite is required.")]
         [JsonProperty(PropertyName = "installationSite")]
         public InstallationSite InstallationSite { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Details is required.")]
+        [JsonProperty(PropertyName = "details")]
+        public WorkItemDetails Details { get; set; }
         
         /// <value>
         /// The status of the work item.

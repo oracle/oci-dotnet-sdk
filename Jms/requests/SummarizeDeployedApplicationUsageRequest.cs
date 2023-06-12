@@ -37,7 +37,7 @@ namespace Oci.JmsService.Requests
         public string ServerKey { get; set; }
         
         /// <value>
-        /// The Java server instance key.
+        /// The Java Server instance key.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serverInstanceKey")]
@@ -108,7 +108,7 @@ namespace Oci.JmsService.Requests
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
         /// <value>
-        /// The field to sort deployed applications.  Only one sort order may be provided.
+        /// The field to sort the deployed applications. Only one sort order can be provided.
         /// If no value is specified _timeLastSeen_ is default.
         /// 
         /// </value>

@@ -106,6 +106,34 @@ namespace Oci.OcvpService.Models
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the deleted ESXi Host with LeftOver billing cycle.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "billingDonorHostId")]
+        public string BillingDonorHostId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the active ESXi Host to swap billing with current host.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "swapBillingHostId")]
+        public string SwapBillingHostId { get; set; }
+        
+        /// <value>
+        /// Indicates whether this host is in the progress of billing continuation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isBillingContinuationInProgress")]
+        public System.Nullable<bool> IsBillingContinuationInProgress { get; set; }
+        
+        /// <value>
+        /// Indicates whether this host is in the progress of swapping billing.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isBillingSwappingInProgress")]
+        public System.Nullable<bool> IsBillingSwappingInProgress { get; set; }
+        
+        /// <value>
         /// The billing option currently used by the ESXi host.
         /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
         /// 

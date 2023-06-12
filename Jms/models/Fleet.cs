@@ -65,7 +65,7 @@ namespace Oci.JmsService.Models
         
         /// <value>
         /// The approximate count of all unique Java Runtimes in the Fleet in the past seven days.
-        /// This metric is provided on a best-effort manner, and is not taken into account when computing the resource ETag.
+        /// This metric is provided on a best-effort manner, and isn't taken into account when computing the resource ETag.
         /// 
         /// </value>
         /// <remarks>
@@ -77,7 +77,7 @@ namespace Oci.JmsService.Models
         
         /// <value>
         /// The approximate count of all unique Java installations in the Fleet in the past seven days.
-        /// This metric is provided on a best-effort manner, and is not taken into account when computing the resource ETag.
+        /// This metric is provided on a best-effort manner, and isn't taken into account when computing the resource ETag.
         /// 
         /// </value>
         /// <remarks>
@@ -89,7 +89,7 @@ namespace Oci.JmsService.Models
         
         /// <value>
         /// The approximate count of all unique applications in the Fleet in the past seven days.
-        /// This metric is provided on a best-effort manner, and is not taken into account when computing the resource ETag.
+        /// This metric is provided on a best-effort manner, and isn't taken into account when computing the resource ETag.
         /// 
         /// </value>
         /// <remarks>
@@ -101,7 +101,7 @@ namespace Oci.JmsService.Models
         
         /// <value>
         /// The approximate count of all unique managed instances in the Fleet in the past seven days.
-        /// This metric is provided on a best-effort manner, and is not taken into account when computing the resource ETag.
+        /// This metric is provided on a best-effort manner, and isn't taken into account when computing the resource ETag.
         /// 
         /// </value>
         /// <remarks>
@@ -113,7 +113,7 @@ namespace Oci.JmsService.Models
         
         /// <value>
         /// The approximate count of all unique Java servers in the Fleet in the past seven days.
-        /// This metric is provided on a best-effort manner, and is not taken into account when computing the resource ETag.
+        /// This metric is provided on a best-effort manner, and isn't taken into account when computing the resource ETag.
         /// 
         /// </value>
         /// <remarks>
@@ -130,8 +130,8 @@ namespace Oci.JmsService.Models
         public CustomLog OperationLog { get; set; }
         
         /// <value>
-        /// Whether or not advanced features are enabled in this fleet.
-        /// Deprecated, use `/fleets/{fleetId}/advanceFeatureConfiguration` api instead.
+        /// Whether or not advanced features are enabled in this Fleet.
+        /// Deprecated, use `/fleets/{fleetId}/advanceFeatureConfiguration` API instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAdvancedFeaturesEnabled")]
@@ -167,7 +167,7 @@ namespace Oci.JmsService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Simple key-value pair that is applied without any predefined name, type, or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}. (See [Managing Tags and Tag Namespaces](https://docs.cloud.oracle.com/Content/Tagging/Concepts/understandingfreeformtags.htm).)
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]

@@ -21,6 +21,9 @@ namespace Oci.AidocumentService.Models
     public class ValueArray : FieldValue
     {
         
+        /// <value>
+        /// The array of values.
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

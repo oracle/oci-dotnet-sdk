@@ -110,6 +110,12 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "MOVE_OPSI_CONFIGURATION")]
       MoveOpsiConfiguration,
       [EnumMember(Value = "DELETE_OPSI_CONFIGURATION")]
-      DeleteOpsiConfiguration
+      DeleteOpsiConfiguration,
+      [EnumMember(Value = "ENABLE_ADB_ADVANCED_FEATURES")]
+      EnableAdbAdvancedFeatures,
+      [EnumMember(Value = "DISABLE_ADB_ADVANCED_FEATURES")]
+      DisableAdbAdvancedFeatures,
+      [EnumMember(Value = "UPDATE_ADB_ADVANCED_FEATURES")]
+      UpdateAdbAdvancedFeatures
   }
 }

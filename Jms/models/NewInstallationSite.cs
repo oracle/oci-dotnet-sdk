@@ -49,5 +49,23 @@ namespace Oci.JmsService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ArtifactContentType> ArtifactContentType { get; set; }
         
+        /// <value>
+        /// Custom path to install new Java installation site.
+        /// </value>
+        [JsonProperty(PropertyName = "installationPath")]
+        public string InstallationPath { get; set; }
+        
+        /// <value>
+        /// Flag to install headless or headful Java installation. Only valid for Oracle Linux in OCI.
+        /// </value>
+        [JsonProperty(PropertyName = "headlessMode")]
+        public System.Nullable<bool> HeadlessMode { get; set; }
+        
+        /// <value>
+        /// Forces the installation request even if a more recent release is already present in the host.
+        /// </value>
+        [JsonProperty(PropertyName = "forceInstall")]
+        public System.Nullable<bool> ForceInstall { get; set; }
+        
     }
 }

@@ -38,6 +38,12 @@ namespace Oci.OpsiService.Models
         public string OpsiPrivateEndpointId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database Management private endpoint
+        /// </value>
+        [JsonProperty(PropertyName = "dbmPrivateEndpointId")]
+        public string DbmPrivateEndpointId { get; set; }
+        
+        /// <value>
         /// The databases that belong to the VM Cluster
         /// </value>
         [JsonProperty(PropertyName = "memberDatabaseDetails")]

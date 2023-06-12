@@ -74,9 +74,9 @@ namespace Oci.OpsiService.Requests
         ///
         /// <value>
         /// Filter by one or more platform types.
-        /// Supported platformType(s) for MACS-managed external host insight: [LINUX].
+        /// Supported platformType(s) for MACS-managed external host insight: [LINUX, SOLARIS, WINDOWS].
         /// Supported platformType(s) for MACS-managed cloud host insight: [LINUX].
-        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX].
+        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX, WINDOWS, AIX].
         /// 
         /// </value>
         ///
@@ -88,14 +88,18 @@ namespace Oci.OpsiService.Requests
             [EnumMember(Value = "SUNOS")]
             Sunos,
             [EnumMember(Value = "ZLINUX")]
-            Zlinux
+            Zlinux,
+            [EnumMember(Value = "WINDOWS")]
+            Windows,
+            [EnumMember(Value = "AIX")]
+            Aix
         };
 
         /// <value>
         /// Filter by one or more platform types.
-        /// Supported platformType(s) for MACS-managed external host insight: [LINUX].
+        /// Supported platformType(s) for MACS-managed external host insight: [LINUX, SOLARIS, WINDOWS].
         /// Supported platformType(s) for MACS-managed cloud host insight: [LINUX].
-        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX].
+        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX, WINDOWS, AIX].
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platformType", Oci.Common.Http.CollectionFormatType.Multi)]

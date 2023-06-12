@@ -38,6 +38,9 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "credentialDetails")]
         public CredentialDetails CredentialDetails { get; set; }
         
+        [JsonProperty(PropertyName = "connectionDetails")]
+        public PeComanagedDatabaseConnectionDetails ConnectionDetails { get; set; }
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the OPSI private endpoint
         /// </value>

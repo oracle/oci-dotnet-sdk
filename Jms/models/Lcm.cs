@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Enable lifecycle management and set post action configurations
+    /// Enable lifecycle management and set post action configurations.
     /// </summary>
     public class Lcm 
     {
         
         /// <value>
-        /// Lcm flag to store enabled or disabled status
+        /// Lifecycle management flag to store enabled or disabled status.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }

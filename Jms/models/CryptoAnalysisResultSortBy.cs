@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.JmsService.Models
 {
   /// <summary>
-  /// The field used to sort crypto event analysis reports.
+  /// The field used to sort Crypto event analysis reports.
   /// </summary>
   public enum CryptoAnalysisResultSortBy {
       [EnumMember(Value = "timeCreated")]

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Advanced feature metadata for the fleet
+    /// Metadata for the advanced features in the Fleet.
     /// </summary>
     public class FleetAdvancedFeatureConfiguration 
     {
         
         /// <value>
-        /// Namespace for the fleet advanced feature
+        /// Namespace for the Fleet advanced feature.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.JmsService.Models
         public string AnalyticNamespace { get; set; }
         
         /// <value>
-        /// Bucket name required to store jfr and related data
+        /// Bucket name required to store JFR and related data.
         /// </value>
         /// <remarks>
         /// Required
@@ -68,6 +68,20 @@ namespace Oci.JmsService.Models
         [Required(ErrorMessage = "JfrRecording is required.")]
         [JsonProperty(PropertyName = "jfrRecording")]
         public JfrRecording JfrRecording { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "PerformanceTuningAnalysis is required.")]
+        [JsonProperty(PropertyName = "performanceTuningAnalysis")]
+        public PerformanceTuningAnalysis PerformanceTuningAnalysis { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "JavaMigrationAnalysis is required.")]
+        [JsonProperty(PropertyName = "javaMigrationAnalysis")]
+        public JavaMigrationAnalysis JavaMigrationAnalysis { get; set; }
         
         /// <value>
         /// The date and time of the last modification to the Fleet Agent Configuration (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).

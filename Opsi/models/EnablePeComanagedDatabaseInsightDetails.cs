@@ -58,6 +58,9 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "credentialDetails")]
         public CredentialDetails CredentialDetails { get; set; }
         
+        [JsonProperty(PropertyName = "connectionDetails")]
+        public PeComanagedDatabaseConnectionDetails ConnectionDetails { get; set; }
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}

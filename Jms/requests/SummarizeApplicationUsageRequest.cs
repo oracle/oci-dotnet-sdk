@@ -66,7 +66,7 @@ namespace Oci.JmsService.Requests
         public string JreVersion { get; set; }
         
         /// <value>
-        /// The file system path of the installation.
+        /// The file system path of the Java Runtime installation.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "installationPath")]
         public string InstallationPath { get; set; }

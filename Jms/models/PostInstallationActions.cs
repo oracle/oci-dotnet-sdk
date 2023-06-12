@@ -27,6 +27,20 @@ namespace Oci.JmsService.Models
       [EnumMember(Value = "DISABLE_TLS")]
       DisableTls,
       [EnumMember(Value = "USE_OS_CACERTS")]
-      UseOsCacerts
+      UseOsCacerts,
+      [EnumMember(Value = "USE_SYSTEM_PROXIES")]
+      UseSystemProxies,
+      [EnumMember(Value = "SETUP_HTTP_PROXY")]
+      SetupHttpProxy,
+      [EnumMember(Value = "SETUP_HTTPS_PROXY")]
+      SetupHttpsProxy,
+      [EnumMember(Value = "SETUP_FTP_PROXY")]
+      SetupFtpProxy,
+      [EnumMember(Value = "SETUP_SOCKS_PROXY")]
+      SetupSocksProxy,
+      [EnumMember(Value = "ADD_FILE_HANDLER")]
+      AddFileHandler,
+      [EnumMember(Value = "LOGGING_LEVEL")]
+      LoggingLevel
   }
 }

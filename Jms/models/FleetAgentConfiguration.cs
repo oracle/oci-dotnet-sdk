@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Management Agent Configuration for a Fleet. Includes JRE scanning frequency and list of include/exclude file system paths.
+    /// Management Agent Configuration for a Fleet. Includes JRE scanning frequency and a list of include/exclude file system paths.
     /// 
     /// </summary>
     public class FleetAgentConfiguration 

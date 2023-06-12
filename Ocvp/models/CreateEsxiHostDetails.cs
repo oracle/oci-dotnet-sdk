@@ -49,6 +49,13 @@ namespace Oci.OcvpService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the deleted ESXi Host with LeftOver billing cycle.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "billingDonorHostId")]
+        public string BillingDonorHostId { get; set; }
+        
+        /// <value>
         /// The billing option currently used by the ESXi host.
         /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
         /// 

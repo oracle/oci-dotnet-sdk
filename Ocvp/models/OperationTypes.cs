@@ -34,6 +34,8 @@ namespace Oci.OcvpService.Models
       [EnumMember(Value = "CANCEL_DOWNGRADE_HCX")]
       CancelDowngradeHcx,
       [EnumMember(Value = "REFRESH_HCX_LICENSE_STATUS")]
-      RefreshHcxLicenseStatus
+      RefreshHcxLicenseStatus,
+      [EnumMember(Value = "SWAP_BILLING")]
+      SwapBilling
   }
 }

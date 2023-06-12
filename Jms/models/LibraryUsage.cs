@@ -77,7 +77,7 @@ namespace Oci.JmsService.Models
         public System.Nullable<int> ApproximateApplicationCount { get; set; }
         
         /// <value>
-        /// The approximate count of Java server instances using the library.
+        /// The approximate count of Java Server instances using the library.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "approximateJavaServerInstanceCount")]

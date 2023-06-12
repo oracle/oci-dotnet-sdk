@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Results of a blocklist search. Contains Blocklist records.
+    /// Results of a blocklist search that contain Blocklist records.
     /// </summary>
     public class BlocklistCollection 
     {

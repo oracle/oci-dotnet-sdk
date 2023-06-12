@@ -22,7 +22,7 @@ namespace Oci.JmsService.Models
     {
         
         /// <value>
-        /// JfrRecording flag to store enabled or disabled status
+        /// JfrRecording flag to store enabled or disabled status.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }

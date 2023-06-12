@@ -63,14 +63,14 @@ namespace Oci.JmsService.Models
         public string ApplicationType { get; set; }
         
         /// <value>
-        /// Whether or not deployed application is clustered.
+        /// Whether or not the deployed application is clustered.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isClustered")]
         public System.Nullable<bool> IsClustered { get; set; }
         
         /// <value>
-        /// The approximate count of Java server instances running the deployed application.
+        /// The approximate count of Java Server instances running the deployed application.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "approximateJavaServerInstanceCount")]

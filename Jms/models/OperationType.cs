@@ -37,6 +37,10 @@ namespace Oci.JmsService.Models
       CollectJfr,
       [EnumMember(Value = "REQUEST_CRYPTO_EVENT_ANALYSIS")]
       RequestCryptoEventAnalysis,
+      [EnumMember(Value = "REQUEST_PERFORMANCE_TUNING_ANALYSIS")]
+      RequestPerformanceTuningAnalysis,
+      [EnumMember(Value = "REQUEST_JAVA_MIGRATION_ANALYSIS")]
+      RequestJavaMigrationAnalysis,
       [EnumMember(Value = "SCAN_JAVA_SERVER_USAGE")]
       ScanJavaServerUsage,
       [EnumMember(Value = "SCAN_LIBRARY_USAGE")]

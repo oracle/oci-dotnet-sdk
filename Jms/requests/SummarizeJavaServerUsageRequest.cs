@@ -88,7 +88,7 @@ namespace Oci.JmsService.Requests
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
         /// <value>
-        /// The field to sort Java servers.  Only one sort order may be provided.
+        /// The field to sort a Java Server. Only one sort order can be provided.
         /// If no value is specified _timeLastSeen_ is default.
         /// 
         /// </value>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Metadata of a Crypto Event Analysis result. The analysis result is stored as the Object Storage object.
+    /// Metadata for the result of a crypto event analysis. The analysis result is stored in an Object Storage bucket.
     /// </summary>
     public class CryptoAnalysisResult 
     {
@@ -114,8 +114,8 @@ namespace Oci.JmsService.Models
         
         /// <value>
         /// Total number of non-compliant findings with the analysis. A non-compliant finding means the
-        /// application won't work properly with the changes introduced by the crypto roadmap version
-        /// used the the analysis.
+        /// application won't work properly with the changes introduced by the Crypto Roadmap version
+        /// used by the analysis.
         /// 
         /// </value>
         /// <remarks>

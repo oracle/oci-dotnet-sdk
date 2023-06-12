@@ -151,5 +151,12 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
+        /// <value>
+        /// The full Path for the object.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "fullPath")]
+        public string FullPath { get; set; }
+        
     }
 }

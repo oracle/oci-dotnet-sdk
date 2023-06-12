@@ -40,8 +40,8 @@ namespace Oci.JmsService.Models
         public CustomLog OperationLog { get; set; }
         
         /// <value>
-        /// Whether or not advanced features are enabled in this fleet.
-        /// Deprecated, use `/fleets/{fleetId}/advanceFeatureConfiguration` api instead.
+        /// Whether or not advanced features are enabled in this Fleet.
+        /// Deprecated, use `/fleets/{fleetId}/advanceFeatureConfiguration` API instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAdvancedFeaturesEnabled")]
@@ -55,7 +55,7 @@ namespace Oci.JmsService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Simple key-value pair that is applied without any predefined name, type, or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}. (See [Managing Tags and Tag Namespaces](https://docs.cloud.oracle.com/Content/Tagging/Concepts/understandingfreeformtags.htm).)
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
