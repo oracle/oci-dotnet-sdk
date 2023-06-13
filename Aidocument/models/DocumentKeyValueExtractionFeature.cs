@@ -21,6 +21,12 @@ namespace Oci.AidocumentService.Models
     public class DocumentKeyValueExtractionFeature : DocumentFeature
     {
         
+        /// <value>
+        /// The custom model ID.
+        /// </value>
+        [JsonProperty(PropertyName = "modelId")]
+        public string ModelId { get; set; }
+        
         [JsonProperty(PropertyName = "featureType")]
         private readonly string featureType = "KEY_VALUE_EXTRACTION";
     }

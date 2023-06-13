@@ -50,7 +50,7 @@ namespace Oci.JmsService.Models
         public System.Nullable<OperationType> Operation { get; set; }
         
         /// <value>
-        /// The reason for why the operation is blocklisted
+        /// The reason why the operation is blocklisted.
         /// </value>
         [JsonProperty(PropertyName = "reason")]
         public string Reason { get; set; }

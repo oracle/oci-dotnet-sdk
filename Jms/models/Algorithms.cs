@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.JmsService.Models
 {
   /// <summary>
-  /// List of supported algorithms for minimum key size update
+  /// List of supported algorithms for minimum key size update.
   /// </summary>
   public enum Algorithms {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

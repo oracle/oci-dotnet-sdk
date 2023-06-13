@@ -30,7 +30,7 @@ namespace Oci.JmsService.Requests
         public string FleetId { get; set; }
         
         /// <value>
-        /// Attributes to generate agent deploy script for a Fleet.
+        /// Attributes to generate the agent deploy script for a Fleet.
         /// </value>
         /// <remarks>
         /// Required

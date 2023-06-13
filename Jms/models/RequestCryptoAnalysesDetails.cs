@@ -17,7 +17,7 @@ namespace Oci.JmsService.Models
 {
     /// <summary>
     /// Details of the request to start a JFR analysis.
-    /// When the targets aren't specified, then all managed instances currently in the fleet are selected.
+    /// When the targets aren't specified, then all managed instances currently in the Fleet are selected.
     /// 
     /// </summary>
     public class RequestCryptoAnalysesDetails 
@@ -34,6 +34,16 @@ namespace Oci.JmsService.Models
         /// </value>
         [JsonProperty(PropertyName = "recordingDurationInMinutes")]
         public System.Nullable<int> RecordingDurationInMinutes { get; set; }
+        
+        /// <value>
+        /// Period to looking for JVMs. In addition to attach to running JVMs when given the command,
+        /// JVM started within the waiting period will also be attached for JFR. The value should be
+        /// larger than the agent polling interval setting for the fleet to ensure agent can get the
+        /// instructions. If not specified, the agent polling interval for the fleet is used.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "waitingPeriodInMinutes")]
+        public System.Nullable<int> WaitingPeriodInMinutes { get; set; }
         
     }
 }

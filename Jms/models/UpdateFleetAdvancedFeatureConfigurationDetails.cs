@@ -16,21 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Details object containing advanced feature configurations to be updated
-    /// Ensure that the namespace and bucket storage are created prior to turning on the JfrRecording or CryptoEventAnalysis feature
+    /// Details object containing advanced feature configurations to be updated.
+    /// Ensure that the namespace and bucket storage are created prior to turning on the JfrRecording or CryptoEventAnalysis feature.
     /// 
     /// </summary>
     public class UpdateFleetAdvancedFeatureConfigurationDetails 
     {
         
         /// <value>
-        /// Namespace for the fleet advanced feature
+        /// Namespace for the Fleet advanced feature.
         /// </value>
         [JsonProperty(PropertyName = "analyticNamespace")]
         public string AnalyticNamespace { get; set; }
         
         /// <value>
-        /// Bucket name required to store jfr and related data
+        /// Bucket name required to store JFR and related data.
         /// </value>
         [JsonProperty(PropertyName = "analyticBucketName")]
         public string AnalyticBucketName { get; set; }
@@ -46,6 +46,12 @@ namespace Oci.JmsService.Models
         
         [JsonProperty(PropertyName = "jfrRecording")]
         public JfrRecording JfrRecording { get; set; }
+        
+        [JsonProperty(PropertyName = "performanceTuningAnalysis")]
+        public PerformanceTuningAnalysis PerformanceTuningAnalysis { get; set; }
+        
+        [JsonProperty(PropertyName = "javaMigrationAnalysis")]
+        public JavaMigrationAnalysis JavaMigrationAnalysis { get; set; }
         
     }
 }

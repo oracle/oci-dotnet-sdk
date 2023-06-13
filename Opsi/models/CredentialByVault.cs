@@ -32,6 +32,12 @@ namespace Oci.OpsiService.Models
         /// </value>
         [JsonProperty(PropertyName = "passwordSecretId")]
         public string PasswordSecretId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the database keystore contents are stored. This is used for TCPS support in BM/VM/ExaCS cases.
+        /// </value>
+        [JsonProperty(PropertyName = "walletSecretId")]
+        public string WalletSecretId { get; set; }
                 ///
         /// <value>
         /// database user role.

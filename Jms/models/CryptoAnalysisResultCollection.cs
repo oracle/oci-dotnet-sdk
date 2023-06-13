@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// List of Crypto Event Analysis results.
+    /// List of Crypto event analysis results.
     /// </summary>
     public class CryptoAnalysisResultCollection 
     {

@@ -42,6 +42,13 @@ namespace Oci.OcvpService.Models
         public System.Nullable<Sku> NextSku { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the deleted ESXi Host with LeftOver billing cycle.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "billingDonorHostId")]
+        public string BillingDonorHostId { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

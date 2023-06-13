@@ -22,7 +22,7 @@ namespace Oci.JmsService.Models
     {
         
         /// <value>
-        /// AdvancedUsageTracking flag to store enabled or disabled status
+        /// AdvancedUsageTracking flag to store enabled or disabled status.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }

@@ -34,7 +34,7 @@ namespace Oci.JmsService.Models
         public string ServerInstanceKey { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the related fleet.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the related Fleet.
         /// 
         /// </value>
         /// <remarks>

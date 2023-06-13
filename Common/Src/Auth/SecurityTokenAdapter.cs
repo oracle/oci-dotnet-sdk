@@ -5,13 +5,6 @@
 
 using System;
 using System.IdentityModel.Tokens.Jwt;
-using System.Security.Cryptography;
-using System.Text;
-
-using Newtonsoft.Json;
-
-using Oci.Common.Auth.Internal;
-using Oci.Common.Utils;
 
 namespace Oci.Common.Auth
 {
@@ -21,7 +14,6 @@ namespace Oci.Common.Auth
     /// </summary>
     public class SecurityTokenAdapter
     {
-        private static readonly string ALGORITHM = "RS256";
         private JwtSecurityToken jwt;
         private readonly ISessionKeySupplier sessionKeySupplier;
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
@@ -31,7 +23,7 @@ namespace Oci.Common.Auth
         public SecurityTokenAdapter(string securityToken, ISessionKeySupplier sessionKeySupplier)
         {
             this.SecurityToken = securityToken;
-            if (String.IsNullOrEmpty(this.SecurityToken))
+            if (string.IsNullOrEmpty(this.SecurityToken))
             {
                 jwt = null;
             }
@@ -45,8 +37,7 @@ namespace Oci.Common.Auth
         private JwtSecurityToken Parse(string token)
         {
             var handler = new JwtSecurityTokenHandler();
-            jwt = (JwtSecurityToken)handler.ReadJwtToken(token);
-            return jwt;
+            return (JwtSecurityToken)handler.ReadJwtToken(token);
         }
 
         /// <summary>
@@ -61,44 +52,12 @@ namespace Oci.Common.Auth
                 logger.Debug("Security token is not valid.");
                 return false;
             }
-            try
-            {
-                var expDateTime = jwt.ValidTo;
-                if (expDateTime != null && expDateTime.CompareTo(DateTime.UtcNow) > 0)
-                {
-                    logger.Debug("Security token is not expired");
-                    string[] tokenParts = this.SecurityToken.Split('.');
-                    // Next we Verifying JWT signed with the RS256 algorithm using public key
-                    // Refer: https://stackoverflow.com/a/34423434
-                    string jwk = GetStringClaim("jwk");
-                    if (!String.IsNullOrEmpty(jwk))
-                    {
-                        var jwkObject = JsonConvert.DeserializeObject<JWK>(jwk, OciJsonSerializerSettings.GetDefaultJsonSerializerSettings());
-                        RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
-                        rsa.ImportParameters(
-                            new RSAParameters()
-                            {
-                                Modulus = FromBase64Url(jwkObject.n),
-                                Exponent = FromBase64Url(jwkObject.e)
-                            }
-                        );
-                        SHA256 sha256 = SHA256.Create();
-                        byte[] hash = sha256.ComputeHash(Encoding.UTF8.GetBytes(tokenParts[0] + '.' + tokenParts[1]));
 
-                        RSAPKCS1SignatureDeformatter rsaDeformatter = new RSAPKCS1SignatureDeformatter(rsa);
-                        rsaDeformatter.SetHashAlgorithm(ALGORITHM);
-                        if (rsaDeformatter.VerifySignature(hash, FromBase64Url(tokenParts[2])))
-                        {
-                            logger.Debug("Security token is still valid. Public key matches with the JWK.");
-                            return true;
-                        }
-                        logger.Debug("Security token is invalid. Public key does not match with the JWK.");
-                    }
-                }
-            }
-            catch (Exception e)
+            var expDateTime = jwt.ValidTo;
+            if (expDateTime != null && expDateTime.CompareTo(DateTime.UtcNow) > 0)
             {
-                logger.Debug($"JWT parsing failed: {e}");
+                logger.Debug("Security token is not expired");
+                return true;
             }
             logger.Debug("Security token is not valid");
             return false;
@@ -115,7 +74,7 @@ namespace Oci.Common.Auth
                 return null;
             }
 
-            if (String.IsNullOrEmpty(key))
+            if (string.IsNullOrEmpty(key))
             {
                 logger.Debug("Key is invalid");
                 return null;
@@ -132,15 +91,6 @@ namespace Oci.Common.Auth
                 logger.Debug("Claim not found");
                 return null;
             }
-        }
-
-        private static byte[] FromBase64Url(string base64Url)
-        {
-            string padded = base64Url.Length % 4 == 0
-                ? base64Url : base64Url + "====".Substring(base64Url.Length % 4);
-            string base64 = padded.Replace("_", "/")
-                                    .Replace("-", "+");
-            return Convert.FromBase64String(base64);
         }
     }
 }

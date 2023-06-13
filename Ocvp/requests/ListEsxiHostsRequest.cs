@@ -112,5 +112,25 @@ namespace Oci.OcvpService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        
+        /// <value>
+        /// If this flag/param is set to True, we return only deleted hosts with LeftOver billingCycle.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isBillingDonorsOnly")]
+        public System.Nullable<bool> IsBillingDonorsOnly { get; set; }
+        
+        /// <value>
+        /// If this flag/param is set to True, we return only active hosts.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isSwapBillingOnly")]
+        public System.Nullable<bool> IsSwapBillingOnly { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment as optional parameter.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace Oci.JmsService.Requests
         public string ServerKey { get; set; }
         
         /// <value>
-        /// The Java server instance key.
+        /// The Java Server instance key.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serverInstanceKey")]
@@ -64,14 +64,14 @@ namespace Oci.JmsService.Requests
         public string LibraryKey { get; set; }
         
         /// <value>
-        /// Filter the list with Java server instance name contains the given value.
+        /// Filter the list with the Java Server instance name contains the given value.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serverInstanceNameContains")]
         public string ServerInstanceNameContains { get; set; }
         
         /// <value>
-        /// The Java server instance name.
+        /// The Java Server instance name.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serverInstanceName")]
@@ -108,7 +108,7 @@ namespace Oci.JmsService.Requests
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
         /// <value>
-        /// The field to sort Java server instances.  Only one sort order may be provided.
+        /// The field to sort the Java Server instances. Only one sort order can be provided.
         /// If no value is specified _timeLastSeen_ is default.
         /// 
         /// </value>

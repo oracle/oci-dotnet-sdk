@@ -30,7 +30,7 @@ namespace Oci.JmsService.Requests
         public string FleetId { get; set; }
         
         /// <value>
-        /// Update advanced feature configurations with new fields
+        /// Update advanced feature configurations with new fields.
         /// </value>
         /// <remarks>
         /// Required

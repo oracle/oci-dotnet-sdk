@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Results of a deployed application usage search.  Contains deployed application usage items.
+    /// Results of a deployed application usage search. Contains deployed application usage items.
     /// 
     /// </summary>
     public class DeployedApplicationUsageCollection 

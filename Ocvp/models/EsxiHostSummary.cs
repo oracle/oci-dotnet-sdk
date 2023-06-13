@@ -213,6 +213,34 @@ namespace Oci.OcvpService.Models
         public System.Nullable<float> HostOcpuCount { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the deleted ESXi Host with LeftOver billing cycle.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "billingDonorHostId")]
+        public string BillingDonorHostId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the active ESXi Host to swap billing with current host.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "swapBillingHostId")]
+        public string SwapBillingHostId { get; set; }
+        
+        /// <value>
+        /// Indicates whether this host is in the progress of billing continuation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isBillingContinuationInProgress")]
+        public System.Nullable<bool> IsBillingContinuationInProgress { get; set; }
+        
+        /// <value>
+        /// Indicates whether this host is in the progress of swapping billing.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isBillingSwappingInProgress")]
+        public System.Nullable<bool> IsBillingSwappingInProgress { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

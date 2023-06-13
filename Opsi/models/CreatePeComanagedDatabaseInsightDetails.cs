@@ -69,6 +69,9 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "CredentialDetails is required.")]
         [JsonProperty(PropertyName = "credentialDetails")]
         public CredentialDetails CredentialDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "connectionDetails")]
+        public PeComanagedDatabaseConnectionDetails ConnectionDetails { get; set; }
                 ///
         /// <value>
         /// Database Deployment Type

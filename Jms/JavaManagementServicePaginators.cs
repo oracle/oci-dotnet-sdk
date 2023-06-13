@@ -50,6 +50,55 @@ namespace Oci.JmsService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAnnouncements operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAnnouncementsResponse> ListAnnouncementsResponseEnumerator(ListAnnouncementsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAnnouncementsRequest, ListAnnouncementsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAnnouncements(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AnnouncementSummary objects
+        /// contained in responses from the ListAnnouncements operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AnnouncementSummary> ListAnnouncementsRecordEnumerator(ListAnnouncementsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAnnouncementsRequest, ListAnnouncementsResponse, AnnouncementSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAnnouncements(request, retryConfiguration, cancellationToken),
+                response => response.AnnouncementCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListBlocklists operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -144,6 +193,55 @@ namespace Oci.JmsService
                 },
                 request => client.ListCryptoAnalysisResults(request, retryConfiguration, cancellationToken),
                 response => response.CryptoAnalysisResultCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListFleetDiagnoses operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListFleetDiagnosesResponse> ListFleetDiagnosesResponseEnumerator(ListFleetDiagnosesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListFleetDiagnosesRequest, ListFleetDiagnosesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListFleetDiagnoses(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the FleetDiagnosisSummary objects
+        /// contained in responses from the ListFleetDiagnoses operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<FleetDiagnosisSummary> ListFleetDiagnosesRecordEnumerator(ListFleetDiagnosesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListFleetDiagnosesRequest, ListFleetDiagnosesResponse, FleetDiagnosisSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListFleetDiagnoses(request, retryConfiguration, cancellationToken),
+                response => response.FleetDiagnosisCollection.Items
             );
         }
 
@@ -295,6 +393,55 @@ namespace Oci.JmsService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListJavaMigrationAnalysisResults operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListJavaMigrationAnalysisResultsResponse> ListJavaMigrationAnalysisResultsResponseEnumerator(ListJavaMigrationAnalysisResultsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListJavaMigrationAnalysisResultsRequest, ListJavaMigrationAnalysisResultsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListJavaMigrationAnalysisResults(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the JavaMigrationAnalysisResultSummary objects
+        /// contained in responses from the ListJavaMigrationAnalysisResults operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<JavaMigrationAnalysisResultSummary> ListJavaMigrationAnalysisResultsRecordEnumerator(ListJavaMigrationAnalysisResultsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListJavaMigrationAnalysisResultsRequest, ListJavaMigrationAnalysisResultsResponse, JavaMigrationAnalysisResultSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListJavaMigrationAnalysisResults(request, retryConfiguration, cancellationToken),
+                response => response.JavaMigrationAnalysisResultCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListJavaReleases operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -389,6 +536,55 @@ namespace Oci.JmsService
                 },
                 request => client.ListJreUsage(request, retryConfiguration, cancellationToken),
                 response => response.JreUsageCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListPerformanceTuningAnalysisResults operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListPerformanceTuningAnalysisResultsResponse> ListPerformanceTuningAnalysisResultsResponseEnumerator(ListPerformanceTuningAnalysisResultsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListPerformanceTuningAnalysisResultsRequest, ListPerformanceTuningAnalysisResultsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListPerformanceTuningAnalysisResults(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the PerformanceTuningAnalysisResultSummary objects
+        /// contained in responses from the ListPerformanceTuningAnalysisResults operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<PerformanceTuningAnalysisResultSummary> ListPerformanceTuningAnalysisResultsRecordEnumerator(ListPerformanceTuningAnalysisResultsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListPerformanceTuningAnalysisResultsRequest, ListPerformanceTuningAnalysisResultsResponse, PerformanceTuningAnalysisResultSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListPerformanceTuningAnalysisResults(request, retryConfiguration, cancellationToken),
+                response => response.PerformanceTuningAnalysisResultCollection.Items
             );
         }
 

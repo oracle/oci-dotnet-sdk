@@ -144,7 +144,7 @@ namespace Oci.ObjectstorageService.Responses
 
 
         /// <value>
-        /// VersionId of the object requested
+        /// VersionId of the object
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "version-id")]
         public string VersionId { get; set; }

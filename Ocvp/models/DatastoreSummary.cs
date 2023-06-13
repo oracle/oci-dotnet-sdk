@@ -51,7 +51,7 @@ namespace Oci.OcvpService.Models
         /// </remarks>
         [Required(ErrorMessage = "Capacity is required.")]
         [JsonProperty(PropertyName = "capacity")]
-        public System.Nullable<decimal> Capacity { get; set; }
+        public System.Double Capacity { get; set; }
         
     }
 }

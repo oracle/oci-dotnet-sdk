@@ -27,6 +27,12 @@ namespace Oci.AidocumentService.Models
         [JsonProperty(PropertyName = "maxResults")]
         public System.Nullable<int> MaxResults { get; set; }
         
+        /// <value>
+        /// The custom model ID.
+        /// </value>
+        [JsonProperty(PropertyName = "modelId")]
+        public string ModelId { get; set; }
+        
         [JsonProperty(PropertyName = "featureType")]
         private readonly string featureType = "DOCUMENT_CLASSIFICATION";
     }

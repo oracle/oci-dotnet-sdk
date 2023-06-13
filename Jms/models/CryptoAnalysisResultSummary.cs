@@ -114,8 +114,8 @@ namespace Oci.JmsService.Models
         
         /// <value>
         /// Total number of non-compliant findings with the analysis. A non-compliant finding means the
-        /// application won't work properly with the changes introduced by the crypto roadmap version
-        /// used the the analysis.
+        /// application won't work properly with the changes introduced by the Crypto Roadmap version
+        /// used by the analysis.
         /// 
         /// </value>
         /// <remarks>

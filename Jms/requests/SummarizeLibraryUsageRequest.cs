@@ -30,7 +30,7 @@ namespace Oci.JmsService.Requests
         public string FleetId { get; set; }
         
         /// <value>
-        /// The Java server instance key.
+        /// The Java Server instance key.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serverInstanceKey")]

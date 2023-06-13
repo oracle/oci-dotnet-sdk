@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Results of an Java Server instance usage search.  Contains Java Server usage items.
+    /// Results of a Java Server instance usage search. Contains Java Server usage items.
     /// 
     /// </summary>
     public class JavaServerInstanceUsageCollection 

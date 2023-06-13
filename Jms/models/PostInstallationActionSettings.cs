@@ -33,7 +33,7 @@ namespace Oci.JmsService.Models
         /// <value>
         /// Restores JDK root certificates with the certificates that are available in the operating system.
         /// The following action is supported by the field:
-        /// - Replace JDK root certificates with a list provided by the operating system
+        /// - Replace JDK root certificates with a list provided by the operating system.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "shouldReplaceCertificatesOperatingSystem")]
@@ -41,6 +41,24 @@ namespace Oci.JmsService.Models
         
         [JsonProperty(PropertyName = "minimumKeySizeSettings")]
         public MinimumKeySizeSettings MinimumKeySizeSettings { get; set; }
+        
+        /// <value>
+        /// Sets FileHandler and ConsoleHandler as handlers in logging.properties file.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "addLoggingHandler")]
+        public System.Nullable<bool> AddLoggingHandler { get; set; }
+        
+        /// <value>
+        /// Sets the logging level in logging.properties file.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "globalLoggingLevel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<GlobalLoggingLevel> GlobalLoggingLevel { get; set; }
+        
+        [JsonProperty(PropertyName = "proxies")]
+        public Proxies Proxies { get; set; }
         
     }
 }
