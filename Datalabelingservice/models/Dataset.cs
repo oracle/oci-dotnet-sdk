@@ -130,6 +130,29 @@ namespace Oci.DatalabelingService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+                ///
+        /// <value>
+        /// The sub-state of the dataset.
+        /// IMPORT_DATASET - The dataset is being imported.
+        /// 
+        /// </value>
+        ///
+        public enum LifecycleSubstateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "IMPORT_DATASET")]
+            ImportDataset
+        };
+
+        /// <value>
+        /// The sub-state of the dataset.
+        /// IMPORT_DATASET - The dataset is being imported.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleSubstate")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<LifecycleSubstateEnum> LifecycleSubstate { get; set; }
         
         /// <value>
         /// The annotation format name required for labeling records.
@@ -165,6 +188,9 @@ namespace Oci.DatalabelingService.Models
         [JsonProperty(PropertyName = "initialRecordGenerationConfiguration")]
         public InitialRecordGenerationConfiguration InitialRecordGenerationConfiguration { get; set; }
         
+        [JsonProperty(PropertyName = "initialImportDatasetConfiguration")]
+        public InitialImportDatasetConfiguration InitialImportDatasetConfiguration { get; set; }
+        
         /// <value>
         /// The labeling instructions for human labelers in rich text format
         /// </value>
@@ -191,6 +217,13 @@ namespace Oci.DatalabelingService.Models
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
+        /// <value>
+        /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
+        /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "additionalProperties")]
+        public System.Collections.Generic.Dictionary<string, string> AdditionalProperties { get; set; }
         
     }
 }

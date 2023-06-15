@@ -106,7 +106,7 @@ namespace Oci.RoverService.Models
         public string Country { get; set; }
         
         /// <value>
-        /// recepient phone number.
+        /// recipient phone number.
         /// </value>
         /// <remarks>
         /// Required
@@ -116,7 +116,7 @@ namespace Oci.RoverService.Models
         public string PhoneNumber { get; set; }
         
         /// <value>
-        /// recepient email address.
+        /// recipient email address.
         /// </value>
         [JsonProperty(PropertyName = "email")]
         public string Email { get; set; }

@@ -70,6 +70,9 @@ namespace Oci.DatalabelingService.Models
         [JsonProperty(PropertyName = "initialRecordGenerationConfiguration")]
         public InitialRecordGenerationConfiguration InitialRecordGenerationConfiguration { get; set; }
         
+        [JsonProperty(PropertyName = "initialImportDatasetConfiguration")]
+        public InitialImportDatasetConfiguration InitialImportDatasetConfiguration { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

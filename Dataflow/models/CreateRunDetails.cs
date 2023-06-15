@@ -185,6 +185,13 @@ namespace Oci.DataflowService.Models
         public System.Collections.Generic.List<ApplicationParameter> Parameters { get; set; }
         
         /// <value>
+        /// The OCID of a pool. Unique Id to indentify a dataflow pool resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "poolId")]
+        public string PoolId { get; set; }
+        
+        /// <value>
         /// The Spark version utilized to run the application. This value may be set if applicationId is not since the Spark version will be taken from the associated application.
         /// 
         /// </value>

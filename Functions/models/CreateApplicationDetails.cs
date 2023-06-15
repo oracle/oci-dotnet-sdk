@@ -63,6 +63,36 @@ namespace Oci.FunctionsService.Models
         [Required(ErrorMessage = "SubnetIds is required.")]
         [JsonProperty(PropertyName = "subnetIds")]
         public System.Collections.Generic.List<string> SubnetIds { get; set; }
+                ///
+        /// <value>
+        /// Valid values are `GENERIC_X86`, `GENERIC_ARM` and `GENERIC_X86_ARM`. Default is `GENERIC_X86`. Setting this to `GENERIC_X86`, will run the functions in the application on X86 processor architecture.
+        /// Setting this to `GENERIC_ARM`, will run the functions in the application on ARM processor architecture.
+        /// When set to `GENERIC_X86_ARM`, functions in the application are run on either X86 or ARM processor architecture.
+        /// Accepted values are:
+        /// `GENERIC_X86`, `GENERIC_ARM`, `GENERIC_X86_ARM`
+        /// 
+        /// </value>
+        ///
+        public enum ShapeEnum {
+            [EnumMember(Value = "GENERIC_X86")]
+            GenericX86,
+            [EnumMember(Value = "GENERIC_ARM")]
+            GenericArm,
+            [EnumMember(Value = "GENERIC_X86_ARM")]
+            GenericX86Arm
+        };
+
+        /// <value>
+        /// Valid values are `GENERIC_X86`, `GENERIC_ARM` and `GENERIC_X86_ARM`. Default is `GENERIC_X86`. Setting this to `GENERIC_X86`, will run the functions in the application on X86 processor architecture.
+        /// Setting this to `GENERIC_ARM`, will run the functions in the application on ARM processor architecture.
+        /// When set to `GENERIC_X86_ARM`, functions in the application are run on either X86 or ARM processor architecture.
+        /// Accepted values are:
+        /// `GENERIC_X86`, `GENERIC_ARM`, `GENERIC_X86_ARM`
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ShapeEnum> Shape { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)s of the Network Security Groups to add the application to.

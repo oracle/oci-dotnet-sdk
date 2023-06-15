@@ -21,6 +21,9 @@ namespace Oci.DatalabelingservicedataplaneService.Models
     public class GenericEntity : Entity
     {
         
+        [JsonProperty(PropertyName = "documentEntityMetadata")]
+        public DocumentEntityMetadata DocumentEntityMetadata { get; set; }
+        
         /// <value>
         /// A collection of label entities.
         /// </value>

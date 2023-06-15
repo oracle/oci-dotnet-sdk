@@ -60,6 +60,12 @@ namespace Oci.DatalabelingservicedataplaneService.Models
         [JsonProperty(PropertyName = "confidence")]
         public System.Nullable<float> Confidence { get; set; }
         
+        /// <value>
+        /// Integer value.
+        /// </value>
+        [JsonProperty(PropertyName = "pageNumber")]
+        public System.Nullable<decimal> PageNumber { get; set; }
+        
         [JsonProperty(PropertyName = "entityType")]
         private readonly string entityType = "KEYVALUESELECTION";
     }

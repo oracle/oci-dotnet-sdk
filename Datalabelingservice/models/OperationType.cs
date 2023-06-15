@@ -34,6 +34,8 @@ namespace Oci.DatalabelingService.Models
       [EnumMember(Value = "REMOVE_DATASET_LABELS")]
       RemoveDatasetLabels,
       [EnumMember(Value = "RENAME_DATASET_LABELS")]
-      RenameDatasetLabels
+      RenameDatasetLabels,
+      [EnumMember(Value = "IMPORT_DATASET")]
+      ImportDataset
   }
 }
