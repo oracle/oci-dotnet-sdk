@@ -257,6 +257,56 @@ namespace Oci.RoverService.Models
         public string MasterKeyId { get; set; }
         
         /// <value>
+        /// The certificateAuthorityId of subordinate/intermediate certificate authority.
+        /// </value>
+        [JsonProperty(PropertyName = "certificateAuthorityId")]
+        public string CertificateAuthorityId { get; set; }
+        
+        /// <value>
+        /// The time after which leaf certificate will invalid.
+        /// </value>
+        [JsonProperty(PropertyName = "timeCertValidityEnd")]
+        public System.Nullable<System.DateTime> TimeCertValidityEnd { get; set; }
+        
+        /// <value>
+        /// The common name for the leaf certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "commonName")]
+        public string CommonName { get; set; }
+        
+        /// <value>
+        /// The compartmentId of the leaf certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "certCompartmentId")]
+        public string CertCompartmentId { get; set; }
+        
+        /// <value>
+        /// The version number of the leaf certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "certificateVersionNumber")]
+        public string CertificateVersionNumber { get; set; }
+        
+        /// <value>
+        /// The id of the leaf certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "certificateId")]
+        public string CertificateId { get; set; }
+        
+        /// <value>
+        /// key algorithm for issuing leaf certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "certKeyAlgorithm")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<CertKeyAlgorithm> CertKeyAlgorithm { get; set; }
+        
+        /// <value>
+        /// signature algorithm for issuing leaf certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "certSignatureAlgorithm")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<CertSignatureAlgorithm> CertSignatureAlgorithm { get; set; }
+        
+        /// <value>
         /// The tags associated with tagSlug.
         /// 
         /// </value>

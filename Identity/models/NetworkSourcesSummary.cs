@@ -27,12 +27,20 @@ namespace Oci.IdentityService.Models
         /// <value>
         /// The OCID of the network source.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
         /// The OCID of the tenancy (root compartment) containing the network source.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
@@ -41,12 +49,20 @@ namespace Oci.IdentityService.Models
         /// the tenancy and cannot be changed.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
         /// The description you assign to the network source. Does not have to be unique, and it's changeable.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
@@ -72,10 +88,27 @@ namespace Oci.IdentityService.Models
         public System.Collections.Generic.List<string> Services { get; set; }
         
         /// <value>
-        /// Date and time the group was created, in the format defined by RFC3339.
+        /// The network source object's current state. After creating a network source, make sure its `lifecycleState` changes from CREATING to
+        /// ACTIVE before using it.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifecycleState is required.")]
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<NetworkSources.LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Date and time the network source was created, in the format defined by RFC3339.
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         

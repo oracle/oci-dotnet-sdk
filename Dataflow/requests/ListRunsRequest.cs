@@ -46,6 +46,13 @@ namespace Oci.DataflowService.Requests
         public string ApplicationId { get; set; }
         
         /// <value>
+        /// The ID of the pool.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "poolId")]
+        public string PoolId { get; set; }
+        
+        /// <value>
         /// The OCID of the user who created the resource.
         /// 
         /// </value>

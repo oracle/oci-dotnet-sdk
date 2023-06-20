@@ -22,7 +22,7 @@ namespace Oci.IdentityService.Models
     /// {@link UIPassword}, {@link SwiftPassword} and
     /// {@link AuthToken}).
     /// For more information, see [User Credentials](https://docs.cloud.oracle.com/Content/Identity/usercred/usercredentials.htm)). End users of your
-    /// application are not typically IAM Service users, but for tenancies that have identity domains, they might be. 
+    /// application are not typically IAM Service users, but for tenancies that have identity domains, they might be.
     /// For conceptual information about users and other IAM Service components, see [Overview of IAM](https://docs.cloud.oracle.com/Content/Identity/getstarted/identity-domains.htm).
     /// <br/>
     /// These users are created directly within the Oracle Cloud Infrastructure system, via the IAM service.

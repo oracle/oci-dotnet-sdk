@@ -35,6 +35,12 @@ namespace Oci.IdentityService.Models
         /// </value>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
+        
+        /// <value>
+        /// Region-specific identity domain URL.
+        /// </value>
+        [JsonProperty(PropertyName = "regionalUrl")]
+        public string RegionalUrl { get; set; }
                 ///
         /// <value>
         /// The IDCS-replicated region state.

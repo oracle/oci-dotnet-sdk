@@ -171,6 +171,44 @@ namespace Oci.RoverService.Models
         public string PublicKey { get; set; }
         
         /// <value>
+        /// The certificateAuthorityId of subordinate/intermediate certificate authority.
+        /// </value>
+        [JsonProperty(PropertyName = "certificateAuthorityId")]
+        public string CertificateAuthorityId { get; set; }
+        
+        /// <value>
+        /// The time after which leaf certificate will invalid.
+        /// </value>
+        [JsonProperty(PropertyName = "timeCertValidityEnd")]
+        public System.Nullable<System.DateTime> TimeCertValidityEnd { get; set; }
+        
+        /// <value>
+        /// The common name for the leaf certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "commonName")]
+        public string CommonName { get; set; }
+        
+        /// <value>
+        /// The compartmentId of the leaf certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "certCompartmentId")]
+        public string CertCompartmentId { get; set; }
+        
+        /// <value>
+        /// key algorithm for issuing leaf certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "certKeyAlgorithm")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<CertKeyAlgorithm> CertKeyAlgorithm { get; set; }
+        
+        /// <value>
+        /// signature algorithm for issuing leaf certificate.
+        /// </value>
+        [JsonProperty(PropertyName = "certSignatureAlgorithm")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<CertSignatureAlgorithm> CertSignatureAlgorithm { get; set; }
+        
+        /// <value>
         /// The freeform tags associated with this resource, if any. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

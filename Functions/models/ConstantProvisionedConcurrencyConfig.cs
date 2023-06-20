@@ -22,6 +22,10 @@ namespace Oci.FunctionsService.Models
     public class ConstantProvisionedConcurrencyConfig : FunctionProvisionedConcurrencyConfig
     {
         
+        /// <value>
+        /// Configuration specifying a constant amount of provisioned concurrency.
+        /// 
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

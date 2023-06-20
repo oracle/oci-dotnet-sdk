@@ -60,6 +60,34 @@ namespace Oci.DataflowService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPoolRequest, GetPoolResponse> ForPool(GetPoolRequest request, params PoolLifecycleState[] targetStates)
+        {
+            return this.ForPool(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPoolRequest, GetPoolResponse> ForPool(GetPoolRequest request, WaiterConfiguration config, params PoolLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetPoolRequest, GetPoolResponse>(
+                request,
+                request => client.GetPool(request),
+                response => targetStates.Contains(response.Pool.LifecycleState.Value),
+                targetStates.Contains(PoolLifecycleState.Deleted)
+            );
+            return new Waiter<GetPoolRequest, GetPoolResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetPrivateEndpointRequest, GetPrivateEndpointResponse> ForPrivateEndpoint(GetPrivateEndpointRequest request, params PrivateEndpointLifecycleState[] targetStates)
         {
             return this.ForPrivateEndpoint(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

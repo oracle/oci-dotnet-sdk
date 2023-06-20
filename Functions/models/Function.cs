@@ -104,6 +104,31 @@ namespace Oci.FunctionsService.Models
         
         [JsonProperty(PropertyName = "sourceDetails")]
         public FunctionSourceDetails SourceDetails { get; set; }
+                ///
+        /// <value>
+        /// The processor shape (`GENERIC_X86`/`GENERIC_ARM`) on which to run functions in the application, extracted from the image manifest.
+        /// 
+        /// </value>
+        ///
+        public enum ShapeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "GENERIC_X86")]
+            GenericX86,
+            [EnumMember(Value = "GENERIC_ARM")]
+            GenericArm,
+            [EnumMember(Value = "GENERIC_X86_ARM")]
+            GenericX86Arm
+        };
+
+        /// <value>
+        /// The processor shape (`GENERIC_X86`/`GENERIC_ARM`) on which to run functions in the application, extracted from the image manifest.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ShapeEnum> Shape { get; set; }
         
         /// <value>
         /// Maximum usable memory for the function (MiB).

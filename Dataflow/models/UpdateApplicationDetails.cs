@@ -171,6 +171,13 @@ namespace Oci.DataflowService.Models
         public System.Collections.Generic.List<ApplicationParameter> Parameters { get; set; }
         
         /// <value>
+        /// The OCID of a pool. Unique Id to indentify a dataflow pool resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "poolId")]
+        public string PoolId { get; set; }
+        
+        /// <value>
         /// The OCID of a private endpoint.
         /// 
         /// </value>

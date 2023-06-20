@@ -492,7 +492,7 @@ namespace Oci.IdentityService
         /// tags from all resources in your tenancy. The tag key definitions must be within the same tag namespace.
         /// &lt;br/&gt;
         /// The following actions happen immediately:
-        /// \u00A0
+        /// &lt;br/&gt;
         ///   * If the tag is a cost-tracking tag, the tag no longer counts against your
         ///   10 cost-tracking tags limit, even if you do not disable the tag before running this operation.
         ///   * If the tag is used with dynamic groups, the rules that contain the tag are no longer
@@ -3764,7 +3764,7 @@ namespace Oci.IdentityService
         }
 
         /// <summary>
-        /// Gets the authentication policy for the given tenancy. You must specify your tenant\u2019s OCID as the value for
+        /// Gets the authentication policy for the given tenancy. You must specify your tenant&#39;s OCID as the value for
         /// the compartment ID (remember that the tenancy is simply the root compartment).
         /// 
         /// </summary>
