@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The open alerts current existing in a storage server.
+    /// The existing open alerts in the Exadata storage server.
     /// </summary>
     public class OpenAlertHistory 
     {

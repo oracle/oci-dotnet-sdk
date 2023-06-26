@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Manage resource allocations among databases. Besides name, need to have at least one other property.
+    /// Manages resource allocation among databases. Besides the name, at least one other property must be available.
     /// 
     /// </summary>
     public class DatabasePlanDirective 
@@ -33,7 +33,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The relative priority a database in the database plan. A higher share value implies
+        /// The relative priority of a database in the database plan. A higher share value implies
         /// higher priority and more access to the I/O resources.
         /// Use either share or (level, allocation). All plan directives in a database plan
         /// should use the same setting.
@@ -180,14 +180,15 @@ namespace Oci.DatabasemanagementService.Models
         public string AsmCluster { get; set; }
         
         /// <value>
-        /// Enables you to create a profile, or template, to ease management and configuration of resource plans
+        /// Enables you to create a profile or template, to ease management and configuration of resource plans
         /// in environments with many databases.
-        /// type=database: Specifies a directive that applies to a specific database.
+        /// <br/>
+        /// - type=database: Specifies a directive that applies to a specific database.
         /// If type in not specified, then the directive defaults to the database type.
-        /// type=profile: Specifies a directive that applies to a profile rather than a specific database.
+        /// - type=profile: Specifies a directive that applies to a profile rather than a specific database.
+        /// <br/>
         ///   To associate a database with an IORM profile, you must set the database initialization
-        ///   parameter db_performance_profile to the value of the profile name. Databases that map to a profile i
-        ///   nherit the settings specified in the profile.
+        ///   parameter db_performance_profile to the value of the profile name. Databases that map to a profile inherit the settings specified in the profile.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "type")]
@@ -195,7 +196,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<DatabasePlanTypeEnum> Type { get; set; }
         
         /// <value>
-        /// Enables you specify different plan directives based on the Oracle Data Guard database role.
+        /// Enables you to specify different plan directives based on the Oracle Data Guard database role.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "role")]

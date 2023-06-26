@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The Exadata storage grid details.
+    /// The details of the Exadata storage server grid.
     /// </summary>
     public class ExternalExadataStorageGrid : DbmResource
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of Exadata infrastructure system.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "exadataInfrastructureId")]
         public string ExadataInfrastructureId { get; set; }
         
         /// <value>
-        /// The number of the storage servers in the Exadata infrastructure.
+        /// The number of Exadata storage servers in the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "serverCount")]
         public System.Nullable<decimal> ServerCount { get; set; }
         
         /// <value>
-        /// A list of monitored Exadata storage server.
+        /// A list of monitored Exadata storage servers.
         /// </value>
         [JsonProperty(PropertyName = "storageServers")]
         public System.Collections.Generic.List<ExternalExadataStorageServerSummary> StorageServers { get; set; }

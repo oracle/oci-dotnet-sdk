@@ -194,5 +194,17 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the key store.
+        /// </value>
+        [JsonProperty(PropertyName = "keyStoreId")]
+        public string KeyStoreId { get; set; }
+        
+        /// <value>
+        /// The wallet name for Oracle Key Vault.
+        /// </value>
+        [JsonProperty(PropertyName = "keyStoreWalletName")]
+        public string KeyStoreWalletName { get; set; }
+        
     }
 }

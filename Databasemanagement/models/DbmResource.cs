@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The base exadata resource.
+    /// The base Exadata resource.
     /// </summary>
     [JsonConverter(typeof(DbmResourceModelConverter))]
     public class DbmResource 
@@ -33,7 +33,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The name of the resource. English letters, numbers, \"-\", \"_\" and \".\" only.
+        /// The name of the Exadata resource. English letters, numbers, \"-\", \"_\" and \".\" only.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,19 +43,19 @@ namespace Oci.DatabasemanagementService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The version of the resource.
+        /// The version of the Exadata resource.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
         
         /// <value>
-        /// The internal ID.
+        /// The internal ID of the Exadata resource.
         /// </value>
         [JsonProperty(PropertyName = "internalId")]
         public string InternalId { get; set; }
         
         /// <value>
-        /// The status of the entity.
+        /// The status of the Exadata resource.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
@@ -89,19 +89,19 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The timestamp of the creation.
+        /// The timestamp of the creation of the Exadata resource.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The timestamp of the last update.
+        /// The timestamp of the last update of the Exadata resource.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The details of the lifecycle state.
+        /// The details of the lifecycle state of the Exadata resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
@@ -114,7 +114,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Collections.Generic.Dictionary<string, string> AdditionalDetails { get; set; }
                 ///
         /// <value>
-        /// The type of resource.
+        /// The type of Exadata resource.
         /// </value>
         ///
         public enum ResourceTypeEnum {

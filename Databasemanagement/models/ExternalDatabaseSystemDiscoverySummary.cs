@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The summary of the database system.
+    /// The summary of the DB system discovery.
     /// </summary>
     public class ExternalDatabaseSystemDiscoverySummary : EntityDiscovered
     {
@@ -28,7 +28,7 @@ namespace Oci.DatabasemanagementService.Models
         public string OracleHome { get; set; }
         
         /// <value>
-        /// The display name of ASM connector.
+        /// The display name of the ASM connector.
         /// </value>
         [JsonProperty(PropertyName = "asmConnectorName")]
         public string AsmConnectorName { get; set; }
@@ -57,7 +57,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }

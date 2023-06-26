@@ -50,5 +50,8 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "databaseManagementConfig")]
         public ExternalDbSystemDatabaseManagementConfigDetails DatabaseManagementConfig { get; set; }
         
+        [JsonProperty(PropertyName = "stackMonitoringConfig")]
+        public AssociatedServiceDetails StackMonitoringConfig { get; set; }
+        
     }
 }

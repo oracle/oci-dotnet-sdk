@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The Exadata storage server grid.
+    /// The summary of the Exadata storage server grid discovery.
     /// </summary>
     public class ExternalStorageGridDiscoverySummary : EntityDiscovered
     {
         
         /// <value>
-        /// The total number of the storage servers discovered.
+        /// The total number of Exadata storage servers discovered.
         /// </value>
         [JsonProperty(PropertyName = "countOfStorageServersDiscovered")]
         public System.Nullable<int> CountOfStorageServersDiscovered { get; set; }

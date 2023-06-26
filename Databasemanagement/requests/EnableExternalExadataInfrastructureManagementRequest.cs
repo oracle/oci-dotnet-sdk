@@ -30,7 +30,7 @@ namespace Oci.DatabasemanagementService.Requests
         public string ExternalExadataInfrastructureId { get; set; }
         
         /// <value>
-        /// The details required to enable the management for the Exadata infrastructure.
+        /// The details required to enable management for the Exadata infrastructure.
         /// </value>
         /// <remarks>
         /// Required

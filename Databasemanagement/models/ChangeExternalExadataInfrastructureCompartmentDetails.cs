@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The details required to change the compartment of an Exadata infrastructure.
+    /// The details required to change the compartment of the Exadata infrastructure.
     /// </summary>
     public class ChangeExternalExadataInfrastructureCompartmentDetails 
     {

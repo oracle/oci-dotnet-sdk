@@ -16,20 +16,20 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The base discover entity.
+    /// The details of the base entity discovery.
     /// </summary>
     [JsonConverter(typeof(EntityDiscoveredModelConverter))]
     public class EntityDiscovered 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm). Null for new discover case.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the entity discovered.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the agent could be used for monitoring.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the agent used for monitoring.
         /// </value>
         [JsonProperty(PropertyName = "agentId")]
         public string AgentId { get; set; }
@@ -57,7 +57,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Version { get; set; }
         
         /// <value>
-        /// The internal identifier.
+        /// The internal identifier of the entity.
         /// </value>
         [JsonProperty(PropertyName = "internalId")]
         public string InternalId { get; set; }
@@ -69,7 +69,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Status { get; set; }
                 ///
         /// <value>
-        /// The status of the entity discover.
+        /// The status of the entity discovery.
         /// </value>
         ///
         public enum DiscoverStatusEnum {
@@ -84,20 +84,20 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// The status of the entity discover.
+        /// The status of the entity discovery.
         /// </value>
         [JsonProperty(PropertyName = "discoverStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DiscoverStatusEnum> DiscoverStatus { get; set; }
         
         /// <value>
-        /// The error code of the discovery on the resource
+        /// The error code of the discovery.
         /// </value>
         [JsonProperty(PropertyName = "discoverErrorCode")]
         public string DiscoverErrorCode { get; set; }
         
         /// <value>
-        /// The error message of the discovery on the resource
+        /// The error message of the discovery.
         /// </value>
         [JsonProperty(PropertyName = "discoverErrorMsg")]
         public string DiscoverErrorMsg { get; set; }

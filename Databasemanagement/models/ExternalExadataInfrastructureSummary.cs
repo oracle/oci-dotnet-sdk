@@ -47,7 +47,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<RackSizeEnum> RackSize { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         /// <remarks>
         /// Required

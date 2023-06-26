@@ -30,7 +30,7 @@ namespace Oci.DatabasemanagementService.Requests
         public string ExternalExadataStorageConnectorId { get; set; }
         
         /// <value>
-        /// The details required to add connections to the storage servers.
+        /// The details required to update connections to the Exadata storage servers.
         /// </value>
         /// <remarks>
         /// Required

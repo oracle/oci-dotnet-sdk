@@ -16,37 +16,37 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The Exadata storage server.
+    /// The summary of the Exadata storage server discovery.
     /// </summary>
     public class ExternalStorageServerDiscoverySummary : EntityDiscovered
     {
         
         /// <value>
-        /// The IP address of the storage server.
+        /// The IP address of the Exadata storage server.
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
         
         /// <value>
-        /// The make model of the storage server.
+        /// The make model of the Exadata storage server.
         /// </value>
         [JsonProperty(PropertyName = "makeModel")]
         public string MakeModel { get; set; }
         
         /// <value>
-        /// The cpu count of the storage server.
+        /// The CPU count of the Exadata storage server.
         /// </value>
         [JsonProperty(PropertyName = "cpuCount")]
         public System.Nullable<int> CpuCount { get; set; }
         
         /// <value>
-        /// The memory size in GB of the storage server.
+        /// The memory size in GB of the Exadata storage server.
         /// </value>
         [JsonProperty(PropertyName = "memoryGB")]
         public System.Double MemoryGB { get; set; }
         
         /// <value>
-        /// The connector name of the storage server in rediscovery case.
+        /// The name of the Exadata storage server connector in case of rediscovery.
         /// </value>
         [JsonProperty(PropertyName = "connectorName")]
         public string ConnectorName { get; set; }

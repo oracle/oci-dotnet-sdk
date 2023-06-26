@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The details of updating external Exadata infrastructure.
+    /// The details required to update the external Exadata infrastructure.
     /// </summary>
     public class UpdateExternalExadataInfrastructureDetails 
     {
@@ -48,7 +48,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -64,13 +64,13 @@ namespace Oci.DatabasemanagementService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The list of all the rac database system OCIDs. If not specified, it keeps the existing database systems
+        /// The list of all the DB systems OCIDs.
         /// </value>
         [JsonProperty(PropertyName = "dbSystemIds")]
         public System.Collections.Generic.List<string> DbSystemIds { get; set; }
         
         /// <value>
-        /// The list of the names of the storage servers to be monitored. If not specified, it includes all the storage servers associated with the monitored database systems.
+        /// The list of the names of Exadata storage servers to be monitored. If not specified, it includes all Exadata storage servers associated with the monitored DB systems.
         /// </value>
         [JsonProperty(PropertyName = "storageServerNames")]
         public System.Collections.Generic.List<string> StorageServerNames { get; set; }

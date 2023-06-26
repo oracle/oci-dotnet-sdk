@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The Exadata infrastructure details.
+    /// The details of the Exadata infrastructure.
     /// </summary>
     public class ExternalExadataInfrastructure : DbmResource
     {
@@ -47,7 +47,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<RackSizeEnum> RackSize { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -79,13 +79,13 @@ namespace Oci.DatabasemanagementService.Models
         public ExternalExadataStorageGridSummary StorageGrid { get; set; }
         
         /// <value>
-        /// A list of database systems.
+        /// A list of DB systems.
         /// </value>
         [JsonProperty(PropertyName = "databaseSystems")]
         public System.Collections.Generic.List<ExternalExadataDatabaseSystemSummary> DatabaseSystems { get; set; }
         
         /// <value>
-        /// The list of [OCIDs] (https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartments
+        /// The list of [OCIDs] (https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartments.
         /// </value>
         [JsonProperty(PropertyName = "databaseCompartments")]
         public System.Collections.Generic.List<string> DatabaseCompartments { get; set; }

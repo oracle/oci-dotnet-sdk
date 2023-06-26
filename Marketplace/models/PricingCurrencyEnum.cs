@@ -32,6 +32,14 @@ namespace Oci.MarketplaceService.Models
       [EnumMember(Value = "JPY")]
       Jpy,
       [EnumMember(Value = "OMR")]
-      Omr
+      Omr,
+      [EnumMember(Value = "EUR")]
+      Eur,
+      [EnumMember(Value = "CHF")]
+      Chf,
+      [EnumMember(Value = "MXN")]
+      Mxn,
+      [EnumMember(Value = "CLP")]
+      Clp
   }
 }

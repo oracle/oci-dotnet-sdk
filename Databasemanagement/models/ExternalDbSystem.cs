@@ -79,6 +79,9 @@ namespace Oci.DatabasemanagementService.Models
         
         [JsonProperty(PropertyName = "databaseManagementConfig")]
         public ExternalDbSystemDatabaseManagementConfigDetails DatabaseManagementConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "stackMonitoringConfig")]
+        public ExternalDbSystemStackMonitoringConfigDetails StackMonitoringConfig { get; set; }
                 ///
         /// <value>
         /// The current lifecycle state of the external DB system resource.

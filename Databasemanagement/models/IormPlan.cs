@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The IORM plan from a storage server.
+    /// The IORM plan from an Exadata storage server.
     /// </summary>
     public class IormPlan 
     {

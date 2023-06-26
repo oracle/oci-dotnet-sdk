@@ -30,7 +30,7 @@ namespace Oci.DatabasemanagementService.Requests
         public string ExternalExadataInfrastructureId { get; set; }
         
         /// <value>
-        /// The details required to change the compartment for the Exadata infrastructure.
+        /// The details required to move the Exadata infrastructure from one compartment to another.
         /// </value>
         /// <remarks>
         /// Required

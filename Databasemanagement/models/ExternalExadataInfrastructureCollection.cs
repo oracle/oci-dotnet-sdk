@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The Exadata infrastructure list.
+    /// A list of the Exadata infrastructure resources.
     /// </summary>
     public class ExternalExadataInfrastructureCollection 
     {
         
         /// <value>
-        /// A list of Exadata infrastructure.
+        /// A list of Exadata infrastructures.
         /// </value>
         /// <remarks>
         /// Required

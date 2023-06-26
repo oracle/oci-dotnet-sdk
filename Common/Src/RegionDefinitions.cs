@@ -81,6 +81,7 @@ namespace Oci.Common
 
         // OC19
         public static readonly Region EU_MADRID_2 = Register("eu-madrid-2", Realm.OC19, "vll");
+        public static readonly Region EU_FRANKFURT_2 = Register("eu-frankfurt-2", Realm.OC19, "str");
 
         // OC20
         public static readonly Region EU_JOVANOVAC_1 = Register("eu-jovanovac-1", Realm.OC20, "beg");
