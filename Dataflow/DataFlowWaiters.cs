@@ -143,6 +143,34 @@ namespace Oci.DataflowService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSqlEndpointRequest, GetSqlEndpointResponse> ForSqlEndpoint(GetSqlEndpointRequest request, params SqlEndpointLifecycleState[] targetStates)
+        {
+            return this.ForSqlEndpoint(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSqlEndpointRequest, GetSqlEndpointResponse> ForSqlEndpoint(GetSqlEndpointRequest request, WaiterConfiguration config, params SqlEndpointLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSqlEndpointRequest, GetSqlEndpointResponse>(
+                request,
+                request => client.GetSqlEndpoint(request),
+                response => targetStates.Contains(response.SqlEndpoint.LifecycleState.Value),
+                targetStates.Contains(SqlEndpointLifecycleState.Deleted)
+            );
+            return new Waiter<GetSqlEndpointRequest, GetSqlEndpointResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetStatementRequest, GetStatementResponse> ForStatement(GetStatementRequest request, params StatementLifecycleState[] targetStates)
         {
             return this.ForStatement(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

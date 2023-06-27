@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemanagementService.Models
 {
   /// <summary>
-  /// Stateful alerts are automatically cleared on severity transition to normal.
+  /// The type of alert. Stateful alerts are automatically cleared on severity transition to normal.
     /// Stateless alerts are never cleared. You can change the alert by setting the examinedBy attribute.
     /// 
   /// </summary>

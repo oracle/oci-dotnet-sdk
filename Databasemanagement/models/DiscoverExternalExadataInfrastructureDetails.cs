@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The connection information and the discovery options for the Exadata discovery.
+    /// The connection details and the discovery options for the Exadata discovery.
     /// </summary>
     public class DiscoverExternalExadataInfrastructureDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// The type of the discovery.
+        /// The type of discovery.
         /// </value>
         ///
         public enum DiscoveryTypeEnum {
@@ -43,7 +43,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// The type of the discovery.
+        /// The type of discovery.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<DiscoveryTypeEnum> DiscoveryType { get; set; }
         
         /// <value>
-        /// The list of the database system identifiers.
+        /// The list of the DB system identifiers.
         /// </value>
         /// <remarks>
         /// Required
@@ -64,7 +64,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Collections.Generic.List<string> DbSystemIds { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of Exadata infrastructure system. For rediscover only.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata infrastructure. This is applicable for rediscovery only.
         /// </value>
         [JsonProperty(PropertyName = "exadataInfrastructureId")]
         public string ExadataInfrastructureId { get; set; }

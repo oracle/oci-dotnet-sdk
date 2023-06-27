@@ -27,6 +27,12 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "sqlText")]
         public string SqlText { get; set; }
         
+        [JsonProperty(PropertyName = "inBinds")]
+        public JobInBindsDetails InBinds { get; set; }
+        
+        [JsonProperty(PropertyName = "outBinds")]
+        public JobOutBindsDetails OutBinds { get; set; }
+        
         [JsonProperty(PropertyName = "sqlType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SqlJob.SqlTypeEnum> SqlType { get; set; }

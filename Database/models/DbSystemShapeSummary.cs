@@ -43,7 +43,7 @@ namespace Oci.DatabaseService.Models
         public string ShapeFamily { get; set; }
                 ///
         /// <value>
-        /// The shape type for the virtual machine DB system. Shape type is determined by CPU hardware. Valid values are `AMD` , `INTEL` or `INTEL_FLEX_X9`.
+        /// The shape type for the virtual machine DB system. Shape type is determined by CPU hardware. Valid values are `AMD` , `INTEL`, `INTEL_FLEX_X9` or `AMPERE_FLEX_A1`.
         /// </value>
         ///
         public enum ShapeTypeEnum {
@@ -55,11 +55,13 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "INTEL")]
             Intel,
             [EnumMember(Value = "INTEL_FLEX_X9")]
-            IntelFlexX9
+            IntelFlexX9,
+            [EnumMember(Value = "AMPERE_FLEX_A1")]
+            AmpereFlexA1
         };
 
         /// <value>
-        /// The shape type for the virtual machine DB system. Shape type is determined by CPU hardware. Valid values are `AMD` , `INTEL` or `INTEL_FLEX_X9`.
+        /// The shape type for the virtual machine DB system. Shape type is determined by CPU hardware. Valid values are `AMD` , `INTEL`, `INTEL_FLEX_X9` or `AMPERE_FLEX_A1`.
         /// </value>
         [JsonProperty(PropertyName = "shapeType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

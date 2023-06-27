@@ -20,7 +20,7 @@ namespace Oci.DatabasemanagementService.Requests
     {
         
         /// <value>
-        /// The details required to add connections to the storage servers.
+        /// The details required to add connections to the Exadata storage servers.
         /// </value>
         /// <remarks>
         /// Required

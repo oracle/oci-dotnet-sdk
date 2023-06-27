@@ -20,6 +20,8 @@ namespace Oci.LicensemanagerService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "OCPU")]
-      Ocpu
+      Ocpu,
+      [EnumMember(Value = "ECPU")]
+      Ecpu
   }
 }

@@ -60,6 +60,49 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "filters")]
         public System.Collections.Generic.List<ChannelFilter> Filters { get; set; }
+                ///
+        /// <value>
+        /// Specifies how a replication channel handles the creation and alteration of tables 
+        /// that do not have a primary key.
+        /// 
+        /// </value>
+        ///
+        public enum TablesWithoutPrimaryKeyHandlingEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "RAISE_ERROR")]
+            RaiseError,
+            [EnumMember(Value = "ALLOW")]
+            Allow,
+            [EnumMember(Value = "GENERATE_IMPLICIT_PRIMARY_KEY")]
+            GenerateImplicitPrimaryKey
+        };
+
+        /// <value>
+        /// Specifies how a replication channel handles the creation and alteration of tables 
+        /// that do not have a primary key.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TablesWithoutPrimaryKeyHandling is required.")]
+        [JsonProperty(PropertyName = "tablesWithoutPrimaryKeyHandling")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<TablesWithoutPrimaryKeyHandlingEnum> TablesWithoutPrimaryKeyHandling { get; set; }
+        
+        /// <value>
+        /// Specifies the amount of time, in seconds, that the channel waits before 
+        /// applying a transaction received from the source.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DelayInSeconds is required.")]
+        [JsonProperty(PropertyName = "delayInSeconds")]
+        public System.Nullable<int> DelayInSeconds { get; set; }
         
         [JsonProperty(PropertyName = "targetType")]
         private readonly string targetType = "DBSYSTEM";

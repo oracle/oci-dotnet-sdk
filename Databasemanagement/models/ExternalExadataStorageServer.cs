@@ -16,67 +16,67 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The Exadata storage server details.
+    /// The details of the Exadata storage server.
     /// </summary>
     public class ExternalExadataStorageServer : DbmResource
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of Exadata infrastructure system.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "exadataInfrastructureId")]
         public string ExadataInfrastructureId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of Exadata storage grid.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata storage server grid.
         /// </value>
         [JsonProperty(PropertyName = "storageGridId")]
         public string StorageGridId { get; set; }
         
         /// <value>
-        /// The make model of the storage server.
+        /// The make model of the Exadata storage server.
         /// </value>
         [JsonProperty(PropertyName = "makeModel")]
         public string MakeModel { get; set; }
         
         /// <value>
-        /// The IP address of the storage server.
+        /// The IP address of the Exadata storage server.
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
         
         /// <value>
-        /// CPU count of the storage server
+        /// The CPU count of the Exadata storage server.
         /// </value>
         [JsonProperty(PropertyName = "cpuCount")]
         public System.Nullable<decimal> CpuCount { get; set; }
         
         /// <value>
-        /// Storage server memory size in GB
+        /// The Exadata storage server memory size in GB.
         /// </value>
         [JsonProperty(PropertyName = "memoryGB")]
         public System.Double MemoryGB { get; set; }
         
         /// <value>
-        /// Maximum hard disk IO operations per second of the storage server
+        /// The maximum hard disk IO operations per second of the Exadata storage server.
         /// </value>
         [JsonProperty(PropertyName = "maxHardDiskIOPS")]
         public System.Nullable<int> MaxHardDiskIOPS { get; set; }
         
         /// <value>
-        /// Maximum hard disk IO throughput in MB/s of the storage server
+        /// The maximum hard disk IO throughput in MB/s of the Exadata storage server.
         /// </value>
         [JsonProperty(PropertyName = "maxHardDiskThroughput")]
         public System.Nullable<int> MaxHardDiskThroughput { get; set; }
         
         /// <value>
-        /// Maximum flash disk IO operations per second of the storage server
+        /// The maximum flash disk IO operations per second of the Exadata storage server.
         /// </value>
         [JsonProperty(PropertyName = "maxFlashDiskIOPS")]
         public System.Nullable<int> MaxFlashDiskIOPS { get; set; }
         
         /// <value>
-        /// Maximum flash disk IO throughput in MB/s of the storage server
+        /// The maximum flash disk IO throughput in MB/s of the Exadata storage server.
         /// </value>
         [JsonProperty(PropertyName = "maxFlashDiskThroughput")]
         public System.Nullable<int> MaxFlashDiskThroughput { get; set; }

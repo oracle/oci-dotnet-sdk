@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The connector of the storage server.
+    /// The details of the Exadata storage server connector.
     /// </summary>
     public class ExternalExadataStorageConnector : DbmResource
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of Exadata infrastructure system.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "exadataInfrastructureId")]
         public string ExadataInfrastructureId { get; set; }
@@ -34,7 +34,7 @@ namespace Oci.DatabasemanagementService.Models
         public string AgentId { get; set; }
         
         /// <value>
-        /// The unique connection string of the connection. For example, \"https://slcm21celadm02.us.oracle.com:443/MS/RESTService/\".
+        /// The unique string of the connection. For example, \"https://<storage-server-name>/MS/RESTService/\".
         /// </value>
         [JsonProperty(PropertyName = "connectionUri")]
         public string ConnectionUri { get; set; }

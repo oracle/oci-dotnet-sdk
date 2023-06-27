@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The storage server grid of the Exadata infrastructure.
+    /// The Exadata storage server grid of the Exadata infrastructure.
     /// </summary>
     public class ExternalExadataStorageGridSummary : DbmResource
     {
         
         /// <value>
-        /// The number of the storage servers in the Exadata infrastructure.
+        /// The number of Exadata storage servers in the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "serverCount")]
         public System.Nullable<decimal> ServerCount { get; set; }

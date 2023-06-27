@@ -42,7 +42,7 @@ namespace Oci.DatabasemanagementService.Models
         public string Password { get; set; }
                 ///
         /// <value>
-        /// The SSL trust store type.
+        /// The SSL truststore type.
         /// </value>
         ///
         public enum SslTrustStoreTypeEnum {
@@ -53,20 +53,20 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// The SSL trust store type.
+        /// The SSL truststore type.
         /// </value>
         [JsonProperty(PropertyName = "sslTrustStoreType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SslTrustStoreTypeEnum> SslTrustStoreType { get; set; }
         
         /// <value>
-        /// The full path of the SSL trust store Location in the agent.
+        /// The full path of the SSL truststore location in the agent.
         /// </value>
         [JsonProperty(PropertyName = "sslTrustStoreLocation")]
         public string SslTrustStoreLocation { get; set; }
         
         /// <value>
-        /// The password of the SSL trust store Location in the agent.
+        /// The password of the SSL truststore location in the agent.
         /// </value>
         [JsonProperty(PropertyName = "sslTrustStorePassword")]
         public string SslTrustStorePassword { get; set; }

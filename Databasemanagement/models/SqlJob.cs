@@ -51,6 +51,12 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "sqlText")]
         public string SqlText { get; set; }
+        
+        [JsonProperty(PropertyName = "inBinds")]
+        public JobInBindsDetails InBinds { get; set; }
+        
+        [JsonProperty(PropertyName = "outBinds")]
+        public JobOutBindsDetails OutBinds { get; set; }
                 ///
         /// <value>
         /// The SQL operation type.

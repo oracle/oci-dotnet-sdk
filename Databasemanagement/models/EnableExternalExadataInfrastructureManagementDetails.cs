@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Details to enable Management on an Exadata infrastructure.
+    /// The details required to enable Database Management on the Exadata infrastructure.
     /// </summary>
     public class EnableExternalExadataInfrastructureManagementDetails 
     {

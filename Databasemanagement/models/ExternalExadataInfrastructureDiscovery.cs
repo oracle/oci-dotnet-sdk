@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The discovery result of the Exadata infrastructure.
+    /// The result of the Exadata infrastructure discovery.
     /// </summary>
     public class ExternalExadataInfrastructureDiscovery : EntityDiscovered
     {
@@ -55,7 +55,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -88,13 +88,13 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<RackSizeEnum> RackSize { get; set; }
         
         /// <value>
-        /// The Oracle home path of the infrastructure.
+        /// The Oracle home path of the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "gridHomePath")]
         public string GridHomePath { get; set; }
         
         /// <value>
-        /// The list of all the rac database systems.
+        /// The list of DB systems in the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "dbSystems")]
         public System.Collections.Generic.List<ExternalDatabaseSystemDiscoverySummary> DbSystems { get; set; }
@@ -103,7 +103,7 @@ namespace Oci.DatabasemanagementService.Models
         public ExternalStorageGridDiscoverySummary StorageGrid { get; set; }
         
         /// <value>
-        /// The list of all the storage servers.
+        /// The list of storage servers in the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "storageServers")]
         public System.Collections.Generic.List<ExternalStorageServerDiscoverySummary> StorageServers { get; set; }

@@ -20,7 +20,7 @@ namespace Oci.DatabasemanagementService.Requests
     {
         
         /// <value>
-        /// The details required to discover and monitor the Exadata system infrastructure.
+        /// The details required to discover and monitor the Exadata infrastructure.
         /// </value>
         /// <remarks>
         /// Required

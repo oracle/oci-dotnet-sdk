@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The discovery result for the Exadata system infrastructure.
+    /// The summary of the Exadata system infrastructure discovery.
     /// </summary>
     public class ExternalExadataInfrastructureDiscoverySummary : EntityDiscovered
     {

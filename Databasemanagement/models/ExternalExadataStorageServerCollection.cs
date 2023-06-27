@@ -22,7 +22,7 @@ namespace Oci.DatabasemanagementService.Models
     {
         
         /// <value>
-        /// A list of Exadata storage server.
+        /// A list of Exadata storage servers.
         /// </value>
         /// <remarks>
         /// Required

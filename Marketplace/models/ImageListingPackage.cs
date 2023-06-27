@@ -40,13 +40,6 @@ namespace Oci.MarketplaceService.Models
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
         
-        /// <value>
-        /// The regions where you can deploy the listing package. (Some packages have restrictions that limit their deployment to United States regions only.)
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "regions")]
-        public System.Collections.Generic.List<Region> Regions { get; set; }
-        
         [JsonProperty(PropertyName = "packageType")]
         private readonly string packageType = "IMAGE";
     }

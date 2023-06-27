@@ -53,6 +53,23 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "filters")]
         public System.Collections.Generic.List<ChannelFilter> Filters { get; set; }
         
+        /// <value>
+        /// Specifies how a replication channel handles the creation and alteration of tables 
+        /// that do not have a primary key. The default value is set to ALLOW.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tablesWithoutPrimaryKeyHandling")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ChannelTargetDbSystem.TablesWithoutPrimaryKeyHandlingEnum> TablesWithoutPrimaryKeyHandling { get; set; }
+        
+        /// <value>
+        /// Specifies the amount of time, in seconds, that the channel waits before 
+        /// applying a transaction received from the source.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "delayInSeconds")]
+        public System.Nullable<int> DelayInSeconds { get; set; }
+        
         [JsonProperty(PropertyName = "targetType")]
         private readonly string targetType = "DBSYSTEM";
     }

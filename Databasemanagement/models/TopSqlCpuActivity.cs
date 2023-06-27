@@ -22,7 +22,7 @@ namespace Oci.DatabasemanagementService.Models
     {
         
         /// <value>
-        /// A list of sql cpu activity.
+        /// A list of sql CPU activity.
         /// </value>
         /// <remarks>
         /// Required

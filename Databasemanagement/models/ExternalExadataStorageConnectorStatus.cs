@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The status of a Exadata storage server connector.
+    /// The status of an Exadata storage server connector.
     /// </summary>
     public class ExternalExadataStorageConnectorStatus 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata storage connector.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata storage server connector.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }

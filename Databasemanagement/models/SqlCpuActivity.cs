@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// SQL CPU activity from storage server.
+    /// The SQL CPU activity from the Exadata storage server.
     /// </summary>
     public class SqlCpuActivity 
     {

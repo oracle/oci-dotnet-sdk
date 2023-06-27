@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// The details of creating the connector to the Exadata storage server.
+    /// The details required to create the connector to the Exadata storage server.
     /// </summary>
     public class CreateExternalExadataStorageConnectorDetails 
     {
@@ -42,7 +42,7 @@ namespace Oci.DatabasemanagementService.Models
         public string AgentId { get; set; }
         
         /// <value>
-        /// The connector name if OCI connector is created.
+        /// The name of the Exadata storage server connector.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.DatabasemanagementService.Models
         public string ConnectorName { get; set; }
         
         /// <value>
-        /// The unique connection string of the connection. For example, \"https://slcm21celadm02.us.oracle.com:443/MS/RESTService/\".
+        /// The unique string of the connection. For example, \"https://<storage-server-name>/MS/RESTService/\".
         /// </value>
         /// <remarks>
         /// Required

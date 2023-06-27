@@ -37,7 +37,21 @@ namespace Oci.MarketplaceService.Models
       IneligibleAccountGovSubscription,
       [EnumMember(Value = "INELIGIBLE_PAID_LISTING_THROTTLED")]
       IneligiblePaidListingThrottled,
+      [EnumMember(Value = "INELIGIBLE_ACCOUNT_NOT_AVAILABLE")]
+      IneligibleAccountNotAvailable,
+      [EnumMember(Value = "INELIGIBLE_ACCOUNT_NOT_MONTHLY_INCLUSIVE")]
+      IneligibleAccountNotMonthlyInclusive,
+      [EnumMember(Value = "IMAGE_META_DATA_SO")]
+      ImageMetaDataSo,
+      [EnumMember(Value = "INELIGIBLE_ACCOUNT_TENANCY_NOT_ALLOWED_ACCESS_IMAGE")]
+      IneligibleAccountTenancyNotAllowedAccessImage,
+      [EnumMember(Value = "INELIGIBLE_ACCOUNT_GOV_LAUNCH_NON_GOV_LISTING")]
+      IneligibleAccountGovLaunchNonGovListing,
+      [EnumMember(Value = "AGREEMENT_NOT_ACCEPTED")]
+      AgreementNotAccepted,
       [EnumMember(Value = "NOT_AUTHORIZED")]
-      NotAuthorized
+      NotAuthorized,
+      [EnumMember(Value = "ELIGIBLE")]
+      Eligible
   }
 }

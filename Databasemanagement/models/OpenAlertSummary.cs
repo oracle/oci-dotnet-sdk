@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// An alert from storage server.
+    /// An alert from the Exadata storage server.
     /// </summary>
     public class OpenAlertSummary 
     {
@@ -29,7 +29,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<AlertSeverityEnum> Severity { get; set; }
         
         /// <value>
-        /// The type of the alert.
+        /// The type of alert.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

@@ -70,6 +70,13 @@ namespace Oci.MarketplaceService.Models
         [JsonProperty(PropertyName = "operatingSystem")]
         public OperatingSystem OperatingSystem { get; set; }
         
+        /// <value>
+        /// The regions where you can deploy the listing package. (Some packages have restrictions that limit their deployment to United States regions only.)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "regions")]
+        public System.Collections.Generic.List<Region> Regions { get; set; }
+        
     }
 
     public class ListingPackageModelConverter : JsonConverter
