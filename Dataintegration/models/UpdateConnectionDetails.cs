@@ -47,6 +47,16 @@ namespace Oci.DataintegrationService.Models
             BipConnection,
             [EnumMember(Value = "LAKE_CONNECTION")]
             LakeConnection,
+            [EnumMember(Value = "ORACLE_PEOPLESOFT_CONNECTION")]
+            OraclePeoplesoftConnection,
+            [EnumMember(Value = "ORACLE_EBS_CONNECTION")]
+            OracleEbsConnection,
+            [EnumMember(Value = "ORACLE_SIEBEL_CONNECTION")]
+            OracleSiebelConnection,
+            [EnumMember(Value = "HDFS_CONNECTION")]
+            HdfsConnection,
+            [EnumMember(Value = "MYSQL_HEATWAVE_CONNECTION")]
+            MysqlHeatwaveConnection,
             [EnumMember(Value = "REST_NO_AUTH_CONNECTION")]
             RestNoAuthConnection,
             [EnumMember(Value = "REST_BASIC_AUTH_CONNECTION")]
@@ -141,8 +151,8 @@ namespace Oci.DataintegrationService.Models
                 case "LAKE_CONNECTION":
                     obj = new UpdateConnectionFromLake();
                     break;
-                case "GENERIC_JDBC_CONNECTION":
-                    obj = new UpdateConnectionFromJdbc();
+                case "ORACLE_EBS_CONNECTION":
+                    obj = new UpdateConnectionFromOracleEbs();
                     break;
                 case "ORACLE_OBJECT_STORAGE_CONNECTION":
                     obj = new UpdateConnectionFromObjectStorage();
@@ -153,14 +163,32 @@ namespace Oci.DataintegrationService.Models
                 case "REST_NO_AUTH_CONNECTION":
                     obj = new UpdateConnectionFromRestNoAuth();
                     break;
+                case "HDFS_CONNECTION":
+                    obj = new UpdateConnectionFromHdfs();
+                    break;
+                case "REST_BASIC_AUTH_CONNECTION":
+                    obj = new UpdateConnectionFromRestBasicAuth();
+                    break;
+                case "ORACLE_SIEBEL_CONNECTION":
+                    obj = new UpdateConnectionFromOracleSiebel();
+                    break;
+                case "MYSQL_HEATWAVE_CONNECTION":
+                    obj = new UpdateConnectionFromMySqlHeatWave();
+                    break;
+                case "BIP_CONNECTION":
+                    obj = new UpdateConnectionFromBIP();
+                    break;
+                case "MYSQL_CONNECTION":
+                    obj = new UpdateConnectionFromMySQL();
+                    break;
+                case "GENERIC_JDBC_CONNECTION":
+                    obj = new UpdateConnectionFromJdbc();
+                    break;
                 case "AMAZON_S3_CONNECTION":
                     obj = new UpdateConnectionFromAmazonS3();
                     break;
                 case "ORACLE_ATP_CONNECTION":
                     obj = new UpdateConnectionFromAtp();
-                    break;
-                case "REST_BASIC_AUTH_CONNECTION":
-                    obj = new UpdateConnectionFromRestBasicAuth();
                     break;
                 case "ORACLEDB_CONNECTION":
                     obj = new UpdateConnectionFromOracle();
@@ -168,11 +196,8 @@ namespace Oci.DataintegrationService.Models
                 case "ORACLE_ADWC_CONNECTION":
                     obj = new UpdateConnectionFromAdwc();
                     break;
-                case "BIP_CONNECTION":
-                    obj = new UpdateConnectionFromBIP();
-                    break;
-                case "MYSQL_CONNECTION":
-                    obj = new UpdateConnectionFromMySQL();
+                case "ORACLE_PEOPLESOFT_CONNECTION":
+                    obj = new UpdateConnectionFromOraclePeopleSoft();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

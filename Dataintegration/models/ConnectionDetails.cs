@@ -47,6 +47,16 @@ namespace Oci.DataintegrationService.Models
             BipConnection,
             [EnumMember(Value = "LAKE_CONNECTION")]
             LakeConnection,
+            [EnumMember(Value = "ORACLE_PEOPLESOFT_CONNECTION")]
+            OraclePeoplesoftConnection,
+            [EnumMember(Value = "ORACLE_EBS_CONNECTION")]
+            OracleEbsConnection,
+            [EnumMember(Value = "ORACLE_SIEBEL_CONNECTION")]
+            OracleSiebelConnection,
+            [EnumMember(Value = "HDFS_CONNECTION")]
+            HdfsConnection,
+            [EnumMember(Value = "MYSQL_HEATWAVE_CONNECTION")]
+            MysqlHeatwaveConnection,
             [EnumMember(Value = "REST_NO_AUTH_CONNECTION")]
             RestNoAuthConnection,
             [EnumMember(Value = "REST_BASIC_AUTH_CONNECTION")]
@@ -151,26 +161,41 @@ namespace Oci.DataintegrationService.Models
                 case "ORACLE_OBJECT_STORAGE_CONNECTION":
                     obj = new ConnectionFromObjectStorageDetails();
                     break;
-                case "BICC_CONNECTION":
-                    obj = new ConnectionFromBICCDetails();
+                case "ORACLE_SIEBEL_CONNECTION":
+                    obj = new ConnectionFromOracleSiebelDetails();
+                    break;
+                case "HDFS_CONNECTION":
+                    obj = new ConnectionFromHdfsDetails();
                     break;
                 case "MYSQL_CONNECTION":
                     obj = new ConnectionFromMySQLDetails();
                     break;
-                case "ORACLE_ADWC_CONNECTION":
-                    obj = new ConnectionFromAdwcDetails();
+                case "MYSQL_HEATWAVE_CONNECTION":
+                    obj = new ConnectionFromMySqlHeatWaveDetails();
                     break;
                 case "ORACLE_ATP_CONNECTION":
                     obj = new ConnectionFromAtpDetails();
                     break;
-                case "ORACLEDB_CONNECTION":
-                    obj = new ConnectionFromOracleDetails();
-                    break;
-                case "LAKE_CONNECTION":
-                    obj = new ConnectionFromLakeDetails();
+                case "ORACLE_PEOPLESOFT_CONNECTION":
+                    obj = new ConnectionFromOraclePeopleSoftDetails();
                     break;
                 case "REST_BASIC_AUTH_CONNECTION":
                     obj = new ConnectionFromRestBasicAuthDetails();
+                    break;
+                case "BICC_CONNECTION":
+                    obj = new ConnectionFromBICCDetails();
+                    break;
+                case "ORACLE_ADWC_CONNECTION":
+                    obj = new ConnectionFromAdwcDetails();
+                    break;
+                case "ORACLEDB_CONNECTION":
+                    obj = new ConnectionFromOracleDetails();
+                    break;
+                case "ORACLE_EBS_CONNECTION":
+                    obj = new ConnectionFromOracleEbsDetails();
+                    break;
+                case "LAKE_CONNECTION":
+                    obj = new ConnectionFromLakeDetails();
                     break;
                 case "BIP_CONNECTION":
                     obj = new ConnectionFromBipDetails();

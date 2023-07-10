@@ -22,14 +22,14 @@ namespace Oci.ApmsyntheticsService.Models
     {
         
         /// <value>
-        /// Request http oauth scheme.
+        /// Request HTTP OAuth scheme.
         /// </value>
         [JsonProperty(PropertyName = "oauthScheme")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OAuthSchemes> OauthScheme { get; set; }
         
         /// <value>
-        /// Username for authentication.
+        /// User name for authentication.
         /// </value>
         [JsonProperty(PropertyName = "authUserName")]
         public string AuthUserName { get; set; }
@@ -47,7 +47,7 @@ namespace Oci.ApmsyntheticsService.Models
         public string AuthToken { get; set; }
         
         /// <value>
-        /// URL to get authetication token.
+        /// URL to get authentication token.
         /// </value>
         [JsonProperty(PropertyName = "authUrl")]
         public string AuthUrl { get; set; }

@@ -22,13 +22,13 @@ namespace Oci.ApmsyntheticsService.Models
     {
         
         /// <value>
-        /// Intervals with failed runs more than this value will be classified as UNAVAILABLE.
+        /// Maximum number of failed runs allowed in an interval. If an interval has more failed runs than the specified value, then the interval will be classified as UNAVAILABLE.
         /// </value>
         [JsonProperty(PropertyName = "maxAllowedFailuresPerInterval")]
         public System.Nullable<int> MaxAllowedFailuresPerInterval { get; set; }
         
         /// <value>
-        /// Intervals with runs less than this value will be classified as UNKNOWN and excluded from the availability calculations.
+        /// Minimum number of runs allowed in an interval. If an interval has fewer runs than the specified value, then the interval will be classified as UNKNOWN and will be excluded from the availability calculations.
         /// </value>
         [JsonProperty(PropertyName = "minAllowedRunsPerInterval")]
         public System.Nullable<int> MinAllowedRunsPerInterval { get; set; }

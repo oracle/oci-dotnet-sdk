@@ -441,5 +441,54 @@ namespace Oci.ContainerengineService
             );
         }
 
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListWorkloadMappings operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListWorkloadMappingsResponse> ListWorkloadMappingsResponseEnumerator(ListWorkloadMappingsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListWorkloadMappingsRequest, ListWorkloadMappingsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListWorkloadMappings(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the WorkloadMappingSummary objects
+        /// contained in responses from the ListWorkloadMappings operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<WorkloadMappingSummary> ListWorkloadMappingsRecordEnumerator(ListWorkloadMappingsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListWorkloadMappingsRequest, ListWorkloadMappingsResponse, WorkloadMappingSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListWorkloadMappings(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
     }
 }

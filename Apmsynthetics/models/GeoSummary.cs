@@ -48,7 +48,7 @@ namespace Oci.ApmsyntheticsService.Models
         public string CountryName { get; set; }
         
         /// <value>
-        /// Degrees north of the Equator.
+        /// Degrees north of the equator.
         /// </value>
         [JsonProperty(PropertyName = "latitude")]
         public System.Double Latitude { get; set; }

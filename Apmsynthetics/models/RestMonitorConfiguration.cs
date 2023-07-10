@@ -22,13 +22,13 @@ namespace Oci.ApmsyntheticsService.Models
     {
         
         /// <value>
-        /// If redirection enabled, then redirects will be allowed while accessing target URL.
+        /// If redirection is enabled, then redirects will be allowed while accessing target URL.
         /// </value>
         [JsonProperty(PropertyName = "isRedirectionEnabled")]
         public System.Nullable<bool> IsRedirectionEnabled { get; set; }
         
         /// <value>
-        /// If certificate validation enabled, then call will fail for certificate errors.
+        /// If certificate validation is enabled, then call will fail for certificate errors.
         /// </value>
         [JsonProperty(PropertyName = "isCertificateValidationEnabled")]
         public System.Nullable<bool> IsCertificateValidationEnabled { get; set; }
@@ -41,7 +41,7 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Nullable<RequestMethods> RequestMethod { get; set; }
         
         /// <value>
-        /// Request http authentication scheme.
+        /// Request HTTP authentication scheme.
         /// </value>
         [JsonProperty(PropertyName = "reqAuthenticationScheme")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -49,6 +49,9 @@ namespace Oci.ApmsyntheticsService.Models
         
         [JsonProperty(PropertyName = "reqAuthenticationDetails")]
         public RequestAuthenticationDetails ReqAuthenticationDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "clientCertificateDetails")]
+        public ClientCertificateDetails ClientCertificateDetails { get; set; }
         
         /// <value>
         /// List of request headers. Example: [{&quot;headerName&quot;: &quot;content-type&quot;, &quot;headerValue&quot;:&quot;json&quot;}]

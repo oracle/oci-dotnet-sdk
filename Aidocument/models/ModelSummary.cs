@@ -123,6 +123,18 @@ namespace Oci.AidocumentService.Models
         [JsonProperty(PropertyName = "precision")]
         public System.Nullable<float> Precision { get; set; }
         
+        /// <value>
+        /// The tenancy id of the model.
+        /// </value>
+        [JsonProperty(PropertyName = "tenancyId")]
+        public string TenancyId { get; set; }
+        
+        /// <value>
+        /// the alias name of the model.
+        /// </value>
+        [JsonProperty(PropertyName = "aliasName")]
+        public string AliasName { get; set; }
+        
         [JsonProperty(PropertyName = "trainingDataset")]
         public Dataset TrainingDataset { get; set; }
         
@@ -131,6 +143,18 @@ namespace Oci.AidocumentService.Models
         
         [JsonProperty(PropertyName = "validationDataset")]
         public Dataset ValidationDataset { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) list of active custom Key Value models that need to be composed.
+        /// </value>
+        [JsonProperty(PropertyName = "componentModels")]
+        public System.Collections.Generic.List<ComponentModel> ComponentModels { get; set; }
+        
+        /// <value>
+        /// Set to true when the model is created by using multiple key value extraction models.
+        /// </value>
+        [JsonProperty(PropertyName = "isComposedModel")]
+        public System.Nullable<bool> IsComposedModel { get; set; }
         
         /// <value>
         /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.

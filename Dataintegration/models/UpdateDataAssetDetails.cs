@@ -45,6 +45,16 @@ namespace Oci.DataintegrationService.Models
             AmazonS3DataAsset,
             [EnumMember(Value = "LAKE_DATA_ASSET")]
             LakeDataAsset,
+            [EnumMember(Value = "ORACLE_PEOPLESOFT_DATA_ASSET")]
+            OraclePeoplesoftDataAsset,
+            [EnumMember(Value = "ORACLE_SIEBEL_DATA_ASSET")]
+            OracleSiebelDataAsset,
+            [EnumMember(Value = "ORACLE_EBS_DATA_ASSET")]
+            OracleEbsDataAsset,
+            [EnumMember(Value = "HDFS_DATA_ASSET")]
+            HdfsDataAsset,
+            [EnumMember(Value = "MYSQL_HEATWAVE_DATA_ASSET")]
+            MysqlHeatwaveDataAsset,
             [EnumMember(Value = "REST_DATA_ASSET")]
             RestDataAsset
         };
@@ -140,14 +150,20 @@ namespace Oci.DataintegrationService.Models
                 case "REST_DATA_ASSET":
                     obj = new UpdateDataAssetFromRest();
                     break;
-                case "ORACLE_ATP_DATA_ASSET":
-                    obj = new UpdateDataAssetFromAtp();
+                case "MYSQL_HEATWAVE_DATA_ASSET":
+                    obj = new UpdateDataAssetFromMySqlHeatWave();
+                    break;
+                case "ORACLE_EBS_DATA_ASSET":
+                    obj = new UpdateDataAssetFromOracleEbs();
                     break;
                 case "ORACLE_ADWC_DATA_ASSET":
                     obj = new UpdateDataAssetFromAdwc();
                     break;
-                case "GENERIC_JDBC_DATA_ASSET":
-                    obj = new UpdateDataAssetFromJdbc();
+                case "HDFS_DATA_ASSET":
+                    obj = new UpdateDataAssetFromHdfs();
+                    break;
+                case "ORACLE_PEOPLESOFT_DATA_ASSET":
+                    obj = new UpdateDataAssetFromOraclePeopleSoft();
                     break;
                 case "ORACLE_OBJECT_STORAGE_DATA_ASSET":
                     obj = new UpdateDataAssetFromObjectStorage();
@@ -155,17 +171,26 @@ namespace Oci.DataintegrationService.Models
                 case "AMAZON_S3_DATA_ASSET":
                     obj = new UpdateDataAssetFromAmazonS3();
                     break;
-                case "FUSION_APP_DATA_ASSET":
-                    obj = new UpdateDataAssetFromFusionApp();
-                    break;
                 case "MYSQL_DATA_ASSET":
                     obj = new UpdateDataAssetFromMySQL();
                     break;
-                case "ORACLE_DATA_ASSET":
-                    obj = new UpdateDataAssetFromOracle();
+                case "ORACLE_SIEBEL_DATA_ASSET":
+                    obj = new UpdateDataAssetFromOracleSiebel();
                     break;
                 case "LAKE_DATA_ASSET":
                     obj = new UpdateDataAssetFromLake();
+                    break;
+                case "ORACLE_ATP_DATA_ASSET":
+                    obj = new UpdateDataAssetFromAtp();
+                    break;
+                case "GENERIC_JDBC_DATA_ASSET":
+                    obj = new UpdateDataAssetFromJdbc();
+                    break;
+                case "FUSION_APP_DATA_ASSET":
+                    obj = new UpdateDataAssetFromFusionApp();
+                    break;
+                case "ORACLE_DATA_ASSET":
+                    obj = new UpdateDataAssetFromOracle();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

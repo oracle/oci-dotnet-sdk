@@ -26,6 +26,8 @@ namespace Oci.ApmsyntheticsService.Models
       [EnumMember(Value = "BASIC")]
       Basic,
       [EnumMember(Value = "BEARER")]
-      Bearer
+      Bearer,
+      [EnumMember(Value = "RESOURCE_PRINCIPAL")]
+      ResourcePrincipal
   }
 }

@@ -42,7 +42,7 @@ namespace Oci.ApmsyntheticsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Type of the monitor.
+        /// Type of monitor.
         /// </value>
         /// <remarks>
         /// Required
@@ -197,7 +197,7 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// If isRunNow is enabled, then the monitor will run now.
+        /// If isRunNow is enabled, then the monitor will run immediately.
         /// </value>
         /// <remarks>
         /// Required
@@ -207,7 +207,7 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Nullable<bool> IsRunNow { get; set; }
         
         /// <value>
-        /// Scheduling policy on Vantage points.
+        /// Scheduling policy to decide the distribution of monitor executions on vantage points.
         /// </value>
         /// <remarks>
         /// Required
@@ -218,7 +218,7 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Nullable<SchedulingPolicy> SchedulingPolicy { get; set; }
         
         /// <value>
-        /// Time interval between 2 runs in round robin batch mode (*SchedulingPolicy - BATCHED_ROUND_ROBIN).
+        /// Time interval between two runs in round robin batch mode (SchedulingPolicy - BATCHED_ROUND_ROBIN).
         /// </value>
         /// <remarks>
         /// Required

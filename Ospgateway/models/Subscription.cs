@@ -157,6 +157,29 @@ namespace Oci.OspgatewayService.Models
         [JsonProperty(PropertyName = "upgradeStateDetails")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UpgradeStateDetailsEnum> UpgradeStateDetails { get; set; }
+                ///
+        /// <value>
+        /// Account type.
+        /// </value>
+        ///
+        public enum AccountTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "PERSONAL")]
+            Personal,
+            [EnumMember(Value = "CORPORATE")]
+            Corporate,
+            [EnumMember(Value = "CORPORATE_SUBMITTED")]
+            CorporateSubmitted
+        };
+
+        /// <value>
+        /// Account type.
+        /// </value>
+        [JsonProperty(PropertyName = "accountType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AccountTypeEnum> AccountType { get; set; }
         
         [JsonProperty(PropertyName = "taxInfo")]
         public TaxInfo TaxInfo { get; set; }
@@ -171,13 +194,19 @@ namespace Oci.OspgatewayService.Models
         public PaymentGateway PaymentGateway { get; set; }
         
         [JsonProperty(PropertyName = "billingAddress")]
-        public BillingAddress BillingAddress { get; set; }
+        public Address BillingAddress { get; set; }
         
         /// <value>
         /// Date of upgrade/conversion when planType changed from FREE_TIER to PAYG
         /// </value>
         [JsonProperty(PropertyName = "timePlanUpgrade")]
         public System.Nullable<System.DateTime> TimePlanUpgrade { get; set; }
+        
+        /// <value>
+        /// Date of upgrade/conversion when account type changed from PERSONAL to CORPORATE
+        /// </value>
+        [JsonProperty(PropertyName = "timePersonalToCorporateConv")]
+        public System.Nullable<System.DateTime> TimePersonalToCorporateConv { get; set; }
         
     }
 }

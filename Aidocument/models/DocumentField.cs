@@ -26,6 +26,9 @@ namespace Oci.AidocumentService.Models
         /// </value>
         ///
         public enum FieldTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "LINE_ITEM_GROUP")]
             LineItemGroup,
             [EnumMember(Value = "LINE_ITEM")]
@@ -44,7 +47,7 @@ namespace Oci.AidocumentService.Models
         /// </remarks>
         [Required(ErrorMessage = "FieldType is required.")]
         [JsonProperty(PropertyName = "fieldType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FieldTypeEnum> FieldType { get; set; }
         
         [JsonProperty(PropertyName = "fieldLabel")]

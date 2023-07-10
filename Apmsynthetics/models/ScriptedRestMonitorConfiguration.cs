@@ -21,6 +21,20 @@ namespace Oci.ApmsyntheticsService.Models
     public class ScriptedRestMonitorConfiguration : MonitorConfiguration
     {
         
+        /// <value>
+        /// Request HTTP authentication scheme.
+        /// </value>
+        [JsonProperty(PropertyName = "reqAuthenticationScheme")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<RequestAuthenticationSchemesForScriptedRest> ReqAuthenticationScheme { get; set; }
+        
+        /// <value>
+        /// Expected HTTP response codes. For status code range, set values such as 2xx, 3xx.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "verifyResponseCodes")]
+        public System.Collections.Generic.List<string> VerifyResponseCodes { get; set; }
+        
         [JsonProperty(PropertyName = "networkConfiguration")]
         public NetworkConfiguration NetworkConfiguration { get; set; }
         

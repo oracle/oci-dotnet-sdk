@@ -30,7 +30,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "FILE_ENTITY")]
             FileEntity,
             [EnumMember(Value = "SQL_ENTITY")]
-            SqlEntity
+            SqlEntity,
+            [EnumMember(Value = "OBJECT_ENTITY")]
+            ObjectEntity
         };
 
         
@@ -56,6 +58,9 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "OBJECT_ENTITY":
+                    obj = new CreateEntityShapeFromObject();
+                    break;
                 case "SQL_ENTITY":
                     obj = new CreateEntityShapeFromSQL();
                     break;

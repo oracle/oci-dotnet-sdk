@@ -132,7 +132,7 @@ namespace Oci.ContainerengineService.Models
         public System.Collections.Generic.List<ClusterPodNetworkOptionDetails> ClusterPodNetworkOptions { get; set; }
         
         /// <value>
-        /// Type of cluster
+        /// Type of cluster. Values can be BASIC_CLUSTER or ENHANCED_CLUSTER. For more information, see [Cluster Types](https://docs.cloud.oracle.com/Content/ContEng/Tasks/contengcomparingenhancedwithbasicclusters_topic.htm)
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
