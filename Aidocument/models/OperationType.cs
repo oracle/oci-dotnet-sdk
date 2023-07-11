@@ -34,6 +34,8 @@ namespace Oci.AidocumentService.Models
       [EnumMember(Value = "DELETE_MODEL")]
       DeleteModel,
       [EnumMember(Value = "MOVE_MODEL")]
-      MoveModel
+      MoveModel,
+      [EnumMember(Value = "COMPOSE_MODEL")]
+      ComposeModel
   }
 }

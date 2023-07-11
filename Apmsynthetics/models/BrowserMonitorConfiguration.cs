@@ -28,12 +28,25 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Nullable<bool> IsCertificateValidationEnabled { get; set; }
         
         /// <value>
+        /// If disabled then auto snapshots are not collected.
+        /// </value>
+        [JsonProperty(PropertyName = "isDefaultSnapshotEnabled")]
+        public System.Nullable<bool> IsDefaultSnapshotEnabled { get; set; }
+        
+        /// <value>
         /// Verifies all the search strings present in the response.
         /// If any search string is not present in the response, then it will be considered as a failure.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "verifyTexts")]
         public System.Collections.Generic.List<VerifyText> VerifyTexts { get; set; }
+        
+        /// <value>
+        /// Expected HTTP response codes. For status code range, set values such as 2xx, 3xx.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "verifyResponseCodes")]
+        public System.Collections.Generic.List<string> VerifyResponseCodes { get; set; }
         
         [JsonProperty(PropertyName = "networkConfiguration")]
         public NetworkConfiguration NetworkConfiguration { get; set; }

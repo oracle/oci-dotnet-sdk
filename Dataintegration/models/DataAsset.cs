@@ -45,6 +45,16 @@ namespace Oci.DataintegrationService.Models
             AmazonS3DataAsset,
             [EnumMember(Value = "LAKE_DATA_ASSET")]
             LakeDataAsset,
+            [EnumMember(Value = "ORACLE_PEOPLESOFT_DATA_ASSET")]
+            OraclePeoplesoftDataAsset,
+            [EnumMember(Value = "ORACLE_SIEBEL_DATA_ASSET")]
+            OracleSiebelDataAsset,
+            [EnumMember(Value = "ORACLE_EBS_DATA_ASSET")]
+            OracleEbsDataAsset,
+            [EnumMember(Value = "HDFS_DATA_ASSET")]
+            HdfsDataAsset,
+            [EnumMember(Value = "MYSQL_HEATWAVE_DATA_ASSET")]
+            MysqlHeatwaveDataAsset,
             [EnumMember(Value = "REST_DATA_ASSET")]
             RestDataAsset
         };
@@ -148,11 +158,32 @@ namespace Oci.DataintegrationService.Models
                 case "ORACLE_DATA_ASSET":
                     obj = new DataAssetFromOracleDetails();
                     break;
+                case "AMAZON_S3_DATA_ASSET":
+                    obj = new DataAssetFromAmazonS3();
+                    break;
+                case "MYSQL_HEATWAVE_DATA_ASSET":
+                    obj = new DataAssetFromMySqlHeatWave();
+                    break;
+                case "MYSQL_DATA_ASSET":
+                    obj = new DataAssetFromMySQL();
+                    break;
+                case "ORACLE_PEOPLESOFT_DATA_ASSET":
+                    obj = new DataAssetFromOraclePeopleSoftDetails();
+                    break;
+                case "ORACLE_EBS_DATA_ASSET":
+                    obj = new DataAssetFromOracleEbsDetails();
+                    break;
+                case "REST_DATA_ASSET":
+                    obj = new DataAssetFromRestDetails();
+                    break;
                 case "ORACLE_ADWC_DATA_ASSET":
                     obj = new DataAssetFromAdwcDetails();
                     break;
-                case "AMAZON_S3_DATA_ASSET":
-                    obj = new DataAssetFromAmazonS3();
+                case "HDFS_DATA_ASSET":
+                    obj = new DataAssetFromHdfsDetails();
+                    break;
+                case "ORACLE_SIEBEL_DATA_ASSET":
+                    obj = new DataAssetFromOracleSiebelDetails();
                     break;
                 case "ORACLE_OBJECT_STORAGE_DATA_ASSET":
                     obj = new DataAssetFromObjectStorageDetails();
@@ -165,12 +196,6 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "ORACLE_ATP_DATA_ASSET":
                     obj = new DataAssetFromAtpDetails();
-                    break;
-                case "MYSQL_DATA_ASSET":
-                    obj = new DataAssetFromMySQL();
-                    break;
-                case "REST_DATA_ASSET":
-                    obj = new DataAssetFromRestDetails();
                     break;
             }
             if (obj != null)

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmsyntheticsService.Models
 {
     /// <summary>
-    /// Network node
+    /// Details of the network node.
     /// </summary>
     public class Node 
     {
         
         /// <value>
-        /// id of node
+        /// ID of the network node.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,55 +32,55 @@ namespace Oci.ApmsyntheticsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// ip address of node
+        /// IP address of the network node.
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
         
         /// <value>
-        /// display name of node
+        /// Display name of the network node.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// geo info
+        /// Geographical information of the network node.
         /// </value>
         [JsonProperty(PropertyName = "geoInfo")]
         public string GeoInfo { get; set; }
         
         /// <value>
-        /// links outgoing from this node
+        /// Outgoing links from the network node.
         /// </value>
         [JsonProperty(PropertyName = "outgoingLinks")]
         public System.Collections.Generic.List<string> OutgoingLinks { get; set; }
         
         /// <value>
-        /// consecutive anonymous node count
+        /// Number of consecutive anonymous network nodes.
         /// </value>
         [JsonProperty(PropertyName = "consecutiveAnonymousCount")]
         public System.Nullable<int> ConsecutiveAnonymousCount { get; set; }
         
         /// <value>
-        /// level of this node
+        /// Level of the network node.
         /// </value>
         [JsonProperty(PropertyName = "level")]
         public System.Nullable<int> Level { get; set; }
         
         /// <value>
-        /// average packet response time in milli seconds
+        /// Average packet response time in milliseconds.
         /// </value>
         [JsonProperty(PropertyName = "avgPacketResponseTimeInMs")]
         public System.Double AvgPacketResponseTimeInMs { get; set; }
         
         /// <value>
-        /// average packet loss percentage
+        /// Percentage of the average packet loss.
         /// </value>
         [JsonProperty(PropertyName = "avgPacketLossPercent")]
         public System.Double AvgPacketLossPercent { get; set; }
                 ///
         /// <value>
-        /// type of node
+        /// Type of network node.
         /// </value>
         ///
         public enum TypeEnum {
@@ -100,7 +100,7 @@ namespace Oci.ApmsyntheticsService.Models
         };
 
         /// <value>
-        /// type of node
+        /// Type of network node.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

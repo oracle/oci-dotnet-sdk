@@ -104,7 +104,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "ReportingManagedInstance",
                     OperationName = "GetManagedInstanceAnalyticContent",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstance/GetManagedInstanceAnalyticContent",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -161,7 +161,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "ReportingManagedInstance",
                     OperationName = "GetManagedInstanceContent",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstance/GetManagedInstanceContent",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -218,7 +218,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "ReportingManagedInstance",
                     OperationName = "SummarizeManagedInstanceAnalytics",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstanceAnalyticCollection/SummarizeManagedInstanceAnalytics",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

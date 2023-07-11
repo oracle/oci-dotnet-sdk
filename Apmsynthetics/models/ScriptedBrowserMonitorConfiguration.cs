@@ -27,6 +27,12 @@ namespace Oci.ApmsyntheticsService.Models
         [JsonProperty(PropertyName = "isCertificateValidationEnabled")]
         public System.Nullable<bool> IsCertificateValidationEnabled { get; set; }
         
+        /// <value>
+        /// If disabled then auto snapshots are not collected.
+        /// </value>
+        [JsonProperty(PropertyName = "isDefaultSnapshotEnabled")]
+        public System.Nullable<bool> IsDefaultSnapshotEnabled { get; set; }
+        
         [JsonProperty(PropertyName = "networkConfiguration")]
         public NetworkConfiguration NetworkConfiguration { get; set; }
         

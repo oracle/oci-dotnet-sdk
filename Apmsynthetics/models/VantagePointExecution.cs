@@ -22,13 +22,13 @@ namespace Oci.ApmsyntheticsService.Models
     {
         
         /// <value>
-        /// Vantage point name.
+        /// Name of the vantage point.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// list of execution times in milli seconds.
+        /// List of execution times in milliseconds.
         /// </value>
         [JsonProperty(PropertyName = "executions")]
         public System.Collections.Generic.List<long> Executions { get; set; }

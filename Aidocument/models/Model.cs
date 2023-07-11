@@ -79,6 +79,18 @@ namespace Oci.AidocumentService.Models
         public System.Nullable<ModelTypeEnum> ModelType { get; set; }
         
         /// <value>
+        /// The tenancy id of the model.
+        /// </value>
+        [JsonProperty(PropertyName = "tenancyId")]
+        public string TenancyId { get; set; }
+        
+        /// <value>
+        /// the alias name of the model.
+        /// </value>
+        [JsonProperty(PropertyName = "aliasName")]
+        public string AliasName { get; set; }
+        
+        /// <value>
         /// The collection of labels used to train the custom model.
         /// </value>
         [JsonProperty(PropertyName = "labels")]
@@ -102,10 +114,6 @@ namespace Oci.AidocumentService.Models
         [JsonProperty(PropertyName = "trainedTimeInHours")]
         public System.Double TrainedTimeInHours { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TrainingDataset is required.")]
         [JsonProperty(PropertyName = "trainingDataset")]
         public Dataset TrainingDataset { get; set; }
         
@@ -114,6 +122,18 @@ namespace Oci.AidocumentService.Models
         
         [JsonProperty(PropertyName = "validationDataset")]
         public Dataset ValidationDataset { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) collection of active custom Key Value models that need to be composed.
+        /// </value>
+        [JsonProperty(PropertyName = "componentModels")]
+        public System.Collections.Generic.List<ComponentModel> ComponentModels { get; set; }
+        
+        /// <value>
+        /// Set to true when the model is created by using multiple key value extraction models.
+        /// </value>
+        [JsonProperty(PropertyName = "isComposedModel")]
+        public System.Nullable<bool> IsComposedModel { get; set; }
         
         /// <value>
         /// The version of the model.

@@ -22,6 +22,13 @@ namespace Oci.DatabasemigrationService.Models
     [JsonConverter(typeof(CreateHostDumpTransferDetailsModelConverter))]
     public class CreateHostDumpTransferDetails 
     {
+        
+        /// <value>
+        /// Directory path to OCI SSL wallet location on Db server node.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "walletLocation")]
+        public string WalletLocation { get; set; }
                 ///
         /// <value>
         /// Type of dump transfer to use during migration in source or target host. Default kind is CURL

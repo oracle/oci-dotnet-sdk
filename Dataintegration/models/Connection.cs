@@ -47,6 +47,16 @@ namespace Oci.DataintegrationService.Models
             BipConnection,
             [EnumMember(Value = "LAKE_CONNECTION")]
             LakeConnection,
+            [EnumMember(Value = "ORACLE_PEOPLESOFT_CONNECTION")]
+            OraclePeoplesoftConnection,
+            [EnumMember(Value = "ORACLE_EBS_CONNECTION")]
+            OracleEbsConnection,
+            [EnumMember(Value = "ORACLE_SIEBEL_CONNECTION")]
+            OracleSiebelConnection,
+            [EnumMember(Value = "HDFS_CONNECTION")]
+            HdfsConnection,
+            [EnumMember(Value = "MYSQL_HEATWAVE_CONNECTION")]
+            MysqlHeatwaveConnection,
             [EnumMember(Value = "REST_NO_AUTH_CONNECTION")]
             RestNoAuthConnection,
             [EnumMember(Value = "REST_BASIC_AUTH_CONNECTION")]
@@ -146,18 +156,6 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
-                case "ORACLE_OBJECT_STORAGE_CONNECTION":
-                    obj = new ConnectionFromObjectStorage();
-                    break;
-                case "ORACLE_ADWC_CONNECTION":
-                    obj = new ConnectionFromAdwc();
-                    break;
-                case "ORACLE_ATP_CONNECTION":
-                    obj = new ConnectionFromAtp();
-                    break;
-                case "ORACLEDB_CONNECTION":
-                    obj = new ConnectionFromOracle();
-                    break;
                 case "AMAZON_S3_CONNECTION":
                     obj = new ConnectionFromAmazonS3();
                     break;
@@ -173,14 +171,41 @@ namespace Oci.DataintegrationService.Models
                 case "BICC_CONNECTION":
                     obj = new ConnectionFromBICC();
                     break;
+                case "MYSQL_HEATWAVE_CONNECTION":
+                    obj = new ConnectionFromMySqlHeatWave();
+                    break;
+                case "REST_BASIC_AUTH_CONNECTION":
+                    obj = new ConnectionFromRestBasicAuth();
+                    break;
+                case "ORACLE_OBJECT_STORAGE_CONNECTION":
+                    obj = new ConnectionFromObjectStorage();
+                    break;
+                case "ORACLE_ADWC_CONNECTION":
+                    obj = new ConnectionFromAdwc();
+                    break;
+                case "ORACLE_ATP_CONNECTION":
+                    obj = new ConnectionFromAtp();
+                    break;
+                case "ORACLEDB_CONNECTION":
+                    obj = new ConnectionFromOracle();
+                    break;
+                case "ORACLE_PEOPLESOFT_CONNECTION":
+                    obj = new ConnectionFromOraclePeopleSoft();
+                    break;
+                case "HDFS_CONNECTION":
+                    obj = new ConnectionFromHdfs();
+                    break;
+                case "ORACLE_EBS_CONNECTION":
+                    obj = new ConnectionFromOracleEbs();
+                    break;
+                case "ORACLE_SIEBEL_CONNECTION":
+                    obj = new ConnectionFromOracleSiebel();
+                    break;
                 case "REST_NO_AUTH_CONNECTION":
                     obj = new ConnectionFromRestNoAuth();
                     break;
                 case "LAKE_CONNECTION":
                     obj = new ConnectionFromLake();
-                    break;
-                case "REST_BASIC_AUTH_CONNECTION":
-                    obj = new ConnectionFromRestBasicAuth();
                     break;
             }
             if (obj != null)

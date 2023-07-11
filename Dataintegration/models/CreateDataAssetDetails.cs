@@ -45,6 +45,16 @@ namespace Oci.DataintegrationService.Models
             AmazonS3DataAsset,
             [EnumMember(Value = "LAKE_DATA_ASSET")]
             LakeDataAsset,
+            [EnumMember(Value = "ORACLE_PEOPLESOFT_DATA_ASSET")]
+            OraclePeoplesoftDataAsset,
+            [EnumMember(Value = "ORACLE_SIEBEL_DATA_ASSET")]
+            OracleSiebelDataAsset,
+            [EnumMember(Value = "ORACLE_EBS_DATA_ASSET")]
+            OracleEbsDataAsset,
+            [EnumMember(Value = "HDFS_DATA_ASSET")]
+            HdfsDataAsset,
+            [EnumMember(Value = "MYSQL_HEATWAVE_DATA_ASSET")]
+            MysqlHeatwaveDataAsset,
             [EnumMember(Value = "REST_DATA_ASSET")]
             RestDataAsset
         };
@@ -131,14 +141,29 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "HDFS_DATA_ASSET":
+                    obj = new CreateDataAssetFromHdfs();
+                    break;
+                case "LAKE_DATA_ASSET":
+                    obj = new CreateDataAssetFromLake();
+                    break;
+                case "MYSQL_HEATWAVE_DATA_ASSET":
+                    obj = new CreateDataAssetFromMySqlHeatWave();
+                    break;
+                case "AMAZON_S3_DATA_ASSET":
+                    obj = new CreateDataAssetFromAmazonS3();
+                    break;
+                case "REST_DATA_ASSET":
+                    obj = new CreateDataAssetFromRest();
+                    break;
+                case "ORACLE_SIEBEL_DATA_ASSET":
+                    obj = new CreateDataAssetFromOracleSiebel();
+                    break;
                 case "GENERIC_JDBC_DATA_ASSET":
                     obj = new CreateDataAssetFromJdbc();
                     break;
                 case "MYSQL_DATA_ASSET":
                     obj = new CreateDataAssetFromMySQL();
-                    break;
-                case "LAKE_DATA_ASSET":
-                    obj = new CreateDataAssetFromLake();
                     break;
                 case "ORACLE_DATA_ASSET":
                     obj = new CreateDataAssetFromOracle();
@@ -146,11 +171,11 @@ namespace Oci.DataintegrationService.Models
                 case "ORACLE_ADWC_DATA_ASSET":
                     obj = new CreateDataAssetFromAdwc();
                     break;
-                case "AMAZON_S3_DATA_ASSET":
-                    obj = new CreateDataAssetFromAmazonS3();
+                case "ORACLE_EBS_DATA_ASSET":
+                    obj = new CreateDataAssetFromOracleEbs();
                     break;
-                case "REST_DATA_ASSET":
-                    obj = new CreateDataAssetFromRest();
+                case "ORACLE_PEOPLESOFT_DATA_ASSET":
+                    obj = new CreateDataAssetFromOraclePeopleSoft();
                     break;
                 case "FUSION_APP_DATA_ASSET":
                     obj = new CreateDataAssetFromFusionApp();

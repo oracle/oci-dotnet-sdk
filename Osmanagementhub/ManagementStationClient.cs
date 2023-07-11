@@ -110,7 +110,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "ManagementStation",
                     OperationName = "CreateManagementStation",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagementStation/CreateManagementStation",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -167,7 +167,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "ManagementStation",
                     OperationName = "DeleteManagementStation",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagementStation/DeleteManagementStation",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -224,7 +224,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "ManagementStation",
                     OperationName = "GetManagementStation",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagementStation/GetManagementStation",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -281,7 +281,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "ManagementStation",
                     OperationName = "ListManagementStations",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagementStation/ListManagementStations",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -338,7 +338,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "ManagementStation",
                     OperationName = "ListMirrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/MirrorsCollection/ListMirrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -395,7 +395,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "ManagementStation",
                     OperationName = "SynchronizeMirrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagementStation/SynchronizeMirrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -452,7 +452,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "ManagementStation",
                     OperationName = "SynchronizeSingleMirrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagementStation/SynchronizeSingleMirrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -509,7 +509,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "ManagementStation",
                     OperationName = "UpdateManagementStation",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagementStation/UpdateManagementStation",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

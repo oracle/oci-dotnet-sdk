@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.ApmsyntheticsService.Models
 {
   /// <summary>
-  /// Scheduling policy.
+  /// Scheduling policy to decide the distribution of monitor executions on vantage points.
   /// </summary>
   public enum SchedulingPolicy {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

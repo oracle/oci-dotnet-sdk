@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmsyntheticsService.Models
 {
     /// <summary>
-    /// Dns settings.
+    /// Information about the DNS settings.
     /// </summary>
     public class DnsConfiguration 
     {
         
         /// <value>
-        /// If isOverrideDns is true, then dns will be overridden.
+        /// If isOverrideDns is true, then DNS settings will be overridden.
         /// </value>
         [JsonProperty(PropertyName = "isOverrideDns")]
         public System.Nullable<bool> IsOverrideDns { get; set; }
         
         /// <value>
-        /// Override dns ip value. This value will be honored only if *ref-isOverrideDns is set to true.
+        /// Attribute to override the DNS IP value. This value will be honored only if isOverrideDns is set to true.
         /// </value>
         [JsonProperty(PropertyName = "overrideDnsIp")]
         public string OverrideDnsIp { get; set; }

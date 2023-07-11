@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmsyntheticsService.Models
 {
     /// <summary>
-    /// Vantage Point Node
+    /// Details of the vantage point node.
     /// </summary>
     public class VantagePointNode 
     {
         
         /// <value>
-        /// id of Vantage Point node
+        /// ID of the vantage point node.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// name of Vantage Point node
+        /// Name of the vantage point node.
         /// </value>
         /// <remarks>
         /// Required
@@ -38,19 +38,19 @@ namespace Oci.ApmsyntheticsService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// display name of Vantage Point node
+        /// Display name of the vantage point node.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// geo info
+        /// Geographical information of the vantage point node.
         /// </value>
         [JsonProperty(PropertyName = "geoInfo")]
         public string GeoInfo { get; set; }
         
         /// <value>
-        /// links outgoing from this Vantage Point node
+        /// Outgoing links from the vantage point node.
         /// </value>
         [JsonProperty(PropertyName = "outgoingLinks")]
         public System.Collections.Generic.List<string> OutgoingLinks { get; set; }

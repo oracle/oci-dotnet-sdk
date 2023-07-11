@@ -54,7 +54,13 @@ namespace Oci.OspgatewayService.Models
             [EnumMember(Value = "DINER")]
             Diner,
             [EnumMember(Value = "ELO")]
-            Elo
+            Elo,
+            [EnumMember(Value = "SAVING")]
+            Saving,
+            [EnumMember(Value = "CHECKING")]
+            Checking,
+            [EnumMember(Value = "CORPORATE_CHECKING")]
+            CorporateChecking
         };
 
         /// <value>

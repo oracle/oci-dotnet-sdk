@@ -45,6 +45,16 @@ namespace Oci.DataintegrationService.Models
             AmazonS3DataAsset,
             [EnumMember(Value = "LAKE_DATA_ASSET")]
             LakeDataAsset,
+            [EnumMember(Value = "ORACLE_PEOPLESOFT_DATA_ASSET")]
+            OraclePeoplesoftDataAsset,
+            [EnumMember(Value = "ORACLE_SIEBEL_DATA_ASSET")]
+            OracleSiebelDataAsset,
+            [EnumMember(Value = "ORACLE_EBS_DATA_ASSET")]
+            OracleEbsDataAsset,
+            [EnumMember(Value = "HDFS_DATA_ASSET")]
+            HdfsDataAsset,
+            [EnumMember(Value = "MYSQL_HEATWAVE_DATA_ASSET")]
+            MysqlHeatwaveDataAsset,
             [EnumMember(Value = "REST_DATA_ASSET")]
             RestDataAsset
         };
@@ -136,20 +146,23 @@ namespace Oci.DataintegrationService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "ORACLE_SIEBEL_DATA_ASSET":
+                    obj = new DataAssetSummaryFromOracleSiebel();
+                    break;
+                case "MYSQL_HEATWAVE_DATA_ASSET":
+                    obj = new DataAssetSummaryFromMySqlHeatWave();
+                    break;
                 case "MYSQL_DATA_ASSET":
                     obj = new DataAssetSummaryFromMySQL();
                     break;
-                case "ORACLE_ATP_DATA_ASSET":
-                    obj = new DataAssetSummaryFromAtp();
-                    break;
-                case "ORACLE_ADWC_DATA_ASSET":
-                    obj = new DataAssetSummaryFromAdwc();
-                    break;
-                case "GENERIC_JDBC_DATA_ASSET":
-                    obj = new DataAssetSummaryFromJdbc();
+                case "HDFS_DATA_ASSET":
+                    obj = new DataAssetSummaryFromHdfs();
                     break;
                 case "AMAZON_S3_DATA_ASSET":
                     obj = new DataAssetSummaryFromAmazonS3();
+                    break;
+                case "ORACLE_PEOPLESOFT_DATA_ASSET":
+                    obj = new DataAssetSummaryFromOraclePeopleSoft();
                     break;
                 case "ORACLE_OBJECT_STORAGE_DATA_ASSET":
                     obj = new DataAssetSummaryFromObjectStorage();
@@ -162,6 +175,18 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "ORACLE_DATA_ASSET":
                     obj = new DataAssetSummaryFromOracle();
+                    break;
+                case "ORACLE_ATP_DATA_ASSET":
+                    obj = new DataAssetSummaryFromAtp();
+                    break;
+                case "ORACLE_ADWC_DATA_ASSET":
+                    obj = new DataAssetSummaryFromAdwc();
+                    break;
+                case "GENERIC_JDBC_DATA_ASSET":
+                    obj = new DataAssetSummaryFromJdbc();
+                    break;
+                case "ORACLE_EBS_DATA_ASSET":
+                    obj = new DataAssetSummaryFromOracleEbs();
                     break;
                 case "FUSION_APP_DATA_ASSET":
                     obj = new DataAssetSummaryFromFusionApp();

@@ -43,6 +43,8 @@ namespace Oci.OspgatewayService.Models
             CreditCard,
             [EnumMember(Value = "PAYPAL")]
             Paypal,
+            [EnumMember(Value = "ECHECK")]
+            Echeck,
             [EnumMember(Value = "OTHER")]
             Other
         };
@@ -77,6 +79,9 @@ namespace Oci.OspgatewayService.Models
             var discriminator = jsonObject["paymentMethod"].Value<string>();
             switch (discriminator)
             {
+                case "ECHECK":
+                    obj = new EcheckPaymentDetail();
+                    break;
                 case "OTHER":
                     obj = new OtherPaymentDetail();
                     break;

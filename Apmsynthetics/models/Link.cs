@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmsyntheticsService.Models
 {
     /// <summary>
-    /// link between 2 nodes
+    /// Details of the link between two nodes.
     /// </summary>
     public class Link 
     {
         
         /// <value>
-        /// id of Link
+        /// ID of the link.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,46 +32,52 @@ namespace Oci.ApmsyntheticsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// source node id
+        /// ID of the source node.
         /// </value>
         [JsonProperty(PropertyName = "source")]
         public string Source { get; set; }
         
         /// <value>
-        /// destination node id
+        /// ID of the destination node.
         /// </value>
         [JsonProperty(PropertyName = "destination")]
         public string Destination { get; set; }
         
         /// <value>
-        /// number of times this link is repeated
+        /// Number of times the link is repeated.
         /// </value>
         [JsonProperty(PropertyName = "repeatCount")]
         public System.Nullable<int> RepeatCount { get; set; }
         
         /// <value>
-        /// average packet loss
+        /// Average packet loss.
         /// </value>
         [JsonProperty(PropertyName = "forwardingLoss")]
         public System.Double ForwardingLoss { get; set; }
         
         /// <value>
-        /// difference of packet response time between source and destination in milliseconds
+        /// Difference of the packet response time between source and destination nodes, in milliseconds.
         /// </value>
         [JsonProperty(PropertyName = "delayInMilliseconds")]
         public System.Double DelayInMilliseconds { get; set; }
         
         /// <value>
-        /// minimum delay in milliseconds
+        /// Minimum delay in milliseconds.
         /// </value>
         [JsonProperty(PropertyName = "minDelayInMilliseconds")]
         public System.Double MinDelayInMilliseconds { get; set; }
         
         /// <value>
-        /// maximum delay in milliseconds
+        /// Maximum delay in milliseconds.
         /// </value>
         [JsonProperty(PropertyName = "maxDelayInMilliseconds")]
         public System.Double MaxDelayInMilliseconds { get; set; }
+        
+        /// <value>
+        /// List of all path ids of which this link is part of.
+        /// </value>
+        [JsonProperty(PropertyName = "paths")]
+        public System.Collections.Generic.List<string> Paths { get; set; }
         
     }
 }

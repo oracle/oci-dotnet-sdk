@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmsyntheticsService.Models
 {
     /// <summary>
-    /// aggregated network data.
+    /// Details of the aggregated network data.
     /// </summary>
     public class AggregatedNetworkData 
     {
                 ///
         /// <value>
-        /// state of the result
+        /// Status of the aggregated network data result.
         /// </value>
         ///
         public enum ResultStateEnum {
@@ -38,7 +38,7 @@ namespace Oci.ApmsyntheticsService.Models
         };
 
         /// <value>
-        /// state of the result
+        /// Status of the aggregated network data result.
         /// </value>
         /// <remarks>
         /// Required
@@ -49,25 +49,25 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Nullable<ResultStateEnum> ResultState { get; set; }
         
         /// <value>
-        /// List of VantagePointNode items.
+        /// List of vantage point nodes.
         /// </value>
         [JsonProperty(PropertyName = "vantagePointNodes")]
         public System.Collections.Generic.List<VantagePointNode> VantagePointNodes { get; set; }
         
         /// <value>
-        /// 2d array of nodes where each internal array corresponds to 1 level
+        /// An array of node arrays where each internal array corresponds to nodes at one level.
         /// </value>
         [JsonProperty(PropertyName = "nodesByLevel")]
         public System.Collections.Generic.List<System.Collections.Generic.List<Node>> NodesByLevel { get; set; }
         
         /// <value>
-        /// map of Link objects
+        /// Map of link objects.
         /// </value>
         [JsonProperty(PropertyName = "links")]
         public System.Collections.Generic.Dictionary<string, Link> Links { get; set; }
         
         /// <value>
-        /// string contaiing error details
+        /// String containing error details.
         /// </value>
         [JsonProperty(PropertyName = "errorDetails")]
         public string ErrorDetails { get; set; }

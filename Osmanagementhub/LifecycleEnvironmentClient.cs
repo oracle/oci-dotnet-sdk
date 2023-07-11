@@ -111,7 +111,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "LifecycleEnvironment",
                     OperationName = "AttachManagedInstancesToLifecycleStage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleStage/AttachManagedInstancesToLifecycleStage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -168,7 +168,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "LifecycleEnvironment",
                     OperationName = "CreateLifecycleEnvironment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleEnvironment/CreateLifecycleEnvironment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -224,7 +224,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "LifecycleEnvironment",
                     OperationName = "DeleteLifecycleEnvironment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleEnvironment/DeleteLifecycleEnvironment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -281,7 +281,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "LifecycleEnvironment",
                     OperationName = "DetachManagedInstancesFromLifecycleStage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleStage/DetachManagedInstancesFromLifecycleStage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -337,7 +337,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "LifecycleEnvironment",
                     OperationName = "GetLifecycleEnvironment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleEnvironment/GetLifecycleEnvironment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -393,7 +393,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "LifecycleEnvironment",
                     OperationName = "GetLifecycleStage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleStage/GetLifecycleStage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -451,7 +451,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "LifecycleEnvironment",
                     OperationName = "ListLifecycleEnvironments",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleEnvironment/ListLifecycleEnvironments",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -509,7 +509,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "LifecycleEnvironment",
                     OperationName = "ListLifecycleStageInstalledPackages",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleStage/ListLifecycleStageInstalledPackages",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -567,7 +567,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "LifecycleEnvironment",
                     OperationName = "ListLifecycleStages",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleStage/ListLifecycleStages",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -625,7 +625,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "LifecycleEnvironment",
                     OperationName = "PromoteSoftwareSourceToLifecycleStage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleStage/PromoteSoftwareSourceToLifecycleStage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -681,7 +681,7 @@ namespace Oci.OsmanagementhubService
                     ServiceName = "LifecycleEnvironment",
                     OperationName = "UpdateLifecycleEnvironment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleEnvironment/UpdateLifecycleEnvironment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
