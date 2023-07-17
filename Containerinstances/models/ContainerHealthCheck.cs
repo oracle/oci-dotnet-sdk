@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// Type of container health check which could be either HTTP, TCP or Command.
+    /// Type of container health check which could be either HTTP, TCP, or Command.
     /// </summary>
     [JsonConverter(typeof(ContainerHealthCheckModelConverter))]
     public class ContainerHealthCheck 

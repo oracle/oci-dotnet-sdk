@@ -353,5 +353,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "platformConfig")]
         public PlatformConfig PlatformConfig { get; set; }
         
+        /// <value>
+        /// The OCID of the Instance Configuration used to source launch details for this instance. Any other fields supplied in the instance launch request override the details stored in the Instance Configuration for this instance launch.
+        /// </value>
+        [JsonProperty(PropertyName = "instanceConfigurationId")]
+        public string InstanceConfigurationId { get; set; }
+        
     }
 }

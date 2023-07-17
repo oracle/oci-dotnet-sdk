@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// A reduced set of details about a single ContainerInstance returned by list APIs.
+    /// A set of details about a single container instance returned by list APIs.
     /// 
     /// </summary>
     public class ContainerInstanceSummary 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// OCID that cannot be changed.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.ContainerinstancesService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Display name for the ContainerInstance. Can be renamed.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.ContainerinstancesService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The OCID of the compartment to create the container instance in.
         /// </value>
         /// <remarks>
         /// Required
@@ -61,20 +61,20 @@ namespace Oci.ContainerinstancesService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}.
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
         /// Usage of system tag keys. These predefined keys are scoped to namespaces.
-        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
+        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}.
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
-        /// Availability Domain where the ContainerInstance is running.
+        /// The availability domain where the container instance runs.
         /// </value>
         /// <remarks>
         /// Required
@@ -84,13 +84,13 @@ namespace Oci.ContainerinstancesService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// Fault Domain where the ContainerInstance is running.
+        /// The fault domain where the container instance runs.
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
         
         /// <value>
-        /// The current state of the ContainerInstance.
+        /// The current state of the container instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -101,15 +101,15 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<ContainerInstance.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A message describing the current state in more detail. For example, can be used to provide
-        /// actionable information for a resource in Failed state.
+        /// A message that describes the current state of the container instance in more detail. Can be used to provide
+        /// actionable information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The time the the ContainerInstance was created. An RFC3339 formatted datetime string
+        /// The time the container instance was created, in the format defined by RFC3339.
         /// </value>
         /// <remarks>
         /// Required
@@ -119,13 +119,13 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the ContainerInstance was updated. An RFC3339 formatted datetime string
+        /// The time the container instance was updated, in the format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The shape of the Container Instance. The shape determines the resources available to the Container Instance.
+        /// The shape of the container instance. The shape determines the resources available to the container instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -142,7 +142,7 @@ namespace Oci.ContainerinstancesService.Models
         public ContainerInstanceShapeConfig ShapeConfig { get; set; }
         
         /// <value>
-        /// The number of containers on this Instance
+        /// The number of containers in the container instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -152,13 +152,13 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<int> ContainerCount { get; set; }
         
         /// <value>
-        /// Duration in seconds processes within a Container have to gracefully terminate. This applies whenever a Container must be halted, such as when the Container Instance is deleted. Processes will first be sent a termination signal. After this timeout is reached, the processes will be sent a termination signal.
+        /// The amount of time that processes in a container have to gracefully end when the container must be stopped. For example, when you delete a container instance. After the timeout is reached, the processes are sent a signal to be deleted.
         /// </value>
         [JsonProperty(PropertyName = "gracefulShutdownTimeoutInSeconds")]
         public System.Nullable<long> GracefulShutdownTimeoutInSeconds { get; set; }
         
         /// <value>
-        /// The number of volumes that attached to this Instance
+        /// The number of volumes that are attached to the container instance.
         /// </value>
         [JsonProperty(PropertyName = "volumeCount")]
         public System.Nullable<int> VolumeCount { get; set; }

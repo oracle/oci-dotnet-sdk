@@ -16,14 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// The container information to be updated.
     /// </summary>
     public class UpdateContainerDetails 
     {
         
         /// <value>
-        /// Display name for the Container. There are no guarantees of uniqueness
-        /// for this name.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -38,7 +37,7 @@ namespace Oci.ContainerinstancesService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}.
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

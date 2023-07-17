@@ -115,5 +115,11 @@ namespace Oci.DisasterrecoveryService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// The DR Protection Group Role.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "role")]
+        public System.Nullable<DrProtectionGroupRole> Role { get; set; }
     }
 }

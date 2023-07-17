@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// For a flexible shape, the number of OCPUs available for instances that use this shape.
+    /// For a flexible shape, the number of OCPUs available for container instances that use this shape.
     /// 
     /// </summary>
     public class ShapeOcpuOptions 

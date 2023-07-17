@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// Results of a containerInstance search. Contains boh ContainerInstanceSummary items and other information, such as metadata.
+    /// Summary information about a list of container instances.
     /// </summary>
     public class ContainerInstanceCollection 
     {
         
         /// <value>
-        /// List of containerInstances.
+        /// List of container instances.
         /// </value>
         /// <remarks>
         /// Required

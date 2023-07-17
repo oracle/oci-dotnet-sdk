@@ -51,7 +51,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The identifier (OCID) of the resource the work request affects.
         /// <br/>
-        /// Example: ocid1.drplanexecution.oc1.iad.exampleocid2
+        /// Example: ocid1.drplanexecution.oc1.iad.&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required

@@ -237,5 +237,11 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "localDisksTotalSizeInGBs")]
         public System.Double LocalDisksTotalSizeInGBs { get; set; }
         
+        /// <value>
+        /// The date and time the instance is expected to be stopped / started, in the format defined by RFC3339.
+        /// </value>
+        [JsonProperty(PropertyName = "timeMaintenanceRebootDue")]
+        public System.Nullable<System.DateTime> TimeMaintenanceRebootDue { get; set; }
+        
     }
 }

@@ -135,6 +135,30 @@ namespace Oci.FilestorageService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+                ///
+        /// <value>
+        /// The method used to map a Unix UID to secondary groups. If NONE, the mount target will not use the Unix UID for ID mapping.
+        /// </value>
+        ///
+        public enum IdmapTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "LDAP")]
+            Ldap,
+            [EnumMember(Value = "NONE")]
+            None
+        };
+
+        /// <value>
+        /// The method used to map a Unix UID to secondary groups. If NONE, the mount target will not use the Unix UID for ID mapping.
+        /// </value>
+        [JsonProperty(PropertyName = "idmapType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<IdmapTypeEnum> IdmapType { get; set; }
+        
+        [JsonProperty(PropertyName = "ldapIdmap")]
+        public LdapIdmap LdapIdmap { get; set; }
         
         /// <value>
         /// A list of Network Security Group [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) associated with this mount target.
@@ -145,6 +169,9 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
+        [JsonProperty(PropertyName = "kerberos")]
+        public Kerberos Kerberos { get; set; }
         
         /// <value>
         /// The date and time the mount target was created, expressed

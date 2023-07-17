@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// For a flexible shape, the amount of memory available for instances that use this shape.
+    /// For a flexible shape, the amount of memory available for container instances that use this shape.
     /// 
     /// </summary>
     public class ShapeMemoryOptions 
     {
         
         /// <value>
-        /// The minimum amount of memory, in gigabytes.
+        /// The minimum amount of memory (GB).
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +34,7 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<float> MinInGBs { get; set; }
         
         /// <value>
-        /// The maximum amount of memory, in gigabytes.
+        /// The maximum amount of memory (GB).
         /// 
         /// </value>
         /// <remarks>
@@ -45,7 +45,7 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<float> MaxInGBs { get; set; }
         
         /// <value>
-        /// The default amount of memory per OCPU available for this shape, in gigabytes.
+        /// The default amount of memory per OCPU available for this shape (GB).
         /// 
         /// </value>
         /// <remarks>
@@ -56,7 +56,7 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<float> DefaultPerOcpuInGBs { get; set; }
         
         /// <value>
-        /// The minimum amount of memory per OCPU available for this shape, in gigabytes.
+        /// The minimum amount of memory per OCPU available for this shape (GB).
         /// 
         /// </value>
         /// <remarks>
@@ -67,7 +67,7 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<float> MinPerOcpuInGBs { get; set; }
         
         /// <value>
-        /// The maximum amount of memory per OCPU available for this shape, in gigabytes.
+        /// The maximum amount of memory per OCPU available for this shape (GB).
         /// 
         /// </value>
         /// <remarks>

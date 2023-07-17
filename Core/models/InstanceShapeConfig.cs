@@ -136,5 +136,14 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "localDiskDescription")]
         public string LocalDiskDescription { get; set; }
         
+        /// <value>
+        /// The total number of VCPUs available to the instance. This can be used instead of OCPUs,
+        /// in which case the actual number of OCPUs will be calculated based on this value
+        /// and the actual hardware. This must be a multiple of 2.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "vcpus")]
+        public System.Nullable<int> Vcpus { get; set; }
+        
     }
 }

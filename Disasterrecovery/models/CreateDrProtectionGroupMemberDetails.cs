@@ -25,7 +25,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the member.
         /// <br/>
-        /// Example: ocid1.instance.oc1.phx.exampleocid1
+        /// Example: ocid1.instance.oc1.phx.&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required
@@ -57,6 +57,12 @@ namespace Oci.DisasterrecoveryService.Models
             var discriminator = jsonObject["memberType"].Value<string>();
             switch (discriminator)
             {
+                case "COMPUTE_INSTANCE_MOVABLE":
+                    obj = new CreateDrProtectionGroupMemberComputeInstanceMovableDetails();
+                    break;
+                case "COMPUTE_INSTANCE_NON_MOVABLE":
+                    obj = new CreateDrProtectionGroupMemberComputeInstanceNonMovableDetails();
+                    break;
                 case "COMPUTE_INSTANCE":
                     obj = new CreateDrProtectionGroupMemberComputeInstanceDetails();
                     break;

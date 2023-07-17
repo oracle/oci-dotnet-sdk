@@ -24,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the VNIC.
         /// <br/>
-        /// Example: ocid1.vnic.oc1.phx.exampleocid1
+        /// Example: ocid1.vnic.oc1.phx.&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required
@@ -36,7 +36,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the destination (remote) subnet to which this VNIC should connect.
         /// <br/>
-        /// Example: ocid1.subnet.oc1.iad.exampleocid2
+        /// Example: ocid1.subnet.oc1.iad.&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required
@@ -46,9 +46,27 @@ namespace Oci.DisasterrecoveryService.Models
         public string DestinationSubnetId { get; set; }
         
         /// <value>
-        /// A list of destination region's network security group (NSG) Ids which this VNIC should use.
+        /// The primary private IP address to assign. This address must belong to the destination subnet.
         /// <br/>
-        /// Example: [ ocid1.networksecuritygroup.oc1.iad.abcd1, ocid1.networksecuritygroup.oc1.iad.wxyz2 ]
+        /// Example: 10.0.3.3
+        /// </value>
+        [JsonProperty(PropertyName = "destinationPrimaryPrivateIpAddress")]
+        public string DestinationPrimaryPrivateIpAddress { get; set; }
+        
+        /// <value>
+        /// The hostname to assign for this primary private IP.
+        /// The value is the hostname portion of the private IP's fully qualified domain name (FQDN) 
+        /// (for example, bminstance1 in FQDN bminstance1.subnet123.vcn1.oraclevcn.com).
+        /// <br/>
+        /// Example: bminstance1
+        /// </value>
+        [JsonProperty(PropertyName = "destinationPrimaryPrivateIpHostnameLabel")]
+        public string DestinationPrimaryPrivateIpHostnameLabel { get; set; }
+        
+        /// <value>
+        /// A list of network security group (NSG) IDs in the destination region which this VNIC should use.
+        /// <br/>
+        /// Example: [ ocid1.networksecuritygroup.oc1.iad.&lt;unique_id&gt;, ocid1.networksecuritygroup.oc1.iad.&lt;unique_id&gt; ]
         /// </value>
         [JsonProperty(PropertyName = "destinationNsgIdList")]
         public System.Collections.Generic.List<string> DestinationNsgIdList { get; set; }

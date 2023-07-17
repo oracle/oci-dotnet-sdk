@@ -32,7 +32,7 @@ namespace Oci.IdentitydataplaneService.Models
         
         /// <value>
         /// A temporary public key, owned by the service. The service also owns the corresponding private key. This public
-        /// key will by put inside the security token by the auth service after successful validation of the certificate.
+        /// key will be put inside the security token by the auth service after successful validation of the certificate.
         /// 
         /// </value>
         /// <remarks>

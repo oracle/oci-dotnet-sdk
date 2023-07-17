@@ -491,7 +491,7 @@ namespace Oci.CoreService
 
         /// <summary>
         /// Moves a compute cluster into a different compartment within the same tenancy.
-        /// A compute cluster is a remote direct memory access (RDMA) network group.
+        /// A [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) is a remote direct memory access (RDMA) network group.
         /// &lt;br/&gt;
         /// For information about moving resources between compartments, see
         /// [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
@@ -967,13 +967,19 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Creates an empty compute cluster, which is a remote direct memory access (RDMA) network group.
+        /// Creates an empty [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm). A compute cluster
+        /// is a remote direct memory access (RDMA) network group.
+        /// &lt;br/&gt;
         /// After the compute cluster is created, you can use the compute cluster&#39;s OCID with the
         /// {@link #launchInstance(LaunchInstanceRequest) launchInstance} operation to create instances in the compute cluster.
-        /// For more information, see [Compute Clusters](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm).
+        /// The instances must be created in the same compartment and availability domain as the cluster.
         /// &lt;br/&gt;
-        /// To create a cluster network that uses intance pools to manage groups of identical instances,
-        /// see {@link #createClusterNetwork(CreateClusterNetworkRequest) createClusterNetwork}.
+        /// Use compute clusters when you want to manage instances in the cluster individually, or when you want
+        /// to use different types of instances in the RDMA network group.
+        /// &lt;br/&gt;
+        /// If you want predictable capacity for a specific number of identical instances that are managed as a group,
+        /// create a cluster network that uses instance pools by using the
+        /// {@link #createClusterNetwork(CreateClusterNetworkRequest) createClusterNetwork} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1399,8 +1405,11 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Deletes the compute cluster, which is a remote direct memory access (RDMA) network group.
-        /// To delete a compute cluster, all instances in the cluster must be deleted first.
+        /// Deletes a compute cluster. A [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) is a
+        /// remote direct memory access (RDMA) network group.
+        /// &lt;br/&gt;
+        /// Before you delete a compute cluster, first delete all instances in the cluster by using
+        /// the {@link #terminateInstance(TerminateInstanceRequest) terminateInstance} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2275,7 +2284,9 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Gets information about the specified compute cluster.
+        /// Gets information about a compute cluster. A [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm)
+        /// is a remote direct memory access (RDMA) network group.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4835,7 +4846,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Terminates (deletes) the specified instance. Any attached VNICs and volumes are automatically detached
+        /// Permanently terminates (deletes) the specified instance. Any attached VNICs and volumes are automatically detached
         /// when the instance terminates.
         /// &lt;br/&gt;
         /// To preserve the boot volume associated with the instance, specify &#x60;true&#x60; for &#x60;PreserveBootVolumeQueryParam&#x60;.
@@ -4959,7 +4970,15 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Updates the specified compute cluster.
+        /// Updates a compute cluster. A [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) is a
+        /// remote direct memory access (RDMA) network group.
+        /// &lt;br/&gt;
+        /// To create instances within a compute cluster, use the {@link #launchInstance(LaunchInstanceRequest) launchInstance}
+        /// operation.
+        /// &lt;br/&gt;
+        /// To delete instances from a compute cluster, use the {@link #terminateInstance(TerminateInstanceRequest) terminateInstance}
+        /// operation.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

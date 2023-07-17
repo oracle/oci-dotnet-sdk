@@ -16,14 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// The configuration details for the move operation.
     /// </summary>
     public class ChangeContainerInstanceCompartmentDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment
-        /// into which the resource should be moved.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to move the container instance to.
         /// 
         /// </value>
         /// <remarks>

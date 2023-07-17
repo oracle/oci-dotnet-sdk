@@ -73,7 +73,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Create an association the DR Protection Group identified by *drProtectionGroupId* and
+        /// Create an association between the DR Protection Group identified by *drProtectionGroupId* and
         /// another DR Protection Group in a different region.
         /// 
         /// </summary>

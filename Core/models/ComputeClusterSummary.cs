@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Summary information for a [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm), which is a remote direct memory access (RDMA) network group.
+    /// Summary information for a compute cluster. A [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm)
+    /// is a remote direct memory access (RDMA) network group.
+    /// 
     /// </summary>
     public class ComputeClusterSummary 
     {
         
         /// <value>
         /// The availability domain the compute cluster is running in.
+        /// <br/>
         /// Example: Uocm:PHX-AD-1
         /// </value>
         /// <remarks>
@@ -33,7 +36,7 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains this compute cluster.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the compute cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -51,7 +54,7 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of this compute cluster.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compute cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -74,6 +77,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// The date and time the compute cluster was created,
         /// in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         /// <remarks>

@@ -84,5 +84,11 @@ namespace Oci.BdsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
+        
+        /// <value>
+        /// The type of a BDS patch history entity.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "patchType")]
+        public System.Nullable<PatchHistorySummary.PatchTypeEnum> PatchType { get; set; }
     }
 }

@@ -189,7 +189,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Moves a cluster network into a different compartment within the same tenancy. For
+        /// Moves a [cluster network with instance pools](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingclusternetworks.htm)
+        /// into a different compartment within the same tenancy. For
         /// information about moving resources between compartments, see
         /// [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
         /// &lt;br/&gt;
@@ -382,8 +383,17 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Creates a cluster network. For more information about cluster networks, see
-        /// [Managing Cluster Networks](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingclusternetworks.htm).
+        /// Creates a [cluster network with instance pools](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingclusternetworks.htm).
+        /// A cluster network is a group of high performance computing (HPC), GPU, or optimized bare metal
+        /// instances that are connected with an ultra low-latency remote direct memory access (RDMA) network.
+        /// Cluster networks with instance pools use instance pools to manage groups of identical instances.
+        /// &lt;br/&gt;
+        /// Use cluster networks with instance pools when you want predictable capacity for a specific number of identical
+        /// instances that are managed as a group.
+        /// &lt;br/&gt;
+        /// If you want to manage instances in the RDMA network independently of each other or use different types of instances
+        /// in the network group, create a compute cluster by using the {@link #createComputeCluster(CreateComputeClusterRequest) createComputeCluster}
+        /// operation.
         /// &lt;br/&gt;
         /// To determine whether capacity is available for a specific shape before you create a cluster network,
         /// use the {@link #createComputeCapacityReport(CreateComputeCapacityReportRequest) createComputeCapacityReport}
@@ -733,7 +743,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Gets information about the specified cluster network.
+        /// Gets information about a [cluster network with instance pools](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingclusternetworks.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1081,7 +1092,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Lists the instances in the specified cluster network.
+        /// Lists the instances in a [cluster network with instance pools](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingclusternetworks.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1137,7 +1149,9 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Lists the cluster networks in the specified compartment.
+        /// Lists the [cluster networks with instance pools](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingclusternetworks.htm)
+        /// in the specified compartment.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1658,7 +1672,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Terminates the specified cluster network.
+        /// Deletes (terminates) a [cluster network with instance pools](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingclusternetworks.htm).
         /// &lt;br/&gt;
         /// When you delete a cluster network, all of its resources are permanently deleted,
         /// including associated instances and instance pools.
@@ -1782,7 +1796,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Updates the specified cluster network. The OCID of the cluster network remains the same.
+        /// Updates a [cluster network with instance pools](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingclusternetworks.htm).
+        /// The OCID of the cluster network remains the same.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

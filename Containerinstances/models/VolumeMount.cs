@@ -23,7 +23,7 @@ namespace Oci.ContainerinstancesService.Models
     {
         
         /// <value>
-        /// mountPath describes the volume access path.
+        /// Describes the volume access path.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,20 +43,20 @@ namespace Oci.ContainerinstancesService.Models
         public string VolumeName { get; set; }
         
         /// <value>
-        /// specifies a sub-path inside the referenced volume instead of its root
+        /// A sub-path inside the referenced volume.
         /// </value>
         [JsonProperty(PropertyName = "subPath")]
         public string SubPath { get; set; }
         
         /// <value>
-        /// Whether the volume was mounted in read-only mode. Defaults to false if not specified.
+        /// Whether the volume was mounted in read-only mode. By default, the volume is mounted with write access.
         /// </value>
         [JsonProperty(PropertyName = "isReadOnly")]
         public System.Nullable<bool> IsReadOnly { get; set; }
         
         /// <value>
-        /// If there is more than 1 partitions in the volume, this is the number of partition which be referenced.
-        /// Here is a Example: Number  Start   End     Size    File system  Name                  Flags 1      1049kB  106MB   105MB   fat16        EFI System Partition  boot, esp 2      106MB   1180MB  1074MB  xfs 3      1180MB  50.0GB  48.8GB                                     lvm
+        /// If there is more than one partition in the volume, reference this number of partitions.
+        /// Here is an Example: Number  Start   End     Size    File system  Name                  Flags1      1049kB  106MB   105MB   fat16        EFI System Partition  boot, esp2      106MB   1180MB  1074MB  xfs3      1180MB  50.0GB  48.8GB                                     lvm
         /// </value>
         [JsonProperty(PropertyName = "partition")]
         public System.Nullable<int> Partition { get; set; }

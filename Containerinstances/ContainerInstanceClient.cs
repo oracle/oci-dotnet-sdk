@@ -73,7 +73,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Moves a ContainerInstance resource from one compartment identifier to another. When provided, If-Match is checked against ETag values of the resource.
+        /// Moves a container instance resource from one compartment identifier to another. When provided, If-Match is checked against ETag values of the resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -129,7 +129,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Creates a new ContainerInstance.
+        /// Creates a container instance and deploys the containers on it.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -186,7 +186,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Deletes a ContainerInstance resource by identifier
+        /// Deletes a container instance and its containers.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -298,7 +298,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Gets a ContainerInstance by identifier
+        /// Gets information about the specified container instance.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -410,7 +410,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Get a list of shapes for creating Container Instances and their details.
+        /// Lists the shapes that can be used to create container instances.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -466,7 +466,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Returns a list of ContainerInstances.
+        /// Returns a list of container instances.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -523,7 +523,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Return a list of Containers.
+        /// Returns a list of containers in a compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -580,7 +580,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Return a (paginated) list of errors for a given work request.
+        /// Return a paginated list of errors for a given work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -637,7 +637,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Return a (paginated) list of logs for a given work request.
+        /// Return a paginated list of logs for a given work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -807,7 +807,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Retrieve recent log from a single container by the container ID up to 256KB.
+        /// Retrieves recent logs from the specified container. The most recent 256 KB of logs are returned.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -976,7 +976,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Update a Container.
+        /// Updates a container.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1032,7 +1032,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Updates the ContainerInstance
+        /// Updates a container instance.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

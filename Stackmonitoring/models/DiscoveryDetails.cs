@@ -58,7 +58,9 @@ namespace Oci.StackmonitoringService.Models
             [EnumMember(Value = "HOST")]
             Host,
             [EnumMember(Value = "ORACLE_PSFT")]
-            OraclePsft
+            OraclePsft,
+            [EnumMember(Value = "ORACLE_MFT")]
+            OracleMft
         };
 
         /// <value>

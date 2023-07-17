@@ -24,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the peer (remote) DR Protection Group.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.iad.exampleocid2
+        /// Example: ocid1.drprotectiongroup.oc1.iad.&lt;unique_id&gt;
         /// </value>
         [JsonProperty(PropertyName = "peerId")]
         public string PeerId { get; set; }

@@ -45,7 +45,7 @@ namespace Oci.GoldengateService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sizeInBytes")]
-        public System.Nullable<decimal> SizeInBytes { get; set; }
+        public System.Nullable<long> SizeInBytes { get; set; }
         
         /// <value>
         /// The time the resource was last updated. The format is defined by

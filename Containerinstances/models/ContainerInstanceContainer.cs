@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// A container on a Container Instance.
+    /// A container on a container instance.
     /// 
     /// </summary>
     public class ContainerInstanceContainer 
     {
         
         /// <value>
-        /// The ID of the Container on this Instance.
+        /// The OCID of the container.
         /// </value>
         /// <remarks>
         /// Required

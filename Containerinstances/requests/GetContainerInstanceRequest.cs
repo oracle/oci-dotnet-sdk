@@ -20,7 +20,7 @@ namespace Oci.ContainerinstancesService.Requests
     {
         
         /// <value>
-        /// The system-generated unique identifier for the ContainerInstance.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the container instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.ContainerinstancesService.Requests
         public string ContainerInstanceId { get; set; }
         
         /// <value>
-        /// The client request ID for tracing.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }

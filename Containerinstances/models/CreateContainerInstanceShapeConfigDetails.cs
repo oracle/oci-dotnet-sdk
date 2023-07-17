@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// The size and amount of resources available to the Container Instance.
+    /// The size and amount of resources available to the container instance.
     /// 
     /// </summary>
     public class CreateContainerInstanceShapeConfigDetails 
     {
         
         /// <value>
-        /// The total number of OCPUs available to the instance.
+        /// The total number of OCPUs available to the container instance.
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +34,7 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<float> Ocpus { get; set; }
         
         /// <value>
-        /// The total amount of memory available to the instance, in gigabytes.
+        /// The total amount of memory available to the container instance (GB).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryInGBs")]

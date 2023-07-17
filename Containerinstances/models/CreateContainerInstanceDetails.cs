@@ -16,21 +16,20 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// The information about new ContainerInstance.
+    /// Information to create a container instance.
     /// </summary>
     public class CreateContainerInstanceDetails 
     {
         
         /// <value>
-        /// Human-readable name for the ContainerInstance. If none is provided,
-        /// OCI will select one for you.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information. If you don't provide a name, a name is generated automatically.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The compartment OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +39,7 @@ namespace Oci.ContainerinstancesService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Availability Domain where the ContainerInstance should be created.
+        /// The availability domain where the container instance runs.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,14 +49,14 @@ namespace Oci.ContainerinstancesService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// Fault Domain where the ContainerInstance should run.
+        /// The fault domain where the container instance runs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
         
         /// <value>
-        /// The shape of the Container Instance. The shape determines the resources available to the Container Instance.
+        /// The shape of the container instance. The shape determines the resources available to the container instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -74,16 +73,17 @@ namespace Oci.ContainerinstancesService.Models
         public CreateContainerInstanceShapeConfigDetails ShapeConfig { get; set; }
         
         /// <value>
-        /// A Volume represents a directory with data that is accessible across multiple containers in a
-        /// ContainerInstance.
-        /// Up to 32 volumes can be attached to single container instance.
+        /// A volume is a directory with data that is accessible across multiple containers in a
+        /// container instance.
+        /// <br/>
+        /// You can attach up to 32 volumes to single container instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "volumes")]
         public System.Collections.Generic.List<CreateContainerVolumeDetails> Volumes { get; set; }
         
         /// <value>
-        /// The Containers to create on this Instance.
+        /// The containers to create on this container instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -93,7 +93,7 @@ namespace Oci.ContainerinstancesService.Models
         public System.Collections.Generic.List<CreateContainerDetails> Containers { get; set; }
         
         /// <value>
-        /// The networks to make available to containers on this Instance.
+        /// The networks available to containers on this container instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -106,13 +106,13 @@ namespace Oci.ContainerinstancesService.Models
         public CreateContainerDnsConfigDetails DnsConfig { get; set; }
         
         /// <value>
-        /// Duration in seconds processes within a Container have to gracefully terminate. This applies whenever a Container must be halted, such as when the Container Instance is deleted. Processes will first be sent a termination signal. After this timeout is reached, the processes will be sent a termination signal.
+        /// The amount of time that processes in a container have to gracefully end when the container must be stopped. For example, when you delete a container instance. After the timeout is reached, the processes are sent a signal to be deleted.
         /// </value>
         [JsonProperty(PropertyName = "gracefulShutdownTimeoutInSeconds")]
         public System.Nullable<long> GracefulShutdownTimeoutInSeconds { get; set; }
         
         /// <value>
-        /// The image pull secrets for accessing private registry to pull images for containers
+        /// The image pulls secrets so you can access private registry to pull container images.
         /// </value>
         [JsonProperty(PropertyName = "imagePullSecrets")]
         public System.Collections.Generic.List<CreateImagePullSecretDetails> ImagePullSecrets { get; set; }
@@ -133,7 +133,7 @@ namespace Oci.ContainerinstancesService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}.
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

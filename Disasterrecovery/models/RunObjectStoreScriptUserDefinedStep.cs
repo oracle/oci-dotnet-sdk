@@ -24,8 +24,12 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the instance where this script or command should be executed.
         /// <br/>
-        /// Example: ocid1.instance.oc1.phx.exampleocid1
+        /// Example: ocid1.instance.oc1.phx.&lt;unique_id&gt;
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RunOnInstanceId is required.")]
         [JsonProperty(PropertyName = "runOnInstanceId")]
         public string RunOnInstanceId { get; set; }
         
@@ -34,9 +38,17 @@ namespace Oci.DisasterrecoveryService.Models
         /// <br/>
         /// Example: us-phoenix-1
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RunOnInstanceRegion is required.")]
         [JsonProperty(PropertyName = "runOnInstanceRegion")]
         public string RunOnInstanceRegion { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ObjectStorageScriptLocation is required.")]
         [JsonProperty(PropertyName = "objectStorageScriptLocation")]
         public ObjectStorageScriptLocation ObjectStorageScriptLocation { get; set; }
         

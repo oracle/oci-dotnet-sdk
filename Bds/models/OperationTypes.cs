@@ -27,6 +27,10 @@ namespace Oci.BdsService.Models
       DeleteBds,
       [EnumMember(Value = "ADD_BLOCK_STORAGE")]
       AddBlockStorage,
+      [EnumMember(Value = "ADD_MASTER_NODES")]
+      AddMasterNodes,
+      [EnumMember(Value = "ADD_UTILITY_NODES")]
+      AddUtilityNodes,
       [EnumMember(Value = "ADD_WORKER_NODES")]
       AddWorkerNodes,
       [EnumMember(Value = "ADD_CLOUD_SQL")]
@@ -73,6 +77,8 @@ namespace Oci.BdsService.Models
       PatchBds,
       [EnumMember(Value = "PATCH_ODH")]
       PatchOdh,
+      [EnumMember(Value = "PATCH_OS")]
+      PatchOs,
       [EnumMember(Value = "STOP_BDS")]
       StopBds,
       [EnumMember(Value = "START_BDS")]
@@ -80,6 +86,8 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "ADD_KAFKA")]
       AddKafka,
       [EnumMember(Value = "REMOVE_KAFKA")]
-      RemoveKafka
+      RemoveKafka,
+      [EnumMember(Value = "EXECUTE_BOOTSTRAP_SCRIPT")]
+      ExecuteBootstrapScript
   }
 }

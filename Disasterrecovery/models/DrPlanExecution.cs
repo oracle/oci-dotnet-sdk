@@ -24,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the DR Plan Execution.
         /// <br/>
-        /// Example: ocid1.drplanexecution.oc1.iad.exampleocid2
+        /// Example: ocid1.drplanexecution.oc1.iad.&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required
@@ -36,7 +36,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the compartment containing this DR Plan Execution.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..exampleocid1
+        /// Example: ocid1.compartment.oc1..&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required
@@ -60,7 +60,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the DR Plan.
         /// <br/>
-        /// Example: ocid1.drplan.oc1.iad.exampleocid2
+        /// Example: ocid1.drplan.oc1.iad.&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required
@@ -91,7 +91,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the DR Protection Group to which this DR Plan Execution belongs.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.iad.exampleocid2
+        /// Example: ocid1.drprotectiongroup.oc1.iad.&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required
@@ -104,7 +104,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// The OCID of peer (remote) DR Protection Group associated with this plan's
         /// DR Protection Group.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.phx.exampleocid1
+        /// Example: ocid1.drprotectiongroup.oc1.phx.&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required

@@ -22,7 +22,7 @@ namespace Oci.DisasterrecoveryService.Models
     {
         
         /// <value>
-        /// A flag indicating whether a precheck should be executed before the plan.
+        /// A flag indicating whether prechecks should be executed before the plan execution.
         /// <br/>
         /// Example: true
         /// </value>
@@ -30,7 +30,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<bool> ArePrechecksEnabled { get; set; }
         
         /// <value>
-        /// A flag indicating whether warnigs should be ignored during the failover.
+        /// A flag indicating whether warnings should be ignored during the failover.
         /// <br/>
         /// Example: false
         /// </value>

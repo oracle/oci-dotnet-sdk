@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// A collection of Container Instance Shapes.
+    /// A collection of container instance shapes.
     /// </summary>
     public class ContainerInstanceShapeCollection 
     {
         
         /// <value>
-        /// List of shapes.
+        /// A list of shapes.
         /// </value>
         /// <remarks>
         /// Required

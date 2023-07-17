@@ -129,5 +129,34 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "anonymousGid")]
         public System.Nullable<long> AnonymousGid { get; set; }
         
+        /// <value>
+        /// Whether or not to enable anonymous access to the file system through this export in cases where a user isn't found in the LDAP server used for ID mapping.
+        /// If true, and the user is not found in the LDAP directory, the operation uses the Squash UID and Squash GID.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAnonymousAccessAllowed")]
+        public System.Nullable<bool> IsAnonymousAccessAllowed { get; set; }
+                ///
+        ///
+        public enum AllowedAuthEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "SYS")]
+            Sys,
+            [EnumMember(Value = "KRB5")]
+            Krb5,
+            [EnumMember(Value = "KRB5I")]
+            Krb5I,
+            [EnumMember(Value = "KRB5P")]
+            Krb5P
+        };
+
+        /// <value>
+        /// Array of allowed NFS authentication types.
+        /// </value>
+        [JsonProperty(PropertyName = "allowedAuth", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<AllowedAuthEnum> AllowedAuth { get; set; }
+        
     }
 }

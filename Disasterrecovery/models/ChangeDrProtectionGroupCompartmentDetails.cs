@@ -24,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the compartment to which the DR Protection Group should be moved.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..exampleocid1
+        /// Example: ocid1.compartment.oc1..&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required

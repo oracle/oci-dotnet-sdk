@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// The shape configuration for a Container Instance. The shape configuration determines
-    /// the resources allocated to the Instance and it's containers.
+    /// The shape configuration for a container instance. The shape configuration determines
+    /// the resources thats are available to the container instance and its containers.
     /// 
     /// </summary>
     public class ContainerInstanceShapeConfig 
     {
         
         /// <value>
-        /// The total number of OCPUs available to the instance.
+        /// The total number of OCPUs available to the container instance.
         /// 
         /// </value>
         /// <remarks>
@@ -35,7 +35,7 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<float> Ocpus { get; set; }
         
         /// <value>
-        /// The total amount of memory available to the instance, in gigabytes.
+        /// The total amount of memory available to the container instance, in gigabytes.
         /// 
         /// </value>
         /// <remarks>
@@ -46,7 +46,7 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<float> MemoryInGBs { get; set; }
         
         /// <value>
-        /// A short description of the instance's processor (CPU).
+        /// A short description of the container instance's processor (CPU).
         /// 
         /// </value>
         /// <remarks>
@@ -57,7 +57,7 @@ namespace Oci.ContainerinstancesService.Models
         public string ProcessorDescription { get; set; }
         
         /// <value>
-        /// The networking bandwidth available to the instance, in gigabits per second.
+        /// The networking bandwidth available to the container instance, in gigabits per second.
         /// 
         /// </value>
         /// <remarks>

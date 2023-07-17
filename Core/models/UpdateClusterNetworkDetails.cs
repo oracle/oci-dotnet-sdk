@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The data to update a cluster network.
+    /// The data to update a [cluster network with instance pools](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingclusternetworks.htm).
+    /// 
     /// </summary>
     public class UpdateClusterNetworkDetails 
     {
