@@ -43,6 +43,9 @@ namespace Oci.CoreService.Models
             var discriminator = jsonObject["instanceType"].Value<string>();
             switch (discriminator)
             {
+                case "instance_options":
+                    obj = new ComputeInstanceOptions();
+                    break;
                 case "compute":
                     obj = new ComputeInstanceDetails();
                     break;

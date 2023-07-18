@@ -29,10 +29,6 @@ namespace Oci.CoreService.Models
         /// <value>
         /// The OCID of the image used to boot the instance.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ImageId is required.")]
         [JsonProperty(PropertyName = "imageId")]
         public string ImageId { get; set; }
         
@@ -60,6 +56,9 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "bootVolumeVpusPerGB")]
         public System.Nullable<long> BootVolumeVpusPerGB { get; set; }
+        
+        [JsonProperty(PropertyName = "instanceSourceImageFilterDetails")]
+        public InstanceSourceImageFilterDetails InstanceSourceImageFilterDetails { get; set; }
         
         [JsonProperty(PropertyName = "sourceType")]
         private readonly string sourceType = "image";

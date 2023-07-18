@@ -16,14 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// Create a Virtual Network Interface Card (VNIC) which gives
-    /// Containers on this Container Instance access to a Virtual Client Network (VCN).
+    /// Information to create a virtual network interface card (VNIC) which gives
+    /// the containers on this container instance access to a virtual client network (VCN).
     /// <br/>
-    /// This VNIC will be created in the same compartment as the specified subnet on
+    /// You use this object when creating the primary VNIC during container instance launch or when creating a secondary VNIC.
+    /// This VNIC is created in the same compartment as the specified subnet on
     /// behalf of the customer.
     /// <br/>
-    /// The VNIC created by this call will contain both the tags specified
-    /// in this object as well as any tags specified in the parent ContainerInstance object.
+    /// The VNIC created by this call contains both the tags specified
+    /// in this object as well as any tags specified in the parent container instance.
     /// 
     /// </summary>
     public class CreateContainerVnicDetails 
@@ -38,7 +39,7 @@ namespace Oci.ContainerinstancesService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The hostname for the VNIC's primary private IP.
+        /// The hostname for the VNIC's primary private IP. Used for DNS.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
@@ -93,7 +94,7 @@ namespace Oci.ContainerinstancesService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}.
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

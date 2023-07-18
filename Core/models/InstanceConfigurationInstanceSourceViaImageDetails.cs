@@ -58,6 +58,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "bootVolumeVpusPerGB")]
         public System.Nullable<long> BootVolumeVpusPerGB { get; set; }
         
+        [JsonProperty(PropertyName = "instanceSourceImageFilterDetails")]
+        public InstanceConfigurationInstanceSourceImageFilterDetails InstanceSourceImageFilterDetails { get; set; }
+        
         [JsonProperty(PropertyName = "sourceType")]
         private readonly string sourceType = "image";
     }

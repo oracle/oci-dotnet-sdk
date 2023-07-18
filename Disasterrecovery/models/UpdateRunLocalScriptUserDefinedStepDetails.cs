@@ -25,8 +25,12 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the instance where this script or command should be executed.
         /// <br/>
-        /// Example: ocid1.instance.oc1.phx.exampleocid1
+        /// Example: ocid1.instance.oc1.phx.&lt;unique_id&gt;
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RunOnInstanceId is required.")]
         [JsonProperty(PropertyName = "runOnInstanceId")]
         public string RunOnInstanceId { get; set; }
         
@@ -35,6 +39,10 @@ namespace Oci.DisasterrecoveryService.Models
         /// <br/>
         /// Example: /usr/bin/python3 /home/opc/scripts/my_app_script.py arg1 arg2 arg3
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ScriptCommand is required.")]
         [JsonProperty(PropertyName = "scriptCommand")]
         public string ScriptCommand { get; set; }
         

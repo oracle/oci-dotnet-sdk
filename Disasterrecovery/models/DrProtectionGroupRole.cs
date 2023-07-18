@@ -14,9 +14,9 @@ namespace Oci.DisasterrecoveryService.Models
 {
   /// <summary>
   /// Enumeration of different roles of a DR Protection Group.
-    /// - PRIMARY - The DR Protection Group has a primary role in a DR confguration.
-    /// - STANDBY - The DR Protection Group has a standby role in a DR confguration.
-    /// - UNCONFIGURED - The DR Protection Group is not part of a DR confguration
+    /// - PRIMARY - The DR Protection Group has a primary role in a DR configuration.
+    /// - STANDBY - The DR Protection Group has a standby role in a DR configuration.
+    /// - UNCONFIGURED - The DR Protection Group is not part of a DR configuration
     /// 
   /// </summary>
   public enum DrProtectionGroupRole {

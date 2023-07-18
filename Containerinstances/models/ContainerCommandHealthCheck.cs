@@ -22,7 +22,7 @@ namespace Oci.ContainerinstancesService.Models
     {
         
         /// <value>
-        /// The list of strings which will be concatenated to a single command for checking container's status.
+        /// The list of strings that will be simplified to a single command for checking the status of the container.
         /// 
         /// </value>
         /// <remarks>

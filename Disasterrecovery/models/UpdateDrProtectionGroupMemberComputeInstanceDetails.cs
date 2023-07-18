@@ -39,7 +39,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the compartment for this compute instance in the destination region.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..exampleocid1
+        /// Example: ocid1.compartment.oc1..&lt;unique_id&gt;
         /// </value>
         [JsonProperty(PropertyName = "destinationCompartmentId")]
         public string DestinationCompartmentId { get; set; }
@@ -48,7 +48,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// The OCID of the dedicated VM Host in the destination region where this compute instance
         /// should be launched
         /// <br/>
-        /// Example: ocid1.dedicatedvmhost.oc1.iad.exampleocid2
+        /// Example: ocid1.dedicatedvmhost.oc1.iad.&lt;unique_id&gt;
         /// </value>
         [JsonProperty(PropertyName = "destinationDedicatedVmHostId")]
         public string DestinationDedicatedVmHostId { get; set; }

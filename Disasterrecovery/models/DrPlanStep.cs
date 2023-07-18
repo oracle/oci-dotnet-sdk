@@ -24,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The unique id of this step. Must not be modified by the user.
         /// <br/>
-        /// Example: sgid1.step..examplestepsgid
+        /// Example: sgid1.step..&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required
@@ -36,7 +36,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The unique id of the group to which this step belongs. Must not be modified by user.
         /// <br/>
-        /// Example: sgid1.group..examplegroupsgid
+        /// Example: sgid1.group..&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the member associated with this step.
         /// <br/>
-        /// Example: ocid1.database.oc1.phx.exampleocid1
+        /// Example: ocid1.database.oc1.phx.&lt;unique_id&gt;
         /// </value>
         [JsonProperty(PropertyName = "memberId")]
         public string MemberId { get; set; }

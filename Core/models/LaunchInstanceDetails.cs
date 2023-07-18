@@ -124,7 +124,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) that the instance will be created in.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the
+        /// [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) that the instance will be created in.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeClusterId")]
@@ -259,10 +260,6 @@ namespace Oci.CoreService.Models
         /// You can enumerate all available shapes by calling {@link #listShapes(ListShapesRequest) listShapes}.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Shape is required.")]
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
         
@@ -289,6 +286,12 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "platformConfig")]
         public LaunchInstancePlatformConfig PlatformConfig { get; set; }
+        
+        /// <value>
+        /// The OCID of the Instance Configuration containing instance launch details. Any other fields supplied in this instance launch request will override the details stored in the Instance Configuration for this instance launch.
+        /// </value>
+        [JsonProperty(PropertyName = "instanceConfigurationId")]
+        public string InstanceConfigurationId { get; set; }
         
     }
 }

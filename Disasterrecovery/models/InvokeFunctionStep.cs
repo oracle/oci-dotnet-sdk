@@ -25,8 +25,12 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of function to be invoked.
         /// <br/>
-        /// Example: ocid1.fnfunc.oc1.iad.exampleocid2
+        /// Example: ocid1.fnfunc.oc1.iad.&lt;unique_id&gt;
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "FunctionId is required.")]
         [JsonProperty(PropertyName = "functionId")]
         public string FunctionId { get; set; }
         
@@ -35,6 +39,10 @@ namespace Oci.DisasterrecoveryService.Models
         /// <br/>
         /// Example: us-ashburn-1
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "FunctionRegion is required.")]
         [JsonProperty(PropertyName = "functionRegion")]
         public string FunctionRegion { get; set; }
         

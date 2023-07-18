@@ -22,7 +22,7 @@ namespace Oci.ContainerinstancesService.Models
     {
         
         /// <value>
-        /// Container health check Http's path.
+        /// Container health check HTTP path.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.ContainerinstancesService.Models
         public string Path { get; set; }
         
         /// <value>
-        /// Container health check Http's port.
+        /// Container health check HTTP port.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<int> Port { get; set; }
         
         /// <value>
-        /// Container health check Http's headers.
+        /// Container health check HTTP headers.
         /// </value>
         [JsonProperty(PropertyName = "headers")]
         public System.Collections.Generic.List<HealthCheckHttpHeader> Headers { get; set; }

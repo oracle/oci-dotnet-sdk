@@ -24,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The unique id of the group to ignore as a whole, or the group containing the step to ignore.
         /// <br/>
-        /// Example: sgid1.group..examplegroupsgid
+        /// Example: sgid1.group..&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required
@@ -36,7 +36,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The unique id of the step to ignore (optional). Only needed when ignoring a step.
         /// <br/>
-        /// Example: sgid1.step..examplestepsgid
+        /// Example: sgid1.step..&lt;unique_id&gt;
         /// </value>
         [JsonProperty(PropertyName = "stepId")]
         public string StepId { get; set; }

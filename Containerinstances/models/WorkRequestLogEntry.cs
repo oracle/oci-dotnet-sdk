@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// A log message from the execution of a work request.
+    /// A log message from a work request.
     /// </summary>
     public class WorkRequestLogEntry 
     {
@@ -32,7 +32,7 @@ namespace Oci.ContainerinstancesService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the log message was written. An RFC3339 formatted datetime string
+        /// The time the log message was written, in the format defined by [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// </value>
         /// <remarks>
         /// Required

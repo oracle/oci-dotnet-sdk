@@ -16,12 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A remote direct memory access (RDMA) network group. Compute clusters are groups
-    /// of high performance computing (HPC) bare metal instances that are connected with an ultra low latency network.
-    /// Compute clusters allow you to manage instances in the cluster individually.
-    /// For more information, see [Compute Clusters](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm).
+    /// A remote direct memory access (RDMA) network group.
     /// <br/>
-    /// For details about cluster networks that use intance pools to manage groups of identical instances,
+    /// A cluster network on a [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) is a group of
+    /// high performance computing (HPC), GPU, or optimized instances that are connected with an ultra low-latency network.
+    /// <br/>
+    /// Use compute clusters when you want to manage instances in the cluster individually, or when you want
+    /// to use different types of instances in the RDMA network group.
+    /// <br/>
+    /// For details about cluster networks that use instance pools to manage groups of identical instances,
     /// see {@link ClusterNetwork}.
     /// 
     /// </summary>
@@ -30,6 +33,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The availability domain the compute cluster is running in.
+        /// <br/>
         /// Example: Uocm:PHX-AD-1
         /// </value>
         /// <remarks>
@@ -40,7 +44,7 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains this compute cluster.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the compute cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -76,7 +80,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of this compute cluster.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compute cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -113,6 +117,7 @@ namespace Oci.CoreService.Models
         /// <value>
         /// The date and time the compute cluster was created,
         /// in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         /// <remarks>

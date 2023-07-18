@@ -24,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The unique id of the group. Must not be modified by user.
         /// <br/>
-        /// Example: sgid1.group..examplegroupsgid
+        /// Example: sgid1.group..&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required

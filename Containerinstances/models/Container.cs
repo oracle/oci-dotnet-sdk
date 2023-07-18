@@ -16,9 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// A single container on a Container Instance.
+    /// A single container on a container instance.
     /// <br/>
-    /// If this Container is DELETED, the record will remain visible for a short period
+    /// If you delete a container, the record remains visible for a short period
     /// of time before being permanently removed.
     /// 
     /// </summary>
@@ -26,7 +26,7 @@ namespace Oci.ContainerinstancesService.Models
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the container.
         /// </value>
         /// <remarks>
         /// Required
@@ -36,7 +36,7 @@ namespace Oci.ContainerinstancesService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Display name for the Container. Can be renamed.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -46,7 +46,7 @@ namespace Oci.ContainerinstancesService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The OCID of the compartment that contains the container.
         /// </value>
         /// <remarks>
         /// Required
@@ -64,20 +64,20 @@ namespace Oci.ContainerinstancesService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}.
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
         /// Usage of system tag keys. These predefined keys are scoped to namespaces.
-        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
+        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}.
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
-        /// Availability Domain where the Container's Instance is running.
+        /// The availability domain where the container instance that hosts the container runs.
         /// </value>
         /// <remarks>
         /// Required
@@ -87,13 +87,13 @@ namespace Oci.ContainerinstancesService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// Fault Domain where the Container's Instance is running.
+        /// The fault domain of the container instance that hosts the container runs.
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
                 ///
         /// <value>
-        /// The current state of the Container.
+        /// The current state of the container.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -117,7 +117,7 @@ namespace Oci.ContainerinstancesService.Models
         };
 
         /// <value>
-        /// The current state of the Container.
+        /// The current state of the container.
         /// </value>
         /// <remarks>
         /// Required
@@ -128,27 +128,27 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A message describing the current state in more detail. For example, can be used to provide
-        /// actionable information for a resource in Failed state.
+        /// A message that describes the current state of the container in more detail. Can be used to provide
+        /// actionable information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The exit code of the container process if it has stopped executing.
+        /// The exit code of the container process when it stopped running.
         /// </value>
         [JsonProperty(PropertyName = "exitCode")]
         public System.Nullable<int> ExitCode { get; set; }
         
         /// <value>
-        /// Time at which the container last terminated. An RFC3339 formatted datetime string
+        /// The time when the container last deleted (terminated), in the format defined by [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeTerminated")]
         public System.Nullable<System.DateTime> TimeTerminated { get; set; }
         
         /// <value>
-        /// The time the the Container was created. An RFC3339 formatted datetime string
+        /// The time the container was created, in the format defined by [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// </value>
         /// <remarks>
         /// Required
@@ -158,13 +158,13 @@ namespace Oci.ContainerinstancesService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the Container was updated. An RFC3339 formatted datetime string
+        /// The time the container was updated, in the format defined by [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The identifier of the Container Instance on which this container is running.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the container instance that the container is running on.
         /// </value>
         /// <remarks>
         /// Required
@@ -174,11 +174,13 @@ namespace Oci.ContainerinstancesService.Models
         public string ContainerInstanceId { get; set; }
         
         /// <value>
-        /// The container image information. Currently only support public docker registry. Can be either image name,
-        /// e.g `containerImage`, image name with version, e.g `containerImage:v1` or complete docker image Url e.g
+        /// The container image information. Currently only supports public Docker registry.
+        /// <br/>
+        /// You can provide either the image name (containerImage), image name with version (containerImagev1), or complete Docker image URL
         /// `docker.io/library/containerImage:latest`.
-        /// If no registry is provided, will default the registry to public docker hub `docker.io/library`.
-        /// The registry used for container image must be reachable over the Container Instance's VNIC.
+        /// <br/>
+        /// If you do not provide a registry, the registry defaults to public Docker hub `docker.io/library`.
+        /// The registry used for the container image must be reachable over the VNIC of the container instance.
         /// 
         /// </value>
         /// <remarks>
@@ -189,43 +191,35 @@ namespace Oci.ContainerinstancesService.Models
         public string ImageUrl { get; set; }
         
         /// <value>
-        /// This command will override the container's entrypoint process. 
-        /// If not specified, the existing entrypoint process defined in the image will be used.
+        /// This command overrides ENTRYPOINT process of the container.
+        /// If you do not specify this command, the existing ENTRYPOINT process defined in the image is the default.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "command")]
         public System.Collections.Generic.List<string> Command { get; set; }
         
         /// <value>
-        /// A list of string arguments for a Container's entrypoint process.
+        /// A list of string arguments for the ENTRYPOINT process of the container.
         /// <br/>
-        /// Many containers use an entrypoint process pointing to a shell,
-        /// for example /bin/bash. For such containers, this argument list
-        /// can also be used to specify the main command in the container process.
+        /// Many containers use an ENTRYPOINT process pointing to a shell
+        /// `/bin/bash`. For those containers, you can use the argument list to specify the main command in the container process.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "arguments")]
         public System.Collections.Generic.List<string> Arguments { get; set; }
         
         /// <value>
-        /// A list of additional configurable container capabilities
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "additionalCapabilities", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Collections.Generic.List<ContainerCapability> AdditionalCapabilities { get; set; }
-        
-        /// <value>
-        /// The working directory within the Container's filesystem for
-        /// the Container process. If this is not present, the default
-        /// working directory from the image will be used.
+        /// The working directory within the container's filesystem for
+        /// the container process. If not specified, the default
+        /// working directory from the image is used.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "workingDirectory")]
         public string WorkingDirectory { get; set; }
         
         /// <value>
-        /// A map of additional environment variables to set in the environment of the container's
-        /// entrypoint process. These variables are in addition to any variables already defined
+        /// A map of additional environment variables to set in the environment of the
+        /// ENTRYPOINT process of the container. These variables are in addition to any variables already defined
         /// in the container's image.
         /// 
         /// </value>
@@ -246,10 +240,10 @@ namespace Oci.ContainerinstancesService.Models
         public System.Collections.Generic.List<ContainerHealthCheck> HealthChecks { get; set; }
         
         /// <value>
-        /// Determines if the Container will have access to the Container Instance Resource Principal. 
-        /// This method utilizes resource principal version 2.2. Please refer to 
-        /// https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdk_authentication_methods.htm#sdk_authentication_methods_resource_principal 
-        /// for detailed explanation of how to leverage the exposed resource principal elements.
+        /// Determines if the container will have access to the container instance resource principal.
+        /// <br/>
+        /// This method utilizes resource principal version 2.2. For more information on how to use the exposed resource principal elements, see
+        /// https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdk_authentication_methods.htm#sdk_authentication_methods_resource_principal.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isResourcePrincipalDisabled")]
@@ -259,7 +253,7 @@ namespace Oci.ContainerinstancesService.Models
         public ContainerResourceConfig ResourceConfig { get; set; }
         
         /// <value>
-        /// The number of container restart attempts. A restart may be attempted after a health check failure or a container exit, based on the restart policy.
+        /// The number of container restart attempts. Depending on the restart policy, a restart might be attempted after a health check failure or a container exit.
         /// </value>
         [JsonProperty(PropertyName = "containerRestartAttemptCount")]
         public System.Nullable<int> ContainerRestartAttemptCount { get; set; }

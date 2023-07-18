@@ -22,7 +22,7 @@ namespace Oci.DisasterrecoveryService.Models
     {
         
         /// <value>
-        /// A flag indicating whether warnigs should be ignored during the failover.
+        /// A flag indicating whether warnings should be ignored during the failover precheck.
         /// <br/>
         /// Example: false
         /// </value>

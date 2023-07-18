@@ -16,8 +16,8 @@ using Newtonsoft.Json.Linq;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// A Volume represents a directory with data that is accessible across multiple containers in a
-    /// ContainerInstance.
+    /// A volume represents a directory with data that is accessible across multiple containers in a
+    /// container instance.
     /// 
     /// </summary>
     [JsonConverter(typeof(CreateContainerVolumeDetailsModelConverter))]
@@ -25,7 +25,7 @@ namespace Oci.ContainerinstancesService.Models
     {
         
         /// <value>
-        /// The name of the volume. This has be unique cross single ContainerInstance.
+        /// The name of the volume. This must be unique within a single container instance.
         /// 
         /// </value>
         /// <remarks>

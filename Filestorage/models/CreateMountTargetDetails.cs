@@ -107,6 +107,16 @@ namespace Oci.FilestorageService.Models
         public string SubnetId { get; set; }
         
         /// <value>
+        /// The method used to map a Unix UID to secondary groups, if any.
+        /// </value>
+        [JsonProperty(PropertyName = "idmapType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<MountTarget.IdmapTypeEnum> IdmapType { get; set; }
+        
+        [JsonProperty(PropertyName = "ldapIdmap")]
+        public CreateLdapIdmapDetails LdapIdmap { get; set; }
+        
+        /// <value>
         /// A list of Network Security Group [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) associated with this mount target.
         /// A maximum of 5 is allowed.
         /// Setting this to an empty array after the list is created removes the mount target from all NSGs.
@@ -115,6 +125,9 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
+        [JsonProperty(PropertyName = "kerberos")]
+        public CreateKerberosDetails Kerberos { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair

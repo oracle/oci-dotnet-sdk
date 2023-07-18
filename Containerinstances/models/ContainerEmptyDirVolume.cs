@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// The empty director of container
+    /// The empty directory of container.
     /// </summary>
     public class ContainerEmptyDirVolume : ContainerVolume
     {
                 ///
         /// <value>
-        /// Volume type that we are using for empty dir where it could be either File Storage or Memory
+        /// The volume type of the empty directory, can be either File Storage or Memory.
         /// </value>
         ///
         public enum BackingStoreEnum {
@@ -36,7 +36,7 @@ namespace Oci.ContainerinstancesService.Models
         };
 
         /// <value>
-        /// Volume type that we are using for empty dir where it could be either File Storage or Memory
+        /// The volume type of the empty directory, can be either File Storage or Memory.
         /// </value>
         [JsonProperty(PropertyName = "backingStore")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

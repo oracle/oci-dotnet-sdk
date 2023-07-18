@@ -22,13 +22,13 @@ namespace Oci.ContainerinstancesService.Models
     {
         
         /// <value>
-        /// Name server IP address
+        /// IP address of the name server..
         /// </value>
         [JsonProperty(PropertyName = "nameservers")]
         public System.Collections.Generic.List<string> Nameservers { get; set; }
         
         /// <value>
-        /// Search list for host-name lookup.
+        /// Search list for hostname lookup.
         /// </value>
         [JsonProperty(PropertyName = "searches")]
         public System.Collections.Generic.List<string> Searches { get; set; }

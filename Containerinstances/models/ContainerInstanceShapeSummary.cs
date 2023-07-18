@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// Details about a shape for a container Instance.
+    /// Details about a shape for a container instance.
     /// 
     /// </summary>
     public class ContainerInstanceShapeSummary 
@@ -34,7 +34,7 @@ namespace Oci.ContainerinstancesService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// A short description of the Instance's processor (CPU).
+        /// A short description of the container instance's processor (CPU).
         /// 
         /// </value>
         /// <remarks>

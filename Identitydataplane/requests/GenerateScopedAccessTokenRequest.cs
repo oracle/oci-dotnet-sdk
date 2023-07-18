@@ -20,7 +20,7 @@ namespace Oci.IdentitydataplaneService.Requests
     {
         
         /// <value>
-        /// Scoped Access token request
+        /// Scoped access token request
         /// </value>
         /// <remarks>
         /// Required

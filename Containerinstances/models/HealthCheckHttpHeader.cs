@@ -22,7 +22,7 @@ namespace Oci.ContainerinstancesService.Models
     {
         
         /// <value>
-        /// Container Http header Key.
+        /// Container HTTP header Key.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.ContainerinstancesService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Container Http header value.
+        /// Container HTTP header value.
         /// </value>
         /// <remarks>
         /// Required

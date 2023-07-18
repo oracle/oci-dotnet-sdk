@@ -73,6 +73,12 @@ namespace Oci.BdsService.Models
         public System.Nullable<int> NumberOfNodes { get; set; }
         
         /// <value>
+        /// Number of nodes that require a maintenance reboot
+        /// </value>
+        [JsonProperty(PropertyName = "numberOfNodesRequiringMaintenanceReboot")]
+        public System.Nullable<int> NumberOfNodesRequiringMaintenanceReboot { get; set; }
+        
+        /// <value>
         /// Version of the Hadoop distribution.
         /// </value>
         [JsonProperty(PropertyName = "clusterVersion")]

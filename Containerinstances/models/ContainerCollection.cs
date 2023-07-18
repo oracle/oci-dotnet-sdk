@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// A list of matching Containers.
+    /// A list of containers.
     /// 
     /// </summary>
     public class ContainerCollection 
     {
         
         /// <value>
-        /// List of Containers.
+        /// List of containers.
         /// </value>
         /// <remarks>
         /// Required

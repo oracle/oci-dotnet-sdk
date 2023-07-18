@@ -207,6 +207,12 @@ namespace Oci.BdsService.Models
         public System.Nullable<int> NumberOfNodes { get; set; }
         
         /// <value>
+        /// Number of nodes that require a maintenance reboot
+        /// </value>
+        [JsonProperty(PropertyName = "numberOfNodesRequiringMaintenanceReboot")]
+        public System.Nullable<int> NumberOfNodesRequiringMaintenanceReboot { get; set; }
+        
+        /// <value>
         /// pre-authenticated URL of the bootstrap script in Object Store that can be downloaded and executed.
         /// </value>
         [JsonProperty(PropertyName = "bootstrapScriptUrl")]

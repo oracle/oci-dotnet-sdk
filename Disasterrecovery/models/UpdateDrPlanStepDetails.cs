@@ -24,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The unique id of this step.
         /// <br/>
-        /// Example: sgid1.step..examplestepsgid
+        /// Example: sgid1.step..&lt;unique_id&gt;
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }

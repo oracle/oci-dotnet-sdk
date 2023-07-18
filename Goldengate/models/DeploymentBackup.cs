@@ -110,7 +110,7 @@ namespace Oci.GoldengateService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sizeInBytes")]
-        public System.Nullable<decimal> SizeInBytes { get; set; }
+        public System.Nullable<long> SizeInBytes { get; set; }
         
         /// <value>
         /// Possible Deployment backup types.

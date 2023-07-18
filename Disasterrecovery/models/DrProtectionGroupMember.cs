@@ -25,7 +25,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the member.
         /// <br/>
-        /// Example: ocid1.instance.oc1.phx.exampleocid1
+        /// Example: ocid1.instance.oc1.phx.&lt;unique_id&gt;
         /// </value>
         /// <remarks>
         /// Required
@@ -61,11 +61,17 @@ namespace Oci.DisasterrecoveryService.Models
                 case "VOLUME_GROUP":
                     obj = new DrProtectionGroupMemberVolumeGroup();
                     break;
+                case "COMPUTE_INSTANCE_MOVABLE":
+                    obj = new DrProtectionGroupMemberComputeInstanceMovable();
+                    break;
                 case "AUTONOMOUS_DATABASE":
                     obj = new DrProtectionGroupMemberAutonomousDatabase();
                     break;
                 case "COMPUTE_INSTANCE":
                     obj = new DrProtectionGroupMemberComputeInstance();
+                    break;
+                case "COMPUTE_INSTANCE_NON_MOVABLE":
+                    obj = new DrProtectionGroupMemberComputeInstanceNonMovable();
                     break;
                 case "DATABASE":
                     obj = new DrProtectionGroupMemberDatabase();

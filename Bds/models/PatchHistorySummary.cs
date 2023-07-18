@@ -67,6 +67,39 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+                ///
+        /// <value>
+        /// The type of current patch history.
+        /// DP - Data Plane patch(This history type is internal available only)
+        /// ODH - Oracle Distribution of Hadoop patch
+        /// OS - Operating System patch
+        /// 
+        /// </value>
+        ///
+        public enum PatchTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ODH")]
+            Odh,
+            [EnumMember(Value = "OS")]
+            Os
+        };
+
+        /// <value>
+        /// The type of current patch history.
+        /// DP - Data Plane patch(This history type is internal available only)
+        /// ODH - Oracle Distribution of Hadoop patch
+        /// OS - Operating System patch
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "PatchType is required.")]
+        [JsonProperty(PropertyName = "patchType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<PatchTypeEnum> PatchType { get; set; }
         
     }
 }

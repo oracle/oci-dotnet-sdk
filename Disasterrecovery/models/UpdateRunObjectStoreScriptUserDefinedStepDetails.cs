@@ -26,9 +26,17 @@ namespace Oci.DisasterrecoveryService.Models
         /// The OCID of the instance where this script or command should be executed.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RunOnInstanceId is required.")]
         [JsonProperty(PropertyName = "runOnInstanceId")]
         public string RunOnInstanceId { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ObjectStorageScriptLocation is required.")]
         [JsonProperty(PropertyName = "objectStorageScriptLocation")]
         public UpdateObjectStorageScriptLocationDetails ObjectStorageScriptLocation { get; set; }
         

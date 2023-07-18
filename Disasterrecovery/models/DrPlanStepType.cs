@@ -71,6 +71,14 @@ namespace Oci.DisasterrecoveryService.Models
       [EnumMember(Value = "VOLUME_GROUP_TERMINATE")]
       VolumeGroupTerminate,
       [EnumMember(Value = "USER_DEFINED")]
-      UserDefined
+      UserDefined,
+      [EnumMember(Value = "COMPUTE_CAPACITY_RESERVATION_SWITCHOVER_PRECHECK")]
+      ComputeCapacityReservationSwitchoverPrecheck,
+      [EnumMember(Value = "COMPUTE_CAPACITY_RESERVATION_FAILOVER_PRECHECK")]
+      ComputeCapacityReservationFailoverPrecheck,
+      [EnumMember(Value = "COMPUTE_CAPACITY_AVAILABILITY_SWITCHOVER_PRECHECK")]
+      ComputeCapacityAvailabilitySwitchoverPrecheck,
+      [EnumMember(Value = "COMPUTE_CAPACITY_AVAILABILITY_FAILOVER_PRECHECK")]
+      ComputeCapacityAvailabilityFailoverPrecheck
   }
 }
