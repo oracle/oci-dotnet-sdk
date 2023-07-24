@@ -33,7 +33,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public System.Nullable<OperationType> OperationType { get; set; }
         
         /// <value>
-        /// Status of current work request.
+        /// Status of the current work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -65,7 +65,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The resources affected by this work request.
+        /// The resources affected by the work request.
         /// </value>
         /// <remarks>
         /// Required

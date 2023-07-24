@@ -50,6 +50,8 @@ namespace Oci.GoldengateService.Models
       GoldengateDeploymentBackupDelete,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_BACKUP_CANCEL")]
       GoldengateDeploymentBackupCancel,
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_BACKUP_COPY")]
+      GoldengateDeploymentBackupCopy,
       [EnumMember(Value = "GOLDENGATE_CONNECTION_CREATE")]
       GoldengateConnectionCreate,
       [EnumMember(Value = "GOLDENGATE_CONNECTION_UPDATE")]

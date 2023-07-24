@@ -24,10 +24,6 @@ namespace Oci.AidocumentService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of active custom Key Value model that need to be composed.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ModelId is required.")]
         [JsonProperty(PropertyName = "modelId")]
         public string ModelId { get; set; }
         

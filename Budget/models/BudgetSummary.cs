@@ -96,12 +96,24 @@ namespace Oci.BudgetService.Models
         public System.Nullable<int> BudgetProcessingPeriodStartOffset { get; set; }
         
         /// <value>
-        /// The type of the budget processing period. Valid values are INVOICE and MONTH.
+        /// The type of the budget processing period. Valid values are INVOICE, MONTH, and SINGLE_USE.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "processingPeriodType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProcessingPeriodType> ProcessingPeriodType { get; set; }
+        
+        /// <value>
+        /// The date when the one-time budget begins. For example, `2023-03-23`. The date-time format conforms to RFC 3339, and will be truncated to the starting point of the date provided after being converted to UTC time.
+        /// </value>
+        [JsonProperty(PropertyName = "startDate")]
+        public System.Nullable<System.DateTime> StartDate { get; set; }
+        
+        /// <value>
+        /// The time when the one-time budget concludes. For example, - `2023-03-23`. The date-time format conforms to RFC 3339, and will be truncated to the starting point of the date provided after being converted to UTC time.
+        /// </value>
+        [JsonProperty(PropertyName = "endDate")]
+        public System.Nullable<System.DateTime> EndDate { get; set; }
         
         /// <value>
         /// The type of target on which the budget is applied.

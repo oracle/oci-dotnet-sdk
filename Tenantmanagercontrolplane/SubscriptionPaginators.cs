@@ -50,6 +50,55 @@ namespace Oci.TenantmanagercontrolplaneService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAssignedSubscriptionLineItems operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAssignedSubscriptionLineItemsResponse> ListAssignedSubscriptionLineItemsResponseEnumerator(ListAssignedSubscriptionLineItemsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAssignedSubscriptionLineItemsRequest, ListAssignedSubscriptionLineItemsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAssignedSubscriptionLineItems(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AssignedSubscriptionLineItemSummary objects
+        /// contained in responses from the ListAssignedSubscriptionLineItems operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AssignedSubscriptionLineItemSummary> ListAssignedSubscriptionLineItemsRecordEnumerator(ListAssignedSubscriptionLineItemsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAssignedSubscriptionLineItemsRequest, ListAssignedSubscriptionLineItemsResponse, AssignedSubscriptionLineItemSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAssignedSubscriptionLineItems(request, retryConfiguration, cancellationToken),
+                response => response.AssignedSubscriptionLineItemCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListAssignedSubscriptions operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -144,6 +193,55 @@ namespace Oci.TenantmanagercontrolplaneService
                 },
                 request => client.ListAvailableRegions(request, retryConfiguration, cancellationToken),
                 response => response.AvailableRegionCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListSubscriptionLineItems operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListSubscriptionLineItemsResponse> ListSubscriptionLineItemsResponseEnumerator(ListSubscriptionLineItemsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListSubscriptionLineItemsRequest, ListSubscriptionLineItemsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListSubscriptionLineItems(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the SubscriptionLineItemSummary objects
+        /// contained in responses from the ListSubscriptionLineItems operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<SubscriptionLineItemSummary> ListSubscriptionLineItemsRecordEnumerator(ListSubscriptionLineItemsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListSubscriptionLineItemsRequest, ListSubscriptionLineItemsResponse, SubscriptionLineItemSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListSubscriptionLineItems(request, retryConfiguration, cancellationToken),
+                response => response.SubscriptionLineItemCollection.Items
             );
         }
 

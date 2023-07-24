@@ -32,62 +32,6 @@ namespace Oci.TenantmanagercontrolplaneService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetAssignedSubscriptionRequest, GetAssignedSubscriptionResponse> ForAssignedSubscription(GetAssignedSubscriptionRequest request, params SubscriptionLifecycleState[] targetStates)
-        {
-            return this.ForAssignedSubscription(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
-        }
-
-        /// <summary>
-        /// Creates a waiter using the provided configuration.
-        /// </summary>
-        /// <param name="request">Request to send.</param>
-        /// <param name="config">Wait Configuration</param>
-        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
-        /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetAssignedSubscriptionRequest, GetAssignedSubscriptionResponse> ForAssignedSubscription(GetAssignedSubscriptionRequest request, WaiterConfiguration config, params SubscriptionLifecycleState[] targetStates)
-        {
-            var agent = new WaiterAgent<GetAssignedSubscriptionRequest, GetAssignedSubscriptionResponse>(
-                request,
-                request => client.GetAssignedSubscription(request),
-                response => targetStates.Contains(response.AssignedSubscription.LifecycleState.Value),
-                targetStates.Contains(SubscriptionLifecycleState.Deleted)
-            );
-            return new Waiter<GetAssignedSubscriptionRequest, GetAssignedSubscriptionResponse>(config, agent);
-        }
-        /// <summary>
-        /// Creates a waiter using default wait configuration.
-        /// </summary>
-        /// <param name="request">Request to send.</param>
-        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
-        /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetSubscriptionRequest, GetSubscriptionResponse> ForSubscription(GetSubscriptionRequest request, params SubscriptionLifecycleState[] targetStates)
-        {
-            return this.ForSubscription(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
-        }
-
-        /// <summary>
-        /// Creates a waiter using the provided configuration.
-        /// </summary>
-        /// <param name="request">Request to send.</param>
-        /// <param name="config">Wait Configuration</param>
-        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
-        /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetSubscriptionRequest, GetSubscriptionResponse> ForSubscription(GetSubscriptionRequest request, WaiterConfiguration config, params SubscriptionLifecycleState[] targetStates)
-        {
-            var agent = new WaiterAgent<GetSubscriptionRequest, GetSubscriptionResponse>(
-                request,
-                request => client.GetSubscription(request),
-                response => targetStates.Contains(response.Subscription.LifecycleState.Value),
-                targetStates.Contains(SubscriptionLifecycleState.Deleted)
-            );
-            return new Waiter<GetSubscriptionRequest, GetSubscriptionResponse>(config, agent);
-        }
-        /// <summary>
-        /// Creates a waiter using default wait configuration.
-        /// </summary>
-        /// <param name="request">Request to send.</param>
-        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
-        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetSubscriptionMappingRequest, GetSubscriptionMappingResponse> ForSubscriptionMapping(GetSubscriptionMappingRequest request, params SubscriptionMapping.LifecycleStateEnum[] targetStates)
         {
             return this.ForSubscriptionMapping(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

@@ -26,7 +26,7 @@ namespace Oci.TenantmanagercontrolplaneService
     public class DomainClient : RegionalClientBase
     {
         private readonly RetryConfiguration retryConfiguration;
-        private const string basePathWithoutHost = "/20200801";
+        private const string basePathWithoutHost = "/20230401";
 
         public DomainPaginators Paginators { get; }
 
@@ -165,7 +165,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Domain",
                     OperationName = "DeleteDomain",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/Domain/DeleteDomain",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/Domain/DeleteDomain",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -221,7 +221,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Domain",
                     OperationName = "GetDomain",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/Domain/GetDomain",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/Domain/GetDomain",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -278,7 +278,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Domain",
                     OperationName = "ListDomains",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/Domain/ListDomains",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/Domain/ListDomains",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -334,7 +334,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Domain",
                     OperationName = "UpdateDomain",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/Domain/UpdateDomain",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/Domain/UpdateDomain",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

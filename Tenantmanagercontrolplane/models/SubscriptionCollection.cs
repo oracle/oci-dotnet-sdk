@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
     /// <summary>
-    /// List of subscriptions.
+    /// List of subscription summaries.
     /// </summary>
     public class SubscriptionCollection 
     {
         
         /// <value>
-        /// Array containing subscription items.
+        /// Array containing subscription summary items.
         /// </value>
         /// <remarks>
         /// Required

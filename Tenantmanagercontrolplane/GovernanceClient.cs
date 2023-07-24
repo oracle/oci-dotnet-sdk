@@ -26,7 +26,7 @@ namespace Oci.TenantmanagercontrolplaneService
     public class GovernanceClient : RegionalClientBase
     {
         private readonly RetryConfiguration retryConfiguration;
-        private const string basePathWithoutHost = "/20200801";
+        private const string basePathWithoutHost = "/20230401";
 
         /// <summary>
         /// Creates a new service instance using the given authentication provider and/or client configuration and/or endpoint.
@@ -103,7 +103,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Governance",
                     OperationName = "AddGovernance",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/OrganizationTenancy/AddGovernance",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/OrganizationTenancy/AddGovernance",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -159,7 +159,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Governance",
                     OperationName = "RemoveGovernance",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/OrganizationTenancy/RemoveGovernance",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/OrganizationTenancy/RemoveGovernance",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

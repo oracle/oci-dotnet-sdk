@@ -474,8 +474,7 @@ namespace Oci.BudgetService
         /// &lt;br/&gt;
         /// To list all budgets, set the targetType query parameter to ALL (for example: &#39;targetType&#x3D;ALL&#39;).
         /// &lt;br/&gt;
-        /// Additional targetTypes would be available in future releases. Clients should ignore new targetTypes, 
-        /// or upgrade to the latest version of the client SDK to handle new targetTypes.
+        /// Clients should ignore new targetTypes, or upgrade to the latest version of the client SDK to handle new targetTypes.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

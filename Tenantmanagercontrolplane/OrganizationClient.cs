@@ -26,7 +26,7 @@ namespace Oci.TenantmanagercontrolplaneService
     public class OrganizationClient : RegionalClientBase
     {
         private readonly RetryConfiguration retryConfiguration;
-        private const string basePathWithoutHost = "/20200801";
+        private const string basePathWithoutHost = "/20230401";
 
         public OrganizationPaginators Paginators { get; }
 
@@ -109,7 +109,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Organization",
                     OperationName = "ApproveOrganizationTenancyForTransfer",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/OrganizationTenancy/ApproveOrganizationTenancyForTransfer",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/OrganizationTenancy/ApproveOrganizationTenancyForTransfer",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -221,7 +221,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Organization",
                     OperationName = "DeleteOrganizationTenancy",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/OrganizationTenancy/DeleteOrganizationTenancy",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/OrganizationTenancy/DeleteOrganizationTenancy",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -277,7 +277,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Organization",
                     OperationName = "GetOrganization",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/Organization/GetOrganization",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/Organization/GetOrganization",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -333,7 +333,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Organization",
                     OperationName = "GetOrganizationTenancy",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/OrganizationTenancy/GetOrganizationTenancy",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/OrganizationTenancy/GetOrganizationTenancy",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -389,7 +389,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Organization",
                     OperationName = "ListOrganizationTenancies",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/Organization/ListOrganizationTenancies",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/Organization/ListOrganizationTenancies",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -445,7 +445,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Organization",
                     OperationName = "ListOrganizations",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/Organization/ListOrganizations",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/Organization/ListOrganizations",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -501,7 +501,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Organization",
                     OperationName = "RestoreOrganizationTenancy",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/OrganizationTenancy/RestoreOrganizationTenancy",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/OrganizationTenancy/RestoreOrganizationTenancy",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -557,7 +557,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Organization",
                     OperationName = "UnapproveOrganizationTenancyForTransfer",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/OrganizationTenancy/UnapproveOrganizationTenancyForTransfer",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/OrganizationTenancy/UnapproveOrganizationTenancyForTransfer",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -613,7 +613,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Organization",
                     OperationName = "UpdateOrganization",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/Organization/UpdateOrganization",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/Organization/UpdateOrganization",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

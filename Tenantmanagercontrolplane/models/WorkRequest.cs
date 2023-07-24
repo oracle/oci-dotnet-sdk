@@ -65,7 +65,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The resources affected by this work request.
+        /// The resources affected by the work request.
         /// </value>
         /// <remarks>
         /// Required

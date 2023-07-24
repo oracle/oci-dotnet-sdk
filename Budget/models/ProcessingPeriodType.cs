@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.BudgetService.Models
 {
   /// <summary>
-  /// The type of the budget processing period. Valid values are INVOICE and MONTH.
+  /// The budget processing period type. Valid values are INVOICE, MONTH, and SINGLE_USE.
   /// </summary>
   public enum ProcessingPeriodType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -22,6 +22,8 @@ namespace Oci.BudgetService.Models
       [EnumMember(Value = "INVOICE")]
       Invoice,
       [EnumMember(Value = "MONTH")]
-      Month
+      Month,
+      [EnumMember(Value = "SINGLE_USE")]
+      SingleUse
   }
 }
