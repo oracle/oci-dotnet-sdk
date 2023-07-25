@@ -20,7 +20,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
     {
         
         /// <value>
-        /// The ID of the subscription to which the tenancy is associated.
+        /// OCID of the subscription.
         /// </value>
         /// <remarks>
         /// Required

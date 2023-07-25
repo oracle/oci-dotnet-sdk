@@ -11,18 +11,31 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
     /// <summary>
-    /// Assigned subscription information.
+    /// Assigned subscription type, which carries shared properties for any assigned subscription version.
     /// </summary>
+    [JsonConverter(typeof(AssignedSubscriptionModelConverter))]
     public class AssignedSubscription 
     {
+                ///
+        /// <value>
+        /// The entity version of the subscription, whether V1 (the legacy schema version), or V2 (the latest 20230401 API version).
+        /// </value>
+        ///
+        public enum EntityVersionEnum {
+            [EnumMember(Value = "V1")]
+            V1,
+            [EnumMember(Value = "V2")]
+            V2
+        };
+
         
         /// <value>
-        /// OCID of the subscription.
+        /// The Oracle ID ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)) of the subscription.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +45,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// OCID of the compartment. Always a tenancy OCID.
+        /// The Oracle ID ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)) of the owning compartment. Always a tenancy OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,17 +55,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Subscription ID.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ClassicSubscriptionId is required.")]
-        [JsonProperty(PropertyName = "classicSubscriptionId")]
-        public string ClassicSubscriptionId { get; set; }
-        
-        /// <value>
-        /// The type of subscription, such as 'CLOUDCM', 'SAAS', 'ERP', or 'CRM'.
+        /// The type of subscription, such as 'UCM', 'SAAS', 'ERP', 'CRM'.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,107 +65,88 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string ServiceName { get; set; }
         
         /// <value>
-        /// Denotes if the subscription is legacy or not.
+        /// The date and time of creation, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// 
         /// </value>
-        [JsonProperty(PropertyName = "isClassicSubscription")]
-        public System.Nullable<bool> IsClassicSubscription { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeCreated is required.")]
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Region for the subscription.
+        /// The date and time of update, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// 
         /// </value>
-        [JsonProperty(PropertyName = "regionAssignment")]
-        public string RegionAssignment { get; set; }
-        
-        /// <value>
-        /// Lifecycle state of the subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<SubscriptionLifecycleState> LifecycleState { get; set; }
-        
-        /// <value>
-        /// List of SKUs linked to the subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "skus")]
-        public System.Collections.Generic.List<SubscriptionSku> Skus { get; set; }
-        
-        /// <value>
-        /// List of subscription order OCIDs that contributed to this subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "orderIds")]
-        public System.Collections.Generic.List<string> OrderIds { get; set; }
-        
-        /// <value>
-        /// Denotes any program that is associated with the subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "programType")]
-        public string ProgramType { get; set; }
-        
-        /// <value>
-        /// The country code for the customer associated with the subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "customerCountryCode")]
-        public string CustomerCountryCode { get; set; }
-        
-        /// <value>
-        /// The currency code for the customer associated with the subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "cloudAmountCurrency")]
-        public string CloudAmountCurrency { get; set; }
-        
-        /// <value>
-        /// Customer service identifier for the customer associated with the subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "csiNumber")]
-        public string CsiNumber { get; set; }
-        
-        /// <value>
-        /// Tier for the subscription, whether it is a free promotion subscription or a paid subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "subscriptionTier")]
-        public string SubscriptionTier { get; set; }
-        
-        /// <value>
-        /// Denotes whether or not the subscription is a government subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "isGovernmentSubscription")]
-        public System.Nullable<bool> IsGovernmentSubscription { get; set; }
-        
-        /// <value>
-        /// List of promotions related to the subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "promotion")]
-        public System.Collections.Generic.List<Promotion> Promotion { get; set; }
-        
-        /// <value>
-        /// Purchase entitlement ID associated with the subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "purchaseEntitlementId")]
-        public string PurchaseEntitlementId { get; set; }
-        
-        /// <value>
-        /// Subscription start time.
-        /// </value>
-        [JsonProperty(PropertyName = "startDate")]
-        public System.Nullable<System.DateTime> StartDate { get; set; }
-        
-        /// <value>
-        /// Subscription end time.
-        /// </value>
-        [JsonProperty(PropertyName = "endDate")]
-        public System.Nullable<System.DateTime> EndDate { get; set; }
-        
-        /// <value>
-        /// Date-time when subscription is updated.
-        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Date-time when subscription is created.
+        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
-        [JsonProperty(PropertyName = "timeCreated")]
-        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "FreeformTags is required.")]
+        [JsonProperty(PropertyName = "freeformTags")]
+        public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
+        /// <value>
+        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DefinedTags is required.")]
+        [JsonProperty(PropertyName = "definedTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+    }
+
+    public class AssignedSubscriptionModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(AssignedSubscription);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(AssignedSubscription);
+            var discriminator = jsonObject["entityVersion"].Value<string>();
+            switch (discriminator)
+            {
+                case "V1":
+                    obj = new ClassicAssignedSubscription();
+                    break;
+                case "V2":
+                    obj = new CloudAssignedSubscription();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under AssignedSubscription! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

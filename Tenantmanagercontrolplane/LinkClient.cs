@@ -26,7 +26,7 @@ namespace Oci.TenantmanagercontrolplaneService
     public class LinkClient : RegionalClientBase
     {
         private readonly RetryConfiguration retryConfiguration;
-        private const string basePathWithoutHost = "/20200801";
+        private const string basePathWithoutHost = "/20230401";
 
         public LinkPaginators Paginators { get; }
 
@@ -109,7 +109,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Link",
                     OperationName = "DeleteLink",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/Link/DeleteLink",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/Link/DeleteLink",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -165,7 +165,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Link",
                     OperationName = "GetLink",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/Link/GetLink",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/Link/GetLink",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -221,7 +221,7 @@ namespace Oci.TenantmanagercontrolplaneService
                     ServiceName = "Link",
                     OperationName = "ListLinks",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20200801/Link/ListLinks",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/organizations/20230401/Link/ListLinks",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

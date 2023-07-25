@@ -34,7 +34,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string DurationUnit { get; set; }
         
         /// <value>
-        /// If a subscription is present, indicates the total amount of promotional subscription credit.
+        /// If a subscription is present, indicates the total amount of promotional subscription credits.
         /// </value>
         [JsonProperty(PropertyName = "amount")]
         public System.Nullable<float> Amount { get; set; }

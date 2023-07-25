@@ -537,10 +537,10 @@ namespace Oci.IdentitydomainsService.Models
         public AuthenticationFactorSettingsTotpSettings TotpSettings { get; set; }
         
         [JsonProperty(PropertyName = "urn:ietf:params:scim:schemas:oracle:idcs:extension:thirdParty:AuthenticationFactorSettings")]
-        public ExtensionThirdPartyAuthenticationFactorSettings UrnietfparamsscimschemasoracleidcsextensionthirdPartyAuthenticationFactorSettings { get; set; }
+        public ExtensionThirdPartyAuthenticationFactorSettings UrnIetfParamsScimSchemasOracleIdcsExtensionThirdPartyAuthenticationFactorSettings { get; set; }
         
         [JsonProperty(PropertyName = "urn:ietf:params:scim:schemas:oracle:idcs:extension:fido:AuthenticationFactorSettings")]
-        public ExtensionFidoAuthenticationFactorSettings UrnietfparamsscimschemasoracleidcsextensionfidoAuthenticationFactorSettings { get; set; }
+        public ExtensionFidoAuthenticationFactorSettings UrnIetfParamsScimSchemasOracleIdcsExtensionFidoAuthenticationFactorSettings { get; set; }
         
     }
 }

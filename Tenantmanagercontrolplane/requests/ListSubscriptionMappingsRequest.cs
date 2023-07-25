@@ -20,7 +20,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
     {
         
         /// <value>
-        /// The ID of the subscription to which the tenancy is associated.
+        /// OCID of the subscription.
         /// </value>
         /// <remarks>
         /// Required
@@ -36,7 +36,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
         public string SubscriptionMappingId { get; set; }
         
         /// <value>
-        /// OCID of the compartment. Always a tenancy OCID.
+        /// The ID of the compartment in which to list resources.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }

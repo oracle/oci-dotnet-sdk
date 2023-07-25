@@ -22,7 +22,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
     {
         
         /// <value>
-        /// Stock keeping unit ID.
+        /// Stock Keeping Unit (SKU) ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,25 +62,25 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string MetricName { get; set; }
         
         /// <value>
-        /// Denotes if the SKU is considered as a parent or child.
+        /// Specifies if the SKU is considered as a parent or child.
         /// </value>
         [JsonProperty(PropertyName = "isBaseServiceComponent")]
         public System.Nullable<bool> IsBaseServiceComponent { get; set; }
         
         /// <value>
-        /// Denotes if an additional test instance can be provisioned by the SAAS application.
+        /// Specifies if an additional test instance can be provisioned by the SaaS application.
         /// </value>
         [JsonProperty(PropertyName = "isAdditionalInstance")]
         public System.Nullable<bool> IsAdditionalInstance { get; set; }
         
         /// <value>
-        /// Date-time when the SKU was created.
+        /// Date and time when the SKU was created.
         /// </value>
         [JsonProperty(PropertyName = "startDate")]
         public System.Nullable<System.DateTime> StartDate { get; set; }
         
         /// <value>
-        /// Date-time when the SKU ended.
+        /// Date and time when the SKU ended.
         /// </value>
         [JsonProperty(PropertyName = "endDate")]
         public System.Nullable<System.DateTime> EndDate { get; set; }

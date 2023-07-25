@@ -72,10 +72,6 @@ namespace Oci.AidocumentService.Models
         [JsonProperty(PropertyName = "maxTrainingTimeInHours")]
         public System.Double MaxTrainingTimeInHours { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TrainingDataset is required.")]
         [JsonProperty(PropertyName = "trainingDataset")]
         public Dataset TrainingDataset { get; set; }
         

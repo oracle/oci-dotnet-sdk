@@ -20,7 +20,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
     {
         
         /// <value>
-        /// OCID of the compartment. Always a tenancy OCID.
+        /// The ID of the compartment in which to list resources.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -80,5 +80,11 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
+        /// The version of the subscription entity.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityVersion")]
+        public System.Nullable<EntityVersion> EntityVersion { get; set; }
     }
 }

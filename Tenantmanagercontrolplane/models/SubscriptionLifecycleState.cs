@@ -13,25 +13,21 @@ using System.Runtime.Serialization;
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
   /// <summary>
-  /// Lifecycle state of the subscription.
+  /// The current lifecycle state of the OCS subscription.
   /// </summary>
   public enum SubscriptionLifecycleState {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "CREATING")]
-      Creating,
+      [EnumMember(Value = "NEEDS_ATTENTION")]
+      NeedsAttention,
       [EnumMember(Value = "ACTIVE")]
       Active,
       [EnumMember(Value = "INACTIVE")]
       Inactive,
-      [EnumMember(Value = "UPDATING")]
-      Updating,
-      [EnumMember(Value = "DELETING")]
-      Deleting,
-      [EnumMember(Value = "DELETED")]
-      Deleted,
       [EnumMember(Value = "FAILED")]
-      Failed
+      Failed,
+      [EnumMember(Value = "CREATING")]
+      Creating
   }
 }

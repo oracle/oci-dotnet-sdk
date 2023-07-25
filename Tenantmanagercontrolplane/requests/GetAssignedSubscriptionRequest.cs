@@ -20,7 +20,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
     {
         
         /// <value>
-        /// OCID of the assigned subscription.
+        /// OCID of the assigned Oracle Cloud Subscription.
         /// </value>
         /// <remarks>
         /// Required

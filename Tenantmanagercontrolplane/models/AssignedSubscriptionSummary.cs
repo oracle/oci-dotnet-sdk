@@ -11,18 +11,31 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.TenantmanagercontrolplaneService.Models
 {
     /// <summary>
-    /// Summary of AssignedSubscription information.
+    /// Assigned subscription summary type, which carries shared properties for any assigned subscription summary version.
     /// </summary>
+    [JsonConverter(typeof(AssignedSubscriptionSummaryModelConverter))]
     public class AssignedSubscriptionSummary 
     {
+                ///
+        /// <value>
+        /// The entity version of the subscription, whether V1 (the legacy schema version), or V2 (the latest 20230401 API version).
+        /// </value>
+        ///
+        public enum EntityVersionEnum {
+            [EnumMember(Value = "V1")]
+            V1,
+            [EnumMember(Value = "V2")]
+            V2
+        };
+
         
         /// <value>
-        /// OCID of the subscription.
+        /// The Oracle ID ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)) of the subscription.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +45,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// OCID of the compartment. Always a tenancy OCID.
+        /// The Oracle ID ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)) of the owning compartment. Always a tenancy OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,17 +55,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Subscription ID.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ClassicSubscriptionId is required.")]
-        [JsonProperty(PropertyName = "classicSubscriptionId")]
-        public string ClassicSubscriptionId { get; set; }
-        
-        /// <value>
-        /// The type of subscription, such as 'CLOUDCM', 'SAAS', 'ERP', or 'CRM'.
+        /// The type of subscription, such as 'UCM', 'SAAS', 'ERP', 'CRM'.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,53 +65,88 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string ServiceName { get; set; }
         
         /// <value>
-        /// Denotes if the subscription is legacy or not.
+        /// The date and time of creation, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// 
         /// </value>
-        [JsonProperty(PropertyName = "isClassicSubscription")]
-        public System.Nullable<bool> IsClassicSubscription { get; set; }
-        
-        /// <value>
-        /// Region for the subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "regionAssignment")]
-        public string RegionAssignment { get; set; }
-        
-        /// <value>
-        /// Lifecycle state of the subscription.
-        /// </value>
-        [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<SubscriptionLifecycleState> LifecycleState { get; set; }
-        
-        /// <value>
-        /// Subscription start time.
-        /// </value>
-        [JsonProperty(PropertyName = "startDate")]
-        public System.Nullable<System.DateTime> StartDate { get; set; }
-        
-        /// <value>
-        /// Subscription end time.
-        /// </value>
-        [JsonProperty(PropertyName = "endDate")]
-        public System.Nullable<System.DateTime> EndDate { get; set; }
-        
-        /// <value>
-        /// Date-time when subscription is updated.
-        /// </value>
-        [JsonProperty(PropertyName = "timeUpdated")]
-        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-        
-        /// <value>
-        /// Date-time when subscription is created.
-        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Customer service identifier for the customer associated with the subscription.
+        /// The date and time of update, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// 
         /// </value>
-        [JsonProperty(PropertyName = "csiNumber")]
-        public string CsiNumber { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeUpdated is required.")]
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        /// <value>
+        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "FreeformTags is required.")]
+        [JsonProperty(PropertyName = "freeformTags")]
+        public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        /// <value>
+        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DefinedTags is required.")]
+        [JsonProperty(PropertyName = "definedTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+    }
+
+    public class AssignedSubscriptionSummaryModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(AssignedSubscriptionSummary);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(AssignedSubscriptionSummary);
+            var discriminator = jsonObject["entityVersion"].Value<string>();
+            switch (discriminator)
+            {
+                case "V1":
+                    obj = new ClassicAssignedSubscriptionSummary();
+                    break;
+                case "V2":
+                    obj = new CloudAssignedSubscriptionSummary();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under AssignedSubscriptionSummary! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

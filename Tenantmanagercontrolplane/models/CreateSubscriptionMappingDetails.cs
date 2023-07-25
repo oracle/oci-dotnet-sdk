@@ -32,7 +32,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// OCID of subscription.
+        /// OCID of Subscription.
         /// </value>
         /// <remarks>
         /// Required

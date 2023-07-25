@@ -20,7 +20,7 @@ namespace Oci.TenantmanagercontrolplaneService.Requests
     {
         
         /// <value>
-        /// OCID of the compartment. Always a tenancy OCID.
+        /// The ID of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required

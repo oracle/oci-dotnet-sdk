@@ -159,5 +159,21 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "loadBalancers")]
         public System.Collections.Generic.List<InstancePoolLoadBalancerAttachment> LoadBalancers { get; set; }
         
+        /// <value>
+        /// A user-friendly formatter for the instance pool's instances. Instance displaynames follow the format.
+        /// The formatter does not retroactively change instance's displaynames, only instance displaynames in the future follow the format
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "instanceDisplayNameFormatter")]
+        public string InstanceDisplayNameFormatter { get; set; }
+        
+        /// <value>
+        /// A user-friendly formatter for the instance pool's instances. Instance hostnames follow the format.
+        /// The formatter does not retroactively change instance's hostnames, only instance hostnames in the future follow the format
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "instanceHostnameFormatter")]
+        public string InstanceHostnameFormatter { get; set; }
+        
     }
 }

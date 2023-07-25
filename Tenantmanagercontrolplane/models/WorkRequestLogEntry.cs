@@ -32,7 +32,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the log message was written. An RFC 3339-formatted date and time string.
+        /// The time the log message was written. An RFC 3339 formatted date and time string.
         /// </value>
         /// <remarks>
         /// Required
