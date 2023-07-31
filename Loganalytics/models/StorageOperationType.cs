@@ -28,6 +28,8 @@ namespace Oci.LoganalyticsService.Models
       RecallArchivedStorageData,
       [EnumMember(Value = "RELEASE_RECALLED_STORAGE_DATA")]
       ReleaseRecalledStorageData,
+      [EnumMember(Value = "PURGE_ARCHIVAL_DATA")]
+      PurgeArchivalData,
       [EnumMember(Value = "ARCHIVE_STORAGE_DATA")]
       ArchiveStorageData,
       [EnumMember(Value = "CLEANUP_ARCHIVAL_STORAGE_DATA")]

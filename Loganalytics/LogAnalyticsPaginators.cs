@@ -295,6 +295,55 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListEffectiveProperties operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListEffectivePropertiesResponse> ListEffectivePropertiesResponseEnumerator(ListEffectivePropertiesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListEffectivePropertiesRequest, ListEffectivePropertiesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListEffectiveProperties(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the EffectivePropertySummary objects
+        /// contained in responses from the ListEffectiveProperties operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<EffectivePropertySummary> ListEffectivePropertiesRecordEnumerator(ListEffectivePropertiesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListEffectivePropertiesRequest, ListEffectivePropertiesResponse, EffectivePropertySummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListEffectiveProperties(request, retryConfiguration, cancellationToken),
+                response => response.EffectivePropertyCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListEntityAssociations operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -1030,6 +1079,55 @@ namespace Oci.LoganalyticsService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListOverlappingRecalls operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListOverlappingRecallsResponse> ListOverlappingRecallsResponseEnumerator(ListOverlappingRecallsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListOverlappingRecallsRequest, ListOverlappingRecallsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOverlappingRecalls(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the OverlappingRecallSummary objects
+        /// contained in responses from the ListOverlappingRecalls operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<OverlappingRecallSummary> ListOverlappingRecallsRecordEnumerator(ListOverlappingRecallsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListOverlappingRecallsRequest, ListOverlappingRecallsResponse, OverlappingRecallSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOverlappingRecalls(request, retryConfiguration, cancellationToken),
+                response => response.OverlappingRecallCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListParserFunctions operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -1173,6 +1271,55 @@ namespace Oci.LoganalyticsService
                 },
                 request => client.ListParsers(request, retryConfiguration, cancellationToken),
                 response => response.LogAnalyticsParserCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListPropertiesMetadata operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListPropertiesMetadataResponse> ListPropertiesMetadataResponseEnumerator(ListPropertiesMetadataRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListPropertiesMetadataRequest, ListPropertiesMetadataResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListPropertiesMetadata(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the PropertyMetadataSummary objects
+        /// contained in responses from the ListPropertiesMetadata operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<PropertyMetadataSummary> ListPropertiesMetadataRecordEnumerator(ListPropertiesMetadataRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListPropertiesMetadataRequest, ListPropertiesMetadataResponse, PropertyMetadataSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListPropertiesMetadata(request, retryConfiguration, cancellationToken),
+                response => response.PropertyMetadataSummaryCollection.Items
             );
         }
 

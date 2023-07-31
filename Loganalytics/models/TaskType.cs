@@ -24,8 +24,6 @@ namespace Oci.LoganalyticsService.Models
       [EnumMember(Value = "ACCELERATION")]
       Acceleration,
       [EnumMember(Value = "PURGE")]
-      Purge,
-      [EnumMember(Value = "ACCELERATION_MAINTENANCE")]
-      AccelerationMaintenance
+      Purge
   }
 }

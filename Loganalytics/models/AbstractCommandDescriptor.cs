@@ -128,7 +128,13 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "DEDUP")]
             Dedup,
             [EnumMember(Value = "TIME_CLUSTER")]
-            TimeCluster
+            TimeCluster,
+            [EnumMember(Value = "FREQUENT")]
+            Frequent,
+            [EnumMember(Value = "RARE")]
+            Rare,
+            [EnumMember(Value = "OUTLIER")]
+            Outlier
         };
 
         
@@ -217,6 +223,9 @@ namespace Oci.LoganalyticsService.Models
                 case "TAIL":
                     obj = new TailCommandDescriptor();
                     break;
+                case "OUTLIER":
+                    obj = new OutlierCommandDescriptor();
+                    break;
                 case "DEMO_MODE":
                     obj = new DemoModeCommandDescriptor();
                     break;
@@ -249,6 +258,9 @@ namespace Oci.LoganalyticsService.Models
                     break;
                 case "BUCKET":
                     obj = new BucketCommandDescriptor();
+                    break;
+                case "RARE":
+                    obj = new RareCommandDescriptor();
                     break;
                 case "ADD_INSIGHTS":
                     obj = new AddInsightsCommandDescriptor();
@@ -306,6 +318,9 @@ namespace Oci.LoganalyticsService.Models
                     break;
                 case "CLUSTER_SPLIT":
                     obj = new ClusterSplitCommandDescriptor();
+                    break;
+                case "FREQUENT":
+                    obj = new FrequentCommandDescriptor();
                     break;
                 case "CLUSTER_DETAILS":
                     obj = new ClusterDetailsCommandDescriptor();

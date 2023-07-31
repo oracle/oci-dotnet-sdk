@@ -60,5 +60,23 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "isOverlappingWithExistingRecalls")]
         public System.Nullable<bool> IsOverlappingWithExistingRecalls { get; set; }
         
+        /// <value>
+        /// This is the number of core groups estimated for this recall
+        /// </value>
+        [JsonProperty(PropertyName = "coreGroupCount")]
+        public System.Nullable<int> CoreGroupCount { get; set; }
+        
+        /// <value>
+        /// This is the max number of core groups that is available for any recall
+        /// </value>
+        [JsonProperty(PropertyName = "coreGroupCountLimit")]
+        public System.Nullable<int> CoreGroupCountLimit { get; set; }
+        
+        /// <value>
+        /// This is the size limit in bytes
+        /// </value>
+        [JsonProperty(PropertyName = "sizeLimitInBytes")]
+        public System.Nullable<long> SizeLimitInBytes { get; set; }
+        
     }
 }

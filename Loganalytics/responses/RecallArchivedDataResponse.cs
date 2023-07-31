@@ -39,6 +39,18 @@ namespace Oci.LoganalyticsService.Responses
         public string Location { get; set; }
 
 
+        /// <value>
+        /// For optimistic concurrency control. See `if-match`.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
+        public string Etag { get; set; }
+
+        /// <value>
+        /// The returned RecalledDataInfo instance.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public RecalledDataInfo RecalledDataInfo { get; set; }
 
     }
 }

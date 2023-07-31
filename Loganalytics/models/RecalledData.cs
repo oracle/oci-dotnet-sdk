@@ -62,7 +62,9 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "RECALLED")]
             Recalled,
             [EnumMember(Value = "PENDING")]
-            Pending
+            Pending,
+            [EnumMember(Value = "FAILED")]
+            Failed
         };
 
         /// <value>
@@ -97,6 +99,56 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "StorageUsageInBytes is required.")]
         [JsonProperty(PropertyName = "storageUsageInBytes")]
         public System.Nullable<long> StorageUsageInBytes { get; set; }
+        
+        /// <value>
+        /// This is the size of the archival data not recalled yet within the specified time range
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "NotRecalledDataInBytes is required.")]
+        [JsonProperty(PropertyName = "notRecalledDataInBytes")]
+        public System.Nullable<long> NotRecalledDataInBytes { get; set; }
+        
+        /// <value>
+        /// This is the purpose of the recall
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Purpose is required.")]
+        [JsonProperty(PropertyName = "purpose")]
+        public string Purpose { get; set; }
+        
+        /// <value>
+        /// This is the query associated with the recall
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "QueryString is required.")]
+        [JsonProperty(PropertyName = "queryString")]
+        public string QueryString { get; set; }
+        
+        /// <value>
+        /// This is the list of logsets associated with the recall
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LogSets is required.")]
+        [JsonProperty(PropertyName = "logSets")]
+        public string LogSets { get; set; }
+        
+        /// <value>
+        /// This is the user who initiated the recall request
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CreatedBy is required.")]
+        [JsonProperty(PropertyName = "createdBy")]
+        public string CreatedBy { get; set; }
         
     }
 }

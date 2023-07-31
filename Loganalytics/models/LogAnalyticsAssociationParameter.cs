@@ -79,6 +79,18 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
+        /// The status description.
+        /// </value>
+        [JsonProperty(PropertyName = "statusDescription")]
+        public string StatusDescription { get; set; }
+        
+        /// <value>
+        /// A list of association properties.
+        /// </value>
+        [JsonProperty(PropertyName = "associationProperties")]
+        public System.Collections.Generic.List<AssociationProperty> AssociationProperties { get; set; }
+        
+        /// <value>
         /// A list of missing properties.
         /// </value>
         [JsonProperty(PropertyName = "missingProperties")]

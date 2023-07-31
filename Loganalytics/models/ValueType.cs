@@ -34,6 +34,8 @@ namespace Oci.LoganalyticsService.Models
       [EnumMember(Value = "TIMESTAMP")]
       Timestamp,
       [EnumMember(Value = "FACET")]
-      Facet
+      Facet,
+      [EnumMember(Value = "TABLE")]
+      Table
   }
 }

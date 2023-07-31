@@ -55,7 +55,7 @@ namespace Oci.OpsiService.Models
         public System.Nullable<CategoryEnum> Category { get; set; }
                 ///
         /// <value>
-        /// Type of a data object column.
+        /// Type name of a data object column.
         /// </value>
         ///
         public enum DataTypeNameEnum {
@@ -71,7 +71,7 @@ namespace Oci.OpsiService.Models
         };
 
         /// <value>
-        /// Type of a data object column.
+        /// Type name of a data object column.
         /// </value>
         [JsonProperty(PropertyName = "dataTypeName")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

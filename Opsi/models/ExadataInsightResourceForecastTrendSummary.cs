@@ -50,6 +50,12 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "DaysToReachCapacity is required.")]
         [JsonProperty(PropertyName = "daysToReachCapacity")]
         public System.Nullable<int> DaysToReachCapacity { get; set; }
+        
+        /// <value>
+        /// Auto-ML algorithm leveraged for the forecast. Only applicable for Auto-ML forecast.
+        /// </value>
+        [JsonProperty(PropertyName = "selectedForecastAlgorithm")]
+        public string SelectedForecastAlgorithm { get; set; }
                 ///
         /// <value>
         /// Time series patterns used in the forecasting.

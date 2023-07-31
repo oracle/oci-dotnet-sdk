@@ -141,6 +141,27 @@ namespace Oci.FusionappsService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
+        /// A property describing the phase of the scheduled activity.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ScheduledActivityPhase is required.")]
+        [JsonProperty(PropertyName = "scheduledActivityPhase")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ScheduledActivity.ScheduledActivityPhaseEnum> ScheduledActivityPhase { get; set; }
+        
+        /// <value>
+        /// The unique identifier that associates a scheduled activity with others in one complete maintenance. For example, with ZDT, a complete upgrade maintenance includes 5 scheduled activities - PREPARE, EXECUTE, POST, PRE_MAINTENANCE, and POST_MAINTENANCE. All of them share the same unique identifier - scheduledActivityAssociationId.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ScheduledActivityAssociationId is required.")]
+        [JsonProperty(PropertyName = "scheduledActivityAssociationId")]
+        public string ScheduledActivityAssociationId { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

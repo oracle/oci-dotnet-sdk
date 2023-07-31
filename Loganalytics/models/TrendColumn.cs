@@ -43,12 +43,24 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "totalIntervalCounts")]
         public System.Collections.Generic.List<long> TotalIntervalCounts { get; set; }
         
+        /// <value>
+        /// Sum of column values for a given timestamp after applying filter.
+        /// 
+        /// </value>
         [JsonProperty(PropertyName = "totalIntervalCountsAfterFilter")]
         public System.Collections.Generic.List<long> TotalIntervalCountsAfterFilter { get; set; }
         
+        /// <value>
+        /// Number of aggregated groups for a given timestamp.
+        /// 
+        /// </value>
         [JsonProperty(PropertyName = "intervalGroupCounts")]
         public System.Collections.Generic.List<long> IntervalGroupCounts { get; set; }
         
+        /// <value>
+        /// Number of aggregated groups for a given timestamp after applying filter.
+        /// 
+        /// </value>
         [JsonProperty(PropertyName = "intervalGroupCountsAfterFilter")]
         public System.Collections.Generic.List<long> IntervalGroupCountsAfterFilter { get; set; }
         

@@ -22,6 +22,16 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
+        /// String representation of the label condition. This supports specifying multiple condition blocks at various nested levels.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "conditionString")]
+        public string ConditionString { get; set; }
+        
+        [JsonProperty(PropertyName = "conditionBlock")]
+        public ConditionBlock ConditionBlock { get; set; }
+        
+        /// <value>
         /// The message.
         /// </value>
         [JsonProperty(PropertyName = "message")]
