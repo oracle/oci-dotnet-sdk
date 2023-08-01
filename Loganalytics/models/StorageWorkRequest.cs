@@ -170,5 +170,29 @@ namespace Oci.LoganalyticsService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EncryptionKeyType> KeyType { get; set; }
         
+        /// <value>
+        /// This is a list of logsets associated with this work request
+        /// </value>
+        [JsonProperty(PropertyName = "logSets")]
+        public string LogSets { get; set; }
+        
+        /// <value>
+        /// This is the purpose of the operation associated with this work request
+        /// </value>
+        [JsonProperty(PropertyName = "purpose")]
+        public string Purpose { get; set; }
+        
+        /// <value>
+        /// This is the query string applied on the operation associated with this work request
+        /// </value>
+        [JsonProperty(PropertyName = "query")]
+        public string Query { get; set; }
+        
+        /// <value>
+        /// This is the flag to indicate if only new data has to be recalled in this work request
+        /// </value>
+        [JsonProperty(PropertyName = "isRecallNewDataOnly")]
+        public System.Nullable<bool> IsRecallNewDataOnly { get; set; }
+        
     }
 }

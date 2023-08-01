@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// The is the namespace summary of a tenancy in Logan Analytics application
+    /// The is the namespace summary of a tenancy in Logging Analytics application
     /// </summary>
     public class NamespaceSummary 
     {

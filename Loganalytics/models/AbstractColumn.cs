@@ -43,6 +43,8 @@ namespace Oci.LoganalyticsService.Models
             TimeClusterColumn,
             [EnumMember(Value = "TIME_CLUSTER_DATA_COLUMN")]
             TimeClusterDataColumn,
+            [EnumMember(Value = "TABLE_COLUMN")]
+            TableColumn,
             [EnumMember(Value = "TIME_COLUMN")]
             TimeColumn,
             [EnumMember(Value = "TREND_COLUMN")]
@@ -177,6 +179,9 @@ namespace Oci.LoganalyticsService.Models
                     break;
                 case "TIME_STATS_DATA_COLUMN":
                     obj = new TimeStatsDataColumn();
+                    break;
+                case "TABLE_COLUMN":
+                    obj = new TableColumn();
                     break;
                 case "CHART_COLUMN":
                     obj = new ChartColumn();

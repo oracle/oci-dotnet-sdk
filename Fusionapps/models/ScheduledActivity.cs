@@ -212,6 +212,43 @@ namespace Oci.FusionappsService.Models
         [JsonProperty(PropertyName = "lifecycleDetails")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleDetailsEnum> LifecycleDetails { get; set; }
+                ///
+        /// <value>
+        /// A property describing the phase of the scheduled activity.
+        /// </value>
+        ///
+        public enum ScheduledActivityPhaseEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "PRE_MAINTENANCE")]
+            PreMaintenance,
+            [EnumMember(Value = "MAINTENANCE")]
+            Maintenance,
+            [EnumMember(Value = "POST_MAINTENANCE")]
+            PostMaintenance
+        };
+
+        /// <value>
+        /// A property describing the phase of the scheduled activity.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ScheduledActivityPhase is required.")]
+        [JsonProperty(PropertyName = "scheduledActivityPhase")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ScheduledActivityPhaseEnum> ScheduledActivityPhase { get; set; }
+        
+        /// <value>
+        /// The unique identifier that associates a scheduled activity with others in one complete maintenance. For example, with ZDT, a complete upgrade maintenance includes 5 scheduled activities - PREPARE, EXECUTE, POST, PRE_MAINTENANCE, and POST_MAINTENANCE. All of them share the same unique identifier - scheduledActivityAssociationId.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ScheduledActivityAssociationId is required.")]
+        [JsonProperty(PropertyName = "scheduledActivityAssociationId")]
+        public string ScheduledActivityAssociationId { get; set; }
         
     }
 }

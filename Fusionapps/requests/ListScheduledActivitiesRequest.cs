@@ -60,6 +60,18 @@ namespace Oci.FusionappsService.Requests
         public System.Nullable<ScheduledActivity.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
+        /// A filter that returns all resources that match the specified scheduledActivityAssociationId.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scheduledActivityAssociationId")]
+        public string ScheduledActivityAssociationId { get; set; }
+        
+        /// <value>
+        /// A filter that returns all resources that match the specified scheduledActivityPhase.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scheduledActivityPhase")]
+        public System.Nullable<ScheduledActivity.ScheduledActivityPhaseEnum> ScheduledActivityPhase { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

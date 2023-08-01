@@ -51,6 +51,13 @@ namespace Oci.LoganalyticsService.Models
         public string PartialResultReason { get; set; }
         
         /// <value>
+        /// True if the data returned by query is hidden.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isContentHidden")]
+        public System.Nullable<bool> IsContentHidden { get; set; }
+        
+        /// <value>
         /// Query result columns
         /// 
         /// </value>

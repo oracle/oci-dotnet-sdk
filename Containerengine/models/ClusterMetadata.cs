@@ -75,5 +75,11 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "updatedByWorkRequestId")]
         public string UpdatedByWorkRequestId { get; set; }
         
+        /// <value>
+        /// The time until which the cluster credential is valid.
+        /// </value>
+        [JsonProperty(PropertyName = "timeCredentialExpiration")]
+        public System.Nullable<System.DateTime> TimeCredentialExpiration { get; set; }
+        
     }
 }

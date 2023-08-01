@@ -42,5 +42,17 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "timeDataEnded")]
         public System.Nullable<System.DateTime> TimeDataEnded { get; set; }
         
+        /// <value>
+        /// This is the list of logsets to be accounted for in the recalled data
+        /// </value>
+        [JsonProperty(PropertyName = "logSets")]
+        public string LogSets { get; set; }
+        
+        /// <value>
+        /// This indicates if only new data has to be recalled in the timeframe
+        /// </value>
+        [JsonProperty(PropertyName = "isRecallNewDataOnly")]
+        public System.Nullable<bool> IsRecallNewDataOnly { get; set; }
+        
     }
 }

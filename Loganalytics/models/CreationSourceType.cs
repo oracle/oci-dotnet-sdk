@@ -13,8 +13,8 @@ using System.Runtime.Serialization;
 namespace Oci.LoganalyticsService.Models
 {
   /// <summary>
-  /// Entities are auto-created when enterprise manager bridge is configured in logging analytics. Similarly
-    /// entities can be auto-created when logs are forwarded from service connector.
+  /// Entities are auto-created when enterprise manager bridge is configured in logging analytics, or
+    /// when logs are forwarded from service connector or through bulk discovery from object store.
     /// 
   /// </summary>
   public enum CreationSourceType {
@@ -23,6 +23,8 @@ namespace Oci.LoganalyticsService.Models
       UnknownEnumValue,
       [EnumMember(Value = "EM_BRIDGE")]
       EmBridge,
+      [EnumMember(Value = "BULK_DISCOVERY")]
+      BulkDiscovery,
       [EnumMember(Value = "SERVICE_CONNECTOR_HUB")]
       ServiceConnectorHub,
       [EnumMember(Value = "DISCOVERY")]

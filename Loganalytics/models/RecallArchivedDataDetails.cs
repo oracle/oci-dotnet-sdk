@@ -71,5 +71,17 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "query")]
         public string Query { get; set; }
         
+        /// <value>
+        /// This is the purpose of the recall
+        /// </value>
+        [JsonProperty(PropertyName = "purpose")]
+        public string Purpose { get; set; }
+        
+        /// <value>
+        /// This indicates if only new data has to be recalled in this recall request
+        /// </value>
+        [JsonProperty(PropertyName = "isRecallNewDataOnly")]
+        public System.Nullable<bool> IsRecallNewDataOnly { get; set; }
+        
     }
 }

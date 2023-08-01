@@ -32,7 +32,7 @@ namespace Oci.OpsiService.Models
         public string Name { get; set; }
                 ///
         /// <value>
-        /// Type of the column in a data object query result set.
+        /// Type name of the column in a data object query result set.
         /// </value>
         ///
         public enum DataTypeNameEnum {
@@ -48,7 +48,7 @@ namespace Oci.OpsiService.Models
         };
 
         /// <value>
-        /// Type of the column in a data object query result set.
+        /// Type name of the column in a data object query result set.
         /// </value>
         [JsonProperty(PropertyName = "dataTypeName")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

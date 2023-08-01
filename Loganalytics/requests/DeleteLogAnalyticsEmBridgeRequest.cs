@@ -57,5 +57,11 @@ namespace Oci.LoganalyticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// If true, delete entities created by this bridge
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDeleteEntities")]
+        public System.Nullable<bool> IsDeleteEntities { get; set; }
     }
 }

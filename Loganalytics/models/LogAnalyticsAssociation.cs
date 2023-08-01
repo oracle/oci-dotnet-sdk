@@ -148,5 +148,11 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "logGroupCompartment")]
         public string LogGroupCompartment { get; set; }
         
+        /// <value>
+        /// A list of association properties.
+        /// </value>
+        [JsonProperty(PropertyName = "associationProperties")]
+        public System.Collections.Generic.List<AssociationProperty> AssociationProperties { get; set; }
+        
     }
 }

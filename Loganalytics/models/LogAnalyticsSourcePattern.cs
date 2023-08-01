@@ -139,5 +139,11 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "entityType")]
         public System.Collections.Generic.List<string> EntityType { get; set; }
         
+        /// <value>
+        /// A list of pattern properties.
+        /// </value>
+        [JsonProperty(PropertyName = "patternProperties")]
+        public System.Collections.Generic.List<LogAnalyticsProperty> PatternProperties { get; set; }
+        
     }
 }

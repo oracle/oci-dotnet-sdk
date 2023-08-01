@@ -133,6 +133,12 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "usageUnit")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UsageUnitEnum> UsageUnit { get; set; }
+        
+        /// <value>
+        /// Auto-ML algorithm leveraged for the forecast. Only applicable for Auto-ML forecast.
+        /// </value>
+        [JsonProperty(PropertyName = "selectedForecastAlgorithm")]
+        public string SelectedForecastAlgorithm { get; set; }
                 ///
         /// <value>
         /// Time series patterns used in the forecasting.

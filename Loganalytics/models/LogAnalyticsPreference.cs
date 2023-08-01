@@ -22,7 +22,7 @@ namespace Oci.LoganalyticsService.Models
     {
         
         /// <value>
-        /// The preference name. Currently, only \"DEFAULT_HOMEPAGE\" is supported.
+        /// The preference name.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

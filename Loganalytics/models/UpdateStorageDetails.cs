@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// This is the input to update storage configuration of a tenancy in Logan Analytics application
+    /// This is the input to update storage configuration of a tenancy in Logging Analytics application
     /// </summary>
     public class UpdateStorageDetails 
     {

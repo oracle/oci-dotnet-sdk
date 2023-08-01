@@ -238,5 +238,17 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        /// <value>
+        /// An array of REST API endpoints for log collection.
+        /// </value>
+        [JsonProperty(PropertyName = "endpoints")]
+        public System.Collections.Generic.List<LogAnalyticsEndpoint> Endpoints { get; set; }
+        
+        /// <value>
+        /// A list of source properties.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceProperties")]
+        public System.Collections.Generic.List<LogAnalyticsProperty> SourceProperties { get; set; }
+        
     }
 }

@@ -263,6 +263,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Ocicontrolcen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Osmanagementhub", "Osmanagementhub\OCI.DotNetSDK.Osmanagementhub.csproj", "{49FE3E97-4B35-4C4A-AF9E-40C3261A0410}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Fleetsoftwareupdate", "Fleetsoftwareupdate\OCI.DotNetSDK.Fleetsoftwareupdate.csproj", "{F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2439,5 +2441,17 @@ Global
         {49FE3E97-4B35-4C4A-AF9E-40C3261A0410}.Release|x64.Build.0 = Release|Any CPU
         {49FE3E97-4B35-4C4A-AF9E-40C3261A0410}.Release|x86.ActiveCfg = Release|Any CPU
         {49FE3E97-4B35-4C4A-AF9E-40C3261A0410}.Release|x86.Build.0 = Release|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Debug|x64.Build.0 = Debug|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Debug|x86.Build.0 = Debug|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Release|Any CPU.Build.0 = Release|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Release|x64.ActiveCfg = Release|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Release|x64.Build.0 = Release|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Release|x86.ActiveCfg = Release|Any CPU
+        {F267BC73-8ECE-4D46-AAD3-04AA6DC1385E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
