@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// OCI IAM User
+    /// Oracle Identity Cloud Service User
     /// </summary>
     public class ExtensionUserUser 
     {
@@ -31,6 +31,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: true
         ///  - multiValued: false
         ///  - mutability: readWrite
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: boolean
@@ -144,6 +145,53 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<ProviderEnum> Provider { get; set; }
                 ///
         /// <value>
+        /// User's preferred landing page following login, logout and reset password.
+        /// <br/>
+        /// **Added In:** 2302092332
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - idcsSearchable: false
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        ///
+        public enum PreferredUiLandingPageEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MyApps")]
+            MyApps,
+            [EnumMember(Value = "MyProfile")]
+            MyProfile,
+            [EnumMember(Value = "OciConsole")]
+            OciConsole
+        };
+
+        /// <value>
+        /// User's preferred landing page following login, logout and reset password.
+        /// <br/>
+        /// **Added In:** 2302092332
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - idcsSearchable: false
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "preferredUiLandingPage")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<PreferredUiLandingPageEnum> PreferredUiLandingPage { get; set; }
+                ///
+        /// <value>
         /// User creation mechanism
         /// <br/>
         /// **SCIM++ Properties:**
@@ -152,6 +200,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: true
         ///  - multiValued: false
         ///  - mutability: immutable
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: request
         ///  - type: string
@@ -189,6 +238,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: true
         ///  - multiValued: false
         ///  - mutability: immutable
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: request
         ///  - type: string
@@ -197,6 +247,23 @@ namespace Oci.IdentitydomainsService.Models
         [JsonProperty(PropertyName = "creationMechanism")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CreationMechanismEnum> CreationMechanism { get; set; }
+        
+        /// <value>
+        /// Specifies date time when a User's group membership was last modified.
+        /// <br/>
+        /// **Added In:** 2304270343
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - multiValued: false
+        ///  - mutability: readOnly
+        ///  - required: false
+        ///  - returned: request
+        ///  - type: dateTime
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "groupMembershipLastModified")]
+        public string GroupMembershipLastModified { get; set; }
         
         /// <value>
         /// A Boolean value indicating whether or not to hide the getting started page
@@ -223,6 +290,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: false
         ///  - multiValued: false
         ///  - mutability: immutable
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: never
         ///  - type: boolean

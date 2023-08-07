@@ -72,6 +72,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         public string ResourceName { get; set; }
         
         /// <value>
+        /// The subresources requested for approval.
+        /// </value>
+        [JsonProperty(PropertyName = "subResourceList")]
+        public System.Collections.Generic.List<string> SubResourceList { get; set; }
+        
+        /// <value>
         /// resourceType for which the AccessRequest is applicable
         /// </value>
         [JsonProperty(PropertyName = "resourceType")]

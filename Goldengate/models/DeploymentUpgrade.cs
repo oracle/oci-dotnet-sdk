@@ -233,5 +233,36 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "isRollbackAllowed")]
         public System.Nullable<bool> IsRollbackAllowed { get; set; }
         
+        /// <value>
+        /// The time until OGG version is supported. After this date has passed OGG version will not be available anymore. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeOggVersionSupportedUntil")]
+        public System.Nullable<System.DateTime> TimeOggVersionSupportedUntil { get; set; }
+        
+        /// <value>
+        /// Indicates if cancel is allowed. Scheduled upgrade can be cancelled only if target version is not forced by service, 
+        /// otherwise only reschedule allowed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCancelAllowed")]
+        public System.Nullable<bool> IsCancelAllowed { get; set; }
+        
+        /// <value>
+        /// Indicates if reschedule is allowed. Upgrade can be rescheduled postponed until the end of the service defined auto-upgrade period.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isRescheduleAllowed")]
+        public System.Nullable<bool> IsRescheduleAllowed { get; set; }
+        
+        /// <value>
+        /// Indicates the latest time until the deployment upgrade could be rescheduled. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeScheduleMax")]
+        public System.Nullable<System.DateTime> TimeScheduleMax { get; set; }
+        
     }
 }

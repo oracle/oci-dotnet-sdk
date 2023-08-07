@@ -32,6 +32,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         /// <remarks>
         /// Required
@@ -51,6 +53,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         /// <remarks>
         /// Required
@@ -70,6 +74,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         ///
         public enum ActionEnum {
@@ -97,6 +103,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         /// <remarks>
         /// Required

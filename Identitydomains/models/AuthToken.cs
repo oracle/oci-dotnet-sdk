@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// User's Auth token resource
+    /// The user's Auth token resource.
     /// </summary>
     public class AuthToken 
     {
@@ -209,7 +209,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Description { get; set; }
                 ///
         /// <value>
-        /// User credential status
+        /// The user's credential status.
         /// <br/>
         /// **Added In:** 2109090424
         /// <br/>
@@ -235,7 +235,7 @@ namespace Oci.IdentitydomainsService.Models
         };
 
         /// <value>
-        /// User credential status
+        /// The user's credential status.
         /// <br/>
         /// **Added In:** 2109090424
         /// <br/>
@@ -254,7 +254,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// User credential expires on
+        /// When the user's credential expire.
         /// <br/>
         /// **Added In:** 2109090424
         /// <br/>

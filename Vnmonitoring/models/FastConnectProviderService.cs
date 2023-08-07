@@ -134,6 +134,97 @@ namespace Oci.VnmonitoringService.Models
         public System.Collections.Generic.List<SupportedVirtualCircuitTypesEnum> SupportedVirtualCircuitTypes { get; set; }
                 ///
         /// <value>
+        /// Who is responsible for managing the ASN information for the network at the other end
+        /// of the connection from Oracle.
+        /// 
+        /// </value>
+        ///
+        public enum CustomerAsnManagementEnum {
+            [EnumMember(Value = "CUSTOMER_MANAGED")]
+            CustomerManaged,
+            [EnumMember(Value = "PROVIDER_MANAGED")]
+            ProviderManaged,
+            [EnumMember(Value = "ORACLE_MANAGED")]
+            OracleManaged
+        };
+
+        /// <value>
+        /// Who is responsible for managing the ASN information for the network at the other end
+        /// of the connection from Oracle.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CustomerAsnManagement is required.")]
+        [JsonProperty(PropertyName = "customerAsnManagement")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<CustomerAsnManagementEnum> CustomerAsnManagement { get; set; }
+                ///
+        /// <value>
+        /// Who is responsible for managing the provider service key.
+        /// 
+        /// </value>
+        ///
+        public enum ProviderServiceKeyManagementEnum {
+            [EnumMember(Value = "CUSTOMER_MANAGED")]
+            CustomerManaged,
+            [EnumMember(Value = "PROVIDER_MANAGED")]
+            ProviderManaged,
+            [EnumMember(Value = "ORACLE_MANAGED")]
+            OracleManaged
+        };
+
+        /// <value>
+        /// Who is responsible for managing the provider service key.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ProviderServiceKeyManagement is required.")]
+        [JsonProperty(PropertyName = "providerServiceKeyManagement")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ProviderServiceKeyManagementEnum> ProviderServiceKeyManagement { get; set; }
+                ///
+        /// <value>
+        /// Who is responsible for managing the virtual circuit bandwidth.
+        /// 
+        /// </value>
+        ///
+        public enum BandwithShapeManagementEnum {
+            [EnumMember(Value = "CUSTOMER_MANAGED")]
+            CustomerManaged,
+            [EnumMember(Value = "PROVIDER_MANAGED")]
+            ProviderManaged,
+            [EnumMember(Value = "ORACLE_MANAGED")]
+            OracleManaged
+        };
+
+        /// <value>
+        /// Who is responsible for managing the virtual circuit bandwidth.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "BandwithShapeManagement is required.")]
+        [JsonProperty(PropertyName = "bandwithShapeManagement")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<BandwithShapeManagementEnum> BandwithShapeManagement { get; set; }
+        
+        /// <value>
+        /// Total number of cross-connect or cross-connect groups required for the virtual circuit.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RequiredTotalCrossConnects is required.")]
+        [JsonProperty(PropertyName = "requiredTotalCrossConnects")]
+        public System.Nullable<int> RequiredTotalCrossConnects { get; set; }
+                ///
+        /// <value>
         /// Provider service type.
         /// 
         /// </value>

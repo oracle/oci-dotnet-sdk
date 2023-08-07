@@ -21,6 +21,12 @@ namespace Oci.AilanguageService.Models
     public class NamedEntityRecognitionModelDetails : ModelDetails
     {
         
+        /// <value>
+        /// Optional if nothing specified latest base model will be used for training. Supported versions can be found at /modelTypes/{modelType}
+        /// </value>
+        [JsonProperty(PropertyName = "version")]
+        public string Version { get; set; }
+        
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "NAMED_ENTITY_RECOGNITION";
     }

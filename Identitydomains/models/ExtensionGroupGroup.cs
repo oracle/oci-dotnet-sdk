@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// Idcs Group
+    /// Oracle Identity Cloud Service Group
     /// </summary>
     public class ExtensionGroupGroup 
     {

@@ -45,6 +45,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         /// <remarks>
         /// Required
@@ -66,6 +68,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "thirdPartyFactorType")]
         public string ThirdPartyFactorType { get; set; }
@@ -83,6 +87,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         /// <remarks>
         /// Required
@@ -104,6 +110,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: reference
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "$ref")]
         public string Ref { get; set; }

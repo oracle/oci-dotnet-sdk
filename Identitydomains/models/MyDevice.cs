@@ -220,6 +220,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -231,6 +233,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: false
         ///  - multiValued: false
         ///  - mutability: immutable
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: string
@@ -258,6 +262,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: false
         ///  - multiValued: false
         ///  - mutability: immutable
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: string
@@ -279,6 +285,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         ///
         public enum StatusEnum {
@@ -311,6 +319,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -342,6 +352,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "deviceType")]
         public string DeviceType { get; set; }
@@ -357,6 +369,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "appVersion")]
         public string AppVersion { get; set; }
@@ -372,6 +386,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "packageId")]
         public string PackageId { get; set; }
@@ -383,6 +399,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: true
         ///  - multiValued: false
         ///  - mutability: readWrite
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: dateTime
@@ -401,6 +419,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsAllowUpdatesInReadOnlyMode: true
         ///  - multiValued: false
         ///  - mutability: readWrite
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: dateTime
@@ -438,6 +458,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "countryCode")]
         public string CountryCode { get; set; }
@@ -453,6 +475,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "phoneNumber")]
         public string PhoneNumber { get; set; }
@@ -469,6 +493,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: boolean
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "isAccRecEnabled")]
         public System.Nullable<bool> IsAccRecEnabled { get; set; }
@@ -484,6 +510,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "deviceUUID")]
         public string DeviceUUID { get; set; }
@@ -499,6 +527,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "basePublicKey")]
         public string BasePublicKey { get; set; }
@@ -516,6 +546,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "authenticationMethod")]
         public string AuthenticationMethod { get; set; }

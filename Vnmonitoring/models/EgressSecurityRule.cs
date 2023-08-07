@@ -109,5 +109,12 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "udpOptions")]
         public UdpOptions UdpOptions { get; set; }
         
+        /// <value>
+        /// An optional description of your choice for the rule.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
     }
 }

@@ -83,6 +83,26 @@ namespace Oci.VnmonitoringService.Models
         public string IpAddress { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the CPE's device type.
+        /// The Networking service maintains a general list of CPE device types (for example,
+        /// Cisco ASA). For each type, Oracle provides CPE configuration content that can help
+        /// a network engineer configure the CPE. The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) uniquely identifies the type of
+        /// device. To get the OCIDs for the device types on the list, see
+        /// {@link #listCpeDeviceShapes(ListCpeDeviceShapesRequest) listCpeDeviceShapes}.
+        /// <br/>
+        /// For information about how to generate CPE configuration content for a
+        /// CPE device type, see:
+        /// <br/>
+        ///   * {@link #getCpeDeviceConfigContent(GetCpeDeviceConfigContentRequest) getCpeDeviceConfigContent}
+        ///   * {@link #getIpsecCpeDeviceConfigContent(GetIpsecCpeDeviceConfigContentRequest) getIpsecCpeDeviceConfigContent}
+        ///   * {@link #getTunnelCpeDeviceConfigContent(GetTunnelCpeDeviceConfigContentRequest) getTunnelCpeDeviceConfigContent}
+        ///   * {@link #getTunnelCpeDeviceConfig(GetTunnelCpeDeviceConfigRequest) getTunnelCpeDeviceConfig}
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "cpeDeviceShapeId")]
+        public string CpeDeviceShapeId { get; set; }
+        
+        /// <value>
         /// The date and time the CPE was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z

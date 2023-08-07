@@ -16,19 +16,20 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// This extension defines attributes used to manage account passwords within a service provider. The extension is typically applied to a User resource, but MAY be applied to other resources that use passwords.
+    /// This extension defines the attributes used to manage account passwords within a service provider. The extension is typically applied to a User resource, but MAY be applied to other resources that use passwords.
     /// </summary>
     public class ExtensionUserStateUser 
     {
         
         /// <value>
-        /// The last successful login date
+        /// The last successful login date.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsSearchable: true
         ///  - idcsAllowUpdatesInReadOnlyMode: true
         ///  - multiValued: false
         ///  - mutability: readOnly
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: request
         ///  - type: dateTime
@@ -38,13 +39,14 @@ namespace Oci.IdentitydomainsService.Models
         public string LastSuccessfulLoginDate { get; set; }
         
         /// <value>
-        /// The previous successful login date
+        /// The previous successful login date.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
         ///  - idcsSearchable: false
         ///  - multiValued: false
         ///  - mutability: readOnly
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: request
         ///  - type: dateTime
@@ -54,13 +56,14 @@ namespace Oci.IdentitydomainsService.Models
         public string PreviousSuccessfulLoginDate { get; set; }
         
         /// <value>
-        /// The last failed login date
+        /// The last failed login date.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsSearchable: false
         ///  - idcsAllowUpdatesInReadOnlyMode: true
         ///  - multiValued: false
         ///  - mutability: readOnly
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: request
         ///  - type: dateTime
@@ -77,6 +80,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsAllowUpdatesInReadOnlyMode: true
         ///  - multiValued: false
         ///  - mutability: readOnly
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: request
         ///  - type: integer
@@ -94,6 +99,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: false
         ///  - multiValued: false
         ///  - mutability: readOnly
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: request
         ///  - type: integer
@@ -120,7 +126,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<int> RecoveryEnrollAttempts { get; set; }
         
         /// <value>
-        /// Maximum number of concurrent sessions for a User
+        /// The maximum number of concurrent sessions for a user.
         /// <br/>
         /// **Added In:** 20.1.3
         /// <br/>

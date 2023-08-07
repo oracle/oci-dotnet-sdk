@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// A list of bypass codes belongs to user
+    /// A list of bypass codes that belongs to the user.
     /// <br/>
     /// **Added In:** 18.3.6
     /// <br/>
@@ -33,7 +33,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// The identifier of the User's bypass code.
+        /// The user's bypass code identifier.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>

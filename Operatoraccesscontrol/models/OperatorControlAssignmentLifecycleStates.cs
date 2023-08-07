@@ -27,6 +27,8 @@ namespace Oci.OperatoraccesscontrolService.Models
       Applyfailed,
       [EnumMember(Value = "UPDATING")]
       Updating,
+      [EnumMember(Value = "UPDATEFAILED")]
+      Updatefailed,
       [EnumMember(Value = "DELETING")]
       Deleting,
       [EnumMember(Value = "DELETED")]

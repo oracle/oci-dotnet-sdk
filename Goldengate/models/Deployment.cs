@@ -307,5 +307,16 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "nextMaintenanceDescription")]
         public string NextMaintenanceDescription { get; set; }
         
+        [JsonProperty(PropertyName = "maintenanceConfiguration")]
+        public MaintenanceConfiguration MaintenanceConfiguration { get; set; }
+        
+        /// <value>
+        /// The time until OGG version is supported. After this date has passed OGG version will not be available anymore. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeOggVersionSupportedUntil")]
+        public System.Nullable<System.DateTime> TimeOggVersionSupportedUntil { get; set; }
+        
     }
 }

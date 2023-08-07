@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// Security question and answers provided by end-user for Account recovery and/or MFA. While setting up security questions, end-user can also provide hint along with answer.
+    /// The schema used to mnage security question and answers provided by a user for account recovery and/or MFA. While setting up security questions, a user can also provide a hint for the answer.
     /// <br/>
     /// **SCIM++ Properties:**
     ///  - idcsCompositeKey: [value]
@@ -31,7 +31,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// Id of the question selected by user while setting up Security Question.
+        /// The identifier of the question selected by the user when setting up a security question.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
@@ -51,7 +51,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// The URI of the corresponding SecurityQuestion resource
+        /// The URI of the corresponding Security Question resource.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsSearchable: false
@@ -66,7 +66,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Ref { get; set; }
         
         /// <value>
-        /// Answer provided by an user for a security question.
+        /// The answer provided by a user for a security question.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsCsvAttributeName: Answer
@@ -88,7 +88,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Answer { get; set; }
         
         /// <value>
-        /// Hint for an answer given by user while setting up Security Question.
+        /// The hint for an answer that's given by user when setting up a security question.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false

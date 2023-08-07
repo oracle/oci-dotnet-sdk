@@ -319,7 +319,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> ExcludeCredentials { get; set; }
         
         /// <value>
-        /// Number of domain levels IDCS should use for origin comparision
+        /// Number of domain levels Oracle Identity Cloud Service should use for origin comparision
         /// <br/>
         /// **Added In:** 2109020413
         /// <br/>

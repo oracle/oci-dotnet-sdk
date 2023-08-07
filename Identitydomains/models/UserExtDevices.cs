@@ -33,7 +33,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// The identifier of the User's device.
+        /// The user's device identifier.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>
@@ -55,7 +55,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// The URI of the corresponding Device resource which belongs to user
+        /// The URI of the corresponding Device resource which belongs to user.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>
@@ -89,7 +89,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Display { get; set; }
         
         /// <value>
-        /// Device status.
+        /// The device's status.
         /// <br/>
         /// **Added In:** 18.4.2
         /// <br/>
@@ -106,7 +106,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Status { get; set; }
         
         /// <value>
-        /// Last Sync time for device.
+        /// The last sync time for device.
         /// <br/>
         /// **Added In:** 18.4.2
         /// <br/>
@@ -123,7 +123,7 @@ namespace Oci.IdentitydomainsService.Models
         public string LastSyncTime { get; set; }
         
         /// <value>
-        /// Device authentication factor type.
+        /// The device authentication factor type.
         /// <br/>
         /// **Added In:** 18.4.2
         /// <br/>
@@ -140,7 +140,7 @@ namespace Oci.IdentitydomainsService.Models
         public string FactorType { get; set; }
         
         /// <value>
-        /// Device authentication factor status.
+        /// The device authentication factor status.
         /// <br/>
         /// **Added In:** 18.4.2
         /// <br/>
@@ -157,7 +157,7 @@ namespace Oci.IdentitydomainsService.Models
         public string FactorStatus { get; set; }
         
         /// <value>
-        /// Authentication method.
+        /// The authentication method.
         /// <br/>
         /// **Added In:** 2009232244
         /// <br/>
@@ -174,7 +174,7 @@ namespace Oci.IdentitydomainsService.Models
         public string AuthenticationMethod { get; set; }
         
         /// <value>
-        /// Third party factor vendor name.
+        /// The third-party factor vendor name.
         /// <br/>
         /// **Added In:** 2009232244
         /// <br/>

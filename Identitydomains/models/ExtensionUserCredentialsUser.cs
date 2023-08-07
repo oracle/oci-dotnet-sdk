@@ -22,7 +22,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// A list of db credentials corresponding to user.
+        /// A list of database credentials corresponding to user.
         /// <br/>
         /// **Added In:** 2102181953
         /// <br/>
@@ -58,7 +58,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Collections.Generic.List<UserExtCustomerSecretKeys> CustomerSecretKeys { get; set; }
         
         /// <value>
-        /// A list of auth tokens corresponding to user.
+        /// A list of Auth tokens corresponding to user.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -76,7 +76,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Collections.Generic.List<UserExtAuthTokens> AuthTokens { get; set; }
         
         /// <value>
-        /// A list of smtp credentials corresponding to user.
+        /// A list of SMTP credentials corresponding to user.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -94,7 +94,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Collections.Generic.List<UserExtSmtpCredentials> SmtpCredentials { get; set; }
         
         /// <value>
-        /// A list of api keys corresponding to user.
+        /// A list of API keys corresponding to user.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -112,7 +112,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Collections.Generic.List<UserExtApiKeys> ApiKeys { get; set; }
         
         /// <value>
-        /// A list of oauth2 client credentials corresponding to user.
+        /// A list of OAuth2 client credentials corresponding to a user.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>

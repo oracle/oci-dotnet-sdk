@@ -33,7 +33,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// The identifier of the User's trusted user agent.
+        /// The user's trusted user agent identifier.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>

@@ -31,9 +31,39 @@ namespace Oci.VnmonitoringService.Models
     {
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the entity the public IP is assigned to, or in the process of
+        /// being assigned to.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "assignedEntityId")]
+        public string AssignedEntityId { get; set; }
+                ///
+        /// <value>
+        /// The type of entity the public IP is assigned to, or in the process of being
+        /// assigned to.
+        /// 
+        /// </value>
+        ///
+        public enum AssignedEntityTypeEnum {
+            [EnumMember(Value = "PRIVATE_IP")]
+            PrivateIp,
+            [EnumMember(Value = "NAT_GATEWAY")]
+            NatGateway
+        };
+
+        /// <value>
+        /// The type of entity the public IP is assigned to, or in the process of being
+        /// assigned to.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "assignedEntityType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AssignedEntityTypeEnum> AssignedEntityType { get; set; }
+        
+        /// <value>
         /// The public IP's availability domain. This property is set only for ephemeral public IPs
-        /// (that is, when the `scope` of the public IP is set to AVAILABILITY_DOMAIN). The value
-        /// is the availability domain of the assigned private IP.
+        /// that are assigned to a private IP (that is, when the `scope` of the public IP is set to
+        /// AVAILABILITY_DOMAIN). The value is the availability domain of the assigned private IP.
         /// <br/>
         /// Example: Uocm:PHX-AD-1
         /// </value>
@@ -42,8 +72,9 @@ namespace Oci.VnmonitoringService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the public IP. For an ephemeral public IP, this is
-        /// the same compartment as the private IP's. For a reserved public IP that is currently assigned,
-        /// this can be a different compartment than the assigned private IP's.
+        /// the compartment of its assigned entity (which can be a private IP or a regional entity such
+        /// as a NAT gateway). For a reserved public IP that is currently assigned,
+        /// its compartment can be different from the assigned private IP's.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
@@ -118,10 +149,12 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// Defines when the public IP is deleted and released back to Oracle's public IP pool.
         /// <br/>
-        /// * `EPHEMERAL`: The lifetime is tied to the lifetime of its assigned private IP. The
-        /// ephemeral public IP is automatically deleted when its private IP is deleted, when
-        /// the VNIC is terminated, or when the instance is terminated. An ephemeral
-        /// public IP must always be assigned to a private IP.
+        /// * `EPHEMERAL`: The lifetime is tied to the lifetime of its assigned entity. An ephemeral
+        /// public IP must always be assigned to an entity. If the assigned entity is a private IP,
+        /// the ephemeral public IP is automatically deleted when the private IP is deleted, when
+        /// the VNIC is terminated, or when the instance is terminated. If the assigned entity is a
+        /// {@link NatGateway}, the ephemeral public IP is automatically
+        /// deleted when the NAT gateway is terminated.
         /// <br/>
         /// * `RESERVED`: You control the public IP's lifetime. You can delete a reserved public IP
         /// whenever you like. It does not need to be assigned to a private IP at all times.
@@ -141,10 +174,12 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// Defines when the public IP is deleted and released back to Oracle's public IP pool.
         /// <br/>
-        /// * `EPHEMERAL`: The lifetime is tied to the lifetime of its assigned private IP. The
-        /// ephemeral public IP is automatically deleted when its private IP is deleted, when
-        /// the VNIC is terminated, or when the instance is terminated. An ephemeral
-        /// public IP must always be assigned to a private IP.
+        /// * `EPHEMERAL`: The lifetime is tied to the lifetime of its assigned entity. An ephemeral
+        /// public IP must always be assigned to an entity. If the assigned entity is a private IP,
+        /// the ephemeral public IP is automatically deleted when the private IP is deleted, when
+        /// the VNIC is terminated, or when the instance is terminated. If the assigned entity is a
+        /// {@link NatGateway}, the ephemeral public IP is automatically
+        /// deleted when the NAT gateway is terminated.
         /// <br/>
         /// * `RESERVED`: You control the public IP's lifetime. You can delete a reserved public IP
         /// whenever you like. It does not need to be assigned to a private IP at all times.
@@ -158,8 +193,13 @@ namespace Oci.VnmonitoringService.Models
         public System.Nullable<LifetimeEnum> Lifetime { get; set; }
         
         /// <value>
+        /// Deprecated. Use `assignedEntityId` instead.
+        /// <br/>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the private IP that the public IP is currently assigned to, or in the
         /// process of being assigned to.
+        /// <br/>
+        /// **Note:** This is `null` if the public IP is not assigned to a private IP, or is
+        /// in the process of being assigned to one.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "privateIpId")]
@@ -168,12 +208,14 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// Whether the public IP is regional or specific to a particular availability domain.
         /// <br/>
-        /// * `REGION`: The public IP exists within a region and can be assigned to a private IP
-        /// in any availability domain in the region. Reserved public IPs have `scope` = `REGION`.
+        /// * `REGION`: The public IP exists within a region and is assigned to a regional entity
+        /// (such as a {@link NatGateway}), or can be assigned to a private
+        /// IP in any availability domain in the region. Reserved public IPs and ephemeral public IPs
+        /// assigned to a regional entity have `scope` = `REGION`.
         /// <br/>
-        /// * `AVAILABILITY_DOMAIN`: The public IP exists within the availability domain of the private IP
+        /// * `AVAILABILITY_DOMAIN`: The public IP exists within the availability domain of the entity
         /// it's assigned to, which is specified by the `availabilityDomain` property of the public IP object.
-        /// Ephemeral public IPs have `scope` = `AVAILABILITY_DOMAIN`.
+        /// Ephemeral public IPs that are assigned to private IPs have `scope` = `AVAILABILITY_DOMAIN`.
         /// 
         /// </value>
         ///
@@ -187,12 +229,14 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// Whether the public IP is regional or specific to a particular availability domain.
         /// <br/>
-        /// * `REGION`: The public IP exists within a region and can be assigned to a private IP
-        /// in any availability domain in the region. Reserved public IPs have `scope` = `REGION`.
+        /// * `REGION`: The public IP exists within a region and is assigned to a regional entity
+        /// (such as a {@link NatGateway}), or can be assigned to a private
+        /// IP in any availability domain in the region. Reserved public IPs and ephemeral public IPs
+        /// assigned to a regional entity have `scope` = `REGION`.
         /// <br/>
-        /// * `AVAILABILITY_DOMAIN`: The public IP exists within the availability domain of the private IP
+        /// * `AVAILABILITY_DOMAIN`: The public IP exists within the availability domain of the entity
         /// it's assigned to, which is specified by the `availabilityDomain` property of the public IP object.
-        /// Ephemeral public IPs have `scope` = `AVAILABILITY_DOMAIN`.
+        /// Ephemeral public IPs that are assigned to private IPs have `scope` = `AVAILABILITY_DOMAIN`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scope")]
@@ -206,6 +250,12 @@ namespace Oci.VnmonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the pool object created in the current tenancy.
+        /// </value>
+        [JsonProperty(PropertyName = "publicIpPoolId")]
+        public string PublicIpPoolId { get; set; }
         
     }
 }

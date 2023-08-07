@@ -303,5 +303,60 @@ namespace Oci.IdentitydomainsService.Models
         [JsonProperty(PropertyName = "crlReloadDuration")]
         public System.Nullable<int> CrlReloadDuration { get; set; }
         
+        /// <value>
+        /// Set to true to enable EKU Validation
+        /// <br/>
+        /// **Added In:** 2304270343
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - idcsSearchable: false
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: boolean
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "ekuValidationEnabled")]
+        public System.Nullable<bool> EkuValidationEnabled { get; set; }
+                ///
+        ///
+        public enum EkuValuesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "SERVER_AUTH")]
+            ServerAuth,
+            [EnumMember(Value = "CLIENT_AUTH")]
+            ClientAuth,
+            [EnumMember(Value = "CODE_SIGNING")]
+            CodeSigning,
+            [EnumMember(Value = "EMAIL_PROTECTION")]
+            EmailProtection,
+            [EnumMember(Value = "TIME_STAMPING")]
+            TimeStamping,
+            [EnumMember(Value = "OCSP_SIGNING")]
+            OcspSigning
+        };
+
+        /// <value>
+        /// List of EKU which needs to be validated
+        /// <br/>
+        /// **Added In:** 2304270343
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - idcsSearchable: false
+        ///  - multiValued: true
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "ekuValues", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<EkuValuesEnum> EkuValues { get; set; }
+        
     }
 }

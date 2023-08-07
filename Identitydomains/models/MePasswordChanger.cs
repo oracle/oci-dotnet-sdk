@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// Schema to handle userpassword change by self.
+    /// The schema used for a user changing their own password.
     /// </summary>
     public class MePasswordChanger 
     {
@@ -230,7 +230,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Password { get; set; }
         
         /// <value>
-        /// Old password attribute
+        /// The old password attribute.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - type: string

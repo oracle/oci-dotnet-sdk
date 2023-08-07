@@ -793,23 +793,6 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<JitUserProvGroupMappingModeEnum> JitUserProvGroupMappingMode { get; set; }
         
         /// <value>
-        /// The list of mappings between the Identity Domain Group and the IDP group.
-        /// <br/>
-        /// **Added In:** 2205120021
-        /// <br/>
-        /// **SCIM++ Properties:**
-        ///  - idcsCompositeKey: [idpGroup]
-        ///  - multiValued: true
-        ///  - mutability: readWrite
-        ///  - required: false
-        ///  - returned: default
-        ///  - type: complex
-        ///  - uniqueness: none
-        /// </value>
-        [JsonProperty(PropertyName = "jitUserProvGroupMappings")]
-        public System.Collections.Generic.List<IdentityProviderJitUserProvGroupMappings> JitUserProvGroupMappings { get; set; }
-        
-        /// <value>
         /// Name of the assertion attribute containing the users groups
         /// <br/>
         /// **Added In:** 20.1.3
@@ -1073,6 +1056,41 @@ namespace Oci.IdentitydomainsService.Models
         /// </value>
         [JsonProperty(PropertyName = "jitUserProvIgnoreErrorOnAbsentGroups")]
         public System.Nullable<bool> JitUserProvIgnoreErrorOnAbsentGroups { get; set; }
+        
+        /// <value>
+        /// Records the notification timestamp for the IdP whose signing certificate is about to expire
+        /// <br/>
+        /// **Added In:** 2302092332
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - idcsSearchable: false
+        ///  - multiValued: false
+        ///  - mutability: readOnly
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: dateTime
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "lastNotificationSentTime")]
+        public string LastNotificationSentTime { get; set; }
+        
+        /// <value>
+        /// The list of mappings between the Identity Domain Group and the IDP group.
+        /// <br/>
+        /// **Added In:** 2205120021
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - idcsCompositeKey: [idpGroup]
+        ///  - multiValued: true
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: complex
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "jitUserProvGroupMappings")]
+        public System.Collections.Generic.List<IdentityProviderJitUserProvGroupMappings> JitUserProvGroupMappings { get; set; }
         
         [JsonProperty(PropertyName = "jitUserProvAttributes")]
         public IdentityProviderJitUserProvAttributes JitUserProvAttributes { get; set; }

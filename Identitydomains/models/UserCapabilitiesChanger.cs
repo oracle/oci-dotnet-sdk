@@ -194,7 +194,7 @@ namespace Oci.IdentitydomainsService.Models
         public string TenancyOcid { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use api keys
+        /// Indicates whether a user can use API keys.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -210,7 +210,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseApiKeys { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use auth tokens
+        /// Indicates whether a user can use Auth tokens.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -226,7 +226,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseAuthTokens { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use console password
+        /// Indicates whether a user can use Console passwords.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -242,7 +242,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseConsolePassword { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use customer secret keys
+        /// Indicates whether a user can use customer secret keys.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -258,7 +258,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseCustomerSecretKeys { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use oauth2 client credentials
+        /// Indicates whether a user can use OAuth2 client credentials.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -274,7 +274,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseOAuth2ClientCredentials { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use smtp credentials
+        /// Indicates whether a user can use SMTP credentials.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -290,7 +290,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseSmtpCredentials { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use db credentials
+        /// Indicates whether a user can use database credentials.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -304,6 +304,23 @@ namespace Oci.IdentitydomainsService.Models
         /// </value>
         [JsonProperty(PropertyName = "canUseDbCredentials")]
         public System.Nullable<bool> CanUseDbCredentials { get; set; }
+        
+        /// <value>
+        /// Indicates whether a user can use the Console.
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - idcsSearchable: true
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - idcsDefaultValue: false
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: boolean
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "canUseConsole")]
+        public System.Nullable<bool> CanUseConsole { get; set; }
         
         [JsonProperty(PropertyName = "urn:ietf:params:scim:schemas:oracle:idcs:extension:selfChange:User")]
         public ExtensionSelfChangeUser UrnIetfParamsScimSchemasOracleIdcsExtensionSelfChangeUser { get; set; }

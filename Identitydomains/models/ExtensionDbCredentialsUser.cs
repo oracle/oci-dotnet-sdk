@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// Db Credentials User extension
+    /// The database credentials user extension.
     /// </summary>
     public class ExtensionDbCredentialsUser 
     {
         
         /// <value>
-        /// The Database User Name
+        /// The database username.
         /// <br/>
         /// **Added In:** 2102181953
         /// <br/>

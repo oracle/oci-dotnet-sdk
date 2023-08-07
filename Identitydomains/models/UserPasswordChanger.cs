@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// Schema to handle userpassword change by administrator.
+    /// The schema used to handle a user password change by an administrator.
     /// </summary>
     public class UserPasswordChanger 
     {
@@ -208,7 +208,7 @@ namespace Oci.IdentitydomainsService.Models
         public string ExternalId { get; set; }
         
         /// <value>
-        /// Password attribute. Max length for password is controlled via Password Policy.
+        /// The password attribute. The maximum length for the password is set in the password policy.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - type: string
@@ -227,7 +227,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Password { get; set; }
         
         /// <value>
-        /// A Boolean value indicating whether or not to send email notification after password is changed.
+        /// Indicates whether to send an email notification after a password is changed.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -243,7 +243,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> BypassNotification { get; set; }
         
         /// <value>
-        /// Specifies the EmailTemplate to be used when sending notification to the user this request is for. If specified, it overrides the default EmailTemplate for this event.
+        /// Specifies the EmailTemplate to be used when sending a notification to the user. If specified, it overrides the default EmailTemplate.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false

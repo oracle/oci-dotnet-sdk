@@ -22,7 +22,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// Indicates weather a user can use api keys
+        /// Indicates whether a user can use API keys.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -40,7 +40,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseApiKeys { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use auth tokens
+        /// Indicates whether a user can use Auth tokens.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -58,7 +58,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseAuthTokens { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use console password
+        /// Indicates whether a user can use Console passwords.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -76,7 +76,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseConsolePassword { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use customer secret keys
+        /// Indicates whether a user can use customer secret keys.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -94,7 +94,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseCustomerSecretKeys { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use oauth2 client credentials
+        /// Indicates whether a user can use OAuth2 client credentials.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -112,7 +112,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseOAuth2ClientCredentials { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use smtp credentials
+        /// Indicates whether a user can use SMTP credentials.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -130,7 +130,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> CanUseSmtpCredentials { get; set; }
         
         /// <value>
-        /// Indicates weather a user can use db credentials
+        /// Indicates whether a user can use database credentials.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -146,6 +146,24 @@ namespace Oci.IdentitydomainsService.Models
         /// </value>
         [JsonProperty(PropertyName = "canUseDbCredentials")]
         public System.Nullable<bool> CanUseDbCredentials { get; set; }
+        
+        /// <value>
+        /// Specifies whether user can access the Console.
+        /// <br/>
+        /// **Added In:** 2206280902
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - idcsSearchable: false
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: boolean
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "canUseConsole")]
+        public System.Nullable<bool> CanUseConsole { get; set; }
         
     }
 }

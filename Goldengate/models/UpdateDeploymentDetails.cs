@@ -109,5 +109,8 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "maintenanceWindow")]
         public UpdateMaintenanceWindowDetails MaintenanceWindow { get; set; }
         
+        [JsonProperty(PropertyName = "maintenanceConfiguration")]
+        public UpdateMaintenanceConfigurationDetails MaintenanceConfiguration { get; set; }
+        
     }
 }

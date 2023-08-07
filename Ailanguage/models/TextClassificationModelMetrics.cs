@@ -74,12 +74,20 @@ namespace Oci.AilanguageService.Models
         /// <value>
         /// Precision refers to the number of true positives divided by the total number of positive predictions (i.e., the number of true positives plus the number of false positives)
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "MacroPrecision is required.")]
         [JsonProperty(PropertyName = "macroPrecision")]
         public System.Nullable<float> MacroPrecision { get; set; }
         
         /// <value>
         /// Measures the model's ability to predict actual positive classes. It is the ratio between the predicted true positives and what was actually tagged. The recall metric reveals how many of the predicted classes are correct.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "MacroRecall is required.")]
         [JsonProperty(PropertyName = "macroRecall")]
         public System.Nullable<float> MacroRecall { get; set; }
         

@@ -60,10 +60,6 @@ namespace Oci.AilanguageService.Models
         [JsonProperty(PropertyName = "modelDetails")]
         public ModelDetails ModelDetails { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TrainingDataset is required.")]
         [JsonProperty(PropertyName = "trainingDataset")]
         public DatasetDetails TrainingDataset { get; set; }
         

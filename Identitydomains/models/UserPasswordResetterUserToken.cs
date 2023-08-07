@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// User token returned if userFlowControlledByExternalClient is true
+    /// The user token returned if userFlowControlledByExternalClient is set to true.
     /// <br/>
     /// **SCIM++ Properties:**
     ///  - type: complex
@@ -31,7 +31,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// User Token identifier
+        /// The user token identifier.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
@@ -47,7 +47,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// User Token URI
+        /// The user token URI.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsSearchable: false

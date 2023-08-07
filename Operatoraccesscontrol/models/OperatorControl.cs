@@ -135,6 +135,13 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Nullable<System.DateTime> TimeOfModification { get; set; }
         
         /// <value>
+        /// Whether the operator control is a default Operator Control.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDefaultOperatorControl")]
+        public System.Nullable<bool> IsDefaultOperatorControl { get; set; }
+        
+        /// <value>
         /// Time when deleted expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339)timestamp format. Example: '2020-05-22T21:10:29.600Z'.Note a deleted operator control still stays in the system, so that you can still audit operator actions associated with access requestsraised on target resources governed by the deleted operator control.
         /// </value>
         [JsonProperty(PropertyName = "timeOfDeletion")]

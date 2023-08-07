@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// User preferred device
+    /// The user's preferred device.
     /// <br/>
     /// **Added In:** 18.3.6
     /// <br/>
@@ -34,7 +34,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// The identifier of the User's preferred device
+        /// The user's preferred device identifier.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>
@@ -56,7 +56,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// The URI that corresponds to the device resource
+        /// The URI that corresponds to the device resource.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>
@@ -73,7 +73,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Ref { get; set; }
         
         /// <value>
-        /// Device display name
+        /// The device display name.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>

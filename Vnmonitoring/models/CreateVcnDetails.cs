@@ -20,15 +20,23 @@ namespace Oci.VnmonitoringService.Models
     {
         
         /// <value>
-        /// The CIDR IP address block of the VCN.
+        /// **Deprecated.** Do *not* set this value. Use `cidrBlocks` instead.
         /// Example: 10.0.0.0/16
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
+        
+        /// <value>
+        /// The list of one or more IPv4 CIDR blocks for the VCN that meet the following criteria:
+        /// - The CIDR blocks must be valid.
+        /// - They must not overlap with each other or with the on-premises network CIDR block.
+        /// - The number of CIDR blocks must not exceed the limit of CIDR blocks allowed per VCN.
+        /// <br/>
+        /// **Important:** Do *not* specify a value for `cidrBlock`. Use this parameter instead.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "cidrBlocks")]
+        public System.Collections.Generic.List<string> CidrBlocks { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to contain the VCN.
@@ -41,29 +49,31 @@ namespace Oci.VnmonitoringService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// If you enable IPv6 for the VCN (see `isIpv6Enabled`), you may optionally provide an IPv6
-        /// /56 CIDR block from the supported ranges (see [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
-        /// The addresses in this block will be considered private and cannot be accessed
-        /// from the internet. The documentation refers to this as a *custom CIDR* for the VCN.
+        /// The list of one or more ULA or Private IPv6 CIDR blocks for the vcn that meets the following criteria:
+        /// - The CIDR blocks must be valid.
+        /// - Multiple CIDR blocks must not overlap each other or the on-premises network CIDR block.
+        /// - The number of CIDR blocks must not exceed the limit of IPv6 CIDR blocks allowed to a vcn.
         /// <br/>
-        /// If you don't provide a custom CIDR for the VCN, Oracle assigns the VCN's IPv6 /56 CIDR block.
-        /// <br/>
-        /// Regardless of whether you or Oracle assigns the `ipv6CidrBlock`,
-        /// Oracle *also* assigns the VCN an IPv6 CIDR block for the VCN's public IP address space
-        /// (see the `ipv6PublicCidrBlock` of the {@link Vcn} object). If you do
-        /// not assign a custom CIDR, Oracle uses the *same* Oracle-assigned CIDR for both the private
-        /// IP address space (`ipv6CidrBlock` in the `Vcn` object) and the public IP addreses space
-        /// (`ipv6PublicCidrBlock` in the `Vcn` object). This means that a given VNIC might use the same
-        /// IPv6 IP address for both private and public (internet) communication. You control whether
-        /// an IPv6 address can be used for internet communication by using the `isInternetAccessAllowed`
-        /// attribute in the {@link Ipv6} object.
-        /// <br/>
-        /// For important details about IPv6 addressing in a VCN, see [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
-        /// <br/>
-        /// Example: 2001:0db8:0123::/48
+        /// **Important:** Do *not* specify a value for `ipv6CidrBlock`. Use this parameter instead.
+        /// 
         /// </value>
-        [JsonProperty(PropertyName = "ipv6CidrBlock")]
-        public string Ipv6CidrBlock { get; set; }
+        [JsonProperty(PropertyName = "ipv6PrivateCidrBlocks")]
+        public System.Collections.Generic.List<string> Ipv6PrivateCidrBlocks { get; set; }
+        
+        /// <value>
+        /// Specifies whether to skip Oracle allocated IPv6 GUA. By default, Oracle will allocate one GUA of /56
+        /// size for an IPv6 enabled VCN.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isOracleGuaAllocationEnabled")]
+        public System.Nullable<bool> IsOracleGuaAllocationEnabled { get; set; }
+        
+        /// <value>
+        /// The list of BYOIPv6 OCIDs and BYOIPv6 CIDR blocks required to create a VCN that uses BYOIPv6 ranges.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "byoipv6CidrDetails")]
+        public System.Collections.Generic.List<Byoipv6CidrDetails> Byoipv6CidrDetails { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
@@ -83,7 +93,7 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// A DNS label for the VCN, used in conjunction with the VNIC's hostname and
         /// subnet's DNS label to form a fully qualified domain name (FQDN) for each VNIC
-        /// within this subnet (for example, `bminstance-1.subnet123.vcn1.oraclevcn.com`).
+        /// within this subnet (for example, `bminstance1.subnet123.vcn1.oraclevcn.com`).
         /// Not required to be unique, but it's a best practice to set unique DNS labels
         /// for VCNs in your tenancy. Must be an alphanumeric string that begins with a letter.
         /// The value cannot be changed.
@@ -110,6 +120,7 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// Whether IPv6 is enabled for the VCN. Default is `false`.
         /// If enabled, Oracle will assign the VCN a IPv6 /56 CIDR block.
+        /// You may skip having Oracle allocate the VCN a IPv6 /56 CIDR block by setting isOracleGuaAllocationEnabled to `false`.
         /// For important details about IPv6 addressing in a VCN, see [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
         /// <br/>
         /// Example: true

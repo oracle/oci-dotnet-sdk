@@ -452,7 +452,9 @@ namespace Oci.IdentitydomainsService.Models
             [EnumMember(Value = "THIRDPARTY")]
             Thirdparty,
             [EnumMember(Value = "FIDO_AUTHENTICATOR")]
-            FidoAuthenticator
+            FidoAuthenticator,
+            [EnumMember(Value = "YUBICO_OTP")]
+            YubicoOtp
         };
 
         /// <value>

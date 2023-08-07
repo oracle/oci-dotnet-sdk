@@ -29,6 +29,11 @@ namespace Oci.VnmonitoringService.Models
     /// [IP Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingIPaddresses.htm).
     /// <br/>
     /// 
+    /// If you are an Oracle Cloud VMware Solution customer, you will have secondary VNICs
+    /// that reside in a VLAN instead of a subnet. These VNICs have other differences, which
+    /// are called out in the descriptions of the relevant attributes in the `Vnic` object.
+    /// Also see {@link Vlan}.
+    /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
     /// talk to an administrator. If you're an administrator who needs to write policies to give users access, see
     /// [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/policygetstarted.htm).
@@ -84,7 +89,7 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// The hostname for the VNIC's primary private IP. Used for DNS. The value is the hostname
         /// portion of the primary private IP's fully qualified domain name (FQDN)
-        /// (for example, `bminstance-1` in FQDN `bminstance-1.subnet123.vcn1.oraclevcn.com`).
+        /// (for example, `bminstance1` in FQDN `bminstance1.subnet123.vcn1.oraclevcn.com`).
         /// Must be unique across all VNICs in the subnet and comply with
         /// [RFC 952](https://tools.ietf.org/html/rfc952) and
         /// [RFC 1123](https://tools.ietf.org/html/rfc1123).
@@ -92,7 +97,7 @@ namespace Oci.VnmonitoringService.Models
         /// For more information, see
         /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/dns.htm).
         /// <br/>
-        /// Example: bminstance-1
+        /// Example: bminstance1
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
@@ -144,6 +149,10 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// The MAC address of the VNIC.
         /// <br/>
+        /// If the VNIC belongs to a VLAN as part of the Oracle Cloud VMware Solution,
+        /// the MAC address is learned. If the VNIC belongs to a subnet, the
+        /// MAC address is a static, Oracle-provided value.
+        /// <br/>
         /// Example: 00:00:00:00:00:01
         /// </value>
         [JsonProperty(PropertyName = "macAddress")]
@@ -152,12 +161,25 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// A list of the OCIDs of the network security groups that the VNIC belongs to.
         /// <br/>
+        /// If the VNIC belongs to a VLAN as part of the Oracle Cloud VMware Solution (instead of
+        /// belonging to a subnet), the value of the `nsgIds` attribute is ignored. Instead, the
+        /// VNIC belongs to the NSGs that are associated with the VLAN itself. See {@link Vlan}.
+        /// <br/>
         /// For more information about NSGs, see
         /// {@link NetworkSecurityGroup}.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
+        /// <value>
+        /// If the VNIC belongs to a VLAN as part of the Oracle Cloud VMware Solution (instead of
+        /// belonging to a subnet), the `vlanId` is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN the VNIC is in. See
+        /// {@link Vlan}. If the VNIC is instead in a subnet, `subnetId` has a value.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "vlanId")]
+        public string VlanId { get; set; }
         
         /// <value>
         /// The private IP address of the primary `privateIp` object on the VNIC.
@@ -182,6 +204,10 @@ namespace Oci.VnmonitoringService.Models
         /// [Using a Private IP as a Route Target](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingroutetables.htm#privateip).
         /// <br/>
         /// 
+        /// If the VNIC belongs to a VLAN as part of the Oracle Cloud VMware Solution (instead of
+        /// belonging to a subnet), the `skipSourceDestCheck` attribute is `true`.
+        /// This is because the source/destination check is always disabled for VNICs in a VLAN.
+        /// <br/>
         /// Example: true
         /// </value>
         [JsonProperty(PropertyName = "skipSourceDestCheck")]
@@ -190,10 +216,6 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet the VNIC is in.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
         

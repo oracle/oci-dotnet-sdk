@@ -34,7 +34,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// The identifier of the User's customer secret key.
+        /// The user's customer secret key identifier.
         /// <br/>
         /// **Added In:** 2102181953
         /// <br/>
@@ -52,7 +52,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// Ocid of the User's customer secret key.
+        /// The user's customer secret key OCID.
         /// <br/>
         /// **Added In:** 2102181953
         /// <br/>
@@ -70,7 +70,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Ocid { get; set; }
         
         /// <value>
-        /// The URI of the corresponding CustomerSecretKey resource to which the user belongs
+        /// The URI of the corresponding CustomerSecretKey resource to which the user belongs.
         /// <br/>
         /// **Added In:** 2102181953
         /// <br/>

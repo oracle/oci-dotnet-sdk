@@ -470,6 +470,23 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> UserNameDisallowed { get; set; }
         
         /// <value>
+        /// List of User attributes whose values are not allowed in the password.
+        /// <br/>
+        /// **Added In:** 2303212224
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - idcsSearchable: false
+        ///  - multiValued: true
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "disallowedUserAttributeValues")]
+        public System.Collections.Generic.List<string> DisallowedUserAttributeValues { get; set; }
+        
+        /// <value>
         /// Minimum time after which the user can resubmit the reset password request
         /// <br/>
         /// **SCIM++ Properties:**
@@ -721,23 +738,21 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> ForcePasswordReset { get; set; }
         
         /// <value>
-        /// A list of groups that the password policy belongs to.
+        /// The number of distinct characters between old password and new password
         /// <br/>
-        /// **Added In:** 20.1.3
+        /// **Added In:** 2303212224
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
-        ///  - idcsCompositeKey: [value]
-        ///  - idcsSearchable: true
-        ///  - multiValued: true
+        ///  - multiValued: false
         ///  - mutability: readWrite
         ///  - required: false
         ///  - returned: default
-        ///  - type: complex
+        ///  - type: integer
         ///  - uniqueness: none
         /// </value>
-        [JsonProperty(PropertyName = "groups")]
-        public System.Collections.Generic.List<PasswordPolicyGroups> Groups { get; set; }
+        [JsonProperty(PropertyName = "distinctCharacters")]
+        public System.Nullable<int> DistinctCharacters { get; set; }
         
         /// <value>
         /// Password policy priority
@@ -756,6 +771,25 @@ namespace Oci.IdentitydomainsService.Models
         /// </value>
         [JsonProperty(PropertyName = "priority")]
         public System.Nullable<int> Priority { get; set; }
+        
+        /// <value>
+        /// A list of groups that the password policy belongs to.
+        /// <br/>
+        /// **Added In:** 20.1.3
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - idcsCompositeKey: [value]
+        ///  - idcsSearchable: true
+        ///  - multiValued: true
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: complex
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "groups")]
+        public System.Collections.Generic.List<PasswordPolicyGroups> Groups { get; set; }
         
         /// <value>
         /// List of password policy rules that have values set. This map of stringKey:stringValue pairs can be used to aid users while setting/resetting password

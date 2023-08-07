@@ -21,6 +21,12 @@ namespace Oci.AilanguageService.Models
     public class ClassificationMultiClassModeDetails : ClassificationType
     {
         
+        /// <value>
+        /// Optional if nothing specified latest base model will be used for training. Supported versions can be found at /modelTypes/{modelType}
+        /// </value>
+        [JsonProperty(PropertyName = "version")]
+        public string Version { get; set; }
+        
         [JsonProperty(PropertyName = "classificationMode")]
         private readonly string classificationMode = "MULTI_CLASS";
     }

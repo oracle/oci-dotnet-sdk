@@ -70,5 +70,13 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "isSecurityFix")]
         public System.Nullable<bool> IsSecurityFix { get; set; }
         
+        /// <value>
+        /// The time until OGG version is supported. After this date has passed OGG version will not be available anymore. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeSupportedUntil")]
+        public System.Nullable<System.DateTime> TimeSupportedUntil { get; set; }
+        
     }
 }

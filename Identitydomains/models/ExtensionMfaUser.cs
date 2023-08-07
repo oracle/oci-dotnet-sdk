@@ -22,7 +22,7 @@ namespace Oci.IdentitydomainsService.Models
     {
                 ///
         /// <value>
-        /// Preferred Authentication Factor Type
+        /// The preferred authentication factor type.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>
@@ -68,7 +68,7 @@ namespace Oci.IdentitydomainsService.Models
         };
 
         /// <value>
-        /// Preferred Authentication Factor Type
+        /// The preferred authentication factor type.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>
@@ -87,7 +87,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<PreferredAuthenticationFactorEnum> PreferredAuthenticationFactor { get; set; }
                 ///
         /// <value>
-        /// User Opted for MFA
+        /// The user opted for MFA.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>
@@ -96,6 +96,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: true
         ///  - multiValued: false
         ///  - mutability: readOnly
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: string
@@ -117,7 +118,7 @@ namespace Oci.IdentitydomainsService.Models
         };
 
         /// <value>
-        /// User Opted for MFA
+        /// The user opted for MFA.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>
@@ -126,6 +127,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: true
         ///  - multiValued: false
         ///  - mutability: readOnly
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: string
@@ -136,7 +138,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<MfaStatusEnum> MfaStatus { get; set; }
         
         /// <value>
-        /// Preferred Third party vendor name
+        /// The preferred third-party vendor name.
         /// <br/>
         /// **Added In:** 19.2.1
         /// <br/>
@@ -154,7 +156,7 @@ namespace Oci.IdentitydomainsService.Models
         public string PreferredThirdPartyVendor { get; set; }
         
         /// <value>
-        /// Preferred Authentication method
+        /// The preferred authentication method.
         /// <br/>
         /// **Added In:** 2009232244
         /// <br/>
@@ -172,7 +174,7 @@ namespace Oci.IdentitydomainsService.Models
         public string PreferredAuthenticationMethod { get; set; }
         
         /// <value>
-        /// Number of incorrect Multi Factor Authentication login attempts made by this user. The user gets locked, if this reaches the threshold specified in the maxIncorrectAttempts attribute in AuthenticationFactorSettings
+        /// The number of incorrect multi factor authentication sign in attempts made by this user. The user is  locked if this reaches the threshold specified in the maxIncorrectAttempts attribute in AuthenticationFactorSettings.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>
@@ -180,6 +182,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: false
         ///  - multiValued: false
         ///  - mutability: readOnly
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: integer
@@ -189,7 +193,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<int> LoginAttempts { get; set; }
         
         /// <value>
-        /// This represents the date when the user enrolled for multi factor authentication. This will be set to null, when the user resets his factors.
+        /// The date when the user enrolled in multi factor authentication. This will be set to null, when the user resets their factors.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>
@@ -244,7 +248,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Collections.Generic.List<UserExtDevices> Devices { get; set; }
         
         /// <value>
-        /// A list of bypass codes belongs to user
+        /// A list of bypass codes that belongs to the user.
         /// <br/>
         /// **Added In:** 18.3.6
         /// <br/>

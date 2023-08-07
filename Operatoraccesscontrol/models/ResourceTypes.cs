@@ -27,6 +27,8 @@ namespace Oci.OperatoraccesscontrolService.Models
       [EnumMember(Value = "AUTONOMOUSVMCLUSTER")]
       Autonomousvmcluster,
       [EnumMember(Value = "CLOUDAUTONOMOUSVMCLUSTER")]
-      Cloudautonomousvmcluster
+      Cloudautonomousvmcluster,
+      [EnumMember(Value = "CCCINFRASTRUCTURE")]
+      Cccinfrastructure
   }
 }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.VnmonitoringService.Models
 {
     /// <summary>
-    /// Specific connection details for an IPSec tunnel.
+    /// Deprecated. For tunnel information, instead see {@link IPSecConnectionTunnel}.
     /// 
     /// </summary>
     public class TunnelStatus 
@@ -44,7 +44,9 @@ namespace Oci.VnmonitoringService.Models
             [EnumMember(Value = "DOWN")]
             Down,
             [EnumMember(Value = "DOWN_FOR_MAINTENANCE")]
-            DownForMaintenance
+            DownForMaintenance,
+            [EnumMember(Value = "PARTIAL_UP")]
+            PartialUp
         };
 
         /// <value>

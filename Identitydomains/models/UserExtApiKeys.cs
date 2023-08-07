@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// A list of api keys corresponding to user.
+    /// A list of API keys corresponding to user.
     /// <br/>
     /// **Added In:** 2012271618
     /// <br/>
@@ -34,7 +34,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// The value of of the User's api key.
+        /// The user's API key value.
         /// <br/>
         /// **Added In:** 2106240046
         /// <br/>
@@ -52,7 +52,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Key { get; set; }
         
         /// <value>
-        /// The identifier of the User's api key.
+        /// The user's API key identifier.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -70,7 +70,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// Ocid of the User's api key.
+        /// The user's API key OCID.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -88,7 +88,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Ocid { get; set; }
         
         /// <value>
-        /// The URI of the corresponding ApiKey resource to which the user belongs
+        /// The URI of the corresponding ApiKey resource to which the user belongs.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>

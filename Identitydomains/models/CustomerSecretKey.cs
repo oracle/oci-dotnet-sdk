@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// User's customer secret key
+    /// The user's customer secret key.
     /// </summary>
     public class CustomerSecretKey 
     {
@@ -220,7 +220,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Description { get; set; }
                 ///
         /// <value>
-        /// User credential status
+        /// The user's credential status.
         /// <br/>
         /// **Added In:** 2109090424
         /// <br/>
@@ -246,7 +246,7 @@ namespace Oci.IdentitydomainsService.Models
         };
 
         /// <value>
-        /// User credential status
+        /// The user's credential status.
         /// <br/>
         /// **Added In:** 2109090424
         /// <br/>
@@ -265,7 +265,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// User credential expires on
+        /// When the user's credential expire.
         /// <br/>
         /// **Added In:** 2109090424
         /// <br/>
@@ -283,7 +283,7 @@ namespace Oci.IdentitydomainsService.Models
         public string ExpiresOn { get; set; }
         
         /// <value>
-        /// Access key
+        /// The access key.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true

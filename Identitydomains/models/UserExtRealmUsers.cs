@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// A list of kerberos realm users for an OCI IAM User
+    /// A list of kerberos realm users for an Oracle Identity Cloud Service User
     /// <br/>
     /// **SCIM++ Properties:**
     ///  - idcsCompositeKey: [value]
@@ -31,7 +31,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// id of the KerberosRealmUser associated with the OCI IAM User.
+        /// id of the KerberosRealmUser associated with the Oracle Identity Cloud Service User.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
@@ -51,7 +51,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// The URI of the corresponding KerberosRealmUser resource associated with the OCI IAM User.
+        /// The URI of the corresponding KerberosRealmUser resource associated with the Oracle Identity Cloud Service User.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsSearchable: false
@@ -66,7 +66,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Ref { get; set; }
         
         /// <value>
-        /// Principal Name of the KerberosRealmUser associated with the OCI IAM User.
+        /// Principal Name of the KerberosRealmUser associated with the Oracle Identity Cloud Service User.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsPii: true
@@ -82,7 +82,7 @@ namespace Oci.IdentitydomainsService.Models
         public string PrincipalName { get; set; }
         
         /// <value>
-        /// Realm Name for the KerberosRealmUser associated with the OCI IAM User.
+        /// Realm Name for the KerberosRealmUser associated with the Oracle Identity Cloud Service User.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsSearchable: true
