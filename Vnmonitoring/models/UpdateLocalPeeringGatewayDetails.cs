@@ -41,5 +41,15 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the LPG will use.
+        /// <br/>
+        /// For information about why you would associate a route table with an LPG, see
+        /// [Transit Routing: Access to Multiple VCNs in Same Region](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitrouting.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "routeTableId")]
+        public string RouteTableId { get; set; }
+        
     }
 }

@@ -88,7 +88,7 @@ namespace Oci.IdentitydomainsService.Models
         public string UserId { get; set; }
         
         /// <value>
-        /// Ocid of the User's Support Account.
+        /// The OCID of the user's support account.
         /// <br/>
         /// **Added In:** 2103141444
         /// <br/>

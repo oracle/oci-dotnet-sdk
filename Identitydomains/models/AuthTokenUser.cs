@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// User linked to auth token
+    /// The user linked to the Auth token.
     /// <br/>
     /// **SCIM++ Properties:**
     ///  - caseExact: false
@@ -32,7 +32,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// User's id
+        /// The user's ID.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
@@ -48,7 +48,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// User's ocid
+        /// The user's OCID.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
@@ -80,7 +80,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Ref { get; set; }
         
         /// <value>
-        /// User display name
+        /// The user's display name.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -96,7 +96,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Display { get; set; }
         
         /// <value>
-        /// User name
+        /// The username.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false

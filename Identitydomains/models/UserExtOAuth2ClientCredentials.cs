@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// A list of oauth2 client credentials corresponding to user.
+    /// A list of OAuth2 client credentials corresponding to a user.
     /// <br/>
     /// **Added In:** 2012271618
     /// <br/>
@@ -34,7 +34,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// The identifier of the User's oAuth2 client credential.
+        /// The user's OAuth2 client credential identifier.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -52,7 +52,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// Ocid of the User's oAuth2 client credential.
+        /// The user's OAuth2 client credential OCID.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -70,7 +70,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Ocid { get; set; }
         
         /// <value>
-        /// The URI of the corresponding OAuth2ClientCredential resource to which the user belongs
+        /// The URI of the corresponding OAuth2ClientCredential resource to which the user belongs.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>

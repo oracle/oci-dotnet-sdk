@@ -39,6 +39,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: true
         ///  - multiValued: false
         ///  - mutability: readWrite
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: true
         ///  - returned: default
         ///  - type: string
@@ -58,6 +59,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - caseExact: false
         ///  - multiValued: false
         ///  - mutability: readOnly
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: true
         ///  - returned: default
         ///  - type: reference
@@ -95,6 +97,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: true
         ///  - multiValued: false
         ///  - mutability: readWrite
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: always
         ///  - type: string

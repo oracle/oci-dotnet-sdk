@@ -96,5 +96,35 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "networkEntityId")]
         public string NetworkEntityId { get; set; }
         
+        /// <value>
+        /// An optional description of your choice for the rule.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+                ///
+        /// <value>
+        /// A route rule can be STATIC if manually added to the route table, LOCAL if added by OCI to the route table.
+        /// 
+        /// </value>
+        ///
+        public enum RouteTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "STATIC")]
+            Static,
+            [EnumMember(Value = "LOCAL")]
+            Local
+        };
+
+        /// <value>
+        /// A route rule can be STATIC if manually added to the route table, LOCAL if added by OCI to the route table.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "routeType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<RouteTypeEnum> RouteType { get; set; }
+        
     }
 }

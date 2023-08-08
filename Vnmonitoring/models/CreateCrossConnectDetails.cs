@@ -37,6 +37,13 @@ namespace Oci.VnmonitoringService.Models
         public string CrossConnectGroupId { get; set; }
         
         /// <value>
+        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "definedTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
         /// 
@@ -53,6 +60,13 @@ namespace Oci.VnmonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "farCrossConnectOrCrossConnectGroupId")]
         public string FarCrossConnectOrCrossConnectGroupId { get; set; }
+        
+        /// <value>
+        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "freeformTags")]
+        public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
         /// The name of the FastConnect location where this cross-connect will be installed.
@@ -89,6 +103,17 @@ namespace Oci.VnmonitoringService.Models
         [Required(ErrorMessage = "PortSpeedShapeName is required.")]
         [JsonProperty(PropertyName = "portSpeedShapeName")]
         public string PortSpeedShapeName { get; set; }
+        
+        /// <value>
+        /// A reference name or identifier for the physical fiber connection that this cross-connect
+        /// uses.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "customerReferenceName")]
+        public string CustomerReferenceName { get; set; }
+        
+        [JsonProperty(PropertyName = "macsecProperties")]
+        public CreateMacsecProperties MacsecProperties { get; set; }
         
     }
 }

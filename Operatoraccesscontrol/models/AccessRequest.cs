@@ -83,6 +83,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         public string ResourceName { get; set; }
         
         /// <value>
+        /// The subresources requested for approval.
+        /// </value>
+        [JsonProperty(PropertyName = "subResourceList")]
+        public System.Collections.Generic.List<string> SubResourceList { get; set; }
+        
+        /// <value>
         /// The OCID of the compartment that contains the access request.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]

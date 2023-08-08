@@ -45,7 +45,11 @@ namespace Oci.GoldengateService.Models
             [EnumMember(Value = "MYSQL_SERVER")]
             MysqlServer,
             [EnumMember(Value = "OCI_MYSQL")]
-            OciMysql
+            OciMysql,
+            [EnumMember(Value = "SINGLESTOREDB")]
+            Singlestoredb,
+            [EnumMember(Value = "SINGLESTOREDB_CLOUD")]
+            SinglestoredbCloud
         };
 
         /// <value>

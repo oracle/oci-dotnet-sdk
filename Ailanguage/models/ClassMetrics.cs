@@ -61,5 +61,11 @@ namespace Oci.AilanguageService.Models
         [JsonProperty(PropertyName = "recall")]
         public System.Nullable<float> Recall { get; set; }
         
+        /// <value>
+        /// number of samples in the test set
+        /// </value>
+        [JsonProperty(PropertyName = "support")]
+        public System.Nullable<float> Support { get; set; }
+        
     }
 }

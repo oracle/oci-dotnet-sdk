@@ -45,10 +45,21 @@ namespace Oci.VnmonitoringService.Models
         /// about the public IP limits, see
         /// [Public IP Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingpublicIPs.htm).
         /// <br/>
-        /// Example: false
+        /// Example: falseIf you specify a vlanId, then assignPublicIp must be set to false. See{@link Vlan}.
         /// </value>
         [JsonProperty(PropertyName = "assignPublicIp")]
         public System.Nullable<bool> AssignPublicIp { get; set; }
+        
+        /// <value>
+        /// Whether the VNIC should be assigned a DNS record. If set to false, there will be no DNS record
+        /// registration for the VNIC. If set to true, the DNS record will be registered. The default
+        /// value is true.
+        /// <br/>
+        /// If you specify a `hostnameLabel`, then `assignPrivateDnsRecord` must be set to true.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "assignPrivateDnsRecord")]
+        public System.Nullable<bool> AssignPrivateDnsRecord { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
@@ -75,7 +86,7 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// The hostname for the VNIC's primary private IP. Used for DNS. The value is the hostname
         /// portion of the primary private IP's fully qualified domain name (FQDN)
-        /// (for example, `bminstance-1` in FQDN `bminstance-1.subnet123.vcn1.oraclevcn.com`).
+        /// (for example, `bminstance1` in FQDN `bminstance1.subnet123.vcn1.oraclevcn.com`).
         /// Must be unique across all VNICs in the subnet and comply with
         /// [RFC 952](https://tools.ietf.org/html/rfc952) and
         /// [RFC 1123](https://tools.ietf.org/html/rfc1123).
@@ -92,7 +103,7 @@ namespace Oci.VnmonitoringService.Models
         /// {@link #launchInstanceDetails(LaunchInstanceDetailsRequest) launchInstanceDetails}.
         /// If you provide both, the values must match.
         /// <br/>
-        /// Example: bminstance-1
+        /// Example: bminstance1If you specify a vlanId, the hostnameLabel cannot be specified. VNICs on a VLANcan not be assigned a hostname. See {@link Vlan}.
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
@@ -101,6 +112,11 @@ namespace Oci.VnmonitoringService.Models
         /// A list of the OCIDs of the network security groups (NSGs) to add the VNIC to. For more
         /// information about NSGs, see
         /// {@link NetworkSecurityGroup}.
+        /// <br/>
+        /// If a `vlanId` is specified, the `nsgIds` cannot be specified. The `vlanId`
+        /// indicates that the VNIC will belong to a VLAN instead of a subnet. With VLANs,
+        /// all VNICs in the VLAN belong to the NSGs that are associated with the VLAN.
+        /// See {@link Vlan}.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
@@ -117,6 +133,9 @@ namespace Oci.VnmonitoringService.Models
         /// {@link #getPrivateIp(GetPrivateIpRequest) getPrivateIp}.
         /// <br/>
         /// 
+        /// If you specify a `vlanId`, the `privateIp` cannot be specified.
+        /// See {@link Vlan}.
+        /// <br/>
         /// Example: 10.0.3.3
         /// </value>
         [JsonProperty(PropertyName = "privateIp")]
@@ -129,6 +148,10 @@ namespace Oci.VnmonitoringService.Models
         /// [Using a Private IP as a Route Target](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingroutetables.htm#privateip).
         /// <br/>
         /// 
+        /// If you specify a `vlanId`, the `skipSourceDestCheck` cannot be specified because the
+        /// source/destination check is always disabled for VNICs in a VLAN. See
+        /// {@link Vlan}.
+        /// <br/>
         /// Example: true
         /// </value>
         [JsonProperty(PropertyName = "skipSourceDestCheck")]
@@ -139,14 +162,26 @@ namespace Oci.VnmonitoringService.Models
         /// use this `subnetId` instead of the deprecated `subnetId` in
         /// {@link #launchInstanceDetails(LaunchInstanceDetailsRequest) launchInstanceDetails}.
         /// At least one of them is required; if you provide both, the values must match.
+        /// <br/>
+        /// If you are an Oracle Cloud VMware Solution customer and creating a secondary
+        /// VNIC in a VLAN instead of a subnet, provide a `vlanId` instead of a `subnetId`.
+        /// If you provide both a `vlanId` and `subnetId`, the request fails.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+        
+        /// <value>
+        /// Provide this attribute only if you are an Oracle Cloud VMware Solution
+        /// customer and creating a secondary VNIC in a VLAN. The value is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN.
+        /// See {@link Vlan}.
+        /// <br/>
+        /// Provide a `vlanId` instead of a `subnetId`. If you provide both a
+        /// `vlanId` and `subnetId`, the request fails.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "vlanId")]
+        public string VlanId { get; set; }
         
     }
 }

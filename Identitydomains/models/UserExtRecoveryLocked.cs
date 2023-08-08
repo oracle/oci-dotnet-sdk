@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// A complex attribute that indicates an password recovery is locked (blocking new sessions)
+    /// A complex attribute that indicates a password recovery is locked (blocking any new sessions).
     /// <br/>
     /// **Added In:** 19.1.4
     /// <br/>
@@ -33,7 +33,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// Indicates that the rev is locked
+        /// Indicates that the recovery is locked.
         /// <br/>
         /// **Added In:** 19.1.4
         /// <br/>
@@ -42,6 +42,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: true
         ///  - multiValued: false
         ///  - mutability: readWrite
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: boolean
@@ -51,7 +52,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> On { get; set; }
         
         /// <value>
-        /// The date and time that the current resource was locked
+        /// The date and time that the current resource was locked.
         /// <br/>
         /// **Added In:** 19.1.4
         /// <br/>
@@ -59,6 +60,7 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: false
         ///  - multiValued: false
         ///  - mutability: readWrite
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: dateTime

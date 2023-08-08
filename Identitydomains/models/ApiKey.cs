@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// User's api key
+    /// The user's API key.
     /// </summary>
     public class ApiKey 
     {

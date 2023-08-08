@@ -42,6 +42,11 @@ namespace Oci.VnmonitoringService.Models
     /// {@link #attachVnic(AttachVnicRequest) attachVnic}. To update the hostname
     /// for a primary private IP, you use {@link #updateVnic(UpdateVnicRequest) updateVnic}.
     /// <br/>
+    /// `PrivateIp` objects that are created for use with the Oracle Cloud VMware Solution are
+    /// assigned to a VLAN and not a VNIC in a subnet. See the
+    /// descriptions of the relevant attributes in the `PrivateIp` object. Also see
+    /// {@link Vlan}.
+    /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
     /// talk to an administrator. If you're an administrator who needs to write policies to give users access, see
     /// [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/policygetstarted.htm).
@@ -51,7 +56,8 @@ namespace Oci.VnmonitoringService.Models
     {
         
         /// <value>
-        /// The private IP's availability domain.
+        /// The private IP's availability domain. This attribute will be null if this is a *secondary*
+        /// private IP assigned to a VNIC that is in a *regional* subnet.
         /// <br/>
         /// Example: Uocm:PHX-AD-1
         /// </value>
@@ -89,7 +95,7 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// The hostname for the private IP. Used for DNS. The value is the hostname
         /// portion of the private IP's fully qualified domain name (FQDN)
-        /// (for example, `bminstance-1` in FQDN `bminstance-1.subnet123.vcn1.oraclevcn.com`).
+        /// (for example, `bminstance1` in FQDN `bminstance1.subnet123.vcn1.oraclevcn.com`).
         /// Must be unique across all VNICs in the subnet and comply with
         /// [RFC 952](https://tools.ietf.org/html/rfc952) and
         /// [RFC 1123](https://tools.ietf.org/html/rfc1123).
@@ -97,7 +103,7 @@ namespace Oci.VnmonitoringService.Models
         /// For more information, see
         /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/dns.htm).
         /// <br/>
-        /// Example: bminstance-1
+        /// Example: bminstance1
         /// </value>
         [JsonProperty(PropertyName = "hostnameLabel")]
         public string HostnameLabel { get; set; }
@@ -112,7 +118,10 @@ namespace Oci.VnmonitoringService.Models
         /// The private IP address of the `privateIp` object. The address is within the CIDR
         /// of the VNIC's subnet.
         /// <br/>
-        /// 
+        /// However, if the `PrivateIp` object is being used with a VLAN as part of
+        /// the Oracle Cloud VMware Solution, the address is from the range specified by the
+        /// `cidrBlock` attribute for the VLAN. See {@link Vlan}.
+        /// <br/>
         /// Example: 10.0.3.3
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
@@ -128,7 +137,19 @@ namespace Oci.VnmonitoringService.Models
         public System.Nullable<bool> IsPrimary { get; set; }
         
         /// <value>
+        /// Applicable only if the `PrivateIp` object is being used with a VLAN as part of
+        /// the Oracle Cloud VMware Solution. The `vlanId` is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN. See
+        /// {@link Vlan}.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "vlanId")]
+        public string VlanId { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet the VNIC is in.
+        /// <br/>
+        /// However, if the `PrivateIp` object is being used with a VLAN as part of
+        /// the Oracle Cloud VMware Solution, the `subnetId` is null.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
@@ -145,6 +166,8 @@ namespace Oci.VnmonitoringService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC the private IP is assigned to. The VNIC and private IP
         /// must be in the same subnet.
+        /// However, if the `PrivateIp` object is being used with a VLAN as part of
+        /// the Oracle Cloud VMware Solution, the `vnicId` is null.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vnicId")]

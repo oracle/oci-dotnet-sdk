@@ -74,6 +74,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
+        
+        /// <value>
+        /// Retention period, in days, for long-term backups
+        /// </value>
+        [JsonProperty(PropertyName = "backupRetentionPeriodInDays")]
+        public System.Nullable<int> BackupRetentionPeriodInDays { get; set; }
                 ///
         /// <value>
         /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value.

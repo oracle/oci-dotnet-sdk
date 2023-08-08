@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// OCI IAM self service schema extension
+    /// Oracle Identity Cloud Service self service schema extension
     /// </summary>
     public class ExtensionMeUser 
     {

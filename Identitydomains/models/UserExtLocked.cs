@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// A complex attribute that indicates an account is locked (blocking new sessions)
+    /// A complex attribute that indicates an account is locked (blocking any new sessions).
     /// <br/>
     /// **SCIM++ Properties:**
     ///  - idcsCsvAttributeNameMappings: [[columnHeaderName:Locked, mapsTo:locked.on], [columnHeaderName:Locked Reason, mapsTo:locked.reason], [columnHeaderName:Locked Date, mapsTo:locked.lockDate]]
@@ -33,12 +33,14 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// Indicates the reason for locking. Valid values are: 0 - failed password login attempts, 1 - admin lock, 2 - failed reset password attempts, 3 - failed MFA login attempts, 4 - failed MFA login attempts for federated user, 5 - failed Database login attempts
+        /// Indicates the reason for locking the account. Valid values are: 0 - failed password login attempts, 1 - admin lock, 2 - failed reset password attempts, 3 - failed MFA login attempts, 4 - failed MFA login attempts for federated user, 5 - failed Database login attempts
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsSearchable: false
         ///  - multiValued: false
         ///  - mutability: readWrite
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: integer
@@ -48,13 +50,15 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<int> Reason { get; set; }
         
         /// <value>
-        /// Indicates tat the account is locked
+        /// Indicates that the account is locked.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
         ///  - idcsSearchable: true
         ///  - multiValued: false
         ///  - mutability: readWrite
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: boolean
@@ -64,12 +68,13 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> On { get; set; }
         
         /// <value>
-        /// The date and time that the current resource was locked
+        /// The date and time that the current resource was locked.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsSearchable: false
         ///  - multiValued: false
         ///  - mutability: readWrite
+        ///  - idcsRequiresWriteForAccessFlows: true
         ///  - required: false
         ///  - returned: default
         ///  - type: dateTime
@@ -79,7 +84,7 @@ namespace Oci.IdentitydomainsService.Models
         public string LockDate { get; set; }
         
         /// <value>
-        /// Indicates whether user password is expired. If this value is false, password expiry will still be evaluated during user login.
+        /// Indicates whether the user password is expired. If this value is false, password expiry is still evaluated during user login.
         /// <br/>
         /// **Added In:** 20.1.3
         /// <br/>

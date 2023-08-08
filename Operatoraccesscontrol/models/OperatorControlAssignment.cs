@@ -194,6 +194,13 @@ namespace Oci.OperatoraccesscontrolService.Models
         public string ErrorMessage { get; set; }
         
         /// <value>
+        /// Whether the assignment is a default assignment.   
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDefaultAssignment")]
+        public System.Nullable<bool> IsDefaultAssignment { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// 
         /// </value>

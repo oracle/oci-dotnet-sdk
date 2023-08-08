@@ -36,7 +36,27 @@ namespace Oci.AilanguageService.Models
             [EnumMember(Value = "NAMED_ENTITY_RECOGNITION")]
             NamedEntityRecognition,
             [EnumMember(Value = "TEXT_CLASSIFICATION")]
-            TextClassification
+            TextClassification,
+            [EnumMember(Value = "PRE_TRAINED_NAMED_ENTITY_RECOGNITION")]
+            PreTrainedNamedEntityRecognition,
+            [EnumMember(Value = "PRE_TRAINED_TEXT_CLASSIFICATION")]
+            PreTrainedTextClassification,
+            [EnumMember(Value = "PRE_TRAINED_SENTIMENT_ANALYSIS")]
+            PreTrainedSentimentAnalysis,
+            [EnumMember(Value = "PRE_TRAINED_KEYPHRASE_EXTRACTION")]
+            PreTrainedKeyphraseExtraction,
+            [EnumMember(Value = "PRE_TRAINED_LANGUAGE_DETECTION")]
+            PreTrainedLanguageDetection,
+            [EnumMember(Value = "PRE_TRAINED_PII")]
+            PreTrainedPii,
+            [EnumMember(Value = "PRE_TRAINED_TRANSLATION")]
+            PreTrainedTranslation,
+            [EnumMember(Value = "PRE_TRAINED_HEALTH_NLU")]
+            PreTrainedHealthNlu,
+            [EnumMember(Value = "PRE_TRAINED_SUMMARIZATION")]
+            PreTrainedSummarization,
+            [EnumMember(Value = "PRE_TRAINED_UNIVERSAL")]
+            PreTrainedUniversal
         };
 
         
@@ -63,11 +83,41 @@ namespace Oci.AilanguageService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "PRE_TRAINED_KEYPHRASE_EXTRACTION":
+                    obj = new PreTrainedKeyPhraseExtractionModelDetails();
+                    break;
+                case "PRE_TRAINED_HEALTH_NLU":
+                    obj = new PreTrainedHealthNluModelDetails();
+                    break;
+                case "PRE_TRAINED_UNIVERSAL":
+                    obj = new PreTrainedUniversalModel();
+                    break;
                 case "NAMED_ENTITY_RECOGNITION":
                     obj = new NamedEntityRecognitionModelDetails();
                     break;
+                case "PRE_TRAINED_LANGUAGE_DETECTION":
+                    obj = new PreTrainedLanguageDetectionModelDetails();
+                    break;
+                case "PRE_TRAINED_NAMED_ENTITY_RECOGNITION":
+                    obj = new PreTrainedNamedEntityRecognitionModelDetails();
+                    break;
+                case "PRE_TRAINED_SENTIMENT_ANALYSIS":
+                    obj = new PreTrainedSentimentAnalysisModelDetails();
+                    break;
+                case "PRE_TRAINED_PHI":
+                    obj = new PreTrainedPhiModelDetails();
+                    break;
+                case "PRE_TRAINED_TEXT_CLASSIFICATION":
+                    obj = new PreTrainedTextClassificationModelDetails();
+                    break;
                 case "TEXT_CLASSIFICATION":
                     obj = new TextClassificationModelDetails();
+                    break;
+                case "PRE_TRAINED_SUMMARIZATION":
+                    obj = new PreTrainedSummarization();
+                    break;
+                case "PRE_TRAINED_PII":
+                    obj = new PreTrainedPiiModelDetails();
                     break;
             }
             if (obj != null)

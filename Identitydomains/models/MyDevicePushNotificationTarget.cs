@@ -42,6 +42,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: always
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         /// <remarks>
         /// Required
@@ -61,6 +63,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: reference
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "$ref")]
         public string Ref { get; set; }

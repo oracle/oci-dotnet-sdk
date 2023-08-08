@@ -91,6 +91,10 @@ namespace Oci.GoldengateService.Models
       MysqlServer,
       [EnumMember(Value = "POSTGRESQL_SERVER")]
       PostgresqlServer,
+      [EnumMember(Value = "SINGLESTOREDB")]
+      Singlestoredb,
+      [EnumMember(Value = "SINGLESTOREDB_CLOUD")]
+      SinglestoredbCloud,
       [EnumMember(Value = "SNOWFLAKE")]
       Snowflake
   }

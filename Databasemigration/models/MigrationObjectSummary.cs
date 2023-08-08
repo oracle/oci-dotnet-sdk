@@ -60,5 +60,12 @@ namespace Oci.DatabasemigrationService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ObjectStatus> ObjectStatus { get; set; }
         
+        /// <value>
+        /// Whether an excluded table should be omitted from replication. Only valid for database objects that have are of type TABLE and object status EXCLUDE.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isOmitExcludedTableFromReplication")]
+        public System.Nullable<bool> IsOmitExcludedTableFromReplication { get; set; }
+        
     }
 }

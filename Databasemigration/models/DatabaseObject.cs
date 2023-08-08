@@ -52,5 +52,12 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
+        /// <value>
+        /// Whether an excluded table should be omitted from replication. Only valid for database objects that have are of type TABLE and that are included in the exludeObjects.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isOmitExcludedTableFromReplication")]
+        public System.Nullable<bool> IsOmitExcludedTableFromReplication { get; set; }
+        
     }
 }

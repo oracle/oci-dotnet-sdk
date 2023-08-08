@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// Group resource.
+    /// The Group resource.
     /// </summary>
     public class Group 
     {
@@ -210,7 +210,7 @@ namespace Oci.IdentitydomainsService.Models
         public string ExternalId { get; set; }
         
         /// <value>
-        /// Group display name
+        /// The Group display name.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -232,7 +232,7 @@ namespace Oci.IdentitydomainsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A human readable name for Group as defined by the Service Consumer
+        /// A human readable name for the group as defined by the Service Consumer.
         /// <br/>
         /// **Added In:** 2011192329
         /// <br/>
@@ -250,20 +250,7 @@ namespace Oci.IdentitydomainsService.Models
         public string NonUniqueDisplayName { get; set; }
         
         /// <value>
-        /// Group members - when requesting members attribute, a max of 10,000 members will be returned in a single request. It is recommended to use startIndex and count to return members in pages instead of in a single response, eg : #attributes=members[startIndex=1%26count=10]
-        /// <br/>
-        /// **SCIM++ Properties:**
-        ///  - caseExact: false
-        ///  - idcsCompositeKey: [value]
-        ///  - idcsCsvAttributeNameMappings: [[columnHeaderName:User Members, mapsTo:members[User].value, multiValueDelimiter:;]]
-        ///  - idcsSearchable: true
-        ///  - multiValued: true
-        ///  - mutability: readWrite
-        ///  - required: false
-        ///  - returned: request
-        ///  - idcsPaginateResponse: true
-        ///  - type: complex
-        ///  - uniqueness: none
+        /// The group members. <b>Important:</b> When requesting group members, a maximum of 10,000 members can be returned in a single request. If the response contains more than 10,000 members, the request will fail. Use 'startIndex' and 'count' to return members in pages instead of in a single response, for Example: #attributes=members[startIndex=1%26count=10]. This REST API is SCIM compliant.**SCIM++ Properties:** - caseExact: false - idcsCompositeKey: [value] - idcsCsvAttributeNameMappings: [[columnHeaderName:User Members, mapsTo:members[User].value, multiValueDelimiter:;]] - idcsSearchable: true - multiValued: true - mutability: readWrite - required: false - returned: request - idcsPaginateResponse: true - type: complex - uniqueness: none
         /// </value>
         [JsonProperty(PropertyName = "members")]
         public System.Collections.Generic.List<GroupMembers> Members { get; set; }

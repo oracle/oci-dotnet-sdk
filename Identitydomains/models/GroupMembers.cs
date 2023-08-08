@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// Group members - when requesting members attribute, a max of 10,000 members will be returned in a single request. It is recommended to use startIndex and count to return members in pages instead of in a single response, eg : #attributes=members[startIndex=1%26count=10]
+    /// The group members. <b>Important:</b> When requesting group members, a maximum of 10,000 members can be returned in a single request. If the response contains more than 10,000 members, the request will fail. Use 'startIndex' and 'count' to return members in pages instead of in a single response, for Example: #attributes=members[startIndex=1%26count=10]. This REST API is SCIM compliant.
     /// </summary>
     public class GroupMembers 
     {
         
         /// <value>
-        /// ID of the member of this Group
+        /// The ID of the member of this Group
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
@@ -42,7 +42,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// The DateTime the member was added to the Group.
+        /// The date and time that the member was added to the group.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -58,7 +58,7 @@ namespace Oci.IdentitydomainsService.Models
         public string DateAdded { get; set; }
         
         /// <value>
-        /// OCID of the member of this Group
+        /// The OCID of the member of this group.
         /// <br/>
         /// **Added In:** 2012271618
         /// <br/>
@@ -76,7 +76,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Ocid { get; set; }
         
         /// <value>
-        /// Membership Ocid
+        /// The membership OCID.
         /// <br/>
         /// **Added In:** 2102181953
         /// <br/>
@@ -94,7 +94,7 @@ namespace Oci.IdentitydomainsService.Models
         public string MembershipOcid { get; set; }
         
         /// <value>
-        /// The URI that corresponds to the member Resource of this Group
+        /// The URI that corresponds to the member Resource of this group.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
@@ -110,7 +110,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Ref { get; set; }
         
         /// <value>
-        /// Member display name
+        /// The member's display name.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -126,7 +126,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Display { get; set; }
                 ///
         /// <value>
-        /// Indicates the type of resource--for example, User or Group
+        /// Indicates the type of resource, for example, User or Group.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
@@ -149,7 +149,7 @@ namespace Oci.IdentitydomainsService.Models
         };
 
         /// <value>
-        /// Indicates the type of resource--for example, User or Group
+        /// Indicates the type of resource, for example, User or Group.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
@@ -171,7 +171,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
-        /// Member name
+        /// The member's name.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false

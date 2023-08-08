@@ -42,7 +42,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// Ocid of the User's group.
+        /// The OCID of the User's group.
         /// <br/>
         /// **Added In:** 2102181953
         /// <br/>
@@ -163,7 +163,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
-        /// Membership Ocid
+        /// The membership OCID.
         /// <br/>
         /// **Added In:** 2103141444
         /// <br/>

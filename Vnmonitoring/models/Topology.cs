@@ -59,6 +59,18 @@ namespace Oci.VnmonitoringService.Models
         public System.Collections.Generic.List<TopologyEntityRelationship> Relationships { get; set; }
         
         /// <value>
+        /// Lists entities that are limited during ingestion.
+        /// The values for the items in the list are the entity type names of the limitedEntities.
+        /// Example: vcn
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LimitedEntities is required.")]
+        [JsonProperty(PropertyName = "limitedEntities")]
+        public System.Collections.Generic.List<string> LimitedEntities { get; set; }
+        
+        /// <value>
         /// Records when the virtual network topology was created, in [RFC3339](https://tools.ietf.org/html/rfc3339) format for date and time.
         /// </value>
         /// <remarks>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// Schema to handle userpassword reset by administrator.
+    /// The schema used to handle a user password reset by an administrator.
     /// </summary>
     public class UserPasswordResetter 
     {
@@ -208,7 +208,7 @@ namespace Oci.IdentitydomainsService.Models
         public string ExternalId { get; set; }
         
         /// <value>
-        /// A Boolean value indicating whether or not to send email notification after resetting the password of the OCI IAM user.
+        /// Indicates whether to send an email notification after resetting the user's password.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -243,7 +243,7 @@ namespace Oci.IdentitydomainsService.Models
         public UserPasswordResetterUserToken UserToken { get; set; }
         
         /// <value>
-        /// Specifies the EmailTemplate to be used when sending notification to the user this request is for. If specified, it overrides the default EmailTemplate for this event.
+        /// Specifies the EmailTemplate to be used when sending notifications to the user. If specified, it overrides the default EmailTemplate.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false
@@ -259,7 +259,7 @@ namespace Oci.IdentitydomainsService.Models
         public string NotificationEmailTemplateId { get; set; }
         
         /// <value>
-        /// One time password will be returned when user does not have primary email address
+        /// A one time password will be returned when the user doesn't have a primary email address.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: false

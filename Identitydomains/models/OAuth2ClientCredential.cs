@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// User's oauth2 client credential
+    /// The user's OAuth2 client credentials.
     /// </summary>
     public class OAuth2ClientCredential 
     {
@@ -226,7 +226,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Description { get; set; }
                 ///
         /// <value>
-        /// User credential status
+        /// The user's credential status.
         /// <br/>
         /// **Added In:** 2109090424
         /// <br/>
@@ -252,7 +252,7 @@ namespace Oci.IdentitydomainsService.Models
         };
 
         /// <value>
-        /// User credential status
+        /// The user's credential status.
         /// <br/>
         /// **Added In:** 2109090424
         /// <br/>
@@ -271,7 +271,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// User credential expires on
+        /// When the user's credentials expire.
         /// <br/>
         /// **Added In:** 2109090424
         /// <br/>
@@ -289,7 +289,7 @@ namespace Oci.IdentitydomainsService.Models
         public string ExpiresOn { get; set; }
         
         /// <value>
-        /// Specifies if secret need to be reset
+        /// Specifies whether the secret must be reset.
         /// <br/>
         /// **Added In:** 2109090424
         /// <br/>

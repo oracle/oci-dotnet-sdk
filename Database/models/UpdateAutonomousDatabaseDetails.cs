@@ -29,6 +29,36 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
+        /// Retention period, in days, for long-term backups
+        /// </value>
+        [JsonProperty(PropertyName = "backupRetentionPeriodInDays")]
+        public System.Nullable<int> BackupRetentionPeriodInDays { get; set; }
+                ///
+        /// <value>
+        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value.
+        /// </value>
+        ///
+        public enum ComputeModelEnum {
+            [EnumMember(Value = "ECPU")]
+            Ecpu,
+            [EnumMember(Value = "OCPU")]
+            Ocpu
+        };
+
+        /// <value>
+        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
+        
+        /// <value>
+        /// Parameter that allows users to select an acceptable maximum data loss limit in seconds, up to which Automatic Failover will be triggered when necessary for a Local Autonomous Data Guard
+        /// </value>
+        [JsonProperty(PropertyName = "localAdgAutoFailoverMaxDataLossLimit")]
+        public System.Nullable<int> LocalAdgAutoFailoverMaxDataLossLimit { get; set; }
+        
+        /// <value>
         /// The number of CPUs to be made available to the Autonomous Database.<br>
         /// For Autonomous Databases on Dedicated Exadata Infrastructure:
         /// - The CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details. 

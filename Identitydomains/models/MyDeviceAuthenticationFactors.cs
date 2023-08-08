@@ -33,6 +33,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         ///
         public enum TypeEnum {
@@ -73,6 +75,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         /// <remarks>
         /// Required
@@ -93,6 +97,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         ///
         public enum StatusEnum {
@@ -124,6 +130,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -140,6 +148,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
+        ///  - idcsRequiresWriteForAccessFlows: true
+        ///  - idcsRequiresImmediateReadAfterWriteForAccessFlows: true
         /// </value>
         [JsonProperty(PropertyName = "publicKey")]
         public string PublicKey { get; set; }

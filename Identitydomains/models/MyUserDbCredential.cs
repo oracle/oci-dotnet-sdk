@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// User's Db Credential
+    /// User's Database Credential
     /// </summary>
     public class MyUserDbCredential 
     {
@@ -209,7 +209,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The db password of the user
+        /// The user's database password.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - type: string
@@ -240,7 +240,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The db password of the user with mixed salt
+        /// The user's database password with mixed salt.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - type: string
@@ -252,7 +252,7 @@ namespace Oci.IdentitydomainsService.Models
         public string MixedDbPassword { get; set; }
         
         /// <value>
-        /// The salt of the password
+        /// The salt of the password.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - type: string
@@ -264,7 +264,7 @@ namespace Oci.IdentitydomainsService.Models
         public string Salt { get; set; }
         
         /// <value>
-        /// The mixed salt of the password
+        /// The mixed salt of the password.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - type: string
@@ -276,7 +276,7 @@ namespace Oci.IdentitydomainsService.Models
         public string MixedSalt { get; set; }
         
         /// <value>
-        /// A DateTime that specifies the date and time when the current db password was set
+        /// A DateTime that specifies the date and time when the current database password was set.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - type: dateTime
@@ -287,7 +287,7 @@ namespace Oci.IdentitydomainsService.Models
         public string LastSetDate { get; set; }
         
         /// <value>
-        /// Indicates that the db password has expired
+        /// Indicates that the database password has expired.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - type: boolean
@@ -343,7 +343,7 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// User credential expires on
+        /// When the user credential expires.
         /// <br/>
         /// **Added In:** 2109090424
         /// <br/>
