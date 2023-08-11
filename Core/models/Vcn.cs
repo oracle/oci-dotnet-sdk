@@ -28,14 +28,14 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The list of BYOIPv6 CIDR blocks required to create a VCN that uses BYOIPv6 ranges.
+        /// The list of BYOIPv6 prefixes required to create a VCN that uses BYOIPv6 ranges.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "byoipv6CidrBlocks")]
         public System.Collections.Generic.List<string> Byoipv6CidrBlocks { get; set; }
         
         /// <value>
-        /// For an IPv6-enabled VCN, this is the list of Private IPv6 CIDR blocks for the VCN's IP address space.
+        /// For an IPv6-enabled VCN, this is the list of Private IPv6 prefixes for the VCN's IP address space.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ipv6PrivateCidrBlocks")]
@@ -148,8 +148,8 @@ namespace Oci.CoreService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// For an IPv6-enabled VCN, this is the list of IPv6 CIDR blocks for the VCN's IP address space.
-        /// The CIDRs are provided by Oracle and the sizes are always /56.
+        /// For an IPv6-enabled VCN, this is the list of IPv6 prefixes for the VCN's IP address space.
+        /// The prefixes are provided by Oracle and the sizes are always /56.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ipv6CidrBlocks")]

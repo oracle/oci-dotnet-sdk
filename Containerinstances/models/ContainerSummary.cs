@@ -161,5 +161,8 @@ namespace Oci.ContainerinstancesService.Models
         [JsonProperty(PropertyName = "isResourcePrincipalDisabled")]
         public System.Nullable<bool> IsResourcePrincipalDisabled { get; set; }
         
+        [JsonProperty(PropertyName = "securityContext")]
+        public SecurityContext SecurityContext { get; set; }
+        
     }
 }

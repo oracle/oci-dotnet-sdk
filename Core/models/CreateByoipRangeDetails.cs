@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The BYOIPv6 CIDR block. You can assign some or all of it to a VCN after it is validated.
+        /// The BYOIPv6 prefix. You can assign some or all of it to a VCN after it is validated.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ipv6CidrBlock")]

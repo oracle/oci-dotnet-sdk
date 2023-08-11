@@ -30,7 +30,6 @@ namespace Oci.ContainerinstancesService.Models
         
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
-        /// <br/>
         /// If you don't provide a name, a name is generated automatically.
         /// 
         /// </value>
@@ -120,6 +119,9 @@ namespace Oci.ContainerinstancesService.Models
         /// </value>
         [JsonProperty(PropertyName = "healthChecks")]
         public System.Collections.Generic.List<CreateContainerHealthCheckDetails> HealthChecks { get; set; }
+        
+        [JsonProperty(PropertyName = "securityContext")]
+        public CreateSecurityContextDetails SecurityContext { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

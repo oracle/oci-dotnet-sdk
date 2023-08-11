@@ -258,5 +258,8 @@ namespace Oci.ContainerinstancesService.Models
         [JsonProperty(PropertyName = "containerRestartAttemptCount")]
         public System.Nullable<int> ContainerRestartAttemptCount { get; set; }
         
+        [JsonProperty(PropertyName = "securityContext")]
+        public SecurityContext SecurityContext { get; set; }
+        
     }
 }

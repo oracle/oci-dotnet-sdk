@@ -37,7 +37,7 @@ namespace Oci.CoreService.Models
         /// The range of IP addresses used for matching when routing traffic.
         /// <br/>
         /// Potential values:
-        ///   * IP address range in CIDR notation. Can be an IPv4 or IPv6 CIDR. For Example: 192.168.1.0/24  or 2001:0db8:0123:45::/56.
+        ///   * IP address range in CIDR notation. Can be an IPv4 CIDR block or IPv6 prefix. For Example: 192.168.1.0/24  or 2001:0db8:0123:45::/56.
         /// </value>
         [JsonProperty(PropertyName = "destination")]
         public string Destination { get; set; }

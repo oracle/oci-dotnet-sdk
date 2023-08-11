@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A summary of IPv6 CIDR block subranges currently allocated to a VCN.
+    /// A summary of IPv6 prefix subranges currently allocated to a VCN.
     /// 
     /// </summary>
     public class ByoipRangeVcnIpv6AllocationSummary 
@@ -36,7 +36,7 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The BYOIPv6 CIDR block range or subrange allocated to a VCN. This could be all or part of a BYOIPv6 CIDR block.
+        /// The BYOIPv6 prefix range or subrange allocated to a VCN. This could be all or part of a BYOIPv6 prefix.
         /// Each VCN allocation must be /64 or larger.
         /// 
         /// </value>

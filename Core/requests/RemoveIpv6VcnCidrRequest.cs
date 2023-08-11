@@ -58,7 +58,7 @@ namespace Oci.CoreService.Requests
         public string IfMatch { get; set; }
         
         /// <value>
-        /// Details object for removing a VCN ipv6 CIDR.
+        /// Details object for removing a VCN IPv6 prefix.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
         public RemoveVcnIpv6CidrDetails RemoveVcnIpv6CidrDetails { get; set; }

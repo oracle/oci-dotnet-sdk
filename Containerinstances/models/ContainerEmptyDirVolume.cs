@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// The empty directory of container.
+    /// The empty directory volume of a container instance. You can create up to 64 EmptyDir per container instance.
     /// </summary>
     public class ContainerEmptyDirVolume : ContainerVolume
     {

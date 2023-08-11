@@ -32,6 +32,29 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
+                ///
+        /// <value>
+        /// The placement constraint when reserving hosts.
+        /// </value>
+        ///
+        public enum PlacementConstraintEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "SINGLE_TIER")]
+            SingleTier,
+            [EnumMember(Value = "SINGLE_BLOCK")]
+            SingleBlock,
+            [EnumMember(Value = "PACKED_DISTRIBUTION_MULTI_BLOCK")]
+            PackedDistributionMultiBlock
+        };
+
+        /// <value>
+        /// The placement constraint when reserving hosts.
+        /// </value>
+        [JsonProperty(PropertyName = "placementConstraint")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<PlacementConstraintEnum> PlacementConstraint { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the primary subnet to place

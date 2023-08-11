@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerinstancesService.Models
 {
     /// <summary>
-    /// The file that is mounted on a container instance through a volume mount. 
+    /// The file that is mounted on a container instance through a volume mount.
     /// 
     /// </summary>
     public class ContainerConfigFile 

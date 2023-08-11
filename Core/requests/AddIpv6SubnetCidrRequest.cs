@@ -30,7 +30,7 @@ namespace Oci.CoreService.Requests
         public string SubnetId { get; set; }
         
         /// <value>
-        /// Details object for adding an IPv6 CIDR to a subnet.
+        /// Details object for adding an IPv6 prefix to a subnet.
         /// </value>
         /// <remarks>
         /// Required
