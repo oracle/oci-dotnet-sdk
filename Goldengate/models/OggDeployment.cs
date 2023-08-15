@@ -59,5 +59,27 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "certificate")]
         public string Certificate { get; set; }
         
+        /// <value>
+        /// The type of credential store for OGG.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "credentialStore")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<CredentialStore> CredentialStore { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Identity Domain when IAM credential store is used.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "identityDomainId")]
+        public string IdentityDomainId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the deployment password is stored.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "passwordSecretId")]
+        public string PasswordSecretId { get; set; }
+        
     }
 }

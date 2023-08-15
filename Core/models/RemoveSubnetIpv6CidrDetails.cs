@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Details object for removing an IPv6 CIDR Block from a Subnet.
+    /// Details object for removing an IPv6 prefix from a subnet.
     /// </summary>
     public class RemoveSubnetIpv6CidrDetails 
     {
         
         /// <value>
-        /// This field is not required and should only be specified when removing an IPv6 CIDR
+        /// This field is not required and should only be specified when removing an IPv6 prefix
         /// from a subnet's IPv6 address space.
         /// See[IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
         /// <br/>

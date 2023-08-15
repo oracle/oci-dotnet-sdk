@@ -30,7 +30,7 @@ namespace Oci.CoreService.Requests
         public string SubnetId { get; set; }
         
         /// <value>
-        /// Details object for removing an IPv6 SUBNET CIDR.
+        /// Details object for removing an IPv6 SUBNET prefix.
         /// </value>
         /// <remarks>
         /// Required

@@ -187,7 +187,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Add an IPv6 CIDR to a subnet.
+        /// Add an IPv6 prefix to a subnet.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -244,8 +244,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Add an IPv6 CIDR to a VCN. The VCN size is always /56 and assigned by Oracle.
-        /// Once added the IPv6 CIDR block cannot be removed or modified.
+        /// Add an IPv6 prefix to a VCN. The VCN size is always /56 and assigned by Oracle.
+        /// Once added the IPv6 prefix cannot be removed or modified.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -12032,7 +12032,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Remove an IPv6 CIDR from a subnet. At least one IPv6 CIDR should remain.
+        /// Remove an IPv6 prefix from a subnet. At least one IPv6 CIDR should remain.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -12089,7 +12089,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Removing an existing IPv6 CIDR from a VCN.
+        /// Removing an existing IPv6 prefix from a VCN.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

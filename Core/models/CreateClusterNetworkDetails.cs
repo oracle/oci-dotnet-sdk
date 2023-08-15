@@ -87,5 +87,8 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "placementConfiguration")]
         public ClusterNetworkPlacementConfigurationDetails PlacementConfiguration { get; set; }
         
+        [JsonProperty(PropertyName = "clusterConfiguration")]
+        public ClusterConfigurationDetails ClusterConfiguration { get; set; }
+        
     }
 }

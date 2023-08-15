@@ -35,13 +35,31 @@ namespace Oci.GoldengateService.Models
         public string DeploymentName { get; set; }
         
         /// <value>
+        /// The type of credential store for OGG.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "credentialStore")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<CredentialStore> CredentialStore { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Identity Domain when IAM credential store is used.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "identityDomainId")]
+        public string IdentityDomainId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the deployment password is stored.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "passwordSecretId")]
+        public string PasswordSecretId { get; set; }
+        
+        /// <value>
         /// The GoldenGate deployment console username.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AdminUsername is required.")]
         [JsonProperty(PropertyName = "adminUsername")]
         public string AdminUsername { get; set; }
         
@@ -49,12 +67,9 @@ namespace Oci.GoldengateService.Models
         /// The password associated with the GoldenGate deployment console username.
         /// The password must be 8 to 30 characters long and must contain at least 1 uppercase, 1 lowercase, 1 numeric,
         /// and 1 special character. Special characters such as '$', '^', or '?' are not allowed.
+        /// This field will be deprecated and replaced by \"passwordSecretId\".
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AdminPassword is required.")]
         [JsonProperty(PropertyName = "adminPassword")]
         public string AdminPassword { get; set; }
         
