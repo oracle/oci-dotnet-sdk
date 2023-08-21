@@ -131,5 +131,11 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
+        /// <value>
+        /// Dst Time Zone Version of the AWR Hub
+        /// </value>
+        [JsonProperty(PropertyName = "hubDstTimezoneVersion")]
+        public string HubDstTimezoneVersion { get; set; }
+        
     }
 }

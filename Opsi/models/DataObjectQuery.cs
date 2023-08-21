@@ -28,9 +28,23 @@ namespace Oci.OpsiService.Models
         ///
         public enum QueryTypeEnum {
             [EnumMember(Value = "TEMPLATIZED_QUERY")]
-            TemplatizedQuery
+            TemplatizedQuery,
+            [EnumMember(Value = "STANDARD_QUERY")]
+            StandardQuery
         };
 
+        
+        /// <value>
+        /// List of bind parameters to be applied in the query.
+        /// </value>
+        [JsonProperty(PropertyName = "bindParams")]
+        public System.Collections.Generic.List<DataObjectBindParameter> BindParams { get; set; }
+        
+        /// <value>
+        /// Timeout (in seconds) to be set for the data object query execution.
+        /// </value>
+        [JsonProperty(PropertyName = "queryExecutionTimeoutInSeconds")]
+        public System.Double QueryExecutionTimeoutInSeconds { get; set; }
         
     }
 
@@ -54,6 +68,9 @@ namespace Oci.OpsiService.Models
             var discriminator = jsonObject["queryType"].Value<string>();
             switch (discriminator)
             {
+                case "STANDARD_QUERY":
+                    obj = new DataObjectStandardQuery();
+                    break;
                 case "TEMPLATIZED_QUERY":
                     obj = new DataObjectTemplatizedQuery();
                     break;

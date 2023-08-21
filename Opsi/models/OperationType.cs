@@ -116,6 +116,18 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "DISABLE_ADB_ADVANCED_FEATURES")]
       DisableAdbAdvancedFeatures,
       [EnumMember(Value = "UPDATE_ADB_ADVANCED_FEATURES")]
-      UpdateAdbAdvancedFeatures
+      UpdateAdbAdvancedFeatures,
+      [EnumMember(Value = "CREATE_NEWS_REPORT")]
+      CreateNewsReport,
+      [EnumMember(Value = "ENABLE_NEWS_REPORT")]
+      EnableNewsReport,
+      [EnumMember(Value = "DISABLE_NEWS_REPORT")]
+      DisableNewsReport,
+      [EnumMember(Value = "UPDATE_NEWS_REPORT")]
+      UpdateNewsReport,
+      [EnumMember(Value = "MOVE_NEWS_REPORT")]
+      MoveNewsReport,
+      [EnumMember(Value = "DELETE_NEWS_REPORT")]
+      DeleteNewsReport
   }
 }

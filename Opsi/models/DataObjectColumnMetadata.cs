@@ -44,7 +44,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "METRIC")]
             Metric,
             [EnumMember(Value = "TIME_DIMENSION")]
-            TimeDimension
+            TimeDimension,
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown
         };
 
         /// <value>
@@ -53,6 +55,12 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "category")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CategoryEnum> Category { get; set; }
+        
+        /// <value>
+        /// Type of a data object column.
+        /// </value>
+        [JsonProperty(PropertyName = "dataType")]
+        public string DataType { get; set; }
                 ///
         /// <value>
         /// Type name of a data object column.
@@ -67,7 +75,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "TIMESTAMP")]
             Timestamp,
             [EnumMember(Value = "VARCHAR2")]
-            Varchar2
+            Varchar2,
+            [EnumMember(Value = "OTHER")]
+            Other
         };
 
         /// <value>
