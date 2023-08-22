@@ -164,6 +164,18 @@ namespace Oci.DatabaseService.Models
         public string NcharacterSet { get; set; }
         
         /// <value>
+        /// The percentage of the System Global Area(SGA) assigned to In-Memory tables in Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "inMemoryPercentage")]
+        public System.Nullable<int> InMemoryPercentage { get; set; }
+        
+        /// <value>
+        /// The area assigned to In-Memory tables in Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "inMemoryAreaInGBs")]
+        public System.Nullable<int> InMemoryAreaInGBs { get; set; }
+        
+        /// <value>
         /// The date and time when the next long-term backup would be created.
         /// </value>
         [JsonProperty(PropertyName = "nextLongTermBackupTimeStamp")]

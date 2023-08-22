@@ -53,6 +53,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
+        /// The percentage of the System Global Area(SGA) assigned to In-Memory tables in Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "inMemoryPercentage")]
+        public System.Nullable<int> InMemoryPercentage { get; set; }
+        
+        /// <value>
         /// Parameter that allows users to select an acceptable maximum data loss limit in seconds, up to which Automatic Failover will be triggered when necessary for a Local Autonomous Data Guard
         /// </value>
         [JsonProperty(PropertyName = "localAdgAutoFailoverMaxDataLossLimit")]

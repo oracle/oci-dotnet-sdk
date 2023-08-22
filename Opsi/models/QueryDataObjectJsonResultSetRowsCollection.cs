@@ -41,6 +41,14 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "itemsMetadata")]
         public System.Collections.Generic.List<QueryDataObjectResultSetColumnMetadata> ItemsMetadata { get; set; }
         
+        /// <value>
+        /// Time taken for executing the data object query (in seconds).
+        /// Consider optimizing the query or reducing the target data range, if query execution time is longer.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "queryExecutionTimeInSeconds")]
+        public System.Double QueryExecutionTimeInSeconds { get; set; }
+        
         [JsonProperty(PropertyName = "format")]
         private readonly string format = "JSON";
     }

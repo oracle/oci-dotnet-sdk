@@ -48,7 +48,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "MONTH")]
             Month,
             [EnumMember(Value = "YEAR")]
-            Year
+            Year,
+            [EnumMember(Value = "MINUTE")]
+            Minute
         };
 
         /// <value>

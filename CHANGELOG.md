@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 69.2.0 - 2023-08-22
+### Added
+- Support for Compute Cloud at Customer service
+- Support for warehouse data objects in the Operations Insights service
+- Support for standard queries on operations insights data objects in the Operations Insights service
+- Support for database in memory on autonomous database create operations in the Database service
+
 ## 69.1.0 - 2023-08-15
 ### Added
 - Support for credential stores, including Single Sign-On support, for deployments in the GoldenGate service

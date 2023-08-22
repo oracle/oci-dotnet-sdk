@@ -50,6 +50,27 @@ namespace Oci.OpsiService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// Name of the data object, which can be used in data object queries just like how view names are used in a query.
+        /// </value>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+        
+        /// <value>
+        /// Names of all the groups to which the data object belongs to.
+        /// </value>
+        [JsonProperty(PropertyName = "groupNames")]
+        public System.Collections.Generic.List<string> GroupNames { get; set; }
+        
+        /// <value>
+        /// Time period supported by the data object for quering data.
+        /// Time period is in ISO 8601 format with respect to current time. Default is last 30 days represented by P30D.
+        /// Examples: P90D (last 90 days), P4W (last 4 weeks), P2M (last 2 months), P1Y (last 12 months).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "supportedQueryTimePeriod")]
+        public string SupportedQueryTimePeriod { get; set; }
+        
+        /// <value>
         /// Metadata of columns in a data object.
         /// </value>
         /// <remarks>
@@ -58,6 +79,12 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "ColumnsMetadata is required.")]
         [JsonProperty(PropertyName = "columnsMetadata")]
         public System.Collections.Generic.List<DataObjectColumnMetadata> ColumnsMetadata { get; set; }
+        
+        /// <value>
+        /// Supported query parameters by this OPSI data object that can be configured while a data object query involving this data object is executed.
+        /// </value>
+        [JsonProperty(PropertyName = "supportedQueryParams")]
+        public System.Collections.Generic.List<OpsiDataObjectSupportedQueryParam> SupportedQueryParams { get; set; }
         
     }
 

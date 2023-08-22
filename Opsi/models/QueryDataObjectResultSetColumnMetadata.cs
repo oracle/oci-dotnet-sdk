@@ -30,6 +30,12 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+        
+        /// <value>
+        /// Type of the column in a data object query result.
+        /// </value>
+        [JsonProperty(PropertyName = "dataType")]
+        public string DataType { get; set; }
                 ///
         /// <value>
         /// Type name of the column in a data object query result set.
@@ -44,7 +50,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "TIMESTAMP")]
             Timestamp,
             [EnumMember(Value = "VARCHAR2")]
-            Varchar2
+            Varchar2,
+            [EnumMember(Value = "OTHER")]
+            Other
         };
 
         /// <value>

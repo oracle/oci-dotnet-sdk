@@ -27,6 +27,12 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "dataObjectIdentifier")]
         public string DataObjectIdentifier { get; set; }
         
+        /// <value>
+        /// Details of OPSI data objects used in the query.
+        /// </value>
+        [JsonProperty(PropertyName = "dataObjects")]
+        public System.Collections.Generic.List<OpsiDataObjectDetailsInQuery> DataObjects { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

@@ -77,7 +77,9 @@ namespace Oci.OpsiService.Requests
             [EnumMember(Value = "displayName")]
             DisplayName,
             [EnumMember(Value = "dataObjectType")]
-            DataObjectType
+            DataObjectType,
+            [EnumMember(Value = "name")]
+            Name
         };
 
         /// <value>
@@ -86,6 +88,18 @@ namespace Oci.OpsiService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
+        /// A filter to return only data objects that belongs to the group of the given group name. By default, no filtering will be applied on group name.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "groupName")]
+        public string GroupName { get; set; }
+        
+        /// <value>
+        /// A filter to return only data objects that match the entire data object name. By default, no filtering will be applied on data object name.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
+        public string Name { get; set; }
         
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact

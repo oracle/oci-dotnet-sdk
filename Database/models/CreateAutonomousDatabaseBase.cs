@@ -271,6 +271,12 @@ namespace Oci.DatabaseService.Models
         public string AutonomousContainerDatabaseId { get; set; }
         
         /// <value>
+        /// The percentage of the System Global Area(SGA) assigned to In-Memory tables in Autonomous Database.
+        /// </value>
+        [JsonProperty(PropertyName = "inMemoryPercentage")]
+        public System.Nullable<int> InMemoryPercentage { get; set; }
+        
+        /// <value>
         /// Indicates if the database-level access control is enabled.
         /// If disabled, database access is defined by the network security rules.
         /// If enabled, database access is restricted to the IP addresses defined by the rules specified with the `whitelistedIps` property. While specifying `whitelistedIps` rules is optional,

@@ -49,6 +49,18 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
+        /// <value>
+        /// Name of the data object, which can be used in data object queries just like how view names are used in a query.
+        /// </value>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+        
+        /// <value>
+        /// Names of all the groups to which the data object belongs to.
+        /// </value>
+        [JsonProperty(PropertyName = "groupNames")]
+        public System.Collections.Generic.List<string> GroupNames { get; set; }
+        
     }
 
     public class OpsiDataObjectSummaryModelConverter : JsonConverter
