@@ -29,20 +29,12 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "restAdminCredentials")]
         public CreateAdminCredentials RestAdminCredentials { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SourceDbAdminCredentials is required.")]
         [JsonProperty(PropertyName = "sourceDbAdminCredentials")]
         public CreateAdminCredentials SourceDbAdminCredentials { get; set; }
         
         [JsonProperty(PropertyName = "sourceContainerDbAdminCredentials")]
         public CreateAdminCredentials SourceContainerDbAdminCredentials { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TargetDbAdminCredentials is required.")]
         [JsonProperty(PropertyName = "targetDbAdminCredentials")]
         public CreateAdminCredentials TargetDbAdminCredentials { get; set; }
         
@@ -62,10 +54,6 @@ namespace Oci.DatabasemigrationService.Models
         /// Name of GoldenGate Microservices deployment to operate on source database
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SourceMicroservicesDeploymentName is required.")]
         [JsonProperty(PropertyName = "sourceMicroservicesDeploymentName")]
         public string SourceMicroservicesDeploymentName { get; set; }
         
@@ -73,10 +61,6 @@ namespace Oci.DatabasemigrationService.Models
         /// Name of GoldenGate Microservices deployment to operate on target database
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TargetMicroservicesDeploymentName is required.")]
         [JsonProperty(PropertyName = "targetMicroservicesDeploymentName")]
         public string TargetMicroservicesDeploymentName { get; set; }
         

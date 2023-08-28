@@ -53,19 +53,18 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<string> FaultDomains { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the primary subnet in which to place
-        /// instances.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the primary subnet in which to place instances. This field is deprecated.
+        /// Use `primaryVnicSubnets` instead to set VNIC data for instances in the pool.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PrimarySubnetId is required.")]
         [JsonProperty(PropertyName = "primarySubnetId")]
         public string PrimarySubnetId { get; set; }
         
+        [JsonProperty(PropertyName = "primaryVnicSubnets")]
+        public InstancePoolPlacementPrimarySubnet PrimaryVnicSubnets { get; set; }
+        
         /// <value>
-        /// The set of subnet OCIDs for secondary VNICs for instances in the pool.
+        /// The set of secondary VNIC data for instances in the pool.
         /// </value>
         [JsonProperty(PropertyName = "secondaryVnicSubnets")]
         public System.Collections.Generic.List<InstancePoolPlacementSecondaryVnicSubnet> SecondaryVnicSubnets { get; set; }

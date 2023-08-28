@@ -67,7 +67,7 @@ namespace Oci.DatabaseService.Models
         public string DbName { get; set; }
         
         /// <value>
-        /// The number of OCPU cores to be made available to the database. For Autonomous Databases on dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-database&id=ATPFG-GUID-B0F033C1-CC5A-42F0-B2E7-3CECFEDA1FD1) for shape details. 
+        /// The number of OCPU cores to be made available to the database. For Autonomous Databases on dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-database&id=ATPFG-GUID-B0F033C1-CC5A-42F0-B2E7-3CECFEDA1FD1) for shape details.
         /// <br/>
         /// **Note:** This parameter cannot be used with the `ocpuCount` parameter.
         /// 
@@ -106,7 +106,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> ComputeCount { get; set; }
         
         /// <value>
-        /// The number of OCPU cores to be made available to the database. 
+        /// The number of OCPU cores to be made available to the database.
         /// <br/>
         /// The following points apply:
         /// - For Autonomous Databases on Dedicated Exadata infrastructure, to provision less than 1 core, enter a fractional value in an increment of 0.1. For example, you can provision 0.3 or 0.4 cores, but not 0.35 cores. (Note that fractional OCPU values are not supported for Autonomous Databasese on shared Exadata infrastructure.)
@@ -159,8 +159,8 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<DbWorkloadEnum> DbWorkload { get; set; }
         
         /// <value>
-        /// The size, in terabytes, of the data volume that will be created and attached to the database. This storage can later be scaled up if needed. For Autonomous Databases on dedicated Exadata infrastructure, the maximum storage value is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-database&id=ATPFG-GUID-B0F033C1-CC5A-42F0-B2E7-3CECFEDA1FD1) for shape details. 
-        /// A full Exadata service is allocated when the Autonomous Database size is set to the upper limit (384 TB).  
+        /// The size, in terabytes, of the data volume that will be created and attached to the database. This storage can later be scaled up if needed. For Autonomous Databases on dedicated Exadata infrastructure, the maximum storage value is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-database&id=ATPFG-GUID-B0F033C1-CC5A-42F0-B2E7-3CECFEDA1FD1) for shape details.
+        /// A full Exadata service is allocated when the Autonomous Database size is set to the upper limit (384 TB).
         /// <br/>
         /// **Note:** This parameter cannot be used with the `dataStorageSizeInGBs` parameter.
         /// 
@@ -171,7 +171,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The size, in gigabytes, of the data volume that will be created and attached to the database. This storage can later be scaled up if needed. The maximum storage value is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-database&id=ATPFG-GUID-B0F033C1-CC5A-42F0-B2E7-3CECFEDA1FD1) for shape details.
         /// <br/>
-        /// **Notes** 
+        /// **Notes**
         /// - This parameter is only supported for dedicated Exadata infrastructure.
         /// - This parameter cannot be used with the `dataStorageSizeInTBs` parameter.
         /// 

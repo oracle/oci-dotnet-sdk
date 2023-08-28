@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// These configuration details are used in the move operation when changing the compartment containing a virtual test access point (VTAP) capture filter.
+    /// These configuration details are used in the move operation when changing the compartment containing a capture filter.
     /// 
     /// </summary>
     public class ChangeCaptureFilterCompartmentDetails 

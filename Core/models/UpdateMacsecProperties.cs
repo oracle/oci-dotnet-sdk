@@ -42,5 +42,11 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MacsecEncryptionCipher> EncryptionCipher { get; set; }
         
+        /// <value>
+        /// Indicates whether unencrypted traffic is allowed if MACsec Key Agreement protocol (MKA) fails.
+        /// </value>
+        [JsonProperty(PropertyName = "isUnprotectedTrafficAllowed")]
+        public System.Nullable<bool> IsUnprotectedTrafficAllowed { get; set; }
+        
     }
 }

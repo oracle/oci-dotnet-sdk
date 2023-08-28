@@ -81,5 +81,12 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "cpeDeviceShapeId")]
         public string CpeDeviceShapeId { get; set; }
         
+        /// <value>
+        /// Indicates whether this CPE is of type `private` or not.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isPrivate")]
+        public System.Nullable<bool> IsPrivate { get; set; }
+        
     }
 }

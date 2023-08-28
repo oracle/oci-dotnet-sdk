@@ -110,5 +110,12 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
+        /// <value>
+        /// Indicates whether this CPE is of type `private` or not.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isPrivate")]
+        public System.Nullable<bool> IsPrivate { get; set; }
+        
     }
 }

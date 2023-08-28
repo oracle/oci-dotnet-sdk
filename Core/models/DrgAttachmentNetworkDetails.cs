@@ -37,10 +37,6 @@ namespace Oci.CoreService.Models
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network attached to the DRG.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
@@ -69,6 +65,9 @@ namespace Oci.CoreService.Models
             {
                 case "VCN":
                     obj = new VcnDrgAttachmentNetworkDetails();
+                    break;
+                case "LOOPBACK":
+                    obj = new LoopBackDrgAttachmentNetworkDetails();
                     break;
                 case "IPSEC_TUNNEL":
                     obj = new IpsecTunnelDrgAttachmentNetworkDetails();

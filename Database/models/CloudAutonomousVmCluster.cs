@@ -221,7 +221,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> OcpuCount { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Cloud Autonomous VM Cluster. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// The compute model of the Cloud Autonomous VM Cluster. 
         /// 
         /// </value>
         ///
@@ -236,7 +236,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Cloud Autonomous VM Cluster. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// The compute model of the Cloud Autonomous VM Cluster. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]
@@ -359,7 +359,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// For Autonomous Databases on Dedicated Exadata Infrastructure:
         /// - These are the CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
-        /// - The CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// - The CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "reclaimableCpus")]
@@ -396,7 +396,8 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> DbNodeStorageSizeInGBs { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) enabled per OCPU or ECPU. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// The amount of memory (in GBs) enabled per OCPU or ECPU. 
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
@@ -406,6 +407,60 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dbServers")]
         public System.Collections.Generic.List<string> DbServers { get; set; }
+        
+        /// <value>
+        /// The percentage of total number of CPUs used in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "cpuPercentage")]
+        public System.Nullable<float> CpuPercentage { get; set; }
+        
+        /// <value>
+        /// The percentage of the data storage used for the Autonomous Databases in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousDataStoragePercentage")]
+        public System.Nullable<float> AutonomousDataStoragePercentage { get; set; }
+        
+        /// <value>
+        /// The number of CPUs provisioned in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "provisionedCpus")]
+        public System.Nullable<float> ProvisionedCpus { get; set; }
+        
+        /// <value>
+        /// The total number of CPUs in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "totalCpus")]
+        public System.Nullable<float> TotalCpus { get; set; }
+        
+        /// <value>
+        /// The total data disk group size for Autonomous Databases, in TBs.
+        /// </value>
+        [JsonProperty(PropertyName = "totalAutonomousDataStorageInTBs")]
+        public System.Nullable<float> TotalAutonomousDataStorageInTBs { get; set; }
+        
+        /// <value>
+        /// The number of CPUs reserved in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "reservedCpus")]
+        public System.Nullable<float> ReservedCpus { get; set; }
+        
+        /// <value>
+        /// The number of provisionable Autonomous Container Databases in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "provisionableAutonomousContainerDatabases")]
+        public System.Nullable<int> ProvisionableAutonomousContainerDatabases { get; set; }
+        
+        /// <value>
+        /// The number of provisioned Autonomous Container Databases in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "provisionedAutonomousContainerDatabases")]
+        public System.Nullable<int> ProvisionedAutonomousContainerDatabases { get; set; }
+        
+        /// <value>
+        /// The number of non-provisionable Autonomous Container Databases in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "nonProvisionableAutonomousContainerDatabases")]
+        public System.Nullable<int> NonProvisionableAutonomousContainerDatabases { get; set; }
         
     }
 }

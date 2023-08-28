@@ -90,7 +90,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ServiceLevelAgreementTypeEnum> ServiceLevelAgreementType { get; set; }
         
         /// <value>
-        /// **No longer used.** For Autonomous Database on dedicated Exadata infrastructure, the container database is created within a specified `cloudAutonomousVmCluster`. 
+        /// **No longer used.** For Autonomous Database on dedicated Exadata infrastructure, the container database is created within a specified `cloudAutonomousVmCluster`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "autonomousExadataInfrastructureId")]
@@ -370,7 +370,7 @@ namespace Oci.DatabaseService.Models
         public string KeyStoreWalletName { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) enabled per OCPU or ECPU in the Autonomous VM Cluster.See [Compute Models](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// The amount of memory (in GBs) enabled per OCPU or ECPU in the Autonomous VM Cluster.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
@@ -378,7 +378,7 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// Sum of CPUs available on the Autonomous VM Cluster + Sum of reclaimable CPUs available in the Autonomous Container Database.<br>
-        /// For Autonomous Databases on Dedicated Exadata Infrastructure, the CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// For Autonomous Databases on Dedicated Exadata Infrastructure, the CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availableCpus")]
@@ -386,7 +386,7 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// The number of CPUs allocated to the Autonomous VM cluster.<br>
-        /// For Autonomous Databases on Dedicated Exadata Infrastructure, the CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// For Autonomous Databases on Dedicated Exadata Infrastructure, the CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "totalCpus")]
@@ -394,23 +394,23 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// For Autonomous Databases on Dedicated Exadata Infrastructure:
-        /// - These are the CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database. 
-        /// - The CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// - These are the CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
+        /// - The CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "reclaimableCpus")]
         public System.Nullable<float> ReclaimableCpus { get; set; }
         
         /// <value>
-        /// An array of CPU values that can be used to successfully provision a single Autonomous Database.\\ 
-        /// For Autonomous Database on Dedicated Exadata Infrastructure, the CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// An array of CPU values that can be used to successfully provision a single Autonomous Database.\\
+        /// For Autonomous Database on Dedicated Exadata Infrastructure, the CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "provisionableCpus")]
         public System.Collections.Generic.List<float> ProvisionableCpus { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Autonomous VM Cluster. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// The compute model of the Autonomous VM Cluster. 
         /// 
         /// </value>
         ///
@@ -425,12 +425,30 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Autonomous VM Cluster. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// The compute model of the Autonomous VM Cluster. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
+        
+        /// <value>
+        /// The number of CPUs provisioned in an Autonomous Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "provisionedCpus")]
+        public System.Nullable<float> ProvisionedCpus { get; set; }
+        
+        /// <value>
+        /// The number of CPUs reserved in an Autonomous Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "reservedCpus")]
+        public System.Nullable<float> ReservedCpus { get; set; }
+        
+        /// <value>
+        /// The largest Autonomous Database (CPU) that can be created in a new Autonomous Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "largestProvisionableAutonomousDatabaseInCpus")]
+        public System.Nullable<float> LargestProvisionableAutonomousDatabaseInCpus { get; set; }
         
     }
 }

@@ -26,6 +26,8 @@ namespace Oci.ApmsyntheticsService.Models
       [EnumMember(Value = "SCRIPTED_REST")]
       ScriptedRest,
       [EnumMember(Value = "REST")]
-      Rest
+      Rest,
+      [EnumMember(Value = "NETWORK")]
+      Network
   }
 }

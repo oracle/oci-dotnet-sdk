@@ -34,7 +34,9 @@ namespace Oci.ApmsyntheticsService.Models
             [EnumMember(Value = "REST_CONFIG")]
             RestConfig,
             [EnumMember(Value = "SCRIPTED_REST_CONFIG")]
-            ScriptedRestConfig
+            ScriptedRestConfig,
+            [EnumMember(Value = "NETWORK_CONFIG")]
+            NetworkConfig
         };
 
         
@@ -81,6 +83,9 @@ namespace Oci.ApmsyntheticsService.Models
                     break;
                 case "BROWSER_CONFIG":
                     obj = new BrowserMonitorConfiguration();
+                    break;
+                case "NETWORK_CONFIG":
+                    obj = new NetworkMonitorConfiguration();
                     break;
             }
             if (obj != null)

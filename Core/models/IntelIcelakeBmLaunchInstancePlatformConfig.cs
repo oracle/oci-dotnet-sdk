@@ -76,6 +76,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "percentageOfCoresEnabled")]
         public System.Nullable<int> PercentageOfCoresEnabled { get; set; }
         
+        /// <value>
+        /// Instance Platform Configuration Configuration Map for flexible setting input.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "configMap")]
+        public System.Collections.Generic.Dictionary<string, string> ConfigMap { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "INTEL_ICELAKE_BM";
     }

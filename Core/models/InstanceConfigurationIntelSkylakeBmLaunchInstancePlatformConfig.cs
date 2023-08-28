@@ -22,6 +22,69 @@ namespace Oci.CoreService.Models
     /// </summary>
     public class InstanceConfigurationIntelSkylakeBmLaunchInstancePlatformConfig : InstanceConfigurationLaunchInstancePlatformConfig
     {
+                ///
+        /// <value>
+        /// The number of NUMA nodes per socket (NPS).
+        /// 
+        /// </value>
+        ///
+        public enum NumaNodesPerSocketEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "NPS1")]
+            Nps1,
+            [EnumMember(Value = "NPS2")]
+            Nps2
+        };
+
+        /// <value>
+        /// The number of NUMA nodes per socket (NPS).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "numaNodesPerSocket")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<NumaNodesPerSocketEnum> NumaNodesPerSocket { get; set; }
+        
+        /// <value>
+        /// Whether symmetric multithreading is enabled on the instance. Symmetric multithreading is also
+        /// called simultaneous multithreading (SMT) or Intel Hyper-Threading.
+        /// <br/>
+        /// Intel and AMD processors have two hardware execution threads per core (OCPU). SMT permits multiple
+        /// independent threads of execution, to better use the resources and increase the efficiency
+        /// of the CPU. When multithreading is disabled, only one thread is permitted to run on each core, which
+        /// can provide higher or more predictable performance for some workloads.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSymmetricMultiThreadingEnabled")]
+        public System.Nullable<bool> IsSymmetricMultiThreadingEnabled { get; set; }
+        
+        /// <value>
+        /// Whether the input-output memory management unit is enabled.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isInputOutputMemoryManagementUnitEnabled")]
+        public System.Nullable<bool> IsInputOutputMemoryManagementUnitEnabled { get; set; }
+        
+        /// <value>
+        /// The percentage of cores enabled. Value must be a multiple of 25%. If the requested percentage
+        /// results in a fractional number of cores, the system rounds up the number of cores across processors
+        /// and provisions an instance with a whole number of cores.
+        /// <br/>
+        /// If the applications that you run on the instance use a core-based licensing model and need fewer cores
+        /// than the full size of the shape, you can disable cores to reduce your licensing costs. The instance
+        /// itself is billed for the full shape, regardless of whether all cores are enabled.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "percentageOfCoresEnabled")]
+        public System.Nullable<int> PercentageOfCoresEnabled { get; set; }
+        
+        /// <value>
+        /// Instance Platform Configuration Configuration Map for flexible setting input.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "configMap")]
+        public System.Collections.Generic.Dictionary<string, string> ConfigMap { get; set; }
         
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "INTEL_SKYLAKE_BM";

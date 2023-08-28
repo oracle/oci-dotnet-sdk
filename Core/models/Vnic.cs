@@ -238,5 +238,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
+        /// <value>
+        /// List of IPv6 addresses assigned to the VNIC.
+        /// <br/>
+        /// Example: 2001:DB8::
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6Addresses")]
+        public System.Collections.Generic.List<string> Ipv6Addresses { get; set; }
+        
     }
 }

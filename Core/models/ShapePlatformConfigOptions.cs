@@ -39,6 +39,8 @@ namespace Oci.CoreService.Models
             AmdRomeBm,
             [EnumMember(Value = "AMD_ROME_BM_GPU")]
             AmdRomeBmGpu,
+            [EnumMember(Value = "GENERIC_BM")]
+            GenericBm,
             [EnumMember(Value = "INTEL_ICELAKE_BM")]
             IntelIcelakeBm,
             [EnumMember(Value = "INTEL_SKYLAKE_BM")]

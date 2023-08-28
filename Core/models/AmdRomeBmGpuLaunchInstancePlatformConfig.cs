@@ -83,6 +83,13 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "isInputOutputMemoryManagementUnitEnabled")]
         public System.Nullable<bool> IsInputOutputMemoryManagementUnitEnabled { get; set; }
         
+        /// <value>
+        /// Instance Platform Configuration Configuration Map for flexible setting input.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "configMap")]
+        public System.Collections.Generic.Dictionary<string, string> ConfigMap { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "AMD_ROME_BM_GPU";
     }

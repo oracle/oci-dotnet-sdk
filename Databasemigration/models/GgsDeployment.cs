@@ -13,38 +13,36 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.MysqlService.Models
+namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// DEPRECATED -- please use HeatWave API instead.
-    /// Schema with estimated memory footprints for each MySQL user table
-    /// of the schema when loaded to Analytics Cluster memory.
+    /// Details about Oracle GoldenGate GGS Deployment.
     /// 
     /// </summary>
-    public class AnalyticsClusterSchemaMemoryEstimate 
+    public class GgsDeployment 
     {
         
         /// <value>
-        /// The name of the schema.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SchemaName is required.")]
-        [JsonProperty(PropertyName = "schemaName")]
-        public string SchemaName { get; set; }
-        
-        /// <value>
-        /// Estimated memory footprints for MySQL user tables of the schema
-        /// when loaded to Analytics Cluster memory.
+        /// OCID of a GoldenGate Deployment
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "PerTableEstimates is required.")]
-        [JsonProperty(PropertyName = "perTableEstimates")]
-        public System.Collections.Generic.List<AnalyticsClusterTableMemoryEstimate> PerTableEstimates { get; set; }
+        [Required(ErrorMessage = "DeploymentId is required.")]
+        [JsonProperty(PropertyName = "deploymentId")]
+        public string DeploymentId { get; set; }
+        
+        /// <value>
+        /// OCID of a VaultSecret containing the Admin Credentials for the GGS Deployment
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "GgsAdminCredentialsSecretId is required.")]
+        [JsonProperty(PropertyName = "ggsAdminCredentialsSecretId")]
+        public string GgsAdminCredentialsSecretId { get; set; }
         
     }
 }

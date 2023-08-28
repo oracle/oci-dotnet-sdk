@@ -8,41 +8,33 @@
 
 
 using System.Runtime.Serialization;
-using Oci.MysqlService.Models;
+using Oci.DatabaseService.Models;
 
-namespace Oci.MysqlService.Responses
+namespace Oci.DatabaseService.Responses
 {
-    public class GetAnalyticsClusterResponse : Oci.Common.IOciResponse
+    public class GetCloudAutonomousVmClusterResourceUsageResponse : Oci.Common.IOciResponse
     {
 
         /// <value>
         /// For optimistic concurrency control. See `if-match`.
-        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
         public string Etag { get; set; }
 
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact
-        /// Oracle about a particular request, please provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about
+        /// a particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
         /// <value>
-        /// The returned AnalyticsCluster instance, or null if {@link #isNotModified()} is true.
+        /// The returned CloudAutonomousVmClusterResourceUsage instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public AnalyticsCluster AnalyticsCluster { get; set; }
+        public CloudAutonomousVmClusterResourceUsage CloudAutonomousVmClusterResourceUsage { get; set; }
 
-        /// <value>
-        /// Flag to indicate whether or not the object was modified.  If this is true,
-        /// the getter for the object itself will return null.  Callers should check this
-        /// if they specified one of the request params that might result in a conditional
-        /// response (like 'if-match'/'if-none-match').
-        /// </value>
-        public bool IsNotModified { get; set; }
     }
 }

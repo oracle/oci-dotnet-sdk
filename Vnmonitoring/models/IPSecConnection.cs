@@ -199,6 +199,26 @@ namespace Oci.VnmonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+                ///
+        /// <value>
+        /// The transport type used for the IPSec connection.
+        /// 
+        /// </value>
+        ///
+        public enum TransportTypeEnum {
+            [EnumMember(Value = "INTERNET")]
+            Internet,
+            [EnumMember(Value = "FASTCONNECT")]
+            Fastconnect
+        };
+
+        /// <value>
+        /// The transport type used for the IPSec connection.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "transportType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<TransportTypeEnum> TransportType { get; set; }
         
     }
 }

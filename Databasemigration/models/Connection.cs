@@ -112,6 +112,9 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "adminCredentials")]
         public AdminCredentials AdminCredentials { get; set; }
         
+        [JsonProperty(PropertyName = "replicationCredentials")]
+        public AdminCredentials ReplicationCredentials { get; set; }
+        
         [JsonProperty(PropertyName = "privateEndpoint")]
         public PrivateEndpointDetails PrivateEndpoint { get; set; }
         

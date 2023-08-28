@@ -31,20 +31,6 @@ namespace Oci.MysqlService.Models
       StopDbsystem,
       [EnumMember(Value = "RESTART_DBSYSTEM")]
       RestartDbsystem,
-      [EnumMember(Value = "ADD_ANALYTICS_CLUSTER")]
-      AddAnalyticsCluster,
-      [EnumMember(Value = "UPDATE_ANALYTICS_CLUSTER")]
-      UpdateAnalyticsCluster,
-      [EnumMember(Value = "DELETE_ANALYTICS_CLUSTER")]
-      DeleteAnalyticsCluster,
-      [EnumMember(Value = "START_ANALYTICS_CLUSTER")]
-      StartAnalyticsCluster,
-      [EnumMember(Value = "STOP_ANALYTICS_CLUSTER")]
-      StopAnalyticsCluster,
-      [EnumMember(Value = "RESTART_ANALYTICS_CLUSTER")]
-      RestartAnalyticsCluster,
-      [EnumMember(Value = "GENERATE_ANALYTICS_CLUSTER_MEMORY_ESTIMATE")]
-      GenerateAnalyticsClusterMemoryEstimate,
       [EnumMember(Value = "ADD_HEATWAVE_CLUSTER")]
       AddHeatwaveCluster,
       [EnumMember(Value = "UPDATE_HEATWAVE_CLUSTER")]

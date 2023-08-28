@@ -57,16 +57,15 @@ namespace Oci.CoreService.Models
         public System.Nullable<PlacementConstraintEnum> PlacementConstraint { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the primary subnet to place
-        /// instances.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the primary subnet to place instances. This field is deprecated.
+        /// Use `primaryVnicSubnets` instead to set VNIC data for instances in the pool.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PrimarySubnetId is required.")]
         [JsonProperty(PropertyName = "primarySubnetId")]
         public string PrimarySubnetId { get; set; }
+        
+        [JsonProperty(PropertyName = "primaryVnicSubnets")]
+        public InstancePoolPlacementPrimarySubnet PrimaryVnicSubnets { get; set; }
         
         /// <value>
         /// The set of secondary VNIC data for instances in the pool.
