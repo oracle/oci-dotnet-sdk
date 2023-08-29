@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A capture filter contains a set of rules governing what traffic a VTAP mirrors.
+    /// A capture filter contains a set of rules governing what traffic a VTAP mirrors or a VCN flow log collects.
     /// 
     /// </summary>
     public class CreateCaptureFilterDetails 

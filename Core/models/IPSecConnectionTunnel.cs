@@ -300,5 +300,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "phaseTwoDetails")]
         public TunnelPhaseTwoDetails PhaseTwoDetails { get; set; }
         
+        /// <value>
+        /// The list of virtual circuit [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)s over which your network can reach this tunnel.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "associatedVirtualCircuits")]
+        public System.Collections.Generic.List<string> AssociatedVirtualCircuits { get; set; }
+        
     }
 }

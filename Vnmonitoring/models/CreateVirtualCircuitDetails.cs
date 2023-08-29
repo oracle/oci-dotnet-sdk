@@ -98,6 +98,13 @@ namespace Oci.VnmonitoringService.Models
         public System.Nullable<bool> IsBfdEnabled { get; set; }
         
         /// <value>
+        /// Set to `true` for the virtual circuit to carry only encrypted traffic, or set to `false` for the virtual circuit to carry unencrypted traffic. If this is not set, the default is `false`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isTransportMode")]
+        public System.Nullable<bool> IsTransportMode { get; set; }
+        
+        /// <value>
         /// Deprecated. Instead use `customerAsn`.
         /// If you specify values for both, the request will be rejected.
         /// 

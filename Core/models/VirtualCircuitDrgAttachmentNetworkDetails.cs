@@ -21,6 +21,14 @@ namespace Oci.CoreService.Models
     public class VirtualCircuitDrgAttachmentNetworkDetails : DrgAttachmentNetworkDetails
     {
         
+        /// <value>
+        /// Boolean flag that determines wether all traffic over the virtual circuits is encrypted.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "transportOnlyMode")]
+        public System.Nullable<bool> TransportOnlyMode { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "VIRTUAL_CIRCUIT";
     }

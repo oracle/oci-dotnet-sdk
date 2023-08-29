@@ -16,8 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A capture filter contains a set of *{@link #captureFilterRuleDetails(CaptureFilterRuleDetailsRequest) captureFilterRuleDetails}* governing what traffic a *{@link Vtap}* mirrors.
-    /// The capture filter is created with no rules defined, and it must have at least one rule for the VTAP to start mirroring traffic.
+    /// A capture filter contains a set of *{@link #captureFilterRuleDetails(CaptureFilterRuleDetailsRequest) captureFilterRuleDetails}* governing what traffic is 
+    /// mirrored for a *{@link Vtap}* or captured for a *[VCN Flow Log](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/vcn-flow-logs.htm)*.
+    /// The capture filter is created with no rules defined, and it must have at least one rule to mirror traffic for the VTAP or collect VCN flow logs.
     /// 
     /// </summary>
     public class CaptureFilter 

@@ -143,5 +143,13 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "tunnelConfiguration")]
         public System.Collections.Generic.List<CreateIPSecConnectionTunnelDetails> TunnelConfiguration { get; set; }
         
+        /// <value>
+        /// The count of tunnels in the IPsec connection. This value should be equal to the number of
+        /// `tunnelConfiguration` objects specified in the `CreateIPSecConnection` request.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tunnelCount")]
+        public System.Nullable<int> TunnelCount { get; set; }
+        
     }
 }

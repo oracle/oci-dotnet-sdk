@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmsyntheticsService.Models
 {
     /// <summary>
-    /// The private key associated with the client certificate in pem format.
+    /// The private key associated with the client certificate in PEM format.
     /// 
     /// </summary>
     public class PrivateKey 

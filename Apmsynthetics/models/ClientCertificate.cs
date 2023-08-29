@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ApmsyntheticsService.Models
 {
     /// <summary>
-    /// Client certificate in pem format.
+    /// Client certificate in PEM format.
     /// 
     /// </summary>
     public class ClientCertificate 

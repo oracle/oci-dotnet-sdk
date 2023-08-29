@@ -209,6 +209,29 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+                ///
+        /// <value>
+        /// The transport type used for the IPSec connection.
+        /// 
+        /// </value>
+        ///
+        public enum TransportTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "INTERNET")]
+            Internet,
+            [EnumMember(Value = "FASTCONNECT")]
+            Fastconnect
+        };
+
+        /// <value>
+        /// The transport type used for the IPSec connection.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "transportType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<TransportTypeEnum> TransportType { get; set; }
         
     }
 }

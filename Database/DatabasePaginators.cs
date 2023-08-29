@@ -883,6 +883,55 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListCloudAutonomousVmClusterAcdResourceUsage operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListCloudAutonomousVmClusterAcdResourceUsageResponse> ListCloudAutonomousVmClusterAcdResourceUsageResponseEnumerator(ListCloudAutonomousVmClusterAcdResourceUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListCloudAutonomousVmClusterAcdResourceUsageRequest, ListCloudAutonomousVmClusterAcdResourceUsageResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListCloudAutonomousVmClusterAcdResourceUsage(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AutonomousContainerDatabaseResourceUsage objects
+        /// contained in responses from the ListCloudAutonomousVmClusterAcdResourceUsage operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AutonomousContainerDatabaseResourceUsage> ListCloudAutonomousVmClusterAcdResourceUsageRecordEnumerator(ListCloudAutonomousVmClusterAcdResourceUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListCloudAutonomousVmClusterAcdResourceUsageRequest, ListCloudAutonomousVmClusterAcdResourceUsageResponse, AutonomousContainerDatabaseResourceUsage>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListCloudAutonomousVmClusterAcdResourceUsage(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListCloudAutonomousVmClusters operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

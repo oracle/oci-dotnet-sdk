@@ -261,7 +261,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
-        /// The compute amount available to the database. Minimum and maximum values depend on the compute model and whether the database is on Shared or Dedicated infrastructure. 
+        /// The compute amount available to the database. Minimum and maximum values depend on the compute model and whether the database is on Shared or Dedicated infrastructure.
         /// For an Autonomous Database on Shared infrastructure, the 'ECPU' compute model requires values in multiples of two. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value.
         /// 
         /// </value>
@@ -281,7 +281,7 @@ namespace Oci.DatabaseService.Models
         public System.Double TotalBackupStorageSizeInGBs { get; set; }
         
         /// <value>
-        /// The number of OCPU cores to be made available to the database. 
+        /// The number of OCPU cores to be made available to the database.
         /// <br/>
         /// The following points apply:
         /// - For Autonomous Databases on dedicated Exadata infrastructure, to provision less than 1 core, enter a fractional value in an increment of 0.1. For example, you can provision 0.3 or 0.4 cores, but not 0.35 cores. (Note that fractional OCPU values are not supported for Autonomous Databasese on shared Exadata infrastructure.)
@@ -312,7 +312,8 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> DataStorageSizeInTBs { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) enabled per OCPU or ECPU. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// The amount of memory (in GBs) enabled per OCPU or ECPU. 
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }

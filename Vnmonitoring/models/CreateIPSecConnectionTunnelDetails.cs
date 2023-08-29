@@ -147,6 +147,29 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "dpdConfig")]
         public DpdConfig DpdConfig { get; set; }
         
+        /// <value>
+        /// The headend IP that you can choose on the Oracle side to terminate your private IPSec tunnel.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "oracleTunnelIp")]
+        public string OracleTunnelIp { get; set; }
+        
+        /// <value>
+        /// The list of virtual circuit [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)s over which your network can reach this tunnel.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "associatedVirtualCircuits")]
+        public System.Collections.Generic.List<string> AssociatedVirtualCircuits { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table assigned to this attachment.
+        /// <br/>
+        /// The DRG route table manages traffic inside the DRG.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "drgRouteTableId")]
+        public string DrgRouteTableId { get; set; }
+        
         [JsonProperty(PropertyName = "encryptionDomainConfig")]
         public CreateIPSecTunnelEncryptionDomainDetails EncryptionDomainConfig { get; set; }
         

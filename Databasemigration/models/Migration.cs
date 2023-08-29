@@ -153,6 +153,9 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "includeObjects")]
         public System.Collections.Generic.List<DatabaseObject> IncludeObjects { get; set; }
         
+        [JsonProperty(PropertyName = "goldenGateServiceDetails")]
+        public GoldenGateServiceDetails GoldenGateServiceDetails { get; set; }
+        
         [JsonProperty(PropertyName = "goldenGateDetails")]
         public GoldenGateDetails GoldenGateDetails { get; set; }
         

@@ -125,6 +125,9 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "goldenGateDetails")]
         public CreateGoldenGateDetails GoldenGateDetails { get; set; }
         
+        [JsonProperty(PropertyName = "goldenGateServiceDetails")]
+        public CreateGoldenGateServiceDetails GoldenGateServiceDetails { get; set; }
+        
         [JsonProperty(PropertyName = "vaultDetails")]
         public CreateVaultDetails VaultDetails { get; set; }
         

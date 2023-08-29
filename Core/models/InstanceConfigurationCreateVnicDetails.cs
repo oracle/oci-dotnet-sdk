@@ -24,6 +24,17 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
+        /// Whether to allocate an IPv6 address at instance and VNIC creation from an IPv6 enabled
+        /// subnet. Default: False. When provided you may optionally provide an IPv6 prefix
+        /// (`ipv6SubnetCidr`) of your choice to assign the IPv6 address from. If `ipv6SubnetCidr`
+        /// is not provided then an IPv6 prefix is chosen
+        /// for you.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "assignIpv6Ip")]
+        public System.Nullable<bool> AssignIpv6Ip { get; set; }
+        
+        /// <value>
         /// Whether the VNIC should be assigned a public IP address. See the `assignPublicIp` attribute of {@link CreateVnicDetails}
         /// for more information.
         /// 
@@ -64,6 +75,16 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        /// <value>
+        /// A list of IPv6 prefixes from which the VNIC should be assigned an IPv6 address.
+        /// You can provide only the prefix and OCI selects an available
+        /// address from the range. You can optionally choose to leave the prefix range empty
+        /// and instead provide the specific IPv6 address that should be used from within that range.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6AddressIpv6SubnetCidrPairDetails")]
+        public System.Collections.Generic.List<InstanceConfigurationIpv6AddressIpv6SubnetCidrPairDetails> Ipv6AddressIpv6SubnetCidrPairDetails { get; set; }
         
         /// <value>
         /// The hostname for the VNIC's primary private IP.

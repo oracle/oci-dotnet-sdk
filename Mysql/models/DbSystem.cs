@@ -80,17 +80,6 @@ namespace Oci.MysqlService.Models
         public DbSystemPlacement CurrentPlacement { get; set; }
         
         /// <value>
-        /// DEPRECATED -- please use `isHeatWaveClusterAttached` instead.
-        /// If the DB System has an Analytics Cluster attached.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "isAnalyticsClusterAttached")]
-        public System.Nullable<bool> IsAnalyticsClusterAttached { get; set; }
-        
-        [JsonProperty(PropertyName = "analyticsCluster")]
-        public AnalyticsClusterSummary AnalyticsCluster { get; set; }
-        
-        /// <value>
         /// If the DB System has a HeatWave Cluster attached.
         /// 
         /// </value>

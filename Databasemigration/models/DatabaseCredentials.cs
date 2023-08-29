@@ -13,39 +13,36 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.MysqlService.Models
+namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// DEPRECATED -- please use HeatWave API instead.
-    /// Details required to add an Analytics Cluster.
+    /// Database Credentials details.
     /// 
     /// </summary>
-    public class AddAnalyticsClusterDetails 
+    public class DatabaseCredentials 
     {
         
         /// <value>
-        /// The shape determines resources to allocate to the Analytics
-        /// Cluster nodes - CPU cores, memory.
+        /// Database username
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ShapeName is required.")]
-        [JsonProperty(PropertyName = "shapeName")]
-        public string ShapeName { get; set; }
+        [Required(ErrorMessage = "Username is required.")]
+        [JsonProperty(PropertyName = "username")]
+        public string Username { get; set; }
         
         /// <value>
-        /// The number of analytics-processing nodes provisioned for the
-        /// Analytics Cluster.
+        /// Database  password
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ClusterSize is required.")]
-        [JsonProperty(PropertyName = "clusterSize")]
-        public System.Nullable<int> ClusterSize { get; set; }
+        [Required(ErrorMessage = "Password is required.")]
+        [JsonProperty(PropertyName = "password")]
+        public string Password { get; set; }
         
     }
 }

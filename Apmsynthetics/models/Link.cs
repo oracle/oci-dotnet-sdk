@@ -74,7 +74,7 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Double MaxDelayInMilliseconds { get; set; }
         
         /// <value>
-        /// List of all path ids of which this link is part of.
+        /// List of all path IDs of which this link is part of.
         /// </value>
         [JsonProperty(PropertyName = "paths")]
         public System.Collections.Generic.List<string> Paths { get; set; }
