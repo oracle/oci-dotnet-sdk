@@ -40,26 +40,6 @@ namespace Oci.CimsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The Customer Support Identifier associated with the support account.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Csi is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "csi")]
-        public string Csi { get; set; }
-        
-        /// <value>
-        /// User OCID for Oracle Identity Cloud Service (IDCS) users who also have a federated Oracle Cloud Infrastructure account.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Ocid is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "ocid")]
-        public string Ocid { get; set; }
-        
-        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
@@ -92,15 +72,33 @@ namespace Oci.CimsService.Requests
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
         /// <value>
-        /// The user-friendly name of the incident type.
+        /// The user-friendly name of the support ticket type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
         public string Name { get; set; }
+        
+        /// <value>
+        /// The Customer Support Identifier (CSI) associated with the support account.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "csi")]
+        public string Csi { get; set; }
+        
+        /// <value>
+        /// User OCID for Oracle Identity Cloud Service (IDCS) users who also have a federated Oracle Cloud Infrastructure account.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "ocid")]
+        public string Ocid { get; set; }
         
         /// <value>
         /// The region of the tenancy.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "homeregion")]
         public string Homeregion { get; set; }
+        
+        /// <value>
+        /// The OCID of identity domain.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "domainid")]
+        public string Domainid { get; set; }
     }
 }

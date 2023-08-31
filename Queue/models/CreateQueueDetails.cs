@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.QueueService.Models
 {
     /// <summary>
-    /// The information about new Queue.
+    /// The information about a new queue.
     /// </summary>
     public class CreateQueueDetails 
     {
         
         /// <value>
-        /// Queue Identifier
+        /// The user-friendly name of the queue.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.QueueService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the queue.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.QueueService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The retention period of the messages in the queue, in seconds.
+        /// The retention period of messages in the queue, in seconds.
         /// </value>
         [JsonProperty(PropertyName = "retentionInSeconds")]
         public System.Nullable<int> RetentionInSeconds { get; set; }
         
         /// <value>
-        /// The default visibility of the messages consumed from the queue.
+        /// The default visibility timeout of the messages consumed from the queue, in seconds.
         /// </value>
         [JsonProperty(PropertyName = "visibilityInSeconds")]
         public System.Nullable<int> VisibilityInSeconds { get; set; }
@@ -60,13 +60,19 @@ namespace Oci.QueueService.Models
         public System.Nullable<int> TimeoutInSeconds { get; set; }
         
         /// <value>
+        /// The percentage of allocated queue resources that can be consumed by a single channel. For example, if a queue has a storage limit of 2Gb, and a single channel consumption limit is 0.1 (10%), that means data size of a single channel  can't exceed 200Mb. Consumption limit of 100% (default) means that a single channel can consume up-to all allocated queue's resources.
+        /// </value>
+        [JsonProperty(PropertyName = "channelConsumptionLimit")]
+        public System.Nullable<int> ChannelConsumptionLimit { get; set; }
+        
+        /// <value>
         /// The number of times a message can be delivered to a consumer before being moved to the dead letter queue. A value of 0 indicates that the DLQ is not used.
         /// </value>
         [JsonProperty(PropertyName = "deadLetterQueueDeliveryCount")]
         public System.Nullable<int> DeadLetterQueueDeliveryCount { get; set; }
         
         /// <value>
-        /// Id of the custom master encryption key which will be used to encrypt messages content
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the custom encryption key to be used to encrypt messages content.
         /// </value>
         [JsonProperty(PropertyName = "customEncryptionKeyId")]
         public string CustomEncryptionKeyId { get; set; }

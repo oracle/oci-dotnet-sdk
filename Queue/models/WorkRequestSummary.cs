@@ -44,7 +44,7 @@ namespace Oci.QueueService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
-        /// The id of the work request.
+        /// The ID of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.QueueService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that contains the work request. Work requests should be scoped to
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the work request. Work requests should be scoped to
         /// the same compartment as the resource the work request affects. If the work request affects multiple resources,
         /// and those resources are not in the same compartment, it is up to the service team to pick the primary
         /// resource whose compartment should be used

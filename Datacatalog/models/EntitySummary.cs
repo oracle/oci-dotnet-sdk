@@ -156,6 +156,14 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// A message describing the current state in more detail. An object not in ACTIVE state may have functional limitations,
+        /// see service documentation for details.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
         /// A map of maps that contains the properties which are specific to the entity type. Each entity type
         /// definition defines it's set of required and optional properties. The map keys are category names and the
         /// values are maps of property name to property value. Every property is contained inside of a category. Most

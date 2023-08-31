@@ -46,5 +46,27 @@ namespace Oci.ContainerinstancesService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
+        
+        ///
+        /// <value>
+        /// The field to sort by. Only one sort order may be provided. Default order for timestamp is descending.
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "timestamp")]
+            Timestamp
+        };
+
+        /// <value>
+        /// The field to sort by. Only one sort order may be provided. Default order for timestamp is descending.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
+        /// The sort order to use, either 'ASC' or 'DESC'.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
+        public System.Nullable<SortOrder> SortOrder { get; set; }
     }
 }

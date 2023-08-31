@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Reserved for future use.
+    /// Details about the service limit increase request. Avoid entering confidential information.
     /// </summary>
     public class CreateLimitItemDetails : CreateItemDetails
     {
@@ -34,7 +34,7 @@ namespace Oci.CimsService.Models
         public System.Nullable<int> CurrentUsage { get; set; }
         
         /// <value>
-        /// Reserved for future use.
+        /// The new service limit being requested.
         /// </value>
         [JsonProperty(PropertyName = "requestedLimit")]
         public System.Nullable<int> RequestedLimit { get; set; }

@@ -15,12 +15,15 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.CimsService.Models
 {
-    
+    /// <summary>
+    /// Information collected from user context during ticket creation.
+    /// 
+    /// </summary>
     public class ContextualData 
     {
         
         /// <value>
-        /// The unique client identifier
+        /// The unique identifier for the client.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +33,7 @@ namespace Oci.CimsService.Models
         public string ClientId { get; set; }
         
         /// <value>
-        /// The schema name
+        /// The name assigned to the schema.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +43,7 @@ namespace Oci.CimsService.Models
         public string SchemaName { get; set; }
         
         /// <value>
-        /// The schema version
+        /// The version of the schema.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,7 +53,7 @@ namespace Oci.CimsService.Models
         public string SchemaVersion { get; set; }
         
         /// <value>
-        /// The context data payload
+        /// The payload for the contextual data.
         /// </value>
         /// <remarks>
         /// Required

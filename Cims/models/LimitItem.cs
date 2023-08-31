@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Reserved for future use.
+    /// Details about the LimitItem object.
     /// </summary>
     public class LimitItem : Item
     {
         
         /// <value>
-        /// The currently available limit of the resource.
+        /// The current service limit for the resource.
         /// </value>
         [JsonProperty(PropertyName = "currentLimit")]
         public System.Nullable<int> CurrentLimit { get; set; }
         
         /// <value>
-        /// The current usage of the resource.
+        /// The current resource usage.
         /// </value>
         [JsonProperty(PropertyName = "currentUsage")]
         public System.Nullable<int> CurrentUsage { get; set; }
         
         /// <value>
-        /// The requested limit for the resource.
+        /// The new service limit being requested for the resource.
         /// </value>
         [JsonProperty(PropertyName = "requestedLimit")]
         public System.Nullable<int> RequestedLimit { get; set; }

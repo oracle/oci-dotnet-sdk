@@ -28,5 +28,12 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "ticket")]
         public UpdateTicketDetails Ticket { get; set; }
         
+        /// <value>
+        /// The kind of support ticket, such as a technical support request or a limit increase request.
+        /// </value>
+        [JsonProperty(PropertyName = "problemType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ProblemType> ProblemType { get; set; }
+        
     }
 }

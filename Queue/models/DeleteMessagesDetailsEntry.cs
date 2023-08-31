@@ -22,7 +22,7 @@ namespace Oci.QueueService.Models
     {
         
         /// <value>
-        /// The receipt of the message to delete
+        /// The receipt of the message to delete.
         /// </value>
         /// <remarks>
         /// Required

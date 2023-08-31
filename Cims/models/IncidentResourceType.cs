@@ -22,7 +22,7 @@ namespace Oci.CimsService.Models
     {
         
         /// <value>
-        /// Unique identifier of the resource.
+        /// A unique identifier for the resource.
         /// </value>
         [JsonProperty(PropertyName = "resourceTypeKey")]
         public string ResourceTypeKey { get; set; }
@@ -54,6 +54,18 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "serviceCategoryList")]
         public System.Collections.Generic.List<ServiceCategory> ServiceCategoryList { get; set; }
+        
+        /// <value>
+        /// The map of services for MOS Taxonomy.
+        /// </value>
+        [JsonProperty(PropertyName = "service")]
+        public System.Collections.Generic.Dictionary<string, string> Service { get; set; }
+        
+        /// <value>
+        /// The service categories list for MOS Taxonomy.
+        /// </value>
+        [JsonProperty(PropertyName = "serviceCategories")]
+        public System.Collections.Generic.List<ServiceCategories> ServiceCategories { get; set; }
         
     }
 }

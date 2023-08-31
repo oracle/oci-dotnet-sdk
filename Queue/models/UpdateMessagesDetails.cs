@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.QueueService.Models
 {
     /// <summary>
-    /// The details of a UpdateMessages request.
+    /// The details of an UpdateMessages request.
     /// </summary>
     public class UpdateMessagesDetails 
     {

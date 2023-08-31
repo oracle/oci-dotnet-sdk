@@ -22,7 +22,7 @@ namespace Oci.QueueService.Models
     {
         
         /// <value>
-        /// The id of the message - this is only used for tracing and debugging purposes and isn't used as a parameter in any request.
+        /// The ID of the message. This ID is only used for tracing and debugging purposes and isn't used as a parameter in any request.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.QueueService.Models
         public System.Nullable<long> Id { get; set; }
         
         /// <value>
-        /// The content of the message
+        /// The content of the message.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.QueueService.Models
         public string Receipt { get; set; }
         
         /// <value>
-        /// The number of time the message has been delivered to a consumer.
+        /// The number of times that the message has been delivered to a consumer.
         /// </value>
         /// <remarks>
         /// Required
@@ -64,7 +64,9 @@ namespace Oci.QueueService.Models
         public System.Nullable<int> DeliveryCount { get; set; }
         
         /// <value>
-        /// The time after which the message will be visible to other consumers. An RFC3339 formatted datetime string
+        /// The time after which the message will be visible to other consumers, expressed in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2018-04-20T00:00:07.405Z
         /// </value>
         /// <remarks>
         /// Required
@@ -74,7 +76,9 @@ namespace Oci.QueueService.Models
         public System.Nullable<System.DateTime> VisibleAfter { get; set; }
         
         /// <value>
-        /// The time after which the message will be automatically deleted. An RFC3339 formatted datetime string
+        /// The time after which the message will be automatically deleted, expressed in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2018-04-20T00:00:07.405Z
         /// </value>
         /// <remarks>
         /// Required
@@ -82,6 +86,9 @@ namespace Oci.QueueService.Models
         [Required(ErrorMessage = "ExpireAfter is required.")]
         [JsonProperty(PropertyName = "expireAfter")]
         public System.Nullable<System.DateTime> ExpireAfter { get; set; }
+        
+        [JsonProperty(PropertyName = "metadata")]
+        public MessageMetadata Metadata { get; set; }
         
     }
 }

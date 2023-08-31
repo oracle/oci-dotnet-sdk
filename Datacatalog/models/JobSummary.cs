@@ -112,6 +112,7 @@ namespace Oci.DatacatalogService.Models
         /// <value>
         /// Interval on which the job will be run. Value is specified as a cron-supported time specification \"nickname\".
         /// The following subset of those is supported: @monthly, @weekly, @daily, @hourly.
+        /// For metastore sync, an additional option @default is supported, which will schedule jobs at a more granular frequency.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scheduleCronExpression")]
@@ -148,6 +149,12 @@ namespace Oci.DatacatalogService.Models
         /// </value>
         [JsonProperty(PropertyName = "dataAssetKey")]
         public string DataAssetKey { get; set; }
+        
+        /// <value>
+        /// Unique key of the glossary to which this job applies.
+        /// </value>
+        [JsonProperty(PropertyName = "glossaryKey")]
+        public string GlossaryKey { get; set; }
         
         /// <value>
         /// Error code returned from the latest job execution for this job. Useful when the latest Job execution is in FAILED state.

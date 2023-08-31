@@ -17,8 +17,6 @@ namespace Oci.CimsService.Models
 {
     /// <summary>
     /// Details for creating the issue type of the support ticket.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class CreateIssueTypeDetails 

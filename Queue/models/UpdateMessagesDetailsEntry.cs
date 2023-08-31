@@ -22,7 +22,7 @@ namespace Oci.QueueService.Models
     {
         
         /// <value>
-        /// The receipt of the message to update
+        /// The receipt of the message to update.
         /// </value>
         /// <remarks>
         /// Required

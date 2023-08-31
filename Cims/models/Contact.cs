@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Contact details for the customer.
+    /// Contact details for the customer. Avoid entering confidential information.
     /// </summary>
     public class Contact 
     {
@@ -32,6 +32,12 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "contactEmail")]
         public string ContactEmail { get; set; }
+        
+        /// <value>
+        /// The email of the contact person.
+        /// </value>
+        [JsonProperty(PropertyName = "email")]
+        public string Email { get; set; }
         
         /// <value>
         /// The phone number of the contact person.

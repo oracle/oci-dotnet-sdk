@@ -23,9 +23,9 @@ namespace Oci.QueueService.Models
                 ///
         /// <value>
         /// Type of the purge to perform:
-        /// - NORMAL - purge only normal queue
-        /// - DLQ - purge only DLQ
-        /// - BOTH - purge both normal queue and DLQ
+        /// - NORMAL - purge only the normal queue
+        /// - DLQ - purge only the dead letter queue
+        /// - BOTH - purge both the normal queue and the dead letter queue
         /// 
         /// </value>
         ///
@@ -40,9 +40,9 @@ namespace Oci.QueueService.Models
 
         /// <value>
         /// Type of the purge to perform:
-        /// - NORMAL - purge only normal queue
-        /// - DLQ - purge only DLQ
-        /// - BOTH - purge both normal queue and DLQ
+        /// - NORMAL - purge only the normal queue
+        /// - DLQ - purge only the dead letter queue
+        /// - BOTH - purge both the normal queue and the dead letter queue
         /// 
         /// </value>
         /// <remarks>
@@ -52,6 +52,15 @@ namespace Oci.QueueService.Models
         [JsonProperty(PropertyName = "purgeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PurgeTypeEnum> PurgeType { get; set; }
+        
+        /// <value>
+        /// Optional parameter to specify the destination of purge operation. 
+        /// If the channel ID is specified, the purge operation will delete all the messages in the specific channels. 
+        /// If the channel ID is not specified, the purge operation will delete all the messages in the queue and in the child channels.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "channelIds")]
+        public System.Collections.Generic.List<string> ChannelIds { get; set; }
         
     }
 }

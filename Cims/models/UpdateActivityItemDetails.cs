@@ -16,9 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details for udpating the support ticket activity.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
+    /// Details for updating the support ticket activity.
     /// 
     /// </summary>
     public class UpdateActivityItemDetails : UpdateItemDetails
@@ -42,7 +40,9 @@ namespace Oci.CimsService.Models
             [EnumMember(Value = "UPDATE")]
             Update,
             [EnumMember(Value = "CLOSE")]
-            Close
+            Close,
+            [EnumMember(Value = "REOPEN")]
+            Reopen
         };
 
         /// <value>

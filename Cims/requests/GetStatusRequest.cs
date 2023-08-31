@@ -20,30 +20,16 @@ namespace Oci.CimsService.Requests
     {
         
         /// <value>
-        /// The system that generated the support ticket, such as My Oracle Support.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Source is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "source")]
-        public string Source { get; set; }
-        
-        /// <value>
-        /// User OCID for Oracle Identity Cloud Service (IDCS) users who also have a federated Oracle Cloud Infrastructure account.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Ocid is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "ocid")]
-        public string Ocid { get; set; }
-        
-        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// User OCID for Oracle Identity Cloud Service (IDCS) users who also have a federated Oracle Cloud Infrastructure account.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "ocid")]
+        public string Ocid { get; set; }
         
         /// <value>
         /// The region of the tenancy.

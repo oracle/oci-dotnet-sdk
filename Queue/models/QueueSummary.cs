@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.QueueService.Models
 {
     /// <summary>
-    /// Summary of the Queue.
+    /// Summary of the queue.
     /// </summary>
     public class QueueSummary 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// A unique identifier for the queue that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.QueueService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Queue Identifier, can be renamed
+        /// A user-friendly name for the queue. Does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the queue.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,9 @@ namespace Oci.QueueService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The time the the Queue was created. An RFC3339 formatted datetime string
+        /// The time that the queue was created, expressed in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2018-04-20T00:00:07.405Z
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +60,9 @@ namespace Oci.QueueService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the Queue was updated. An RFC3339 formatted datetime string
+        /// The time that the queue was updated, expressed in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2018-04-20T00:00:07.405Z
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +72,7 @@ namespace Oci.QueueService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the Queue.
+        /// The current state of the queue.
         /// </value>
         /// <remarks>
         /// Required
@@ -79,13 +83,13 @@ namespace Oci.QueueService.Models
         public System.Nullable<Queue.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
+        /// Any additional details about the current state of the queue.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The endpoint to use to get or put messages in the queue.
+        /// The endpoint to use to consume or publish messages in the queue.
         /// </value>
         /// <remarks>
         /// Required

@@ -40,7 +40,9 @@ namespace Oci.CimsService.Models
             [EnumMember(Value = "HIGH")]
             High,
             [EnumMember(Value = "MEDIUM")]
-            Medium
+            Medium,
+            [EnumMember(Value = "LOW")]
+            Low
         };
 
         /// <value>

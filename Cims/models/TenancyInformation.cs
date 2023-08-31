@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details about the customer's tenancy.
+    /// Details about the tenancy.
     /// </summary>
     public class TenancyInformation 
     {
         
         /// <value>
-        /// The Customer Support Identifier number associated with the tenancy.
+        /// The Customer Support Identifier (CSI) number associated with the tenancy.
         /// </value>
         /// <remarks>
         /// Required

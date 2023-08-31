@@ -33,7 +33,7 @@ namespace Oci.CimsService.Models
         public string ItemKey { get; set; }
         
         /// <value>
-        /// The display name of the item.
+        /// The display name of the item. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -70,6 +70,9 @@ namespace Oci.CimsService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "account":
+                    obj = new AccountItem();
+                    break;
                 case "limit":
                     obj = new LimitItem();
                     break;

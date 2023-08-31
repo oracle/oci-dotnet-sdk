@@ -88,6 +88,14 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// A message describing the current state in more detail. An object not in ACTIVE state may have functional limitations,
+        /// see service documentation for details.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
         /// Unique external key of this object in the source system.
         /// </value>
         [JsonProperty(PropertyName = "externalKey")]

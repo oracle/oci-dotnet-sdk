@@ -20,16 +20,6 @@ namespace Oci.CimsService.Requests
     {
         
         /// <value>
-        /// The Customer Support Identifier associated with the support account.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Csi is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "csi")]
-        public string Csi { get; set; }
-        
-        /// <value>
         /// The OCID of the tenancy.
         /// </value>
         /// <remarks>
@@ -40,14 +30,10 @@ namespace Oci.CimsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// User OCID for Oracle Identity Cloud Service (IDCS) users who also have a federated Oracle Cloud Infrastructure account.
+        /// The Customer Support Identifier (CSI) associated with the support account.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Ocid is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "ocid")]
-        public string Ocid { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "csi")]
+        public string Csi { get; set; }
         
         /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a paginated \"List\" call. For important details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
@@ -88,6 +74,12 @@ namespace Oci.CimsService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
+        /// User OCID for Oracle Identity Cloud Service (IDCS) users who also have a federated Oracle Cloud Infrastructure account.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "ocid")]
+        public string Ocid { get; set; }
+        
+        /// <value>
         /// The region of the tenancy.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "homeregion")]
@@ -98,5 +90,29 @@ namespace Oci.CimsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "problemType")]
         public string ProblemType { get; set; }
+        
+        /// <value>
+        /// Token type that determine which cloud provider the request come from.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "bearertokentype")]
+        public string Bearertokentype { get; set; }
+        
+        /// <value>
+        /// Token that provided by multi cloud provider, which help to validate the email.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "bearertoken")]
+        public string Bearertoken { get; set; }
+        
+        /// <value>
+        /// IdToken that provided by multi cloud provider, which help to validate the email.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "idtoken")]
+        public string Idtoken { get; set; }
+        
+        /// <value>
+        /// The OCID of identity domain.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "domainid")]
+        public string Domainid { get; set; }
     }
 }

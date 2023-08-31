@@ -42,7 +42,7 @@ namespace Oci.QueueService.Models
         public System.Nullable<long> InFlightMessages { get; set; }
         
         /// <value>
-        /// The approximate size of the queue in bytes. Sum of the size of visible of in-flight messages.
+        /// The approximate size of the queue in bytes. Sum of the size of visible and in-flight messages.
         /// </value>
         /// <remarks>
         /// Required

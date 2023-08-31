@@ -16,9 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details gathered during item creation.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
+    /// Details gathered during ticket creation.
     /// 
     /// </summary>
     [JsonConverter(typeof(CreateItemDetailsModelConverter))]
@@ -36,7 +34,7 @@ namespace Oci.CimsService.Models
         public CreateIssueTypeDetails IssueType { get; set; }
         
         /// <value>
-        /// The display name of the item.
+        /// The display name of the ticket. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -68,6 +66,9 @@ namespace Oci.CimsService.Models
                     break;
                 case "limit":
                     obj = new CreateLimitItemDetails();
+                    break;
+                case "account":
+                    obj = new CreateAccountItemDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

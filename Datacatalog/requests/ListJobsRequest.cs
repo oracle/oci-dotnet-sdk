@@ -93,8 +93,15 @@ namespace Oci.DatacatalogService.Requests
         public string DataAssetKey { get; set; }
         
         /// <value>
+        /// Unique glossary key.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "glossaryKey")]
+        public string GlossaryKey { get; set; }
+        
+        /// <value>
         /// Interval on which the job will be run. Value is specified as a cron-supported time specification \"nickname\".
         /// The following subset of those is supported: @monthly, @weekly, @daily, @hourly.
+        /// For metastore sync, an additional option @default is supported, which will schedule jobs at a more granular frequency.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scheduleCronExpression")]

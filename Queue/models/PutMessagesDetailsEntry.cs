@@ -31,5 +31,8 @@ namespace Oci.QueueService.Models
         [JsonProperty(PropertyName = "content")]
         public string Content { get; set; }
         
+        [JsonProperty(PropertyName = "metadata")]
+        public MessageMetadata Metadata { get; set; }
+        
     }
 }
