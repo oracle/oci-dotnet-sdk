@@ -50,7 +50,7 @@ namespace Oci.CimsService.Models
         public IncidentResourceType IncidentType { get; set; }
         
         /// <value>
-        /// The kind of support ticket, such as a technical support request.
+        /// The kind of support ticket, such as a technical support request or a limit increase request.
         /// </value>
         /// <remarks>
         /// Required

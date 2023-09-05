@@ -75,6 +75,12 @@ namespace Oci.DatacatalogService.Requests
         public string DataAssetKey { get; set; }
         
         /// <value>
+        /// Unique glossary key.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "glossaryKey")]
+        public string GlossaryKey { get; set; }
+        
+        /// <value>
         /// Unique connection key.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "connectionKey")]

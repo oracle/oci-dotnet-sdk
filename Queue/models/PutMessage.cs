@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.QueueService.Models
 {
     /// <summary>
-    /// A message that has been published in a queue.
+    /// A message that has been published to a queue.
     /// </summary>
     public class PutMessage 
     {
         
         /// <value>
-        /// The id of the message
+        /// The ID of the message.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,6 +30,14 @@ namespace Oci.QueueService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public System.Nullable<long> Id { get; set; }
+        
+        /// <value>
+        /// The time after which the message will be automatically deleted, expressed in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2018-04-20T00:00:07.405Z
+        /// </value>
+        [JsonProperty(PropertyName = "expireAfter")]
+        public System.Nullable<System.DateTime> ExpireAfter { get; set; }
         
     }
 }

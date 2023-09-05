@@ -28,15 +28,7 @@ namespace Oci.CimsService.Models
         /// The list of available Oracle Cloud Infrastructure regions.
         /// </value>
         [JsonProperty(PropertyName = "region")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<Region> Region { get; set; }
-        
-        /// <value>
-        /// The list of available Oracle Cloud Infrastructure availability domains.
-        /// </value>
-        [JsonProperty(PropertyName = "availabilityDomain")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<AvailabilityDomain> AvailabilityDomain { get; set; }
+        public string Region { get; set; }
         
     }
 }

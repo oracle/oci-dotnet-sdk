@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CimsService.Models
 {
   /// <summary>
-  /// The kind of support ticket, such as a technical support request.
+  /// The kind of support ticket, such as a technical support request or a limit increase request.
   /// </summary>
   public enum ProblemType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -26,6 +26,8 @@ namespace Oci.CimsService.Models
       [EnumMember(Value = "TECH")]
       Tech,
       [EnumMember(Value = "ACCOUNT")]
-      Account
+      Account,
+      [EnumMember(Value = "TAXONOMY")]
+      Taxonomy
   }
 }

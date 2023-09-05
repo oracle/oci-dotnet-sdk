@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details about the user object.
+    /// Details about the user.
     /// </summary>
     public class User 
     {
         
         /// <value>
-        /// Unique identifier for the user.
+        /// A unique identifier for the user.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,43 +32,43 @@ namespace Oci.CimsService.Models
         public string Key { get; set; }
         
         /// <value>
-        /// First name of the user.
+        /// The user's first name.
         /// </value>
         [JsonProperty(PropertyName = "firstName")]
         public string FirstName { get; set; }
         
         /// <value>
-        /// Last name of the user.
+        /// The user's last name.
         /// </value>
         [JsonProperty(PropertyName = "lastName")]
         public string LastName { get; set; }
         
         /// <value>
-        /// Country of the user.
+        /// The country of the user.
         /// </value>
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
         
         /// <value>
-        /// CSI to be associated to the user.
+        /// The CSI associated with the user.
         /// </value>
         [JsonProperty(PropertyName = "csi")]
         public string Csi { get; set; }
         
         /// <value>
-        /// Contact number of the user.
+        /// The user's contact phone number.
         /// </value>
         [JsonProperty(PropertyName = "phone")]
         public string Phone { get; set; }
         
         /// <value>
-        /// Timezone of the user.
+        /// The timezone of the user.
         /// </value>
         [JsonProperty(PropertyName = "timezone")]
         public string Timezone { get; set; }
         
         /// <value>
-        /// Organization of the user.
+        /// The company that the user belongs to.
         /// </value>
         [JsonProperty(PropertyName = "organizationName")]
         public string OrganizationName { get; set; }
@@ -84,6 +84,13 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "contactEmail")]
         public string ContactEmail { get; set; }
+        
+        /// <value>
+        /// The kind of support ticket, such as a technical support request or a limit increase request.
+        /// </value>
+        [JsonProperty(PropertyName = "problemType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ProblemType> ProblemType { get; set; }
         
     }
 }

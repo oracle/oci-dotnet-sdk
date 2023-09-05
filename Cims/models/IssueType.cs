@@ -33,5 +33,11 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
         
+        /// <value>
+        /// The URL for the contextual documentation.
+        /// </value>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+        
     }
 }

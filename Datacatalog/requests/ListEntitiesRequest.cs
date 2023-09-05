@@ -210,7 +210,8 @@ namespace Oci.DatacatalogService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. If no value is specified TIMECREATED is default.
+        /// The field to sort by. Only one sort order may be provided. DISPLAYORBUSINESSNAME considers businessName of a given object if set, else its displayName is used.
+        /// Default sort order for TIMECREATED is descending and default sort order for DISPLAYNAME and DISPLAYORBUSINESSNAME is ascending. If no order is specified, TIMECREATED is the default.
         /// 
         /// </value>
         ///
@@ -218,11 +219,14 @@ namespace Oci.DatacatalogService.Requests
             [EnumMember(Value = "TIMECREATED")]
             Timecreated,
             [EnumMember(Value = "DISPLAYNAME")]
-            Displayname
+            Displayname,
+            [EnumMember(Value = "DISPLAYORBUSINESSNAME")]
+            Displayorbusinessname
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. If no value is specified TIMECREATED is default.
+        /// The field to sort by. Only one sort order may be provided. DISPLAYORBUSINESSNAME considers businessName of a given object if set, else its displayName is used.
+        /// Default sort order for TIMECREATED is descending and default sort order for DISPLAYNAME and DISPLAYORBUSINESSNAME is ascending. If no order is specified, TIMECREATED is the default.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

@@ -17,8 +17,6 @@ namespace Oci.CimsService.Models
 {
     /// <summary>
     /// Details gathered during the creation of the support ticket.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class CreateIncident 
@@ -42,13 +40,15 @@ namespace Oci.CimsService.Models
         public CreateTicketDetails Ticket { get; set; }
         
         /// <value>
-        /// The Customer Support Identifier number for the support account.
+        /// The Customer Support Identifier (CSI) number associated with the support account.
+        /// The CSI is required for technical support tickets and optional for limits and billing tickets.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "csi")]
         public string Csi { get; set; }
         
         /// <value>
-        /// The kind of support ticket, such as a technical issue request.
+        /// The kind of support ticket, such as a technical support request or a limit increase request.
         /// </value>
         /// <remarks>
         /// Required

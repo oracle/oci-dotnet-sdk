@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details about the incident type object.
+    /// Details about the incident type associated with the support ticket.
     /// </summary>
     public class IncidentType 
     {

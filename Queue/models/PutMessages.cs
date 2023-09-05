@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.QueueService.Models
 {
     /// <summary>
-    /// A list of the messages published in a queue.
+    /// A list of the messages published to a queue.
     /// </summary>
     public class PutMessages 
     {
         
         /// <value>
-        /// The messages that have been published in a queue.
+        /// The messages that have been published to a queue.
         /// </value>
         /// <remarks>
         /// Required

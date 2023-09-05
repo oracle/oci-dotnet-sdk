@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.QueueService.Models
 {
     /// <summary>
-    /// The stats for a queue and its dead letter queue.
+    /// The stats for a queue and its dead letter queue. If channelId is specified in request field, it will return channel specific stats response.
     /// </summary>
     public class QueueStats 
     {
@@ -34,6 +34,12 @@ namespace Oci.QueueService.Models
         [Required(ErrorMessage = "Dlq is required.")]
         [JsonProperty(PropertyName = "dlq")]
         public Stats Dlq { get; set; }
+        
+        /// <value>
+        /// If channelId is presented in GetStats call, the channel id will be returned in the GetStats response.
+        /// </value>
+        [JsonProperty(PropertyName = "channelId")]
+        public string ChannelId { get; set; }
         
     }
 }

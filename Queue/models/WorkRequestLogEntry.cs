@@ -32,7 +32,7 @@ namespace Oci.QueueService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the log message was written. An RFC3339 formatted datetime string
+        /// The time the log message was written. An [RFC 3339](https://tools.ietf.org/rfc/rfc3339) formatted datetime string
         /// </value>
         /// <remarks>
         /// Required

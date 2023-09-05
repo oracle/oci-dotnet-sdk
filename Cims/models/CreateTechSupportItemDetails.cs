@@ -16,9 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details about the issue that the technical support request relates to.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
+    /// Details about the issue that the technical support ticket relates to. Avoid entering confidential information.
     /// 
     /// </summary>
     public class CreateTechSupportItemDetails : CreateItemDetails

@@ -17,8 +17,6 @@ namespace Oci.CimsService.Models
 {
     /// <summary>
     /// Details relevant to the support ticket.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class CreateTicketDetails 
@@ -34,7 +32,9 @@ namespace Oci.CimsService.Models
             [EnumMember(Value = "HIGH")]
             High,
             [EnumMember(Value = "MEDIUM")]
-            Medium
+            Medium,
+            [EnumMember(Value = "LOW")]
+            Low
         };
 
         /// <value>
@@ -55,7 +55,7 @@ namespace Oci.CimsService.Models
         public System.Collections.Generic.List<CreateResourceDetails> ResourceList { get; set; }
         
         /// <value>
-        /// The title of the support ticket.
+        /// The title of the support ticket. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -65,7 +65,7 @@ namespace Oci.CimsService.Models
         public string Title { get; set; }
         
         /// <value>
-        /// The description of the support ticket.
+        /// The description of the support ticket. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -74,9 +74,6 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
-        /// <value>
-        /// The context from where the ticket is getting created.
-        /// </value>
         [JsonProperty(PropertyName = "contextualData")]
         public ContextualData ContextualData { get; set; }
         

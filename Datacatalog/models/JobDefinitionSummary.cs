@@ -128,5 +128,11 @@ namespace Oci.DatacatalogService.Models
         [JsonProperty(PropertyName = "dataAssetKey")]
         public string DataAssetKey { get; set; }
         
+        /// <value>
+        /// Unique key of the glossary to which this job applies, if the job involves a glossary.
+        /// </value>
+        [JsonProperty(PropertyName = "glossaryKey")]
+        public string GlossaryKey { get; set; }
+        
     }
 }

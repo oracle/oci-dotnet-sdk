@@ -12,7 +12,9 @@ using System.Runtime.Serialization;
 
 namespace Oci.CimsService.Models
 {
-
+  /// <summary>
+  /// The list of timezones supported by the Support Management API.
+  /// </summary>
   public enum TimeZone {
       [EnumMember(Value = "GREENWICH_MEAN_TIME")]
       GreenwichMeanTime,

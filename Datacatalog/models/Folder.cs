@@ -154,6 +154,14 @@ namespace Oci.DatacatalogService.Models
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// A message describing the current state in more detail. An object not in ACTIVE state may have functional limitations,
+        /// see service documentation for details.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
         /// Status of the object as updated by the harvest process.
         /// </value>
         [JsonProperty(PropertyName = "harvestStatus")]

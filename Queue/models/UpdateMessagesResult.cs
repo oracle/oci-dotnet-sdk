@@ -32,7 +32,7 @@ namespace Oci.QueueService.Models
         public System.Nullable<int> ServerFailures { get; set; }
         
         /// <value>
-        /// The number of messages that failed to be updated in the queue because of a client failure such as an invalid receipt or invalid visibilityInSeconds.
+        /// The number of messages that failed to be updated in the queue because of a client failure such as an invalid receipt or invalid `visibilityInSeconds`.
         /// </value>
         /// <remarks>
         /// Required

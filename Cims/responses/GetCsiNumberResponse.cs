@@ -12,7 +12,7 @@ using Oci.CimsService.Models;
 
 namespace Oci.CimsService.Responses
 {
-    public class CreateUserResponse : Oci.Common.IOciResponse
+    public class GetCsiNumberResponse : Oci.Common.IOciResponse
     {
 
         /// <value>
@@ -22,10 +22,10 @@ namespace Oci.CimsService.Responses
         public string OpcRequestId { get; set; }
 
         /// <value>
-        /// The returned User instance.
+        /// The returned string instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public User User { get; set; }
+        public string Value { get; set; }
 
     }
 }

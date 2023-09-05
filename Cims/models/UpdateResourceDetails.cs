@@ -17,8 +17,6 @@ namespace Oci.CimsService.Models
 {
     /// <summary>
     /// Details about updates to the resource.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
     public class UpdateResourceDetails 

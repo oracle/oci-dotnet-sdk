@@ -16,9 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details for udpating an item.
-    /// <br/>
-    /// **Caution:** Avoid using any confidential information when you supply string values using the API.
+    /// Details for updating an item.
     /// 
     /// </summary>
     [JsonConverter(typeof(UpdateItemDetailsModelConverter))]

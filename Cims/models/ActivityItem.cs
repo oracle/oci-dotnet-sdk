@@ -24,18 +24,30 @@ namespace Oci.CimsService.Models
         /// <value>
         /// Comments added with the activity on the support ticket.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Comments is required.")]
         [JsonProperty(PropertyName = "comments")]
         public string Comments { get; set; }
         
         /// <value>
         /// The time when the activity was created, in milliseconds since epoch time.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<int> TimeCreated { get; set; }
         
         /// <value>
         /// The time when the activity was updated, in milliseconds since epoch time.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<int> TimeUpdated { get; set; }
                 ///
@@ -54,19 +66,22 @@ namespace Oci.CimsService.Models
             [EnumMember(Value = "UPDATE")]
             Update,
             [EnumMember(Value = "CLOSE")]
-            Close
+            Close,
+            [EnumMember(Value = "REOPEN")]
+            Reopen
         };
 
         /// <value>
         /// The type of activity occuring on the support ticket.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ActivityType is required.")]
         [JsonProperty(PropertyName = "activityType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActivityTypeEnum> ActivityType { get; set; }
                 ///
-        /// <value>
-        /// The person who updates the activity on the support ticket.
-        /// </value>
         ///
         public enum ActivityAuthorEnum {
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -78,12 +93,53 @@ namespace Oci.CimsService.Models
             Oracle
         };
 
-        /// <value>
-        /// The person who updates the activity on the support ticket.
-        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ActivityAuthor is required.")]
         [JsonProperty(PropertyName = "activityAuthor")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActivityAuthorEnum> ActivityAuthor { get; set; }
+                ///
+        ///
+        public enum ItemTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ATTACHMENTS")]
+            Attachments,
+            [EnumMember(Value = "COMMENTS")]
+            Comments
+        };
+
+        [JsonProperty(PropertyName = "itemType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ItemTypeEnum> ItemType { get; set; }
+                ///
+        /// <value>
+        /// Who updates the activity on the support ticket.
+        /// </value>
+        ///
+        public enum ItemStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "PROCESSING")]
+            Processing,
+            [EnumMember(Value = "ATTACHED")]
+            Attached,
+            [EnumMember(Value = "REMOVED")]
+            Removed,
+            [EnumMember(Value = "FAILED")]
+            Failed
+        };
+
+        /// <value>
+        /// Who updates the activity on the support ticket.
+        /// </value>
+        [JsonProperty(PropertyName = "itemStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ItemStatusEnum> ItemStatus { get; set; }
         
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "activity";

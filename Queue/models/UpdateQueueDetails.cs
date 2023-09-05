@@ -22,13 +22,13 @@ namespace Oci.QueueService.Models
     {
         
         /// <value>
-        /// Queue Identifier
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the queue.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The default visibility of the messages consumed from the queue.
+        /// The default visibility timeout of the messages consumed from the queue, in seconds.
         /// </value>
         [JsonProperty(PropertyName = "visibilityInSeconds")]
         public System.Nullable<int> VisibilityInSeconds { get; set; }
@@ -40,16 +40,22 @@ namespace Oci.QueueService.Models
         public System.Nullable<int> TimeoutInSeconds { get; set; }
         
         /// <value>
+        /// The percentage of allocated queue resources that can be consumed by a single channel. For example, if a queue has a storage limit of 2Gb, and a single channel consumption limit is 0.1 (10%), that means data size of a single channel  can't exceed 200Mb. Consumption limit of 100% (default) means that a single channel can consume up-to all allocated queue's resources.
+        /// </value>
+        [JsonProperty(PropertyName = "channelConsumptionLimit")]
+        public System.Nullable<int> ChannelConsumptionLimit { get; set; }
+        
+        /// <value>
         /// The number of times a message can be delivered to a consumer before being moved to the dead letter queue.
         /// A value of 0 indicates that the DLQ is not used.
-        /// Changing that value to a lower threshold does not retro-actively move in-flight messages in the dead letter queue.
+        /// Changing that value to a lower threshold does not retroactively move in-flight messages in the dead letter queue.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "deadLetterQueueDeliveryCount")]
         public System.Nullable<int> DeadLetterQueueDeliveryCount { get; set; }
         
         /// <value>
-        /// Id of the custom master encryption key which will be used to encrypt messages content. String of length 0 means the custom key should be removed from queue
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the custom encryption key to be used to encrypt messages content. A string with a length of 0 means the custom key should be removed from queue.
         /// </value>
         [JsonProperty(PropertyName = "customEncryptionKeyId")]
         public string CustomEncryptionKeyId { get; set; }

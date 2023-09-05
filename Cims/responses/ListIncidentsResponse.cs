@@ -28,6 +28,20 @@ namespace Oci.CimsService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]
         public string OpcNextPage { get; set; }
 
+
+        /// <value>
+        /// For list pagination. When this header appears in the response, previous pages of results can be queried. For important details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/Content/API/Concepts/usingapi.htm#nine).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-prev-page")]
+        public string OpcPrevPage { get; set; }
+
+
+        /// <value>
+        /// Returns the age of the incidents in the response in epoch milliseconds. This is used because the incidents might be cached.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "as-of-time")]
+        public string AsOfTime { get; set; }
+
         /// <value>
         /// A list of IncidentSummary instances.
         /// </value>

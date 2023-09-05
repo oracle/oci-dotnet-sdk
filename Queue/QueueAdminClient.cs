@@ -73,7 +73,7 @@ namespace Oci.QueueService
         }
 
         /// <summary>
-        /// Moves a Queue resource from one compartment identifier to another. When provided, If-Match is checked against ETag values of the resource.
+        /// Moves a queue from one compartment to another. When provided, If-Match is checked against ETag values of the resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -129,7 +129,7 @@ namespace Oci.QueueService
         }
 
         /// <summary>
-        /// Creates a new Queue.
+        /// Creates a new queue.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -186,7 +186,7 @@ namespace Oci.QueueService
         }
 
         /// <summary>
-        /// Deletes a Queue resource by identifier
+        /// Deletes a queue resource by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -242,7 +242,7 @@ namespace Oci.QueueService
         }
 
         /// <summary>
-        /// Gets a Queue by identifier
+        /// Gets a queue by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -354,7 +354,7 @@ namespace Oci.QueueService
         }
 
         /// <summary>
-        /// Returns a list of Queues.
+        /// Returns a list of queues.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -582,8 +582,9 @@ namespace Oci.QueueService
         }
 
         /// <summary>
-        /// Deletes all messages present in the queue at the time of invocation. Only one concurrent purge operation is supported for any given queue.
+        /// Deletes all messages present in the queue, or deletes all the messages in the specific channel at the time of invocation. Only one concurrent purge operation is supported for any given queue. 
         /// However multiple concurrent purge operations are supported for different queues.
+        /// Purge request without specification of target channels will clean up all messages in the queue and in the child channels.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -640,7 +641,7 @@ namespace Oci.QueueService
         }
 
         /// <summary>
-        /// Updates the Queue
+        /// Updates the specified queue.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

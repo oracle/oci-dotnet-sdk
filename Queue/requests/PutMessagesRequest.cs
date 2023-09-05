@@ -20,7 +20,7 @@ namespace Oci.QueueService.Requests
     {
         
         /// <value>
-        /// unique Queue identifier
+        /// The unique queue identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.QueueService.Requests
         public PutMessagesDetails PutMessagesDetails { get; set; }
         
         /// <value>
-        /// The client request ID for tracing.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }

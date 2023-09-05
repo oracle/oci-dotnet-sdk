@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details of about the incident object.
+    /// Details about the support ticket.
     /// </summary>
     public class Incident 
     {
@@ -50,7 +50,7 @@ namespace Oci.CimsService.Models
         public IncidentType IncidentType { get; set; }
         
         /// <value>
-        /// The kind of support ticket, such as a technical support request.
+        /// The kind of support ticket, such as a technical support request or a limit increase request.
         /// </value>
         [JsonProperty(PropertyName = "problemType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

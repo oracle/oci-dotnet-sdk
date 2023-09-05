@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details about creation of user.
+    /// Details for creating a new user.
     /// </summary>
     public class CreateUserDetails 
     {
@@ -52,17 +52,7 @@ namespace Oci.CimsService.Models
         public string LastName { get; set; }
         
         /// <value>
-        /// Country of the user.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Country is required.")]
-        [JsonProperty(PropertyName = "country")]
-        public string Country { get; set; }
-        
-        /// <value>
-        /// CSI to be associated to the user.
+        /// CSI associated with the user.
         /// </value>
         /// <remarks>
         /// Required
@@ -100,6 +90,17 @@ namespace Oci.CimsService.Models
         [Required(ErrorMessage = "OrganizationName is required.")]
         [JsonProperty(PropertyName = "organizationName")]
         public string OrganizationName { get; set; }
+        
+        /// <value>
+        /// The kind of support ticket, such as a technical support request or a limit increase request.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ProblemType is required.")]
+        [JsonProperty(PropertyName = "problemType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ProblemType> ProblemType { get; set; }
         
     }
 }

@@ -22,7 +22,7 @@ namespace Oci.QueueService.Models
     {
         
         /// <value>
-        /// The id of the message that's been updated.
+        /// The ID of the message that's been updated.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,9 @@ namespace Oci.QueueService.Models
         public System.Nullable<long> Id { get; set; }
         
         /// <value>
-        /// The time after which the message will be visible to other consumers. An RFC3339 formatted datetime string
+        /// The time after which the message will be visible to other consumers, expressed in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2018-04-20T00:00:07.405Z
         /// </value>
         /// <remarks>
         /// Required

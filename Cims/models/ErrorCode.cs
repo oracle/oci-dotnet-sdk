@@ -12,7 +12,9 @@ using System.Runtime.Serialization;
 
 namespace Oci.CimsService.Models
 {
-
+  /// <summary>
+  /// Service error codes that can be returned from the API calls.
+  /// </summary>
   public enum ErrorCode {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
@@ -29,6 +31,8 @@ namespace Oci.CimsService.Models
       SslAuthorization,
       [EnumMember(Value = "AUTH_FAILED")]
       AuthFailed,
+      [EnumMember(Value = "AUTHZ_FAILED")]
+      AuthzFailed,
       [EnumMember(Value = "CSI_NOT_AUTHORIZED")]
       CsiNotAuthorized,
       [EnumMember(Value = "USER_POLICY_NOT_AUTHORIZED")]
@@ -37,6 +41,10 @@ namespace Oci.CimsService.Models
       EmailNotVerified,
       [EnumMember(Value = "EMAIL_NOT_FOUND")]
       EmailNotFound,
+      [EnumMember(Value = "OCI_EMAIL_NOT_FOUND")]
+      OciEmailNotFound,
+      [EnumMember(Value = "MOS_EMAIL_NOT_FOUND")]
+      MosEmailNotFound,
       [EnumMember(Value = "IDCS_EMAIL_NOT_VALID")]
       IdcsEmailNotValid,
       [EnumMember(Value = "INVALID_PATH")]
@@ -62,6 +70,34 @@ namespace Oci.CimsService.Models
       [EnumMember(Value = "DATA_ALREADY_EXISTS")]
       DataAlreadyExists,
       [EnumMember(Value = "AUTH_USER_NOT_MATCHING")]
-      AuthUserNotMatching
+      AuthUserNotMatching,
+      [EnumMember(Value = "CONTACT_NOT_APPROVED")]
+      ContactNotApproved,
+      [EnumMember(Value = "CREATE_PROFILE_MOS_FAILURE")]
+      CreateProfileMosFailure,
+      [EnumMember(Value = "CREATE_PROFILE_CREATE_OSSO_FAILURE")]
+      CreateProfileCreateOssoFailure,
+      [EnumMember(Value = "CREATE_PROFILE_IDENTITY_FAILURE")]
+      CreateProfileIdentityFailure,
+      [EnumMember(Value = "CREATE_PROFILE_VERIFY_OSSO_FAILURE")]
+      CreateProfileVerifyOssoFailure,
+      [EnumMember(Value = "PROFILE_ACCOUNT_NOT_VERIFIED")]
+      ProfileAccountNotVerified,
+      [EnumMember(Value = "SUPPORT_ACCOUNT_NOT_FOUND")]
+      SupportAccountNotFound,
+      [EnumMember(Value = "SUPPORT_ACCOUNT_PENDING_CSI_APPROVAL")]
+      SupportAccountPendingCsiApproval,
+      [EnumMember(Value = "FREE_TIER_CUSTOMER_SLI_UNSUPPORTED")]
+      FreeTierCustomerSliUnsupported,
+      [EnumMember(Value = "PROFILE_ACCOUNT_VERIFIED")]
+      ProfileAccountVerified,
+      [EnumMember(Value = "PROFILE_VERIFIED_CSI_REQUEST_PENDING")]
+      ProfileVerifiedCsiRequestPending,
+      [EnumMember(Value = "PROFILE_VERIFIED_CSI_REQUEST_NOT_FOUND")]
+      ProfileVerifiedCsiRequestNotFound,
+      [EnumMember(Value = "CREATE_PROFILE_ORGANIZATION_NAME_INVALID")]
+      CreateProfileOrganizationNameInvalid,
+      [EnumMember(Value = "CREATE_PROFILE_EMAIL_INVALID")]
+      CreateProfileEmailInvalid
   }
 }

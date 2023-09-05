@@ -22,7 +22,7 @@ namespace Oci.DatacatalogService.Models
     {
         
         /// <value>
-        /// Date field name that needs to be filtered by.
+        /// Date field name that needs to be filtered by. Acceptable fields include TimeCreated and TimeUpdated.
         /// </value>
         [JsonProperty(PropertyName = "fieldName")]
         public string FieldName { get; set; }

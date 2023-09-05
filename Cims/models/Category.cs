@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details about the category associated with the support ticket.
+    /// Details about the service category associated with the support ticket.
     /// </summary>
     public class Category 
     {
         
         /// <value>
-        /// Unique identifier for the category.
+        /// Unique identifier for the service category.
         /// </value>
         [JsonProperty(PropertyName = "categoryKey")]
         public string CategoryKey { get; set; }
         
         /// <value>
-        /// The name of the category. For example, `Compute` or `Identity`.
+        /// The name of the service category. For example, `Compute` or `Identity`.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

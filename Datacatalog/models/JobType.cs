@@ -25,6 +25,8 @@ namespace Oci.DatacatalogService.Models
     /// ASYNC_DELETE - Job type for asynchronous bulk delete on data assets, folders and data entities.
     /// PURGE - Job type for cleaning up schedules, executions and logs of a Job.
     /// IMPORT_DATA_ASSET - Job type to import technical objects to a data asset.
+    /// CREATE_SCAN_PROXY - Job type to create scan proxy resource for RAC enabled data asset.
+    /// ASYNC_EXPORT_GLOSSARY - Job type to export glossary metadata to a file asynchronously.
     /// 
   /// </summary>
   public enum JobType {
@@ -64,6 +66,10 @@ namespace Oci.DatacatalogService.Models
       [EnumMember(Value = "ASYNC_DELETE")]
       AsyncDelete,
       [EnumMember(Value = "IMPORT_DATA_ASSET")]
-      ImportDataAsset
+      ImportDataAsset,
+      [EnumMember(Value = "CREATE_SCAN_PROXY")]
+      CreateScanProxy,
+      [EnumMember(Value = "ASYNC_EXPORT_GLOSSARY")]
+      AsyncExportGlossary
   }
 }
