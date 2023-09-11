@@ -43,6 +43,12 @@ namespace Oci.AivisionService.Models
         public ImageText ImageText { get; set; }
         
         /// <value>
+        /// The detected faces.
+        /// </value>
+        [JsonProperty(PropertyName = "detectedFaces")]
+        public System.Collections.Generic.List<Face> DetectedFaces { get; set; }
+        
+        /// <value>
         /// The image classification model version.
         /// </value>
         [JsonProperty(PropertyName = "imageClassificationModelVersion")]
@@ -59,6 +65,12 @@ namespace Oci.AivisionService.Models
         /// </value>
         [JsonProperty(PropertyName = "textDetectionModelVersion")]
         public string TextDetectionModelVersion { get; set; }
+        
+        /// <value>
+        /// The face detection model version.
+        /// </value>
+        [JsonProperty(PropertyName = "faceDetectionModelVersion")]
+        public string FaceDetectionModelVersion { get; set; }
         
         /// <value>
         /// The errors encountered during image analysis.

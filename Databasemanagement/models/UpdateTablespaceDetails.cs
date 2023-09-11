@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to update a tablespace.
+    /// 
     /// </summary>
     public class UpdateTablespaceDetails 
     {

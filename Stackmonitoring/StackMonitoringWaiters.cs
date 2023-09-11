@@ -32,6 +32,34 @@ namespace Oci.StackmonitoringService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetConfigRequest, GetConfigResponse> ForConfig(GetConfigRequest request, params Config.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForConfig(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetConfigRequest, GetConfigResponse> ForConfig(GetConfigRequest request, WaiterConfiguration config, params Config.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetConfigRequest, GetConfigResponse>(
+                request,
+                request => client.GetConfig(request),
+                response => targetStates.Contains(response.Config.LifecycleState.Value),
+                targetStates.Contains(Config.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetConfigRequest, GetConfigResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDiscoveryJobRequest, GetDiscoveryJobResponse> ForDiscoveryJob(GetDiscoveryJobRequest request, params LifecycleState[] targetStates)
         {
             return this.ForDiscoveryJob(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

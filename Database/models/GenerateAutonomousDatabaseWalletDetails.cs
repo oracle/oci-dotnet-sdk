@@ -25,7 +25,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The type of wallet to generate.
         /// <br/>
-        /// **Shared Exadata infrastructure usage:**
+        /// **Serverless instance usage:**
         /// * `SINGLE` - used to generate a wallet for a single database
         /// * `ALL` - used to generate wallet for all databases in the region
         /// <br/>
@@ -43,7 +43,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The type of wallet to generate.
         /// <br/>
-        /// **Shared Exadata infrastructure usage:**
+        /// **Serverless instance usage:**
         /// * `SINGLE` - used to generate a wallet for a single database
         /// * `ALL` - used to generate wallet for all databases in the region
         /// <br/>

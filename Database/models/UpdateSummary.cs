@@ -47,7 +47,7 @@ namespace Oci.DatabaseService.Models
         public string Description { get; set; }
                 ///
         /// <value>
-        /// The update action.
+        /// The previous update action performed.
         /// </value>
         ///
         public enum LastActionEnum {
@@ -65,15 +65,12 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The update action.
+        /// The previous update action performed.
         /// </value>
         [JsonProperty(PropertyName = "lastAction")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LastActionEnum> LastAction { get; set; }
                 ///
-        /// <value>
-        /// The update action.
-        /// </value>
         ///
         public enum AvailableActionsEnum {
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

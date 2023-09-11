@@ -274,6 +274,12 @@ namespace Oci.AnnouncementsService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<PlatformTypeEnum> PlatformType { get; set; }
         
+        /// <value>
+        /// The sequence of connected announcements, or announcement chain, that this announcement belongs to. Related announcements share the same chain ID.
+        /// </value>
+        [JsonProperty(PropertyName = "chainId")]
+        public string ChainId { get; set; }
+        
     }
 
     public class BaseAnnouncementModelConverter : JsonConverter

@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to change the disk space limit for the SQL Management Base.
+    /// 
     /// </summary>
     public class ChangeSpaceBudgetDetails 
     {

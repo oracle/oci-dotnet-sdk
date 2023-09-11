@@ -27,7 +27,8 @@ namespace Oci.AivisionService.Models
         /// The allowed values are:
         /// - `IMAGE_CLASSIFICATION`: Label the image.
         /// - `OBJECT_DETECTION`: Identify objects in the image with bounding boxes.
-        /// - `TEXT_DETECTION`: Recognize text in the image.
+        /// - `TEXT_DETECTION`: Recognize text at the word and line level.
+        /// - `FACE_DETECTION`: Identify faces in the image with bounding boxes and face landmarks.
         /// 
         /// </value>
         ///
@@ -37,7 +38,9 @@ namespace Oci.AivisionService.Models
             [EnumMember(Value = "OBJECT_DETECTION")]
             ObjectDetection,
             [EnumMember(Value = "TEXT_DETECTION")]
-            TextDetection
+            TextDetection,
+            [EnumMember(Value = "FACE_DETECTION")]
+            FaceDetection
         };
 
         
@@ -66,6 +69,9 @@ namespace Oci.AivisionService.Models
             {
                 case "TEXT_DETECTION":
                     obj = new ImageTextDetectionFeature();
+                    break;
+                case "FACE_DETECTION":
+                    obj = new FaceDetectionFeature();
                     break;
                 case "OBJECT_DETECTION":
                     obj = new ImageObjectDetectionFeature();

@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to drop SQL plan baselines.
+    /// 
     /// </summary>
     public class DropSqlPlanBaselinesDetails 
     {

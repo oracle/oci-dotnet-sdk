@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The database credentials used to perform management activity.
+    /// 
     /// </summary>
     public class DatabaseCredentials 
     {

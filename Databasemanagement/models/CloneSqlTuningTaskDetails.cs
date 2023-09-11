@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The request to clone and run a SQL tuning task. The new task uses the same inputs as the one being cloned.
+    /// 
     /// </summary>
     public class CloneSqlTuningTaskDetails 
     {

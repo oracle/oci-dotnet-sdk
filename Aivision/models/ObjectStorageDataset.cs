@@ -24,18 +24,30 @@ namespace Oci.AivisionService.Models
         /// <value>
         /// The namespace name of the Object Storage bucket that contains the input data file.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "NamespaceName is required.")]
         [JsonProperty(PropertyName = "namespaceName")]
         public string NamespaceName { get; set; }
         
         /// <value>
         /// The name of the Object Storage bucket that contains the input data file.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "BucketName is required.")]
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
         
         /// <value>
         /// The object name of the input data file.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ObjectName is required.")]
         [JsonProperty(PropertyName = "objectName")]
         public string ObjectName { get; set; }
         

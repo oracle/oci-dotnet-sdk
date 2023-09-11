@@ -126,6 +126,12 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<SoftwareSourceDetails> SoftwareSourceIds { get; set; }
         
         /// <value>
+        /// The list of software sources that the managed instance group will use.
+        /// </value>
+        [JsonProperty(PropertyName = "softwareSources")]
+        public System.Collections.Generic.List<SoftwareSourceDetails> SoftwareSources { get; set; }
+        
+        /// <value>
         /// The list of managed instances OCIDs attached to the managed instance group.
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceIds")]

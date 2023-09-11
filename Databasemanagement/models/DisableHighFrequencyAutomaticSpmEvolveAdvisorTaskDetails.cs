@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to disable high frequency Automatic SPM Evolve Advisor task.
+    /// 
     /// </summary>
     public class DisableHighFrequencyAutomaticSpmEvolveAdvisorTaskDetails 
     {
