@@ -22,7 +22,7 @@ namespace Oci.AnnouncementsService.Models
     {
         
         /// <value>
-        /// A list of filters against which the Announcements service matches announcements. You cannot have more than one of any given filter type within a filter group.
+        /// A list of filters against which the Announcements service matches announcements. You cannot combine the RESOURCE_ID filter with any other type of filter within a given filter group. For filter types that support multiple values, specify the values individually.
         /// </value>
         /// <remarks>
         /// Required

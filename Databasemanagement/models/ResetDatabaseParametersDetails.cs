@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to reset database parameter values.
+    /// 
     /// </summary>
     public class ResetDatabaseParametersDetails 
     {

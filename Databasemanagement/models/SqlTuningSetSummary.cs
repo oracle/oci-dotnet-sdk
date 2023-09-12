@@ -53,5 +53,42 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "statementCounts")]
         public System.Nullable<int> StatementCounts { get; set; }
         
+        /// <value>
+        /// The unique Sql tuning set identifier. This is not OCID.
+        /// </value>
+        [JsonProperty(PropertyName = "id")]
+        public System.Nullable<int> Id { get; set; }
+        
+        /// <value>
+        /// The created time of the Sql tuning set.
+        /// </value>
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// Last modified time of the Sql tuning set.
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastModified")]
+        public System.Nullable<System.DateTime> TimeLastModified { get; set; }
+        
+        /// <value>
+        /// Current status of the Sql tuning set.
+        /// </value>
+        [JsonProperty(PropertyName = "status")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SqlTuningSetStatusTypes> Status { get; set; }
+        
+        /// <value>
+        /// Name of the Sql tuning set scheduler job.
+        /// </value>
+        [JsonProperty(PropertyName = "scheduledJobName")]
+        public string ScheduledJobName { get; set; }
+        
+        /// <value>
+        /// Latest execution error of the plsql that was submitted as a scheduler job.
+        /// </value>
+        [JsonProperty(PropertyName = "errorMessage")]
+        public string ErrorMessage { get; set; }
+        
     }
 }

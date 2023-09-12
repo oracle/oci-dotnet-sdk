@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to disable SQL plan baseline usage.
+    /// 
     /// </summary>
     public class DisableSqlPlanBaselinesUsageDetails 
     {

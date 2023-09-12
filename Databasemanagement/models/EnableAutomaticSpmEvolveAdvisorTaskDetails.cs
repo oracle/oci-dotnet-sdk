@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to enable Automatic SPM Evolve Advisor task.
+    /// 
     /// </summary>
     public class EnableAutomaticSpmEvolveAdvisorTaskDetails 
     {

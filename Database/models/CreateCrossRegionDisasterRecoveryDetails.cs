@@ -73,7 +73,7 @@ namespace Oci.DatabaseService.Models
         public string SourceId { get; set; }
         
         /// <value>
-        /// Indicates the cross-region disaster recovery (DR) type of the standby Shared Autonomous Database.
+        /// Indicates the cross-region disaster recovery (DR) type of the standby Autonomous Database Serverless instance.
         /// Autonomous Data Guard (ADG) DR type provides business critical DR with a faster recovery time objective (RTO) during failover or switchover.
         /// Backup-based DR type provides lower cost DR with a slower RTO during failover or switchover.
         /// 

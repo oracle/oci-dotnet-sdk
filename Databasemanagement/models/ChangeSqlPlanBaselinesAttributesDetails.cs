@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to change SQL plan baseline attributes.
+    /// 
     /// </summary>
     public class ChangeSqlPlanBaselinesAttributesDetails 
     {

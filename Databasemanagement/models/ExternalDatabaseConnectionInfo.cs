@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to connect to an external Oracle Database.
+    /// 
     /// </summary>
     public class ExternalDatabaseConnectionInfo : ExternalDbSystemConnectionInfo
     {

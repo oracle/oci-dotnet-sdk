@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to remove a data file or temp file from the tablespace.
+    /// 
     /// </summary>
     public class RemoveDataFileDetails 
     {

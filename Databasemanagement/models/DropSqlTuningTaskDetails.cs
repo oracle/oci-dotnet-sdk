@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The request to drop a SQL tuning task.
+    /// 
     /// </summary>
     public class DropSqlTuningTaskDetails 
     {

@@ -23,10 +23,6 @@ namespace Oci.DatabasemanagementService.Models
     public class UpdateExternalDbSystemMacsConnectorDetails : UpdateExternalDbSystemConnectorDetails
     {
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ConnectionInfo is required.")]
         [JsonProperty(PropertyName = "connectionInfo")]
         public ExternalDbSystemConnectionInfo ConnectionInfo { get; set; }
         

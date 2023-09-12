@@ -1112,7 +1112,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// This operation updates the cross-region disaster recovery (DR) details of the standby Shared Autonomous Database, and must be run on the standby side.
+        /// This operation updates the cross-region disaster recovery (DR) details of the standby Autonomous Database Serverless database, and must be run on the standby side.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -10757,7 +10757,7 @@ namespace Oci.DatabaseService
 
         /// <summary>
         /// Gets a list of supported Autonomous Database versions. Note that preview version software is only available for
-        /// databases with [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html).
+        /// Autonomous Database Serverless (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) databases.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to change database parameter values.
+    /// 
     /// </summary>
     public class ChangeDatabaseParametersDetails 
     {

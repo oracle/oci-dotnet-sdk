@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to enable automatic initial plan capture.
+    /// 
     /// </summary>
     public class EnableAutomaticInitialPlanCaptureDetails 
     {

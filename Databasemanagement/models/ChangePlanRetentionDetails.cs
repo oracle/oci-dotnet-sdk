@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to change the plan retention period.
+    /// 
     /// </summary>
     public class ChangePlanRetentionDetails 
     {

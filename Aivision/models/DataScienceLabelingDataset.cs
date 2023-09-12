@@ -24,6 +24,10 @@ namespace Oci.AivisionService.Models
         /// <value>
         /// OCID of the Data Labeling dataset.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DatasetId is required.")]
         [JsonProperty(PropertyName = "datasetId")]
         public string DatasetId { get; set; }
         

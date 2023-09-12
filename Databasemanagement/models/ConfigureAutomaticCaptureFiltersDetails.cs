@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to configure automatic capture filters.
+    /// 
     /// </summary>
     public class ConfigureAutomaticCaptureFiltersDetails 
     {

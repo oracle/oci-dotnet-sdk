@@ -20,7 +20,7 @@ namespace Oci.AivisionService.Requests
     {
         
         /// <value>
-        /// Image job id.
+        /// The image job ID.
         /// </value>
         /// <remarks>
         /// Required

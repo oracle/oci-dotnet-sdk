@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AnnouncementsService.Models
 {
     /// <summary>
-    /// Criteria that the Announcements service uses to match announcements in order to provide only desired, matching announcements.
+    /// Criteria that the Announcements service uses to match announcements so it can provide only desired announcements to subscribers.
     /// </summary>
     public class Filter 
     {
                 ///
         /// <value>
-        /// The type of filter.
+        /// The type of filter. You cannot combine the RESOURCE_ID filter with any other type of filter within a given filter group. For filter types that support multiple values, specify the values individually.
         /// </value>
         ///
         public enum TypeEnum {
@@ -44,7 +44,7 @@ namespace Oci.AnnouncementsService.Models
         };
 
         /// <value>
-        /// The type of filter.
+        /// The type of filter. You cannot combine the RESOURCE_ID filter with any other type of filter within a given filter group. For filter types that support multiple values, specify the values individually.
         /// </value>
         /// <remarks>
         /// Required

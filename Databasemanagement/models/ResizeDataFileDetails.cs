@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to resize a data file or temp file within the tablespace.
+    /// 
     /// </summary>
     public class ResizeDataFileDetails 
     {

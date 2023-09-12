@@ -35,6 +35,8 @@ namespace Oci.DatabasemanagementService.Models
       Related,
       [EnumMember(Value = "FAILED")]
       Failed,
+      [EnumMember(Value = "ACCEPTED")]
+      Accepted,
       [EnumMember(Value = "ENABLED")]
       Enabled,
       [EnumMember(Value = "DISABLED")]

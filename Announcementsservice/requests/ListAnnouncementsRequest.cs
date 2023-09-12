@@ -169,6 +169,18 @@ namespace Oci.AnnouncementsService.Requests
         public System.Collections.Generic.List<string> ExcludeAnnouncementTypes { get; set; }
         
         /// <value>
+        /// A filter to display only the latest announcement in a chain.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldShowOnlyLatestInChain")]
+        public System.Nullable<bool> ShouldShowOnlyLatestInChain { get; set; }
+        
+        /// <value>
+        /// A filter to return only announcements belonging to the specified announcement chain ID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "chainId")]
+        public string ChainId { get; set; }
+        
+        /// <value>
         /// The unique Oracle-assigned identifier for the request. If you need to contact Oracle about
         /// a particular request, please provide the complete request ID.
         /// 

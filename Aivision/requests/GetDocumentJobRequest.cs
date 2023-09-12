@@ -20,7 +20,7 @@ namespace Oci.AivisionService.Requests
     {
         
         /// <value>
-        /// Document job id.
+        /// The document job ID.
         /// </value>
         /// <remarks>
         /// Required
