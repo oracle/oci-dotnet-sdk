@@ -183,5 +183,15 @@ namespace Oci.IntegrationService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ShapeEnum> Shape { get; set; }
         
+        /// <value>
+        /// The OCID of the identity domain, that will be used to determine the 
+        /// corresponding Idcs Stripe and create an Idcs application within the stripe. 
+        /// This parameter is mutually exclusive with parameter: idcsAt, i.e only one of 
+        /// two parameters should be specified.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "domainId")]
+        public string DomainId { get; set; }
+        
     }
 }

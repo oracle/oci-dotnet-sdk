@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the KeyVersion associated with the Key.
+    /// </summary>
     public class KeyVersion 
     {
         
@@ -162,8 +164,14 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "replicaDetails")]
         public KeyVersionReplicaDetails ReplicaDetails { get; set; }
         
+        /// <value>
+        /// A Boolean value that indicates whether the KeyVersion belongs to primary Vault or replica Vault.
+        /// </value>
         [JsonProperty(PropertyName = "isPrimary")]
         public System.Nullable<bool> IsPrimary { get; set; }
+        
+        [JsonProperty(PropertyName = "externalKeyReferenceDetails")]
+        public ExternalKeyReferenceDetails ExternalKeyReferenceDetails { get; set; }
         
     }
 }

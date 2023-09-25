@@ -21,6 +21,9 @@ namespace Oci.KeymanagementService.Models
     public class ReplicationStatusDetails 
     {
         
+        /// <value>
+        /// Replica Details.
+        /// </value>
         [JsonProperty(PropertyName = "replicaDetails")]
         public System.Collections.Generic.List<ReplicaDetails> ReplicaDetails { get; set; }
         

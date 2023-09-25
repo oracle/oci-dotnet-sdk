@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the plaintext data that you want to encrypt.
+    /// </summary>
     public class EncryptDataDetails 
     {
         
@@ -64,10 +66,10 @@ namespace Oci.KeymanagementService.Models
                 ///
         /// <value>
         /// The encryption algorithm to use to encrypt and decrypt data with a customer-managed key.
-        /// `AES_256_GCM` indicates that the key is a symmetric key that uses the Advanced Encryption Standard (AES) algorithm and 
-        /// that the mode of encryption is the Galois/Counter Mode (GCM). `RSA_OAEP_SHA_1` indicates that the 
-        /// key is an asymmetric key that uses the RSA encryption algorithm and uses Optimal Asymmetric Encryption Padding (OAEP). 
-        /// `RSA_OAEP_SHA_256` indicates that the key is an asymmetric key that uses the RSA encryption algorithm with a SHA-256 hash 
+        /// `AES_256_GCM` indicates that the key is a symmetric key that uses the Advanced Encryption Standard (AES) algorithm and
+        /// that the mode of encryption is the Galois/Counter Mode (GCM). `RSA_OAEP_SHA_1` indicates that the
+        /// key is an asymmetric key that uses the RSA encryption algorithm and uses Optimal Asymmetric Encryption Padding (OAEP).
+        /// `RSA_OAEP_SHA_256` indicates that the key is an asymmetric key that uses the RSA encryption algorithm with a SHA-256 hash
         /// and uses OAEP.
         /// 
         /// </value>
@@ -83,10 +85,10 @@ namespace Oci.KeymanagementService.Models
 
         /// <value>
         /// The encryption algorithm to use to encrypt and decrypt data with a customer-managed key.
-        /// `AES_256_GCM` indicates that the key is a symmetric key that uses the Advanced Encryption Standard (AES) algorithm and 
-        /// that the mode of encryption is the Galois/Counter Mode (GCM). `RSA_OAEP_SHA_1` indicates that the 
-        /// key is an asymmetric key that uses the RSA encryption algorithm and uses Optimal Asymmetric Encryption Padding (OAEP). 
-        /// `RSA_OAEP_SHA_256` indicates that the key is an asymmetric key that uses the RSA encryption algorithm with a SHA-256 hash 
+        /// `AES_256_GCM` indicates that the key is a symmetric key that uses the Advanced Encryption Standard (AES) algorithm and
+        /// that the mode of encryption is the Galois/Counter Mode (GCM). `RSA_OAEP_SHA_1` indicates that the
+        /// key is an asymmetric key that uses the RSA encryption algorithm and uses Optimal Asymmetric Encryption Padding (OAEP).
+        /// `RSA_OAEP_SHA_256` indicates that the key is an asymmetric key that uses the RSA encryption algorithm with a SHA-256 hash
         /// and uses OAEP.
         /// 
         /// </value>

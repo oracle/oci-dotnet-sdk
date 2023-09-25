@@ -67,7 +67,7 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Backs up an encrypted file that contains all key versions and metadata of the specified key so that you can restore 
+        /// Backs up an encrypted file that contains all key versions and metadata of the specified key so that you can restore
         /// the key later. The file also contains the metadata of the vault that the key belonged to.
         /// 
         /// </summary>
@@ -105,7 +105,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "BackupKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/BackupKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -169,7 +169,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "CancelKeyDeletion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/CancelKeyDeletion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -233,7 +233,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "CancelKeyVersionDeletion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/KeyVersion/CancelKeyVersionDeletion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -298,7 +298,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "ChangeKeyCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/ChangeKeyCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -360,7 +360,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "CreateKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/CreateKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -423,7 +423,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "CreateKeyVersion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/KeyVersion/CreateKeyVersion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -486,7 +486,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "DisableKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/DisableKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -549,7 +549,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "EnableKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/EnableKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -611,7 +611,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "GetKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/GetKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -673,7 +673,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "GetKeyVersion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/KeyVersion/GetKeyVersion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -733,7 +733,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "GetReplicationStatus",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/ReplicationStatusDetails/GetReplicationStatus",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -791,7 +791,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "GetWrappingKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/WrappingKey/GetWrappingKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -811,9 +811,12 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Imports AES key material to create a new key with. The key material must be base64-encoded and
-        /// wrapped by the vault&#39;s public RSA wrapping key before you can import it. Key Management supports AES symmetric keys
-        /// that are exactly 16, 24, or 32 bytes. Furthermore, the key length must match what you specify at the time of import.
+        /// Imports AES and RSA keys to create a new key. The key material must be base64-encoded 
+        /// and wrapped by the vault&#39;s public RSA wrapping key before you can import it. 
+        /// Key Management supports both RSA and AES keys. The AES keys are symmetric keys 
+        /// of length 128 bits (16 bytes), 192 bits (24 bytes), or 256 bits (32 bytes), and the RSA keys are asymmetric keys of length 2048 bits (256 bytes), 3072 bits (384 bytes), and 4096 bits (512 bytes). 
+        /// Furthermore, the key length must match what you specify at the time of import. When importing an asymmetric key, 
+        /// only private key must be wrapped in PKCS8 format while the corresponding public key is generated internally by KMS.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -850,7 +853,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "ImportKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/ImportKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -870,11 +873,12 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Imports AES key material to create a new key version with, and then rotates the key to begin using the new
+        /// Imports AES key material to create a new key version and then rotate the key to begin using the new
         /// key version. The key material must be base64-encoded and wrapped by the vault&#39;s public RSA wrapping key
         /// before you can import it. Key Management supports AES symmetric keys that are exactly 16, 24, or 32 bytes.
         /// Furthermore, the key length must match the length of the specified key and what you specify as the length
-        /// at the time of import.
+        /// at the time of import. When importing an asymmetric key, only the private key must be wrapped in PKCS8 format 
+        /// while the corresponding public key is generated internally by KMS.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -911,7 +915,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "ImportKeyVersion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/KeyVersion/ImportKeyVersion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -974,7 +978,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "ListKeyVersions",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/KeyVersionSummary/ListKeyVersions",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1036,7 +1040,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "ListKeys",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/KeySummary/ListKeys",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1056,8 +1060,8 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Restores the specified key to the specified vault, based on information in the backup file provided. 
-        /// If the vault doesn&#39;t exist, the operation returns a response with a 404 HTTP status error code. You 
+        /// Restores the specified key to the specified vault, based on information in the backup file provided.
+        /// If the vault doesn&#39;t exist, the operation returns a response with a 404 HTTP status error code. You
         /// need to first restore the vault associated with the key.
         /// 
         /// </summary>
@@ -1095,7 +1099,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "RestoreKeyFromFile",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/RestoreKeyFromFile",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1115,8 +1119,8 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Restores the specified key to the specified vault from an Oracle Cloud Infrastructure 
-        /// Object Storage location. If the vault doesn&#39;t exist, the operation returns a response with a 
+        /// Restores the specified key to the specified vault from an Oracle Cloud Infrastructure
+        /// Object Storage location. If the vault doesn&#39;t exist, the operation returns a response with a
         /// 404 HTTP status error code. You need to first restore the vault associated with the key.
         /// 
         /// </summary>
@@ -1154,7 +1158,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "RestoreKeyFromObjectStore",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/RestoreKeyFromObjectStore",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1217,7 +1221,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "ScheduleKeyDeletion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/ScheduleKeyDeletion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1280,7 +1284,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "ScheduleKeyVersionDeletion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/KeyVersion/ScheduleKeyVersionDeletion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1344,7 +1348,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsManagement",
                     OperationName = "UpdateKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Key/UpdateKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

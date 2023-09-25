@@ -50,7 +50,7 @@ namespace Oci.KeymanagementService.Requests
         /// The base64-encoded MD5 hash value of the body, as described in [RFC 2616](https://tools.ietf.org/rfc/rfc2616), section 14.15.
         /// If the Content-MD5 header is present, Key Management performs an integrity check on the body of the HTTP request by computing the MD5
         /// hash for the body and comparing it to the MD5 hash supplied in the header. If the two hashes don't match, the object is rejected and
-        /// a response with 400 Unmatched Content MD5 error is returned, along with the message: \"The computed MD5 of the request body (ACTUAL_MD5) 
+        /// a response with 400 Unmatched Content MD5 error is returned, along with the message: \"The computed MD5 of the request body (ACTUAL_MD5)
         /// does not match the Content-MD5 header (HEADER_MD5).\"
         /// 
         /// </value>

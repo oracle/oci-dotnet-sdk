@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the number of Keys and KeyVersions usage in a Vault.
+    /// </summary>
     public class VaultUsage 
     {
         

@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The public RSA wrapping key associated with the vault
+    /// </summary>
     public class WrappingKey 
     {
         

@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The deatils of the compartment that you wish to move the Key.
+    /// </summary>
     public class ChangeKeyCompartmentDetails 
     {
         

@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the key that you want to encrypt or decrypt data.
+    /// </summary>
     public class GenerateKeyDetails 
     {
         

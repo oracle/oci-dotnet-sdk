@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The response to a request to verify the message.
+    /// </summary>
     public class VerifiedData 
     {
         

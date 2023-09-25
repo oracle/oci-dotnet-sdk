@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the vault that you want to create.
+    /// </summary>
     public class CreateVaultDetails 
     {
         
@@ -56,6 +58,9 @@ namespace Oci.KeymanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        [JsonProperty(PropertyName = "externalKeyManagerMetadata")]
+        public ExternalKeyManagerMetadata ExternalKeyManagerMetadata { get; set; }
                 ///
         /// <value>
         /// The type of vault to create. Each type of vault stores the key with different degrees of isolation and has different options and pricing.
@@ -66,7 +71,9 @@ namespace Oci.KeymanagementService.Models
             [EnumMember(Value = "VIRTUAL_PRIVATE")]
             VirtualPrivate,
             [EnumMember(Value = "DEFAULT")]
-            Default
+            Default,
+            [EnumMember(Value = "EXTERNAL")]
+            External
         };
 
         /// <value>

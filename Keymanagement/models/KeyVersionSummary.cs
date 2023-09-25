@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the KeyVersion.
+    /// </summary>
     public class KeyVersionSummary 
     {
         
@@ -143,6 +145,9 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "VaultId is required.")]
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
+        
+        [JsonProperty(PropertyName = "externalKeyReferenceDetails")]
+        public ExternalKeyReferenceDetails ExternalKeyReferenceDetails { get; set; }
         
     }
 }

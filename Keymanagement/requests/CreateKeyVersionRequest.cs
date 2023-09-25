@@ -49,5 +49,11 @@ namespace Oci.KeymanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
+        
+        /// <value>
+        /// CreateKeyMetadataDetails
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public ExternalKeyVersionReference CreateKeyMetadataDetails { get; set; }
     }
 }

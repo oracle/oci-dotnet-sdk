@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the KeyVersion that you wish to import.
+    /// </summary>
     public class ImportKeyVersionDetails 
     {
         

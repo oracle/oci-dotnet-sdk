@@ -98,7 +98,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsCrypto",
                     OperationName = "Decrypt",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/DecryptedData/Decrypt",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -156,7 +156,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsCrypto",
                     OperationName = "Encrypt",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/EncryptedData/Encrypt",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -176,9 +176,10 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Exports a specific version of a master encryption key according to the details of the request. For their protection, 
-        /// keys that you create and store on a hardware security module (HSM) can never leave the HSM. You can only export keys 
+        /// Exports a specific version of a master encryption key according to the details of the request. For their protection,
+        /// keys that you create and store on a hardware security module (HSM) can never leave the HSM. You can only export keys
         /// stored on the server. For export, the key version is encrypted by an RSA public key that you provide.
+        /// This operation is not supported for keys having protection mode &#x60;EXTERNAL&#x60;.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -215,7 +216,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsCrypto",
                     OperationName = "ExportKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/ExportedKeyData/ExportKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -272,7 +273,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsCrypto",
                     OperationName = "GenerateDataEncryptionKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/GeneratedKey/GenerateDataEncryptionKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -292,9 +293,10 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Creates a digital signature for a message or message digest by using the private key of a public-private key pair, 
-        /// also known as an asymmetric key. To verify the generated signature, you can use the [Verify](https://docs.cloud.oracle.com/api/#/en/key/latest/VerifiedData/Verify) 
+        /// Creates a digital signature for a message or message digest by using the private key of a public-private key pair,
+        /// also known as an asymmetric key. To verify the generated signature, you can use the [Verify](https://docs.cloud.oracle.com/api/#/en/key/latest/VerifiedData/Verify)
         /// operation. Or, if you want to validate the signature outside of the service, you can do so by using the public key of the same asymmetric key.
+        /// This operation is not supported for keys having protection mode &#x60;EXTERNAL&#x60;.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -331,7 +333,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsCrypto",
                     OperationName = "Sign",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/SignedData/Sign",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -351,9 +353,10 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Verifies a digital signature that was generated by the [Sign](https://docs.cloud.oracle.com/api/#/en/key/latest/SignedData/Sign) operation 
-        /// by using the public key of the same asymmetric key that was used to sign the data. If you want to validate the  
+        /// Verifies a digital signature that was generated by the [Sign](https://docs.cloud.oracle.com/api/#/en/key/latest/SignedData/Sign) operation
+        /// by using the public key of the same asymmetric key that was used to sign the data. If you want to validate the
         /// digital signature outside of the service, you can do so by using the public key of the asymmetric key.
+        /// This operation is not supported for keys having protection mode &#x60;EXTERNAL&#x60;.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -390,7 +393,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsCrypto",
                     OperationName = "Verify",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/VerifiedData/Verify",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
