@@ -42,6 +42,9 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }
                 ///
+        /// <value>
+        /// Status of the Vault
+        /// </value>
         ///
         public enum StatusEnum {
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -57,6 +60,9 @@ namespace Oci.KeymanagementService.Models
             Deleted
         };
 
+        /// <value>
+        /// Status of the Vault
+        /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }

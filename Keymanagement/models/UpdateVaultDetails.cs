@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the Vault that you wish to update.
+    /// </summary>
     public class UpdateVaultDetails 
     {
         

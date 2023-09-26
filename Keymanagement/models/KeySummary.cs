@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the Key.
+    /// </summary>
     public class KeySummary 
     {
         
@@ -143,9 +145,12 @@ namespace Oci.KeymanagementService.Models
         /// <value>
         /// The key's protection mode indicates how the key persists and where cryptographic operations that use the key are performed.
         /// A protection mode of `HSM` means that the key persists on a hardware security module (HSM) and all cryptographic operations are performed inside
-        /// the HSM. A protection mode of `SOFTWARE` means that the key persists on the server, protected by the vault's RSA wrapping key which persists 
-        /// on the HSM. All cryptographic operations that use a key with a protection mode of `SOFTWARE` are performed on the server. By default, 
+        /// the HSM. A protection mode of `SOFTWARE` means that the key persists on the server, protected by the vault's RSA wrapping key which persists
+        /// on the HSM. All cryptographic operations that use a key with a protection mode of `SOFTWARE` are performed on the server. By default,
         /// a key's protection mode is set to `HSM`. You can't change a key's protection mode after the key is created or imported.
+        /// A protection mode of `EXTERNAL` mean that the key persists on the customer's external key manager which is hosted externally outside of oracle.
+        /// Oracle only hold a reference to that key.
+        /// All cryptographic operations that use a key with a protection mode of `EXTERNAL` are performed by external key manager.
         /// 
         /// </value>
         ///
@@ -156,15 +161,20 @@ namespace Oci.KeymanagementService.Models
             [EnumMember(Value = "HSM")]
             Hsm,
             [EnumMember(Value = "SOFTWARE")]
-            Software
+            Software,
+            [EnumMember(Value = "EXTERNAL")]
+            External
         };
 
         /// <value>
         /// The key's protection mode indicates how the key persists and where cryptographic operations that use the key are performed.
         /// A protection mode of `HSM` means that the key persists on a hardware security module (HSM) and all cryptographic operations are performed inside
-        /// the HSM. A protection mode of `SOFTWARE` means that the key persists on the server, protected by the vault's RSA wrapping key which persists 
-        /// on the HSM. All cryptographic operations that use a key with a protection mode of `SOFTWARE` are performed on the server. By default, 
+        /// the HSM. A protection mode of `SOFTWARE` means that the key persists on the server, protected by the vault's RSA wrapping key which persists
+        /// on the HSM. All cryptographic operations that use a key with a protection mode of `SOFTWARE` are performed on the server. By default,
         /// a key's protection mode is set to `HSM`. You can't change a key's protection mode after the key is created or imported.
+        /// A protection mode of `EXTERNAL` mean that the key persists on the customer's external key manager which is hosted externally outside of oracle.
+        /// Oracle only hold a reference to that key.
+        /// All cryptographic operations that use a key with a protection mode of `EXTERNAL` are performed by external key manager.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "protectionMode")]
@@ -193,6 +203,9 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "algorithm")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AlgorithmEnum> Algorithm { get; set; }
+        
+        [JsonProperty(PropertyName = "externalKeyReferenceDetails")]
+        public ExternalKeyReferenceDetails ExternalKeyReferenceDetails { get; set; }
         
     }
 }

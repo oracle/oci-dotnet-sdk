@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the compartment you wish to move the Vault.
+    /// </summary>
     public class ChangeVaultCompartmentDetails 
     {
         

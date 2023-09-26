@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the backup location from which you want to restore the Key.
+    /// </summary>
     public class RestoreKeyFromObjectStoreDetails 
     {
         

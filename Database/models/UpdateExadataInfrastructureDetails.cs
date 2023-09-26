@@ -113,7 +113,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "X8M")]
             X8M,
             [EnumMember(Value = "X9M")]
-            X9M
+            X9M,
+            [EnumMember(Value = "X10M")]
+            X10M
         };
 
         /// <value>

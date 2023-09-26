@@ -15,13 +15,18 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the Vault that you wish to backup.
+    /// </summary>
     public class BackupVaultDetails 
     {
         
         [JsonProperty(PropertyName = "backupLocation")]
         public BackupLocation BackupLocation { get; set; }
         
+        /// <value>
+        /// A Boolean value that indicates whether the Keys should be included during backing up the Vault.
+        /// </value>
         [JsonProperty(PropertyName = "isIncludeKeys")]
         public System.Nullable<bool> IsIncludeKeys { get; set; }
         

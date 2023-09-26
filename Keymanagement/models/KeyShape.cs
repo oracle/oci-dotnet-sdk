@@ -22,7 +22,7 @@ namespace Oci.KeymanagementService.Models
     {
                 ///
         /// <value>
-        /// The algorithm used by a key's key versions to encrypt or decrypt.
+        /// The algorithm used by a key's key versions to encrypt or decrypt. Only AES algorithm is supported for `External` keys.
         /// </value>
         ///
         public enum AlgorithmEnum {
@@ -38,7 +38,7 @@ namespace Oci.KeymanagementService.Models
         };
 
         /// <value>
-        /// The algorithm used by a key's key versions to encrypt or decrypt.
+        /// The algorithm used by a key's key versions to encrypt or decrypt. Only AES algorithm is supported for `External` keys.
         /// </value>
         /// <remarks>
         /// Required

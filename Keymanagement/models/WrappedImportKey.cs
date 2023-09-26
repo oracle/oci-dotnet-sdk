@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the wrapped import Key.
+    /// </summary>
     public class WrappedImportKey 
     {
         

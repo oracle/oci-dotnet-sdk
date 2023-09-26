@@ -32,7 +32,7 @@ namespace Oci.KeymanagementService.Responses
 
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the work request, used to track the progress of the 
+        /// Unique Oracle-assigned identifier for the work request, used to track the progress of the
         /// restore operation.
         /// 
         /// </value>

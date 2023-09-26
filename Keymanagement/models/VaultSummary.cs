@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the Vault.
+    /// </summary>
     public class VaultSummary 
     {
         
@@ -160,6 +162,8 @@ namespace Oci.KeymanagementService.Models
             UnknownEnumValue,
             [EnumMember(Value = "VIRTUAL_PRIVATE")]
             VirtualPrivate,
+            [EnumMember(Value = "EXTERNAL")]
+            External,
             [EnumMember(Value = "DEFAULT")]
             Default
         };
@@ -176,6 +180,9 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "vaultType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<VaultTypeEnum> VaultType { get; set; }
+        
+        [JsonProperty(PropertyName = "externalKeyManagerMetadataSummary")]
+        public ExternalKeyManagerMetadataSummary ExternalKeyManagerMetadataSummary { get; set; }
         
     }
 }

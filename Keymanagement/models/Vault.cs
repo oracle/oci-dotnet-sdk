@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The logical entity where the Vault service creates and durably stores keys.
+    /// </summary>
     public class Vault 
     {
         
@@ -168,7 +170,9 @@ namespace Oci.KeymanagementService.Models
             [EnumMember(Value = "VIRTUAL_PRIVATE")]
             VirtualPrivate,
             [EnumMember(Value = "DEFAULT")]
-            Default
+            Default,
+            [EnumMember(Value = "EXTERNAL")]
+            External
         };
 
         /// <value>
@@ -185,8 +189,8 @@ namespace Oci.KeymanagementService.Models
         public System.Nullable<VaultTypeEnum> VaultType { get; set; }
         
         /// <value>
-        /// The OCID of the vault from which this vault was restored, if it was restored from a backup file. 
-        /// If you restore a vault to the same region, the vault retains the same OCID that it had when you 
+        /// The OCID of the vault from which this vault was restored, if it was restored from a backup file.
+        /// If you restore a vault to the same region, the vault retains the same OCID that it had when you
         /// backed up the vault.
         /// 
         /// </value>
@@ -206,8 +210,14 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "replicaDetails")]
         public VaultReplicaDetails ReplicaDetails { get; set; }
         
+        /// <value>
+        /// A Boolean value that indicates whether the Vault is primary Vault or replica Vault.
+        /// </value>
         [JsonProperty(PropertyName = "isPrimary")]
         public System.Nullable<bool> IsPrimary { get; set; }
+        
+        [JsonProperty(PropertyName = "externalKeyManagerMetadataSummary")]
+        public ExternalKeyManagerMetadataSummary ExternalKeyManagerMetadataSummary { get; set; }
         
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.KeymanagementService.Requests
         public string VaultId { get; set; }
         
         /// <value>
-        /// 
+        /// ChangeVaultCompartmentDetails
         /// </value>
         /// <remarks>
         /// Required

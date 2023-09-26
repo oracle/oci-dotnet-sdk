@@ -30,7 +30,7 @@ namespace Oci.KeymanagementService.Requests
         public string KeyId { get; set; }
         
         /// <value>
-        /// 
+        /// Details of change key compartment.
         /// </value>
         /// <remarks>
         /// Required

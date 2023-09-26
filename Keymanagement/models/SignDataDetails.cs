@@ -15,7 +15,9 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.KeymanagementService.Models
 {
-    
+    /// <summary>
+    /// The details of the message that you want to sign.
+    /// </summary>
     public class SignDataDetails 
     {
         
@@ -46,7 +48,7 @@ namespace Oci.KeymanagementService.Models
         public string KeyVersionId { get; set; }
                 ///
         /// <value>
-        /// Denotes whether the value of the message parameter is a raw message or a message digest. 
+        /// Denotes whether the value of the message parameter is a raw message or a message digest.
         /// The default value, `RAW`, indicates a message. To indicate a message digest, use `DIGEST`.
         /// 
         /// </value>
@@ -59,7 +61,7 @@ namespace Oci.KeymanagementService.Models
         };
 
         /// <value>
-        /// Denotes whether the value of the message parameter is a raw message or a message digest. 
+        /// Denotes whether the value of the message parameter is a raw message or a message digest.
         /// The default value, `RAW`, indicates a message. To indicate a message digest, use `DIGEST`.
         /// 
         /// </value>
@@ -69,10 +71,10 @@ namespace Oci.KeymanagementService.Models
                 ///
         /// <value>
         /// The algorithm to use to sign the message or message digest.
-        /// For RSA keys, supported signature schemes include PKCS #1 and RSASSA-PSS, along with 
-        /// different hashing algorithms. 
+        /// For RSA keys, supported signature schemes include PKCS #1 and RSASSA-PSS, along with
+        /// different hashing algorithms.
         /// For ECDSA keys, ECDSA is the supported signature scheme with different hashing algorithms.
-        /// When you pass a message digest for signing, ensure that you specify the same hashing algorithm 
+        /// When you pass a message digest for signing, ensure that you specify the same hashing algorithm
         /// as used when creating the message digest.
         /// 
         /// </value>
@@ -104,10 +106,10 @@ namespace Oci.KeymanagementService.Models
 
         /// <value>
         /// The algorithm to use to sign the message or message digest.
-        /// For RSA keys, supported signature schemes include PKCS #1 and RSASSA-PSS, along with 
-        /// different hashing algorithms. 
+        /// For RSA keys, supported signature schemes include PKCS #1 and RSASSA-PSS, along with
+        /// different hashing algorithms.
         /// For ECDSA keys, ECDSA is the supported signature scheme with different hashing algorithms.
-        /// When you pass a message digest for signing, ensure that you specify the same hashing algorithm 
+        /// When you pass a message digest for signing, ensure that you specify the same hashing algorithm
         /// as used when creating the message digest.
         /// 
         /// </value>

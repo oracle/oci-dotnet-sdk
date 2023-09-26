@@ -73,8 +73,8 @@ namespace Oci.KeymanagementService
         }
 
         /// <summary>
-        /// Backs up an encrypted file that contains all the metadata of a vault so that you can restore the vault later. 
-        /// You can backup a vault whether or not it contains keys. This operation only backs up the 
+        /// Backs up an encrypted file that contains all the metadata of a vault so that you can restore the vault later.
+        /// You can backup a vault whether or not it contains keys. This operation only backs up the
         /// metadata of the vault, and does not include key metadata.
         /// 
         /// </summary>
@@ -112,7 +112,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "BackupVault",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/BackupVault",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -177,7 +177,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "CancelVaultDeletion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/CancelVaultDeletion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -242,7 +242,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "ChangeVaultCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/ChangeVaultCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -307,7 +307,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "CreateVault",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/CreateVault",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -373,7 +373,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "CreateVaultReplica",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/CreateVaultReplica",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -435,7 +435,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "DeleteVaultReplica",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/DeleteVaultReplica",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -497,7 +497,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "GetVault",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/GetVault",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -554,7 +554,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "GetVaultUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/VaultUsage/GetVaultUsage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -616,7 +616,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "ListVaultReplicas",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/ListVaultReplicas",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -678,7 +678,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "ListVaults",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/VaultSummary/ListVaults",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -737,7 +737,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "RestoreVaultFromFile",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/RestoreVaultFromFile",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -796,7 +796,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "RestoreVaultFromObjectStore",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/RestoreVaultFromObjectStore",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -862,7 +862,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "ScheduleVaultDeletion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/ScheduleVaultDeletion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -926,7 +926,7 @@ namespace Oci.KeymanagementService
                     ServiceName = "KmsVault",
                     OperationName = "UpdateVault",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/key/release/Vault/UpdateVault",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
