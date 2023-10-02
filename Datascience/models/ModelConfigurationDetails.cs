@@ -42,7 +42,7 @@ namespace Oci.DatascienceService.Models
         public ScalingPolicy ScalingPolicy { get; set; }
         
         /// <value>
-        /// The network bandwidth for the model.
+        /// The minimum network bandwidth for the model deployment.
         /// </value>
         [JsonProperty(PropertyName = "bandwidthMbps")]
         public System.Nullable<int> BandwidthMbps { get; set; }

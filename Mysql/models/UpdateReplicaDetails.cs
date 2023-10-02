@@ -57,5 +57,8 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "isDeleteProtected")]
         public System.Nullable<bool> IsDeleteProtected { get; set; }
         
+        [JsonProperty(PropertyName = "replicaOverrides")]
+        public ReplicaOverrides ReplicaOverrides { get; set; }
+        
     }
 }

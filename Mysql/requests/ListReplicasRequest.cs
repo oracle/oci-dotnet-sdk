@@ -79,6 +79,20 @@ namespace Oci.MysqlService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "replicaId")]
         public string ReplicaId { get; set; }
         
+        /// <value>
+        /// The requested Configuration instance.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "configurationId")]
+        public string ConfigurationId { get; set; }
+        
+        /// <value>
+        /// Filter instances if they are using the latest revision of the
+        /// Configuration they are associated with.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isUpToDate")]
+        public System.Nullable<bool> IsUpToDate { get; set; }
+        
         ///
         /// <value>
         /// The field to sort by. You can sort by one field only. By default, the Time field is sorted in descending order and the Display Name field in ascending order.

@@ -147,5 +147,18 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDataGuardEnabled")]
         public System.Nullable<bool> IsDataGuardEnabled { get; set; }
+        
+        /// <value>
+        /// Filter if the resource is the resource pool leader. A value of `true` returns only resource pool leader.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isResourcePoolLeader")]
+        public System.Nullable<bool> IsResourcePoolLeader { get; set; }
+        
+        /// <value>
+        /// The database [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resourcepool Leader Autonomous Database.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourcePoolLeaderId")]
+        public string ResourcePoolLeaderId { get; set; }
     }
 }

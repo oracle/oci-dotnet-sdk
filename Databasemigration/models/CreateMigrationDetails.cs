@@ -89,6 +89,9 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "targetDatabaseConnectionId")]
         public string TargetDatabaseConnectionId { get; set; }
         
+        [JsonProperty(PropertyName = "dataTransferMediumDetailsV2")]
+        public DataTransferMediumDetailsV2 DataTransferMediumDetailsV2 { get; set; }
+        
         [JsonProperty(PropertyName = "dataTransferMediumDetails")]
         public CreateDataTransferMediumDetails DataTransferMediumDetails { get; set; }
         

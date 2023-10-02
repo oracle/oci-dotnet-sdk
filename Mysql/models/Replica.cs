@@ -129,7 +129,7 @@ namespace Oci.MysqlService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The MySQL version used by the read replica.
+        /// The MySQL version currently in use by the read replica.
         /// </value>
         /// <remarks>
         /// Required
@@ -205,6 +205,24 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "isDeleteProtected")]
         public System.Nullable<bool> IsDeleteProtected { get; set; }
+        
+        /// <value>
+        /// The shape currently in use by the read replica. The shape determines the resources allocated: 
+        /// CPU cores and memory for VM shapes, CPU cores, memory and storage for non-VM (bare metal) shapes. 
+        /// To get a list of shapes, use the {@link #listShapes(ListShapesRequest) listShapes} operation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shapeName")]
+        public string ShapeName { get; set; }
+        
+        /// <value>
+        /// The OCID of the Configuration currently in use by the read replica.
+        /// </value>
+        [JsonProperty(PropertyName = "configurationId")]
+        public string ConfigurationId { get; set; }
+        
+        [JsonProperty(PropertyName = "replicaOverrides")]
+        public ReplicaOverrides ReplicaOverrides { get; set; }
         
     }
 }

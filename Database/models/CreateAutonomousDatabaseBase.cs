@@ -445,6 +445,15 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "isMtlsConnectionRequired")]
         public System.Nullable<bool> IsMtlsConnectionRequired { get; set; }
+        
+        /// <value>
+        /// The unique identifier for leader autonomous database OCID [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// </value>
+        [JsonProperty(PropertyName = "resourcePoolLeaderId")]
+        public string ResourcePoolLeaderId { get; set; }
+        
+        [JsonProperty(PropertyName = "resourcePoolSummary")]
+        public ResourcePoolSummary ResourcePoolSummary { get; set; }
                 ///
         /// <value>
         /// The maintenance schedule type of the Autonomous Database Serverless. An EARLY maintenance schedule

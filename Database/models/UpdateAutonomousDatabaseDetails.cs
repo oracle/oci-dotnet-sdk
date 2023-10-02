@@ -485,6 +485,15 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsMtlsConnectionRequired { get; set; }
         
         /// <value>
+        /// The unique identifier for leader autonomous database OCID [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// </value>
+        [JsonProperty(PropertyName = "resourcePoolLeaderId")]
+        public string ResourcePoolLeaderId { get; set; }
+        
+        [JsonProperty(PropertyName = "resourcePoolSummary")]
+        public ResourcePoolSummary ResourcePoolSummary { get; set; }
+        
+        /// <value>
         /// The list of scheduled operations.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.

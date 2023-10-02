@@ -28,5 +28,12 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "target")]
         public UpdateHostDumpTransferDetails Target { get; set; }
         
+        /// <value>
+        /// OCID of the shared storage mount target
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sharedStorageMountTargetId")]
+        public string SharedStorageMountTargetId { get; set; }
+        
     }
 }
