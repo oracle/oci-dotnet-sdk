@@ -16,24 +16,23 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Optional additional properties for dump transfer.
+    /// Optional details for creating a network database link from OCI database to on-premise database.
     /// 
     /// </summary>
-    public class CreateDumpTransferDetails 
+    public class DbLinkDataTransferMediumDetails : DataTransferMediumDetailsV2
     {
         
-        [JsonProperty(PropertyName = "source")]
-        public CreateHostDumpTransferDetails Source { get; set; }
-        
-        [JsonProperty(PropertyName = "target")]
-        public CreateHostDumpTransferDetails Target { get; set; }
+        [JsonProperty(PropertyName = "objectStorageBucket")]
+        public ObjectStoreBucket ObjectStorageBucket { get; set; }
         
         /// <value>
-        /// OCID of the shared storage mount target
+        /// Name of database link from OCI database to on-premise database. ODMS will create link, if the link does not already exist.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "sharedStorageMountTargetId")]
-        public string SharedStorageMountTargetId { get; set; }
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
         
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "DBLINK";
     }
 }

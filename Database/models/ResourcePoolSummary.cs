@@ -13,27 +13,26 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatabasemigrationService.Models
+namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Optional additional properties for dump transfer.
-    /// 
+    /// The configuration details for resource pool
     /// </summary>
-    public class CreateDumpTransferDetails 
+    public class ResourcePoolSummary 
     {
         
-        [JsonProperty(PropertyName = "source")]
-        public CreateHostDumpTransferDetails Source { get; set; }
-        
-        [JsonProperty(PropertyName = "target")]
-        public CreateHostDumpTransferDetails Target { get; set; }
+        /// <value>
+        /// Resource pool size.
+        /// </value>
+        [JsonProperty(PropertyName = "poolSize")]
+        public System.Nullable<int> PoolSize { get; set; }
         
         /// <value>
-        /// OCID of the shared storage mount target
+        /// Indicates if the resource pool should be deleted for the Autonomous Database. 
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "sharedStorageMountTargetId")]
-        public string SharedStorageMountTargetId { get; set; }
+        [JsonProperty(PropertyName = "isDisabled")]
+        public System.Nullable<bool> IsDisabled { get; set; }
         
     }
 }

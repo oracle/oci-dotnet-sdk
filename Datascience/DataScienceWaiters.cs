@@ -32,6 +32,34 @@ namespace Oci.DatascienceService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDataSciencePrivateEndpointRequest, GetDataSciencePrivateEndpointResponse> ForDataSciencePrivateEndpoint(GetDataSciencePrivateEndpointRequest request, params DataSciencePrivateEndpointLifecycleState[] targetStates)
+        {
+            return this.ForDataSciencePrivateEndpoint(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDataSciencePrivateEndpointRequest, GetDataSciencePrivateEndpointResponse> ForDataSciencePrivateEndpoint(GetDataSciencePrivateEndpointRequest request, WaiterConfiguration config, params DataSciencePrivateEndpointLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetDataSciencePrivateEndpointRequest, GetDataSciencePrivateEndpointResponse>(
+                request,
+                request => client.GetDataSciencePrivateEndpoint(request),
+                response => targetStates.Contains(response.DataSciencePrivateEndpoint.LifecycleState.Value),
+                targetStates.Contains(DataSciencePrivateEndpointLifecycleState.Deleted)
+            );
+            return new Waiter<GetDataSciencePrivateEndpointRequest, GetDataSciencePrivateEndpointResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetJobRequest, GetJobResponse> ForJob(GetJobRequest request, params JobLifecycleState[] targetStates)
         {
             return this.ForJob(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

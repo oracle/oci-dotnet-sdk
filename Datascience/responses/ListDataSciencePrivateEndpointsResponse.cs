@@ -12,16 +12,15 @@ using Oci.DatascienceService.Models;
 
 namespace Oci.DatascienceService.Responses
 {
-    public class ListWorkRequestErrorsResponse : Oci.Common.IOciResponse
+    public class ListDataSciencePrivateEndpointsResponse : Oci.Common.IOciResponse
     {
 
         /// <value>
-        /// Unique Oracle assigned identifier for the request. If you need to contact
-        /// Oracle about a particular request, then provide the request ID.
+        /// Retrieves the previous page of results. When this header appears in the response, previous pages of results exist. See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
-        public string OpcRequestId { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-prev-page")]
+        public string OpcPrevPage { get; set; }
 
 
         /// <value>
@@ -33,17 +32,18 @@ namespace Oci.DatascienceService.Responses
 
 
         /// <value>
-        /// Retrieves the previous page of results. When this header appears in the response, previous pages of results exist. See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// Unique Oracle assigned identifier for the request. If you need to contact
+        /// Oracle about a particular request, then provide the request ID.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-prev-page")]
-        public string OpcPrevPage { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
+        public string OpcRequestId { get; set; }
 
         /// <value>
-        /// A list of WorkRequestError instances.
+        /// A list of DataSciencePrivateEndpointSummary instances.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public System.Collections.Generic.List<WorkRequestError> Items { get; set; }
+        public System.Collections.Generic.List<DataSciencePrivateEndpointSummary> Items { get; set; }
 
     }
 }

@@ -16,24 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Optional additional properties for dump transfer.
+    /// OCI Object Storage bucket will be used to store Data Pump dump files for the migration.
     /// 
     /// </summary>
-    public class CreateDumpTransferDetails 
+    public class ObjectStorageDataTransferMediumDetails : DataTransferMediumDetailsV2
     {
         
-        [JsonProperty(PropertyName = "source")]
-        public CreateHostDumpTransferDetails Source { get; set; }
+        [JsonProperty(PropertyName = "objectStorageBucket")]
+        public ObjectStoreBucket ObjectStorageBucket { get; set; }
         
-        [JsonProperty(PropertyName = "target")]
-        public CreateHostDumpTransferDetails Target { get; set; }
-        
-        /// <value>
-        /// OCID of the shared storage mount target
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "sharedStorageMountTargetId")]
-        public string SharedStorageMountTargetId { get; set; }
-        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "OBJECT_STORAGE";
     }
 }

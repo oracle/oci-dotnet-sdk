@@ -13,27 +13,24 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatabasemigrationService.Models
+namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// Optional additional properties for dump transfer.
+    /// The details required to change a private endpoint compartment.
     /// 
     /// </summary>
-    public class CreateDumpTransferDetails 
+    public class ChangeDataSciencePrivateEndpointCompartmentDetails 
     {
         
-        [JsonProperty(PropertyName = "source")]
-        public CreateHostDumpTransferDetails Source { get; set; }
-        
-        [JsonProperty(PropertyName = "target")]
-        public CreateHostDumpTransferDetails Target { get; set; }
-        
         /// <value>
-        /// OCID of the shared storage mount target
-        /// 
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where you want to create private endpoint.
         /// </value>
-        [JsonProperty(PropertyName = "sharedStorageMountTargetId")]
-        public string SharedStorageMountTargetId { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
         
     }
 }

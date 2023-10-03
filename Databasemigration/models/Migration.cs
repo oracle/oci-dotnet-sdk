@@ -126,6 +126,9 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "executingJobId")]
         public string ExecutingJobId { get; set; }
         
+        [JsonProperty(PropertyName = "dataTransferMediumDetailsV2")]
+        public DataTransferMediumDetailsV2 DataTransferMediumDetailsV2 { get; set; }
+        
         [JsonProperty(PropertyName = "dataTransferMediumDetails")]
         public DataTransferMediumDetails DataTransferMediumDetails { get; set; }
         

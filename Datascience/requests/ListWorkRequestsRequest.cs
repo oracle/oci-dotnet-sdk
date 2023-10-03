@@ -81,7 +81,15 @@ namespace Oci.DatascienceService.Requests
             [EnumMember(Value = "PIPELINE_RUN_CANCEL")]
             PipelineRunCancel,
             [EnumMember(Value = "PIPELINE_RUN_DELETE")]
-            PipelineRunDelete
+            PipelineRunDelete,
+            [EnumMember(Value = "PRIVATE_ENDPOINT_CREATE")]
+            PrivateEndpointCreate,
+            [EnumMember(Value = "PRIVATE_ENDPOINT_DELETE")]
+            PrivateEndpointDelete,
+            [EnumMember(Value = "PRIVATE_ENDPOINT_MOVE")]
+            PrivateEndpointMove,
+            [EnumMember(Value = "PRIVATE_ENDPOINT_UPDATE")]
+            PrivateEndpointUpdate
         };
 
         /// <value>
