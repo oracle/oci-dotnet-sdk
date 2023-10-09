@@ -1866,6 +1866,64 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Converts a Refreshable clone to Regular pluggable database (PDB).
+        /// Pluggable Database will be in &#x60;READ_WRITE&#x60; openmode after conversion.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ConvertToRegularPluggableDatabase.cs.html">here</a> to see an example of how to use ConvertToRegularPluggableDatabase API.</example>
+        public async Task<ConvertToRegularPluggableDatabaseResponse> ConvertToRegularPluggableDatabase(ConvertToRegularPluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called convertToRegularPluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/pluggableDatabases/{pluggableDatabaseId}/actions/convertToRegular".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Database",
+                    OperationName = "ConvertToRegularPluggableDatabase",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database/20160918/PluggableDatabase/ConvertToRegularPluggableDatabase",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ConvertToRegularPluggableDatabaseResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ConvertToRegularPluggableDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Creates a new application virtual IP (VIP) address in the specified cloud VM cluster based on the request parameters you provide.
         /// 
         /// </summary>
@@ -3189,6 +3247,7 @@ namespace Oci.DatabaseService
 
         /// <summary>
         /// Creates and starts a pluggable database in the specified container database.
+        /// Pluggable Database can be created using different operations (e.g. LocalClone, RemoteClone, Relocate ) with this API.
         /// Use the {@link #startPluggableDatabase(StartPluggableDatabaseRequest) startPluggableDatabase} and {@link #stopPluggableDatabase(StopPluggableDatabaseRequest) stopPluggableDatabase} APIs to start and stop the pluggable database.
         /// 
         /// </summary>
@@ -7435,6 +7494,63 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Get the resource usage details for the specified Autonomous Exadata VM cluster.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/GetAutonomousVmClusterResourceUsage.cs.html">here</a> to see an example of how to use GetAutonomousVmClusterResourceUsage API.</example>
+        public async Task<GetAutonomousVmClusterResourceUsageResponse> GetAutonomousVmClusterResourceUsage(GetAutonomousVmClusterResourceUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getAutonomousVmClusterResourceUsage");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/autonomousVmClusters/{autonomousVmClusterId}/resourceUsage".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Database",
+                    OperationName = "GetAutonomousVmClusterResourceUsage",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database/20160918/AutonomousVmCluster/GetAutonomousVmClusterResourceUsage",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetAutonomousVmClusterResourceUsageResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetAutonomousVmClusterResourceUsage failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets information about the specified backup.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -11041,6 +11157,63 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Gets the list of resource usage details for all the Autonomous Container Database in the specified Autonomous Exadata VM cluster.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/ListAutonomousVmClusterAcdResourceUsage.cs.html">here</a> to see an example of how to use ListAutonomousVmClusterAcdResourceUsage API.</example>
+        public async Task<ListAutonomousVmClusterAcdResourceUsageResponse> ListAutonomousVmClusterAcdResourceUsage(ListAutonomousVmClusterAcdResourceUsageRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listAutonomousVmClusterAcdResourceUsage");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/autonomousVmClusters/{autonomousVmClusterId}/acdResourceUsage".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Database",
+                    OperationName = "ListAutonomousVmClusterAcdResourceUsage",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database/20160918/AutonomousVmCluster/ListAutonomousVmClusterAcdResourceUsage",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListAutonomousVmClusterAcdResourceUsageResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListAutonomousVmClusterAcdResourceUsage failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets a list of Exadata Cloud@Customer Autonomous VM clusters in the specified compartment. To list Autonomous VM Clusters in the Oracle Cloud, see {@link #listCloudAutonomousVmClusters(ListCloudAutonomousVmClustersRequest) listCloudAutonomousVmClusters}.
         /// 
         /// </summary>
@@ -13724,6 +13897,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// **Deprecated.** Use {@link #createPluggableDatabase(CreatePluggableDatabaseRequest) createPluggableDatabase} for Pluggable Database LocalClone Operation.
         /// Clones and starts a pluggable database (PDB) in the same database (CDB) as the source PDB. The source PDB must be in the &#x60;READ_WRITE&#x60; openMode to perform the clone operation.
         /// 
         /// </summary>
@@ -14007,6 +14181,63 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Refreshes a pluggable database (PDB) Refreshable clone.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/database/RefreshPluggableDatabase.cs.html">here</a> to see an example of how to use RefreshPluggableDatabase API.</example>
+        public async Task<RefreshPluggableDatabaseResponse> RefreshPluggableDatabase(RefreshPluggableDatabaseRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called refreshPluggableDatabase");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/pluggableDatabases/{pluggableDatabaseId}/actions/refresh".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Database",
+                    OperationName = "RefreshPluggableDatabase",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database/20160918/PluggableDatabase/RefreshPluggableDatabase",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<RefreshPluggableDatabaseResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RefreshPluggableDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Asynchronously registers this Autonomous Database with Data Safe.
         /// 
         /// </summary>
@@ -14178,6 +14409,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// **Deprecated.** Use {@link #createPluggableDatabase(CreatePluggableDatabaseRequest) createPluggableDatabase} for Pluggable Database RemoteClone Operation.
         /// Clones a pluggable database (PDB) to a different database from the source PDB. The cloned PDB will be started upon completion of the clone operation. The source PDB must be in the &#x60;READ_WRITE&#x60; openMode when performing the clone.
         /// For Exadata Cloud@Customer instances, the source pluggable database (PDB) must be on the same Exadata Infrastructure as the target container database (CDB) to create a remote clone.
         /// 

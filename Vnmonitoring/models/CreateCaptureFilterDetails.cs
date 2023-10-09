@@ -61,7 +61,9 @@ namespace Oci.VnmonitoringService.Models
         ///
         public enum FilterTypeEnum {
             [EnumMember(Value = "VTAP")]
-            Vtap
+            Vtap,
+            [EnumMember(Value = "FLOWLOG")]
+            Flowlog
         };
 
         /// <value>
@@ -81,6 +83,13 @@ namespace Oci.VnmonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "vtapCaptureFilterRules")]
         public System.Collections.Generic.List<VtapCaptureFilterRuleDetails> VtapCaptureFilterRules { get; set; }
+        
+        /// <value>
+        /// The set of rules governing what traffic the Flow Log collects when creating a flow log capture filter.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "flowLogCaptureFilterRules")]
+        public System.Collections.Generic.List<FlowLogCaptureFilterRuleDetails> FlowLogCaptureFilterRules { get; set; }
         
     }
 }

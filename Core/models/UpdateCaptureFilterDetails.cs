@@ -47,6 +47,13 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<VtapCaptureFilterRuleDetails> VtapCaptureFilterRules { get; set; }
         
         /// <value>
+        /// The set of rules governing what traffic the VCN flow log collects.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "flowLogCaptureFilterRules")]
+        public System.Collections.Generic.List<FlowLogCaptureFilterRuleDetails> FlowLogCaptureFilterRules { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>

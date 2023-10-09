@@ -22,6 +22,10 @@ namespace Oci.MarketplaceService.Models
       [EnumMember(Value = "ORCHESTRATION")]
       Orchestration,
       [EnumMember(Value = "IMAGE")]
-      Image
+      Image,
+      [EnumMember(Value = "CONTAINER")]
+      Container,
+      [EnumMember(Value = "KUBERNETES")]
+      Kubernetes
   }
 }

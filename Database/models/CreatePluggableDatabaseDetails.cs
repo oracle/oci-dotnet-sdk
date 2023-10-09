@@ -17,6 +17,7 @@ namespace Oci.DatabaseService.Models
 {
     /// <summary>
     /// Parameters for creating a pluggable database in a specified container database (CDB).
+    /// Additional option `pdbCreationTypeDetails` can be used for creating Pluggable Database using different operations, e.g. LocalClone, Remote Clone, Relocate.
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
@@ -62,6 +63,21 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "shouldPdbAdminAccountBeLocked")]
         public System.Nullable<bool> ShouldPdbAdminAccountBeLocked { get; set; }
+        
+        /// <value>
+        /// The DB system administrator password of the Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "containerDatabaseAdminPassword")]
+        public string ContainerDatabaseAdminPassword { get; set; }
+        
+        /// <value>
+        /// Indicates whether to take Pluggable Database Backup after the operation.
+        /// </value>
+        [JsonProperty(PropertyName = "shouldCreatePdbBackup")]
+        public System.Nullable<bool> ShouldCreatePdbBackup { get; set; }
+        
+        [JsonProperty(PropertyName = "pdbCreationTypeDetails")]
+        public CreatePluggableDatabaseCreationTypeDetails PdbCreationTypeDetails { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
