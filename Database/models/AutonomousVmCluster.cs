@@ -214,6 +214,54 @@ namespace Oci.DatabaseService.Models
         public string NextMaintenanceRunId { get; set; }
         
         /// <value>
+        /// The percentage of total number of CPUs used in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "cpuPercentage")]
+        public System.Nullable<float> CpuPercentage { get; set; }
+        
+        /// <value>
+        /// The percentage of the data storage used for the Autonomous Databases in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousDataStoragePercentage")]
+        public System.Nullable<float> AutonomousDataStoragePercentage { get; set; }
+        
+        /// <value>
+        /// The number of CPUs provisioned in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "provisionedCpus")]
+        public System.Nullable<float> ProvisionedCpus { get; set; }
+        
+        /// <value>
+        /// The total data disk group size for Autonomous Databases, in TBs.
+        /// </value>
+        [JsonProperty(PropertyName = "totalAutonomousDataStorageInTBs")]
+        public System.Nullable<float> TotalAutonomousDataStorageInTBs { get; set; }
+        
+        /// <value>
+        /// The number of CPUs reserved in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "reservedCpus")]
+        public System.Nullable<float> ReservedCpus { get; set; }
+        
+        /// <value>
+        /// The number of provisionable Autonomous Container Databases in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "provisionableAutonomousContainerDatabases")]
+        public System.Nullable<int> ProvisionableAutonomousContainerDatabases { get; set; }
+        
+        /// <value>
+        /// The number of provisioned Autonomous Container Databases in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "provisionedAutonomousContainerDatabases")]
+        public System.Nullable<int> ProvisionedAutonomousContainerDatabases { get; set; }
+        
+        /// <value>
+        /// The number of non-provisionable Autonomous Container Databases in an Autonomous VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "nonProvisionableAutonomousContainerDatabases")]
+        public System.Nullable<int> NonProvisionableAutonomousContainerDatabases { get; set; }
+        
+        /// <value>
         /// The memory allocated in GBs.
         /// </value>
         [JsonProperty(PropertyName = "memorySizeInGBs")]

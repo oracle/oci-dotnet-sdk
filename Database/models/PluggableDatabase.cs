@@ -74,7 +74,21 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "UPDATING")]
             Updating,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "RELOCATING")]
+            Relocating,
+            [EnumMember(Value = "RELOCATED")]
+            Relocated,
+            [EnumMember(Value = "REFRESHING")]
+            Refreshing,
+            [EnumMember(Value = "RESTORE_IN_PROGRESS")]
+            RestoreInProgress,
+            [EnumMember(Value = "RESTORE_FAILED")]
+            RestoreFailed,
+            [EnumMember(Value = "BACKUP_IN_PROGRESS")]
+            BackupInProgress,
+            [EnumMember(Value = "DISABLED")]
+            Disabled
         };
 
         /// <value>
@@ -108,6 +122,7 @@ namespace Oci.DatabaseService.Models
         public PluggableDatabaseConnectionStrings ConnectionStrings { get; set; }
                 ///
         /// <value>
+        /// **Deprecated.** Use {@link #pluggableDatabaseNodeLevelDetails(PluggableDatabaseNodeLevelDetailsRequest) pluggableDatabaseNodeLevelDetails} for OpenMode details.
         /// The mode that pluggable database is in. Open mode can only be changed to READ_ONLY or MIGRATE directly from the backend (within the Oracle Database software).
         /// 
         /// </value>
@@ -127,6 +142,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
+        /// **Deprecated.** Use {@link #pluggableDatabaseNodeLevelDetails(PluggableDatabaseNodeLevelDetailsRequest) pluggableDatabaseNodeLevelDetails} for OpenMode details.
         /// The mode that pluggable database is in. Open mode can only be changed to READ_ONLY or MIGRATE directly from the backend (within the Oracle Database software).
         /// 
         /// </value>
@@ -175,6 +191,16 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "pluggableDatabaseManagementConfig")]
         public PluggableDatabaseManagementConfig PluggableDatabaseManagementConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "refreshableCloneConfig")]
+        public PluggableDatabaseRefreshableCloneConfig RefreshableCloneConfig { get; set; }
+        
+        /// <value>
+        /// Pluggable Database Node Level Details.
+        /// Example: [{&quot;nodeName&quot; : &quot;node1&quot;, &quot;openMode&quot; : &quot;READ_WRITE&quot;}, {&quot;nodeName&quot; : &quot;node2&quot;, &quot;openMode&quot; : &quot;READ_ONLY&quot;}]
+        /// </value>
+        [JsonProperty(PropertyName = "pdbNodeLevelDetails")]
+        public System.Collections.Generic.List<PluggableDatabaseNodeLevelDetails> PdbNodeLevelDetails { get; set; }
         
     }
 }

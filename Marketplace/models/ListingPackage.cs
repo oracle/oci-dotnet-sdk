@@ -100,11 +100,17 @@ namespace Oci.MarketplaceService.Models
             var discriminator = jsonObject["packageType"].Value<string>();
             switch (discriminator)
             {
+                case "CONTAINER":
+                    obj = new ContainerListingPackage();
+                    break;
                 case "ORCHESTRATION":
                     obj = new OrchestrationListingPackage();
                     break;
                 case "IMAGE":
                     obj = new ImageListingPackage();
+                    break;
+                case "KUBERNETES":
+                    obj = new KubernetesListingPackage();
                     break;
             }
             if (obj != null)

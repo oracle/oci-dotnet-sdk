@@ -21,6 +21,7 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// Restores using the backup with the System Change Number (SCN) specified.
+        /// This field is applicable for both use cases - Restoring Container Database or Restoring specific Pluggable Database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "databaseSCN")]
@@ -39,6 +40,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "latest")]
         public System.Nullable<bool> Latest { get; set; }
+        
+        /// <value>
+        /// Restores only the Pluggable Database (if specified) using the inputs provided in request.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "pluggableDatabaseName")]
+        public string PluggableDatabaseName { get; set; }
         
     }
 }

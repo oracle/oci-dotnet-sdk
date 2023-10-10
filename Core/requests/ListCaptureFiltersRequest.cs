@@ -126,5 +126,11 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<CaptureFilter.LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// A filter to only return resources that match the given capture `filterType`. The `filterType` value is the string representation of enum - `VTAP`, `FLOWLOG`.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filterType")]
+        public System.Nullable<CaptureFilter.FilterTypeEnum> FilterType { get; set; }
     }
 }

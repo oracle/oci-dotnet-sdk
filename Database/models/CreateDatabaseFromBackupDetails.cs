@@ -64,5 +64,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "sidPrefix")]
         public string SidPrefix { get; set; }
         
+        /// <value>
+        /// The list of pluggable databases that needs to be restored into new database.
+        /// </value>
+        [JsonProperty(PropertyName = "pluggableDatabases")]
+        public System.Collections.Generic.List<string> PluggableDatabases { get; set; }
+        
     }
 }

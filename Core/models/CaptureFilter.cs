@@ -112,7 +112,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = null)]
             UnknownEnumValue,
             [EnumMember(Value = "VTAP")]
-            Vtap
+            Vtap,
+            [EnumMember(Value = "FLOWLOG")]
+            Flowlog
         };
 
         /// <value>
@@ -136,6 +138,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vtapCaptureFilterRules")]
         public System.Collections.Generic.List<VtapCaptureFilterRuleDetails> VtapCaptureFilterRules { get; set; }
+        
+        /// <value>
+        /// The set of rules governing what traffic the VCN flow log collects.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "flowLogCaptureFilterRules")]
+        public System.Collections.Generic.List<FlowLogCaptureFilterRuleDetails> FlowLogCaptureFilterRules { get; set; }
         
     }
 }

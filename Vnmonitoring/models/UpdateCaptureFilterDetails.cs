@@ -45,6 +45,13 @@ namespace Oci.VnmonitoringService.Models
         public System.Collections.Generic.List<VtapCaptureFilterRuleDetails> VtapCaptureFilterRules { get; set; }
         
         /// <value>
+        /// The set of rules governing what traffic the Flow Log collects when creating a flow log capture filter.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "flowLogCaptureFilterRules")]
+        public System.Collections.Generic.List<FlowLogCaptureFilterRuleDetails> FlowLogCaptureFilterRules { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

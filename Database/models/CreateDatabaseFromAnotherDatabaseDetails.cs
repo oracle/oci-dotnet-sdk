@@ -63,5 +63,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "timeStampForPointInTimeRecovery")]
         public System.Nullable<System.DateTime> TimeStampForPointInTimeRecovery { get; set; }
         
+        /// <value>
+        /// The list of pluggable databases that needs to be restored into new database.
+        /// </value>
+        [JsonProperty(PropertyName = "pluggableDatabases")]
+        public System.Collections.Generic.List<string> PluggableDatabases { get; set; }
+        
     }
 }
