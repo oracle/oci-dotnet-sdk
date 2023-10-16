@@ -43,5 +43,11 @@ namespace Oci.LockboxService.Models
         [JsonProperty(PropertyName = "defaultValue")]
         public string DefaultValue { get; set; }
         
+        /// <value>
+        /// List of context attribute values.
+        /// </value>
+        [JsonProperty(PropertyName = "values")]
+        public System.Collections.Generic.List<string> Values { get; set; }
+        
     }
 }

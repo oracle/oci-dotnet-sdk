@@ -22,7 +22,7 @@ namespace Oci.LoggingService.Models
     {
                 ///
         /// <value>
-        /// Time type of JSON parser.
+        /// JSON parser time type.
         /// </value>
         ///
         public enum TimeTypeEnum {
@@ -38,7 +38,7 @@ namespace Oci.LoggingService.Models
         };
 
         /// <value>
-        /// Time type of JSON parser.
+        /// JSON parser time type.
         /// </value>
         [JsonProperty(PropertyName = "timeType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

@@ -24,30 +24,18 @@ namespace Oci.NetworkfirewallService.Models
         /// <value>
         /// Whether to block sessions if SSL version is not supported.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "IsUnsupportedVersionBlocked is required.")]
         [JsonProperty(PropertyName = "isUnsupportedVersionBlocked")]
         public System.Nullable<bool> IsUnsupportedVersionBlocked { get; set; }
         
         /// <value>
         /// Whether to block sessions if SSL cipher suite is not supported.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "IsUnsupportedCipherBlocked is required.")]
         [JsonProperty(PropertyName = "isUnsupportedCipherBlocked")]
         public System.Nullable<bool> IsUnsupportedCipherBlocked { get; set; }
         
         /// <value>
         /// Whether to block sessions if the firewall is temporarily unable to decrypt their traffic.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "IsOutOfCapacityBlocked is required.")]
         [JsonProperty(PropertyName = "isOutOfCapacityBlocked")]
         public System.Nullable<bool> IsOutOfCapacityBlocked { get; set; }
         

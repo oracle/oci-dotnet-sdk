@@ -204,5 +204,38 @@ namespace Oci.LockboxService.Models
         [JsonProperty(PropertyName = "timeExpired")]
         public System.Nullable<System.DateTime> TimeExpired { get; set; }
         
+        /// <value>
+        /// The time the access request was last reminded. Format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// Example: 2020-01-25T21:10:29.600Z
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeReminded is required.")]
+        [JsonProperty(PropertyName = "timeReminded")]
+        public System.Nullable<System.DateTime> TimeReminded { get; set; }
+        
+        /// <value>
+        /// The count of times the access request was reminded.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ReminderCount is required.")]
+        [JsonProperty(PropertyName = "reminderCount")]
+        public System.Nullable<int> ReminderCount { get; set; }
+        
+        /// <value>
+        /// The location of the requestor. Format with be two letters indicatiog operator's country code defined by https://jira-sd.mc1.oracleiaas.com/browse/SSD-17880
+        /// Example: US
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RequestorLocation is required.")]
+        [JsonProperty(PropertyName = "requestorLocation")]
+        public string RequestorLocation { get; set; }
+        
     }
 }

@@ -38,6 +38,6 @@ namespace Oci.NetworkfirewallService.Models
         public System.Nullable<int> IcmpCode { get; set; }
         
         [JsonProperty(PropertyName = "type")]
-        private readonly string type = "ICMP6";
+        private readonly string type = "ICMP_V6";
     }
 }

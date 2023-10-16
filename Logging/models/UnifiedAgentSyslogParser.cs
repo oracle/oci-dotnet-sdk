@@ -28,13 +28,13 @@ namespace Oci.LoggingService.Models
         public string TimeFormat { get; set; }
         
         /// <value>
-        /// rfc5424 time format.
+        /// RFC 5424 time format.
         /// </value>
         [JsonProperty(PropertyName = "rfc5424TimeFormat")]
         public string Rfc5424TimeFormat { get; set; }
                 ///
         /// <value>
-        /// Message format of syslog.
+        /// Syslog message format.
         /// </value>
         ///
         public enum MessageFormatEnum {
@@ -50,20 +50,20 @@ namespace Oci.LoggingService.Models
         };
 
         /// <value>
-        /// Message format of syslog.
+        /// Syslog message format.
         /// </value>
         [JsonProperty(PropertyName = "messageFormat")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MessageFormatEnum> MessageFormat { get; set; }
         
         /// <value>
-        /// With priority or not.
+        /// Specifies with priority or not. Corresponds to the Fluentd with_priority parameter.
         /// </value>
         [JsonProperty(PropertyName = "isWithPriority")]
         public System.Nullable<bool> IsWithPriority { get; set; }
         
         /// <value>
-        /// Support colonless ident or not.
+        /// Specifies whether or not to support colonless ident. Corresponds to the Fluentd support_colonless_ident parameter.
         /// </value>
         [JsonProperty(PropertyName = "isSupportColonlessIdent")]
         public System.Nullable<bool> IsSupportColonlessIdent { get; set; }

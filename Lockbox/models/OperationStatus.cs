@@ -32,6 +32,8 @@ namespace Oci.LockboxService.Models
       [EnumMember(Value = "CANCELING")]
       Canceling,
       [EnumMember(Value = "CANCELED")]
-      Canceled
+      Canceled,
+      [EnumMember(Value = "NEEDS_ATTENTION")]
+      NeedsAttention
   }
 }

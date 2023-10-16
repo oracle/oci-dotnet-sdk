@@ -22,22 +22,17 @@ namespace Oci.NetworkfirewallService.Models
     public class MappedSecret 
     {
         
-                ///
         /// <value>
-        /// Type of the secrets mapped based on the policy.
-        /// <br/>
-        ///  * `SSL_INBOUND_INSPECTION`: For Inbound inspection of SSL traffic.
-        ///  * `SSL_FORWARD_PROXY`: For forward proxy certificates for SSL inspection.
-        /// 
+        /// Name of the secret.
         /// </value>
-        ///
-        public enum TypeEnum {
-            [EnumMember(Value = "SSL_INBOUND_INSPECTION")]
-            SslInboundInspection,
-            [EnumMember(Value = "SSL_FORWARD_PROXY")]
-            SslForwardProxy
-        };
-
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Name is required.")]
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+        
+        
         /// <value>
         /// Type of the secrets mapped based on the policy.
         /// <br/>
@@ -51,7 +46,17 @@ namespace Oci.NetworkfirewallService.Models
         [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<TypeEnum> Type { get; set; }
+        public System.Nullable<InspectionType> Type { get; set; }
+        
+        /// <value>
+        /// OCID of the Network Firewall Policy this Mapped Secret belongs to.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ParentResourceId is required.")]
+        [JsonProperty(PropertyName = "parentResourceId")]
+        public string ParentResourceId { get; set; }
         
     }
 

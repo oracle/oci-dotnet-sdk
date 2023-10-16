@@ -39,25 +39,7 @@ namespace Oci.NetworkfirewallService.Models
         [Required(ErrorMessage = "Condition is required.")]
         [JsonProperty(PropertyName = "condition")]
         public DecryptionRuleMatchCriteria Condition { get; set; }
-                ///
-        /// <value>
-        /// Action:
-        /// <br/>
-        /// * NO_DECRYPT - Matching traffic is not decrypted.
-        /// * DECRYPT - Matching traffic is decrypted with the specified `secret` according to the specified `decryptionProfile`.
-        /// 
-        /// </value>
-        ///
-        public enum ActionEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "NO_DECRYPT")]
-            NoDecrypt,
-            [EnumMember(Value = "DECRYPT")]
-            Decrypt
-        };
-
+        
         /// <value>
         /// Action:
         /// <br/>
@@ -71,7 +53,7 @@ namespace Oci.NetworkfirewallService.Models
         [Required(ErrorMessage = "Action is required.")]
         [JsonProperty(PropertyName = "action")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<ActionEnum> Action { get; set; }
+        public System.Nullable<DecryptionActionType> Action { get; set; }
         
         /// <value>
         /// The name of the decryption profile to use.
@@ -84,6 +66,19 @@ namespace Oci.NetworkfirewallService.Models
         /// </value>
         [JsonProperty(PropertyName = "secret")]
         public string Secret { get; set; }
+        
+        [JsonProperty(PropertyName = "position")]
+        public RulePosition Position { get; set; }
+        
+        /// <value>
+        /// OCID of the Network Firewall Policy this decryption rule belongs to.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ParentResourceId is required.")]
+        [JsonProperty(PropertyName = "parentResourceId")]
+        public string ParentResourceId { get; set; }
         
     }
 }

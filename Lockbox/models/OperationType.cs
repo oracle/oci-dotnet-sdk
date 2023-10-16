@@ -40,6 +40,12 @@ namespace Oci.LockboxService.Models
       [EnumMember(Value = "UPDATE_APPROVAL_TEMPLATE")]
       UpdateApprovalTemplate,
       [EnumMember(Value = "DELETE_APPROVAL_TEMPLATE")]
-      DeleteApprovalTemplate
+      DeleteApprovalTemplate,
+      [EnumMember(Value = "CREATE_PARTNER")]
+      CreatePartner,
+      [EnumMember(Value = "REMIND_ACCESS_REQUEST")]
+      RemindAccessRequest,
+      [EnumMember(Value = "CREATE_ACCESSCONTEXTATTRIBUTE")]
+      CreateAccesscontextattribute
   }
 }

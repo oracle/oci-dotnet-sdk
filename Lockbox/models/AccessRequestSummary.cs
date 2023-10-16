@@ -72,6 +72,13 @@ namespace Oci.LockboxService.Models
         public string RequestorId { get; set; }
         
         /// <value>
+        /// The two-char country code of the requestor while creating the access request
+        /// Example: US
+        /// </value>
+        [JsonProperty(PropertyName = "requestorLocation")]
+        public string RequestorLocation { get; set; }
+        
+        /// <value>
         /// The current state of the access request.
         /// </value>
         /// <remarks>

@@ -1,0 +1,19 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\General.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{0F47CAA3-C4AB-470A-9F17-EB543E1C7603}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <PackageId>OCI.DotNetSDK.Marketplacepublisher</PackageId>
+    <RootNamespace>Oci.MarketplacepublisherService</RootNamespace>
+    <Authors>Oracle Cloud Infrastructure</Authors>
+    <Company>Oracle</Company>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Marketplacepublisher</PackageTags>
+    <Description>Oracle Cloud Infrastructure Cloud Marketplace Publisher Service</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>
+  </ItemGroup>
+</Project>

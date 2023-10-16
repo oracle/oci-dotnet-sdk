@@ -22,13 +22,13 @@ namespace Oci.LoggingService.Models
     {
         
         /// <value>
-        /// If you don't need stream/logtag fields, set this to false.
+        /// If you don't need stream or logtag fields, set this to false.
         /// </value>
         [JsonProperty(PropertyName = "isMergeCriFields")]
         public System.Nullable<bool> IsMergeCriFields { get; set; }
         
         /// <value>
-        /// Optional nested JSON Parser for CRI Parser. Supported fields are fieldTimeKey, timeFormat, and isKeepTimeKey.
+        /// Optional nested JSON Parser for CRI. Supported fields are fieldTimeKey, timeFormat, and isKeepTimeKey.
         /// </value>
         [JsonProperty(PropertyName = "nestedParser")]
         public UnifiedJSONParser NestedParser { get; set; }

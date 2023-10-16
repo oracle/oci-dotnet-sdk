@@ -37,10 +37,6 @@ namespace Oci.LockboxService.Models
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ApproverLevels is required.")]
         [JsonProperty(PropertyName = "approverLevels")]
         public ApproverLevels ApproverLevels { get; set; }
         

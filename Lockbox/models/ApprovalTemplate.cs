@@ -70,10 +70,6 @@ namespace Oci.LockboxService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ApproverLevels is required.")]
         [JsonProperty(PropertyName = "approverLevels")]
         public ApproverLevels ApproverLevels { get; set; }
         
