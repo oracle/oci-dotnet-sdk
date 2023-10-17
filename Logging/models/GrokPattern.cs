@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// grok pattern object.
+    /// Grok pattern object.
     /// </summary>
     public class GrokPattern 
     {
         
         /// <value>
-        /// The grok pattern.
+        /// The Grok pattern.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.LoggingService.Models
         public string Pattern { get; set; }
         
         /// <value>
-        /// The name key to tag this grok pattern.
+        /// The name key to tag this Grok pattern.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

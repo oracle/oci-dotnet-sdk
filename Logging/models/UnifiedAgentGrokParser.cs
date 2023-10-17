@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// grok parser.
+    /// Grok parser.
     /// </summary>
     public class UnifiedAgentGrokParser : UnifiedAgentParser
     {
         
         /// <value>
-        /// grok name key.
+        /// Grok name key.
         /// </value>
         [JsonProperty(PropertyName = "grokNameKey")]
         public string GrokNameKey { get; set; }
         
         /// <value>
-        /// grok failure key.
+        /// Grok failure key.
         /// </value>
         [JsonProperty(PropertyName = "grokFailureKey")]
         public string GrokFailureKey { get; set; }
         
         /// <value>
-        /// grok pattern object.
+        /// Grok pattern object.
         /// </value>
         /// <remarks>
         /// Required

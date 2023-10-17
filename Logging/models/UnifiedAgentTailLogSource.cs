@@ -22,7 +22,7 @@ namespace Oci.LoggingService.Models
     {
         
         /// <value>
-        /// Absolute paths for log source files. Wildcard can be used.
+        /// Absolute paths for log source files. Wildcards can be used.
         /// </value>
         /// <remarks>
         /// Required

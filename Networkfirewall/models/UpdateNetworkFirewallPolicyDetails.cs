@@ -28,76 +28,17 @@ namespace Oci.NetworkfirewallService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Map defining secrets of the policy.
-        /// The value of an entry is a \"mapped secret\" consisting of a purpose and source.
-        /// The associated key is the identifier by which the mapped secret is referenced.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "mappedSecrets")]
-        public System.Collections.Generic.Dictionary<string, MappedSecret> MappedSecrets { get; set; }
-        
-        /// <value>
-        /// Map defining application lists of the policy.
-        /// The value of an entry is a list of \"applications\", each consisting of a protocol identifier (such as TCP, UDP, or ICMP) and protocol-specific parameters (such as a port range).
-        /// The associated key is the identifier by which the application list is referenced.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "applicationLists")]
-        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<Application>> ApplicationLists { get; set; }
-        
-        /// <value>
-        /// Map defining URL pattern lists of the policy.
-        /// The value of an entry is a list of URL patterns.
-        /// The associated key is the identifier by which the URL pattern list is referenced.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "urlLists")]
-        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<UrlPattern>> UrlLists { get; set; }
-        
-        /// <value>
-        /// Map defining IP address lists of the policy.
-        /// The value of an entry is a list of IP addresses or prefixes in CIDR notation.
-        /// The associated key is the identifier by which the IP address list is referenced.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "ipAddressLists")]
-        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> IpAddressLists { get; set; }
-        
-        /// <value>
-        /// List of Security Rules defining the behavior of the policy.
-        /// The first rule with a matching condition determines the action taken upon network traffic.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "securityRules")]
-        public System.Collections.Generic.List<SecurityRule> SecurityRules { get; set; }
-        
-        /// <value>
-        /// List of Decryption Rules defining the behavior of the policy.
-        /// The first rule with a matching condition determines the action taken upon network traffic.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "decryptionRules")]
-        public System.Collections.Generic.List<DecryptionRule> DecryptionRules { get; set; }
-        
-        /// <value>
-        /// Map defining decryption profiles of the policy.
-        /// The value of an entry is a decryption profile.
-        /// The associated key is the identifier by which the decryption profile is referenced.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "decryptionProfiles")]
-        public System.Collections.Generic.Dictionary<string, DecryptionProfile> DecryptionProfiles { get; set; }
-        
-        /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }

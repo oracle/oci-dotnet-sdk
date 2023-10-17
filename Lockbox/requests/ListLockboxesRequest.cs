@@ -56,6 +56,12 @@ namespace Oci.LockboxService.Requests
         public System.Nullable<LockboxPartner> LockboxPartner { get; set; }
         
         /// <value>
+        /// The ID of the partner.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "partnerId")]
+        public string PartnerId { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

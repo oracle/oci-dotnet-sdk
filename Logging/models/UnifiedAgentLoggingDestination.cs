@@ -31,5 +31,8 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "logObjectId")]
         public string LogObjectId { get; set; }
         
+        [JsonProperty(PropertyName = "operationalMetricsConfiguration")]
+        public OperationalMetricsConfiguration OperationalMetricsConfiguration { get; set; }
+        
     }
 }

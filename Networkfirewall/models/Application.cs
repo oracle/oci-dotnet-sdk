@@ -25,10 +25,31 @@ namespace Oci.NetworkfirewallService.Models
     {
         
         
+        /// <value>
+        /// Name of the application.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Name is required.")]
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+        
+        /// <value>
+        /// OCID of the Network Firewall Policy this application belongs to.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ParentResourceId is required.")]
+        [JsonProperty(PropertyName = "parentResourceId")]
+        public string ParentResourceId { get; set; }
+        
     }
 
     public class ApplicationModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -50,17 +71,18 @@ namespace Oci.NetworkfirewallService.Models
                 case "ICMP":
                     obj = new IcmpApplication();
                     break;
-                case "UDP":
-                    obj = new UdpApplication();
-                    break;
-                case "TCP":
-                    obj = new TcpApplication();
-                    break;
-                case "ICMP6":
+                case "ICMP_V6":
                     obj = new Icmp6Application();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under Application! Returning null value.");
+            }
             return obj;
         }
     }

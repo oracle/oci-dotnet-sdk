@@ -22,13 +22,13 @@ namespace Oci.LoggingService.Models
     {
         
         /// <value>
-        /// grok name key.
+        /// Grok name key.
         /// </value>
         [JsonProperty(PropertyName = "grokNameKey")]
         public string GrokNameKey { get; set; }
         
         /// <value>
-        /// grok failure key.
+        /// Grok failure key.
         /// </value>
         [JsonProperty(PropertyName = "grokFailureKey")]
         public string GrokFailureKey { get; set; }
@@ -40,7 +40,7 @@ namespace Oci.LoggingService.Models
         public string MultiLineStartRegexp { get; set; }
         
         /// <value>
-        /// grok pattern object.
+        /// Grok pattern object.
         /// </value>
         /// <remarks>
         /// Required

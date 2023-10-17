@@ -26,26 +26,32 @@ namespace Oci.NetworkfirewallService.Models
         /// <value>
         /// An array of IP address list names to be evaluated against the traffic source address.
         /// </value>
-        [JsonProperty(PropertyName = "sources")]
-        public System.Collections.Generic.List<string> Sources { get; set; }
+        [JsonProperty(PropertyName = "sourceAddress")]
+        public System.Collections.Generic.List<string> SourceAddress { get; set; }
         
         /// <value>
         /// An array of IP address list names to be evaluated against the traffic destination address.
         /// </value>
-        [JsonProperty(PropertyName = "destinations")]
-        public System.Collections.Generic.List<string> Destinations { get; set; }
+        [JsonProperty(PropertyName = "destinationAddress")]
+        public System.Collections.Generic.List<string> DestinationAddress { get; set; }
         
         /// <value>
         /// An array of application list names to be evaluated against the traffic protocol and protocol-specific parameters.
         /// </value>
-        [JsonProperty(PropertyName = "applications")]
-        public System.Collections.Generic.List<string> Applications { get; set; }
+        [JsonProperty(PropertyName = "application")]
+        public System.Collections.Generic.List<string> Application { get; set; }
+        
+        /// <value>
+        /// An array of service list names to be evaluated against the traffic protocol and protocol-specific parameters.
+        /// </value>
+        [JsonProperty(PropertyName = "service")]
+        public System.Collections.Generic.List<string> Service { get; set; }
         
         /// <value>
         /// An array of URL pattern list names to be evaluated against the HTTP(S) request target.
         /// </value>
-        [JsonProperty(PropertyName = "urls")]
-        public System.Collections.Generic.List<string> Urls { get; set; }
+        [JsonProperty(PropertyName = "url")]
+        public System.Collections.Generic.List<string> Url { get; set; }
         
     }
 }

@@ -40,31 +40,7 @@ namespace Oci.NetworkfirewallService.Models
         [Required(ErrorMessage = "Condition is required.")]
         [JsonProperty(PropertyName = "condition")]
         public SecurityRuleMatchCriteria Condition { get; set; }
-                ///
-        /// <value>
-        /// Types of Action on the Traffic flow.
-        /// <br/>
-        ///   * ALLOW - Allows the traffic.
-        ///   * DROP - Silently drops the traffic, e.g. without sending a TCP reset.
-        ///   * REJECT - Rejects the traffic, sending a TCP reset to client and/or server as applicable.
-        ///   * INSPECT - Inspects traffic for vulnerability as specified in `inspection`, which may result in rejection.
-        /// 
-        /// </value>
-        ///
-        public enum ActionEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "ALLOW")]
-            Allow,
-            [EnumMember(Value = "DROP")]
-            Drop,
-            [EnumMember(Value = "REJECT")]
-            Reject,
-            [EnumMember(Value = "INSPECT")]
-            Inspect
-        };
-
+        
         /// <value>
         /// Types of Action on the Traffic flow.
         /// <br/>
@@ -80,26 +56,8 @@ namespace Oci.NetworkfirewallService.Models
         [Required(ErrorMessage = "Action is required.")]
         [JsonProperty(PropertyName = "action")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<ActionEnum> Action { get; set; }
-                ///
-        /// <value>
-        /// Type of inspection to affect the Traffic flow. This is only applicable if action is INSPECT.
-        /// <br/>
-        ///   * INTRUSION_DETECTION - Intrusion Detection.
-        ///   * INTRUSION_PREVENTION - Intrusion Detection and Prevention. Traffic classified as potentially malicious will be rejected as described in `type`.
-        /// 
-        /// </value>
-        ///
-        public enum InspectionEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "INTRUSION_DETECTION")]
-            IntrusionDetection,
-            [EnumMember(Value = "INTRUSION_PREVENTION")]
-            IntrusionPrevention
-        };
-
+        public System.Nullable<TrafficActionType> Action { get; set; }
+        
         /// <value>
         /// Type of inspection to affect the Traffic flow. This is only applicable if action is INSPECT.
         /// <br/>
@@ -109,7 +67,20 @@ namespace Oci.NetworkfirewallService.Models
         /// </value>
         [JsonProperty(PropertyName = "inspection")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<InspectionEnum> Inspection { get; set; }
+        public System.Nullable<TrafficInspectionType> Inspection { get; set; }
+        
+        [JsonProperty(PropertyName = "position")]
+        public RulePosition Position { get; set; }
+        
+        /// <value>
+        /// OCID of the Network Firewall Policy this security rule belongs to.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ParentResourceId is required.")]
+        [JsonProperty(PropertyName = "parentResourceId")]
+        public string ParentResourceId { get; set; }
         
     }
 }

@@ -21,18 +21,27 @@ namespace Oci.NetworkfirewallService.Models
     [JsonConverter(typeof(DecryptionProfileModelConverter))]
     public class DecryptionProfile 
     {
-                ///
+        
+        
         /// <value>
-        /// Describes the type of Decryption Profile SslForwardProxy or SslInboundInspection.
+        /// Unique Name of the decryption profile.
         /// </value>
-        ///
-        public enum TypeEnum {
-            [EnumMember(Value = "SSL_INBOUND_INSPECTION")]
-            SslInboundInspection,
-            [EnumMember(Value = "SSL_FORWARD_PROXY")]
-            SslForwardProxy
-        };
-
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Name is required.")]
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+        
+        /// <value>
+        /// OCID of the Network Firewall Policy this decryption profile belongs to.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ParentResourceId is required.")]
+        [JsonProperty(PropertyName = "parentResourceId")]
+        public string ParentResourceId { get; set; }
         
     }
 

@@ -22,13 +22,13 @@ namespace Oci.LoggingService.Models
     {
         
         /// <value>
-        /// csv delimiter.
+        /// CSV delimiter.
         /// </value>
         [JsonProperty(PropertyName = "delimiter")]
         public string Delimiter { get; set; }
         
         /// <value>
-        /// csv keys.
+        /// CSV keys.
         /// </value>
         /// <remarks>
         /// Required

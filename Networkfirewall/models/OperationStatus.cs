@@ -29,6 +29,8 @@ namespace Oci.NetworkfirewallService.Models
       Failed,
       [EnumMember(Value = "SUCCEEDED")]
       Succeeded,
+      [EnumMember(Value = "NEEDS_ATTENTION")]
+      NeedsAttention,
       [EnumMember(Value = "CANCELING")]
       Canceling,
       [EnumMember(Value = "CANCELED")]

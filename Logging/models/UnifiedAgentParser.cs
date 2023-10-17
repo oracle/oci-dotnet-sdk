@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// source parser object.
+    /// Source parser object.
     /// </summary>
     [JsonConverter(typeof(UnifiedAgentParserModelConverter))]
     public class UnifiedAgentParser 
@@ -59,7 +59,7 @@ namespace Oci.LoggingService.Models
 
         
         /// <value>
-        /// Specify time field for the event time. If the event doesn't have this field, the current time is used.
+        /// Specifies the time field for the event time. If the event doesn't have this field, the current time is used.
         /// </value>
         [JsonProperty(PropertyName = "fieldTimeKey")]
         public string FieldTimeKey { get; set; }
@@ -98,19 +98,19 @@ namespace Oci.LoggingService.Models
         public string NullValuePattern { get; set; }
         
         /// <value>
-        /// If true, an empty string field is replaced with nil.
+        /// If true, an empty string field is replaced with a null value.
         /// </value>
         [JsonProperty(PropertyName = "isNullEmptyString")]
         public System.Nullable<bool> IsNullEmptyString { get; set; }
         
         /// <value>
-        /// If true, use Fluent::EventTime.now(current time) as a timestamp when time_key is specified.
+        /// If true, use Fluent::EventTime.now(current time) as a timestamp when the time_key is specified.
         /// </value>
         [JsonProperty(PropertyName = "isEstimateCurrentEvent")]
         public System.Nullable<bool> IsEstimateCurrentEvent { get; set; }
         
         /// <value>
-        /// If true, keep time field in the record.
+        /// If true, keep the time field in the record.
         /// </value>
         [JsonProperty(PropertyName = "isKeepTimeKey")]
         public System.Nullable<bool> IsKeepTimeKey { get; set; }

@@ -56,6 +56,12 @@ namespace Oci.LockboxService.Requests
         public System.Nullable<LockboxPartner> LockboxPartner { get; set; }
         
         /// <value>
+        /// The ID of the partner.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "partnerId")]
+        public string PartnerId { get; set; }
+        
+        /// <value>
         /// The unique identifier (OCID) of the requestor in which to list resources.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "requestorId")]
@@ -100,5 +106,17 @@ namespace Oci.LockboxService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
+        /// Date and time on or after which Access Requests were created, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339)
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeCreatedAfter")]
+        public System.Nullable<System.DateTime> TimeCreatedAfter { get; set; }
+        
+        /// <value>
+        /// Date and time on or before which Access requests were created, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339)
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeCreatedBefore")]
+        public System.Nullable<System.DateTime> TimeCreatedBefore { get; set; }
     }
 }

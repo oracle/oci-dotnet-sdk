@@ -39,10 +39,10 @@ namespace Oci.DatascienceService.Requests
         /// <value>
         /// For list pagination. The maximum number of results per page,
         /// or items to return in a paginated \"List\" call.
-        /// 1 is the minimum, 1000 is the maximum.
+        /// 1 is the minimum, 100 is the maximum.
         /// See [List Pagination](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/usingapi.htm#nine).
         /// <br/>
-        /// Example: 500
+        /// Example: 50
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }

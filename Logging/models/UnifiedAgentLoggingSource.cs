@@ -23,7 +23,7 @@ namespace Oci.LoggingService.Models
     {
         
         /// <value>
-        /// unique name for the source
+        /// Unique name for the source.
         /// </value>
         /// <remarks>
         /// Required

@@ -40,10 +40,6 @@ namespace Oci.LockboxService.Models
         /// <value>
         /// The partner using this lockbox to lock a resource.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "LockboxPartner is required.")]
         [JsonProperty(PropertyName = "lockboxPartner")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LockboxPartner> LockboxPartner { get; set; }
@@ -59,12 +55,14 @@ namespace Oci.LockboxService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The unique identifier (OCID) of partner resource using this lockbox to lock a resource
+        /// </value>
+        [JsonProperty(PropertyName = "partnerId")]
+        public string PartnerId { get; set; }
+        
+        /// <value>
         /// Compartment Identifier
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PartnerCompartmentId is required.")]
         [JsonProperty(PropertyName = "partnerCompartmentId")]
         public string PartnerCompartmentId { get; set; }
         

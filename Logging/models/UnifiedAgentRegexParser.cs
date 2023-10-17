@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoggingService.Models
 {
     /// <summary>
-    /// regexp parser.
+    /// Regexp parser.
     /// </summary>
     public class UnifiedAgentRegexParser : UnifiedAgentParser
     {

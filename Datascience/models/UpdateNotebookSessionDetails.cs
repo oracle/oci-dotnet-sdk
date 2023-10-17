@@ -50,5 +50,11 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "notebookSessionRuntimeConfigDetails")]
         public NotebookSessionRuntimeConfigDetails NotebookSessionRuntimeConfigDetails { get; set; }
         
+        /// <value>
+        /// Collection of NotebookSessionStorageMountConfigurationDetails.
+        /// </value>
+        [JsonProperty(PropertyName = "notebookSessionStorageMountConfigurationDetailsList")]
+        public System.Collections.Generic.List<StorageMountConfigurationDetails> NotebookSessionStorageMountConfigurationDetailsList { get; set; }
+        
     }
 }
