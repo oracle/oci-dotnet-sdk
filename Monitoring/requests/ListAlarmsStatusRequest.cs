@@ -54,7 +54,8 @@ namespace Oci.MonitoringService.Requests
         
         /// <value>
         /// For list pagination. The value of the `opc-next-page` response header from the previous \"List\" call.
-        /// For important details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// For important details about how pagination works, see
+        /// [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
@@ -62,7 +63,8 @@ namespace Oci.MonitoringService.Requests
         
         /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a paginated \"List\" call.
-        /// For important details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
+        /// For important details about how pagination works, see
+        /// [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// <br/>
         /// Default: 1000
         /// <br/>
@@ -122,5 +124,58 @@ namespace Oci.MonitoringService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a resource that is monitored by the
+        /// metric that you are searching for.
+        /// <br/>
+        /// Example: ocid1.instance.oc1.phx.exampleuniqueID
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
+        public string ResourceId { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given service name exactly.
+        /// Use this filter to list all alarms containing metric streams that match the *exact* service-name dimension.
+        /// <br/>
+        /// Example: logging-analytics
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serviceName")]
+        public string ServiceName { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the entity monitored by the
+        /// metric that you are searching for.
+        /// <br/>
+        /// Example: ocid1.instance.oc1.phx.exampleuniqueID
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityId")]
+        public string EntityId { get; set; }
+        
+        ///
+        /// <value>
+        /// The status of the metric stream to use for alarm filtering. For example, set `StatusQueryParam` to
+        /// \"FIRING\" to filter results to metric streams of the alarm with that status. Default behaviour is to return
+        /// alarms irrespective of metric streams' status.
+        /// <br/>
+        /// Example: FIRING
+        /// </value>
+        ///
+        public enum StatusEnum {
+            [EnumMember(Value = "FIRING")]
+            Firing,
+            [EnumMember(Value = "OK")]
+            Ok
+        };
+
+        /// <value>
+        /// The status of the metric stream to use for alarm filtering. For example, set `StatusQueryParam` to
+        /// \"FIRING\" to filter results to metric streams of the alarm with that status. Default behaviour is to return
+        /// alarms irrespective of metric streams' status.
+        /// <br/>
+        /// Example: FIRING
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
+        public System.Nullable<StatusEnum> Status { get; set; }
     }
 }

@@ -110,6 +110,23 @@ namespace Oci.DatabasetoolsService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
+        
+        /// <value>
+        /// Specifies whether this connection is supported by the Database Tools Runtime.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RuntimeSupport is required.")]
+        [JsonProperty(PropertyName = "runtimeSupport")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<RuntimeSupport> RuntimeSupport { get; set; }
         
     }
 
@@ -137,8 +154,14 @@ namespace Oci.DatabasetoolsService.Models
                 case "ORACLE_DATABASE":
                     obj = new DatabaseToolsConnectionOracleDatabase();
                     break;
+                case "POSTGRESQL":
+                    obj = new DatabaseToolsConnectionPostgresql();
+                    break;
                 case "MYSQL":
                     obj = new DatabaseToolsConnectionMySql();
+                    break;
+                case "GENERIC_JDBC":
+                    obj = new DatabaseToolsConnectionGenericJdbc();
                     break;
             }
             if (obj != null)

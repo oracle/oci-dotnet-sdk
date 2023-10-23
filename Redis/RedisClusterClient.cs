@@ -109,7 +109,7 @@ namespace Oci.RedisService
                     ServiceName = "RedisCluster",
                     OperationName = "CancelWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/redis/20220315/WorkRequest/CancelWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -165,7 +165,7 @@ namespace Oci.RedisService
                     ServiceName = "RedisCluster",
                     OperationName = "ChangeRedisClusterCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/redis/20220315/RedisCluster/ChangeRedisClusterCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -222,7 +222,7 @@ namespace Oci.RedisService
                     ServiceName = "RedisCluster",
                     OperationName = "CreateRedisCluster",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/redis/20220315/RedisCluster/CreateRedisCluster",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -278,7 +278,7 @@ namespace Oci.RedisService
                     ServiceName = "RedisCluster",
                     OperationName = "DeleteRedisCluster",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/redis/20220315/RedisCluster/DeleteRedisCluster",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -334,7 +334,7 @@ namespace Oci.RedisService
                     ServiceName = "RedisCluster",
                     OperationName = "GetRedisCluster",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/redis/20220315/RedisCluster/GetRedisCluster",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -390,7 +390,7 @@ namespace Oci.RedisService
                     ServiceName = "RedisCluster",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/redis/20220315/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -447,7 +447,7 @@ namespace Oci.RedisService
                     ServiceName = "RedisCluster",
                     OperationName = "ListRedisClusters",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/redis/20220315/RedisClusterSummary/ListRedisClusters",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -504,7 +504,7 @@ namespace Oci.RedisService
                     ServiceName = "RedisCluster",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/redis/20220315/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -561,7 +561,7 @@ namespace Oci.RedisService
                     ServiceName = "RedisCluster",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/redis/20220315/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -618,7 +618,7 @@ namespace Oci.RedisService
                     ServiceName = "RedisCluster",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/redis/20220315/WorkRequest/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -674,7 +674,7 @@ namespace Oci.RedisService
                     ServiceName = "RedisCluster",
                     OperationName = "UpdateRedisCluster",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/redis/20220315/RedisCluster/UpdateRedisCluster",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

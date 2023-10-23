@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AdmService.Models
 {
     /// <summary>
-    /// A Knowledge Base is a component of Application Dependency Management that contains vulnerability audits.
+    /// A knowledge base is a component of Application Dependency Management (ADM) service that provides access to vulnerabilities.
     /// 
     /// </summary>
     public class KnowledgeBase 
     {
         
         /// <value>
-        /// The Oracle Cloud Identifier ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)) of the Knowledge Base.
+        /// The Oracle Cloud Identifier ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)) of the knowledge base.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.AdmService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The name of the Knowledge Base.
+        /// The name of the knowledge base.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.AdmService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The creation date and time of the Knowledge Base (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// The creation date and time of the knowledge base (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.AdmService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the Knowledge Base was last updated (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// The date and time the knowledge base was last updated (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.AdmService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// The current lifecycle state of the Knowledge Base.
+        /// The current lifecycle state of the knowledge base.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -85,7 +85,7 @@ namespace Oci.AdmService.Models
         };
 
         /// <value>
-        /// The current lifecycle state of the Knowledge Base.
+        /// The current lifecycle state of the knowledge base.
         /// </value>
         /// <remarks>
         /// Required
@@ -96,7 +96,7 @@ namespace Oci.AdmService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The Oracle Cloud Identifier ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)) of the Knowledge Base's compartment.
+        /// The compartment Oracle Cloud Identifier ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)) of the knowledge base.
         /// </value>
         /// <remarks>
         /// Required

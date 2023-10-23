@@ -60,6 +60,62 @@ namespace Oci.AdmService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetRemediationRecipeRequest, GetRemediationRecipeResponse> ForRemediationRecipe(GetRemediationRecipeRequest request, params RemediationRecipe.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForRemediationRecipe(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetRemediationRecipeRequest, GetRemediationRecipeResponse> ForRemediationRecipe(GetRemediationRecipeRequest request, WaiterConfiguration config, params RemediationRecipe.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetRemediationRecipeRequest, GetRemediationRecipeResponse>(
+                request,
+                request => client.GetRemediationRecipe(request),
+                response => targetStates.Contains(response.RemediationRecipe.LifecycleState.Value),
+                targetStates.Contains(RemediationRecipe.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetRemediationRecipeRequest, GetRemediationRecipeResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetRemediationRunRequest, GetRemediationRunResponse> ForRemediationRun(GetRemediationRunRequest request, params RemediationRun.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForRemediationRun(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetRemediationRunRequest, GetRemediationRunResponse> ForRemediationRun(GetRemediationRunRequest request, WaiterConfiguration config, params RemediationRun.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetRemediationRunRequest, GetRemediationRunResponse>(
+                request,
+                request => client.GetRemediationRun(request),
+                response => targetStates.Contains(response.RemediationRun.LifecycleState.Value),
+                targetStates.Contains(RemediationRun.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetRemediationRunRequest, GetRemediationRunResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetVulnerabilityAuditRequest, GetVulnerabilityAuditResponse> ForVulnerabilityAudit(GetVulnerabilityAuditRequest request, params VulnerabilityAudit.LifecycleStateEnum[] targetStates)
         {
             return this.ForVulnerabilityAudit(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

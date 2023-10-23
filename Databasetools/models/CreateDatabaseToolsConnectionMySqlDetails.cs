@@ -27,15 +27,27 @@ namespace Oci.DatabasetoolsService.Models
         /// <value>
         /// The connection string used to connect to the MySQL Server.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ConnectionString is required.")]
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
         
         /// <value>
         /// The user name.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "UserName is required.")]
         [JsonProperty(PropertyName = "userName")]
         public string UserName { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "UserPassword is required.")]
         [JsonProperty(PropertyName = "userPassword")]
         public DatabaseToolsUserPasswordDetails UserPassword { get; set; }
         

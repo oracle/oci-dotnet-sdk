@@ -30,6 +30,10 @@ namespace Oci.DatabasetoolsService.Models
         /// <value>
         /// The database version.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DatabaseVersion is required.")]
         [JsonProperty(PropertyName = "databaseVersion")]
         public string DatabaseVersion { get; set; }
         

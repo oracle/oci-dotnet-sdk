@@ -55,5 +55,11 @@ namespace Oci.DatabasetoolsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Whether to override locks (if any exist).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLockOverride")]
+        public System.Nullable<bool> IsLockOverride { get; set; }
     }
 }

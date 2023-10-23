@@ -214,7 +214,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "ONEOFF")]
             Oneoff,
             [EnumMember(Value = "SECURITY_MONTHLY")]
-            SecurityMonthly
+            SecurityMonthly,
+            [EnumMember(Value = "TIMEZONE")]
+            Timezone
         };
 
         /// <value>
@@ -223,6 +225,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "maintenanceSubtype")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MaintenanceSubtypeEnum> MaintenanceSubtype { get; set; }
+        
+        /// <value>
+        /// Indicates if an automatic DST Time Zone file update is enabled for the Autonomous Container Database. If enabled along with Release Update, patching will be done in a Non-Rolling manner.
+        /// </value>
+        [JsonProperty(PropertyName = "isDstFileUpdateEnabled")]
+        public System.Nullable<bool> IsDstFileUpdateEnabled { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the maintenance run for the Autonomous Data Guard association's peer container database.

@@ -107,6 +107,58 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "connectionFactory")]
         public string ConnectionFactory { get; set; }
+                ///
+        /// <value>
+        /// Security protocol for Java Message Service. If not provided, default is PLAIN.
+        /// Optional until 2024-06-27, in the release after it will be made required.
+        /// 
+        /// </value>
+        ///
+        public enum SecurityProtocolEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "PLAIN")]
+            Plain,
+            [EnumMember(Value = "TLS")]
+            Tls,
+            [EnumMember(Value = "MTLS")]
+            Mtls
+        };
+
+        /// <value>
+        /// Security protocol for Java Message Service. If not provided, default is PLAIN.
+        /// Optional until 2024-06-27, in the release after it will be made required.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "securityProtocol")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SecurityProtocolEnum> SecurityProtocol { get; set; }
+                ///
+        /// <value>
+        /// Authentication type for Java Message Service.  If not provided, default is NONE.
+        /// Optional until 2024-06-27, in the release after it will be made required.
+        /// 
+        /// </value>
+        ///
+        public enum AuthenticationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "NONE")]
+            None,
+            [EnumMember(Value = "BASIC")]
+            Basic
+        };
+
+        /// <value>
+        /// Authentication type for Java Message Service.  If not provided, default is NONE.
+        /// Optional until 2024-06-27, in the release after it will be made required.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "authenticationType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AuthenticationTypeEnum> AuthenticationType { get; set; }
         
         /// <value>
         /// The username Oracle GoldenGate uses to connect to the Java Message Service.

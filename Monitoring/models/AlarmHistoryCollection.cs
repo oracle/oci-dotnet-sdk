@@ -23,7 +23,7 @@ namespace Oci.MonitoringService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the alarm for which to retrieve history.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the alarm to retrieve history for.
         /// 
         /// </value>
         /// <remarks>

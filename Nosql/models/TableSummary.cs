@@ -70,7 +70,7 @@ namespace Oci.NosqlService.Models
         /// The state of a table.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Table.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -94,6 +94,39 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeOfExpiration")]
         public System.Nullable<System.DateTime> TimeOfExpiration { get; set; }
+                ///
+        /// <value>
+        /// The current state of this table's schema. Available states are
+        /// MUTABLE - The schema can be changed. The table is not eligible for replication.
+        /// FROZEN - The schema is immutable. The table is eligible for replication.
+        /// 
+        /// </value>
+        ///
+        public enum SchemaStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MUTABLE")]
+            Mutable,
+            [EnumMember(Value = "FROZEN")]
+            Frozen
+        };
+
+        /// <value>
+        /// The current state of this table's schema. Available states are
+        /// MUTABLE - The schema can be changed. The table is not eligible for replication.
+        /// FROZEN - The schema is immutable. The table is eligible for replication.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "schemaState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SchemaStateEnum> SchemaState { get; set; }
+        
+        /// <value>
+        /// True if this table is currently a member of a replication set.
+        /// </value>
+        [JsonProperty(PropertyName = "isMultiRegion")]
+        public System.Nullable<bool> IsMultiRegion { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined

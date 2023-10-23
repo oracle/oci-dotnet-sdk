@@ -17,14 +17,16 @@ namespace Oci.MonitoringService.Models
 {
     /// <summary>
     /// A summary of properties for the specified alarm and its current evaluation status.
-    /// For information about alarms, see [Alarms Overview](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#AlarmsOverview).
+    /// For information about alarms, see
+    /// [Alarms Overview](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#AlarmsOverview).
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
     /// talk to an administrator. If you're an administrator who needs to write policies to give users access, see
     /// [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/policygetstarted.htm).
     /// <br/>
     /// For information about endpoints and signing API requests, see
-    /// [About the API](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm). For information about available SDKs and tools, see
+    /// [About the API](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm).
+    /// For information about available SDKs and tools, see
     /// [SDKS and Other Tools](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/sdks.htm).
     /// 
     /// </summary>
@@ -104,8 +106,6 @@ namespace Oci.MonitoringService.Models
         /// The status of this alarm.
         /// Status is collective, across all metric streams in the alarm.
         /// To list alarm status for each metric stream, use {@link #retrieveDimensionStates(RetrieveDimensionStatesRequest) retrieveDimensionStates}.
-        /// The alarm attribute `isNotificationsPerMetricDimensionEnabled` must be set to `true`.
-        /// <br/>
         /// Example: FIRING
         /// </value>
         ///
@@ -125,8 +125,6 @@ namespace Oci.MonitoringService.Models
         /// The status of this alarm.
         /// Status is collective, across all metric streams in the alarm.
         /// To list alarm status for each metric stream, use {@link #retrieveDimensionStates(RetrieveDimensionStatesRequest) retrieveDimensionStates}.
-        /// The alarm attribute `isNotificationsPerMetricDimensionEnabled` must be set to `true`.
-        /// <br/>
         /// Example: FIRING
         /// </value>
         /// <remarks>

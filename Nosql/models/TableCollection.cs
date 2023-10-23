@@ -51,5 +51,11 @@ namespace Oci.NosqlService.Models
         [JsonProperty(PropertyName = "maxOnDemandCapacityTables")]
         public System.Nullable<int> MaxOnDemandCapacityTables { get; set; }
         
+        /// <value>
+        /// An array of regions that are available for replication.
+        /// </value>
+        [JsonProperty(PropertyName = "availableReplicationRegions")]
+        public System.Collections.Generic.List<string> AvailableReplicationRegions { get; set; }
+        
     }
 }

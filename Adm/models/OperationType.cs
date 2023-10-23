@@ -19,6 +19,18 @@ namespace Oci.AdmService.Models
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
+      [EnumMember(Value = "CREATE_REMEDIATION_RECIPE")]
+      CreateRemediationRecipe,
+      [EnumMember(Value = "DELETE_REMEDIATION_RECIPE")]
+      DeleteRemediationRecipe,
+      [EnumMember(Value = "MOVE_REMEDIATION_RECIPE")]
+      MoveRemediationRecipe,
+      [EnumMember(Value = "UPDATE_REMEDIATION_RECIPE")]
+      UpdateRemediationRecipe,
+      [EnumMember(Value = "ACTIVATE_REMEDIATION_RECIPE")]
+      ActivateRemediationRecipe,
+      [EnumMember(Value = "DEACTIVATE_REMEDIATION_RECIPE")]
+      DeactivateRemediationRecipe,
       [EnumMember(Value = "CREATE_KNOWLEDGE_BASE")]
       CreateKnowledgeBase,
       [EnumMember(Value = "DELETE_KNOWLEDGE_BASE")]

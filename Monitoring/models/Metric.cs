@@ -17,7 +17,8 @@ namespace Oci.MonitoringService.Models
 {
     /// <summary>
     /// The properties that define a metric.
-    /// For information about metrics, see [Metrics Overview](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#MetricsOverview).
+    /// For information about metrics, see
+    /// [Metrics Overview](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#MetricsOverview).
     /// 
     /// </summary>
     public class Metric 

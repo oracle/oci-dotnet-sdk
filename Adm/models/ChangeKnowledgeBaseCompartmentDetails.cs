@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AdmService.Models
 {
     /// <summary>
-    /// Details for moving a Knowledge Base.
+    /// Details for moving a knowledge base.
     /// </summary>
     public class ChangeKnowledgeBaseCompartmentDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to which the resource must be moved.
+        /// The compartment Oracle Cloud Identifier ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)) to which the resource must be moved.
         /// </value>
         /// <remarks>
         /// Required

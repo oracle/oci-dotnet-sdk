@@ -30,6 +30,8 @@ namespace Oci.DatabasetoolsService.Models
       [EnumMember(Value = "DELETED")]
       Deleted,
       [EnumMember(Value = "FAILED")]
-      Failed
+      Failed,
+      [EnumMember(Value = "INACTIVE")]
+      Inactive
   }
 }

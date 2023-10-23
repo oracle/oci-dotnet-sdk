@@ -17,7 +17,8 @@ namespace Oci.MonitoringService.Models
 {
     /// <summary>
     /// The set of aggregated data returned for a metric.
-    /// For information about metrics, see [Metrics Overview](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#MetricsOverview).
+    /// For information about metrics, see
+    /// [Metrics Overview](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#MetricsOverview).
     /// <br/>
     /// Limits information for returned data follows.
     /// <br/>
@@ -31,7 +32,8 @@ namespace Oci.MonitoringService.Models
     /// *A metric stream is an individual set of aggregated data for a metric with zero or more dimension values.
     /// Metric streams cannot be aggregated across metric groups.
     /// A metric group is the combination of a given metric, metric namespace, and tenancy for the purpose of determining limits.
-    /// For more information about metric-related concepts, see [Monitoring Concepts](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#concepts).
+    /// For more information about metric-related concepts, see
+    /// [Monitoring Concepts](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#concepts).
     /// 
     /// </summary>
     public class MetricData 
@@ -61,7 +63,7 @@ namespace Oci.MonitoringService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the
-        /// resources from which the aggregated data was returned.
+        /// resources that the aggregated data was returned from.
         /// 
         /// </value>
         /// <remarks>
@@ -106,7 +108,7 @@ namespace Oci.MonitoringService.Models
         
         /// <value>
         /// The time between calculated aggregation windows. Use with the query interval to vary the
-        /// frequency at which aggregated data points are returned. For example, use a query interval of
+        /// frequency for returning aggregated data points. For example, use a query interval of
         /// 5 minutes with a resolution of 1 minute to retrieve five-minute aggregations at a one-minute
         /// frequency. The resolution must be equal or less than the interval in the query. The default
         /// resolution is 1m (one minute). Supported values: `1m`-`60m`, `1h`-`24h`, `1d`.

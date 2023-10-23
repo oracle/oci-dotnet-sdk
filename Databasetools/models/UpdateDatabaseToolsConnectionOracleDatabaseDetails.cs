@@ -59,6 +59,9 @@ namespace Oci.DatabasetoolsService.Models
         [JsonProperty(PropertyName = "privateEndpointId")]
         public string PrivateEndpointId { get; set; }
         
+        [JsonProperty(PropertyName = "proxyClient")]
+        public DatabaseToolsConnectionOracleDatabaseProxyClientDetails ProxyClient { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "ORACLE_DATABASE";
     }

@@ -51,6 +51,20 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "ORACLE_NOSQL")]
       OracleNosql,
       [EnumMember(Value = "MONGODB")]
-      Mongodb
+      Mongodb,
+      [EnumMember(Value = "AMAZON_KINESIS")]
+      AmazonKinesis,
+      [EnumMember(Value = "AMAZON_REDSHIFT")]
+      AmazonRedshift,
+      [EnumMember(Value = "REDIS")]
+      Redis,
+      [EnumMember(Value = "ELASTICSEARCH")]
+      Elasticsearch,
+      [EnumMember(Value = "GENERIC")]
+      Generic,
+      [EnumMember(Value = "GOOGLE_CLOUD_STORAGE")]
+      GoogleCloudStorage,
+      [EnumMember(Value = "GOOGLE_BIGQUERY")]
+      GoogleBigquery
   }
 }

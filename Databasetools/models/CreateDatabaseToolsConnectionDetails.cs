@@ -56,6 +56,19 @@ namespace Oci.DatabasetoolsService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
+        
+        /// <value>
+        /// Specifies whether this connection is supported by the Database Tools Runtime.
+        /// </value>
+        [JsonProperty(PropertyName = "runtimeSupport")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RuntimeSupport> RuntimeSupport { get; set; }
         
     }
 
@@ -79,6 +92,12 @@ namespace Oci.DatabasetoolsService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "GENERIC_JDBC":
+                    obj = new CreateDatabaseToolsConnectionGenericJdbcDetails();
+                    break;
+                case "POSTGRESQL":
+                    obj = new CreateDatabaseToolsConnectionPostgresqlDetails();
+                    break;
                 case "MYSQL":
                     obj = new CreateDatabaseToolsConnectionMySqlDetails();
                     break;

@@ -174,13 +174,6 @@ namespace Oci.GoldengateService.Models
         public string KeyId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet being referenced.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "subnetId")]
-        public string SubnetId { get; set; }
-        
-        /// <value>
         /// List of ingress IP addresses from where the GoldenGate deployment connects to this connection's privateIp. 
         /// Customers may optionally set up ingress security rules to restrict traffic from these IP addresses.
         /// 
@@ -194,6 +187,13 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet being referenced.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
         
     }
 
@@ -227,6 +227,12 @@ namespace Oci.GoldengateService.Models
                 case "JAVA_MESSAGE_SERVICE":
                     obj = new JavaMessageServiceConnection();
                     break;
+                case "ELASTICSEARCH":
+                    obj = new ElasticsearchConnection();
+                    break;
+                case "AMAZON_REDSHIFT":
+                    obj = new AmazonRedshiftConnection();
+                    break;
                 case "SNOWFLAKE":
                     obj = new SnowflakeConnection();
                     break;
@@ -238,6 +244,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "AMAZON_S3":
                     obj = new AmazonS3Connection();
+                    break;
+                case "GOOGLE_BIGQUERY":
+                    obj = new GoogleBigQueryConnection();
                     break;
                 case "ORACLE":
                     obj = new OracleConnection();
@@ -251,6 +260,9 @@ namespace Oci.GoldengateService.Models
                 case "HDFS":
                     obj = new HdfsConnection();
                     break;
+                case "GOOGLE_CLOUD_STORAGE":
+                    obj = new GoogleCloudStorageConnection();
+                    break;
                 case "OCI_OBJECT_STORAGE":
                     obj = new OciObjectStorageConnection();
                     break;
@@ -260,11 +272,20 @@ namespace Oci.GoldengateService.Models
                 case "MICROSOFT_SQLSERVER":
                     obj = new MicrosoftSqlserverConnection();
                     break;
+                case "AMAZON_KINESIS":
+                    obj = new AmazonKinesisConnection();
+                    break;
+                case "GENERIC":
+                    obj = new GenericConnection();
+                    break;
                 case "ORACLE_NOSQL":
                     obj = new OracleNosqlConnection();
                     break;
                 case "AZURE_SYNAPSE_ANALYTICS":
                     obj = new AzureSynapseConnection();
+                    break;
+                case "REDIS":
+                    obj = new RedisConnection();
                     break;
             }
             if (obj != null)

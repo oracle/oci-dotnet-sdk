@@ -154,13 +154,6 @@ namespace Oci.GoldengateService.Models
         public string KeyId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet being referenced.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "subnetId")]
-        public string SubnetId { get; set; }
-        
-        /// <value>
         /// List of ingress IP addresses from where the GoldenGate deployment connects to this connection's privateIp. 
         /// Customers may optionally set up ingress security rules to restrict traffic from these IP addresses.
         /// 
@@ -174,6 +167,13 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet being referenced.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
         
     }
 
@@ -219,6 +219,12 @@ namespace Oci.GoldengateService.Models
                 case "SNOWFLAKE":
                     obj = new SnowflakeConnectionSummary();
                     break;
+                case "AMAZON_KINESIS":
+                    obj = new AmazonKinesisConnectionSummary();
+                    break;
+                case "REDIS":
+                    obj = new RedisConnectionSummary();
+                    break;
                 case "OCI_OBJECT_STORAGE":
                     obj = new OciObjectStorageConnectionSummary();
                     break;
@@ -231,6 +237,9 @@ namespace Oci.GoldengateService.Models
                 case "MONGODB":
                     obj = new MongoDbConnectionSummary();
                     break;
+                case "GOOGLE_BIGQUERY":
+                    obj = new GoogleBigQueryConnectionSummary();
+                    break;
                 case "AMAZON_S3":
                     obj = new AmazonS3ConnectionSummary();
                     break;
@@ -240,11 +249,23 @@ namespace Oci.GoldengateService.Models
                 case "MYSQL":
                     obj = new MysqlConnectionSummary();
                     break;
+                case "GENERIC":
+                    obj = new GenericConnectionSummary();
+                    break;
                 case "KAFKA":
                     obj = new KafkaConnectionSummary();
                     break;
+                case "ELASTICSEARCH":
+                    obj = new ElasticsearchConnectionSummary();
+                    break;
+                case "AMAZON_REDSHIFT":
+                    obj = new AmazonRedshiftConnectionSummary();
+                    break;
                 case "HDFS":
                     obj = new HdfsConnectionSummary();
+                    break;
+                case "GOOGLE_CLOUD_STORAGE":
+                    obj = new GoogleCloudStorageConnectionSummary();
                     break;
             }
             if (obj != null)

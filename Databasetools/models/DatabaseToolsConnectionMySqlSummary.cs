@@ -27,6 +27,10 @@ namespace Oci.DatabasetoolsService.Models
         /// <value>
         /// The connection string used to connect to the MySQL Server.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ConnectionString is required.")]
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
         

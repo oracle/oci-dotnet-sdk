@@ -45,6 +45,9 @@ namespace Oci.DatabasetoolsService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "POSTGRESQL":
+                    obj = new ValidateDatabaseToolsConnectionPostgresqlDetails();
+                    break;
                 case "ORACLE_DATABASE":
                     obj = new ValidateDatabaseToolsConnectionOracleDatabaseDetails();
                     break;

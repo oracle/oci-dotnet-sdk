@@ -27,15 +27,27 @@ namespace Oci.DatabasetoolsService.Models
         /// <value>
         /// The connect descriptor or Easy Connect Naming method use to connect to the database.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ConnectionString is required.")]
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
         
         /// <value>
         /// The database user name.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "UserName is required.")]
         [JsonProperty(PropertyName = "userName")]
         public string UserName { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "UserPassword is required.")]
         [JsonProperty(PropertyName = "userPassword")]
         public DatabaseToolsUserPasswordDetails UserPassword { get; set; }
         
@@ -58,6 +70,9 @@ namespace Oci.DatabasetoolsService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointId")]
         public string PrivateEndpointId { get; set; }
+        
+        [JsonProperty(PropertyName = "proxyClient")]
+        public DatabaseToolsConnectionOracleDatabaseProxyClientDetails ProxyClient { get; set; }
         
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "ORACLE_DATABASE";
