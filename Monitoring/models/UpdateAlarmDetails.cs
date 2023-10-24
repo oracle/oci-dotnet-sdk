@@ -26,7 +26,7 @@ namespace Oci.MonitoringService.Models
         /// A user-friendly name for the alarm. It does not have to be unique, and it's changeable.
         /// Avoid entering confidential information.
         /// <br/>
-        /// This name is sent as the title for notifications related to this alarm.
+        /// This value determines the title of each alarm notification.
         /// <br/>
         /// Example: High CPU Utilization
         /// </value>
@@ -86,9 +86,12 @@ namespace Oci.MonitoringService.Models
         /// rule (threshold or absence). Supported values for interval depend on the specified time range. More
         /// interval values are supported for smaller time ranges. You can optionally
         /// specify dimensions and grouping functions. Supported grouping functions: `grouping()`, `groupBy()`.
-        /// For details about Monitoring Query Language (MQL), see [Monitoring Query Language (MQL) Reference](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Reference/mql.htm).
-        /// For available dimensions, review the metric definition for the supported service.
-        /// See [Supported Services](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#SupportedServices).
+        /// For information about writing MQL expressions, see
+        /// [Editing the MQL Expression for a Query](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/query-metric-mql.htm).
+        /// For details about MQL, see
+        /// [Monitoring Query Language (MQL) Reference](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Reference/mql.htm).
+        /// For available dimensions, review the metric definition for the supported service. See
+        /// [Supported Services](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#SupportedServices).
         /// <br/>
         /// Example of threshold alarm:
         /// <br/>
@@ -147,7 +150,7 @@ namespace Oci.MonitoringService.Models
         public System.Nullable<Alarm.SeverityEnum> Severity { get; set; }
         
         /// <value>
-        /// The human-readable content of the notification delivered. Oracle recommends providing guidance
+        /// The human-readable content of the delivered alarm notification. Oracle recommends providing guidance
         /// to operators for resolving the alarm condition. Consider adding links to standard runbook
         /// practices. Avoid entering confidential information.
         /// <br/>
@@ -157,17 +160,18 @@ namespace Oci.MonitoringService.Models
         public string Body { get; set; }
         
         /// <value>
-        /// When set to `true`, splits notifications per metric stream. When set to `false`, groups notifications across metric streams.
-        /// Example: true
+        /// When set to `true`, splits alarm notifications per metric stream.
+        /// When set to `false`, groups alarm notifications across metric streams.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isNotificationsPerMetricDimensionEnabled")]
         public System.Nullable<bool> IsNotificationsPerMetricDimensionEnabled { get; set; }
                 ///
         /// <value>
-        /// The format to use for notification messages sent from this alarm. The formats are:
-        /// * `RAW` - Raw JSON blob. Default value.
-        /// * `PRETTY_JSON`: JSON with new lines and indents.
-        /// * `ONS_OPTIMIZED`: Simplified, user-friendly layout. Applies only to messages sent through the Notifications service to the following subscription types: Email.
+        /// The format to use for alarm notifications. The formats are:
+        /// * `RAW` - Raw JSON blob. Default value. When the `destinations` attribute specifies `Streaming`, all alarm notifications use this format.
+        /// * `PRETTY_JSON`: JSON with new lines and indents. Available when the `destinations` attribute specifies `Notifications` only.
+        /// * `ONS_OPTIMIZED`: Simplified, user-friendly layout. Available when the `destinations` attribute specifies `Notifications` only. Applies to Email subscription types only.
         /// 
         /// </value>
         ///
@@ -181,10 +185,10 @@ namespace Oci.MonitoringService.Models
         };
 
         /// <value>
-        /// The format to use for notification messages sent from this alarm. The formats are:
-        /// * `RAW` - Raw JSON blob. Default value.
-        /// * `PRETTY_JSON`: JSON with new lines and indents.
-        /// * `ONS_OPTIMIZED`: Simplified, user-friendly layout. Applies only to messages sent through the Notifications service to the following subscription types: Email.
+        /// The format to use for alarm notifications. The formats are:
+        /// * `RAW` - Raw JSON blob. Default value. When the `destinations` attribute specifies `Streaming`, all alarm notifications use this format.
+        /// * `PRETTY_JSON`: JSON with new lines and indents. Available when the `destinations` attribute specifies `Notifications` only.
+        /// * `ONS_OPTIMIZED`: Simplified, user-friendly layout. Available when the `destinations` attribute specifies `Notifications` only. Applies to Email subscription types only.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "messageFormat")]
@@ -192,17 +196,19 @@ namespace Oci.MonitoringService.Models
         public System.Nullable<MessageFormatEnum> MessageFormat { get; set; }
         
         /// <value>
-        /// A list of destinations to which the notifications for this alarm will be delivered.
-        /// Each destination is represented by an [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) related to the supported destination service.
-        /// For example, a destination using the Notifications service is represented by a topic OCID.
-        /// Supported destination services: Notifications Service. Limit: One destination per supported destination service.
+        /// A list of destinations for alarm notifications.
+        /// Each destination is represented by the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)
+        /// of a related resource, such as a {@link NotificationTopic}.
+        /// Supported destination services: Notifications
+        /// , Streaming.          
+        /// Limit: One destination per supported destination service.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "destinations")]
         public System.Collections.Generic.List<string> Destinations { get; set; }
         
         /// <value>
-        /// The frequency at which notifications are re-submitted, if the alarm keeps firing without
+        /// The frequency for re-submitting alarm notifications, if the alarm keeps firing without
         /// interruption. Format defined by ISO 8601. For example, `PT4H` indicates four hours.
         /// Minimum: PT1M. Maximum: P30D.
         /// <br/>

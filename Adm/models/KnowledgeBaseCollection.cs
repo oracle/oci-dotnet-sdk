@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AdmService.Models
 {
     /// <summary>
-    /// Collection of Knowledge Base summaries.
+    /// Collection of knowledge base summaries.
     /// </summary>
     public class KnowledgeBaseCollection 
     {
         
         /// <value>
-        /// List of Knowledge Base summaries.
+        /// List of knowledge base summaries.
         /// </value>
         /// <remarks>
         /// Required

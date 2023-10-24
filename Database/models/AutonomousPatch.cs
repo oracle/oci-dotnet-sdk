@@ -134,6 +134,29 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "year")]
         public string Year { get; set; }
+                ///
+        /// <value>
+        /// Maintenance run type, either \"QUARTERLY\" or \"TIMEZONE\".
+        /// 
+        /// </value>
+        ///
+        public enum AutonomousPatchTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "QUARTERLY")]
+            Quarterly,
+            [EnumMember(Value = "TIMEZONE")]
+            Timezone
+        };
+
+        /// <value>
+        /// Maintenance run type, either \"QUARTERLY\" or \"TIMEZONE\".
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousPatchType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AutonomousPatchTypeEnum> AutonomousPatchType { get; set; }
         
     }
 }

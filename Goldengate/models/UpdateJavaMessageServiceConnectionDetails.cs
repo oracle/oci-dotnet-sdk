@@ -102,6 +102,60 @@ namespace Oci.GoldengateService.Models
         public string Password { get; set; }
         
         /// <value>
+        /// Security protocol for Java Message Service. If not provided, default is PLAIN.
+        /// Optional until 2024-06-27, in the release after it will be made required.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "securityProtocol")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<JavaMessageServiceConnection.SecurityProtocolEnum> SecurityProtocol { get; set; }
+        
+        /// <value>
+        /// Authentication type for Java Message Service.  If not provided, default is NONE.
+        /// Optional until 2024-06-27, in the release after it will be made required.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "authenticationType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<JavaMessageServiceConnection.AuthenticationTypeEnum> AuthenticationType { get; set; }
+        
+        /// <value>
+        /// The base64 encoded content of the TrustStore file.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "trustStore")]
+        public string TrustStore { get; set; }
+        
+        /// <value>
+        /// The TrustStore password.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "trustStorePassword")]
+        public string TrustStorePassword { get; set; }
+        
+        /// <value>
+        /// The base64 encoded content of the KeyStore file.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "keyStore")]
+        public string KeyStore { get; set; }
+        
+        /// <value>
+        /// The KeyStore password.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "keyStorePassword")]
+        public string KeyStorePassword { get; set; }
+        
+        /// <value>
+        /// The password for the cert inside of the KeyStore.
+        /// In case it differs from the KeyStore password, it should be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sslKeyPassword")]
+        public string SslKeyPassword { get; set; }
+        
+        /// <value>
         /// The private IP address of the connection's endpoint in the customer's VCN, typically a
         /// database endpoint or a big data endpoint (e.g. Kafka bootstrap server).
         /// In case the privateIp is provided, the subnetId must also be provided.

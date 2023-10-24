@@ -101,17 +101,35 @@ namespace Oci.GoldengateService.Models
             var discriminator = jsonObject["connectionType"].Value<string>();
             switch (discriminator)
             {
+                case "ELASTICSEARCH":
+                    obj = new UpdateElasticsearchConnectionDetails();
+                    break;
+                case "GOOGLE_BIGQUERY":
+                    obj = new UpdateGoogleBigQueryConnectionDetails();
+                    break;
                 case "ORACLE":
                     obj = new UpdateOracleConnectionDetails();
+                    break;
+                case "AMAZON_REDSHIFT":
+                    obj = new UpdateAmazonRedshiftConnectionDetails();
                     break;
                 case "OCI_OBJECT_STORAGE":
                     obj = new UpdateOciObjectStorageConnectionDetails();
                     break;
+                case "REDIS":
+                    obj = new UpdateRedisConnectionDetails();
+                    break;
                 case "MONGODB":
                     obj = new UpdateMongoDbConnectionDetails();
                     break;
+                case "GOOGLE_CLOUD_STORAGE":
+                    obj = new UpdateGoogleCloudStorageConnectionDetails();
+                    break;
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new UpdateAzureDataLakeStorageConnectionDetails();
+                    break;
+                case "AMAZON_KINESIS":
+                    obj = new UpdateAmazonKinesisConnectionDetails();
                     break;
                 case "JAVA_MESSAGE_SERVICE":
                     obj = new UpdateJavaMessageServiceConnectionDetails();
@@ -145,6 +163,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "KAFKA":
                     obj = new UpdateKafkaConnectionDetails();
+                    break;
+                case "GENERIC":
+                    obj = new UpdateGenericConnectionDetails();
                     break;
                 case "AZURE_SYNAPSE_ANALYTICS":
                     obj = new UpdateAzureSynapseConnectionDetails();

@@ -65,6 +65,12 @@ namespace Oci.DatabasetoolsService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "GENERIC_JDBC":
+                    obj = new UpdateDatabaseToolsConnectionGenericJdbcDetails();
+                    break;
+                case "POSTGRESQL":
+                    obj = new UpdateDatabaseToolsConnectionPostgresqlDetails();
+                    break;
                 case "MYSQL":
                     obj = new UpdateDatabaseToolsConnectionMySqlDetails();
                     break;

@@ -48,6 +48,18 @@ namespace Oci.DatabasetoolsService.Requests
         public System.Collections.Generic.List<ConnectionType> Type { get; set; }
         
         /// <value>
+        /// A filter to return only resources with one of the specified runtimeSupport values.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "runtimeSupport", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<RuntimeSupport> RuntimeSupport { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources associated to the related resource identifier OCID passed in the query string.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "relatedResourceIdentifier")]
+        public string RelatedResourceIdentifier { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

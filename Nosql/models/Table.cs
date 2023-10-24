@@ -127,6 +127,54 @@ namespace Oci.NosqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "ddlStatement")]
         public string DdlStatement { get; set; }
+                ///
+        /// <value>
+        /// The current state of this table's schema. Available states are
+        /// MUTABLE - The schema can be changed. The table is not eligible for replication.
+        /// FROZEN - The schema is immutable. The table is eligible for replication.
+        /// 
+        /// </value>
+        ///
+        public enum SchemaStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MUTABLE")]
+            Mutable,
+            [EnumMember(Value = "FROZEN")]
+            Frozen
+        };
+
+        /// <value>
+        /// The current state of this table's schema. Available states are
+        /// MUTABLE - The schema can be changed. The table is not eligible for replication.
+        /// FROZEN - The schema is immutable. The table is eligible for replication.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "schemaState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SchemaStateEnum> SchemaState { get; set; }
+        
+        /// <value>
+        /// True if this table is currently a member of a replication set.
+        /// </value>
+        [JsonProperty(PropertyName = "isMultiRegion")]
+        public System.Nullable<bool> IsMultiRegion { get; set; }
+        
+        /// <value>
+        /// If this table is in a replication set, this value represents
+        /// the progress of the initialization of the replica's data.  A
+        /// value of 100 indicates that initialization has completed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "localReplicaInitializationInPercent")]
+        public System.Nullable<int> LocalReplicaInitializationInPercent { get; set; }
+        
+        /// <value>
+        /// An array of Replica listing this table's replicas, if any
+        /// </value>
+        [JsonProperty(PropertyName = "replicas")]
+        public System.Collections.Generic.List<Replica> Replicas { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined

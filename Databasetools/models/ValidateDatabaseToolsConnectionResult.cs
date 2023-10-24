@@ -84,6 +84,9 @@ namespace Oci.DatabasetoolsService.Models
                 case "MYSQL":
                     obj = new ValidateDatabaseToolsConnectionMySqlResult();
                     break;
+                case "POSTGRESQL":
+                    obj = new ValidateDatabaseToolsConnectionPostgresqlResult();
+                    break;
             }
             if (obj != null)
             {

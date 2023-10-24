@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AdmService.Models
 {
     /// <summary>
-    /// Details to update an existing Knowledge Base.
+    /// Details to update an existing knowledge base.
     /// </summary>
     public class UpdateKnowledgeBaseDetails 
     {
         
         /// <value>
-        /// The name of the Knowledge Base.
+        /// The name of the knowledge base.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

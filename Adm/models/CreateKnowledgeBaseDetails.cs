@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AdmService.Models
 {
     /// <summary>
-    /// Details to create a new Knowledge Base.
+    /// Details to create a new knowledge base.
     /// </summary>
     public class CreateKnowledgeBaseDetails 
     {
         
         /// <value>
-        /// The Oracle Cloud Identifier ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)) of the Knowledge Base's compartment.
+        /// The compartment Oracle Cloud Identifier ([OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)) of the knowledge base.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.AdmService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The name of the Knowledge Base.
+        /// The name of the knowledge base.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

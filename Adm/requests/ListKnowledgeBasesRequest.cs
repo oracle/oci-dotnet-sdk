@@ -21,6 +21,8 @@ namespace Oci.AdmService.Requests
         
         /// <value>
         /// A filter to return only resources that match the specified identifier.
+        /// Required only if the compartmentId query parameter is not specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
@@ -87,6 +89,8 @@ namespace Oci.AdmService.Requests
         
         /// <value>
         /// A filter to return only resources that belong to the specified compartment identifier.
+        /// Required only if the id query param is not specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }

@@ -22,6 +22,10 @@ namespace Oci.DatabasetoolsService.Models
       [EnumMember(Value = "ORACLE_DATABASE")]
       OracleDatabase,
       [EnumMember(Value = "MYSQL")]
-      Mysql
+      Mysql,
+      [EnumMember(Value = "POSTGRESQL")]
+      Postgresql,
+      [EnumMember(Value = "GENERIC_JDBC")]
+      GenericJdbc
   }
 }

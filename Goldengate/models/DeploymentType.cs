@@ -31,6 +31,10 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "DATABASE_MYSQL")]
       DatabaseMysql,
       [EnumMember(Value = "DATABASE_POSTGRESQL")]
-      DatabasePostgresql
+      DatabasePostgresql,
+      [EnumMember(Value = "DATABASE_DB2ZOS")]
+      DatabaseDb2Zos,
+      [EnumMember(Value = "DATA_TRANSFORMS")]
+      DataTransforms
   }
 }

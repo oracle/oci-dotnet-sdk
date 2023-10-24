@@ -36,6 +36,8 @@ namespace Oci.GoldengateService.Models
             AzureSqlserverManagedInstance,
             [EnumMember(Value = "AZURE_SQLSERVER_NON_MANAGED_INSTANCE")]
             AzureSqlserverNonManagedInstance,
+            [EnumMember(Value = "GOOGLE_CLOUD_SQL_SQLSERVER")]
+            GoogleCloudSqlSqlserver,
             [EnumMember(Value = "MICROSOFT_SQLSERVER")]
             MicrosoftSqlserver
         };

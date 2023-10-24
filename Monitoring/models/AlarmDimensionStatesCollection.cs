@@ -46,8 +46,9 @@ namespace Oci.MonitoringService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// When set to `true`, splits notifications per metric stream. When set to `false`, groups notifications across metric streams.
-        /// Example: true
+        /// When set to `true`, splits alarm notifications per metric stream.
+        /// When set to `false`, groups alarm notifications across metric streams.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

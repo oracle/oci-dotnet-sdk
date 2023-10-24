@@ -80,5 +80,12 @@ namespace Oci.NosqlService.Models
         [JsonProperty(PropertyName = "maxShardSizeUsageInPercent")]
         public System.Nullable<int> MaxShardSizeUsageInPercent { get; set; }
         
+        /// <value>
+        /// The time stamp of this usage record.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeStarted")]
+        public System.Nullable<System.DateTime> TimeStarted { get; set; }
+        
     }
 }

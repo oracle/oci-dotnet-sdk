@@ -19,6 +19,8 @@ namespace Oci.GoldengateService.Models
   public enum TechnologyType {
       [EnumMember(Value = "GOLDENGATE")]
       Goldengate,
+      [EnumMember(Value = "GENERIC")]
+      Generic,
       [EnumMember(Value = "OCI_AUTONOMOUS_DATABASE")]
       OciAutonomousDatabase,
       [EnumMember(Value = "OCI_AUTONOMOUS_JSON_DATABASE")]
@@ -47,6 +49,10 @@ namespace Oci.GoldengateService.Models
       AmazonAuroraMysql,
       [EnumMember(Value = "AMAZON_AURORA_POSTGRESQL")]
       AmazonAuroraPostgresql,
+      [EnumMember(Value = "AMAZON_KINESIS")]
+      AmazonKinesis,
+      [EnumMember(Value = "AMAZON_REDSHIFT")]
+      AmazonRedshift,
       [EnumMember(Value = "AMAZON_RDS_MARIADB")]
       AmazonRdsMariadb,
       [EnumMember(Value = "AMAZON_RDS_MYSQL")]
@@ -75,10 +81,18 @@ namespace Oci.GoldengateService.Models
       ConfluentKafka,
       [EnumMember(Value = "CONFLUENT_SCHEMA_REGISTRY")]
       ConfluentSchemaRegistry,
+      [EnumMember(Value = "ELASTICSEARCH")]
+      Elasticsearch,
+      [EnumMember(Value = "GOOGLE_BIGQUERY")]
+      GoogleBigquery,
+      [EnumMember(Value = "GOOGLE_CLOUD_STORAGE")]
+      GoogleCloudStorage,
       [EnumMember(Value = "GOOGLE_CLOUD_SQL_MYSQL")]
       GoogleCloudSqlMysql,
       [EnumMember(Value = "GOOGLE_CLOUD_SQL_POSTGRESQL")]
       GoogleCloudSqlPostgresql,
+      [EnumMember(Value = "GOOGLE_CLOUD_SQL_SQLSERVER")]
+      GoogleCloudSqlSqlserver,
       [EnumMember(Value = "HDFS")]
       Hdfs,
       [EnumMember(Value = "MARIADB")]
@@ -91,6 +105,8 @@ namespace Oci.GoldengateService.Models
       MysqlServer,
       [EnumMember(Value = "POSTGRESQL_SERVER")]
       PostgresqlServer,
+      [EnumMember(Value = "REDIS")]
+      Redis,
       [EnumMember(Value = "SINGLESTOREDB")]
       Singlestoredb,
       [EnumMember(Value = "SINGLESTOREDB_CLOUD")]

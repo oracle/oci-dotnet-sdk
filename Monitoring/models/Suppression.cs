@@ -17,7 +17,8 @@ namespace Oci.MonitoringService.Models
 {
     /// <summary>
     /// The configuration details for suppressing an alarm.
-    /// For information about alarms, see [Alarms Overview](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#AlarmsOverview).
+    /// For information about alarms, see
+    /// [Alarms Overview](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#AlarmsOverview).
     /// 
     /// </summary>
     public class Suppression 

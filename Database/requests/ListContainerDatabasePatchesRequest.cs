@@ -50,5 +50,25 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
+        
+        ///
+        /// <value>
+        /// Autonomous patch type, either \"QUARTERLY\" or \"TIMEZONE\".
+        /// 
+        /// </value>
+        ///
+        public enum AutonomousPatchTypeEnum {
+            [EnumMember(Value = "QUARTERLY")]
+            Quarterly,
+            [EnumMember(Value = "TIMEZONE")]
+            Timezone
+        };
+
+        /// <value>
+        /// Autonomous patch type, either \"QUARTERLY\" or \"TIMEZONE\".
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "autonomousPatchType")]
+        public System.Nullable<AutonomousPatchTypeEnum> AutonomousPatchType { get; set; }
     }
 }

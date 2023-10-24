@@ -35,6 +35,8 @@ namespace Oci.DatabasetoolsService.Requests
         /// hours, but can be invalidated before then due to conflicting operations. For example, if a resource
         /// has been deleted and purged from the system, then a retry of the original creation request
         /// might be rejected.
+        /// <br/>
+        /// Accepted characters: ASCII alphanumerics plus underscore (U+005F LOW LINE \"_\") and dash (U+002D HYPHEN-MINUS \"-\")
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]

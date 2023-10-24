@@ -23,8 +23,8 @@ namespace Oci.GoldengateService.Models
     {
                 ///
         /// <value>
-        /// The deployment category defines the broad separation of the deployment type into categories.  Currently
-        /// the separation is 'DATA_REPLICATION' and 'STREAM_ANALYTICS'.
+        /// The deployment category defines the broad separation of the deployment type into three categories.
+        /// Currently the separation is 'DATA_REPLICATION', 'STREAM_ANALYTICS' and 'DATA_TRANSFORMS'.
         /// 
         /// </value>
         ///
@@ -35,12 +35,14 @@ namespace Oci.GoldengateService.Models
             [EnumMember(Value = "DATA_REPLICATION")]
             DataReplication,
             [EnumMember(Value = "STREAM_ANALYTICS")]
-            StreamAnalytics
+            StreamAnalytics,
+            [EnumMember(Value = "DATA_TRANSFORMS")]
+            DataTransforms
         };
 
         /// <value>
-        /// The deployment category defines the broad separation of the deployment type into categories.  Currently
-        /// the separation is 'DATA_REPLICATION' and 'STREAM_ANALYTICS'.
+        /// The deployment category defines the broad separation of the deployment type into three categories.
+        /// Currently the separation is 'DATA_REPLICATION', 'STREAM_ANALYTICS' and 'DATA_TRANSFORMS'.
         /// 
         /// </value>
         /// <remarks>
@@ -107,6 +109,20 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "oggVersion")]
         public string OggVersion { get; set; }
+        
+        /// <value>
+        /// The URL to the webpage listing the supported technologies.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "supportedTechnologiesUrl")]
+        public string SupportedTechnologiesUrl { get; set; }
+        
+        /// <value>
+        /// The default admin username used by deployment.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "defaultUsername")]
+        public string DefaultUsername { get; set; }
         
     }
 }
