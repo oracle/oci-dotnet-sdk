@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Update properties for a Compute Instance member.
+    /// Deprecated. Update properties for a compute instance member.
     /// </summary>
     public class UpdateDrProtectionGroupMemberComputeInstanceDetails : UpdateDrProtectionGroupMemberDetails
     {
         
         /// <value>
-        /// A flag indicating if this compute instance should be moved during DR operations.
+        /// A flag indicating if the compute instance should be moved during DR operations.
         /// <br/>
         /// Example: false
         /// </value>
@@ -30,25 +30,26 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<bool> IsMovable { get; set; }
         
         /// <value>
-        /// A list of Compute Instance VNIC mappings.
+        /// A list of compute instance VNIC mappings.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vnicMapping")]
         public System.Collections.Generic.List<ComputeInstanceVnicMappingDetails> VnicMapping { get; set; }
         
         /// <value>
-        /// The OCID of the compartment for this compute instance in the destination region.
+        /// The OCID of a compartment in the destination region in which the compute instance
+        /// should be launched.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..&lt;unique_id&gt;
+        /// Example: ocid1.compartment.oc1..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "destinationCompartmentId")]
         public string DestinationCompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the dedicated VM Host in the destination region where this compute instance
-        /// should be launched
+        /// The OCID of a dedicated VM host in the destination region on which the compute instance
+        /// should be launched.
         /// <br/>
-        /// Example: ocid1.dedicatedvmhost.oc1.iad.&lt;unique_id&gt;
+        /// Example: ocid1.dedicatedvmhost.oc1..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "destinationDedicatedVmHostId")]
         public string DestinationDedicatedVmHostId { get; set; }

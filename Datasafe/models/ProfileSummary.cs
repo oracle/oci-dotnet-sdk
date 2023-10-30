@@ -64,7 +64,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<int> UserCount { get; set; }
         
         /// <value>
-        /// Maximum times the user is allowed in fail login before the user account is locked.
+        /// Maximum times the user is allowed to fail login before the user account is locked.
         /// </value>
         [JsonProperty(PropertyName = "failedLoginAttempts")]
         public string FailedLoginAttempts { get; set; }

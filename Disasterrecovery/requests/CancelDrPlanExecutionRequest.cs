@@ -20,7 +20,7 @@ namespace Oci.DisasterrecoveryService.Requests
     {
         
         /// <value>
-        /// Details for canceling a DR Plan Execution.
+        /// Details for canceling the DR plan execution.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,9 +30,9 @@ namespace Oci.DisasterrecoveryService.Requests
         public CancelDrPlanExecutionDetails CancelDrPlanExecutionDetails { get; set; }
         
         /// <value>
-        /// The OCID of the DR Plan Execution.
+        /// The OCID of the DR plan execution.
         /// <br/>
-        /// Example: ocid1.drplanexecution.oc1.iad.exampleocid
+        /// Example: ocid1.drplanexecution.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required

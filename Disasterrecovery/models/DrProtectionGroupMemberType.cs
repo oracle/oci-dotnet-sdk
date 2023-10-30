@@ -13,13 +13,16 @@ using System.Runtime.Serialization;
 namespace Oci.DisasterrecoveryService.Models
 {
   /// <summary>
-  /// Enumeration of different type of members in a DR Protection Group.
-    /// - COMPUTE_INSTANCE - An Oracle Cloud compute instance.
-    /// - COMPUTE_INSTANCE_MOVABLE - An Oracle Cloud compute instance that moves across regions or ADs during DR.
-    /// - COMPUTE_INSTANCE_NON_MOVABLE - An Oracle Cloud compute instance that does not move across regions or ADs during DR.
-    /// - VOLUME_GROUP - An Oracle Cloud volume group.
-    /// - DATABASE - An Oracle Database Cloud Service database.
-    /// - AUTONOMOUS_DATABASE - An Oracle Autonomous Database.
+  /// Enumeration of different types of Oracle Cloud Infrastructure (OCI) resources that are members in a DR protection group.
+    /// - COMPUTE_INSTANCE - Deprecated. A compute instance.
+    /// - COMPUTE_INSTANCE_MOVABLE - A compute instance that moves across regions or ADs during DR.
+    /// - COMPUTE_INSTANCE_NON_MOVABLE - A compute instance that does not move across regions or ADs during DR.
+    /// - VOLUME_GROUP - A volume group.
+    /// - DATABASE - An Oracle Database instance from Base Database service, or Exadata Database service.
+    /// - AUTONOMOUS_DATABASE - An Oracle Autonomous Database Serverless instance.
+    /// - LOAD_BALANCER - A load balancer.
+    /// - NETWORK_LOAD_BALANCER - A network load balancer.
+    /// - FILE_SYSTEM - A file system.
     /// 
   /// </summary>
   public enum DrProtectionGroupMemberType {
@@ -37,6 +40,12 @@ namespace Oci.DisasterrecoveryService.Models
       [EnumMember(Value = "DATABASE")]
       Database,
       [EnumMember(Value = "AUTONOMOUS_DATABASE")]
-      AutonomousDatabase
+      AutonomousDatabase,
+      [EnumMember(Value = "LOAD_BALANCER")]
+      LoadBalancer,
+      [EnumMember(Value = "NETWORK_LOAD_BALANCER")]
+      NetworkLoadBalancer,
+      [EnumMember(Value = "FILE_SYSTEM")]
+      FileSystem
   }
 }

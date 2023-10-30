@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DisasterrecoveryService.Models
 {
   /// <summary>
-  /// Operation types for resources.
+  /// The types of operations that can be performed on Full Stack DR resources.
   /// </summary>
   public enum OperationType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

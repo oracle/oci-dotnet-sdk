@@ -30,7 +30,7 @@ namespace Oci.DatasafeService.Requests
         public string SecurityAssessmentId { get; set; }
         
         /// <value>
-        /// The OCID of the baseline security assessment.
+        /// The OCID of the security assessment baseline.
         /// </value>
         /// <remarks>
         /// Required

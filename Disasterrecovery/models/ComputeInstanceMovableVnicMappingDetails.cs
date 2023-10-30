@@ -16,15 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// A movable compute instance's source and destination VNIC mapping.
+    /// Source VNIC to destination subnet mapping for a movable compute instance.
+    /// 
     /// </summary>
     public class ComputeInstanceMovableVnicMappingDetails 
     {
         
         /// <value>
-        /// The OCID of the VNIC.
+        /// The OCID of the source VNIC.
         /// <br/>
-        /// Example: ocid1.vnic.oc1..&lt;unique_id&gt;
+        /// Example: ocid1.vnic.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -34,9 +35,9 @@ namespace Oci.DisasterrecoveryService.Models
         public string SourceVnicId { get; set; }
         
         /// <value>
-        /// The OCID of the destination (remote) subnet to which this VNIC should connect.
+        /// The OCID of the destination subnet to which the source VNIC should connect.        
         /// <br/>
-        /// Example: ocid1.subnet.oc1..&lt;unique_id&gt;
+        /// Example: ocid1.subnet.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -46,7 +47,8 @@ namespace Oci.DisasterrecoveryService.Models
         public string DestinationSubnetId { get; set; }
         
         /// <value>
-        /// The primary private IP address to assign. This address must belong to the destination subnet.
+        /// The primary private IP address to be assigned to the source VNIC in the destination subnet. 
+        /// This IP address must belong to the destination subnet.
         /// <br/>
         /// Example: 10.0.3.3
         /// </value>
@@ -54,19 +56,20 @@ namespace Oci.DisasterrecoveryService.Models
         public string DestinationPrimaryPrivateIpAddress { get; set; }
         
         /// <value>
-        /// The hostname to assign for this primary private IP.
-        /// The value is the hostname portion of the private IP's fully qualified domain name (FQDN) 
-        /// (for example, bminstance1 in FQDN bminstance1.subnet123.vcn1.oraclevcn.com).
+        /// The hostname label to be assigned in the destination subnet for the primary private IP of the source VNIC.
+        /// This label is the hostname portion of the private IP's fully qualified domain name (FQDN) 
+        /// (for example, 'myhost1' in the FQDN 'myhost1.subnet123.vcn1.oraclevcn.com').
         /// <br/>
-        /// Example: bminstance1
+        /// Example: myhost1
         /// </value>
         [JsonProperty(PropertyName = "destinationPrimaryPrivateIpHostnameLabel")]
         public string DestinationPrimaryPrivateIpHostnameLabel { get; set; }
         
         /// <value>
-        /// A list of network security group (NSG) IDs in the destination region which this VNIC should use.
+        /// A list of OCIDs of network security groups (NSG) in the destination region which should be assigned to
+        /// the source VNIC.
         /// <br/>
-        /// Example: [ ocid1.networksecuritygroup.oc1..&lt;unique_id&gt;, ocid1.networksecuritygroup.oc1..&lt;unique_id&gt; ]
+        /// Example: [ ocid1.networksecuritygroup.oc1..uniqueID, ocid1.networksecuritygroup.oc1..uniqueID ]
         /// </value>
         [JsonProperty(PropertyName = "destinationNsgIdList")]
         public System.Collections.Generic.List<string> DestinationNsgIdList { get; set; }

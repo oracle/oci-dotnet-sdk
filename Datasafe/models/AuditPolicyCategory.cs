@@ -30,6 +30,8 @@ namespace Oci.DatasafeService.Models
       [EnumMember(Value = "COMPLIANCE_STANDARD")]
       ComplianceStandard,
       [EnumMember(Value = "CUSTOM")]
-      Custom
+      Custom,
+      [EnumMember(Value = "SQL_FIREWALL_AUDITING")]
+      SqlFirewallAuditing
   }
 }

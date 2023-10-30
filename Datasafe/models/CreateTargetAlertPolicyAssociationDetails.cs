@@ -65,7 +65,7 @@ namespace Oci.DatasafeService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Indicates if the target-alert policy association is enabled or disabled.
+        /// Indicates if the target-alert policy association is enabled or disabled by user.
         /// </value>
         /// <remarks>
         /// Required

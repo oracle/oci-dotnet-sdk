@@ -13,11 +13,16 @@ using System.Runtime.Serialization;
 namespace Oci.DisasterrecoveryService.Models
 {
   /// <summary>
-  /// All available DR Plan types.  Plans of type *precheck* are automatically created, updated, or deleted.
+  /// The types of DR plan execution that can be created, updated, or deleted by the user.  Executions of type *precheck* cannot be created separately by the user.  
+    /// They are automatically generated as part of the plan, however prechecks can be executed separately from a plan.
     /// - SWITCHOVER - Switchover from primary to standby.
-    /// - SWITCHOVER_PRECHECK - Precheck for switchover DR Plan.
+    /// - SWITCHOVER_PRECHECK - Precheck for switchover DR plan.
     /// - FAILOVER - Failover to standby.
-    /// - FAILOVER_PRECHECK - Precheck for failover DR Plan.
+    /// - FAILOVER_PRECHECK - Precheck for failover DR plan.
+    /// - START_DRILL - Start DR drill.
+    /// - START_DRILL_PRECHECK - Precheck for a start drill DR plan.
+    /// - STOP_DRILL - Stop DR drill.
+    /// - STOP_DRILL_PRECHECK - Precheck for a stop drill DR plan.
     /// 
   /// </summary>
   public enum DrPlanExecutionType {
@@ -31,6 +36,14 @@ namespace Oci.DisasterrecoveryService.Models
       [EnumMember(Value = "FAILOVER")]
       Failover,
       [EnumMember(Value = "FAILOVER_PRECHECK")]
-      FailoverPrecheck
+      FailoverPrecheck,
+      [EnumMember(Value = "START_DRILL")]
+      StartDrill,
+      [EnumMember(Value = "START_DRILL_PRECHECK")]
+      StartDrillPrecheck,
+      [EnumMember(Value = "STOP_DRILL")]
+      StopDrill,
+      [EnumMember(Value = "STOP_DRILL_PRECHECK")]
+      StopDrillPrecheck
   }
 }

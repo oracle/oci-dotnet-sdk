@@ -16,21 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The details for updating a DR Plan group.
+    /// The details for updating a group in a DR plan.
     /// </summary>
     public class UpdateDrPlanGroupDetails 
     {
         
         /// <value>
-        /// The unique id of this group. Must not be modified by user.
+        /// The unique id of the group. Must not be modified by user.
         /// <br/>
-        /// Example: sgid1.group..&lt;unique_id&gt;
+        /// Example: sgid1.group..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The display name of this group.
+        /// The display name of the group.
         /// <br/>
         /// Example: My_GROUP_3 - EBS Start
         /// </value>
@@ -39,7 +39,8 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// The group type.
-        /// 
+        /// <br/>
+        /// Example: BUILT_IN
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]

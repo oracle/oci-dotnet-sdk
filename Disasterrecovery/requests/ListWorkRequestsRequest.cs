@@ -22,7 +22,7 @@ namespace Oci.DisasterrecoveryService.Requests
         /// <value>
         /// The ID (OCID) of the compartment in which to list resources.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..exampleocid1
+        /// Example: ocid1.compartment.oc1..uniqueID
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -30,7 +30,7 @@ namespace Oci.DisasterrecoveryService.Requests
         /// <value>
         /// The ID (OCID) of the asynchronous work request.
         /// <br/>
-        /// Example: ocid1.workrequest.oc1.phx.exampleocid1
+        /// Example: ocid1.workrequest.oc1..uniqueID
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "workRequestId")]
         public string WorkRequestId { get; set; }
@@ -44,7 +44,8 @@ namespace Oci.DisasterrecoveryService.Requests
         
         /// <value>
         /// The ID (OCID) of the resource affected by the work request.
-        /// Example: ocid1.drplanexecution.oc1.iad.exampleocid
+        /// <br/>
+        /// Example: ocid1.drplanexecution.oc1..uniqueID
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
         public string ResourceId { get; set; }

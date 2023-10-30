@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The details reqired to set baseline assessment.
+    /// The details required to set the baseline for the assessment.
     /// </summary>
     public class SecurityAssessmentBaseLineDetails 
     {
         
         /// <value>
-        /// List of security assessment OCIDs that need to be updated while setting the baseline.
+        /// The list of OCIDs for the security assessments that need to be updated while setting the baseline.
         /// </value>
         [JsonProperty(PropertyName = "assessmentIds")]
         public System.Collections.Generic.List<string> AssessmentIds { get; set; }

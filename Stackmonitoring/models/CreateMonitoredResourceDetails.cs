@@ -94,6 +94,15 @@ namespace Oci.StackmonitoringService.Models
         public string ResourceTimeZone { get; set; }
         
         /// <value>
+        /// License edition of the monitored resource. If not provided 
+        /// the default license type for the compartment will be used.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "license")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LicenseType> License { get; set; }
+        
+        /// <value>
         /// List of monitored resource properties.
         /// 
         /// </value>

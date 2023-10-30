@@ -22,7 +22,7 @@ namespace Oci.DisasterrecoveryService.Requests
         /// <value>
         /// The ID (OCID) of the asynchronous request.
         /// <br/>
-        /// Example: ocid1.workrequest.oc1.phx.exampleocid
+        /// Example: ocid1.workrequest.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required

@@ -77,6 +77,13 @@ namespace Oci.StackmonitoringService.Models
         public string ResourceName { get; set; }
         
         /// <value>
+        /// License edition of the monitored resource.
+        /// </value>
+        [JsonProperty(PropertyName = "license")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<LicenseType> License { get; set; }
+        
+        /// <value>
         /// The OCID of the Compartment
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]

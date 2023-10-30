@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// A list of DR Protection Groups.
+    /// A list of DR protection group summaries.
     /// </summary>
     public class DrProtectionGroupCollection 
     {
         
         /// <value>
-        /// A list of DR Protection Group summary objects.
+        /// A list of DR protection group summaries.
         /// 
         /// </value>
         /// <remarks>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The details of the Oracle Database Cloud Service to be registered as a target database in Data Safe.
+    /// The details of the cloud database to be registered as a target database in Data Safe.
     /// </summary>
     public class DatabaseCloudServiceDetails : DatabaseDetails
     {
@@ -28,7 +28,7 @@ namespace Oci.DatasafeService.Models
         public string VmClusterId { get; set; }
         
         /// <value>
-        /// The OCID of the cloud database system registered as a target database in Data Safe.
+        /// The OCID of the cloud database registered as a target database in Data Safe.
         /// </value>
         [JsonProperty(PropertyName = "dbSystemId")]
         public string DbSystemId { get; set; }

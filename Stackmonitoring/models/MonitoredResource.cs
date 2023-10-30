@@ -136,6 +136,13 @@ namespace Oci.StackmonitoringService.Models
         public System.Nullable<ResourceLifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// License edition of the monitored resource.
+        /// </value>
+        [JsonProperty(PropertyName = "license")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<LicenseType> License { get; set; }
+        
+        /// <value>
         /// List of monitored resource properties.
         /// 
         /// </value>

@@ -145,7 +145,7 @@ namespace Oci.DatasafeService.Models
         public string SensitiveTypeId { get; set; }
         
         /// <value>
-        /// Indicates if data masking is enabled for the masking column.
+        /// Indicates whether data masking is enabled for the masking column.
         /// </value>
         /// <remarks>
         /// Required

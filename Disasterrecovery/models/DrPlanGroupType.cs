@@ -13,10 +13,10 @@ using System.Runtime.Serialization;
 namespace Oci.DisasterrecoveryService.Models
 {
   /// <summary>
-  /// Group types in a DR Plan.
-    /// - USER_DEFINED - DR Plan group whose contents are defined by the user.
-    /// - BUILT_IN - DR Plan group whose contents are pre-defined by the service.
-    /// - BUILT_IN_PRECHECK - DR Plan precheck group whose contents are pre-defined by the service.
+  /// The types of groups in a DR plan.
+    /// - USER_DEFINED - DR plan group whose contents are defined by the user.
+    /// - BUILT_IN - DR plan group whose contents are pre-defined by the service.  These groups cannot be modified by the user.
+    /// - BUILT_IN_PRECHECK - DR plan precheck group whose contents are pre-defined by the service. These groups cannot be modified by the user.
     /// 
   /// </summary>
   public enum DrPlanGroupType {

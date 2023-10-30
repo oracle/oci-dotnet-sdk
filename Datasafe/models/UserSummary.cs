@@ -70,7 +70,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<UserCategoryEnum> UserCategory { get; set; }
                 ///
         /// <value>
-        /// The user account status.
+        /// The status of the user account.
         /// </value>
         ///
         public enum AccountStatusEnum {
@@ -90,7 +90,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// The user account status.
+        /// The status of the user account.
         /// </value>
         [JsonProperty(PropertyName = "accountStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -107,13 +107,13 @@ namespace Oci.DatasafeService.Models
         public string TargetId { get; set; }
         
         /// <value>
-        /// The date and time when the user last logged in, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the user last logged in, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeLastLogin")]
         public System.Nullable<System.DateTime> TimeLastLogin { get; set; }
         
         /// <value>
-        /// The date and time when the user was created in the database, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the user was created in the database, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeUserCreated")]
         public System.Nullable<System.DateTime> TimeUserCreated { get; set; }
@@ -146,7 +146,7 @@ namespace Oci.DatasafeService.Models
         public string UserProfile { get; set; }
         
         /// <value>
-        /// The date and time when the user password was last changed, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the user password was last changed, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timePasswordChanged")]
         public System.Nullable<System.DateTime> TimePasswordChanged { get; set; }

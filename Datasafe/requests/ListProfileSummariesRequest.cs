@@ -208,6 +208,8 @@ namespace Oci.DatasafeService.Requests
             SessionsPerUser,
             [EnumMember(Value = "inactiveAccountTime")]
             InactiveAccountTime,
+            [EnumMember(Value = "passwordLockTime")]
+            PasswordLockTime,
             [EnumMember(Value = "failedLoginAttempts")]
             FailedLoginAttempts
         };

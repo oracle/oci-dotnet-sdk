@@ -214,5 +214,13 @@ namespace Oci.MysqlService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CrashRecoveryStatus> CrashRecovery { get; set; }
         
+        /// <value>
+        /// Whether to enable monitoring via the Database Management service.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "databaseManagement")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DatabaseManagementStatus> DatabaseManagement { get; set; }
+        
     }
 }

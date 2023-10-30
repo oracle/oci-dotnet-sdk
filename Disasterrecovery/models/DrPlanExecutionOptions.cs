@@ -35,7 +35,15 @@ namespace Oci.DisasterrecoveryService.Models
             [EnumMember(Value = "FAILOVER")]
             Failover,
             [EnumMember(Value = "FAILOVER_PRECHECK")]
-            FailoverPrecheck
+            FailoverPrecheck,
+            [EnumMember(Value = "START_DRILL_PRECHECK")]
+            StartDrillPrecheck,
+            [EnumMember(Value = "START_DRILL")]
+            StartDrill,
+            [EnumMember(Value = "STOP_DRILL_PRECHECK")]
+            StopDrillPrecheck,
+            [EnumMember(Value = "STOP_DRILL")]
+            StopDrill
         };
 
         
@@ -62,14 +70,26 @@ namespace Oci.DisasterrecoveryService.Models
             var discriminator = jsonObject["planExecutionType"].Value<string>();
             switch (discriminator)
             {
+                case "STOP_DRILL":
+                    obj = new StopDrillExecutionOptions();
+                    break;
                 case "SWITCHOVER":
                     obj = new SwitchoverExecutionOptions();
                     break;
                 case "FAILOVER_PRECHECK":
                     obj = new FailoverPrecheckExecutionOptions();
                     break;
+                case "START_DRILL":
+                    obj = new StartDrillExecutionOptions();
+                    break;
                 case "SWITCHOVER_PRECHECK":
                     obj = new SwitchoverPrecheckExecutionOptions();
+                    break;
+                case "START_DRILL_PRECHECK":
+                    obj = new StartDrillPrecheckExecutionOptions();
+                    break;
+                case "STOP_DRILL_PRECHECK":
+                    obj = new StopDrillPrecheckExecutionOptions();
                     break;
                 case "FAILOVER":
                     obj = new FailoverExecutionOptions();

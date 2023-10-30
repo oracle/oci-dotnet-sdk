@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// A summary of a work request.
+    /// The summary of a work request.
     /// </summary>
     public class WorkRequestSummary 
     {
@@ -46,9 +46,9 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
-        /// The ID (OCID) of the work request.
+        /// The OCID of the work request.
         /// <br/>
-        /// Example: ocid1.workrequest.oc1.phx.&lt;unique_id&gt;
+        /// Example: ocid1.workrequest.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// and those resources are not in the same compartment, it is up to the service team to pick the primary
         /// resource whose compartment should be used.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..&lt;unique_id&gt;
+        /// Example: ocid1.compartment.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required

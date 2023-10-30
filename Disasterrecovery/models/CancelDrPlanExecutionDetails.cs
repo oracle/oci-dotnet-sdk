@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The details for cancelling a DR Plan Execution.
+    /// The details for cancelling a DR plan execution.
     /// 
     /// </summary>
     public class CancelDrPlanExecutionDetails : DrPlanExecutionControlDetails

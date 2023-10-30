@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Properties for a member in a DR Protection Group.
+    /// The properties of a member in a DR protection group.
     /// </summary>
     [JsonConverter(typeof(DrProtectionGroupMemberModelConverter))]
     public class DrProtectionGroupMember 
@@ -25,7 +25,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the member.
         /// <br/>
-        /// Example: ocid1.instance.oc1.phx.&lt;unique_id&gt;
+        /// Example: ocid1.instance.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -61,11 +61,20 @@ namespace Oci.DisasterrecoveryService.Models
                 case "VOLUME_GROUP":
                     obj = new DrProtectionGroupMemberVolumeGroup();
                     break;
+                case "NETWORK_LOAD_BALANCER":
+                    obj = new DrProtectionGroupMemberNetworkLoadBalancer();
+                    break;
+                case "FILE_SYSTEM":
+                    obj = new DrProtectionGroupMemberFileSystem();
+                    break;
                 case "COMPUTE_INSTANCE_MOVABLE":
                     obj = new DrProtectionGroupMemberComputeInstanceMovable();
                     break;
                 case "AUTONOMOUS_DATABASE":
                     obj = new DrProtectionGroupMemberAutonomousDatabase();
+                    break;
+                case "LOAD_BALANCER":
+                    obj = new DrProtectionGroupMemberLoadBalancer();
                     break;
                 case "COMPUTE_INSTANCE":
                     obj = new DrProtectionGroupMemberComputeInstance();

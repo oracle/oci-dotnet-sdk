@@ -58,7 +58,7 @@ namespace Oci.DatasafeService.Models
         public string ProfileName { get; set; }
         
         /// <value>
-        /// The number of users having a given profile.
+        /// The number of users that have a given profile.
         /// </value>
         [JsonProperty(PropertyName = "userCount")]
         public System.Nullable<int> UserCount { get; set; }

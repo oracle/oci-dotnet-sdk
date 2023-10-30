@@ -118,6 +118,12 @@ namespace Oci.StackmonitoringService.Models
                 case "AUTO_PROMOTE":
                     obj = new AutoPromoteConfigSummary();
                     break;
+                case "LICENSE_AUTO_ASSIGN":
+                    obj = new LicenseAutoAssignConfigSummary();
+                    break;
+                case "LICENSE_ENTERPRISE_EXTENSIBILITY":
+                    obj = new LicenseEnterpriseExtensibilityConfigSummary();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

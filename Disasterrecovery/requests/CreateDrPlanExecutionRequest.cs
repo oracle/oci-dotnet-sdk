@@ -20,7 +20,7 @@ namespace Oci.DisasterrecoveryService.Requests
     {
         
         /// <value>
-        /// Details for the new DR Plan Execution.
+        /// Details for creating the DR plan execution.
         /// </value>
         /// <remarks>
         /// Required

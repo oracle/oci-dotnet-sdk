@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The role details for a DR Protection Group.
+    /// The details for updating the role of a DR protection group.
     /// </summary>
     public class UpdateDrProtectionGroupRoleDetails 
     {
         
         /// <value>
-        /// The role of the DR Protection Group.
+        /// The new role of the DR protection group.
         /// 
         /// </value>
         /// <remarks>

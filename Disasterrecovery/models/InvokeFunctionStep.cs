@@ -25,7 +25,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of function to be invoked.
         /// <br/>
-        /// Example: ocid1.fnfunc.oc1.iad.&lt;unique_id&gt;
+        /// Example: ocid1.fnfunc.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required

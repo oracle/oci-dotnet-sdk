@@ -24,6 +24,10 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// The OCID of the SDM masking policy difference.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SdmMaskingPolicyDifferenceId is required.")]
         [JsonProperty(PropertyName = "sdmMaskingPolicyDifferenceId")]
         public string SdmMaskingPolicyDifferenceId { get; set; }
         

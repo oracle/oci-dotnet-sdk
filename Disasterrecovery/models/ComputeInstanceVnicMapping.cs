@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// A compute instance's source and destination VNIC mapping.
+    /// Deprecated. Source VNIC to destination subnet mapping for a compute instance.
+    /// 
     /// </summary>
     public class ComputeInstanceVnicMapping 
     {
@@ -24,7 +25,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the VNIC.
         /// <br/>
-        /// Example: ocid1.vnic.oc1.phx.exampleocid
+        /// Example: ocid1.vnic.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -34,9 +35,9 @@ namespace Oci.DisasterrecoveryService.Models
         public string SourceVnicId { get; set; }
         
         /// <value>
-        /// The OCID of the destination (remote) subnet to which this VNIC should connect.
+        /// The OCID of the destination subnet to which the source VNIC should connect.
         /// <br/>
-        /// Example: ocid1.subnet.oc1.iad.exampleocid
+        /// Example: ocid1.subnet.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -46,9 +47,10 @@ namespace Oci.DisasterrecoveryService.Models
         public string DestinationSubnetId { get; set; }
         
         /// <value>
-        /// A list of destination region's network security group (NSG) OCIDs which this VNIC should use.
+        /// A list of OCIDs of network security groups (NSG) in the destination region which should be assigned to
+        /// the source VNIC.
         /// <br/>
-        /// Example: [ ocid1.networksecuritygroup.oc1.iad.exampleocid1, ocid1.networksecuritygroup.oc1.iad.exampleocid2 ]
+        /// Example: [ ocid1.networksecuritygroup.oc1..uniqueID1, ocid1.networksecuritygroup.oc1..uniqueID2 ]
         /// </value>
         [JsonProperty(PropertyName = "destinationNsgIdList")]
         public System.Collections.Generic.List<string> DestinationNsgIdList { get; set; }

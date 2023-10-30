@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Properties for a Volume Group member of a DR Protection Group.
+    /// The properties for a volume group member of a DR protection group.
     /// 
     /// </summary>
     public class DrProtectionGroupMemberVolumeGroup : DrProtectionGroupMember

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details of a schema fetched from the database.
+    /// The details of a schema fetched from the database.
     /// </summary>
     public class SchemaSummary 
     {

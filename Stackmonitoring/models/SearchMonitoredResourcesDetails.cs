@@ -90,6 +90,13 @@ namespace Oci.StackmonitoringService.Models
         public System.Nullable<ResourceLifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// License edition of the monitored resource.
+        /// </value>
+        [JsonProperty(PropertyName = "license")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LicenseType> License { get; set; }
+        
+        /// <value>
         /// Search for resources that were created within a specific date range,
         /// using this parameter to specify the earliest creation date for the
         /// returned list (inclusive). Specifying this parameter without the

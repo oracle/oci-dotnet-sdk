@@ -81,6 +81,26 @@ namespace Oci.MysqlService.Requests
         
         ///
         /// <value>
+        /// Filter DB Systems by their Database Management configuration.
+        /// 
+        /// </value>
+        ///
+        public enum DatabaseManagementEnum {
+            [EnumMember(Value = "ENABLED")]
+            Enabled,
+            [EnumMember(Value = "DISABLED")]
+            Disabled
+        };
+
+        /// <value>
+        /// Filter DB Systems by their Database Management configuration.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseManagement", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<DatabaseManagementEnum> DatabaseManagement { get; set; }
+        
+        ///
+        /// <value>
         /// The field to sort by. Only one sort order may be provided. Time fields are default ordered as descending. Display name is default ordered as ascending.
         /// 
         /// </value>

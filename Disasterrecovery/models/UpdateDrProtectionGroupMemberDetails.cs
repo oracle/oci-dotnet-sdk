@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Update properties for a member in a DR Protection Group.
+    /// Update properties for a member in a DR protection group.
     /// </summary>
     [JsonConverter(typeof(UpdateDrProtectionGroupMemberDetailsModelConverter))]
     public class UpdateDrProtectionGroupMemberDetails 
@@ -25,7 +25,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the member.
         /// <br/>
-        /// Example: ocid1.database.oc1.phx.&lt;unique_id&gt;
+        /// Example: ocid1.database.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -60,14 +60,23 @@ namespace Oci.DisasterrecoveryService.Models
                 case "COMPUTE_INSTANCE":
                     obj = new UpdateDrProtectionGroupMemberComputeInstanceDetails();
                     break;
+                case "NETWORK_LOAD_BALANCER":
+                    obj = new UpdateDrProtectionGroupMemberNetworkLoadBalancerDetails();
+                    break;
                 case "AUTONOMOUS_DATABASE":
                     obj = new UpdateDrProtectionGroupMemberAutonomousDatabaseDetails();
+                    break;
+                case "FILE_SYSTEM":
+                    obj = new UpdateDrProtectionGroupMemberFileSystemDetails();
                     break;
                 case "VOLUME_GROUP":
                     obj = new UpdateDrProtectionGroupMemberVolumeGroupDetails();
                     break;
                 case "COMPUTE_INSTANCE_NON_MOVABLE":
                     obj = new UpdateDrProtectionGroupMemberComputeInstanceNonMovableDetails();
+                    break;
+                case "LOAD_BALANCER":
+                    obj = new UpdateDrProtectionGroupMemberLoadBalancerDetails();
                     break;
                 case "COMPUTE_INSTANCE_MOVABLE":
                     obj = new UpdateDrProtectionGroupMemberComputeInstanceMovableDetails();

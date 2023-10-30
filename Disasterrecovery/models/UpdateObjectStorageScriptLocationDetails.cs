@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Information about updating an Object Storage script location for a user-defined step in a DR Plan.
+    /// The details for updating an object storage script location for a user-defined step in a DR plan.
     /// </summary>
     public class UpdateObjectStorageScriptLocationDetails 
     {
         
         /// <value>
-        /// The namespace in Object Storage (Note - this is usually the tenancy name).
+        /// The namespace in object storage (Note - this is usually the tenancy name).
         /// <br/>
         /// Example: myocitenancy
         /// </value>
@@ -34,7 +34,7 @@ namespace Oci.DisasterrecoveryService.Models
         public string Namespace { get; set; }
         
         /// <value>
-        /// The bucket name inside the Object Storage namespace.
+        /// The bucket name inside the object storage namespace.
         /// <br/>
         /// Example: custom_dr_scripts
         /// </value>
@@ -46,7 +46,7 @@ namespace Oci.DisasterrecoveryService.Models
         public string Bucket { get; set; }
         
         /// <value>
-        /// The object name inside the Object Storage bucket.
+        /// The object name inside the object storage bucket.
         /// <br/>
         /// Example: validate_app_start.sh
         /// </value>

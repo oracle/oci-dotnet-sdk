@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Create properties for an Autonomous Database member.
+    /// Create properties for an Autonomous Database Serverless member.
     /// </summary>
     public class CreateDrProtectionGroupMemberAutonomousDatabaseDetails : CreateDrProtectionGroupMemberDetails
     {

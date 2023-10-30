@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The details used to create a new Data Safe private endpoint.
+    /// The details used to create the new Data Safe private endpoint.
     /// </summary>
     public class CreateDataSafePrivateEndpointDetails 
     {

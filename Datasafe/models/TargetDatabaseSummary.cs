@@ -80,7 +80,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<DatabaseType> DatabaseType { get; set; }
         
         /// <value>
-        /// The OCIDs of associated resources like Database, Data Safe private endpoint etc.
+        /// The OCIDs of associated resources like database, Data Safe private endpoint etc.
         /// </value>
         [JsonProperty(PropertyName = "associatedResourceIds")]
         public System.Collections.Generic.List<string> AssociatedResourceIds { get; set; }

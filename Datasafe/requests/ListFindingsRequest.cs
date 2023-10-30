@@ -62,7 +62,7 @@ namespace Oci.DatasafeService.Requests
         public System.Nullable<SeverityEnum> Severity { get; set; }
         
         /// <value>
-        /// An optional filter to return only findings containing the specified reference.
+        /// An optional filter to return only findings that match the specified reference.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "references")]
         public System.Nullable<SecurityAssessmentReferences> References { get; set; }
@@ -114,7 +114,9 @@ namespace Oci.DatasafeService.Requests
         public System.Nullable<AccessLevelEnum> AccessLevel { get; set; }
         
         /// <value>
-        /// Each finding has a key. This key is same for the finding across targets
+        /// Each finding in security assessment has an associated key (think of key as a finding's name).
+        /// For a given finding, the key will be the same across targets. The user can use these keys to filter the findings.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "findingKey")]
         public string FindingKey { get; set; }

@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The details for creating a DR Protection Group.
+    /// The details for creating a DR protection group.
     /// </summary>
     public class CreateDrProtectionGroupDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment in which to create the DR Protection Group.
+        /// The OCID of the compartment in which to create the DR protection group.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..&lt;unique_id&gt;
+        /// Example: ocid1.compartment.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -34,9 +34,9 @@ namespace Oci.DisasterrecoveryService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The display name of the DR Protection Group.
+        /// The display name of the DR protection group.
         /// <br/>
-        /// Example: EBS PHX DRPG
+        /// Example: EBS PHX Group
         /// </value>
         /// <remarks>
         /// Required
@@ -56,7 +56,7 @@ namespace Oci.DisasterrecoveryService.Models
         public AssociateDrProtectionGroupDetails Association { get; set; }
         
         /// <value>
-        /// A list of DR Protection Group members.
+        /// A list of DR protection group members.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "members")]
@@ -64,6 +64,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -71,6 +72,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]

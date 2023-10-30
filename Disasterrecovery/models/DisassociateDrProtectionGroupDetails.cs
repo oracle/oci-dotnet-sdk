@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The details for disassociating this DR Protection Group from a peer (remote) DR Protection Group.
+    /// The details for disassociating this DR protection group from a peer DR protection group.
     /// </summary>
     [JsonConverter(typeof(DisassociateDrProtectionGroupDetailsModelConverter))]
     public class DisassociateDrProtectionGroupDetails 
     {
                 ///
         /// <value>
-        /// The default type (required for forward compatibility).
+        /// The default type.
         /// 
         /// </value>
         ///

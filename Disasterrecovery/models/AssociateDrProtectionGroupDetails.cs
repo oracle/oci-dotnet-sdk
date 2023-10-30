@@ -16,21 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The details for associating this DR Protection Group with a peer (remote) DR Protection Group.
+    /// The details for associating a DR protection group with a peer DR protection group.
     /// </summary>
     public class AssociateDrProtectionGroupDetails 
     {
         
         /// <value>
-        /// The OCID of the peer (remote) DR Protection Group.
+        /// The OCID of the peer DR protection group.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.iad.&lt;unique_id&gt;
+        /// Example: ocid1.drprotectiongroup.oc1..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "peerId")]
         public string PeerId { get; set; }
         
         /// <value>
-        /// The region of the peer (remote) DR Protection Group.
+        /// The region of the peer DR protection group.
         /// <br/>
         /// Example: us-ashburn-1
         /// </value>
@@ -38,8 +38,9 @@ namespace Oci.DisasterrecoveryService.Models
         public string PeerRegion { get; set; }
         
         /// <value>
-        /// The role of this DR Protection Group.
-        /// 
+        /// The role of the DR protection group.
+        /// <br/>
+        /// Example: STANDBY
         /// </value>
         /// <remarks>
         /// Required

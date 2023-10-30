@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-using Oci.Common.Alloy;
+using Oci.Common.DeveloperToolConfigurations;
 
 namespace Oci.Common
 {
@@ -20,7 +20,7 @@ namespace Oci.Common
     {
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private static readonly Dictionary<string, Realm> KNOWN_REALMS = new Dictionary<string, Realm>();
-        private static readonly Dictionary<string, Realm> ALLOY_REALMS = new Dictionary<string, Realm>();
+        private static readonly Dictionary<string, Realm> DEVELOPER_TOOL_CONFIG_REALMS = new Dictionary<string, Realm>();
 
         /// <summary>The id of a realm.</summary>
         public string RealmId { get; }
@@ -29,7 +29,7 @@ namespace Oci.Common
 
         public static readonly string OCI_DEFAULT_REALM = "OCI_DEFAULT_REALM";
 
-        private Realm(string realmId, string secondlevelDomain, bool isAlloyRealm = false)
+        private Realm(string realmId, string secondlevelDomain, bool isDeveloperToolConfigRealm = false)
         {
             if (realmId == null || secondlevelDomain == null)
             {
@@ -38,15 +38,15 @@ namespace Oci.Common
 
             RealmId = realmId;
             SecondLevelDomain = secondlevelDomain;
-            AddRealm(this, isAlloyRealm);
+            AddRealm(this, isDeveloperToolConfigRealm);
         }
 
         [MethodImpl(MethodImplOptions.Synchronized)]
-        private void AddRealm(Realm realm, bool isAlloyRealm = false)
+        private void AddRealm(Realm realm, bool isDeveloperToolConfigRealm = false)
         {
-            if (isAlloyRealm)
+            if (isDeveloperToolConfigRealm)
             {
-                ALLOY_REALMS.Add(realm.RealmId, realm);
+                DEVELOPER_TOOL_CONFIG_REALMS.Add(realm.RealmId, realm);
             }
             else
             {
@@ -58,15 +58,15 @@ namespace Oci.Common
         [MethodImpl(MethodImplOptions.Synchronized)]
         public static Realm[] Values()
         {
-            if (AlloyConfiguration.UseOnlyAlloyRegions())
+            if (DeveloperToolConfiguration.UseOnlyDeveloperToolConfigurationRegions())
             {
-                Realm[] alloy_realms = new Realm[ALLOY_REALMS.Count];
-                ALLOY_REALMS.Values.CopyTo(alloy_realms, 0);
-                return alloy_realms;
+                Realm[] developerToolConfigRealms = new Realm[DEVELOPER_TOOL_CONFIG_REALMS.Count];
+                DEVELOPER_TOOL_CONFIG_REALMS.Values.CopyTo(developerToolConfigRealms, 0);
+                return developerToolConfigRealms;
             }
-            Realm[] realms = new Realm[KNOWN_REALMS.Count + ALLOY_REALMS.Count];
+            Realm[] realms = new Realm[KNOWN_REALMS.Count + DEVELOPER_TOOL_CONFIG_REALMS.Count];
             KNOWN_REALMS.Values.CopyTo(realms, 0);
-            ALLOY_REALMS.Values.CopyTo(realms, KNOWN_REALMS.Count);
+            DEVELOPER_TOOL_CONFIG_REALMS.Values.CopyTo(realms, KNOWN_REALMS.Count);
             return realms;
         }
 
@@ -84,23 +84,23 @@ namespace Oci.Common
             {
                 throw new ArgumentNullException("Realm Id cannot be null or empty.");
             }
-            if (AlloyConfiguration.UseOnlyAlloyRegions())
+            if (DeveloperToolConfiguration.UseOnlyDeveloperToolConfigurationRegions())
             {
-                if (!ALLOY_REALMS.TryGetValue(realmId, out Realm alloyRealm))
+                if (!DEVELOPER_TOOL_CONFIG_REALMS.TryGetValue(realmId, out Realm developerToolConfigRealm))
                 {
-                    throw new ArgumentNullException($"Unknown Alloy realm with Id {realmId}.");
+                    throw new ArgumentNullException($"Unknown DeveloperToolConfig realm with Id {realmId}.");
                 }
-                return alloyRealm;
+                return developerToolConfigRealm;
             }
             else
             {
                 if (!KNOWN_REALMS.TryGetValue(realmId, out Realm realm))
                 {
-                    if (!ALLOY_REALMS.TryGetValue(realmId, out Realm alloyRealm))
+                    if (!DEVELOPER_TOOL_CONFIG_REALMS.TryGetValue(realmId, out Realm developerToolConfigRealm))
                     {
                         throw new ArgumentNullException($"Unknown realm with Id {realmId}.");
                     }
-                    return alloyRealm;
+                    return developerToolConfigRealm;
                 }
                 return realm;
             }
@@ -109,10 +109,10 @@ namespace Oci.Common
         /// <summary>Register a new Realm. Allow the SDK to be forward compatible with unreleased realms.</summary>
         /// <param name="realmId">The realm id.</param>
         /// <param name="secondlevelDomain">The second level domain of the realm.</param>
-        /// <param name="isAlloyRealm">The bool value denoting if the Realm is an Alloy Realm or not. Set to false by default.</param>
+        /// <param name="isDeveloperToolConfigRealm">The bool value denoting if the Realm is an DeveloperToolConfig Realm or not. Set to false by default.</param>
         /// <returns>The registered Realm (or existing one if found).</returns>
         [MethodImpl(MethodImplOptions.Synchronized)]
-        public static Realm Register(string realmId, string secondlevelDomain, bool isAlloyRealm = false)
+        public static Realm Register(string realmId, string secondlevelDomain, bool isDeveloperToolConfigRealm = false)
         {
             // Check if this realm is already registered. If found, return the existing realm.
             foreach (var realm in Values())
@@ -127,13 +127,13 @@ namespace Oci.Common
                 }
             }
             // If the realm is not yet registered, call constructor.
-            return new Realm(realmId, secondlevelDomain, isAlloyRealm);
+            return new Realm(realmId, secondlevelDomain, isDeveloperToolConfigRealm);
         }
 
         [MethodImpl(MethodImplOptions.Synchronized)]
-        public static void ResetAlloyConfig()
+        public static void ResetDeveloperToolConfig()
         {
-            ALLOY_REALMS.Clear();
+            DEVELOPER_TOOL_CONFIG_REALMS.Clear();
         }
     }
 }

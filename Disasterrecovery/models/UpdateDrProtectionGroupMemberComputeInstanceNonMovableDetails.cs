@@ -16,10 +16,32 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Update properties for a Non-Movable Compute Instance member.
+    /// Update properties for a non-movable compute instance member.
     /// </summary>
     public class UpdateDrProtectionGroupMemberComputeInstanceNonMovableDetails : UpdateDrProtectionGroupMemberDetails
     {
+        
+        /// <value>
+        /// A flag indicating whether the non-movable compute instance should be started and stopped during DR operations.
+        /// *Prechecks cannot be executed on stopped instances that are configured to be started.*
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isStartStopEnabled")]
+        public System.Nullable<bool> IsStartStopEnabled { get; set; }
+        
+        /// <value>
+        /// A list of operations performed on file systems used by the compute instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "fileSystemOperations")]
+        public System.Collections.Generic.List<UpdateComputeInstanceNonMovableFileSystemOperationDetails> FileSystemOperations { get; set; }
+        
+        /// <value>
+        /// A list of operations performed on block volumes used by the compute instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "blockVolumeOperations")]
+        public System.Collections.Generic.List<UpdateComputeInstanceNonMovableBlockVolumeOperationDetails> BlockVolumeOperations { get; set; }
         
         [JsonProperty(PropertyName = "memberType")]
         private readonly string memberType = "COMPUTE_INSTANCE_NON_MOVABLE";

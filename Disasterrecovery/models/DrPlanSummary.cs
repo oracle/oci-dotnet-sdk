@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Summary information about a DR Plan Execution.
+    /// The summary of a DR plan.
     /// </summary>
     public class DrPlanSummary 
     {
         
         /// <value>
-        /// The OCID of this DR Plan.
+        /// The OCID of the DR plan.
         /// <br/>
-        /// Example: ocid1.drplan.oc1.iad.&lt;unique_id&gt;
+        /// Example: ocid1.drplan.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -34,9 +34,9 @@ namespace Oci.DisasterrecoveryService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the DR Plan.
+        /// The OCID of the compartment containing the DR plan.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..&lt;unique_id&gt;
+        /// Example: ocid1.compartment.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -46,7 +46,7 @@ namespace Oci.DisasterrecoveryService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The display name of this DR Plan.
+        /// The display name of the DR plan.
         /// <br/>
         /// Example: EBS Switchover PHX to IAD
         /// </value>
@@ -58,8 +58,9 @@ namespace Oci.DisasterrecoveryService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The type of this DR Plan.
-        /// 
+        /// The type of the DR plan.
+        /// <br/>
+        /// Example: SWITCHOVER
         /// </value>
         /// <remarks>
         /// Required
@@ -70,9 +71,9 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanType> Type { get; set; }
         
         /// <value>
-        /// The OCID of the DR Protection Group with which this DR Plan is associated.
+        /// The OCID of the DR protection group to which this DR plan belongs.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.iad.&lt;unique_id&gt;
+        /// Example: ocid1.drprotectiongroup.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -82,10 +83,10 @@ namespace Oci.DisasterrecoveryService.Models
         public string DrProtectionGroupId { get; set; }
         
         /// <value>
-        /// The OCID of peer (remote) DR Protection Group associated with this plan execution's
-        /// DR Protection Group.
+        /// The OCID of the peer DR protection group associated with this plan's
+        /// DR protection group.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.phx.&lt;unique_id&gt;
+        /// Example: ocid1.drprotectiongroup.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -95,9 +96,10 @@ namespace Oci.DisasterrecoveryService.Models
         public string PeerDrProtectionGroupId { get; set; }
         
         /// <value>
-        /// The region of the peer (remote) DR Protection Group.
+        /// The region of the peer DR protection group associated with this plan's
+        /// DR protection group.
         /// <br/>
-        /// Example: us-phoenix-1
+        /// Example: us-ashburn-1
         /// </value>
         /// <remarks>
         /// Required
@@ -107,7 +109,7 @@ namespace Oci.DisasterrecoveryService.Models
         public string PeerRegion { get; set; }
         
         /// <value>
-        /// The date and time the DR Plan was created. An RFC3339 formatted datetime string.
+        /// The date and time the DR plan was created. An RFC3339 formatted datetime string.
         /// <br/>
         /// Example: 2019-03-29T09:36:42Z
         /// </value>
@@ -119,7 +121,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the DR Plan was updated. An RFC3339 formatted datetime string.
+        /// The date and time the DR plan was updated. An RFC3339 formatted datetime string.
         /// <br/>
         /// Example: 2019-03-29T09:36:42Z
         /// </value>
@@ -131,8 +133,9 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the DR Plan.
-        /// 
+        /// The current state of the DR plan.
+        /// <br/>
+        /// Example: ACTIVE
         /// </value>
         /// <remarks>
         /// Required
@@ -143,7 +146,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// A message describing the DR Plan's current state in more detail.
+        /// A message describing the DR plan's current state in more detail.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifeCycleDetails")]
@@ -151,6 +154,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -158,6 +162,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
@@ -165,6 +170,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Usage of system tag keys. These predefined keys are scoped to namespaces.
+        /// <br/>
         /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
