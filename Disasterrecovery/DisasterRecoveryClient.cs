@@ -13,7 +13,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Oci.Common;
-using Oci.Common.Alloy;
+using Oci.Common.DeveloperToolConfigurations;
 using Oci.Common.Model;
 using Oci.Common.Auth;
 using Oci.Common.Retry;
@@ -42,9 +42,9 @@ namespace Oci.DisasterrecoveryService
         public DisasterRecoveryClient(IBasicAuthenticationDetailsProvider authenticationDetailsProvider, ClientConfiguration clientConfiguration = null, string endpoint = null)
             : base(authenticationDetailsProvider, clientConfiguration)
         {
-            if (!AlloyConfiguration.IsServiceEnabled("disasterrecovery"))
+            if (!DeveloperToolConfiguration.IsServiceEnabled("disasterrecovery"))
             {
-                throw new ArgumentException("The Alloy configuration disabled this service, this behavior is controlled by AlloyConfiguration.OciEnabledServiceSet variable. Please check if your local alloy_config file has configured the service you're targeting or contact the cloud provider on the availability of this service");
+                throw new ArgumentException("The DeveloperToolConfiguration disabled this service, this behavior is controlled by DeveloperToolConfiguration.OciEnabledServiceSet variable. Please check if your local DeveloperToolConfiguration file has configured the service you're targeting or contact the cloud provider on the availability of this service");
             }
             service = new Service
             {
@@ -73,8 +73,8 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Create an association between the DR Protection Group identified by *drProtectionGroupId* and
-        /// another DR Protection Group in a different region.
+        /// Create an association between the DR protection group identified by *drProtectionGroupId* and
+        /// another DR protection group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -131,7 +131,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Cancel the DR Plan Execution indentified by *drPlanExecutionId*.
+        /// Cancel the DR plan execution identified by *drPlanExecutionId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -243,7 +243,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Move the DR Protection Group identified by *drProtectionGroupId* to a different compartment.
+        /// Move the DR protection group identified by *drProtectionGroupId* to a different compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -299,7 +299,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Creates a new DR Plan of the specified DR Plan type.
+        /// Create a DR plan of the specified DR plan type.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -355,7 +355,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Execute a DR Plan for a DR Protection Group.
+        /// Execute a DR plan for a DR protection group.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -411,7 +411,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Create a new DR Protection Group.
+        /// Create a DR protection group.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -467,7 +467,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Delete the DR Plan identified by *drPlanId*.
+        /// Delete the DR plan identified by *drPlanId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -523,7 +523,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Delete the DR Plan Execution identified by *drPlanExecutionId*.
+        /// Delete the DR plan execution identified by *drPlanExecutionId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -579,7 +579,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Delete the DR Protection Group identified by *drProtectionGroupId*.
+        /// Delete the DR protection group identified by *drProtectionGroupId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -635,8 +635,8 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Delete the association between the DR Protection Group identified by *drProtectionGroupId*.
-        /// and its peer DR Protection Group.
+        /// Delete the association between the DR protection group identified by *drProtectionGroupId*.
+        /// and its peer DR protection group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -693,7 +693,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Get details for the DR Plan identified by *drPlanId*.
+        /// Get details for the DR plan identified by *drPlanId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -749,7 +749,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Get details for the DR Plan Execution identified by *drPlanExecutionId*.
+        /// Get details for the DR plan execution identified by *drPlanExecutionId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -805,7 +805,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Get the DR Protection Group identified by *drProtectionGroupId*.
+        /// Get the DR protection group identified by *drProtectionGroupId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -917,7 +917,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Ignore failed group or step in DR Plan Execution identified by *drPlanExecutionId* and resume execution.
+        /// Ignore the failed group or step in DR plan execution identified by *drPlanExecutionId* and resume execution.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -973,7 +973,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Get a summary list of all DR Plan Executions for a DR Protection Group.
+        /// Get a summary list of all DR plan executions for a DR protection group.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1029,7 +1029,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Gets a summary list of all DR Plans for a DR Protection Group.
+        /// Get a summary list of all DR plans for a DR protection group.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1085,7 +1085,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Gets a summary list of all DR Protection Groups in a compartment.
+        /// Get a summary list of all DR protection groups in a compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1141,7 +1141,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Return a (paginated) list of errors for a given work request.
+        /// Get a list of work request errors for the work request identified by *workRequestId*.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1198,7 +1198,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Return a (paginated) list of logs for the work request identified by *workRequestId*.
+        /// Get a list of logs for the work request identified by *workRequestId*.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1312,7 +1312,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Pause the DR Plan Execution identified by *drPlanExecutionId*.
+        /// Pause the DR plan execution identified by *drPlanExecutionId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1368,7 +1368,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Resume the DR Plan Execution identified by *drPlanExecutionId*.
+        /// Resume the DR plan execution identified by *drPlanExecutionId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1424,7 +1424,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Retry failed group or step in DR Plan Execution identified by *drPlanExecutionId* and resume execution.
+        /// Retry the failed group or step in DR plan execution identified by *drPlanExecutionId* and resume execution.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1480,7 +1480,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Update the DR Plan identified by *drPlanId*.
+        /// Update the DR plan identified by *drPlanId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1536,7 +1536,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Update the DR Plan Execution identified by *drPlanExecutionId*.
+        /// Update the DR plan execution identified by *drPlanExecutionId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1592,7 +1592,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Update the DR Protection Group identified by *drProtectionGroupId*.
+        /// Update the DR protection group identified by *drProtectionGroupId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1648,7 +1648,7 @@ namespace Oci.DisasterrecoveryService
         }
 
         /// <summary>
-        /// Update the role of the DR Protection Group identified by *drProtectionGroupId*.
+        /// Update the role of the DR protection group identified by *drProtectionGroupId*.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

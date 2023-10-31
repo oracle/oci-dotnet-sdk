@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The details for updating a DR Plan.
+    /// The details for updating a DR plan.
     /// </summary>
     public class UpdateDrPlanDetails 
     {
         
         /// <value>
-        /// The display name of the DR Plan being updated.
+        /// The display name of the DR plan being updated.
         /// <br/>
         /// Example: EBS Switchover PHX to IAD
         /// </value>
@@ -30,7 +30,7 @@ namespace Oci.DisasterrecoveryService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// An ordered list of plan groups in a DR Plan.
+        /// An ordered list of groups in a DR plan.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "planGroups")]
@@ -38,6 +38,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -45,6 +46,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]

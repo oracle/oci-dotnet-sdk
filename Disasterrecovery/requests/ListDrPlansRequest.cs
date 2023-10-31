@@ -20,9 +20,9 @@ namespace Oci.DisasterrecoveryService.Requests
     {
         
         /// <value>
-        /// The OCID of the DR Protection Group. Mandatory query param.
+        /// The OCID of the DR protection group. Mandatory query param.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.phx.exampleocid
+        /// Example: ocid1.drprotectiongroup.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -32,30 +32,30 @@ namespace Oci.DisasterrecoveryService.Requests
         public string DrProtectionGroupId { get; set; }
         
         /// <value>
-        /// A filter to return only DR Plans that match the given lifecycleState.
+        /// A filter to return only DR plans that match the given lifecycle state.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<DrPlanLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// The OCID of the DR Plan.
+        /// The OCID of the DR plan.
         /// <br/>
-        /// Example: ocid1.drplan.oc1.iad.exampleocid
+        /// Example: ocid1.drplan.oc1..uniqueID
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "drPlanId")]
         public string DrPlanId { get; set; }
         
         /// <value>
-        /// The DR Plan type.
+        /// The DR plan type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "drPlanType")]
         public System.Nullable<DrPlanType> DrPlanType { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the entire display name given.
+        /// A filter to return only resources that match the given display name.
         /// <br/>
-        /// Example: MY UNIQUE DISPLAY NAME
+        /// Example: MyResourceDisplayName
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
@@ -96,7 +96,7 @@ namespace Oci.DisasterrecoveryService.Requests
         /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending.
         /// Default order for displayName is ascending. If no value is specified timeCreated is default.
         /// <br/>
-        /// Example: displayName
+        /// Example: MyResourceDisplayName
         /// </value>
         ///
         public enum SortByEnum {
@@ -110,7 +110,7 @@ namespace Oci.DisasterrecoveryService.Requests
         /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending.
         /// Default order for displayName is ascending. If no value is specified timeCreated is default.
         /// <br/>
-        /// Example: displayName
+        /// Example: MyResourceDisplayName
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }

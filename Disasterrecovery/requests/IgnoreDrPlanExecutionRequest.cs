@@ -20,7 +20,7 @@ namespace Oci.DisasterrecoveryService.Requests
     {
         
         /// <value>
-        /// Details of the failed group or step to ignore.
+        /// Details for ignoring the failed group or step and resuming execution.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,9 +30,9 @@ namespace Oci.DisasterrecoveryService.Requests
         public IgnoreDrPlanExecutionDetails IgnoreDrPlanExecutionDetails { get; set; }
         
         /// <value>
-        /// The OCID of the DR Plan Execution.
+        /// The OCID of the DR plan execution.
         /// <br/>
-        /// Example: ocid1.drplanexecution.oc1.iad.exampleocid
+        /// Example: ocid1.drplanexecution.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required

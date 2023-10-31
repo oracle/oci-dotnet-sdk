@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Summary information about a group execution in a DR Plan Execution.
+    /// The details of a group execution in a DR plan execution.
     /// </summary>
     public class DrPlanGroupExecution 
     {
@@ -24,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The unique id of the group. Must not be modified by user.
         /// <br/>
-        /// Example: sgid1.group..&lt;unique_id&gt;
+        /// Example: sgid1.group..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -34,8 +34,9 @@ namespace Oci.DisasterrecoveryService.Models
         public string GroupId { get; set; }
         
         /// <value>
-        /// The plan group type.
-        /// 
+        /// The group type.
+        /// <br/>
+        /// Example: BUILT_IN
         /// </value>
         /// <remarks>
         /// Required
@@ -46,7 +47,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanGroupType> Type { get; set; }
         
         /// <value>
-        /// The display name of group that was executed.
+        /// The display name of the group execution.
         /// <br/>
         /// Example: DATABASE_SWITCHOVER
         /// </value>
@@ -70,15 +71,15 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanGroupExecutionStatus> Status { get; set; }
         
         /// <value>
-        /// Additional details about the group execution status.
+        /// Additional details on the group execution status.
         /// <br/>
-        /// Example: A total of three steps failed in the group
+        /// Example: A total of [3] steps failed in the group
         /// </value>
         [JsonProperty(PropertyName = "statusDetails")]
         public string StatusDetails { get; set; }
         
         /// <value>
-        /// The time at which group execution began. An RFC3339 formatted datetime string.
+        /// The time when group execution began. An RFC3339 formatted datetime string.
         /// <br/>
         /// Example: 2019-03-29T09:36:42Z
         /// </value>
@@ -86,7 +87,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The time at which group execution ended. An RFC3339 formatted datetime string.
+        /// The time when group execution ended. An RFC3339 formatted datetime string.
         /// <br/>
         /// Example: 2019-03-29T09:36:42Z
         /// </value>
@@ -102,7 +103,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<int> ExecutionDurationInSec { get; set; }
         
         /// <value>
-        /// A list of details of each step executed in this group.
+        /// A list of step executions in the group.
         /// 
         /// </value>
         /// <remarks>

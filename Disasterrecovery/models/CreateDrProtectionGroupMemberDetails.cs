@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Create properties for a member in a DR Protection Group.
+    /// Create properties for a member in a DR protection group.
     /// </summary>
     [JsonConverter(typeof(CreateDrProtectionGroupMemberDetailsModelConverter))]
     public class CreateDrProtectionGroupMemberDetails 
@@ -25,7 +25,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the member.
         /// <br/>
-        /// Example: ocid1.instance.oc1.phx.&lt;unique_id&gt;
+        /// Example: ocid1.instance.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -72,8 +72,17 @@ namespace Oci.DisasterrecoveryService.Models
                 case "AUTONOMOUS_DATABASE":
                     obj = new CreateDrProtectionGroupMemberAutonomousDatabaseDetails();
                     break;
+                case "NETWORK_LOAD_BALANCER":
+                    obj = new CreateDrProtectionGroupMemberNetworkLoadBalancerDetails();
+                    break;
                 case "VOLUME_GROUP":
                     obj = new CreateDrProtectionGroupMemberVolumeGroupDetails();
+                    break;
+                case "FILE_SYSTEM":
+                    obj = new CreateDrProtectionGroupMemberFileSystemDetails();
+                    break;
+                case "LOAD_BALANCER":
+                    obj = new CreateDrProtectionGroupMemberLoadBalancerDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

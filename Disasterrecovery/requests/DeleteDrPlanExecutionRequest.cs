@@ -20,9 +20,9 @@ namespace Oci.DisasterrecoveryService.Requests
     {
         
         /// <value>
-        /// The OCID of the DR Plan Execution.
+        /// The OCID of the DR plan execution.
         /// <br/>
-        /// Example: ocid1.drplanexecution.oc1.iad.exampleocid
+        /// Example: ocid1.drplanexecution.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required

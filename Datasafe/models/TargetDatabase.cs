@@ -74,7 +74,7 @@ namespace Oci.DatasafeService.Models
         public ConnectionOption ConnectionOption { get; set; }
         
         /// <value>
-        /// The OCIDs of associated resources like Database, Data Safe private endpoint etc.
+        /// The OCIDs of associated resources like database, Data Safe private endpoint etc.
         /// </value>
         [JsonProperty(PropertyName = "associatedResourceIds")]
         public System.Collections.Generic.List<string> AssociatedResourceIds { get; set; }
@@ -97,7 +97,7 @@ namespace Oci.DatasafeService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The date and time of target database registration and creation in Data Safe.
+        /// The date and time of the target database registration and creation in Data Safe.
         /// </value>
         /// <remarks>
         /// Required

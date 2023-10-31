@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The default type (required for forward compatibility).
+    /// The default type.
     /// </summary>
     public class DisassociateDrProtectionGroupDefaultDetails : DisassociateDrProtectionGroupDetails
     {

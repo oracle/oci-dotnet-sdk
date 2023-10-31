@@ -61,6 +61,12 @@ namespace Oci.StackmonitoringService.Models
         public string Type { get; set; }
         
         /// <value>
+        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// Monitored Resource Host Name.
         /// 
         /// </value>
@@ -108,6 +114,13 @@ namespace Oci.StackmonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.List<MonitoredResourceProperty> Properties { get; set; }
+        
+        /// <value>
+        /// License edition of the monitored resource.
+        /// </value>
+        [JsonProperty(PropertyName = "license")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<LicenseType> License { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

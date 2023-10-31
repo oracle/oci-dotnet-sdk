@@ -22,7 +22,7 @@ namespace Oci.DatasafeService.Models
     {
         
         /// <value>
-        /// The OCID of the new compartment to where you want to move the Data Safe target database.
+        /// The OCID of the compartment you want to move the Data Safe target database to.
         /// </value>
         /// <remarks>
         /// Required

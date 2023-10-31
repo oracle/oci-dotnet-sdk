@@ -22,7 +22,7 @@ namespace Oci.DisasterrecoveryService.Requests
         /// <value>
         /// The ID (OCID) of the compartment in which to list resources.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..exampleocid1
+        /// Example: ocid1.compartment.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -32,24 +32,24 @@ namespace Oci.DisasterrecoveryService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only DR Protection Groups that match the given lifecycleState.
+        /// A filter to return only DR protection groups that match the given lifecycle state.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<DrProtectionGroupLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// The OCID of the DR Protection Group. Optional query param.
+        /// The OCID of the DR protection group. Optional query param.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.phx.exampleocid
+        /// Example: ocid1.drprotectiongroup.oc1..uniqueID
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "drProtectionGroupId")]
         public string DrProtectionGroupId { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the entire display name given.
+        /// A filter to return only resources that match the given display name.
         /// <br/>
-        /// Example: MY UNIQUE DISPLAY NAME
+        /// Example: MyResourceDisplayName
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
@@ -90,7 +90,7 @@ namespace Oci.DisasterrecoveryService.Requests
         /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending.
         /// Default order for displayName is ascending. If no value is specified timeCreated is default.
         /// <br/>
-        /// Example: displayName
+        /// Example: MyResourceDisplayName
         /// </value>
         ///
         public enum SortByEnum {
@@ -104,7 +104,7 @@ namespace Oci.DisasterrecoveryService.Requests
         /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending.
         /// Default order for displayName is ascending. If no value is specified timeCreated is default.
         /// <br/>
-        /// Example: displayName
+        /// Example: MyResourceDisplayName
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
@@ -117,9 +117,16 @@ namespace Oci.DisasterrecoveryService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The DR Protection Group Role.
+        /// The DR protection group Role.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "role")]
         public System.Nullable<DrProtectionGroupRole> Role { get; set; }
+        
+        /// <value>
+        /// A filter to return only DR protection groups that match the given lifecycle sub-state.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleSubState")]
+        public System.Nullable<DrProtectionGroupLifecycleSubState> LifecycleSubState { get; set; }
     }
 }

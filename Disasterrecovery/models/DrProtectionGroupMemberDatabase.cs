@@ -16,16 +16,17 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Properties for a Database (DBCS) member of a DR Protection Group.
+    /// The properties for a Base Database or Exadata Database member of a DR protection group.
     /// 
     /// </summary>
     public class DrProtectionGroupMemberDatabase : DrProtectionGroupMember
     {
         
         /// <value>
-        /// The ID of the vault secret where the database password is stored.
+        /// The OCID of the vault secret where the database SYSDBA password is stored.
+        /// This password is used for performing database DR operations.
         /// <br/>
-        /// Example: ocid1.vaultsecret.oc1.phx.exampleocid1
+        /// Example: ocid1.vaultsecret.oc1..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "passwordVaultSecretId")]
         public string PasswordVaultSecretId { get; set; }

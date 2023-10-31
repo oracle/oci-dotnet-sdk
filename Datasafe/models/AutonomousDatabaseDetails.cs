@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The details of the Oracle Autonomous Database to be registered as a target database in Data Safe.
+    /// The details of the Autonomous Database to be registered as a target database in Data Safe.
     /// </summary>
     public class AutonomousDatabaseDetails : DatabaseDetails
     {
         
         /// <value>
-        /// The OCID of the autonomous database registered as a target database in Data Safe.
+        /// The OCID of the Autonomous Database registered as a target database in Data Safe.
         /// </value>
         /// <remarks>
         /// Required

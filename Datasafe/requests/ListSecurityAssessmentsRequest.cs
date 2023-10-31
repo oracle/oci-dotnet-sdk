@@ -148,7 +148,7 @@ namespace Oci.DatasafeService.Requests
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
         
         /// <value>
-        /// A filter to return only security assessments that are set as baseline.
+        /// A filter to return only the security assessments that are set as a baseline.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isBaseline")]
         public System.Nullable<bool> IsBaseline { get; set; }

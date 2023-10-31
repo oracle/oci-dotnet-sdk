@@ -22,9 +22,9 @@ namespace Oci.DisasterrecoveryService.Models
     {
         
         /// <value>
-        /// The OCID of the vault secret where the database password is stored.
+        /// The OCID of the vault secret where the database SYSDBA password is stored.
         /// <br/>
-        /// Example: ocid1.vaultsecret.oc1.phx.&lt;unique_id&gt;
+        /// Example: ocid1.vaultsecret.oc1..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "passwordVaultSecretId")]
         public string PasswordVaultSecretId { get; set; }

@@ -33,11 +33,19 @@ namespace Oci.StackmonitoringService.Models
       DisableExternalDatabase,
       [EnumMember(Value = "ADD_SOURCES_TO_AGENT")]
       AddSourcesToAgent,
+      [EnumMember(Value = "ENABLE_METRIC_EXTENSION")]
+      EnableMetricExtension,
+      [EnumMember(Value = "DISABLE_METRIC_EXTENSION")]
+      DisableMetricExtension,
+      [EnumMember(Value = "TEST_METRIC_EXTENSION")]
+      TestMetricExtension,
       [EnumMember(Value = "BULK_ADD_RESOURCES")]
       BulkAddResources,
       [EnumMember(Value = "BULK_DELETE_RESOURCES")]
       BulkDeleteResources,
       [EnumMember(Value = "UPDATE_AND_PROPAGATE_TAGS")]
-      UpdateAndPropagateTags
+      UpdateAndPropagateTags,
+      [EnumMember(Value = "IMPORT_RESOURCES")]
+      ImportResources
   }
 }

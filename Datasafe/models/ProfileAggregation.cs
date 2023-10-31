@@ -27,30 +27,12 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// The array of profile aggregation data.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, System.Object>> Items { get; set; }
-        
-        /// <value>
-        /// The OCID of the latest user assessment corresponding to the target under consideration. A compartment 
-        /// type assessment can also be passed to profiles from all the targets from the corresponding compartment.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "UserAssessmentId is required.")]
-        [JsonProperty(PropertyName = "userAssessmentId")]
-        public string UserAssessmentId { get; set; }
-        
-        /// <value>
-        /// The OCID of the compartment that contains the user assessment.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)

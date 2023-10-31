@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Details of a plan group in a DR Plan.
+    /// Details of a group in a DR plan.
     /// </summary>
     public class DrPlanGroup 
     {
         
         /// <value>
-        /// The unique id of this group. Must not be modified by user.
+        /// The unique id of the group. Must not be modified by user.
         /// <br/>
-        /// Example: sgid1.group..&lt;unique_id&gt;
+        /// Example: sgid1.group..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -34,8 +34,9 @@ namespace Oci.DisasterrecoveryService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The plan group type.
-        /// 
+        /// The group type.
+        /// <br/>
+        /// Example: BUILT_IN
         /// </value>
         /// <remarks>
         /// Required
@@ -46,7 +47,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanGroupType> Type { get; set; }
         
         /// <value>
-        /// The display name of this DR Plan Group.
+        /// The display name of the group.
         /// <br/>
         /// Example: DATABASE_SWITCHOVER
         /// </value>
@@ -58,7 +59,7 @@ namespace Oci.DisasterrecoveryService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The list of steps in this plan group.
+        /// The list of steps in the group.
         /// 
         /// </value>
         /// <remarks>

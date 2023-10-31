@@ -20,7 +20,7 @@ namespace Oci.DisasterrecoveryService.Requests
     {
         
         /// <value>
-        /// The role details for the DR Protection Group.
+        /// The role details for the DR protection group to be updated.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,9 +30,9 @@ namespace Oci.DisasterrecoveryService.Requests
         public UpdateDrProtectionGroupRoleDetails UpdateDrProtectionGroupRoleDetails { get; set; }
         
         /// <value>
-        /// The OCID of the DR Protection Group.
+        /// The OCID of the DR protection group.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.phx.exampleocid
+        /// Example: ocid1.drprotectiongroup.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required

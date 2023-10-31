@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatasafeService.Models
 {
   /// <summary>
-  /// Sort orders.
+  /// Defines the sorting order of the assessment (ascending or descending).
   /// </summary>
   public enum SortOrders {
       [EnumMember(Value = "ASC")]

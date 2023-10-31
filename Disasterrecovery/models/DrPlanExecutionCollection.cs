@@ -16,15 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Results of a DR Plan Execution search. Contains both DR Plan Execution summary items
-    /// and other information, such as metadata.
+    /// A list of DR plan execution summaries.
     /// 
     /// </summary>
     public class DrPlanExecutionCollection 
     {
         
         /// <value>
-        /// A list of all DR Plan Execution summary objects.
+        /// A list of DR plan execution summaries.
         /// 
         /// </value>
         /// <remarks>

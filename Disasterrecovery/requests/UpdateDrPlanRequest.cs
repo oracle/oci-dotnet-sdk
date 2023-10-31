@@ -20,7 +20,7 @@ namespace Oci.DisasterrecoveryService.Requests
     {
         
         /// <value>
-        /// Details of DR Plan to update.
+        /// Details for updating the DR plan.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,9 +30,9 @@ namespace Oci.DisasterrecoveryService.Requests
         public UpdateDrPlanDetails UpdateDrPlanDetails { get; set; }
         
         /// <value>
-        /// The OCID of the DR Plan.
+        /// The OCID of the DR plan.
         /// <br/>
-        /// Example: ocid1.drplan.oc1.iad.exampleocid
+        /// Example: ocid1.drplan.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required

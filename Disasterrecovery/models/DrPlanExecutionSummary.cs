@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Summary information about a DR Plan Execution.
+    /// The summary of a DR plan execution.
     /// </summary>
     public class DrPlanExecutionSummary 
     {
         
         /// <value>
-        /// The OCID of this plan execution.
+        /// The OCID of the DR plan execution.
         /// <br/>
-        /// Example: ocid1.drplanexecution.oc1.iad.&lt;unique_id&gt;
+        /// Example: ocid1.drplanexecution.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -36,7 +36,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the compartment containing this plan execution.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..&lt;unique_id&gt;
+        /// Example: ocid1.compartment.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -46,7 +46,7 @@ namespace Oci.DisasterrecoveryService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The display name of this DR Plan Execution.
+        /// The display name of the DR plan execution.
         /// <br/>
         /// Example: Execution - EBS Switchover PHX to IAD
         /// </value>
@@ -58,9 +58,9 @@ namespace Oci.DisasterrecoveryService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the DR Plan for this plan execution.
+        /// The OCID of the DR plan for this DR plan execution.
         /// <br/>
-        /// Example: ocid1.drplan.oc1.iad.&lt;unique_id&gt;
+        /// Example: ocid1.drplan.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -70,7 +70,7 @@ namespace Oci.DisasterrecoveryService.Models
         public string PlanId { get; set; }
         
         /// <value>
-        /// The type of the DR Plan executed.
+        /// The type of the DR plan execution.
         /// 
         /// </value>
         /// <remarks>
@@ -82,9 +82,9 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanExecutionType> PlanExecutionType { get; set; }
         
         /// <value>
-        /// The OCID of DR Protection Group associated with this plan execution.
+        /// The OCID of the DR protection group to which this DR plan execution belongs.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.iad.&lt;unique_id&gt;
+        /// Example: ocid1.drprotectiongroup.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -94,10 +94,10 @@ namespace Oci.DisasterrecoveryService.Models
         public string DrProtectionGroupId { get; set; }
         
         /// <value>
-        /// The OCID of peer (remote) DR Protection Group associated with this plan execution's
-        /// DR Protection Group.
+        /// The OCID of peer DR protection group associated with this DR plan execution's
+        /// DR protection group.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.phx.&lt;unique_id&gt;
+        /// Example: ocid1.drprotectiongroup.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -107,7 +107,8 @@ namespace Oci.DisasterrecoveryService.Models
         public string PeerDrProtectionGroupId { get; set; }
         
         /// <value>
-        /// The region of the peer (remote) DR Protection Group.
+        /// The region of the peer DR protection group associated with this DR plan execution's
+        /// DR protection group.
         /// <br/>
         /// Example: us-ashburn-1
         /// </value>
@@ -126,7 +127,7 @@ namespace Oci.DisasterrecoveryService.Models
         public ObjectStorageLogLocation LogLocation { get; set; }
         
         /// <value>
-        /// The date and time at which DR Plan Execution was created. An RFC3339 formatted datetime string.
+        /// The date and time at which DR plan execution was created. An RFC3339 formatted datetime string.
         /// <br/>
         /// Example: 2019-03-29T09:36:42Z
         /// </value>
@@ -138,7 +139,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time at which DR Plan Execution began. An RFC3339 formatted datetime string.
+        /// The date and time at which DR plan execution began. An RFC3339 formatted datetime string.
         /// <br/>
         /// Example: 2019-03-29T09:36:42Z
         /// </value>
@@ -146,7 +147,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The time at which DR Plan Execution was last updated.
+        /// The time when this DR plan execution was last updated.
         /// <br/>
         /// Example: 2019-03-29T09:36:42Z
         /// </value>
@@ -158,7 +159,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The date and time at which DR Plan Execution succeeded, failed, paused, or canceled.
+        /// The date and time at which DR plan execution succeeded, failed, was paused, or canceled.
         /// An RFC3339 formatted datetime string.
         /// <br/>
         /// Example: 2019-03-29T09:36:42Z
@@ -167,7 +168,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
         
         /// <value>
-        /// The total duration in seconds taken to complete the DR Plan Execution.
+        /// The total duration in seconds taken to complete the DR plan execution.
         /// <br/>
         /// Example: 750
         /// </value>
@@ -175,7 +176,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<int> ExecutionDurationInSec { get; set; }
         
         /// <value>
-        /// The current state of the DR Plan Execution.
+        /// The current state of the DR plan execution.
         /// 
         /// </value>
         /// <remarks>
@@ -187,15 +188,15 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanExecutionLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// A message describing the DR Plan Execution's current state in more detail.
-        /// <br/>
-        /// Example: The DR Plan Execution [Execution - EBS Switchover PHX to IAD] is currently in progress
+        /// A message describing the DR plan execution's current state in more detail.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "lifeCycleDetails")]
         public string LifeCycleDetails { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -203,6 +204,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
@@ -210,6 +212,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Usage of system tag keys. These predefined keys are scoped to namespaces.
+        /// <br/>
         /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]

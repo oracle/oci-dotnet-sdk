@@ -23,8 +23,14 @@ namespace Oci.DisasterrecoveryService.Models
     {
         
         /// <value>
-        /// The OCID of the instance where this script or command should be executed.
-        /// 
+        /// The OCID of the instance on which this script or command should be executed.  
+        /// <br/>
+        /// **For moving instances:** *runOnInstanceId* must be the OCID of the instance in the region where the 
+        /// instance is currently present.  
+        /// <br/>
+        /// **For non-moving instances:** *runOnInstanceId* must be the OCID of the non-moving instance.  
+        /// <br/>
+        /// Example: ocid1.instance.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required

@@ -16,14 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Create properties for a Movable Compute Instance member.
+    /// Create properties for a movable compute instance member.
     /// </summary>
     public class CreateDrProtectionGroupMemberComputeInstanceMovableDetails : CreateDrProtectionGroupMemberDetails
     {
         
         /// <value>
-        /// A flag indicating if this compute instance should be moved to the same fault domain. 
-        /// Compute instance launch will fail if this flag is set to true and capacity is not available in that specific fault domain in the destination region.
+        /// A flag indicating if the compute instance should be moved to the same fault domain in the destination region. 
+        /// The compute instance launch will fail if this flag is set to true and capacity is not available in the 
+        /// specified fault domain in the destination region.
         /// <br/>
         /// Example: false
         /// </value>
@@ -31,37 +32,45 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<bool> IsRetainFaultDomain { get; set; }
         
         /// <value>
-        /// The OCID of the capacity reservation in the destination region using which this compute instance
-        /// should be launched.
+        /// The OCID of a capacity reservation in the destination region which will be used to launch
+        /// the compute instance.
         /// <br/>
-        /// Example: ocid1.capacityreservation.oc1..&lt;unique_id&gt;
+        /// Example: ocid1.capacityreservation.oc1..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "destinationCapacityReservationId")]
         public string DestinationCapacityReservationId { get; set; }
         
         /// <value>
-        /// A list of Compute Instance VNIC mappings.
+        /// A list of compute instance VNIC mappings.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vnicMappings")]
         public System.Collections.Generic.List<ComputeInstanceMovableVnicMappingDetails> VnicMappings { get; set; }
         
         /// <value>
-        /// The OCID of the compartment for this compute instance in the destination region.
+        /// The OCID of a compartment in the destination region in which the compute instance
+        /// should be launched.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..&lt;unique_id&gt;
+        /// Example: ocid1.compartment.oc1..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "destinationCompartmentId")]
         public string DestinationCompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the dedicated VM Host in the destination region where this compute instance
-        /// should be launched
+        /// The OCID of a dedicated VM host in the destination region where the compute instance
+        /// should be launched.
         /// <br/>
-        /// Example: ocid1.dedicatedvmhost.oc1..&lt;unique_id&gt;
+        /// Example: ocid1.dedicatedvmhost.oc1..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "destinationDedicatedVmHostId")]
         public string DestinationDedicatedVmHostId { get; set; }
+        
+        /// <value>
+        /// A list of operations performed on file systems used by the compute instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "fileSystemOperations")]
+        public System.Collections.Generic.List<CreateComputeInstanceMovableFileSystemOperationDetails> FileSystemOperations { get; set; }
         
         [JsonProperty(PropertyName = "memberType")]
         private readonly string memberType = "COMPUTE_INSTANCE_MOVABLE";

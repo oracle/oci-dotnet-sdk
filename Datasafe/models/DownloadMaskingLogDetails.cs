@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details to download masking log.
+    /// Details to download the masking log.
     /// </summary>
     public class DownloadMaskingLogDetails 
     {

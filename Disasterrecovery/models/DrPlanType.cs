@@ -13,9 +13,11 @@ using System.Runtime.Serialization;
 namespace Oci.DisasterrecoveryService.Models
 {
   /// <summary>
-  /// DR Plan types that can be created, updated, or deleted by the user.
+  /// The types of DR plan that can be created, updated, or deleted by the user.
     /// - SWITCHOVER - Switchover from primary to standby.
     /// - FAILOVER - Failover to standby.
+    /// - START_DRILL - Start DR drill.
+    /// - STOP_DRILL - Stop DR drill.
     /// 
   /// </summary>
   public enum DrPlanType {
@@ -25,6 +27,10 @@ namespace Oci.DisasterrecoveryService.Models
       [EnumMember(Value = "SWITCHOVER")]
       Switchover,
       [EnumMember(Value = "FAILOVER")]
-      Failover
+      Failover,
+      [EnumMember(Value = "START_DRILL")]
+      StartDrill,
+      [EnumMember(Value = "STOP_DRILL")]
+      StopDrill
   }
 }

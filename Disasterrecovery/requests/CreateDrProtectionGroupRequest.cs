@@ -20,7 +20,7 @@ namespace Oci.DisasterrecoveryService.Requests
     {
         
         /// <value>
-        /// Details for the new DR Protection Group.
+        /// Details for creating the DR protection group.
         /// </value>
         /// <remarks>
         /// Required

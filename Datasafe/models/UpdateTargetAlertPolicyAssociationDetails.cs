@@ -23,7 +23,7 @@ namespace Oci.DatasafeService.Models
     {
         
         /// <value>
-        /// Indicates if the target-alert policy association is enabled or disabled.
+        /// Indicates if the target-alert policy association is enabled or disabled by user.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }

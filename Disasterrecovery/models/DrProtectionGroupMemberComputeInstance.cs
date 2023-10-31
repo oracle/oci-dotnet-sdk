@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Properties for a Compute Instance member of a DR Protection Group.
+    /// Deprecated. Properties for a compute instance member of a DR protection group.
     /// </summary>
     public class DrProtectionGroupMemberComputeInstance : DrProtectionGroupMember
     {
         
         /// <value>
-        /// A flag indicating if this compute instance should be moved during DR operations.
+        /// A flag indicating if the compute instance should be moved during DR operations.
         /// <br/>
         /// Example: false
         /// </value>
@@ -37,17 +37,19 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Collections.Generic.List<ComputeInstanceVnicMapping> VnicMapping { get; set; }
         
         /// <value>
-        /// The OCID of the compartment for this compute instance in the destination region.
+        /// The OCID of a compartment in the destination region in which the compute instance
+        /// should be launched.
         /// <br/>
-        /// Example: ocid1.compartment.oc1..exampleocid
+        /// Example: ocid1.compartment.oc1..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "destinationCompartmentId")]
         public string DestinationCompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the dedicated VM Host for this compute instance in the destination region.
+        /// The OCID of a dedicated VM host in the destination region where the compute instance
+        /// should be launched.
         /// <br/>
-        /// Example: ocid1.dedicatedvmhost.oc1.iad.exampleocid
+        /// Example: ocid1.dedicatedvmhost.oc1..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "destinationDedicatedVmHostId")]
         public string DestinationDedicatedVmHostId { get; set; }

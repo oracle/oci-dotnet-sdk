@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Summary information about a step execution.
+    /// The details of a step execution in a DR plan execution.
     /// </summary>
     public class DrPlanStepExecution 
     {
         
         /// <value>
-        /// The unique id of this step. Must not be modified by user.
+        /// The unique id of the step. Must not be modified by user.
         /// <br/>
-        /// Example: sgid1.step..&lt;unique_id&gt;
+        /// Example: sgid1.step..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -34,7 +34,7 @@ namespace Oci.DisasterrecoveryService.Models
         public string StepId { get; set; }
         
         /// <value>
-        /// The plan step type.
+        /// The step type.
         /// 
         /// </value>
         /// <remarks>
@@ -48,7 +48,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The unique id of the group to which this step belongs. Must not be modified by user.
         /// <br/>
-        /// Example: sgid1.group..&lt;unique_id&gt;
+        /// Example: sgid1.group..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.DisasterrecoveryService.Models
         public string GroupId { get; set; }
         
         /// <value>
-        /// The display name of the step.
+        /// The display name of the step execution.
         /// <br/>
         /// Example: DATABASE_SWITCHOVER
         /// </value>
@@ -89,7 +89,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanStepExecutionStatus> Status { get; set; }
         
         /// <value>
-        /// Additional details about the step execution status.
+        /// Additional details on the step execution status.
         /// <br/>
         /// Example: This step failed to complete due to a timeout
         /// </value>
@@ -97,7 +97,7 @@ namespace Oci.DisasterrecoveryService.Models
         public string StatusDetails { get; set; }
         
         /// <value>
-        /// The time at which step execution began. An RFC3339 formatted datetime string.
+        /// The time when step execution began. An RFC3339 formatted datetime string.
         /// <br/>
         /// Example: 2019-03-29T09:36:42Z
         /// </value>
@@ -105,7 +105,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The time at which step execution ended. An RFC3339 formatted datetime string.
+        /// The time when execution ended. An RFC3339 formatted datetime string.
         /// <br/>
         /// Example: 2019-03-29T09:36:42Z
         /// </value>
@@ -113,7 +113,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
         
         /// <value>
-        /// The total duration in seconds taken to complete step execution.
+        /// The total duration in seconds taken to complete the step execution.
         /// <br/>
         /// Example: 35
         /// </value>

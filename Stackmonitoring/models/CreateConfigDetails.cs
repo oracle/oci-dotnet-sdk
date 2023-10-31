@@ -75,8 +75,14 @@ namespace Oci.StackmonitoringService.Models
             var discriminator = jsonObject["configType"].Value<string>();
             switch (discriminator)
             {
+                case "LICENSE_AUTO_ASSIGN":
+                    obj = new CreateLicenseAutoAssignConfigDetails();
+                    break;
                 case "AUTO_PROMOTE":
                     obj = new CreateAutoPromoteConfigDetails();
+                    break;
+                case "LICENSE_ENTERPRISE_EXTENSIBILITY":
+                    obj = new CreateLicenseEnterpriseExtensibilityConfigDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

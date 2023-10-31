@@ -14,7 +14,7 @@ using System.Runtime.CompilerServices;
 
 using Newtonsoft.Json;
 
-using Oci.Common.Alloy;
+using Oci.Common.DeveloperToolConfigurations;
 using Oci.Common.Internal;
 using Oci.Common.Model;
 using Oci.Common.Utils;
@@ -30,12 +30,12 @@ namespace Oci.Common
     {
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private static readonly Dictionary<string, Region> KNOWN_REGIONS = new Dictionary<string, Region>();
-        private static readonly Dictionary<string, Region> ALLOY_REGIONS = new Dictionary<string, Region>();
+        private static readonly Dictionary<string, Region> DEVELOPER_TOOL_CONFIG_REGIONS = new Dictionary<string, Region>();
         private static readonly string OCI_REGION_METADATA_ENV_VAR_NAME = "OCI_REGION_METADATA";
         private static readonly string REGIONS_CONFIG_FILE_PATH = Path.Combine("~", ".oci", "regions-config.json");
         private static volatile bool HasUsedEnvVar = false;
         private static volatile bool HasUsedConfigFile = false;
-        private static volatile bool HasUsedAlloyConfigFile = false;
+        private static volatile bool HasUsedDeveloperToolConfigFile = false;
         private static volatile bool HasUsedInstanceMetadataService = false;
         private static volatile bool HasReceivedInstanceMetadataServiceResponse = false;
         private static volatile bool HasWarnedAboutValuesWithoutInstanceMetadataService = false;
@@ -63,7 +63,7 @@ namespace Oci.Common
         public Realm Realm { get; }
 
         [MethodImpl(MethodImplOptions.Synchronized)]
-        private Region(string regionId, string regionCode, Realm realm, bool isAlloyRegion = false)
+        private Region(string regionId, string regionCode, Realm realm, bool isDeveloperToolConfigRegion = false)
         {
             if (regionId == null || realm == null)
             {
@@ -72,9 +72,9 @@ namespace Oci.Common
             RegionId = regionId;
             RegionCode = regionCode;
             Realm = realm;
-            if (isAlloyRegion)
+            if (isDeveloperToolConfigRegion)
             {
-                ALLOY_REGIONS.Add(regionId, this);
+                DEVELOPER_TOOL_CONFIG_REGIONS.Add(regionId, this);
             }
             else
             {
@@ -120,12 +120,12 @@ namespace Oci.Common
             HasUsedConfigFile = false;
         }
 
-        /// <summary> Resets the HasUsedAlloyConfigFile check for reading Alloy Config from alloy config file</summary>
+        /// <summary> Resets the HasUsedDeveloperToolConfigFile check for reading DeveloperToolConfig from DeveloperToolConfigFile</summary>
         [MethodImpl(MethodImplOptions.Synchronized)]
-        public static void ResetAlloyConfig()
+        public static void ResetDeveloperToolConfig()
         {
-            HasUsedAlloyConfigFile = false;
-            ALLOY_REGIONS.Clear();
+            HasUsedDeveloperToolConfigFile = false;
+            DEVELOPER_TOOL_CONFIG_REGIONS.Clear();
         }
 
         /// <summary>
@@ -159,9 +159,9 @@ namespace Oci.Common
             {
                 return FormatDefaultRegionEndpoint(service, region);
             }
-            if (AlloyConfiguration.UseOnlyAlloyRegions())
+            if (DeveloperToolConfiguration.UseOnlyDeveloperToolConfigurationRegions())
             {
-                throw new ArgumentException($"You're using the {AlloyConfiguration.OciAlloyProvider} Alloy configuration file, the region you're targeting is not declared in this config file. Please check if this is the correct region you're targeting or contact the {AlloyConfiguration.OciAlloyProvider} cloud provider for help. If you want to target both OCI regions and Alloy regions, please set the OCI_ALLOY_REGION_COEXIST env var to True.");
+                throw new ArgumentException($"You're using the {DeveloperToolConfiguration.DeveloperToolConfigurationProvider} DeveloperTool configuration file, the region you're targeting is not declared in this config file. Please check if this is the correct region you're targeting or contact the {DeveloperToolConfiguration.DeveloperToolConfigurationProvider} cloud provider for help. If you want to target both OCI regions and DeveloperToolConfig regions, please set the OCI_ALLOW_ONLY_DEVELOPER_TOOL_CONFIGURATION_REGIONS env var to False.");
             }
             // Else we need to fall back to OC1 SLD.
             logger.Debug($"Unknown regionId '{regionId}', will assume it's in Realm OC1");
@@ -186,9 +186,9 @@ namespace Oci.Common
             Region region = GetRegionAndRegisterIfNeccessary(regionId);
             if (region == null)
             {
-                if (AlloyConfiguration.UseOnlyAlloyRegions())
+                if (DeveloperToolConfiguration.UseOnlyDeveloperToolConfigurationRegions())
                 {
-                    throw new ArgumentException($"You're using the {AlloyConfiguration.OciAlloyProvider} Alloy configuration file, the region you're targeting is not declared in this config file. Please check if this is the correct region you're targeting or contact the {AlloyConfiguration.OciAlloyProvider} cloud provider for help. If you want to target both OCI regions and Alloy regions, please set the OCI_ALLOY_REGION_COEXIST env var to True.");
+                    throw new ArgumentException($"You're using the {DeveloperToolConfiguration.DeveloperToolConfigurationProvider} DeveloperTool configuration file, the region you're targeting is not declared in this config file. Please check if this is the correct region you're targeting or contact the {DeveloperToolConfiguration.DeveloperToolConfigurationProvider} cloud provider for help. If you want to target both OCI regions and DeveloperToolConfig regions, please set the OCI_ALLOW_ONLY_DEVELOPER_TOOL_CONFIGURATION_REGIONS env var to False.");
                 }
                 throw new ArgumentException($"Unable to find region from regionId {regionId}.");
             }
@@ -204,9 +204,9 @@ namespace Oci.Common
             Region region = GetRegionAndRegisterIfNeccessary(regionCodeOrId);
             if (region == null)
             {
-                if (AlloyConfiguration.UseOnlyAlloyRegions())
+                if (DeveloperToolConfiguration.UseOnlyDeveloperToolConfigurationRegions())
                 {
-                    throw new ArgumentException($"You're using the {AlloyConfiguration.OciAlloyProvider} Alloy configuration file, the region you're targeting is not declared in this config file. Please check if this is the correct region you're targeting or contact the {AlloyConfiguration.OciAlloyProvider} cloud provider for help. If you want to target both OCI regions and Alloy regions, please set the OCI_ALLOY_REGION_COEXIST env var to True.");
+                    throw new ArgumentException($"You're using the {DeveloperToolConfiguration.DeveloperToolConfigurationProvider} DeveloperTool configuration file, the region you're targeting is not declared in this config file. Please check if this is the correct region you're targeting or contact the {DeveloperToolConfiguration.DeveloperToolConfigurationProvider} cloud provider for help. If you want to target both OCI regions and DeveloperToolConfig regions, please set the OCI_ALLOW_ONLY_DEVELOPER_TOOL_CONFIGURATION_REGIONS env var to False.");
                 }
                 throw new ArgumentException($"Unable to find region from regionId or regionCode {regionCodeOrId}.");
             }
@@ -228,37 +228,37 @@ namespace Oci.Common
                 HasWarnedAboutValuesWithoutInstanceMetadataService = true;
             }
             RegisterAllRegions();
-            if (AlloyConfiguration.UseOnlyAlloyRegions())
+            if (DeveloperToolConfiguration.UseOnlyDeveloperToolConfigurationRegions())
             {
-                return ALLOY_REGIONS.Values.ToArray();
+                return DEVELOPER_TOOL_CONFIG_REGIONS.Values.ToArray();
             }
             var allowedRegions = KNOWN_REGIONS.Values.ToArray();
-            allowedRegions.Concat(ALLOY_REGIONS.Values.ToArray());
+            allowedRegions.Concat(DEVELOPER_TOOL_CONFIG_REGIONS.Values.ToArray());
             return allowedRegions;
         }
 
         /// <summary>Register a new region. Used to allow the SDK to be forward compatible with unreleased regions.</summary>
         /// <param name="regionId">The region id.</param>
         /// <param name="realm">The realm of the new region.</param>
-        /// <param name="isAlloyRegion">The bool value denoting if region to be registered is an Alloy Region or not. Set to false by default for OCI regions.</param>
+        /// <param name="isDeveloperToolConfigRegion">The bool value denoting if region to be registered is an DeveloperToolConfig Region or not. Set to false by default for OCI regions.</param>
         /// <returns>The registered region (or existing one if found).</returns>
-        public static Region Register(string regionId, Realm realm, bool isAlloyRegion = false)
+        public static Region Register(string regionId, Realm realm, bool isDeveloperToolConfigRegion = false)
         {
             if (regionId == null || realm == null)
             {
                 throw new ArgumentNullException();
             }
-            return Register(regionId, realm, null, isAlloyRegion);
+            return Register(regionId, realm, null, isDeveloperToolConfigRegion);
         }
 
         /// <summary>Register a new region. Used to allow the SDK to be forward compatible with unreleased regions.</summary>
         /// <param name="regionId">The region id.</param>
         /// <param name="realm">The realm of the new region.</param>
         /// <param name="regionCode">The 3-letter region code.</param>
-        /// <param name="isAlloyRegion">The bool value denoting if region to be registered is an Alloy Region or not. Set to false by default for OCI regions</param>
+        /// <param name="isDeveloperToolConfig">The bool value denoting if region to be registered is an DeveloperToolConfig Region or not. Set to false by default for OCI regions</param>
         /// <returns>The registered region (or existing one if found).</returns>
         [MethodImpl(MethodImplOptions.Synchronized)]
-        public static Region Register(string regionId, Realm realm, string regionCode, bool isAlloyRegion = false)
+        public static Region Register(string regionId, Realm realm, string regionCode, bool isDeveloperToolConfig = false)
         {
             if (regionId == null || realm == null)
             {
@@ -272,7 +272,7 @@ namespace Oci.Common
                 throw new ArgumentNullException("Cannot have empty regionId");
             }
 
-            var allowed_regions = isAlloyRegion ? ALLOY_REGIONS : KNOWN_REGIONS; // Decide which map to use depending on which region is used.
+            var allowed_regions = isDeveloperToolConfig ? DEVELOPER_TOOL_CONFIG_REGIONS : KNOWN_REGIONS; // Decide which map to use depending on which region is used.
             foreach (Region region in allowed_regions.Values)
             {
                 if (region.RegionId.Equals(regionId))
@@ -294,7 +294,7 @@ namespace Oci.Common
                 }
             }
 
-            return new Region(regionId, regionCode, realm, isAlloyRegion);
+            return new Region(regionId, regionCode, realm, isDeveloperToolConfig);
         }
 
         /// <summary>Gets Region from Region Id or Region Code</summary>
@@ -312,12 +312,12 @@ namespace Oci.Common
             return null;
         }
 
-        /// <summary>Gets Alloy Region from Region Id or Region Code</summary>
+        /// <summary>Gets DeveloperToolConfig Region from Region Id or Region Code</summary>
         /// <param name="regionCodeOrId">The region code/Id.</param>
         /// <returns>Region corresponding to the region code or Id</returns>
-        private static Region GetAlloyRegionFromRegionCodeOrIdWithoutRegistering(string regionCodeOrId)
+        private static Region GetDeveloperToolConfigRegionFromRegionCodeOrIdWithoutRegistering(string regionCodeOrId)
         {
-            foreach (Region region in ALLOY_REGIONS.Values)
+            foreach (Region region in DEVELOPER_TOOL_CONFIG_REGIONS.Values)
             {
                 if ((region.RegionId != null && region.RegionId.Equals(regionCodeOrId)) || (region.RegionCode != null && region.RegionCode.Equals(regionCodeOrId)))
                 {
@@ -333,19 +333,19 @@ namespace Oci.Common
         [MethodImpl(MethodImplOptions.Synchronized)]
         private static Region GetRegionAndRegisterIfNeccessary(string regionCodeOrId)
         {
-            if (!HasUsedAlloyConfigFile && AlloyConfiguration.DoesAlloyConfigFileExist())
+            if (!HasUsedDeveloperToolConfigFile && DeveloperToolConfiguration.DoesDeveloperToolConfigurationFileExist())
             {
-                RegisterRegionFromAlloyConfigFile();
+                RegisterRegionFromDeveloperToolConfigFile();
             }
 
-            // Check Alloy Region first.
-            Region alloy_region = GetAlloyRegionFromRegionCodeOrIdWithoutRegistering(regionCodeOrId);
-            if (alloy_region != null)
+            // Check DeveloperToolConfig Region first.
+            Region developerToolConfigRegion = GetDeveloperToolConfigRegionFromRegionCodeOrIdWithoutRegistering(regionCodeOrId);
+            if (developerToolConfigRegion != null)
             {
-                return alloy_region;
+                return developerToolConfigRegion;
             }
-            // Block access to OCI regions when using only alloy regions
-            if (AlloyConfiguration.UseOnlyAlloyRegions())
+            // Block access to OCI regions when using only DeveloperToolConfig regions
+            if (DeveloperToolConfiguration.UseOnlyDeveloperToolConfigurationRegions())
             {
                 return null;
             }
@@ -399,14 +399,14 @@ namespace Oci.Common
             return null;
         }
 
-        /// <summary> Registers all regions from Alloy Config file, Regions Config file and/or OCI_REGION_METADATA Environment Variable</summary>
+        /// <summary> Registers all regions from DeveloperToolConfig file, Regions Config file and/or OCI_REGION_METADATA Environment Variable</summary>
         [MethodImpl(MethodImplOptions.Synchronized)]
         private static void RegisterAllRegions()
         {
             // This check makes sure that the known regions dict is cleared only once to remove hard-coded oci regions
-            if (!HasUsedAlloyConfigFile)
+            if (!HasUsedDeveloperToolConfigFile)
             {
-                RegisterRegionFromAlloyConfigFile();
+                RegisterRegionFromDeveloperToolConfigFile();
             }
             if (!HasUsedConfigFile)
             {
@@ -431,15 +431,15 @@ namespace Oci.Common
         }
 
         [MethodImpl(MethodImplOptions.Synchronized)]
-        private static void RegisterRegionFromAlloyConfigFile()
+        private static void RegisterRegionFromDeveloperToolConfigFile()
         {
-            HasUsedAlloyConfigFile = true;
-            var regionSchemas = AlloyConfiguration.AlloyConfiguredRegions;
+            HasUsedDeveloperToolConfigFile = true;
+            var regionSchemas = DeveloperToolConfiguration.DeveloperToolConfigurationRegions;
             foreach (RegionSchema regionSchema in regionSchemas)
             {
                 if (regionSchema != null && regionSchema.isValid())
                 {
-                    Register(regionSchema.regionIdentifier, Realm.Register(regionSchema.realmKey, regionSchema.realmDomainComponent, isAlloyRealm: true), regionSchema.regionKey, isAlloyRegion: true);
+                    Register(regionSchema.regionIdentifier, Realm.Register(regionSchema.realmKey, regionSchema.realmDomainComponent, isDeveloperToolConfigRealm: true), regionSchema.regionKey, isDeveloperToolConfig: true);
                 }
             }
         }

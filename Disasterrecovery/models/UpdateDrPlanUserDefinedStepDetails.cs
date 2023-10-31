@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The details for updating a user-defined step in a DR Plan.
+    /// The details for updating a user-defined step in a DR plan.
     /// </summary>
     [JsonConverter(typeof(UpdateDrPlanUserDefinedStepDetailsModelConverter))]
     public class UpdateDrPlanUserDefinedStepDetails 
@@ -25,12 +25,21 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The type of the user-defined step.
         /// <br/>
-        /// RUN_OBJECTSTORE_SCRIPT - A step which runs a script stored in Oracle Object Storage Service.
+        ///   **RUN_OBJECTSTORE_SCRIPT_PRECHECK** - A step which performs a precheck on a script stored
+        ///     in OCI object storage.
         /// <br/>
-        /// RUN_LOCAL_SCRIPT - A step which runs a script that resides locally on a compute instance.
+        ///   **RUN_LOCAL_SCRIPT_PRECHECK** - A step which performs a precheck on a script which resides
+        ///     locally on a compute instance.
         /// <br/>
-        /// INVOKE_FUNCTION - A step which invokes an Oracle Function.
-        ///   See https://docs.oracle.com/en-us/iaas/Content/Functions/home.htm.
+        ///   **INVOKE_FUNCTION_PRECHECK** - A step which performs a precheck on an OCI function.
+        ///     See https://docs.oracle.com/en-us/iaas/Content/Functions/home.htm.
+        /// <br/>
+        ///   **RUN_OBJECTSTORE_SCRIPT** - A step which runs a script stored in OCI object storage.
+        /// <br/>
+        ///   **RUN_LOCAL_SCRIPT** - A step which runs a script that resides locally on a compute instance.
+        /// <br/>
+        ///   **INVOKE_FUNCTION** - A step which invokes an OCI function.
+        ///     See https://docs.oracle.com/en-us/iaas/Content/Functions/home.htm.
         /// 
         /// </value>
         ///

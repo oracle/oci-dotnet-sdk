@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details of a role fetched from the database.
+    /// The details of a role fetched from the database.
     /// </summary>
     public class RoleSummary 
     {
         
         /// <value>
-        /// Name of the role.
+        /// The name of the role.
         /// </value>
         /// <remarks>
         /// Required

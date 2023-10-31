@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The details for creating a DR Plan Execution.
+    /// The details for creating a DR plan execution.
     /// </summary>
     public class CreateDrPlanExecutionDetails 
     {
         
         /// <value>
-        /// The display name of the DR Plan Execution.
+        /// The display name of the DR plan execution.
         /// <br/>
         /// Example: Execution - EBS Switchover PHX to IAD
         /// </value>
@@ -30,9 +30,9 @@ namespace Oci.DisasterrecoveryService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the DR Plan.
+        /// The OCID of the DR plan.
         /// <br/>
-        /// Example: ocid1.drplan.oc1.iad.&lt;unique_id&gt;
+        /// Example: ocid1.drplan.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -50,6 +50,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -57,6 +58,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]

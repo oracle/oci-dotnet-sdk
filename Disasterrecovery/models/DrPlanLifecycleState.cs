@@ -13,15 +13,15 @@ using System.Runtime.Serialization;
 namespace Oci.DisasterrecoveryService.Models
 {
   /// <summary>
-  /// Possible lifecycle states of a DR Plan.
-    /// - CREATING - DR Plan is being created.
-    /// - UPDATING - DR Plan is being updated.
-    /// - ACTIVE - DR Plan is active and available for operations.
-    /// - INACTIVE - DR Plan is inactive and is not available for operations.
-    /// - DELETING - DR Plan is being deleted.
-    /// - DELETED - DR Plan has been deleted.
-    /// - FAILED - DR Plan creation failed.
-    /// - NEEDS_ATTENTION - DR Plan has failed to update.
+  /// The lifecycle states of a DR plan.
+    /// - CREATING - DR plan is being created.
+    /// - UPDATING - DR plan is being updated.
+    /// - ACTIVE - DR plan is active and available for operations.
+    /// - INACTIVE - DR plan is inactive and is not available for operations.
+    /// - DELETING - DR plan is being deleted.
+    /// - DELETED - DR plan has been deleted.
+    /// - FAILED - DR plan creation failed.
+    /// - NEEDS_ATTENTION - DR plan has failed to update.
     /// 
   /// </summary>
   public enum DrPlanLifecycleState {

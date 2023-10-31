@@ -13,9 +13,9 @@ using System.Runtime.Serialization;
 namespace Oci.DisasterrecoveryService.Models
 {
   /// <summary>
-  /// Types of error modes for steps in a DR Plan.
-    /// - STOP_ON_ERROR - Stop DR Plan execution if this step fails.
-    /// - CONTINUE_ON_ERROR - Continue DR Plan execution even if this step fails.
+  /// The types of error modes for steps in a DR plan.
+    /// - STOP_ON_ERROR - Stop DR plan execution if the step fails.
+    /// - CONTINUE_ON_ERROR - Continue executing the DR plan even if the step fails.
     /// 
   /// </summary>
   public enum DrPlanStepErrorMode {

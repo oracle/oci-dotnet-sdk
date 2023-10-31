@@ -114,7 +114,7 @@ namespace Oci.DatasafeService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. You can specify only one sort order (sortOrder). The default order for timeFinished is descending.
+        /// The field to sort by. You can specify only one sorting parameter (sortOrder). The default order for timeFinished is descending.
         /// The default order for displayName is ascending.
         /// 
         /// </value>
@@ -127,7 +127,7 @@ namespace Oci.DatasafeService.Requests
         };
 
         /// <value>
-        /// The field to sort by. You can specify only one sort order (sortOrder). The default order for timeFinished is descending.
+        /// The field to sort by. You can specify only one sorting parameter (sortOrder). The default order for timeFinished is descending.
         /// The default order for displayName is ascending.
         /// 
         /// </value>

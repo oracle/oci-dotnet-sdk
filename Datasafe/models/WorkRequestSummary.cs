@@ -119,6 +119,46 @@ namespace Oci.DatasafeService.Models
             CalculateVolume,
             [EnumMember(Value = "CALCULATE_COLLECTED_VOLUME")]
             CalculateCollectedVolume,
+            [EnumMember(Value = "CREATE_DB_SECURITY_CONFIG")]
+            CreateDbSecurityConfig,
+            [EnumMember(Value = "REFRESH_DB_SECURITY_CONFIG")]
+            RefreshDbSecurityConfig,
+            [EnumMember(Value = "UPDATE_DB_SECURITY_CONFIG")]
+            UpdateDbSecurityConfig,
+            [EnumMember(Value = "CHANGE_DB_SECURITY_CONFIG_COMPARTMENT")]
+            ChangeDbSecurityConfigCompartment,
+            [EnumMember(Value = "GENERATE_FIREWALL_POLICY")]
+            GenerateFirewallPolicy,
+            [EnumMember(Value = "UPDATE_FIREWALL_POLICY")]
+            UpdateFirewallPolicy,
+            [EnumMember(Value = "CHANGE_FIREWALL_POLICY_COMPARTMENT")]
+            ChangeFirewallPolicyCompartment,
+            [EnumMember(Value = "DELETE_FIREWALL_POLICY")]
+            DeleteFirewallPolicy,
+            [EnumMember(Value = "CREATE_SQL_COLLECTION")]
+            CreateSqlCollection,
+            [EnumMember(Value = "UPDATE_SQL_COLLECTION")]
+            UpdateSqlCollection,
+            [EnumMember(Value = "START_SQL_COLLECTION")]
+            StartSqlCollection,
+            [EnumMember(Value = "STOP_SQL_COLLECTION")]
+            StopSqlCollection,
+            [EnumMember(Value = "DELETE_SQL_COLLECTION")]
+            DeleteSqlCollection,
+            [EnumMember(Value = "CHANGE_SQL_COLLECTION_COMPARTMENT")]
+            ChangeSqlCollectionCompartment,
+            [EnumMember(Value = "REFRESH_SQL_COLLECTION_LOG_INSIGHTS")]
+            RefreshSqlCollectionLogInsights,
+            [EnumMember(Value = "PURGE_SQL_COLLECTION_LOGS")]
+            PurgeSqlCollectionLogs,
+            [EnumMember(Value = "UPDATE_SECURITY_POLICY")]
+            UpdateSecurityPolicy,
+            [EnumMember(Value = "CHANGE_SECURITY_POLICY_COMPARTMENT")]
+            ChangeSecurityPolicyCompartment,
+            [EnumMember(Value = "UPDATE_SECURITY_POLICY_DEPLOYMENT")]
+            UpdateSecurityPolicyDeployment,
+            [EnumMember(Value = "CHANGE_SECURITY_POLICY_DEPLOYMENT_COMPARTMENT")]
+            ChangeSecurityPolicyDeploymentCompartment,
             [EnumMember(Value = "AUDIT_TRAIL")]
             AuditTrail,
             [EnumMember(Value = "DELETE_AUDIT_TRAIL")]

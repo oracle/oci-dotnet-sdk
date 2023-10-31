@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DisasterrecoveryService.Models
 {
   /// <summary>
-  /// Step types in a DR Plan.
+  /// The types of steps in a DR plan.
     /// 
   /// </summary>
   public enum DrPlanStepType {
@@ -72,6 +72,84 @@ namespace Oci.DisasterrecoveryService.Models
       VolumeGroupTerminate,
       [EnumMember(Value = "USER_DEFINED")]
       UserDefined,
+      [EnumMember(Value = "VOLUME_GROUP_RESTORE_START_DRILL_PRECHECK")]
+      VolumeGroupRestoreStartDrillPrecheck,
+      [EnumMember(Value = "VOLUME_GROUP_REMOVE_PRECHECK")]
+      VolumeGroupRemovePrecheck,
+      [EnumMember(Value = "VOLUME_GROUP_TERMINATE_PRECHECK")]
+      VolumeGroupTerminatePrecheck,
+      [EnumMember(Value = "VOLUME_GROUP_RESTORE_START_DRILL")]
+      VolumeGroupRestoreStartDrill,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_CREATE_CLONE_PRECHECK")]
+      AutonomousDatabaseCreateClonePrecheck,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_DELETE_CLONE_PRECHECK")]
+      AutonomousDatabaseDeleteClonePrecheck,
+      [EnumMember(Value = "LOAD_BALANCER_UPDATE_PRIMARY_BACKEND_SET_PRECHECK")]
+      LoadBalancerUpdatePrimaryBackendSetPrecheck,
+      [EnumMember(Value = "LOAD_BALANCER_UPDATE_STANDBY_BACKEND_SET_PRECHECK")]
+      LoadBalancerUpdateStandbyBackendSetPrecheck,
+      [EnumMember(Value = "FILE_SYSTEM_SWITCHOVER_PRECHECK")]
+      FileSystemSwitchoverPrecheck,
+      [EnumMember(Value = "FILE_SYSTEM_FAILOVER_PRECHECK")]
+      FileSystemFailoverPrecheck,
+      [EnumMember(Value = "FILE_SYSTEM_START_DRILL_PRECHECK")]
+      FileSystemStartDrillPrecheck,
+      [EnumMember(Value = "FILE_SYSTEM_STOP_DRILL_PRECHECK")]
+      FileSystemStopDrillPrecheck,
+      [EnumMember(Value = "FILE_SYSTEM_REMOVE_PRECHECK")]
+      FileSystemRemovePrecheck,
+      [EnumMember(Value = "FILE_SYSTEM_TERMINATE_PRECHECK")]
+      FileSystemTerminatePrecheck,
+      [EnumMember(Value = "FILE_SYSTEM_MOUNT_PRECHECK")]
+      FileSystemMountPrecheck,
+      [EnumMember(Value = "FILE_SYSTEM_UNMOUNT_PRECHECK")]
+      FileSystemUnmountPrecheck,
+      [EnumMember(Value = "COMPUTE_INSTANCE_START_PRECHECK")]
+      ComputeInstanceStartPrecheck,
+      [EnumMember(Value = "COMPUTE_INSTANCE_ATTACH_BLOCK_VOLUMES_PRECHECK")]
+      ComputeInstanceAttachBlockVolumesPrecheck,
+      [EnumMember(Value = "COMPUTE_INSTANCE_DETACH_BLOCK_VOLUMES_PRECHECK")]
+      ComputeInstanceDetachBlockVolumesPrecheck,
+      [EnumMember(Value = "COMPUTE_INSTANCE_MOUNT_BLOCK_VOLUMES_PRECHECK")]
+      ComputeInstanceMountBlockVolumesPrecheck,
+      [EnumMember(Value = "COMPUTE_INSTANCE_UNMOUNT_BLOCK_VOLUMES_PRECHECK")]
+      ComputeInstanceUnmountBlockVolumesPrecheck,
+      [EnumMember(Value = "COMPUTE_CAPACITY_RESERVATION_START_DRILL_PRECHECK")]
+      ComputeCapacityReservationStartDrillPrecheck,
+      [EnumMember(Value = "COMPUTE_CAPACITY_AVAILABILITY_START_DRILL_PRECHECK")]
+      ComputeCapacityAvailabilityStartDrillPrecheck,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_CREATE_CLONE")]
+      AutonomousDatabaseCreateClone,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_DELETE_CLONE")]
+      AutonomousDatabaseDeleteClone,
+      [EnumMember(Value = "LOAD_BALANCER_UPDATE_PRIMARY_BACKEND_SET")]
+      LoadBalancerUpdatePrimaryBackendSet,
+      [EnumMember(Value = "LOAD_BALANCER_UPDATE_STANDBY_BACKEND_SET")]
+      LoadBalancerUpdateStandbyBackendSet,
+      [EnumMember(Value = "FILE_SYSTEM_SWITCHOVER")]
+      FileSystemSwitchover,
+      [EnumMember(Value = "FILE_SYSTEM_FAILOVER")]
+      FileSystemFailover,
+      [EnumMember(Value = "FILE_SYSTEM_REMOVE")]
+      FileSystemRemove,
+      [EnumMember(Value = "FILE_SYSTEM_REVERSE")]
+      FileSystemReverse,
+      [EnumMember(Value = "FILE_SYSTEM_TERMINATE")]
+      FileSystemTerminate,
+      [EnumMember(Value = "FILE_SYSTEM_START_DRILL")]
+      FileSystemStartDrill,
+      [EnumMember(Value = "FILE_SYSTEM_STOP_DRILL")]
+      FileSystemStopDrill,
+      [EnumMember(Value = "COMPUTE_INSTANCE_START")]
+      ComputeInstanceStart,
+      [EnumMember(Value = "COMPUTE_INSTANCE_ATTACH_BLOCK_VOLUMES")]
+      ComputeInstanceAttachBlockVolumes,
+      [EnumMember(Value = "COMPUTE_INSTANCE_DETACH_BLOCK_VOLUMES")]
+      ComputeInstanceDetachBlockVolumes,
+      [EnumMember(Value = "FILE_SYSTEM_MOUNT")]
+      FileSystemMount,
+      [EnumMember(Value = "FILE_SYSTEM_UNMOUNT")]
+      FileSystemUnmount,
       [EnumMember(Value = "COMPUTE_CAPACITY_RESERVATION_SWITCHOVER_PRECHECK")]
       ComputeCapacityReservationSwitchoverPrecheck,
       [EnumMember(Value = "COMPUTE_CAPACITY_RESERVATION_FAILOVER_PRECHECK")]

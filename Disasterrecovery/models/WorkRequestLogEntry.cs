@@ -24,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// A human-readable log message.
         /// <br/>
-        /// Example: DR Plan Execution is in progress
+        /// Example: DR plan execution is in progress
         /// </value>
         /// <remarks>
         /// Required

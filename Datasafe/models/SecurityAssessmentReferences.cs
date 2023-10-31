@@ -13,7 +13,9 @@ using System.Runtime.Serialization;
 namespace Oci.DatasafeService.Models
 {
   /// <summary>
-  /// The filtering capability to list findings by the refernce label.
+  /// A filter to return only findings that match the specified reference. Currently supported values are STIG, CIS, and GDPR. 
+    /// Here STIG refers to DISA STIG, CIS refers to CIS Benchmark, and GDPR refers to EU GDPR.
+    /// 
   /// </summary>
   public enum SecurityAssessmentReferences {
       [EnumMember(Value = "STIG")]

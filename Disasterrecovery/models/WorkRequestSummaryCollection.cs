@@ -24,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
     {
         
         /// <value>
-        /// A list of workRequestSummary objects.
+        /// A list of work request summaries.
         /// 
         /// </value>
         /// <remarks>

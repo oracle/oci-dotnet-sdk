@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The details for updating a DR Protection Group.
+    /// The details for updating a DR protection group.
     /// </summary>
     public class UpdateDrProtectionGroupDetails 
     {
         
         /// <value>
-        /// The display name of the DR Protection Group.
+        /// The display name of the DR protection group.
         /// <br/>
-        /// Example: EBS PHX DRPG
+        /// Example: EBS PHX Group
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -33,7 +33,8 @@ namespace Oci.DisasterrecoveryService.Models
         public UpdateObjectStorageLogLocationDetails LogLocation { get; set; }
         
         /// <value>
-        /// A list of DR Protection Group members.
+        /// A list of DR protection group members.  When updating members, this list must contain all members being retained,
+        /// including added and updated members. The list must not contain deleted members.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "members")]
@@ -41,6 +42,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
@@ -48,6 +50,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]

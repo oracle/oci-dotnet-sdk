@@ -16,21 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// The details for updating a DR Plan step.
+    /// The details for updating a DR plan step.
     /// </summary>
     public class UpdateDrPlanStepDetails 
     {
         
         /// <value>
-        /// The unique id of this step.
+        /// The unique id of the step.
         /// <br/>
-        /// Example: sgid1.step..&lt;unique_id&gt;
+        /// Example: sgid1.step..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The display name of this step in a group.
+        /// The display name of the step in a group.
         /// <br/>
         /// Example: My_STEP_3A - EBS Start - STAGE A
         /// </value>

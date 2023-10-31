@@ -49,19 +49,19 @@ namespace Oci.DatasafeService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return the target databases that matches the current state of the target database.
+        /// A filter to return only target databases that match the specified lifecycle state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<TargetDatabaseLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// A filter to return target databases that match the database type of the target database.
+        /// A filter to return only target databases that match the specified database type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseType")]
         public System.Nullable<DatabaseType> DatabaseType { get; set; }
         
         /// <value>
-        /// A filter to return target databases that match the infrastructure type of the target database.
+        /// A filter to return only target databases that match the specified infrastructure type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "infrastructureType")]
         public System.Nullable<InfrastructureType> InfrastructureType { get; set; }

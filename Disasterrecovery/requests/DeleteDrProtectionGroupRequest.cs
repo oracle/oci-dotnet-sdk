@@ -20,9 +20,9 @@ namespace Oci.DisasterrecoveryService.Requests
     {
         
         /// <value>
-        /// The OCID of the DR Protection Group.
+        /// The OCID of the DR protection group.
         /// <br/>
-        /// Example: ocid1.drprotectiongroup.oc1.phx.exampleocid
+        /// Example: ocid1.drprotectiongroup.oc1..uniqueID
         /// </value>
         /// <remarks>
         /// Required

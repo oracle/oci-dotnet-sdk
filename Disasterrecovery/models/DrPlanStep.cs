@@ -16,15 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
-    /// Details of a step in a DR Plan.
+    /// Details of a step in a DR plan.
     /// </summary>
     public class DrPlanStep 
     {
         
         /// <value>
-        /// The unique id of this step. Must not be modified by the user.
+        /// The unique id of the step. Must not be modified by the user.
         /// <br/>
-        /// Example: sgid1.step..&lt;unique_id&gt;
+        /// Example: sgid1.step..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -36,7 +36,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The unique id of the group to which this step belongs. Must not be modified by user.
         /// <br/>
-        /// Example: sgid1.group..&lt;unique_id&gt;
+        /// Example: sgid1.group..uniqueID
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The OCID of the member associated with this step.
         /// <br/>
-        /// Example: ocid1.database.oc1.phx.&lt;unique_id&gt;
+        /// Example: ocid1.database.oc1..uniqueID
         /// </value>
         [JsonProperty(PropertyName = "memberId")]
         public string MemberId { get; set; }
@@ -66,7 +66,7 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanStepType> Type { get; set; }
         
         /// <value>
-        /// The display name of this DR Plan Group.
+        /// The display name of the group.
         /// <br/>
         /// Example: DATABASE_SWITCHOVER
         /// </value>
