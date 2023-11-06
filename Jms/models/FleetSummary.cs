@@ -139,6 +139,13 @@ namespace Oci.JmsService.Models
         public System.Nullable<bool> IsAdvancedFeaturesEnabled { get; set; }
         
         /// <value>
+        /// Whether or not export setting is enabled in this Fleet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isExportSettingEnabled")]
+        public System.Nullable<bool> IsExportSettingEnabled { get; set; }
+        
+        /// <value>
         /// The creation date and time of the Fleet (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// 
         /// </value>

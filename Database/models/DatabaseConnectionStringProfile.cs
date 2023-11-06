@@ -196,5 +196,11 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SyntaxFormatEnum> SyntaxFormat { get; set; }
         
+        /// <value>
+        /// True for a regional connection string, applicable to cross-region DG only.
+        /// </value>
+        [JsonProperty(PropertyName = "isRegional")]
+        public System.Nullable<bool> IsRegional { get; set; }
+        
     }
 }

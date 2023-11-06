@@ -72,6 +72,13 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "windowsConfiguration")]
         public FleetAgentOsConfiguration WindowsConfiguration { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "MacOsConfiguration is required.")]
+        [JsonProperty(PropertyName = "macOsConfiguration")]
+        public FleetAgentOsConfiguration MacOsConfiguration { get; set; }
+        
         /// <value>
         /// The date and time of the last modification to the Fleet Agent Configuration (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// 

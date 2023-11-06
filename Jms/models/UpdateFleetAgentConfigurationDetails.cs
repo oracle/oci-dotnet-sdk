@@ -55,5 +55,8 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "windowsConfiguration")]
         public FleetAgentOsConfiguration WindowsConfiguration { get; set; }
         
+        [JsonProperty(PropertyName = "macOsConfiguration")]
+        public FleetAgentOsConfiguration MacOsConfiguration { get; set; }
+        
     }
 }

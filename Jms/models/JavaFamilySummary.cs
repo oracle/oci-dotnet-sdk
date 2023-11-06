@@ -75,5 +75,27 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "docUrl")]
         public string DocUrl { get; set; }
         
+        /// <value>
+        /// Latest Java release version in the family.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LatestReleaseVersion is required.")]
+        [JsonProperty(PropertyName = "latestReleaseVersion")]
+        public string LatestReleaseVersion { get; set; }
+        
+        /// <value>
+        /// Whether or not this Java release family is under active support.
+        /// Refer [Java Support Roadmap](https://www.oracle.com/java/technologies/java-se-support-roadmap.html) for more details.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsSupportedVersion is required.")]
+        [JsonProperty(PropertyName = "isSupportedVersion")]
+        public System.Nullable<bool> IsSupportedVersion { get; set; }
+        
     }
 }

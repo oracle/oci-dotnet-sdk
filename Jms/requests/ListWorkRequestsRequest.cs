@@ -55,5 +55,11 @@ namespace Oci.JmsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
+        
+        /// <value>
+        /// The Fleet-unique identifier of the managed instance.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managedInstanceId")]
+        public string ManagedInstanceId { get; set; }
     }
 }

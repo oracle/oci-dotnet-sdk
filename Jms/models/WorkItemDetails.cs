@@ -30,7 +30,9 @@ namespace Oci.JmsService.Models
             [EnumMember(Value = "BASIC")]
             Basic,
             [EnumMember(Value = "APPLICATION")]
-            Application
+            Application,
+            [EnumMember(Value = "LCM")]
+            Lcm
         };
 
         
@@ -64,6 +66,9 @@ namespace Oci.JmsService.Models
             var discriminator = jsonObject["kind"].Value<string>();
             switch (discriminator)
             {
+                case "LCM":
+                    obj = new LcmWorkItemDetails();
+                    break;
                 case "BASIC":
                     obj = new BasicWorkItemDetails();
                     break;
