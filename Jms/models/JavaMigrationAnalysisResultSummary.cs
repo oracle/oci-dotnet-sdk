@@ -48,6 +48,12 @@ namespace Oci.JmsService.Models
         public string FleetId { get; set; }
         
         /// <value>
+        /// The unique key that identifies the application.
+        /// </value>
+        [JsonProperty(PropertyName = "applicationKey")]
+        public string ApplicationKey { get; set; }
+        
+        /// <value>
         /// The name of the application for which the Java migration analysis was performed.
         /// </value>
         /// <remarks>

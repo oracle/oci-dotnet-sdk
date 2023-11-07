@@ -41,9 +41,23 @@ namespace Oci.JmsService.Models
       RequestPerformanceTuningAnalysis,
       [EnumMember(Value = "REQUEST_JAVA_MIGRATION_ANALYSIS")]
       RequestJavaMigrationAnalysis,
+      [EnumMember(Value = "DELETE_JMS_REPORT")]
+      DeleteJmsReport,
       [EnumMember(Value = "SCAN_JAVA_SERVER_USAGE")]
       ScanJavaServerUsage,
       [EnumMember(Value = "SCAN_LIBRARY_USAGE")]
-      ScanLibraryUsage
+      ScanLibraryUsage,
+      [EnumMember(Value = "EXPORT_DATA_CSV")]
+      ExportDataCsv,
+      [EnumMember(Value = "CREATE_DRS_FILE")]
+      CreateDrsFile,
+      [EnumMember(Value = "UPDATE_DRS_FILE")]
+      UpdateDrsFile,
+      [EnumMember(Value = "DELETE_DRS_FILE")]
+      DeleteDrsFile,
+      [EnumMember(Value = "ENABLE_DRS")]
+      EnableDrs,
+      [EnumMember(Value = "DISABLE_DRS")]
+      DisableDrs
   }
 }

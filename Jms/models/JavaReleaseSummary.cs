@@ -116,5 +116,19 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "artifactContentTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<ArtifactContentType> ArtifactContentTypes { get; set; }
         
+        /// <value>
+        /// List of My Oracle Support(MoS) patches available for this release.
+        /// This information is only available for `BPR` release type.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "mosPatches")]
+        public System.Collections.Generic.List<PatchDetail> MosPatches { get; set; }
+        
+        /// <value>
+        /// The number of days since this release has been under the security baseline.
+        /// </value>
+        [JsonProperty(PropertyName = "daysUnderSecurityBaseline")]
+        public System.Nullable<int> DaysUnderSecurityBaseline { get; set; }
+        
     }
 }

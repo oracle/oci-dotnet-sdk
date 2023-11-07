@@ -63,6 +63,9 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "operatingSystem")]
         public OperatingSystem OperatingSystem { get; set; }
         
+        [JsonProperty(PropertyName = "agent")]
+        public Agent Agent { get; set; }
+        
         /// <value>
         /// The approximate count of applications reported by this managed instance.
         /// </value>
@@ -80,6 +83,13 @@ namespace Oci.JmsService.Models
         /// </value>
         [JsonProperty(PropertyName = "approximateJreCount")]
         public System.Nullable<int> ApproximateJreCount { get; set; }
+        
+        /// <value>
+        /// DRS file status
+        /// </value>
+        [JsonProperty(PropertyName = "drsFileStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DrsFileStatus> DrsFileStatus { get; set; }
         
         /// <value>
         /// Lower bound of the specified time period filter. JMS provides a view of the data that is _per day_. The query uses only the date element of the parameter.

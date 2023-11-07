@@ -72,5 +72,84 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "sha256")]
         public string Sha256 { get; set; }
         
+        /// <value>
+        /// The file name of the artifact.
+        /// </value>
+        [JsonProperty(PropertyName = "artifactFileName")]
+        public string ArtifactFileName { get; set; }
+        
+        /// <value>
+        /// The target Operating System family for the artifact.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "OsFamily is required.")]
+        [JsonProperty(PropertyName = "osFamily")]
+        public string OsFamily { get; set; }
+        
+        /// <value>
+        /// The target Operating System architecture for the artifact.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Architecture is required.")]
+        [JsonProperty(PropertyName = "architecture")]
+        public string Architecture { get; set; }
+        
+        /// <value>
+        /// The package type(typically the file extension) of the artifact.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "PackageType is required.")]
+        [JsonProperty(PropertyName = "packageType")]
+        public string PackageType { get; set; }
+        
+        /// <value>
+        /// Additional information about the package type.
+        /// </value>
+        [JsonProperty(PropertyName = "packageTypeDetail")]
+        public string PackageTypeDetail { get; set; }
+        
+        /// <value>
+        /// The endpoint that returns a short-lived artifact download URL in the response payload.
+        /// This download url can then be used for downloading the artifact.
+        /// See this [API](https://docs.oracle.com/en-us/iaas/api/#/en/jms/20230601/JavaArtifact/GenerateArtifactDownloadUrl) for more details.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DownloadUrl is required.")]
+        [JsonProperty(PropertyName = "downloadUrl")]
+        public string DownloadUrl { get; set; }
+        
+        /// <value>
+        /// The endpoint for downloading this artifact from command line, automatically in scripts and dockerfiles.
+        /// Depending on the context, this can point to the archive or latest update release version artifact in the specified family.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ScriptDownloadUrl is required.")]
+        [JsonProperty(PropertyName = "scriptDownloadUrl")]
+        public string ScriptDownloadUrl { get; set; }
+        
+        /// <value>
+        /// The URL for retrieving the checksum for the artifact.
+        /// Depending on the context, this can point to the checksum of the archive or latest update release version artifact.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ScriptChecksumUrl is required.")]
+        [JsonProperty(PropertyName = "scriptChecksumUrl")]
+        public string ScriptChecksumUrl { get; set; }
+        
     }
 }

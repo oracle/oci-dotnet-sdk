@@ -189,6 +189,8 @@ namespace Oci.DatabaseService.Models
             MaintenanceInProgress,
             [EnumMember(Value = "ROLE_CHANGE_IN_PROGRESS")]
             RoleChangeInProgress,
+            [EnumMember(Value = "ENABLING_AUTONOMOUS_DATA_GUARD")]
+            EnablingAutonomousDataGuard,
             [EnumMember(Value = "UNAVAILABLE")]
             Unavailable
         };

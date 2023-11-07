@@ -271,6 +271,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Marketplacepu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Redis", "Redis\OCI.DotNetSDK.Redis.csproj", "{30B5937E-A512-41F2-96DF-711116FD976C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Jmsjavadownloads", "Jmsjavadownloads\OCI.DotNetSDK.Jmsjavadownloads.csproj", "{B6EACA05-395E-4AC2-ACF2-36323D20C90C}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2495,5 +2497,17 @@ Global
         {30B5937E-A512-41F2-96DF-711116FD976C}.Release|x64.Build.0 = Release|Any CPU
         {30B5937E-A512-41F2-96DF-711116FD976C}.Release|x86.ActiveCfg = Release|Any CPU
         {30B5937E-A512-41F2-96DF-711116FD976C}.Release|x86.Build.0 = Release|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Debug|x64.Build.0 = Debug|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Debug|x86.Build.0 = Debug|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Release|Any CPU.Build.0 = Release|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Release|x64.ActiveCfg = Release|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Release|x64.Build.0 = Release|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Release|x86.ActiveCfg = Release|Any CPU
+        {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -64,5 +64,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
         
+        /// <value>
+        /// True when requesting regional connection strings in PDB connect info, applicable to cross-region DG only.
+        /// </value>
+        [JsonProperty(PropertyName = "isRegional")]
+        public System.Nullable<bool> IsRegional { get; set; }
+        
     }
 }

@@ -32,6 +32,12 @@ namespace Oci.JmsService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Filter the Java Release Family versions by support status.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isSupportedVersion")]
+        public System.Nullable<bool> IsSupportedVersion { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

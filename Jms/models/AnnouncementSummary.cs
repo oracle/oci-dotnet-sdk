@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// A summary of a announcement on Console Overview page
+    /// An summary of a announcement on Console Overview page
     /// </summary>
     public class AnnouncementSummary 
     {
