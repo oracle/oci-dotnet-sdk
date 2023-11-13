@@ -80,6 +80,23 @@ namespace Oci.IdentitydomainsService.Models
         /// </value>
         [JsonProperty(PropertyName = "display")]
         public string Display { get; set; }
+        
+        /// <value>
+        /// Resource description
+        /// <br/>
+        /// **Added In:** 2307071836
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - idcsSearchable: true
+        ///  - multiValued: false
+        ///  - mutability: readOnly
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
                 ///
         /// <value>
         /// Requestable type. Allowed values are Group and App.

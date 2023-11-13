@@ -243,5 +243,20 @@ namespace Oci.IdentitydomainsService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
         
+        /// <value>
+        /// Specifies the token to be removed
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - type: string
+        ///  - multiValued: false
+        ///  - required: false
+        ///  - mutability: readWrite
+        ///  - returned: request
+        ///  - uniqueness: none
+        ///  - idcsSearchable: false
+        /// </value>
+        [JsonProperty(PropertyName = "token")]
+        public string Token { get; set; }
+        
     }
 }

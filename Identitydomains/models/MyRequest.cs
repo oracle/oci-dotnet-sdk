@@ -212,9 +212,64 @@ namespace Oci.IdentitydomainsService.Models
         [Required(ErrorMessage = "Justification is required.")]
         [JsonProperty(PropertyName = "justification")]
         public string Justification { get; set; }
-        
+                ///
         /// <value>
         /// status
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: true
+        ///  - idcsSearchable: true
+        ///  - multiValued: false
+        ///  - mutability: readOnly
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        ///
+        public enum StatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "CREATED")]
+            Created,
+            [EnumMember(Value = "COMPLETE")]
+            Complete,
+            [EnumMember(Value = "IN_PROGRESS")]
+            InProgress,
+            [EnumMember(Value = "APPROVED")]
+            Approved,
+            [EnumMember(Value = "REJECTED")]
+            Rejected,
+            [EnumMember(Value = "CANCELED")]
+            Canceled,
+            [EnumMember(Value = "EXPIRED")]
+            Expired,
+            [EnumMember(Value = "FAILED")]
+            Failed
+        };
+
+        /// <value>
+        /// status
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: true
+        ///  - idcsSearchable: true
+        ///  - multiValued: false
+        ///  - mutability: readOnly
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "status")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<StatusEnum> Status { get; set; }
+                ///
+        /// <value>
+        /// Requestor can set action to CANCEL to cancel the request or to ESCALATE to escalate the request while the request status is IN_PROGRESS. Requestor can't escalate the request if canceling or escalation is in progress.
+        /// <br/>
+        /// **Added In:** 2307071836
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
@@ -226,8 +281,68 @@ namespace Oci.IdentitydomainsService.Models
         ///  - type: string
         ///  - uniqueness: none
         /// </value>
-        [JsonProperty(PropertyName = "status")]
-        public string Status { get; set; }
+        ///
+        public enum ActionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "CANCEL")]
+            Cancel,
+            [EnumMember(Value = "ESCALATE")]
+            Escalate
+        };
+
+        /// <value>
+        /// Requestor can set action to CANCEL to cancel the request or to ESCALATE to escalate the request while the request status is IN_PROGRESS. Requestor can't escalate the request if canceling or escalation is in progress.
+        /// <br/>
+        /// **Added In:** 2307071836
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: true
+        ///  - idcsSearchable: true
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "action")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ActionEnum> Action { get; set; }
+        
+        /// <value>
+        /// Time by when Request expires
+        /// <br/>
+        /// **Added In:** 2307071836
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - idcsSearchable: true
+        ///  - multiValued: false
+        ///  - mutability: readOnly
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: dateTime
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "expires")]
+        public string Expires { get; set; }
+        
+        /// <value>
+        /// Approvals created for this request.
+        /// <br/>
+        /// **Added In:** 2307071836
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - idcsSearchable: false
+        ///  - multiValued: true
+        ///  - mutability: readOnly
+        ///  - returned: request
+        ///  - type: complex
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "approvalDetails")]
+        public System.Collections.Generic.List<MyRequestApprovalDetails> ApprovalDetails { get; set; }
         
         [JsonProperty(PropertyName = "requestor")]
         public MyRequestRequestor Requestor { get; set; }

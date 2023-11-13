@@ -273,6 +273,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Redis", "Redi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Jmsjavadownloads", "Jmsjavadownloads\OCI.DotNetSDK.Jmsjavadownloads.csproj", "{B6EACA05-395E-4AC2-ACF2-36323D20C90C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Psql", "Psql\OCI.DotNetSDK.Psql.csproj", "{97E3BA70-0F90-497B-BACB-EE6A5BB6034B}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2509,5 +2511,17 @@ Global
         {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Release|x64.Build.0 = Release|Any CPU
         {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Release|x86.ActiveCfg = Release|Any CPU
         {B6EACA05-395E-4AC2-ACF2-36323D20C90C}.Release|x86.Build.0 = Release|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Debug|x64.Build.0 = Debug|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Debug|x86.Build.0 = Debug|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Release|Any CPU.Build.0 = Release|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Release|x64.ActiveCfg = Release|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Release|x64.Build.0 = Release|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Release|x86.ActiveCfg = Release|Any CPU
+        {97E3BA70-0F90-497B-BACB-EE6A5BB6034B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

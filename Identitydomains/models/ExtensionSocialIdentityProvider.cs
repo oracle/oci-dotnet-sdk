@@ -147,6 +147,24 @@ namespace Oci.IdentitydomainsService.Models
         public string AccessTokenUrl { get; set; }
         
         /// <value>
+        /// Relay Param variable for Social IDP
+        /// <br/>
+        /// **Added In:** 2305190132
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - idcsCompositeKey: [relayParamKey]
+        ///  - idcsSearchable: true
+        ///  - multiValued: true
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: complex
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "relayIdpParamMappings")]
+        public System.Collections.Generic.List<IdentityProviderRelayIdpParamMappings> RelayIdpParamMappings { get; set; }
+        
+        /// <value>
         /// Social IDP User profile URL
         /// <br/>
         /// **Added In:** 20.1.3
