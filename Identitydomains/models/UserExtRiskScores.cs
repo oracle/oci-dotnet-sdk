@@ -123,6 +123,8 @@ namespace Oci.IdentitydomainsService.Models
         ///  - returned: always
         ///  - type: integer
         ///  - uniqueness: none
+        ///  - idcsMaxValue: 100
+        ///  - idcsMinValue: 0
         /// </value>
         /// <remarks>
         /// Required

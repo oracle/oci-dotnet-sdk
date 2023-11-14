@@ -85,6 +85,24 @@ namespace Oci.IdentitydomainsService.Models
         public string SecretKey { get; set; }
         
         /// <value>
+        /// Secret key used to secure communication between RADIUS Proxy and RADIUS client. This will be available only for few releases for an internal migration requirement. Use secretKey attribute instead of this attribute for all other requirements.
+        /// <br/>
+        /// **Added In:** 2306131901
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: true
+        ///  - idcsSearchable: false
+        ///  - idcsSensitive: encrypt
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: never
+        ///  - type: string
+        /// </value>
+        [JsonProperty(PropertyName = "secretKeyTemporary")]
+        public string SecretKeyTemporary { get; set; }
+        
+        /// <value>
         /// Indicates to include groups in RADIUS response
         /// <br/>
         /// **Added In:** 20.1.3

@@ -393,6 +393,202 @@ namespace Oci.CoreService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListComputeCapacityTopologies operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListComputeCapacityTopologiesResponse> ListComputeCapacityTopologiesResponseEnumerator(ListComputeCapacityTopologiesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListComputeCapacityTopologiesRequest, ListComputeCapacityTopologiesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeCapacityTopologies(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ComputeCapacityTopologySummary objects
+        /// contained in responses from the ListComputeCapacityTopologies operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ComputeCapacityTopologySummary> ListComputeCapacityTopologiesRecordEnumerator(ListComputeCapacityTopologiesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListComputeCapacityTopologiesRequest, ListComputeCapacityTopologiesResponse, ComputeCapacityTopologySummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeCapacityTopologies(request, retryConfiguration, cancellationToken),
+                response => response.ComputeCapacityTopologyCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListComputeCapacityTopologyComputeBareMetalHosts operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListComputeCapacityTopologyComputeBareMetalHostsResponse> ListComputeCapacityTopologyComputeBareMetalHostsResponseEnumerator(ListComputeCapacityTopologyComputeBareMetalHostsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListComputeCapacityTopologyComputeBareMetalHostsRequest, ListComputeCapacityTopologyComputeBareMetalHostsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeCapacityTopologyComputeBareMetalHosts(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ComputeBareMetalHostSummary objects
+        /// contained in responses from the ListComputeCapacityTopologyComputeBareMetalHosts operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ComputeBareMetalHostSummary> ListComputeCapacityTopologyComputeBareMetalHostsRecordEnumerator(ListComputeCapacityTopologyComputeBareMetalHostsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListComputeCapacityTopologyComputeBareMetalHostsRequest, ListComputeCapacityTopologyComputeBareMetalHostsResponse, ComputeBareMetalHostSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeCapacityTopologyComputeBareMetalHosts(request, retryConfiguration, cancellationToken),
+                response => response.ComputeBareMetalHostCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListComputeCapacityTopologyComputeHpcIslands operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListComputeCapacityTopologyComputeHpcIslandsResponse> ListComputeCapacityTopologyComputeHpcIslandsResponseEnumerator(ListComputeCapacityTopologyComputeHpcIslandsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListComputeCapacityTopologyComputeHpcIslandsRequest, ListComputeCapacityTopologyComputeHpcIslandsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeCapacityTopologyComputeHpcIslands(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ComputeHpcIslandSummary objects
+        /// contained in responses from the ListComputeCapacityTopologyComputeHpcIslands operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ComputeHpcIslandSummary> ListComputeCapacityTopologyComputeHpcIslandsRecordEnumerator(ListComputeCapacityTopologyComputeHpcIslandsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListComputeCapacityTopologyComputeHpcIslandsRequest, ListComputeCapacityTopologyComputeHpcIslandsResponse, ComputeHpcIslandSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeCapacityTopologyComputeHpcIslands(request, retryConfiguration, cancellationToken),
+                response => response.ComputeHpcIslandCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListComputeCapacityTopologyComputeNetworkBlocks operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListComputeCapacityTopologyComputeNetworkBlocksResponse> ListComputeCapacityTopologyComputeNetworkBlocksResponseEnumerator(ListComputeCapacityTopologyComputeNetworkBlocksRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListComputeCapacityTopologyComputeNetworkBlocksRequest, ListComputeCapacityTopologyComputeNetworkBlocksResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeCapacityTopologyComputeNetworkBlocks(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ComputeNetworkBlockSummary objects
+        /// contained in responses from the ListComputeCapacityTopologyComputeNetworkBlocks operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ComputeNetworkBlockSummary> ListComputeCapacityTopologyComputeNetworkBlocksRecordEnumerator(ListComputeCapacityTopologyComputeNetworkBlocksRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListComputeCapacityTopologyComputeNetworkBlocksRequest, ListComputeCapacityTopologyComputeNetworkBlocksResponse, ComputeNetworkBlockSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListComputeCapacityTopologyComputeNetworkBlocks(request, retryConfiguration, cancellationToken),
+                response => response.ComputeNetworkBlockCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListComputeClusters operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

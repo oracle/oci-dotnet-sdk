@@ -209,7 +209,7 @@ namespace Oci.IdentitydomainsService.Models
         public string ExternalId { get; set; }
         
         /// <value>
-        /// Password attribute. Max length for password is controlled via Password Policy.
+        /// Password attribute. The maximum length for a password is controlled by a password policy.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - type: string

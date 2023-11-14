@@ -99,5 +99,8 @@ namespace Oci.AispeechService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LanguageCodeEnum> LanguageCode { get; set; }
         
+        [JsonProperty(PropertyName = "transcriptionSettings")]
+        public TranscriptionSettings TranscriptionSettings { get; set; }
+        
     }
 }

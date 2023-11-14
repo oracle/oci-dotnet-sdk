@@ -88,6 +88,8 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "REMOVE_KAFKA")]
       RemoveKafka,
       [EnumMember(Value = "EXECUTE_BOOTSTRAP_SCRIPT")]
-      ExecuteBootstrapScript
+      ExecuteBootstrapScript,
+      [EnumMember(Value = "ODH_SERVICE_CERTIFICATE_UPDATE")]
+      OdhServiceCertificateUpdate
   }
 }
