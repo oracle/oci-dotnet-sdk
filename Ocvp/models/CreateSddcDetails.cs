@@ -22,17 +22,6 @@ namespace Oci.OcvpService.Models
     {
         
         /// <value>
-        /// The availability domain to create the SDDC's ESXi hosts in. For multi-AD SDDC deployment, set to `multi-AD`.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ComputeAvailabilityDomain is required.")]
-        [JsonProperty(PropertyName = "computeAvailabilityDomain")]
-        public string ComputeAvailabilityDomain { get; set; }
-        
-        /// <value>
         /// A descriptive name for the SDDC.
         /// SDDC name requirements are 1-16 character length limit, Must start with a letter, Must be English letters, numbers, - only, No repeating hyphens, Must be unique within the region.
         /// Avoid entering confidential information.
@@ -55,6 +44,16 @@ namespace Oci.OcvpService.Models
         public string VmwareSoftwareVersion { get; set; }
         
         /// <value>
+        /// The ESXi software bundle to install on the ESXi hosts in the SDDC. 
+        /// Only versions under the same vmwareSoftwareVersion and have been validate by Oracle Cloud VMware Solution will be accepted.
+        /// To get a list of the available versions, use
+        /// {@link #listSupportedVmwareSoftwareVersions(ListSupportedVmwareSoftwareVersionsRequest) listSupportedVmwareSoftwareVersions}.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "esxiSoftwareVersion")]
+        public string EsxiSoftwareVersion { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to contain the SDDC.
         /// 
         /// </value>
@@ -66,69 +65,26 @@ namespace Oci.OcvpService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A prefix used in the name of each ESXi host and Compute instance in the SDDC.
-        /// If this isn't set, the SDDC's `displayName` is used as the prefix.
-        /// <br/>
-        /// For example, if the value is `mySDDC`, the ESXi hosts are named `mySDDC-1`,
-        /// `mySDDC-2`, and so on.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "instanceDisplayNamePrefix")]
-        public string InstanceDisplayNamePrefix { get; set; }
-        
-        /// <value>
-        /// The number of ESXi hosts to create in the SDDC. You can add more hosts later
-        /// (see {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost}). Creating
-        /// a SDDC with a ESXi host count of 1 will be considered a single ESXi host SDDC.
-        /// <br/>
-        /// **Note:** If you later delete EXSi hosts from a production SDDC to total less
-        /// than 3, you are still billed for the 3 minimum recommended ESXi hosts. Also,
-        /// you cannot add more VMware workloads to the SDDC until it again has at least
-        /// 3 ESXi hosts.
+        /// HCX configuration of the SDDC.
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "EsxiHostsCount is required.")]
-        [JsonProperty(PropertyName = "esxiHostsCount")]
-        public System.Nullable<int> EsxiHostsCount { get; set; }
-        
-        /// <value>
-        /// The billing option selected during SDDC creation.
-        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "initialSku")]
+        [Required(ErrorMessage = "HcxMode is required.")]
+        [JsonProperty(PropertyName = "hcxMode")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<Sku> InitialSku { get; set; }
+        public System.Nullable<HcxModes> HcxMode { get; set; }
         
-        /// <value>
-        /// For SDDC with dense compute shapes, this parameter indicates whether to enable HCX Advanced for this SDDC.
-        /// For SDDC with standard compute shapes, this parameter is equivalent to `isHcxEnterpriseEnabled`.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "isHcxEnabled")]
-        public System.Nullable<bool> IsHcxEnabled { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for the HCX
-        /// component of the VMware environment. This value is required only when `isHcxEnabled` is true.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "hcxVlanId")]
-        public string HcxVlanId { get; set; }
-        
-        /// <value>
-        /// Indicates whether to enable HCX Enterprise for this SDDC.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "isHcxEnterpriseEnabled")]
-        public System.Nullable<bool> IsHcxEnterpriseEnabled { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "InitialConfiguration is required.")]
+        [JsonProperty(PropertyName = "initialConfiguration")]
+        public InitialConfiguration InitialConfiguration { get; set; }
         
         /// <value>
         /// Indicates whether this SDDC is designated for only single ESXi host.
-        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSingleHostSddc")]
         public System.Nullable<bool> IsSingleHostSddc { get; set; }
@@ -145,165 +101,6 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "SshAuthorizedKeys is required.")]
         [JsonProperty(PropertyName = "sshAuthorizedKeys")]
         public string SshAuthorizedKeys { get; set; }
-        
-        /// <value>
-        /// The CIDR block for the IP addresses that VMware VMs in the SDDC use to run application
-        /// workloads.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "workloadNetworkCidr")]
-        public string WorkloadNetworkCidr { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the management subnet to use
-        /// for provisioning the SDDC.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ProvisioningSubnetId is required.")]
-        [JsonProperty(PropertyName = "provisioningSubnetId")]
-        public string ProvisioningSubnetId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for the vSphere
-        /// component of the VMware environment.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VsphereVlanId is required.")]
-        [JsonProperty(PropertyName = "vsphereVlanId")]
-        public string VsphereVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for the vMotion
-        /// component of the VMware environment.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VmotionVlanId is required.")]
-        [JsonProperty(PropertyName = "vmotionVlanId")]
-        public string VmotionVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for the vSAN
-        /// component of the VMware environment.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VsanVlanId is required.")]
-        [JsonProperty(PropertyName = "vsanVlanId")]
-        public string VsanVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for the NSX VTEP
-        /// component of the VMware environment.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NsxVTepVlanId is required.")]
-        [JsonProperty(PropertyName = "nsxVTepVlanId")]
-        public string NsxVTepVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for the NSX Edge VTEP
-        /// component of the VMware environment.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NsxEdgeVTepVlanId is required.")]
-        [JsonProperty(PropertyName = "nsxEdgeVTepVlanId")]
-        public string NsxEdgeVTepVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for the NSX Edge
-        /// Uplink 1 component of the VMware environment.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NsxEdgeUplink1VlanId is required.")]
-        [JsonProperty(PropertyName = "nsxEdgeUplink1VlanId")]
-        public string NsxEdgeUplink1VlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for the NSX Edge
-        /// Uplink 2 component of the VMware environment.
-        /// <br/>
-        /// **Note:** This VLAN is reserved for future use to deploy public-facing applications on the VMware SDDC.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NsxEdgeUplink2VlanId is required.")]
-        [JsonProperty(PropertyName = "nsxEdgeUplink2VlanId")]
-        public string NsxEdgeUplink2VlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the vSphere Replication component of the VMware environment.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "replicationVlanId")]
-        public string ReplicationVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the Provisioning component of the VMware environment.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "provisioningVlanId")]
-        public string ProvisioningVlanId { get; set; }
-        
-        /// <value>
-        /// The initial compute shape of the SDDC's ESXi hosts.
-        /// {@link #listSupportedHostShapes(ListSupportedHostShapesRequest) listSupportedHostShapes}.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "initialHostShapeName")]
-        public string InitialHostShapeName { get; set; }
-        
-        /// <value>
-        /// The initial OCPU count of the SDDC's ESXi hosts.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "initialHostOcpuCount")]
-        public System.Nullable<float> InitialHostOcpuCount { get; set; }
-        
-        /// <value>
-        /// Indicates whether shielded instance is enabled for this SDDC.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "isShieldedInstanceEnabled")]
-        public System.Nullable<bool> IsShieldedInstanceEnabled { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Capacity Reservation.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "capacityReservationId")]
-        public string CapacityReservationId { get; set; }
-        
-        /// <value>
-        /// A list of datastore info for the SDDC.
-        /// This value is required only when `initialHostShapeName` is a standard shape.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "datastores")]
-        public System.Collections.Generic.List<DatastoreInfo> Datastores { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no

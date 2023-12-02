@@ -14,9 +14,9 @@ using Oci.OcvpService.Models;
 namespace Oci.OcvpService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/ListSupportedSkus.cs.html">here</a> to see an example of how to use ListSupportedSkus request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/ListSupportedCommitments.cs.html">here</a> to see an example of how to use ListSupportedCommitments request.
     /// </example>
-    public class ListSupportedSkusRequest : Oci.Common.IOciRequest
+    public class ListSupportedCommitmentsRequest : Oci.Common.IOciRequest
     {
         
         /// <value>

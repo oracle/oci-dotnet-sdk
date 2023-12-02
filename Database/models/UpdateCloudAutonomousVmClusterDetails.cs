@@ -36,6 +36,24 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "maintenanceWindowDetails")]
         public MaintenanceWindow MaintenanceWindowDetails { get; set; }
+        
+        /// <value>
+        /// The new scaled up/down value for exadata storage in TBs for cloud autonomous VM cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousDataStorageSizeInTBs")]
+        public System.Double AutonomousDataStorageSizeInTBs { get; set; }
+        
+        /// <value>
+        /// The new scaled up/down value for ocpus for cloud autonomous VM cluster per node.
+        /// </value>
+        [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
+        public System.Nullable<int> CpuCoreCountPerNode { get; set; }
+        
+        /// <value>
+        /// The new scaled up/down value for maxACD count for cloud autonomous VM cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "totalContainerDatabases")]
+        public System.Nullable<int> TotalContainerDatabases { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.

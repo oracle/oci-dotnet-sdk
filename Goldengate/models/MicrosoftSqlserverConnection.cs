@@ -132,7 +132,7 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<SecurityProtocolEnum> SecurityProtocol { get; set; }
         
         /// <value>
-        /// Database Certificate - The base64 encoded content of pem file
+        /// Database Certificate - The base64 encoded content of a .pem or .crt file.
         /// containing the server public key (for 1-way SSL).
         /// 
         /// </value>

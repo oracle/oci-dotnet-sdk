@@ -64,22 +64,26 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// A valid Oracle Grid Infrastructure (GI) software version.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NewGiVersion is required.")]
         [JsonProperty(PropertyName = "newGiVersion")]
         public string NewGiVersion { get; set; }
         
         /// <value>
         /// A valid Oracle Grid Infrastructure (GI) software version.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OldGiVersion is required.")]
         [JsonProperty(PropertyName = "oldGiVersion")]
         public string OldGiVersion { get; set; }
+        
+        /// <value>
+        /// A valid Oracle Software (OS) version eg. Oracle Linux Server release 8
+        /// </value>
+        [JsonProperty(PropertyName = "oldOsVersion")]
+        public string OldOsVersion { get; set; }
+        
+        /// <value>
+        /// A valid Oracle Software (OS) version eg. Oracle Linux Server release 8
+        /// </value>
+        [JsonProperty(PropertyName = "newOsVersion")]
+        public string NewOsVersion { get; set; }
         
         /// <value>
         /// The retention period, in days, for the snapshot that allows you to perform a rollback of the upgrade operation. After this number of days passes, you cannot roll back the upgrade.

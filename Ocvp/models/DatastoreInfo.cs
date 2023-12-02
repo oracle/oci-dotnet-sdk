@@ -40,7 +40,7 @@ namespace Oci.OcvpService.Models
         /// </remarks>
         [Required(ErrorMessage = "DatastoreType is required.")]
         [JsonProperty(PropertyName = "datastoreType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatastoreTypes> DatastoreType { get; set; }
         
     }

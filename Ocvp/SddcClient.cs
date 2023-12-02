@@ -26,7 +26,7 @@ namespace Oci.OcvpService
     public class SddcClient : RegionalClientBase
     {
         private readonly RetryConfiguration retryConfiguration;
-        private const string basePathWithoutHost = "/20200501";
+        private const string basePathWithoutHost = "/20230701";
 
         public SddcPaginators Paginators { get; }
 
@@ -110,7 +110,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "CancelDowngradeHcx",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/Sddc/CancelDowngradeHcx",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/Sddc/CancelDowngradeHcx",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -169,7 +169,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "ChangeSddcCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/Sddc/ChangeSddcCompartment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/Sddc/ChangeSddcCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -231,7 +231,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "CreateSddc",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/Sddc/CreateSddc",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/Sddc/CreateSddc",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -293,7 +293,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "DeleteSddc",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/Sddc/DeleteSddc",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/Sddc/DeleteSddc",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -317,7 +317,7 @@ namespace Oci.OcvpService
         /// SDDC with standard compute shapes will always use HCX Enterprise if HCX is enabled and cannot be downgraded.
         /// Downgrading from HCX Enterprise to HCX Advanced reduces the number of provided license keys from 10 to 3.
         /// Downgrade remains in a &#x60;PENDING&#x60; state until the end of the current billing cycle. You can use {@link #cancelDowngradeHcx(CancelDowngradeHcxRequest) cancelDowngradeHcx} 
-        /// to cancel the downgrade while it&#39;s still in a &#x60;PENDING&#x60; state. 
+        /// to cancel the downgrade while it&#39;s still in a &#x60;PENDING&#x60; state.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -354,7 +354,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "DowngradeHcx",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/Sddc/DowngradeHcx",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/Sddc/DowngradeHcx",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -410,7 +410,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "GetSddc",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/Sddc/GetSddc",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/Sddc/GetSddc",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -468,7 +468,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "ListSddcs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/SddcSummary/ListSddcs",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/SddcSummary/ListSddcs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -483,6 +483,63 @@ namespace Oci.OcvpService
             catch (Exception e)
             {
                 logger.Error($"ListSddcs failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists supported Commitments.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/ListSupportedCommitments.cs.html">here</a> to see an example of how to use ListSupportedCommitments API.</example>
+        public async Task<ListSupportedCommitmentsResponse> ListSupportedCommitments(ListSupportedCommitmentsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listSupportedCommitments");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/supportedCommitments".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Sddc",
+                    OperationName = "ListSupportedCommitments",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/SupportedCommitmentSummary/ListSupportedCommitments",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListSupportedCommitmentsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListSupportedCommitments failed with error: {e.Message}");
                 throw;
             }
         }
@@ -525,7 +582,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "ListSupportedHostShapes",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/SupportedHostShapeSummary/ListSupportedHostShapes",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/SupportedHostShapeSummary/ListSupportedHostShapes",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -540,63 +597,6 @@ namespace Oci.OcvpService
             catch (Exception e)
             {
                 logger.Error($"ListSupportedHostShapes failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Lists supported SKUs.
-        /// 
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/ListSupportedSkus.cs.html">here</a> to see an example of how to use ListSupportedSkus API.</example>
-        public async Task<ListSupportedSkusResponse> ListSupportedSkus(ListSupportedSkusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called listSupportedSkus");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/supportedSkus".Trim('/')));
-            HttpMethod method = new HttpMethod("GET");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "Sddc",
-                    OperationName = "ListSupportedSkus",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/SupportedSkuSummary/ListSupportedSkus",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<ListSupportedSkusResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"ListSupportedSkus failed with error: {e.Message}");
                 throw;
             }
         }
@@ -640,7 +640,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "ListSupportedVmwareSoftwareVersions",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/SupportedVmwareSoftwareVersionSummary/ListSupportedVmwareSoftwareVersions",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/SupportedVmwareSoftwareVersionSummary/ListSupportedVmwareSoftwareVersions",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -696,7 +696,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "RefreshHcxLicenseStatus",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/Sddc/RefreshHcxLicenseStatus",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/Sddc/RefreshHcxLicenseStatus",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -711,6 +711,63 @@ namespace Oci.OcvpService
             catch (Exception e)
             {
                 logger.Error($"RefreshHcxLicenseStatus failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieve the SDDC password.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/ocvp/RetrievePassword.cs.html">here</a> to see an example of how to use RetrievePassword API.</example>
+        public async Task<RetrievePasswordResponse> RetrievePassword(RetrievePasswordRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called retrievePassword");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/sddcs/{sddcId}/actions/retrievePassword".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Sddc",
+                    OperationName = "RetrievePassword",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/Sddc/RetrievePassword",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<RetrievePasswordResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RetrievePassword failed with error: {e.Message}");
                 throw;
             }
         }
@@ -758,7 +815,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "UpdateSddc",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/Sddc/UpdateSddc",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/Sddc/UpdateSddc",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -815,7 +872,7 @@ namespace Oci.OcvpService
                     ServiceName = "Sddc",
                     OperationName = "UpgradeHcx",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20200501/Sddc/UpgradeHcx",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/Sddc/UpgradeHcx",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

@@ -128,6 +128,18 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "MOVE_NEWS_REPORT")]
       MoveNewsReport,
       [EnumMember(Value = "DELETE_NEWS_REPORT")]
-      DeleteNewsReport
+      DeleteNewsReport,
+      [EnumMember(Value = "CREATE_AWRHUB_SOURCE")]
+      CreateAwrhubSource,
+      [EnumMember(Value = "DELETE_AWRHUB_SOURCE")]
+      DeleteAwrhubSource,
+      [EnumMember(Value = "UPDATE_AWRHUB_SOURCE")]
+      UpdateAwrhubSource,
+      [EnumMember(Value = "MOVE_AWRHUB_SOURCE")]
+      MoveAwrhubSource,
+      [EnumMember(Value = "ENABLE_AWRHUB_SOURCE")]
+      EnableAwrhubSource,
+      [EnumMember(Value = "DISABLE_AWRHUB_SOURCE")]
+      DisableAwrhubSource
   }
 }

@@ -13,5 +13,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>
+    <ProjectReference Include="..\Workrequests\OCI.DotNetSDK.Workrequests.csproj" />
   </ItemGroup>
 </Project>

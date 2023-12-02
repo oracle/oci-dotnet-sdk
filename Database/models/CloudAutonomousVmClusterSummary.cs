@@ -462,5 +462,23 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "nonProvisionableAutonomousContainerDatabases")]
         public System.Nullable<int> NonProvisionableAutonomousContainerDatabases { get; set; }
         
+        /// <value>
+        /// The lowest value to which exadataStorage in TBs can be scaled down.
+        /// </value>
+        [JsonProperty(PropertyName = "exadataStorageInTBsLowestScaledValue")]
+        public System.Double ExadataStorageInTBsLowestScaledValue { get; set; }
+        
+        /// <value>
+        /// The lowest value to which ocpus can be scaled down.
+        /// </value>
+        [JsonProperty(PropertyName = "ocpusLowestScaledValue")]
+        public System.Nullable<int> OcpusLowestScaledValue { get; set; }
+        
+        /// <value>
+        /// The lowest value to which ACDs can be scaled down.
+        /// </value>
+        [JsonProperty(PropertyName = "maxAcdsLowestScaledValue")]
+        public System.Nullable<int> MaxAcdsLowestScaledValue { get; set; }
+        
     }
 }

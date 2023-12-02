@@ -54,5 +54,17 @@ namespace Oci.OcvpService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given VMware software version exactly.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "version")]
+        public string Version { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match or support the given ESXi host shape.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostShapeName")]
+        public string HostShapeName { get; set; }
     }
 }

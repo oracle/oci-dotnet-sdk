@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class ListSupportedSkusResponse : Oci.Common.IOciResponse
+    public class ListClustersResponse : Oci.Common.IOciResponse
     {
 
         /// <value>
@@ -34,10 +34,10 @@ namespace Oci.OcvpService.Responses
         public string OpcNextPage { get; set; }
 
         /// <value>
-        /// The returned SupportedSkuSummaryCollection instance.
+        /// The returned ClusterCollection instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public SupportedSkuSummaryCollection SupportedSkuSummaryCollection { get; set; }
+        public ClusterCollection ClusterCollection { get; set; }
 
     }
 }

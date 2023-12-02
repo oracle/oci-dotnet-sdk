@@ -70,11 +70,11 @@ namespace Oci.OcvpService.Models
         public System.Collections.Generic.List<float> SupportedOcpuCount { get; set; }
         
         /// <value>
-        /// The supported SDDC types for the shape.
+        /// Indicates whether the shape supports single host SDDCs.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "supportedSddcTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Collections.Generic.List<SddcTypes> SupportedSddcTypes { get; set; }
+        [JsonProperty(PropertyName = "isSingleHostSddcSupported")]
+        public System.Nullable<bool> IsSingleHostSddcSupported { get; set; }
         
         /// <value>
         /// The VMware software versions supported by the shape.
@@ -97,10 +97,10 @@ namespace Oci.OcvpService.Models
         public System.Nullable<bool> IsSupportShieldedInstances { get; set; }
         
         /// <value>
-        /// Whether the shape supports \"MONTH\" SKU.
+        /// Whether the shape supports \"MONTH\" Commitment.
         /// </value>
-        [JsonProperty(PropertyName = "isSupportMonthlySku")]
-        public System.Nullable<bool> IsSupportMonthlySku { get; set; }
+        [JsonProperty(PropertyName = "isSupportMonthlyCommitment")]
+        public System.Nullable<bool> IsSupportMonthlyCommitment { get; set; }
         
     }
 }

@@ -13,24 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.OcvpService.Models
+namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// A specific SKU.
-    /// 
+    /// Collection of Awr Hub sources.
     /// </summary>
-    public class SupportedSkuSummaryCollection 
+    public class AwrHubSourceSummaryCollection 
     {
         
         /// <value>
-        /// A list of the supported SKUs.
+        /// Array of Awr Hub source objects.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
-        public System.Collections.Generic.List<SupportedSkuSummary> Items { get; set; }
+        public System.Collections.Generic.List<AwrHubSourceSummary> Items { get; set; }
         
     }
 }

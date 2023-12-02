@@ -70,7 +70,9 @@ namespace Oci.DatascienceService.Models
             [EnumMember(Value = "NVIDIA_GPU")]
             NvidiaGpu,
             [EnumMember(Value = "LEGACY")]
-            Legacy
+            Legacy,
+            [EnumMember(Value = "ARM")]
+            Arm
         };
 
         /// <value>

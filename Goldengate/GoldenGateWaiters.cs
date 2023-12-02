@@ -32,6 +32,34 @@ namespace Oci.GoldengateService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCertificateRequest, GetCertificateResponse> ForCertificate(GetCertificateRequest request, params CertificateLifecycleState[] targetStates)
+        {
+            return this.ForCertificate(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCertificateRequest, GetCertificateResponse> ForCertificate(GetCertificateRequest request, WaiterConfiguration config, params CertificateLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCertificateRequest, GetCertificateResponse>(
+                request,
+                request => client.GetCertificate(request),
+                response => targetStates.Contains(response.Certificate.LifecycleState.Value),
+                targetStates.Contains(CertificateLifecycleState.Deleted)
+            );
+            return new Waiter<GetCertificateRequest, GetCertificateResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetConnectionRequest, GetConnectionResponse> ForConnection(GetConnectionRequest request, params Connection.LifecycleStateEnum[] targetStates)
         {
             return this.ForConnection(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

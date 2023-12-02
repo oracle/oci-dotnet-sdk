@@ -23,6 +23,10 @@ namespace Oci.OcvpService.Models
       CreateSddc,
       [EnumMember(Value = "DELETE_SDDC")]
       DeleteSddc,
+      [EnumMember(Value = "CREATE_CLUSTER")]
+      CreateCluster,
+      [EnumMember(Value = "DELETE_CLUSTER")]
+      DeleteCluster,
       [EnumMember(Value = "CREATE_ESXI_HOST")]
       CreateEsxiHost,
       [EnumMember(Value = "DELETE_ESXI_HOST")]
@@ -36,6 +40,10 @@ namespace Oci.OcvpService.Models
       [EnumMember(Value = "REFRESH_HCX_LICENSE_STATUS")]
       RefreshHcxLicenseStatus,
       [EnumMember(Value = "SWAP_BILLING")]
-      SwapBilling
+      SwapBilling,
+      [EnumMember(Value = "REPLACE_HOST")]
+      ReplaceHost,
+      [EnumMember(Value = "IN_PLACE_UPGRADE")]
+      InPlaceUpgrade
   }
 }

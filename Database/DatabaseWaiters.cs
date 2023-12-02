@@ -1442,6 +1442,38 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateConsoleHistoryRequest, CreateConsoleHistoryResponse> ForCreateConsoleHistory(CreateConsoleHistoryRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCreateConsoleHistory(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateConsoleHistoryRequest, CreateConsoleHistoryResponse> ForCreateConsoleHistory(CreateConsoleHistoryRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CreateConsoleHistoryRequest, CreateConsoleHistoryResponse>(() =>
+            {
+                var response = client.CreateConsoleHistory(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<CreateDataGuardAssociationRequest, CreateDataGuardAssociationResponse> ForCreateDataGuardAssociation(CreateDataGuardAssociationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForCreateDataGuardAssociation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -2195,6 +2227,38 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteConsoleConnectionRequest, DeleteConsoleConnectionResponse>(() =>
             {
                 var response = client.DeleteConsoleConnection(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteConsoleHistoryRequest, DeleteConsoleHistoryResponse> ForDeleteConsoleHistory(DeleteConsoleHistoryRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForDeleteConsoleHistory(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteConsoleHistoryRequest, DeleteConsoleHistoryResponse> ForDeleteConsoleHistory(DeleteConsoleHistoryRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<DeleteConsoleHistoryRequest, DeleteConsoleHistoryResponse>(() =>
+            {
+                var response = client.DeleteConsoleHistory(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3957,6 +4021,34 @@ namespace Oci.DatabaseService
                 targetStates.Contains(ConsoleConnection.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetConsoleConnectionRequest, GetConsoleConnectionResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetConsoleHistoryRequest, GetConsoleHistoryResponse> ForConsoleHistory(GetConsoleHistoryRequest request, params ConsoleHistory.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForConsoleHistory(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetConsoleHistoryRequest, GetConsoleHistoryResponse> ForConsoleHistory(GetConsoleHistoryRequest request, WaiterConfiguration config, params ConsoleHistory.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetConsoleHistoryRequest, GetConsoleHistoryResponse>(
+                request,
+                request => client.GetConsoleHistory(request),
+                response => targetStates.Contains(response.ConsoleHistory.LifecycleState.Value),
+                targetStates.Contains(ConsoleHistory.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetConsoleHistoryRequest, GetConsoleHistoryResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.
@@ -6343,6 +6435,38 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateConsoleConnectionRequest, UpdateConsoleConnectionResponse>(() =>
             {
                 var response = client.UpdateConsoleConnection(request).Result;
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateConsoleHistoryRequest, UpdateConsoleHistoryResponse> ForUpdateConsoleHistory(UpdateConsoleHistoryRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateConsoleHistory(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateConsoleHistoryRequest, UpdateConsoleHistoryResponse> ForUpdateConsoleHistory(UpdateConsoleHistoryRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateConsoleHistoryRequest, UpdateConsoleHistoryResponse>(() =>
+            {
+                var response = client.UpdateConsoleHistory(request).Result;
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

@@ -38,7 +38,7 @@ namespace Oci.OcvpService.Models
         
         /// <value>
         /// The version of bundled VMware software that the Oracle Cloud VMware Solution will
-        /// install on any new ESXi hosts that you add to this SDDC in the future.
+        /// install on any new ESXi hosts that you add to this SDDC in the future unless a specific version is configured on the Cluster level.
         /// <br/>
         /// For the list of versions supported by the Oracle Cloud VMware Solution, see
         /// {@link #listSupportedVmwareSoftwareVersions(ListSupportedVmwareSoftwareVersionsRequest) listSupportedVmwareSoftwareVersions}).
@@ -46,6 +46,17 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "vmwareSoftwareVersion")]
         public string VmwareSoftwareVersion { get; set; }
+        
+        /// <value>
+        /// The version of bundled ESXi software that the Oracle Cloud VMware Solution will
+        /// install on any new ESXi hosts that you add to this SDDC in the future unless a specific version is configured on the Cluster level.
+        /// <br/>
+        /// For the list of versions supported by the Oracle Cloud VMware Solution, see
+        /// {@link #listSupportedVmwareSoftwareVersions(ListSupportedVmwareSoftwareVersionsRequest) listSupportedVmwareSoftwareVersions}).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "esxiSoftwareVersion")]
+        public string EsxiSoftwareVersion { get; set; }
         
         /// <value>
         /// One or more public SSH keys to be included in the `~/.ssh/authorized_keys` file for
@@ -56,88 +67,6 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "sshAuthorizedKeys")]
         public string SshAuthorizedKeys { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
-        /// the vSphere component of the VMware environment when adding new ESXi hosts to the SDDC.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "vsphereVlanId")]
-        public string VsphereVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
-        /// the vMotion component of the VMware environment when adding new ESXi hosts to the SDDC.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "vmotionVlanId")]
-        public string VmotionVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
-        /// the vSAN component of the VMware environment when adding new ESXi hosts to the SDDC.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "vsanVlanId")]
-        public string VsanVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
-        /// the NSX VTEP component of the VMware environment when adding new ESXi hosts to the SDDC.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "nsxVTepVlanId")]
-        public string NsxVTepVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
-        /// the NSX Edge VTEP component of the VMware environment when adding new ESXi hosts to the SDDC.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "nsxEdgeVTepVlanId")]
-        public string NsxEdgeVTepVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
-        /// the NSX Edge Uplink 1 component of the VMware environment when adding new ESXi hosts to the SDDC.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "nsxEdgeUplink1VlanId")]
-        public string NsxEdgeUplink1VlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for
-        /// the NSX Edge Uplink 2 component of the VMware environment when adding new ESXi hosts to the SDDC.
-        /// <br/>
-        /// **Note:** This VLAN is reserved for future use to deploy public-facing applications on the VMware SDDC.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "nsxEdgeUplink2VlanId")]
-        public string NsxEdgeUplink2VlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the vSphere Replication component of the VMware environment.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "replicationVlanId")]
-        public string ReplicationVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the Provisioning component of the VMware environment.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "provisioningVlanId")]
-        public string ProvisioningVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN to use for the HCX
-        /// component of the VMware environment when adding new ESXi hosts to the SDDC. This value can be updated only when `isHcxEnabled` is true.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "hcxVlanId")]
-        public string HcxVlanId { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no

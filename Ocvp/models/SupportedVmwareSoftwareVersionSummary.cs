@@ -44,5 +44,12 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
+        /// <value>
+        /// A list of supported ESXi software versions.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "esxiSoftwareVersions")]
+        public System.Collections.Generic.List<SupportedEsxiSoftwareVersionSummary> EsxiSoftwareVersions { get; set; }
+        
     }
 }
