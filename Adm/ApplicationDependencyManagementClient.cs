@@ -1341,7 +1341,7 @@ namespace Oci.AdmService
                     ServiceName = "ApplicationDependencyManagement",
                     OperationName = "ListApplicationDependencyRecommendations",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/adm/20220421/ApplicationDependencyRecommendationCollection/ListApplicationDependencyRecommendations",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/adm/20220421/RemediationRun/ListApplicationDependencyRecommendations",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1513,7 +1513,7 @@ namespace Oci.AdmService
                     ServiceName = "ApplicationDependencyManagement",
                     OperationName = "ListRemediationRecipes",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/adm/20220421/RemediationRecipeCollection/ListRemediationRecipes",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/adm/20220421/RemediationRecipe/ListRemediationRecipes",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1571,7 +1571,7 @@ namespace Oci.AdmService
                     ServiceName = "ApplicationDependencyManagement",
                     OperationName = "ListRemediationRuns",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/adm/20220421/RemediationRunCollection/ListRemediationRuns",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/adm/20220421/RemediationRun/ListRemediationRuns",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1627,7 +1627,7 @@ namespace Oci.AdmService
                     ServiceName = "ApplicationDependencyManagement",
                     OperationName = "ListStages",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/adm/20220421/RemediationRunStageCollection/ListStages",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/adm/20220421/RemediationRunStage/ListStages",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1648,7 +1648,7 @@ namespace Oci.AdmService
 
         /// <summary>
         /// Returns a list of Vulnerability Audits based on the specified query parameters.
-        /// At least one of id, compartmentId or knowledgeBaseId query parameter must be provided.
+        /// At least one of id, compartmentId query parameter must be provided.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

@@ -19,7 +19,7 @@ namespace Oci.OcvpService.Models
     /// Datastore summary for a getting an Sddc.
     /// 
     /// </summary>
-    public class DatastoreSummary 
+    public class DatastoreDetails 
     {
         
         /// <value>

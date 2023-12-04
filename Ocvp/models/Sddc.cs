@@ -42,18 +42,6 @@ namespace Oci.OcvpService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The availability domain the ESXi hosts are running in. For Multi-AD SDDC, it is `multi-AD`.
-        /// <br/>
-        /// Example: Uocm:PHX-AD-1, multi-AD
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ComputeAvailabilityDomain is required.")]
-        [JsonProperty(PropertyName = "computeAvailabilityDomain")]
-        public string ComputeAvailabilityDomain { get; set; }
-        
-        /// <value>
         /// A descriptive name for the SDDC. It must be unique, start with a letter, and contain only letters, digits,
         /// whitespaces, dashes and underscores.
         /// Avoid entering confidential information.
@@ -65,17 +53,6 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        
-        /// <value>
-        /// A prefix used in the name of each ESXi host and Compute instance in the SDDC.
-        /// If this isn't set, the SDDC's `displayName` is used as the prefix.
-        /// <br/>
-        /// For example, if the value is `MySDDC`, the ESXi hosts are named `MySDDC-1`,
-        /// `MySDDC-2`, and so on.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "instanceDisplayNamePrefix")]
-        public string InstanceDisplayNamePrefix { get; set; }
         
         /// <value>
         /// In general, this is a specific version of bundled VMware software supported by
@@ -102,6 +79,27 @@ namespace Oci.OcvpService.Models
         public string VmwareSoftwareVersion { get; set; }
         
         /// <value>
+        /// In general, this is a specific version of bundled ESXi software supported by
+        /// Oracle Cloud VMware Solution (see
+        /// {@link #listSupportedVmwareSoftwareVersions(ListSupportedVmwareSoftwareVersionsRequest) listSupportedVmwareSoftwareVersions}).
+        /// <br/>
+        /// This attribute is not guaranteed to reflect the version of
+        /// software currently installed on the ESXi hosts in the SDDC. The purpose
+        /// of this attribute is to show the version of software that the Oracle
+        /// Cloud VMware Solution will install on any new ESXi hosts that you *add to this
+        /// SDDC in the future* with {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost} 
+        /// unless a different version is configured on the Cluster or ESXi host level.
+        /// <br/>
+        /// Therefore, if you upgrade the existing ESXi hosts in the SDDC to use a newer
+        /// version of bundled ESXi software supported by the Oracle Cloud VMware Solution, you
+        /// should use {@link #updateSddc(UpdateSddcRequest) updateSddc} to update the SDDC's
+        /// `vmwareSoftwareVersion` with that new version.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "esxiSoftwareVersion")]
+        public string EsxiSoftwareVersion { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that
         /// contains the SDDC.
         /// 
@@ -114,23 +112,14 @@ namespace Oci.OcvpService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The number of ESXi hosts in the SDDC.
+        /// The number of Clusters in the SDDC.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "EsxiHostsCount is required.")]
-        [JsonProperty(PropertyName = "esxiHostsCount")]
-        public System.Nullable<int> EsxiHostsCount { get; set; }
-        
-        /// <value>
-        /// The billing option selected during SDDC creation.
-        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "initialSku")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<Sku> InitialSku { get; set; }
+        [Required(ErrorMessage = "ClustersCount is required.")]
+        [JsonProperty(PropertyName = "clustersCount")]
+        public System.Nullable<int> ClustersCount { get; set; }
         
         /// <value>
         /// The FQDN for vCenter.
@@ -183,23 +172,7 @@ namespace Oci.OcvpService.Models
         public string NsxManagerPrivateIpId { get; set; }
         
         /// <value>
-        /// The SDDC includes an administrator username and initial password for vCenter. Make sure
-        /// to change this initial vCenter password to a different value.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "vcenterInitialPassword")]
-        public string VcenterInitialPassword { get; set; }
-        
-        /// <value>
-        /// The SDDC includes an administrator username and initial password for NSX Manager. Make sure
-        /// to change this initial NSX Manager password to a different value.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "nsxManagerInitialPassword")]
-        public string NsxManagerInitialPassword { get; set; }
-        
-        /// <value>
-        /// The SDDC includes an administrator username and initial password for vCenter. You can
+        /// The SDDC includes an administrator username and password for vCenter. You can
         /// change this initial username to a different value in vCenter.
         /// 
         /// </value>
@@ -238,22 +211,6 @@ namespace Oci.OcvpService.Models
         public string SshAuthorizedKeys { get; set; }
         
         /// <value>
-        /// The CIDR block for the IP addresses that VMware VMs in the SDDC use to run application
-        /// workloads.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "workloadNetworkCidr")]
-        public string WorkloadNetworkCidr { get; set; }
-        
-        /// <value>
-        /// The VMware NSX overlay workload segment to host your application. Connect to workload
-        /// portgroup in vCenter to access this overlay segment.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "nsxOverlaySegmentName")]
-        public string NsxOverlaySegmentName { get; set; }
-        
-        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `PrivateIp` object that is
         /// the virtual IP (VIP) for the NSX Edge Uplink. Use this OCID as the route target for
         /// route table rules when setting up connectivity between the SDDC and other networks.
@@ -262,195 +219,6 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsxEdgeUplinkIpId")]
         public string NsxEdgeUplinkIpId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the management subnet used
-        /// to provision the SDDC.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ProvisioningSubnetId is required.")]
-        [JsonProperty(PropertyName = "provisioningSubnetId")]
-        public string ProvisioningSubnetId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the vSphere component of the VMware environment.
-        /// <br/>
-        /// This attribute is not guaranteed to reflect the vSphere VLAN
-        /// currently used by the ESXi hosts in the SDDC. The purpose
-        /// of this attribute is to show the vSphere VLAN that the Oracle
-        /// Cloud VMware Solution will use for any new ESXi hosts that you *add to this
-        /// SDDC in the future* with {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost}.
-        /// <br/>
-        /// Therefore, if you change the existing ESXi hosts in the SDDC to use a different VLAN
-        /// for the vSphere component of the VMware environment, you
-        /// should use {@link #updateSddc(UpdateSddcRequest) updateSddc} to update the SDDC's
-        /// `vsphereVlanId` with that new VLAN's OCID.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VsphereVlanId is required.")]
-        [JsonProperty(PropertyName = "vsphereVlanId")]
-        public string VsphereVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the vMotion component of the VMware environment.
-        /// <br/>
-        /// This attribute is not guaranteed to reflect the vMotion VLAN
-        /// currently used by the ESXi hosts in the SDDC. The purpose
-        /// of this attribute is to show the vMotion VLAN that the Oracle
-        /// Cloud VMware Solution will use for any new ESXi hosts that you *add to this
-        /// SDDC in the future* with {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost}.
-        /// <br/>
-        /// Therefore, if you change the existing ESXi hosts in the SDDC to use a different VLAN
-        /// for the vMotion component of the VMware environment, you
-        /// should use {@link #updateSddc(UpdateSddcRequest) updateSddc} to update the SDDC's
-        /// `vmotionVlanId` with that new VLAN's OCID.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VmotionVlanId is required.")]
-        [JsonProperty(PropertyName = "vmotionVlanId")]
-        public string VmotionVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the vSAN component of the VMware environment.
-        /// <br/>
-        /// This attribute is not guaranteed to reflect the vSAN VLAN
-        /// currently used by the ESXi hosts in the SDDC. The purpose
-        /// of this attribute is to show the vSAN VLAN that the Oracle
-        /// Cloud VMware Solution will use for any new ESXi hosts that you *add to this
-        /// SDDC in the future* with {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost}.
-        /// <br/>
-        /// Therefore, if you change the existing ESXi hosts in the SDDC to use a different VLAN
-        /// for the vSAN component of the VMware environment, you
-        /// should use {@link #updateSddc(UpdateSddcRequest) updateSddc} to update the SDDC's
-        /// `vsanVlanId` with that new VLAN's OCID.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VsanVlanId is required.")]
-        [JsonProperty(PropertyName = "vsanVlanId")]
-        public string VsanVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the NSX VTEP component of the VMware environment.
-        /// <br/>
-        /// This attribute is not guaranteed to reflect the NSX VTEP VLAN
-        /// currently used by the ESXi hosts in the SDDC. The purpose
-        /// of this attribute is to show the NSX VTEP VLAN that the Oracle
-        /// Cloud VMware Solution will use for any new ESXi hosts that you *add to this
-        /// SDDC in the future* with {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost}.
-        /// <br/>
-        /// Therefore, if you change the existing ESXi hosts in the SDDC to use a different VLAN
-        /// for the NSX VTEP component of the VMware environment, you
-        /// should use {@link #updateSddc(UpdateSddcRequest) updateSddc} to update the SDDC's
-        /// `nsxVTepVlanId` with that new VLAN's OCID.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NsxVTepVlanId is required.")]
-        [JsonProperty(PropertyName = "nsxVTepVlanId")]
-        public string NsxVTepVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the NSX Edge VTEP component of the VMware environment.
-        /// <br/>
-        /// This attribute is not guaranteed to reflect the NSX Edge VTEP VLAN
-        /// currently used by the ESXi hosts in the SDDC. The purpose
-        /// of this attribute is to show the NSX Edge VTEP VLAN that the Oracle
-        /// Cloud VMware Solution will use for any new ESXi hosts that you *add to this
-        /// SDDC in the future* with {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost}.
-        /// <br/>
-        /// Therefore, if you change the existing ESXi hosts in the SDDC to use a different VLAN
-        /// for the NSX Edge VTEP component of the VMware environment, you
-        /// should use {@link #updateSddc(UpdateSddcRequest) updateSddc} to update the SDDC's
-        /// `nsxEdgeVTepVlanId` with that new VLAN's OCID.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NsxEdgeVTepVlanId is required.")]
-        [JsonProperty(PropertyName = "nsxEdgeVTepVlanId")]
-        public string NsxEdgeVTepVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the NSX Edge Uplink 1 component of the VMware environment.
-        /// <br/>
-        /// This attribute is not guaranteed to reflect the NSX Edge Uplink 1 VLAN
-        /// currently used by the ESXi hosts in the SDDC. The purpose
-        /// of this attribute is to show the NSX Edge Uplink 1 VLAN that the Oracle
-        /// Cloud VMware Solution will use for any new ESXi hosts that you *add to this
-        /// SDDC in the future* with {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost}.
-        /// <br/>
-        /// Therefore, if you change the existing ESXi hosts in the SDDC to use a different VLAN
-        /// for the NSX Edge Uplink 1 component of the VMware environment, you
-        /// should use {@link #updateSddc(UpdateSddcRequest) updateSddc} to update the SDDC's
-        /// `nsxEdgeUplink1VlanId` with that new VLAN's OCID.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NsxEdgeUplink1VlanId is required.")]
-        [JsonProperty(PropertyName = "nsxEdgeUplink1VlanId")]
-        public string NsxEdgeUplink1VlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the NSX Edge Uplink 2 component of the VMware environment.
-        /// <br/>
-        /// This attribute is not guaranteed to reflect the NSX Edge Uplink 2 VLAN
-        /// currently used by the ESXi hosts in the SDDC. The purpose
-        /// of this attribute is to show the NSX Edge Uplink 2 VLAN that the Oracle
-        /// Cloud VMware Solution will use for any new ESXi hosts that you *add to this
-        /// SDDC in the future* with {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost}.
-        /// <br/>
-        /// Therefore, if you change the existing ESXi hosts in the SDDC to use a different VLAN
-        /// for the NSX Edge Uplink 2 component of the VMware environment, you
-        /// should use {@link #updateSddc(UpdateSddcRequest) updateSddc} to update the SDDC's
-        /// `nsxEdgeUplink2VlanId` with that new VLAN's OCID.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NsxEdgeUplink2VlanId is required.")]
-        [JsonProperty(PropertyName = "nsxEdgeUplink2VlanId")]
-        public string NsxEdgeUplink2VlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the vSphere Replication component of the VMware environment.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "replicationVlanId")]
-        public string ReplicationVlanId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the Provisioning component of the VMware environment.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "provisioningVlanId")]
-        public string ProvisioningVlanId { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `PrivateIp` object that is
@@ -470,52 +238,23 @@ namespace Oci.OcvpService.Models
         public string HcxFqdn { get; set; }
         
         /// <value>
-        /// The SDDC includes an administrator username and initial password for HCX Manager. Make sure
-        /// to change this initial HCX Manager password to a different value.
+        /// HCX configuration of the SDDC.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "hcxInitialPassword")]
-        public string HcxInitialPassword { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "HcxMode is required.")]
+        [JsonProperty(PropertyName = "hcxMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<HcxModes> HcxMode { get; set; }
         
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VLAN used by the SDDC
-        /// for the HCX component of the VMware environment.
-        /// <br/>
-        /// This attribute is not guaranteed to reflect the HCX VLAN
-        /// currently used by the ESXi hosts in the SDDC. The purpose
-        /// of this attribute is to show the HCX VLAN that the Oracle
-        /// Cloud VMware Solution will use for any new ESXi hosts that you *add to this
-        /// SDDC in the future* with {@link #createEsxiHost(CreateEsxiHostRequest) createEsxiHost}.
-        /// <br/>
-        /// Therefore, if you change the existing ESXi hosts in the SDDC to use a different VLAN
-        /// for the HCX component of the VMware environment, you
-        /// should use {@link #updateSddc(UpdateSddcRequest) updateSddc} to update the SDDC's
-        /// `hcxVlanId` with that new VLAN's OCID.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "hcxVlanId")]
-        public string HcxVlanId { get; set; }
-        
-        /// <value>
-        /// Indicates whether HCX is enabled for this SDDC.
-        /// </value>
-        [JsonProperty(PropertyName = "isHcxEnabled")]
-        public System.Nullable<bool> IsHcxEnabled { get; set; }
-        
-        /// <value>
-        /// The activation keys to use on the on-premises HCX Enterprise appliances you site pair with HCX Manager in your VMware Solution.
-        /// The number of keys provided depends on the HCX license type. HCX Advanced provides 3 activation keys.
-        /// HCX Enterprise provides 10 activation keys.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "hcxOnPremKey")]
-        public string HcxOnPremKey { get; set; }
-        
-        /// <value>
-        /// Indicates whether HCX Enterprise is enabled for this SDDC.
-        /// </value>
-        [JsonProperty(PropertyName = "isHcxEnterpriseEnabled")]
-        public System.Nullable<bool> IsHcxEnterpriseEnabled { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "InitialConfiguration is required.")]
+        [JsonProperty(PropertyName = "initialConfiguration")]
+        public InitialConfiguration InitialConfiguration { get; set; }
         
         /// <value>
         /// Indicates whether SDDC is pending downgrade from HCX Enterprise to HCX Advanced.
@@ -580,67 +319,6 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
-        
-        /// <value>
-        /// The vSphere licenses to use when upgrading the SDDC.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "upgradeLicenses")]
-        public System.Collections.Generic.List<VsphereLicense> UpgradeLicenses { get; set; }
-        
-        /// <value>
-        /// The link to guidance for upgrading vSphere.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "vsphereUpgradeGuide")]
-        public string VsphereUpgradeGuide { get; set; }
-        
-        /// <value>
-        /// The links to binary objects needed to upgrade vSphere.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "vsphereUpgradeObjects")]
-        public System.Collections.Generic.List<VsphereUpgradeObject> VsphereUpgradeObjects { get; set; }
-        
-        /// <value>
-        /// The initial compute shape of the SDDC's ESXi hosts.
-        /// {@link #listSupportedHostShapes(ListSupportedHostShapesRequest) listSupportedHostShapes}.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "InitialHostShapeName is required.")]
-        [JsonProperty(PropertyName = "initialHostShapeName")]
-        public string InitialHostShapeName { get; set; }
-        
-        /// <value>
-        /// The initial OCPU count of the SDDC's ESXi hosts.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "initialHostOcpuCount")]
-        public System.Nullable<float> InitialHostOcpuCount { get; set; }
-        
-        /// <value>
-        /// Indicates whether shielded instance is enabled at the SDDC level.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "isShieldedInstanceEnabled")]
-        public System.Nullable<bool> IsShieldedInstanceEnabled { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Capacity Reservation.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "capacityReservationId")]
-        public string CapacityReservationId { get; set; }
-        
-        /// <value>
-        /// Datastores used for the Sddc.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "datastores")]
-        public System.Collections.Generic.List<DatastoreSummary> Datastores { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no

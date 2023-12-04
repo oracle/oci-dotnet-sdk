@@ -23,7 +23,7 @@ namespace Oci.OcvpService.Models
         
         /// <value>
         /// A descriptive name for the ESXi host. It's changeable.
-        /// Esxi Host name requirements are 1-16 character length limit, Must start with a letter, Must be English letters, numbers, - only, No repeating hyphens, Must be unique within the SDDC.
+        /// Esxi Host name requirements are 1-16 character length limit, Must start with a letter, Must be English letters, numbers, - only, No repeating hyphens, Must be unique within the Cluster.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -33,13 +33,13 @@ namespace Oci.OcvpService.Models
         
         /// <value>
         /// The billing option to switch to after the existing billing cycle ends.
-        /// If `nextSku` is null or empty, `currentSku` continues to the next billing cycle.
-        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
+        /// If `nextCommitment` is null or empty, `currentCommitment` continues to the next billing cycle.
+        /// {@link #listSupportedCommitments(ListSupportedCommitmentsRequest) listSupportedCommitments}.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "nextSku")]
+        [JsonProperty(PropertyName = "nextCommitment")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<Sku> NextSku { get; set; }
+        public System.Nullable<Commitment> NextCommitment { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the deleted ESXi Host with LeftOver billing cycle.

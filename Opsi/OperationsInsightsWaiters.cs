@@ -60,6 +60,34 @@ namespace Oci.OpsiService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAwrHubSourceRequest, GetAwrHubSourceResponse> ForAwrHubSource(GetAwrHubSourceRequest request, params AwrHubSourceLifecycleState[] targetStates)
+        {
+            return this.ForAwrHubSource(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAwrHubSourceRequest, GetAwrHubSourceResponse> ForAwrHubSource(GetAwrHubSourceRequest request, WaiterConfiguration config, params AwrHubSourceLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetAwrHubSourceRequest, GetAwrHubSourceResponse>(
+                request,
+                request => client.GetAwrHubSource(request),
+                response => targetStates.Contains(response.AwrHubSource.LifecycleState.Value),
+                targetStates.Contains(AwrHubSourceLifecycleState.Deleted)
+            );
+            return new Waiter<GetAwrHubSourceRequest, GetAwrHubSourceResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDatabaseInsightRequest, GetDatabaseInsightResponse> ForDatabaseInsight(GetDatabaseInsightRequest request, params LifecycleState[] targetStates)
         {
             return this.ForDatabaseInsight(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

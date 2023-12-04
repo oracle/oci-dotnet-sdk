@@ -396,5 +396,23 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "timeOrdsCertificateExpires")]
         public System.Nullable<System.DateTime> TimeOrdsCertificateExpires { get; set; }
         
+        /// <value>
+        /// The lowest value to which exadataStorage in TBs can be scaled down.
+        /// </value>
+        [JsonProperty(PropertyName = "exadataStorageInTBsLowestScaledValue")]
+        public System.Double ExadataStorageInTBsLowestScaledValue { get; set; }
+        
+        /// <value>
+        /// The lowest value to which cpus can be scaled down.
+        /// </value>
+        [JsonProperty(PropertyName = "cpusLowestScaledValue")]
+        public System.Nullable<int> CpusLowestScaledValue { get; set; }
+        
+        /// <value>
+        /// The lowest value to which ACDs can be scaled down.
+        /// </value>
+        [JsonProperty(PropertyName = "maxAcdsLowestScaledValue")]
+        public System.Nullable<int> MaxAcdsLowestScaledValue { get; set; }
+        
     }
 }

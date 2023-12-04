@@ -10,18 +10,20 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.OcvpService.Models
+namespace Oci.OpsiService.Models
 {
   /// <summary>
-  /// Possible SDDC types.
+  /// Archival states of an Awr Hub object.
   /// </summary>
-  public enum SddcTypes {
+  public enum ArchivalState {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "PRODUCTION")]
-      Production,
-      [EnumMember(Value = "NON_PRODUCTION")]
-      NonProduction
+      [EnumMember(Value = "ARCHIVED")]
+      Archived,
+      [EnumMember(Value = "RESTORING")]
+      Restoring,
+      [EnumMember(Value = "RESTORED")]
+      Restored
   }
 }

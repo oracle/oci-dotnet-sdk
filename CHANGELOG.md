@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 76.0.0 - 2023-12-04
+### Added
+- Support for calling Oracle Cloud Infrastructure services in the eu-dcc-zurich-1 and the sa-bogota-1 region
+- Support for managing certificates of target Servers in the Golden Gate service
+- Support for AWR Hub Snapshot ingest endpoints in the Operations Insights service
+- Support for reducing false positives in the Application Dependency Management service
+- Support for ARM shapes in the Data Science service
+- Support for new optional parameters in the upload discovery data API in the Usage service
+- Support for multiple clusters in a Software-Defined Data Centers (SDDCs) in the VMWare Solution service
+- Support for No/Zero days backup in Autonomous Container Database in the Database service
+- Support for provisioning a VM Cluster with a choice of Exadata image version in the Database service
+- Support for updating ocpu/ecpu count, local storage, ACD count and Exadata storage on Cloud Autonomous VM Cluster and Autonomous VM Cluster in the Database service
+- Support for serial console history in the Database service
+- Support for Oracle Linux 8 version database system in the Database service
+ 
+### Breaking Changes
+- The properties `ComputeAvailabilityDomain`, `InstanceDisplayNamePrefix`, `EsxiHostsCount`, `InitialSku`, `VcenterInitialPassword`, `NsxManagerInitialPassword`, `WorkloadNetworkCidr`, `NsxOverlaySegmentName`, `ProvisioningSubnetId`, `VsphereVlanId`, `VmotionVlanId`, `VsanVlanId`, `NsxVTepVlanId`, `NsxEdgeVTepVlanId`, `NsxEdgeUplink1VlanId`, `NsxEdgeUplink2VlanId`, `ReplicationVlanId`, `ProvisioningVlanId`, `HcxInitialPassword`, `HcxVlanId`, `IsHcxEnabled`, `HcxOnPremKey`, `IsHcxEnterpriseEnabled`, `UpgradeLicenses`, `VsphereUpgradeGuide`, `VsphereUpgradeObjects`, `InitialHostShapeName`, `InitialHostOcpuCount`, `IsShieldedInstanceEnabled`, `CapacityReservationId`, `Datastores` were removed from the model `Sddc` in the VMWare Solution service
+- The properties `ComputeAvailabilityDomain`, `EsxiHostsCount` and `IsHcxEnabled` were removed from the model `SddcSummary` in the VMWare Solution service
+- The properties `SddcId`, `CurrentSku`, `NextSku`, `FailedEsxiHostId` and `NonUpgradedEsxiHostId` were removed from the model `CreateEsxiHostDetails` in the VMWare Solution service
+- The properties `ComputeAvailabilityDomain`, `EsxiHostsCount`, `InitialSku`, `IsHcxEnabled`, `HcxVlanId`, `IsHcxEnterpriseEnabled`, `WorkloadNetworkCidr`, `ProvisioningSubnetId`, `VsphereVlanId`, `VmotionVlanId`, `VsanVlanId`, `NsxVTepVlanId`, `NsxEdgeVTepVlanId`, `NsxEdgeUplink1VlanId`, `NsxEdgeUplink2VlanId`, `ReplicationVlanId`, `ProvisioningVlanId`, `InitialHostShapeName`, `InitialHostOcpuCount`, `IsShieldedInstanceEnabled`, `CapacityReservationId`, `InstanceDisplayNamePrefix`, and `Datastores` were removed from the model `CreateSddcDetails` in the VMWare Solution service
+- The properties `VsphereVlanId`, `VmotionVlanId`, `VsanVlanId`, `NsxVTepVlanId`, `NsxEdgeVTepVlanId`, `NsxEdgeUplink1VlanId`, `NsxEdgeUplink2VlanId`, `ReplicationVlanId`, `ProvisioningVlanId`, `and HcxVlanId` were removed from the model `UpdateSddcDetails` in the VMWare Solution service
+- The properties `SupportedSddcTypes` and `IsSupportMonthlySku` were removed from the model `SupportedHostShapeSummary` in the VMWare Solution service
+- The property `NextSku` was removed from the model `UpdateEsxiHostDetails` in the VMWare Solution service
+- The properties `CurrentSku` and `NextSku` were removed from the models `EsxiHost` and `EsxiHostSummary` in the VMWare Solution service
+- The models `SupportedSkuSummary`, `SupportedSkuSummaryCollection`, `SddcTypes`, `DatastoreSummary`, `ListSupportedSkusRequest`, and `ListSupportedSkusResponse` were removed from the VMWare Solution service
+- The operations `ListSupportedHostShapesResponseEnumerator`, `ListSupportedHostShapesRecordEnumerator`, `ListSupportedSkusResponseEnumerator`, `ListSupportedSkusRecordEnumerator` were removed from `SddcPaginators` in the VMWare Solution service
+
 ## 75.0.0 - 2023-11-14
 ### Added
 - Support for the PostgreSQL service

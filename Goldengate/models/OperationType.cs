@@ -75,6 +75,10 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_UPGRADE_ROLLBACK")]
       GoldengateDeploymentUpgradeRollback,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_UPGRADE_SNOOZE")]
-      GoldengateDeploymentUpgradeSnooze
+      GoldengateDeploymentUpgradeSnooze,
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_CERTIFICATE_CREATE")]
+      GoldengateDeploymentCertificateCreate,
+      [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_CERTIFICATE_DELETE")]
+      GoldengateDeploymentCertificateDelete
   }
 }

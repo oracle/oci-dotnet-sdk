@@ -49,6 +49,7 @@ namespace Oci.Common
         public static readonly Region US_CHICAGO_1 = Register("us-chicago-1", Realm.OC1, "ord");
         public static readonly Region MX_MONTERREY_1 = Register("mx-monterrey-1", Realm.OC1, "mty");
         public static readonly Region US_SALTLAKE_2 = Register("us-saltlake-2", Realm.OC1, "aga");
+        public static readonly Region SA_BOGOTA_1 = Register("sa-bogota-1", Realm.OC1, "bog");
 
         // OC2
         public static readonly Region US_LANGLEY_1 = Register("us-langley-1", Realm.OC2, "lfi");
@@ -87,5 +88,8 @@ namespace Oci.Common
 
         // OC20
         public static readonly Region EU_JOVANOVAC_1 = Register("eu-jovanovac-1", Realm.OC20, "beg");
+
+        // OC24
+        public static readonly Region EU_DCC_ZURICH_1 = Register("eu-dcc-zurich-1", Realm.OC24, "avz");
     }
 }

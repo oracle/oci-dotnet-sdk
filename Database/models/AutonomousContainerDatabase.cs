@@ -464,5 +464,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "largestProvisionableAutonomousDatabaseInCpus")]
         public System.Nullable<float> LargestProvisionableAutonomousDatabaseInCpus { get; set; }
         
+        /// <value>
+        /// The timestamp of last successful backup. Here NULL value represents either there are no successful backups or backups are not configured for this Autonomous Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfLastBackup")]
+        public System.Nullable<System.DateTime> TimeOfLastBackup { get; set; }
+        
     }
 }

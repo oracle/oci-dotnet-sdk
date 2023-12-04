@@ -62,9 +62,16 @@ namespace Oci.OcvpService.Requests
         public string Name { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the given SDDC type exactly.
+        /// A filter to return only resources that support single host SDDC.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sddcType")]
-        public System.Nullable<SddcTypes> SddcType { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isSingleHostSddcSupported")]
+        public System.Nullable<bool> IsSingleHostSddcSupported { get; set; }
+        
+        /// <value>
+        /// A filter to return only the shapes compatible with the initial host shape of the Cluster.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "initialHostShapeName")]
+        public string InitialHostShapeName { get; set; }
     }
 }

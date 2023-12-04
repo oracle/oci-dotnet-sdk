@@ -189,5 +189,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dataCollectionOptions")]
         public DataCollectionOptions DataCollectionOptions { get; set; }
         
+        /// <value>
+        /// Operating system version of the image.
+        /// </value>
+        [JsonProperty(PropertyName = "systemVersion")]
+        public string SystemVersion { get; set; }
+        
     }
 }

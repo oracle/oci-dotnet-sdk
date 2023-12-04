@@ -53,8 +53,20 @@ namespace Oci.OcvpService.Models
         public string SddcId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Cluster that the
+        /// ESXi host belongs to.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ClusterId is required.")]
+        [JsonProperty(PropertyName = "clusterId")]
+        public string ClusterId { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that
-        /// contains the SDDC.
+        /// contains the Cluster.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
@@ -95,34 +107,34 @@ namespace Oci.OcvpService.Models
         
         /// <value>
         /// The billing option currently used by the ESXi host.
-        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
+        /// {@link #listSupportedCommitments(ListSupportedCommitmentsRequest) listSupportedCommitments}.
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "CurrentSku is required.")]
-        [JsonProperty(PropertyName = "currentSku")]
+        [Required(ErrorMessage = "CurrentCommitment is required.")]
+        [JsonProperty(PropertyName = "currentCommitment")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<Sku> CurrentSku { get; set; }
+        public System.Nullable<Commitment> CurrentCommitment { get; set; }
         
         /// <value>
         /// The billing option to switch to after the current billing cycle ends.
-        /// If `nextSku` is null or empty, `currentSku` continues to the next billing cycle.
-        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
+        /// If `nextCommitment` is null or empty, `currentCommitment` continues to the next billing cycle.
+        /// {@link #listSupportedCommitments(ListSupportedCommitmentsRequest) listSupportedCommitments}.
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "NextSku is required.")]
-        [JsonProperty(PropertyName = "nextSku")]
+        [Required(ErrorMessage = "NextCommitment is required.")]
+        [JsonProperty(PropertyName = "nextCommitment")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<Sku> NextSku { get; set; }
+        public System.Nullable<Commitment> NextCommitment { get; set; }
         
         /// <value>
-        /// Current billing cycle end date. If the value in `currentSku` and `nextSku` are different, the value specified in `nextSku`
-        /// becomes the new `currentSKU` when the `contractEndDate` is reached.
+        /// Current billing cycle end date. If the value in `currentCommitment` and `nextCommitment` are different, the value specified in `nextCommitment`
+        /// becomes the new `currentCommitment` when the `contractEndDate` is reached.
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         /// <remarks>

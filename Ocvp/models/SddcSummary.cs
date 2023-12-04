@@ -34,17 +34,6 @@ namespace Oci.OcvpService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The availability domain that the SDDC's ESXi hosts are running in. For Multi-AD SDDC, it is `multi-AD`.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ComputeAvailabilityDomain is required.")]
-        [JsonProperty(PropertyName = "computeAvailabilityDomain")]
-        public string ComputeAvailabilityDomain { get; set; }
-        
-        /// <value>
         /// A descriptive name for the SDDC. It must be unique, start with a letter, and contain only letters, digits,
         /// whitespaces, dashes and underscores.
         /// Avoid entering confidential information.
@@ -99,9 +88,9 @@ namespace Oci.OcvpService.Models
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "EsxiHostsCount is required.")]
-        [JsonProperty(PropertyName = "esxiHostsCount")]
-        public System.Nullable<int> EsxiHostsCount { get; set; }
+        [Required(ErrorMessage = "ClustersCount is required.")]
+        [JsonProperty(PropertyName = "clustersCount")]
+        public System.Nullable<int> ClustersCount { get; set; }
         
         /// <value>
         /// HCX Fully Qualified Domain Name
@@ -110,10 +99,12 @@ namespace Oci.OcvpService.Models
         public string HcxFqdn { get; set; }
         
         /// <value>
-        /// Indicates whether HCX is enabled.
+        /// HCX configuration of the SDDC.
+        /// 
         /// </value>
-        [JsonProperty(PropertyName = "isHcxEnabled")]
-        public System.Nullable<bool> IsHcxEnabled { get; set; }
+        [JsonProperty(PropertyName = "hcxMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<HcxModes> HcxMode { get; set; }
         
         /// <value>
         /// FQDN for vCenter
@@ -154,32 +145,6 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
-        
-        /// <value>
-        /// Indicates whether shielded instance is enabled at the SDDC level.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "isShieldedInstanceEnabled")]
-        public System.Nullable<bool> IsShieldedInstanceEnabled { get; set; }
-        
-        /// <value>
-        /// The initial compute shape of the SDDC's ESXi hosts.
-        /// {@link #listSupportedHostShapes(ListSupportedHostShapesRequest) listSupportedHostShapes}.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "InitialHostShapeName is required.")]
-        [JsonProperty(PropertyName = "initialHostShapeName")]
-        public string InitialHostShapeName { get; set; }
-        
-        /// <value>
-        /// The initial OCPU count of the SDDC's ESXi hosts.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "initialHostOcpuCount")]
-        public System.Nullable<float> InitialHostOcpuCount { get; set; }
         
         /// <value>
         /// Indicates whether this SDDC is designated for only single ESXi host.

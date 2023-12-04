@@ -61,6 +61,12 @@ namespace Oci.DatabaseService.Models
         public string NewGiVersion { get; set; }
         
         /// <value>
+        /// A valid Oracle Software (OS) version eg. Oracle Linux Server release 8
+        /// </value>
+        [JsonProperty(PropertyName = "newOsVersion")]
+        public string NewOsVersion { get; set; }
+        
+        /// <value>
         /// If true, rollback time is updated even if operating system upgrade history contains errors.
         /// </value>
         [JsonProperty(PropertyName = "isSnapshotRetentionDaysForceUpdated")]

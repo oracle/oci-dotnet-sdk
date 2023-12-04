@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OcvpService.Models
 {
     /// <summary>
-    /// A specific SKU.
+    /// A specific Commitment.
     /// 
     /// </summary>
-    public class SupportedSkuSummary 
+    public class SupportedCommitmentSummary 
     {
         
         /// <value>
-        /// name of SKU
+        /// name of Commitment
         /// </value>
         /// <remarks>
         /// Required
@@ -31,7 +31,7 @@ namespace Oci.OcvpService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<Sku> Name { get; set; }
+        public System.Nullable<Commitment> Name { get; set; }
         
     }
 }

@@ -16,31 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OcvpService.Models
 {
     /// <summary>
-    /// Details of the ESXi host to add to the SDDC.
+    /// Details of the ESXi host to add to the Cluster.
     /// </summary>
     public class CreateEsxiHostDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the SDDC to add the
-        /// ESXi host to.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Cluster to add the ESXi host to.
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "SddcId is required.")]
-        [JsonProperty(PropertyName = "sddcId")]
-        public string SddcId { get; set; }
+        [Required(ErrorMessage = "ClusterId is required.")]
+        [JsonProperty(PropertyName = "clusterId")]
+        public string ClusterId { get; set; }
         
         /// <value>
         /// A descriptive name for the ESXi host. It's changeable.
-        /// Esxi Host name requirements are 1-16 character length limit, Must start with a letter, Must be English letters, numbers, - only, No repeating hyphens, Must be unique within the SDDC.
+        /// Esxi Host name requirements are 1-16 character length limit, Must start with a letter, 
+        /// Must be English letters, numbers, - only, No repeating hyphens, Must be unique within the Cluster.
         /// <br/>
-        /// If this attribute is not specified, the SDDC's `instanceDisplayNamePrefix` attribute is used
+        /// If this attribute is not specified, the Cluster's `instanceDisplayNamePrefix` attribute is used
         /// to name and incrementally number the ESXi host. For example, if you're creating the fourth
-        /// ESXi host in the SDDC, and `instanceDisplayNamePrefix` is `MySDDC`, the host's display
-        /// name is `MySDDC-4`.
+        /// ESXi host in the Cluster, and `instanceDisplayNamePrefix` is `MyCluster`, the host's display
+        /// name is `MyCluster-4`.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -57,41 +57,31 @@ namespace Oci.OcvpService.Models
         
         /// <value>
         /// The billing option currently used by the ESXi host.
-        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
+        /// {@link #listSupportedCommitments(ListSupportedCommitmentsRequest) listSupportedCommitments}.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "currentSku")]
+        [JsonProperty(PropertyName = "currentCommitment")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<Sku> CurrentSku { get; set; }
+        public System.Nullable<Commitment> CurrentCommitment { get; set; }
         
         /// <value>
         /// The billing option to switch to after the existing billing cycle ends.
-        /// If `nextSku` is null or empty, `currentSku` continues to the next billing cycle.
-        /// {@link #listSupportedSkus(ListSupportedSkusRequest) listSupportedSkus}.
+        /// If `nextCommitment` is null or empty, `currentCommitment` continues to the next billing cycle.
+        /// {@link #listSupportedCommitments(ListSupportedCommitmentsRequest) listSupportedCommitments}.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "nextSku")]
+        [JsonProperty(PropertyName = "nextCommitment")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<Sku> NextSku { get; set; }
+        public System.Nullable<Commitment> NextCommitment { get; set; }
         
         /// <value>
         /// The availability domain to create the ESXi host in.
-        /// If keep empty, for AD-specific SDDC, new ESXi host will be created in the same availability domain;
-        /// for multi-AD SDDC, new ESXi host will be auto assigned to the next availability domain following evenly distribution strategy.
+        /// If keep empty, for AD-specific Cluster, new ESXi host will be created in the same availability domain;
+        /// for multi-AD Cluster, new ESXi host will be auto assigned to the next availability domain following evenly distribution strategy.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeAvailabilityDomain")]
         public string ComputeAvailabilityDomain { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the ESXi host that
-        /// is failed. This is an optional parameter. If this parameter is specified, a new ESXi
-        /// host will be created to replace the failed one, and the `failedEsxiHostId` field
-        /// will be updated in the newly created Esxi host.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "failedEsxiHostId")]
-        public string FailedEsxiHostId { get; set; }
         
         /// <value>
         /// The compute shape name of the ESXi host.
@@ -116,15 +106,14 @@ namespace Oci.OcvpService.Models
         public string CapacityReservationId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the ESXi host that
-        /// will be upgraded. This is an optional parameter. If this parameter
-        /// is specified, an ESXi host with the new software version is created to replace the
-        /// original one, and the `nonUpgradedEsxiHostId` field is updated in the newly
-        /// created Esxi host. See [Upgrading VMware Software](https://docs.cloud.oracle.com/Content/VMware/Concepts/upgrade.htm) for more information.
+        /// The ESXi software bundle to install on the ESXi host. 
+        /// Only versions under the same vmwareSoftwareVersion and have been validate by Oracle Cloud VMware Solution will be accepted.
+        /// To get a list of the available versions, use
+        /// {@link #listSupportedVmwareSoftwareVersions(ListSupportedVmwareSoftwareVersionsRequest) listSupportedVmwareSoftwareVersions}.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "nonUpgradedEsxiHostId")]
-        public string NonUpgradedEsxiHostId { get; set; }
+        [JsonProperty(PropertyName = "esxiSoftwareVersion")]
+        public string EsxiSoftwareVersion { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no

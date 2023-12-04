@@ -54,10 +54,6 @@ namespace Oci.OpsiService.Models
         /// <value>
         /// Object Storage Bucket Name
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ObjectStorageBucketName is required.")]
         [JsonProperty(PropertyName = "objectStorageBucketName")]
         public string ObjectStorageBucketName { get; set; }
         
