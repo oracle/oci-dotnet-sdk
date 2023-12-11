@@ -479,10 +479,6 @@ namespace Oci.IdentitydomainsService.Models
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public MeName Name { get; set; }
         

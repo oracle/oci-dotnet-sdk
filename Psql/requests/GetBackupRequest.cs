@@ -20,7 +20,7 @@ namespace Oci.PsqlService.Requests
     {
         
         /// <value>
-        /// unique Backup identifier
+        /// A unique identifier for the backup.
         /// </value>
         /// <remarks>
         /// Required

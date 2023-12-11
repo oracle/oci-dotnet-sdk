@@ -29,7 +29,7 @@ namespace Oci.UsageapiService.Models
         public string Description { get; set; }
                 ///
         /// <value>
-        /// Specifies supported output file format.
+        /// Specifies the supported output file format.
         /// </value>
         ///
         public enum OutputFileFormatEnum {
@@ -40,7 +40,7 @@ namespace Oci.UsageapiService.Models
         };
 
         /// <value>
-        /// Specifies supported output file format.
+        /// Specifies the supported output file format.
         /// </value>
         [JsonProperty(PropertyName = "outputFileFormat")]
         [JsonConverter(typeof(StringEnumConverter))]

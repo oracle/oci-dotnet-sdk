@@ -22,13 +22,13 @@ namespace Oci.PsqlService.Models
     {
         
         /// <value>
-        /// Backup display name
+        /// A user-friendly display name for the backup. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Backup description
+        /// A description for the backup.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

@@ -16,14 +16,6 @@ namespace Oci.PsqlService.Responses
     {
 
         /// <value>
-        /// For optimistic concurrency control. See `if-match`.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
-        public string Etag { get; set; }
-
-
-        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
         /// Oracle about a particular request, please provide the request ID.
         /// 
@@ -31,11 +23,7 @@ namespace Oci.PsqlService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
-        /// <value>
-        /// The returned Configuration instance.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public Configuration Configuration { get; set; }
+
 
     }
 }

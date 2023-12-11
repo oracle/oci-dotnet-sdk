@@ -30,6 +30,12 @@ namespace Oci.OptimizerService.Requests
         public string ResourceActionId { get; set; }
         
         /// <value>
+        /// Supplement additional resource information in extended metadata response.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "includeResourceMetadata")]
+        public System.Nullable<bool> IncludeResourceMetadata { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request.
         /// If you need to contact Oracle about a particular request, please provide the request ID.
         /// 

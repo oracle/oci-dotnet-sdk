@@ -64,7 +64,7 @@ namespace Oci.DatasafeService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Specifies the format of report to be excel or pdf
+        /// Specifies the format of report to be .xls or .pdf
         /// </value>
         ///
         public enum MimeTypeEnum {
@@ -78,7 +78,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the format of report to be excel or pdf
+        /// Specifies the format of report to be .xls or .pdf
         /// </value>
         [JsonProperty(PropertyName = "mimeType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

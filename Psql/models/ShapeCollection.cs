@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// The list of shapes that allowed to use to create a db system.
+    /// The list of shapes that can be used to create a database system.
     /// </summary>
     public class ShapeCollection 
     {
         
         /// <value>
-        /// List of dbSystems.
+        /// List of supported shapes.
         /// </value>
         /// <remarks>
         /// Required

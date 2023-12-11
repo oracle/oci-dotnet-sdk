@@ -116,7 +116,7 @@ namespace Oci.GoldengateService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet being referenced.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet of the deployment's private endpoint.
         /// 
         /// </value>
         /// <remarks>
@@ -125,6 +125,23 @@ namespace Oci.GoldengateService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a public subnet in the customer tenancy.
+        /// Can be provided only for public deployments. If provided, the loadbalancer will be created in this subnet instead of the service tenancy.
+        /// For backward compatiblity this is an optional property for now, but it will become mandatory (for public deployments only) after October 1, 2024.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "loadBalancerSubnetId")]
+        public string LoadBalancerSubnetId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the loadbalancer in the customer's subnet.
+        /// The loadbalancer of the public deployment created in the customer subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "loadBalancerId")]
+        public string LoadBalancerId { get; set; }
         
         /// <value>
         /// The Oracle license model that applies to a Deployment.

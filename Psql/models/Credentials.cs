@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Initial DbSystem credentials that the DbSystem will be provisioned with.
+    /// Initial database system credentials that the database system will be provisioned with.
     /// The password details are not visible on any subsequent operation, such as GET /dbSystems/{dbSystemId}.
     /// 
     /// </summary>
@@ -24,7 +24,7 @@ namespace Oci.PsqlService.Models
     {
         
         /// <value>
-        /// The DB system username.
+        /// The database system administrator username.
         /// </value>
         /// <remarks>
         /// Required

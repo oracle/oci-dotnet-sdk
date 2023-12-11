@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Configuration for PGSQL instance.
+    /// Configuration for the PostgreSQL database instance.
     /// </summary>
     public class UpdateDbConfigParams 
     {
                 ///
         /// <value>
-        /// Specify whether config update requires a restart of Db instance or reload of config.
-        /// Some of the config changes require restart of DB instnace's to apply.
+        /// Whether a configuration update requires a restart of the database instance or a reload of the configuration.
+        /// Some configuration changes require a restart of database instances to be applied.
         /// 
         /// </value>
         ///
@@ -35,8 +35,8 @@ namespace Oci.PsqlService.Models
         };
 
         /// <value>
-        /// Specify whether config update requires a restart of Db instance or reload of config.
-        /// Some of the config changes require restart of DB instnace's to apply.
+        /// Whether a configuration update requires a restart of the database instance or a reload of the configuration.
+        /// Some configuration changes require a restart of database instances to be applied.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "applyConfig")]
@@ -44,7 +44,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<ApplyConfigEnum> ApplyConfig { get; set; }
         
         /// <value>
-        /// Configuration identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the configuration.
         /// </value>
         /// <remarks>
         /// Required

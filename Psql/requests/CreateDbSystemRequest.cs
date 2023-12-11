@@ -20,7 +20,7 @@ namespace Oci.PsqlService.Requests
     {
         
         /// <value>
-        /// Details for the new DbSystem.
+        /// Details for the new database system.
         /// </value>
         /// <remarks>
         /// Required
@@ -31,6 +31,9 @@ namespace Oci.PsqlService.Requests
         
         /// <value>
         /// A token that uniquely identifies a request so it can be retried in case of a timeout or
+        /// server error without risk of executing that same action again. Retry tokens expire after 24
+        /// hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+        /// has been deleted and purged from the system, `retrytoken` could be expired or invalidated.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]

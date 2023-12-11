@@ -20,7 +20,7 @@ namespace Oci.PsqlService.Requests
     {
         
         /// <value>
-        /// unique DbSystem identifier
+        /// A unique identifier for the database system.
         /// </value>
         /// <remarks>
         /// Required

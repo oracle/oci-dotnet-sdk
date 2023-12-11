@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// DbInstance update parameters.
+    /// Database instance node update parameters.
     /// </summary>
     public class UpdateDbSystemDbInstanceDetails 
     {
         
         /// <value>
-        /// Display name of the DbInstance.
+        /// A user-friendly display name of the database instance node. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description of the DbInstance.
+        /// A user-provided description of the database instance node.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

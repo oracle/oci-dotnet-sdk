@@ -20,7 +20,7 @@ namespace Oci.DatasafeService.Requests
     {
         
         /// <value>
-        /// The OCID of the SQL firewall policy resource.
+        /// The OCID of the SQL Firewall policy resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DatasafeService.Requests
         public string SqlFirewallPolicyId { get; set; }
         
         /// <value>
-        /// Details to update the SQL firewall policy.
+        /// Details to update the SQL Firewall policy.
         /// </value>
         /// <remarks>
         /// Required

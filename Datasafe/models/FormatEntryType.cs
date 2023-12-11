@@ -35,6 +35,8 @@ namespace Oci.DatasafeService.Models
       LibraryMaskingFormat,
       [EnumMember(Value = "NULL_VALUE")]
       NullValue,
+      [EnumMember(Value = "PATTERN")]
+      Pattern,
       [EnumMember(Value = "POST_PROCESSING_FUNCTION")]
       PostProcessingFunction,
       [EnumMember(Value = "PRESERVE_ORIGINAL_DATA")]

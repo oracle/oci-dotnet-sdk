@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// DB Configuration
+    /// Database configuration.
     /// </summary>
     public class ConfigParams 
     {
         
         /// <value>
-        /// Key is the configuration key.
+        /// The configuration variable name.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.PsqlService.Models
         public string ConfigKey { get; set; }
         
         /// <value>
-        /// Default value
+        /// Default value for the configuration variable.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.PsqlService.Models
         public string DefaultConfigValue { get; set; }
         
         /// <value>
-        /// User selected configuration value
+        /// User-selected configuration variable value.
         /// </value>
         [JsonProperty(PropertyName = "overridenConfigValue")]
         public string OverridenConfigValue { get; set; }
         
         /// <value>
-        /// Range or list of allowed values
+        /// Range or list of allowed values.
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.PsqlService.Models
         public string AllowedValues { get; set; }
         
         /// <value>
-        /// If true, modfying this configuration value will requires restart.
+        /// If true, modifying this configuration value will require a restart of the database.
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +68,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<bool> IsRestartRequired { get; set; }
         
         /// <value>
-        /// Describes about the Datatype value.
+        /// Data type of the variable.
         /// </value>
         /// <remarks>
         /// Required
@@ -78,7 +78,7 @@ namespace Oci.PsqlService.Models
         public string DataType { get; set; }
         
         /// <value>
-        /// This flags tells whether the value is overridable or not.
+        /// Whether the value can be overridden or not.
         /// </value>
         /// <remarks>
         /// Required
@@ -88,7 +88,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<bool> IsOverridable { get; set; }
         
         /// <value>
-        /// Details about the Postgresql params.
+        /// Details about the PostgreSQL parameter.
         /// </value>
         /// <remarks>
         /// Required

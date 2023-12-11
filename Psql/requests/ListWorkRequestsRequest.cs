@@ -32,7 +32,7 @@ namespace Oci.PsqlService.Requests
         public string WorkRequestId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given OperationStatus.
+        /// A filter to return only resources if their `lifecycleState` matches the given OperationStatus.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
         public System.Nullable<OperationStatus> Status { get; set; }

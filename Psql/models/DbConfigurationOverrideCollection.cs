@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Configuration Overrides for PGSQL instance.
+    /// Configuration overrides for a PostgreSQL instance.
     /// </summary>
     public class DbConfigurationOverrideCollection 
     {
         
         /// <value>
-        /// List of configuration overriden values
+        /// List of configuration overridden values.
         /// </value>
         /// <remarks>
         /// Required

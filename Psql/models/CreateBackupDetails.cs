@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// The information to create a new Backup.
+    /// The information to create a new backup.
     /// </summary>
     public class CreateBackupDetails 
     {
         
         /// <value>
-        /// Backup display name.
+        /// A user-friendly display name for the backup. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.PsqlService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Backup description
+        /// A description for the backup.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Compartment identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the backup.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.PsqlService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Posgresql DbSystem identifier
+        /// The ID of the database system.
         /// </value>
         /// <remarks>
         /// Required

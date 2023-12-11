@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Posgresql DB system backup policy
+    /// PostgreSQL database system backup policy.
     /// </summary>
     [JsonConverter(typeof(BackupPolicyModelConverter))]
     public class BackupPolicy 
     {
                 ///
         /// <value>
-        /// Backup policy kind
+        /// The kind of backup policy.
         /// </value>
         ///
         public enum KindEnum {
@@ -39,7 +39,7 @@ namespace Oci.PsqlService.Models
 
         
         /// <value>
-        /// How many days the customers data should be stored after the db system deletion.
+        /// How many days the data should be stored after the database system deletion.
         /// </value>
         [JsonProperty(PropertyName = "retentionDays")]
         public System.Nullable<int> RetentionDays { get; set; }

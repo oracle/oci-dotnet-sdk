@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Information about the DbSystem associated to a backup.
+    /// Information about the database system associated with a backup.
     /// </summary>
     public class DbSystemDetails 
     {
         
         /// <value>
-        /// Type of the DbSystem.
+        /// Type of the database system.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<DbSystem.SystemTypeEnum> SystemType { get; set; }
         
         /// <value>
-        /// The major and minor versions of the DbSystem software.
+        /// The major and minor versions of the database system software.
         /// </value>
         /// <remarks>
         /// Required

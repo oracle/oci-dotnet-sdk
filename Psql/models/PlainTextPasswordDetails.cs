@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Details for in-line DbSystem password.
+    /// Details for in-line database system password.
     /// </summary>
     public class PlainTextPasswordDetails : PasswordDetails
     {
         
         /// <value>
-        /// The dbSystem password.
+        /// The database system password.
         /// </value>
         /// <remarks>
         /// Required

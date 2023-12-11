@@ -20,7 +20,7 @@ namespace Oci.DatasafeService.Requests
     {
         
         /// <value>
-        /// The OCID of the SQL firewall policy resource.
+        /// The OCID of the SQL Firewall policy resource.
         /// </value>
         /// <remarks>
         /// Required

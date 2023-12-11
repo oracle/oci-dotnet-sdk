@@ -48,7 +48,7 @@ namespace Oci.UsageapiService.Models
         public string Description { get; set; }
                 ///
         /// <value>
-        /// Specifies supported output file format.
+        /// Specifies the supported output file format.
         /// </value>
         ///
         public enum OutputFileFormatEnum {
@@ -59,14 +59,14 @@ namespace Oci.UsageapiService.Models
         };
 
         /// <value>
-        /// Specifies supported output file format.
+        /// Specifies the supported output file format.
         /// </value>
         [JsonProperty(PropertyName = "outputFileFormat")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OutputFileFormatEnum> OutputFileFormat { get; set; }
         
         /// <value>
-        /// The saved report id which can also be used to generate query.
+        /// The saved report ID which can also be used to generate a query.
         /// </value>
         [JsonProperty(PropertyName = "savedReportId")]
         public string SavedReportId { get; set; }

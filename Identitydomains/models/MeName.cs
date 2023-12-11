@@ -23,7 +23,7 @@ namespace Oci.IdentitydomainsService.Models
     ///  - idcsPii: true
     ///  - multiValued: false
     ///  - mutability: readWrite
-    ///  - required: true
+    ///  - required: false
     ///  - returned: default
     ///  - type: complex
     ///  - uniqueness: none
@@ -56,15 +56,11 @@ namespace Oci.IdentitydomainsService.Models
         ///  - idcsSearchable: true
         ///  - multiValued: false
         ///  - mutability: readWrite
-        ///  - required: true
+        ///  - required: false
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "FamilyName is required.")]
         [JsonProperty(PropertyName = "familyName")]
         public string FamilyName { get; set; }
         

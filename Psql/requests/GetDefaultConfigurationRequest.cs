@@ -20,7 +20,7 @@ namespace Oci.PsqlService.Requests
     {
         
         /// <value>
-        /// unique Configuration identifier
+        /// A unique identifier for the configuration.
         /// </value>
         /// <remarks>
         /// Required

@@ -22,7 +22,7 @@ namespace Oci.PsqlService.Models
     {
         
         /// <value>
-        /// The resource type the work request affects.
+        /// The resource type that the work request affects.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.PsqlService.Models
         public string Identifier { get; set; }
         
         /// <value>
-        /// The URI path that the user can do a GET on to access the resource metadata
+        /// The URI path that the user can do a GET on to access the resource metadata.
         /// </value>
         [JsonProperty(PropertyName = "entityUri")]
         public string EntityUri { get; set; }

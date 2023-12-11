@@ -16,14 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// The real-time DbSystem configuration that customers can use for getting access to the PostgreSQL instance.
-    /// 
+    /// Database system connection information. Used to connect to PostgreSQL instance(s).
     /// </summary>
     public class ConnectionDetails 
     {
         
         /// <value>
-        /// The CA certificate to be used by the Posgresql client to connect to the database.
+        /// The CA certificate to be used by the PosgreSQL client to connect to the database.
         /// The CA certificate is used to authenticate the server identity. 
         /// It is issued by PostgreSQL Service Private CA.
         /// 
@@ -43,7 +42,7 @@ namespace Oci.PsqlService.Models
         public Endpoint PrimaryDbEndpoint { get; set; }
         
         /// <value>
-        /// The list of DbInstance endpoints in the DbSystem.
+        /// The list of database instance node endpoints in the database system.
         /// </value>
         /// <remarks>
         /// Required

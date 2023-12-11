@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Db system backup information
+    /// Database system backup information.
     /// </summary>
     public class Backup 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the backup.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.PsqlService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Backup display name
+        /// A user-friendly display name for the backup. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.PsqlService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Backup description
+        /// A description for the backup.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Backup compartment identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the backup.
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.PsqlService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Specifies whether the backup was created manually, or via scheduled backup policy
+        /// Specifies whether the backup was created manually, or by a management policy.
         /// </value>
         ///
         public enum SourceTypeEnum {
@@ -72,14 +72,17 @@ namespace Oci.PsqlService.Models
         };
 
         /// <value>
-        /// Specifies whether the backup was created manually, or via scheduled backup policy
+        /// Specifies whether the backup was created manually, or by a management policy.
         /// </value>
         [JsonProperty(PropertyName = "sourceType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SourceTypeEnum> SourceType { get; set; }
         
         /// <value>
-        /// The time the the Backup was created. An RFC3339 formatted datetime string
+        /// The date and time the backup was created, expressed in
+        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         /// <remarks>
         /// Required
@@ -89,13 +92,16 @@ namespace Oci.PsqlService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the Backup was updated. An RFC3339 formatted datetime string
+        /// The date and time the backup was updated, expressed in
+        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// The current state of the Backup.
+        /// The current state of the backup.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -115,7 +121,7 @@ namespace Oci.PsqlService.Models
         };
 
         /// <value>
-        /// The current state of the Backup.
+        /// The current state of the backup.
         /// </value>
         /// <remarks>
         /// Required
@@ -138,7 +144,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<int> RetentionPeriod { get; set; }
         
         /// <value>
-        /// Backup size in GB.
+        /// The size of the backup, in gigabytes.
         /// </value>
         /// <remarks>
         /// Required
@@ -148,7 +154,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<int> BackupSize { get; set; }
         
         /// <value>
-        /// The source DbSystem OCID.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the backup's source database system.
         /// </value>
         [JsonProperty(PropertyName = "dbSystemId")]
         public string DbSystemId { get; set; }

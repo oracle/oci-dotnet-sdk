@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The details of SQL firewall policy.
+    /// The details of SQL Firewall policy.
     /// </summary>
     public class SqlFirewallPolicyAggregation 
     {

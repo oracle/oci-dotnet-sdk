@@ -46,7 +46,15 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "targetId")]
             TargetId,
             [EnumMember(Value = "sensitiveDataModelId")]
-            SensitiveDataModelId
+            SensitiveDataModelId,
+            [EnumMember(Value = "sensitiveTypeId")]
+            SensitiveTypeId,
+            [EnumMember(Value = "targetIdAndSensitiveDataModelId")]
+            TargetIdAndSensitiveDataModelId,
+            [EnumMember(Value = "sensitiveTypeIdAndTargetId")]
+            SensitiveTypeIdAndTargetId,
+            [EnumMember(Value = "sensitiveTypeIdAndSensitiveDataModelId")]
+            SensitiveTypeIdAndSensitiveDataModelId
         };
 
         /// <value>
@@ -68,6 +76,12 @@ namespace Oci.DatasafeService.Requests
         public string SensitiveDataModelId { get; set; }
         
         /// <value>
+        /// A filter to return only items related to a specific sensitive type OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sensitiveTypeId")]
+        public string SensitiveTypeId { get; set; }
+        
+        /// <value>
         /// For list pagination. The maximum number of items to return per page in a paginated \"List\" call. For details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
@@ -84,5 +98,13 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to return only the common sensitive type resources. Common sensitive types belong to 
+        /// library sensitive types which are frequently used to perform sensitive data discovery.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isCommon")]
+        public System.Nullable<bool> IsCommon { get; set; }
     }
 }

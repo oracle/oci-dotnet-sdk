@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The SQL firewall policy resource contains the firewall policy metadata for a single user.
+    /// The SQL Firewall policy resource contains the firewall policy metadata for a single user.
     /// 
     /// </summary>
     public class SqlFirewallPolicySummary 
     {
         
         /// <value>
-        /// The OCID of the SQL firewall policy.
+        /// The OCID of the SQL Firewall policy.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DatasafeService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the SQL firewall policy.
+        /// The OCID of the compartment containing the SQL Firewall policy.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DatasafeService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The display name of the SQL firewall policy.
+        /// The display name of the SQL Firewall policy.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,13 +53,13 @@ namespace Oci.DatasafeService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The description of the SQL firewall policy.
+        /// The description of the SQL Firewall policy.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the security policy corresponding to the SQL firewall policy.
+        /// The OCID of the security policy corresponding to the SQL Firewall policy.
         /// </value>
         /// <remarks>
         /// Required
@@ -79,7 +79,7 @@ namespace Oci.DatasafeService.Models
         public string DbUserName { get; set; }
                 ///
         /// <value>
-        /// Specifies the level of SQL included for this SQL firewall policy.
+        /// Specifies the level of SQL included for this SQL Firewall policy.
         /// USER_ISSUED_SQL - User issued SQL statements only.
         /// ALL_SQL - Includes all SQL statements including SQL statement issued inside PL/SQL units.
         /// 
@@ -96,7 +96,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the level of SQL included for this SQL firewall policy.
+        /// Specifies the level of SQL included for this SQL Firewall policy.
         /// USER_ISSUED_SQL - User issued SQL statements only.
         /// ALL_SQL - Includes all SQL statements including SQL statement issued inside PL/SQL units.
         /// 
@@ -106,7 +106,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<SqlLevelEnum> SqlLevel { get; set; }
                 ///
         /// <value>
-        /// Specifies whether the SQL firewall policy is enabled or disabled.
+        /// Specifies whether the SQL Firewall policy is enabled or disabled.
         /// </value>
         ///
         public enum StatusEnum {
@@ -120,7 +120,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies whether the SQL firewall policy is enabled or disabled.
+        /// Specifies whether the SQL Firewall policy is enabled or disabled.
         /// </value>
         /// <remarks>
         /// Required
@@ -131,7 +131,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
                 ///
         /// <value>
-        /// Specifies the SQL firewall policy enforcement option.
+        /// Specifies the SQL Firewall policy enforcement option.
         /// </value>
         ///
         public enum EnforcementScopeEnum {
@@ -147,14 +147,14 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the SQL firewall policy enforcement option.
+        /// Specifies the SQL Firewall policy enforcement option.
         /// </value>
         [JsonProperty(PropertyName = "enforcementScope")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EnforcementScopeEnum> EnforcementScope { get; set; }
                 ///
         /// <value>
-        /// Specifies the SQL firewall action based on detection of SQL firewall violations.
+        /// Specifies the SQL Firewall action based on detection of SQL Firewall violations.
         /// </value>
         ///
         public enum ViolationActionEnum {
@@ -168,14 +168,14 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the SQL firewall action based on detection of SQL firewall violations.
+        /// Specifies the SQL Firewall action based on detection of SQL Firewall violations.
         /// </value>
         [JsonProperty(PropertyName = "violationAction")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ViolationActionEnum> ViolationAction { get; set; }
                 ///
         /// <value>
-        /// Specifies whether a unified audit policy should be enabled for auditing the SQL firewall policy violations.
+        /// Specifies whether a unified audit policy should be enabled for auditing the SQL Firewall policy violations.
         /// </value>
         ///
         public enum ViolationAuditEnum {
@@ -189,14 +189,14 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies whether a unified audit policy should be enabled for auditing the SQL firewall policy violations.
+        /// Specifies whether a unified audit policy should be enabled for auditing the SQL Firewall policy violations.
         /// </value>
         [JsonProperty(PropertyName = "violationAudit")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ViolationAuditEnum> ViolationAudit { get; set; }
         
         /// <value>
-        /// The time that the SQL firewall policy was created, in the format defined by RFC3339.
+        /// The time that the SQL Firewall policy was created, in the format defined by RFC3339.
         /// </value>
         /// <remarks>
         /// Required
@@ -206,13 +206,13 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the SQL firewall policy was last updated, in the format defined by RFC3339.
+        /// The date and time the SQL Firewall policy was last updated, in the format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the SQL firewall policy.
+        /// The current state of the SQL Firewall policy.
         /// </value>
         /// <remarks>
         /// Required
@@ -223,7 +223,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<SqlFirewallPolicyLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// Details about the current state of the SQL firewall policy in Data Safe.
+        /// Details about the current state of the SQL Firewall policy in Data Safe.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }

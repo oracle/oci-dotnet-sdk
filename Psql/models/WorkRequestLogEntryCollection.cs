@@ -22,7 +22,7 @@ namespace Oci.PsqlService.Models
     {
         
         /// <value>
-        /// List of workRequestLogEntries.
+        /// List of work request log entries.
         /// </value>
         /// <remarks>
         /// Required

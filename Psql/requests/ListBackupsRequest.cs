@@ -26,19 +26,19 @@ namespace Oci.PsqlService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The start date for getting  backups. An RFC3339 formatted datetime string
+        /// The start date for getting backups. An [RFC 3339](https://tools.ietf.org/rfc/rfc3339) formatted datetime string.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The End date for getting  backups. An RFC3339 formatted datetime string.
+        /// The end date for getting backups. An [RFC 3339](https://tools.ietf.org/rfc/rfc3339) formatted datetime string.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources if their `lifecycleState` matches the given `lifecycleState`.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Backup.LifecycleStateEnum> LifecycleState { get; set; }
@@ -50,13 +50,13 @@ namespace Oci.PsqlService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// unique Backup identifier
+        /// A unique identifier for the backup.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "backupId")]
         public string BackupId { get; set; }
         
         /// <value>
-        /// unique DbSystem identifier
+        /// A unique identifier for the database system.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }

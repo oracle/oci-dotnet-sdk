@@ -61,7 +61,7 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<TargetClassEnum> TargetClass { get; set; }
         
         /// <value>
-        /// Type of object in the source database affected by the action. i.e PL/SQL, SYNONYM, PACKAGE BODY.
+        /// Type of object in the source database affected by the action. For example PL/SQL, SYNONYM or PACKAGE BODY.
         /// </value>
         [JsonProperty(PropertyName = "objectType")]
         public System.Collections.Generic.List<string> ObjectType { get; set; }
@@ -73,7 +73,7 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<string> ClientHostname { get; set; }
         
         /// <value>
-        /// The application from which the audit event was generated. Examples SQL Plus or SQL Developer.
+        /// The application from which the audit event was generated. For example SQL Plus or SQL Developer.
         /// </value>
         [JsonProperty(PropertyName = "clientProgram")]
         public System.Collections.Generic.List<string> ClientProgram { get; set; }
@@ -114,7 +114,7 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<AuditTypeEnum> AuditType { get; set; }
         
         /// <value>
-        /// The name of the event executed by the user on the target database. i.e ALTER SEQUENCE, CREATE TRIGGER, CREATE INDEX.
+        /// The name of the event executed by the user on the target database. For example ALTER SEQUENCE, CREATE TRIGGER or CREATE INDEX.
         /// </value>
         [JsonProperty(PropertyName = "eventName")]
         public System.Collections.Generic.List<string> EventName { get; set; }

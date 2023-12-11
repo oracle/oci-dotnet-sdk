@@ -16,19 +16,20 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Summary of the DbSystem shape.
+    /// Summary of the database system shape.
     /// </summary>
     public class ShapeSummary 
     {
         
         /// <value>
-        /// Unique identifier for the shape
+        /// A unique identifier for the shape.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The Compute Shape Name like VM.Standard.E4.Flex
+        /// The name of the Compute VM shape.
+        /// Example: VM.Standard.E4.Flex
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +39,7 @@ namespace Oci.PsqlService.Models
         public string Shape { get; set; }
         
         /// <value>
-        /// The number of OCPUs
+        /// The number of OCPUs.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +49,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<int> OcpuCount { get; set; }
         
         /// <value>
-        /// The amount of memory in GB
+        /// The amount of memory in gigabytes.
         /// </value>
         /// <remarks>
         /// Required

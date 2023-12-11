@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Monthly backup policy
+    /// Monthly backup policy.
     /// </summary>
     public class MonthlyBackupPolicy : BackupPolicy
     {
@@ -32,8 +32,8 @@ namespace Oci.PsqlService.Models
         public string BackupStart { get; set; }
         
         /// <value>
-        /// Days of the month when backup should start.
-        /// If the day is greater last day of the current month, then it will be triggered on the last day of the current month
+        /// Day of the month when the backup should start.
+        /// To ensure that the backup runs monthly, the latest day of the month that you can use to schedule a backup is the the 28th day.
         /// 
         /// </value>
         /// <remarks>

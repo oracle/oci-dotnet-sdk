@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Storage details of the OCI_OPTIMIZED_STORAGE DbSystem.
+    /// Storage details of the database system.
     /// </summary>
     public class OciOptimizedStorageDetails : StorageDetails
     {
         
         /// <value>
-        /// DbSystem Performance Unit
+        /// Guaranteed input/output storage requests per second (IOPS) available to the database system.
         /// </value>
         [JsonProperty(PropertyName = "iops")]
         public System.Nullable<long> Iops { get; set; }

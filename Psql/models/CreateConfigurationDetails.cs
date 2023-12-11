@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// The information to create a new Configuration.
+    /// The information to create a new configuration.
     /// </summary>
     public class CreateConfigurationDetails 
     {
         
         /// <value>
-        /// configuration display name
+        /// A user-friendly display name for the configuration. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.PsqlService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the configuration.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,14 @@ namespace Oci.PsqlService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Details about the Configuration Set.
+        /// Details about the configuration set.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Compute Shape Name like VM.Standard3.Flex.
+        /// The name of the shape for the configuration.
+        /// Example: VM.Standard.E4.Flex
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +59,7 @@ namespace Oci.PsqlService.Models
         public string Shape { get; set; }
         
         /// <value>
-        /// Version of the Postgresql DB
+        /// Version of the PostgreSQL database.
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +69,7 @@ namespace Oci.PsqlService.Models
         public string DbVersion { get; set; }
         
         /// <value>
-        /// CPU cpuCoreCount. Min value is 1. Max value depends on the shape.
+        /// CPU core count.
         /// 
         /// </value>
         /// <remarks>
@@ -79,7 +80,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<int> InstanceOcpuCount { get; set; }
         
         /// <value>
-        /// Memory Size in GB with 1GB increment. Min value matches the cpuCoreCount. Max value depends on the shape.
+        /// Memory size in gigabytes with 1GB increment.
         /// 
         /// </value>
         /// <remarks>

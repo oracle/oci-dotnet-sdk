@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Posgresql DB system management policy update details
+    /// PostgreSQL database system management policy update details.
     /// </summary>
     public class ManagementPolicyDetails 
     {

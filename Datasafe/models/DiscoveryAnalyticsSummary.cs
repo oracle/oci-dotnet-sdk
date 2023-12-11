@@ -40,7 +40,9 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "SENSITIVE_COLUMN")]
             SensitiveColumn,
             [EnumMember(Value = "SENSITIVE_DATA_VALUE")]
-            SensitiveDataValue
+            SensitiveDataValue,
+            [EnumMember(Value = "TARGET_DATABASE")]
+            TargetDatabase
         };
 
         /// <value>

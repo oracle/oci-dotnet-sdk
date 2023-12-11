@@ -22,7 +22,7 @@ namespace Oci.PsqlService.Models
     {
         
         /// <value>
-        /// Type of the work request
+        /// Type of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +44,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
-        /// The id of the work request.
+        /// The ID of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,10 @@ namespace Oci.PsqlService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that contains the work request. Work requests should be scoped to
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the work request. Work requests should be scoped to
+        /// the same compartment as the resource the work request affects. If the work request affects multiple resources,
+        /// and those resources are not in the same compartment, it is up to the service team to pick the primary
+        /// resource whose compartment should be used
         /// 
         /// </value>
         /// <remarks>
@@ -105,7 +108,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The date and time the object was finished, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
+        /// The date and time the request was finished, as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]

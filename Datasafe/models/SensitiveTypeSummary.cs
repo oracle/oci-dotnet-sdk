@@ -131,6 +131,14 @@ namespace Oci.DatasafeService.Models
         public string DefaultMaskingFormatId { get; set; }
         
         /// <value>
+        /// Specifies whether the sensitive type is common. Common sensitive types belong to 
+        /// library sensitive types which are frequently used to perform sensitive data discovery.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCommon")]
+        public System.Nullable<bool> IsCommon { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

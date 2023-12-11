@@ -16,8 +16,8 @@ using Newtonsoft.Json.Linq;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Details for the DbSystem password.
-    /// Password can be passed as `VaultSecretPasswordDetails`(Vault) or `PlainTextPasswordDetails`.
+    /// Details for the database system password.
+    /// Password can be passed as `VaultSecretPasswordDetails` or `PlainTextPasswordDetails`.
     /// 
     /// </summary>
     [JsonConverter(typeof(PasswordDetailsModelConverter))]
@@ -25,7 +25,7 @@ namespace Oci.PsqlService.Models
     {
                 ///
         /// <value>
-        /// Password type
+        /// The password type.
         /// </value>
         ///
         public enum PasswordTypeEnum {

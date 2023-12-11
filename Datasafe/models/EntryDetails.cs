@@ -24,7 +24,7 @@ namespace Oci.DatasafeService.Models
                 ///
         /// <value>
         /// The security policy entry type. Allowed values:
-        /// - FIREWALL_POLICY - The SQL firewall policy entry type.
+        /// - FIREWALL_POLICY - The SQL Firewall policy entry type.
         /// 
         /// </value>
         ///

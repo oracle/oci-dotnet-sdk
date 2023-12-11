@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The details for moving the audit report to a different compartment.
+    /// The details of the compartment that the audit report is moving to.
     /// </summary>
     public class ChangeReportCompartmentDetails 
     {

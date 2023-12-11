@@ -77,7 +77,7 @@ namespace Oci.DatasafeService.Requests
         
         ///
         /// <value>
-        /// The group by parameter to summarize SQL firewall policy aggregation.
+        /// The group by parameter to summarize SQL Firewall policy aggregation.
         /// </value>
         ///
         public enum GroupByEnum {
@@ -92,13 +92,13 @@ namespace Oci.DatasafeService.Requests
         };
 
         /// <value>
-        /// The group by parameter to summarize SQL firewall policy aggregation.
+        /// The group by parameter to summarize SQL Firewall policy aggregation.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "groupBy", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<GroupByEnum> GroupBy { get; set; }
         
         /// <value>
-        /// The current state of the SQL firewall policy.
+        /// The current state of the SQL Firewall policy.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<SqlFirewallPolicyLifecycleState> LifecycleState { get; set; }
@@ -110,7 +110,7 @@ namespace Oci.DatasafeService.Requests
         public string SecurityPolicyId { get; set; }
         
         /// <value>
-        /// An optional filter to return the summary of the SQL firewall policies created after the date-time specified,
+        /// An optional filter to return the summary of the SQL Firewall policies created after the date-time specified,
         /// in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// 
         /// </value>
@@ -118,7 +118,7 @@ namespace Oci.DatasafeService.Requests
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// An optional filter to return the summary of the SQL firewall policies created before the date-time specified,
+        /// An optional filter to return the summary of the SQL Firewall policies created before the date-time specified,
         /// in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// 
         /// </value>

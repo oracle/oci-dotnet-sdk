@@ -16,8 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Password detail that will be used to reset the DbSystem's master user.
-    /// They are not visible on any subsequent operation, such as GET /dbSystems/{dbSystemId}.
+    /// Password detail that will be used to reset the database system's master user.
+    /// These details are not visible on any subsequent operation, such as GET /dbSystems/{dbSystemId}.
     /// 
     /// </summary>
     public class ResetMasterUserPasswordDetails 

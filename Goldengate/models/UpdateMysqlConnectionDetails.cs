@@ -106,6 +106,9 @@ namespace Oci.GoldengateService.Models
         public string SslKey { get; set; }
         
         /// <value>
+        /// Deprecated: this field will be removed in future versions. Either specify the private IP in the connectionString or host 
+        /// field, or make sure the host name is resolvable in the target VCN.
+        /// <br/>
         /// The private IP address of the connection's endpoint in the customer's VCN, typically a
         /// database endpoint or a big data endpoint (e.g. Kafka bootstrap server).
         /// In case the privateIp is provided, the subnetId must also be provided.
