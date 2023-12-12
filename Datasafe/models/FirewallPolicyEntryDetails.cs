@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// SQL firewall policy details.
+    /// SQL Firewall policy details.
     /// </summary>
     public class FirewallPolicyEntryDetails : EntryDetails
     {
         
         /// <value>
-        /// The time the the SQL firewall policy was generated on the target database, in the format defined by RFC3339.
+        /// The time the the SQL Firewall policy was generated on the target database, in the format defined by RFC3339.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeGenerated { get; set; }
         
         /// <value>
-        /// The last date and time the status of the SQL firewall policy was updated on the target database, in the format defined by RFC3339.
+        /// The last date and time the status of the SQL Firewall policy was updated on the target database, in the format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeStatusUpdated")]
         public System.Nullable<System.DateTime> TimeStatusUpdated { get; set; }

@@ -405,6 +405,26 @@ namespace Oci.IdentitydomainsService.Models
         public string NotificationEmailTemplateId { get; set; }
         
         /// <value>
+        /// Indicates if User is a Service User
+        /// <br/>
+        /// **Added In:** 2306131901
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - idcsCsvAttributeName: Service User
+        ///  - idcsCsvAttributeNameMappings: [[columnHeaderName:Service User]]
+        ///  - idcsSearchable: true
+        ///  - multiValued: false
+        ///  - mutability: immutable
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: boolean
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "serviceUser")]
+        public System.Nullable<bool> ServiceUser { get; set; }
+        
+        /// <value>
         /// A list of Support Accounts corresponding to user.
         /// <br/>
         /// **Added In:** 2103141444

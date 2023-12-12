@@ -151,6 +151,8 @@ namespace Oci.DatasafeService.Models
             RefreshSqlCollectionLogInsights,
             [EnumMember(Value = "PURGE_SQL_COLLECTION_LOGS")]
             PurgeSqlCollectionLogs,
+            [EnumMember(Value = "REFRESH_VIOLATIONS")]
+            RefreshViolations,
             [EnumMember(Value = "UPDATE_SECURITY_POLICY")]
             UpdateSecurityPolicy,
             [EnumMember(Value = "CHANGE_SECURITY_POLICY_COMPARTMENT")]
@@ -261,6 +263,8 @@ namespace Oci.DatasafeService.Models
             PatchDifference,
             [EnumMember(Value = "APPLY_DIFFERENCE")]
             ApplyDifference,
+            [EnumMember(Value = "ABORT_MASKING")]
+            AbortMasking,
             [EnumMember(Value = "CREATE_SCHEDULE")]
             CreateSchedule,
             [EnumMember(Value = "REMOVE_SCHEDULE_REPORT")]

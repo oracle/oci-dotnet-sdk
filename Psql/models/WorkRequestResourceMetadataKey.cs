@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.PsqlService.Models
 {
   /// <summary>
-  /// Possible Metadata keys for workRequest resource metadata
+  /// Possible metadata keys for workRequest resource metadata.
   /// </summary>
   public enum WorkRequestResourceMetadataKey {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

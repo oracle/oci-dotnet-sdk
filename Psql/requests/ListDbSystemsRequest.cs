@@ -26,7 +26,7 @@ namespace Oci.PsqlService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources if their `lifecycleState` matches the given `lifecycleState`.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<DbSystem.LifecycleStateEnum> LifecycleState { get; set; }
@@ -38,7 +38,7 @@ namespace Oci.PsqlService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// unique DbSystem identifier
+        /// A unique identifier for the database system.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }

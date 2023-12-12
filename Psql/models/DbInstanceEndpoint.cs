@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// The DbInstance endpoint information.
+    /// The database instance node endpoint information.
     /// </summary>
     public class DbInstanceEndpoint 
     {
         
         /// <value>
-        /// Unique identifier of the DbInstance.
+        /// Unique identifier of the database instance node.
         /// </value>
         /// <remarks>
         /// Required

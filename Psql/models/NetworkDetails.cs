@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// DbSystem network details.
+    /// Network details for the database system.
     /// </summary>
     public class NetworkDetails 
     {
         
         /// <value>
-        /// Customer Subnet identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer subnet associated with the database system.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,14 +33,14 @@ namespace Oci.PsqlService.Models
         
         /// <value>
         /// Private IP in customer subnet. The value is optional.
-        /// If the IP is not provided the IP will be chosen among the available IP addresses from the specified subnet.
+        /// If the IP is not provided, the IP will be chosen from the available IP addresses from the specified subnet.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "primaryDbEndpointPrivateIp")]
         public string PrimaryDbEndpointPrivateIp { get; set; }
         
         /// <value>
-        /// List of customer NetworkSecurityGroup identifiers
+        /// List of customer Network Security Group [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) associated with the database system.
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }

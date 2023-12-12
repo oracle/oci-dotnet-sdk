@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Storage details of the DbSystem.
+    /// Storage details of the database system.
     /// </summary>
     [JsonConverter(typeof(StorageDetailsModelConverter))]
     public class StorageDetails 
@@ -24,10 +24,10 @@ namespace Oci.PsqlService.Models
         
         
         /// <value>
-        /// Specifies if the block volume used for the DbSystem is regional or AD-local.
+        /// Specifies if the block volume used for the database system is regional or AD-local.
         /// If not specified, it will be set to false.
-        /// If isRegionallyDurable is set to true, availabilityDomain should not be specified.
-        /// If isRegionallyDurable is set to false, availabilityDomain must be specified.
+        /// If `isRegionallyDurable` is set to true, `availabilityDomain` should not be specified.
+        /// If `isRegionallyDurable` is set to false, `availabilityDomain` must be specified.
         /// 
         /// </value>
         /// <remarks>
@@ -39,8 +39,8 @@ namespace Oci.PsqlService.Models
         
         /// <value>
         /// Specifies the availability domain of AD-local storage.
-        /// If isRegionallyDurable is set to true, availabilityDomain should not be specified.
-        /// If isRegionallyDurable is set to false, availabilityDomain must be specified.
+        /// If `isRegionallyDurable` is set to true, `availabilityDomain` should not be specified.
+        /// If `isRegionallyDurable` is set to false, `availabilityDomain` must be specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]

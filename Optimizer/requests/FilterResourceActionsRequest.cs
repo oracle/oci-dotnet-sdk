@@ -101,6 +101,12 @@ namespace Oci.OptimizerService.Requests
         public System.Nullable<bool> IncludeOrganization { get; set; }
         
         /// <value>
+        /// Supplement additional resource information in extended metadata response.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "includeResourceMetadata")]
+        public System.Nullable<bool> IncludeResourceMetadata { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return in a paginated \"List\" call.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

@@ -22,13 +22,13 @@ namespace Oci.PsqlService.Models
     {
         
         /// <value>
-        /// DbSystem display name.
+        /// A user-friendly display name for the database system. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description of a DbSystem. This field should be input by the user.
+        /// A user-provided description of the database system.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

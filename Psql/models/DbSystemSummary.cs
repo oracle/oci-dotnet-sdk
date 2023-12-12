@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Summary of the DbSystem.
+    /// Summary information about a database system.
     /// </summary>
     public class DbSystemSummary 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// A unique identifier for the database system. Immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.PsqlService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// DbSystem display name
+        /// A user-friendly display name for the database system. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.PsqlService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the database system.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,10 @@ namespace Oci.PsqlService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The time the the DbSystem was created. An RFC3339 formatted datetime string
+        /// The date and time that the database system was created, expressed in
+        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         /// <remarks>
         /// Required
@@ -62,13 +65,16 @@ namespace Oci.PsqlService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the DbSystem was updated. An RFC3339 formatted datetime string
+        /// The date and time that the database system was updated, expressed in
+        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the DbSystem.
+        /// The current state of the database system.
         /// </value>
         /// <remarks>
         /// Required
@@ -85,7 +91,7 @@ namespace Oci.PsqlService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// Type of the DbSystem.
+        /// Type of the database system.
         /// </value>
         /// <remarks>
         /// Required
@@ -96,7 +102,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<DbSystem.SystemTypeEnum> SystemType { get; set; }
         
         /// <value>
-        /// Count of DbInstances in the DbSystem.
+        /// Count of database instances, or nodes, in the database system.
         /// </value>
         /// <remarks>
         /// Required
@@ -106,13 +112,14 @@ namespace Oci.PsqlService.Models
         public System.Nullable<int> InstanceCount { get; set; }
         
         /// <value>
-        /// Shape of dbInstance.
+        /// The name of the shape for the database instance node.
+        /// Example: VM.Standard.E4.Flex
         /// </value>
         [JsonProperty(PropertyName = "shape")]
         public string Shape { get; set; }
         
         /// <value>
-        /// The total number of OCPUs available to each DbInstance.
+        /// The total number of OCPUs available to each database instance node.
         /// </value>
         /// <remarks>
         /// Required
@@ -122,7 +129,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<int> InstanceOcpuCount { get; set; }
         
         /// <value>
-        /// The total amount of memory available to each DbInstance, in gigabytes.
+        /// The total amount of memory available to each database instance node, in gigabytes.
         /// </value>
         /// <remarks>
         /// Required
@@ -132,7 +139,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<int> InstanceMemorySizeInGBs { get; set; }
         
         /// <value>
-        /// Version of DbSystem software.
+        /// Version of database system software.
         /// </value>
         /// <remarks>
         /// Required
@@ -142,7 +149,7 @@ namespace Oci.PsqlService.Models
         public string DbVersion { get; set; }
         
         /// <value>
-        /// Configuration identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the configuration associated with the database system.
         /// </value>
         [JsonProperty(PropertyName = "configId")]
         public string ConfigId { get; set; }

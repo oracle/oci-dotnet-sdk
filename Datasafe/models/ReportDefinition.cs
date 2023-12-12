@@ -100,13 +100,13 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<int> DisplayOrder { get; set; }
         
         /// <value>
-        /// Specifies the data and time the report definition was created.
+        /// Specifies the date and time the report definition was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the report definition was update.
+        /// The date and time the report definition was updated.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
@@ -183,7 +183,7 @@ namespace Oci.DatasafeService.Models
         public string Schedule { get; set; }
                 ///
         /// <value>
-        /// Specifies the format of the report ( either XLS or PDF )
+        /// Specifies the format of the report ( either .xls or .pdf )
         /// </value>
         ///
         public enum ScheduledReportMimeTypeEnum {
@@ -197,7 +197,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the format of the report ( either XLS or PDF )
+        /// Specifies the format of the report ( either .xls or .pdf )
         /// </value>
         [JsonProperty(PropertyName = "scheduledReportMimeType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -216,7 +216,7 @@ namespace Oci.DatasafeService.Models
         public string ScheduledReportName { get; set; }
         
         /// <value>
-        /// The OCID of the compartment in which the scheduled resource should be created.
+        /// The OCID of the compartment in which the scheduled resource will be created.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scheduledReportCompartmentId")]

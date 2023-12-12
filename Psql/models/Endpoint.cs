@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// The node endpoint information.
+    /// Information about the database instance node endpoint.
     /// </summary>
     public class Endpoint 
     {
         
         /// <value>
-        /// The FQDN of the endpoint
+        /// The FQDN of the endpoint.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.PsqlService.Models
         public string Fqdn { get; set; }
         
         /// <value>
-        /// The IP Address of the endpoint
+        /// The IP address of the endpoint.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.PsqlService.Models
         public string IpAddress { get; set; }
         
         /// <value>
-        /// The port Address of the endpoint
+        /// The port address of the endpoint.
         /// </value>
         /// <remarks>
         /// Required

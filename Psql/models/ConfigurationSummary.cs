@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Summary of the Configuration.
+    /// Summary of the configuration.
     /// </summary>
     public class ConfigurationSummary 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the configuration. Immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.PsqlService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Configuration identifier name
+        /// A user-friendly display name for the configuration. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.PsqlService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the configuration.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,10 @@ namespace Oci.PsqlService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The time the the Configuration was created. An RFC3339 formatted datetime string
+        /// The date and time the configuration was created, expressed in
+        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +65,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The current state of the Configuration.
+        /// The current state of the configuration.
         /// </value>
         /// <remarks>
         /// Required
@@ -79,7 +82,8 @@ namespace Oci.PsqlService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// Compute Shape Name like VM.Standard3.Flex.
+        /// The name of the shape for the configuration.
+        /// Example: VM.Standard.E4.Flex
         /// </value>
         /// <remarks>
         /// Required
@@ -89,7 +93,7 @@ namespace Oci.PsqlService.Models
         public string Shape { get; set; }
         
         /// <value>
-        /// Version of the Postgresql DB
+        /// Version of the PostgreSQL database.
         /// </value>
         /// <remarks>
         /// Required
@@ -99,7 +103,7 @@ namespace Oci.PsqlService.Models
         public string DbVersion { get; set; }
         
         /// <value>
-        /// CPU cpuCoreCount. Min value is 1. Max value depends on the shape.
+        /// CPU core count.
         /// 
         /// </value>
         /// <remarks>
@@ -110,7 +114,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<int> InstanceOcpuCount { get; set; }
         
         /// <value>
-        /// Memory Size in GB with 1GB increment. Min value matches the cpuCoreCount. Max value depends on the shape.
+        /// Memory size in gigabytes with 1GB increment.
         /// 
         /// </value>
         /// <remarks>

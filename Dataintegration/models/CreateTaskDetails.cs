@@ -113,6 +113,12 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "configProviderDelegate")]
         public CreateConfigProvider ConfigProviderDelegate { get; set; }
         
+        /// <value>
+        /// Whether the same task can be executed concurrently.
+        /// </value>
+        [JsonProperty(PropertyName = "isConcurrentAllowed")]
+        public System.Nullable<bool> IsConcurrentAllowed { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

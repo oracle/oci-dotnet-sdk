@@ -46,7 +46,7 @@ namespace Oci.DataintegrationService.Models
         public System.Nullable<long> EndTimeInMillis { get; set; }
                 ///
         /// <value>
-        /// status
+        /// Status of RuntimeOperator. This field is deprecated, use RuntimeOperator's executionState field instead.
         /// </value>
         ///
         public enum StatusEnum {
@@ -70,7 +70,7 @@ namespace Oci.DataintegrationService.Models
         };
 
         /// <value>
-        /// status
+        /// Status of RuntimeOperator. This field is deprecated, use RuntimeOperator's executionState field instead.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

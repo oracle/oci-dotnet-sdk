@@ -124,7 +124,7 @@ namespace Oci.GoldengateService.Models
         public string Fqdn { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet being referenced.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the target subnet of the dedicated connection.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]

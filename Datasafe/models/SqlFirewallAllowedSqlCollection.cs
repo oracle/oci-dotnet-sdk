@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Collection of SQL firewall allowed SQL statements.
+    /// Collection of SQL Firewall allowed SQL statements.
     /// </summary>
     public class SqlFirewallAllowedSqlCollection 
     {
         
         /// <value>
-        /// Array of SQL firewall allowed SQL statements.
+        /// Array of SQL Firewall allowed SQL statements.
         /// </value>
         /// <remarks>
         /// Required

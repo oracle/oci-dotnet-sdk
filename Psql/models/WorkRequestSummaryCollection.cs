@@ -22,7 +22,7 @@ namespace Oci.PsqlService.Models
     {
         
         /// <value>
-        /// List of workRequestSummary objects.
+        /// List of work requests.
         /// </value>
         /// <remarks>
         /// Required

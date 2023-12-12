@@ -22,7 +22,7 @@ namespace Oci.DatasafeService.Models
     {
                 ///
         /// <value>
-        /// The severity of the finding.
+        /// The severity of the finding as determined by security assessment and is same as oracleDefinedSeverity, unless modified by user.
         /// </value>
         ///
         public enum SeverityEnum {
@@ -44,7 +44,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// The severity of the finding.
+        /// The severity of the finding as determined by security assessment and is same as oracleDefinedSeverity, unless modified by user.
         /// </value>
         [JsonProperty(PropertyName = "severity")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

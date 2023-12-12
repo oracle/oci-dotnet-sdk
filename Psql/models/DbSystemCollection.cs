@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Results of a DB system search. Contains boh DbSystemSummary items and other information, such as metadata.
+    /// Results of a database system search. Contains both DbSystemSummary items and other information, such as metadata.
     /// </summary>
     public class DbSystemCollection 
     {
         
         /// <value>
-        /// List of DB systems.
+        /// List of database systems.
         /// </value>
         /// <remarks>
         /// Required

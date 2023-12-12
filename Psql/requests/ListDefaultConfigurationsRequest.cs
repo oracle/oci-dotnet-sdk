@@ -20,7 +20,7 @@ namespace Oci.PsqlService.Requests
     {
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources if their `lifecycleState` matches the given `lifecycleState`.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Configuration.LifecycleStateEnum> LifecycleState { get; set; }
@@ -32,19 +32,20 @@ namespace Oci.PsqlService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Verison of the Postgresql DB like 14.5
+        /// Verison of the PostgreSQL database, such as 14.9.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dbVersion")]
         public string DbVersion { get; set; }
         
         /// <value>
-        /// Shape name of the compute like VM.Standard.E4.Flex or VM.Standard3.Flex
+        /// The name of the shape for the configuration.
+        /// Example: VM.Standard.E4.Flex
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shape")]
         public string Shape { get; set; }
         
         /// <value>
-        /// unique Configuration identifier
+        /// A unique identifier for the configuration.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "configurationId")]
         public string ConfigurationId { get; set; }

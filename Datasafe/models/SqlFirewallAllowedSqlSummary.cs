@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The resource represents a SQL firewall allowed SQL in Data Safe.
+    /// The resource represents a SQL Firewall allowed SQL in Data Safe.
     /// 
     /// </summary>
     public class SqlFirewallAllowedSqlSummary 
     {
         
         /// <value>
-        /// The OCID of the SQL firewall allowed SQL.
+        /// The OCID of the SQL Firewall allowed SQL.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DatasafeService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the SQL firewall allowed SQL.
+        /// The OCID of the compartment containing the SQL Firewall allowed SQL.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DatasafeService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The display name of the SQL firewall allowed SQL.
+        /// The display name of the SQL Firewall allowed SQL.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,13 +53,13 @@ namespace Oci.DatasafeService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The description of the SQL firewall allowed SQL.
+        /// The description of the SQL Firewall allowed SQL.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the SQL firewall policy corresponding to the SQL firewall allowed SQL.
+        /// The OCID of the SQL Firewall policy corresponding to the SQL Firewall allowed SQL.
         /// </value>
         /// <remarks>
         /// Required
@@ -85,7 +85,7 @@ namespace Oci.DatasafeService.Models
         public string DbUserName { get; set; }
         
         /// <value>
-        /// The SQL text of the SQL firewall allowed SQL.
+        /// The SQL text of the SQL Firewall allowed SQL.
         /// </value>
         /// <remarks>
         /// Required
@@ -95,7 +95,7 @@ namespace Oci.DatasafeService.Models
         public string SqlText { get; set; }
                 ///
         /// <value>
-        /// Specifies the level of SQL included for this SQL firewall policy.
+        /// Specifies the level of SQL included for this SQL Firewall policy.
         /// USER_ISSUED_SQL - User issued SQL statements only.
         /// ALL_SQL - Includes all SQL statements including SQL statement issued inside PL/SQL units.
         /// 
@@ -112,7 +112,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the level of SQL included for this SQL firewall policy.
+        /// Specifies the level of SQL included for this SQL Firewall policy.
         /// USER_ISSUED_SQL - User issued SQL statements only.
         /// ALL_SQL - Includes all SQL statements including SQL statement issued inside PL/SQL units.
         /// 
@@ -132,7 +132,7 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<string> SqlAccessedObjects { get; set; }
         
         /// <value>
-        /// Version of the associated SQL firewall policy. This identifies whether the allowed SQLs were added in the same batch or not.
+        /// Version of the associated SQL Firewall policy. This identifies whether the allowed SQLs were added in the same batch or not.
         /// </value>
         /// <remarks>
         /// Required
@@ -142,7 +142,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<float> Version { get; set; }
         
         /// <value>
-        /// The time the the SQL firewall allowed SQL was collected from the target database, in the format defined by RFC3339.
+        /// The time the the SQL Firewall allowed SQL was collected from the target database, in the format defined by RFC3339.
         /// </value>
         /// <remarks>
         /// Required
@@ -152,13 +152,13 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeCollected { get; set; }
         
         /// <value>
-        /// The last date and time the SQL firewall allowed SQL was updated, in the format defined by RFC3339.
+        /// The last date and time the SQL Firewall allowed SQL was updated, in the format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the SQL firewall allowed SQL.
+        /// The current state of the SQL Firewall allowed SQL.
         /// </value>
         /// <remarks>
         /// Required

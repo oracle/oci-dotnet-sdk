@@ -52,7 +52,7 @@ namespace Oci.DatasafeService.Models
         public string Schedule { get; set; }
                 ///
         /// <value>
-        /// Specifies if the report will be in Excel or PDF format
+        /// Specifies if the report will be in .xls or .pdf format
         /// </value>
         ///
         public enum MimeTypeEnum {
@@ -63,7 +63,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies if the report will be in Excel or PDF format
+        /// Specifies if the report will be in .xls or .pdf format
         /// </value>
         /// <remarks>
         /// Required

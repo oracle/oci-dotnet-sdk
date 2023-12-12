@@ -20,7 +20,7 @@ namespace Oci.PsqlService.Requests
     {
         
         /// <value>
-        /// unique DbSystem identifier
+        /// A unique identifier for the database system.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.PsqlService.Requests
         public string DbSystemId { get; set; }
         
         /// <value>
-        /// The information to be patched.
+        /// The information to be modified.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,8 @@ namespace Oci.PsqlService.Requests
         public PatchDbSystemDetails PatchDbSystemDetails { get; set; }
         
         /// <value>
-        /// For optimistic concurrency control. In the PUT or DELETE call
+        /// For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the etag from a previous GET or POST response for that resource. 
+        /// The resource will be updated or deleted only if the etag you provide matches the resource's current etag value.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]

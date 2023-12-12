@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The dimensions available for SQL firewall policy analytics.
+    /// The dimensions available for SQL Firewall policy analytics.
     /// </summary>
     public class SqlFirewallPolicyDimensions 
     {
         
         /// <value>
-        /// The OCID of the security policy corresponding to the SQL firewall policy.
+        /// The OCID of the security policy corresponding to the SQL Firewall policy.
         /// </value>
         [JsonProperty(PropertyName = "securityPolicyId")]
         public string SecurityPolicyId { get; set; }
                 ///
         /// <value>
-        /// Specifies the SQL firewall policy enforcement option.
+        /// Specifies the SQL Firewall policy enforcement option.
         /// </value>
         ///
         public enum EnforcementScopeEnum {
@@ -44,14 +44,14 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the SQL firewall policy enforcement option.
+        /// Specifies the SQL Firewall policy enforcement option.
         /// </value>
         [JsonProperty(PropertyName = "enforcementScope")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EnforcementScopeEnum> EnforcementScope { get; set; }
                 ///
         /// <value>
-        /// Specifies the mode in which the SQL firewall policy is enabled.
+        /// Specifies the mode in which the SQL Firewall policy is enabled.
         /// </value>
         ///
         public enum ViolationActionEnum {
@@ -65,14 +65,14 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the mode in which the SQL firewall policy is enabled.
+        /// Specifies the mode in which the SQL Firewall policy is enabled.
         /// </value>
         [JsonProperty(PropertyName = "violationAction")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ViolationActionEnum> ViolationAction { get; set; }
         
         /// <value>
-        /// The current state of the SQL firewall policy.
+        /// The current state of the SQL Firewall policy.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

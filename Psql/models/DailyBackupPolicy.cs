@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Daily backup policy
+    /// Daily backup policy.
     /// </summary>
     public class DailyBackupPolicy : BackupPolicy
     {
         
         /// <value>
-        /// Hour of the day when backup starts.
+        /// Hour of the day when the backup starts.
         /// </value>
         /// <remarks>
         /// Required

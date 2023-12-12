@@ -1663,7 +1663,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Moves the specified SQL firewall policy and its dependent resources into a different compartment.
+        /// Moves the specified SQL Firewall policy and its dependent resources into a different compartment.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3993,7 +3993,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Deletes the SQL firewall policy resource.
+        /// Deletes the SQL Firewall policy resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5045,7 +5045,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Generates a PDF or XLS report based on parameters and report definition.
+        /// Generates a .xls or .pdf report based on parameters and report definition.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5219,7 +5219,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Generates or appends to the SQL firewall policy using the specified SQL collection.
+        /// Generates or appends to the SQL Firewall policy using the specified SQL collection.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -6524,7 +6524,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Downloads the specified report in the form of PDF or XLXS.
+        /// Downloads the specified report in the form of .xls or .pdf.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -7196,7 +7196,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Gets a SQL firewall policy by identifier.
+        /// Gets a SQL Firewall policy by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -9539,7 +9539,7 @@ namespace Oci.DatasafeService
         /// When you perform the ListProfileAnalytics operation, if the parameter compartmentIdInSubtree is set to \&quot;true,\&quot; and if the
         /// parameter accessLevel is set to ACCESSIBLE, then the operation returns compartments in which the requestor has INSPECT
         /// permissions on at least one resource, directly or indirectly (in subcompartments). If the operation is performed at the
-        /// root compartment. If the requestor does not have access to at least one subcompartment of the compartment specified by
+        /// root compartment and the requestor does not have access to at least one subcompartment of the compartment specified by
         /// compartmentId, then \&quot;Not Authorized\&quot; is returned.
         /// &lt;br/&gt;
         /// The parameter compartmentIdInSubtree applies when you perform ListProfileAnalytics on the compartmentId passed and when it is
@@ -10711,9 +10711,9 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Returns the aggregation details of all SQL firewall allowed SQL statements.
+        /// Returns the aggregation details of all SQL Firewall allowed SQL statements.
         /// &lt;br/&gt;
-        /// The ListSqlFirewallAllowedSqlAnalytics operation returns the aggregates of the SQL firewall allowed SQL statements in the specified &#x60;compartmentId&#x60;.
+        /// The ListSqlFirewallAllowedSqlAnalytics operation returns the aggregates of the SQL Firewall allowed SQL statements in the specified &#x60;compartmentId&#x60;.
         /// &lt;br/&gt;
         /// The parameter &#x60;accessLevel&#x60; specifies whether to return only those compartments for which the
         /// requestor has INSPECT permissions on at least one resource directly
@@ -10781,9 +10781,9 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Retrieves a list of all SQL firewall allowed SQL statements.
+        /// Retrieves a list of all SQL Firewall allowed SQL statements.
         /// &lt;br/&gt;
-        /// The ListSqlFirewallAllowedSqls operation returns only the SQL firewall allowed SQL statements in the specified &#x60;compartmentId&#x60;.
+        /// The ListSqlFirewallAllowedSqls operation returns only the SQL Firewall allowed SQL statements in the specified &#x60;compartmentId&#x60;.
         /// &lt;br/&gt;
         /// The parameter &#x60;accessLevel&#x60; specifies whether to return only those compartments for which the
         /// requestor has INSPECT permissions on at least one resource directly
@@ -10851,9 +10851,9 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Retrieves a list of all SQL firewall policies.
+        /// Retrieves a list of all SQL Firewall policies.
         /// &lt;br/&gt;
-        /// The ListSqlFirewallPolicies operation returns only the SQL firewall policies in the specified &#x60;compartmentId&#x60;.
+        /// The ListSqlFirewallPolicies operation returns only the SQL Firewall policies in the specified &#x60;compartmentId&#x60;.
         /// &lt;br/&gt;
         /// The parameter &#x60;accessLevel&#x60; specifies whether to return only those compartments for which the
         /// requestor has INSPECT permissions on at least one resource directly
@@ -10921,7 +10921,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Gets a list of aggregated SQL firewall policy details.
+        /// Gets a list of aggregated SQL Firewall policy details.
         /// &lt;br/&gt;
         /// The parameter &#x60;accessLevel&#x60; specifies whether to return only those compartments for which the
         /// requestor has INSPECT permissions on at least one resource directly
@@ -10989,7 +10989,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Returns the aggregation details of the SQL firewall violations.
+        /// Returns the aggregation details of the SQL Firewall violations.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -11046,7 +11046,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Gets a list of all the SQL firewall violations captured by the firewall.
+        /// Gets a list of all the SQL Firewall violations captured by the firewall.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -11281,7 +11281,7 @@ namespace Oci.DatasafeService
         /// When you perform the ListUserAnalytics operation, if the parameter compartmentIdInSubtree is set to \&quot;true,\&quot; and if the
         /// parameter accessLevel is set to ACCESSIBLE, then the operation returns compartments in which the requestor has INSPECT
         /// permissions on at least one resource, directly or indirectly (in subcompartments). If the operation is performed at the
-        /// root compartment. If the requestor does not have access to at least one subcompartment of the compartment specified by
+        /// root compartment and the requestor does not have access to at least one subcompartment of the compartment specified by
         /// compartmentId, then \&quot;Not Authorized\&quot; is returned.
         /// &lt;br/&gt;
         /// The parameter compartmentIdInSubtree applies when you perform ListUserAnalytics on the compartmentId passed and when it is
@@ -12448,7 +12448,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Deletes the schedule of a PDF or XLS report.
+        /// Deletes the schedule of a .xls or .pdf report.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -12673,7 +12673,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Schedules a PDF or XLS report based on parameters and report definition.
+        /// Schedules a .xls or .pdf report based on parameters and report definition.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -14420,7 +14420,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Updates the SQL firewall policy.
+        /// Updates the SQL Firewall policy.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

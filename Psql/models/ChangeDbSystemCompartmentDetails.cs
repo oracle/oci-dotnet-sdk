@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Change db system compartment operation details.
+    /// Change database system compartment operation details.
     /// </summary>
     public class ChangeDbSystemCompartmentDetails 
     {
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment
-        /// into which the resource should be moved.
+        /// into which the database system should be moved.
         /// 
         /// </value>
         /// <remarks>

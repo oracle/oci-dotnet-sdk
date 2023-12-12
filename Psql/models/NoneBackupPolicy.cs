@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// No backup policy
+    /// No backup policy.
     /// </summary>
     public class NoneBackupPolicy : BackupPolicy
     {

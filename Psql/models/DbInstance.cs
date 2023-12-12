@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// DbInstance information.
+    /// Information about a database instance node.
     /// </summary>
     public class DbInstance 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation.
+        /// A unique identifier for the database instance node. Immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,19 +32,19 @@ namespace Oci.PsqlService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Display name of the DbInstance.
+        /// A user-friendly display name for the database instance node. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description of the DbInstance.
+        /// Description of the database instance node.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The availability domain in which the DbInstance is placed.
+        /// The availability domain in which the database instance node is located.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.PsqlService.Models
         public string AvailabilityDomain { get; set; }
                 ///
         /// <value>
-        /// The current state of the DbInstance.
+        /// The current state of the database instance node.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -78,7 +78,7 @@ namespace Oci.PsqlService.Models
         };
 
         /// <value>
-        /// The current state of the DbInstance.
+        /// The current state of the database instance node.
         /// </value>
         /// <remarks>
         /// Required
@@ -95,7 +95,10 @@ namespace Oci.PsqlService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The time the the DbInstance was created. An RFC3339 formatted datetime string.
+        /// The date and time that the database instance node was created, expressed in
+        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         /// <remarks>
         /// Required
@@ -105,7 +108,10 @@ namespace Oci.PsqlService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the DbInstance was updated. An RFC3339 formatted datetime string.
+        /// The date and time that the database instance node was updated, expressed in
+        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }

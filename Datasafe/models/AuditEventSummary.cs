@@ -32,7 +32,7 @@ namespace Oci.DatasafeService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the audit event. This is the same as that of audit profile of the target database resource compartment.
+        /// The OCID of the compartment containing the audit event. The compartment is the same as that of audit profile of the target database resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -122,7 +122,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<TargetClassEnum> TargetClass { get; set; }
         
         /// <value>
-        /// The time of the audit event occurrence in the target database.
+        /// The time that the audit event occurs in the target database.
         /// </value>
         /// <remarks>
         /// Required
@@ -148,7 +148,7 @@ namespace Oci.DatasafeService.Models
         public string OsUserName { get; set; }
         
         /// <value>
-        /// The name of the action executed by the user on the target database. i.e ALTER, CREATE, DROP.
+        /// The name of the action executed by the user on the target database. For example ALTER, CREATE or DROP.
         /// </value>
         [JsonProperty(PropertyName = "operation")]
         public string Operation { get; set; }
@@ -175,7 +175,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<OperationStatusEnum> OperationStatus { get; set; }
         
         /// <value>
-        /// The name of the detail action executed by the user on the target database. i.e ALTER SEQUENCE, CREATE TRIGGER, CREATE INDEX.
+        /// The name of the detail action executed by the user on the target database. For example ALTER SEQUENCE, CREATE TRIGGER or CREATE INDEX.
         /// </value>
         [JsonProperty(PropertyName = "eventName")]
         public string EventName { get; set; }
@@ -187,13 +187,13 @@ namespace Oci.DatasafeService.Models
         public string ErrorCode { get; set; }
         
         /// <value>
-        /// The detailed message on why the Error occurred.
+        /// The detailed message on why the error occurred.
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
         
         /// <value>
-        /// The type of the object in the source database affected by the action. i.e PL/SQL, SYNONYM, PACKAGE BODY.
+        /// The type of the object in the source database affected by the action. For example PL/SQL, SYNONYM or PACKAGE BODY.
         /// </value>
         [JsonProperty(PropertyName = "objectType")]
         public string ObjectType { get; set; }
@@ -245,7 +245,7 @@ namespace Oci.DatasafeService.Models
         public string ActionTaken { get; set; }
         
         /// <value>
-        /// The application from which the audit event was generated. Examples SQL Plus or SQL Developer.
+        /// The application from which the audit event was generated. For example SQL Plus or SQL Developer.
         /// </value>
         [JsonProperty(PropertyName = "clientProgram")]
         public string ClientProgram { get; set; }

@@ -16,15 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// The backup information to move it a different compartment.
+    /// The information used to move a backup to a different compartment.
     /// </summary>
     public class ChangeBackupCompartmentDetails 
     {
         
         /// <value>
-        /// The identifier of the compartment
-        /// into which the resource should be moved.
-        /// 
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment into which the backup will be moved.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// DbInstance restart parameters.
+    /// Database instance node restart parameters.
     /// </summary>
     public class RestartDbInstanceInDbSystemDetails 
     {
         
         /// <value>
-        /// Unique identifier of the DbInstance.
+        /// A unique identifier for the database instance, or node.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.PsqlService.Models
         public string DbInstanceId { get; set; }
                 ///
         /// <value>
-        /// The DbInstance restart type to use.
+        /// The restart type for the database instance.
         /// </value>
         ///
         public enum RestartTypeEnum {
@@ -43,7 +43,7 @@ namespace Oci.PsqlService.Models
         };
 
         /// <value>
-        /// The DbInstance restart type to use.
+        /// The restart type for the database instance.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Weekly backup policy
+    /// Weekly backup policy.
     /// </summary>
     public class WeeklyBackupPolicy : BackupPolicy
     {
@@ -43,7 +43,7 @@ namespace Oci.PsqlService.Models
         };
 
         /// <value>
-        /// Weekly days
+        /// The day of the week that the backup starts.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.PsqlService.Models
         public System.Collections.Generic.List<DaysOfTheWeekEnum> DaysOfTheWeek { get; set; }
         
         /// <value>
-        /// Hour of the day when backup starts.
+        /// Hour of the day when the backup starts.
         /// </value>
         /// <remarks>
         /// Required

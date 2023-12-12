@@ -73,7 +73,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Moves a Backup resource from one compartment identifier to another. When provided, If-Match is checked against ETag values of the resource.
+        /// Moves a backup from one compartment to another. When provided, If-Match is checked against ETag values of the resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -129,7 +129,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Moves a Configuration resource from one compartment identifier to another. When provided, If-Match is checked against ETag values of the resource.
+        /// Moves a configuration from one compartment to another. When provided, If-Match is checked against ETag values of the resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -185,7 +185,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Moves a DbSystem resource from one compartment identifier to another. When provided, If-Match is checked against ETag values of the resource.
+        /// Moves a database system from one compartment to another. When provided, If-Match is checked against ETag values of the resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -241,7 +241,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Creates a new Backup.
+        /// Creates a new backup.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -298,7 +298,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Creates a new Configuration Set.
+        /// Creates a new configuration.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -355,7 +355,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Creates a new DbSystem.
+        /// Creates a new database system.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -412,7 +412,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Deletes a Backup resource by identifier
+        /// Deletes a backup by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -468,7 +468,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Deletes a Cofniguration resource by identifier
+        /// Deletes a configuration by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -524,7 +524,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Deletes a DbSystem resource by identifier
+        /// Deletes a database system by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -580,7 +580,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Runs a failover operation. Optionally user can specify the desired AD for 3AD regions.
+        /// Runs a failover operation. Optionally, specify the desired AD for regions with three ADs.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -636,7 +636,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Gets a Backup by identifier
+        /// Gets a backup by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -692,7 +692,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Gets a Configuration by identifier
+        /// Gets a configuration by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -748,7 +748,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Gets the DbSystem connection details.
+        /// Gets the database system connection details.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -804,7 +804,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Gets a DbSystem by identifier
+        /// Gets a database system by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -860,7 +860,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Gets a Default Configuration by identifier
+        /// Gets a default configuration by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -916,7 +916,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Gets the primary DbInstance details.
+        /// Gets the primary database instance node details.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1028,7 +1028,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Returns a list of Backup.
+        /// Returns a list of backups.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1085,7 +1085,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Returns a list of Configurations.
+        /// Returns a list of configurations.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1142,7 +1142,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Returns a list of DbSystems.
+        /// Returns a list of database systems.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1199,7 +1199,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Returns a list of Default Configurations.
+        /// Returns a list of default configurations.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1483,7 +1483,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Patching operation allows to add DbInstances to the DbSystem or remove them.
+        /// Modifies the database system by adding or removing database instance nodes.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1539,7 +1539,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Resets the Db system&#39;s master password.
+        /// Resets the database system&#39;s master password.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1595,7 +1595,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Restarts the running DbInstance.
+        /// Restarts the running database instance node.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1651,7 +1651,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Restore the Db System.
+        /// Restore the database system.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1707,7 +1707,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Updates the Backup
+        /// Updates the backup.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1763,7 +1763,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Updates a display name or description of the Configuration Set.
+        /// Updates a display name or description of the configuration.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1820,7 +1820,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Updates the DbSystem
+        /// Updates the database system.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1876,7 +1876,7 @@ namespace Oci.PsqlService
         }
 
         /// <summary>
-        /// Updates the DbInstance.
+        /// Updates the database instance node.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

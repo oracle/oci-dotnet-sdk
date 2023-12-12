@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// The information about new DbSystem.
+    /// The information about new database system.
     /// </summary>
     public class CreateDbSystemDetails 
     {
         
         /// <value>
-        /// DbSystem display name
+        /// A user-friendly display name for the database system. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.PsqlService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description of a DbSystem. This field should be input by the user.
+        /// A user-provided description of a database system.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Compartment identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains the database system.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,14 +48,14 @@ namespace Oci.PsqlService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Type of the DbSystem.
+        /// Type of the database system.
         /// </value>
         [JsonProperty(PropertyName = "systemType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DbSystem.SystemTypeEnum> SystemType { get; set; }
         
         /// <value>
-        /// Version of DbSystem software.
+        /// Version of database system software.
         /// </value>
         /// <remarks>
         /// Required
@@ -65,7 +65,7 @@ namespace Oci.PsqlService.Models
         public string DbVersion { get; set; }
         
         /// <value>
-        /// Configuration identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the configuration associated with the database system.
         /// </value>
         [JsonProperty(PropertyName = "configId")]
         public string ConfigId { get; set; }
@@ -78,7 +78,8 @@ namespace Oci.PsqlService.Models
         public StorageDetails StorageDetails { get; set; }
         
         /// <value>
-        /// Shape of DbInstance. This name should match from with one of the available shapes from /shapes API.
+        /// The name of the shape for the database instance node. Use the /shapes API for accepted shapes.
+        /// Example: VM.Standard.E4.Flex
         /// </value>
         /// <remarks>
         /// Required
@@ -88,27 +89,27 @@ namespace Oci.PsqlService.Models
         public string Shape { get; set; }
         
         /// <value>
-        /// The total number of OCPUs available to each DbInstance.
+        /// The total number of OCPUs available to each database instance node.
         /// </value>
         [JsonProperty(PropertyName = "instanceOcpuCount")]
         public System.Nullable<int> InstanceOcpuCount { get; set; }
         
         /// <value>
-        /// The total amount of memory available to each DbInstance, in gigabytes.
+        /// The total amount of memory available to each database instance node, in gigabytes.
         /// </value>
         [JsonProperty(PropertyName = "instanceMemorySizeInGBs")]
         public System.Nullable<int> InstanceMemorySizeInGBs { get; set; }
         
         /// <value>
-        /// Count of DbInstances to be created in the DbSystem.
+        /// Count of database instances nodes to be created in the database system.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "instanceCount")]
         public System.Nullable<int> InstanceCount { get; set; }
         
         /// <value>
-        /// Details of DbInstances to be created. Optional parameter.
-        /// If specified, its size must match instanceCount.
+        /// Details of database instances nodes to be created. This parameter is optional.
+        /// If specified, its size must match `instanceCount`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "instancesDetails")]

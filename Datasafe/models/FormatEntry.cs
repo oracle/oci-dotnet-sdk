@@ -113,6 +113,9 @@ namespace Oci.DatasafeService.Models
                 case "SUBSTRING":
                     obj = new SubstringFormatEntry();
                     break;
+                case "PATTERN":
+                    obj = new PatternFormatEntry();
+                    break;
                 case "RANDOM_NUMBER":
                     obj = new RandomNumberFormatEntry();
                     break;

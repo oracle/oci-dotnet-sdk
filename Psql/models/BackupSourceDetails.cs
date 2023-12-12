@@ -16,14 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Restoring to a new DbSystem from the backup. The DbSystem details that are part of the CreateDbSystem request are not required, but if present will override the backup's DbSystem details snapshot.
+    /// Restoring to a new database system from the backup. 
+    /// The database system details that are part of the CreateDbSystem request are not required, but if present will override the details from the backup's database system snapshot.
     /// 
     /// </summary>
     public class BackupSourceDetails : SourceDetails
     {
         
         /// <value>
-        /// DbSystem backup identifier.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the database system backup.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +34,7 @@ namespace Oci.PsqlService.Models
         public string BackupId { get; set; }
         
         /// <value>
-        /// Restore the DB config overrides from backup. Default is false
+        /// Deprecated. Don't use.
         /// </value>
         [JsonProperty(PropertyName = "isHavingRestoreConfigOverrides")]
         public System.Nullable<bool> IsHavingRestoreConfigOverrides { get; set; }

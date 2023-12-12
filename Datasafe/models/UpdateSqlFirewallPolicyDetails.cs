@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details to update the SQL firewall policy.
+    /// Details to update the SQL Firewall policy.
     /// </summary>
     public class UpdateSqlFirewallPolicyDetails 
     {
         
         /// <value>
-        /// The display name of the SQL firewall policy. The name does not have to be unique, and it is changeable.
+        /// The display name of the SQL Firewall policy. The name does not have to be unique, and it is changeable.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The description of the SQL firewall policy.
+        /// The description of the SQL Firewall policy.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
                 ///
         /// <value>
-        /// Specifies whether the SQL firewall policy is enabled or disabled.
+        /// Specifies whether the SQL Firewall policy is enabled or disabled.
         /// </value>
         ///
         public enum StatusEnum {
@@ -45,14 +45,14 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies whether the SQL firewall policy is enabled or disabled.
+        /// Specifies whether the SQL Firewall policy is enabled or disabled.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
                 ///
         /// <value>
-        /// Specifies the SQL firewall policy enforcement option.
+        /// Specifies the SQL Firewall policy enforcement option.
         /// </value>
         ///
         public enum EnforcementScopeEnum {
@@ -65,14 +65,14 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the SQL firewall policy enforcement option.
+        /// Specifies the SQL Firewall policy enforcement option.
         /// </value>
         [JsonProperty(PropertyName = "enforcementScope")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<EnforcementScopeEnum> EnforcementScope { get; set; }
                 ///
         /// <value>
-        /// Specifies the SQL firewall action based on detection of SQL firewall violations.
+        /// Specifies the SQL Firewall action based on detection of SQL Firewall violations.
         /// </value>
         ///
         public enum ViolationActionEnum {
@@ -83,14 +83,14 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the SQL firewall action based on detection of SQL firewall violations.
+        /// Specifies the SQL Firewall action based on detection of SQL Firewall violations.
         /// </value>
         [JsonProperty(PropertyName = "violationAction")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ViolationActionEnum> ViolationAction { get; set; }
                 ///
         /// <value>
-        /// Specifies whether a unified audit policy should be enabled for auditing the SQL firewall policy violations.
+        /// Specifies whether a unified audit policy should be enabled for auditing the SQL Firewall policy violations.
         /// </value>
         ///
         public enum ViolationAuditEnum {
@@ -101,26 +101,26 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies whether a unified audit policy should be enabled for auditing the SQL firewall policy violations.
+        /// Specifies whether a unified audit policy should be enabled for auditing the SQL Firewall policy violations.
         /// </value>
         [JsonProperty(PropertyName = "violationAudit")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ViolationAuditEnum> ViolationAudit { get; set; }
         
         /// <value>
-        /// List of allowed ip addresses for the SQL firewall policy.
+        /// List of allowed ip addresses for the SQL Firewall policy.
         /// </value>
         [JsonProperty(PropertyName = "allowedClientIps")]
         public System.Collections.Generic.List<string> AllowedClientIps { get; set; }
         
         /// <value>
-        /// List of allowed operating system user names for the SQL firewall policy.
+        /// List of allowed operating system user names for the SQL Firewall policy.
         /// </value>
         [JsonProperty(PropertyName = "allowedClientOsUsernames")]
         public System.Collections.Generic.List<string> AllowedClientOsUsernames { get; set; }
         
         /// <value>
-        /// List of allowed client programs for the SQL firewall policy.
+        /// List of allowed client programs for the SQL Firewall policy.
         /// </value>
         [JsonProperty(PropertyName = "allowedClientPrograms")]
         public System.Collections.Generic.List<string> AllowedClientPrograms { get; set; }

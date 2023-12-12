@@ -24,6 +24,12 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "dataflowApplication")]
         public DataflowApplication DataflowApplication { get; set; }
         
+        [JsonProperty(PropertyName = "driverShapeDetails")]
+        public ShapeDetails DriverShapeDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "executorShapeDetails")]
+        public ShapeDetails ExecutorShapeDetails { get; set; }
+        
         [JsonProperty(PropertyName = "modelType")]
         private readonly string modelType = "OCI_DATAFLOW_TASK";
     }

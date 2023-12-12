@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// New source is used to restore the DB system.
+    /// The source used to restore the database system.
     /// </summary>
     [JsonConverter(typeof(SourceDetailsModelConverter))]
     public class SourceDetails 

@@ -20,7 +20,7 @@ namespace Oci.PsqlService.Requests
     {
         
         /// <value>
-        /// unique DbSystem identifier
+        /// A unique identifier for the database system.
         /// </value>
         /// <remarks>
         /// Required
@@ -37,7 +37,7 @@ namespace Oci.PsqlService.Requests
         
         ///
         /// <value>
-        /// A filter to exclude DB config  when this query param is set to OverrideDbConfig
+        /// A filter to exclude database configuration when this query parameter is set to OverrideDbConfig.
         /// </value>
         ///
         public enum ExcludedFieldsEnum {
@@ -46,7 +46,7 @@ namespace Oci.PsqlService.Requests
         };
 
         /// <value>
-        /// A filter to exclude DB config  when this query param is set to OverrideDbConfig
+        /// A filter to exclude database configuration when this query parameter is set to OverrideDbConfig.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "excludedFields", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ExcludedFieldsEnum> ExcludedFields { get; set; }

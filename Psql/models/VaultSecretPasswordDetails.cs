@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Secret details for the DbSystem password.
+    /// Secret details for the database system password.
     /// </summary>
     public class VaultSecretPasswordDetails : PasswordDetails
     {
         
         /// <value>
-        /// The OCID of secret where the password is stored.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the secret where the password is stored.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.PsqlService.Models
         public string SecretId { get; set; }
         
         /// <value>
-        /// The secret version where the password is stored.
+        /// The secret version of the stored password.
         /// </value>
         /// <remarks>
         /// Required

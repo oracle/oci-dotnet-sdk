@@ -130,7 +130,7 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<bool> IsHealthy { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet being referenced.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet of the deployment's private endpoint.
         /// 
         /// </value>
         /// <remarks>
@@ -139,6 +139,23 @@ namespace Oci.GoldengateService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a public subnet in the customer tenancy.
+        /// Can be provided only for public deployments. If provided, the loadbalancer will be created in this subnet instead of the service tenancy.
+        /// For backward compatiblity this is an optional property for now, but it will become mandatory (for public deployments only) after October 1, 2024.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "loadBalancerSubnetId")]
+        public string LoadBalancerSubnetId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the loadbalancer in the customer's subnet.
+        /// The loadbalancer of the public deployment created in the customer subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "loadBalancerId")]
+        public string LoadBalancerId { get; set; }
         
         /// <value>
         /// A three-label Fully Qualified Domain Name (FQDN) for a resource.
@@ -317,6 +334,14 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeOggVersionSupportedUntil")]
         public System.Nullable<System.DateTime> TimeOggVersionSupportedUntil { get; set; }
+        
+        /// <value>
+        /// List of ingress IP addresses from where the GoldenGate deployment connects to this connection's privateIp. 
+        /// Customers may optionally set up ingress security rules to restrict traffic from these IP addresses.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ingressIps")]
+        public System.Collections.Generic.List<IngressIpDetails> IngressIps { get; set; }
         
     }
 }

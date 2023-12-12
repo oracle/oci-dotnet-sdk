@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// List of DB default Configuration Values.
+    /// List of default configuration values for databases.
     /// </summary>
     public class DefaultConfigurationDetails 
     {

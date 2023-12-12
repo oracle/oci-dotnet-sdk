@@ -22,7 +22,7 @@ namespace Oci.PsqlService.Models
     {
         
         /// <value>
-        /// List of Configurations.
+        /// List of configurations.
         /// </value>
         /// <remarks>
         /// Required

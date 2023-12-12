@@ -184,5 +184,13 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<DiscoveryLifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// A filter to return only the common sensitive type resources. Common sensitive types belong to 
+        /// library sensitive types which are frequently used to perform sensitive data discovery.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isCommon")]
+        public System.Nullable<bool> IsCommon { get; set; }
     }
 }

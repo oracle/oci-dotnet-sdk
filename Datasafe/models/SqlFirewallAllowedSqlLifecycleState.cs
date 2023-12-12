@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatasafeService.Models
 {
   /// <summary>
-  /// The current state of SQL firewall allowed SQL.
+  /// The current state of SQL Firewall allowed SQL.
   /// </summary>
   public enum SqlFirewallAllowedSqlLifecycleState {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

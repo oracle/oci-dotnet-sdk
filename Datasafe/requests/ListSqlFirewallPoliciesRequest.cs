@@ -89,13 +89,13 @@ namespace Oci.DatasafeService.Requests
         public string SecurityPolicyId { get; set; }
         
         /// <value>
-        /// The current state of the SQL firewall policy.
+        /// The current state of the SQL Firewall policy.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<SqlFirewallPolicyLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// An optional filter to return only resources that match the specified OCID of the SQL firewall policy resource.
+        /// An optional filter to return only resources that match the specified OCID of the SQL Firewall policy resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sqlFirewallPolicyId")]
         public string SqlFirewallPolicyId { get; set; }

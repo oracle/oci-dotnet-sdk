@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Configuration Overrides for PGSQL instance.
+    /// Configuration overrides for a PostgreSQL instance.
     /// </summary>
     public class ConfigOverrides 
     {
         
         /// <value>
-        /// Key is the configuration key.
+        /// Configuration variable name.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.PsqlService.Models
         public string ConfigKey { get; set; }
         
         /// <value>
-        /// User selected configuration value
+        /// User-selected variable value.
         /// </value>
         /// <remarks>
         /// Required

@@ -51,6 +51,9 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "readAttribute")]
         public AbstractReadAttribute ReadAttribute { get; set; }
         
+        [JsonProperty(PropertyName = "incrementalReadConfig")]
+        public IncrementalReadConfig IncrementalReadConfig { get; set; }
+        
         /// <value>
         /// The status of an object that can be set to value 1 for shallow references across objects, other values reserved.
         /// </value>

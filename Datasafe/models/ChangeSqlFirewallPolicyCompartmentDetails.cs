@@ -22,7 +22,7 @@ namespace Oci.DatasafeService.Models
     {
         
         /// <value>
-        /// The OCID of the compartment where you want to move the SQL firewall policy.
+        /// The OCID of the compartment where you want to move the SQL Firewall policy.
         /// </value>
         /// <remarks>
         /// Required
