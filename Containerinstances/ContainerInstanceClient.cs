@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -580,7 +580,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Return a paginated list of errors for a given work request.
+        /// Returns a paginated list of errors for a work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -637,7 +637,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Return a paginated list of logs for a given work request.
+        /// Returns a paginated list of logs for a work request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

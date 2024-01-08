@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -51,6 +51,10 @@ namespace Oci.CoreService
             return new Waiter<CopyBootVolumeBackupRequest, CopyBootVolumeBackupResponse>(() =>
             {
                 var response = client.CopyBootVolumeBackup(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -83,6 +87,10 @@ namespace Oci.CoreService
             return new Waiter<CopyVolumeBackupRequest, CopyVolumeBackupResponse>(() =>
             {
                 var response = client.CopyVolumeBackup(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

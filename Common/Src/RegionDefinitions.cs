@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -50,6 +50,7 @@ namespace Oci.Common
         public static readonly Region MX_MONTERREY_1 = Register("mx-monterrey-1", Realm.OC1, "mty");
         public static readonly Region US_SALTLAKE_2 = Register("us-saltlake-2", Realm.OC1, "aga");
         public static readonly Region SA_BOGOTA_1 = Register("sa-bogota-1", Realm.OC1, "bog");
+        public static readonly Region SA_VALPARAISO_1 = Register("sa-valparaiso-1", Realm.OC1, "vap");
 
         // OC2
         public static readonly Region US_LANGLEY_1 = Register("us-langley-1", Realm.OC2, "lfi");

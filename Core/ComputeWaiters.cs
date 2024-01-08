@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -51,6 +51,10 @@ namespace Oci.CoreService
             return new Waiter<ChangeComputeCapacityReservationCompartmentRequest, ChangeComputeCapacityReservationCompartmentResponse>(() =>
             {
                 var response = client.ChangeComputeCapacityReservationCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -83,6 +87,10 @@ namespace Oci.CoreService
             return new Waiter<ChangeComputeCapacityTopologyCompartmentRequest, ChangeComputeCapacityTopologyCompartmentResponse>(() =>
             {
                 var response = client.ChangeComputeCapacityTopologyCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -115,6 +123,10 @@ namespace Oci.CoreService
             return new Waiter<ChangeDedicatedVmHostCompartmentRequest, ChangeDedicatedVmHostCompartmentResponse>(() =>
             {
                 var response = client.ChangeDedicatedVmHostCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -147,6 +159,10 @@ namespace Oci.CoreService
             return new Waiter<ChangeInstanceCompartmentRequest, ChangeInstanceCompartmentResponse>(() =>
             {
                 var response = client.ChangeInstanceCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -179,6 +195,10 @@ namespace Oci.CoreService
             return new Waiter<CreateComputeCapacityReservationRequest, CreateComputeCapacityReservationResponse>(() =>
             {
                 var response = client.CreateComputeCapacityReservation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -211,6 +231,10 @@ namespace Oci.CoreService
             return new Waiter<CreateComputeCapacityTopologyRequest, CreateComputeCapacityTopologyResponse>(() =>
             {
                 var response = client.CreateComputeCapacityTopology(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -243,6 +267,10 @@ namespace Oci.CoreService
             return new Waiter<CreateDedicatedVmHostRequest, CreateDedicatedVmHostResponse>(() =>
             {
                 var response = client.CreateDedicatedVmHost(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -275,6 +303,10 @@ namespace Oci.CoreService
             return new Waiter<CreateImageRequest, CreateImageResponse>(() =>
             {
                 var response = client.CreateImage(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -307,6 +339,10 @@ namespace Oci.CoreService
             return new Waiter<DeleteComputeCapacityReservationRequest, DeleteComputeCapacityReservationResponse>(() =>
             {
                 var response = client.DeleteComputeCapacityReservation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -339,6 +375,10 @@ namespace Oci.CoreService
             return new Waiter<DeleteComputeCapacityTopologyRequest, DeleteComputeCapacityTopologyResponse>(() =>
             {
                 var response = client.DeleteComputeCapacityTopology(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -371,6 +411,10 @@ namespace Oci.CoreService
             return new Waiter<DeleteDedicatedVmHostRequest, DeleteDedicatedVmHostResponse>(() =>
             {
                 var response = client.DeleteDedicatedVmHost(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -403,6 +447,10 @@ namespace Oci.CoreService
             return new Waiter<ExportImageRequest, ExportImageResponse>(() =>
             {
                 var response = client.ExportImage(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -739,6 +787,10 @@ namespace Oci.CoreService
             return new Waiter<LaunchInstanceRequest, LaunchInstanceResponse>(() =>
             {
                 var response = client.LaunchInstance(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -771,6 +823,10 @@ namespace Oci.CoreService
             return new Waiter<UpdateComputeCapacityReservationRequest, UpdateComputeCapacityReservationResponse>(() =>
             {
                 var response = client.UpdateComputeCapacityReservation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -803,6 +859,10 @@ namespace Oci.CoreService
             return new Waiter<UpdateComputeCapacityTopologyRequest, UpdateComputeCapacityTopologyResponse>(() =>
             {
                 var response = client.UpdateComputeCapacityTopology(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -835,6 +895,10 @@ namespace Oci.CoreService
             return new Waiter<UpdateInstanceRequest, UpdateInstanceResponse>(() =>
             {
                 var response = client.UpdateInstance(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

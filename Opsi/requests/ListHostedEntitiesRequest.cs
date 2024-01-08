@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -76,7 +76,7 @@ namespace Oci.OpsiService.Requests
         /// Filter by one or more platform types.
         /// Supported platformType(s) for MACS-managed external host insight: [LINUX, SOLARIS, WINDOWS].
         /// Supported platformType(s) for MACS-managed cloud host insight: [LINUX].
-        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX, WINDOWS, AIX].
+        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX, WINDOWS, AIX, HP-UX].
         /// 
         /// </value>
         ///
@@ -92,14 +92,16 @@ namespace Oci.OpsiService.Requests
             [EnumMember(Value = "WINDOWS")]
             Windows,
             [EnumMember(Value = "AIX")]
-            Aix
+            Aix,
+            [EnumMember(Value = "HP_UX")]
+            HpUx
         };
 
         /// <value>
         /// Filter by one or more platform types.
         /// Supported platformType(s) for MACS-managed external host insight: [LINUX, SOLARIS, WINDOWS].
         /// Supported platformType(s) for MACS-managed cloud host insight: [LINUX].
-        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX, WINDOWS, AIX].
+        /// Supported platformType(s) for EM-managed external host insight: [LINUX, SOLARIS, SUNOS, ZLINUX, WINDOWS, AIX, HP-UX].
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platformType", Oci.Common.Http.CollectionFormatType.Multi)]

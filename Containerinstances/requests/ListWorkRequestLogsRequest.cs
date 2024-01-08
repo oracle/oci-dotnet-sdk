@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -49,7 +49,7 @@ namespace Oci.ContainerinstancesService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timestamp is descending.
+        /// The field to sort by. You can provide one sort order. Default order for timestamp is descending.
         /// </value>
         ///
         public enum SortByEnum {
@@ -58,13 +58,13 @@ namespace Oci.ContainerinstancesService.Requests
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timestamp is descending.
+        /// The field to sort by. You can provide one sort order. Default order for timestamp is descending.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// The sort order to use, either 'ASC' or 'DESC'.
+        /// The sort order to use, either ascending (ASC) or descending (DESC).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }

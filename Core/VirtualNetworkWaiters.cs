@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -51,6 +51,10 @@ namespace Oci.CoreService
             return new Waiter<AddIpv6SubnetCidrRequest, AddIpv6SubnetCidrResponse>(() =>
             {
                 var response = client.AddIpv6SubnetCidr(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -83,6 +87,10 @@ namespace Oci.CoreService
             return new Waiter<AddIpv6VcnCidrRequest, AddIpv6VcnCidrResponse>(() =>
             {
                 var response = client.AddIpv6VcnCidr(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -115,6 +123,10 @@ namespace Oci.CoreService
             return new Waiter<AddVcnCidrRequest, AddVcnCidrResponse>(() =>
             {
                 var response = client.AddVcnCidr(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -147,6 +159,10 @@ namespace Oci.CoreService
             return new Waiter<ChangeCaptureFilterCompartmentRequest, ChangeCaptureFilterCompartmentResponse>(() =>
             {
                 var response = client.ChangeCaptureFilterCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -179,6 +195,10 @@ namespace Oci.CoreService
             return new Waiter<ChangeDrgCompartmentRequest, ChangeDrgCompartmentResponse>(() =>
             {
                 var response = client.ChangeDrgCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -211,6 +231,10 @@ namespace Oci.CoreService
             return new Waiter<ChangeSubnetCompartmentRequest, ChangeSubnetCompartmentResponse>(() =>
             {
                 var response = client.ChangeSubnetCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -243,6 +267,10 @@ namespace Oci.CoreService
             return new Waiter<ChangeVcnCompartmentRequest, ChangeVcnCompartmentResponse>(() =>
             {
                 var response = client.ChangeVcnCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -275,6 +303,10 @@ namespace Oci.CoreService
             return new Waiter<ChangeVlanCompartmentRequest, ChangeVlanCompartmentResponse>(() =>
             {
                 var response = client.ChangeVlanCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -307,6 +339,10 @@ namespace Oci.CoreService
             return new Waiter<ChangeVtapCompartmentRequest, ChangeVtapCompartmentResponse>(() =>
             {
                 var response = client.ChangeVtapCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -339,6 +375,10 @@ namespace Oci.CoreService
             return new Waiter<DeleteByoipRangeRequest, DeleteByoipRangeResponse>(() =>
             {
                 var response = client.DeleteByoipRange(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -371,6 +411,10 @@ namespace Oci.CoreService
             return new Waiter<DeleteVtapRequest, DeleteVtapResponse>(() =>
             {
                 var response = client.DeleteVtap(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1270,6 +1314,10 @@ namespace Oci.CoreService
             return new Waiter<ModifyVcnCidrRequest, ModifyVcnCidrResponse>(() =>
             {
                 var response = client.ModifyVcnCidr(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1302,6 +1350,10 @@ namespace Oci.CoreService
             return new Waiter<RemoveIpv6SubnetCidrRequest, RemoveIpv6SubnetCidrResponse>(() =>
             {
                 var response = client.RemoveIpv6SubnetCidr(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1334,6 +1386,10 @@ namespace Oci.CoreService
             return new Waiter<RemoveIpv6VcnCidrRequest, RemoveIpv6VcnCidrResponse>(() =>
             {
                 var response = client.RemoveIpv6VcnCidr(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1366,6 +1422,10 @@ namespace Oci.CoreService
             return new Waiter<RemoveVcnCidrRequest, RemoveVcnCidrResponse>(() =>
             {
                 var response = client.RemoveVcnCidr(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1398,6 +1458,10 @@ namespace Oci.CoreService
             return new Waiter<UpdateVtapRequest, UpdateVtapResponse>(() =>
             {
                 var response = client.UpdateVtap(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1430,6 +1494,10 @@ namespace Oci.CoreService
             return new Waiter<UpgradeDrgRequest, UpgradeDrgResponse>(() =>
             {
                 var response = client.UpgradeDrg(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1462,6 +1530,10 @@ namespace Oci.CoreService
             return new Waiter<ValidateByoipRangeRequest, ValidateByoipRangeResponse>(() =>
             {
                 var response = client.ValidateByoipRange(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
