@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -99,7 +99,7 @@ namespace Oci.ApmsyntheticsService.Models
         
         /// <value>
         /// Specify the endpoint on which to run the monitor.
-        /// For BROWSER and REST monitor types, target is mandatory.
+        /// For BROWSER, REST and NETWORK monitor types, target is mandatory.
         /// If target is specified in the SCRIPTED_BROWSER monitor type, then the monitor will run the selected script (specified by scriptId in monitor) against the specified target endpoint.
         /// If target is not specified in the SCRIPTED_BROWSER monitor type, then the monitor will run the selected script as it is.
         /// For NETWORK monitor with TCP protocol, a port needs to be provided along with target. Example: 192.168.0.1:80

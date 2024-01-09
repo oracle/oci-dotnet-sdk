@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -51,6 +51,10 @@ namespace Oci.DatabaseService
             return new Waiter<ActivateExadataInfrastructureRequest, ActivateExadataInfrastructureResponse>(() =>
             {
                 var response = client.ActivateExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -83,6 +87,10 @@ namespace Oci.DatabaseService
             return new Waiter<AddStorageCapacityCloudExadataInfrastructureRequest, AddStorageCapacityCloudExadataInfrastructureResponse>(() =>
             {
                 var response = client.AddStorageCapacityCloudExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -115,6 +123,10 @@ namespace Oci.DatabaseService
             return new Waiter<AddStorageCapacityExadataInfrastructureRequest, AddStorageCapacityExadataInfrastructureResponse>(() =>
             {
                 var response = client.AddStorageCapacityExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -147,6 +159,10 @@ namespace Oci.DatabaseService
             return new Waiter<AddVirtualMachineToCloudVmClusterRequest, AddVirtualMachineToCloudVmClusterResponse>(() =>
             {
                 var response = client.AddVirtualMachineToCloudVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -179,6 +195,10 @@ namespace Oci.DatabaseService
             return new Waiter<AddVirtualMachineToVmClusterRequest, AddVirtualMachineToVmClusterResponse>(() =>
             {
                 var response = client.AddVirtualMachineToVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -211,6 +231,10 @@ namespace Oci.DatabaseService
             return new Waiter<AutonomousDatabaseManualRefreshRequest, AutonomousDatabaseManualRefreshResponse>(() =>
             {
                 var response = client.AutonomousDatabaseManualRefresh(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -243,6 +267,10 @@ namespace Oci.DatabaseService
             return new Waiter<CancelBackupRequest, CancelBackupResponse>(() =>
             {
                 var response = client.CancelBackup(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -275,6 +303,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeAutonomousContainerDatabaseCompartmentRequest, ChangeAutonomousContainerDatabaseCompartmentResponse>(() =>
             {
                 var response = client.ChangeAutonomousContainerDatabaseCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -307,6 +339,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeAutonomousDatabaseCompartmentRequest, ChangeAutonomousDatabaseCompartmentResponse>(() =>
             {
                 var response = client.ChangeAutonomousDatabaseCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -339,6 +375,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeAutonomousExadataInfrastructureCompartmentRequest, ChangeAutonomousExadataInfrastructureCompartmentResponse>(() =>
             {
                 var response = client.ChangeAutonomousExadataInfrastructureCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -371,6 +411,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeAutonomousVmClusterCompartmentRequest, ChangeAutonomousVmClusterCompartmentResponse>(() =>
             {
                 var response = client.ChangeAutonomousVmClusterCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -403,6 +447,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeBackupDestinationCompartmentRequest, ChangeBackupDestinationCompartmentResponse>(() =>
             {
                 var response = client.ChangeBackupDestinationCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -435,6 +483,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeCloudAutonomousVmClusterCompartmentRequest, ChangeCloudAutonomousVmClusterCompartmentResponse>(() =>
             {
                 var response = client.ChangeCloudAutonomousVmClusterCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -467,6 +519,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeCloudExadataInfrastructureCompartmentRequest, ChangeCloudExadataInfrastructureCompartmentResponse>(() =>
             {
                 var response = client.ChangeCloudExadataInfrastructureCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -499,6 +555,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeCloudVmClusterCompartmentRequest, ChangeCloudVmClusterCompartmentResponse>(() =>
             {
                 var response = client.ChangeCloudVmClusterCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -531,6 +591,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeDatabaseSoftwareImageCompartmentRequest, ChangeDatabaseSoftwareImageCompartmentResponse>(() =>
             {
                 var response = client.ChangeDatabaseSoftwareImageCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -563,6 +627,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeDataguardRoleRequest, ChangeDataguardRoleResponse>(() =>
             {
                 var response = client.ChangeDataguardRole(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -595,6 +663,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeDbSystemCompartmentRequest, ChangeDbSystemCompartmentResponse>(() =>
             {
                 var response = client.ChangeDbSystemCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -627,6 +699,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeDisasterRecoveryConfigurationRequest, ChangeDisasterRecoveryConfigurationResponse>(() =>
             {
                 var response = client.ChangeDisasterRecoveryConfiguration(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -659,6 +735,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeExadataInfrastructureCompartmentRequest, ChangeExadataInfrastructureCompartmentResponse>(() =>
             {
                 var response = client.ChangeExadataInfrastructureCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -691,6 +771,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeExternalContainerDatabaseCompartmentRequest, ChangeExternalContainerDatabaseCompartmentResponse>(() =>
             {
                 var response = client.ChangeExternalContainerDatabaseCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -723,6 +807,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeExternalNonContainerDatabaseCompartmentRequest, ChangeExternalNonContainerDatabaseCompartmentResponse>(() =>
             {
                 var response = client.ChangeExternalNonContainerDatabaseCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -755,6 +843,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeExternalPluggableDatabaseCompartmentRequest, ChangeExternalPluggableDatabaseCompartmentResponse>(() =>
             {
                 var response = client.ChangeExternalPluggableDatabaseCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -787,6 +879,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeKeyStoreCompartmentRequest, ChangeKeyStoreCompartmentResponse>(() =>
             {
                 var response = client.ChangeKeyStoreCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -819,6 +915,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeKeyStoreTypeRequest, ChangeKeyStoreTypeResponse>(() =>
             {
                 var response = client.ChangeKeyStoreType(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -851,6 +951,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeOneoffPatchCompartmentRequest, ChangeOneoffPatchCompartmentResponse>(() =>
             {
                 var response = client.ChangeOneoffPatchCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -883,6 +987,10 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeVmClusterCompartmentRequest, ChangeVmClusterCompartmentResponse>(() =>
             {
                 var response = client.ChangeVmClusterCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -915,6 +1023,10 @@ namespace Oci.DatabaseService
             return new Waiter<CheckExternalDatabaseConnectorConnectionStatusRequest, CheckExternalDatabaseConnectorConnectionStatusResponse>(() =>
             {
                 var response = client.CheckExternalDatabaseConnectorConnectionStatus(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -947,6 +1059,10 @@ namespace Oci.DatabaseService
             return new Waiter<CompleteExternalBackupJobRequest, CompleteExternalBackupJobResponse>(() =>
             {
                 var response = client.CompleteExternalBackupJob(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -979,6 +1095,10 @@ namespace Oci.DatabaseService
             return new Waiter<ConfigureAutonomousDatabaseVaultKeyRequest, ConfigureAutonomousDatabaseVaultKeyResponse>(() =>
             {
                 var response = client.ConfigureAutonomousDatabaseVaultKey(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1011,6 +1131,10 @@ namespace Oci.DatabaseService
             return new Waiter<ConfigureSaasAdminUserRequest, ConfigureSaasAdminUserResponse>(() =>
             {
                 var response = client.ConfigureSaasAdminUser(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1043,6 +1167,10 @@ namespace Oci.DatabaseService
             return new Waiter<ConvertToPdbRequest, ConvertToPdbResponse>(() =>
             {
                 var response = client.ConvertToPdb(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1075,6 +1203,10 @@ namespace Oci.DatabaseService
             return new Waiter<ConvertToRegularPluggableDatabaseRequest, ConvertToRegularPluggableDatabaseResponse>(() =>
             {
                 var response = client.ConvertToRegularPluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1107,6 +1239,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateApplicationVipRequest, CreateApplicationVipResponse>(() =>
             {
                 var response = client.CreateApplicationVip(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1139,6 +1275,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateAutonomousContainerDatabaseRequest, CreateAutonomousContainerDatabaseResponse>(() =>
             {
                 var response = client.CreateAutonomousContainerDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1171,6 +1311,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateAutonomousContainerDatabaseDataguardAssociationRequest, CreateAutonomousContainerDatabaseDataguardAssociationResponse>(() =>
             {
                 var response = client.CreateAutonomousContainerDatabaseDataguardAssociation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1203,6 +1347,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateAutonomousDatabaseRequest, CreateAutonomousDatabaseResponse>(() =>
             {
                 var response = client.CreateAutonomousDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1235,6 +1383,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateAutonomousDatabaseBackupRequest, CreateAutonomousDatabaseBackupResponse>(() =>
             {
                 var response = client.CreateAutonomousDatabaseBackup(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1267,6 +1419,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateAutonomousVmClusterRequest, CreateAutonomousVmClusterResponse>(() =>
             {
                 var response = client.CreateAutonomousVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1299,6 +1455,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateBackupRequest, CreateBackupResponse>(() =>
             {
                 var response = client.CreateBackup(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1331,6 +1491,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateCloudAutonomousVmClusterRequest, CreateCloudAutonomousVmClusterResponse>(() =>
             {
                 var response = client.CreateCloudAutonomousVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1363,6 +1527,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateCloudExadataInfrastructureRequest, CreateCloudExadataInfrastructureResponse>(() =>
             {
                 var response = client.CreateCloudExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1395,6 +1563,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateCloudVmClusterRequest, CreateCloudVmClusterResponse>(() =>
             {
                 var response = client.CreateCloudVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1427,6 +1599,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateConsoleConnectionRequest, CreateConsoleConnectionResponse>(() =>
             {
                 var response = client.CreateConsoleConnection(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1459,6 +1635,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateConsoleHistoryRequest, CreateConsoleHistoryResponse>(() =>
             {
                 var response = client.CreateConsoleHistory(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1491,6 +1671,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateDataGuardAssociationRequest, CreateDataGuardAssociationResponse>(() =>
             {
                 var response = client.CreateDataGuardAssociation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1523,6 +1707,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateDatabaseRequest, CreateDatabaseResponse>(() =>
             {
                 var response = client.CreateDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1555,6 +1743,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateDatabaseSoftwareImageRequest, CreateDatabaseSoftwareImageResponse>(() =>
             {
                 var response = client.CreateDatabaseSoftwareImage(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1587,6 +1779,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateDbHomeRequest, CreateDbHomeResponse>(() =>
             {
                 var response = client.CreateDbHome(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1619,6 +1815,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateExadataInfrastructureRequest, CreateExadataInfrastructureResponse>(() =>
             {
                 var response = client.CreateExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1651,6 +1851,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateExternalBackupJobRequest, CreateExternalBackupJobResponse>(() =>
             {
                 var response = client.CreateExternalBackupJob(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1683,6 +1887,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateExternalContainerDatabaseRequest, CreateExternalContainerDatabaseResponse>(() =>
             {
                 var response = client.CreateExternalContainerDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1715,6 +1923,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateExternalDatabaseConnectorRequest, CreateExternalDatabaseConnectorResponse>(() =>
             {
                 var response = client.CreateExternalDatabaseConnector(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1747,6 +1959,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateExternalNonContainerDatabaseRequest, CreateExternalNonContainerDatabaseResponse>(() =>
             {
                 var response = client.CreateExternalNonContainerDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1779,6 +1995,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateExternalPluggableDatabaseRequest, CreateExternalPluggableDatabaseResponse>(() =>
             {
                 var response = client.CreateExternalPluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1811,6 +2031,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateOneoffPatchRequest, CreateOneoffPatchResponse>(() =>
             {
                 var response = client.CreateOneoffPatch(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1843,6 +2067,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreatePluggableDatabaseRequest, CreatePluggableDatabaseResponse>(() =>
             {
                 var response = client.CreatePluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1875,6 +2103,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateVmClusterRequest, CreateVmClusterResponse>(() =>
             {
                 var response = client.CreateVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1907,6 +2139,10 @@ namespace Oci.DatabaseService
             return new Waiter<CreateVmClusterNetworkRequest, CreateVmClusterNetworkResponse>(() =>
             {
                 var response = client.CreateVmClusterNetwork(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1939,6 +2175,10 @@ namespace Oci.DatabaseService
             return new Waiter<DbNodeActionRequest, DbNodeActionResponse>(() =>
             {
                 var response = client.DbNodeAction(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -1971,6 +2211,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteApplicationVipRequest, DeleteApplicationVipResponse>(() =>
             {
                 var response = client.DeleteApplicationVip(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2003,6 +2247,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteAutonomousDatabaseRequest, DeleteAutonomousDatabaseResponse>(() =>
             {
                 var response = client.DeleteAutonomousDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2035,6 +2283,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteAutonomousDatabaseBackupRequest, DeleteAutonomousDatabaseBackupResponse>(() =>
             {
                 var response = client.DeleteAutonomousDatabaseBackup(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2067,6 +2319,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteAutonomousVmClusterRequest, DeleteAutonomousVmClusterResponse>(() =>
             {
                 var response = client.DeleteAutonomousVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2099,6 +2355,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteBackupRequest, DeleteBackupResponse>(() =>
             {
                 var response = client.DeleteBackup(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2131,6 +2391,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteCloudAutonomousVmClusterRequest, DeleteCloudAutonomousVmClusterResponse>(() =>
             {
                 var response = client.DeleteCloudAutonomousVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2163,6 +2427,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteCloudExadataInfrastructureRequest, DeleteCloudExadataInfrastructureResponse>(() =>
             {
                 var response = client.DeleteCloudExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2195,6 +2463,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteCloudVmClusterRequest, DeleteCloudVmClusterResponse>(() =>
             {
                 var response = client.DeleteCloudVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2227,6 +2499,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteConsoleConnectionRequest, DeleteConsoleConnectionResponse>(() =>
             {
                 var response = client.DeleteConsoleConnection(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2259,6 +2535,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteConsoleHistoryRequest, DeleteConsoleHistoryResponse>(() =>
             {
                 var response = client.DeleteConsoleHistory(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2291,6 +2571,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteDatabaseRequest, DeleteDatabaseResponse>(() =>
             {
                 var response = client.DeleteDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2323,6 +2607,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteDatabaseSoftwareImageRequest, DeleteDatabaseSoftwareImageResponse>(() =>
             {
                 var response = client.DeleteDatabaseSoftwareImage(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2355,6 +2643,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteDbHomeRequest, DeleteDbHomeResponse>(() =>
             {
                 var response = client.DeleteDbHome(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2387,6 +2679,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteExadataInfrastructureRequest, DeleteExadataInfrastructureResponse>(() =>
             {
                 var response = client.DeleteExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2419,6 +2715,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteExternalContainerDatabaseRequest, DeleteExternalContainerDatabaseResponse>(() =>
             {
                 var response = client.DeleteExternalContainerDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2451,6 +2751,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteExternalDatabaseConnectorRequest, DeleteExternalDatabaseConnectorResponse>(() =>
             {
                 var response = client.DeleteExternalDatabaseConnector(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2483,6 +2787,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteExternalNonContainerDatabaseRequest, DeleteExternalNonContainerDatabaseResponse>(() =>
             {
                 var response = client.DeleteExternalNonContainerDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2515,6 +2823,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteExternalPluggableDatabaseRequest, DeleteExternalPluggableDatabaseResponse>(() =>
             {
                 var response = client.DeleteExternalPluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2547,6 +2859,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteOneoffPatchRequest, DeleteOneoffPatchResponse>(() =>
             {
                 var response = client.DeleteOneoffPatch(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2579,6 +2895,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeletePluggableDatabaseRequest, DeletePluggableDatabaseResponse>(() =>
             {
                 var response = client.DeletePluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2611,6 +2931,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteVmClusterRequest, DeleteVmClusterResponse>(() =>
             {
                 var response = client.DeleteVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2643,6 +2967,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeleteVmClusterNetworkRequest, DeleteVmClusterNetworkResponse>(() =>
             {
                 var response = client.DeleteVmClusterNetwork(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2675,6 +3003,10 @@ namespace Oci.DatabaseService
             return new Waiter<DeregisterAutonomousDatabaseDataSafeRequest, DeregisterAutonomousDatabaseDataSafeResponse>(() =>
             {
                 var response = client.DeregisterAutonomousDatabaseDataSafe(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2707,6 +3039,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisableAutonomousDatabaseManagementRequest, DisableAutonomousDatabaseManagementResponse>(() =>
             {
                 var response = client.DisableAutonomousDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2739,6 +3075,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisableAutonomousDatabaseOperationsInsightsRequest, DisableAutonomousDatabaseOperationsInsightsResponse>(() =>
             {
                 var response = client.DisableAutonomousDatabaseOperationsInsights(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2771,6 +3111,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisableDatabaseManagementRequest, DisableDatabaseManagementResponse>(() =>
             {
                 var response = client.DisableDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2803,6 +3147,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisableExternalContainerDatabaseDatabaseManagementRequest, DisableExternalContainerDatabaseDatabaseManagementResponse>(() =>
             {
                 var response = client.DisableExternalContainerDatabaseDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2835,6 +3183,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisableExternalContainerDatabaseStackMonitoringRequest, DisableExternalContainerDatabaseStackMonitoringResponse>(() =>
             {
                 var response = client.DisableExternalContainerDatabaseStackMonitoring(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2867,6 +3219,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisableExternalNonContainerDatabaseDatabaseManagementRequest, DisableExternalNonContainerDatabaseDatabaseManagementResponse>(() =>
             {
                 var response = client.DisableExternalNonContainerDatabaseDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2899,6 +3255,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisableExternalNonContainerDatabaseOperationsInsightsRequest, DisableExternalNonContainerDatabaseOperationsInsightsResponse>(() =>
             {
                 var response = client.DisableExternalNonContainerDatabaseOperationsInsights(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2931,6 +3291,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisableExternalNonContainerDatabaseStackMonitoringRequest, DisableExternalNonContainerDatabaseStackMonitoringResponse>(() =>
             {
                 var response = client.DisableExternalNonContainerDatabaseStackMonitoring(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2963,6 +3327,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisableExternalPluggableDatabaseDatabaseManagementRequest, DisableExternalPluggableDatabaseDatabaseManagementResponse>(() =>
             {
                 var response = client.DisableExternalPluggableDatabaseDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -2995,6 +3363,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisableExternalPluggableDatabaseOperationsInsightsRequest, DisableExternalPluggableDatabaseOperationsInsightsResponse>(() =>
             {
                 var response = client.DisableExternalPluggableDatabaseOperationsInsights(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3027,6 +3399,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisableExternalPluggableDatabaseStackMonitoringRequest, DisableExternalPluggableDatabaseStackMonitoringResponse>(() =>
             {
                 var response = client.DisableExternalPluggableDatabaseStackMonitoring(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3059,6 +3435,10 @@ namespace Oci.DatabaseService
             return new Waiter<DisablePluggableDatabaseManagementRequest, DisablePluggableDatabaseManagementResponse>(() =>
             {
                 var response = client.DisablePluggableDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3091,6 +3471,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnableAutonomousDatabaseManagementRequest, EnableAutonomousDatabaseManagementResponse>(() =>
             {
                 var response = client.EnableAutonomousDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3123,6 +3507,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnableAutonomousDatabaseOperationsInsightsRequest, EnableAutonomousDatabaseOperationsInsightsResponse>(() =>
             {
                 var response = client.EnableAutonomousDatabaseOperationsInsights(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3155,6 +3543,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnableDatabaseManagementRequest, EnableDatabaseManagementResponse>(() =>
             {
                 var response = client.EnableDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3187,6 +3579,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnableExternalContainerDatabaseDatabaseManagementRequest, EnableExternalContainerDatabaseDatabaseManagementResponse>(() =>
             {
                 var response = client.EnableExternalContainerDatabaseDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3219,6 +3615,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnableExternalContainerDatabaseStackMonitoringRequest, EnableExternalContainerDatabaseStackMonitoringResponse>(() =>
             {
                 var response = client.EnableExternalContainerDatabaseStackMonitoring(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3251,6 +3651,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnableExternalNonContainerDatabaseDatabaseManagementRequest, EnableExternalNonContainerDatabaseDatabaseManagementResponse>(() =>
             {
                 var response = client.EnableExternalNonContainerDatabaseDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3283,6 +3687,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnableExternalNonContainerDatabaseOperationsInsightsRequest, EnableExternalNonContainerDatabaseOperationsInsightsResponse>(() =>
             {
                 var response = client.EnableExternalNonContainerDatabaseOperationsInsights(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3315,6 +3723,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnableExternalNonContainerDatabaseStackMonitoringRequest, EnableExternalNonContainerDatabaseStackMonitoringResponse>(() =>
             {
                 var response = client.EnableExternalNonContainerDatabaseStackMonitoring(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3347,6 +3759,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnableExternalPluggableDatabaseDatabaseManagementRequest, EnableExternalPluggableDatabaseDatabaseManagementResponse>(() =>
             {
                 var response = client.EnableExternalPluggableDatabaseDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3379,6 +3795,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnableExternalPluggableDatabaseOperationsInsightsRequest, EnableExternalPluggableDatabaseOperationsInsightsResponse>(() =>
             {
                 var response = client.EnableExternalPluggableDatabaseOperationsInsights(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3411,6 +3831,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnableExternalPluggableDatabaseStackMonitoringRequest, EnableExternalPluggableDatabaseStackMonitoringResponse>(() =>
             {
                 var response = client.EnableExternalPluggableDatabaseStackMonitoring(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3443,6 +3867,10 @@ namespace Oci.DatabaseService
             return new Waiter<EnablePluggableDatabaseManagementRequest, EnablePluggableDatabaseManagementResponse>(() =>
             {
                 var response = client.EnablePluggableDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3475,6 +3903,10 @@ namespace Oci.DatabaseService
             return new Waiter<FailOverAutonomousDatabaseRequest, FailOverAutonomousDatabaseResponse>(() =>
             {
                 var response = client.FailOverAutonomousDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3507,6 +3939,10 @@ namespace Oci.DatabaseService
             return new Waiter<FailoverAutonomousContainerDatabaseDataguardAssociationRequest, FailoverAutonomousContainerDatabaseDataguardAssociationResponse>(() =>
             {
                 var response = client.FailoverAutonomousContainerDatabaseDataguardAssociation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -3539,6 +3975,10 @@ namespace Oci.DatabaseService
             return new Waiter<FailoverDataGuardAssociationRequest, FailoverDataGuardAssociationResponse>(() =>
             {
                 var response = client.FailoverDataGuardAssociation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -4739,6 +5179,10 @@ namespace Oci.DatabaseService
             return new Waiter<LaunchAutonomousExadataInfrastructureRequest, LaunchAutonomousExadataInfrastructureResponse>(() =>
             {
                 var response = client.LaunchAutonomousExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -4771,6 +5215,10 @@ namespace Oci.DatabaseService
             return new Waiter<LaunchDbSystemRequest, LaunchDbSystemResponse>(() =>
             {
                 var response = client.LaunchDbSystem(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -4803,6 +5251,10 @@ namespace Oci.DatabaseService
             return new Waiter<LocalClonePluggableDatabaseRequest, LocalClonePluggableDatabaseResponse>(() =>
             {
                 var response = client.LocalClonePluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -4835,6 +5287,10 @@ namespace Oci.DatabaseService
             return new Waiter<MigrateExadataDbSystemResourceModelRequest, MigrateExadataDbSystemResourceModelResponse>(() =>
             {
                 var response = client.MigrateExadataDbSystemResourceModel(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -4867,6 +5323,10 @@ namespace Oci.DatabaseService
             return new Waiter<MigrateVaultKeyRequest, MigrateVaultKeyResponse>(() =>
             {
                 var response = client.MigrateVaultKey(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -4899,6 +5359,10 @@ namespace Oci.DatabaseService
             return new Waiter<ModifyDatabaseManagementRequest, ModifyDatabaseManagementResponse>(() =>
             {
                 var response = client.ModifyDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -4931,6 +5395,10 @@ namespace Oci.DatabaseService
             return new Waiter<ModifyPluggableDatabaseManagementRequest, ModifyPluggableDatabaseManagementResponse>(() =>
             {
                 var response = client.ModifyPluggableDatabaseManagement(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -4963,6 +5431,10 @@ namespace Oci.DatabaseService
             return new Waiter<RefreshPluggableDatabaseRequest, RefreshPluggableDatabaseResponse>(() =>
             {
                 var response = client.RefreshPluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -4995,6 +5467,10 @@ namespace Oci.DatabaseService
             return new Waiter<RegisterAutonomousDatabaseDataSafeRequest, RegisterAutonomousDatabaseDataSafeResponse>(() =>
             {
                 var response = client.RegisterAutonomousDatabaseDataSafe(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5027,6 +5503,10 @@ namespace Oci.DatabaseService
             return new Waiter<ReinstateAutonomousContainerDatabaseDataguardAssociationRequest, ReinstateAutonomousContainerDatabaseDataguardAssociationResponse>(() =>
             {
                 var response = client.ReinstateAutonomousContainerDatabaseDataguardAssociation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5059,6 +5539,10 @@ namespace Oci.DatabaseService
             return new Waiter<ReinstateDataGuardAssociationRequest, ReinstateDataGuardAssociationResponse>(() =>
             {
                 var response = client.ReinstateDataGuardAssociation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5091,6 +5575,10 @@ namespace Oci.DatabaseService
             return new Waiter<RemoteClonePluggableDatabaseRequest, RemoteClonePluggableDatabaseResponse>(() =>
             {
                 var response = client.RemoteClonePluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5123,6 +5611,10 @@ namespace Oci.DatabaseService
             return new Waiter<RemoveVirtualMachineFromCloudVmClusterRequest, RemoveVirtualMachineFromCloudVmClusterResponse>(() =>
             {
                 var response = client.RemoveVirtualMachineFromCloudVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5155,6 +5647,10 @@ namespace Oci.DatabaseService
             return new Waiter<RemoveVirtualMachineFromVmClusterRequest, RemoveVirtualMachineFromVmClusterResponse>(() =>
             {
                 var response = client.RemoveVirtualMachineFromVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5187,6 +5683,10 @@ namespace Oci.DatabaseService
             return new Waiter<ResizeVmClusterNetworkRequest, ResizeVmClusterNetworkResponse>(() =>
             {
                 var response = client.ResizeVmClusterNetwork(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5219,6 +5719,10 @@ namespace Oci.DatabaseService
             return new Waiter<RestartAutonomousContainerDatabaseRequest, RestartAutonomousContainerDatabaseResponse>(() =>
             {
                 var response = client.RestartAutonomousContainerDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5251,6 +5755,10 @@ namespace Oci.DatabaseService
             return new Waiter<RestartAutonomousDatabaseRequest, RestartAutonomousDatabaseResponse>(() =>
             {
                 var response = client.RestartAutonomousDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5283,6 +5791,10 @@ namespace Oci.DatabaseService
             return new Waiter<RestoreAutonomousDatabaseRequest, RestoreAutonomousDatabaseResponse>(() =>
             {
                 var response = client.RestoreAutonomousDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5315,6 +5827,10 @@ namespace Oci.DatabaseService
             return new Waiter<RestoreDatabaseRequest, RestoreDatabaseResponse>(() =>
             {
                 var response = client.RestoreDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5347,6 +5863,10 @@ namespace Oci.DatabaseService
             return new Waiter<RotateAutonomousContainerDatabaseEncryptionKeyRequest, RotateAutonomousContainerDatabaseEncryptionKeyResponse>(() =>
             {
                 var response = client.RotateAutonomousContainerDatabaseEncryptionKey(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5379,6 +5899,10 @@ namespace Oci.DatabaseService
             return new Waiter<RotateAutonomousDatabaseEncryptionKeyRequest, RotateAutonomousDatabaseEncryptionKeyResponse>(() =>
             {
                 var response = client.RotateAutonomousDatabaseEncryptionKey(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5411,6 +5935,10 @@ namespace Oci.DatabaseService
             return new Waiter<RotateAutonomousVmClusterOrdsCertsRequest, RotateAutonomousVmClusterOrdsCertsResponse>(() =>
             {
                 var response = client.RotateAutonomousVmClusterOrdsCerts(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5443,6 +5971,10 @@ namespace Oci.DatabaseService
             return new Waiter<RotateAutonomousVmClusterSslCertsRequest, RotateAutonomousVmClusterSslCertsResponse>(() =>
             {
                 var response = client.RotateAutonomousVmClusterSslCerts(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5475,6 +6007,10 @@ namespace Oci.DatabaseService
             return new Waiter<RotateCloudAutonomousVmClusterOrdsCertsRequest, RotateCloudAutonomousVmClusterOrdsCertsResponse>(() =>
             {
                 var response = client.RotateCloudAutonomousVmClusterOrdsCerts(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5507,6 +6043,10 @@ namespace Oci.DatabaseService
             return new Waiter<RotateCloudAutonomousVmClusterSslCertsRequest, RotateCloudAutonomousVmClusterSslCertsResponse>(() =>
             {
                 var response = client.RotateCloudAutonomousVmClusterSslCerts(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5539,6 +6079,10 @@ namespace Oci.DatabaseService
             return new Waiter<RotateOrdsCertsRequest, RotateOrdsCertsResponse>(() =>
             {
                 var response = client.RotateOrdsCerts(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5571,6 +6115,10 @@ namespace Oci.DatabaseService
             return new Waiter<RotatePluggableDatabaseEncryptionKeyRequest, RotatePluggableDatabaseEncryptionKeyResponse>(() =>
             {
                 var response = client.RotatePluggableDatabaseEncryptionKey(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5603,6 +6151,10 @@ namespace Oci.DatabaseService
             return new Waiter<RotateSslCertsRequest, RotateSslCertsResponse>(() =>
             {
                 var response = client.RotateSslCerts(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5635,6 +6187,10 @@ namespace Oci.DatabaseService
             return new Waiter<RotateVaultKeyRequest, RotateVaultKeyResponse>(() =>
             {
                 var response = client.RotateVaultKey(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5667,6 +6223,10 @@ namespace Oci.DatabaseService
             return new Waiter<ScanExternalContainerDatabasePluggableDatabasesRequest, ScanExternalContainerDatabasePluggableDatabasesResponse>(() =>
             {
                 var response = client.ScanExternalContainerDatabasePluggableDatabases(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5699,6 +6259,10 @@ namespace Oci.DatabaseService
             return new Waiter<ShrinkAutonomousDatabaseRequest, ShrinkAutonomousDatabaseResponse>(() =>
             {
                 var response = client.ShrinkAutonomousDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5731,6 +6295,10 @@ namespace Oci.DatabaseService
             return new Waiter<StartAutonomousDatabaseRequest, StartAutonomousDatabaseResponse>(() =>
             {
                 var response = client.StartAutonomousDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5763,6 +6331,10 @@ namespace Oci.DatabaseService
             return new Waiter<StartPluggableDatabaseRequest, StartPluggableDatabaseResponse>(() =>
             {
                 var response = client.StartPluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5795,6 +6367,10 @@ namespace Oci.DatabaseService
             return new Waiter<StopAutonomousDatabaseRequest, StopAutonomousDatabaseResponse>(() =>
             {
                 var response = client.StopAutonomousDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5827,6 +6403,10 @@ namespace Oci.DatabaseService
             return new Waiter<StopPluggableDatabaseRequest, StopPluggableDatabaseResponse>(() =>
             {
                 var response = client.StopPluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5859,6 +6439,10 @@ namespace Oci.DatabaseService
             return new Waiter<SwitchoverAutonomousContainerDatabaseDataguardAssociationRequest, SwitchoverAutonomousContainerDatabaseDataguardAssociationResponse>(() =>
             {
                 var response = client.SwitchoverAutonomousContainerDatabaseDataguardAssociation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5891,6 +6475,10 @@ namespace Oci.DatabaseService
             return new Waiter<SwitchoverAutonomousDatabaseRequest, SwitchoverAutonomousDatabaseResponse>(() =>
             {
                 var response = client.SwitchoverAutonomousDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5923,6 +6511,10 @@ namespace Oci.DatabaseService
             return new Waiter<SwitchoverDataGuardAssociationRequest, SwitchoverDataGuardAssociationResponse>(() =>
             {
                 var response = client.SwitchoverDataGuardAssociation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5955,6 +6547,10 @@ namespace Oci.DatabaseService
             return new Waiter<TerminateAutonomousContainerDatabaseRequest, TerminateAutonomousContainerDatabaseResponse>(() =>
             {
                 var response = client.TerminateAutonomousContainerDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -5987,6 +6583,10 @@ namespace Oci.DatabaseService
             return new Waiter<TerminateAutonomousExadataInfrastructureRequest, TerminateAutonomousExadataInfrastructureResponse>(() =>
             {
                 var response = client.TerminateAutonomousExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6019,6 +6619,10 @@ namespace Oci.DatabaseService
             return new Waiter<TerminateDbSystemRequest, TerminateDbSystemResponse>(() =>
             {
                 var response = client.TerminateDbSystem(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6051,6 +6655,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateAutonomousContainerDatabaseRequest, UpdateAutonomousContainerDatabaseResponse>(() =>
             {
                 var response = client.UpdateAutonomousContainerDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6083,6 +6691,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateAutonomousContainerDatabaseDataguardAssociationRequest, UpdateAutonomousContainerDatabaseDataguardAssociationResponse>(() =>
             {
                 var response = client.UpdateAutonomousContainerDatabaseDataguardAssociation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6115,6 +6727,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateAutonomousDatabaseRequest, UpdateAutonomousDatabaseResponse>(() =>
             {
                 var response = client.UpdateAutonomousDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6147,6 +6763,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateAutonomousDatabaseBackupRequest, UpdateAutonomousDatabaseBackupResponse>(() =>
             {
                 var response = client.UpdateAutonomousDatabaseBackup(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6179,6 +6799,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateAutonomousDatabaseRegionalWalletRequest, UpdateAutonomousDatabaseRegionalWalletResponse>(() =>
             {
                 var response = client.UpdateAutonomousDatabaseRegionalWallet(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6211,6 +6835,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateAutonomousDatabaseWalletRequest, UpdateAutonomousDatabaseWalletResponse>(() =>
             {
                 var response = client.UpdateAutonomousDatabaseWallet(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6243,6 +6871,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateAutonomousExadataInfrastructureRequest, UpdateAutonomousExadataInfrastructureResponse>(() =>
             {
                 var response = client.UpdateAutonomousExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6275,6 +6907,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateAutonomousVmClusterRequest, UpdateAutonomousVmClusterResponse>(() =>
             {
                 var response = client.UpdateAutonomousVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6307,6 +6943,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateCloudAutonomousVmClusterRequest, UpdateCloudAutonomousVmClusterResponse>(() =>
             {
                 var response = client.UpdateCloudAutonomousVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6339,6 +6979,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateCloudExadataInfrastructureRequest, UpdateCloudExadataInfrastructureResponse>(() =>
             {
                 var response = client.UpdateCloudExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6371,6 +7015,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateCloudVmClusterRequest, UpdateCloudVmClusterResponse>(() =>
             {
                 var response = client.UpdateCloudVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6403,6 +7051,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateCloudVmClusterIormConfigRequest, UpdateCloudVmClusterIormConfigResponse>(() =>
             {
                 var response = client.UpdateCloudVmClusterIormConfig(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6435,6 +7087,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateConsoleConnectionRequest, UpdateConsoleConnectionResponse>(() =>
             {
                 var response = client.UpdateConsoleConnection(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6467,6 +7123,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateConsoleHistoryRequest, UpdateConsoleHistoryResponse>(() =>
             {
                 var response = client.UpdateConsoleHistory(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6499,6 +7159,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateDataGuardAssociationRequest, UpdateDataGuardAssociationResponse>(() =>
             {
                 var response = client.UpdateDataGuardAssociation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6531,6 +7195,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateDatabaseRequest, UpdateDatabaseResponse>(() =>
             {
                 var response = client.UpdateDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6563,6 +7231,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateDbHomeRequest, UpdateDbHomeResponse>(() =>
             {
                 var response = client.UpdateDbHome(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6595,6 +7267,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateDbNodeRequest, UpdateDbNodeResponse>(() =>
             {
                 var response = client.UpdateDbNode(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6627,6 +7303,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateDbSystemRequest, UpdateDbSystemResponse>(() =>
             {
                 var response = client.UpdateDbSystem(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6659,6 +7339,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateExadataInfrastructureRequest, UpdateExadataInfrastructureResponse>(() =>
             {
                 var response = client.UpdateExadataInfrastructure(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6691,6 +7375,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateExadataIormConfigRequest, UpdateExadataIormConfigResponse>(() =>
             {
                 var response = client.UpdateExadataIormConfig(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6723,6 +7411,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateExternalContainerDatabaseRequest, UpdateExternalContainerDatabaseResponse>(() =>
             {
                 var response = client.UpdateExternalContainerDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6755,6 +7447,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateExternalDatabaseConnectorRequest, UpdateExternalDatabaseConnectorResponse>(() =>
             {
                 var response = client.UpdateExternalDatabaseConnector(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6787,6 +7483,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateExternalNonContainerDatabaseRequest, UpdateExternalNonContainerDatabaseResponse>(() =>
             {
                 var response = client.UpdateExternalNonContainerDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6819,6 +7519,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateExternalPluggableDatabaseRequest, UpdateExternalPluggableDatabaseResponse>(() =>
             {
                 var response = client.UpdateExternalPluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6851,6 +7555,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdatePluggableDatabaseRequest, UpdatePluggableDatabaseResponse>(() =>
             {
                 var response = client.UpdatePluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6883,6 +7591,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateVmClusterRequest, UpdateVmClusterResponse>(() =>
             {
                 var response = client.UpdateVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6915,6 +7627,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateVmClusterNetworkRequest, UpdateVmClusterNetworkResponse>(() =>
             {
                 var response = client.UpdateVmClusterNetwork(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6947,6 +7663,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpgradeDatabaseRequest, UpgradeDatabaseResponse>(() =>
             {
                 var response = client.UpgradeDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -6979,6 +7699,10 @@ namespace Oci.DatabaseService
             return new Waiter<UpgradeDbSystemRequest, UpgradeDbSystemResponse>(() =>
             {
                 var response = client.UpgradeDbSystem(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId
@@ -7011,6 +7735,10 @@ namespace Oci.DatabaseService
             return new Waiter<ValidateVmClusterNetworkRequest, ValidateVmClusterNetworkResponse>(() =>
             {
                 var response = client.ValidateVmClusterNetwork(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
                 var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
                 {
                     WorkRequestId = response.OpcWorkRequestId

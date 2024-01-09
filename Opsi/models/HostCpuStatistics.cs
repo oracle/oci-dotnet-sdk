@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -21,6 +21,12 @@ namespace Oci.OpsiService.Models
     /// </summary>
     public class HostCpuStatistics : HostResourceStatistics
     {
+        
+        /// <value>
+        /// The baseline utilization is a fraction of each CPU core expressed in percentages, either 12.5% or 50%. The baseline provides the minimum CPUs that can be used constantly.
+        /// </value>
+        [JsonProperty(PropertyName = "cpuBaseline")]
+        public System.Double CpuBaseline { get; set; }
         
         [JsonProperty(PropertyName = "load")]
         public SummaryStatistics Load { get; set; }

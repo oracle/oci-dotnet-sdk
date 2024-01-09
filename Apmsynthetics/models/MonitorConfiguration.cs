@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -36,7 +36,13 @@ namespace Oci.ApmsyntheticsService.Models
             [EnumMember(Value = "SCRIPTED_REST_CONFIG")]
             ScriptedRestConfig,
             [EnumMember(Value = "NETWORK_CONFIG")]
-            NetworkConfig
+            NetworkConfig,
+            [EnumMember(Value = "DNS_SERVER_CONFIG")]
+            DnsServerConfig,
+            [EnumMember(Value = "DNS_TRACE_CONFIG")]
+            DnsTraceConfig,
+            [EnumMember(Value = "DNSSEC_CONFIG")]
+            DnssecConfig
         };
 
         
@@ -72,8 +78,17 @@ namespace Oci.ApmsyntheticsService.Models
             var discriminator = jsonObject["configType"].Value<string>();
             switch (discriminator)
             {
+                case "DNSSEC_CONFIG":
+                    obj = new DnsSecMonitorConfiguration();
+                    break;
+                case "DNS_TRACE_CONFIG":
+                    obj = new DnsTraceMonitorConfiguration();
+                    break;
                 case "SCRIPTED_REST_CONFIG":
                     obj = new ScriptedRestMonitorConfiguration();
+                    break;
+                case "DNS_SERVER_CONFIG":
+                    obj = new DnsServerMonitorConfiguration();
                     break;
                 case "SCRIPTED_BROWSER_CONFIG":
                     obj = new ScriptedBrowserMonitorConfiguration();
