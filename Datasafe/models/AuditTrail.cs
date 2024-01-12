@@ -167,6 +167,55 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeLastCollected { get; set; }
         
         /// <value>
+        /// The secondary id assigned for the peer database registered with Data Safe.
+        /// </value>
+        [JsonProperty(PropertyName = "peerTargetDatabaseKey")]
+        public System.Nullable<int> PeerTargetDatabaseKey { get; set; }
+        
+        /// <value>
+        /// The underlying source of unified audit trail.
+        /// </value>
+        [JsonProperty(PropertyName = "trailSource")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AuditTrailSource> TrailSource { get; set; }
+        
+        /// <value>
+        /// The date and time of the last purge job. The purge job deletes audit data in the
+        /// target database every seven days so that the database's audit trail does not become too large.
+        /// In the format defined by RFC3339.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "purgeJobTime")]
+        public System.Nullable<System.DateTime> PurgeJobTime { get; set; }
+                ///
+        /// <value>
+        /// The current status of the audit trail purge job.
+        /// </value>
+        ///
+        public enum PurgeJobStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "SUCCEEDED")]
+            Succeeded,
+            [EnumMember(Value = "FAILED")]
+            Failed
+        };
+
+        /// <value>
+        /// The current status of the audit trail purge job.
+        /// </value>
+        [JsonProperty(PropertyName = "purgeJobStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<PurgeJobStatusEnum> PurgeJobStatus { get; set; }
+        
+        /// <value>
+        /// The details of the audit trail purge job that ran at the time specified by purgeJobTime\".
+        /// </value>
+        [JsonProperty(PropertyName = "purgeJobDetails")]
+        public string PurgeJobDetails { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

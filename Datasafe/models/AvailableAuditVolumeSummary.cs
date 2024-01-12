@@ -33,6 +33,18 @@ namespace Oci.DatasafeService.Models
         public string AuditProfileId { get; set; }
         
         /// <value>
+        /// The OCID of the audit trail.
+        /// </value>
+        [JsonProperty(PropertyName = "auditTrailId")]
+        public string AuditTrailId { get; set; }
+        
+        /// <value>
+        /// Unique name of the database associated to the peer target database.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseUniqueName")]
+        public string DatabaseUniqueName { get; set; }
+        
+        /// <value>
         /// Audit trail location on the target database from where the audit data is being collected by Data Safe.
         /// </value>
         /// <remarks>

@@ -30,12 +30,14 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// The trail locations for which the audit data volume has to be calculated.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TrailLocations is required.")]
         [JsonProperty(PropertyName = "trailLocations")]
         public System.Collections.Generic.List<string> TrailLocations { get; set; }
+        
+        /// <value>
+        /// Unique name of the database associated to the peer target database.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseUniqueName")]
+        public string DatabaseUniqueName { get; set; }
         
     }
 }

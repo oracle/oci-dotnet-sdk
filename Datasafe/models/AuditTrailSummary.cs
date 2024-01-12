@@ -146,6 +146,12 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> AuditCollectionStartTime { get; set; }
         
         /// <value>
+        /// The secondary id assigned for the peer database registered with Data Safe.
+        /// </value>
+        [JsonProperty(PropertyName = "peerTargetDatabaseKey")]
+        public System.Nullable<int> PeerTargetDatabaseKey { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

@@ -49,6 +49,7 @@ namespace Oci.MonitoringService.Models
         /// aggregate. The query must specify a metric, statistic, and interval.
         /// Supported values for interval depend on the specified time range. More interval values are supported for smaller time ranges.
         /// You can optionally specify dimensions and grouping functions.
+        /// When specifying a dimension value, surround it with double quotes, and escape each double quote with a backslash (`\\`) character.
         /// Supported grouping functions: `grouping()`, `groupBy()`.
         /// <br/>
         /// Construct your query to avoid exceeding limits on returned data. See {@link MetricData}.
@@ -58,7 +59,10 @@ namespace Oci.MonitoringService.Models
         /// For available dimensions, review the metric definition for the supported service. See
         /// [Supported Services](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#SupportedServices).
         /// <br/>
-        /// Example: CpuUtilization[1m].sum()
+        /// Example 1: `CpuUtilization[1m].sum()`
+        /// <br/>
+        /// Example 2 (escaped double quotes for value string): `CpuUtilization[1m]{resourceId = \\\"<var>&lt;instance_OCID&gt;</var>\\\"}.max()`
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +76,7 @@ namespace Oci.MonitoringService.Models
         /// Format is defined by RFC3339. The response includes metric data points for the startTime.
         /// Default value: the timestamp 3 hours before the call was sent.
         /// <br/>
-        /// Example: 2019-02-01T01:02:29.600Z
+        /// Example: 2023-02-01T01:02:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "startTime")]
         public System.Nullable<System.DateTime> StartTime { get; set; }
@@ -82,7 +86,7 @@ namespace Oci.MonitoringService.Models
         /// Format is defined by RFC3339. The response excludes metric data points for the endTime.
         /// Default value: the timestamp representing when the call was sent.
         /// <br/>
-        /// Example: 2019-02-01T02:02:29.600Z
+        /// Example: 2023-02-01T02:02:29.600Z
         /// </value>
         [JsonProperty(PropertyName = "endTime")]
         public System.Nullable<System.DateTime> EndTime { get; set; }

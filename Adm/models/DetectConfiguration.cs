@@ -65,5 +65,12 @@ namespace Oci.AdmService.Models
         [JsonProperty(PropertyName = "maxPermissibleCvssV3Score")]
         public System.Nullable<float> MaxPermissibleCvssV3Score { get; set; }
         
+        /// <value>
+        /// The maximum ADM Severity. An artifact with an ADM Severity below this value is not considered for patching.
+        /// </value>
+        [JsonProperty(PropertyName = "maxPermissibleSeverity")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ConfigSeverity> MaxPermissibleSeverity { get; set; }
+        
     }
 }

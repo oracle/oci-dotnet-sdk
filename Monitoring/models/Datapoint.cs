@@ -26,7 +26,7 @@ namespace Oci.MonitoringService.Models
         /// Timestamp for this metric value. Format defined by RFC3339.
         /// For a data point to be posted, its timestamp must be near current time (less than two hours in the past and less than 10 minutes in the future).
         /// <br/>
-        /// Example: 2019-02-01T01:02:29.600Z
+        /// Example: 2023-02-01T01:02:29.600Z
         /// </value>
         /// <remarks>
         /// Required

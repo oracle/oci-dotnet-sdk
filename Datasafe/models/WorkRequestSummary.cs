@@ -69,6 +69,14 @@ namespace Oci.DatasafeService.Models
             DeleteTargetDatabase,
             [EnumMember(Value = "CHANGE_TARGET_DATABASE_COMPARTMENT")]
             ChangeTargetDatabaseCompartment,
+            [EnumMember(Value = "CREATE_PEER_TARGET_DATABASE")]
+            CreatePeerTargetDatabase,
+            [EnumMember(Value = "UPDATE_PEER_TARGET_DATABASE")]
+            UpdatePeerTargetDatabase,
+            [EnumMember(Value = "DELETE_PEER_TARGET_DATABASE")]
+            DeletePeerTargetDatabase,
+            [EnumMember(Value = "REFRESH_TARGET_DATABASE")]
+            RefreshTargetDatabase,
             [EnumMember(Value = "CREATE_USER_ASSESSMENT")]
             CreateUserAssessment,
             [EnumMember(Value = "ASSESS_USER_ASSESSMENT")]
@@ -107,6 +115,8 @@ namespace Oci.DatasafeService.Models
             DeleteSecurityAssessment,
             [EnumMember(Value = "UPDATE_SECURITY_ASSESSMENT")]
             UpdateSecurityAssessment,
+            [EnumMember(Value = "UPDATE_FINDING_RISK")]
+            UpdateFindingRisk,
             [EnumMember(Value = "CHANGE_SECURITY_ASSESSMENT_COMPARTMENT")]
             ChangeSecurityAssessmentCompartment,
             [EnumMember(Value = "SET_SECURITY_ASSESSMENT_BASELINE")]
@@ -265,6 +275,12 @@ namespace Oci.DatasafeService.Models
             ApplyDifference,
             [EnumMember(Value = "ABORT_MASKING")]
             AbortMasking,
+            [EnumMember(Value = "CREATE_SECURITY_POLICY_REPORT")]
+            CreateSecurityPolicyReport,
+            [EnumMember(Value = "REFRESH_SECURITY_POLICY_CACHE")]
+            RefreshSecurityPolicyCache,
+            [EnumMember(Value = "DELETE_SECURITY_POLICY_CACHE")]
+            DeleteSecurityPolicyCache,
             [EnumMember(Value = "CREATE_SCHEDULE")]
             CreateSchedule,
             [EnumMember(Value = "REMOVE_SCHEDULE_REPORT")]

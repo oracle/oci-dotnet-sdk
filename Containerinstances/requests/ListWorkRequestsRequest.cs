@@ -88,5 +88,11 @@ namespace Oci.ContainerinstancesService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }
+        
+        /// <value>
+        /// The OCID of the resource affected by the work request.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
+        public string ResourceId { get; set; }
     }
 }

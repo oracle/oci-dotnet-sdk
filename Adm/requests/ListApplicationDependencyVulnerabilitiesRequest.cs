@@ -36,18 +36,25 @@ namespace Oci.AdmService.Requests
         public string VulnerabilityId { get; set; }
         
         /// <value>
-        /// A filter that returns only Vulnerability Audits that have a Common Vulnerability Scoring System Version 3 (CVSS V3) greater or equal than the specified value.
+        /// A filter that returns only Vulnerabilities that have a Common Vulnerability Scoring System Version 3 (CVSS V3) greater than or equal to the specified value.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "cvssV3GreaterThanOrEqual")]
         public System.Nullable<float> CvssV3GreaterThanOrEqual { get; set; }
         
         /// <value>
-        /// A filter that returns only Vulnerability Audits that have a Common Vulnerability Scoring System Version 2 (CVSS V2) greater or equal than the specified value.
+        /// A filter that returns only Vulnerabilities that have a Common Vulnerability Scoring System Version 2 (CVSS V2) greater than or equal to the specified value.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "cvssV2GreaterThanOrEqual")]
         public System.Nullable<float> CvssV2GreaterThanOrEqual { get; set; }
+        
+        /// <value>
+        /// A filter that returns only Vulnerabilities that have a severity greater than or equal to the specified value.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "severityGreaterThanOrEqual")]
+        public System.Nullable<VulnerabilitySeverity> SeverityGreaterThanOrEqual { get; set; }
         
         /// <value>
         /// The maximum number of items to return.
@@ -73,6 +80,7 @@ namespace Oci.AdmService.Requests
         /// If sort order is dfs, the nodes are returned by going through the application dependency tree in a depth-first manner. Children are sorted based on their GAV property alphabetically (either ascending or descending, depending on the order parameter). Default order is ascending.
         /// If sort order is bfs, the nodes are returned by going through the application dependency tree in a breadth-first manner. Children are sorted based on their GAV property alphabetically (either ascending or descending, depending on the order parameter). Default order is ascending.
         /// Default order for gav is ascending where ascending corresponds to alphanumerical order.
+        /// Default order for purl is ascending where ascending corresponds to alphabetical order
         /// Default order for nodeId is ascending where ascending corresponds to alphanumerical order.
         /// Sorting by DFS or BFS cannot be used in conjunction with the following query parameters: \"gav\", \"cvssV2GreaterThanOrEqual\", \"cvssV3GreaterThanOrEqual\" and \"vulnerabilityId\".
         /// 
@@ -81,6 +89,8 @@ namespace Oci.AdmService.Requests
         public enum SortByEnum {
             [EnumMember(Value = "gav")]
             Gav,
+            [EnumMember(Value = "purl")]
+            Purl,
             [EnumMember(Value = "nodeId")]
             NodeId,
             [EnumMember(Value = "dfs")]
@@ -94,6 +104,7 @@ namespace Oci.AdmService.Requests
         /// If sort order is dfs, the nodes are returned by going through the application dependency tree in a depth-first manner. Children are sorted based on their GAV property alphabetically (either ascending or descending, depending on the order parameter). Default order is ascending.
         /// If sort order is bfs, the nodes are returned by going through the application dependency tree in a breadth-first manner. Children are sorted based on their GAV property alphabetically (either ascending or descending, depending on the order parameter). Default order is ascending.
         /// Default order for gav is ascending where ascending corresponds to alphanumerical order.
+        /// Default order for purl is ascending where ascending corresponds to alphabetical order
         /// Default order for nodeId is ascending where ascending corresponds to alphanumerical order.
         /// Sorting by DFS or BFS cannot be used in conjunction with the following query parameters: \"gav\", \"cvssV2GreaterThanOrEqual\", \"cvssV3GreaterThanOrEqual\" and \"vulnerabilityId\".
         /// 
@@ -122,6 +133,12 @@ namespace Oci.AdmService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "gav")]
         public string Gav { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the entire PURL given (https://github.com/package-url/purl-spec/).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "purl")]
+        public string Purl { get; set; }
         
         /// <value>
         /// The client request ID for tracing.

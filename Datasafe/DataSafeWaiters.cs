@@ -449,6 +449,34 @@ namespace Oci.DatasafeService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPeerTargetDatabaseRequest, GetPeerTargetDatabaseResponse> ForPeerTargetDatabase(GetPeerTargetDatabaseRequest request, params TargetDatabaseLifecycleState[] targetStates)
+        {
+            return this.ForPeerTargetDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPeerTargetDatabaseRequest, GetPeerTargetDatabaseResponse> ForPeerTargetDatabase(GetPeerTargetDatabaseRequest request, WaiterConfiguration config, params TargetDatabaseLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetPeerTargetDatabaseRequest, GetPeerTargetDatabaseResponse>(
+                request,
+                request => client.GetPeerTargetDatabase(request),
+                response => targetStates.Contains(response.PeerTargetDatabase.LifecycleState.Value),
+                targetStates.Contains(TargetDatabaseLifecycleState.Deleted)
+            );
+            return new Waiter<GetPeerTargetDatabaseRequest, GetPeerTargetDatabaseResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetReportRequest, GetReportResponse> ForReport(GetReportRequest request, params ReportLifecycleState[] targetStates)
         {
             return this.ForReport(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -636,6 +664,34 @@ namespace Oci.DatasafeService
                 targetStates.Contains(SecurityPolicyDeploymentLifecycleState.Deleted)
             );
             return new Waiter<GetSecurityPolicyDeploymentRequest, GetSecurityPolicyDeploymentResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSecurityPolicyReportRequest, GetSecurityPolicyReportResponse> ForSecurityPolicyReport(GetSecurityPolicyReportRequest request, params SecurityPolicyReportLifecycleState[] targetStates)
+        {
+            return this.ForSecurityPolicyReport(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSecurityPolicyReportRequest, GetSecurityPolicyReportResponse> ForSecurityPolicyReport(GetSecurityPolicyReportRequest request, WaiterConfiguration config, params SecurityPolicyReportLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSecurityPolicyReportRequest, GetSecurityPolicyReportResponse>(
+                request,
+                request => client.GetSecurityPolicyReport(request),
+                response => targetStates.Contains(response.SecurityPolicyReport.LifecycleState.Value),
+                targetStates.Contains(SecurityPolicyReportLifecycleState.Deleted)
+            );
+            return new Waiter<GetSecurityPolicyReportRequest, GetSecurityPolicyReportResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

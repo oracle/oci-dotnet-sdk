@@ -16,6 +16,9 @@ namespace Oci.DatasafeService.Models
   /// The underlying source of unified audit trail.
   /// </summary>
   public enum AuditTrailSource {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "TABLE")]
       Table,
       [EnumMember(Value = "FILE")]

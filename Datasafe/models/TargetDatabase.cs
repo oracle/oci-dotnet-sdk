@@ -113,6 +113,12 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// The OCIDs of associated resources like database, Data Safe private endpoint, etc.
+        /// </value>
+        [JsonProperty(PropertyName = "peerTargetDatabases")]
+        public System.Collections.Generic.List<PeerTargetDatabase> PeerTargetDatabases { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

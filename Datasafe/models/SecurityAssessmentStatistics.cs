@@ -51,5 +51,8 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "pass")]
         public SectionStatistics Pass { get; set; }
         
+        [JsonProperty(PropertyName = "deferred")]
+        public SectionStatistics Deferred { get; set; }
+        
     }
 }

@@ -22,14 +22,16 @@ namespace Oci.AdmService.Models
     {
         
         /// <value>
-        /// Group Artifact Version (GAV) identifier (Group:Artifact:Version), e.g. org.graalvm.nativeimage:svm:21.1.0.
+        /// Group Artifact Version (GAV) identifier (Group:Artifact:Version). Example: org.graalvm.nativeimage:svm:21.1.0.&quot;N/A&quot; for non-maven artifacts.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Gav is required.")]
         [JsonProperty(PropertyName = "gav")]
         public string Gav { get; set; }
+        
+        /// <value>
+        /// Package URL defined in https://github.com/package-url/purl-spec, e.g. pkg:maven/org.graalvm.nativeimage/svm@21.1.0
+        /// </value>
+        [JsonProperty(PropertyName = "purl")]
+        public string Purl { get; set; }
         
         /// <value>
         /// Unique identifier of an application dependency, for example nodeId1.

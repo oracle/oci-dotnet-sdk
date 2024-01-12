@@ -66,7 +66,9 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "ADVISORY")]
             Advisory,
             [EnumMember(Value = "PASS")]
-            Pass
+            Pass,
+            [EnumMember(Value = "DEFERRED")]
+            Deferred
         };
 
         /// <value>

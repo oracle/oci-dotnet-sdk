@@ -236,5 +236,17 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to return items that contain the specified schema list.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "schemaList", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> SchemaList { get; set; }
+        
+        /// <value>
+        /// A filter to return only items that match the criteria that all schemas can be accessed by a user.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "areAllSchemasAccessible")]
+        public System.Nullable<bool> AreAllSchemasAccessible { get; set; }
     }
 }

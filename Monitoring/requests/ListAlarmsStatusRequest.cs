@@ -126,8 +126,8 @@ namespace Oci.MonitoringService.Requests
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a resource that is monitored by the
-        /// metric that you are searching for.
+        /// A filter to return only the resource with the specified [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// The resource must be monitored by the metric that you are searching for.
         /// <br/>
         /// Example: ocid1.instance.oc1.phx.exampleuniqueID
         /// </value>
@@ -144,8 +144,8 @@ namespace Oci.MonitoringService.Requests
         public string ServiceName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the entity monitored by the
-        /// metric that you are searching for.
+        /// A filter to return only resources that match the given entity [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) exactly.
+        /// The resource (entity) must be monitored by the metric that you are searching for.
         /// <br/>
         /// Example: ocid1.instance.oc1.phx.exampleuniqueID
         /// </value>
@@ -154,9 +154,8 @@ namespace Oci.MonitoringService.Requests
         
         ///
         /// <value>
-        /// The status of the metric stream to use for alarm filtering. For example, set `StatusQueryParam` to
-        /// \"FIRING\" to filter results to metric streams of the alarm with that status. Default behaviour is to return
-        /// alarms irrespective of metric streams' status.
+        /// A filter to return only metric streams that match the specified status.
+        /// For example, the value \"FIRING\" returns only firing metric streams.
         /// <br/>
         /// Example: FIRING
         /// </value>
@@ -169,9 +168,8 @@ namespace Oci.MonitoringService.Requests
         };
 
         /// <value>
-        /// The status of the metric stream to use for alarm filtering. For example, set `StatusQueryParam` to
-        /// \"FIRING\" to filter results to metric streams of the alarm with that status. Default behaviour is to return
-        /// alarms irrespective of metric streams' status.
+        /// A filter to return only metric streams that match the specified status.
+        /// For example, the value \"FIRING\" returns only firing metric streams.
         /// <br/>
         /// Example: FIRING
         /// </value>

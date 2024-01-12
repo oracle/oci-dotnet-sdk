@@ -54,5 +54,33 @@ namespace Oci.MonitoringService
             );
             return new Waiter<GetAlarmRequest, GetAlarmResponse>(config, agent);
         }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAlarmSuppressionRequest, GetAlarmSuppressionResponse> ForAlarmSuppression(GetAlarmSuppressionRequest request, params AlarmSuppression.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForAlarmSuppression(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAlarmSuppressionRequest, GetAlarmSuppressionResponse> ForAlarmSuppression(GetAlarmSuppressionRequest request, WaiterConfiguration config, params AlarmSuppression.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetAlarmSuppressionRequest, GetAlarmSuppressionResponse>(
+                request,
+                request => client.GetAlarmSuppression(request),
+                response => targetStates.Contains(response.AlarmSuppression.LifecycleState.Value),
+                targetStates.Contains(AlarmSuppression.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetAlarmSuppressionRequest, GetAlarmSuppressionResponse>(config, agent);
+        }
     }
 }
