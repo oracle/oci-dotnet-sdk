@@ -57,7 +57,7 @@ namespace Oci.MonitoringService.Models
         public string DisplayName { get; set; }
                 ///
         /// <value>
-        /// The configured severity of the alarm.
+        /// The perceived type of response required when the alarm is in the \"FIRING\" state.
         /// <br/>
         /// Example: CRITICAL
         /// </value>
@@ -77,7 +77,7 @@ namespace Oci.MonitoringService.Models
         };
 
         /// <value>
-        /// The configured severity of the alarm.
+        /// The perceived type of response required when the alarm is in the \"FIRING\" state.
         /// <br/>
         /// Example: CRITICAL
         /// </value>
@@ -93,7 +93,7 @@ namespace Oci.MonitoringService.Models
         /// Timestamp for the transition of the alarm state. For example, the time when the alarm transitioned from OK to Firing.
         /// Note: A three-minute lag for this value accounts for any late-arriving metrics.
         /// <br/>
-        /// Example: 2019-02-01T01:02:29.600Z
+        /// Example: 2023-02-01T01:02:29.600Z
         /// </value>
         /// <remarks>
         /// Required

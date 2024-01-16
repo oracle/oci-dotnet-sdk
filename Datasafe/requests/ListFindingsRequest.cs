@@ -35,6 +35,12 @@ namespace Oci.DatasafeService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
         
+        /// <value>
+        /// A filter to return only the findings that are marked as top findings.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isTopFinding")]
+        public System.Nullable<bool> IsTopFinding { get; set; }
+        
         ///
         /// <value>
         /// A filter to return only findings of a particular risk level.
@@ -52,7 +58,9 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "ADVISORY")]
             Advisory,
             [EnumMember(Value = "PASS")]
-            Pass
+            Pass,
+            [EnumMember(Value = "DEFERRED")]
+            Deferred
         };
 
         /// <value>
@@ -60,6 +68,12 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "severity")]
         public System.Nullable<SeverityEnum> Severity { get; set; }
+        
+        /// <value>
+        /// A filter to return only the findings that match the specified lifecycle states.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        public System.Nullable<FindingLifecycleState> LifecycleState { get; set; }
         
         /// <value>
         /// An optional filter to return only findings that match the specified reference.

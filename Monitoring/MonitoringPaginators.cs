@@ -50,6 +50,55 @@ namespace Oci.MonitoringService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAlarmSuppressions operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAlarmSuppressionsResponse> ListAlarmSuppressionsResponseEnumerator(ListAlarmSuppressionsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAlarmSuppressionsRequest, ListAlarmSuppressionsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAlarmSuppressions(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AlarmSuppressionSummary objects
+        /// contained in responses from the ListAlarmSuppressions operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AlarmSuppressionSummary> ListAlarmSuppressionsRecordEnumerator(ListAlarmSuppressionsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAlarmSuppressionsRequest, ListAlarmSuppressionsResponse, AlarmSuppressionSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAlarmSuppressions(request, retryConfiguration, cancellationToken),
+                response => response.AlarmSuppressionCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListAlarms operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

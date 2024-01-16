@@ -16,7 +16,8 @@ using Newtonsoft.Json.Linq;
 namespace Oci.AdmService.Models
 {
     /// <summary>
-    /// The source details of the usage data on Object Storage.
+    /// The source details of the usage data in object storage. The usage data file uploaded to object storage must be a gzip archive
+    /// of the JSON usage data returned from the GraalVM native-image-inspect tool after a native-image build.
     /// Set `sourceType` to `objectStorageTuple`
     /// and use {@link #usageDataViaObjectStorageTupleDetails(UsageDataViaObjectStorageTupleDetailsRequest) usageDataViaObjectStorageTupleDetails}
     /// when specifying the namespace, bucket name, and object name.

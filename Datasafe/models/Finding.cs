@@ -46,7 +46,9 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "ADVISORY")]
             Advisory,
             [EnumMember(Value = "PASS")]
-            Pass
+            Pass,
+            [EnumMember(Value = "DEFERRED")]
+            Deferred
         };
 
         /// <value>
@@ -55,6 +57,18 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "severity")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SeverityEnum> Severity { get; set; }
+        
+        /// <value>
+        /// The OCID of the assessment that generated this finding.
+        /// </value>
+        [JsonProperty(PropertyName = "assessmentId")]
+        public string AssessmentId { get; set; }
+        
+        /// <value>
+        /// The OCID of the target database.
+        /// </value>
+        [JsonProperty(PropertyName = "targetId")]
+        public string TargetId { get; set; }
         
         /// <value>
         /// The short title for the finding.
@@ -85,6 +99,57 @@ namespace Oci.DatasafeService.Models
         /// </value>
         [JsonProperty(PropertyName = "references")]
         public References References { get; set; }
+        
+        /// <value>
+        /// The severity of the finding as determined by security assessment. This cannot be modified by user.
+        /// </value>
+        [JsonProperty(PropertyName = "oracleDefinedSeverity")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<Finding.SeverityEnum> OracleDefinedSeverity { get; set; }
+        
+        /// <value>
+        /// Determines if this risk level was modified by user.
+        /// </value>
+        [JsonProperty(PropertyName = "isRiskModified")]
+        public System.Nullable<bool> IsRiskModified { get; set; }
+        
+        /// <value>
+        /// Determines if this risk level has changed on the target database since the last time 'severity' was modified by user.
+        /// </value>
+        [JsonProperty(PropertyName = "hasTargetDbRiskLevelChanged")]
+        public System.Nullable<bool> HasTargetDbRiskLevelChanged { get; set; }
+        
+        /// <value>
+        /// User provided reason for accepting or modifying this finding if they choose to do so.
+        /// </value>
+        [JsonProperty(PropertyName = "justification")]
+        public string Justification { get; set; }
+        
+        /// <value>
+        /// The time until which the change in severity(deferred/modified) of this finding is valid.
+        /// </value>
+        [JsonProperty(PropertyName = "timeValidUntil")]
+        public System.Nullable<System.DateTime> TimeValidUntil { get; set; }
+        
+        /// <value>
+        /// The date and time the risk level of finding was last updated, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The current state of the finding.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<FindingLifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Details about the current state of the finding.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
         
     }
 }

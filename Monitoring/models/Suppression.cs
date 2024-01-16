@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MonitoringService.Models
 {
     /// <summary>
-    /// The configuration details for suppressing an alarm.
+    /// The configuration details for an alarm-wide suppression.
+    /// For dimension-specific suppressions, see {@link AlarmSuppression}.
     /// For information about alarms, see
     /// [Alarms Overview](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#AlarmsOverview).
     /// 
@@ -40,7 +41,7 @@ namespace Oci.MonitoringService.Models
         /// <value>
         /// The start date and time for the suppression to take place, inclusive. Format defined by RFC3339.
         /// <br/>
-        /// Example: 2019-02-01T01:02:29.600Z
+        /// Example: 2023-02-01T01:02:29.600Z
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +53,7 @@ namespace Oci.MonitoringService.Models
         /// <value>
         /// The end date and time for the suppression to take place, inclusive. Format defined by RFC3339.
         /// <br/>
-        /// Example: 2019-02-01T02:02:29.600Z
+        /// Example: 2023-02-01T02:02:29.600Z
         /// </value>
         /// <remarks>
         /// Required

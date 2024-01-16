@@ -60,6 +60,12 @@ namespace Oci.DatasafeService.Models
         public ConnectionOption ConnectionOption { get; set; }
         
         /// <value>
+        /// The details of the database to be registered as a peer target database.
+        /// </value>
+        [JsonProperty(PropertyName = "peerTargetDatabaseDetails")]
+        public System.Collections.Generic.List<CreatePeerTargetDatabaseDetails> PeerTargetDatabaseDetails { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

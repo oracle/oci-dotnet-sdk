@@ -25,7 +25,7 @@ namespace Oci.MonitoringService.Models
         /// <value>
         /// The date and time associated with the value of this data point. Format defined by RFC3339.
         /// <br/>
-        /// Example: 2019-02-01T01:02:29.600Z
+        /// Example: 2023-02-01T01:02:29.600Z
         /// </value>
         /// <remarks>
         /// Required

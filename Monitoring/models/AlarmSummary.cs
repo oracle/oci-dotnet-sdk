@@ -132,7 +132,7 @@ namespace Oci.MonitoringService.Models
         public string Query { get; set; }
                 ///
         /// <value>
-        /// The perceived severity of the alarm with regard to the affected system.
+        /// The perceived type of response required when the alarm is in the \"FIRING\" state.
         /// <br/>
         /// Example: CRITICAL
         /// </value>
@@ -152,7 +152,7 @@ namespace Oci.MonitoringService.Models
         };
 
         /// <value>
-        /// The perceived severity of the alarm with regard to the affected system.
+        /// The perceived type of response required when the alarm is in the \"FIRING\" state.
         /// <br/>
         /// Example: CRITICAL
         /// </value>
@@ -168,8 +168,7 @@ namespace Oci.MonitoringService.Models
         /// A list of destinations for alarm notifications.
         /// Each destination is represented by the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)
         /// of a related resource, such as a {@link NotificationTopic}.
-        /// Supported destination services: Notifications
-        /// , Streaming.          
+        /// Supported destination services: Notifications, Streaming.
         /// Limit: One destination per supported destination service.
         /// 
         /// </value>
@@ -198,6 +197,14 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "IsEnabled is required.")]
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
+        
+        /// <value>
+        /// Whether the alarm sends a separate message for each metric stream.
+        /// See [Creating an Alarm That Splits Messages by Metric Stream](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/create-alarm-split.htm).
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isNotificationsPerMetricDimensionEnabled")]
+        public System.Nullable<bool> IsNotificationsPerMetricDimensionEnabled { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

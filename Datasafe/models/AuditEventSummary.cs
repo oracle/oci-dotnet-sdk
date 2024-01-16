@@ -339,6 +339,25 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<AuditTypeEnum> AuditType { get; set; }
         
         /// <value>
+        /// The secondary id assigned for the peer database registered with Data Safe.
+        /// </value>
+        [JsonProperty(PropertyName = "peerTargetDatabaseKey")]
+        public System.Nullable<int> PeerTargetDatabaseKey { get; set; }
+        
+        /// <value>
+        /// The underlying source of unified audit trail.
+        /// </value>
+        [JsonProperty(PropertyName = "trailSource")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AuditTrailSource> TrailSource { get; set; }
+        
+        /// <value>
+        /// Unique name of the database associated to the peer target database.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseUniqueName")]
+        public string DatabaseUniqueName { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

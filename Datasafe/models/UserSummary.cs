@@ -202,5 +202,17 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "adminRoles", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<AdminRolesEnum> AdminRoles { get; set; }
         
+        /// <value>
+        /// Indicates whether the user has access to all the schemas.
+        /// </value>
+        [JsonProperty(PropertyName = "areAllSchemasAccessible")]
+        public System.Nullable<bool> AreAllSchemasAccessible { get; set; }
+        
+        /// <value>
+        /// The list of database schemas current user can access.
+        /// </value>
+        [JsonProperty(PropertyName = "schemaList")]
+        public System.Collections.Generic.List<string> SchemaList { get; set; }
+        
     }
 }

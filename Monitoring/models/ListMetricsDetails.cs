@@ -54,7 +54,7 @@ namespace Oci.MonitoringService.Models
         /// Qualifiers that you want to use when searching for metric definitions.
         /// Available dimensions vary by metric namespace. Each dimension takes the form of a key-value pair.
         /// <br/>
-        /// Example: &quot;resourceId&quot;: &quot;ocid1.instance.region1.phx.exampleuniqueID&quot;
+        /// Example: {&quot;resourceId&quot;: &quot;ocid1.instance.region1.phx.exampleuniqueID&quot;}
         /// </value>
         [JsonProperty(PropertyName = "dimensionFilters")]
         public System.Collections.Generic.Dictionary<string, string> DimensionFilters { get; set; }

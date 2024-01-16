@@ -216,7 +216,7 @@ namespace Oci.MonitoringService.Models
         /// <value>
         /// The human-readable content of the delivered alarm notification. Oracle recommends providing guidance
         /// to operators for resolving the alarm condition. Consider adding links to standard runbook
-        /// practices.
+        /// practices. Avoid entering confidential information.
         /// <br/>
         /// Example: High CPU usage alert. Follow runbook instructions for resolution.
         /// </value>
@@ -266,8 +266,7 @@ namespace Oci.MonitoringService.Models
         /// A list of destinations for alarm notifications.
         /// Each destination is represented by the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)
         /// of a related resource, such as a {@link NotificationTopic}.
-        /// Supported destination services: Notifications
-        /// , Streaming.          
+        /// Supported destination services: Notifications, Streaming.
         /// Limit: One destination per supported destination service.
         /// 
         /// </value>
@@ -357,7 +356,7 @@ namespace Oci.MonitoringService.Models
         /// <value>
         /// The date and time the alarm was created. Format defined by RFC3339.
         /// <br/>
-        /// Example: 2019-02-01T01:02:29.600Z
+        /// Example: 2023-02-01T01:02:29.600Z
         /// </value>
         /// <remarks>
         /// Required
@@ -369,7 +368,7 @@ namespace Oci.MonitoringService.Models
         /// <value>
         /// The date and time the alarm was last updated. Format defined by RFC3339.
         /// <br/>
-        /// Example: 2019-02-03T01:02:29.600Z
+        /// Example: 2023-02-03T01:02:29.600Z
         /// </value>
         /// <remarks>
         /// Required

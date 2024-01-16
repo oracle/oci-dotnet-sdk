@@ -86,7 +86,7 @@ namespace Oci.MonitoringService.Requests
         /// <value>
         /// A filter to return only alarm history entries with timestamps occurring on or after the specified date and time. Format defined by RFC3339.
         /// <br/>
-        /// Example: 2019-01-01T01:00:00.789Z
+        /// Example: 2023-01-01T01:00:00.789Z
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timestampGreaterThanOrEqualTo")]
         public System.Nullable<System.DateTime> TimestampGreaterThanOrEqualTo { get; set; }
@@ -94,7 +94,7 @@ namespace Oci.MonitoringService.Requests
         /// <value>
         /// A filter to return only alarm history entries with timestamps occurring before the specified date and time. Format defined by RFC3339.
         /// <br/>
-        /// Example: 2019-01-02T01:00:00.789Z
+        /// Example: 2023-01-02T01:00:00.789Z
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timestampLessThan")]
         public System.Nullable<System.DateTime> TimestampLessThan { get; set; }

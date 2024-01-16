@@ -25,7 +25,7 @@ namespace Oci.MonitoringService.Models
         /// <value>
         /// The source service or application emitting the metric.
         /// <br/>
-        /// A valid namespace value starts with an alphabetical character and includes only alphanumeric characters and underscores. The \"oci_\" prefix is reserved.
+        /// A valid namespace value starts with an alphabetical character and includes only alphanumeric characters and underscores. Custom metrics can't use the following reserved prefixes: `oci_` and `oracle_`
         /// Avoid entering confidential information.
         /// <br/>
         /// Example: my_namespace
@@ -61,7 +61,7 @@ namespace Oci.MonitoringService.Models
         /// <value>
         /// The name of the metric.
         /// <br/>
-        /// A valid name value starts with an alphabetical character and includes only alphanumeric characters, dots, underscores, hyphens, and dollar signs. The `oci_` prefix is reserved.
+        /// A valid name value starts with an alphabetical character and includes only alphanumeric characters, dots, underscores, hyphens, and dollar signs.
         /// Avoid entering confidential information.
         /// <br/>
         /// Example: my_app.success_rate
@@ -80,7 +80,7 @@ namespace Oci.MonitoringService.Models
         /// A valid dimension value includes only Unicode characters. The character limit for a dimension value is 512.
         /// Empty strings are not allowed for keys or values. Avoid entering confidential information.
         /// <br/>
-        /// Example: &quot;resourceId&quot;: &quot;ocid1.instance.region1.phx.exampleuniqueID&quot;
+        /// Example: {&quot;resourceId&quot;: &quot;ocid1.instance.region1.phx.exampleuniqueID&quot;}
         /// </value>
         /// <remarks>
         /// Required
