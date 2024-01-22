@@ -40,6 +40,96 @@ namespace Oci.MarketplaceService.Models
       [EnumMember(Value = "MXN")]
       Mxn,
       [EnumMember(Value = "CLP")]
-      Clp
+      Clp,
+      [EnumMember(Value = "ALL")]
+      All,
+      [EnumMember(Value = "ARS")]
+      Ars,
+      [EnumMember(Value = "AUD")]
+      Aud,
+      [EnumMember(Value = "BDT")]
+      Bdt,
+      [EnumMember(Value = "BAM")]
+      Bam,
+      [EnumMember(Value = "BGN")]
+      Bgn,
+      [EnumMember(Value = "CNY")]
+      Cny,
+      [EnumMember(Value = "COP")]
+      Cop,
+      [EnumMember(Value = "CRC")]
+      Crc,
+      [EnumMember(Value = "HRK")]
+      Hrk,
+      [EnumMember(Value = "CZK")]
+      Czk,
+      [EnumMember(Value = "DKK")]
+      Dkk,
+      [EnumMember(Value = "EGP")]
+      Egp,
+      [EnumMember(Value = "HKD")]
+      Hkd,
+      [EnumMember(Value = "HUF")]
+      Huf,
+      [EnumMember(Value = "ISK")]
+      Isk,
+      [EnumMember(Value = "IDR")]
+      Idr,
+      [EnumMember(Value = "ILS")]
+      Ils,
+      [EnumMember(Value = "JMD")]
+      Jmd,
+      [EnumMember(Value = "KZT")]
+      Kzt,
+      [EnumMember(Value = "KES")]
+      Kes,
+      [EnumMember(Value = "KRW")]
+      Krw,
+      [EnumMember(Value = "KWD")]
+      Kwd,
+      [EnumMember(Value = "LBP")]
+      Lbp,
+      [EnumMember(Value = "MOP")]
+      Mop,
+      [EnumMember(Value = "MYR")]
+      Myr,
+      [EnumMember(Value = "MVR")]
+      Mvr,
+      [EnumMember(Value = "AED")]
+      Aed,
+      [EnumMember(Value = "NZD")]
+      Nzd,
+      [EnumMember(Value = "NOK")]
+      Nok,
+      [EnumMember(Value = "PKR")]
+      Pkr,
+      [EnumMember(Value = "PEN")]
+      Pen,
+      [EnumMember(Value = "PHP")]
+      Php,
+      [EnumMember(Value = "PLN")]
+      Pln,
+      [EnumMember(Value = "QAR")]
+      Qar,
+      [EnumMember(Value = "RON")]
+      Ron,
+      [EnumMember(Value = "SAR")]
+      Sar,
+      [EnumMember(Value = "RSD")]
+      Rsd,
+      [EnumMember(Value = "SGD")]
+      Sgd,
+      [EnumMember(Value = "ZAR")]
+      Zar,
+      [EnumMember(Value = "SEK")]
+      Sek,
+      [EnumMember(Value = "TWD")]
+      Twd,
+      [EnumMember(Value = "THB")]
+      Thb,
+      [EnumMember(Value = "TRY")]
+      Try,
+      [EnumMember(Value = "VND")]
+      Vnd
   }
 }

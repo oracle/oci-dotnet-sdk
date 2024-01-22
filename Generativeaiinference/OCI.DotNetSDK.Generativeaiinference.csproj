@@ -1,0 +1,19 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\General.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{53BE60ED-195A-4DC7-8242-7786B718E3A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <PackageId>OCI.DotNetSDK.Generativeaiinference</PackageId>
+    <RootNamespace>Oci.GenerativeaiinferenceService</RootNamespace>
+    <Authors>Oracle Cloud Infrastructure</Authors>
+    <Company>Oracle</Company>
+    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Generativeaiinference</PackageTags>
+    <Description>Oracle Cloud Infrastructure Cloud Generative Ai Inference Service</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>
+  </ItemGroup>
+</Project>
