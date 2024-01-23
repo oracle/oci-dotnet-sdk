@@ -64,7 +64,9 @@ namespace Oci.StackmonitoringService.Models
             [EnumMember(Value = "APACHE_HTTP_SERVER")]
             ApacheHttpServer,
             [EnumMember(Value = "ORACLE_GOLDENGATE")]
-            OracleGoldengate
+            OracleGoldengate,
+            [EnumMember(Value = "CUSTOM_RESOURCE")]
+            CustomResource
         };
 
         /// <value>
