@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The request to drop a SQL tuning task.
+    /// It takes either credentialDetails or databaseCredential. It's recommended to provide databaseCredential
     /// 
     /// </summary>
     public class DropSqlTuningTaskDetails 
@@ -35,12 +36,11 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "taskId")]
         public System.Nullable<long> TaskId { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CredentialDetails is required.")]
         [JsonProperty(PropertyName = "credentialDetails")]
         public SqlTuningTaskCredentialDetails CredentialDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
         
     }
 }

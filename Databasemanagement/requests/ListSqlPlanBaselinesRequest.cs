@@ -119,7 +119,9 @@ namespace Oci.DatabasemanagementService.Requests
             [EnumMember(Value = "timeCreated")]
             TimeCreated,
             [EnumMember(Value = "timeLastModified")]
-            TimeLastModified
+            TimeLastModified,
+            [EnumMember(Value = "timeLastExecuted")]
+            TimeLastExecuted
         };
 
         /// <value>
@@ -135,9 +137,47 @@ namespace Oci.DatabasemanagementService.Requests
         public System.Nullable<SortOrders> SortOrder { get; set; }
         
         /// <value>
+        /// A filter to return only SQL plan baselines that are either auto-purged or not auto-purged.
+        /// By default, all SQL plan baselines are returned.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isAutoPurged")]
+        public System.Nullable<bool> IsAutoPurged { get; set; }
+        
+        /// <value>
+        /// A filter to return only SQL plan baselines whose last execution time is
+        /// after the specified value. By default, all SQL plan baselines are returned.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeLastExecutedGreaterThan")]
+        public System.Nullable<System.DateTime> TimeLastExecutedGreaterThan { get; set; }
+        
+        /// <value>
+        /// A filter to return only SQL plan baselines whose last execution time is
+        /// before the specified value. By default, all SQL plan baselines are returned.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeLastExecutedLessThan")]
+        public System.Nullable<System.DateTime> TimeLastExecutedLessThan { get; set; }
+        
+        /// <value>
+        /// A filter to return only SQL plan baselines that are not executed till now.
+        /// By default, all SQL plan baselines are returned.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isNeverExecuted")]
+        public System.Nullable<bool> IsNeverExecuted { get; set; }
+        
+        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// The OCID of the Named Credential.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-named-credential-id")]
+        public string OpcNamedCredentialId { get; set; }
     }
 }

@@ -17,17 +17,17 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// Create an empty Sql tuning sets.
+    /// It takes either credentialDetails or databaseCredential. It's recommended to provide databaseCredential
     /// 
     /// </summary>
     public class CreateSqlTuningSetDetails 
     {
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CredentialDetails is required.")]
         [JsonProperty(PropertyName = "credentialDetails")]
         public SqlTuningSetAdminCredentialDetails CredentialDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
         
         /// <value>
         /// A unique Sql tuning set name.

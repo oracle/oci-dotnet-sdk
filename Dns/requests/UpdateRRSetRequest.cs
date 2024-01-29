@@ -98,7 +98,7 @@ namespace Oci.DnsService.Requests
         public System.Nullable<Scope> Scope { get; set; }
         
         /// <value>
-        /// The OCID of the view the resource is associated with.
+        /// The OCID of the view the zone is associated with. Required when accessing a private zone by name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "viewId")]
         public string ViewId { get; set; }

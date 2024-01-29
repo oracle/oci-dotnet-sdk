@@ -17,17 +17,17 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// Save current list of Sql statements into another Sql tuning set.
+    /// It takes either credentialDetails or databaseCredential. It's recommended to provide databaseCredential
     /// 
     /// </summary>
     public class SaveSqlTuningSetAsDetails 
     {
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CredentialDetails is required.")]
         [JsonProperty(PropertyName = "credentialDetails")]
         public SqlTuningSetAdminCredentialDetails CredentialDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
         
         /// <value>
         /// Flag to indicate whether to save the Sql tuning set or just display the plsql used to save Sql tuning set.

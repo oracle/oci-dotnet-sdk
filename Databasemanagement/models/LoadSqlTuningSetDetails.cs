@@ -17,17 +17,17 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to load the Sql statements into the Sql tuning set.
+    /// It takes either credentialDetails or databaseCredential. It's recommended to provide databaseCredential
     /// 
     /// </summary>
     public class LoadSqlTuningSetDetails 
     {
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CredentialDetails is required.")]
         [JsonProperty(PropertyName = "credentialDetails")]
         public SqlTuningSetAdminCredentialDetails CredentialDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
         
         /// <value>
         /// Flag to indicate whether to create the Sql tuning set or just display the plsql used to create Sql tuning set.

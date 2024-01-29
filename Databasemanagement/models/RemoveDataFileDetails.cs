@@ -17,17 +17,17 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to remove a data file or temp file from the tablespace.
+    /// It takes either credentialDetails or databaseCredential. It's recommended to provide databaseCredential
     /// 
     /// </summary>
     public class RemoveDataFileDetails 
     {
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CredentialDetails is required.")]
         [JsonProperty(PropertyName = "credentialDetails")]
         public TablespaceAdminCredentialDetails CredentialDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
                 ///
         /// <value>
         /// Specifies whether the file is a data file or temp file.

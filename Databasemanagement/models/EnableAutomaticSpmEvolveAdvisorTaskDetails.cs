@@ -17,17 +17,17 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to enable Automatic SPM Evolve Advisor task.
+    /// It takes either credentials or databaseCredential. It's recommended to provide databaseCredential
     /// 
     /// </summary>
     public class EnableAutomaticSpmEvolveAdvisorTaskDetails 
     {
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Credentials is required.")]
         [JsonProperty(PropertyName = "credentials")]
         public ManagedDatabaseCredential Credentials { get; set; }
+        
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
         
     }
 }

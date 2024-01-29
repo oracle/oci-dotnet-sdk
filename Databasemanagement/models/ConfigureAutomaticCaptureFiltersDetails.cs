@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to configure automatic capture filters.
+    /// It takes either credentials or databaseCredential. It's recommended to provide databaseCredential
     /// 
     /// </summary>
     public class ConfigureAutomaticCaptureFiltersDetails 
@@ -32,12 +33,11 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "autoCaptureFilters")]
         public System.Collections.Generic.List<AutomaticCaptureFilterDetails> AutoCaptureFilters { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Credentials is required.")]
         [JsonProperty(PropertyName = "credentials")]
         public ManagedDatabaseCredential Credentials { get; set; }
+        
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
         
     }
 }

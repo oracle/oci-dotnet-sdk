@@ -42,7 +42,7 @@ namespace Oci.DatabasemanagementService.Models
         public string MdsDeploymentType { get; set; }
         
         /// <value>
-        ///  The number of MySQL Databases.
+        /// The number of MySQL Databases.
         /// </value>
         /// <remarks>
         /// Required

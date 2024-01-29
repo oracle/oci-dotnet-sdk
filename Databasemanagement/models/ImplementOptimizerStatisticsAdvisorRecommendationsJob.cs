@@ -60,5 +60,8 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "credentials")]
         public ManagedDatabaseCredential Credentials { get; set; }
         
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
+        
     }
 }

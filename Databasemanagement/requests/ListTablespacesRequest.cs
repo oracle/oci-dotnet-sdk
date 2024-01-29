@@ -84,5 +84,11 @@ namespace Oci.DatabasemanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
+        
+        /// <value>
+        /// The OCID of the Named Credential.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-named-credential-id")]
+        public string OpcNamedCredentialId { get; set; }
     }
 }

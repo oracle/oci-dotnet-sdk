@@ -20,17 +20,17 @@ namespace Oci.DatabasemanagementService.Models
     /// The basicFilter parameter specifies the Sql predicate to filter the Sql from the Sql tuning set defined on attributes of the SQLSET_ROW.
     /// If a valid filter criteria is specified, then, Sql statements matching this filter criteria will be deleted from the current Sql tuning set.
     /// If filter criteria is not specified, then, all Sql statements will be deleted from the current Sql tuning set.
+    /// It takes either credentialDetails or databaseCredential. It's recommended to provide databaseCredential
     /// 
     /// </summary>
     public class DropSqlsInSqlTuningSetDetails 
     {
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CredentialDetails is required.")]
         [JsonProperty(PropertyName = "credentialDetails")]
         public SqlTuningSetAdminCredentialDetails CredentialDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
         
         /// <value>
         /// Flag to indicate whether to drop the Sql statements or just display the plsql used to drop the Sql statements.

@@ -31,5 +31,11 @@ namespace Oci.OspgatewayService.Models
         [JsonProperty(PropertyName = "fields")]
         public System.Collections.Generic.List<Field> Fields { get; set; }
         
+        /// <value>
+        /// Label value pair for allowed values. Used for GIRO
+        /// </value>
+        [JsonProperty(PropertyName = "valueSet")]
+        public System.Collections.Generic.List<ValueSetEntity> ValueSet { get; set; }
+        
     }
 }

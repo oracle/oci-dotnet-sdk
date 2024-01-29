@@ -57,6 +57,12 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "objectKeyForImport")]
         public string ObjectKeyForImport { get; set; }
         
+        /// <value>
+        /// This field controls if the data asset references will be included during import.
+        /// </value>
+        [JsonProperty(PropertyName = "areDataAssetReferencesIncluded")]
+        public System.Nullable<bool> AreDataAssetReferencesIncluded { get; set; }
+        
         [JsonProperty(PropertyName = "importConflictResolution")]
         public ImportConflictResolution ImportConflictResolution { get; set; }
                 ///

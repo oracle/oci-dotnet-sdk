@@ -20,6 +20,8 @@ namespace Oci.DatabasemanagementService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "BASIC")]
-      Basic
+      Basic,
+      [EnumMember(Value = "NAMED_CREDENTIAL")]
+      NamedCredential
   }
 }

@@ -51,5 +51,11 @@ namespace Oci.OspgatewayService.Models
         [JsonProperty(PropertyName = "taxCnpj")]
         public string TaxCnpj { get; set; }
         
+        /// <value>
+        /// Companies' GIRO code
+        /// </value>
+        [JsonProperty(PropertyName = "giro")]
+        public string Giro { get; set; }
+        
     }
 }

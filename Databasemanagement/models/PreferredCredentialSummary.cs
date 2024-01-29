@@ -71,5 +71,11 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "passwordSecretId")]
         public string PasswordSecretId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Named Credential that contains the database user password metadata.
+        /// </value>
+        [JsonProperty(PropertyName = "namedCredentialId")]
+        public string NamedCredentialId { get; set; }
+        
     }
 }

@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to change the plan retention period.
+    /// It takes either credentials or databaseCredential. It's recommended to provide databaseCredential
     /// 
     /// </summary>
     public class ChangePlanRetentionDetails 
@@ -33,12 +34,11 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "retentionWeeks")]
         public System.Nullable<int> RetentionWeeks { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Credentials is required.")]
         [JsonProperty(PropertyName = "credentials")]
         public ManagedDatabaseCredential Credentials { get; set; }
+        
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
         
     }
 }
