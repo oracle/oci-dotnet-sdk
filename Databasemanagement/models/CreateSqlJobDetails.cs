@@ -70,6 +70,12 @@ namespace Oci.DatabasemanagementService.Models
         public string SecretId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Named Credentials containing password secret.
+        /// </value>
+        [JsonProperty(PropertyName = "namedCredentialId")]
+        public string NamedCredentialId { get; set; }
+        
+        /// <value>
         /// The role of the database user. Indicates whether the database user is a normal user or sysdba.
         /// </value>
         [JsonProperty(PropertyName = "role")]

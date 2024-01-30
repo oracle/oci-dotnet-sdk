@@ -100,5 +100,11 @@ namespace Oci.DatabasemanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrders> SortOrder { get; set; }
+        
+        /// <value>
+        /// The OCID of the Named Credential.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-named-credential-id")]
+        public string OpcNamedCredentialId { get; set; }
     }
 }

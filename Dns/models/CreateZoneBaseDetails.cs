@@ -41,6 +41,12 @@ namespace Oci.DnsService.Models
         
         /// <value>
         /// The name of the zone.
+        /// <br/>
+        /// Global zone names must be unique across all other zones within the realm. Private zone names must be unique
+        /// within their view.
+        /// <br/>
+        /// Unicode characters will be converted into punycode, see [RFC 3492](https://tools.ietf.org/html/rfc3492).
+        /// 
         /// </value>
         /// <remarks>
         /// Required

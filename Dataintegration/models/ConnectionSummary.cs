@@ -60,7 +60,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "REST_NO_AUTH_CONNECTION")]
             RestNoAuthConnection,
             [EnumMember(Value = "REST_BASIC_AUTH_CONNECTION")]
-            RestBasicAuthConnection
+            RestBasicAuthConnection,
+            [EnumMember(Value = "OAUTH2_CONNECTION")]
+            Oauth2Connection
         };
 
         
@@ -173,6 +175,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "AMAZON_S3_CONNECTION":
                     obj = new ConnectionSummaryFromAmazonS3();
+                    break;
+                case "OAUTH2_CONNECTION":
+                    obj = new ConnectionSummaryFromOAuth2();
                     break;
                 case "ORACLE_PEOPLESOFT_CONNECTION":
                     obj = new ConnectionSummaryFromOraclePeopleSoft();

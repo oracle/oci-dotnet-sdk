@@ -60,7 +60,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "REST_NO_AUTH_CONNECTION")]
             RestNoAuthConnection,
             [EnumMember(Value = "REST_BASIC_AUTH_CONNECTION")]
-            RestBasicAuthConnection
+            RestBasicAuthConnection,
+            [EnumMember(Value = "OAUTH2_CONNECTION")]
+            Oauth2Connection
         };
 
         
@@ -165,6 +167,9 @@ namespace Oci.DataintegrationService.Models
                     break;
                 case "HDFS_CONNECTION":
                     obj = new UpdateConnectionFromHdfs();
+                    break;
+                case "OAUTH2_CONNECTION":
+                    obj = new UpdateConnectionFromOAuth2();
                     break;
                 case "REST_BASIC_AUTH_CONNECTION":
                     obj = new UpdateConnectionFromRestBasicAuth();

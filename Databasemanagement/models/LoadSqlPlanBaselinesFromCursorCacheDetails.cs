@@ -20,6 +20,7 @@ namespace Oci.DatabasemanagementService.Models
     /// the plans to load using SQL ID, plan identifier, or filterName and filterValue pair.
     /// You can also control the SQL plan baseline into which the plans are loaded using either
     /// SQL text or SQL handle.
+    /// It takes either credentials or databaseCredential. It's recommended to provide databaseCredential
     /// 
     /// </summary>
     public class LoadSqlPlanBaselinesFromCursorCacheDetails 
@@ -129,12 +130,11 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Credentials is required.")]
         [JsonProperty(PropertyName = "credentials")]
         public ManagedDatabaseCredential Credentials { get; set; }
+        
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
         
     }
 }

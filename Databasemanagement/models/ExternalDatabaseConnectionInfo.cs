@@ -17,6 +17,7 @@ namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
     /// The details required to connect to an external Oracle Database.
+    /// It takes either connectionCredentials or databaseCredential. It's recommended to provide databaseCredential
     /// 
     /// </summary>
     public class ExternalDatabaseConnectionInfo : ExternalDbSystemConnectionInfo
@@ -29,12 +30,11 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "connectionString")]
         public DatabaseConnectionString ConnectionString { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ConnectionCredentials is required.")]
         [JsonProperty(PropertyName = "connectionCredentials")]
         public DatabaseConnectionCredentials ConnectionCredentials { get; set; }
+        
+        [JsonProperty(PropertyName = "databaseCredential")]
+        public DatabaseCredentialDetails DatabaseCredential { get; set; }
         
         [JsonProperty(PropertyName = "componentType")]
         private readonly string componentType = "DATABASE";

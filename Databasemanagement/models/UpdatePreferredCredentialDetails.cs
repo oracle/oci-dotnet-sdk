@@ -45,6 +45,9 @@ namespace Oci.DatabasemanagementService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "NAMED_CREDENTIAL":
+                    obj = new UpdateNamedPreferredCredentialDetails();
+                    break;
                 case "BASIC":
                     obj = new UpdateBasicPreferredCredentialDetails();
                     break;

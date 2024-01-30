@@ -90,7 +90,9 @@ namespace Oci.DataintegrationService.Models
             [EnumMember(Value = "DUPLICATED")]
             Duplicated,
             [EnumMember(Value = "REPLACED")]
-            Replaced
+            Replaced,
+            [EnumMember(Value = "EXCLUDED")]
+            Excluded
         };
 
         /// <value>

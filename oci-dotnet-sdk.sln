@@ -279,6 +279,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Generativeai"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Generativeaiinference", "Generativeaiinference\OCI.DotNetSDK.Generativeaiinference.csproj", "{53BE60ED-195A-4DC7-8242-7786B718E3A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Capacitymanagement", "Capacitymanagement\OCI.DotNetSDK.Capacitymanagement.csproj", "{429928E3-2759-439D-BD5A-C0F170003953}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2551,5 +2553,17 @@ Global
         {53BE60ED-195A-4DC7-8242-7786B718E3A5}.Release|x64.Build.0 = Release|Any CPU
         {53BE60ED-195A-4DC7-8242-7786B718E3A5}.Release|x86.ActiveCfg = Release|Any CPU
         {53BE60ED-195A-4DC7-8242-7786B718E3A5}.Release|x86.Build.0 = Release|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Debug|x64.Build.0 = Debug|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Debug|x86.Build.0 = Debug|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Release|Any CPU.Build.0 = Release|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Release|x64.ActiveCfg = Release|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Release|x64.Build.0 = Release|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Release|x86.ActiveCfg = Release|Any CPU
+        {429928E3-2759-439D-BD5A-C0F170003953}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

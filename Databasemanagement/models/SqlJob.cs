@@ -110,6 +110,12 @@ namespace Oci.DatabasemanagementService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RoleEnum> Role { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Named Credentials containing password secret.
+        /// </value>
+        [JsonProperty(PropertyName = "namedCredentialId")]
+        public string NamedCredentialId { get; set; }
+        
         [JsonProperty(PropertyName = "jobType")]
         private readonly string jobType = "SQL";
     }
