@@ -67,7 +67,7 @@ namespace Oci.MediaservicesService
         }
 
         /// <summary>
-        /// Gets the playlist content for the specified Packaging Configuration and Media Asset combination.
+        /// Gets the playlist content for the specified Packaging Configuration and Media Asset combination. This API call is made using the MediaStreamsClient, which requires the endpoint to be set with the value of the distribution channel domain name (for example, https://example_channel.dc.mediaservices.example_region.oci.oraclecloud.com) to generate a session token or playlist for a media asset registered in this distribution channel.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -123,7 +123,7 @@ namespace Oci.MediaservicesService
         }
 
         /// <summary>
-        /// Generate a new streaming session token.
+        /// Generate a new streaming session token. This API call is made using the MediaStreamsClient, which requires the endpoint to be set with the value of the distribution channel domain name (for example, https://example_channel.dc.mediaservices.example_region.oci.oraclecloud.com) to generate a session token or playlist for a media asset registered in this distribution channel.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

@@ -169,6 +169,12 @@ namespace Oci.ManagementagentService.Models
         public System.Nullable<InstallTypes> InstallType { get; set; }
         
         /// <value>
+        /// list of dataSources summaries associated with the agent
+        /// </value>
+        [JsonProperty(PropertyName = "dataSourceSummaryList")]
+        public System.Collections.Generic.List<DataSourceSummaryItem> DataSourceSummaryList { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

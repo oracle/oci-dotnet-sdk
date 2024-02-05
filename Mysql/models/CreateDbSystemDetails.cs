@@ -224,5 +224,8 @@ namespace Oci.MysqlService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DatabaseManagementStatus> DatabaseManagement { get; set; }
         
+        [JsonProperty(PropertyName = "secureConnections")]
+        public SecureConnectionDetails SecureConnections { get; set; }
+        
     }
 }

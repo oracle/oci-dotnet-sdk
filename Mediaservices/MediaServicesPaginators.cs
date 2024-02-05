@@ -197,55 +197,6 @@ namespace Oci.MediaservicesService
         }
 
         /// <summary>
-        /// Creates a new enumerable which will iterate over the responses received from the ListMediaWorkflowJobFacts operation. This enumerable
-        /// will fetch more data from the server as needed.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send</param>
-        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
-        /// <param name="cancellationToken">The cancellation token object</param>
-        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
-        public IEnumerable<ListMediaWorkflowJobFactsResponse> ListMediaWorkflowJobFactsResponseEnumerator(ListMediaWorkflowJobFactsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
-        {
-            return new Common.Utils.ResponseEnumerable<ListMediaWorkflowJobFactsRequest, ListMediaWorkflowJobFactsResponse>(
-                response => response.OpcNextPage,
-                input =>
-                {
-                    if (!string.IsNullOrEmpty(input))
-                    {
-                        request.Page = input;
-                    }
-                    return request;
-                },
-                request => client.ListMediaWorkflowJobFacts(request, retryConfiguration, cancellationToken)
-            );
-        }
-
-        /// <summary>
-        /// Creates a new enumerable which will iterate over the MediaWorkflowJobFactSummary objects
-        /// contained in responses from the ListMediaWorkflowJobFacts operation. This enumerable will fetch more data from the server as needed.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send</param>
-        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
-        /// <param name="cancellationToken">The cancellation token object</param>
-        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
-        public IEnumerable<MediaWorkflowJobFactSummary> ListMediaWorkflowJobFactsRecordEnumerator(ListMediaWorkflowJobFactsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
-        {
-            return new Common.Utils.ResponseRecordEnumerable<ListMediaWorkflowJobFactsRequest, ListMediaWorkflowJobFactsResponse, MediaWorkflowJobFactSummary>(
-                response => response.OpcNextPage,
-                input =>
-                {
-                    if (!string.IsNullOrEmpty(input))
-                    {
-                        request.Page = input;
-                    }
-                    return request;
-                },
-                request => client.ListMediaWorkflowJobFacts(request, retryConfiguration, cancellationToken),
-                response => response.MediaWorkflowJobFactCollection.Items
-            );
-        }
-
-        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListMediaWorkflowJobs operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

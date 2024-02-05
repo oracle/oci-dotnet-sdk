@@ -96,8 +96,8 @@ namespace Oci.KeymanagementService.Models
         /// on the HSM. All cryptographic operations that use a key with a protection mode of `SOFTWARE` are performed on the server. By default,
         /// a key's protection mode is set to `HSM`. You can't change a key's protection mode after the key is created or imported.
         /// A protection mode of `EXTERNAL` mean that the key persists on the customer's external key manager which is hosted externally outside of oracle.
-        /// Oracle only hold a reference to that key. 
-        /// All cryptographic operations that use a key with a protection mode of `EXTERNAL` are performed by external key manager. 
+        /// Oracle only hold a reference to that key.
+        /// All cryptographic operations that use a key with a protection mode of `EXTERNAL` are performed by external key manager.
         /// 
         /// </value>
         ///
@@ -120,8 +120,8 @@ namespace Oci.KeymanagementService.Models
         /// on the HSM. All cryptographic operations that use a key with a protection mode of `SOFTWARE` are performed on the server. By default,
         /// a key's protection mode is set to `HSM`. You can't change a key's protection mode after the key is created or imported.
         /// A protection mode of `EXTERNAL` mean that the key persists on the customer's external key manager which is hosted externally outside of oracle.
-        /// Oracle only hold a reference to that key. 
-        /// All cryptographic operations that use a key with a protection mode of `EXTERNAL` are performed by external key manager. 
+        /// Oracle only hold a reference to that key.
+        /// All cryptographic operations that use a key with a protection mode of `EXTERNAL` are performed by external key manager.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "protectionMode")]

@@ -64,6 +64,9 @@ namespace Oci.VaultService.Models
         [JsonProperty(PropertyName = "secretContent")]
         public SecretContentDetails SecretContent { get; set; }
         
+        [JsonProperty(PropertyName = "rotationConfig")]
+        public RotationConfig RotationConfig { get; set; }
+        
         /// <value>
         /// A list of rules to control how the secret is used and managed.
         /// </value>

@@ -17,6 +17,7 @@
     <ProjectReference Include="..\Logging\OCI.DotNetSDK.Logging.csproj" />
     <ProjectReference Include="..\Loggingingestion\OCI.DotNetSDK.Loggingingestion.csproj" />
     <ProjectReference Include="..\Loggingsearch\OCI.DotNetSDK.Loggingsearch.csproj" />
+    <ProjectReference Include="..\Generativeaiinference\OCI.DotNetSDK.Generativeaiinference.csproj" />
   </ItemGroup>
   <PropertyGroup>
     <OutputType>Exe</OutputType>

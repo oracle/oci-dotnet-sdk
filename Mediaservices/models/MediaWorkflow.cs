@@ -57,6 +57,10 @@ namespace Oci.MediaservicesService.Models
         /// CreateMediaWorkflowDetails or UpdateMediaWorkflowDetails.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Tasks is required.")]
         [JsonProperty(PropertyName = "tasks")]
         public System.Collections.Generic.List<MediaWorkflowTask> Tasks { get; set; }
         
@@ -125,6 +129,12 @@ namespace Oci.MediaservicesService.Models
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public System.Nullable<long> Version { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

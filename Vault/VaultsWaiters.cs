@@ -20,10 +20,12 @@ namespace Oci.VaultService
     public class VaultsWaiters
     {
         private readonly VaultsClient client;
+        private readonly Oci.WorkrequestsService.WorkRequestClient workRequestClient;
 
-        public  VaultsWaiters(VaultsClient client)
+        public  VaultsWaiters(VaultsClient client, Oci.WorkrequestsService.WorkRequestClient workRequestClient)
         {
             this.client = client;
+            this.workRequestClient = workRequestClient;
         }
 
         /// <summary>
@@ -54,5 +56,41 @@ namespace Oci.VaultService
             );
             return new Waiter<GetSecretRequest, GetSecretResponse>(config, agent);
         }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RotateSecretRequest, RotateSecretResponse> ForRotateSecret(RotateSecretRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForRotateSecret(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RotateSecretRequest, RotateSecretResponse> ForRotateSecret(RotateSecretRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<RotateSecretRequest, RotateSecretResponse>(() =>
+            {
+                var response = client.RotateSecret(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
     }
 }

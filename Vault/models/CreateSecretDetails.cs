@@ -69,12 +69,11 @@ namespace Oci.VaultService.Models
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, System.Object> Metadata { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SecretContent is required.")]
         [JsonProperty(PropertyName = "secretContent")]
         public SecretContentDetails SecretContent { get; set; }
+        
+        [JsonProperty(PropertyName = "rotationConfig")]
+        public RotationConfig RotationConfig { get; set; }
         
         /// <value>
         /// A user-friendly name for the secret. Secret names should be unique within a vault. Avoid entering confidential information. Valid characters are uppercase or lowercase letters, numbers, hyphens, underscores, and periods.

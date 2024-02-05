@@ -62,8 +62,8 @@ namespace Oci.ManagementagentService.Requests
         /// <value>
         /// The OperationType of the workRequest
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
-        public System.Nullable<OperationTypes> Type { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<OperationTypes> Type { get; set; }
         
         /// <value>
         /// Filter for items with timeCreated greater or equal to provided value.

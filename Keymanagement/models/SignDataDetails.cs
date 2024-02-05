@@ -121,5 +121,13 @@ namespace Oci.KeymanagementService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SigningAlgorithmEnum> SigningAlgorithm { get; set; }
         
+        /// <value>
+        /// Information that can be used to provide context for audit logging. It is a map that contains any additional
+        /// data that you provide to include with audit logs, if audit logging is enabled.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "loggingContext")]
+        public System.Collections.Generic.Dictionary<string, string> LoggingContext { get; set; }
+        
     }
 }

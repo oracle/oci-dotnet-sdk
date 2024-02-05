@@ -45,6 +45,8 @@ namespace Oci.MediaservicesService.Models
             VisionJob,
             [EnumMember(Value = "TEXT_ANALYSIS")]
             TextAnalysis,
+            [EnumMember(Value = "INPUT_FILE")]
+            InputFile,
             [EnumMember(Value = "OTHER")]
             Other
         };

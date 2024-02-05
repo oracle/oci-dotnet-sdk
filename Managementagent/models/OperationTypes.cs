@@ -26,6 +26,12 @@ namespace Oci.ManagementagentService.Models
       [EnumMember(Value = "CREATE_UPGRADE_PLUGINS")]
       CreateUpgradePlugins,
       [EnumMember(Value = "AGENTIMAGE_UPGRADE")]
-      AgentimageUpgrade
+      AgentimageUpgrade,
+      [EnumMember(Value = "CREATE_DATA_SOURCE")]
+      CreateDataSource,
+      [EnumMember(Value = "UPDATE_DATA_SOURCE")]
+      UpdateDataSource,
+      [EnumMember(Value = "DELETE_DATA_SOURCE")]
+      DeleteDataSource
   }
 }

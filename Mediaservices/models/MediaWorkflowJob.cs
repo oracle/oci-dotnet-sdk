@@ -78,6 +78,8 @@ namespace Oci.MediaservicesService.Models
             InProgress,
             [EnumMember(Value = "WAITING")]
             Waiting,
+            [EnumMember(Value = "REJECTED")]
+            Rejected,
             [EnumMember(Value = "FAILED")]
             Failed,
             [EnumMember(Value = "SUCCEEDED")]
@@ -155,6 +157,12 @@ namespace Oci.MediaservicesService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
