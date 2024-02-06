@@ -121,5 +121,13 @@ namespace Oci.VaultService.Models
         [JsonProperty(PropertyName = "versionNumber")]
         public System.Nullable<long> VersionNumber { get; set; }
         
+        /// <value>
+        /// System tags for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
+        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
     }
 }

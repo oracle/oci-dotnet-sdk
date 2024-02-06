@@ -167,5 +167,17 @@ namespace Oci.ManagementagentService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "accessLevel")]
         public string AccessLevel { get; set; }
+        
+        /// <value>
+        /// The type of the dataSource.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dataSourceType")]
+        public System.Nullable<DataSourceTypes> DataSourceType { get; set; }
+        
+        /// <value>
+        /// Unique name of the dataSource.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dataSourceName", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> DataSourceName { get; set; }
     }
 }

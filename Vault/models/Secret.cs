@@ -130,6 +130,48 @@ namespace Oci.VaultService.Models
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, System.Object> Metadata { get; set; }
         
+        [JsonProperty(PropertyName = "rotationConfig")]
+        public RotationConfig RotationConfig { get; set; }
+                ///
+        /// <value>
+        /// Additional information about the status of the secret rotation
+        /// </value>
+        ///
+        public enum RotationStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "IN_PROGRESS")]
+            InProgress,
+            [EnumMember(Value = "SCHEDULED")]
+            Scheduled,
+            [EnumMember(Value = "NOT_ENABLED")]
+            NotEnabled,
+            [EnumMember(Value = "CANCELLING")]
+            Cancelling
+        };
+
+        /// <value>
+        /// Additional information about the status of the secret rotation
+        /// </value>
+        [JsonProperty(PropertyName = "rotationStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<RotationStatusEnum> RotationStatus { get; set; }
+        
+        /// <value>
+        /// A property indicating when the secret was last rotated successfully, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
+        /// Example: 2019-04-03T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "lastRotationTime")]
+        public System.Nullable<System.DateTime> LastRotationTime { get; set; }
+        
+        /// <value>
+        /// A property indicating when the secret is scheduled to be rotated, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
+        /// Example: 2019-04-03T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "nextRotationTime")]
+        public System.Nullable<System.DateTime> NextRotationTime { get; set; }
+        
         /// <value>
         /// The user-friendly name of the secret. Avoid entering confidential information.
         /// </value>

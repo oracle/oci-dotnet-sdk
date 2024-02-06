@@ -54,6 +54,14 @@ namespace Oci.VaultService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
+        /// System tags for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
+        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
+        /// <value>
         /// The OCID of the master encryption key that is used to encrypt the secret. You must specify a symmetric key to encrypt the secret during import to the vault. You cannot encrypt secrets with asymmetric keys. Furthermore, the key must exist in the vault that you specify.
         /// 
         /// </value>
@@ -114,6 +122,30 @@ namespace Oci.VaultService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
+        [JsonProperty(PropertyName = "rotationConfig")]
+        public RotationConfig RotationConfig { get; set; }
+        
+        /// <value>
+        /// Additional information about the status of the secret rotation
+        /// </value>
+        [JsonProperty(PropertyName = "rotationStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<Secret.RotationStatusEnum> RotationStatus { get; set; }
+        
+        /// <value>
+        /// A property indicating when the secret was last rotated successfully, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
+        /// Example: 2019-04-03T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "lastRotationTime")]
+        public System.Nullable<System.DateTime> LastRotationTime { get; set; }
+        
+        /// <value>
+        /// A property indicating when the secret is scheduled to be rotated, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
+        /// Example: 2019-04-03T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "nextRotationTime")]
+        public System.Nullable<System.DateTime> NextRotationTime { get; set; }
         
         /// <value>
         /// The name of the secret.

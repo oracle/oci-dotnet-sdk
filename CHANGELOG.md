@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 79.0.0 - 2024-02-06
+### Added
+- Support for the Globally Distributed Database service
+- Support for secret auto-rotation in the Secret Management service
+- Support for dedicated key management in the Key Management service
+- Support for resource locking operations in the Digital Media service
+- Support for data sources, including prometheus emitter, in the Management Agent service
+- Support for Bring Your Own Certificates (BYOC) in the MySQL HeatWave Database service
+ 
+### Breaking Changes
+- The operations `GetMediaWorkflowJobFact` and `ListMediaWorkflowJobFacts` were removed in the Digital Media service
+- The models `MediaWorkflowJobFact` and `MediaWorkflowJobFactSummary` were removed in the Digital Media service
+- The property `OpcWorkRequestId` was removed from the `ChangeMediaWorkflowCompartmentResponse`, `ChangeMediaWorkflowConfigurationCompartmentResponse`, `ChangeMediaWorkflowJobCompartmentResponse`, `ChangeStreamDistributionChannelCompartmentResponse`, `DeleteMediaWorkflowConfigurationResponse`, `DeleteMediaWorkflowJobResponse`, and `UpdateStreamPackagingConfigResponse` responses in the Digital Media service
+
 ## 78.2.0 - 2024-01-30
 ### Added
 Support for OCI Control Center service

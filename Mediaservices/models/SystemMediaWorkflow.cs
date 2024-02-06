@@ -61,5 +61,11 @@ namespace Oci.MediaservicesService.Models
         [JsonProperty(PropertyName = "tasks")]
         public System.Collections.Generic.List<MediaWorkflowTask> Tasks { get; set; }
         
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
     }
 }

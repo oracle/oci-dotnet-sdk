@@ -30,6 +30,12 @@ namespace Oci.MediaservicesService.Requests
         public string StreamCdnConfigId { get; set; }
         
         /// <value>
+        /// Whether to override locks (if any exist).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLockOverride")]
+        public System.Nullable<bool> IsLockOverride { get; set; }
+        
+        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

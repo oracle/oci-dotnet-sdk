@@ -40,6 +40,12 @@ namespace Oci.MediaservicesService.Requests
         public UpdateStreamDistributionChannelDetails UpdateStreamDistributionChannelDetails { get; set; }
         
         /// <value>
+        /// Whether to override locks (if any exist).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLockOverride")]
+        public System.Nullable<bool> IsLockOverride { get; set; }
+        
+        /// <value>
         /// For optimistic concurrency control. In the PUT or DELETE call
         /// for a resource, set the `if-match` parameter to the value of the
         /// etag from a previous GET or POST response for that resource.

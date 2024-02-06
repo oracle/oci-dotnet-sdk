@@ -144,6 +144,13 @@ namespace Oci.Common.Http
             var opcRequestId = httpRequest.Headers.Contains("opc-request-id") ?
                 httpRequest.Headers.GetValues("opc-request-id").FirstOrDefault() : string.Empty;
 
+            var contentType = httpResponse?.Content?.Headers?.ContentType;
+            if("text/event-stream".Equals(contentType?.ToString().ToLower()))
+            {
+                logger.Warn("Streaming mode is currently not supported. Please use non-streaming mode for this API instead");
+                throw new OciException("Streaming mode is currently not supported. Please use non-streaming mode for this API instead", new ArgumentException());
+            }
+
             try
             {
                 logger.Debug("Dumping HttpResponse:\n{0}", httpResponse.ToString());

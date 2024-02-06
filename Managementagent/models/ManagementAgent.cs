@@ -181,6 +181,12 @@ namespace Oci.ManagementagentService.Models
         public System.Collections.Generic.List<ManagementAgentProperty> ManagementAgentProperties { get; set; }
         
         /// <value>
+        /// list of dataSources associated with the agent
+        /// </value>
+        [JsonProperty(PropertyName = "dataSourceList")]
+        public System.Collections.Generic.List<DataSource> DataSourceList { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

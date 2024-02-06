@@ -27,6 +27,10 @@ namespace Oci.MediaservicesService.Models
         /// The type of process to run at this task. Refers to the name of a MediaWorkflowTaskDeclaration.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
@@ -84,6 +88,10 @@ namespace Oci.MediaservicesService.Models
         /// contain values or references to other parameters.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Parameters is required.")]
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.Dictionary<string, System.Object> Parameters { get; set; }
         
