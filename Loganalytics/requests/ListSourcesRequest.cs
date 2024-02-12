@@ -153,6 +153,12 @@ namespace Oci.LoganalyticsService.Requests
         public string Name { get; set; }
         
         /// <value>
+        /// The source type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceType")]
+        public string SourceType { get; set; }
+        
+        /// <value>
         /// A comma-separated list of categories used for filtering
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "categories")]

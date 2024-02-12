@@ -28,6 +28,12 @@ namespace Oci.LoganalyticsService.Models
         public System.Collections.Generic.Dictionary<string, string> ExtraInfoAttributes { get; set; }
         
         /// <value>
+        /// The field map.
+        /// </value>
+        [JsonProperty(PropertyName = "fieldMap")]
+        public System.Collections.Generic.Dictionary<string, string> FieldMap { get; set; }
+        
+        /// <value>
         /// The field name value map.
         /// </value>
         [JsonProperty(PropertyName = "fieldNameValueMap")]

@@ -194,5 +194,11 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "isRecallNewDataOnly")]
         public System.Nullable<bool> IsRecallNewDataOnly { get; set; }
         
+        /// <value>
+        /// This indicates if user checked system recommended time range
+        /// </value>
+        [JsonProperty(PropertyName = "isUseRecommendedDataSet")]
+        public System.Nullable<bool> IsUseRecommendedDataSet { get; set; }
+        
     }
 }

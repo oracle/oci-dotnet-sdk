@@ -145,6 +145,16 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// The date and time the resource was last discovered, in the format defined by RFC3339.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastDiscovered")]
+        public System.Nullable<System.DateTime> TimeLastDiscovered { get; set; }
+        
+        [JsonProperty(PropertyName = "metadata")]
+        public LogAnalyticsMetadataCollection Metadata { get; set; }
+        
+        /// <value>
         /// The Boolean flag to indicate if logs are collected for an entity for log analytics usage.
         /// 
         /// </value>

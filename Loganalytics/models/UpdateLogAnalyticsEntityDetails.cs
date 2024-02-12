@@ -73,5 +73,15 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The date and time the resource was last discovered, in the format defined by RFC3339.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastDiscovered")]
+        public System.Nullable<System.DateTime> TimeLastDiscovered { get; set; }
+        
+        [JsonProperty(PropertyName = "metadata")]
+        public LogAnalyticsMetadataDetails Metadata { get; set; }
+        
     }
 }

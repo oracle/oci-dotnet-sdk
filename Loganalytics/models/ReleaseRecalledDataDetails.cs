@@ -59,5 +59,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StorageDataType> DataType { get; set; }
         
+        /// <value>
+        /// This is the id for the recalled data collection to be released.
+        /// If specified, only this collection will be released
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "collectionId")]
+        public System.Nullable<long> CollectionId { get; set; }
+        
     }
 }

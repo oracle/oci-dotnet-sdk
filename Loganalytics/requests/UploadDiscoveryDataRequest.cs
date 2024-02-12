@@ -74,6 +74,13 @@ namespace Oci.LoganalyticsService.Requests
         public System.Nullable<DiscoveryDataTypeEnum> DiscoveryDataType { get; set; }
         
         /// <value>
+        /// The log group OCID that gets mapped to the logs in the discovery data.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "logGroupId")]
+        public string LogGroupId { get; set; }
+        
+        /// <value>
         /// Identifies the type of request payload.
         /// 
         /// </value>

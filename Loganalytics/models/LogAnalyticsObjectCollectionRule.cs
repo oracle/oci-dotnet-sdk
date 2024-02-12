@@ -252,6 +252,21 @@ namespace Oci.LoganalyticsService.Models
         public System.Collections.Generic.List<string> ObjectNameFilters { get; set; }
         
         /// <value>
+        /// Type of files/objects in this object collection rule.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "logType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<LogTypes> LogType { get; set; }
+        
+        /// <value>
+        /// Flag to allow historic collection if poll period overlaps with existing ACTIVE collection rule
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isForceHistoricCollection")]
+        public System.Nullable<bool> IsForceHistoricCollection { get; set; }
+        
+        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>

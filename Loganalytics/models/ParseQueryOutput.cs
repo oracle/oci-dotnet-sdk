@@ -58,6 +58,9 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "responseTimeInMs")]
         public System.Nullable<long> ResponseTimeInMs { get; set; }
         
+        [JsonProperty(PropertyName = "timeFilter")]
+        public TimeRange TimeFilter { get; set; }
+        
         /// <value>
         /// List of querylanguage command descriptors, describing the specfied query string.
         /// 

@@ -86,6 +86,12 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DisasterRecoveryConfiguration.DisasterRecoveryTypeEnum> RemoteDisasterRecoveryType { get; set; }
         
+        /// <value>
+        /// If true, 7 days worth of backups are replicated across regions for Cross-Region ADB or Backup-Based DR between Primary and Standby. If false, the backups taken on the Primary are not replicated to the Standby database.
+        /// </value>
+        [JsonProperty(PropertyName = "isReplicateAutomaticBackups")]
+        public System.Nullable<bool> IsReplicateAutomaticBackups { get; set; }
+        
         [JsonProperty(PropertyName = "source")]
         private readonly string source = "CROSS_REGION_DISASTER_RECOVERY";
     }

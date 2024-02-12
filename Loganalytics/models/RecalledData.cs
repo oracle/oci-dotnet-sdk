@@ -150,5 +150,35 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "createdBy")]
         public string CreatedBy { get; set; }
         
+        /// <value>
+        /// This is the id for the recalled data collection
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CollectionId is required.")]
+        [JsonProperty(PropertyName = "collectionId")]
+        public System.Nullable<long> CollectionId { get; set; }
+        
+        /// <value>
+        /// This is the recalled date start time
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeRecalledDataStarted is required.")]
+        [JsonProperty(PropertyName = "timeRecalledDataStarted")]
+        public System.Nullable<System.DateTime> TimeRecalledDataStarted { get; set; }
+        
+        /// <value>
+        /// This is the recalled data end time
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeRecalledDataEnded is required.")]
+        [JsonProperty(PropertyName = "timeRecalledDataEnded")]
+        public System.Nullable<System.DateTime> TimeRecalledDataEnded { get; set; }
+        
     }
 }

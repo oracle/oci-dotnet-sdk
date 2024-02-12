@@ -61,5 +61,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isSnapshotStandby")]
         public System.Nullable<bool> IsSnapshotStandby { get; set; }
         
+        /// <value>
+        /// If true, 7 days worth of backups are replicated across regions for Cross-Region ADB or Backup-Based DR between Primary and Standby. If false, the backups taken on the Primary are not replicated to the Standby database.
+        /// </value>
+        [JsonProperty(PropertyName = "isReplicateAutomaticBackups")]
+        public System.Nullable<bool> IsReplicateAutomaticBackups { get; set; }
+        
     }
 }
