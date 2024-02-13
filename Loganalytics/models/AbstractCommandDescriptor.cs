@@ -91,6 +91,10 @@ namespace Oci.LoganalyticsService.Models
             ClusterCompare,
             [EnumMember(Value = "DELETE")]
             Delete,
+            [EnumMember(Value = "CREATETABLE")]
+            Createtable,
+            [EnumMember(Value = "SEQUENCE")]
+            Sequence,
             [EnumMember(Value = "DELTA")]
             Delta,
             [EnumMember(Value = "DISTINCT")]
@@ -223,6 +227,9 @@ namespace Oci.LoganalyticsService.Models
                 case "TAIL":
                     obj = new TailCommandDescriptor();
                     break;
+                case "SEQUENCE":
+                    obj = new SequenceCommandDescriptor();
+                    break;
                 case "OUTLIER":
                     obj = new OutlierCommandDescriptor();
                     break;
@@ -288,6 +295,9 @@ namespace Oci.LoganalyticsService.Models
                     break;
                 case "MULTI_SEARCH":
                     obj = new MultiSearchCommandDescriptor();
+                    break;
+                case "CREATETABLE":
+                    obj = new CreateTableCommandDescriptor();
                     break;
                 case "COMPARE":
                     obj = new CompareCommandDescriptor();

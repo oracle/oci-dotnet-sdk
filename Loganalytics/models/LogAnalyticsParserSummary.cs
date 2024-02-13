@@ -240,5 +240,12 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "isNamespaceAware")]
         public System.Nullable<bool> IsNamespaceAware { get; set; }
         
+        /// <value>
+        /// A flag indicating whether the parser is positionally aware.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isPositionAware")]
+        public System.Nullable<bool> IsPositionAware { get; set; }
+        
     }
 }

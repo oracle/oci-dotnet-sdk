@@ -73,6 +73,13 @@ namespace Oci.LoganalyticsService.Requests
         public System.Nullable<KindEnum> Kind { get; set; }
         
         /// <value>
+        /// The target service to use for filtering.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetService")]
+        public string TargetService { get; set; }
+        
+        /// <value>
         /// The rule lifecycle state used for filtering. Currently supported
         /// values are ACTIVE and DELETED.
         /// 

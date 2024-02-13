@@ -64,7 +64,7 @@ namespace Oci.LoganalyticsService.Models
         public string LookupReferenceString { get; set; }
                 ///
         /// <value>
-        /// The lookup type.  Valid values are LOOKUP or DICTIONARY.
+        /// The lookup type. Valid values are Lookup, Dictionary or Module.
         /// </value>
         ///
         public enum TypeEnum {
@@ -74,11 +74,13 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "Lookup")]
             Lookup,
             [EnumMember(Value = "Dictionary")]
-            Dictionary
+            Dictionary,
+            [EnumMember(Value = "Module")]
+            Module
         };
 
         /// <value>
-        /// The lookup type.  Valid values are LOOKUP or DICTIONARY.
+        /// The lookup type. Valid values are Lookup, Dictionary or Module.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

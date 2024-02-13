@@ -32,18 +32,20 @@ namespace Oci.LoganalyticsService.Requests
         
         ///
         /// <value>
-        /// The lookup type.  Valid values are Lookup or Dictionary.
+        /// The lookup type.  Valid values are Lookup, Dictionary or Module.
         /// </value>
         ///
         public enum TypeEnum {
             [EnumMember(Value = "Lookup")]
             Lookup,
             [EnumMember(Value = "Dictionary")]
-            Dictionary
+            Dictionary,
+            [EnumMember(Value = "Module")]
+            Module
         };
 
         /// <value>
-        /// The lookup type.  Valid values are Lookup or Dictionary.
+        /// The lookup type.  Valid values are Lookup, Dictionary or Module.
         /// </value>
         /// <remarks>
         /// Required

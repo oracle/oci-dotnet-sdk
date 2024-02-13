@@ -44,6 +44,12 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<TaskType> TaskType { get; set; }
         
         /// <value>
+        /// Target Service
+        /// </value>
+        [JsonProperty(PropertyName = "targetService")]
+        public string TargetService { get; set; }
+        
+        /// <value>
         /// Compartment Identifier [OCID] (https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>

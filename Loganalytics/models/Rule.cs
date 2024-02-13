@@ -100,6 +100,12 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<RuleKind> Kind { get; set; }
         
         /// <value>
+        /// The target service.
+        /// </value>
+        [JsonProperty(PropertyName = "targetService")]
+        public string TargetService { get; set; }
+        
+        /// <value>
         /// The ingest time rule or scheduled task display name.
         /// </value>
         /// <remarks>

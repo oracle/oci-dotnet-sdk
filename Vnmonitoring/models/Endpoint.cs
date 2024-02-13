@@ -45,7 +45,9 @@ namespace Oci.VnmonitoringService.Models
             [EnumMember(Value = "NETWORK_LOAD_BALANCER_LISTENER")]
             NetworkLoadBalancerListener,
             [EnumMember(Value = "VLAN")]
-            Vlan
+            Vlan,
+            [EnumMember(Value = "ON_PREM")]
+            OnPrem
         };
 
         
@@ -80,6 +82,9 @@ namespace Oci.VnmonitoringService.Models
                     break;
                 case "NETWORK_LOAD_BALANCER":
                     obj = new NetworkLoadBalancerEndpoint();
+                    break;
+                case "ON_PREM":
+                    obj = new OnPremEndpoint();
                     break;
                 case "LOAD_BALANCER":
                     obj = new LoadBalancerEndpoint();

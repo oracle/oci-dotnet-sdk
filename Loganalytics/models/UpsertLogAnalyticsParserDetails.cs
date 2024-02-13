@@ -204,5 +204,12 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "categories")]
         public System.Collections.Generic.List<LogAnalyticsCategory> Categories { get; set; }
         
+        /// <value>
+        /// A flag indicating whether the parser is positionally aware.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isPositionAware")]
+        public System.Nullable<bool> IsPositionAware { get; set; }
+        
     }
 }

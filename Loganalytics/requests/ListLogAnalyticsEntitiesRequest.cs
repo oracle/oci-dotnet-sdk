@@ -203,5 +203,13 @@ namespace Oci.LoganalyticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to return only log analytics entities whose metadata name, value and type matches the specified string.
+        /// Each item in the array has the format \"{name}:{value}:{type}\".  All inputs are case-insensitive.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "metadataEquals", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> MetadataEquals { get; set; }
     }
 }

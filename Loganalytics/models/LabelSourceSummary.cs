@@ -52,6 +52,16 @@ namespace Oci.LoganalyticsService.Models
         public string LabelCondition { get; set; }
         
         /// <value>
+        /// String representation of the label condition.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "conditionString")]
+        public string ConditionString { get; set; }
+        
+        [JsonProperty(PropertyName = "conditionBlock")]
+        public ConditionBlock ConditionBlock { get; set; }
+        
+        /// <value>
         /// The label field display name.
         /// </value>
         [JsonProperty(PropertyName = "labelFieldDisplayname")]

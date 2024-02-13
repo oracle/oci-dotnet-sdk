@@ -16,34 +16,28 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// Result column that contains a table within each row.
-    /// 
+    /// Entity metadata information.
     /// </summary>
-    public class TableColumn : AbstractColumn
+    public class LogAnalyticsMetadata 
     {
         
         /// <value>
-        /// Column descriptors for the table result.
-        /// 
+        /// The metadata name.
         /// </value>
-        [JsonProperty(PropertyName = "columns")]
-        public System.Collections.Generic.List<AbstractColumn> Columns { get; set; }
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
         
         /// <value>
-        /// Results data of the table.
-        /// 
+        /// The metadata value.
         /// </value>
-        [JsonProperty(PropertyName = "result")]
-        public System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, System.Object>> Result { get; set; }
+        [JsonProperty(PropertyName = "value")]
+        public string Value { get; set; }
         
         /// <value>
-        /// True if query did not complete processing all data.
-        /// 
+        /// The metadata type.
         /// </value>
-        [JsonProperty(PropertyName = "arePartialResults")]
-        public System.Nullable<bool> ArePartialResults { get; set; }
-        
         [JsonProperty(PropertyName = "type")]
-        private readonly string type = "TABLE_COLUMN";
+        public string Type { get; set; }
+        
     }
 }

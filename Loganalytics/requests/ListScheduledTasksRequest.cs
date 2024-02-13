@@ -131,5 +131,12 @@ namespace Oci.LoganalyticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayNameContains")]
         public string DisplayNameContains { get; set; }
+        
+        /// <value>
+        /// The target service to use for filtering.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetService")]
+        public string TargetService { get; set; }
     }
 }

@@ -102,5 +102,25 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "createdBy")]
         public string CreatedBy { get; set; }
         
+        /// <value>
+        /// This is the id of the associated recalled data collection
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CollectionId is required.")]
+        [JsonProperty(PropertyName = "collectionId")]
+        public System.Nullable<long> CollectionId { get; set; }
+        
+        /// <value>
+        /// This is the id for the recall request
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RecallId is required.")]
+        [JsonProperty(PropertyName = "recallId")]
+        public System.Nullable<long> RecallId { get; set; }
+        
     }
 }

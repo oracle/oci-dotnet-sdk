@@ -247,5 +247,24 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "categories")]
         public System.Collections.Generic.List<LogAnalyticsCategory> Categories { get; set; }
         
+        /// <value>
+        /// A flag indicating whether the parser is positionally aware.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isPositionAware")]
+        public System.Nullable<bool> IsPositionAware { get; set; }
+        
+        /// <value>
+        /// A list of sources that depend on the parser, either directly or indirectly.
+        /// </value>
+        [JsonProperty(PropertyName = "dependentSources")]
+        public System.Collections.Generic.List<DependentSource> DependentSources { get; set; }
+        
+        /// <value>
+        /// A list of sub parsers used by this parser.
+        /// </value>
+        [JsonProperty(PropertyName = "dependentParsers")]
+        public System.Collections.Generic.List<DependentParser> DependentParsers { get; set; }
+        
     }
 }

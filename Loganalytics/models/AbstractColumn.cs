@@ -112,6 +112,13 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<bool> IsEvaluable { get; set; }
         
         /// <value>
+        /// Identifies if this column should be hidden by default but can be displayed in the UI on demand.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isHidden")]
+        public System.Nullable<bool> IsHidden { get; set; }
+        
+        /// <value>
         /// Field denoting column data type.
         /// 
         /// </value>
