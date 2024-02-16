@@ -90,6 +90,9 @@ namespace Oci.Common
         // OC20
         public static readonly Region EU_JOVANOVAC_1 = Register("eu-jovanovac-1", Realm.OC20, "beg");
 
+        // OC21
+        public static readonly Region ME_DCC_DOHA_1 = Register("me-dcc-doha-1", Realm.OC21, "doh");
+
         // OC24
         public static readonly Region EU_DCC_ZURICH_1 = Register("eu-dcc-zurich-1", Realm.OC24, "avz");
     }

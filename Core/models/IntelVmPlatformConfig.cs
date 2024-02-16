@@ -22,6 +22,19 @@ namespace Oci.CoreService.Models
     public class IntelVmPlatformConfig : PlatformConfig
     {
         
+        /// <value>
+        /// Whether symmetric multithreading is enabled on the instance. Symmetric multithreading is also
+        /// called simultaneous multithreading (SMT) or Intel Hyper-Threading.
+        /// <br/>
+        /// Intel and AMD processors have two hardware execution threads per core (OCPU). SMT permits multiple
+        /// independent threads of execution, to better use the resources and increase the efficiency
+        /// of the CPU. When multithreading is disabled, only one thread is permitted to run on each core, which
+        /// can provide higher or more predictable performance for some workloads.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSymmetricMultiThreadingEnabled")]
+        public System.Nullable<bool> IsSymmetricMultiThreadingEnabled { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "INTEL_VM";
     }

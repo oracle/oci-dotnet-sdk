@@ -13,23 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.AilanguageService.Models
+namespace Oci.DesktopsService.Models
 {
     /// <summary>
-    /// Possible pre trained PHI model information
+    /// Provides the OCID of the new compartment that will contain the desktop pool.
     /// </summary>
-    public class PreTrainedPhiModelDetails : ModelDetails
+    public class ChangeDesktopPoolCompartmentDetails 
     {
         
         /// <value>
-        /// Optional pre trained model version. if nothing specified latest pre trained model will be used. 
-        /// Supported versions can be found at /modelTypes/{modelType}
-        /// 
+        /// The OCID of the compartment which will contain the desktop pool.
         /// </value>
-        [JsonProperty(PropertyName = "version")]
-        public string Version { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
         
-        [JsonProperty(PropertyName = "modelType")]
-        private readonly string modelType = "PRE_TRAINED_PHI";
     }
 }

@@ -207,5 +207,8 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "dedicatedVmHostId")]
         public string DedicatedVmHostId { get; set; }
         
+        [JsonProperty(PropertyName = "platformConfig")]
+        public UpdateInstancePlatformConfig PlatformConfig { get; set; }
+        
     }
 }

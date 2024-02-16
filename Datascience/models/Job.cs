@@ -98,6 +98,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "jobInfrastructureConfigurationDetails")]
         public JobInfrastructureConfigurationDetails JobInfrastructureConfigurationDetails { get; set; }
         
+        [JsonProperty(PropertyName = "jobEnvironmentConfigurationDetails")]
+        public JobEnvironmentConfigurationDetails JobEnvironmentConfigurationDetails { get; set; }
+        
         [JsonProperty(PropertyName = "jobLogConfigurationDetails")]
         public JobLogConfigurationDetails JobLogConfigurationDetails { get; set; }
         

@@ -104,9 +104,6 @@ namespace Oci.AilanguageService.Models
                 case "PRE_TRAINED_SENTIMENT_ANALYSIS":
                     obj = new PreTrainedSentimentAnalysisModelDetails();
                     break;
-                case "PRE_TRAINED_PHI":
-                    obj = new PreTrainedPhiModelDetails();
-                    break;
                 case "PRE_TRAINED_TEXT_CLASSIFICATION":
                     obj = new PreTrainedTextClassificationModelDetails();
                     break;

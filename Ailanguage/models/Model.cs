@@ -140,7 +140,7 @@ namespace Oci.AilanguageService.Models
         
         /// <value>
         /// For pre trained models this will identify model type version used for model creation
-        /// For custom identifying the model by model id is difficult. This param provides ease of use for end customer.
+        /// For custom this will identify model type version used for model creation and custom model on which training has to be done
         /// <<service>>::<<service-name>>_<<model-type-version>>::<<custom model on which this training has to be done>>
         /// ex: ai-lang::NER_V1::CUSTOM-V0
         /// 
@@ -167,7 +167,7 @@ namespace Oci.AilanguageService.Models
         /// Example: { &quot;orcl-cloud&quot;: { &quot;free-tier-retained&quot;: &quot;true&quot; } }
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
-        public System.Collections.Generic.Dictionary<string, System.Object> SystemTags { get; set; }
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
     }
 }

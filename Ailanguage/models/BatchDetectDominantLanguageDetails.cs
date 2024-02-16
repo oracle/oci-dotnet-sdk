@@ -22,6 +22,29 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
+        /// Specifies whether to consider or ignore transliteration. For example \"hi, aap kaise ho? sab kuch teek hai? I will call you tomorrow.\" would be detected as English when ignore transliteration=true, Hindi when ignoreTransliteration=false.
+        /// </value>
+        [JsonProperty(PropertyName = "shouldIgnoreTransliteration")]
+        public System.Nullable<bool> ShouldIgnoreTransliteration { get; set; }
+        
+        /// <value>
+        /// default value is None.
+        /// Specifies maximum number of characters to consider for determining the dominant language.
+        /// If unspecified, then optimum number characters will be considered.
+        /// If 0 is specified then all the characters are used to determine the language.
+        /// If the value is greater than 0, then specified number of characters will be considered from the beginning of the text.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "charsToConsider")]
+        public System.Nullable<int> CharsToConsider { get; set; }
+        
+        /// <value>
+        /// The endpoint which have to be used for inferencing. If endpointId and compartmentId is provided, then inference will be served from custom model which is mapped to this Endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "endpointId")]
+        public string EndpointId { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that calls the API, inference will be served from pre trained model
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
