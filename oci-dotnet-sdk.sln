@@ -283,6 +283,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Capacitymanag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Globallydistributeddatabase", "Globallydistributeddatabase\OCI.DotNetSDK.Globallydistributeddatabase.csproj", "{E8DCA17E-F5ED-47B2-8B4F-5D4AFD9747AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Desktops", "Desktops\OCI.DotNetSDK.Desktops.csproj", "{5C95D96B-3660-42E5-B337-C1A56BED8F05}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2579,5 +2581,17 @@ Global
         {E8DCA17E-F5ED-47B2-8B4F-5D4AFD9747AA}.Release|x64.Build.0 = Release|Any CPU
         {E8DCA17E-F5ED-47B2-8B4F-5D4AFD9747AA}.Release|x86.ActiveCfg = Release|Any CPU
         {E8DCA17E-F5ED-47B2-8B4F-5D4AFD9747AA}.Release|x86.Build.0 = Release|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Debug|x64.Build.0 = Debug|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Debug|x86.Build.0 = Debug|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Release|Any CPU.Build.0 = Release|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Release|x64.ActiveCfg = Release|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Release|x64.Build.0 = Release|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Release|x86.ActiveCfg = Release|Any CPU
+        {5C95D96B-3660-42E5-B337-C1A56BED8F05}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
