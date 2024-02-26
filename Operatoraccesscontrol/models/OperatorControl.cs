@@ -135,6 +135,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Nullable<System.DateTime> TimeOfModification { get; set; }
         
         /// <value>
+        /// Number of approvers required to approve an access request.
+        /// </value>
+        [JsonProperty(PropertyName = "numberOfApprovers")]
+        public System.Nullable<int> NumberOfApprovers { get; set; }
+        
+        /// <value>
         /// Whether the operator control is a default Operator Control.
         /// 
         /// </value>

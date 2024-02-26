@@ -173,5 +173,11 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "externalKeyReferenceDetails")]
         public ExternalKeyReferenceDetails ExternalKeyReferenceDetails { get; set; }
         
+        /// <value>
+        /// A Boolean Value indicating whether this keyversion is generated from auto rotation of key
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoRotated")]
+        public System.Nullable<bool> IsAutoRotated { get; set; }
+        
     }
 }

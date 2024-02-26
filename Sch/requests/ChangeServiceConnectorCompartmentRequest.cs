@@ -20,7 +20,7 @@ namespace Oci.SchService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the service connector.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the connector.
         /// 
         /// </value>
         /// <remarks>
@@ -31,7 +31,7 @@ namespace Oci.SchService.Requests
         public string ServiceConnectorId { get; set; }
         
         /// <value>
-        /// The configuration details for moving a service connector to a different compartment.
+        /// The configuration details for moving a connector to a different compartment.
         /// 
         /// </value>
         /// <remarks>

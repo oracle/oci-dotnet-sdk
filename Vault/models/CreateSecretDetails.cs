@@ -57,6 +57,10 @@ namespace Oci.VaultService.Models
         /// The OCID of the master encryption key that is used to encrypt the secret. You must specify a symmetric key to encrypt the secret during import to the vault. You cannot encrypt secrets with asymmetric keys. Furthermore, the key must exist in the vault that you specify.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "KeyId is required.")]
         [JsonProperty(PropertyName = "keyId")]
         public string KeyId { get; set; }
         
@@ -101,6 +105,16 @@ namespace Oci.VaultService.Models
         [Required(ErrorMessage = "VaultId is required.")]
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
+        
+        [JsonProperty(PropertyName = "secretGenerationContext")]
+        public SecretGenerationContext SecretGenerationContext { get; set; }
+        
+        /// <value>
+        /// The value of this flag determines whether or not secret content will be generated automatically. If not set, it defaults to false.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "enableAutoGeneration")]
+        public System.Nullable<bool> EnableAutoGeneration { get; set; }
         
     }
 }

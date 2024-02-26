@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The configuration details for creating a service connector.
+    /// The configuration details for creating a connector.
     /// 
     /// </summary>
     public class CreateServiceConnectorDetails 
@@ -36,7 +36,7 @@ namespace Oci.SchService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the
-        /// comparment to create the service connector in.
+        /// comparment to create the connector in.
         /// 
         /// </value>
         /// <remarks>

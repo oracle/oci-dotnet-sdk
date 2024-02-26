@@ -81,6 +81,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Collections.Generic.List<string> EmailIdList { get; set; }
         
         /// <value>
+        /// Number of approvers required to approve an access request.
+        /// </value>
+        [JsonProperty(PropertyName = "numberOfApprovers")]
+        public System.Nullable<int> NumberOfApprovers { get; set; }
+        
+        /// <value>
         /// System message that would be displayed to the operator users on accessing the target resource under the governance of this operator control.
         /// </value>
         [JsonProperty(PropertyName = "systemMessage")]

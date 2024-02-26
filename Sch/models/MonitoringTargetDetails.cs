@@ -16,9 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The metric and metric namespace used for the Monitoring target.
+    /// The destination metric for data transferred from the source.
     /// For configuration instructions, see
-    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
+    /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
     /// 
     /// </summary>
     public class MonitoringTargetDetails : TargetDetails

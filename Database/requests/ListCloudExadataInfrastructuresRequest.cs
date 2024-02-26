@@ -97,5 +97,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given cluster placement group ID exactly.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
     }
 }

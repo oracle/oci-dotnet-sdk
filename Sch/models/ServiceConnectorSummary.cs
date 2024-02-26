@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// A summary of properties for the specified service connector.
+    /// A summary of properties for the specified connector.
     /// 
     /// </summary>
     public class ServiceConnectorSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the service connector.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the connector.
         /// 
         /// </value>
         /// <remarks>
@@ -53,7 +53,7 @@ namespace Oci.SchService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the service connector.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the connector.
         /// 
         /// </value>
         /// <remarks>
@@ -64,7 +64,7 @@ namespace Oci.SchService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The date and time when the service connector was created.
+        /// The date and time when the connector was created.
         /// Format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2020-01-25T21:10:29.600Z
         /// </value>
@@ -76,7 +76,7 @@ namespace Oci.SchService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time when the service connector was updated.
+        /// The date and time when the connector was updated.
         /// Format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2020-01-25T21:10:29.600Z
         /// </value>
@@ -88,7 +88,7 @@ namespace Oci.SchService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the service connector.
+        /// The current state of the connector.
         /// 
         /// </value>
         /// <remarks>

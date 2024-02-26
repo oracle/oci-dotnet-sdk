@@ -139,13 +139,13 @@ namespace Oci.DatabaseService.Models
         public string KmsKeyId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts).
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts). This parameter and `secretId` are required for Customer Managed Keys.
         /// </value>
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
         
         /// <value>
-        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation.
+        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation. Autonomous Database Serverless does not use key versions, hence is not applicable for Autonomous Database Serverless instances.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyVersionId")]
@@ -308,7 +308,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsDstFileUpdateEnabled { get; set; }
         
         /// <value>
-        /// DST Time Zone File version of the Autonomous Container Database.
+        /// DST Time-zone File version of the Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "dstFileVersion")]
         public string DstFileVersion { get; set; }
@@ -375,7 +375,7 @@ namespace Oci.DatabaseService.Models
         public AutonomousContainerDatabaseBackupConfig BackupConfig { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the key store.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the key store of Oracle Vault.
         /// </value>
         [JsonProperty(PropertyName = "keyStoreId")]
         public string KeyStoreId { get; set; }
@@ -387,47 +387,41 @@ namespace Oci.DatabaseService.Models
         public string KeyStoreWalletName { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) enabled per OCPU or ECPU in the Autonomous VM Cluster.
-        /// 
+        /// The amount of memory (in GBs) enabled per ECPU or OCPU in the Autonomous VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
         
         /// <value>
-        /// Sum of CPUs available on the Autonomous VM Cluster + Sum of reclaimable CPUs available in the Autonomous Container Database.<br>
-        /// For Autonomous Databases on Dedicated Exadata Infrastructure, the CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. 
+        /// Sum of CPUs available on the Autonomous VM Cluster + Sum of reclaimable CPUs available in the Autonomous Container Database.    
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availableCpus")]
         public System.Nullable<float> AvailableCpus { get; set; }
         
         /// <value>
-        /// The number of CPUs allocated to the Autonomous VM cluster.<br>
-        /// For Autonomous Databases on Dedicated Exadata Infrastructure, the CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. 
+        /// The number of CPUs allocated to the Autonomous VM cluster.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "totalCpus")]
         public System.Nullable<int> TotalCpus { get; set; }
         
         /// <value>
-        /// For Autonomous Databases on Dedicated Exadata Infrastructure:
-        /// - These are the CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
-        /// - The CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. 
+        /// CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "reclaimableCpus")]
         public System.Nullable<float> ReclaimableCpus { get; set; }
         
         /// <value>
-        /// An array of CPU values that can be used to successfully provision a single Autonomous Database.\\
-        /// For Autonomous Database on Dedicated Exadata Infrastructure, the CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model.
+        /// An array of CPU values that can be used to successfully provision a single Autonomous Database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "provisionableCpus")]
         public System.Collections.Generic.List<float> ProvisionableCpus { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Autonomous VM Cluster. 
+        /// The compute model of the Autonomous Container Database. For Autonomous Database on Dedicated Exadata Infrastructure, the CPU type (ECPUs or OCPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// 
         /// </value>
         ///
@@ -442,7 +436,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Autonomous VM Cluster. 
+        /// The compute model of the Autonomous Container Database. For Autonomous Database on Dedicated Exadata Infrastructure, the CPU type (ECPUs or OCPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]

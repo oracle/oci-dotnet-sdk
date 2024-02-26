@@ -38,19 +38,19 @@ namespace Oci.DatabaseService.Models
         public MaintenanceWindow MaintenanceWindowDetails { get; set; }
         
         /// <value>
-        /// The new scaled up/down value for exadata storage in TBs for cloud autonomous VM cluster.
+        /// The new value of autonomous data storage (in TBs) for the Autonomous VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "autonomousDataStorageSizeInTBs")]
         public System.Double AutonomousDataStorageSizeInTBs { get; set; }
         
         /// <value>
-        /// The new scaled up/down value for ocpus for cloud autonomous VM cluster per node.
+        /// The new value of cpus per Autonomous VM cluster per node for the Autonomous VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
         public System.Nullable<int> CpuCoreCountPerNode { get; set; }
         
         /// <value>
-        /// The new scaled up/down value for maxACD count for cloud autonomous VM cluster.
+        /// The new value of maximum number of ACDs for the Autonomous VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "totalContainerDatabases")]
         public System.Nullable<int> TotalContainerDatabases { get; set; }
@@ -59,9 +59,9 @@ namespace Oci.DatabaseService.Models
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Oracle Database service.
         /// Note that when provisioning an [Autonomous Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
-        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`.
+        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
         /// <br/>
-        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
         /// </value>
         ///
@@ -76,9 +76,9 @@ namespace Oci.DatabaseService.Models
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Oracle Database service.
         /// Note that when provisioning an [Autonomous Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
-        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`.
+        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
         /// <br/>
-        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]

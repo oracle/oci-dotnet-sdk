@@ -221,7 +221,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> OcpuCount { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Cloud Autonomous VM Cluster. 
+        /// The compute model of the Cloud Autonomous VM Cluster. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous Database on Dedicated Exadata #Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// 
         /// </value>
         ///
@@ -236,7 +236,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Cloud Autonomous VM Cluster. 
+        /// The compute model of the Cloud Autonomous VM Cluster. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous Database on Dedicated Exadata #Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]
@@ -265,9 +265,9 @@ namespace Oci.DatabaseService.Models
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Oracle Database service.
         /// Note that when provisioning an [Autonomous Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
-        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`.
+        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
         /// <br/>
-        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
         /// </value>
         ///
@@ -285,9 +285,9 @@ namespace Oci.DatabaseService.Models
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Oracle Database service.
         /// Note that when provisioning an [Autonomous Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
-        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`.
+        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
         /// <br/>
-        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]
@@ -357,9 +357,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> AvailableCpus { get; set; }
         
         /// <value>
-        /// For Autonomous Databases on Dedicated Exadata Infrastructure:
-        /// - These are the CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
-        /// - The CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. 
+        /// CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.          
         /// 
         /// </value>
         [JsonProperty(PropertyName = "reclaimableCpus")]
@@ -396,7 +394,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> DbNodeStorageSizeInGBs { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) enabled per OCPU or ECPU. 
+        /// The amount of memory (in GBs) enabled per OCPU or ECPU.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
@@ -463,7 +461,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> NonProvisionableAutonomousContainerDatabases { get; set; }
         
         /// <value>
-        /// The lowest value to which exadataStorage in TBs can be scaled down.
+        /// The lowest value to which exadataStorage (in TBs) can be scaled down.
         /// </value>
         [JsonProperty(PropertyName = "exadataStorageInTBsLowestScaledValue")]
         public System.Double ExadataStorageInTBsLowestScaledValue { get; set; }
@@ -475,7 +473,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> OcpusLowestScaledValue { get; set; }
         
         /// <value>
-        /// The lowest value to which ACDs can be scaled down.
+        /// The lowest value to which maximum number of ACDs can be scaled down.
         /// </value>
         [JsonProperty(PropertyName = "maxAcdsLowestScaledValue")]
         public System.Nullable<int> MaxAcdsLowestScaledValue { get; set; }

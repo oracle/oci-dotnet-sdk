@@ -62,19 +62,19 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// The new scaled up/down value for autonomous data storage in TBs for Autonomous VM cluster.
+        /// The new value of autonomous data storage (in TBs) for the Autonomous VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "autonomousDataStorageSizeInTBs")]
         public System.Double AutonomousDataStorageSizeInTBs { get; set; }
         
         /// <value>
-        /// The new scaled up/down value for cpus per Autonomous VM cluster per node.
+        /// The new value of cpus per Autonomous VM cluster per node for the Autonomous VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCountPerNode")]
         public System.Nullable<int> CpuCoreCountPerNode { get; set; }
         
         /// <value>
-        /// The new scaled up/down value for maxACD count for Autonomous VM cluster.
+        /// The new value of maximum number of ACDs for the Autonomous VM cluster.
         /// </value>
         [JsonProperty(PropertyName = "totalContainerDatabases")]
         public System.Nullable<int> TotalContainerDatabases { get; set; }

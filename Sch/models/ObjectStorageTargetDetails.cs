@@ -16,9 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The bucket used for the Object Storage target.
+    /// The destination bucket for data transferred from the source.
     /// For configuration instructions, see
-    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
+    /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
     /// 
     /// </summary>
     public class ObjectStorageTargetDetails : TargetDetails
@@ -32,8 +32,9 @@ namespace Oci.SchService.Models
         public string Namespace { get; set; }
         
         /// <value>
-        /// The name of the bucket. Avoid entering confidential information.
-        /// 
+        /// The name of the bucket. Valid characters are letters (upper or lower case), numbers, hyphens (-),
+        /// underscores(_), and periods (.). Bucket names must be unique within an Object Storage namespace.
+        /// Avoid entering confidential information. Example: my-new-bucket1
         /// </value>
         /// <remarks>
         /// Required

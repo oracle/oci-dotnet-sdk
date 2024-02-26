@@ -223,5 +223,15 @@ namespace Oci.VaultService.Models
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
         
+        [JsonProperty(PropertyName = "secretGenerationContext")]
+        public SecretGenerationContext SecretGenerationContext { get; set; }
+        
+        /// <value>
+        /// The value of this flag determines whether or not secret content will be generated automatically.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoGenerationEnabled")]
+        public System.Nullable<bool> IsAutoGenerationEnabled { get; set; }
+        
     }
 }

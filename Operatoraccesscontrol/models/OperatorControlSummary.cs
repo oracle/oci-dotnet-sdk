@@ -61,6 +61,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Nullable<ResourceTypes> ResourceType { get; set; }
         
         /// <value>
+        /// Number of approvers required to approve an access request.
+        /// </value>
+        [JsonProperty(PropertyName = "numberOfApprovers")]
+        public System.Nullable<int> NumberOfApprovers { get; set; }
+        
+        /// <value>
         /// Time when the operator control was created, expressed in [RFC 3339] (https://tools.ietf.org/html/rfc3339) timestamp format. Example: '2020-05-22T21:10:29.600Z'
         /// </value>
         [JsonProperty(PropertyName = "timeOfCreation")]

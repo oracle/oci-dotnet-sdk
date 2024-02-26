@@ -41,6 +41,12 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the cluster placement group of the Exadata Infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
                 ///
         /// <value>
         /// The current lifecycle state of the cloud Exadata infrastructure resource.
@@ -236,6 +242,14 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// System tags for this resource. Each key is predefined and scoped to a namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
         /// The list of customer email addresses that receive information from Oracle about the specified OCI Database service resource.

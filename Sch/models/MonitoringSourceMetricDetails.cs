@@ -24,7 +24,7 @@ namespace Oci.SchService.Models
     {
                 ///
         /// <value>
-        /// The type descriminator.
+        /// The type discriminator.
         /// 
         /// </value>
         ///

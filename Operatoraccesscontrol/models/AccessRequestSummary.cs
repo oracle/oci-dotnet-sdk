@@ -141,6 +141,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Nullable<bool> IsAutoApproved { get; set; }
         
         /// <value>
+        /// Time in future when the user for the access request needs to be created in [RFC 3339](https://tools.ietf.org/html/rfc3339)timestamp format. Example: '2020-05-22T21:10:29.600Z'
+        /// </value>
+        [JsonProperty(PropertyName = "timeRequestedForFutureAccess")]
+        public System.Nullable<System.DateTime> TimeRequestedForFutureAccess { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// 
         /// </value>

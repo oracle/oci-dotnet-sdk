@@ -18,14 +18,14 @@ namespace Oci.SchService.Models
     /// <summary>
     /// The Monitoring source.
     /// For configuration instructions, see
-    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
+    /// [Creating a Connector with a Monitoring Source](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector-monitoring-source.htm).
     /// 
     /// </summary>
     public class MonitoringSourceDetails : SourceDetails
     {
         
         /// <value>
-        /// The list of metric namespaces to retrieve data from.
+        /// One or more compartment-specific lists of metric namespaces to retrieve data from.
         /// 
         /// </value>
         /// <remarks>

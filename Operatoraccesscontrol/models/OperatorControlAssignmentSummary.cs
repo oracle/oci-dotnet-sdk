@@ -69,6 +69,18 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Nullable<ResourceTypes> ResourceType { get; set; }
         
         /// <value>
+        /// Name of the target resource.
+        /// </value>
+        [JsonProperty(PropertyName = "resourceName")]
+        public string ResourceName { get; set; }
+        
+        /// <value>
+        /// Name of the operator control name associated.
+        /// </value>
+        [JsonProperty(PropertyName = "opControlName")]
+        public string OpControlName { get; set; }
+        
+        /// <value>
         /// The time at which the target resource will be brought under the governance of the operator control in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format. Example: '2020-05-22T21:10:29.600Z'
         /// </value>
         [JsonProperty(PropertyName = "timeAssignmentFrom")]
@@ -121,6 +133,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         /// </value>
         [JsonProperty(PropertyName = "remoteSyslogServerPort")]
         public System.Nullable<int> RemoteSyslogServerPort { get; set; }
+        
+        /// <value>
+        /// If set, then the hypervisor audit logs will be forwarded to the relevant remote syslog server
+        /// </value>
+        [JsonProperty(PropertyName = "isHypervisorLogForwarded")]
+        public System.Nullable<bool> IsHypervisorLogForwarded { get; set; }
         
         /// <value>
         /// The current lifcycle state of the OperatorControl.

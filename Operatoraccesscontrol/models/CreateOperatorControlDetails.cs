@@ -90,6 +90,12 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Nullable<ResourceTypes> ResourceType { get; set; }
         
         /// <value>
+        /// Number of approvers required to approve an access request.
+        /// </value>
+        [JsonProperty(PropertyName = "numberOfApprovers")]
+        public System.Nullable<int> NumberOfApprovers { get; set; }
+        
+        /// <value>
         /// List of emailId.
         /// 
         /// </value>

@@ -20,7 +20,7 @@ namespace Oci.SchService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the service connector.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the connector.
         /// 
         /// </value>
         /// <remarks>

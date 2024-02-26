@@ -27,6 +27,7 @@ namespace Oci.DatacatalogService.Models
     /// IMPORT_DATA_ASSET - Job type to import technical objects to a data asset.
     /// CREATE_SCAN_PROXY - Job type to create scan proxy resource for RAC enabled data asset.
     /// ASYNC_EXPORT_GLOSSARY - Job type to export glossary metadata to a file asynchronously.
+    /// ASYNC_EXPORT_DATA_ASSET - Job type to export data assets metadata to a file asynchronously.
     /// 
   /// </summary>
   public enum JobType {
@@ -70,6 +71,8 @@ namespace Oci.DatacatalogService.Models
       [EnumMember(Value = "CREATE_SCAN_PROXY")]
       CreateScanProxy,
       [EnumMember(Value = "ASYNC_EXPORT_GLOSSARY")]
-      AsyncExportGlossary
+      AsyncExportGlossary,
+      [EnumMember(Value = "ASYNC_EXPORT_DATA_ASSET")]
+      AsyncExportDataAsset
   }
 }

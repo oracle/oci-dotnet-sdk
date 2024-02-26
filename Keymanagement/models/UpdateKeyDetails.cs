@@ -22,6 +22,15 @@ namespace Oci.KeymanagementService.Models
     {
         
         /// <value>
+        /// A parameter specifying whether the auto key rotation is enabled or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoRotationEnabled")]
+        public System.Nullable<bool> IsAutoRotationEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "autoKeyRotationDetails")]
+        public AutoKeyRotationDetails AutoKeyRotationDetails { get; set; }
+        
+        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}

@@ -20,7 +20,7 @@ namespace Oci.SchService.Requests
     {
         
         /// <value>
-        /// Configuration details for the new service connector.
+        /// Configuration details for the new connector.
         /// 
         /// </value>
         /// <remarks>

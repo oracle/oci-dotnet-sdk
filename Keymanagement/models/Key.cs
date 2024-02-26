@@ -223,6 +223,15 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "isPrimary")]
         public System.Nullable<bool> IsPrimary { get; set; }
         
+        /// <value>
+        /// A parameter specifying whether the auto key rotation is enabled or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoRotationEnabled")]
+        public System.Nullable<bool> IsAutoRotationEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "autoKeyRotationDetails")]
+        public AutoKeyRotationDetails AutoKeyRotationDetails { get; set; }
+        
         [JsonProperty(PropertyName = "externalKeyReferenceDetails")]
         public ExternalKeyReferenceDetails ExternalKeyReferenceDetails { get; set; }
         

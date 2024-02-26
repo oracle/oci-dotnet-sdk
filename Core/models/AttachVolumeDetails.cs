@@ -35,7 +35,9 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the instance.
+        /// The OCID of the instance. For AttachVolume operation, this is a required field for the request,
+        /// see {@link #attachVolume(AttachVolumeRequest) attachVolume}.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +64,8 @@ namespace Oci.CoreService.Models
         
         
         /// <value>
-        /// The OCID of the volume.
+        /// The OCID of the volume. If CreateVolumeDetails is specified, this field must be omitted from the request.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

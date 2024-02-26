@@ -16,7 +16,9 @@ using Newtonsoft.Json.Linq;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The type of [cursor](https://docs.cloud.oracle.com/iaas/Content/Streaming/Tasks/using_a_single_consumer.htm#usingcursors), which determines the starting point from which the stream will be consumed.
+    /// The [read setting](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector-streaming-source.htm), which determines where in the stream to start moving data.
+    /// For configuration instructions, see
+    /// [Creating a Connector with a Streaming Source](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector-streaming-source.htm).
     /// 
     /// </summary>
     [JsonConverter(typeof(StreamingCursorDetailsModelConverter))]
@@ -24,7 +26,7 @@ namespace Oci.SchService.Models
     {
                 ///
         /// <value>
-        /// The type descriminator.
+        /// The type discriminator.
         /// 
         /// </value>
         ///

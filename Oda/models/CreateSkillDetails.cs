@@ -42,6 +42,12 @@ namespace Oci.OdaService.Models
         public string PlatformVersion { get; set; }
         
         /// <value>
+        /// The resource's dialog version.
+        /// </value>
+        [JsonProperty(PropertyName = "dialogVersion")]
+        public string DialogVersion { get; set; }
+        
+        /// <value>
         /// The multilingual mode for the resource.
         /// </value>
         [JsonProperty(PropertyName = "multilingualMode")]

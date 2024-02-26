@@ -35,6 +35,8 @@ namespace Oci.SchService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the log group.
+        /// Note: For the Notifications target, only _Audit is allowed.
+        /// Example OCID for _Audit log group: ocid1.tenancy.oc1..exampleuniqueid/_Audit
         /// 
         /// </value>
         [JsonProperty(PropertyName = "logGroupId")]

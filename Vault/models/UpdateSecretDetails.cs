@@ -73,5 +73,15 @@ namespace Oci.VaultService.Models
         [JsonProperty(PropertyName = "secretRules")]
         public System.Collections.Generic.List<SecretRule> SecretRules { get; set; }
         
+        [JsonProperty(PropertyName = "secretGenerationContext")]
+        public SecretGenerationContext SecretGenerationContext { get; set; }
+        
+        /// <value>
+        /// The value of this flag determines whether or not secret content will be generated automatically.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "enableAutoGeneration")]
+        public System.Nullable<bool> EnableAutoGeneration { get; set; }
+        
     }
 }

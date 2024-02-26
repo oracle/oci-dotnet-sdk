@@ -176,6 +176,18 @@ namespace Oci.OperatoraccesscontrolService.Models
         public string RemoteSyslogServerCACert { get; set; }
         
         /// <value>
+        /// If set, then the hypervisor audit logs will be forwarded to the relevant remote syslog server
+        /// </value>
+        [JsonProperty(PropertyName = "isHypervisorLogForwarded")]
+        public System.Nullable<bool> IsHypervisorLogForwarded { get; set; }
+        
+        /// <value>
+        /// Name of the operator control name associated.
+        /// </value>
+        [JsonProperty(PropertyName = "opControlName")]
+        public string OpControlName { get; set; }
+        
+        /// <value>
         /// The boolean if true would autoApprove during maintenance.
         /// </value>
         [JsonProperty(PropertyName = "isAutoApproveDuringMaintenance")]

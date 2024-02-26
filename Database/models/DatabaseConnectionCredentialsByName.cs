@@ -19,7 +19,7 @@ namespace Oci.DatabaseService.Models
     /// Existing named credential used to connect to the database.
     /// 
     /// </summary>
-    public class DatabaseConnectionCredentailsByName : DatabaseConnectionCredentials
+    public class DatabaseConnectionCredentialsByName : DatabaseConnectionCredentials
     {
         
         /// <value>
