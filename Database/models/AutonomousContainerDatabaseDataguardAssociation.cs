@@ -33,7 +33,7 @@ namespace Oci.DatabaseService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Container Database that has a relationship with the peer Autonomous Container Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Container Database that has a relationship with the peer Autonomous Container Database. Used only by Autonomous Database on Dedicated Exadata Infrastructure.
         /// 
         /// </value>
         /// <remarks>
@@ -167,7 +167,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<PeerRoleEnum> PeerRole { get; set; }
                 ///
         /// <value>
-        /// The current state of Autonomous Data Guard.
+        /// The current state of the Autonomous Container Database.
         /// </value>
         ///
         public enum PeerLifecycleStateEnum {
@@ -178,22 +178,34 @@ namespace Oci.DatabaseService.Models
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
             Available,
-            [EnumMember(Value = "ROLE_CHANGE_IN_PROGRESS")]
-            RoleChangeInProgress,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
             [EnumMember(Value = "TERMINATING")]
             Terminating,
             [EnumMember(Value = "TERMINATED")]
             Terminated,
             [EnumMember(Value = "FAILED")]
             Failed,
+            [EnumMember(Value = "BACKUP_IN_PROGRESS")]
+            BackupInProgress,
+            [EnumMember(Value = "RESTORING")]
+            Restoring,
+            [EnumMember(Value = "RESTORE_FAILED")]
+            RestoreFailed,
+            [EnumMember(Value = "RESTARTING")]
+            Restarting,
+            [EnumMember(Value = "MAINTENANCE_IN_PROGRESS")]
+            MaintenanceInProgress,
+            [EnumMember(Value = "ROLE_CHANGE_IN_PROGRESS")]
+            RoleChangeInProgress,
+            [EnumMember(Value = "ENABLING_AUTONOMOUS_DATA_GUARD")]
+            EnablingAutonomousDataGuard,
             [EnumMember(Value = "UNAVAILABLE")]
-            Unavailable,
-            [EnumMember(Value = "UPDATING")]
-            Updating
+            Unavailable
         };
 
         /// <value>
-        /// The current state of Autonomous Data Guard.
+        /// The current state of the Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "peerLifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

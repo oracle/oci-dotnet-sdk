@@ -65,6 +65,15 @@ namespace Oci.KeymanagementService.Models
         [Required(ErrorMessage = "KeyShape is required.")]
         [JsonProperty(PropertyName = "keyShape")]
         public KeyShape KeyShape { get; set; }
+        
+        /// <value>
+        /// A parameter specifying whether the auto key rotation is enabled or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoRotationEnabled")]
+        public System.Nullable<bool> IsAutoRotationEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "autoKeyRotationDetails")]
+        public AutoKeyRotationDetails AutoKeyRotationDetails { get; set; }
                 ///
         /// <value>
         /// The key's protection mode indicates how the key persists and where cryptographic operations that use the key are performed.

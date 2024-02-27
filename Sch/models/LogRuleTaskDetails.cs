@@ -16,16 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The log rule task.
+    /// The log filter task.
     /// For configuration instructions, see
-    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
+    /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
     /// 
     /// </summary>
     public class LogRuleTaskDetails : TaskDetails
     {
         
         /// <value>
-        /// A filter or mask to limit the source used in the flow defined by the service connector.
+        /// A filter or mask to limit the source used in the flow defined by the connector.
         /// 
         /// </value>
         /// <remarks>

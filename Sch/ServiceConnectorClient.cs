@@ -73,13 +73,13 @@ namespace Oci.SchService
         }
 
         /// <summary>
-        /// Activates the specified service connector.
+        /// Activates the specified connector.
         /// &lt;br/&gt;
-        /// After you send your request, the service connector&#39;s state is temporarily
+        /// After you send your request, the connector&#39;s state is temporarily
         /// UPDATING. When the state changes to ACTIVE, data begins transferring from the
-        /// source service to the target service. For instructions on activating service
-        /// connectors, see
-        /// [To activate a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#activate).
+        /// source service to the target service.
+        /// For more information, see
+        /// [Activating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/activate-service-connector.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -116,7 +116,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ActivateServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/ActivateServiceConnector",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -136,9 +136,9 @@ namespace Oci.SchService
         }
 
         /// <summary>
-        /// Moves a service connector into a different compartment within the same tenancy.
-        /// For information about moving resources between compartments, see
-        /// [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
+        /// Moves a connector into a different compartment within the same tenancy.
+        /// For more information, see
+        /// [Moving a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/change-compartment-service-connector.htm).
         /// &lt;br/&gt;
         /// When provided, If-Match is checked against ETag values of the resource.
         /// 
@@ -177,7 +177,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ChangeServiceConnectorCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/ChangeServiceConnectorCompartment",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -197,26 +197,26 @@ namespace Oci.SchService
         }
 
         /// <summary>
-        /// Creates a new service connector in the specified compartment.
-        /// A service connector is a logically defined flow for moving data from
+        /// Creates a new connector in the specified compartment.
+        /// A connector is a logically defined flow for moving data from
         /// a source service to a destination service in Oracle Cloud Infrastructure.
-        /// For instructions, see
-        /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
-        /// For general information about service connectors, see
-        /// [Service Connector Hub Overview](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/overview.htm).
+        /// For more information, see
+        /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
+        /// For general information about connectors, see
+        /// [Overview of Connector Hub](https://docs.cloud.oracle.com/iaas/Content/connector-hub/overview.htm).
         /// &lt;br/&gt;
         /// For purposes of access control, you must provide the
         /// [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where
-        /// you want the service connector to reside. Notice that the service connector
+        /// you want the connector to reside. Notice that the connector
         /// doesn&#39;t have to be in the same compartment as the source or target services.
         /// For information about access control and compartments, see
         /// [Overview of the IAM Service](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/overview.htm).
         /// &lt;br/&gt;
-        /// After you send your request, the new service connector&#39;s state is temporarily
+        /// After you send your request, the new connector&#39;s state is temporarily
         /// CREATING. When the state changes to ACTIVE, data begins transferring from the
         /// source service to the target service. For instructions on deactivating and
-        /// activating service connectors, see
-        /// [To activate or deactivate a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/overview.htm).
+        /// activating connectors, see
+        /// [Activating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/activate-service-connector.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -253,7 +253,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "CreateServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/CreateServiceConnector",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -273,12 +273,12 @@ namespace Oci.SchService
         }
 
         /// <summary>
-        /// Deactivates the specified service connector.
+        /// Deactivates the specified connector.
         /// &lt;br/&gt;
-        /// After you send your request, the service connector&#39;s state is temporarily
+        /// After you send your request, the connector&#39;s state is temporarily
         /// UPDATING and any data transfer stops. The state then changes to INACTIVE.
-        /// For instructions on deactivating service connectors, see
-        /// [To deactivate a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#deactivate).
+        /// For more information, see
+        /// [Deactivating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/deactivate-service-connector.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -315,7 +315,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "DeactivateServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/DeactivateServiceConnector",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -335,9 +335,11 @@ namespace Oci.SchService
         }
 
         /// <summary>
-        /// Deletes the specified service connector.
+        /// Deletes the specified connector.
+        /// For more information, see
+        /// [Deleting a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/delete-service-connector.htm).
         /// &lt;br/&gt;
-        /// After you send your request, the service connector&#39;s state is temporarily
+        /// After you send your request, the connector&#39;s state is temporarily
         /// DELETING and any data transfer stops. The state then changes to DELETED.
         /// 
         /// </summary>
@@ -375,7 +377,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "DeleteServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/DeleteServiceConnector",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -395,7 +397,9 @@ namespace Oci.SchService
         }
 
         /// <summary>
-        /// Gets the specified service connector&#39;s configuration information.
+        /// Gets the specified connector&#39;s configuration information.
+        /// For more information, see
+        /// [Getting a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/get-service-connector.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -432,7 +436,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "GetServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/GetServiceConnector",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -453,6 +457,8 @@ namespace Oci.SchService
 
         /// <summary>
         /// Gets the details of the specified work request.
+        /// For more information, see
+        /// [Getting a Work Request&#39;s Details](https://docs.cloud.oracle.com/iaas/Content/connector-hub/get-work-request.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -489,7 +495,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/WorkRequest/GetWorkRequest",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -509,7 +515,9 @@ namespace Oci.SchService
         }
 
         /// <summary>
-        /// Lists service connectors in the specified compartment.
+        /// Lists connectors in the specified compartment.
+        /// For more information, see
+        /// [Listing Connectors](https://docs.cloud.oracle.com/iaas/Content/connector-hub/list-service-connector.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -546,7 +554,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ListServiceConnectors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/ListServiceConnectors",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -567,6 +575,8 @@ namespace Oci.SchService
 
         /// <summary>
         /// Lists work request errors for the specified work request. Results are paginated.
+        /// For more information, see
+        /// [Listing Work Request Errors](https://docs.cloud.oracle.com/iaas/Content/connector-hub/list-work-request-error.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -603,7 +613,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/WorkRequestError/ListWorkRequestErrors",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -624,6 +634,8 @@ namespace Oci.SchService
 
         /// <summary>
         /// Lists logs for the specified work request. Results are paginated.
+        /// For more information, see
+        /// [Listing Work Request Log Entries](https://docs.cloud.oracle.com/iaas/Content/connector-hub/list-work-request-log-entry.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -660,7 +672,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/WorkRequestLogEntry/ListWorkRequestLogs",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -681,6 +693,8 @@ namespace Oci.SchService
 
         /// <summary>
         /// Lists the work requests in the specified compartment.
+        /// For more information, see
+        /// [Listing Work Requests](https://docs.cloud.oracle.com/iaas/Content/connector-hub/list-work-request.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -717,7 +731,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/WorkRequest/ListWorkRequests",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -737,9 +751,11 @@ namespace Oci.SchService
         }
 
         /// <summary>
-        /// Updates the configuration information for the specified service connector.
+        /// Updates the configuration information for the specified connector.
+        /// For more information, see
+        /// [Updating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/update-service-connector.htm).
         /// &lt;br/&gt;
-        /// After you send your request, the service connector&#39;s state is temporarily
+        /// After you send your request, the connector&#39;s state is temporarily
         /// UPDATING and any data transfer pauses. The state then changes back to its
         /// original value: if ACTIVE, then data transfer resumes.
         /// 
@@ -778,7 +794,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "UpdateServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/UpdateServiceConnector",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

@@ -279,6 +279,12 @@ namespace Oci.CoreService.Models
         public string SubnetId { get; set; }
         
         /// <value>
+        /// Volume attachments to create as part of the launch instance operation.
+        /// </value>
+        [JsonProperty(PropertyName = "launchVolumeAttachments")]
+        public System.Collections.Generic.List<LaunchAttachVolumeDetails> LaunchVolumeAttachments { get; set; }
+        
+        /// <value>
         /// Whether to enable in-transit encryption for the data volume's paravirtualized attachment. This field applies to both block volumes and boot volumes. The default value is false.
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]

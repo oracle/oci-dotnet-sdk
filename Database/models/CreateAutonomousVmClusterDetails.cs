@@ -108,7 +108,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpuCoreCountPerNode { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Autonomous VM Cluster. 
+        /// The compute model of the Autonomous VM Cluster. ECPU compute model is the recommended model and OCPU compute model is legacy.
         /// 
         /// </value>
         ///
@@ -120,7 +120,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Autonomous VM Cluster. 
+        /// The compute model of the Autonomous VM Cluster. ECPU compute model is the recommended model and OCPU compute model is legacy.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]

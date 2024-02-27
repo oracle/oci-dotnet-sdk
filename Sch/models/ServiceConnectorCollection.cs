@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// Collection of service connector property summaries.
+    /// Collection of connector property summaries.
     /// 
     /// </summary>
     public class ServiceConnectorCollection 

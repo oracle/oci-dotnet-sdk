@@ -115,6 +115,12 @@ namespace Oci.OdaService.Models
         public string PlatformVersion { get; set; }
         
         /// <value>
+        /// The resource's dialog version.
+        /// </value>
+        [JsonProperty(PropertyName = "dialogVersion")]
+        public string DialogVersion { get; set; }
+        
+        /// <value>
         /// The unique identifier for the base reource (when this resource extends another).
         /// </value>
         [JsonProperty(PropertyName = "baseId")]

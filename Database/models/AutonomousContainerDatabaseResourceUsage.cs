@@ -38,13 +38,13 @@ namespace Oci.DatabaseService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// CPUs / cores reclaimable or released to cluster on Autonomous Container Database restart.
+        /// Number of CPUs that are reclaimable or released to the AVMC on Autonomous Container Database restart.
         /// </value>
         [JsonProperty(PropertyName = "reclaimableCpus")]
         public System.Nullable<float> ReclaimableCpus { get; set; }
         
         /// <value>
-        /// CPUs / cores available for ADB provisioning or scaling in the Autonomous Container Database.
+        /// CPUs available for provisioning or scaling an Autonomous Database in the Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "availableCpus")]
         public System.Nullable<float> AvailableCpus { get; set; }
@@ -78,7 +78,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> UsedCpus { get; set; }
         
         /// <value>
-        /// Valid list of provisionable CPUs / cores for ADB creation.
+        /// Valid list of provisionable CPUs for Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "provisionableCpus")]
         public System.Collections.Generic.List<float> ProvisionableCpus { get; set; }

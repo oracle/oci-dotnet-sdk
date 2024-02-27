@@ -19,7 +19,7 @@ namespace Oci.SchService.Models
     /// The Functions task. 
     /// Batch input for a function can be limited by either size or time. The first limit reached determines the boundary of the batch.
     /// For configuration instructions, see
-    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
+    /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
     /// 
     /// </summary>
     public class FunctionTaskDetails : TaskDetails

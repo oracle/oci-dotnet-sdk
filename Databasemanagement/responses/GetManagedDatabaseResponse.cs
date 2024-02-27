@@ -23,6 +23,14 @@ namespace Oci.DatabasemanagementService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
+
+        /// <value>
+        /// For optimistic concurrency control. See `if-match`.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
+        public string Etag { get; set; }
+
         /// <value>
         /// The returned ManagedDatabase instance.
         /// </value>

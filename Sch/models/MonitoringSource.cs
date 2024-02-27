@@ -22,7 +22,7 @@ namespace Oci.SchService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the metric namespaces you want to use for the Monitoring source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a compartment containing metric namespaces you want to use for the Monitoring source.
         /// 
         /// </value>
         /// <remarks>

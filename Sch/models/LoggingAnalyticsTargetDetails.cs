@@ -16,9 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The log group used for the Logging Analytics target.
+    /// The destination log group for data transferred from the source.
     /// For configuration instructions, see
-    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
+    /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
     /// 
     /// </summary>
     public class LoggingAnalyticsTargetDetails : TargetDetails
@@ -36,7 +36,7 @@ namespace Oci.SchService.Models
         public string LogGroupId { get; set; }
         
         /// <value>
-        /// Identifier of the log source that you want to use for processing data received from the service connector source.
+        /// Identifier of the log source that you want to use for processing data received from the connector source.
         /// Applies to `StreamingSource` only.
         /// Equivalent to `name` at {@link LogAnalyticsSource}.
         /// 

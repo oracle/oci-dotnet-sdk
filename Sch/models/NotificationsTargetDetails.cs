@@ -16,9 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The topic used for the Notifications target.
+    /// The destination topic for data transferred from the source.
     /// For configuration instructions, see
-    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
+    /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
     /// 
     /// </summary>
     public class NotificationsTargetDetails : TargetDetails
@@ -36,7 +36,7 @@ namespace Oci.SchService.Models
         public string TopicId { get; set; }
         
         /// <value>
-        /// Whether to apply a simplified, user-friendly format to the message. Applies only when friendly formatting is supported by the service connector source and the subscription protocol.
+        /// Whether to apply a simplified, user-friendly format to the message. Applies only when friendly formatting is supported by the connector source and the subscription protocol.
         /// <br/>
         /// Example: true
         /// </value>

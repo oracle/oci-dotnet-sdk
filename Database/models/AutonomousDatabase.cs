@@ -118,7 +118,7 @@ namespace Oci.DatabaseService.Models
         public string KmsKeyId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts).
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts). This parameter and `secretId` are required for Customer Managed Keys.
         /// </value>
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
@@ -130,7 +130,7 @@ namespace Oci.DatabaseService.Models
         public string KmsKeyLifecycleDetails { get; set; }
         
         /// <value>
-        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation.
+        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation. Autonomous Database Serverless does not use key versions, hence is not applicable for Autonomous Database Serverless instances.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyVersionId")]
@@ -164,7 +164,7 @@ namespace Oci.DatabaseService.Models
         public string NcharacterSet { get; set; }
         
         /// <value>
-        /// The percentage of the System Global Area(SGA) assigned to In-Memory tables in Autonomous Database.
+        /// The percentage of the System Global Area(SGA) assigned to In-Memory tables in Autonomous Database. This property is applicable only to Autonomous Databases on the Exadata Cloud@Customer platform.
         /// </value>
         [JsonProperty(PropertyName = "inMemoryPercentage")]
         public System.Nullable<int> InMemoryPercentage { get; set; }
@@ -225,7 +225,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<AutonomousDatabaseKeyHistoryEntry> KeyHistoryEntry { get; set; }
         
         /// <value>
-        /// The number of OCPU cores to be made available to the database. When the ECPU is selected, the value for cpuCoreCount is 0. For Autonomous Databases on dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-database&id=ATPFG-GUID-B0F033C1-CC5A-42F0-B2E7-3CECFEDA1FD1) for shape details.
+        /// The number of CPU cores to be made available to the database. When the ECPU is selected, the value for cpuCoreCount is 0. For Autonomous Database on Dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-database&id=ATPFG-GUID-B0F033C1-CC5A-42F0-B2E7-3CECFEDA1FD1) for shape details.
         /// <br/>
         /// **Note:** This parameter cannot be used with the `ocpuCount` parameter.
         /// 
@@ -240,7 +240,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> LocalAdgAutoFailoverMaxDataLossLimit { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value.
+        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. ECPU compute model is the recommended model and OCPU compute model is legacy.
         /// </value>
         ///
         public enum ComputeModelEnum {
@@ -254,15 +254,15 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value.
+        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. ECPU compute model is the recommended model and OCPU compute model is legacy.
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
-        /// The compute amount available to the database. Minimum and maximum values depend on the compute model and whether the database is an Autonomous Database Serverless instance or an Autonomous Database on Dedicated Exadata Infrastructure.
-        /// For an Autonomous Database Serverless instance, the 'ECPU' compute model requires values in multiples of two. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value.
+        /// The compute amount (CPUs) available to the database. Minimum and maximum values depend on the compute model and whether the database is an Autonomous Database Serverless instance or an Autonomous Database on Dedicated Exadata Infrastructure. 
+        /// For an Autonomous Database Serverless instance, the 'ECPU' compute model requires a minimum value of one, for databases in the elastic resource pool and minimum value of two, otherwise. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value. Providing `computeModel` and `computeCount` is the preferred method for both OCPU and ECPU.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeCount")]
@@ -285,7 +285,8 @@ namespace Oci.DatabaseService.Models
         /// <br/>
         /// The following points apply:
         /// - For Autonomous Databases on Dedicated Exadata Infrastructure, to provision less than 1 core, enter a fractional value in an increment of 0.1. For example, you can provision 0.3 or 0.4 cores, but not 0.35 cores. (Note that fractional OCPU values are not supported for Autonomous Database Serverless instances.)
-        /// - To provision 1 or more cores, you must enter an integer between 1 and the maximum number of cores available for the infrastructure shape. For example, you can provision 2 cores or 3 cores, but not 2.5 cores. This applies to Autonomous Databases on both shared and dedicated Exadata infrastructure.
+        /// - To provision cores, enter an integer between 1 and the maximum number of cores available for the infrastructure shape. For example, you can provision 2 cores or 3 cores, but not 2.5 cores. This applies to Autonomous Databases on both serverless and dedicated Exadata infrastructure.
+        /// - For Autonomous Database Serverless instances, this parameter is not used.
         /// <br/>
         /// For Autonomous Databases on Dedicated Exadata Infrastructure, the maximum number of cores is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbde/index.html) for shape details.
         /// <br/>
@@ -312,7 +313,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> DataStorageSizeInTBs { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) enabled per OCPU or ECPU. 
+        /// The amount of memory (in GBs) enabled per ECPU or OCPU. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
@@ -359,7 +360,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsDedicated { get; set; }
         
         /// <value>
-        /// The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm). Used only by Autonomous Database on Dedicated Exadata Infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "autonomousContainerDatabaseId")]
         public string AutonomousContainerDatabaseId { get; set; }
@@ -395,9 +396,9 @@ namespace Oci.DatabaseService.Models
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Oracle Database service.
         /// Note that when provisioning an [Autonomous Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
-        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`.
+        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
         /// <br/>
-        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
         /// </value>
         ///
@@ -415,9 +416,9 @@ namespace Oci.DatabaseService.Models
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
         /// License Included allows you to subscribe to new Oracle Database software licenses and the Oracle Database service.
         /// Note that when provisioning an [Autonomous Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
-        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`.
+        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
         /// <br/>
-        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]
@@ -479,7 +480,10 @@ namespace Oci.DatabaseService.Models
         public string PrivateEndpoint { get; set; }
         
         /// <value>
-        /// The resource's private endpoint label. Setting this to an empty string, after the creation of the private endpoint database, changes the private endpoint database to a public endpoint database.
+        /// The resource's private endpoint label.
+        /// - Setting the endpoint label to a non-empty string creates a private endpoint database.
+        /// - Resetting the endpoint label to an empty string, after the creation of the private endpoint database, changes the private endpoint database to a public endpoint database.
+        /// - Setting the endpoint label to a non-empty string value, updates to a new private endpoint database, when the database is disabled and re-enabled.
         /// <br/>
         /// This setting cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
@@ -553,7 +557,7 @@ namespace Oci.DatabaseService.Models
         ///  if database-level access control is enabled and no rules are specified, the database will become inaccessible. The rules can be added later using the `UpdateAutonomousDatabase` API operation or edit option in console.
         /// When creating a database clone, the desired access control setting should be specified. By default, database-level access control will be disabled for the clone.
         /// <br/>
-        /// This property is applicable only to Autonomous Databases on the Exadata Cloud@Customer platform.
+        /// This property is applicable only to Autonomous Databases on the Exadata Cloud@Customer platform. For Autonomous Database Serverless instances, `whitelistedIps` is used.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAccessControlEnabled")]
@@ -562,9 +566,10 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The client IP access control list (ACL). This feature is available for [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) and on Exadata Cloud@Customer.
         /// Only clients connecting from an IP address included in the ACL may access the Autonomous Database instance.
+        /// If `arePrimaryWhitelistedIpsUsed` is 'TRUE' then Autonomous Database uses this primary's IP access control list (ACL) for the disaster recovery peer called `standbywhitelistedips`.
         /// <br/>
         /// For Autonomous Database Serverless, this is an array of CIDR (classless inter-domain routing) notations for a subnet or VCN OCID (virtual cloud network Oracle Cloud ID).
-        /// Use a semicolon (;) as a deliminator between the VCN-specific subnets or IPs.
+        /// Multiple IPs and VCN OCIDs should be separate strings separated by commas, but if it\u2019s other configurations that need multiple pieces of information then its each piece is connected with semicolon (;) as a delimiter.
         /// Example: [&quot;1.1.1.1&quot;,&quot;1.1.1.0/24&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id>&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id1>;1.1.1.1&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id2>;1.1.0.0/16&quot;]For Exadata Cloud@Customer, this is an array of IP addresses or CIDR notations.
         /// </value>
         [JsonProperty(PropertyName = "whitelistedIps")]
@@ -582,9 +587,10 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The client IP access control list (ACL). This feature is available for [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) and on Exadata Cloud@Customer.
         /// Only clients connecting from an IP address included in the ACL may access the Autonomous Database instance.
+        /// If `arePrimaryWhitelistedIpsUsed` is 'TRUE' then Autonomous Database uses this primary's IP access control list (ACL) for the disaster recovery peer called `standbywhitelistedips`.
         /// <br/>
         /// For Autonomous Database Serverless, this is an array of CIDR (classless inter-domain routing) notations for a subnet or VCN OCID (virtual cloud network Oracle Cloud ID).
-        /// Use a semicolon (;) as a deliminator between the VCN-specific subnets or IPs.
+        /// Multiple IPs and VCN OCIDs should be separate strings separated by commas, but if it\u2019s other configurations that need multiple pieces of information then its each piece is connected with semicolon (;) as a delimiter.
         /// Example: [&quot;1.1.1.1&quot;,&quot;1.1.1.0/24&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id>&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id1>;1.1.1.1&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id2>;1.1.0.0/16&quot;]For Exadata Cloud@Customer, this is an array of IP addresses or CIDR notations.
         /// </value>
         [JsonProperty(PropertyName = "standbyWhitelistedIps")]
@@ -597,7 +603,7 @@ namespace Oci.DatabaseService.Models
         public AutonomousDatabaseApex ApexDetails { get; set; }
         
         /// <value>
-        /// Indicates if auto scaling is enabled for the Autonomous Database CPU core count.
+        /// Indicates if auto scaling is enabled for the Autonomous Database CPU core count. The default value is `TRUE`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoScalingEnabled")]
@@ -912,7 +918,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> AvailableUpgradeVersions { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the key store.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the key store of Oracle Vault.
         /// </value>
         [JsonProperty(PropertyName = "keyStoreId")]
         public string KeyStoreId { get; set; }
@@ -978,7 +984,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// Specifies if the Autonomous Database requires mTLS connections.
         /// <br/>
-        /// This may not be updated in parallel with any of the following: licenseModel, databaseEdition, cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, whitelistedIps, openMode, permissionLevel, db-workload, privateEndpointLabel, nsgIds, customerContacts, dbVersion, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+        /// This may not be updated in parallel with any of the following: licenseModel, databaseEdition, cpuCoreCount, computeCount, dataStorageSizeInTBs, whitelistedIps, openMode, permissionLevel, db-workload, privateEndpointLabel, nsgIds, customerContacts, dbVersion, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// <br/>
         /// Service Change: The default value of the isMTLSConnectionRequired attribute will change from true to false on July 1, 2023 in the following APIs:
         /// - CreateAutonomousDatabase
@@ -1045,7 +1051,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<AutonomousMaintenanceScheduleTypeEnum> AutonomousMaintenanceScheduleType { get; set; }
         
         /// <value>
-        /// The list of scheduled operations.
+        /// The list of scheduled operations. Consists of values such as dayOfWeek, scheduledStartTime, scheduledStopTime.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
@@ -1075,13 +1081,6 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "actualUsedDataStorageSizeInTBs")]
         public System.Double ActualUsedDataStorageSizeInTBs { get; set; }
-        
-        /// <value>
-        /// The number of Max OCPU cores to be made available to the autonomous database with auto scaling of cpu enabled.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "maxCpuCoreCount")]
-        public System.Nullable<int> MaxCpuCoreCount { get; set; }
                 ///
         /// <value>
         /// The Oracle Database Edition that applies to the Autonomous databases.

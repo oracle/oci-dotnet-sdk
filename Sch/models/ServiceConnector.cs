@@ -16,16 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The configuration details of the flow defined by the service connector.
-    /// For more information about flows defined by service connectors, see
-    /// [Service Connector Hub Overview](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/overview.htm).
+    /// The configuration details of the flow defined by the connector.
+    /// For more information about flows defined by connectors, see
+    /// [Overview of Connector Hub](https://docs.cloud.oracle.com/iaas/Content/connector-hub/overview.htm).
     /// 
     /// </summary>
     public class ServiceConnector 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the service connector.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the connector.
         /// 
         /// </value>
         /// <remarks>
@@ -55,7 +55,7 @@ namespace Oci.SchService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the service connector.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the connector.
         /// 
         /// </value>
         /// <remarks>
@@ -66,7 +66,7 @@ namespace Oci.SchService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The date and time when the service connector was created.
+        /// The date and time when the connector was created.
         /// Format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2020-01-25T21:10:29.600Z
         /// </value>
@@ -78,7 +78,7 @@ namespace Oci.SchService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time when the service connector was updated.
+        /// The date and time when the connector was updated.
         /// Format is defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2020-01-25T21:10:29.600Z
         /// </value>
@@ -90,7 +90,7 @@ namespace Oci.SchService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the service connector.
+        /// The current state of the connector.
         /// 
         /// </value>
         /// <remarks>

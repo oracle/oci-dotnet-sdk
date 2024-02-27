@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The configuration details for moving a service connector to a different compartment.
+    /// The configuration details for moving a connector to a different compartment.
     /// 
     /// </summary>
     public class ChangeServiceConnectorCompartmentDetails 
@@ -24,7 +24,7 @@ namespace Oci.SchService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment
-        /// to move the service connector to.
+        /// to move the connector to.
         /// 
         /// </value>
         /// <remarks>

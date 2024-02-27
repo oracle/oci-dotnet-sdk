@@ -229,6 +229,48 @@ namespace Oci.OperatoraccesscontrolService.Models
         public System.Collections.Generic.List<string> AuditType { get; set; }
         
         /// <value>
+        /// Number of approvers required to approve an access request.
+        /// </value>
+        [JsonProperty(PropertyName = "numberOfApproversRequired")]
+        public System.Nullable<int> NumberOfApproversRequired { get; set; }
+        
+        /// <value>
+        /// Number of approvers who have authorized an access request.
+        /// </value>
+        [JsonProperty(PropertyName = "numberOfApprovers")]
+        public System.Nullable<int> NumberOfApprovers { get; set; }
+        
+        /// <value>
+        /// Number of approvers who have authorized an access request for extension.
+        /// </value>
+        [JsonProperty(PropertyName = "numberOfExtensionApprovers")]
+        public System.Nullable<int> NumberOfExtensionApprovers { get; set; }
+        
+        /// <value>
+        /// Contains the user ids who have approved the accessRequest for extension.
+        /// </value>
+        [JsonProperty(PropertyName = "approverDetails")]
+        public System.Collections.Generic.List<ApproverDetail> ApproverDetails { get; set; }
+        
+        /// <value>
+        /// Contains the user ids who have approved the accessRequest for extension.
+        /// </value>
+        [JsonProperty(PropertyName = "extensionApproverDetails")]
+        public System.Collections.Generic.List<ApproverDetail> ExtensionApproverDetails { get; set; }
+        
+        /// <value>
+        /// Whether the access request was requested for Validate Assignment.
+        /// </value>
+        [JsonProperty(PropertyName = "isValidateAssignment")]
+        public System.Nullable<bool> IsValidateAssignment { get; set; }
+        
+        /// <value>
+        /// Time in future when the user for the access request needs to be created in [RFC 3339](https://tools.ietf.org/html/rfc3339)timestamp format. Example: '2020-05-22T21:10:29.600Z'
+        /// </value>
+        [JsonProperty(PropertyName = "timeRequestedForFutureAccess")]
+        public System.Nullable<System.DateTime> TimeRequestedForFutureAccess { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// 
         /// </value>

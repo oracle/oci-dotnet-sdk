@@ -16,9 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// The function used for the Functions target.
+    /// The destination function for data transferred from the source.
     /// For configuration instructions, see
-    /// [To create a service connector](https://docs.cloud.oracle.com/iaas/Content/service-connector-hub/managingconnectors.htm#create).
+    /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
     /// 
     /// </summary>
     public class FunctionsTargetDetails : TargetDetails
@@ -34,6 +34,27 @@ namespace Oci.SchService.Models
         [Required(ErrorMessage = "FunctionId is required.")]
         [JsonProperty(PropertyName = "functionId")]
         public string FunctionId { get; set; }
+        
+        /// <value>
+        /// The batch rollover size in kilobytes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "batchSizeInKbs")]
+        public System.Nullable<int> BatchSizeInKbs { get; set; }
+        
+        /// <value>
+        /// The batch rollover size in number of messages.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "batchSizeInNum")]
+        public System.Nullable<int> BatchSizeInNum { get; set; }
+        
+        /// <value>
+        /// The batch rollover time in seconds.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "batchTimeInSec")]
+        public System.Nullable<int> BatchTimeInSec { get; set; }
         
         [JsonProperty(PropertyName = "kind")]
         private readonly string kind = "functions";

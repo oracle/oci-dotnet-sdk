@@ -97,6 +97,12 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the cluster placement group of the Exadata Infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
+        /// <value>
         /// Customer contacts.
         /// </value>
         [JsonProperty(PropertyName = "customerContacts")]

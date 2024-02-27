@@ -60,11 +60,11 @@ namespace Oci.DatabaseService.Models
             var discriminator = jsonObject["credentialType"].Value<string>();
             switch (discriminator)
             {
-                case "NAME_REFERENCE":
-                    obj = new DatabaseConnectionCredentailsByName();
-                    break;
                 case "SSL_DETAILS":
                     obj = new DatabaseSslConnectionCredentials();
+                    break;
+                case "NAME_REFERENCE":
+                    obj = new DatabaseConnectionCredentialsByName();
                     break;
                 case "DETAILS":
                     obj = new DatabaseConnectionCredentialsByDetails();

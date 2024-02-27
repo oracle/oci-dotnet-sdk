@@ -47,7 +47,7 @@ namespace Oci.DatabaseService.Models
         public string Shape { get; set; }
         
         /// <value>
-        /// The number of OCPU cores available for AMD-based virtual machine DB systems.
+        /// The number of CPU cores available for AMD-based virtual machine DB systems.
         /// </value>
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
@@ -151,7 +151,7 @@ namespace Oci.DatabaseService.Models
         public string PrivateIp { get; set; }
                 ///
         /// <value>
-        /// The Oracle license model that applies to all the databases on the dataguard standby DB system. The default is LICENSE_INCLUDED.
+        /// The Oracle license model that applies to all the databases on the dataguard standby DB system. The default is LICENSE_INCLUDED. Bring your own license (BYOL) allows you to select the DB edition using the optional parameter, for Autonomous Database Serverless.
         /// 
         /// </value>
         ///
@@ -163,7 +163,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Oracle license model that applies to all the databases on the dataguard standby DB system. The default is LICENSE_INCLUDED.
+        /// The Oracle license model that applies to all the databases on the dataguard standby DB system. The default is LICENSE_INCLUDED. Bring your own license (BYOL) allows you to select the DB edition using the optional parameter, for Autonomous Database Serverless.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]

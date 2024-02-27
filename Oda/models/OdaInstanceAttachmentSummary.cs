@@ -60,7 +60,9 @@ namespace Oci.OdaService.Models
             [EnumMember(Value = null)]
             UnknownEnumValue,
             [EnumMember(Value = "FUSION")]
-            Fusion
+            Fusion,
+            [EnumMember(Value = "MAX")]
+            Max
         };
 
         /// <value>

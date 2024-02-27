@@ -45,5 +45,14 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "preserveBootVolume")]
         public System.Nullable<bool> PreserveBootVolume { get; set; }
+        
+        /// <value>
+        /// Specifies whether to delete or preserve the data volumes created during launch when
+        /// terminating an instance. When set to `true`, the data volumes are preserved. The 
+        /// default value is `true`.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "preserveDataVolumesCreatedAtLaunch")]
+        public System.Nullable<bool> PreserveDataVolumesCreatedAtLaunch { get; set; }
     }
 }

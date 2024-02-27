@@ -25,7 +25,7 @@ namespace Oci.SchService.Models
         /// <value>
         /// Dimension key. A valid dimension key includes only printable ASCII, excluding periods (.) and spaces.
         /// Custom dimension keys are acceptable. Avoid entering confidential information.
-        /// Due to use by Service Connector Hub, the following dimension names are reserved: `connectorId`, `connectorName`, `connectorSourceType`.
+        /// Due to use by Connector Hub, the following dimension names are reserved: `connectorId`, `connectorName`, `connectorSourceType`.
         /// For information on valid dimension keys and values, see {@link #metricDataDetails(MetricDataDetailsRequest) metricDataDetails}.
         /// Example: type
         /// </value>

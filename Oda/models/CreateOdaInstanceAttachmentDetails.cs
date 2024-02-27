@@ -37,7 +37,9 @@ namespace Oci.OdaService.Models
         ///
         public enum AttachmentTypeEnum {
             [EnumMember(Value = "FUSION")]
-            Fusion
+            Fusion,
+            [EnumMember(Value = "MAX")]
+            Max
         };
 
         /// <value>

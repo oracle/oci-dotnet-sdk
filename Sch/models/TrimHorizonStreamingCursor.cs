@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// `TRIM_HORIZON` cursor type. Sets the starting point for consuming the stream at the oldest available message in the stream. For more information about Streaming cursors, see [Using Cursors](https://docs.cloud.oracle.com/iaas/Content/Streaming/Tasks/using_a_single_consumer.htm#usingcursors).
+    /// `TRIM_HORIZON` cursor type. Starts reading from the oldest available message in the stream.
+    /// For configuration instructions, see
+    /// [Creating a Connector with a Streaming Source](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector-streaming-source.htm).
     /// 
     /// </summary>
     public class TrimHorizonStreamingCursor : StreamingCursorDetails

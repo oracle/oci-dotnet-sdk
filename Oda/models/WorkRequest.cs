@@ -148,7 +148,13 @@ namespace Oci.OdaService.Models
             [EnumMember(Value = "CREATE_ODA_PRIVATE_ENDPOINT_ATTACHMENT")]
             CreateOdaPrivateEndpointAttachment,
             [EnumMember(Value = "DELETE_ODA_PRIVATE_ENDPOINT_ATTACHMENT")]
-            DeleteOdaPrivateEndpointAttachment
+            DeleteOdaPrivateEndpointAttachment,
+            [EnumMember(Value = "TRAIN_SKILL")]
+            TrainSkill,
+            [EnumMember(Value = "DELETE_SKILL_ENTITIES")]
+            DeleteSkillEntities,
+            [EnumMember(Value = "IMPORT_SKILL_ENTITIES")]
+            ImportSkillEntities
         };
 
         /// <value>

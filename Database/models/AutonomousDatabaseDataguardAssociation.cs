@@ -163,7 +163,7 @@ namespace Oci.DatabaseService.Models
         public string PeerAutonomousDatabaseId { get; set; }
                 ///
         /// <value>
-        /// The current state of Autonomous Data Guard.
+        /// The current state of the Autonomous Database.
         /// </value>
         ///
         public enum PeerAutonomousDatabaseLifeCycleStateEnum {
@@ -174,22 +174,48 @@ namespace Oci.DatabaseService.Models
             Provisioning,
             [EnumMember(Value = "AVAILABLE")]
             Available,
-            [EnumMember(Value = "ROLE_CHANGE_IN_PROGRESS")]
-            RoleChangeInProgress,
+            [EnumMember(Value = "STOPPING")]
+            Stopping,
+            [EnumMember(Value = "STOPPED")]
+            Stopped,
+            [EnumMember(Value = "STARTING")]
+            Starting,
             [EnumMember(Value = "TERMINATING")]
             Terminating,
             [EnumMember(Value = "TERMINATED")]
             Terminated,
-            [EnumMember(Value = "FAILED")]
-            Failed,
             [EnumMember(Value = "UNAVAILABLE")]
             Unavailable,
+            [EnumMember(Value = "RESTORE_IN_PROGRESS")]
+            RestoreInProgress,
+            [EnumMember(Value = "RESTORE_FAILED")]
+            RestoreFailed,
+            [EnumMember(Value = "BACKUP_IN_PROGRESS")]
+            BackupInProgress,
+            [EnumMember(Value = "SCALE_IN_PROGRESS")]
+            ScaleInProgress,
+            [EnumMember(Value = "AVAILABLE_NEEDS_ATTENTION")]
+            AvailableNeedsAttention,
             [EnumMember(Value = "UPDATING")]
-            Updating
+            Updating,
+            [EnumMember(Value = "MAINTENANCE_IN_PROGRESS")]
+            MaintenanceInProgress,
+            [EnumMember(Value = "RESTARTING")]
+            Restarting,
+            [EnumMember(Value = "RECREATING")]
+            Recreating,
+            [EnumMember(Value = "ROLE_CHANGE_IN_PROGRESS")]
+            RoleChangeInProgress,
+            [EnumMember(Value = "UPGRADING")]
+            Upgrading,
+            [EnumMember(Value = "INACCESSIBLE")]
+            Inaccessible,
+            [EnumMember(Value = "STANDBY")]
+            Standby
         };
 
         /// <value>
-        /// The current state of Autonomous Data Guard.
+        /// The current state of the Autonomous Database.
         /// </value>
         [JsonProperty(PropertyName = "peerAutonomousDatabaseLifeCycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

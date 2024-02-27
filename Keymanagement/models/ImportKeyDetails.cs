@@ -22,6 +22,15 @@ namespace Oci.KeymanagementService.Models
     {
         
         /// <value>
+        /// A parameter specifying whether the auto key rotation is enabled or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoRotationEnabled")]
+        public System.Nullable<bool> IsAutoRotationEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "autoKeyRotationDetails")]
+        public AutoKeyRotationDetails AutoKeyRotationDetails { get; set; }
+        
+        /// <value>
         /// The OCID of the compartment that contains this key.
         /// </value>
         /// <remarks>

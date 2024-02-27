@@ -23,7 +23,7 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
-        /// The number of OCPU cores available.
+        /// The number of CPU cores available.
         /// </value>
         /// <remarks>
         /// Required

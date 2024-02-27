@@ -43,12 +43,21 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the peer cloud Autonomous Exadata VM Cluster.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PeerCloudAutonomousVmClusterId is required.")]
         [JsonProperty(PropertyName = "peerCloudAutonomousVmClusterId")]
         public string PeerCloudAutonomousVmClusterId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the peer Autonomous Exadata VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "peerAutonomousVmClusterId")]
+        public string PeerAutonomousVmClusterId { get; set; }
+        
+        /// <value>
+        /// Specifies the `DB_UNIQUE_NAME` of the peer database to be created.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "peerDbUniqueName")]
+        public string PeerDbUniqueName { get; set; }
         
         [JsonProperty(PropertyName = "peerAutonomousContainerDatabaseBackupConfig")]
         public PeerAutonomousContainerDatabaseBackupConfig PeerAutonomousContainerDatabaseBackupConfig { get; set; }

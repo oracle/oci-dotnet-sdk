@@ -139,7 +139,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpusEnabled { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Autonomous VM Cluster. 
+        /// The compute model of the Autonomous VM Cluster. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous Database on Dedicated Exadata #Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// 
         /// </value>
         ///
@@ -154,7 +154,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Autonomous VM Cluster. 
+        /// The compute model of the Autonomous VM Cluster. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous Database on Dedicated Exadata #Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]
@@ -244,7 +244,8 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> ReservedCpus { get; set; }
         
         /// <value>
-        /// The number of provisionable Autonomous Container Databases in an Autonomous VM Cluster.
+        /// **Deprecated.** Use field totalContainerDatabases.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "provisionableAutonomousContainerDatabases")]
         public System.Nullable<int> ProvisionableAutonomousContainerDatabases { get; set; }
@@ -346,9 +347,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> DbServers { get; set; }
         
         /// <value>
-        /// For Autonomous Databases on Dedicated Exadata Infrastructure:
-        /// - These are the CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
-        /// - The CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. 
+        /// CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "reclaimableCpus")]
@@ -397,7 +396,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeOrdsCertificateExpires { get; set; }
         
         /// <value>
-        /// The lowest value to which exadataStorage in TBs can be scaled down.
+        /// The lowest value to which exadataStorage(in TBs) can be scaled down.
         /// </value>
         [JsonProperty(PropertyName = "exadataStorageInTBsLowestScaledValue")]
         public System.Double ExadataStorageInTBsLowestScaledValue { get; set; }
@@ -409,7 +408,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> CpusLowestScaledValue { get; set; }
         
         /// <value>
-        /// The lowest value to which ACDs can be scaled down.
+        /// The lowest value to which maximum number of ACDs can be scaled down.
         /// </value>
         [JsonProperty(PropertyName = "maxAcdsLowestScaledValue")]
         public System.Nullable<int> MaxAcdsLowestScaledValue { get; set; }
