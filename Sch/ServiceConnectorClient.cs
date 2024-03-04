@@ -116,7 +116,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ActivateServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/ActivateServiceConnector",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -177,7 +177,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ChangeServiceConnectorCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/ChangeServiceConnectorCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -253,7 +253,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "CreateServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/CreateServiceConnector",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -315,7 +315,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "DeactivateServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/DeactivateServiceConnector",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -377,7 +377,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "DeleteServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/DeleteServiceConnector",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -436,7 +436,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "GetServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/GetServiceConnector",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -495,7 +495,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -554,7 +554,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ListServiceConnectors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/ListServiceConnectors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -613,7 +613,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -672,7 +672,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -731,7 +731,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/WorkRequest/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -794,7 +794,7 @@ namespace Oci.SchService
                     ServiceName = "ServiceConnector",
                     OperationName = "UpdateServiceConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ServiceConnector/UpdateServiceConnector",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

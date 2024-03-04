@@ -36,8 +36,8 @@ namespace Oci.ContainerinstancesService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// Returns the logs for the previous run of the container in a pod if the pod exists. 
-        /// If the container fails for some reason, this parameter is useful to determine the root cause of the failure.
+        /// Returns the logs for the previous run of the container in a pod.
+        /// If the container fails, this parameter can help you to determine the root cause of the failure.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isPrevious")]

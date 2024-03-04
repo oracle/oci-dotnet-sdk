@@ -47,6 +47,9 @@ namespace Oci.ContainerinstancesService.Models
         [JsonProperty(PropertyName = "isRootFileSystemReadonly")]
         public System.Nullable<bool> IsRootFileSystemReadonly { get; set; }
         
+        [JsonProperty(PropertyName = "capabilities")]
+        public ContainerCapabilities Capabilities { get; set; }
+        
         [JsonProperty(PropertyName = "securityContextType")]
         private readonly string securityContextType = "LINUX";
     }

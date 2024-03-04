@@ -218,6 +218,66 @@ System.Security.Cryptography.Cng
 * Source code: https://github.com/dotnet/runtime/tree/master/src/libraries/System.Security.Cryptography.Cng
 * Project home: https://dot.net/
 
+Microsoft.IdentityModel.Abstractions
+* Copyright (c) Microsoft Corporation
+* License: The MIT License
+* Source code: https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet
+* Project home: https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet
+
+Microsoft.Bcl.AsyncInterfaces
+* Copyright (c) .NET Foundation and Contributors
+* License: The MIT License
+* Source code: https://github.com/dotnet/runtime
+* Project home: https://dotnet.microsoft.com/en-us/
+
+Microsoft.NETCore.Targets
+* Copyright (c) .NET Foundation and Contributors
+* License: The MIT License
+* Source code: https://github.com/dotnet/runtime
+* Project home: https://dotnet.microsoft.com/en-us/
+
+System.Buffers
+* Copyright (c) .NET Foundation and Contributors
+* License: The MIT License
+* Source code: https://github.com/dotnet/corefx
+* Project home: https://dotnet.microsoft.com/en-us/
+
+System.Memory
+* Copyright (c) .NET Foundation and Contributors
+* License: The MIT License
+* Source code: https://github.com/dotnet/corefx
+* Project home: https://dotnet.microsoft.com/en-us/
+
+System.Numerics.Vectors
+* Copyright (c) .NET Foundation and Contributors
+* License: The MIT License
+* Source code: https://github.com/dotnet/corefx
+* Project home: https://dotnet.microsoft.com/en-us/
+
+System.Runtime.CompilerServices.Unsafe
+* Copyright (c) .NET Foundation and Contributors
+* License: The MIT License
+* Source code: https://github.com/dotnet/runtime
+* Project home: https://dotnet.microsoft.com/en-us/
+
+System.Text.Encodings.Web
+* Copyright (c) .NET Foundation and Contributors
+* License: The MIT License
+* Source code: https://github.com/dotnet/runtime
+* Project home: https://dotnet.microsoft.com/en-us/
+
+System.Text.Json
+* Copyright (c) .NET Foundation and Contributors
+* License: The MIT License
+* Source code: https://github.com/dotnet/runtime
+* Project home: https://dotnet.microsoft.com/en-us/
+
+System.Threading.Tasks.Extensions
+* Copyright (c) .NET Foundation and Contributors
+* License: The MIT License
+* Source code: https://github.com/dotnet/corefx
+* Project home: https://dotnet.microsoft.com/en-us/
+
 -------------------------------- Notices -------------------------------
 
 Apache License Version 2.0, January 2004

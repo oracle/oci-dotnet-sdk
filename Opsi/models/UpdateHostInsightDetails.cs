@@ -68,6 +68,9 @@ namespace Oci.OpsiService.Models
                 case "MACS_MANAGED_CLOUD_HOST":
                     obj = new UpdateMacsManagedCloudHostInsightDetails();
                     break;
+                case "PE_COMANAGED_HOST":
+                    obj = new UpdatePeComanagedHostInsightDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

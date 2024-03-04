@@ -142,5 +142,18 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
         
+        /// <value>
+        /// Day of the week in which the news report will be sent if the frequency is set to WEEKLY.
+        /// </value>
+        [JsonProperty(PropertyName = "dayOfWeek")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DayOfWeek> DayOfWeek { get; set; }
+        
+        /// <value>
+        /// A flag to consider the resources within a given compartment and all sub-compartments.
+        /// </value>
+        [JsonProperty(PropertyName = "areChildCompartmentsIncluded")]
+        public System.Nullable<bool> AreChildCompartmentsIncluded { get; set; }
+        
     }
 }
