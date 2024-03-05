@@ -24,12 +24,44 @@ namespace Oci.OpsiService.Models
         /// <value>
         /// Supported resources for capacity planning content type.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CapacityPlanningResources is required.")]
         [JsonProperty(PropertyName = "capacityPlanningResources")]
         public System.Collections.Generic.List<NewsContentTypesResource> CapacityPlanningResources { get; set; }
+        
+        /// <value>
+        /// Supported resources for SQL insights - fleet analysis content type.
+        /// </value>
+        [JsonProperty(PropertyName = "sqlInsightsFleetAnalysisResources")]
+        public System.Collections.Generic.List<NewsSqlInsightsContentTypesResource> SqlInsightsFleetAnalysisResources { get; set; }
+        
+        /// <value>
+        /// Supported resources for SQL insights - plan changes content type.
+        /// </value>
+        [JsonProperty(PropertyName = "sqlInsightsPlanChangesResources")]
+        public System.Collections.Generic.List<NewsSqlInsightsContentTypesResource> SqlInsightsPlanChangesResources { get; set; }
+        
+        /// <value>
+        /// Supported resources for SQL insights - top databases content type.
+        /// </value>
+        [JsonProperty(PropertyName = "sqlInsightsTopDatabasesResources")]
+        public System.Collections.Generic.List<NewsSqlInsightsContentTypesResource> SqlInsightsTopDatabasesResources { get; set; }
+        
+        /// <value>
+        /// Supported resources for SQL insights - top SQL by insights content type.
+        /// </value>
+        [JsonProperty(PropertyName = "sqlInsightsTopSqlByInsightsResources")]
+        public System.Collections.Generic.List<NewsSqlInsightsContentTypesResource> SqlInsightsTopSqlByInsightsResources { get; set; }
+        
+        /// <value>
+        /// Supported resources for SQL insights - top SQL content type.
+        /// </value>
+        [JsonProperty(PropertyName = "sqlInsightsTopSqlResources")]
+        public System.Collections.Generic.List<NewsSqlInsightsContentTypesResource> SqlInsightsTopSqlResources { get; set; }
+        
+        /// <value>
+        /// Supported resources for SQL insights - performance degradation content type.
+        /// </value>
+        [JsonProperty(PropertyName = "sqlInsightsPerformanceDegradationResources")]
+        public System.Collections.Generic.List<NewsSqlInsightsContentTypesResource> SqlInsightsPerformanceDegradationResources { get; set; }
         
     }
 }

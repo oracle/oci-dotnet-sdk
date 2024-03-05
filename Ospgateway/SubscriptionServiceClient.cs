@@ -48,7 +48,7 @@ namespace Oci.OspgatewayService
             {
                 ServiceName = "SUBSCRIPTIONSERVICE",
                 ServiceEndpointPrefix = "",
-                ServiceEndpointTemplate = "https://ospap.oracle.com"
+                ServiceEndpointTemplate = "https://osp-oci-integ.osp.{region}.oci.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();

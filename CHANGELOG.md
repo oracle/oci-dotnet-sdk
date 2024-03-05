@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 82.0.0 - 2024-03-05
+### Added
+- Support for Linux capabilities configuration for the containers in the Container Instances service
+- Support for service platforms in the Oracle Store Platform Gateway service
+- Support for whisper models and delete job operation in the Speech service
+- Support for new SQL insight content types in news reports in the Operations Insights service
+- Support for launching virtual machines with multiple volumes in the Compute service
+ 
+### Changed
+- The 3P library `System.IdentityModel.Tokens.Jwt` was upgraded from version `6.7.1` to `6.35.0` to address CVE-2024-21319 and Microsoft Identity Denial of service vulnerability
+  
+### Breaking Changes
+- The property `CapacityPlanningResources` was made optional in the model `NewsContentTypes` in the Operations Insights service
+
 ## 81.0.0 - 2024-02-27
 ### Added
 - Support for specifying dialog version when creating skills entities in the Digital Assistant service

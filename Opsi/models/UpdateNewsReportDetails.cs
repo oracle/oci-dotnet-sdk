@@ -65,5 +65,31 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The news report name.
+        /// </value>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+        
+        /// <value>
+        /// The description of the news report.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        /// <value>
+        /// Day of the week in which the news report will be sent if the frequency is set to WEEKLY.
+        /// </value>
+        [JsonProperty(PropertyName = "dayOfWeek")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DayOfWeek> DayOfWeek { get; set; }
+        
+        /// <value>
+        /// A flag to consider the resources within a given compartment and all sub-compartments.
+        /// </value>
+        [JsonProperty(PropertyName = "areChildCompartmentsIncluded")]
+        public System.Nullable<bool> AreChildCompartmentsIncluded { get; set; }
+        
     }
 }

@@ -20,6 +20,16 @@ namespace Oci.AispeechService.Models
     /// </summary>
     public class TranscriptionModelDetails 
     {
+        
+        /// <value>
+        /// Select a model to use for generating transcriptions. Currently supported models are:
+        /// - ORACLE
+        /// - WHISPER_MEDIUM
+        /// - WHISPER_LARGE_V2 (upon service request)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "modelType")]
+        public string ModelType { get; set; }
                 ///
         /// <value>
         /// Domain for input files.
@@ -41,8 +51,9 @@ namespace Oci.AispeechService.Models
         public System.Nullable<DomainEnum> Domain { get; set; }
                 ///
         /// <value>
-        /// Locale value as per given in [https://datatracker.ietf.org/doc/html/rfc5646].
-        /// - en-US: English - United States
+        /// 
+        /// Oracle supported language codes are (Oracle models are locale specific).
+        /// - en-US: English - United States (default)
         /// - es-ES: Spanish - Spain
         /// - pt-BR: Portuguese - Brazil
         /// - en-GB: English - Great Britain
@@ -52,6 +63,65 @@ namespace Oci.AispeechService.Models
         /// - fr-FR: French - France
         /// - de-DE: German - Germany
         /// - it-IT: Italian - Italy
+        /// <br/>
+        /// Whisper supported language codes are (Whisper models are locale agnostic).
+        /// - af: Afrikaans
+        /// - ar: Arabic
+        /// - az: Azerbaijani
+        /// - be: Belarusian
+        /// - bg: Bulgarian
+        /// - bs: Bosnian
+        /// - ca: Catalan
+        /// - cs: Czech
+        /// - cy: Welsh
+        /// - da: Danish
+        /// - de: German
+        /// - el: Greek
+        /// - en: English (default)
+        /// - es: Spanish
+        /// - et: Estonian
+        /// - fa: Persian
+        /// - fi: Finnish
+        /// - fr: French
+        /// - gl: Galician
+        /// - he: Hebrew
+        /// - hi: Hindi
+        /// - hr: Croatian
+        /// - hu: Hungarian
+        /// - hy: Armenian
+        /// - id: Indonesian
+        /// - is: Icelandic
+        /// - it: Italian
+        /// - ja: Japanese
+        /// - kk: Kazakh
+        /// - kn: Kannada
+        /// - ko: Korean
+        /// - lt: Lithuanian
+        /// - lv: Latvian
+        /// - mi: Maori
+        /// - mk: Macedonian
+        /// - mr: Marathi
+        /// - ms: Malay
+        /// - ne: Nepali
+        /// - nl: Dutch
+        /// - no: Norwegian
+        /// - pl: Polish
+        /// - pt: Portuguese
+        /// - ro: Romanian
+        /// - ru: Russian
+        /// - sk: Slovak
+        /// - sl: Slovenian
+        /// - sr: Serbian
+        /// - sv: Swedish
+        /// - sw: Swahili
+        /// - ta: Tamil
+        /// - th: Thai
+        /// - tl: Tagalog
+        /// - tr: Turkish
+        /// - uk: Ukrainian
+        /// - ur: Urdu
+        /// - vi: Vietnamese
+        /// - zh: Chinese
         /// 
         /// </value>
         ///
@@ -78,12 +148,127 @@ namespace Oci.AispeechService.Models
             [EnumMember(Value = "de-DE")]
             DeDe,
             [EnumMember(Value = "it-IT")]
-            ItIt
+            ItIt,
+            [EnumMember(Value = "af")]
+            Af,
+            [EnumMember(Value = "ar")]
+            Ar,
+            [EnumMember(Value = "az")]
+            Az,
+            [EnumMember(Value = "be")]
+            Be,
+            [EnumMember(Value = "bg")]
+            Bg,
+            [EnumMember(Value = "bs")]
+            Bs,
+            [EnumMember(Value = "ca")]
+            Ca,
+            [EnumMember(Value = "cs")]
+            Cs,
+            [EnumMember(Value = "cy")]
+            Cy,
+            [EnumMember(Value = "da")]
+            Da,
+            [EnumMember(Value = "de")]
+            De,
+            [EnumMember(Value = "el")]
+            El,
+            [EnumMember(Value = "en")]
+            En,
+            [EnumMember(Value = "es")]
+            Es,
+            [EnumMember(Value = "et")]
+            Et,
+            [EnumMember(Value = "fa")]
+            Fa,
+            [EnumMember(Value = "fi")]
+            Fi,
+            [EnumMember(Value = "fr")]
+            Fr,
+            [EnumMember(Value = "gl")]
+            Gl,
+            [EnumMember(Value = "he")]
+            He,
+            [EnumMember(Value = "hi")]
+            Hi,
+            [EnumMember(Value = "hr")]
+            Hr,
+            [EnumMember(Value = "hu")]
+            Hu,
+            [EnumMember(Value = "hy")]
+            Hy,
+            [EnumMember(Value = "id")]
+            Id,
+            [EnumMember(Value = "is")]
+            Is,
+            [EnumMember(Value = "it")]
+            It,
+            [EnumMember(Value = "ja")]
+            Ja,
+            [EnumMember(Value = "kk")]
+            Kk,
+            [EnumMember(Value = "kn")]
+            Kn,
+            [EnumMember(Value = "ko")]
+            Ko,
+            [EnumMember(Value = "lt")]
+            Lt,
+            [EnumMember(Value = "lv")]
+            Lv,
+            [EnumMember(Value = "mi")]
+            Mi,
+            [EnumMember(Value = "mk")]
+            Mk,
+            [EnumMember(Value = "mr")]
+            Mr,
+            [EnumMember(Value = "ms")]
+            Ms,
+            [EnumMember(Value = "ne")]
+            Ne,
+            [EnumMember(Value = "nl")]
+            Nl,
+            [EnumMember(Value = "no")]
+            No,
+            [EnumMember(Value = "pl")]
+            Pl,
+            [EnumMember(Value = "pt")]
+            Pt,
+            [EnumMember(Value = "ro")]
+            Ro,
+            [EnumMember(Value = "ru")]
+            Ru,
+            [EnumMember(Value = "sk")]
+            Sk,
+            [EnumMember(Value = "sl")]
+            Sl,
+            [EnumMember(Value = "sr")]
+            Sr,
+            [EnumMember(Value = "sv")]
+            Sv,
+            [EnumMember(Value = "sw")]
+            Sw,
+            [EnumMember(Value = "ta")]
+            Ta,
+            [EnumMember(Value = "th")]
+            Th,
+            [EnumMember(Value = "tl")]
+            Tl,
+            [EnumMember(Value = "tr")]
+            Tr,
+            [EnumMember(Value = "uk")]
+            Uk,
+            [EnumMember(Value = "ur")]
+            Ur,
+            [EnumMember(Value = "vi")]
+            Vi,
+            [EnumMember(Value = "zh")]
+            Zh
         };
 
         /// <value>
-        /// Locale value as per given in [https://datatracker.ietf.org/doc/html/rfc5646].
-        /// - en-US: English - United States
+        /// 
+        /// Oracle supported language codes are (Oracle models are locale specific).
+        /// - en-US: English - United States (default)
         /// - es-ES: Spanish - Spain
         /// - pt-BR: Portuguese - Brazil
         /// - en-GB: English - Great Britain
@@ -93,6 +278,65 @@ namespace Oci.AispeechService.Models
         /// - fr-FR: French - France
         /// - de-DE: German - Germany
         /// - it-IT: Italian - Italy
+        /// <br/>
+        /// Whisper supported language codes are (Whisper models are locale agnostic).
+        /// - af: Afrikaans
+        /// - ar: Arabic
+        /// - az: Azerbaijani
+        /// - be: Belarusian
+        /// - bg: Bulgarian
+        /// - bs: Bosnian
+        /// - ca: Catalan
+        /// - cs: Czech
+        /// - cy: Welsh
+        /// - da: Danish
+        /// - de: German
+        /// - el: Greek
+        /// - en: English (default)
+        /// - es: Spanish
+        /// - et: Estonian
+        /// - fa: Persian
+        /// - fi: Finnish
+        /// - fr: French
+        /// - gl: Galician
+        /// - he: Hebrew
+        /// - hi: Hindi
+        /// - hr: Croatian
+        /// - hu: Hungarian
+        /// - hy: Armenian
+        /// - id: Indonesian
+        /// - is: Icelandic
+        /// - it: Italian
+        /// - ja: Japanese
+        /// - kk: Kazakh
+        /// - kn: Kannada
+        /// - ko: Korean
+        /// - lt: Lithuanian
+        /// - lv: Latvian
+        /// - mi: Maori
+        /// - mk: Macedonian
+        /// - mr: Marathi
+        /// - ms: Malay
+        /// - ne: Nepali
+        /// - nl: Dutch
+        /// - no: Norwegian
+        /// - pl: Polish
+        /// - pt: Portuguese
+        /// - ro: Romanian
+        /// - ru: Russian
+        /// - sk: Slovak
+        /// - sl: Slovenian
+        /// - sr: Serbian
+        /// - sv: Swedish
+        /// - sw: Swahili
+        /// - ta: Tamil
+        /// - th: Thai
+        /// - tl: Tagalog
+        /// - tr: Turkish
+        /// - uk: Ukrainian
+        /// - ur: Urdu
+        /// - vi: Vietnamese
+        /// - zh: Chinese
         /// 
         /// </value>
         [JsonProperty(PropertyName = "languageCode")]

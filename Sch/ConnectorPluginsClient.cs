@@ -110,7 +110,7 @@ namespace Oci.SchService
                     ServiceName = "ConnectorPlugins",
                     OperationName = "GetConnectorPlugin",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ConnectorPlugin/GetConnectorPlugin",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -167,7 +167,7 @@ namespace Oci.SchService
                     ServiceName = "ConnectorPlugins",
                     OperationName = "ListConnectorPlugins",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/serviceconnectors/20200909/ConnectorPluginSummary/ListConnectorPlugins",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

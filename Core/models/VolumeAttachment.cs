@@ -197,6 +197,14 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IscsiLoginStateEnum> IscsiLoginState { get; set; }
         
+        /// <value>
+        /// Flag indicating if this volume was created for the customer as part of a simplified launch.
+        /// Used to determine whether the volume requires deletion on instance termination.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isVolumeCreatedDuringLaunch")]
+        public System.Nullable<bool> IsVolumeCreatedDuringLaunch { get; set; }
+        
     }
 
     public class VolumeAttachmentModelConverter : JsonConverter

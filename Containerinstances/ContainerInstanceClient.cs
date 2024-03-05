@@ -807,7 +807,7 @@ namespace Oci.ContainerinstancesService
         }
 
         /// <summary>
-        /// Retrieves recent logs from the specified container. The most recent 256 KB of logs are returned.
+        /// Returns the most recent 256 KB of logs from the specified container.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
