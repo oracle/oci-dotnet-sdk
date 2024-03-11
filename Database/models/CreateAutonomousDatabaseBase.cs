@@ -263,6 +263,13 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsAutoScalingEnabled { get; set; }
         
         /// <value>
+        /// This project introduces Autonomous Database for Developers (ADB-Dev), a free tier on dedicated infrastructure, and Cloud@Customer for database development purposes. ADB-Dev enables ExaDB customers to experiment with ADB for free and incentivizes enterprises to use ADB for new development projects.Note that ADB-Dev have 4 CPU and 20GB of memory. For ADB-Dev , memory and CPU cannot be scaled
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDevTier")]
+        public System.Nullable<bool> IsDevTier { get; set; }
+        
+        /// <value>
         /// True if the database is on [dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html).
         /// 
         /// </value>

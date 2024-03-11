@@ -16,34 +16,42 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// The scaling policy to apply to each model of the deployment.
+    /// The metric expression rule base.
+    /// 
     /// </summary>
-    [JsonConverter(typeof(ScalingPolicyModelConverter))]
-    public class ScalingPolicy 
+    [JsonConverter(typeof(MetricExpressionRuleModelConverter))]
+    public class MetricExpressionRule 
     {
                 ///
         /// <value>
-        /// The type of scaling policy.
+        /// The metric expression for creating the alarm used to trigger autoscaling actions on the model deployment.
+        /// <br/>
+        /// The following values are supported:
+        /// <br/>
+        /// * `PREDEFINED_EXPRESSION`: An expression built using CPU or Memory metrics emitted by the Model Deployment Monitoring.
+        /// <br/>
+        /// * `CUSTOM_EXPRESSION`: A custom Monitoring Query Language (MQL) expression.
+        /// 
         /// </value>
         ///
-        public enum PolicyTypeEnum {
-            [EnumMember(Value = "FIXED_SIZE")]
-            FixedSize,
-            [EnumMember(Value = "AUTOSCALING")]
-            Autoscaling
+        public enum MetricExpressionRuleTypeEnum {
+            [EnumMember(Value = "PREDEFINED_EXPRESSION")]
+            PredefinedExpression,
+            [EnumMember(Value = "CUSTOM_EXPRESSION")]
+            CustomExpression
         };
 
         
     }
 
-    public class ScalingPolicyModelConverter : JsonConverter
+    public class MetricExpressionRuleModelConverter : JsonConverter
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
         {
-            return type == typeof(ScalingPolicy);
+            return type == typeof(MetricExpressionRule);
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -53,15 +61,15 @@ namespace Oci.DatascienceService.Models
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jsonObject = JObject.Load(reader);
-            var obj = default(ScalingPolicy);
-            var discriminator = jsonObject["policyType"].Value<string>();
+            var obj = default(MetricExpressionRule);
+            var discriminator = jsonObject["metricExpressionRuleType"].Value<string>();
             switch (discriminator)
             {
-                case "AUTOSCALING":
-                    obj = new AutoScalingPolicy();
+                case "PREDEFINED_EXPRESSION":
+                    obj = new PredefinedMetricExpressionRule();
                     break;
-                case "FIXED_SIZE":
-                    obj = new FixedSizeScalingPolicy();
+                case "CUSTOM_EXPRESSION":
+                    obj = new CustomMetricExpressionRule();
                     break;
             }
             if (obj != null)
@@ -70,7 +78,7 @@ namespace Oci.DatascienceService.Models
             }
             else
             {
-                logger.Warn($"The type {discriminator} is not present under ScalingPolicy! Returning null value.");
+                logger.Warn($"The type {discriminator} is not present under MetricExpressionRule! Returning null value.");
             }
             return obj;
         }

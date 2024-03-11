@@ -43,5 +43,11 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "bandwidthMbps")]
         public System.Nullable<int> BandwidthMbps { get; set; }
         
+        /// <value>
+        /// The maximum network bandwidth for the model deployment.
+        /// </value>
+        [JsonProperty(PropertyName = "maximumBandwidthMbps")]
+        public System.Nullable<int> MaximumBandwidthMbps { get; set; }
+        
     }
 }

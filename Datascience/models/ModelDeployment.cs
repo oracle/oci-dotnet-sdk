@@ -106,6 +106,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "modelDeploymentUrl")]
         public string ModelDeploymentUrl { get; set; }
         
+        [JsonProperty(PropertyName = "modelDeploymentSystemData")]
+        public ModelDeploymentSystemData ModelDeploymentSystemData { get; set; }
+        
         /// <value>
         /// The state of the model deployment.
         /// </value>
