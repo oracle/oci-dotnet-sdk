@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 82.1.0 - 2024-03-12
+### Added
+- Support for new development license type on dedicated infrastructure in the Database service
+- Support for placement parameters on Autonomous Container Database create operation in the Database service
+- Support for autoscaling on model deployment in the Data Science service
+
 ## 82.0.0 - 2024-03-05
 ### Added
 - Support for Linux capabilities configuration for the containers in the Container Instances service

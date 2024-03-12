@@ -16,34 +16,32 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// The scaling policy to apply to each model of the deployment.
+    /// Model deployment system data.
     /// </summary>
-    [JsonConverter(typeof(ScalingPolicyModelConverter))]
-    public class ScalingPolicy 
+    [JsonConverter(typeof(ModelDeploymentSystemDataModelConverter))]
+    public class ModelDeploymentSystemData 
     {
                 ///
         /// <value>
-        /// The type of scaling policy.
+        /// The infrastructure type of the model deployment.
         /// </value>
         ///
-        public enum PolicyTypeEnum {
-            [EnumMember(Value = "FIXED_SIZE")]
-            FixedSize,
-            [EnumMember(Value = "AUTOSCALING")]
-            Autoscaling
+        public enum SystemInfraTypeEnum {
+            [EnumMember(Value = "INSTANCE_POOL")]
+            InstancePool
         };
 
         
     }
 
-    public class ScalingPolicyModelConverter : JsonConverter
+    public class ModelDeploymentSystemDataModelConverter : JsonConverter
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
         {
-            return type == typeof(ScalingPolicy);
+            return type == typeof(ModelDeploymentSystemData);
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -53,15 +51,12 @@ namespace Oci.DatascienceService.Models
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jsonObject = JObject.Load(reader);
-            var obj = default(ScalingPolicy);
-            var discriminator = jsonObject["policyType"].Value<string>();
+            var obj = default(ModelDeploymentSystemData);
+            var discriminator = jsonObject["systemInfraType"].Value<string>();
             switch (discriminator)
             {
-                case "AUTOSCALING":
-                    obj = new AutoScalingPolicy();
-                    break;
-                case "FIXED_SIZE":
-                    obj = new FixedSizeScalingPolicy();
+                case "INSTANCE_POOL":
+                    obj = new InstancePoolModelDeploymentSystemData();
                     break;
             }
             if (obj != null)
@@ -70,7 +65,7 @@ namespace Oci.DatascienceService.Models
             }
             else
             {
-                logger.Warn($"The type {discriminator} is not present under ScalingPolicy! Returning null value.");
+                logger.Warn($"The type {discriminator} is not present under ModelDeploymentSystemData! Returning null value.");
             }
             return obj;
         }

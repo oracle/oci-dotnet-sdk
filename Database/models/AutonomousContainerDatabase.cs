@@ -464,5 +464,59 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "timeOfLastBackup")]
         public System.Nullable<System.DateTime> TimeOfLastBackup { get; set; }
         
+        /// <value>
+        /// The value above which an Autonomous Database will be split across multiple nodes. This value defaults to 16 when the \"CPU per VM\" value on the Autonomous VM Cluster is greater than 16. Otherwise, it defaults to the \"CPU per VM\" value.
+        /// </value>
+        [JsonProperty(PropertyName = "dbSplitThreshold")]
+        public System.Nullable<int> DbSplitThreshold { get; set; }
+        
+        /// <value>
+        /// The percentage of CPUs to reserve for a single node Autonomous Database, in increments of 25.
+        /// </value>
+        [JsonProperty(PropertyName = "vmFailoverReservation")]
+        public System.Nullable<int> VmFailoverReservation { get; set; }
+                ///
+        /// <value>
+        /// This option determines whether to open an Autonomous Database across the maximum number of nodes or the least number of nodes. The default will be for the minimum number of VMs.
+        /// </value>
+        ///
+        public enum DistributionAffinityEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MINIMUM_DISTRIBUTION")]
+            MinimumDistribution,
+            [EnumMember(Value = "MAXIMUM_DISTRIBUTION")]
+            MaximumDistribution
+        };
+
+        /// <value>
+        /// This option determines whether to open an Autonomous Database across the maximum number of nodes or the least number of nodes. The default will be for the minimum number of VMs.
+        /// </value>
+        [JsonProperty(PropertyName = "distributionAffinity")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DistributionAffinityEnum> DistributionAffinity { get; set; }
+                ///
+        /// <value>
+        /// Enabling SHARED server architecture enables a database server to allow many client processes to share very few server processes, thereby increasing the number of supported users.
+        /// </value>
+        ///
+        public enum NetServicesArchitectureEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "DEDICATED")]
+            Dedicated,
+            [EnumMember(Value = "SHARED")]
+            Shared
+        };
+
+        /// <value>
+        /// Enabling SHARED server architecture enables a database server to allow many client processes to share very few server processes, thereby increasing the number of supported users.
+        /// </value>
+        [JsonProperty(PropertyName = "netServicesArchitecture")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<NetServicesArchitectureEnum> NetServicesArchitecture { get; set; }
+        
     }
 }

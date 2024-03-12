@@ -82,6 +82,13 @@ namespace Oci.DatabaseService.Models
         public LongTermBackUpScheduleDetails LongTermBackupSchedule { get; set; }
         
         /// <value>
+        /// This project introduces Autonomous Database for Developers (ADB-Dev), a free tier on dedicated infrastructure, and Cloud@Customer for database development purposes. ADB-Dev enables ExaDB customers to experiment with ADB for free and incentivizes enterprises to use ADB for new development projects.Note that ADB-Dev have 4 CPU and 20GB of memory. For ADB-Dev , memory and CPU cannot be scaled
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDevTier")]
+        public System.Nullable<bool> IsDevTier { get; set; }
+        
+        /// <value>
         /// The compute amount (CPUs) available to the database. Minimum and maximum values depend on the compute model and whether the database is an Autonomous Database Serverless instance or an Autonomous Database on Dedicated Exadata Infrastructure.
         /// For an Autonomous Database Serverless instance, the 'ECPU' compute model requires a minimum value of one, for databases in the elastic resource pool and minimum value of two, otherwise. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value. Providing `computeModel` and `computeCount` is the preferred method for both OCPU and ECPU.
         /// <br/>

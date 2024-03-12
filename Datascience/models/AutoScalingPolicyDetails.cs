@@ -16,34 +16,36 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// The scaling policy to apply to each model of the deployment.
+    /// Details for an autoscaling policy to enable on the model deployment.
+    /// Each autoscaling configuration can have one autoscaling policy.
+    /// In a threshold-based autoscaling policy, an autoscaling action is triggered when a performance metric meets
+    /// or exceeds a threshold.
+    /// 
     /// </summary>
-    [JsonConverter(typeof(ScalingPolicyModelConverter))]
-    public class ScalingPolicy 
+    [JsonConverter(typeof(AutoScalingPolicyDetailsModelConverter))]
+    public class AutoScalingPolicyDetails 
     {
                 ///
         /// <value>
-        /// The type of scaling policy.
+        /// The type of autoscaling policy.
         /// </value>
         ///
-        public enum PolicyTypeEnum {
-            [EnumMember(Value = "FIXED_SIZE")]
-            FixedSize,
-            [EnumMember(Value = "AUTOSCALING")]
-            Autoscaling
+        public enum AutoScalingPolicyTypeEnum {
+            [EnumMember(Value = "THRESHOLD")]
+            Threshold
         };
 
         
     }
 
-    public class ScalingPolicyModelConverter : JsonConverter
+    public class AutoScalingPolicyDetailsModelConverter : JsonConverter
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
         {
-            return type == typeof(ScalingPolicy);
+            return type == typeof(AutoScalingPolicyDetails);
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -53,15 +55,12 @@ namespace Oci.DatascienceService.Models
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jsonObject = JObject.Load(reader);
-            var obj = default(ScalingPolicy);
-            var discriminator = jsonObject["policyType"].Value<string>();
+            var obj = default(AutoScalingPolicyDetails);
+            var discriminator = jsonObject["autoScalingPolicyType"].Value<string>();
             switch (discriminator)
             {
-                case "AUTOSCALING":
-                    obj = new AutoScalingPolicy();
-                    break;
-                case "FIXED_SIZE":
-                    obj = new FixedSizeScalingPolicy();
+                case "THRESHOLD":
+                    obj = new ThresholdBasedAutoScalingPolicyDetails();
                     break;
             }
             if (obj != null)
@@ -70,7 +69,7 @@ namespace Oci.DatascienceService.Models
             }
             else
             {
-                logger.Warn($"The type {discriminator} is not present under ScalingPolicy! Returning null value.");
+                logger.Warn($"The type {discriminator} is not present under AutoScalingPolicyDetails! Returning null value.");
             }
             return obj;
         }
