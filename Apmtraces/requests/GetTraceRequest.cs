@@ -20,7 +20,7 @@ namespace Oci.ApmtracesService.Requests
     {
         
         /// <value>
-        /// The APM Domain ID the request is intended for.
+        /// The APM Domain ID for the intended request.
         /// 
         /// </value>
         /// <remarks>
@@ -48,5 +48,39 @@ namespace Oci.ApmtracesService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Include traces that have a `minTraceStartTime` equal to or greater than this value.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeTraceStartedGreaterThanOrEqualTo")]
+        public System.Nullable<System.DateTime> TimeTraceStartedGreaterThanOrEqualTo { get; set; }
+        
+        /// <value>
+        /// Include traces that have a `minTraceStartTime` less than this value.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeTraceStartedLessThan")]
+        public System.Nullable<System.DateTime> TimeTraceStartedLessThan { get; set; }
+        
+        ///
+        /// <value>
+        /// Name space from which the trace details need to be retrieved.
+        /// 
+        /// </value>
+        ///
+        public enum TraceNamespaceEnum {
+            [EnumMember(Value = "TRACES")]
+            Traces,
+            [EnumMember(Value = "SYNTHETIC")]
+            Synthetic
+        };
+
+        /// <value>
+        /// Name space from which the trace details need to be retrieved.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "traceNamespace")]
+        public System.Nullable<TraceNamespaceEnum> TraceNamespace { get; set; }
     }
 }

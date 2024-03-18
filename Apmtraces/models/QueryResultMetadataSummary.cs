@@ -53,6 +53,9 @@ namespace Oci.ApmtracesService.Models
         [JsonProperty(PropertyName = "queryResultsOrderedBy")]
         public System.Collections.Generic.List<QueryResultsOrderedBySummary> QueryResultsOrderedBy { get; set; }
         
+        [JsonProperty(PropertyName = "queryResultsTopologyInfo")]
+        public QueryResultsTopologyInfo QueryResultsTopologyInfo { get; set; }
+        
         /// <value>
         /// Interval for the time series function in minutes.
         /// 

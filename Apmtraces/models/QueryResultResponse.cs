@@ -44,5 +44,19 @@ namespace Oci.ApmtracesService.Models
         [JsonProperty(PropertyName = "queryResultRows")]
         public System.Collections.Generic.List<QueryResultRow> QueryResultRows { get; set; }
         
+        /// <value>
+        /// A map containing metadata or additional information.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "queryResultMetadata")]
+        public System.Collections.Generic.Dictionary<string, System.Object> QueryResultMetadata { get; set; }
+        
+        /// <value>
+        /// A structure that provides warnings, if any, along with the query results.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "queryResultWarnings")]
+        public System.Collections.Generic.List<QueryResultWarning> QueryResultWarnings { get; set; }
+        
     }
 }

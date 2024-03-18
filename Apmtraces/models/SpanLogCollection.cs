@@ -30,6 +30,13 @@ namespace Oci.ApmtracesService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
+        /// Name of the event for which the log is created.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "eventName")]
+        public string EventName { get; set; }
+        
+        /// <value>
         /// List of logs associated with the span at the given timestamp.
         /// 
         /// </value>
