@@ -148,6 +148,29 @@ namespace Oci.ApmtracesService.Models
         /// </value>
         [JsonProperty(PropertyName = "serviceSummaries")]
         public System.Collections.Generic.List<TraceServiceSummary> ServiceSummaries { get; set; }
+                ///
+        /// <value>
+        /// Source of trace (traces, syn_traces).
+        /// 
+        /// </value>
+        ///
+        public enum SourceNameEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "TRACES")]
+            Traces,
+            [EnumMember(Value = "SYN_TRACES")]
+            SynTraces
+        };
+
+        /// <value>
+        /// Source of trace (traces, syn_traces).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sourceName")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SourceNameEnum> SourceName { get; set; }
         
         [JsonProperty(PropertyName = "spanSummary")]
         public TraceSpanSummary SpanSummary { get; set; }

@@ -66,7 +66,9 @@ namespace Oci.StackmonitoringService.Models
             [EnumMember(Value = "ORACLE_GOLDENGATE")]
             OracleGoldengate,
             [EnumMember(Value = "CUSTOM_RESOURCE")]
-            CustomResource
+            CustomResource,
+            [EnumMember(Value = "ORACLE_HTTP_SERVER")]
+            OracleHttpServer
         };
 
         /// <value>

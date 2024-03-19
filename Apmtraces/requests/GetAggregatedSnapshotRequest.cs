@@ -20,7 +20,7 @@ namespace Oci.ApmtracesService.Requests
     {
         
         /// <value>
-        /// The APM Domain ID the request is intended for.
+        /// The APM Domain ID for the intended request.
         /// 
         /// </value>
         /// <remarks>
@@ -48,5 +48,33 @@ namespace Oci.ApmtracesService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Name associated with the service.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serviceName")]
+        public string ServiceName { get; set; }
+        
+        /// <value>
+        /// Name of the server.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serverName")]
+        public string ServerName { get; set; }
+        
+        /// <value>
+        /// Unique Application Performance Monitoring span identifier (spanId).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "spanKey")]
+        public string SpanKey { get; set; }
+        
+        /// <value>
+        /// Name of the span associated with the trace.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "spanName")]
+        public string SpanName { get; set; }
     }
 }

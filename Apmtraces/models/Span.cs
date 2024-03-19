@@ -119,6 +119,13 @@ namespace Oci.ApmtracesService.Models
         public System.Collections.Generic.List<Tag> Tags { get; set; }
         
         /// <value>
+        /// Metadata about the tags in the span.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tagsMetadata")]
+        public System.Collections.Generic.Dictionary<string, TagMetadata> TagsMetadata { get; set; }
+        
+        /// <value>
         /// List of logs associated with the span.
         /// 
         /// </value>
@@ -135,6 +142,29 @@ namespace Oci.ApmtracesService.Models
         [Required(ErrorMessage = "IsError is required.")]
         [JsonProperty(PropertyName = "isError")]
         public System.Nullable<bool> IsError { get; set; }
+                ///
+        /// <value>
+        /// Source of span (spans, syn_spans).
+        /// 
+        /// </value>
+        ///
+        public enum SourceNameEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "SPANS")]
+            Spans,
+            [EnumMember(Value = "SYN_SPANS")]
+            SynSpans
+        };
+
+        /// <value>
+        /// Source of span (spans, syn_spans).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sourceName")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SourceNameEnum> SourceName { get; set; }
         
     }
 }
