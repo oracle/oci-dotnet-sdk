@@ -32,7 +32,7 @@ namespace Oci.DevopsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Unique name of a repository. This value is mutable.
+        /// Name of the repository. Should be unique within the project. This value is mutable.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -191,6 +191,10 @@ namespace Oci.DevopsService.Models
             UnknownEnumValue,
             [EnumMember(Value = "PUSH")]
             Push,
+            [EnumMember(Value = "PULL_REQUEST_CREATED")]
+            PullRequestCreated,
+            [EnumMember(Value = "PULL_REQUEST_UPDATED")]
+            PullRequestUpdated,
             [EnumMember(Value = "COMMIT_UPDATES")]
             CommitUpdates
         };
@@ -198,6 +202,8 @@ namespace Oci.DevopsService.Models
         /// <value>
         /// Trigger build events supported for this repository:
         /// PUSH - Build is triggered when a push event occurs.
+        /// PULL_REQUEST_CREATED - Build is triggered when a pull request is created in the repository.
+        /// PULL_REQUEST_UPDATED - Build is triggered when a push is made to a branch with an open pull request.
         /// COMMIT_UPDATES - Build is triggered when new commits are mirrored into a repository.
         /// 
         /// </value>

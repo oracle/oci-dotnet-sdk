@@ -473,6 +473,24 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
         /// <value>
+        /// The frequency a refreshable clone is refreshed after auto-refresh is enabled. The minimum is 1 hour. The maximum is 7 days. The date and time that auto-refresh is enabled is controlled by the `timeOfAutoRefreshStart` parameter.
+        /// </value>
+        [JsonProperty(PropertyName = "autoRefreshFrequencyInSeconds")]
+        public System.Nullable<int> AutoRefreshFrequencyInSeconds { get; set; }
+        
+        /// <value>
+        /// The time, in seconds, the data of the refreshable clone lags the primary database at the point of refresh. The minimum is 0 minutes (0 mins means refresh to the latest available timestamp). The maximum is 7 days. The lag time increases after refreshing until the next data refresh happens.
+        /// </value>
+        [JsonProperty(PropertyName = "autoRefreshPointLagInSeconds")]
+        public System.Nullable<int> AutoRefreshPointLagInSeconds { get; set; }
+        
+        /// <value>
+        /// The the date and time that auto-refreshing will begin for an Autonomous Database refreshable clone. This value controls only the start time for the first refresh operation. Subsequent (ongoing) refresh operations have start times controlled by the value of the `autoRefreshFrequencyInSeconds` parameter.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfAutoRefreshStart")]
+        public System.Nullable<System.DateTime> TimeOfAutoRefreshStart { get; set; }
+        
+        /// <value>
         /// Customer Contacts. Setting this to an empty list removes all customer contacts of an Oracle
         /// <br/>
         /// This cannot be updated in parallel with any of the following: isMTLSConnectionRequired, scheduledOperations, or dbToolsDetails.

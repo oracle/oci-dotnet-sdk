@@ -26,6 +26,10 @@ namespace Oci.LoggingService.Models
         /// and it's changeable. Avoid entering confidential information.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
@@ -76,6 +80,10 @@ namespace Oci.LoggingService.Models
         /// <value>
         /// Description for this resource.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Description is required.")]
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         

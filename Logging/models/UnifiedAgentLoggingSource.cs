@@ -40,7 +40,9 @@ namespace Oci.LoggingService.Models
             [EnumMember(Value = "LOG_TAIL")]
             LogTail,
             [EnumMember(Value = "WINDOWS_EVENT_LOG")]
-            WindowsEventLog
+            WindowsEventLog,
+            [EnumMember(Value = "CUSTOM_PLUGIN")]
+            CustomPlugin
         };
 
         
@@ -67,6 +69,9 @@ namespace Oci.LoggingService.Models
             var discriminator = jsonObject["sourceType"].Value<string>();
             switch (discriminator)
             {
+                case "CUSTOM_PLUGIN":
+                    obj = new UnifiedAgentCustomPluginLogSource();
+                    break;
                 case "WINDOWS_EVENT_LOG":
                     obj = new UnifiedAgentWindowsEventSource();
                     break;

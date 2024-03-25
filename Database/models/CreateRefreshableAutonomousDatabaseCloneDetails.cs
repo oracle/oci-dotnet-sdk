@@ -50,6 +50,48 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RefreshableModeEnum> RefreshableMode { get; set; }
         
+        /// <value>
+        /// The frequency a refreshable clone is refreshed after auto-refresh is enabled. The minimum is 1 hour. The maximum is 7 days. The date and time that auto-refresh is enabled is controlled by the `timeOfAutoRefreshStart` parameter.
+        /// </value>
+        [JsonProperty(PropertyName = "autoRefreshFrequencyInSeconds")]
+        public System.Nullable<int> AutoRefreshFrequencyInSeconds { get; set; }
+        
+        /// <value>
+        /// The time, in seconds, the data of the refreshable clone lags the primary database at the point of refresh. The minimum is 0 minutes (0 mins means refresh to the latest available timestamp). The maximum is 7 days. The lag time increases after refreshing until the next data refresh happens.
+        /// </value>
+        [JsonProperty(PropertyName = "autoRefreshPointLagInSeconds")]
+        public System.Nullable<int> AutoRefreshPointLagInSeconds { get; set; }
+        
+        /// <value>
+        /// The the date and time that auto-refreshing will begin for an Autonomous Database refreshable clone. This value controls only the start time for the first refresh operation. Subsequent (ongoing) refresh operations have start times controlled by the value of the `autoRefreshFrequencyInSeconds` parameter.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfAutoRefreshStart")]
+        public System.Nullable<System.DateTime> TimeOfAutoRefreshStart { get; set; }
+                ///
+        /// <value>
+        /// Indicates the Autonomous Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// 
+        /// </value>
+        ///
+        public enum OpenModeEnum {
+            [EnumMember(Value = "READ_ONLY")]
+            ReadOnly,
+            [EnumMember(Value = "READ_WRITE")]
+            ReadWrite
+        };
+
+        /// <value>
+        /// Indicates the Autonomous Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
+        /// <br/>
+        /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "openMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OpenModeEnum> OpenMode { get; set; }
+        
         [JsonProperty(PropertyName = "source")]
         private readonly string source = "CLONE_TO_REFRESHABLE";
     }

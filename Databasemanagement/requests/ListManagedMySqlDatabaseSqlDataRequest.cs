@@ -55,6 +55,7 @@ namespace Oci.DatabasemanagementService.Requests
         
         /// <value>
         /// The parameter to filter results by key criteria which include :
+        /// - AVG_TIMER_WAIT
         /// - SUM_TIMER_WAIT
         /// - COUNT_STAR
         /// - SUM_ERRORS
@@ -66,6 +67,8 @@ namespace Oci.DatabasemanagementService.Requests
         /// - SUM_NO_GOOD_INDEX_USED
         /// - FIRST_SEEN
         /// - LAST_SEEN
+        /// - HEATWAVE_OFFLOADED
+        /// - HEATWAVE_OUT_OF_MEMORY
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filterColumn")]

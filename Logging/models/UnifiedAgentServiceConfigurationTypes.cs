@@ -20,6 +20,8 @@ namespace Oci.LoggingService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "LOGGING")]
-      Logging
+      Logging,
+      [EnumMember(Value = "MONITORING")]
+      Monitoring
   }
 }

@@ -32,7 +32,7 @@ namespace Oci.DevopsService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Unique name of a repository. This value is mutable.
+        /// Name of the repository. Should be unique within the project. This value is mutable.
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

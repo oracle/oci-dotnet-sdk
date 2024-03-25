@@ -1479,7 +1479,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Deletes a Repository&#39;s Ref by its name. Returns an error if the name is ambiguous. Can be disambiguated by using full names like \&quot;heads/&lt;name&gt;\&quot; or \&quot;tags/&lt;name&gt;\&quot;.
+        /// Deletes a Repository&#39;s Ref by its name. Returns an error if the name is ambiguous. Can be disambiguated by using full names like \&quot;heads/&lt;name&gt;\&quot; or \&quot;tags/&lt;name&gt;\&quot;. This API will be deprecated on Wed, 12 June 2024 01:00:00 GMT as it does not get recognized when refName has &#39;/&#39;. This will be replaced by \&quot;/repositories/{repositoryId}/actions/deleteGitRef\&quot;.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2549,7 +2549,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Retrieves a repository&#39;s reference by its name with preference for branches over tags if the name is ambiguous. This can be disambiguated by using full names like \&quot;heads/&lt;name&gt;\&quot; or \&quot;tags/&lt;name&gt;\&quot;.
+        /// This API will be deprecated on Wed, 12 June 2024 01:00:00 GMT as it does not get recognized when refName has &#39;/&#39;. This will be replaced by \&quot;/repositories/{repositoryId}/refs\&quot;. Retrieves a repository&#39;s reference by its name with preference for branches over tags if the name is ambiguous. This can be disambiguated by using full names like \&quot;heads/&lt;name&gt;\&quot; or \&quot;tags/&lt;name&gt;\&quot;.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4246,7 +4246,7 @@ namespace Oci.DevopsService
         }
 
         /// <summary>
-        /// Creates a new reference or updates an existing one.
+        /// Creates a new reference or updates an existing one. This API will be deprecated on Wed, 12 June 2024 01:00:00 GMT as it does not get recognized when refName has &#39;/&#39;. This will be replaced by \&quot;/repositories/{repositoryId}/actions/createOrUpdateGitRef\&quot;.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

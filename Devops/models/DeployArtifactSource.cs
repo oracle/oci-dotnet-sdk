@@ -70,6 +70,9 @@ namespace Oci.DevopsService.Models
                 case "OCIR":
                     obj = new OcirDeployArtifactSource();
                     break;
+                case "HELM_COMMAND_SPEC":
+                    obj = new HelmCommandSpecArtifactSource();
+                    break;
                 case "INLINE":
                     obj = new InlineDeployArtifactSource();
                     break;

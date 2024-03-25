@@ -49,6 +49,9 @@ namespace Oci.LoggingService.Models
                 case "LOGGING":
                     obj = new UnifiedAgentLoggingConfiguration();
                     break;
+                case "MONITORING":
+                    obj = new UnifiedAgentMonitoringConfigurationDetails();
+                    break;
             }
             if (obj != null)
             {

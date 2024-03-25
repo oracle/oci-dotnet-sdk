@@ -52,6 +52,8 @@ namespace Oci.NetworkloadbalancerService.Models
       [EnumMember(Value = "ATTACH_NLB_TO_POD")]
       AttachNlbToPod,
       [EnumMember(Value = "DETACH_NLB_FROM_POD")]
-      DetachNlbFromPod
+      DetachNlbFromPod,
+      [EnumMember(Value = "LIVE_MIGRATION")]
+      LiveMigration
   }
 }

@@ -22,7 +22,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Branch for push event.
+        /// Branch for push event; source branch for pull requests
         /// </value>
         [JsonProperty(PropertyName = "headRef")]
         public string HeadRef { get; set; }
