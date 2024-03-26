@@ -31,7 +31,7 @@ namespace Oci.DevopsService.Models
         };
 
         /// <value>
-        /// The events only support PUSH.
+        /// The events, for example, PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED.
         /// </value>
         [JsonProperty(PropertyName = "events", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<EventsEnum> Events { get; set; }

@@ -54,7 +54,9 @@ namespace Oci.LoggingService.Models
             [EnumMember(Value = "GROK")]
             Grok,
             [EnumMember(Value = "MULTILINE_GROK")]
-            MultilineGrok
+            MultilineGrok,
+            [EnumMember(Value = "OPENMETRICS")]
+            Openmetrics
         };
 
         
@@ -158,6 +160,9 @@ namespace Oci.LoggingService.Models
                     break;
                 case "SYSLOG":
                     obj = new UnifiedAgentSyslogParser();
+                    break;
+                case "OPENMETRICS":
+                    obj = new UnifiedAgentOpenmetricsParser();
                     break;
                 case "AUDITD":
                     obj = new UnifiedAgentAuditdParser();

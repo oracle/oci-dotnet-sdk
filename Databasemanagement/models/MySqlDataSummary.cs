@@ -341,5 +341,17 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "quantile999")]
         public System.Nullable<decimal> Quantile999 { get; set; }
         
+        /// <value>
+        /// The number of query executions offloaded to HeatWave.
+        /// </value>
+        [JsonProperty(PropertyName = "heatWaveOffloaded")]
+        public System.Nullable<decimal> HeatWaveOffloaded { get; set; }
+        
+        /// <value>
+        /// The number of query executions with HeatWave out-of-memory errors.
+        /// </value>
+        [JsonProperty(PropertyName = "heatWaveOutOfMemory")]
+        public System.Nullable<decimal> HeatWaveOutOfMemory { get; set; }
+        
     }
 }

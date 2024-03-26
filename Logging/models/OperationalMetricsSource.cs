@@ -50,6 +50,10 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "metrics")]
         public System.Collections.Generic.List<string> Metrics { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RecordInput is required.")]
         [JsonProperty(PropertyName = "recordInput")]
         public OperationalMetricsRecordInput RecordInput { get; set; }
         

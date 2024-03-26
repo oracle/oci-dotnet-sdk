@@ -247,5 +247,33 @@ namespace Oci.MonitoringService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// A set of overrides that control evaluations of the alarm. 
+        /// <br/>
+        /// Each override can specify values for query, severity, body, and pending duration.
+        /// When an alarm contains overrides, the Monitoring service evaluates each override in order, beginning with the first override in the array (index position `0`),
+        /// and then evaluates the alarm's base values (`ruleName` value of `BASE`).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "overrides")]
+        public System.Collections.Generic.List<AlarmOverride> Overrides { get; set; }
+        
+        /// <value>
+        /// Identifier of the alarm's base values for alarm evaluation, for use when the alarm contains overrides. 
+        /// A valid ruleName value starts with an alphabetic character and includes only alphanumeric characters, underscores and square brackets. 
+        /// Minimum number of characters: 3. Default value is `BASE`. For information about alarm overrides, see {@link #alarmOverride(AlarmOverrideRequest) alarmOverride}.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ruleName")]
+        public string RuleName { get; set; }
+        
+        /// <value>
+        /// The version of the alarm notification to be delivered. Allowed value: `1.X`
+        /// The value must start with a number (up to four digits), followed by a period and an uppercase X.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "notificationVersion")]
+        public string NotificationVersion { get; set; }
+        
     }
 }

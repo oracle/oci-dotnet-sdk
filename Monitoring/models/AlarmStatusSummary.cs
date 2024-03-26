@@ -90,6 +90,19 @@ namespace Oci.MonitoringService.Models
         public System.Nullable<SeverityEnum> Severity { get; set; }
         
         /// <value>
+        /// Identifier of the alarm's base values for alarm evaluation, for use when the alarm contains overrides. 
+        /// A valid ruleName value starts with an alphabetic character and includes only alphanumeric characters, underscores and square brackets. 
+        /// Minimum number of characters: 3. Default value is `BASE`. For information about alarm overrides, see {@link #alarmOverride(AlarmOverrideRequest) alarmOverride}.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RuleName is required.")]
+        [JsonProperty(PropertyName = "ruleName")]
+        public string RuleName { get; set; }
+        
+        /// <value>
         /// Timestamp for the transition of the alarm state. For example, the time when the alarm transitioned from OK to Firing.
         /// Note: A three-minute lag for this value accounts for any late-arriving metrics.
         /// <br/>

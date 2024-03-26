@@ -50,6 +50,18 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "timeFormat")]
         public string TimeFormat { get; set; }
         
+        /// <value>
+        /// If true, a separator parameter can be further defined.
+        /// </value>
+        [JsonProperty(PropertyName = "parseNested")]
+        public System.Nullable<bool> ParseNested { get; set; }
+        
+        /// <value>
+        /// Keys of adjacent levels are joined by the separator.
+        /// </value>
+        [JsonProperty(PropertyName = "separator")]
+        public string Separator { get; set; }
+        
         [JsonProperty(PropertyName = "parserType")]
         private readonly string parserType = "JSON";
     }

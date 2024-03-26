@@ -105,6 +105,24 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<MySqlDatabaseStatus> DatabaseStatus { get; set; }
         
         /// <value>
+        /// If HeatWave is enabled for this db system or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isHeatWaveEnabled")]
+        public System.Nullable<bool> IsHeatWaveEnabled { get; set; }
+        
+        /// <value>
+        /// The name of the HeatWave cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "heatWaveClusterDisplayName")]
+        public string HeatWaveClusterDisplayName { get; set; }
+        
+        /// <value>
+        /// The number of nodes in the HeatWave cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "heatWaveNodeCount")]
+        public System.Nullable<int> HeatWaveNodeCount { get; set; }
+        
+        /// <value>
         /// A list of the database health metrics like CPU, Storage, and Memory.
         /// </value>
         /// <remarks>

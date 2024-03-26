@@ -88,5 +88,11 @@ namespace Oci.DatabasemanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filterByMySqlDatabaseVersion")]
         public string FilterByMySqlDatabaseVersion { get; set; }
+        
+        /// <value>
+        /// The parameter to filter based on whether HeatWave is enabled for the database.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isHeatWaveEnabled")]
+        public System.Nullable<bool> IsHeatWaveEnabled { get; set; }
     }
 }

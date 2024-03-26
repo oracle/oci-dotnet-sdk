@@ -34,6 +34,9 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "parser")]
         public UnifiedAgentParser Parser { get; set; }
         
+        [JsonProperty(PropertyName = "advancedOptions")]
+        public UnifiedAgentTailSourceAdvancedOptions AdvancedOptions { get; set; }
+        
         [JsonProperty(PropertyName = "sourceType")]
         private readonly string sourceType = "LOG_TAIL";
     }

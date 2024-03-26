@@ -58,6 +58,39 @@ namespace Oci.DevopsService.Models
         public string ReleaseName { get; set; }
         
         /// <value>
+        /// Uninstall the Helm chart release on deleting the stage.
+        /// </value>
+        [JsonProperty(PropertyName = "isUninstallOnStageDelete")]
+        public System.Nullable<bool> IsUninstallOnStageDelete { get; set; }
+        
+        /// <value>
+        /// List of Helm command artifact OCIDs.
+        /// </value>
+        [JsonProperty(PropertyName = "helmCommandArtifactIds")]
+        public System.Collections.Generic.List<string> HelmCommandArtifactIds { get; set; }
+                ///
+        /// <value>
+        /// The purpose of running this Helm stage
+        /// </value>
+        ///
+        public enum PurposeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "EXECUTE_HELM_UPGRADE")]
+            ExecuteHelmUpgrade,
+            [EnumMember(Value = "EXECUTE_HELM_COMMAND")]
+            ExecuteHelmCommand
+        };
+
+        /// <value>
+        /// The purpose of running this Helm stage
+        /// </value>
+        [JsonProperty(PropertyName = "purpose")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<PurposeEnum> Purpose { get; set; }
+        
+        /// <value>
         /// Default namespace to be used for Kubernetes deployment when not specified in the manifest.
         /// </value>
         [JsonProperty(PropertyName = "namespace")]

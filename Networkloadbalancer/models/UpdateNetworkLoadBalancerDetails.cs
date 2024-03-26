@@ -42,6 +42,14 @@ namespace Oci.NetworkloadbalancerService.Models
         public System.Nullable<bool> IsPreserveSourceDestination { get; set; }
         
         /// <value>
+        /// This can only be enabled when NLB is working in transparent mode with source destination header preservation enabled. 
+        /// This removes the additional dependency from NLB backends(like Firewalls) to perform SNAT.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSymmetricHashEnabled")]
+        public System.Nullable<bool> IsSymmetricHashEnabled { get; set; }
+        
+        /// <value>
         /// IP version associated with the NLB.
         /// </value>
         [JsonProperty(PropertyName = "nlbIpVersion")]

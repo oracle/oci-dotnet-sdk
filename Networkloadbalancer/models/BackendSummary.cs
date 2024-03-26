@@ -17,7 +17,7 @@ namespace Oci.NetworkloadbalancerService.Models
 {
     /// <summary>
     /// The configuration of a backend server that is a member of a network load balancer backend set.
-    /// For more information, see [Managing Backend Servers](https://docs.cloud.oracle.com/Content/Balance/Tasks/managingbackendservers.htm).
+    /// For more information, see [Managing Backend Servers](https://docs.cloud.oracle.com/Content/NetworkLoadBalancer/BackendServers/backend-server-management.htm).
     /// 
     /// </summary>
     public class BackendSummary 
@@ -62,7 +62,7 @@ namespace Oci.NetworkloadbalancerService.Models
         /// proportion of incoming traffic. For example, a server weighted '3' receives three times the number of new connections
         /// as a server weighted '1'.
         /// For more information about load balancing policies, see
-        /// [How Network Load Balancing Policies Work](https://docs.cloud.oracle.com/Content/Balance/Reference/lbpolicies.htm).
+        /// [How Network Load Balancing Policies Work](https://docs.cloud.oracle.com/Content/NetworkLoadBalancer/introducton.htm#Policies).
         /// <br/>
         /// Example: 3
         /// </value>
@@ -70,7 +70,7 @@ namespace Oci.NetworkloadbalancerService.Models
         public System.Nullable<int> Weight { get; set; }
         
         /// <value>
-        /// Whether the network load balancer should drain this server. Servers marked \"isDrain\" receive no 
+        /// Whether the network load balancer should drain this server. Servers marked \"isDrain\" receive no
         /// incoming traffic.
         /// <br/>
         /// Example: false

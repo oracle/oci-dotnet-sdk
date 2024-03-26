@@ -81,5 +81,53 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
+        /// <value>
+        /// The name of the HeatWave cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "heatWaveClusterDisplayName")]
+        public string HeatWaveClusterDisplayName { get; set; }
+        
+        /// <value>
+        /// If HeatWave is enabled for this db system or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isHeatWaveEnabled")]
+        public System.Nullable<bool> IsHeatWaveEnabled { get; set; }
+        
+        /// <value>
+        /// If HeatWave Lakehouse is enabled for the db system or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isLakehouseEnabled")]
+        public System.Nullable<bool> IsLakehouseEnabled { get; set; }
+        
+        /// <value>
+        /// Shape of the nodes in the HeatWave cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "heatWaveNodeShape")]
+        public string HeatWaveNodeShape { get; set; }
+        
+        /// <value>
+        /// The total memory belonging to the HeatWave cluster in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "heatWaveMemorySize")]
+        public System.Nullable<int> HeatWaveMemorySize { get; set; }
+        
+        /// <value>
+        /// The information about an individual HeatWave nodes in the cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "heatWaveNodes")]
+        public System.Collections.Generic.List<HeatWaveNode> HeatWaveNodes { get; set; }
+        
+        /// <value>
+        /// If the HeatWave cluster is active or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isHeatWaveActive")]
+        public System.Nullable<bool> IsHeatWaveActive { get; set; }
+        
+        /// <value>
+        /// The date and time the Managed MySQL Database was created.
+        /// </value>
+        [JsonProperty(PropertyName = "timeCreatedHeatWave")]
+        public System.Nullable<System.DateTime> TimeCreatedHeatWave { get; set; }
+        
     }
 }

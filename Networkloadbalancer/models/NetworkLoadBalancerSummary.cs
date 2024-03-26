@@ -120,7 +120,7 @@ namespace Oci.NetworkloadbalancerService.Models
         /// A public network load balancer is accessible from the internet, depending the
         /// [security list rules](https://docs.cloud.oracle.com/Content/network/Concepts/securitylists.htm) for your virtual cloudn network. For more information about public and
         /// private network load balancers,
-        /// see [How Network Load Balancing Works](https://docs.cloud.oracle.com/Content/Balance/Concepts/balanceoverview.htm#how-network-load-balancing-works).
+        /// see [How Network Load Balancing Works](https://docs.cloud.oracle.com/Content/NetworkLoadBalancer/overview.htm).
         /// This value is true by default.
         /// <br/>
         /// Example: true
@@ -135,6 +135,14 @@ namespace Oci.NetworkloadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPreserveSourceDestination")]
         public System.Nullable<bool> IsPreserveSourceDestination { get; set; }
+        
+        /// <value>
+        /// This can only be enabled when NLB is working in transparent mode with source destination header preservation enabled. 
+        /// This removes the additional dependency from NLB backends(like Firewalls) to perform SNAT.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSymmetricHashEnabled")]
+        public System.Nullable<bool> IsSymmetricHashEnabled { get; set; }
         
         /// <value>
         /// The subnet in which the network load balancer is spawned [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).\"

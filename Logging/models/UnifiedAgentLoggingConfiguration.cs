@@ -31,6 +31,12 @@ namespace Oci.LoggingService.Models
         [JsonProperty(PropertyName = "sources")]
         public System.Collections.Generic.List<UnifiedAgentLoggingSource> Sources { get; set; }
         
+        /// <value>
+        /// Logging filter object.
+        /// </value>
+        [JsonProperty(PropertyName = "filter")]
+        public System.Collections.Generic.List<UnifiedAgentLoggingFilter> Filter { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

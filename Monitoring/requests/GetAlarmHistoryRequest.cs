@@ -40,8 +40,9 @@ namespace Oci.MonitoringService.Requests
         
         ///
         /// <value>
-        /// The type of history entries to retrieve. State history (STATE_HISTORY) or state transition history (STATE_TRANSITION_HISTORY).
-        /// If not specified, entries of both types are retrieved.
+        /// The type of history entries to retrieve.
+        /// State history (STATE_HISTORY), state transition history (STATE_TRANSITION_HISTORY), rule history (RULE_HISTORY) or rule transition history (RULE_TRANSITION_HISTORY).
+        /// If not specified, entries of all types are retrieved.
         /// <br/>
         /// Example: STATE_HISTORY
         /// </value>
@@ -50,12 +51,17 @@ namespace Oci.MonitoringService.Requests
             [EnumMember(Value = "STATE_HISTORY")]
             StateHistory,
             [EnumMember(Value = "STATE_TRANSITION_HISTORY")]
-            StateTransitionHistory
+            StateTransitionHistory,
+            [EnumMember(Value = "RULE_HISTORY")]
+            RuleHistory,
+            [EnumMember(Value = "RULE_TRANSITION_HISTORY")]
+            RuleTransitionHistory
         };
 
         /// <value>
-        /// The type of history entries to retrieve. State history (STATE_HISTORY) or state transition history (STATE_TRANSITION_HISTORY).
-        /// If not specified, entries of both types are retrieved.
+        /// The type of history entries to retrieve.
+        /// State history (STATE_HISTORY), state transition history (STATE_TRANSITION_HISTORY), rule history (RULE_HISTORY) or rule transition history (RULE_TRANSITION_HISTORY).
+        /// If not specified, entries of all types are retrieved.
         /// <br/>
         /// Example: STATE_HISTORY
         /// </value>

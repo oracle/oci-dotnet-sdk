@@ -22,7 +22,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Unique name of a repository.
+        /// Name of the repository. Should be unique within the project.
         /// </value>
         /// <remarks>
         /// Required
