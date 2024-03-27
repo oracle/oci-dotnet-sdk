@@ -42,25 +42,41 @@ namespace Oci.Common.Auth
             }
 
             AsymmetricCipherKeyPair keyPair;
-
-            try
+            using (StringReader reader = new StringReader(privateKeyContent))
             {
-                keyPair = (AsymmetricCipherKeyPair)new PemReader(new StringReader(privateKeyContent), this.passPhrase == null ? null : new PasswordFinder(this.passPhrase)).ReadObject();
+                try
+                {
+                    // PemReader uses password only if the private is password encrypted.
+                    // If password is passed for a plain private key, it would be ignored.
+                    object pemReader = new PemReader(reader, this.passPhrase == null ? null : new PasswordFinder(this.passPhrase)).ReadObject();
+                    if (pemReader is AsymmetricCipherKeyPair)
+                    {
+                        keyPair = (AsymmetricCipherKeyPair)pemReader;
+                        return this.privateKey = (RsaKeyParameters)keyPair.Private;
+                    }
+                    else if (pemReader is AsymmetricKeyParameter)
+                    {
+                        RsaPrivateCrtKeyParameters rsaPrivateCrtKeyParameters = (RsaPrivateCrtKeyParameters)pemReader;
+                        return this.privateKey = new RsaKeyParameters(rsaPrivateCrtKeyParameters.IsPrivate, rsaPrivateCrtKeyParameters.Modulus, rsaPrivateCrtKeyParameters.Exponent);
+                    }
+                    else
+                    {
+                        throw new FormatException("The given key does not have the expected type");
+                    }
+                }
+                catch (InvalidCipherTextException e)
+                {
+                    throw new ArgumentException("Incorrect passphrase for private key", e);
+                }
+                catch (PasswordException e)
+                {
+                    throw new ArgumentException("Private key is encrypted with a pass phrase. Please provide passphrase in the config", e);
+                }
+                catch (InvalidKeyException e)
+                {
+                    throw new ArgumentException("Invalid Key has been provided", e);
+                }
             }
-            catch (InvalidCipherTextException e)
-            {
-                throw new ArgumentException("Incorrect passphrase for private key", e);
-            }
-            catch (PasswordException e)
-            {
-                throw new ArgumentException("Private key is encrypted with a pass phrase. Please provide passphrase in the config", e);
-            }
-            catch (InvalidKeyException e)
-            {
-                throw new ArgumentException("Invalid Key has been provided", e);
-            }
-
-            return (RsaKeyParameters)keyPair.Private;
         }
     }
 }
