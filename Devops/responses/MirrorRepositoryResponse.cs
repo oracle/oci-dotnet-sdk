@@ -12,7 +12,7 @@ using Oci.DevopsService.Models;
 
 namespace Oci.DevopsService.Responses
 {
-    public class MirrorRepositoryResponse : Oci.Common.IOciResponse
+    public class MirrorRepositoryResponse : Oci.Common.OciResponse
     {
 
         /// <value>

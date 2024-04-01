@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class UpdateEnterpriseManagerBridgeResponse : Oci.Common.IOciResponse
+    public class UpdateEnterpriseManagerBridgeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

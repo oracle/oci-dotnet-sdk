@@ -12,7 +12,7 @@ using Oci.KeymanagementService.Models;
 
 namespace Oci.KeymanagementService.Responses
 {
-    public class GetPreCoUserCredentialsResponse : Oci.Common.IOciResponse
+    public class GetPreCoUserCredentialsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

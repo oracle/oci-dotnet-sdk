@@ -12,7 +12,7 @@ using Oci.OpaService.Models;
 
 namespace Oci.OpaService.Responses
 {
-    public class DeleteOpaInstanceResponse : Oci.Common.IOciResponse
+    public class DeleteOpaInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

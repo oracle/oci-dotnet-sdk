@@ -12,7 +12,7 @@ using Oci.MonitoringService.Models;
 
 namespace Oci.MonitoringService.Responses
 {
-    public class ListMetricsResponse : Oci.Common.IOciResponse
+    public class ListMetricsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

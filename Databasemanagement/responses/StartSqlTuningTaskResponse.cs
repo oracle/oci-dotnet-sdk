@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class StartSqlTuningTaskResponse : Oci.Common.IOciResponse
+    public class StartSqlTuningTaskResponse : Oci.Common.OciResponse
     {
 
         /// <value>

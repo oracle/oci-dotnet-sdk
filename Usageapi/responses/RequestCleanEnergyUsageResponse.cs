@@ -12,7 +12,7 @@ using Oci.UsageapiService.Models;
 
 namespace Oci.UsageapiService.Responses
 {
-    public class RequestCleanEnergyUsageResponse : Oci.Common.IOciResponse
+    public class RequestCleanEnergyUsageResponse : Oci.Common.OciResponse
     {
 
         /// <value>

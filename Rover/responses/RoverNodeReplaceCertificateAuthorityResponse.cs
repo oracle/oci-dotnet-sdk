@@ -12,7 +12,7 @@ using Oci.RoverService.Models;
 
 namespace Oci.RoverService.Responses
 {
-    public class RoverNodeReplaceCertificateAuthorityResponse : Oci.Common.IOciResponse
+    public class RoverNodeReplaceCertificateAuthorityResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.EmailService.Models
 {
     /// <summary>
-    /// Results of a search. Contains boh DkimSummary items and other information, such as metadata.
+    /// Results of a search. Contains both DkimSummary items and other information, such as metadata.
     /// </summary>
     public class DkimCollection 
     {

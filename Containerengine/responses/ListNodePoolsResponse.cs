@@ -12,7 +12,7 @@ using Oci.ContainerengineService.Models;
 
 namespace Oci.ContainerengineService.Responses
 {
-    public class ListNodePoolsResponse : Oci.Common.IOciResponse
+    public class ListNodePoolsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

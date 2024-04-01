@@ -12,7 +12,7 @@ using Oci.WaaService.Models;
 
 namespace Oci.WaaService.Responses
 {
-    public class PurgeWebAppAccelerationCacheResponse : Oci.Common.IOciResponse
+    public class PurgeWebAppAccelerationCacheResponse : Oci.Common.OciResponse
     {
 
         /// <value>

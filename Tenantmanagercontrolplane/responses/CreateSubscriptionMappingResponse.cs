@@ -12,7 +12,7 @@ using Oci.TenantmanagercontrolplaneService.Models;
 
 namespace Oci.TenantmanagercontrolplaneService.Responses
 {
-    public class CreateSubscriptionMappingResponse : Oci.Common.IOciResponse
+    public class CreateSubscriptionMappingResponse : Oci.Common.OciResponse
     {
 
         /// <value>

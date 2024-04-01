@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class RemoveVirtualMachineFromVmClusterResponse : Oci.Common.IOciResponse
+    public class RemoveVirtualMachineFromVmClusterResponse : Oci.Common.OciResponse
     {
 
         /// <value>

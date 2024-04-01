@@ -12,7 +12,7 @@ using Oci.ServicecatalogService.Models;
 
 namespace Oci.ServicecatalogService.Responses
 {
-    public class BulkReplaceServiceCatalogAssociationsResponse : Oci.Common.IOciResponse
+    public class BulkReplaceServiceCatalogAssociationsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

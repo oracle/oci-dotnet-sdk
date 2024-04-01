@@ -12,7 +12,7 @@ using Oci.DatabasemigrationService.Models;
 
 namespace Oci.DatabasemigrationService.Responses
 {
-    public class ConnectionDiagnosticsResponse : Oci.Common.IOciResponse
+    public class ConnectionDiagnosticsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

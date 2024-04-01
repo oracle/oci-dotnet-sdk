@@ -12,7 +12,7 @@ using Oci.DevopsService.Models;
 
 namespace Oci.DevopsService.Responses
 {
-    public class ListPathsResponse : Oci.Common.IOciResponse
+    public class ListPathsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.OspgatewayService.Models;
 
 namespace Oci.OspgatewayService.Responses
 {
-    public class VerifyAddressResponse : Oci.Common.IOciResponse
+    public class VerifyAddressResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatacatalogService.Models;
 
 namespace Oci.DatacatalogService.Responses
 {
-    public class DeleteGlossaryResponse : Oci.Common.IOciResponse
+    public class DeleteGlossaryResponse : Oci.Common.OciResponse
     {
 
         /// <value>

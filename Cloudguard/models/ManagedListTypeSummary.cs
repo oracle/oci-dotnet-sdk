@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of the ManagedListType.
+    /// A managed list type summary (ManagedListTypeSummary object) contains summary information for a managed list type (ManagedListType object).
     /// </summary>
     public class ManagedListTypeSummary 
     {

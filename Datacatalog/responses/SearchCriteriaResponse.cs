@@ -12,7 +12,7 @@ using Oci.DatacatalogService.Models;
 
 namespace Oci.DatacatalogService.Responses
 {
-    public class SearchCriteriaResponse : Oci.Common.IOciResponse
+    public class SearchCriteriaResponse : Oci.Common.OciResponse
     {
 
         /// <value>

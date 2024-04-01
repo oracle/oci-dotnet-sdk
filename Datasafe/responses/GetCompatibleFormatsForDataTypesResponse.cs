@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class GetCompatibleFormatsForDataTypesResponse : Oci.Common.IOciResponse
+    public class GetCompatibleFormatsForDataTypesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

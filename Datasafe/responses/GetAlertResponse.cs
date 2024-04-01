@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class GetAlertResponse : Oci.Common.IOciResponse
+    public class GetAlertResponse : Oci.Common.OciResponse
     {
 
         /// <value>

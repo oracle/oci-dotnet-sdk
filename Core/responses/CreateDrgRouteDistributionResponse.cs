@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class CreateDrgRouteDistributionResponse : Oci.Common.IOciResponse
+    public class CreateDrgRouteDistributionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

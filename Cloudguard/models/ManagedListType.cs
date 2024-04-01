@@ -42,6 +42,10 @@ namespace Oci.CloudguardService.Models
       [EnumMember(Value = "TAGS")]
       Tags,
       [EnumMember(Value = "GENERIC")]
-      Generic
+      Generic,
+      [EnumMember(Value = "FUSION_APPS_ROLE")]
+      FusionAppsRole,
+      [EnumMember(Value = "FUSION_APPS_PERMISSION")]
+      FusionAppsPermission
   }
 }

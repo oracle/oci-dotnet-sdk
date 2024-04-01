@@ -12,7 +12,7 @@ using Oci.ManagementdashboardService.Models;
 
 namespace Oci.ManagementdashboardService.Responses
 {
-    public class ChangeManagementSavedSearchesCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeManagementSavedSearchesCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

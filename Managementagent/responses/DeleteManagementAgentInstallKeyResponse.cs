@@ -12,7 +12,7 @@ using Oci.ManagementagentService.Models;
 
 namespace Oci.ManagementagentService.Responses
 {
-    public class DeleteManagementAgentInstallKeyResponse : Oci.Common.IOciResponse
+    public class DeleteManagementAgentInstallKeyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

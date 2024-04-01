@@ -75,7 +75,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApiKeys".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -131,7 +131,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Apps".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -187,7 +187,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AppRoles".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -243,7 +243,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflows".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -299,7 +299,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflowAssignments".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -355,7 +355,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflowSteps".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -411,7 +411,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AuthTokens".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -467,7 +467,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AuthenticationFactorsRemover".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -523,7 +523,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGates".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -579,7 +579,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateMappings".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -635,7 +635,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateServers".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -691,7 +691,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Conditions".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -747,7 +747,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CustomerSecretKeys".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -803,7 +803,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/DynamicResourceGroups".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -859,7 +859,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Grants".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -915,7 +915,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Groups".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -971,7 +971,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityPropagationTrusts".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1027,7 +1027,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityProviders".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1083,7 +1083,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Me".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1139,7 +1139,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyApiKeys".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1195,7 +1195,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyAuthTokens".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1251,7 +1251,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyAuthenticationFactorInitiator".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1307,7 +1307,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyAuthenticationFactorValidator".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1363,7 +1363,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyAuthenticationFactorsRemover".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1419,7 +1419,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyCustomerSecretKeys".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1475,7 +1475,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyOAuth2ClientCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1531,7 +1531,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyRequests".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1587,7 +1587,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MySmtpCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1643,7 +1643,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MySupportAccounts".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1699,7 +1699,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyUserDbCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1755,7 +1755,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/NetworkPerimeters".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1811,7 +1811,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuth2ClientCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1867,7 +1867,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuthClientCertificates".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1923,7 +1923,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuthPartnerCertificates".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1979,7 +1979,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/PasswordPolicies".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2035,7 +2035,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Policies".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2091,7 +2091,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Rules".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2147,7 +2147,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SecurityQuestions".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2203,7 +2203,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SelfRegistrationProfiles".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2259,7 +2259,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SmtpCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2315,7 +2315,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Users".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2371,7 +2371,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserDbCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2427,7 +2427,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApiKeys/{apiKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2483,7 +2483,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Apps/{appId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2539,7 +2539,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AppRoles/{appRoleId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2595,7 +2595,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflows/{approvalWorkflowId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2651,7 +2651,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflowAssignments/{approvalWorkflowAssignmentId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2707,7 +2707,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflowSteps/{approvalWorkflowStepId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2763,7 +2763,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AuthTokens/{authTokenId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2819,7 +2819,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGates/{cloudGateId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2875,7 +2875,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateMappings/{cloudGateMappingId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2931,7 +2931,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateServers/{cloudGateServerId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2987,7 +2987,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Conditions/{conditionId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3043,7 +3043,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CustomerSecretKeys/{customerSecretKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3099,7 +3099,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/DynamicResourceGroups/{dynamicResourceGroupId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3155,7 +3155,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Grants/{grantId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3211,7 +3211,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Groups/{groupId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3267,7 +3267,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityPropagationTrusts/{identityPropagationTrustId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3323,7 +3323,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityProviders/{identityProviderId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3379,7 +3379,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyApiKeys/{myApiKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3435,7 +3435,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyAuthTokens/{myAuthTokenId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3491,7 +3491,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyCustomerSecretKeys/{myCustomerSecretKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3547,7 +3547,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyDevices/{myDeviceId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3603,7 +3603,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyOAuth2ClientCredentials/{myOAuth2ClientCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3659,7 +3659,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MySmtpCredentials/{mySmtpCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3715,7 +3715,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MySupportAccounts/{mySupportAccountId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3771,7 +3771,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyTrustedUserAgents/{myTrustedUserAgentId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3827,7 +3827,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyUserDbCredentials/{myUserDbCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3883,7 +3883,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/NetworkPerimeters/{networkPerimeterId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3939,7 +3939,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuth2ClientCredentials/{oAuth2ClientCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3995,7 +3995,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuthClientCertificates/{oAuthClientCertificateId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4051,7 +4051,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuthPartnerCertificates/{oAuthPartnerCertificateId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4107,7 +4107,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/PasswordPolicies/{passwordPolicyId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4163,7 +4163,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Policies/{policyId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4219,7 +4219,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Rules/{ruleId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4275,7 +4275,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SecurityQuestions/{securityQuestionId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4331,7 +4331,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SelfRegistrationProfiles/{selfRegistrationProfileId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4387,7 +4387,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SmtpCredentials/{smtpCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4443,7 +4443,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Users/{userId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4499,7 +4499,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserDbCredentials/{userDbCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4555,7 +4555,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AccountMgmtInfos/{accountMgmtInfoId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4611,7 +4611,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AccountRecoverySettings/{accountRecoverySettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4667,7 +4667,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApiKeys/{apiKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4723,7 +4723,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Apps/{appId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4779,7 +4779,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AppRoles/{appRoleId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4835,7 +4835,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflows/{approvalWorkflowId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4891,7 +4891,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflowAssignments/{approvalWorkflowAssignmentId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4947,7 +4947,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflowSteps/{approvalWorkflowStepId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5003,7 +5003,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AuthTokens/{authTokenId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5059,7 +5059,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AuthenticationFactorSettings/{authenticationFactorSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5115,7 +5115,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/BrandingSettings/{brandingSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5171,7 +5171,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGates/{cloudGateId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5227,7 +5227,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateMappings/{cloudGateMappingId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5283,7 +5283,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateServers/{cloudGateServerId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5339,7 +5339,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Conditions/{conditionId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5395,7 +5395,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CustomerSecretKeys/{customerSecretKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5451,7 +5451,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/DynamicResourceGroups/{dynamicResourceGroupId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5507,7 +5507,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Grants/{grantId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5563,7 +5563,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Groups/{groupId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5619,7 +5619,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityPropagationTrusts/{identityPropagationTrustId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5675,7 +5675,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityProviders/{identityProviderId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5731,7 +5731,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentitySettings/{identitySettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5787,7 +5787,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/KmsiSettings/{kmsiSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5843,7 +5843,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Me".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5899,7 +5899,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyApiKeys/{myApiKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5955,7 +5955,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyAuthTokens/{myAuthTokenId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6011,7 +6011,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyCompletedApprovals/{myCompletedApprovalId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6067,7 +6067,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyCustomerSecretKeys/{myCustomerSecretKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6123,7 +6123,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyDevices/{myDeviceId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6179,7 +6179,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyOAuth2ClientCredentials/{myOAuth2ClientCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6235,7 +6235,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyPendingApprovals/{myPendingApprovalId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6291,7 +6291,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyRequests/{myRequestId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6347,7 +6347,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MySmtpCredentials/{mySmtpCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6403,7 +6403,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MySupportAccounts/{mySupportAccountId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6459,7 +6459,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyTrustedUserAgents/{myTrustedUserAgentId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6515,7 +6515,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyUserDbCredentials/{myUserDbCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6571,7 +6571,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/NetworkPerimeters/{networkPerimeterId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6627,7 +6627,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/NotificationSettings/{notificationSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6683,7 +6683,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuth2ClientCredentials/{oAuth2ClientCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6739,7 +6739,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuthClientCertificates/{oAuthClientCertificateId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6795,7 +6795,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuthPartnerCertificates/{oAuthPartnerCertificateId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6851,7 +6851,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/PasswordPolicies/{passwordPolicyId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6907,7 +6907,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Policies/{policyId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6963,7 +6963,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Rules/{ruleId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7019,7 +7019,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Schemas/{schemaId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7075,7 +7075,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SecurityQuestions/{securityQuestionId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7131,7 +7131,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SecurityQuestionSettings/{securityQuestionSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7187,7 +7187,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SelfRegistrationProfiles/{selfRegistrationProfileId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7243,7 +7243,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Settings/{settingId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7299,7 +7299,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SmtpCredentials/{smtpCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7355,7 +7355,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Users/{userId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7411,7 +7411,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserAttributesSettings/{userAttributesSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7467,7 +7467,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserDbCredentials/{userDbCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7523,7 +7523,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AccountMgmtInfos".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7579,7 +7579,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AccountRecoverySettings".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7635,7 +7635,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApiKeys".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7691,7 +7691,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AppRoles".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7747,7 +7747,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflowAssignments".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7803,7 +7803,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflowSteps".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7859,7 +7859,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflows".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7915,7 +7915,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Apps".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7971,7 +7971,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AuthTokens".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8027,7 +8027,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AuthenticationFactorSettings".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8083,7 +8083,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/BrandingSettings".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8139,7 +8139,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateMappings".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8195,7 +8195,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateServers".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8251,7 +8251,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGates".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8307,7 +8307,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Conditions".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8363,7 +8363,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CustomerSecretKeys".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8419,7 +8419,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/DynamicResourceGroups".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8475,7 +8475,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Grants".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8531,7 +8531,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Groups".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8587,7 +8587,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityPropagationTrusts".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8643,7 +8643,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityProviders".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8699,7 +8699,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentitySettings".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8755,7 +8755,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/KmsiSettings".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8811,7 +8811,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyApiKeys".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8867,7 +8867,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyApps".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8923,7 +8923,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyAuthTokens".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8979,7 +8979,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyCompletedApprovals".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9035,7 +9035,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyCustomerSecretKeys".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9091,7 +9091,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyDevices".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9147,7 +9147,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyGroups".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9203,7 +9203,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyOAuth2ClientCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9259,7 +9259,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyPendingApprovals".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9315,7 +9315,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyRequestableGroups".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9371,7 +9371,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyRequests".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9427,7 +9427,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MySmtpCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9483,7 +9483,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MySupportAccounts".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9539,7 +9539,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyTrustedUserAgents".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9595,7 +9595,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyUserDbCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9651,7 +9651,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/NetworkPerimeters".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9707,7 +9707,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/NotificationSettings".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9763,7 +9763,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuth2ClientCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9819,7 +9819,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuthClientCertificates".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9875,7 +9875,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuthPartnerCertificates".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9931,7 +9931,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/PasswordPolicies".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -9987,7 +9987,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Policies".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10043,7 +10043,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ResourceTypeSchemaAttributes".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10099,7 +10099,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Rules".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10155,7 +10155,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Schemas".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10211,7 +10211,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SecurityQuestionSettings".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10267,7 +10267,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SecurityQuestions".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10323,7 +10323,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SelfRegistrationProfiles".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10379,7 +10379,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Settings".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10435,7 +10435,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SmtpCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10491,7 +10491,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserAttributesSettings".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10547,7 +10547,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserDbCredentials".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10603,7 +10603,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Users".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10659,7 +10659,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AccountRecoverySettings/{accountRecoverySettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10715,7 +10715,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApiKeys/{apiKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10771,7 +10771,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Apps/{appId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10827,7 +10827,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AppRoles/{appRoleId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10883,7 +10883,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflows/{approvalWorkflowId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10939,7 +10939,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflowSteps/{approvalWorkflowStepId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -10995,7 +10995,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AuthTokens/{authTokenId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11051,7 +11051,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGates/{cloudGateId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11107,7 +11107,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateMappings/{cloudGateMappingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11163,7 +11163,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateServers/{cloudGateServerId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11219,7 +11219,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Conditions/{conditionId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11275,7 +11275,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CustomerSecretKeys/{customerSecretKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11331,7 +11331,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/DynamicResourceGroups/{dynamicResourceGroupId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11387,7 +11387,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Grants/{grantId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11443,7 +11443,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Groups/{groupId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11499,7 +11499,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityPropagationTrusts/{identityPropagationTrustId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11555,7 +11555,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityProviders/{identityProviderId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11611,7 +11611,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentitySettings/{identitySettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11667,7 +11667,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/KmsiSettings/{kmsiSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11723,7 +11723,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Me".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11779,7 +11779,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyApiKeys/{myApiKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11835,7 +11835,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyAuthTokens/{myAuthTokenId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11891,7 +11891,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyCustomerSecretKeys/{myCustomerSecretKeyId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -11947,7 +11947,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyDevices/{myDeviceId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12003,7 +12003,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyOAuth2ClientCredentials/{myOAuth2ClientCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12059,7 +12059,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyPendingApprovals/{myPendingApprovalId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12115,7 +12115,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyRequests/{myRequestId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12171,7 +12171,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MySmtpCredentials/{mySmtpCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12227,7 +12227,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/NetworkPerimeters/{networkPerimeterId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12283,7 +12283,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuth2ClientCredentials/{oAuth2ClientCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12339,7 +12339,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/PasswordPolicies/{passwordPolicyId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12395,7 +12395,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Policies/{policyId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12451,7 +12451,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Rules/{ruleId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12507,7 +12507,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Schemas/{schemaId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12563,7 +12563,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SecurityQuestions/{securityQuestionId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12619,7 +12619,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SecurityQuestionSettings/{securityQuestionSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12675,7 +12675,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SelfRegistrationProfiles/{selfRegistrationProfileId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12731,7 +12731,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Settings/{settingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12787,7 +12787,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SmtpCredentials/{smtpCredentialId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12843,7 +12843,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Users/{userId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12899,7 +12899,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserAttributesSettings/{userAttributesSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PATCH");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -12955,7 +12955,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AccountRecoverySettings/{accountRecoverySettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13011,7 +13011,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Apps/{appId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13067,7 +13067,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AppStatusChanger/{appStatusChangerId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13123,7 +13123,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApprovalWorkflows/{approvalWorkflowId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13179,7 +13179,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AuthenticationFactorSettings/{authenticationFactorSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13235,7 +13235,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGates/{cloudGateId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13291,7 +13291,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateMappings/{cloudGateMappingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13347,7 +13347,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateServers/{cloudGateServerId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13403,7 +13403,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Conditions/{conditionId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13459,7 +13459,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/DynamicResourceGroups/{dynamicResourceGroupId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13515,7 +13515,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Groups/{groupId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13571,7 +13571,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityPropagationTrusts/{identityPropagationTrustId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13627,7 +13627,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityProviders/{identityProviderId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13683,7 +13683,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentitySettings/{identitySettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13739,7 +13739,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/KmsiSettings/{kmsiSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13795,7 +13795,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Me".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13851,7 +13851,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MePasswordChanger".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13907,7 +13907,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/NetworkPerimeters/{networkPerimeterId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -13963,7 +13963,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/NotificationSettings/{notificationSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14019,7 +14019,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/PasswordPolicies/{passwordPolicyId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14075,7 +14075,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Policies/{policyId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14131,7 +14131,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Rules/{ruleId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14187,7 +14187,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Schemas/{schemaId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14243,7 +14243,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SecurityQuestionSettings/{securityQuestionSettingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14299,7 +14299,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SelfRegistrationProfiles/{selfRegistrationProfileId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14355,7 +14355,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Settings/{settingId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14411,7 +14411,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Users/{userId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14467,7 +14467,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserCapabilitiesChanger/{userCapabilitiesChangerId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14523,7 +14523,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserPasswordChanger/{userPasswordChangerId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14579,7 +14579,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserPasswordResetter/{userPasswordResetterId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14635,7 +14635,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserStatusChanger/{userStatusChangerId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14691,7 +14691,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AccountMgmtInfos/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14747,7 +14747,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ApiKeys/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14803,7 +14803,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AppRoles/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14859,7 +14859,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Apps/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14915,7 +14915,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AuthTokens/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -14971,7 +14971,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/AuthenticationFactorSettings/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15027,7 +15027,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateMappings/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15083,7 +15083,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGateServers/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15139,7 +15139,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CloudGates/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15195,7 +15195,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Conditions/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15251,7 +15251,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/CustomerSecretKeys/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15307,7 +15307,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/DynamicResourceGroups/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15363,7 +15363,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Grants/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15419,7 +15419,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Groups/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15475,7 +15475,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentityProviders/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15531,7 +15531,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/IdentitySettings/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15587,7 +15587,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/KmsiSettings/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15643,7 +15643,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyApps/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15699,7 +15699,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyGroups/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15755,7 +15755,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyRequestableGroups/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15811,7 +15811,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/MyRequests/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15867,7 +15867,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/NetworkPerimeters/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15923,7 +15923,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/NotificationSettings/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -15979,7 +15979,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuth2ClientCredentials/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16035,7 +16035,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuthClientCertificates/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16091,7 +16091,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OAuthPartnerCertificates/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16147,7 +16147,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/PasswordPolicies/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16203,7 +16203,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Policies/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16259,7 +16259,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/ResourceTypeSchemaAttributes/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16315,7 +16315,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Rules/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16371,7 +16371,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Schemas/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16427,7 +16427,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SecurityQuestionSettings/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16483,7 +16483,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SecurityQuestions/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16539,7 +16539,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SelfRegistrationProfiles/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16595,7 +16595,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Settings/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16651,7 +16651,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/SmtpCredentials/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16707,7 +16707,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserAttributesSettings/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16763,7 +16763,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/UserDbCredentials/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -16819,7 +16819,7 @@ namespace Oci.IdentitydomainsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/Users/.search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 

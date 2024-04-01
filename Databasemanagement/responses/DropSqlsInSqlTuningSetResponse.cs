@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class DropSqlsInSqlTuningSetResponse : Oci.Common.IOciResponse
+    public class DropSqlsInSqlTuningSetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

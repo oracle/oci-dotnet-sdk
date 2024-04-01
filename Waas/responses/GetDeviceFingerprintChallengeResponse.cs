@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class GetDeviceFingerprintChallengeResponse : Oci.Common.IOciResponse
+    public class GetDeviceFingerprintChallengeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

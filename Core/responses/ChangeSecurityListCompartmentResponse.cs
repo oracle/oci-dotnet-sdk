@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ChangeSecurityListCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeSecurityListCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

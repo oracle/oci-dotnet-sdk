@@ -120,7 +120,10 @@ namespace Oci.Common
         /// <returns>A SDK response object.</returns>
         public static T FromHttpResponseMessage<T>(HttpResponseMessage responseMessage) where T : IOciResponse, new()
         {
-            var response = new T();
+            var response = new T
+            {
+                httpResponseMessage = responseMessage
+            };
             PropertyInfo[] props = typeof(T).GetProperties();
             foreach (var prop in props)
             {

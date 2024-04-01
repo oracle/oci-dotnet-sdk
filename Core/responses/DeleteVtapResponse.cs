@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class DeleteVtapResponse : Oci.Common.IOciResponse
+    public class DeleteVtapResponse : Oci.Common.OciResponse
     {
 
         /// <value>

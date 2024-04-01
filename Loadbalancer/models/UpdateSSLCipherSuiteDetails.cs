@@ -29,6 +29,14 @@ namespace Oci.LoadbalancerService.Models
         /// <br/>
         /// The following ciphers are valid values for this property:
         /// <br/>
+        /// *  __TLSv1.3 ciphers__
+        /// <br/>
+        ///         \"TLS-AES-128-GCM-SHA256\"
+        ///         \"TLS-AES-256-GCM-SHA384\"
+        ///         \"TLS-CHACHA20-POLY1305-SHA256\"
+        ///         \"TLS-AES-128-CCM-SHA256\"
+        ///         \"TLS-AES-128-CCM-8-SHA256\"
+        /// <br/>
         /// *  __TLSv1.2 ciphers__
         /// <br/>
         ///         \"AES128-GCM-SHA256\"

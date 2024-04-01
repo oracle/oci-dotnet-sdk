@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class DeleteCrossConnectResponse : Oci.Common.IOciResponse
+    public class DeleteCrossConnectResponse : Oci.Common.OciResponse
     {
 
         /// <value>

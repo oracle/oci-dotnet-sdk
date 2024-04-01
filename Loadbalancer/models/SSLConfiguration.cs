@@ -148,6 +148,7 @@ namespace Oci.LoadbalancerService.Models
         /// *  TLSv1
         /// *  TLSv1.1
         /// *  TLSv1.2
+        /// *  TLSv1.3
         /// <br/>
         /// If this field is not specified, TLSv1.2 is the default.
         /// <br/>

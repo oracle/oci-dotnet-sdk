@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class ListWindowsUpdatesResponse : Oci.Common.IOciResponse
+    public class ListWindowsUpdatesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

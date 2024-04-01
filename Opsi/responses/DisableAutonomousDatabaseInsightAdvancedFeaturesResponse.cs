@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class DisableAutonomousDatabaseInsightAdvancedFeaturesResponse : Oci.Common.IOciResponse
+    public class DisableAutonomousDatabaseInsightAdvancedFeaturesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ApmtracesService.Models;
 
 namespace Oci.ApmtracesService.Responses
 {
-    public class PutToggleAutoActivateResponse : Oci.Common.IOciResponse
+    public class PutToggleAutoActivateResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.LoadbalancerService.Models;
 
 namespace Oci.LoadbalancerService.Responses
 {
-    public class UpdateLoadBalancerResponse : Oci.Common.IOciResponse
+    public class UpdateLoadBalancerResponse : Oci.Common.OciResponse
     {
 
         /// <value>

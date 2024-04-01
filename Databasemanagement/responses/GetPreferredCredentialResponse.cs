@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class GetPreferredCredentialResponse : Oci.Common.IOciResponse
+    public class GetPreferredCredentialResponse : Oci.Common.OciResponse
     {
 
         /// <value>

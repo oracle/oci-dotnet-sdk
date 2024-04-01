@@ -12,7 +12,7 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Responses
 {
-    public class UpdateNamespaceMetadataResponse : Oci.Common.IOciResponse
+    public class UpdateNamespaceMetadataResponse : Oci.Common.OciResponse
     {
 
         /// <value>

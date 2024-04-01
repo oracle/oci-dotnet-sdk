@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class UpsertLabelResponse : Oci.Common.IOciResponse
+    public class UpsertLabelResponse : Oci.Common.OciResponse
     {
 
         /// <value>

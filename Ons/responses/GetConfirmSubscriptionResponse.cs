@@ -12,7 +12,7 @@ using Oci.OnsService.Models;
 
 namespace Oci.OnsService.Responses
 {
-    public class GetConfirmSubscriptionResponse : Oci.Common.IOciResponse
+    public class GetConfirmSubscriptionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

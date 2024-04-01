@@ -12,7 +12,7 @@ using Oci.GloballydistributeddatabaseService.Models;
 
 namespace Oci.GloballydistributeddatabaseService.Responses
 {
-    public class FetchConnectionStringResponse : Oci.Common.IOciResponse
+    public class FetchConnectionStringResponse : Oci.Common.OciResponse
     {
 
         /// <value>

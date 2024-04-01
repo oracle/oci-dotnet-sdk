@@ -12,7 +12,7 @@ using Oci.NetworkloadbalancerService.Models;
 
 namespace Oci.NetworkloadbalancerService.Responses
 {
-    public class DeleteNetworkLoadBalancerResponse : Oci.Common.IOciResponse
+    public class DeleteNetworkLoadBalancerResponse : Oci.Common.OciResponse
     {
 
         /// <value>

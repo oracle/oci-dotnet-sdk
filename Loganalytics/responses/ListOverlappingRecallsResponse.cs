@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class ListOverlappingRecallsResponse : Oci.Common.IOciResponse
+    public class ListOverlappingRecallsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

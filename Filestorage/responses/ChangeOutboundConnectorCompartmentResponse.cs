@@ -12,7 +12,7 @@ using Oci.FilestorageService.Models;
 
 namespace Oci.FilestorageService.Responses
 {
-    public class ChangeOutboundConnectorCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeOutboundConnectorCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

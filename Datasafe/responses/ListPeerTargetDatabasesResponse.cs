@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class ListPeerTargetDatabasesResponse : Oci.Common.IOciResponse
+    public class ListPeerTargetDatabasesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

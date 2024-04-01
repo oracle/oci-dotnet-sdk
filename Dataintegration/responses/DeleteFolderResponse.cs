@@ -12,7 +12,7 @@ using Oci.DataintegrationService.Models;
 
 namespace Oci.DataintegrationService.Responses
 {
-    public class DeleteFolderResponse : Oci.Common.IOciResponse
+    public class DeleteFolderResponse : Oci.Common.OciResponse
     {
 
         /// <value>

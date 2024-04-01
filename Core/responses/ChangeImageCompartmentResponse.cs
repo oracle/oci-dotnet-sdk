@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ChangeImageCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeImageCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

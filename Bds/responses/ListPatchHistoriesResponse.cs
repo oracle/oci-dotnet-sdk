@@ -12,7 +12,7 @@ using Oci.BdsService.Models;
 
 namespace Oci.BdsService.Responses
 {
-    public class ListPatchHistoriesResponse : Oci.Common.IOciResponse
+    public class ListPatchHistoriesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

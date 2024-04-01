@@ -12,7 +12,7 @@ using Oci.JmsService.Models;
 
 namespace Oci.JmsService.Responses
 {
-    public class DeletePerformanceTuningAnalysisResultResponse : Oci.Common.IOciResponse
+    public class DeletePerformanceTuningAnalysisResultResponse : Oci.Common.OciResponse
     {
 
         /// <value>

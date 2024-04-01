@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class ChangeExadataInfrastructureCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeExadataInfrastructureCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

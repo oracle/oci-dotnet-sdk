@@ -12,7 +12,7 @@ using Oci.BdsService.Models;
 
 namespace Oci.BdsService.Responses
 {
-    public class RemoveKafkaResponse : Oci.Common.IOciResponse
+    public class RemoveKafkaResponse : Oci.Common.OciResponse
     {
 
         /// <value>

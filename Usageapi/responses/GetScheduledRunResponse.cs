@@ -12,7 +12,7 @@ using Oci.UsageapiService.Models;
 
 namespace Oci.UsageapiService.Responses
 {
-    public class GetScheduledRunResponse : Oci.Common.IOciResponse
+    public class GetScheduledRunResponse : Oci.Common.OciResponse
     {
 
         /// <value>

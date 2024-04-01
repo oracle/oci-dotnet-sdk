@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class GetDrgAttachmentResponse : Oci.Common.IOciResponse
+    public class GetDrgAttachmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

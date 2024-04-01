@@ -12,7 +12,7 @@ using Oci.ResourcesearchService.Models;
 
 namespace Oci.ResourcesearchService.Responses
 {
-    public class ListResourceTypesResponse : Oci.Common.IOciResponse
+    public class ListResourceTypesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

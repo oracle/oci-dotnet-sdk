@@ -12,7 +12,7 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Responses
 {
-    public class UpdateCompartmentResponse : Oci.Common.IOciResponse
+    public class UpdateCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

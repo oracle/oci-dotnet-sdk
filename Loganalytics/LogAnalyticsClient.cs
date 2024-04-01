@@ -319,7 +319,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/labels/actions/basicInfo".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
@@ -836,7 +836,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/search/actions/compareContent".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
@@ -1295,7 +1295,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/associations/actions/delete".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
@@ -1467,7 +1467,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/labels/{labelName}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -1864,7 +1864,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/parsers/{parserName}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -2960,7 +2960,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/parsers/actions/extractLogFieldPaths".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
@@ -3018,7 +3018,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/parsers/actions/extractLogHeaderPaths".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
@@ -3133,7 +3133,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/associationSummary".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3190,7 +3190,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/categories/{categoryName}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3304,7 +3304,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/configWorkRequests/{workRequestId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3361,7 +3361,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/fields/{fieldName}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3418,7 +3418,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/fieldSummary".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3532,7 +3532,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/labels/{labelName}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -3589,7 +3589,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/labelSummary".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4323,7 +4323,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/parsers/{parserName}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4380,7 +4380,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/parsersSummary".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4437,7 +4437,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/preferences".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4722,7 +4722,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/rulesSummary".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4835,7 +4835,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -4892,7 +4892,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sourceSummary".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5291,7 +5291,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/contents/actions/importCustomContent".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
@@ -5349,7 +5349,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/associableEntities".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5406,7 +5406,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/associatedEntities".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5463,7 +5463,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/autoAssociations".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5520,7 +5520,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/categories".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5577,7 +5577,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/configWorkRequests".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5803,7 +5803,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/entityAssociations".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5860,7 +5860,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/fields".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -5974,7 +5974,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/labelPriorities".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6031,7 +6031,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/labelSourceDetails".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6088,7 +6088,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/labels".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6596,7 +6596,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sourceMetaTypes".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6768,7 +6768,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/parserFunctions".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6825,7 +6825,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/parserMetaPlugins".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -6882,7 +6882,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/parsers".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7110,7 +7110,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/categories/resourceCategories".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7280,7 +7280,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sourceAssociations".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7337,7 +7337,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/eventTypes".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7394,7 +7394,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/extendedFieldDefinitions".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7451,7 +7451,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sourceLabelOperators".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7508,7 +7508,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sourceMetaFunctions".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7565,7 +7565,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/{sourceName}/patterns".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -7622,7 +7622,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 
@@ -8760,7 +8760,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/lookups/actions/register".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
@@ -8991,7 +8991,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/categories/actions/removeResourceCategories".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
@@ -10031,7 +10031,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/categories/actions/updateResourceCategories".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
@@ -10963,7 +10963,7 @@ namespace Oci.LoganalyticsService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/namespaces/{namespaceName}/sources/actions/validateExtendedFields".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json;charset=UTF-8");
             requestMessage.Headers.Add("Expect", "100-continue");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;

@@ -12,7 +12,7 @@ using Oci.DatacatalogService.Models;
 
 namespace Oci.DatacatalogService.Responses
 {
-    public class UploadCredentialsResponse : Oci.Common.IOciResponse
+    public class UploadCredentialsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

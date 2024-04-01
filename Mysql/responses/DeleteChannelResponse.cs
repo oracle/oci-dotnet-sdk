@@ -12,7 +12,7 @@ using Oci.MysqlService.Models;
 
 namespace Oci.MysqlService.Responses
 {
-    public class DeleteChannelResponse : Oci.Common.IOciResponse
+    public class DeleteChannelResponse : Oci.Common.OciResponse
     {
 
         /// <value>

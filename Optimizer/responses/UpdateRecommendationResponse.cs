@@ -12,7 +12,7 @@ using Oci.OptimizerService.Models;
 
 namespace Oci.OptimizerService.Responses
 {
-    public class UpdateRecommendationResponse : Oci.Common.IOciResponse
+    public class UpdateRecommendationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

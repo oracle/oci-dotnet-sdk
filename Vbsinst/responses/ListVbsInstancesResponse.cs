@@ -12,7 +12,7 @@ using Oci.VbsinstService.Models;
 
 namespace Oci.VbsinstService.Responses
 {
-    public class ListVbsInstancesResponse : Oci.Common.IOciResponse
+    public class ListVbsInstancesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

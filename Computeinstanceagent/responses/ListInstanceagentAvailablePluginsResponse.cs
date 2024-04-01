@@ -12,7 +12,7 @@ using Oci.ComputeinstanceagentService.Models;
 
 namespace Oci.ComputeinstanceagentService.Responses
 {
-    public class ListInstanceagentAvailablePluginsResponse : Oci.Common.IOciResponse
+    public class ListInstanceagentAvailablePluginsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

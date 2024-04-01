@@ -12,7 +12,7 @@ using Oci.AidocumentService.Models;
 
 namespace Oci.AidocumentService.Responses
 {
-    public class CreateProcessorJobResponse : Oci.Common.IOciResponse
+    public class CreateProcessorJobResponse : Oci.Common.OciResponse
     {
 
         /// <value>

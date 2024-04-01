@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class ListStorageWorkRequestErrorsResponse : Oci.Common.IOciResponse
+    public class ListStorageWorkRequestErrorsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.GenerativeaiinferenceService.Models;
 
 namespace Oci.GenerativeaiinferenceService.Responses
 {
-    public class GenerateTextResponse : Oci.Common.IOciResponse
+    public class GenerateTextResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class PatchDynamicResourceGroupResponse : Oci.Common.IOciResponse
+    public class PatchDynamicResourceGroupResponse : Oci.Common.OciResponse
     {
 
         /// <value>

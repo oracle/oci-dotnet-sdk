@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class ResetDatabaseParametersResponse : Oci.Common.IOciResponse
+    public class ResetDatabaseParametersResponse : Oci.Common.OciResponse
     {
 
         /// <value>

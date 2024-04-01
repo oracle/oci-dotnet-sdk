@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.EmailService.Models
 {
     /// <summary>
-    /// Results of an EmailDomain search. Contains boh EmailDomainSummary items and other information, such as metadata.
+    /// Results of an EmailDomain search. Contains both EmailDomainSummary items and other information, such as metadata.
     /// </summary>
     public class EmailDomainCollection 
     {

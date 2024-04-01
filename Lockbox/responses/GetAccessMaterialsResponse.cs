@@ -12,7 +12,7 @@ using Oci.LockboxService.Models;
 
 namespace Oci.LockboxService.Responses
 {
-    public class GetAccessMaterialsResponse : Oci.Common.IOciResponse
+    public class GetAccessMaterialsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

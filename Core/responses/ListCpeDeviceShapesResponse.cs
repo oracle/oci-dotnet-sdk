@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListCpeDeviceShapesResponse : Oci.Common.IOciResponse
+    public class ListCpeDeviceShapesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

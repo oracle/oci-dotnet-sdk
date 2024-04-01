@@ -12,7 +12,7 @@ using Oci.TenantmanagercontrolplaneService.Models;
 
 namespace Oci.TenantmanagercontrolplaneService.Responses
 {
-    public class GetOrganizationResponse : Oci.Common.IOciResponse
+    public class GetOrganizationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

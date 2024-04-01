@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class MigrateExadataDbSystemResourceModelResponse : Oci.Common.IOciResponse
+    public class MigrateExadataDbSystemResourceModelResponse : Oci.Common.OciResponse
     {
 
         /// <value>

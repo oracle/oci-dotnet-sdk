@@ -12,7 +12,7 @@ using Oci.CertificatesmanagementService.Models;
 
 namespace Oci.CertificatesmanagementService.Responses
 {
-    public class ScheduleCertificateDeletionResponse : Oci.Common.IOciResponse
+    public class ScheduleCertificateDeletionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

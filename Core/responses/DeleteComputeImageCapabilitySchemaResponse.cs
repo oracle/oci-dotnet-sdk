@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class DeleteComputeImageCapabilitySchemaResponse : Oci.Common.IOciResponse
+    public class DeleteComputeImageCapabilitySchemaResponse : Oci.Common.OciResponse
     {
 
         /// <value>

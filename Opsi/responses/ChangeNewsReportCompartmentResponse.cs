@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class ChangeNewsReportCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeNewsReportCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

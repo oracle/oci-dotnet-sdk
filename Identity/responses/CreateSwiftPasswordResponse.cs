@@ -12,7 +12,7 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Responses
 {
-    public class CreateSwiftPasswordResponse : Oci.Common.IOciResponse
+    public class CreateSwiftPasswordResponse : Oci.Common.OciResponse
     {
 
         /// <value>

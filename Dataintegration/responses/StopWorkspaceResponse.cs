@@ -12,7 +12,7 @@ using Oci.DataintegrationService.Models;
 
 namespace Oci.DataintegrationService.Responses
 {
-    public class StopWorkspaceResponse : Oci.Common.IOciResponse
+    public class StopWorkspaceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

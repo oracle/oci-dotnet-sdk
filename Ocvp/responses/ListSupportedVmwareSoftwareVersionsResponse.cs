@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class ListSupportedVmwareSoftwareVersionsResponse : Oci.Common.IOciResponse
+    public class ListSupportedVmwareSoftwareVersionsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

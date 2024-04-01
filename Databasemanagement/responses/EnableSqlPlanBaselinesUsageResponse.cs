@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class EnableSqlPlanBaselinesUsageResponse : Oci.Common.IOciResponse
+    public class EnableSqlPlanBaselinesUsageResponse : Oci.Common.OciResponse
     {
 
         /// <value>

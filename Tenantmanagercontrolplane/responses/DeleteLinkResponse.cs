@@ -12,7 +12,7 @@ using Oci.TenantmanagercontrolplaneService.Models;
 
 namespace Oci.TenantmanagercontrolplaneService.Responses
 {
-    public class DeleteLinkResponse : Oci.Common.IOciResponse
+    public class DeleteLinkResponse : Oci.Common.OciResponse
     {
 
         /// <value>

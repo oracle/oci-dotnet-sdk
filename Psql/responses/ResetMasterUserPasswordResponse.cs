@@ -12,7 +12,7 @@ using Oci.PsqlService.Models;
 
 namespace Oci.PsqlService.Responses
 {
-    public class ResetMasterUserPasswordResponse : Oci.Common.IOciResponse
+    public class ResetMasterUserPasswordResponse : Oci.Common.OciResponse
     {
 
         /// <value>

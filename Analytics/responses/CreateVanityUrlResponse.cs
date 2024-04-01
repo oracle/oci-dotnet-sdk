@@ -12,7 +12,7 @@ using Oci.AnalyticsService.Models;
 
 namespace Oci.AnalyticsService.Responses
 {
-    public class CreateVanityUrlResponse : Oci.Common.IOciResponse
+    public class CreateVanityUrlResponse : Oci.Common.OciResponse
     {
 
         /// <value>

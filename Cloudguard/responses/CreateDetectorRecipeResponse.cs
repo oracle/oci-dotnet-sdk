@@ -12,7 +12,7 @@ using Oci.CloudguardService.Models;
 
 namespace Oci.CloudguardService.Responses
 {
-    public class CreateDetectorRecipeResponse : Oci.Common.IOciResponse
+    public class CreateDetectorRecipeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

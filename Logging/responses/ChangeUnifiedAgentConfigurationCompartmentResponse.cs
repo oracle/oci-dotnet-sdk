@@ -12,7 +12,7 @@ using Oci.LoggingService.Models;
 
 namespace Oci.LoggingService.Responses
 {
-    public class ChangeUnifiedAgentConfigurationCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeUnifiedAgentConfigurationCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

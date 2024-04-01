@@ -12,7 +12,7 @@ using Oci.ServicemeshService.Models;
 
 namespace Oci.ServicemeshService.Responses
 {
-    public class DeleteIngressGatewayResponse : Oci.Common.IOciResponse
+    public class DeleteIngressGatewayResponse : Oci.Common.OciResponse
     {
 
         /// <value>

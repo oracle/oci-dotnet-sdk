@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class RefreshHcxLicenseStatusResponse : Oci.Common.IOciResponse
+    public class RefreshHcxLicenseStatusResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ArtifactsService.Models;
 
 namespace Oci.ArtifactsService.Responses
 {
-    public class UpdateContainerConfigurationResponse : Oci.Common.IOciResponse
+    public class UpdateContainerConfigurationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class GetNetworkingTopologyResponse : Oci.Common.IOciResponse
+    public class GetNetworkingTopologyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

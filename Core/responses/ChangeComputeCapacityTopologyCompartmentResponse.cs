@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ChangeComputeCapacityTopologyCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeComputeCapacityTopologyCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

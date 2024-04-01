@@ -12,7 +12,7 @@ using Oci.OsmanagementhubService.Models;
 
 namespace Oci.OsmanagementhubService.Responses
 {
-    public class DeleteProfileResponse : Oci.Common.IOciResponse
+    public class DeleteProfileResponse : Oci.Common.OciResponse
     {
 
         /// <value>

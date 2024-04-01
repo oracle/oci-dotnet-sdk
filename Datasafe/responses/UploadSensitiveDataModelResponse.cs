@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class UploadSensitiveDataModelResponse : Oci.Common.IOciResponse
+    public class UploadSensitiveDataModelResponse : Oci.Common.OciResponse
     {
 
         /// <value>

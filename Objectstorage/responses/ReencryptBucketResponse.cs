@@ -12,7 +12,7 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Responses
 {
-    public class ReencryptBucketResponse : Oci.Common.IOciResponse
+    public class ReencryptBucketResponse : Oci.Common.OciResponse
     {
 
         /// <value>

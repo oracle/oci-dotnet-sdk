@@ -12,7 +12,7 @@ using Oci.OptimizerService.Models;
 
 namespace Oci.OptimizerService.Responses
 {
-    public class ListEnrollmentStatusesResponse : Oci.Common.IOciResponse
+    public class ListEnrollmentStatusesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.FusionappsService.Models;
 
 namespace Oci.FusionappsService.Responses
 {
-    public class DeleteServiceAttachmentResponse : Oci.Common.IOciResponse
+    public class DeleteServiceAttachmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

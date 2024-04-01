@@ -12,7 +12,7 @@ using Oci.AianomalydetectionService.Models;
 
 namespace Oci.AianomalydetectionService.Responses
 {
-    public class GetDataAssetResponse : Oci.Common.IOciResponse
+    public class GetDataAssetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.AdmService.Models;
 
 namespace Oci.AdmService.Responses
 {
-    public class ListApplicationDependencyVulnerabilitiesResponse : Oci.Common.IOciResponse
+    public class ListApplicationDependencyVulnerabilitiesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

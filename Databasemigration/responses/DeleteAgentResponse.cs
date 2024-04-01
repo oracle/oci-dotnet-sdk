@@ -12,7 +12,7 @@ using Oci.DatabasemigrationService.Models;
 
 namespace Oci.DatabasemigrationService.Responses
 {
-    public class DeleteAgentResponse : Oci.Common.IOciResponse
+    public class DeleteAgentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

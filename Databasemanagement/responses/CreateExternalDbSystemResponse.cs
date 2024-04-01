@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class CreateExternalDbSystemResponse : Oci.Common.IOciResponse
+    public class CreateExternalDbSystemResponse : Oci.Common.OciResponse
     {
 
         /// <value>

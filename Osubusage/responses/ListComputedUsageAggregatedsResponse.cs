@@ -12,7 +12,7 @@ using Oci.OsubusageService.Models;
 
 namespace Oci.OsubusageService.Responses
 {
-    public class ListComputedUsageAggregatedsResponse : Oci.Common.IOciResponse
+    public class ListComputedUsageAggregatedsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.FusionappsService.Models;
 
 namespace Oci.FusionappsService.Responses
 {
-    public class GetFusionEnvironmentFamilyResponse : Oci.Common.IOciResponse
+    public class GetFusionEnvironmentFamilyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

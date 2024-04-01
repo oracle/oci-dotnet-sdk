@@ -12,7 +12,7 @@ using Oci.GloballydistributeddatabaseService.Models;
 
 namespace Oci.GloballydistributeddatabaseService.Responses
 {
-    public class GenerateWalletResponse : Oci.Common.IOciResponse
+    public class GenerateWalletResponse : Oci.Common.OciResponse
     {
 
         /// <value>

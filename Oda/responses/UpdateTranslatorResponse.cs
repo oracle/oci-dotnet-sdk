@@ -12,7 +12,7 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Responses
 {
-    public class UpdateTranslatorResponse : Oci.Common.IOciResponse
+    public class UpdateTranslatorResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class ChangeTargetAlertPolicyAssociationCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeTargetAlertPolicyAssociationCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

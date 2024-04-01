@@ -12,7 +12,7 @@ using Oci.KeymanagementService.Models;
 
 namespace Oci.KeymanagementService.Responses
 {
-    public class DownloadCertificateSigningRequestResponse : Oci.Common.IOciResponse
+    public class DownloadCertificateSigningRequestResponse : Oci.Common.OciResponse
     {
 
         /// <value>

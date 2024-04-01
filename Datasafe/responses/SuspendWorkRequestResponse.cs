@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class SuspendWorkRequestResponse : Oci.Common.IOciResponse
+    public class SuspendWorkRequestResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,6 +12,8 @@ using Oci.GenerativeaiinferenceService.Responses;
 
 using Oci.Common.Auth;
 using Oci.Common.Model;
+using System.Net.Http;
+using Oci.CoreService.Requests;
 
 namespace Oci.Examples
 {
@@ -28,8 +30,8 @@ namespace Oci.Examples
             try
             {
                 var modelId = "cohere.command";
-                var prompt = "Tell me a fact about the Earth";
-                var maxTokens = 75;
+                var prompt = "Tell me a fact about Oracle";
+                var maxTokens = 1000;
                 var temperature = 0.75;
                 var frequencyPenalty = 1.0;
                 var topP = 0.7;
@@ -41,7 +43,7 @@ namespace Oci.Examples
                     var inferenceRequest = new GenerativeaiinferenceService.Models.CohereLlmInferenceRequest
                     {
                         Prompt = prompt,
-                        IsStream = false,
+                        IsStream = true,
                         MaxTokens = maxTokens,
                         Temperature = temperature,
                         FrequencyPenalty = frequencyPenalty,
@@ -61,14 +63,28 @@ namespace Oci.Examples
                     {
                         GenerateTextDetails = details
                     };
-                    GenerateTextResponse response = await client.GenerateText(request);
-                    logger.Info($"Response from generate text: {JsonConvert.SerializeObject(response)}");
                     try
                     {
-                        inferenceRequest.IsStream = true;
-                        response = await client.GenerateText(request);
+                        GenerateTextResponse response = await client.GenerateText(request, completionOption: HttpCompletionOption.ResponseHeadersRead);
+
+                        using (var stream = await response.httpResponseMessage.Content.ReadAsStreamAsync())
+                        using (var reader = new System.IO.StreamReader(stream))
+                        {
+                            while (!reader.EndOfStream)
+                            {
+                                string line = await reader.ReadLineAsync();
+                                if (line.StartsWith("data:"))
+                                {
+                                    // Extract the data part of the event by removing the "data: " prefix from the string
+                                    string jsonContent = line.Substring("data: ".Length);
+                                    Data data = JsonConvert.DeserializeObject<Data>(jsonContent);
+                                    Console.Write($"{data.text}");
+                                }
+                            }
+                            Console.WriteLine("");
+                        }
                     }
-                    catch(OciException ex)
+                    catch (OciException ex)
                     {
                         logger.Info($"Caught expected exception:{ex}");
                     }
@@ -82,5 +98,11 @@ namespace Oci.Examples
             }
         }
 
+    }
+
+    class Data
+    {
+        public string id { get; set; }
+        public string text { get; set; }
     }
 }

@@ -12,7 +12,7 @@ using Oci.KeymanagementService.Models;
 
 namespace Oci.KeymanagementService.Responses
 {
-    public class UploadPartitionCertificatesResponse : Oci.Common.IOciResponse
+    public class UploadPartitionCertificatesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class SkipNextScheduledJobExecutionResponse : Oci.Common.IOciResponse
+    public class SkipNextScheduledJobExecutionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

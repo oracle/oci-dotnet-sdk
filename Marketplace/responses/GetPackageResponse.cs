@@ -12,7 +12,7 @@ using Oci.MarketplaceService.Models;
 
 namespace Oci.MarketplaceService.Responses
 {
-    public class GetPackageResponse : Oci.Common.IOciResponse
+    public class GetPackageResponse : Oci.Common.OciResponse
     {
 
         /// <value>

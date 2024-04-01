@@ -12,7 +12,7 @@ using Oci.JmsService.Models;
 
 namespace Oci.JmsService.Responses
 {
-    public class RequestJfrRecordingsResponse : Oci.Common.IOciResponse
+    public class RequestJfrRecordingsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

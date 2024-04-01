@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class ListSupportedCommitmentsResponse : Oci.Common.IOciResponse
+    public class ListSupportedCommitmentsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

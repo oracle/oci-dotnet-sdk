@@ -12,7 +12,7 @@ using Oci.AuditService.Models;
 
 namespace Oci.AuditService.Responses
 {
-    public class ListEventsResponse : Oci.Common.IOciResponse
+    public class ListEventsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

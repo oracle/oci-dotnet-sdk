@@ -12,7 +12,7 @@ using Oci.VisualbuilderService.Models;
 
 namespace Oci.VisualbuilderService.Responses
 {
-    public class RequestSummarizedApplicationsResponse : Oci.Common.IOciResponse
+    public class RequestSummarizedApplicationsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

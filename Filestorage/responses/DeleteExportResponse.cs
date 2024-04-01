@@ -12,7 +12,7 @@ using Oci.FilestorageService.Models;
 
 namespace Oci.FilestorageService.Responses
 {
-    public class DeleteExportResponse : Oci.Common.IOciResponse
+    public class DeleteExportResponse : Oci.Common.OciResponse
     {
 
         /// <value>

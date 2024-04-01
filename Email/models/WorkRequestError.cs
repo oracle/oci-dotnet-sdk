@@ -22,8 +22,7 @@ namespace Oci.EmailService.Models
     {
         
         /// <value>
-        /// A machine-usable code for the error that occured. Error codes are listed on
-        /// (https://docs.cloud.oracle.com/Content/API/References/apierrors.htm)
+        /// A machine-usable code for the error that occurred. Refer to [API Errors](https://docs.cloud.oracle.com/Content/API/References/apierrors.htm) for a list of error codes.
         /// 
         /// </value>
         /// <remarks>
@@ -44,7 +43,7 @@ namespace Oci.EmailService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the error occured. An RFC3339 formatted datetime string.
+        /// The time the error occurred. An RFC3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required

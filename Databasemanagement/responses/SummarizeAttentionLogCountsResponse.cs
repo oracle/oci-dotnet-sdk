@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class SummarizeAttentionLogCountsResponse : Oci.Common.IOciResponse
+    public class SummarizeAttentionLogCountsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

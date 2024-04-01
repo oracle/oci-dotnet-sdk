@@ -12,7 +12,7 @@ using Oci.SecretsService.Models;
 
 namespace Oci.SecretsService.Responses
 {
-    public class GetSecretBundleResponse : Oci.Common.IOciResponse
+    public class GetSecretBundleResponse : Oci.Common.OciResponse
     {
 
         /// <value>

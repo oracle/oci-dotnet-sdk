@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListCrossconnectPortSpeedShapesResponse : Oci.Common.IOciResponse
+    public class ListCrossconnectPortSpeedShapesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

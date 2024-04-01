@@ -12,7 +12,7 @@ using Oci.OsmanagementhubService.Models;
 
 namespace Oci.OsmanagementhubService.Responses
 {
-    public class RemovePackagesFromManagedInstanceGroupResponse : Oci.Common.IOciResponse
+    public class RemovePackagesFromManagedInstanceGroupResponse : Oci.Common.OciResponse
     {
 
         /// <value>

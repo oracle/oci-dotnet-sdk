@@ -12,7 +12,7 @@ using Oci.GloballydistributeddatabaseService.Models;
 
 namespace Oci.GloballydistributeddatabaseService.Responses
 {
-    public class GetPrivateEndpointResponse : Oci.Common.IOciResponse
+    public class GetPrivateEndpointResponse : Oci.Common.OciResponse
     {
 
         /// <value>

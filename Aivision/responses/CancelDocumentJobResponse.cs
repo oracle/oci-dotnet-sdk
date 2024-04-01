@@ -12,7 +12,7 @@ using Oci.AivisionService.Models;
 
 namespace Oci.AivisionService.Responses
 {
-    public class CancelDocumentJobResponse : Oci.Common.IOciResponse
+    public class CancelDocumentJobResponse : Oci.Common.OciResponse
     {
 
         /// <value>

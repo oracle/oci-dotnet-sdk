@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class GetAddressListResponse : Oci.Common.IOciResponse
+    public class GetAddressListResponse : Oci.Common.OciResponse
     {
 
         /// <value>

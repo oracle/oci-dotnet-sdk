@@ -12,7 +12,7 @@ using Oci.OceService.Models;
 
 namespace Oci.OceService.Responses
 {
-    public class CreateOceInstanceResponse : Oci.Common.IOciResponse
+    public class CreateOceInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class ChangeIngestTimeRuleCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeIngestTimeRuleCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

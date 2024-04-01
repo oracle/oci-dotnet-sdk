@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class DetachInstancePoolInstanceResponse : Oci.Common.IOciResponse
+    public class DetachInstancePoolInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

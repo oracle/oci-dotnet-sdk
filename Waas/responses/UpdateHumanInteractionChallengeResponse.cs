@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class UpdateHumanInteractionChallengeResponse : Oci.Common.IOciResponse
+    public class UpdateHumanInteractionChallengeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

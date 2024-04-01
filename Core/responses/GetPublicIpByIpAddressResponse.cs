@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class GetPublicIpByIpAddressResponse : Oci.Common.IOciResponse
+    public class GetPublicIpByIpAddressResponse : Oci.Common.OciResponse
     {
 
         /// <value>

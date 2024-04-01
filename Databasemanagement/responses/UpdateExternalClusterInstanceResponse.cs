@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class UpdateExternalClusterInstanceResponse : Oci.Common.IOciResponse
+    public class UpdateExternalClusterInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

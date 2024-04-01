@@ -12,7 +12,7 @@ using Oci.ContainerengineService.Models;
 
 namespace Oci.ContainerengineService.Responses
 {
-    public class GetClusterOptionsResponse : Oci.Common.IOciResponse
+    public class GetClusterOptionsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

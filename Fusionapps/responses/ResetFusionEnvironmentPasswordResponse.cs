@@ -12,7 +12,7 @@ using Oci.FusionappsService.Models;
 
 namespace Oci.FusionappsService.Responses
 {
-    public class ResetFusionEnvironmentPasswordResponse : Oci.Common.IOciResponse
+    public class ResetFusionEnvironmentPasswordResponse : Oci.Common.OciResponse
     {
 
         /// <value>

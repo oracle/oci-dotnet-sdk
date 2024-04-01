@@ -12,7 +12,7 @@ using Oci.JmsjavadownloadsService.Models;
 
 namespace Oci.JmsjavadownloadsService.Responses
 {
-    public class GetJavaDownloadReportResponse : Oci.Common.IOciResponse
+    public class GetJavaDownloadReportResponse : Oci.Common.OciResponse
     {
 
         /// <value>

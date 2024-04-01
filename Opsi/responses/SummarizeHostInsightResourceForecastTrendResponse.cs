@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class SummarizeHostInsightResourceForecastTrendResponse : Oci.Common.IOciResponse
+    public class SummarizeHostInsightResourceForecastTrendResponse : Oci.Common.OciResponse
     {
 
         /// <value>

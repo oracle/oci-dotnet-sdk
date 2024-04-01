@@ -12,7 +12,7 @@ using Oci.DataintegrationService.Models;
 
 namespace Oci.DataintegrationService.Responses
 {
-    public class GetRuntimeOperatorResponse : Oci.Common.IOciResponse
+    public class GetRuntimeOperatorResponse : Oci.Common.OciResponse
     {
 
         /// <value>

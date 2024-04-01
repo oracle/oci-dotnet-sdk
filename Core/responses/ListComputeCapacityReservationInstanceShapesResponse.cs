@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListComputeCapacityReservationInstanceShapesResponse : Oci.Common.IOciResponse
+    public class ListComputeCapacityReservationInstanceShapesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

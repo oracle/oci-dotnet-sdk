@@ -12,7 +12,7 @@ using Oci.OnsService.Models;
 
 namespace Oci.OnsService.Responses
 {
-    public class DeleteTopicResponse : Oci.Common.IOciResponse
+    public class DeleteTopicResponse : Oci.Common.OciResponse
     {
 
         /// <value>

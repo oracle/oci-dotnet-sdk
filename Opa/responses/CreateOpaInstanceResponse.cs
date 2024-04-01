@@ -12,7 +12,7 @@ using Oci.OpaService.Models;
 
 namespace Oci.OpaService.Responses
 {
-    public class CreateOpaInstanceResponse : Oci.Common.IOciResponse
+    public class CreateOpaInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

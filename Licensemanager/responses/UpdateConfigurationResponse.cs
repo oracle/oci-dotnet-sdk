@@ -12,7 +12,7 @@ using Oci.LicensemanagerService.Models;
 
 namespace Oci.LicensemanagerService.Responses
 {
-    public class UpdateConfigurationResponse : Oci.Common.IOciResponse
+    public class UpdateConfigurationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

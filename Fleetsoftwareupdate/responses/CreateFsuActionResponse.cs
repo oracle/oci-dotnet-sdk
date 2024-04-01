@@ -12,7 +12,7 @@ using Oci.FleetsoftwareupdateService.Models;
 
 namespace Oci.FleetsoftwareupdateService.Responses
 {
-    public class CreateFsuActionResponse : Oci.Common.IOciResponse
+    public class CreateFsuActionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

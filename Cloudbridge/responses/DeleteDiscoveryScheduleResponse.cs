@@ -12,7 +12,7 @@ using Oci.CloudbridgeService.Models;
 
 namespace Oci.CloudbridgeService.Responses
 {
-    public class DeleteDiscoveryScheduleResponse : Oci.Common.IOciResponse
+    public class DeleteDiscoveryScheduleResponse : Oci.Common.OciResponse
     {
 
         /// <value>

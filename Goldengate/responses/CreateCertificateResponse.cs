@@ -12,7 +12,7 @@ using Oci.GoldengateService.Models;
 
 namespace Oci.GoldengateService.Responses
 {
-    public class CreateCertificateResponse : Oci.Common.IOciResponse
+    public class CreateCertificateResponse : Oci.Common.OciResponse
     {
 
         /// <value>

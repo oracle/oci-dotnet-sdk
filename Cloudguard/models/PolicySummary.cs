@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Global policy statement
+    /// A policy summary (PolicySummary object) contains a list of all current global policy statements (policy attributes).
     /// </summary>
     public class PolicySummary 
     {

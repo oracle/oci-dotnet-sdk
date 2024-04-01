@@ -12,7 +12,7 @@ using Oci.VnmonitoringService.Models;
 
 namespace Oci.VnmonitoringService.Responses
 {
-    public class ListWorkRequestLogsResponse : Oci.Common.IOciResponse
+    public class ListWorkRequestLogsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

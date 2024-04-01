@@ -12,7 +12,7 @@ using Oci.AnalyticsService.Models;
 
 namespace Oci.AnalyticsService.Responses
 {
-    public class SetKmsKeyResponse : Oci.Common.IOciResponse
+    public class SetKmsKeyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

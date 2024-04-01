@@ -12,7 +12,7 @@ using Oci.ApmtracesService.Models;
 
 namespace Oci.ApmtracesService.Responses
 {
-    public class BulkDeActivateAttributeResponse : Oci.Common.IOciResponse
+    public class BulkDeActivateAttributeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

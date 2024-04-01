@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class GetSmtpCredentialResponse : Oci.Common.IOciResponse
+    public class GetSmtpCredentialResponse : Oci.Common.OciResponse
     {
 
         /// <value>

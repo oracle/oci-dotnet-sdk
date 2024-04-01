@@ -12,7 +12,7 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Responses
 {
-    public class DeleteDigitalAssistantResponse : Oci.Common.IOciResponse
+    public class DeleteDigitalAssistantResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Responses
 {
-    public class ListCustomerSecretKeysResponse : Oci.Common.IOciResponse
+    public class ListCustomerSecretKeysResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.LockboxService.Models;
 
 namespace Oci.LockboxService.Responses
 {
-    public class UpdateLockboxResponse : Oci.Common.IOciResponse
+    public class UpdateLockboxResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class UpdateVolumeAttachmentResponse : Oci.Common.IOciResponse
+    public class UpdateVolumeAttachmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

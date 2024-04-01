@@ -12,7 +12,7 @@ using Oci.DataintegrationService.Models;
 
 namespace Oci.DataintegrationService.Responses
 {
-    public class DeleteScheduleResponse : Oci.Common.IOciResponse
+    public class DeleteScheduleResponse : Oci.Common.OciResponse
     {
 
         /// <value>

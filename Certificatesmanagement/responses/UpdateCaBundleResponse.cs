@@ -12,7 +12,7 @@ using Oci.CertificatesmanagementService.Models;
 
 namespace Oci.CertificatesmanagementService.Responses
 {
-    public class UpdateCaBundleResponse : Oci.Common.IOciResponse
+    public class UpdateCaBundleResponse : Oci.Common.OciResponse
     {
 
         /// <value>

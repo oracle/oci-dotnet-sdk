@@ -12,7 +12,7 @@ using Oci.DevopsService.Models;
 
 namespace Oci.DevopsService.Responses
 {
-    public class GetRefResponse : Oci.Common.IOciResponse
+    public class GetRefResponse : Oci.Common.OciResponse
     {
 
         /// <value>

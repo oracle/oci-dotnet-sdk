@@ -12,7 +12,7 @@ using Oci.AccessgovernancecpService.Models;
 
 namespace Oci.AccessgovernancecpService.Responses
 {
-    public class DeleteGovernanceInstanceResponse : Oci.Common.IOciResponse
+    public class DeleteGovernanceInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

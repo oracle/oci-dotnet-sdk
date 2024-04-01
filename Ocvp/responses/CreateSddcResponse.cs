@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class CreateSddcResponse : Oci.Common.IOciResponse
+    public class CreateSddcResponse : Oci.Common.OciResponse
     {
 
         /// <value>

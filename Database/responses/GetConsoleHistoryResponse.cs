@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class GetConsoleHistoryResponse : Oci.Common.IOciResponse
+    public class GetConsoleHistoryResponse : Oci.Common.OciResponse
     {
 
         /// <value>

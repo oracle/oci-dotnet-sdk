@@ -12,7 +12,7 @@ using Oci.ManagementagentService.Models;
 
 namespace Oci.ManagementagentService.Responses
 {
-    public class ListAvailabilityHistoriesResponse : Oci.Common.IOciResponse
+    public class ListAvailabilityHistoriesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

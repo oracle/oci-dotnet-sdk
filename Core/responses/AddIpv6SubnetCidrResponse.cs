@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class AddIpv6SubnetCidrResponse : Oci.Common.IOciResponse
+    public class AddIpv6SubnetCidrResponse : Oci.Common.OciResponse
     {
 
         /// <value>

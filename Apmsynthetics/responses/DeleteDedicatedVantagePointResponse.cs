@@ -12,7 +12,7 @@ using Oci.ApmsyntheticsService.Models;
 
 namespace Oci.ApmsyntheticsService.Responses
 {
-    public class DeleteDedicatedVantagePointResponse : Oci.Common.IOciResponse
+    public class DeleteDedicatedVantagePointResponse : Oci.Common.OciResponse
     {
 
         /// <value>

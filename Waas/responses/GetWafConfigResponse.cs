@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class GetWafConfigResponse : Oci.Common.IOciResponse
+    public class GetWafConfigResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatalabelingService.Models;
 
 namespace Oci.DatalabelingService.Responses
 {
-    public class ListWorkRequestLogsResponse : Oci.Common.IOciResponse
+    public class ListWorkRequestLogsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

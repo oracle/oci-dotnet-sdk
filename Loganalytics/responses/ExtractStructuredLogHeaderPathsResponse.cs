@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class ExtractStructuredLogHeaderPathsResponse : Oci.Common.IOciResponse
+    public class ExtractStructuredLogHeaderPathsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.WaaService.Models;
 
 namespace Oci.WaaService.Responses
 {
-    public class GetWebAppAccelerationPolicyResponse : Oci.Common.IOciResponse
+    public class GetWebAppAccelerationPolicyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

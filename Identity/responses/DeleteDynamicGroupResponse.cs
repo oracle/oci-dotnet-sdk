@@ -12,7 +12,7 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Responses
 {
-    public class DeleteDynamicGroupResponse : Oci.Common.IOciResponse
+    public class DeleteDynamicGroupResponse : Oci.Common.OciResponse
     {
 
         /// <value>

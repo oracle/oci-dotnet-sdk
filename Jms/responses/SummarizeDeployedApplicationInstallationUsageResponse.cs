@@ -12,7 +12,7 @@ using Oci.JmsService.Models;
 
 namespace Oci.JmsService.Responses
 {
-    public class SummarizeDeployedApplicationInstallationUsageResponse : Oci.Common.IOciResponse
+    public class SummarizeDeployedApplicationInstallationUsageResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.FilestorageService.Models;
 
 namespace Oci.FilestorageService.Responses
 {
-    public class DeleteFilesystemSnapshotPolicyResponse : Oci.Common.IOciResponse
+    public class DeleteFilesystemSnapshotPolicyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

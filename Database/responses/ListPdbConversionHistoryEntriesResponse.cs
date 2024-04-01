@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class ListPdbConversionHistoryEntriesResponse : Oci.Common.IOciResponse
+    public class ListPdbConversionHistoryEntriesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

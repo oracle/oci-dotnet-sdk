@@ -12,7 +12,7 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Responses
 {
-    public class ListOdaPrivateEndpointScanProxiesResponse : Oci.Common.IOciResponse
+    public class ListOdaPrivateEndpointScanProxiesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class UpdateVolumeKmsKeyResponse : Oci.Common.IOciResponse
+    public class UpdateVolumeKmsKeyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

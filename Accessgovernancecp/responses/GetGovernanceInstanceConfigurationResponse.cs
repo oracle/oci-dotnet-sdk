@@ -12,7 +12,7 @@ using Oci.AccessgovernancecpService.Models;
 
 namespace Oci.AccessgovernancecpService.Responses
 {
-    public class GetGovernanceInstanceConfigurationResponse : Oci.Common.IOciResponse
+    public class GetGovernanceInstanceConfigurationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

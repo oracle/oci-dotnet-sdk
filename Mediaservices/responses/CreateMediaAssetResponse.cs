@@ -12,7 +12,7 @@ using Oci.MediaservicesService.Models;
 
 namespace Oci.MediaservicesService.Responses
 {
-    public class CreateMediaAssetResponse : Oci.Common.IOciResponse
+    public class CreateMediaAssetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

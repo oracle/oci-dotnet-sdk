@@ -12,7 +12,7 @@ using Oci.AianomalydetectionService.Models;
 
 namespace Oci.AianomalydetectionService.Responses
 {
-    public class CreateProjectResponse : Oci.Common.IOciResponse
+    public class CreateProjectResponse : Oci.Common.OciResponse
     {
 
         /// <value>

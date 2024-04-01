@@ -12,7 +12,7 @@ using Oci.FilestorageService.Models;
 
 namespace Oci.FilestorageService.Responses
 {
-    public class ListMountTargetsResponse : Oci.Common.IOciResponse
+    public class ListMountTargetsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

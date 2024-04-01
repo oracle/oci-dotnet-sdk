@@ -12,7 +12,7 @@ using Oci.DatabasetoolsService.Models;
 
 namespace Oci.DatabasetoolsService.Responses
 {
-    public class GetDatabaseToolsPrivateEndpointResponse : Oci.Common.IOciResponse
+    public class GetDatabaseToolsPrivateEndpointResponse : Oci.Common.OciResponse
     {
 
         /// <value>

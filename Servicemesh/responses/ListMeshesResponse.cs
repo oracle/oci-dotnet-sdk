@@ -12,7 +12,7 @@ using Oci.ServicemeshService.Models;
 
 namespace Oci.ServicemeshService.Responses
 {
-    public class ListMeshesResponse : Oci.Common.IOciResponse
+    public class ListMeshesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

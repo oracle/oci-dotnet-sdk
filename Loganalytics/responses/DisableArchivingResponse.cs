@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class DisableArchivingResponse : Oci.Common.IOciResponse
+    public class DisableArchivingResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.KeymanagementService.Models;
 
 namespace Oci.KeymanagementService.Responses
 {
-    public class CancelKeyVersionDeletionResponse : Oci.Common.IOciResponse
+    public class CancelKeyVersionDeletionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

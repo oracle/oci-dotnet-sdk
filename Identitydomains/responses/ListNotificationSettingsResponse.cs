@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class ListNotificationSettingsResponse : Oci.Common.IOciResponse
+    public class ListNotificationSettingsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

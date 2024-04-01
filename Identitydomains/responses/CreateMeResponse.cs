@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class CreateMeResponse : Oci.Common.IOciResponse
+    public class CreateMeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

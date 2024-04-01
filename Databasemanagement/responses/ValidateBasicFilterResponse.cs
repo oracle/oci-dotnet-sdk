@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class ValidateBasicFilterResponse : Oci.Common.IOciResponse
+    public class ValidateBasicFilterResponse : Oci.Common.OciResponse
     {
 
         /// <value>

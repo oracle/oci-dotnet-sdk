@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class PurgeSqlCollectionLogsResponse : Oci.Common.IOciResponse
+    public class PurgeSqlCollectionLogsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

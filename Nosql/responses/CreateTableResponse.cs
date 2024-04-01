@@ -12,7 +12,7 @@ using Oci.NosqlService.Models;
 
 namespace Oci.NosqlService.Responses
 {
-    public class CreateTableResponse : Oci.Common.IOciResponse
+    public class CreateTableResponse : Oci.Common.OciResponse
     {
 
         /// <value>

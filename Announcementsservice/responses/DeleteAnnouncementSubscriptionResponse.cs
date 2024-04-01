@@ -12,7 +12,7 @@ using Oci.AnnouncementsService.Models;
 
 namespace Oci.AnnouncementsService.Responses
 {
-    public class DeleteAnnouncementSubscriptionResponse : Oci.Common.IOciResponse
+    public class DeleteAnnouncementSubscriptionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

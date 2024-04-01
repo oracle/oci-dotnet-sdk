@@ -12,7 +12,7 @@ using Oci.UsageapiService.Models;
 
 namespace Oci.UsageapiService.Responses
 {
-    public class CreateQueryResponse : Oci.Common.IOciResponse
+    public class CreateQueryResponse : Oci.Common.OciResponse
     {
 
         /// <value>

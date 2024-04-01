@@ -12,7 +12,7 @@ using Oci.NosqlService.Models;
 
 namespace Oci.NosqlService.Responses
 {
-    public class ChangeTableCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeTableCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.FusionappsService.Models;
 
 namespace Oci.FusionappsService.Responses
 {
-    public class GetScheduledActivityResponse : Oci.Common.IOciResponse
+    public class GetScheduledActivityResponse : Oci.Common.OciResponse
     {
 
         /// <value>

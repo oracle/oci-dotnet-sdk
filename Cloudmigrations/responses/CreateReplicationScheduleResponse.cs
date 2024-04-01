@@ -12,7 +12,7 @@ using Oci.CloudmigrationsService.Models;
 
 namespace Oci.CloudmigrationsService.Responses
 {
-    public class CreateReplicationScheduleResponse : Oci.Common.IOciResponse
+    public class CreateReplicationScheduleResponse : Oci.Common.OciResponse
     {
 
         /// <value>

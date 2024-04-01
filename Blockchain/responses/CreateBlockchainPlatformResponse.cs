@@ -12,7 +12,7 @@ using Oci.BlockchainService.Models;
 
 namespace Oci.BlockchainService.Responses
 {
-    public class CreateBlockchainPlatformResponse : Oci.Common.IOciResponse
+    public class CreateBlockchainPlatformResponse : Oci.Common.OciResponse
     {
 
         /// <value>

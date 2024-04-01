@@ -12,7 +12,7 @@ using Oci.ContainerengineService.Models;
 
 namespace Oci.ContainerengineService.Responses
 {
-    public class UpdateAddonResponse : Oci.Common.IOciResponse
+    public class UpdateAddonResponse : Oci.Common.OciResponse
     {
 
         /// <value>

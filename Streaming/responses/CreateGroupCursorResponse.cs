@@ -12,7 +12,7 @@ using Oci.StreamingService.Models;
 
 namespace Oci.StreamingService.Responses
 {
-    public class CreateGroupCursorResponse : Oci.Common.IOciResponse
+    public class CreateGroupCursorResponse : Oci.Common.OciResponse
     {
 
         /// <value>

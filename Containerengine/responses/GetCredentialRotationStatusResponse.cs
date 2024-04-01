@@ -12,7 +12,7 @@ using Oci.ContainerengineService.Models;
 
 namespace Oci.ContainerengineService.Responses
 {
-    public class GetCredentialRotationStatusResponse : Oci.Common.IOciResponse
+    public class GetCredentialRotationStatusResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.WaaService.Models;
 
 namespace Oci.WaaService.Responses
 {
-    public class DeleteWebAppAccelerationResponse : Oci.Common.IOciResponse
+    public class DeleteWebAppAccelerationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

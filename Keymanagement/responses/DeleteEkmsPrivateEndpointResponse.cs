@@ -12,7 +12,7 @@ using Oci.KeymanagementService.Models;
 
 namespace Oci.KeymanagementService.Responses
 {
-    public class DeleteEkmsPrivateEndpointResponse : Oci.Common.IOciResponse
+    public class DeleteEkmsPrivateEndpointResponse : Oci.Common.OciResponse
     {
 
         /// <value>

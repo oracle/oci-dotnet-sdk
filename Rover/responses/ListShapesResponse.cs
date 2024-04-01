@@ -12,7 +12,7 @@ using Oci.RoverService.Models;
 
 namespace Oci.RoverService.Responses
 {
-    public class ListShapesResponse : Oci.Common.IOciResponse
+    public class ListShapesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

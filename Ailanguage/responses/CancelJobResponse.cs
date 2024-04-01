@@ -12,7 +12,7 @@ using Oci.AilanguageService.Models;
 
 namespace Oci.AilanguageService.Responses
 {
-    public class CancelJobResponse : Oci.Common.IOciResponse
+    public class CancelJobResponse : Oci.Common.OciResponse
     {
 
         /// <value>

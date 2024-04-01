@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class AttachLoadBalancerResponse : Oci.Common.IOciResponse
+    public class AttachLoadBalancerResponse : Oci.Common.OciResponse
     {
 
         /// <value>

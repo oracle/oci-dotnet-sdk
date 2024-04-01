@@ -12,7 +12,7 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Responses
 {
-    public class GetTagNamespaceResponse : Oci.Common.IOciResponse
+    public class GetTagNamespaceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

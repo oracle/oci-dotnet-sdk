@@ -12,7 +12,7 @@ using Oci.LoadbalancerService.Models;
 
 namespace Oci.LoadbalancerService.Responses
 {
-    public class CreateSSLCipherSuiteResponse : Oci.Common.IOciResponse
+    public class CreateSSLCipherSuiteResponse : Oci.Common.OciResponse
     {
 
         /// <value>

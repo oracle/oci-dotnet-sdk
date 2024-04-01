@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// condition type provided by cloud guard
+    /// The metadata definition of the requested condition type.
     /// </summary>
     public class ConditionMetadataType 
     {

@@ -12,7 +12,7 @@ using Oci.CloudguardService.Models;
 
 namespace Oci.CloudguardService.Responses
 {
-    public class GetSightingResponse : Oci.Common.IOciResponse
+    public class GetSightingResponse : Oci.Common.OciResponse
     {
 
         /// <value>

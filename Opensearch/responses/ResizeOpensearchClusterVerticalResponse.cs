@@ -12,7 +12,7 @@ using Oci.OpensearchService.Models;
 
 namespace Oci.OpensearchService.Responses
 {
-    public class ResizeOpensearchClusterVerticalResponse : Oci.Common.IOciResponse
+    public class ResizeOpensearchClusterVerticalResponse : Oci.Common.OciResponse
     {
 
         /// <value>

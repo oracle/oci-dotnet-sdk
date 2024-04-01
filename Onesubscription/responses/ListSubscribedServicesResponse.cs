@@ -12,7 +12,7 @@ using Oci.OnesubscriptionService.Models;
 
 namespace Oci.OnesubscriptionService.Responses
 {
-    public class ListSubscribedServicesResponse : Oci.Common.IOciResponse
+    public class ListSubscribedServicesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

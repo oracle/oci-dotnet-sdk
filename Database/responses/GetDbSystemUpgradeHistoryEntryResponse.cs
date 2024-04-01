@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class GetDbSystemUpgradeHistoryEntryResponse : Oci.Common.IOciResponse
+    public class GetDbSystemUpgradeHistoryEntryResponse : Oci.Common.OciResponse
     {
 
         /// <value>

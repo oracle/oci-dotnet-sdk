@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class DeleteMyApiKeyResponse : Oci.Common.IOciResponse
+    public class DeleteMyApiKeyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class CreatePrivateIpResponse : Oci.Common.IOciResponse
+    public class CreatePrivateIpResponse : Oci.Common.OciResponse
     {
 
         /// <value>

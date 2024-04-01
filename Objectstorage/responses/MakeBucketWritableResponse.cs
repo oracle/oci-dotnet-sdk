@@ -12,7 +12,7 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Responses
 {
-    public class MakeBucketWritableResponse : Oci.Common.IOciResponse
+    public class MakeBucketWritableResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.PsqlService.Models;
 
 namespace Oci.PsqlService.Responses
 {
-    public class DeleteDbSystemResponse : Oci.Common.IOciResponse
+    public class DeleteDbSystemResponse : Oci.Common.OciResponse
     {
 
         /// <value>

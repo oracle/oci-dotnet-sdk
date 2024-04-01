@@ -12,7 +12,7 @@ using Oci.OpensearchService.Models;
 
 namespace Oci.OpensearchService.Responses
 {
-    public class UpdateOpensearchClusterBackupResponse : Oci.Common.IOciResponse
+    public class UpdateOpensearchClusterBackupResponse : Oci.Common.OciResponse
     {
 
         /// <value>

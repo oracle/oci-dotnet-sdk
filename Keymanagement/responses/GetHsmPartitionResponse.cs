@@ -12,7 +12,7 @@ using Oci.KeymanagementService.Models;
 
 namespace Oci.KeymanagementService.Responses
 {
-    public class GetHsmPartitionResponse : Oci.Common.IOciResponse
+    public class GetHsmPartitionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class SummarizeAwrDbMetricsResponse : Oci.Common.IOciResponse
+    public class SummarizeAwrDbMetricsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

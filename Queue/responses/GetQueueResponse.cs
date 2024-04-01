@@ -12,7 +12,7 @@ using Oci.QueueService.Models;
 
 namespace Oci.QueueService.Responses
 {
-    public class GetQueueResponse : Oci.Common.IOciResponse
+    public class GetQueueResponse : Oci.Common.OciResponse
     {
 
         /// <value>

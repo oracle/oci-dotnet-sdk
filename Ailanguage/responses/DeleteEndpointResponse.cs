@@ -12,7 +12,7 @@ using Oci.AilanguageService.Models;
 
 namespace Oci.AilanguageService.Responses
 {
-    public class DeleteEndpointResponse : Oci.Common.IOciResponse
+    public class DeleteEndpointResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatabasemigrationService.Models;
 
 namespace Oci.DatabasemigrationService.Responses
 {
-    public class ListExcludedObjectsResponse : Oci.Common.IOciResponse
+    public class ListExcludedObjectsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

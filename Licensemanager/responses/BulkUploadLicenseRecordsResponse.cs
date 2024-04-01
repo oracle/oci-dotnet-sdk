@@ -12,7 +12,7 @@ using Oci.LicensemanagerService.Models;
 
 namespace Oci.LicensemanagerService.Responses
 {
-    public class BulkUploadLicenseRecordsResponse : Oci.Common.IOciResponse
+    public class BulkUploadLicenseRecordsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

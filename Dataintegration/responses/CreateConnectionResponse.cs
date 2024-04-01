@@ -12,7 +12,7 @@ using Oci.DataintegrationService.Models;
 
 namespace Oci.DataintegrationService.Responses
 {
-    public class CreateConnectionResponse : Oci.Common.IOciResponse
+    public class CreateConnectionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

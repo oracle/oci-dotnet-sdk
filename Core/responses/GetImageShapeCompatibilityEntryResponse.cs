@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class GetImageShapeCompatibilityEntryResponse : Oci.Common.IOciResponse
+    public class GetImageShapeCompatibilityEntryResponse : Oci.Common.OciResponse
     {
 
         /// <value>

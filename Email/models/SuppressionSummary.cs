@@ -50,40 +50,18 @@ namespace Oci.EmailService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-                ///
-        /// <value>
-        /// The reason that the email address was suppressed.
-        /// </value>
-        ///
-        public enum ReasonEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "UNKNOWN")]
-            Unknown,
-            [EnumMember(Value = "HARDBOUNCE")]
-            Hardbounce,
-            [EnumMember(Value = "COMPLAINT")]
-            Complaint,
-            [EnumMember(Value = "MANUAL")]
-            Manual,
-            [EnumMember(Value = "SOFTBOUNCE")]
-            Softbounce,
-            [EnumMember(Value = "UNSUBSCRIBE")]
-            Unsubscribe
-        };
-
+        
         /// <value>
         /// The reason that the email address was suppressed.
         /// </value>
         [JsonProperty(PropertyName = "reason")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<ReasonEnum> Reason { get; set; }
+        public System.Nullable<SuppressionReason> Reason { get; set; }
         
         /// <value>
         /// The date and time a recipient's email address was added to the
         /// suppression list, in \"YYYY-MM-ddThh:mmZ\" format with a Z offset, as
-        /// defined by RFC 3339.
+        /// defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]

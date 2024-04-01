@@ -12,7 +12,7 @@ using Oci.CloudguardService.Models;
 
 namespace Oci.CloudguardService.Responses
 {
-    public class DeleteSecurityRecipeResponse : Oci.Common.IOciResponse
+    public class DeleteSecurityRecipeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

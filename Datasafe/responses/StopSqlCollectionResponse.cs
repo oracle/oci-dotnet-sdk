@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class StopSqlCollectionResponse : Oci.Common.IOciResponse
+    public class StopSqlCollectionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

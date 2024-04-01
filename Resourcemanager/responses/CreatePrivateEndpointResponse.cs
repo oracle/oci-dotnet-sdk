@@ -12,7 +12,7 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Responses
 {
-    public class CreatePrivateEndpointResponse : Oci.Common.IOciResponse
+    public class CreatePrivateEndpointResponse : Oci.Common.OciResponse
     {
 
         /// <value>

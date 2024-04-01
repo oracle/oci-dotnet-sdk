@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class MigrateVaultKeyResponse : Oci.Common.IOciResponse
+    public class MigrateVaultKeyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

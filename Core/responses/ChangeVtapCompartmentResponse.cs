@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ChangeVtapCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeVtapCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

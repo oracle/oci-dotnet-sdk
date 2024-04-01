@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ConnectRemotePeeringConnectionsResponse : Oci.Common.IOciResponse
+    public class ConnectRemotePeeringConnectionsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

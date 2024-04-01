@@ -12,7 +12,7 @@ using Oci.MarketplacepublisherService.Models;
 
 namespace Oci.MarketplacepublisherService.Responses
 {
-    public class UpdateTermVersionContentResponse : Oci.Common.IOciResponse
+    public class UpdateTermVersionContentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

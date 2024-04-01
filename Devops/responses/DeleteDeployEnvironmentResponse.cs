@@ -12,7 +12,7 @@ using Oci.DevopsService.Models;
 
 namespace Oci.DevopsService.Responses
 {
-    public class DeleteDeployEnvironmentResponse : Oci.Common.IOciResponse
+    public class DeleteDeployEnvironmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

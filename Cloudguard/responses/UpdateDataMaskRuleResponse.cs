@@ -12,7 +12,7 @@ using Oci.CloudguardService.Models;
 
 namespace Oci.CloudguardService.Responses
 {
-    public class UpdateDataMaskRuleResponse : Oci.Common.IOciResponse
+    public class UpdateDataMaskRuleResponse : Oci.Common.OciResponse
     {
 
         /// <value>

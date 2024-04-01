@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class CreateComputeImageCapabilitySchemaResponse : Oci.Common.IOciResponse
+    public class CreateComputeImageCapabilitySchemaResponse : Oci.Common.OciResponse
     {
 
         /// <value>

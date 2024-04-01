@@ -12,7 +12,7 @@ using Oci.DatalabelingService.Models;
 
 namespace Oci.DatalabelingService.Responses
 {
-    public class SnapshotDatasetResponse : Oci.Common.IOciResponse
+    public class SnapshotDatasetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

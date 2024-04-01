@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class PauseScheduledTaskResponse : Oci.Common.IOciResponse
+    public class PauseScheduledTaskResponse : Oci.Common.OciResponse
     {
 
         /// <value>

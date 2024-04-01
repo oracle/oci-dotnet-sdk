@@ -12,7 +12,7 @@ using Oci.DatascienceService.Models;
 
 namespace Oci.DatascienceService.Responses
 {
-    public class UpdateModelResponse : Oci.Common.IOciResponse
+    public class UpdateModelResponse : Oci.Common.OciResponse
     {
 
         /// <value>

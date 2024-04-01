@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class ConfigureAutomaticCaptureFiltersResponse : Oci.Common.IOciResponse
+    public class ConfigureAutomaticCaptureFiltersResponse : Oci.Common.OciResponse
     {
 
         /// <value>

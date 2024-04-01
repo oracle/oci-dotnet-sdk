@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class ModifyGlobalSettingsResponse : Oci.Common.IOciResponse
+    public class ModifyGlobalSettingsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

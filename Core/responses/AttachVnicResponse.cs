@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class AttachVnicResponse : Oci.Common.IOciResponse
+    public class AttachVnicResponse : Oci.Common.OciResponse
     {
 
         /// <value>

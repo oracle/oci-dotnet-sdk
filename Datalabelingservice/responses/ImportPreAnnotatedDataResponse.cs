@@ -12,7 +12,7 @@ using Oci.DatalabelingService.Models;
 
 namespace Oci.DatalabelingService.Responses
 {
-    public class ImportPreAnnotatedDataResponse : Oci.Common.IOciResponse
+    public class ImportPreAnnotatedDataResponse : Oci.Common.OciResponse
     {
 
         /// <value>

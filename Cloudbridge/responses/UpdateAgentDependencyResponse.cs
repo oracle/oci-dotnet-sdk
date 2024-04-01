@@ -12,7 +12,7 @@ using Oci.CloudbridgeService.Models;
 
 namespace Oci.CloudbridgeService.Responses
 {
-    public class UpdateAgentDependencyResponse : Oci.Common.IOciResponse
+    public class UpdateAgentDependencyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

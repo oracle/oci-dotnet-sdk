@@ -12,7 +12,7 @@ using Oci.ComputecloudatcustomerService.Models;
 
 namespace Oci.ComputecloudatcustomerService.Responses
 {
-    public class GetCccUpgradeScheduleResponse : Oci.Common.IOciResponse
+    public class GetCccUpgradeScheduleResponse : Oci.Common.OciResponse
     {
 
         /// <value>

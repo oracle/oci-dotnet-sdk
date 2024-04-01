@@ -12,7 +12,7 @@ using Oci.DevopsService.Models;
 
 namespace Oci.DevopsService.Responses
 {
-    public class ScheduleCascadingProjectDeletionResponse : Oci.Common.IOciResponse
+    public class ScheduleCascadingProjectDeletionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

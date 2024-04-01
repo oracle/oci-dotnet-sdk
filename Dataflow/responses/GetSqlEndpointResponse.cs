@@ -12,7 +12,7 @@ using Oci.DataflowService.Models;
 
 namespace Oci.DataflowService.Responses
 {
-    public class GetSqlEndpointResponse : Oci.Common.IOciResponse
+    public class GetSqlEndpointResponse : Oci.Common.OciResponse
     {
 
         /// <value>

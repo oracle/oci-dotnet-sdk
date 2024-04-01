@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class ListOptimizerStatisticsAdvisorExecutionsResponse : Oci.Common.IOciResponse
+    public class ListOptimizerStatisticsAdvisorExecutionsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

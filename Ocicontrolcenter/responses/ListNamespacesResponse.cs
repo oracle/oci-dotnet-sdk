@@ -12,7 +12,7 @@ using Oci.OcicontrolcenterService.Models;
 
 namespace Oci.OcicontrolcenterService.Responses
 {
-    public class ListNamespacesResponse : Oci.Common.IOciResponse
+    public class ListNamespacesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DevopsService.Models;
 
 namespace Oci.DevopsService.Responses
 {
-    public class GetCommitDiffResponse : Oci.Common.IOciResponse
+    public class GetCommitDiffResponse : Oci.Common.OciResponse
     {
 
         /// <value>

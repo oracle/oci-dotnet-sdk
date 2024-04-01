@@ -12,7 +12,7 @@ using Oci.VnmonitoringService.Models;
 
 namespace Oci.VnmonitoringService.Responses
 {
-    public class DeletePathAnalyzerTestResponse : Oci.Common.IOciResponse
+    public class DeletePathAnalyzerTestResponse : Oci.Common.OciResponse
     {
 
         /// <value>

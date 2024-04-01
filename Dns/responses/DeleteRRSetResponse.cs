@@ -12,7 +12,7 @@ using Oci.DnsService.Models;
 
 namespace Oci.DnsService.Responses
 {
-    public class DeleteRRSetResponse : Oci.Common.IOciResponse
+    public class DeleteRRSetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

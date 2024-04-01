@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class AddNetworkSecurityGroupSecurityRulesResponse : Oci.Common.IOciResponse
+    public class AddNetworkSecurityGroupSecurityRulesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

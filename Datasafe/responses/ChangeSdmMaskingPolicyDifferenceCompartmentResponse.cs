@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class ChangeSdmMaskingPolicyDifferenceCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeSdmMaskingPolicyDifferenceCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class ListAutonomousDbPreviewVersionsResponse : Oci.Common.IOciResponse
+    public class ListAutonomousDbPreviewVersionsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

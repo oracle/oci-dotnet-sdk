@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class ListEdgeSubnetsResponse : Oci.Common.IOciResponse
+    public class ListEdgeSubnetsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

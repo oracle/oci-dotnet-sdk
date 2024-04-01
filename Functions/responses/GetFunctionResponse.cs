@@ -12,7 +12,7 @@ using Oci.FunctionsService.Models;
 
 namespace Oci.FunctionsService.Responses
 {
-    public class GetFunctionResponse : Oci.Common.IOciResponse
+    public class GetFunctionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -128,6 +128,28 @@ namespace Oci.NetworkloadbalancerService.Models
         public System.Nullable<NlbIpVersion> NlbIpVersion { get; set; }
         
         /// <value>
+        /// IPv6 subnet prefix selection. If Ipv6 subnet prefix is passed, Nlb Ipv6 Address would be assign within the cidr block. NLB has to be dual or single stack ipv6 to support this.
+        /// </value>
+        [JsonProperty(PropertyName = "subnetIpv6Cidr")]
+        public string SubnetIpv6Cidr { get; set; }
+        
+        /// <value>
+        /// Private IP address to be assigned to the network load balancer being created.
+        /// This IP address has to be in the CIDR range of the subnet where network load balancer is being created
+        /// Example: &quot;10.0.0.1&quot;
+        /// </value>
+        [JsonProperty(PropertyName = "assignedPrivateIpv4")]
+        public string AssignedPrivateIpv4 { get; set; }
+        
+        /// <value>
+        /// IPv6 address to be assigned to the network load balancer being created.
+        /// This IP address has to be part of one of the prefixes supported by the subnet.
+        /// Example: &quot;2607:9b80:9a0a:9a7e:abcd:ef01:2345:6789&quot;
+        /// </value>
+        [JsonProperty(PropertyName = "assignedIpv6")]
+        public string AssignedIpv6 { get; set; }
+        
+        /// <value>
         /// Listeners associated with the network load balancer.
         /// </value>
         [JsonProperty(PropertyName = "listeners")]

@@ -12,7 +12,7 @@ using Oci.ManagementagentService.Models;
 
 namespace Oci.ManagementagentService.Responses
 {
-    public class UpdateManagementAgentResponse : Oci.Common.IOciResponse
+    public class UpdateManagementAgentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

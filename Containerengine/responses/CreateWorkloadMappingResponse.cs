@@ -12,7 +12,7 @@ using Oci.ContainerengineService.Models;
 
 namespace Oci.ContainerengineService.Responses
 {
-    public class CreateWorkloadMappingResponse : Oci.Common.IOciResponse
+    public class CreateWorkloadMappingResponse : Oci.Common.OciResponse
     {
 
         /// <value>

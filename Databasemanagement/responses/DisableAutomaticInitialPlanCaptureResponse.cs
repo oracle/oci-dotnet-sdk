@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class DisableAutomaticInitialPlanCaptureResponse : Oci.Common.IOciResponse
+    public class DisableAutomaticInitialPlanCaptureResponse : Oci.Common.OciResponse
     {
 
         /// <value>

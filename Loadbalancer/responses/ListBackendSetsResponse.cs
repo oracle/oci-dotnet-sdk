@@ -12,7 +12,7 @@ using Oci.LoadbalancerService.Models;
 
 namespace Oci.LoadbalancerService.Responses
 {
-    public class ListBackendSetsResponse : Oci.Common.IOciResponse
+    public class ListBackendSetsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

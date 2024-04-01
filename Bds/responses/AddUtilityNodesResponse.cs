@@ -12,7 +12,7 @@ using Oci.BdsService.Models;
 
 namespace Oci.BdsService.Responses
 {
-    public class AddUtilityNodesResponse : Oci.Common.IOciResponse
+    public class AddUtilityNodesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

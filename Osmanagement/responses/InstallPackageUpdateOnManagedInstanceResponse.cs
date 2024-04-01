@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class InstallPackageUpdateOnManagedInstanceResponse : Oci.Common.IOciResponse
+    public class InstallPackageUpdateOnManagedInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ManagementagentService.Models;
 
 namespace Oci.ManagementagentService.Responses
 {
-    public class GetManagementAgentInstallKeyContentResponse : Oci.Common.IOciResponse
+    public class GetManagementAgentInstallKeyContentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

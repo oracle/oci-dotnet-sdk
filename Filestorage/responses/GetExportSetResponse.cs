@@ -12,7 +12,7 @@ using Oci.FilestorageService.Models;
 
 namespace Oci.FilestorageService.Responses
 {
-    public class GetExportSetResponse : Oci.Common.IOciResponse
+    public class GetExportSetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

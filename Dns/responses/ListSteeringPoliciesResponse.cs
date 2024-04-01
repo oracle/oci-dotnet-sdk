@@ -12,7 +12,7 @@ using Oci.DnsService.Models;
 
 namespace Oci.DnsService.Responses
 {
-    public class ListSteeringPoliciesResponse : Oci.Common.IOciResponse
+    public class ListSteeringPoliciesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

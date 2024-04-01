@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class SwapBillingResponse : Oci.Common.IOciResponse
+    public class SwapBillingResponse : Oci.Common.OciResponse
     {
 
         /// <value>

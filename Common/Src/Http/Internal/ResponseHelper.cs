@@ -90,9 +90,14 @@ namespace Oci.Common.Http.Internal
 
         private static T ReadEntityInternal<T>(HttpResponseMessage response, string opcRequestId)
         {
-            var content = response.Content.ReadAsStringAsync().Result;
-            // Directly return if the expected type is string
+            // Skip De-serialization if SSE event
             response.Content.Headers.TryGetValues("Content-Type", out var values);
+            if(values != null && values.FirstOrDefault().Contains("text/event-stream"))
+            {
+                return default(T);
+            }
+            // Directly return if the expected type is strings
+            var content = response.Content.ReadAsStringAsync().Result;
             if (values != null && values.FirstOrDefault().Contains("text/plain"))
             {
                 return (T)(Object)content;

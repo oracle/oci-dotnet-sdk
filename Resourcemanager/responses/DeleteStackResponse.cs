@@ -12,7 +12,7 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Responses
 {
-    public class DeleteStackResponse : Oci.Common.IOciResponse
+    public class DeleteStackResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class StartAuditTrailResponse : Oci.Common.IOciResponse
+    public class StartAuditTrailResponse : Oci.Common.OciResponse
     {
 
         /// <value>

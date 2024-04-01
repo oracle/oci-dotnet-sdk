@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class GetLabelSummaryResponse : Oci.Common.IOciResponse
+    public class GetLabelSummaryResponse : Oci.Common.OciResponse
     {
 
         /// <value>

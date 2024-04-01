@@ -12,7 +12,7 @@ using Oci.ArtifactsService.Models;
 
 namespace Oci.ArtifactsService.Responses
 {
-    public class DeleteGenericArtifactByPathResponse : Oci.Common.IOciResponse
+    public class DeleteGenericArtifactByPathResponse : Oci.Common.OciResponse
     {
 
         /// <value>

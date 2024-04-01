@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class PutMePasswordChangerResponse : Oci.Common.IOciResponse
+    public class PutMePasswordChangerResponse : Oci.Common.OciResponse
     {
 
         /// <value>

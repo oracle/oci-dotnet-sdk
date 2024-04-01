@@ -12,7 +12,7 @@ using Oci.KeymanagementService.Models;
 
 namespace Oci.KeymanagementService.Responses
 {
-    public class ListHsmClustersResponse : Oci.Common.IOciResponse
+    public class ListHsmClustersResponse : Oci.Common.OciResponse
     {
 
         /// <value>

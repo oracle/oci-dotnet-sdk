@@ -12,7 +12,7 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Responses
 {
-    public class ListTerraformVersionsResponse : Oci.Common.IOciResponse
+    public class ListTerraformVersionsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

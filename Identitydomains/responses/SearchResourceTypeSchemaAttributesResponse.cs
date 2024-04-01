@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class SearchResourceTypeSchemaAttributesResponse : Oci.Common.IOciResponse
+    public class SearchResourceTypeSchemaAttributesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

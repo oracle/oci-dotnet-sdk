@@ -12,7 +12,7 @@ using Oci.NetworkfirewallService.Models;
 
 namespace Oci.NetworkfirewallService.Responses
 {
-    public class DeleteServiceResponse : Oci.Common.IOciResponse
+    public class DeleteServiceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

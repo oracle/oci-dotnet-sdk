@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class RemoveDataFileResponse : Oci.Common.IOciResponse
+    public class RemoveDataFileResponse : Oci.Common.OciResponse
     {
 
         /// <value>

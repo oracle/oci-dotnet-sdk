@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class GetAllowedIkeIPSecParametersResponse : Oci.Common.IOciResponse
+    public class GetAllowedIkeIPSecParametersResponse : Oci.Common.OciResponse
     {
 
         /// <value>

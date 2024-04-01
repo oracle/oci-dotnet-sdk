@@ -12,7 +12,7 @@ using Oci.ApmconfigService.Models;
 
 namespace Oci.ApmconfigService.Responses
 {
-    public class DeleteConfigResponse : Oci.Common.IOciResponse
+    public class DeleteConfigResponse : Oci.Common.OciResponse
     {
 
         /// <value>

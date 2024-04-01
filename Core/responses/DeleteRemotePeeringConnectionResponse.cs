@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class DeleteRemotePeeringConnectionResponse : Oci.Common.IOciResponse
+    public class DeleteRemotePeeringConnectionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

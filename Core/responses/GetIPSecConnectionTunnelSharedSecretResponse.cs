@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class GetIPSecConnectionTunnelSharedSecretResponse : Oci.Common.IOciResponse
+    public class GetIPSecConnectionTunnelSharedSecretResponse : Oci.Common.OciResponse
     {
 
         /// <value>

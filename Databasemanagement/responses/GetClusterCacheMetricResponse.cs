@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class GetClusterCacheMetricResponse : Oci.Common.IOciResponse
+    public class GetClusterCacheMetricResponse : Oci.Common.OciResponse
     {
 
         /// <value>

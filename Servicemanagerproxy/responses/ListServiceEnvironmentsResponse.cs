@@ -12,7 +12,7 @@ using Oci.ServicemanagerproxyService.Models;
 
 namespace Oci.ServicemanagerproxyService.Responses
 {
-    public class ListServiceEnvironmentsResponse : Oci.Common.IOciResponse
+    public class ListServiceEnvironmentsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

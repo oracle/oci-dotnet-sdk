@@ -12,7 +12,7 @@ using Oci.MysqlService.Models;
 
 namespace Oci.MysqlService.Responses
 {
-    public class UpdateReplicaResponse : Oci.Common.IOciResponse
+    public class UpdateReplicaResponse : Oci.Common.OciResponse
     {
 
         /// <value>

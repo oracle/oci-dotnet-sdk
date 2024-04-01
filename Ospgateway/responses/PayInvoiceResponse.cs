@@ -12,7 +12,7 @@ using Oci.OspgatewayService.Models;
 
 namespace Oci.OspgatewayService.Responses
 {
-    public class PayInvoiceResponse : Oci.Common.IOciResponse
+    public class PayInvoiceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

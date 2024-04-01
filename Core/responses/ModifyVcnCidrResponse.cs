@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ModifyVcnCidrResponse : Oci.Common.IOciResponse
+    public class ModifyVcnCidrResponse : Oci.Common.OciResponse
     {
 
         /// <value>

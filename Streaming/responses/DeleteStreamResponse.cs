@@ -12,7 +12,7 @@ using Oci.StreamingService.Models;
 
 namespace Oci.StreamingService.Responses
 {
-    public class DeleteStreamResponse : Oci.Common.IOciResponse
+    public class DeleteStreamResponse : Oci.Common.OciResponse
     {
 
         /// <value>

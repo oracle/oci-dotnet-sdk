@@ -12,7 +12,7 @@ using Oci.ArtifactsService.Models;
 
 namespace Oci.ArtifactsService.Responses
 {
-    public class DeleteContainerImageResponse : Oci.Common.IOciResponse
+    public class DeleteContainerImageResponse : Oci.Common.OciResponse
     {
 
         /// <value>

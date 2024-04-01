@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class GetExecutionPlanStatsComparisionResponse : Oci.Common.IOciResponse
+    public class GetExecutionPlanStatsComparisionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

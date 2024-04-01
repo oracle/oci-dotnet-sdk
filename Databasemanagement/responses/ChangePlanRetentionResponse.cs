@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class ChangePlanRetentionResponse : Oci.Common.IOciResponse
+    public class ChangePlanRetentionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

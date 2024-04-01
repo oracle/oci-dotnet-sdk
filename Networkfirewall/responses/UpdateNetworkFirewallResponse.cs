@@ -12,7 +12,7 @@ using Oci.NetworkfirewallService.Models;
 
 namespace Oci.NetworkfirewallService.Responses
 {
-    public class UpdateNetworkFirewallResponse : Oci.Common.IOciResponse
+    public class UpdateNetworkFirewallResponse : Oci.Common.OciResponse
     {
 
         /// <value>

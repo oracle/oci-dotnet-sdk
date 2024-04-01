@@ -12,7 +12,7 @@ using Oci.AianomalydetectionService.Models;
 
 namespace Oci.AianomalydetectionService.Responses
 {
-    public class ListAiPrivateEndpointsResponse : Oci.Common.IOciResponse
+    public class ListAiPrivateEndpointsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

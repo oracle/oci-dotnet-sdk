@@ -12,7 +12,7 @@ using Oci.CloudmigrationsService.Models;
 
 namespace Oci.CloudmigrationsService.Responses
 {
-    public class RefreshMigrationAssetResponse : Oci.Common.IOciResponse
+    public class RefreshMigrationAssetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

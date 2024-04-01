@@ -12,7 +12,7 @@ using Oci.GoldengateService.Models;
 
 namespace Oci.GoldengateService.Responses
 {
-    public class CancelDeploymentBackupResponse : Oci.Common.IOciResponse
+    public class CancelDeploymentBackupResponse : Oci.Common.OciResponse
     {
 
         /// <value>

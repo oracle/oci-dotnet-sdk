@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class DeleteManagedInstanceGroupResponse : Oci.Common.IOciResponse
+    public class DeleteManagedInstanceGroupResponse : Oci.Common.OciResponse
     {
 
         /// <value>

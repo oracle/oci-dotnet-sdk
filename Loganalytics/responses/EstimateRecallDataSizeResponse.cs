@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class EstimateRecallDataSizeResponse : Oci.Common.IOciResponse
+    public class EstimateRecallDataSizeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

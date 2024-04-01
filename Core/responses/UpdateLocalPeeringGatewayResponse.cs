@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class UpdateLocalPeeringGatewayResponse : Oci.Common.IOciResponse
+    public class UpdateLocalPeeringGatewayResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.BdsService.Models;
 
 namespace Oci.BdsService.Responses
 {
-    public class RemoveAutoScalingConfigurationResponse : Oci.Common.IOciResponse
+    public class RemoveAutoScalingConfigurationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

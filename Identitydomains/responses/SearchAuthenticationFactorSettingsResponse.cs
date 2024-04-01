@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class SearchAuthenticationFactorSettingsResponse : Oci.Common.IOciResponse
+    public class SearchAuthenticationFactorSettingsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

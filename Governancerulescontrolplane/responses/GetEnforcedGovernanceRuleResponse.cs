@@ -12,7 +12,7 @@ using Oci.GovernancerulescontrolplaneService.Models;
 
 namespace Oci.GovernancerulescontrolplaneService.Responses
 {
-    public class GetEnforcedGovernanceRuleResponse : Oci.Common.IOciResponse
+    public class GetEnforcedGovernanceRuleResponse : Oci.Common.OciResponse
     {
 
         /// <value>

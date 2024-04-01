@@ -12,7 +12,7 @@ using Oci.EventsService.Models;
 
 namespace Oci.EventsService.Responses
 {
-    public class UpdateRuleResponse : Oci.Common.IOciResponse
+    public class UpdateRuleResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class GetScheduledJobResponse : Oci.Common.IOciResponse
+    public class GetScheduledJobResponse : Oci.Common.OciResponse
     {
 
         /// <value>

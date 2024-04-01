@@ -12,7 +12,7 @@ using Oci.StreamingService.Models;
 
 namespace Oci.StreamingService.Responses
 {
-    public class GetMessagesResponse : Oci.Common.IOciResponse
+    public class GetMessagesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

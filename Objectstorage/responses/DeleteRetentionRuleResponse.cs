@@ -12,7 +12,7 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Responses
 {
-    public class DeleteRetentionRuleResponse : Oci.Common.IOciResponse
+    public class DeleteRetentionRuleResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.FusionappsService.Models;
 
 namespace Oci.FusionappsService.Responses
 {
-    public class ListTimeAvailableForRefreshesResponse : Oci.Common.IOciResponse
+    public class ListTimeAvailableForRefreshesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

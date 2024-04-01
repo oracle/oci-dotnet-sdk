@@ -12,7 +12,7 @@ using Oci.LockboxService.Models;
 
 namespace Oci.LockboxService.Responses
 {
-    public class ChangeApprovalTemplateCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeApprovalTemplateCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

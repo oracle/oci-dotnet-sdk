@@ -12,7 +12,7 @@ using Oci.RedisService.Models;
 
 namespace Oci.RedisService.Responses
 {
-    public class CreateRedisClusterResponse : Oci.Common.IOciResponse
+    public class CreateRedisClusterResponse : Oci.Common.OciResponse
     {
 
         /// <value>

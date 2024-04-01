@@ -12,7 +12,7 @@ using Oci.JmsService.Models;
 
 namespace Oci.JmsService.Responses
 {
-    public class GenerateAgentDeployScriptResponse : Oci.Common.IOciResponse
+    public class GenerateAgentDeployScriptResponse : Oci.Common.OciResponse
     {
 
         /// <value>

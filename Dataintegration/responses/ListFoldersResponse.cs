@@ -12,7 +12,7 @@ using Oci.DataintegrationService.Models;
 
 namespace Oci.DataintegrationService.Responses
 {
-    public class ListFoldersResponse : Oci.Common.IOciResponse
+    public class ListFoldersResponse : Oci.Common.OciResponse
     {
 
         /// <value>

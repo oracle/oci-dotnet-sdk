@@ -12,7 +12,7 @@ using Oci.MonitoringService.Models;
 
 namespace Oci.MonitoringService.Responses
 {
-    public class GetAlarmSuppressionResponse : Oci.Common.IOciResponse
+    public class GetAlarmSuppressionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class UpdateWaasPolicyResponse : Oci.Common.IOciResponse
+    public class UpdateWaasPolicyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

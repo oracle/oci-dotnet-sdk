@@ -12,7 +12,7 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Responses
 {
-    public class CreateOdaInstanceAttachmentResponse : Oci.Common.IOciResponse
+    public class CreateOdaInstanceAttachmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

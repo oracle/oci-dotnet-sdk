@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class ListDbHomePatchHistoryEntriesResponse : Oci.Common.IOciResponse
+    public class ListDbHomePatchHistoryEntriesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Responses
 {
-    public class CreateConfigurationSourceProviderResponse : Oci.Common.IOciResponse
+    public class CreateConfigurationSourceProviderResponse : Oci.Common.OciResponse
     {
 
         /// <value>

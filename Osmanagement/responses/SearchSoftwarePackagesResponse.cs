@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class SearchSoftwarePackagesResponse : Oci.Common.IOciResponse
+    public class SearchSoftwarePackagesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.RoverService.Models;
 
 namespace Oci.RoverService.Responses
 {
-    public class RequestBundleRoverClusterResponse : Oci.Common.IOciResponse
+    public class RequestBundleRoverClusterResponse : Oci.Common.OciResponse
     {
 
         /// <value>

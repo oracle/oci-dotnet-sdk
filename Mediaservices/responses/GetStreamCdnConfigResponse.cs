@@ -12,7 +12,7 @@ using Oci.MediaservicesService.Models;
 
 namespace Oci.MediaservicesService.Responses
 {
-    public class GetStreamCdnConfigResponse : Oci.Common.IOciResponse
+    public class GetStreamCdnConfigResponse : Oci.Common.OciResponse
     {
 
         /// <value>

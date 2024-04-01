@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class LoadSqlPlanBaselinesFromCursorCacheResponse : Oci.Common.IOciResponse
+    public class LoadSqlPlanBaselinesFromCursorCacheResponse : Oci.Common.OciResponse
     {
 
         /// <value>

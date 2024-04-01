@@ -12,7 +12,7 @@ using Oci.UsageService.Models;
 
 namespace Oci.UsageService.Responses
 {
-    public class ListUsageLimitsResponse : Oci.Common.IOciResponse
+    public class ListUsageLimitsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

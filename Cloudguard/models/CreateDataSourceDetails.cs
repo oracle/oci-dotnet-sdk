@@ -32,6 +32,13 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Status of DataSource. Default value is DISABLED.
+        /// </value>
+        [JsonProperty(PropertyName = "status")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DataSourceStatus> Status { get; set; }
+        
+        /// <value>
         /// CompartmentId of Data Source.
         /// </value>
         /// <remarks>

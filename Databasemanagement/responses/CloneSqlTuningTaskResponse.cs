@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class CloneSqlTuningTaskResponse : Oci.Common.IOciResponse
+    public class CloneSqlTuningTaskResponse : Oci.Common.OciResponse
     {
 
         /// <value>

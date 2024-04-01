@@ -12,7 +12,7 @@ using Oci.MonitoringService.Models;
 
 namespace Oci.MonitoringService.Responses
 {
-    public class RetrieveDimensionStatesResponse : Oci.Common.IOciResponse
+    public class RetrieveDimensionStatesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

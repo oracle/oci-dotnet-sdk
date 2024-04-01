@@ -12,7 +12,7 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Responses
 {
-    public class RemoveTagNamespaceLockResponse : Oci.Common.IOciResponse
+    public class RemoveTagNamespaceLockResponse : Oci.Common.OciResponse
     {
 
         /// <value>

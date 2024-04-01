@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class EstimatePurgeDataSizeResponse : Oci.Common.IOciResponse
+    public class EstimatePurgeDataSizeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

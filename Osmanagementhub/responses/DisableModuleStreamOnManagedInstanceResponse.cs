@@ -12,7 +12,7 @@ using Oci.OsmanagementhubService.Models;
 
 namespace Oci.OsmanagementhubService.Responses
 {
-    public class DisableModuleStreamOnManagedInstanceResponse : Oci.Common.IOciResponse
+    public class DisableModuleStreamOnManagedInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

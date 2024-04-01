@@ -12,7 +12,7 @@ using Oci.AilanguageService.Models;
 
 namespace Oci.AilanguageService.Responses
 {
-    public class DetectDominantLanguageResponse : Oci.Common.IOciResponse
+    public class DetectDominantLanguageResponse : Oci.Common.OciResponse
     {
 
         /// <value>

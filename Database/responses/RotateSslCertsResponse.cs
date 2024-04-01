@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class RotateSslCertsResponse : Oci.Common.IOciResponse
+    public class RotateSslCertsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

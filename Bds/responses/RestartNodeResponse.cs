@@ -12,7 +12,7 @@ using Oci.BdsService.Models;
 
 namespace Oci.BdsService.Responses
 {
-    public class RestartNodeResponse : Oci.Common.IOciResponse
+    public class RestartNodeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

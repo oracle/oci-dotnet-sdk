@@ -12,7 +12,7 @@ using Oci.UsageService.Models;
 
 namespace Oci.UsageService.Responses
 {
-    public class ListRedemptionsResponse : Oci.Common.IOciResponse
+    public class ListRedemptionsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

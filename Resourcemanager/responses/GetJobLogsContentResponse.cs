@@ -12,7 +12,7 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Responses
 {
-    public class GetJobLogsContentResponse : Oci.Common.IOciResponse
+    public class GetJobLogsContentResponse : Oci.Common.OciResponse
     {
 
         /// <value>
