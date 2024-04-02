@@ -12,7 +12,7 @@ using Oci.OsmanagementhubService.Models;
 
 namespace Oci.OsmanagementhubService.Responses
 {
-    public class DeleteLifecycleEnvironmentResponse : Oci.Common.IOciResponse
+    public class DeleteLifecycleEnvironmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

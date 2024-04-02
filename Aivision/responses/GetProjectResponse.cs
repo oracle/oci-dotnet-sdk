@@ -12,7 +12,7 @@ using Oci.AivisionService.Models;
 
 namespace Oci.AivisionService.Responses
 {
-    public class GetProjectResponse : Oci.Common.IOciResponse
+    public class GetProjectResponse : Oci.Common.OciResponse
     {
 
         /// <value>

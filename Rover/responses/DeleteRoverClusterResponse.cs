@@ -12,7 +12,7 @@ using Oci.RoverService.Models;
 
 namespace Oci.RoverService.Responses
 {
-    public class DeleteRoverClusterResponse : Oci.Common.IOciResponse
+    public class DeleteRoverClusterResponse : Oci.Common.OciResponse
     {
 
         /// <value>

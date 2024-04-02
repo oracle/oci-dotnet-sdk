@@ -12,7 +12,7 @@ using Oci.DatacatalogService.Models;
 
 namespace Oci.DatacatalogService.Responses
 {
-    public class SynchronousExportDataAssetResponse : Oci.Common.IOciResponse
+    public class SynchronousExportDataAssetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatascienceService.Models;
 
 namespace Oci.DatascienceService.Responses
 {
-    public class ChangePipelineCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangePipelineCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

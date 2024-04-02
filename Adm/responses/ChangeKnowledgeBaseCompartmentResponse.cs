@@ -12,7 +12,7 @@ using Oci.AdmService.Models;
 
 namespace Oci.AdmService.Responses
 {
-    public class ChangeKnowledgeBaseCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeKnowledgeBaseCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class IngestSqlBucketResponse : Oci.Common.IOciResponse
+    public class IngestSqlBucketResponse : Oci.Common.OciResponse
     {
 
         /// <value>

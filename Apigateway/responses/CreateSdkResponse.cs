@@ -12,7 +12,7 @@ using Oci.ApigatewayService.Models;
 
 namespace Oci.ApigatewayService.Responses
 {
-    public class CreateSdkResponse : Oci.Common.IOciResponse
+    public class CreateSdkResponse : Oci.Common.OciResponse
     {
 
         /// <value>

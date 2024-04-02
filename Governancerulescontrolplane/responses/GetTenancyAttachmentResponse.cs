@@ -12,7 +12,7 @@ using Oci.GovernancerulescontrolplaneService.Models;
 
 namespace Oci.GovernancerulescontrolplaneService.Responses
 {
-    public class GetTenancyAttachmentResponse : Oci.Common.IOciResponse
+    public class GetTenancyAttachmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

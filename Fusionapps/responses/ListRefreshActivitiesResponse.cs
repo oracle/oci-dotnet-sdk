@@ -12,7 +12,7 @@ using Oci.FusionappsService.Models;
 
 namespace Oci.FusionappsService.Responses
 {
-    public class ListRefreshActivitiesResponse : Oci.Common.IOciResponse
+    public class ListRefreshActivitiesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

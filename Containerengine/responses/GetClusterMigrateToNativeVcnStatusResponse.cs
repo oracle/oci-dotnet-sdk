@@ -12,7 +12,7 @@ using Oci.ContainerengineService.Models;
 
 namespace Oci.ContainerengineService.Responses
 {
-    public class GetClusterMigrateToNativeVcnStatusResponse : Oci.Common.IOciResponse
+    public class GetClusterMigrateToNativeVcnStatusResponse : Oci.Common.OciResponse
     {
 
         /// <value>

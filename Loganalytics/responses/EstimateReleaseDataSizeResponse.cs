@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class EstimateReleaseDataSizeResponse : Oci.Common.IOciResponse
+    public class EstimateReleaseDataSizeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

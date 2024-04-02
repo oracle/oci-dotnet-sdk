@@ -12,7 +12,7 @@ using Oci.KeymanagementService.Models;
 
 namespace Oci.KeymanagementService.Responses
 {
-    public class ScheduleHsmClusterDeletionResponse : Oci.Common.IOciResponse
+    public class ScheduleHsmClusterDeletionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

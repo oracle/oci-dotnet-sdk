@@ -12,7 +12,7 @@ using Oci.BdsService.Models;
 
 namespace Oci.BdsService.Responses
 {
-    public class AddCloudSqlResponse : Oci.Common.IOciResponse
+    public class AddCloudSqlResponse : Oci.Common.OciResponse
     {
 
         /// <value>

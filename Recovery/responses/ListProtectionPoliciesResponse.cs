@@ -12,7 +12,7 @@ using Oci.RecoveryService.Models;
 
 namespace Oci.RecoveryService.Responses
 {
-    public class ListProtectionPoliciesResponse : Oci.Common.IOciResponse
+    public class ListProtectionPoliciesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

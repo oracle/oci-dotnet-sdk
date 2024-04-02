@@ -12,7 +12,7 @@ using Oci.ApigatewayService.Models;
 
 namespace Oci.ApigatewayService.Responses
 {
-    public class ChangeCertificateCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeCertificateCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

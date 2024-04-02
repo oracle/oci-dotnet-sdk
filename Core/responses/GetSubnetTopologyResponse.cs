@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class GetSubnetTopologyResponse : Oci.Common.IOciResponse
+    public class GetSubnetTopologyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

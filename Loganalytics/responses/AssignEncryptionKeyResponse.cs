@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class AssignEncryptionKeyResponse : Oci.Common.IOciResponse
+    public class AssignEncryptionKeyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

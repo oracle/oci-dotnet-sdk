@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class DeleteEventContentResponse : Oci.Common.IOciResponse
+    public class DeleteEventContentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

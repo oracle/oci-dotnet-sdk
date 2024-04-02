@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class OffboardNamespaceResponse : Oci.Common.IOciResponse
+    public class OffboardNamespaceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

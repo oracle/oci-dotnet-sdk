@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class RemoveModuleStreamProfileFromManagedInstanceResponse : Oci.Common.IOciResponse
+    public class RemoveModuleStreamProfileFromManagedInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

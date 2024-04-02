@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListComputeCapacityTopologyComputeBareMetalHostsResponse : Oci.Common.IOciResponse
+    public class ListComputeCapacityTopologyComputeBareMetalHostsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Responses
 {
-    public class ListMultipartUploadsResponse : Oci.Common.IOciResponse
+    public class ListMultipartUploadsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

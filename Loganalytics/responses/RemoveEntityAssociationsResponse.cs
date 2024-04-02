@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class RemoveEntityAssociationsResponse : Oci.Common.IOciResponse
+    public class RemoveEntityAssociationsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

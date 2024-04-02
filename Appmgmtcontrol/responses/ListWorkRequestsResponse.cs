@@ -12,7 +12,7 @@ using Oci.AppmgmtcontrolService.Models;
 
 namespace Oci.AppmgmtcontrolService.Responses
 {
-    public class ListWorkRequestsResponse : Oci.Common.IOciResponse
+    public class ListWorkRequestsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

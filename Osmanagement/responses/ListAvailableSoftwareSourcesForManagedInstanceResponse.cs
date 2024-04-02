@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class ListAvailableSoftwareSourcesForManagedInstanceResponse : Oci.Common.IOciResponse
+    public class ListAvailableSoftwareSourcesForManagedInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

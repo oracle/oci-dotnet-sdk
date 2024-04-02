@@ -12,7 +12,7 @@ using Oci.GenerativeaiService.Models;
 
 namespace Oci.GenerativeaiService.Responses
 {
-    public class ChangeModelCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeModelCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

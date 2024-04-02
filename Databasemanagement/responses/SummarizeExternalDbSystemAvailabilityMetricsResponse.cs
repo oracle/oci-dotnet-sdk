@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class SummarizeExternalDbSystemAvailabilityMetricsResponse : Oci.Common.IOciResponse
+    public class SummarizeExternalDbSystemAvailabilityMetricsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

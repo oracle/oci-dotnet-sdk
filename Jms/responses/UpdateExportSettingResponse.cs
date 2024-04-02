@@ -12,7 +12,7 @@ using Oci.JmsService.Models;
 
 namespace Oci.JmsService.Responses
 {
-    public class UpdateExportSettingResponse : Oci.Common.IOciResponse
+    public class UpdateExportSettingResponse : Oci.Common.OciResponse
     {
 
         /// <value>

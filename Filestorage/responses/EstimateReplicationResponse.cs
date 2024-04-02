@@ -12,7 +12,7 @@ using Oci.FilestorageService.Models;
 
 namespace Oci.FilestorageService.Responses
 {
-    public class EstimateReplicationResponse : Oci.Common.IOciResponse
+    public class EstimateReplicationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

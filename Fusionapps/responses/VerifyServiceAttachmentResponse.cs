@@ -12,7 +12,7 @@ using Oci.FusionappsService.Models;
 
 namespace Oci.FusionappsService.Responses
 {
-    public class VerifyServiceAttachmentResponse : Oci.Common.IOciResponse
+    public class VerifyServiceAttachmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

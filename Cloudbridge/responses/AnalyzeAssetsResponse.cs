@@ -12,7 +12,7 @@ using Oci.CloudbridgeService.Models;
 
 namespace Oci.CloudbridgeService.Responses
 {
-    public class AnalyzeAssetsResponse : Oci.Common.IOciResponse
+    public class AnalyzeAssetsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

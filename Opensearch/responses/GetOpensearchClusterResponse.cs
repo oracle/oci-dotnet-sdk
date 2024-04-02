@@ -12,7 +12,7 @@ using Oci.OpensearchService.Models;
 
 namespace Oci.OpensearchService.Responses
 {
-    public class GetOpensearchClusterResponse : Oci.Common.IOciResponse
+    public class GetOpensearchClusterResponse : Oci.Common.OciResponse
     {
 
         /// <value>

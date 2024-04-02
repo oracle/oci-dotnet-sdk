@@ -12,7 +12,7 @@ using Oci.ThreatintelligenceService.Models;
 
 namespace Oci.ThreatintelligenceService.Responses
 {
-    public class ListIndicatorsResponse : Oci.Common.IOciResponse
+    public class ListIndicatorsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

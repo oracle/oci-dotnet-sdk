@@ -12,7 +12,7 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Responses
 {
-    public class CascadingDeleteSkillCustomEntitiesResponse : Oci.Common.IOciResponse
+    public class CascadingDeleteSkillCustomEntitiesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

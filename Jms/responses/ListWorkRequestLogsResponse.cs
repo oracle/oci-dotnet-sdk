@@ -12,7 +12,7 @@ using Oci.JmsService.Models;
 
 namespace Oci.JmsService.Responses
 {
-    public class ListWorkRequestLogsResponse : Oci.Common.IOciResponse
+    public class ListWorkRequestLogsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Provides the dimensions and their corresponding count value.
+    /// Provides aggregated information on counts of problems by specified parameters.
     /// </summary>
     public class ProblemAggregation 
     {

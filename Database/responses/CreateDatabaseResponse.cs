@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class CreateDatabaseResponse : Oci.Common.IOciResponse
+    public class CreateDatabaseResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class RemovePackagesFromSoftwareSourceResponse : Oci.Common.IOciResponse
+    public class RemovePackagesFromSoftwareSourceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

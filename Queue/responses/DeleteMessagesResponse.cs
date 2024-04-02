@@ -12,7 +12,7 @@ using Oci.QueueService.Models;
 
 namespace Oci.QueueService.Responses
 {
-    public class DeleteMessagesResponse : Oci.Common.IOciResponse
+    public class DeleteMessagesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

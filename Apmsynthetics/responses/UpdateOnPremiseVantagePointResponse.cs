@@ -12,7 +12,7 @@ using Oci.ApmsyntheticsService.Models;
 
 namespace Oci.ApmsyntheticsService.Responses
 {
-    public class UpdateOnPremiseVantagePointResponse : Oci.Common.IOciResponse
+    public class UpdateOnPremiseVantagePointResponse : Oci.Common.OciResponse
     {
 
         /// <value>

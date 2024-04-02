@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class ListCloudGateMappingsResponse : Oci.Common.IOciResponse
+    public class ListCloudGateMappingsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

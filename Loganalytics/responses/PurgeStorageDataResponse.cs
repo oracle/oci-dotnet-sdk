@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class PurgeStorageDataResponse : Oci.Common.IOciResponse
+    public class PurgeStorageDataResponse : Oci.Common.OciResponse
     {
 
         /// <value>

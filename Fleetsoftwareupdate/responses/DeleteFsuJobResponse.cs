@@ -12,7 +12,7 @@ using Oci.FleetsoftwareupdateService.Models;
 
 namespace Oci.FleetsoftwareupdateService.Responses
 {
-    public class DeleteFsuJobResponse : Oci.Common.IOciResponse
+    public class DeleteFsuJobResponse : Oci.Common.OciResponse
     {
 
         /// <value>

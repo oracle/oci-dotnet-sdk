@@ -12,7 +12,7 @@ using Oci.NosqlService.Models;
 
 namespace Oci.NosqlService.Responses
 {
-    public class DeleteIndexResponse : Oci.Common.IOciResponse
+    public class DeleteIndexResponse : Oci.Common.OciResponse
     {
 
         /// <value>

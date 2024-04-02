@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class GetTopSqlCpuActivityResponse : Oci.Common.IOciResponse
+    public class GetTopSqlCpuActivityResponse : Oci.Common.OciResponse
     {
 
         /// <value>

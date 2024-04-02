@@ -12,7 +12,7 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Responses
 {
-    public class ListAuthTokensResponse : Oci.Common.IOciResponse
+    public class ListAuthTokensResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.BudgetService.Models;
 
 namespace Oci.BudgetService.Responses
 {
-    public class CreateBudgetResponse : Oci.Common.IOciResponse
+    public class CreateBudgetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ApigatewayService.Models;
 
 namespace Oci.ApigatewayService.Responses
 {
-    public class DeleteGatewayResponse : Oci.Common.IOciResponse
+    public class DeleteGatewayResponse : Oci.Common.OciResponse
     {
 
         /// <value>

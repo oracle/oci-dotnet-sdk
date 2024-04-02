@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListVirtualCircuitAssociatedTunnelsResponse : Oci.Common.IOciResponse
+    public class ListVirtualCircuitAssociatedTunnelsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

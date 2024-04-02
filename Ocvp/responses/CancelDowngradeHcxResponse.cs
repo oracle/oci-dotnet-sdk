@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class CancelDowngradeHcxResponse : Oci.Common.IOciResponse
+    public class CancelDowngradeHcxResponse : Oci.Common.OciResponse
     {
 
         /// <value>

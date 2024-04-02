@@ -12,7 +12,7 @@ using Oci.LoadbalancerService.Models;
 
 namespace Oci.LoadbalancerService.Responses
 {
-    public class DeleteHostnameResponse : Oci.Common.IOciResponse
+    public class DeleteHostnameResponse : Oci.Common.OciResponse
     {
 
         /// <value>

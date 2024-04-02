@@ -12,7 +12,7 @@ using Oci.TenantmanagercontrolplaneService.Models;
 
 namespace Oci.TenantmanagercontrolplaneService.Responses
 {
-    public class GetAssignedSubscriptionResponse : Oci.Common.IOciResponse
+    public class GetAssignedSubscriptionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

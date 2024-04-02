@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class SummarizeAwrDatabaseCpuUsagesResponse : Oci.Common.IOciResponse
+    public class SummarizeAwrDatabaseCpuUsagesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

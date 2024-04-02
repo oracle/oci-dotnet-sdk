@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListVirtualCircuitPublicPrefixesResponse : Oci.Common.IOciResponse
+    public class ListVirtualCircuitPublicPrefixesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

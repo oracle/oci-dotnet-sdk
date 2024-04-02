@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class ListSupportedHostShapesResponse : Oci.Common.IOciResponse
+    public class ListSupportedHostShapesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class GetLogAnalyticsEmBridgeSummaryResponse : Oci.Common.IOciResponse
+    public class GetLogAnalyticsEmBridgeSummaryResponse : Oci.Common.OciResponse
     {
 
         /// <value>

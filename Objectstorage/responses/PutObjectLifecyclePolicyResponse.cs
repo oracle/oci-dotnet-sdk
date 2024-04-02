@@ -12,7 +12,7 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Responses
 {
-    public class PutObjectLifecyclePolicyResponse : Oci.Common.IOciResponse
+    public class PutObjectLifecyclePolicyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

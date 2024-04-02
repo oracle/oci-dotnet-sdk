@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class EnableHighFrequencyAutomaticSpmEvolveAdvisorTaskResponse : Oci.Common.IOciResponse
+    public class EnableHighFrequencyAutomaticSpmEvolveAdvisorTaskResponse : Oci.Common.OciResponse
     {
 
         /// <value>

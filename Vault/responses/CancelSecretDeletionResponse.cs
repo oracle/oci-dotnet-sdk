@@ -12,7 +12,7 @@ using Oci.VaultService.Models;
 
 namespace Oci.VaultService.Responses
 {
-    public class CancelSecretDeletionResponse : Oci.Common.IOciResponse
+    public class CancelSecretDeletionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

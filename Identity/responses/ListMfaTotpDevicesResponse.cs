@@ -12,7 +12,7 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Responses
 {
-    public class ListMfaTotpDevicesResponse : Oci.Common.IOciResponse
+    public class ListMfaTotpDevicesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

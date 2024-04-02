@@ -12,7 +12,7 @@ using Oci.ServicemeshService.Models;
 
 namespace Oci.ServicemeshService.Responses
 {
-    public class UpdateVirtualDeploymentResponse : Oci.Common.IOciResponse
+    public class UpdateVirtualDeploymentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class ChangeSddcCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeSddcCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

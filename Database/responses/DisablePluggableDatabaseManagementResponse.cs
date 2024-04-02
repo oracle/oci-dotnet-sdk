@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class DisablePluggableDatabaseManagementResponse : Oci.Common.IOciResponse
+    public class DisablePluggableDatabaseManagementResponse : Oci.Common.OciResponse
     {
 
         /// <value>

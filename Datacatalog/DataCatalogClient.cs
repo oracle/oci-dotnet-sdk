@@ -3171,7 +3171,7 @@ namespace Oci.DatacatalogService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/catalogs/{catalogId}/glossaries/{glossaryKey}/actions/export".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 

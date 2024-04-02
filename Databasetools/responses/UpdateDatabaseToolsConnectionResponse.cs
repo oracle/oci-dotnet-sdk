@@ -12,7 +12,7 @@ using Oci.DatabasetoolsService.Models;
 
 namespace Oci.DatabasetoolsService.Responses
 {
-    public class UpdateDatabaseToolsConnectionResponse : Oci.Common.IOciResponse
+    public class UpdateDatabaseToolsConnectionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

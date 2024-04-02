@@ -12,7 +12,7 @@ using Oci.UsageapiService.Models;
 
 namespace Oci.UsageapiService.Responses
 {
-    public class DeleteQueryResponse : Oci.Common.IOciResponse
+    public class DeleteQueryResponse : Oci.Common.OciResponse
     {
 
         /// <value>

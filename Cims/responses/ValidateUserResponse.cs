@@ -12,7 +12,7 @@ using Oci.CimsService.Models;
 
 namespace Oci.CimsService.Responses
 {
-    public class ValidateUserResponse : Oci.Common.IOciResponse
+    public class ValidateUserResponse : Oci.Common.OciResponse
     {
 
         /// <value>

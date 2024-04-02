@@ -12,7 +12,7 @@ using Oci.DashboardService.Models;
 
 namespace Oci.DashboardService.Responses
 {
-    public class CreateDashboardGroupResponse : Oci.Common.IOciResponse
+    public class CreateDashboardGroupResponse : Oci.Common.OciResponse
     {
 
         /// <value>

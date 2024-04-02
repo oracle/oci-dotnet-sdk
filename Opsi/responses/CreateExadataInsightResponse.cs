@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class CreateExadataInsightResponse : Oci.Common.IOciResponse
+    public class CreateExadataInsightResponse : Oci.Common.OciResponse
     {
 
         /// <value>

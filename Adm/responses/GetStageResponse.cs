@@ -12,7 +12,7 @@ using Oci.AdmService.Models;
 
 namespace Oci.AdmService.Responses
 {
-    public class GetStageResponse : Oci.Common.IOciResponse
+    public class GetStageResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DesktopsService.Models;
 
 namespace Oci.DesktopsService.Responses
 {
-    public class UpdateDesktopPoolResponse : Oci.Common.IOciResponse
+    public class UpdateDesktopPoolResponse : Oci.Common.OciResponse
     {
 
         /// <value>

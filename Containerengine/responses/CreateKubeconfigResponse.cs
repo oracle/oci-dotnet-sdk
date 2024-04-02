@@ -12,7 +12,7 @@ using Oci.ContainerengineService.Models;
 
 namespace Oci.ContainerengineService.Responses
 {
-    public class CreateKubeconfigResponse : Oci.Common.IOciResponse
+    public class CreateKubeconfigResponse : Oci.Common.OciResponse
     {
 
         /// <value>

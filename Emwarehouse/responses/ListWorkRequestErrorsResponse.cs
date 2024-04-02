@@ -12,7 +12,7 @@ using Oci.EmwarehouseService.Models;
 
 namespace Oci.EmwarehouseService.Responses
 {
-    public class ListWorkRequestErrorsResponse : Oci.Common.IOciResponse
+    public class ListWorkRequestErrorsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

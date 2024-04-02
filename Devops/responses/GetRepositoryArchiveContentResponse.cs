@@ -12,7 +12,7 @@ using Oci.DevopsService.Models;
 
 namespace Oci.DevopsService.Responses
 {
-    public class GetRepositoryArchiveContentResponse : Oci.Common.IOciResponse
+    public class GetRepositoryArchiveContentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

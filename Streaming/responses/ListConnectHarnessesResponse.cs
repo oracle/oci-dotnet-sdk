@@ -12,7 +12,7 @@ using Oci.StreamingService.Models;
 
 namespace Oci.StreamingService.Responses
 {
-    public class ListConnectHarnessesResponse : Oci.Common.IOciResponse
+    public class ListConnectHarnessesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

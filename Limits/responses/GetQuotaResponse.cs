@@ -12,7 +12,7 @@ using Oci.LimitsService.Models;
 
 namespace Oci.LimitsService.Responses
 {
-    public class GetQuotaResponse : Oci.Common.IOciResponse
+    public class GetQuotaResponse : Oci.Common.OciResponse
     {
 
         /// <value>

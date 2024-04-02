@@ -12,7 +12,7 @@ using Oci.SchService.Models;
 
 namespace Oci.SchService.Responses
 {
-    public class GetWorkRequestResponse : Oci.Common.IOciResponse
+    public class GetWorkRequestResponse : Oci.Common.OciResponse
     {
 
         /// <value>

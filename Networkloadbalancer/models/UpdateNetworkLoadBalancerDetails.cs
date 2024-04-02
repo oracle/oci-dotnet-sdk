@@ -57,6 +57,20 @@ namespace Oci.NetworkloadbalancerService.Models
         public System.Nullable<NlbIpVersion> NlbIpVersion { get; set; }
         
         /// <value>
+        /// IPv6 subnet prefix selection. If Ipv6 subnet prefix is passed, Nlb Ipv6 Address would be assign within the cidr block. NLB has to be dual or single stack ipv6 to support this.
+        /// </value>
+        [JsonProperty(PropertyName = "subnetIpv6Cidr")]
+        public string SubnetIpv6Cidr { get; set; }
+        
+        /// <value>
+        /// IPv6 address to be assigned to the network load balancer being created.
+        /// This IP address has to be part of one of the prefixes supported by the subnet.
+        /// Example: &quot;2607:9b80:9a0a:9a7e:abcd:ef01:2345:6789&quot;
+        /// </value>
+        [JsonProperty(PropertyName = "assignedIpv6")]
+        public string AssignedIpv6 { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

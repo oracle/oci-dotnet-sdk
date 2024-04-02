@@ -12,7 +12,7 @@ using Oci.OspgatewayService.Models;
 
 namespace Oci.OspgatewayService.Responses
 {
-    public class DownloadPdfContentResponse : Oci.Common.IOciResponse
+    public class DownloadPdfContentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Responses
 {
-    public class ListPreauthenticatedRequestsResponse : Oci.Common.IOciResponse
+    public class ListPreauthenticatedRequestsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

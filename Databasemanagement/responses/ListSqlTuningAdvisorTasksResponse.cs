@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class ListSqlTuningAdvisorTasksResponse : Oci.Common.IOciResponse
+    public class ListSqlTuningAdvisorTasksResponse : Oci.Common.OciResponse
     {
 
         /// <value>

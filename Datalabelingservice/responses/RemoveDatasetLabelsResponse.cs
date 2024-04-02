@@ -12,7 +12,7 @@ using Oci.DatalabelingService.Models;
 
 namespace Oci.DatalabelingService.Responses
 {
-    public class RemoveDatasetLabelsResponse : Oci.Common.IOciResponse
+    public class RemoveDatasetLabelsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

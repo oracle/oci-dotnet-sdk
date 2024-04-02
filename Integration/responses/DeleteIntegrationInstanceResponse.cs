@@ -12,7 +12,7 @@ using Oci.IntegrationService.Models;
 
 namespace Oci.IntegrationService.Responses
 {
-    public class DeleteIntegrationInstanceResponse : Oci.Common.IOciResponse
+    public class DeleteIntegrationInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class AddStorageCapacityExadataInfrastructureResponse : Oci.Common.IOciResponse
+    public class AddStorageCapacityExadataInfrastructureResponse : Oci.Common.OciResponse
     {
 
         /// <value>

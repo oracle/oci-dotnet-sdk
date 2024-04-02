@@ -12,7 +12,7 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Responses
 {
-    public class CreateReplicationPolicyResponse : Oci.Common.IOciResponse
+    public class CreateReplicationPolicyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class UpdatePublicIpPoolResponse : Oci.Common.IOciResponse
+    public class UpdatePublicIpPoolResponse : Oci.Common.OciResponse
     {
 
         /// <value>

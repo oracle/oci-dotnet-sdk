@@ -12,7 +12,7 @@ using Oci.NetworkfirewallService.Models;
 
 namespace Oci.NetworkfirewallService.Responses
 {
-    public class BulkUploadApplicationsResponse : Oci.Common.IOciResponse
+    public class BulkUploadApplicationsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

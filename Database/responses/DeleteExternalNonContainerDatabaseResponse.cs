@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class DeleteExternalNonContainerDatabaseResponse : Oci.Common.IOciResponse
+    public class DeleteExternalNonContainerDatabaseResponse : Oci.Common.OciResponse
     {
 
         /// <value>

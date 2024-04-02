@@ -12,7 +12,7 @@ using Oci.DevopsService.Models;
 
 namespace Oci.DevopsService.Responses
 {
-    public class GetFileDiffResponse : Oci.Common.IOciResponse
+    public class GetFileDiffResponse : Oci.Common.OciResponse
     {
 
         /// <value>

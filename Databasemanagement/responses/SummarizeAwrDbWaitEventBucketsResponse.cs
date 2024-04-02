@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class SummarizeAwrDbWaitEventBucketsResponse : Oci.Common.IOciResponse
+    public class SummarizeAwrDbWaitEventBucketsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

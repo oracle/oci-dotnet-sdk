@@ -12,7 +12,7 @@ using Oci.JmsjavadownloadsService.Models;
 
 namespace Oci.JmsjavadownloadsService.Responses
 {
-    public class GetJavaLicenseAcceptanceRecordResponse : Oci.Common.IOciResponse
+    public class GetJavaLicenseAcceptanceRecordResponse : Oci.Common.OciResponse
     {
 
         /// <value>

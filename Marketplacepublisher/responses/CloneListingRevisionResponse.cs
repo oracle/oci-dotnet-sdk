@@ -12,7 +12,7 @@ using Oci.MarketplacepublisherService.Models;
 
 namespace Oci.MarketplacepublisherService.Responses
 {
-    public class CloneListingRevisionResponse : Oci.Common.IOciResponse
+    public class CloneListingRevisionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatacatalogService.Models;
 
 namespace Oci.DatacatalogService.Responses
 {
-    public class ListDataAssetTagsResponse : Oci.Common.IOciResponse
+    public class ListDataAssetTagsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

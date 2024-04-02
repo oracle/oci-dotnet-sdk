@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class CreateHttpRedirectResponse : Oci.Common.IOciResponse
+    public class CreateHttpRedirectResponse : Oci.Common.OciResponse
     {
 
         /// <value>

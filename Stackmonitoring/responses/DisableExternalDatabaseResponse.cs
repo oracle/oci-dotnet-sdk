@@ -12,7 +12,7 @@ using Oci.StackmonitoringService.Models;
 
 namespace Oci.StackmonitoringService.Responses
 {
-    public class DisableExternalDatabaseResponse : Oci.Common.IOciResponse
+    public class DisableExternalDatabaseResponse : Oci.Common.OciResponse
     {
 
         /// <value>

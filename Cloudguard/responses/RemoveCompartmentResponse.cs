@@ -12,7 +12,7 @@ using Oci.CloudguardService.Models;
 
 namespace Oci.CloudguardService.Responses
 {
-    public class RemoveCompartmentResponse : Oci.Common.IOciResponse
+    public class RemoveCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

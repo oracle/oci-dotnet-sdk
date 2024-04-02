@@ -12,7 +12,7 @@ using Oci.RoverService.Models;
 
 namespace Oci.RoverService.Responses
 {
-    public class GetRoverNodeEncryptionKeyResponse : Oci.Common.IOciResponse
+    public class GetRoverNodeEncryptionKeyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

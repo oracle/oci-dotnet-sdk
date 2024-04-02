@@ -12,7 +12,7 @@ using Oci.JmsService.Models;
 
 namespace Oci.JmsService.Responses
 {
-    public class ChangeFleetCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeFleetCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

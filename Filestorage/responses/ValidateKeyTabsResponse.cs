@@ -12,7 +12,7 @@ using Oci.FilestorageService.Models;
 
 namespace Oci.FilestorageService.Responses
 {
-    public class ValidateKeyTabsResponse : Oci.Common.IOciResponse
+    public class ValidateKeyTabsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.CloudmigrationsService.Models;
 
 namespace Oci.CloudmigrationsService.Responses
 {
-    public class DeleteMigrationAssetResponse : Oci.Common.IOciResponse
+    public class DeleteMigrationAssetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

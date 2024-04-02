@@ -12,7 +12,7 @@ using Oci.DisasterrecoveryService.Models;
 
 namespace Oci.DisasterrecoveryService.Responses
 {
-    public class ResumeDrPlanExecutionResponse : Oci.Common.IOciResponse
+    public class ResumeDrPlanExecutionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

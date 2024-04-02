@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class UpgradeHcxResponse : Oci.Common.IOciResponse
+    public class UpgradeHcxResponse : Oci.Common.OciResponse
     {
 
         /// <value>

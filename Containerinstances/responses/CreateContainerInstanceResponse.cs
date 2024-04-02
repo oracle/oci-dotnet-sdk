@@ -12,7 +12,7 @@ using Oci.ContainerinstancesService.Models;
 
 namespace Oci.ContainerinstancesService.Responses
 {
-    public class CreateContainerInstanceResponse : Oci.Common.IOciResponse
+    public class CreateContainerInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

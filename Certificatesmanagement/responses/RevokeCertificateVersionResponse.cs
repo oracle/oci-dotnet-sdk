@@ -12,7 +12,7 @@ using Oci.CertificatesmanagementService.Models;
 
 namespace Oci.CertificatesmanagementService.Responses
 {
-    public class RevokeCertificateVersionResponse : Oci.Common.IOciResponse
+    public class RevokeCertificateVersionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

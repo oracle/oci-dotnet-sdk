@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class GetDifferenceColumnResponse : Oci.Common.IOciResponse
+    public class GetDifferenceColumnResponse : Oci.Common.OciResponse
     {
 
         /// <value>

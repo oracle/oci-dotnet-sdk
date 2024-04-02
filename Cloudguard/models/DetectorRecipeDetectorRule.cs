@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Detector Recipe Rule
+    /// A DetectorRecipeDetectorRule object defines a single recipe rule in the collection for a DetectorRecipe object.
     /// </summary>
     public class DetectorRecipeDetectorRule 
     {
@@ -111,7 +111,11 @@ namespace Oci.CloudguardService.Models
             [EnumMember(Value = "TAGS")]
             Tags,
             [EnumMember(Value = "GENERIC")]
-            Generic
+            Generic,
+            [EnumMember(Value = "FUSION_APPS_ROLE")]
+            FusionAppsRole,
+            [EnumMember(Value = "FUSION_APPS_PERMISSION")]
+            FusionAppsPermission
         };
 
         /// <value>

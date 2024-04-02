@@ -12,7 +12,7 @@ using Oci.UsageService.Models;
 
 namespace Oci.UsageService.Responses
 {
-    public class CreateRedeemableUserResponse : Oci.Common.IOciResponse
+    public class CreateRedeemableUserResponse : Oci.Common.OciResponse
     {
 
         /// <value>

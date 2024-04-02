@@ -12,7 +12,7 @@ using Oci.DataflowService.Models;
 
 namespace Oci.DataflowService.Responses
 {
-    public class ChangeRunCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeRunCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

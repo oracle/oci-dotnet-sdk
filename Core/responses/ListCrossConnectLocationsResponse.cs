@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListCrossConnectLocationsResponse : Oci.Common.IOciResponse
+    public class ListCrossConnectLocationsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

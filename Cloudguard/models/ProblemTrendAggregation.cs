@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Provides the dimensions and their corresponding time and count.
+    /// Provides aggregated information on trends for counts of problems by specified parameters.
     /// </summary>
     public class ProblemTrendAggregation 
     {

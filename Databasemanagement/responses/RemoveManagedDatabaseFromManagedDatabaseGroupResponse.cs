@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class RemoveManagedDatabaseFromManagedDatabaseGroupResponse : Oci.Common.IOciResponse
+    public class RemoveManagedDatabaseFromManagedDatabaseGroupResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Responses
 {
-    public class BulkDeleteResourcesResponse : Oci.Common.IOciResponse
+    public class BulkDeleteResourcesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

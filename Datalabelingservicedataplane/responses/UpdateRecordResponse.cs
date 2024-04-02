@@ -12,7 +12,7 @@ using Oci.DatalabelingservicedataplaneService.Models;
 
 namespace Oci.DatalabelingservicedataplaneService.Responses
 {
-    public class UpdateRecordResponse : Oci.Common.IOciResponse
+    public class UpdateRecordResponse : Oci.Common.OciResponse
     {
 
         /// <value>

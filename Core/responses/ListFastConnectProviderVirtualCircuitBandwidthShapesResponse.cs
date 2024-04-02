@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListFastConnectProviderVirtualCircuitBandwidthShapesResponse : Oci.Common.IOciResponse
+    public class ListFastConnectProviderVirtualCircuitBandwidthShapesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.GloballydistributeddatabaseService.Models;
 
 namespace Oci.GloballydistributeddatabaseService.Responses
 {
-    public class DeleteShardedDatabaseResponse : Oci.Common.IOciResponse
+    public class DeleteShardedDatabaseResponse : Oci.Common.OciResponse
     {
 
         /// <value>

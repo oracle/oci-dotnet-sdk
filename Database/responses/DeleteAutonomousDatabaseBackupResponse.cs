@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class DeleteAutonomousDatabaseBackupResponse : Oci.Common.IOciResponse
+    public class DeleteAutonomousDatabaseBackupResponse : Oci.Common.OciResponse
     {
 
         /// <value>

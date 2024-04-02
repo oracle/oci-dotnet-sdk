@@ -12,7 +12,7 @@ using Oci.LoadbalancerService.Models;
 
 namespace Oci.LoadbalancerService.Responses
 {
-    public class UpdateNetworkSecurityGroupsResponse : Oci.Common.IOciResponse
+    public class UpdateNetworkSecurityGroupsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

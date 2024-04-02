@@ -12,7 +12,7 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Responses
 {
-    public class RenameObjectResponse : Oci.Common.IOciResponse
+    public class RenameObjectResponse : Oci.Common.OciResponse
     {
 
         /// <value>

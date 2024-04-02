@@ -12,7 +12,7 @@ using Oci.MediaservicesService.Models;
 
 namespace Oci.MediaservicesService.Responses
 {
-    public class RemoveStreamPackagingConfigLockResponse : Oci.Common.IOciResponse
+    public class RemoveStreamPackagingConfigLockResponse : Oci.Common.OciResponse
     {
 
         /// <value>

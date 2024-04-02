@@ -12,7 +12,7 @@ using Oci.ArtifactsService.Models;
 
 namespace Oci.ArtifactsService.Responses
 {
-    public class CreateRepositoryResponse : Oci.Common.IOciResponse
+    public class CreateRepositoryResponse : Oci.Common.OciResponse
     {
 
         /// <value>

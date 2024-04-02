@@ -12,7 +12,7 @@ using Oci.AnalyticsService.Models;
 
 namespace Oci.AnalyticsService.Responses
 {
-    public class DeleteWorkRequestResponse : Oci.Common.IOciResponse
+    public class DeleteWorkRequestResponse : Oci.Common.OciResponse
     {
 
         /// <value>

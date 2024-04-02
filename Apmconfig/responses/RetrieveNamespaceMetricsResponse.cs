@@ -12,7 +12,7 @@ using Oci.ApmconfigService.Models;
 
 namespace Oci.ApmconfigService.Responses
 {
-    public class RetrieveNamespaceMetricsResponse : Oci.Common.IOciResponse
+    public class RetrieveNamespaceMetricsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

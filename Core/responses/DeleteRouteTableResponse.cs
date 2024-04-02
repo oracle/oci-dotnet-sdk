@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class DeleteRouteTableResponse : Oci.Common.IOciResponse
+    public class DeleteRouteTableResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class RemoteClonePluggableDatabaseResponse : Oci.Common.IOciResponse
+    public class RemoteClonePluggableDatabaseResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class GetTunnelCpeDeviceConfigResponse : Oci.Common.IOciResponse
+    public class GetTunnelCpeDeviceConfigResponse : Oci.Common.OciResponse
     {
 
         /// <value>

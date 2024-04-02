@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class ListMyPendingApprovalsResponse : Oci.Common.IOciResponse
+    public class ListMyPendingApprovalsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

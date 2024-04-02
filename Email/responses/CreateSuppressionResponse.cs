@@ -12,7 +12,7 @@ using Oci.EmailService.Models;
 
 namespace Oci.EmailService.Responses
 {
-    public class CreateSuppressionResponse : Oci.Common.IOciResponse
+    public class CreateSuppressionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

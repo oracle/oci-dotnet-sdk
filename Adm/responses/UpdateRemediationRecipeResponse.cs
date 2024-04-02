@@ -12,7 +12,7 @@ using Oci.AdmService.Models;
 
 namespace Oci.AdmService.Responses
 {
-    public class UpdateRemediationRecipeResponse : Oci.Common.IOciResponse
+    public class UpdateRemediationRecipeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

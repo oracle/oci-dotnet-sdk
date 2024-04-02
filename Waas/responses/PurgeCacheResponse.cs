@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class PurgeCacheResponse : Oci.Common.IOciResponse
+    public class PurgeCacheResponse : Oci.Common.OciResponse
     {
 
         /// <value>

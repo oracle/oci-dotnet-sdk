@@ -12,7 +12,7 @@ using Oci.LimitsService.Models;
 
 namespace Oci.LimitsService.Responses
 {
-    public class GetResourceAvailabilityResponse : Oci.Common.IOciResponse
+    public class GetResourceAvailabilityResponse : Oci.Common.OciResponse
     {
 
         /// <value>

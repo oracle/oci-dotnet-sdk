@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class UpdateDatabaseInsightResponse : Oci.Common.IOciResponse
+    public class UpdateDatabaseInsightResponse : Oci.Common.OciResponse
     {
 
         /// <value>

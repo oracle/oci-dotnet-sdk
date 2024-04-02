@@ -12,7 +12,7 @@ using Oci.AispeechService.Models;
 
 namespace Oci.AispeechService.Responses
 {
-    public class CancelTranscriptionTaskResponse : Oci.Common.IOciResponse
+    public class CancelTranscriptionTaskResponse : Oci.Common.OciResponse
     {
 
         /// <value>

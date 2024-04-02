@@ -12,7 +12,7 @@ using Oci.JmsService.Models;
 
 namespace Oci.JmsService.Responses
 {
-    public class GetCryptoAnalysisResultResponse : Oci.Common.IOciResponse
+    public class GetCryptoAnalysisResultResponse : Oci.Common.OciResponse
     {
 
         /// <value>

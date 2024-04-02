@@ -23,6 +23,10 @@ namespace Oci.EmailService.Models
       Accepted,
       [EnumMember(Value = "IN_PROGRESS")]
       InProgress,
+      [EnumMember(Value = "WAITING")]
+      Waiting,
+      [EnumMember(Value = "NEEDS_ATTENTION")]
+      NeedsAttention,
       [EnumMember(Value = "FAILED")]
       Failed,
       [EnumMember(Value = "SUCCEEDED")]

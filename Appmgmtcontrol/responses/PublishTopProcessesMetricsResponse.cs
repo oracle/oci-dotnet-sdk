@@ -12,7 +12,7 @@ using Oci.AppmgmtcontrolService.Models;
 
 namespace Oci.AppmgmtcontrolService.Responses
 {
-    public class PublishTopProcessesMetricsResponse : Oci.Common.IOciResponse
+    public class PublishTopProcessesMetricsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

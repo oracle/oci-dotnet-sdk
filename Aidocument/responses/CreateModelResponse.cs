@@ -12,7 +12,7 @@ using Oci.AidocumentService.Models;
 
 namespace Oci.AidocumentService.Responses
 {
-    public class CreateModelResponse : Oci.Common.IOciResponse
+    public class CreateModelResponse : Oci.Common.OciResponse
     {
 
         /// <value>

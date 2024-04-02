@@ -12,7 +12,7 @@ using Oci.DataintegrationService.Models;
 
 namespace Oci.DataintegrationService.Responses
 {
-    public class GetPipelineResponse : Oci.Common.IOciResponse
+    public class GetPipelineResponse : Oci.Common.OciResponse
     {
 
         /// <value>

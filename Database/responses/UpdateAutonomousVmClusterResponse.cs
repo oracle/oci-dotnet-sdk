@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class UpdateAutonomousVmClusterResponse : Oci.Common.IOciResponse
+    public class UpdateAutonomousVmClusterResponse : Oci.Common.OciResponse
     {
 
         /// <value>

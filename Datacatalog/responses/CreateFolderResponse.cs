@@ -12,7 +12,7 @@ using Oci.DatacatalogService.Models;
 
 namespace Oci.DatacatalogService.Responses
 {
-    public class CreateFolderResponse : Oci.Common.IOciResponse
+    public class CreateFolderResponse : Oci.Common.OciResponse
     {
 
         /// <value>

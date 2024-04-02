@@ -12,7 +12,7 @@ using Oci.AidocumentService.Models;
 
 namespace Oci.AidocumentService.Responses
 {
-    public class DeleteModelResponse : Oci.Common.IOciResponse
+    public class DeleteModelResponse : Oci.Common.OciResponse
     {
 
         /// <value>

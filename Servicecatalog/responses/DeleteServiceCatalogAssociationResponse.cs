@@ -12,7 +12,7 @@ using Oci.ServicecatalogService.Models;
 
 namespace Oci.ServicecatalogService.Responses
 {
-    public class DeleteServiceCatalogAssociationResponse : Oci.Common.IOciResponse
+    public class DeleteServiceCatalogAssociationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

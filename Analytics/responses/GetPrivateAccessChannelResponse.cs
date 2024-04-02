@@ -12,7 +12,7 @@ using Oci.AnalyticsService.Models;
 
 namespace Oci.AnalyticsService.Responses
 {
-    public class GetPrivateAccessChannelResponse : Oci.Common.IOciResponse
+    public class GetPrivateAccessChannelResponse : Oci.Common.OciResponse
     {
 
         /// <value>

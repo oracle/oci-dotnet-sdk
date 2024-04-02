@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class ModifySnapshotSettingsResponse : Oci.Common.IOciResponse
+    public class ModifySnapshotSettingsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

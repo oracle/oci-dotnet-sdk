@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class ValidateAssociationParametersResponse : Oci.Common.IOciResponse
+    public class ValidateAssociationParametersResponse : Oci.Common.OciResponse
     {
 
         /// <value>

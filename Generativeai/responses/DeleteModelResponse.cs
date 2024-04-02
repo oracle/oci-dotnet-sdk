@@ -12,7 +12,7 @@ using Oci.GenerativeaiService.Models;
 
 namespace Oci.GenerativeaiService.Responses
 {
-    public class DeleteModelResponse : Oci.Common.IOciResponse
+    public class DeleteModelResponse : Oci.Common.OciResponse
     {
 
         /// <value>

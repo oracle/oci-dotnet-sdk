@@ -12,7 +12,7 @@ using Oci.OpaService.Models;
 
 namespace Oci.OpaService.Responses
 {
-    public class ListWorkRequestLogsResponse : Oci.Common.IOciResponse
+    public class ListWorkRequestLogsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

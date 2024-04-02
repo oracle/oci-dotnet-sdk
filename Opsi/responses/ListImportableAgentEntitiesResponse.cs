@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class ListImportableAgentEntitiesResponse : Oci.Common.IOciResponse
+    public class ListImportableAgentEntitiesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

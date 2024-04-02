@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class SummarizeDatabaseInsightResourceUsageResponse : Oci.Common.IOciResponse
+    public class SummarizeDatabaseInsightResourceUsageResponse : Oci.Common.OciResponse
     {
 
         /// <value>

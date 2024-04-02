@@ -12,7 +12,7 @@ using Oci.ApmconfigService.Models;
 
 namespace Oci.ApmconfigService.Responses
 {
-    public class ListConfigsResponse : Oci.Common.IOciResponse
+    public class ListConfigsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

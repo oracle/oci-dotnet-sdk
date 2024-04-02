@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class GetInstanceMaintenanceRebootResponse : Oci.Common.IOciResponse
+    public class GetInstanceMaintenanceRebootResponse : Oci.Common.OciResponse
     {
 
         /// <value>

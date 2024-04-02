@@ -12,7 +12,7 @@ using Oci.VisualbuilderService.Models;
 
 namespace Oci.VisualbuilderService.Responses
 {
-    public class ListWorkRequestLogsResponse : Oci.Common.IOciResponse
+    public class ListWorkRequestLogsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

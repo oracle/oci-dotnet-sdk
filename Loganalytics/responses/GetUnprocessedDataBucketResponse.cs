@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class GetUnprocessedDataBucketResponse : Oci.Common.IOciResponse
+    public class GetUnprocessedDataBucketResponse : Oci.Common.OciResponse
     {
 
         /// <value>

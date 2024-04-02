@@ -12,7 +12,7 @@ using Oci.AnnouncementsService.Models;
 
 namespace Oci.AnnouncementsService.Responses
 {
-    public class DeleteFilterGroupResponse : Oci.Common.IOciResponse
+    public class DeleteFilterGroupResponse : Oci.Common.OciResponse
     {
 
         /// <value>

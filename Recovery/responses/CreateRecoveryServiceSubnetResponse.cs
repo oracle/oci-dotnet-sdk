@@ -12,7 +12,7 @@ using Oci.RecoveryService.Models;
 
 namespace Oci.RecoveryService.Responses
 {
-    public class CreateRecoveryServiceSubnetResponse : Oci.Common.IOciResponse
+    public class CreateRecoveryServiceSubnetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ObjectstorageService.Models;
 
 namespace Oci.ObjectstorageService.Responses
 {
-    public class DeleteObjectResponse : Oci.Common.IOciResponse
+    public class DeleteObjectResponse : Oci.Common.OciResponse
     {
 
         /// <value>

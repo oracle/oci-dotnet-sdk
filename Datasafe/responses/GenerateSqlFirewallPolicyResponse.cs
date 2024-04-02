@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class GenerateSqlFirewallPolicyResponse : Oci.Common.IOciResponse
+    public class GenerateSqlFirewallPolicyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

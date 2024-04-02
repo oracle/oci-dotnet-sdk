@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class ListCursorCacheStatementsResponse : Oci.Common.IOciResponse
+    public class ListCursorCacheStatementsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

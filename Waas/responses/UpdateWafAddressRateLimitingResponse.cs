@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class UpdateWafAddressRateLimitingResponse : Oci.Common.IOciResponse
+    public class UpdateWafAddressRateLimitingResponse : Oci.Common.OciResponse
     {
 
         /// <value>

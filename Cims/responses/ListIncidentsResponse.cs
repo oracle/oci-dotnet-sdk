@@ -12,7 +12,7 @@ using Oci.CimsService.Models;
 
 namespace Oci.CimsService.Responses
 {
-    public class ListIncidentsResponse : Oci.Common.IOciResponse
+    public class ListIncidentsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

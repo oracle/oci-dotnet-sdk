@@ -12,7 +12,7 @@ using Oci.UsageapiService.Models;
 
 namespace Oci.UsageapiService.Responses
 {
-    public class ListUsageCarbonEmissionsQueriesResponse : Oci.Common.IOciResponse
+    public class ListUsageCarbonEmissionsQueriesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

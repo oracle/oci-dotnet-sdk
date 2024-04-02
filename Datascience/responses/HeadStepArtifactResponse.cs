@@ -12,7 +12,7 @@ using Oci.DatascienceService.Models;
 
 namespace Oci.DatascienceService.Responses
 {
-    public class HeadStepArtifactResponse : Oci.Common.IOciResponse
+    public class HeadStepArtifactResponse : Oci.Common.OciResponse
     {
 
         /// <value>

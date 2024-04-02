@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class SoftstopInstancePoolResponse : Oci.Common.IOciResponse
+    public class SoftstopInstancePoolResponse : Oci.Common.OciResponse
     {
 
         /// <value>

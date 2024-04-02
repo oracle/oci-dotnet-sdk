@@ -12,7 +12,7 @@ using Oci.JmsService.Models;
 
 namespace Oci.JmsService.Responses
 {
-    public class DeleteJavaMigrationAnalysisResultResponse : Oci.Common.IOciResponse
+    public class DeleteJavaMigrationAnalysisResultResponse : Oci.Common.OciResponse
     {
 
         /// <value>

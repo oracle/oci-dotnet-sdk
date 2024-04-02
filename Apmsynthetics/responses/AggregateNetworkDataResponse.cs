@@ -12,7 +12,7 @@ using Oci.ApmsyntheticsService.Models;
 
 namespace Oci.ApmsyntheticsService.Responses
 {
-    public class AggregateNetworkDataResponse : Oci.Common.IOciResponse
+    public class AggregateNetworkDataResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class ChangeDisasterRecoveryConfigurationResponse : Oci.Common.IOciResponse
+    public class ChangeDisasterRecoveryConfigurationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

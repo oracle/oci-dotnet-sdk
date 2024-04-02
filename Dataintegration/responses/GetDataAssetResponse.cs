@@ -12,7 +12,7 @@ using Oci.DataintegrationService.Models;
 
 namespace Oci.DataintegrationService.Responses
 {
-    public class GetDataAssetResponse : Oci.Common.IOciResponse
+    public class GetDataAssetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

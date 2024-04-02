@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class GetAppCatalogListingResourceVersionResponse : Oci.Common.IOciResponse
+    public class GetAppCatalogListingResourceVersionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

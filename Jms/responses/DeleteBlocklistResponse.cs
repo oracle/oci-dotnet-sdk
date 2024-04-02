@@ -12,7 +12,7 @@ using Oci.JmsService.Models;
 
 namespace Oci.JmsService.Responses
 {
-    public class DeleteBlocklistResponse : Oci.Common.IOciResponse
+    public class DeleteBlocklistResponse : Oci.Common.OciResponse
     {
 
         /// <value>

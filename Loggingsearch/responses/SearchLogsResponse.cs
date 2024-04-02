@@ -12,7 +12,7 @@ using Oci.LoggingsearchService.Models;
 
 namespace Oci.LoggingsearchService.Responses
 {
-    public class SearchLogsResponse : Oci.Common.IOciResponse
+    public class SearchLogsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

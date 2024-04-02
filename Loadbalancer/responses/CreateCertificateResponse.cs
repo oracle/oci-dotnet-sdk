@@ -12,7 +12,7 @@ using Oci.LoadbalancerService.Models;
 
 namespace Oci.LoadbalancerService.Responses
 {
-    public class CreateCertificateResponse : Oci.Common.IOciResponse
+    public class CreateCertificateResponse : Oci.Common.OciResponse
     {
 
         /// <value>

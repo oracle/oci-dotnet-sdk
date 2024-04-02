@@ -12,7 +12,7 @@ using Oci.ApplicationmigrationService.Models;
 
 namespace Oci.ApplicationmigrationService.Responses
 {
-    public class GetWorkRequestResponse : Oci.Common.IOciResponse
+    public class GetWorkRequestResponse : Oci.Common.OciResponse
     {
 
         /// <value>

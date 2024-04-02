@@ -12,7 +12,7 @@ using Oci.BdsService.Models;
 
 namespace Oci.BdsService.Responses
 {
-    public class StopBdsInstanceResponse : Oci.Common.IOciResponse
+    public class StopBdsInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

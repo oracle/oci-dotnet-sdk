@@ -12,7 +12,7 @@ using Oci.KeymanagementService.Models;
 
 namespace Oci.KeymanagementService.Responses
 {
-    public class DeleteVaultReplicaResponse : Oci.Common.IOciResponse
+    public class DeleteVaultReplicaResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class ListProxyUsersResponse : Oci.Common.IOciResponse
+    public class ListProxyUsersResponse : Oci.Common.OciResponse
     {
 
         /// <value>

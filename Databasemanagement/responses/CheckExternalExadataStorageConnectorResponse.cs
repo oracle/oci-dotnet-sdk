@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class CheckExternalExadataStorageConnectorResponse : Oci.Common.IOciResponse
+    public class CheckExternalExadataStorageConnectorResponse : Oci.Common.OciResponse
     {
 
         /// <value>

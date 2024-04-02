@@ -12,7 +12,7 @@ using Oci.IntegrationService.Models;
 
 namespace Oci.IntegrationService.Responses
 {
-    public class ChangePrivateEndpointOutboundConnectionResponse : Oci.Common.IOciResponse
+    public class ChangePrivateEndpointOutboundConnectionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Responses
 {
-    public class CreateOdaPrivateEndpointResponse : Oci.Common.IOciResponse
+    public class CreateOdaPrivateEndpointResponse : Oci.Common.OciResponse
     {
 
         /// <value>

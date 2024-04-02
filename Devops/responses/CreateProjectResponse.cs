@@ -12,7 +12,7 @@ using Oci.DevopsService.Models;
 
 namespace Oci.DevopsService.Responses
 {
-    public class CreateProjectResponse : Oci.Common.IOciResponse
+    public class CreateProjectResponse : Oci.Common.OciResponse
     {
 
         /// <value>

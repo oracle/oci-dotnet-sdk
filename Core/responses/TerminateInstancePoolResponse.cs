@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class TerminateInstancePoolResponse : Oci.Common.IOciResponse
+    public class TerminateInstancePoolResponse : Oci.Common.OciResponse
     {
 
         /// <value>

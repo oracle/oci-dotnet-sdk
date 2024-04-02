@@ -12,7 +12,7 @@ using Oci.OpensearchService.Models;
 
 namespace Oci.OpensearchService.Responses
 {
-    public class ListWorkRequestLogsResponse : Oci.Common.IOciResponse
+    public class ListWorkRequestLogsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

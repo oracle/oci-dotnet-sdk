@@ -12,7 +12,7 @@ using Oci.GoldengateService.Models;
 
 namespace Oci.GoldengateService.Responses
 {
-    public class ListDeploymentVersionsResponse : Oci.Common.IOciResponse
+    public class ListDeploymentVersionsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.OsmanagementhubService.Models;
 
 namespace Oci.OsmanagementhubService.Responses
 {
-    public class CreateLifecycleEnvironmentResponse : Oci.Common.IOciResponse
+    public class CreateLifecycleEnvironmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

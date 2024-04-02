@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class GetOnPremConnectorResponse : Oci.Common.IOciResponse
+    public class GetOnPremConnectorResponse : Oci.Common.OciResponse
     {
 
         /// <value>

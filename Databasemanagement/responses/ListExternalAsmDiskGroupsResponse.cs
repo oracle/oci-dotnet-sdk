@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class ListExternalAsmDiskGroupsResponse : Oci.Common.IOciResponse
+    public class ListExternalAsmDiskGroupsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

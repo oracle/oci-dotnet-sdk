@@ -12,7 +12,7 @@ using Oci.IdentitydataplaneService.Models;
 
 namespace Oci.IdentitydataplaneService.Responses
 {
-    public class GenerateScopedAccessTokenResponse : Oci.Common.IOciResponse
+    public class GenerateScopedAccessTokenResponse : Oci.Common.OciResponse
     {
 
         /// <value>

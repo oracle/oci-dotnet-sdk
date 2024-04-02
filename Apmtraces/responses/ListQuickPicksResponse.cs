@@ -12,7 +12,7 @@ using Oci.ApmtracesService.Models;
 
 namespace Oci.ApmtracesService.Responses
 {
-    public class ListQuickPicksResponse : Oci.Common.IOciResponse
+    public class ListQuickPicksResponse : Oci.Common.OciResponse
     {
 
         /// <value>

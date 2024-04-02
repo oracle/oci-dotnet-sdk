@@ -12,7 +12,7 @@ using Oci.IdentityService.Models;
 
 namespace Oci.IdentityService.Responses
 {
-    public class DeleteTagResponse : Oci.Common.IOciResponse
+    public class DeleteTagResponse : Oci.Common.OciResponse
     {
 
         /// <value>

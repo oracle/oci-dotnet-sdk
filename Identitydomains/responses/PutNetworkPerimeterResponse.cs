@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class PutNetworkPerimeterResponse : Oci.Common.IOciResponse
+    public class PutNetworkPerimeterResponse : Oci.Common.OciResponse
     {
 
         /// <value>

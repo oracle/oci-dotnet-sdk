@@ -12,7 +12,7 @@ using Oci.CloudbridgeService.Models;
 
 namespace Oci.CloudbridgeService.Responses
 {
-    public class DeleteAssetSourceResponse : Oci.Common.IOciResponse
+    public class DeleteAssetSourceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

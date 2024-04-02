@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class UpdateAccessRulesResponse : Oci.Common.IOciResponse
+    public class UpdateAccessRulesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ArtifactsService.Models;
 
 namespace Oci.ArtifactsService.Responses
 {
-    public class GetGenericArtifactResponse : Oci.Common.IOciResponse
+    public class GetGenericArtifactResponse : Oci.Common.OciResponse
     {
 
         /// <value>

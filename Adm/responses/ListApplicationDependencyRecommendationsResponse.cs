@@ -12,7 +12,7 @@ using Oci.AdmService.Models;
 
 namespace Oci.AdmService.Responses
 {
-    public class ListApplicationDependencyRecommendationsResponse : Oci.Common.IOciResponse
+    public class ListApplicationDependencyRecommendationsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

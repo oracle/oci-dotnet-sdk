@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class DeleteDhcpOptionsResponse : Oci.Common.IOciResponse
+    public class DeleteDhcpOptionsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

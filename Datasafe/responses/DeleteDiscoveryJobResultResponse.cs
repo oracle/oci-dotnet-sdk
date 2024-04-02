@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class DeleteDiscoveryJobResultResponse : Oci.Common.IOciResponse
+    public class DeleteDiscoveryJobResultResponse : Oci.Common.OciResponse
     {
 
         /// <value>

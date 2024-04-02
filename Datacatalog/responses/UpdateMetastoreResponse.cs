@@ -12,7 +12,7 @@ using Oci.DatacatalogService.Models;
 
 namespace Oci.DatacatalogService.Responses
 {
-    public class UpdateMetastoreResponse : Oci.Common.IOciResponse
+    public class UpdateMetastoreResponse : Oci.Common.OciResponse
     {
 
         /// <value>

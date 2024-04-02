@@ -12,7 +12,7 @@ using Oci.LockboxService.Models;
 
 namespace Oci.LockboxService.Responses
 {
-    public class CancelWorkRequestResponse : Oci.Common.IOciResponse
+    public class CancelWorkRequestResponse : Oci.Common.OciResponse
     {
 
         /// <value>

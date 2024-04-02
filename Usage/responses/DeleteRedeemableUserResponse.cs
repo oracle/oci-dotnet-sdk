@@ -12,7 +12,7 @@ using Oci.UsageService.Models;
 
 namespace Oci.UsageService.Responses
 {
-    public class DeleteRedeemableUserResponse : Oci.Common.IOciResponse
+    public class DeleteRedeemableUserResponse : Oci.Common.OciResponse
     {
 
         /// <value>

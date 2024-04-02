@@ -12,7 +12,7 @@ using Oci.VnmonitoringService.Models;
 
 namespace Oci.VnmonitoringService.Responses
 {
-    public class UpdatePathAnalyzerTestResponse : Oci.Common.IOciResponse
+    public class UpdatePathAnalyzerTestResponse : Oci.Common.OciResponse
     {
 
         /// <value>

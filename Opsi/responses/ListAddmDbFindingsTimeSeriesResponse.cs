@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class ListAddmDbFindingsTimeSeriesResponse : Oci.Common.IOciResponse
+    public class ListAddmDbFindingsTimeSeriesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

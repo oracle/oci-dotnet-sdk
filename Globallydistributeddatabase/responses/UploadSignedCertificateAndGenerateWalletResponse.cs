@@ -12,7 +12,7 @@ using Oci.GloballydistributeddatabaseService.Models;
 
 namespace Oci.GloballydistributeddatabaseService.Responses
 {
-    public class UploadSignedCertificateAndGenerateWalletResponse : Oci.Common.IOciResponse
+    public class UploadSignedCertificateAndGenerateWalletResponse : Oci.Common.OciResponse
     {
 
         /// <value>

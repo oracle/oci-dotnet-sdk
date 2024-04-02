@@ -12,7 +12,7 @@ using Oci.JmsService.Models;
 
 namespace Oci.JmsService.Responses
 {
-    public class CreateDrsFileResponse : Oci.Common.IOciResponse
+    public class CreateDrsFileResponse : Oci.Common.OciResponse
     {
 
         /// <value>

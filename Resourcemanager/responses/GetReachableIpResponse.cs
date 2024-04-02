@@ -12,7 +12,7 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Responses
 {
-    public class GetReachableIpResponse : Oci.Common.IOciResponse
+    public class GetReachableIpResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.OcicontrolcenterService.Models;
 
 namespace Oci.OcicontrolcenterService.Responses
 {
-    public class RequestSummarizedMetricDataResponse : Oci.Common.IOciResponse
+    public class RequestSummarizedMetricDataResponse : Oci.Common.OciResponse
     {
 
         /// <value>

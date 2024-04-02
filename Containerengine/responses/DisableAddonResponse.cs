@@ -12,7 +12,7 @@ using Oci.ContainerengineService.Models;
 
 namespace Oci.ContainerengineService.Responses
 {
-    public class DisableAddonResponse : Oci.Common.IOciResponse
+    public class DisableAddonResponse : Oci.Common.OciResponse
     {
 
         /// <value>

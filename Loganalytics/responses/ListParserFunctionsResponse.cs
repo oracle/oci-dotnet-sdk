@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class ListParserFunctionsResponse : Oci.Common.IOciResponse
+    public class ListParserFunctionsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

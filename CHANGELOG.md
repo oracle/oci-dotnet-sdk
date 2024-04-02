@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 84.0.0 - 2024-04-02
+### Added
+- Support for assigned private IP and single stack IPV6 feature for Network Load Balancer Service
+- Support for Configuration API in Email Delivery Service
+- Support for the status field in creating data source resource for Cloud Guard Service
+- Support for TLSv1.3 in Load Balancer Service
+- Support for sending mails via HTTPS for Email Delivery Service
+- Support for getting original HttpResponseMessage from the response models, which can be leveraged to consume `text/event-stream` events. Refer the [GenAIInferenceExample](https://github.com/oracle/oci-dotnet-sdk/blob/master/Examples/GenAIInferenceExample.cs) to learn more
+ 
+### Changed
+- All Response models are now derived from the abstract base class `OciResponse` which implements the interface `IOciResponse` instead of implementing the `IOciResponse` interface directly
+ 
+### Breaking Changes
+- The type of property `Reason` was changed from `ReasonEnum` to `SuppressionReason` in the model `SuppressionSummary` in the Email Delivery Service
+
 ## 83.0.0 - 2024-03-26
 ### Added
 - Support for creating and updating a refreshable clone with auto-refresh for an Autonomous Database in the Database service

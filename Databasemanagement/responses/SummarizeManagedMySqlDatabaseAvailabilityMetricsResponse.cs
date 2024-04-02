@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class SummarizeManagedMySqlDatabaseAvailabilityMetricsResponse : Oci.Common.IOciResponse
+    public class SummarizeManagedMySqlDatabaseAvailabilityMetricsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

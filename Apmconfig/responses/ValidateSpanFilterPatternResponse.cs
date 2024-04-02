@@ -12,7 +12,7 @@ using Oci.ApmconfigService.Models;
 
 namespace Oci.ApmconfigService.Responses
 {
-    public class ValidateSpanFilterPatternResponse : Oci.Common.IOciResponse
+    public class ValidateSpanFilterPatternResponse : Oci.Common.OciResponse
     {
 
         /// <value>

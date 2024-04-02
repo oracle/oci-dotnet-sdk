@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListBootVolumesResponse : Oci.Common.IOciResponse
+    public class ListBootVolumesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

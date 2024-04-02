@@ -12,7 +12,7 @@ using Oci.DnsService.Models;
 
 namespace Oci.DnsService.Responses
 {
-    public class ChangeTsigKeyCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeTsigKeyCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

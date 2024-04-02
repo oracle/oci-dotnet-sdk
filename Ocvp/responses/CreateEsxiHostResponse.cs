@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class CreateEsxiHostResponse : Oci.Common.IOciResponse
+    public class CreateEsxiHostResponse : Oci.Common.OciResponse
     {
 
         /// <value>

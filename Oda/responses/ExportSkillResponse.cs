@@ -12,7 +12,7 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Responses
 {
-    public class ExportSkillResponse : Oci.Common.IOciResponse
+    public class ExportSkillResponse : Oci.Common.OciResponse
     {
 
         /// <value>

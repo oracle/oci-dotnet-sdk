@@ -12,7 +12,7 @@ using Oci.ApmsyntheticsService.Models;
 
 namespace Oci.ApmsyntheticsService.Responses
 {
-    public class CreateScriptResponse : Oci.Common.IOciResponse
+    public class CreateScriptResponse : Oci.Common.OciResponse
     {
 
         /// <value>

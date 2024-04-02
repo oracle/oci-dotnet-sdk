@@ -12,7 +12,7 @@ using Oci.OperatoraccesscontrolService.Models;
 
 namespace Oci.OperatoraccesscontrolService.Responses
 {
-    public class GetOperatorControlAssignmentResponse : Oci.Common.IOciResponse
+    public class GetOperatorControlAssignmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

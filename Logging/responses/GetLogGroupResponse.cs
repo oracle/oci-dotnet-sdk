@@ -12,7 +12,7 @@ using Oci.LoggingService.Models;
 
 namespace Oci.LoggingService.Responses
 {
-    public class GetLogGroupResponse : Oci.Common.IOciResponse
+    public class GetLogGroupResponse : Oci.Common.OciResponse
     {
 
         /// <value>

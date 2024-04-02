@@ -12,7 +12,7 @@ using Oci.VisualbuilderService.Models;
 
 namespace Oci.VisualbuilderService.Responses
 {
-    public class ChangeVbInstanceCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeVbInstanceCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

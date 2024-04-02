@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class AttachParentSoftwareSourceToManagedInstanceResponse : Oci.Common.IOciResponse
+    public class AttachParentSoftwareSourceToManagedInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

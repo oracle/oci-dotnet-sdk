@@ -12,7 +12,7 @@ using Oci.DnsService.Models;
 
 namespace Oci.DnsService.Responses
 {
-    public class ChangeZoneCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeZoneCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

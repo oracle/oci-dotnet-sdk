@@ -12,7 +12,7 @@ using Oci.DatascienceService.Models;
 
 namespace Oci.DatascienceService.Responses
 {
-    public class ListNotebookSessionsResponse : Oci.Common.IOciResponse
+    public class ListNotebookSessionsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

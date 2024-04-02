@@ -12,7 +12,7 @@ using Oci.MarketplacepublisherService.Models;
 
 namespace Oci.MarketplacepublisherService.Responses
 {
-    public class CreateListingRevisionAttachmentResponse : Oci.Common.IOciResponse
+    public class CreateListingRevisionAttachmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

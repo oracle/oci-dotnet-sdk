@@ -12,7 +12,7 @@ using Oci.DatabasemigrationService.Models;
 
 namespace Oci.DatabasemigrationService.Responses
 {
-    public class RetrieveSupportedPhasesResponse : Oci.Common.IOciResponse
+    public class RetrieveSupportedPhasesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.WafService.Models;
 
 namespace Oci.WafService.Responses
 {
-    public class CreateNetworkAddressListResponse : Oci.Common.IOciResponse
+    public class CreateNetworkAddressListResponse : Oci.Common.OciResponse
     {
 
         /// <value>

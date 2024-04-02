@@ -12,7 +12,7 @@ using Oci.AilanguageService.Models;
 
 namespace Oci.AilanguageService.Responses
 {
-    public class ChangeModelCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeModelCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

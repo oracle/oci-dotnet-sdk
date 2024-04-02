@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class DeleteSddcResponse : Oci.Common.IOciResponse
+    public class DeleteSddcResponse : Oci.Common.OciResponse
     {
 
         /// <value>

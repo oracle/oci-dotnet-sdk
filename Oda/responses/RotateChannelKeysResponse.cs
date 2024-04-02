@@ -12,7 +12,7 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Responses
 {
-    public class RotateChannelKeysResponse : Oci.Common.IOciResponse
+    public class RotateChannelKeysResponse : Oci.Common.OciResponse
     {
 
         /// <value>

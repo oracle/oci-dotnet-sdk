@@ -12,7 +12,7 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Responses
 {
-    public class GetStackTfConfigResponse : Oci.Common.IOciResponse
+    public class GetStackTfConfigResponse : Oci.Common.OciResponse
     {
 
         /// <value>

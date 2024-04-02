@@ -12,7 +12,7 @@ using Oci.ResourcemanagerService.Models;
 
 namespace Oci.ResourcemanagerService.Responses
 {
-    public class ChangeStackCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeStackCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

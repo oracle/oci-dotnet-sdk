@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class ListCachingRulesResponse : Oci.Common.IOciResponse
+    public class ListCachingRulesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ManagementagentService.Models;
 
 namespace Oci.ManagementagentService.Responses
 {
-    public class DeleteWorkRequestResponse : Oci.Common.IOciResponse
+    public class DeleteWorkRequestResponse : Oci.Common.OciResponse
     {
 
         /// <value>

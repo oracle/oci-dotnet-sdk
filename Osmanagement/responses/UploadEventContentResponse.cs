@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class UploadEventContentResponse : Oci.Common.IOciResponse
+    public class UploadEventContentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

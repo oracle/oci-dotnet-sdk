@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class DeleteUploadWarningResponse : Oci.Common.IOciResponse
+    public class DeleteUploadWarningResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Responses
 {
-    public class GetPackageResponse : Oci.Common.IOciResponse
+    public class GetPackageResponse : Oci.Common.OciResponse
     {
 
         /// <value>

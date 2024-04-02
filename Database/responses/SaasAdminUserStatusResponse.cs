@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class SaasAdminUserStatusResponse : Oci.Common.IOciResponse
+    public class SaasAdminUserStatusResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.AuditService.Models;
 
 namespace Oci.AuditService.Responses
 {
-    public class GetConfigurationResponse : Oci.Common.IOciResponse
+    public class GetConfigurationResponse : Oci.Common.OciResponse
     {
         /// <value>
         /// The returned Configuration instance.

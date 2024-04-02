@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class GetIPSecConnectionResponse : Oci.Common.IOciResponse
+    public class GetIPSecConnectionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DataflowService.Models;
 
 namespace Oci.DataflowService.Responses
 {
-    public class DeleteSqlEndpointResponse : Oci.Common.IOciResponse
+    public class DeleteSqlEndpointResponse : Oci.Common.OciResponse
     {
 
         /// <value>

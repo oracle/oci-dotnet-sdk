@@ -12,7 +12,7 @@ using Oci.ContainerengineService.Models;
 
 namespace Oci.ContainerengineService.Responses
 {
-    public class DeleteVirtualNodePoolResponse : Oci.Common.IOciResponse
+    public class DeleteVirtualNodePoolResponse : Oci.Common.OciResponse
     {
 
         /// <value>

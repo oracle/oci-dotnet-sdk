@@ -12,7 +12,7 @@ using Oci.DtsService.Models;
 
 namespace Oci.DtsService.Responses
 {
-    public class DeleteTransferDeviceResponse : Oci.Common.IOciResponse
+    public class DeleteTransferDeviceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

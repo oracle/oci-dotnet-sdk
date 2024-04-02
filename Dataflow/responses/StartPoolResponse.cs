@@ -12,7 +12,7 @@ using Oci.DataflowService.Models;
 
 namespace Oci.DataflowService.Responses
 {
-    public class StartPoolResponse : Oci.Common.IOciResponse
+    public class StartPoolResponse : Oci.Common.OciResponse
     {
 
         /// <value>

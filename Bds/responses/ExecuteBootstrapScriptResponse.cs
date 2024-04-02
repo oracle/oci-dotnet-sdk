@@ -12,7 +12,7 @@ using Oci.BdsService.Models;
 
 namespace Oci.BdsService.Responses
 {
-    public class ExecuteBootstrapScriptResponse : Oci.Common.IOciResponse
+    public class ExecuteBootstrapScriptResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -73,12 +73,12 @@ namespace Oci.EmailService
         }
 
         /// <summary>
-        /// Moves a email domain into a different compartment.
+        /// Moves an email domain into a different compartment.
         /// When provided, If-Match is checked against ETag value of the resource.
         /// For information about moving resources between compartments, see
         /// [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
         /// &lt;br/&gt;
-        /// **Note:** All Dkim objects associated with this email domain will also be moved into the provided compartment.
+        /// **Note:** All DKIM objects associated with this email domain will also be moved into the provided compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -191,10 +191,10 @@ namespace Oci.EmailService
         }
 
         /// <summary>
-        /// Creates a new DKIM for a email domain.
-        /// This DKIM will sign all approved senders in the tenancy that are in this email domain.
+        /// Creates a new DKIM for an email domain.
+        /// This DKIM signs all approved senders in the tenancy that are in this email domain.
         /// Best security practices indicate to periodically rotate the DKIM that is doing the signing.
-        /// When a second DKIM is applied, all senders will seamlessly pick up the new key
+        /// When a second DKIM is applied, all senders seamlessly pick up the new key
         /// without interruption in signing.
         /// 
         /// </summary>
@@ -429,7 +429,7 @@ namespace Oci.EmailService
         /// will stop signing the domain&#39;s outgoing mail.
         /// DKIM keys are left in DELETING state for about a day to allow DKIM signatures on
         /// in-transit mail to be validated.
-        /// Consider instead of deletion creating a new DKIM for this domain so the signing can be rotated to it.
+        /// Consider creating a new DKIM for this domain so the signing can be rotated to it instead of deletion.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -486,7 +486,7 @@ namespace Oci.EmailService
         }
 
         /// <summary>
-        /// Deletes a email domain.
+        /// Deletes an email domain.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -709,6 +709,63 @@ namespace Oci.EmailService
             catch (Exception e)
             {
                 logger.Error($"GetDkim failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns  email configuration associated with the specified compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/GetEmailConfiguration.cs.html">here</a> to see an example of how to use GetEmailConfiguration API.</example>
+        public async Task<GetEmailConfigurationResponse> GetEmailConfiguration(GetEmailConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getEmailConfiguration");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/configuration".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Email",
+                    OperationName = "GetEmailConfiguration",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/emaildelivery/20170907/Configuration/GetEmailConfiguration",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetEmailConfigurationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetEmailConfiguration failed with error: {e.Message}");
                 throw;
             }
         }
@@ -940,7 +997,7 @@ namespace Oci.EmailService
         }
 
         /// <summary>
-        /// Lists DKIMs for a email domain.
+        /// Lists DKIMs for an email domain.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1395,7 +1452,7 @@ namespace Oci.EmailService
         }
 
         /// <summary>
-        /// Modifies a email domain.
+        /// Modifies an email domain.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

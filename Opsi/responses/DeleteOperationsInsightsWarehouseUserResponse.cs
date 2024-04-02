@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class DeleteOperationsInsightsWarehouseUserResponse : Oci.Common.IOciResponse
+    public class DeleteOperationsInsightsWarehouseUserResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.CloudbridgeService.Models;
 
 namespace Oci.CloudbridgeService.Responses
 {
-    public class DeleteAgentDependencyResponse : Oci.Common.IOciResponse
+    public class DeleteAgentDependencyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

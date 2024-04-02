@@ -12,7 +12,7 @@ using Oci.AnalyticsService.Models;
 
 namespace Oci.AnalyticsService.Responses
 {
-    public class CreateAnalyticsInstanceResponse : Oci.Common.IOciResponse
+    public class CreateAnalyticsInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

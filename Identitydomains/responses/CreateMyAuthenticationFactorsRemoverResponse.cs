@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class CreateMyAuthenticationFactorsRemoverResponse : Oci.Common.IOciResponse
+    public class CreateMyAuthenticationFactorsRemoverResponse : Oci.Common.OciResponse
     {
 
         /// <value>

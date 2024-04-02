@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Problem endpoints summary.
+    /// Summary information for endpoints associated with a problem (Problem object).
     /// </summary>
     public class ProblemEndpointSummary 
     {

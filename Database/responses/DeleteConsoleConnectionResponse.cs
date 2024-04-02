@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class DeleteConsoleConnectionResponse : Oci.Common.IOciResponse
+    public class DeleteConsoleConnectionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

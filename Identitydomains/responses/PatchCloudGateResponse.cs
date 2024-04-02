@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class PatchCloudGateResponse : Oci.Common.IOciResponse
+    public class PatchCloudGateResponse : Oci.Common.OciResponse
     {
 
         /// <value>

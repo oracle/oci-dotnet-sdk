@@ -12,7 +12,7 @@ using Oci.HealthchecksService.Models;
 
 namespace Oci.HealthchecksService.Responses
 {
-    public class UpdatePingMonitorResponse : Oci.Common.IOciResponse
+    public class UpdatePingMonitorResponse : Oci.Common.OciResponse
     {
 
         /// <value>

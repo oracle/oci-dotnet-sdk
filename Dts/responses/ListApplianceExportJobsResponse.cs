@@ -12,7 +12,7 @@ using Oci.DtsService.Models;
 
 namespace Oci.DtsService.Responses
 {
-    public class ListApplianceExportJobsResponse : Oci.Common.IOciResponse
+    public class ListApplianceExportJobsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

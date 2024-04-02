@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Impacted Resource summary Definition.
+    /// A summary of detailed information on a resource that\u2019s been impacted by a detected problem.
     /// </summary>
     public class ImpactedResourceSummary 
     {

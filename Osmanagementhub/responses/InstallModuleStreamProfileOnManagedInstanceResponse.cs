@@ -12,7 +12,7 @@ using Oci.OsmanagementhubService.Models;
 
 namespace Oci.OsmanagementhubService.Responses
 {
-    public class InstallModuleStreamProfileOnManagedInstanceResponse : Oci.Common.IOciResponse
+    public class InstallModuleStreamProfileOnManagedInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class ListProfileSummariesResponse : Oci.Common.IOciResponse
+    public class ListProfileSummariesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

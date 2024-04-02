@@ -22,6 +22,8 @@ namespace Oci.NetworkloadbalancerService.Models
       [EnumMember(Value = "IPV4")]
       Ipv4,
       [EnumMember(Value = "IPV4_AND_IPV6")]
-      Ipv4AndIpv6
+      Ipv4AndIpv6,
+      [EnumMember(Value = "IPV6")]
+      Ipv6
   }
 }

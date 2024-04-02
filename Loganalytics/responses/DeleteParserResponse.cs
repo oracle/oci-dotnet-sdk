@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class DeleteParserResponse : Oci.Common.IOciResponse
+    public class DeleteParserResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ApmcontrolplaneService.Models;
 
 namespace Oci.ApmcontrolplaneService.Responses
 {
-    public class GenerateDataKeysResponse : Oci.Common.IOciResponse
+    public class GenerateDataKeysResponse : Oci.Common.OciResponse
     {
 
         /// <value>

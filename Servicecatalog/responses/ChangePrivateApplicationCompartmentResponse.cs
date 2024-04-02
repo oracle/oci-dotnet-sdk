@@ -12,7 +12,7 @@ using Oci.ServicecatalogService.Models;
 
 namespace Oci.ServicecatalogService.Responses
 {
-    public class ChangePrivateApplicationCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangePrivateApplicationCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class DeleteApprovalWorkflowStepResponse : Oci.Common.IOciResponse
+    public class DeleteApprovalWorkflowStepResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.FunctionsService.Models;
 
 namespace Oci.FunctionsService.Responses
 {
-    public class DeleteFunctionResponse : Oci.Common.IOciResponse
+    public class DeleteFunctionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

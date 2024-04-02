@@ -12,7 +12,7 @@ using Oci.MysqlService.Models;
 
 namespace Oci.MysqlService.Responses
 {
-    public class UpdateHeatWaveClusterResponse : Oci.Common.IOciResponse
+    public class UpdateHeatWaveClusterResponse : Oci.Common.OciResponse
     {
 
         /// <value>

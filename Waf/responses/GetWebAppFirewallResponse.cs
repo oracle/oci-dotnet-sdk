@@ -12,7 +12,7 @@ using Oci.WafService.Models;
 
 namespace Oci.WafService.Responses
 {
-    public class GetWebAppFirewallResponse : Oci.Common.IOciResponse
+    public class GetWebAppFirewallResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListDedicatedVmHostShapesResponse : Oci.Common.IOciResponse
+    public class ListDedicatedVmHostShapesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

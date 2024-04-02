@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class SearchAppRolesResponse : Oci.Common.IOciResponse
+    public class SearchAppRolesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

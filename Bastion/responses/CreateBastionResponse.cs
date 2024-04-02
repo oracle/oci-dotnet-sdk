@@ -12,7 +12,7 @@ using Oci.BastionService.Models;
 
 namespace Oci.BastionService.Responses
 {
-    public class CreateBastionResponse : Oci.Common.IOciResponse
+    public class CreateBastionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

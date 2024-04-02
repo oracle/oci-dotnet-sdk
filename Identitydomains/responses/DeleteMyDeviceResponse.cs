@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class DeleteMyDeviceResponse : Oci.Common.IOciResponse
+    public class DeleteMyDeviceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A single Detector
+    /// Information for a single detector category. For example, IAAS_ACTIVITY_DETECTOR or IAAS_CONFIGURATION_DETECTOR.
     /// </summary>
     public class Detector 
     {

@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class ListSupportedTimezonesResponse : Oci.Common.IOciResponse
+    public class ListSupportedTimezonesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

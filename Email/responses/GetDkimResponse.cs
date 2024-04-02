@@ -12,7 +12,7 @@ using Oci.EmailService.Models;
 
 namespace Oci.EmailService.Responses
 {
-    public class GetDkimResponse : Oci.Common.IOciResponse
+    public class GetDkimResponse : Oci.Common.OciResponse
     {
 
         /// <value>

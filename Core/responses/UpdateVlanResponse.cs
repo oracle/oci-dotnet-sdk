@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class UpdateVlanResponse : Oci.Common.IOciResponse
+    public class UpdateVlanResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.StackmonitoringService.Models;
 
 namespace Oci.StackmonitoringService.Responses
 {
-    public class UpdateAndPropagateTagsResponse : Oci.Common.IOciResponse
+    public class UpdateAndPropagateTagsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -16,8 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.EmailService.Models
 {
     /// <summary>
-    /// The properties that define a email domain.
-    /// A Email Domain contains configuration used to assert responsibility for emails sent from that domain.
+    /// The properties that define an email domain.
+    /// An email domain contains configuration used to assert responsibility for emails sent from that domain.
     /// 
     /// </summary>
     public class EmailDomainSummary 
@@ -26,7 +26,7 @@ namespace Oci.EmailService.Models
         /// <value>
         /// The name of the email domain in the Internet Domain Name System (DNS).
         /// <br/>
-        /// Example: example.net
+        /// Example: mydomain.example.com
         /// </value>
         /// <remarks>
         /// Required
@@ -69,7 +69,7 @@ namespace Oci.EmailService.Models
         public string ActiveDkimId { get; set; }
         
         /// <value>
-        /// The description of a email domain.
+        /// The description of an email domain.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class UpdateAutonomousDatabaseWalletResponse : Oci.Common.IOciResponse
+    public class UpdateAutonomousDatabaseWalletResponse : Oci.Common.OciResponse
     {
 
         /// <value>

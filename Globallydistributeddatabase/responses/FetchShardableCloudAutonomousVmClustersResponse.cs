@@ -12,7 +12,7 @@ using Oci.GloballydistributeddatabaseService.Models;
 
 namespace Oci.GloballydistributeddatabaseService.Responses
 {
-    public class FetchShardableCloudAutonomousVmClustersResponse : Oci.Common.IOciResponse
+    public class FetchShardableCloudAutonomousVmClustersResponse : Oci.Common.OciResponse
     {
 
         /// <value>

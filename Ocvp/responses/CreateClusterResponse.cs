@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class CreateClusterResponse : Oci.Common.IOciResponse
+    public class CreateClusterResponse : Oci.Common.OciResponse
     {
 
         /// <value>

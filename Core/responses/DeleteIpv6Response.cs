@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class DeleteIpv6Response : Oci.Common.IOciResponse
+    public class DeleteIpv6Response : Oci.Common.OciResponse
     {
 
         /// <value>

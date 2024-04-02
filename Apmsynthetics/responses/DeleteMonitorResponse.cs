@@ -12,7 +12,7 @@ using Oci.ApmsyntheticsService.Models;
 
 namespace Oci.ApmsyntheticsService.Responses
 {
-    public class DeleteMonitorResponse : Oci.Common.IOciResponse
+    public class DeleteMonitorResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.AnalyticsService.Models;
 
 namespace Oci.AnalyticsService.Responses
 {
-    public class DeletePrivateAccessChannelResponse : Oci.Common.IOciResponse
+    public class DeletePrivateAccessChannelResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.PsqlService.Models;
 
 namespace Oci.PsqlService.Responses
 {
-    public class ChangeBackupCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeBackupCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

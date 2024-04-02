@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class GetMySqlFleetMetricResponse : Oci.Common.IOciResponse
+    public class GetMySqlFleetMetricResponse : Oci.Common.OciResponse
     {
 
         /// <value>

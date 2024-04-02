@@ -264,7 +264,7 @@ namespace Oci.Common.Http.Internal
             }
         }
 
-        public class TestEnumRef : Oci.Common.IOciResponse
+        public class TestEnumRef : Oci.Common.OciResponse
         {
             [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "lifecycleState")]
             public System.Nullable<EnumRef.LifecycleStateEnum> LifecycleState { get; set; }
@@ -278,7 +278,7 @@ namespace Oci.Common.Http.Internal
             Option2
         }
 
-        public class TestTopLevelEnum : Oci.Common.IOciResponse
+        public class TestTopLevelEnum : Oci.Common.OciResponse
         {
             [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "option")]
             public System.Nullable<TopLevelEnum> Option { get; set; }

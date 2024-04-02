@@ -12,7 +12,7 @@ using Oci.OcvpService.Models;
 
 namespace Oci.OcvpService.Responses
 {
-    public class RetrievePasswordResponse : Oci.Common.IOciResponse
+    public class RetrievePasswordResponse : Oci.Common.OciResponse
     {
 
         /// <value>

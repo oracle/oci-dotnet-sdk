@@ -12,7 +12,7 @@ using Oci.DataintegrationService.Models;
 
 namespace Oci.DataintegrationService.Responses
 {
-    public class GetDataFlowValidationResponse : Oci.Common.IOciResponse
+    public class GetDataFlowValidationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

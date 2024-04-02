@@ -12,7 +12,7 @@ using Oci.AutoscalingService.Models;
 
 namespace Oci.AutoscalingService.Responses
 {
-    public class ListAutoScalingPoliciesResponse : Oci.Common.IOciResponse
+    public class ListAutoScalingPoliciesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

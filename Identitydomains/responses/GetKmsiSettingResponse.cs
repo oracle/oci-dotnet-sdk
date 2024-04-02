@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class GetKmsiSettingResponse : Oci.Common.IOciResponse
+    public class GetKmsiSettingResponse : Oci.Common.OciResponse
     {
 
         /// <value>

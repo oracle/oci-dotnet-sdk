@@ -12,7 +12,7 @@ using Oci.BdsService.Models;
 
 namespace Oci.BdsService.Responses
 {
-    public class UpdateBdsMetastoreConfigurationResponse : Oci.Common.IOciResponse
+    public class UpdateBdsMetastoreConfigurationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

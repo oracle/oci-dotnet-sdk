@@ -12,7 +12,7 @@ using Oci.BdsService.Models;
 
 namespace Oci.BdsService.Responses
 {
-    public class RenewCertificateResponse : Oci.Common.IOciResponse
+    public class RenewCertificateResponse : Oci.Common.OciResponse
     {
 
         /// <value>

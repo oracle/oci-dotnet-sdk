@@ -12,7 +12,7 @@ using Oci.RecoveryService.Models;
 
 namespace Oci.RecoveryService.Responses
 {
-    public class ChangeProtectedDatabaseCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeProtectedDatabaseCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

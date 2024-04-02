@@ -12,7 +12,7 @@ using Oci.LoadbalancerService.Models;
 
 namespace Oci.LoadbalancerService.Responses
 {
-    public class CreatePathRouteSetResponse : Oci.Common.IOciResponse
+    public class CreatePathRouteSetResponse : Oci.Common.OciResponse
     {
 
         /// <value>

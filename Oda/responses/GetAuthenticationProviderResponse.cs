@@ -12,7 +12,7 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Responses
 {
-    public class GetAuthenticationProviderResponse : Oci.Common.IOciResponse
+    public class GetAuthenticationProviderResponse : Oci.Common.OciResponse
     {
 
         /// <value>

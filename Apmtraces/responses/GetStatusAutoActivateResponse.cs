@@ -12,7 +12,7 @@ using Oci.ApmtracesService.Models;
 
 namespace Oci.ApmtracesService.Responses
 {
-    public class GetStatusAutoActivateResponse : Oci.Common.IOciResponse
+    public class GetStatusAutoActivateResponse : Oci.Common.OciResponse
     {
 
         /// <value>

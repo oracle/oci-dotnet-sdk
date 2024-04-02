@@ -12,7 +12,7 @@ using Oci.ServicemeshService.Models;
 
 namespace Oci.ServicemeshService.Responses
 {
-    public class ListVirtualServiceRouteTablesResponse : Oci.Common.IOciResponse
+    public class ListVirtualServiceRouteTablesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

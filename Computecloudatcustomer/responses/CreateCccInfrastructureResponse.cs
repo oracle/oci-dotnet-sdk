@@ -12,7 +12,7 @@ using Oci.ComputecloudatcustomerService.Models;
 
 namespace Oci.ComputecloudatcustomerService.Responses
 {
-    public class CreateCccInfrastructureResponse : Oci.Common.IOciResponse
+    public class CreateCccInfrastructureResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.GoldengateService.Models;
 
 namespace Oci.GoldengateService.Responses
 {
-    public class DeploymentWalletExistsResponse : Oci.Common.IOciResponse
+    public class DeploymentWalletExistsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

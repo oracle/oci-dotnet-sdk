@@ -12,7 +12,7 @@ using Oci.VaultService.Models;
 
 namespace Oci.VaultService.Responses
 {
-    public class GetSecretVersionResponse : Oci.Common.IOciResponse
+    public class GetSecretVersionResponse : Oci.Common.OciResponse
     {
 
         /// <value>

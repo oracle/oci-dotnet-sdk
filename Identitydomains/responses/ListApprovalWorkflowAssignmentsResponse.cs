@@ -12,7 +12,7 @@ using Oci.IdentitydomainsService.Models;
 
 namespace Oci.IdentitydomainsService.Responses
 {
-    public class ListApprovalWorkflowAssignmentsResponse : Oci.Common.IOciResponse
+    public class ListApprovalWorkflowAssignmentsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

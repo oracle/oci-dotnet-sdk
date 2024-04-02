@@ -12,7 +12,7 @@ using Oci.GoldengateService.Models;
 
 namespace Oci.GoldengateService.Responses
 {
-    public class ListTrailFilesResponse : Oci.Common.IOciResponse
+    public class ListTrailFilesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

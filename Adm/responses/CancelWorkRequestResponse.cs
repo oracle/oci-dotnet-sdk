@@ -12,7 +12,7 @@ using Oci.AdmService.Models;
 
 namespace Oci.AdmService.Responses
 {
-    public class CancelWorkRequestResponse : Oci.Common.IOciResponse
+    public class CancelWorkRequestResponse : Oci.Common.OciResponse
     {
 
         /// <value>

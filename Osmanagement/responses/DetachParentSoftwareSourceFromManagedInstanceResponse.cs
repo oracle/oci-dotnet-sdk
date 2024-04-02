@@ -12,7 +12,7 @@ using Oci.OsmanagementService.Models;
 
 namespace Oci.OsmanagementService.Responses
 {
-    public class DetachParentSoftwareSourceFromManagedInstanceResponse : Oci.Common.IOciResponse
+    public class DetachParentSoftwareSourceFromManagedInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

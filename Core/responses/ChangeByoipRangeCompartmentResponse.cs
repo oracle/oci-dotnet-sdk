@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ChangeByoipRangeCompartmentResponse : Oci.Common.IOciResponse
+    public class ChangeByoipRangeCompartmentResponse : Oci.Common.OciResponse
     {
 
         /// <value>

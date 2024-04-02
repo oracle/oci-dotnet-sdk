@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class GetDatabaseFleetHealthMetricsResponse : Oci.Common.IOciResponse
+    public class GetDatabaseFleetHealthMetricsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

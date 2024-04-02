@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class ValidateEndpointResponse : Oci.Common.IOciResponse
+    public class ValidateEndpointResponse : Oci.Common.OciResponse
     {
 
         /// <value>

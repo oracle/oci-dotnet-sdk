@@ -141,7 +141,7 @@ namespace Oci.GenerativeaiinferenceService
             Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/actions/generateText".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("Accept", "application/json, text/event-stream");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
             HttpResponseMessage responseMessage;
 

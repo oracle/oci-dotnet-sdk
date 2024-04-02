@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListClusterNetworkInstancesResponse : Oci.Common.IOciResponse
+    public class ListClusterNetworkInstancesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class RemoveResourceCategoriesResponse : Oci.Common.IOciResponse
+    public class RemoveResourceCategoriesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

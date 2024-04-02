@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class GetHeatWaveFleetMetricResponse : Oci.Common.IOciResponse
+    public class GetHeatWaveFleetMetricResponse : Oci.Common.OciResponse
     {
 
         /// <value>

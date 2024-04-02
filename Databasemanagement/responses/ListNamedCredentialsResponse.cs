@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class ListNamedCredentialsResponse : Oci.Common.IOciResponse
+    public class ListNamedCredentialsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.LoganalyticsService.Models;
 
 namespace Oci.LoganalyticsService.Responses
 {
-    public class ListSupportedCharEncodingsResponse : Oci.Common.IOciResponse
+    public class ListSupportedCharEncodingsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.OdaService.Models;
 
 namespace Oci.OdaService.Responses
 {
-    public class BulkCreateSkillEntitiesResponse : Oci.Common.IOciResponse
+    public class BulkCreateSkillEntitiesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

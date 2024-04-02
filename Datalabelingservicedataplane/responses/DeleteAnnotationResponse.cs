@@ -12,7 +12,7 @@ using Oci.DatalabelingservicedataplaneService.Models;
 
 namespace Oci.DatalabelingservicedataplaneService.Responses
 {
-    public class DeleteAnnotationResponse : Oci.Common.IOciResponse
+    public class DeleteAnnotationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

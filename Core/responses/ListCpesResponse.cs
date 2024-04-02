@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListCpesResponse : Oci.Common.IOciResponse
+    public class ListCpesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

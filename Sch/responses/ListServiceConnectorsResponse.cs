@@ -12,7 +12,7 @@ using Oci.SchService.Models;
 
 namespace Oci.SchService.Responses
 {
-    public class ListServiceConnectorsResponse : Oci.Common.IOciResponse
+    public class ListServiceConnectorsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.WaasService.Models;
 
 namespace Oci.WaasService.Responses
 {
-    public class GetCustomProtectionRuleResponse : Oci.Common.IOciResponse
+    public class GetCustomProtectionRuleResponse : Oci.Common.OciResponse
     {
 
         /// <value>

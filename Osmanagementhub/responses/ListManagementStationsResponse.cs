@@ -12,7 +12,7 @@ using Oci.OsmanagementhubService.Models;
 
 namespace Oci.OsmanagementhubService.Responses
 {
-    public class ListManagementStationsResponse : Oci.Common.IOciResponse
+    public class ListManagementStationsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

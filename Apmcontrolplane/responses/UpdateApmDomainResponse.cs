@@ -12,7 +12,7 @@ using Oci.ApmcontrolplaneService.Models;
 
 namespace Oci.ApmcontrolplaneService.Responses
 {
-    public class UpdateApmDomainResponse : Oci.Common.IOciResponse
+    public class UpdateApmDomainResponse : Oci.Common.OciResponse
     {
 
         /// <value>

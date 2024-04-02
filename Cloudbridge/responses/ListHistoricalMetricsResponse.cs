@@ -12,7 +12,7 @@ using Oci.CloudbridgeService.Models;
 
 namespace Oci.CloudbridgeService.Responses
 {
-    public class ListHistoricalMetricsResponse : Oci.Common.IOciResponse
+    public class ListHistoricalMetricsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

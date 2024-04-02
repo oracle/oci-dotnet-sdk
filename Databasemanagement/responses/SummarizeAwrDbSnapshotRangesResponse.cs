@@ -12,7 +12,7 @@ using Oci.DatabasemanagementService.Models;
 
 namespace Oci.DatabasemanagementService.Responses
 {
-    public class SummarizeAwrDbSnapshotRangesResponse : Oci.Common.IOciResponse
+    public class SummarizeAwrDbSnapshotRangesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

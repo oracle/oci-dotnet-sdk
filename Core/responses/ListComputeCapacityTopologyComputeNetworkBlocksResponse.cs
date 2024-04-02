@@ -12,7 +12,7 @@ using Oci.CoreService.Models;
 
 namespace Oci.CoreService.Responses
 {
-    public class ListComputeCapacityTopologyComputeNetworkBlocksResponse : Oci.Common.IOciResponse
+    public class ListComputeCapacityTopologyComputeNetworkBlocksResponse : Oci.Common.OciResponse
     {
 
         /// <value>

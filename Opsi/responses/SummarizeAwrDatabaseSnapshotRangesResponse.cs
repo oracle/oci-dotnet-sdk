@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class SummarizeAwrDatabaseSnapshotRangesResponse : Oci.Common.IOciResponse
+    public class SummarizeAwrDatabaseSnapshotRangesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

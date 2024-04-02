@@ -12,7 +12,7 @@ using Oci.RecoveryService.Models;
 
 namespace Oci.RecoveryService.Responses
 {
-    public class GetProtectedDatabaseResponse : Oci.Common.IOciResponse
+    public class GetProtectedDatabaseResponse : Oci.Common.OciResponse
     {
 
         /// <value>

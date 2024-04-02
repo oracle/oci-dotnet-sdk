@@ -12,7 +12,7 @@ using Oci.ServicemeshService.Models;
 
 namespace Oci.ServicemeshService.Responses
 {
-    public class UpdateAccessPolicyResponse : Oci.Common.IOciResponse
+    public class UpdateAccessPolicyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

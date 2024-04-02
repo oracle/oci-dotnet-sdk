@@ -12,7 +12,7 @@ using Oci.OsubbillingscheduleService.Models;
 
 namespace Oci.OsubbillingscheduleService.Responses
 {
-    public class ListBillingSchedulesResponse : Oci.Common.IOciResponse
+    public class ListBillingSchedulesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

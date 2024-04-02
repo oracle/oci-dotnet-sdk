@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class RotateAutonomousContainerDatabaseEncryptionKeyResponse : Oci.Common.IOciResponse
+    public class RotateAutonomousContainerDatabaseEncryptionKeyResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.LoggingService.Models;
 
 namespace Oci.LoggingService.Responses
 {
-    public class DeleteLogResponse : Oci.Common.IOciResponse
+    public class DeleteLogResponse : Oci.Common.OciResponse
     {
 
         /// <value>

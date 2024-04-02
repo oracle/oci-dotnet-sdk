@@ -12,7 +12,7 @@ using Oci.DatabaseService.Models;
 
 namespace Oci.DatabaseService.Responses
 {
-    public class UpdateDataGuardAssociationResponse : Oci.Common.IOciResponse
+    public class UpdateDataGuardAssociationResponse : Oci.Common.OciResponse
     {
 
         /// <value>

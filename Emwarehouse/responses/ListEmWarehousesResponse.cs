@@ -12,7 +12,7 @@ using Oci.EmwarehouseService.Models;
 
 namespace Oci.EmwarehouseService.Responses
 {
-    public class ListEmWarehousesResponse : Oci.Common.IOciResponse
+    public class ListEmWarehousesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

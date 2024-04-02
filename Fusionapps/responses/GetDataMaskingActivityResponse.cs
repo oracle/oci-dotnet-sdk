@@ -12,7 +12,7 @@ using Oci.FusionappsService.Models;
 
 namespace Oci.FusionappsService.Responses
 {
-    public class GetDataMaskingActivityResponse : Oci.Common.IOciResponse
+    public class GetDataMaskingActivityResponse : Oci.Common.OciResponse
     {
 
         /// <value>

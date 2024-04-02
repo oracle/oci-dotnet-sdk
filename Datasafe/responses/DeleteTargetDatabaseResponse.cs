@@ -12,7 +12,7 @@ using Oci.DatasafeService.Models;
 
 namespace Oci.DatasafeService.Responses
 {
-    public class DeleteTargetDatabaseResponse : Oci.Common.IOciResponse
+    public class DeleteTargetDatabaseResponse : Oci.Common.OciResponse
     {
 
         /// <value>

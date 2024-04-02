@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class SummarizeAddmDbSchemaObjectsResponse : Oci.Common.IOciResponse
+    public class SummarizeAddmDbSchemaObjectsResponse : Oci.Common.OciResponse
     {
 
         /// <value>

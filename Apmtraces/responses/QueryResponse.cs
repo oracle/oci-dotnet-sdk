@@ -12,7 +12,7 @@ using Oci.ApmtracesService.Models;
 
 namespace Oci.ApmtracesService.Responses
 {
-    public class QueryResponse : Oci.Common.IOciResponse
+    public class QueryResponse : Oci.Common.OciResponse
     {
 
         /// <value>

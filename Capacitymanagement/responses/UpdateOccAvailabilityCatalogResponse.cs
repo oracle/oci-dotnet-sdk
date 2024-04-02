@@ -12,7 +12,7 @@ using Oci.CapacitymanagementService.Models;
 
 namespace Oci.CapacitymanagementService.Responses
 {
-    public class UpdateOccAvailabilityCatalogResponse : Oci.Common.IOciResponse
+    public class UpdateOccAvailabilityCatalogResponse : Oci.Common.OciResponse
     {
 
         /// <value>

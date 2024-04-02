@@ -12,7 +12,7 @@ using Oci.AilanguageService.Models;
 
 namespace Oci.AilanguageService.Responses
 {
-    public class BatchDetectLanguageKeyPhrasesResponse : Oci.Common.IOciResponse
+    public class BatchDetectLanguageKeyPhrasesResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.IntegrationService.Models;
 
 namespace Oci.IntegrationService.Responses
 {
-    public class GetIntegrationInstanceResponse : Oci.Common.IOciResponse
+    public class GetIntegrationInstanceResponse : Oci.Common.OciResponse
     {
 
         /// <value>

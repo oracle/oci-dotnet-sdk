@@ -86,7 +86,7 @@ namespace Oci.EmailService.Models
         
         /// <value>
         /// The date and time the approved sender was added in \"YYYY-MM-ddThh:mmZ\"
-        /// format with a Z offset, as defined by RFC 3339.
+        /// format with a Z offset, as defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
@@ -116,6 +116,13 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// Usage of system tag keys. These predefined keys are scoped to namespaces.
+        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
     }
 }

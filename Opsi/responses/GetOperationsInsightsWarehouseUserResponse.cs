@@ -12,7 +12,7 @@ using Oci.OpsiService.Models;
 
 namespace Oci.OpsiService.Responses
 {
-    public class GetOperationsInsightsWarehouseUserResponse : Oci.Common.IOciResponse
+    public class GetOperationsInsightsWarehouseUserResponse : Oci.Common.OciResponse
     {
 
         /// <value>

@@ -12,7 +12,7 @@ using Oci.ApmtracesService.Models;
 
 namespace Oci.ApmtracesService.Responses
 {
-    public class BulkUnpinAttributeResponse : Oci.Common.IOciResponse
+    public class BulkUnpinAttributeResponse : Oci.Common.OciResponse
     {
 
         /// <value>

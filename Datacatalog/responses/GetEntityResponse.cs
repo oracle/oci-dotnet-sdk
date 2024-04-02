@@ -12,7 +12,7 @@ using Oci.DatacatalogService.Models;
 
 namespace Oci.DatacatalogService.Responses
 {
-    public class GetEntityResponse : Oci.Common.IOciResponse
+    public class GetEntityResponse : Oci.Common.OciResponse
     {
 
         /// <value>

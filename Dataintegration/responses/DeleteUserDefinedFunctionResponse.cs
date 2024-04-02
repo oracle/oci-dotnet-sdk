@@ -12,7 +12,7 @@ using Oci.DataintegrationService.Models;
 
 namespace Oci.DataintegrationService.Responses
 {
-    public class DeleteUserDefinedFunctionResponse : Oci.Common.IOciResponse
+    public class DeleteUserDefinedFunctionResponse : Oci.Common.OciResponse
     {
 
         /// <value>
