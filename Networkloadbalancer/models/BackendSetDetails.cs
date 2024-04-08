@@ -52,6 +52,21 @@ namespace Oci.NetworkloadbalancerService.Models
         public System.Nullable<bool> IsPreserveSource { get; set; }
         
         /// <value>
+        /// If enabled, the network load balancer will continue to distribute traffic in the configured distribution in the event all backends are unhealthy.
+        /// The value is false by default.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isFailOpen")]
+        public System.Nullable<bool> IsFailOpen { get; set; }
+        
+        /// <value>
+        /// If enabled existing connections will be forwarded to an alternative healthy backend as soon as current backend becomes unhealthy.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isInstantFailoverEnabled")]
+        public System.Nullable<bool> IsInstantFailoverEnabled { get; set; }
+        
+        /// <value>
         /// An array of backends.
         /// 
         /// </value>

@@ -10,28 +10,18 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.ApplicationmigrationService.Models
+namespace Oci.NetworkloadbalancerService.Models
 {
   /// <summary>
-  /// Migration process state
+  /// Transport protocol for the DNS health check probe.
   /// </summary>
-  public enum MigrationStates {
+  public enum DnsHealthCheckTransportProtocols {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "DISCOVERING_APPLICATION")]
-      DiscoveringApplication,
-      [EnumMember(Value = "DISCOVERY_FAILED")]
-      DiscoveryFailed,
-      [EnumMember(Value = "MISSING_CONFIG_VALUES")]
-      MissingConfigValues,
-      [EnumMember(Value = "READY")]
-      Ready,
-      [EnumMember(Value = "MIGRATING")]
-      Migrating,
-      [EnumMember(Value = "MIGRATION_FAILED")]
-      MigrationFailed,
-      [EnumMember(Value = "MIGRATION_SUCCEEDED")]
-      MigrationSucceeded
+      [EnumMember(Value = "UDP")]
+      Udp,
+      [EnumMember(Value = "TCP")]
+      Tcp
   }
 }

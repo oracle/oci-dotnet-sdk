@@ -65,6 +65,22 @@ namespace Oci.StackmonitoringService.Models
         [JsonProperty(PropertyName = "metricNamespace")]
         public string MetricNamespace { get; set; }
         
+        /// <value>
+        /// Source type to indicate if the resource is stack monitoring discovered, OCI native resource, etc.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<SourceType> SourceType { get; set; }
+        
+        /// <value>
+        /// Resource Category to indicate the kind of resource type.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceCategory")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceCategory> ResourceCategory { get; set; }
+        
         [JsonProperty(PropertyName = "metadata")]
         public ResourceTypeMetadataDetails Metadata { get; set; }
         

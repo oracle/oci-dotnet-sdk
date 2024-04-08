@@ -2,7 +2,7 @@
   <Import Project="..\General.targets" />
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <RootNamespace>Oci.Common</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
@@ -11,8 +11,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Moq" Version="4.13.1"/>
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1"/>
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.2"/>
     <PackageReference Include="xunit" Version="2.4.1"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
     <PackageReference Include="coverlet.collector" Version="1.2.1"/>
     <ProjectReference Include="..\Common\OCI.DotNetSDK.Common.csproj"/>
   </ItemGroup>

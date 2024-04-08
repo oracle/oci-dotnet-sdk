@@ -33,6 +33,34 @@ namespace Oci.StackmonitoringService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// Multiple compartment identifiers [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentIds")]
+        public System.Collections.Generic.List<string> CompartmentIds { get; set; }
+        
+        /// <value>
+        /// Multiple lifecycle states filter.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleStates")]
+        public System.Collections.Generic.List<ResourceLifecycleState> LifecycleStates { get; set; }
+        
+        /// <value>
+        /// Source type filter.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<SourceType> SourceType { get; set; }
+        
+        /// <value>
+        /// Resource category filter.
+        /// </value>
+        [JsonProperty(PropertyName = "resourceCategory")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceCategory> ResourceCategory { get; set; }
+        
+        /// <value>
         /// A filter to return resources that match exact resource name.
         /// 
         /// </value>

@@ -123,6 +123,22 @@ namespace Oci.StackmonitoringService.Models
         public System.Nullable<LicenseType> License { get; set; }
         
         /// <value>
+        /// Source type to indicate if the resource is stack monitoring discovered, OCI native resource, etc.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sourceType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SourceType> SourceType { get; set; }
+        
+        /// <value>
+        /// Resource Category to indicate the kind of resource type.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceCategory")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ResourceCategory> ResourceCategory { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

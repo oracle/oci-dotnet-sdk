@@ -26,6 +26,8 @@ namespace Oci.NetworkloadbalancerService.Models
       [EnumMember(Value = "TCP")]
       Tcp,
       [EnumMember(Value = "UDP")]
-      Udp
+      Udp,
+      [EnumMember(Value = "DNS")]
+      Dns
   }
 }

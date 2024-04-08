@@ -74,6 +74,80 @@ namespace Oci.StackmonitoringService.Models
         public string ResourceGroup { get; set; }
         
         /// <value>
+        /// Flag to indicate whether status is calculated using metrics or 
+        /// LifeCycleState attribute of the resource in OCI service.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shouldUseMetricsFlowForStatus")]
+        public System.Nullable<bool> ShouldUseMetricsFlowForStatus { get; set; }
+        
+        /// <value>
+        /// The base URL of the OCI service to which the resource belongs to.
+        /// Also this property is applicable only when source is OCI_TELEMETRY_NATIVE.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "serviceBaseUrl")]
+        public string ServiceBaseUrl { get; set; }
+        
+        /// <value>
+        /// The console path prefix to use for providing service home url page navigation. 
+        /// For example if the prefix provided is 'security/bastion/bastions', the URL used for navigation will be
+        /// https://<cloudhostname>/security/bastion/bastions/<resourceOcid>. If not provided, service home page link 
+        /// will not be shown in the stack monitoring home page.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "consolePathPrefix")]
+        public string ConsolePathPrefix { get; set; }
+        
+        /// <value>
+        /// Lifecycle states of the external resource which reflects the status of the resource being up.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleStatusMappingsForUpStatus")]
+        public System.Collections.Generic.List<string> LifecycleStatusMappingsForUpStatus { get; set; }
+        
+        /// <value>
+        /// The resource name property in the metric dimensions. 
+        /// Resources imported will be using this property value for resource name.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceNameMapping")]
+        public string ResourceNameMapping { get; set; }
+        
+        /// <value>
+        /// The external resource identifier property in the metric dimensions. 
+        /// Resources imported will be using this property value for external id.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "externalIdMapping")]
+        public string ExternalIdMapping { get; set; }
+        
+        /// <value>
+        /// The resource type property in the metric dimensions. 
+        /// Resources imported will be using this property value for resource type.
+        /// If not specified, namespace will be used for resource type.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceTypeMapping")]
+        public string ResourceTypeMapping { get; set; }
+        
+        /// <value>
+        /// The resource name filter. Resources matching with the resource name filter will be imported.
+        /// Regular expressions will be accepted.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceNameFilter")]
+        public string ResourceNameFilter { get; set; }
+        
+        /// <value>
+        /// The resource type filter. Resources matching with the resource type filter will be imported.
+        /// Regular expressions will be accepted.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceTypeFilter")]
+        public string ResourceTypeFilter { get; set; }
+        
+        /// <value>
         /// List of metrics to be used to calculate the availability of the resource.
         /// Resource is considered to be up if at least one of the specified metrics is available for 
         /// the resource during the specified interval using the property 

@@ -42,6 +42,12 @@ namespace Oci.StackmonitoringService.Requests
         public string WorkRequestId { get; set; }
         
         /// <value>
+        /// A filter to return only resources with matching lifecycleState.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
+        public System.Nullable<ResourceLifecycleState> Status { get; set; }
+        
+        /// <value>
         /// The field to sort by. Only one sort order may be provided.
         /// Default order for timeCreated is descending. Default order for resources is ascending.
         /// 

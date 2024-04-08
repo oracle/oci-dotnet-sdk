@@ -10,18 +10,22 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.ApplicationmigrationService.Models
+namespace Oci.StackmonitoringService.Models
 {
   /// <summary>
-  /// The type of the target database associated with the target instance.
+  /// Resource Category.
   /// </summary>
-  public enum TargetDatabaseTypes {
+  public enum ResourceCategory {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "DATABASE_SYSTEM")]
-      DatabaseSystem,
-      [EnumMember(Value = "NOT_SET")]
-      NotSet
+      [EnumMember(Value = "APPLICATION")]
+      Application,
+      [EnumMember(Value = "DATABASE")]
+      Database,
+      [EnumMember(Value = "MIDDLEWARE")]
+      Middleware,
+      [EnumMember(Value = "UNKNOWN")]
+      Unknown
   }
 }
