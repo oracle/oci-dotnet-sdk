@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Announcements
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Apigateway", "Apigateway\OCI.DotNetSDK.Apigateway.csproj", "{3C65DA4F-47CD-4234-B784-2E7E0EB44413}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Applicationmigration", "Applicationmigration\OCI.DotNetSDK.Applicationmigration.csproj", "{1D9330C5-05E6-481C-889A-C4A28B857524}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Audit", "Audit\OCI.DotNetSDK.Audit.csproj", "{5B648BCB-29A3-45F2-8AFB-631E86BEBF84}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Autoscaling", "Autoscaling\OCI.DotNetSDK.Autoscaling.csproj", "{A18E2854-DE19-4357-BCCB-2187E88695DB}"

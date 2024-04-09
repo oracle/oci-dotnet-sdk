@@ -10,24 +10,22 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.ApplicationmigrationService.Models
+namespace Oci.NetworkloadbalancerService.Models
 {
   /// <summary>
-  /// Possible source environment types.
+  /// Return code value to validate the DNS response in healthcheck.
   /// </summary>
-  public enum SourceTypes {
+  public enum DnsHealthCheckRCodes {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "OCIC")]
-      Ocic,
-      [EnumMember(Value = "INTERNAL_COMPUTE")]
-      InternalCompute,
-      [EnumMember(Value = "OCC")]
-      Occ,
-      [EnumMember(Value = "OCIC_IDCS")]
-      OcicIdcs,
-      [EnumMember(Value = "IMPORT")]
-      Import
+      [EnumMember(Value = "NOERROR")]
+      Noerror,
+      [EnumMember(Value = "SERVFAIL")]
+      Servfail,
+      [EnumMember(Value = "NXDOMAIN")]
+      Nxdomain,
+      [EnumMember(Value = "REFUSED")]
+      Refused
   }
 }

@@ -19,6 +19,8 @@ namespace Oci.DataflowService.Models
     /// DELETING        - The resource is being deleted, and might require a deep clean of any children.
     /// DELETED         - The resource has been deleted, and isn't available.
     /// FAILED          - The resource is in a failed state due to validation or other errors.
+    /// UPDATING        - The resource is being updated and might not be usable until all changes are commited.
+    /// NEEDS_ATTENTION - The resource needs customer/operator intervention.
     /// 
   /// </summary>
   public enum SqlEndpointLifecycleState {
@@ -34,6 +36,10 @@ namespace Oci.DataflowService.Models
       [EnumMember(Value = "DELETED")]
       Deleted,
       [EnumMember(Value = "FAILED")]
-      Failed
+      Failed,
+      [EnumMember(Value = "UPDATING")]
+      Updating,
+      [EnumMember(Value = "NEEDS_ATTENTION")]
+      NeedsAttention
   }
 }

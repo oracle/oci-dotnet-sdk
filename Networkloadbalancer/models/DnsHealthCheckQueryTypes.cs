@@ -10,26 +10,20 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.ApplicationmigrationService.Models
+namespace Oci.NetworkloadbalancerService.Models
 {
   /// <summary>
-  /// Possible operation status.
+  /// Query type values for the DNS health check probe.
   /// </summary>
-  public enum OperationStatus {
+  public enum DnsHealthCheckQueryTypes {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "ACCEPTED")]
-      Accepted,
-      [EnumMember(Value = "IN_PROGRESS")]
-      InProgress,
-      [EnumMember(Value = "FAILED")]
-      Failed,
-      [EnumMember(Value = "SUCCEEDED")]
-      Succeeded,
-      [EnumMember(Value = "CANCELING")]
-      Canceling,
-      [EnumMember(Value = "CANCELED")]
-      Canceled
+      [EnumMember(Value = "A")]
+      A,
+      [EnumMember(Value = "TXT")]
+      Txt,
+      [EnumMember(Value = "AAAA")]
+      Aaaa
   }
 }

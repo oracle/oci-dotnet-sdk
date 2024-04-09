@@ -217,6 +217,12 @@ namespace Oci.DataflowService.Models
         [JsonProperty(PropertyName = "sparkAdvancedConfigurations")]
         public System.Collections.Generic.Dictionary<string, string> SparkAdvancedConfigurations { get; set; }
         
+        /// <value>
+        /// The SQL Endpoint message displayed as a banner to provide user with any action items required on the resource.
+        /// </value>
+        [JsonProperty(PropertyName = "bannerMessage")]
+        public string BannerMessage { get; set; }
+        
         [JsonProperty(PropertyName = "networkConfiguration")]
         public SqlEndpointNetworkConfiguration NetworkConfiguration { get; set; }
         

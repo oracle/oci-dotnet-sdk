@@ -108,5 +108,8 @@ namespace Oci.NetworkloadbalancerService.Models
         [JsonProperty(PropertyName = "responseData")]
         public System.Byte[] ResponseData { get; set; }
         
+        [JsonProperty(PropertyName = "dns")]
+        public DnsHealthCheckerDetails Dns { get; set; }
+        
     }
 }

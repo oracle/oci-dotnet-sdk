@@ -10,26 +10,18 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.ApplicationmigrationService.Models
+namespace Oci.NetworkloadbalancerService.Models
 {
   /// <summary>
-  /// The type of application to be migrated.
+  /// Query class values for the DNS health check probe.
   /// </summary>
-  public enum MigrationTypes {
+  public enum DnsHealthCheckQueryClasses {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "JCS")]
-      Jcs,
-      [EnumMember(Value = "SOACS")]
-      Soacs,
-      [EnumMember(Value = "OIC")]
-      Oic,
-      [EnumMember(Value = "OAC")]
-      Oac,
-      [EnumMember(Value = "ICS")]
-      Ics,
-      [EnumMember(Value = "PCS")]
-      Pcs
+      [EnumMember(Value = "IN")]
+      In,
+      [EnumMember(Value = "CH")]
+      Ch
   }
 }

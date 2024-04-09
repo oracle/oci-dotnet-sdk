@@ -47,5 +47,13 @@ namespace Oci.DataflowService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// (Optional header param, required for Resource Principal version 3.0+)
+        /// Parent resource control plane endpoint used to exchange for upper level resource principal token.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-parent-rpt-url")]
+        public string OpcParentRptUrl { get; set; }
     }
 }

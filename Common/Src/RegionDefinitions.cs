@@ -83,6 +83,9 @@ namespace Oci.Common
         public static readonly Region EU_DCC_RATING_1 = Register("eu-dcc-rating-1", Realm.OC14, "dus");
         public static readonly Region EU_DCC_DUBLIN_1 = Register("eu-dcc-dublin-1", Realm.OC14, "ork");
 
+        // OC15
+        public static readonly Region AP_DCC_GAZIPUR_1 = Register("ap-dcc-gazipur-1", Realm.OC15, "dac");
+
         // OC19
         public static readonly Region EU_MADRID_2 = Register("eu-madrid-2", Realm.OC19, "vll");
         public static readonly Region EU_FRANKFURT_2 = Register("eu-frankfurt-2", Realm.OC19, "str");
