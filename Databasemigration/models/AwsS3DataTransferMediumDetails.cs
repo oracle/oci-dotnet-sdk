@@ -55,6 +55,9 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "secretAccessKey")]
         public string SecretAccessKey { get; set; }
         
+        [JsonProperty(PropertyName = "objectStorageBucket")]
+        public ObjectStoreBucket ObjectStorageBucket { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "AWS_S3";
     }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Optional additional properties for dump transfer in source or target host. Default kind is CURL
+    /// Optional additional properties for dump transfer in source or target host.
     /// 
     /// </summary>
     [JsonConverter(typeof(DataTransferMediumDetailsV2ModelConverter))]

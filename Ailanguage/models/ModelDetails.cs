@@ -56,7 +56,9 @@ namespace Oci.AilanguageService.Models
             [EnumMember(Value = "PRE_TRAINED_SUMMARIZATION")]
             PreTrainedSummarization,
             [EnumMember(Value = "PRE_TRAINED_UNIVERSAL")]
-            PreTrainedUniversal
+            PreTrainedUniversal,
+            [EnumMember(Value = "PII")]
+            Pii
         };
 
         
@@ -94,6 +96,9 @@ namespace Oci.AilanguageService.Models
                     break;
                 case "NAMED_ENTITY_RECOGNITION":
                     obj = new NamedEntityRecognitionModelDetails();
+                    break;
+                case "PII":
+                    obj = new PiiModelDetails();
                     break;
                 case "PRE_TRAINED_LANGUAGE_DETECTION":
                     obj = new PreTrainedLanguageDetectionModelDetails();

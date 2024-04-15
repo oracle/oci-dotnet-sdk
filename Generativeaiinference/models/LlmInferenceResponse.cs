@@ -30,7 +30,11 @@ namespace Oci.GenerativeaiinferenceService.Models
             [EnumMember(Value = "COHERE")]
             Cohere,
             [EnumMember(Value = "LLAMA")]
-            Llama
+            Llama,
+            [EnumMember(Value = "OPENAI")]
+            Openai,
+            [EnumMember(Value = "DALLE3")]
+            Dalle3
         };
 
         

@@ -98,7 +98,7 @@ namespace Oci.UsageapiService.Models
         public string SavedReportId { get; set; }
         
         /// <value>
-        /// Specifies the frequency according to when the schedule will be run, 
+        /// Specifies the frequency according to when the schedule will be run,
         /// in the x-obmcs-recurring-time format described in [RFC 5545 section 3.3.10](https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10).
         /// Supported values are : ONE_TIME, DAILY, WEEKLY and MONTHLY.
         /// 

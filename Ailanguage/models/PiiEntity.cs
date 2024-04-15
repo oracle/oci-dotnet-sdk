@@ -22,32 +22,99 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
+        /// Unique id of the entity.
+        /// </value>
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
+        
+        /// <value>
         /// The number of Unicode code points preceding this entity in the submitted text.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Offset is required.")]
         [JsonProperty(PropertyName = "offset")]
         public System.Nullable<int> Offset { get; set; }
         
         /// <value>
         /// Length of PII entity text.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Length is required.")]
         [JsonProperty(PropertyName = "length")]
         public System.Nullable<int> Length { get; set; }
         
         /// <value>
         /// Entity text like name of person, Organization and so on.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Text is required.")]
         [JsonProperty(PropertyName = "text")]
         public string Text { get; set; }
         
         /// <value>
-        /// Type of PII entity text like PER, LOC.
+        /// Entity type supported
+        /// PERSON
+        /// ADDRESS
+        /// AGE
+        /// DATE_TIME
+        /// SSN_OR_TAXPAYER
+        /// EMAIL
+        /// PASSPORT_NUMBER_US
+        /// TELEPHONE_NUMBER
+        /// DRIVER_ID_US
+        /// BANK_ACCOUNT_NUMBER
+        /// BANK_SWIFT
+        /// BANK_ROUTING
+        /// CREDIT_DEBIT_NUMBER
+        /// IP_ADDRESS
+        /// MAC_ADDRESS
+        /// COOKIE
+        /// XSRF_TOKEN
+        /// AUTH_BASIC
+        /// AUTH_BEARER
+        /// JSON_WEB_TOKEN
+        /// PRIVATE_KEY
+        /// PUBLIC_KEY
+        /// OCI_OCID_USER
+        /// OCI_OCID_TENANCY
+        /// OCI_SMTP_USERNAME
+        /// OCI_OCID_REFERENCE
+        /// OCI_FINGERPRINT
+        /// OCI_CREDENTIAL
+        /// OCI_PRE_AUTH_REQUEST
+        /// OCI_STORAGE_SIGNED_URL
+        /// OCI_CUSTOMER_SECRET_KEY
+        /// OCI_ACCESS_KEy
+        /// MEDICAL_RECORD_NUMBER
+        /// HEALTH_PLAN_ID
+        /// URL
+        /// CERTIFICATE_NUMBER
+        /// FIN
+        /// GUIDs
+        /// VEHICLE_LICENSE_PLATE_US
+        /// VEHICLE_IDENTIFIER_US
+        /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Type is required.")]
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
         /// <value>
         /// Score or confidence for detected PII entity.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Score is required.")]
         [JsonProperty(PropertyName = "score")]
         public System.Double Score { get; set; }
         

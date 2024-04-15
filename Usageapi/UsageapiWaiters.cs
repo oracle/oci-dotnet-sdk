@@ -32,6 +32,33 @@ namespace Oci.UsageapiService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetEmailRecipientsGroupRequest, GetEmailRecipientsGroupResponse> ForEmailRecipientsGroup(GetEmailRecipientsGroupRequest request, params EmailRecipientsGroup.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForEmailRecipientsGroup(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetEmailRecipientsGroupRequest, GetEmailRecipientsGroupResponse> ForEmailRecipientsGroup(GetEmailRecipientsGroupRequest request, WaiterConfiguration config, params EmailRecipientsGroup.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetEmailRecipientsGroupRequest, GetEmailRecipientsGroupResponse>(
+                request,
+                request => client.GetEmailRecipientsGroup(request),
+                response => targetStates.Contains(response.EmailRecipientsGroup.LifecycleState.Value)
+            );
+            return new Waiter<GetEmailRecipientsGroupRequest, GetEmailRecipientsGroupResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetScheduleRequest, GetScheduleResponse> ForSchedule(GetScheduleRequest request, params Schedule.LifecycleStateEnum[] targetStates)
         {
             return this.ForSchedule(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
