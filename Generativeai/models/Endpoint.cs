@@ -135,6 +135,9 @@ namespace Oci.GenerativeaiService.Models
         [JsonProperty(PropertyName = "contentModerationConfig")]
         public ContentModerationConfig ContentModerationConfig { get; set; }
         
+        [JsonProperty(PropertyName = "previousState")]
+        public Endpoint PreviousState { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).

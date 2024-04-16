@@ -17,8 +17,9 @@ namespace Oci.AilanguageService.Models
 {
     /// <summary>
     /// document location and other meta data about documents
-    /// For TXT both ObjectStoragePrefixLocation and ObjectStorageFileNameLocation supported
+    /// For TXT only ObjectStoragePrefixLocation supported
     /// For CSV only ObjectStorageFileNameLocation is supported
+    /// For this release only one file is supported for ObjectStorageFileNameLocation i.e CSV file type
     /// 
     /// </summary>
     [JsonConverter(typeof(InputLocationModelConverter))]

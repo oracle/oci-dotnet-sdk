@@ -22,7 +22,7 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
-        /// Optional pre trained model version. if nothing specified latest pre trained model will be used. 
+        /// Optional pre trained model version. if nothing specified latest pre trained model will be used.
         /// Supported versions can be found at /modelTypes/{modelType}
         /// 
         /// </value>

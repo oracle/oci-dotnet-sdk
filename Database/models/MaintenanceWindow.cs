@@ -125,5 +125,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "leadTimeInWeeks")]
         public System.Nullable<int> LeadTimeInWeeks { get; set; }
         
+        /// <value>
+        /// If true, skips the release update (RU) for the quarter. You cannot skip two consecutive quarters. An RU skip request will only be honoured if the current version of the Autonomous Container Database is supported for current quarter.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "skipRu")]
+        public System.Collections.Generic.List<bool> SkipRu { get; set; }
+        
     }
 }

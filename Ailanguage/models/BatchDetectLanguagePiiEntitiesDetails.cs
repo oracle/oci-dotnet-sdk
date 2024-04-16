@@ -49,5 +49,8 @@ namespace Oci.AilanguageService.Models
         [JsonProperty(PropertyName = "masking")]
         public System.Collections.Generic.Dictionary<string, PiiEntityMasking> Masking { get; set; }
         
+        [JsonProperty(PropertyName = "profile")]
+        public Profile Profile { get; set; }
+        
     }
 }

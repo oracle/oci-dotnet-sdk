@@ -159,6 +159,12 @@ namespace Oci.RedisService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// OCIDs of the NSGs to control access in the customer network
+        /// </value>
+        [JsonProperty(PropertyName = "nsgIds")]
+        public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

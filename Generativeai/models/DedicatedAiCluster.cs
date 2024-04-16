@@ -164,7 +164,9 @@ namespace Oci.GenerativeaiService.Models
             [EnumMember(Value = "EMBED_COHERE")]
             EmbedCohere,
             [EnumMember(Value = "LLAMA2_70")]
-            Llama270
+            Llama270,
+            [EnumMember(Value = "LARGE_COHERE_V2")]
+            LargeCohereV2
         };
 
         /// <value>
@@ -180,6 +182,9 @@ namespace Oci.GenerativeaiService.Models
         
         [JsonProperty(PropertyName = "capacity")]
         public DedicatedAiClusterCapacity Capacity { get; set; }
+        
+        [JsonProperty(PropertyName = "previousState")]
+        public DedicatedAiCluster PreviousState { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

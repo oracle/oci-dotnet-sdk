@@ -42,7 +42,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public string Text { get; set; }
         
         /// <value>
-        /// The reason why the model stopped generating tokens. 
+        /// The reason why the model stopped generating tokens.
         /// <br/>
         /// Stops if the model hits a natural stop point or a provided stop sequence. Returns the length if the tokens reach the specified maximum number of tokens.
         /// 

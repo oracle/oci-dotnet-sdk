@@ -18,7 +18,7 @@ namespace Oci.GenerativeaiService.Models
     /// <summary>
     /// The dataset used to fine-tune the model. 
     /// <br/>
-    /// Only one dataset is allowed per custom model, which is split 90-10 for training and validating. You must provide the dataset in a JSON Lines (JSONL) file. Each line in the JSONL file must have the format:
+    /// Only one dataset is allowed per custom model, which is split 80-20 for training and validating. You must provide the dataset in a JSON Lines (JSONL) file. Each line in the JSONL file must have the format:
     ///       
     /// `{\"prompt\": \"<first prompt>\", \"completion\": \"<expected completion given first prompt>\"}`
     /// 

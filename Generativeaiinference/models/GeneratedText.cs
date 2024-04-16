@@ -55,7 +55,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Double Likelihood { get; set; }
         
         /// <value>
-        /// The reason why the model stopped generating tokens. 
+        /// The reason why the model stopped generating tokens.
         /// <br/>
         /// A model stops generating tokens if the model hits a natural stop point or reaches a provided stop sequence.
         /// 

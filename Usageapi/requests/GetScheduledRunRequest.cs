@@ -20,7 +20,7 @@ namespace Oci.UsageapiService.Requests
     {
         
         /// <value>
-        /// The scheduledRun unique OCID.
+        /// The scheduledRun unique OCID
         /// </value>
         /// <remarks>
         /// Required

@@ -77,6 +77,12 @@ namespace Oci.DatabaseService.Models
         public string DbVersion { get; set; }
         
         /// <value>
+        /// The Autonomous Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// </value>
+        [JsonProperty(PropertyName = "databaseSoftwareImageId")]
+        public string DatabaseSoftwareImageId { get; set; }
+        
+        /// <value>
         /// *No longer used.* This parameter is no longer used for Autonomous Database on dedicated Exadata infrasture. Specify a `peerCloudAutonomousVmClusterId` instead. Using this parameter will cause the operation to fail.
         /// 
         /// </value>

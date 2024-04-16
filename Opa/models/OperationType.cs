@@ -30,6 +30,10 @@ namespace Oci.OpaService.Models
       [EnumMember(Value = "CREATE_OPA_INSTANCE_ATTACHMENT")]
       CreateOpaInstanceAttachment,
       [EnumMember(Value = "DELETE_OPA_INSTANCE_ATTACHMENT")]
-      DeleteOpaInstanceAttachment
+      DeleteOpaInstanceAttachment,
+      [EnumMember(Value = "START_OPA_INSTANCE")]
+      StartOpaInstance,
+      [EnumMember(Value = "STOP_OPA_INSTANCE")]
+      StopOpaInstance
   }
 }

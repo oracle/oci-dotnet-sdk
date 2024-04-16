@@ -22,6 +22,9 @@ namespace Oci.DatabasemigrationService.Models
     public class NfsDataTransferMediumDetails : DataTransferMediumDetailsV2
     {
         
+        [JsonProperty(PropertyName = "objectStorageBucket")]
+        public ObjectStoreBucket ObjectStorageBucket { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "NFS";
     }

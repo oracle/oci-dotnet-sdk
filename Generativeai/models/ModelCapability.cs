@@ -26,6 +26,8 @@ namespace Oci.GenerativeaiService.Models
       [EnumMember(Value = "TEXT_EMBEDDINGS")]
       TextEmbeddings,
       [EnumMember(Value = "FINE_TUNE")]
-      FineTune
+      FineTune,
+      [EnumMember(Value = "CHAT")]
+      Chat
   }
 }

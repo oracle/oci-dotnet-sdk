@@ -442,6 +442,55 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAutonomousDatabaseSoftwareImages operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAutonomousDatabaseSoftwareImagesResponse> ListAutonomousDatabaseSoftwareImagesResponseEnumerator(ListAutonomousDatabaseSoftwareImagesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAutonomousDatabaseSoftwareImagesRequest, ListAutonomousDatabaseSoftwareImagesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAutonomousDatabaseSoftwareImages(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AutonomousDatabaseSoftwareImageSummary objects
+        /// contained in responses from the ListAutonomousDatabaseSoftwareImages operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AutonomousDatabaseSoftwareImageSummary> ListAutonomousDatabaseSoftwareImagesRecordEnumerator(ListAutonomousDatabaseSoftwareImagesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAutonomousDatabaseSoftwareImagesRequest, ListAutonomousDatabaseSoftwareImagesResponse, AutonomousDatabaseSoftwareImageSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAutonomousDatabaseSoftwareImages(request, retryConfiguration, cancellationToken),
+                response => response.AutonomousDatabaseSoftwareImageCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListAutonomousDatabases operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
