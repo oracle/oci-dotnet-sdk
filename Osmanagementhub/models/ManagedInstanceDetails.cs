@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Identifying information for the specified managed instance.
+    /// Provides identifying information for the specified managed instance.
     /// </summary>
     public class ManagedInstanceDetails 
     {
         
         /// <value>
-        /// The OCID of the managed instance.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance.
         /// </value>
         /// <remarks>
         /// Required

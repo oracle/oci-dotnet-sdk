@@ -115,6 +115,12 @@ namespace Oci.CoreService.Models
         public string FaultDomain { get; set; }
         
         /// <value>
+        /// The OCID of the cluster placement group of the instance.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>

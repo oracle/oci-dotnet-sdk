@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Summary information pertaining to an installed package on a managed instance group.
+    /// Provides summary information for a package installed on a managed instance group.
     /// </summary>
     public class ManagedInstanceGroupInstalledPackageSummary 
     {

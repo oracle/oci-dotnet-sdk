@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// The status of the data source.
+  /// The enablement status of the data source
   /// </summary>
   public enum DataSourceStatus {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

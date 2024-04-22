@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Results of a workRequestError search. Contains both WorkRequestError items and other information, such as metadata.
+    /// The collection of work request error resources. These result from a
+    /// workRequestError search. Contains WorkRequestError items and other
+    /// information, such as metadata.
+    /// 
     /// </summary>
     public class WorkRequestErrorCollection 
     {
         
         /// <value>
-        /// List of workRequestError objects.
+        /// List of workRequestError resources
         /// </value>
         /// <remarks>
         /// Required

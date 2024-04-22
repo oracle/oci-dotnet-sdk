@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Continuous query start policy object
+    /// Start policy for continuous query
     /// </summary>
     [JsonConverter(typeof(ContinuousQueryStartPolicyModelConverter))]
     public class ContinuousQueryStartPolicy 
     {
                 ///
         /// <value>
-        /// policy used for deciding the query start time
+        /// Start policy delay timing
         /// </value>
         ///
         public enum StartPolicyTypeEnum {

@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The OCID of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// OCId of the problem.
+        /// OCID of the problem.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Requests
         public string ProblemId { get; set; }
         
         /// <value>
-        /// The maximum number of items to return.
+        /// The maximum number of items to return
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
@@ -52,7 +52,7 @@ namespace Oci.CloudguardService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'.
+        /// The sort order to use
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrders> SortOrder { get; set; }

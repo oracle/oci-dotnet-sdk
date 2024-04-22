@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Tactic summary.
+    /// Summary information for a tactic.
     /// </summary>
     public class TacticSummary 
     {
         
         /// <value>
-        /// Unique identifier for the tactic.
+        /// Unique identifier for the tactic
         /// </value>
         /// <remarks>
         /// Required

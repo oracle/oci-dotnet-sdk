@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of the ResponderRule.
+    /// Summary information for a responder rule.
     /// </summary>
     public class ResponderRuleSummary 
     {
         
         /// <value>
-        /// Identifier for ResponderRule.
+        /// Unique identifier for responder rule
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// ResponderRule Display Name
+        /// Display name for responder rule
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// ResponderRule Description
+        /// Responder rule description
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Type of Responder
+        /// Type of responder
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ResponderType> Type { get; set; }
         
         /// <value>
-        /// List of Policy
+        /// List of policies
         /// </value>
         [JsonProperty(PropertyName = "policies")]
         public System.Collections.Generic.List<string> Policies { get; set; }
@@ -80,7 +80,7 @@ namespace Oci.CloudguardService.Models
         };
 
         /// <value>
-        /// Supported Execution Modes
+        /// Supported execution modes for responder rule
         /// </value>
         [JsonProperty(PropertyName = "supportedModes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<SupportedModesEnum> SupportedModes { get; set; }
@@ -95,13 +95,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the responder rule was updated. Format defined by RFC3339.
+        /// The date and time the responder rule was last updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the ResponderRule.
+        /// The current lifecycle state of the responder rule
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

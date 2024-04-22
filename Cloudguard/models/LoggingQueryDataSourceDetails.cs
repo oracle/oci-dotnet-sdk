@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information about new Logging Query of type DataSource.
+    /// Information for a logging query for a data source.
     /// </summary>
     public class LoggingQueryDataSourceDetails : DataSourceDetails
     {
         
         /// <value>
-        /// Logging Query regions
+        /// List of logging query regions
         /// </value>
         [JsonProperty(PropertyName = "regions")]
         public System.Collections.Generic.List<string> Regions { get; set; }
         
         /// <value>
-        /// The continuous query expression that is run periodically.
+        /// The continuous query expression that is run periodicall
         /// </value>
         [JsonProperty(PropertyName = "query")]
         public string Query { get; set; }
@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<int> IntervalInMinutes { get; set; }
         
         /// <value>
-        /// The integer value that must be exceeded, fall below or equal to (depending on the operator), the query result to trigger an event.
+        /// The integer value that must be exceeded, fall below or equal to (depending on the operator), for the query result to trigger an event
         /// </value>
         [JsonProperty(PropertyName = "threshold")]
         public System.Nullable<int> Threshold { get; set; }
@@ -49,21 +49,21 @@ namespace Oci.CloudguardService.Models
         public ContinuousQueryStartPolicy QueryStartTime { get; set; }
         
         /// <value>
-        /// Operator used in Data Soruce
+        /// Operator used in data source
         /// </value>
         [JsonProperty(PropertyName = "operator")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LoggingQueryOperatorType> Operator { get; set; }
         
         /// <value>
-        /// Logging query type for data source (Sighting/Insight)
+        /// Type of logging query for data source (Sighting/Insight)
         /// </value>
         [JsonProperty(PropertyName = "loggingQueryType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LoggingQueryType> LoggingQueryType { get; set; }
         
         /// <value>
-        /// The additional entities count used for data source query.
+        /// The additional entities count used for data source query
         /// </value>
         [JsonProperty(PropertyName = "additionalEntitiesCount")]
         public System.Nullable<int> AdditionalEntitiesCount { get; set; }

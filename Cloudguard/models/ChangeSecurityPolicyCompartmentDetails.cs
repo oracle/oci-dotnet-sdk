@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// Parameters to be used to move a security policy to a different compartment.
     /// </summary>
     public class ChangeSecurityPolicyCompartmentDetails 
     {

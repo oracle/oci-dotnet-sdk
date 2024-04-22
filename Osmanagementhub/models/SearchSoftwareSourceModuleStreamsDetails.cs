@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Contains a list of software sources to get the combined list of module streams from all of those software sources.
+    /// Provides the information used to search for a set of module streams from a list software sources.
     /// </summary>
     public class SearchSoftwareSourceModuleStreamsDetails 
     {
         
         /// <value>
-        /// List of software source OCIDs.
+        /// List of software source [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required

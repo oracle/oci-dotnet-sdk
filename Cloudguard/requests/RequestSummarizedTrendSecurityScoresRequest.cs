@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The OCID of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Requests
         public System.Nullable<System.DateTime> TimeScoreComputedLessThanOrEqualTo { get; set; }
         
         /// <value>
-        /// The maximum number of items to return.
+        /// The maximum number of items to return
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }

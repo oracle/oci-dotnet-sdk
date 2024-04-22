@@ -16,22 +16,40 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// Provides the information used to update a managed instance.
     /// </summary>
     public class UpdateManagedInstanceDetails 
     {
         
         /// <value>
-        /// The OCID of a management station to be used as the preferred primary.
+        /// User-specified description of the managed instance. Avoid entering confidential information.
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station for the instance to use as primary management station.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "primaryManagementStationId")]
         public string PrimaryManagementStationId { get; set; }
         
         /// <value>
-        /// The OCID of a management station to be used as the preferred secondary.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station for the instance to use as secondary management station.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "secondaryManagementStationId")]
         public string SecondaryManagementStationId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Oracle Notifications service (ONS) topic. ONS is the channel used to send notifications to the customer.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "notificationTopicId")]
+        public string NotificationTopicId { get; set; }
+        
+        [JsonProperty(PropertyName = "autonomousSettings")]
+        public UpdatableAutonomousSettings AutonomousSettings { get; set; }
         
     }
 }

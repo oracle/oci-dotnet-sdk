@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the lifecycle stage.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle stage.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string LifecycleStageId { get; set; }
         
         /// <value>
-        /// Details for managed instances to detach from the lifecycle stage.
+        /// Details for the managed instance to detach from the lifecycle stage.
         /// </value>
         /// <remarks>
         /// Required

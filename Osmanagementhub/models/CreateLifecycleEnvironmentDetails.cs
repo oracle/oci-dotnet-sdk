@@ -16,16 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Creates a lifecycle environment.
-    /// A lifecycle environment is a user-defined pipeline to deliver curated, 
-    /// versioned content in a prescribed, methodical manner.
+    /// Provides the information used to create a lifecycle environment. A lifecycle environment is a user-defined pipeline to deliver curated, versioned content in a prescribed, methodical manner.
     /// 
     /// </summary>
     public class CreateLifecycleEnvironmentDetails 
     {
         
         /// <value>
-        /// The OCID of the tenancy containing the lifecycle environment.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -35,7 +33,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name for the lifecycle environment. Does not have to be unique and you can change the name later. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -45,13 +43,13 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// User specified information about the lifecycle environment.
+        /// User-specified information about the lifecycle environment. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// User specified list of ranked lifecycle stages to be created for the lifecycle environment.
+        /// User-specified list of ranked lifecycle stages used within the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -61,7 +59,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<CreateLifecycleStageDetails> Stages { get; set; }
         
         /// <value>
-        /// The CPU architecture of the managed instance(s) in the lifecycle environment.
+        /// The CPU architecture of the managed instances in the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +70,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// The operating system type of the managed instance(s) in the lifecycle environment.
+        /// The operating system of the managed instances in the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -83,7 +81,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<OsFamily> OsFamily { get; set; }
         
         /// <value>
-        /// The software source vendor name.
+        /// The vendor of the operating system used by the managed instances in the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -92,6 +90,14 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "vendorName")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<VendorName> VendorName { get; set; }
+        
+        /// <value>
+        /// The location of managed instances attached to the lifecycle environment. If no location is provided, the default is 'ON_PREMISE.'
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "location")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ManagedInstanceLocation> Location { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

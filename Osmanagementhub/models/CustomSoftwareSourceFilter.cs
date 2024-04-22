@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Used to apply filters to a VendorSoftwareSource to create/update CustomSoftwareSources.
+    /// Provides the information used to apply filters to a vendor software source to create or update a custom software source.
     /// </summary>
     public class CustomSoftwareSourceFilter 
     {

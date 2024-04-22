@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Details about Security Zone Target.
+    /// Target details for a security zone target.
     /// </summary>
     public class SecurityZoneTargetDetails : TargetDetails
     {
         
         /// <value>
-        /// The OCID of the security zone to associate this compartment with.
+        /// The OCID of the security zone to associate with this compartment
         /// </value>
         [JsonProperty(PropertyName = "securityZoneId")]
         public string SecurityZoneId { get; set; }
         
         /// <value>
-        /// The name of the security zone to associate this compartment with.
+        /// The name of the security zone to associate with this compartment.
         /// </value>
         [JsonProperty(PropertyName = "securityZoneDisplayName")]
         public string SecurityZoneDisplayName { get; set; }
         
         /// <value>
-        /// The list of security zone recipes to associate this compartment with.
+        /// The list of security zone recipes to associate with this compartment
         /// </value>
         [JsonProperty(PropertyName = "targetSecurityZoneRecipes")]
         public System.Collections.Generic.List<SecurityRecipe> TargetSecurityZoneRecipes { get; set; }

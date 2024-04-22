@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Description of Target.
+    /// A target defines the scope of resources that Cloud Guard
+    /// monitors and the rules to be enforced in that monitoring. A Target resource
+    /// contains the settings for a specific target.
+    /// 
     /// </summary>
     public class Target 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation.
+        /// Unique identifier that can't be changed after creation
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +35,13 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Target display name, can be renamed.
+        /// Target display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier where the resource is created
+        /// Compartment OCID where the resource is created
         /// </value>
         /// <remarks>
         /// Required
@@ -48,13 +51,13 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The target description.
+        /// The target description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// possible type of targets
+        /// Type of target
         /// </value>
         /// <remarks>
         /// Required
@@ -85,13 +88,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<int> RecipeCount { get; set; }
         
         /// <value>
-        /// List of detector recipes associated with target
+        /// List of detector recipes attached to target
         /// </value>
         [JsonProperty(PropertyName = "targetDetectorRecipes")]
         public System.Collections.Generic.List<TargetDetectorRecipe> TargetDetectorRecipes { get; set; }
         
         /// <value>
-        /// List of responder recipes associated with target
+        /// List of responder recipes attached to target
         /// </value>
         [JsonProperty(PropertyName = "targetResponderRecipes")]
         public System.Collections.Generic.List<TargetResponderRecipe> TargetResponderRecipes { get; set; }
@@ -112,20 +115,20 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the target was updated. Format defined by RFC3339.
+        /// The date and time the target was last updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the Target.
+        /// The current lifecycle state of the target
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
+        /// A message describing the current lifecycle state in more detail. For example, can be used to provide actionable information for a resource in Failed state. [DEPRECATE]
         /// </value>
         [JsonProperty(PropertyName = "lifecyleDetails")]
         public string LifecyleDetails { get; set; }

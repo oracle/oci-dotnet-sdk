@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information required to create TargetDetectorRecipe
+    /// Parameters to use to create a target detector recipe.
     /// </summary>
     public class CreateTargetDetectorRecipeDetails 
     {
         
         /// <value>
-        /// Identifier for DetectorRecipe.
+        /// Unique identifier for the target detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string DetectorRecipeId { get; set; }
         
         /// <value>
-        /// Overrides to be applied to Detector Rule associated with the target
+        /// List of overrides to be applied to detector rules associated with the target
         /// </value>
         [JsonProperty(PropertyName = "detectorRules")]
         public System.Collections.Generic.List<UpdateTargetRecipeDetectorRuleDetails> DetectorRules { get; set; }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Collection of the RecommendationSummary
+    /// Collection of RecommendationSummary resources.
     /// </summary>
     public class RecommendationSummaryCollection 
     {
         
         /// <value>
-        /// List of Recommendation
+        /// List of RecommendationSummary resources
         /// </value>
         /// <remarks>
         /// Required
@@ -30,6 +30,12 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<RecommendationSummary> Items { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

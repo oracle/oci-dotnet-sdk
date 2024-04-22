@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The unique identifier of the security zone (`SecurityZone`)
+        /// The unique identifier of the security zone (`SecurityZone` resource).
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public string SecurityZoneId { get; set; }
         
         /// <value>
-        /// The compartment to which you want to move the security zone.
+        /// The compartment to which you want to move the security zone
         /// </value>
         /// <remarks>
         /// Required

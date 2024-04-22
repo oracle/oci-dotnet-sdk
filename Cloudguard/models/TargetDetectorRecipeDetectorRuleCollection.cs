@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of the DetectorRule within Target.
+    /// Collection of summary information for target detector recipe detector rules.
     /// </summary>
     public class TargetDetectorRecipeDetectorRuleCollection 
     {
         
         /// <value>
-        /// List of TargetDetectorRecipeDetectorRuleSummary
+        /// List of TargetDetectorRecipeDetectorRuleSummary resources
         /// </value>
         /// <remarks>
         /// Required
@@ -30,6 +30,12 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<TargetDetectorRecipeDetectorRuleSummary> Items { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

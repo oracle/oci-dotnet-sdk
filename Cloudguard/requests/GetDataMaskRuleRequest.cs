@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// OCID of dataMaskRule
+        /// OCID of the data mask rule
         /// </value>
         /// <remarks>
         /// Required

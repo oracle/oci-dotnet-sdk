@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Definition of a registration profile of type GROUP.
+    /// Provides the information for a group registration profile.
     /// </summary>
     public class GroupProfile : Profile
     {

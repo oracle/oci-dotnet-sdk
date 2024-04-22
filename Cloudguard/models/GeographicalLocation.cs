@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Geographical Location of a problem
+    /// The geographical location of a problem in terms of latitude and longitude.
     /// </summary>
     public class GeographicalLocation 
     {
         
         /// <value>
-        /// Latitude
+        /// Latitude of problem
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public System.Double Latitude { get; set; }
         
         /// <value>
-        /// Longitude
+        /// Longitude of problem
         /// </value>
         /// <remarks>
         /// Required

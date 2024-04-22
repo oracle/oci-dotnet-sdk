@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A simple representation of a package using its displayName and NEVRA parts.
+    /// Provides summary information about a package.
     /// </summary>
     public class PackageNameSummary 
     {
         
         /// <value>
-        /// Full package NEVRA name - this value should be unique.
+        /// Full package name in NERVA format. This value should be unique.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,13 +48,13 @@ namespace Oci.OsmanagementhubService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// Version of the installed package.
+        /// The version of the software package.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
         
         /// <value>
-        /// The architecture for which this package was built.
+        /// The CPU architecture type for which this package was built.
         /// </value>
         [JsonProperty(PropertyName = "architecture")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

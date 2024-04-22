@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Security Score Aggregation Collection.
+    /// Collection of security score aggregation information.
     /// </summary>
     public class SecurityScoreAggregationCollection 
     {
         
         /// <value>
-        /// The items consist of all the SecurityScoreAggregation objects.
+        /// List of all the SecurityScoreAggregation resources objects.
         /// </value>
         /// <remarks>
         /// Required

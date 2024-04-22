@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// Details for the new managed instance group.
+        /// Provides the information used to create the managed instance group.
         /// </value>
         /// <remarks>
         /// Required

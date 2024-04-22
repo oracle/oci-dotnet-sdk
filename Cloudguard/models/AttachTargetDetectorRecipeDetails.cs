@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information required to create TargetDetectorRecipe
+    /// Identifier for an existing detector recipe to use to create
+    /// a new detector recipe (TargetDetectorRecipe resource) to be
+    /// attached to a target.
+    /// 
     /// </summary>
     public class AttachTargetDetectorRecipeDetails 
     {
         
         /// <value>
-        /// DetectorRecipe Identifier
+        /// Detector recipe unique identifier
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Description of a software source registration profile to be created.
+    /// Provides the information used to create the software source registration profile.
     /// </summary>
     public class CreateSoftwareSourceProfileDetails : CreateProfileDetails
     {
         
         /// <value>
-        /// The software source vendor name.
+        /// The vendor of the operating system for the instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,12 +55,8 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// The list of software source OCIDs that the registration profile will use.
+        /// The list of software source [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that the registration profile will use.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SoftwareSourceIds is required.")]
         [JsonProperty(PropertyName = "softwareSourceIds")]
         public System.Collections.Generic.List<string> SoftwareSourceIds { get; set; }
         

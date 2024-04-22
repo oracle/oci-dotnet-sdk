@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// ManagedListType Identifier
+        /// Unique identifier for a managed list type
         /// </value>
         /// <remarks>
         /// Required
@@ -32,17 +32,23 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// ManagedListType description
+        /// Managed list type description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The current state of the resource.
+        /// The current lifecycle state of the resource
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

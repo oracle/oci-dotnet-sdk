@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Target selection on basis of TargetIds.
+    /// Target selection on basis of target IDs.
     /// </summary>
     public class TargetIdsSelected : TargetSelected
     {
         
         /// <value>
-        /// Ids of Target
+        /// IDs of targets
         /// </value>
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<string> Values { get; set; }

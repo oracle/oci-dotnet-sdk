@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// Possible scheduled job operation types.
+  /// Type of operation the scheduled job is performing.
   /// </summary>
   public enum OperationTypes {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -50,6 +50,18 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "SYNC_MANAGEMENT_STATION_MIRROR")]
       SyncManagementStationMirror,
       [EnumMember(Value = "PROMOTE_LIFECYCLE")]
-      PromoteLifecycle
+      PromoteLifecycle,
+      [EnumMember(Value = "INSTALL_WINDOWS_UPDATES")]
+      InstallWindowsUpdates,
+      [EnumMember(Value = "INSTALL_ALL_WINDOWS_UPDATES")]
+      InstallAllWindowsUpdates,
+      [EnumMember(Value = "INSTALL_SECURITY_WINDOWS_UPDATES")]
+      InstallSecurityWindowsUpdates,
+      [EnumMember(Value = "INSTALL_BUGFIX_WINDOWS_UPDATES")]
+      InstallBugfixWindowsUpdates,
+      [EnumMember(Value = "INSTALL_ENHANCEMENT_WINDOWS_UPDATES")]
+      InstallEnhancementWindowsUpdates,
+      [EnumMember(Value = "INSTALL_OTHER_WINDOWS_UPDATES")]
+      InstallOtherWindowsUpdates
   }
 }

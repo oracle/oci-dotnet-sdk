@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The details for Responder Configuration
+    /// The configuration details for a responder rule execution.
     /// </summary>
     public class ExecuteResponderExecutionDetails 
     {
         
         /// <value>
-        /// ResponderRule configurations
+        /// List of responder rule configurations
         /// </value>
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<ResponderConfiguration> Configurations { get; set; }

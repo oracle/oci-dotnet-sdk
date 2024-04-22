@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Update cloud guard configuration details for a tenancy.
+    /// Parameters to update Cloud Guard configuration details for a tenancy.
     /// </summary>
     public class UpdateConfigurationDetails 
     {
         
         /// <value>
-        /// The reporting region value
+        /// The reporting region
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string ReportingRegion { get; set; }
         
         /// <value>
-        /// Status of Cloud Guard Tenant
+        /// Status of Cloud Guard tenant
         /// </value>
         /// <remarks>
         /// Required
@@ -41,6 +41,12 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CloudGuardStatus> Status { get; set; }
+        
+        /// <value>
+        /// List of service configurations for tenant
+        /// </value>
+        [JsonProperty(PropertyName = "serviceConfigurations")]
+        public System.Collections.Generic.List<ServiceConfiguration> ServiceConfigurations { get; set; }
         
         /// <value>
         /// Identifies if Oracle managed resources will be created by customers.

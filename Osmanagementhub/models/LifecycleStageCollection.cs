@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a lifecycle stage search. Contains both lifecycle stage summary items and other data.
+    /// A set of lifecycle stages returned for the {@link #listLifecycleStages(ListLifecycleStagesRequest) listLifecycleStages} operation.
+    /// 
     /// </summary>
     public class LifecycleStageCollection 
     {

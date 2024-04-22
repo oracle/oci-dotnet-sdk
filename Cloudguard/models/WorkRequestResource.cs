@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A resource created or operated on by a work request.
+    /// Parameters of a work request resource, which is created or operated on by a work request.
     /// </summary>
     public class WorkRequestResource 
     {
         
         /// <value>
-        /// The resource type the work request affects.
+        /// The resource type the work request affects
         /// </value>
         /// <remarks>
         /// Required
@@ -47,7 +47,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ActionType> ActionType { get; set; }
         
         /// <value>
-        /// The identifier of the resource the work request affects.
+        /// The identifier of the resource that the work request affects
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.CloudguardService.Models
         public string EntityUri { get; set; }
         
         /// <value>
-        /// Additional information that helps to explain the resource.
+        /// Additional information that helps to explain the resource
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

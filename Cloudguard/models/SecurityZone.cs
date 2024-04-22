@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A security zone is associated with a security zone recipe and enforces all security zone policies in the recipe. Any actions in the zone's compartment (and any subcompartments in the zone) that violate a policy are denied.
+    /// A security zone is associated with a security zone recipe and enforces
+    /// all security zone policies in the recipe. Any actions in the zone's compartment
+    /// (and any subcompartments in the zone) that violate a policy are denied.
+    /// 
     /// </summary>
     public class SecurityZone 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that can\u2019t be changed after creation
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +35,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The security zone's name
+        /// The security zone's display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -54,7 +57,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the recipe (`SecurityRecipe`) for the security zone
+        /// The OCID of the recipe (`SecurityRecipe` resource) for the security zone
         /// </value>
         /// <remarks>
         /// Required
@@ -88,7 +91,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the security zone
+        /// The current lifecycle state of the security zone
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

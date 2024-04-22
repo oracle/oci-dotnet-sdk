@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details about the software sources to be detached.
+    /// Provides the information used to detach the software sources from the managed instance.
     /// </summary>
     public class DetachSoftwareSourcesFromManagedInstanceDetails 
     {

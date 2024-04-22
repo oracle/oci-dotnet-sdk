@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The information about a lifecycle stage.
+    /// Provides the information used to create a lifecycle stage.
     /// </summary>
     public class CreateLifecycleStageDetails 
     {
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name for the lifecycle stage. Does not have to be unique and you can change the name later. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,8 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// User specified rank for the lifecycle stage.
-        /// Rank determines the hierarchy of the lifecycle stages for a given lifecycle environment.
+        /// User-specified rank for the lifecycle stage. Rank determines the hierarchy of the lifecycle stages within the lifecycle environment.
         /// 
         /// </value>
         /// <remarks>

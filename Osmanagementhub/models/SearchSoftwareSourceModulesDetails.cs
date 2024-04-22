@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Contains a list of software sources to get the combined list of modules from all of those software sources.
+    /// Provides the information used to search for a set of modules from a list software sources.
     /// </summary>
     public class SearchSoftwareSourceModulesDetails 
     {
         
         /// <value>
-        /// List of software source OCIDs.
+        /// List of sofware source [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required
@@ -57,7 +57,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// filters results, allowing only those with a name which contains the string.
+        /// A filter to return modules with a name that contains the given string.
         /// </value>
         [JsonProperty(PropertyName = "nameContains")]
         public string NameContains { get; set; }

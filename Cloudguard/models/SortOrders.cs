@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Sort orders.
+  /// Supported ort orders.
   /// </summary>
   public enum SortOrders {
       [EnumMember(Value = "ASC")]

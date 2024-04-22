@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The software source OCID.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,9 +30,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string SoftwareSourceId { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable.
-        /// <br/>
-        /// Example: My new resource
+        /// A filter to return resources that match the given user-friendly name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
@@ -44,10 +42,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string DisplayNameContains { get; set; }
         
         /// <value>
-        /// A boolean variable that is used to list only the latest versions of packages, module streams,
-        /// and stream profiles when set to true. All packages, module streams, and stream profiles are
-        /// returned when set to false.
-        /// 
+        /// Indicates whether to list only the latest versions of packages, module streams, and stream profiles.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLatest")]
         public System.Nullable<bool> IsLatest { get; set; }

@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// Details for the new registration profile.
+        /// Provides the information used to create the registration profile.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a module stream profile search. Contains both ModuleStreamProfileSummary items and other information, such as metadata.
+    /// A set of modules returned for the {@link #listManagedInstanceGroupAvailableModules(ListManagedInstanceGroupAvailableModulesRequest) listManagedInstanceGroupAvailableModules} operation.
     /// </summary>
     public class ManagedInstanceGroupAvailableModuleCollection 
     {
         
         /// <value>
-        /// List of module stream profile.
+        /// List of available modules.
         /// </value>
         /// <remarks>
         /// Required

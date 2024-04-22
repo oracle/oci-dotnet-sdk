@@ -44,7 +44,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the error occured. An RFC3339 formatted datetime string.
+        /// The time the error occured. (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         /// <remarks>
         /// Required

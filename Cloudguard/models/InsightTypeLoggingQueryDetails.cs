@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Additional details specific to insight type DataSource.
+    /// Additional details for Insight type queries on a data source.
     /// </summary>
     public class InsightTypeLoggingQueryDetails : LoggingQueryDetails
     {

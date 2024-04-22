@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Filter type can be config filter or condition filter
+  /// Filter type (config filter or condition filter).
   /// </summary>
   public enum ConditionFilterType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

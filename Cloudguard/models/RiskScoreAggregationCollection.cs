@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Risk Score Aggregation Collection.
+    /// Collection of RiskScoreAggregation resources.
     /// </summary>
     public class RiskScoreAggregationCollection 
     {
         
         /// <value>
-        /// The items consist of all the RiskScoreAggregation objects.
+        /// The list of all the RiskScoreAggregation resources.
         /// </value>
         /// <remarks>
         /// Required

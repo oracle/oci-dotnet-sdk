@@ -13,13 +13,15 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// Possible vendor names.
+  /// Name of OS vendor.
   /// </summary>
   public enum VendorName {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "ORACLE")]
-      Oracle
+      Oracle,
+      [EnumMember(Value = "MICROSOFT")]
+      Microsoft
   }
 }

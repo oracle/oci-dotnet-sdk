@@ -28,7 +28,7 @@ namespace Oci.OsmanagementhubService.Models
         public string ManagementStationVersion { get; set; }
         
         /// <value>
-        /// Target config needed for set management station config.
+        /// The configuration of the management station.
         /// </value>
         [JsonProperty(PropertyName = "config")]
         public System.Byte[] Config { get; set; }

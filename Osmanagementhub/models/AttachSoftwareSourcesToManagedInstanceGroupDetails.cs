@@ -16,14 +16,18 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The software sources OCIDs to attach to the managed instance group.
+    /// Provides the information used to attach software sources to a managed instance group.
     /// </summary>
     public class AttachSoftwareSourcesToManagedInstanceGroupDetails 
     {
         
         /// <value>
-        /// The list of software sources OCIDs to be attached.
+        /// List of software source [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) to attach to the group.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SoftwareSources is required.")]
         [JsonProperty(PropertyName = "softwareSources")]
         public System.Collections.Generic.List<string> SoftwareSources { get; set; }
         

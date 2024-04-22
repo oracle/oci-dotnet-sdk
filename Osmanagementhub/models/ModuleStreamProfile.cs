@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A module stream profile provided by a software source.
+    /// An object that defines a module stream profile provide by a software source.
     /// </summary>
     public class ModuleStreamProfile 
     {

@@ -16,13 +16,26 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Target Detector recipe
+    /// A TargetDetectorRecipe resource contains a specific instance of one of the
+    /// supported detector types (for example, activity, configuration, or threat)
+    /// in which some settings can be modified specifically for a single target.
+    /// <br/>
+    /// A TargetDetectorRecipe resource:
+    /// * Is effectively a copy of a DetectorRecipe resource in which users can make
+    /// very limited changes if it\u2019s Oracle-managed, and more changes if it\u2019s user-managed.
+    /// * Is visible on the Cloud Guard Targets, Target Details page.
+    /// * Is located in a specific OCI compartment.
+    /// * Can be modified by users, programmatically or through the UI.
+    /// * Changes that can be made here override any settings in the corresponding
+    /// DetectorRecipe, of which the TargetDetectorRecipe resource is effectively a copy,
+    /// created when the detector recipe is attached to the target.
+    /// 
     /// </summary>
     public class TargetDetectorRecipe 
     {
         
         /// <value>
-        /// Ocid for detector recipe
+        /// OCID for the detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +45,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Display name of detector recipe.
+        /// Display name of the detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +61,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// compartmentId of detector recipe
+        /// Compartment OCID of the detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +71,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Unique identifier for Detector Recipe of which this is an extension
+        /// Unique identifier for of original Oracle-managed detector recipe on which the TargetDetectorRecipe is based
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +81,7 @@ namespace Oci.CloudguardService.Models
         public string DetectorRecipeId { get; set; }
         
         /// <value>
-        /// Owner of detector recipe
+        /// Owner of the detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -90,13 +103,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<DetectorEnum> Detector { get; set; }
         
         /// <value>
-        /// List of detector rules for the detector type for recipe - user input
+        /// List of detector rules for the detector recipe - user input
         /// </value>
         [JsonProperty(PropertyName = "detectorRules")]
         public System.Collections.Generic.List<TargetDetectorRecipeDetectorRule> DetectorRules { get; set; }
         
         /// <value>
-        /// List of effective detector rules for the detector type for recipe after applying defaults
+        /// List of currently enabled detector rules for the detector type for recipe after applying defaults
         /// </value>
         [JsonProperty(PropertyName = "effectiveDetectorRules")]
         public System.Collections.Generic.List<TargetDetectorRecipeDetectorRule> EffectiveDetectorRules { get; set; }
@@ -108,17 +121,30 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the target detector recipe was updated. Format defined by RFC3339.
+        /// The date and time the target detector recipe was last updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the resource.
+        /// The current lifecycle state of the resource
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
+        /// <value>
+        /// Recipe type ( STANDARD, ENTERPRISE )
+        /// </value>
+        [JsonProperty(PropertyName = "detectorRecipeType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DetectorRecipeEnum> DetectorRecipeType { get; set; }
         
         /// <value>
         /// The number of days for which source data is retained

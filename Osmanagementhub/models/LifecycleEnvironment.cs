@@ -16,13 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Contains versioned software source content and lifecycle stages for a managed instance.
+    /// Defines the lifecycle environment, including the associated versioned software sources, lifecycle stages, and managed instances.
+    /// 
     /// </summary>
     public class LifecycleEnvironment 
     {
         
         /// <value>
-        /// The OCID of the resource that is immutable on creation.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the tenancy containing the lifecycle environment.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +43,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// The user-friendly name for the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,13 +53,13 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// User specified information about the lifecycle environment.
+        /// User-specified information about the lifecycle environment.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// User specified list of lifecycle stages to be created for the lifecycle environment.
+        /// User-specified list of lifecycle stages used within the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +69,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<LifecycleStage> Stages { get; set; }
         
         /// <value>
-        /// The list of managed instance OCIDs specified in the lifecycle stage.
+        /// List of managed instance [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) assigned to the lifecycle stage.
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceIds")]
         public System.Collections.Generic.List<ManagedInstanceDetails> ManagedInstanceIds { get; set; }
@@ -107,7 +108,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The operating system type of the target instances.
+        /// The operating system of the managed instances in the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -118,7 +119,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<OsFamily> OsFamily { get; set; }
         
         /// <value>
-        /// The CPU architecture of the target instances.
+        /// The CPU architecture of the managed instances in the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -129,7 +130,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// The software source vendor name.
+        /// The vendor of the operating system used by the managed instances in the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required
@@ -140,7 +141,14 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<VendorName> VendorName { get; set; }
         
         /// <value>
-        /// The time the lifecycle environment was created. An RFC3339 formatted datetime string.
+        /// The location of managed instances attached to the lifecycle environment.
+        /// </value>
+        [JsonProperty(PropertyName = "location")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ManagedInstanceLocation> Location { get; set; }
+        
+        /// <value>
+        /// The time the lifecycle environment was created (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         /// <remarks>
         /// Required
@@ -150,7 +158,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the lifecycle environment was last modified. An RFC3339 formatted datetime string.
+        /// The time the lifecycle environment was last modified (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         [JsonProperty(PropertyName = "timeModified")]
         public System.Nullable<System.DateTime> TimeModified { get; set; }

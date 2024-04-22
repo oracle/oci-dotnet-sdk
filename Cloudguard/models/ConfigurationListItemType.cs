@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Possible configuration list item types
+  /// Possible configuration list item types.
   /// </summary>
   public enum ConfigurationListItemType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

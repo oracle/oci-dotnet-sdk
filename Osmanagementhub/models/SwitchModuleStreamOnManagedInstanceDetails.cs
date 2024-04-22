@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details of the module stream to be version switched on a managed instance.
+    /// Provides the information used to switch module streams on a managed instance.
     /// </summary>
     public class SwitchModuleStreamOnManagedInstanceDetails 
     {
@@ -43,6 +43,13 @@ namespace Oci.OsmanagementhubService.Models
         [Required(ErrorMessage = "StreamName is required.")]
         [JsonProperty(PropertyName = "streamName")]
         public string StreamName { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source that contains the module stream.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "softwareSourceId")]
+        public string SoftwareSourceId { get; set; }
         
     }
 }

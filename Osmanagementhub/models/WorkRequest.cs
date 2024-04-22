@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Describes a work request.
+    /// An object that defines a work request.
     /// </summary>
     public class WorkRequest 
     {
@@ -44,7 +44,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
-        /// The OCID of the work request.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -84,10 +84,9 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<string> ChildrenId { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the work request. Work requests should be scoped to
-        /// the same compartment as the resource it affects. If the work request affects multiple resources,
-        /// and those resources are not in the same compartment, it is up to the service team to pick the primary
-        /// resource whose compartment should be used.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the work request.
+        /// Work requests should be scoped to the same compartment as the resource it affects.
+        /// If the work request affects multiple resources the different compartments, the services selects the compartment of the primary resource.
         /// 
         /// </value>
         /// <remarks>
@@ -98,7 +97,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The list of OCIDs for the resources affected by the work request.
+        /// The list of [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the resources affected by the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -108,10 +107,16 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
         
         /// <value>
-        /// A list of package names to be installed/updated/removed.
+        /// A list of package names to be installed, updated, or removed.
         /// </value>
         [JsonProperty(PropertyName = "packageNames")]
         public System.Collections.Generic.List<string> PackageNames { get; set; }
+        
+        /// <value>
+        /// The UUIDs of the target Windows update (only used when operation type is INSTALL_WINDOWS_UPDATES).
+        /// </value>
+        [JsonProperty(PropertyName = "windowsUpdateNames")]
+        public System.Collections.Generic.List<string> WindowsUpdateNames { get; set; }
         
         /// <value>
         /// The list of appstream modules being operated on.
@@ -130,8 +135,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<float> PercentComplete { get; set; }
         
         /// <value>
-        /// The date and time the work request was created - as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the work request was created (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         /// <remarks>
@@ -142,38 +146,80 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the work request was created - as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the work request started (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The date and time the work request was started - as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339),
-        /// section 14.29.
+        /// The date and time the work request started (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The date and time the work request was finished - as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
+        /// The date and time the work request completed (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
         
         /// <value>
-        /// The OCID of the resource that initiated the work request.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the resource that initiated the work request.
         /// </value>
         [JsonProperty(PropertyName = "initiatorId")]
         public string InitiatorId { get; set; }
         
         [JsonProperty(PropertyName = "managementStation")]
         public WorkRequestManagementStationDetails ManagementStation { get; set; }
+        
+        /// <value>
+        /// The scheduled date and time to retry the work request (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// </value>
+        [JsonProperty(PropertyName = "timeScheduled")]
+        public System.Nullable<System.DateTime> TimeScheduled { get; set; }
+        
+        /// <value>
+        /// The location of the bundle in the filesystem of the resource associated to this work request.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "contentLocation")]
+        public string ContentLocation { get; set; }
+        
+        /// <value>
+        /// The event id of the content. This property is required when the work request type is IMPORT_CONTENT or REMOVE_CONTENT.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "eventId")]
+        public string EventId { get; set; }
+        
+        /// <value>
+        /// The EventFingerprint associated with the content. This property is required when the work request type is IMPORT_CONTENT or REMOVE_CONTENT.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "contentChecksum")]
+        public string ContentChecksum { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the original work request that is being retried.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "retryOfId")]
+        public string RetryOfId { get; set; }
+        
+        /// <value>
+        /// Indicates whether this work request is managed by the Autonomous Linux service.
+        /// </value>
+        [JsonProperty(PropertyName = "retryIntervals")]
+        public System.Collections.Generic.List<int> RetryIntervals { get; set; }
+        
+        /// <value>
+        /// Indicates whether this work request is managed by the Autonomous Linux service.
+        /// </value>
+        [JsonProperty(PropertyName = "isManagedByAutonomousLinux")]
+        public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
         
     }
 }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Updatable information for a module stream profile.
+    /// Provides the information used to update a module stream profile.
     /// </summary>
     public class ModuleStreamProfileDetails 
     {
@@ -50,6 +50,13 @@ namespace Oci.OsmanagementhubService.Models
         [Required(ErrorMessage = "ProfileName is required.")]
         [JsonProperty(PropertyName = "profileName")]
         public string ProfileName { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source that contains the module stream.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "softwareSourceId")]
+        public string SoftwareSourceId { get; set; }
         
     }
 }

@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the log message was written. An RFC3339 formatted datetime string.
+        /// The date and time the log message was written (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         /// <remarks>
         /// Required

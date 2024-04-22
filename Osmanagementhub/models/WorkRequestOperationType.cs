@@ -68,6 +68,30 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "CREATE_SOFTWARE_SOURCE")]
       CreateSoftwareSource,
       [EnumMember(Value = "UPDATE_SOFTWARE_SOURCE")]
-      UpdateSoftwareSource
+      UpdateSoftwareSource,
+      [EnumMember(Value = "IMPORT_CONTENT")]
+      ImportContent,
+      [EnumMember(Value = "SYNC_AGENT_CONFIG")]
+      SyncAgentConfig,
+      [EnumMember(Value = "INSTALL_WINDOWS_UPDATES")]
+      InstallWindowsUpdates,
+      [EnumMember(Value = "LIST_WINDOWS_UPDATE")]
+      ListWindowsUpdate,
+      [EnumMember(Value = "GET_WINDOWS_UPDATE_DETAILS")]
+      GetWindowsUpdateDetails,
+      [EnumMember(Value = "INSTALL_ALL_WINDOWS_UPDATES")]
+      InstallAllWindowsUpdates,
+      [EnumMember(Value = "INSTALL_SECURITY_WINDOWS_UPDATES")]
+      InstallSecurityWindowsUpdates,
+      [EnumMember(Value = "INSTALL_BUGFIX_WINDOWS_UPDATES")]
+      InstallBugfixWindowsUpdates,
+      [EnumMember(Value = "INSTALL_ENHANCEMENT_WINDOWS_UPDATES")]
+      InstallEnhancementWindowsUpdates,
+      [EnumMember(Value = "INSTALL_OTHER_WINDOWS_UPDATES")]
+      InstallOtherWindowsUpdates,
+      [EnumMember(Value = "REMOVE_CONTENT")]
+      RemoveContent,
+      [EnumMember(Value = "UNREGISTER_MANAGED_INSTANCE")]
+      UnregisterManagedInstance
   }
 }

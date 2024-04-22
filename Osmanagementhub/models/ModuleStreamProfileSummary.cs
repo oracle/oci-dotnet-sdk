@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Summary information pertaining to a module stream profile provided by a software source.
+    /// Provides the summary information for a module stream profile contained within a software source.
     /// </summary>
     public class ModuleStreamProfileSummary 
     {
@@ -52,7 +52,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Indicates if this profile is the default for its module stream.
+        /// Indicates if this profile is the default for the module stream.
         /// </value>
         [JsonProperty(PropertyName = "isDefault")]
         public System.Nullable<bool> IsDefault { get; set; }

@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The OCID of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required
@@ -36,19 +36,19 @@ namespace Oci.CloudguardService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return only resources their feedProvider matches the given DataSourceFeedProvider.
+        /// A filter to return only resources when their feed provider matches the given feed provider (`DataSourceFeedProvider` resource).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dataSourceFeedProvider")]
         public System.Nullable<DataSourceFeedProvider> DataSourceFeedProvider { get; set; }
         
         /// <value>
-        /// The field life cycle state. Only one state can be provided. Default value for state is active. If no value is specified state is active.
+        /// The field lifecycle state. Only one state can be provided. Default value for state is active. If no value is specified state is active.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// The maximum number of items to return.
+        /// The maximum number of items to return
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
@@ -60,7 +60,7 @@ namespace Oci.CloudguardService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// A filter to return only resources their query type matches the given LoggingQueryType.
+        /// A filter to return only resources where their query type matches the given LoggingQueryType.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "loggingQueryType")]
         public System.Nullable<LoggingQueryType> LoggingQueryType { get; set; }
@@ -69,7 +69,7 @@ namespace Oci.CloudguardService.Requests
         /// Default is false.
         /// When set to true, the hierarchy of compartments is traversed
         /// and all compartments and subcompartments in the tenancy are
-        /// returned depending on the the setting of `accessLevel`.
+        /// returned depending on the setting of `accessLevel`.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
@@ -104,7 +104,7 @@ namespace Oci.CloudguardService.Requests
         public System.Nullable<AccessLevelEnum> AccessLevel { get; set; }
         
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'.
+        /// The sort order to use
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrders> SortOrder { get; set; }

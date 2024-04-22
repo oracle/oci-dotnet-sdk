@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Unique id for sighting associated with the endpoint.
+        /// Unique identifier for sighting associated with the endpoint
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string SightingId { get; set; }
         
         /// <value>
-        /// Unique id for cloudguard problem
+        /// Unique identifier for problem associated with the endpoint
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.CloudguardService.Models
         public string ProblemId { get; set; }
         
         /// <value>
-        /// Identifier for the sighting type
+        /// Unique identifier for the sighting type associated with the endpoint
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.CloudguardService.Models
         public string SightingType { get; set; }
         
         /// <value>
-        /// Display Name of the sighting type
+        /// Display name of the sighting type
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.CloudguardService.Models
         public string SightingTypeDisplayName { get; set; }
         
         /// <value>
-        /// IP Address of the Endpoint
+        /// IP address of the endpoint
         /// </value>
         /// <remarks>
         /// Required
@@ -82,7 +82,7 @@ namespace Oci.CloudguardService.Models
         public string IpAddress { get; set; }
         
         /// <value>
-        /// IP Address type of the Endpoint
+        /// Type of IP address for the endpoint
         /// </value>
         /// <remarks>
         /// Required
@@ -92,7 +92,7 @@ namespace Oci.CloudguardService.Models
         public string IpAddressType { get; set; }
         
         /// <value>
-        /// IP Address classification type of the endpoint
+        /// IP address classification type for the endpoint
         /// </value>
         [JsonProperty(PropertyName = "ipClassificationType")]
         public string IpClassificationType { get; set; }
@@ -122,13 +122,13 @@ namespace Oci.CloudguardService.Models
         public string AsnNumber { get; set; }
         
         /// <value>
-        /// Regions where activities were performed from this IP
+        /// Regions where activities were performed from this IP address
         /// </value>
         [JsonProperty(PropertyName = "regions")]
         public System.Collections.Generic.List<string> Regions { get; set; }
         
         /// <value>
-        /// Services where activities were performed from this IP
+        /// List of services where activities were performed from this IP address
         /// </value>
         [JsonProperty(PropertyName = "services")]
         public System.Collections.Generic.List<string> Services { get; set; }

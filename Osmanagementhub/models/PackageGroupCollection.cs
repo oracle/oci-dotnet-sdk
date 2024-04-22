@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a package group search. Contains both package group summary items and other information, such as metadata.
+    /// The set of package groups returned for the {@link #listPackageGroups(ListPackageGroupsRequest) listPackageGroups} {@link #searchSoftwareSourcePackageGroups(SearchSoftwareSourcePackageGroupsRequest) searchSoftwareSourcePackageGroups} operation.
     /// </summary>
     public class PackageGroupCollection 
     {

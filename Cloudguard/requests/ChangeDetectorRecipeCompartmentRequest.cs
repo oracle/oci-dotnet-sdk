@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// DetectorRecipe OCID
+        /// Detector recipe OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public string DetectorRecipeId { get; set; }
         
         /// <value>
-        /// The target compartment id.
+        /// The target compartment OCID
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Provides the summary of sighting endpoints
+    /// Collection of sighting endpoint summaries.
     /// </summary>
     public class SightingEndpointCollection 
     {
         
         /// <value>
-        /// List of SightingEndpointSummary
+        /// List of SightingEndpointSummary resources
         /// </value>
         /// <remarks>
         /// Required

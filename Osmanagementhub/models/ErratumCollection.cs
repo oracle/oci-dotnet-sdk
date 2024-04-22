@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a Erratum search. Contains boh ErratumSummary items and other information, such as metadata.
+    /// The set of errata returned for the {@link #listErrata(ListErrataRequest) listErrata} operation.
     /// </summary>
     public class ErratumCollection 
     {
         
         /// <value>
-        /// List of Errata.
+        /// List of errata.
         /// </value>
         /// <remarks>
         /// Required

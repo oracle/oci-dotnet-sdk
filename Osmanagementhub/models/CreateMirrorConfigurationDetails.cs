@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Information for creating a mirror configuration
+    /// Information used to create the mirror configuration for a management station.
     /// </summary>
     public class CreateMirrorConfigurationDetails 
     {
         
         /// <value>
-        /// Directory for the mirroring
+        /// Path to the data volume on the management station where software source mirrors are stored.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Directory { get; set; }
         
         /// <value>
-        /// Default port for the mirror
+        /// Default mirror listening port for http.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Port { get; set; }
         
         /// <value>
-        /// Default sslport for the mirror
+        /// Default mirror listening port for https.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Sslport { get; set; }
         
         /// <value>
-        /// Local path for the sslcert
+        /// Path to the SSL cerfificate.
         /// </value>
         [JsonProperty(PropertyName = "sslcert")]
         public string Sslcert { get; set; }

@@ -148,6 +148,55 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListManagedInstanceAvailableWindowsUpdates operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListManagedInstanceAvailableWindowsUpdatesResponse> ListManagedInstanceAvailableWindowsUpdatesResponseEnumerator(ListManagedInstanceAvailableWindowsUpdatesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListManagedInstanceAvailableWindowsUpdatesRequest, ListManagedInstanceAvailableWindowsUpdatesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListManagedInstanceAvailableWindowsUpdates(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AvailableWindowsUpdateSummary objects
+        /// contained in responses from the ListManagedInstanceAvailableWindowsUpdates operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AvailableWindowsUpdateSummary> ListManagedInstanceAvailableWindowsUpdatesRecordEnumerator(ListManagedInstanceAvailableWindowsUpdatesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListManagedInstanceAvailableWindowsUpdatesRequest, ListManagedInstanceAvailableWindowsUpdatesResponse, AvailableWindowsUpdateSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListManagedInstanceAvailableWindowsUpdates(request, retryConfiguration, cancellationToken),
+                response => response.AvailableWindowsUpdateCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListManagedInstanceErrata operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -242,6 +291,55 @@ namespace Oci.OsmanagementhubService
                 },
                 request => client.ListManagedInstanceInstalledPackages(request, retryConfiguration, cancellationToken),
                 response => response.InstalledPackageCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListManagedInstanceInstalledWindowsUpdates operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListManagedInstanceInstalledWindowsUpdatesResponse> ListManagedInstanceInstalledWindowsUpdatesResponseEnumerator(ListManagedInstanceInstalledWindowsUpdatesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListManagedInstanceInstalledWindowsUpdatesRequest, ListManagedInstanceInstalledWindowsUpdatesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListManagedInstanceInstalledWindowsUpdates(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the InstalledWindowsUpdateSummary objects
+        /// contained in responses from the ListManagedInstanceInstalledWindowsUpdates operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<InstalledWindowsUpdateSummary> ListManagedInstanceInstalledWindowsUpdatesRecordEnumerator(ListManagedInstanceInstalledWindowsUpdatesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListManagedInstanceInstalledWindowsUpdatesRequest, ListManagedInstanceInstalledWindowsUpdatesResponse, InstalledWindowsUpdateSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListManagedInstanceInstalledWindowsUpdates(request, retryConfiguration, cancellationToken),
+                response => response.InstalledWindowsUpdateCollection.Items
             );
         }
 
@@ -389,6 +487,55 @@ namespace Oci.OsmanagementhubService
                 },
                 request => client.ListManagedInstances(request, retryConfiguration, cancellationToken),
                 response => response.ManagedInstanceCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListWindowsUpdates operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListWindowsUpdatesResponse> ListWindowsUpdatesResponseEnumerator(ListWindowsUpdatesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListWindowsUpdatesRequest, ListWindowsUpdatesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListWindowsUpdates(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the WindowsUpdateSummary objects
+        /// contained in responses from the ListWindowsUpdates operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<WindowsUpdateSummary> ListWindowsUpdatesRecordEnumerator(ListWindowsUpdatesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListWindowsUpdatesRequest, ListWindowsUpdatesResponse, WindowsUpdateSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListWindowsUpdates(request, retryConfiguration, cancellationToken),
+                response => response.WindowsUpdateCollection.Items
             );
         }
 

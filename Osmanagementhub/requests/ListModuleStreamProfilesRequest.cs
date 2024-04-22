@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The software source OCID.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -38,9 +38,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string ModuleName { get; set; }
         
         /// <value>
-        /// The name of the stream of the containing module.  This parameter
-        /// is required if a profileName is specified.
-        /// 
+        /// The name of the module stream. This parameter is required if a profile name is specified.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "streamName")]
         public string StreamName { get; set; }

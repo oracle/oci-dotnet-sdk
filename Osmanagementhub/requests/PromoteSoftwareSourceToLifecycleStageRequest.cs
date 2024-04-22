@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the lifecycle stage.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle stage.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.OsmanagementhubService.Requests
         public PromoteSoftwareSourceToLifecycleStageDetails PromoteSoftwareSourceToLifecycleStageDetails { get; set; }
         
         /// <value>
-        /// The OCID for the software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source. This filter returns resources associated with this software source.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "softwareSourceId")]
         public string SoftwareSourceId { get; set; }

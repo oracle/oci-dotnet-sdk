@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// Update Configuration Details of Cloud Guard for a Tenancy.
+        /// Updates configuration details of Cloud Guard for a Tenancy.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public UpdateConfigurationDetails UpdateConfigurationDetails { get; set; }
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The OCID of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required

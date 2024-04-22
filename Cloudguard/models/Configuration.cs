@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// The reporting region value
+        /// The reporting region
         /// </value>
         /// <remarks>
         /// Required
@@ -32,14 +32,20 @@ namespace Oci.CloudguardService.Models
         public string ReportingRegion { get; set; }
         
         /// <value>
-        /// Status of Cloud Guard Tenant
+        /// Status of the Cloud Guard tenant
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CloudGuardStatus> Status { get; set; }
         
         /// <value>
-        /// Identifies if Oracle managed resources were created by customers
+        /// List of service configurations for this tenant
+        /// </value>
+        [JsonProperty(PropertyName = "serviceConfigurations")]
+        public System.Collections.Generic.List<ServiceConfiguration> ServiceConfigurations { get; set; }
+        
+        /// <value>
+        /// Were Oracle-managed resources created by customer?
         /// 
         /// </value>
         [JsonProperty(PropertyName = "selfManageResources")]

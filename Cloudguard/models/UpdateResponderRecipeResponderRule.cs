@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The details to be updated in ResponderRule
+    /// Parameters to use to update a responder recipe responder rule.
     /// </summary>
     public class UpdateResponderRecipeResponderRule 
     {
         
         /// <value>
-        /// ResponderRecipeRule Identifier
+        /// Unique identifier for the responder rule
         /// </value>
         /// <remarks>
         /// Required

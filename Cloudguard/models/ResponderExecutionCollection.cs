@@ -16,13 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Provides the summary of responder executions and their corresponding count value.
+    /// Collection of aggregated responder execution information,
+    /// including their corresponding count values.
+    /// 
     /// </summary>
     public class ResponderExecutionCollection 
     {
         
         /// <value>
-        /// List of ResponderExecutionSummary
+        /// List of ResponderExecutionSummary resources
         /// </value>
         /// <remarks>
         /// Required
@@ -30,6 +32,12 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ResponderExecutionSummary> Items { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

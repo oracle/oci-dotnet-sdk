@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details about the software sources to be attached.
+    /// Provides the information used to attach software sources to a managed instance.
     /// </summary>
     public class AttachSoftwareSourcesToManagedInstanceDetails 
     {

@@ -16,13 +16,17 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A security policy defines a security requirement for resources in a security zone. If a security zone enables a policy (using a recipe), then any action that attempts to violate that policy is denied.
+    /// A security policy (SecurityPolicy resource) defines security requirements
+    /// for resources in a security zone. If a security zone enables a security policy through
+    /// a security recipe (SecurityRecipe resource), then any action that would violate that
+    /// policy is blocked.
+    /// 
     /// </summary>
     public class SecurityPolicy 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that can\u2019t be changed after creation
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string FriendlyName { get; set; }
         
         /// <value>
-        /// The security policy's full name
+        /// The security policy's display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -50,7 +54,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The id of the security policy's compartment
+        /// The OCID of the security policy's compartment
         /// </value>
         /// <remarks>
         /// Required
@@ -71,7 +75,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<OwnerType> Owner { get; set; }
         
         /// <value>
-        /// The category of security policy
+        /// The category of the security policy
         /// </value>
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
@@ -95,7 +99,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the security policy
+        /// The current lifecycle state of the security policy
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -106,6 +110,12 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

@@ -16,14 +16,18 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The managed instance OCIDs to detach from the managed instance group.
+    /// Provides the information used to detach managed instances from a group.
     /// </summary>
     public class DetachManagedInstancesFromManagedInstanceGroupDetails 
     {
         
         /// <value>
-        /// The list of managed instance OCIDs to be detached.
+        /// List of managed instance [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) to detach from the group.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ManagedInstances is required.")]
         [JsonProperty(PropertyName = "managedInstances")]
         public System.Collections.Generic.List<string> ManagedInstances { get; set; }
         

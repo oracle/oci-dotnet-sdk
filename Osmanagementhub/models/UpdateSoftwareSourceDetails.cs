@@ -16,26 +16,26 @@ using Newtonsoft.Json.Linq;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Information for updating a software source.
+    /// Provides the information used to update a software source.
     /// </summary>
     [JsonConverter(typeof(UpdateSoftwareSourceDetailsModelConverter))]
     public class UpdateSoftwareSourceDetails 
     {
         
         /// <value>
-        /// The OCID of the tenancy containing the software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the software source.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// User friendly name for the software source.
+        /// User-friendly name for the software source.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Information specified by the user about the software source.
+        /// User-specified description of the software source.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -81,6 +81,9 @@ namespace Oci.OsmanagementhubService.Models
             {
                 case "CUSTOM":
                     obj = new UpdateCustomSoftwareSourceDetails();
+                    break;
+                case "VERSIONED":
+                    obj = new UpdateVersionedCustomSoftwareSourceDetails();
                     break;
                 case "VENDOR":
                     obj = new UpdateVendorSoftwareSourceDetails();

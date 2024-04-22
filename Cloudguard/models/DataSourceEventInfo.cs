@@ -16,7 +16,10 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Event info of a data source.
+    /// This resource can have multiple subtypes, depending on the dataSourceFeedProvider
+    /// value. For example, if dataSourceFeedProvider is LOGGINGQUERY, this resource
+    /// will be of type LoggingEventInfo.
+    /// 
     /// </summary>
     [JsonConverter(typeof(DataSourceEventInfoModelConverter))]
     public class DataSourceEventInfo 

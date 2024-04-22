@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Base condition object
+    /// The base condition resource.
     /// </summary>
     [JsonConverter(typeof(ConditionModelConverter))]
     public class Condition 
     {
                 ///
         /// <value>
-        /// Type of condition object
+        /// Type of condition resource
         /// </value>
         ///
         public enum KindEnum {

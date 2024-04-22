@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Identifying information for the specified managed instance group.
+    /// Provides identifying information for the specified managed instance group.
     /// </summary>
     public class ManagedInstanceGroupDetails 
     {
         
         /// <value>
-        /// The OCID of the managed instance group.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance group.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Managed instance group displayName.
+        /// Managed instance group name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

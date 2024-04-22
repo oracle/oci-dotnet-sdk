@@ -33,25 +33,33 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<bool> IsDryRun { get; set; }
         
         /// <value>
-        /// The set of module streams to enable.
+        /// The set of module streams to enable. If any streams of a module are already enabled, the service switches from the current stream to the new stream. 
+        /// Once complete, the streams will be in 'ENABLED' status.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "enable")]
         public System.Collections.Generic.List<ModuleStreamDetails> Enable { get; set; }
         
         /// <value>
-        /// The set of module streams to disable.
+        /// The set of module streams to disable. Any profiles that are installed for the module stream will be removed as part of the operation. 
+        /// Once complete, the streams will be in 'DISABLED' status.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "disable")]
         public System.Collections.Generic.List<ModuleStreamDetails> Disable { get; set; }
         
         /// <value>
-        /// The set of module stream profiles to install.
+        /// The set of module stream profiles to install. Any packages that are part of the profile are installed on the managed instance. 
+        /// Once complete, the profile will be in 'INSTALLED' status. The operation will return an error if you attempt to install a profile from a disabled stream, unless enabling the new module stream is included in this operation.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "install")]
         public System.Collections.Generic.List<ModuleStreamProfileDetails> Install { get; set; }
         
         /// <value>
-        /// The set of module stream profiles to remove.
+        /// The set of module stream profiles to remove. Once complete, the profile will be in 'AVAILABLE' status. 
+        /// The status of packages within the profile after the operation is complete is defined by the package manager on the managed instance group.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "remove")]
         public System.Collections.Generic.List<ModuleStreamProfileDetails> Remove { get; set; }

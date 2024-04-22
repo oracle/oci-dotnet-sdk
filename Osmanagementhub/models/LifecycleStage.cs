@@ -22,13 +22,13 @@ namespace Oci.OsmanagementhubService.Models
     {
         
         /// <value>
-        /// The lifecycle stage OCID that is immutable on creation.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle stage.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the tenancy containing the lifecycle stage.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the lifecycle stage.
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +38,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// The user-friendly name for the lifecycle stage.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,14 +48,13 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the lifecycle environment for the lifecycle stage.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle environment that contains the lifecycle stage.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleEnvironmentId")]
         public string LifecycleEnvironmentId { get; set; }
         
         /// <value>
-        /// User specified rank for the lifecycle stage.
-        /// Rank determines the hierarchy of the lifecycle stages for a given lifecycle environment.
+        /// User-specified rank for the lifecycle stage. Rank determines the hierarchy of the lifecycle stages within the lifecycle environment.
         /// 
         /// </value>
         /// <remarks>
@@ -66,43 +65,50 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<int> Rank { get; set; }
         
         /// <value>
-        /// The operating system type of the target instances.
+        /// The operating system of the managed instances in the lifecycle stage.
         /// </value>
         [JsonProperty(PropertyName = "osFamily")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsFamily> OsFamily { get; set; }
         
         /// <value>
-        /// The CPU architecture of the target instances.
+        /// The CPU architecture of the managed instances in the lifecycle stage.
         /// </value>
         [JsonProperty(PropertyName = "archType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// The software source vendor name.
+        /// The vendor of the operating system used by the managed instances in the lifecycle stage.
         /// </value>
         [JsonProperty(PropertyName = "vendorName")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<VendorName> VendorName { get; set; }
         
         /// <value>
-        /// The list of managed instances specified lifecycle stage.
+        /// The list of managed instances associated with the lifecycle stage.
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceIds")]
         public System.Collections.Generic.List<ManagedInstanceDetails> ManagedInstanceIds { get; set; }
+        
+        /// <value>
+        /// The location of managed instances associated with the lifecycle stage.
+        /// </value>
+        [JsonProperty(PropertyName = "location")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ManagedInstanceLocation> Location { get; set; }
         
         [JsonProperty(PropertyName = "softwareSourceId")]
         public SoftwareSourceDetails SoftwareSourceId { get; set; }
         
         /// <value>
-        /// The time the lifecycle stage was created. An RFC3339 formatted datetime string.
+        /// The time the lifecycle stage was created (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the lifecycle stage was last modified. An RFC3339 formatted datetime string.
+        /// The time the lifecycle stage was last modified (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         [JsonProperty(PropertyName = "timeModified")]
         public System.Nullable<System.DateTime> TimeModified { get; set; }

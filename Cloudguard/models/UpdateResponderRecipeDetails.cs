@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The details to be updated in ResponderRecipe
+    /// Parameters to use to update a responder recipe.
     /// </summary>
     public class UpdateResponderRecipeDetails 
     {
         
         /// <value>
-        /// Responder recipe identifier.
+        /// Responder recipe display name.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -35,7 +35,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Responder recipe description.
+        /// Responder recipe description
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -44,7 +44,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Responder Rules to Update
+        /// List of responder rules to update
         /// </value>
         [JsonProperty(PropertyName = "responderRules")]
         public System.Collections.Generic.List<UpdateResponderRecipeResponderRule> ResponderRules { get; set; }

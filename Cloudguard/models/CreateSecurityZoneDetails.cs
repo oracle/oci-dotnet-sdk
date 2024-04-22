@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Details for a new security zone
+    /// Parameters to be used to create a new security zone.
     /// </summary>
     public class CreateSecurityZoneDetails 
     {
         
         /// <value>
-        /// The security zone's name
+        /// The security zone's display name
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +38,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the recipe (`SecurityRecipe`) for the security zone
+        /// The OCID of the security zone recipe (`SecurityRecipe` resource) for the security zone
         /// </value>
         /// <remarks>
         /// Required

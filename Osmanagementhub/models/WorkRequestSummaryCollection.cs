@@ -22,7 +22,7 @@ namespace Oci.OsmanagementhubService.Models
     {
         
         /// <value>
-        /// List of work request summary objects.
+        /// List of work requests.
         /// </value>
         /// <remarks>
         /// Required

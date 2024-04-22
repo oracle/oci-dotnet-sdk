@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information about new Data Mask Rule.
+    /// Parameters to us to create a new data mask rule.
     /// </summary>
     public class CreateDataMaskRuleDetails 
     {
         
         /// <value>
-        /// Data mask rule name.
+        /// Data mask rule display name
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -35,7 +35,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier where the resource is created
+        /// Compartment OCID where the resource is created
         /// </value>
         /// <remarks>
         /// Required
@@ -45,14 +45,14 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The data mask rule description.
+        /// The data mask rule description
         /// Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// IAM Group id associated with the data mask rule
+        /// IAM group ID associated with the data mask rule
         /// </value>
         /// <remarks>
         /// Required
@@ -69,7 +69,7 @@ namespace Oci.CloudguardService.Models
         public TargetSelected TargetSelected { get; set; }
         
         /// <value>
-        /// Data Mask Categories
+        /// Data mask rule categories
         /// </value>
         /// <remarks>
         /// Required
@@ -79,14 +79,14 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<DataMaskCategory> DataMaskCategories { get; set; }
         
         /// <value>
-        /// The status of the dataMaskRule.
+        /// The current status of the data mask rule
         /// </value>
         [JsonProperty(PropertyName = "dataMaskRuleStatus")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DataMaskRuleStatus> DataMaskRuleStatus { get; set; }
         
         /// <value>
-        /// The current state of the DataMaskRule.
+        /// The current lifecycle state of the data mask rule
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]

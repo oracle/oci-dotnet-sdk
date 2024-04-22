@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a Module search. Contains module summary items and other information, such as metadata.
+    /// The set of modules returned for the {@link #searchSoftwareSourceModules(SearchSoftwareSourceModulesRequest) searchSoftwareSourceModules} operation.
     /// </summary>
     public class ModuleCollection 
     {
         
         /// <value>
-        /// List of Modules.
+        /// List of modules.
         /// </value>
         /// <remarks>
         /// Required

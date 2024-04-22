@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// Details for the new Target.
+        /// Contains generic target information which is required for all target types
         /// </value>
         /// <remarks>
         /// Required

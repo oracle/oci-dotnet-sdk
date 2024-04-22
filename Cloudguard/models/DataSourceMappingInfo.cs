@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Detail of resources which are mapped to DataSource.
+    /// Details of the detector recipe and detector rule mapped to the data source.
     /// </summary>
     public class DataSourceMappingInfo 
     {
         
         /// <value>
-        /// Id of the attached detectorRecipeId to the Data Source.
+        /// ID of the detector recipe attached to the data source
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string DetectorRecipeId { get; set; }
         
         /// <value>
-        /// Id of the attached detectorRuleId to the Data Source.
+        /// ID of the detector rule attached to the data source
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Results of a workRequestLog search. Contains both workRequestLog items and other information, such as metadata.
+    /// The collection of work request log entries. These result from a
+    /// workRequestLog search. Contains both workRequestLog items and
+    /// other information, such as metadata.
+    /// 
     /// </summary>
     public class WorkRequestLogEntryCollection 
     {
         
         /// <value>
-        /// List of workRequestLogEntries.
+        /// List of workRequestLogEntry resources
         /// </value>
         /// <remarks>
         /// Required
@@ -30,6 +33,12 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<WorkRequestLogEntry> Items { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

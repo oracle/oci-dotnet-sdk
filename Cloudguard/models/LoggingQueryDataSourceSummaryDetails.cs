@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information about new Logging Query of type DataSourceSummary.
+    /// Summary information for a logging query for a data source.
     /// </summary>
     public class LoggingQueryDataSourceSummaryDetails : DataSourceSummaryDetails
     {
         
         /// <value>
-        /// DataSource customer specified regions
+        /// Data source customer-specified regions
         /// </value>
         [JsonProperty(PropertyName = "regions")]
         public System.Collections.Generic.List<string> Regions { get; set; }
         
         /// <value>
-        /// DataSource mapping with detectorRecipe and detectorRule
+        /// Data source mapping with detector recipe and detector rule
         /// </value>
         [JsonProperty(PropertyName = "dataSourceDetectorMappingInfo")]
         public System.Collections.Generic.List<DataSourceMappingInfo> DataSourceDetectorMappingInfo { get; set; }
         
         /// <value>
-        /// DataSource query metadata replication region and status.
+        /// Data source query metadata replication region and status.
         /// </value>
         [JsonProperty(PropertyName = "regionStatusDetail")]
         public System.Collections.Generic.List<RegionStatusDetail> RegionStatusDetail { get; set; }

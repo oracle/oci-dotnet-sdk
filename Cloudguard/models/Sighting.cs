@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// Unique identifier for sighting event
+        /// Unique identifier for the sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Description of the sighting event
+        /// Description of the sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Problem Id to which the Sighting is associated
+        /// Problem ID associated the sighting
         /// </value>
         [JsonProperty(PropertyName = "problemId")]
         public string ProblemId { get; set; }
         
         /// <value>
-        /// Compartment Id where the resource is created
+        /// Compartment OCID where the resource is created
         /// </value>
         /// <remarks>
         /// Required
@@ -76,7 +76,7 @@ namespace Oci.CloudguardService.Models
         public string ActorPrincipalType { get; set; }
         
         /// <value>
-        /// ClassificationStatus of the sighting event
+        /// Classification status of the sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -87,7 +87,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ClassificationStatus> ClassificationStatus { get; set; }
         
         /// <value>
-        /// Identifier for the sighting type
+        /// Type of sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -107,7 +107,7 @@ namespace Oci.CloudguardService.Models
         public string SightingTypeDisplayName { get; set; }
         
         /// <value>
-        /// Name of the Mitre att&ck tactic
+        /// Name of the MITRE ATT@CK framework tactic
         /// </value>
         /// <remarks>
         /// Required
@@ -117,7 +117,7 @@ namespace Oci.CloudguardService.Models
         public string TacticName { get; set; }
         
         /// <value>
-        /// Name of the Mitre att&ck technique
+        /// Name of the MITRE ATT@CK framework technique
         /// </value>
         /// <remarks>
         /// Required
@@ -148,7 +148,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<Severity> Severity { get; set; }
         
         /// <value>
-        /// Confidence of the sighting
+        /// Level of confidence that the sighting is not a false positive
         /// </value>
         /// <remarks>
         /// Required
@@ -179,7 +179,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeLastDetected { get; set; }
         
         /// <value>
-        /// regions involved in the sighting
+        /// List of regions involved in the sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -189,10 +189,16 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<string> Regions { get; set; }
         
         /// <value>
-        /// The additional details of the Sighting
+        /// The additional details for the sighting
         /// </value>
         [JsonProperty(PropertyName = "additionalDetails")]
         public System.Collections.Generic.Dictionary<string, string> AdditionalDetails { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

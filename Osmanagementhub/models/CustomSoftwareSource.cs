@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A custom software source contains a custom collection of packages.
+    /// The object that defines a custom software source. A software source contains a collection of packages. For more information, see [Managing Software Sources](https://docs.cloud.oracle.com/iaas/osmh/doc/software-sources.htm).
     /// </summary>
     public class CustomSoftwareSource : SoftwareSource
     {
         
         /// <value>
-        /// List of vendor software sources.
+        /// List of vendor software sources that are used for the basis of the custom software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -35,10 +35,28 @@ namespace Oci.OsmanagementhubService.Models
         public CustomSoftwareSourceFilter CustomSoftwareSourceFilter { get; set; }
         
         /// <value>
-        /// Indicates whether service should automatically update the custom software source for the user.
+        /// Indicates whether the service should automatically update the custom software source to use the latest package versions available. The service reviews packages levels once a day.
         /// </value>
         [JsonProperty(PropertyName = "isAutomaticallyUpdated")]
         public System.Nullable<bool> IsAutomaticallyUpdated { get; set; }
+        
+        /// <value>
+        /// Indicates whether the service should automatically resolve package dependencies when including specific packages in the software source.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoResolveDependencies")]
+        public System.Nullable<bool> IsAutoResolveDependencies { get; set; }
+        
+        /// <value>
+        /// Indicates whether the service should create the software source from a list of packages provided by the user.
+        /// </value>
+        [JsonProperty(PropertyName = "isCreatedFromPackageList")]
+        public System.Nullable<bool> IsCreatedFromPackageList { get; set; }
+        
+        /// <value>
+        /// The packages in the software source.
+        /// </value>
+        [JsonProperty(PropertyName = "packages")]
+        public System.Collections.Generic.List<string> Packages { get; set; }
         
         [JsonProperty(PropertyName = "softwareSourceType")]
         private readonly string softwareSourceType = "CUSTOM";

@@ -16,8 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a search for module streams on a managed instance.
-    /// Contains both ManagedInstanceModuleSummary items and other data.
+    /// The set of modules returned for the {@link #listManagedInstanceModules(ListManagedInstanceModulesRequest) listManagedInstanceModules} operation.
     /// 
     /// </summary>
     public class ManagedInstanceModuleCollection 

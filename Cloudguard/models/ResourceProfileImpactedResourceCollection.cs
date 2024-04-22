@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// List of ResourceProfileImpactedResourceSummary
+        /// List of ResourceProfileImpactedResourceSummary resources
         /// </value>
         /// <remarks>
         /// Required
@@ -30,6 +30,12 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ResourceProfileImpactedResourceSummary> Items { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

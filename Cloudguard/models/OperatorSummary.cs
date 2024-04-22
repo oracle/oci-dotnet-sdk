@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of Operator
+    /// Summary information on available operators.
     /// </summary>
     public class OperatorSummary 
     {
         
         /// <value>
-        /// name of the operand
+        /// Name of the operand
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// display name of the operand
+        /// Display name of the operand
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// data type of operand
+        /// Data type of the operand
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.CloudguardService.Models
         public string Datatype { get; set; }
         
         /// <value>
-        /// operand list type
+        /// Operand list type
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.CloudguardService.Models
         public string ManagedListtype { get; set; }
         
         /// <value>
-        /// Filter type can be config filter or condition filter
+        /// Type of filter
         /// </value>
         /// <remarks>
         /// Required
@@ -83,7 +83,7 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<ConditionOperator> Operators { get; set; }
         
         /// <value>
-        /// configuration value type list for multilist data type
+        /// Configuration value type list for multi-list data type
         /// </value>
         [JsonProperty(PropertyName = "multiListTypes")]
         public System.Collections.Generic.List<string> MultiListTypes { get; set; }

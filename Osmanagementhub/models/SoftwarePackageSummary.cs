@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Summary information for a software package.
+    /// Provides summary information for a software package.
     /// </summary>
     public class SoftwarePackageSummary 
     {
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Unique identifier for the package. NOTE - This is not an OCID.
+        /// Unique identifier for the package. Note that this is not an OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -65,7 +65,8 @@ namespace Oci.OsmanagementhubService.Models
         /// The architecture for which this software was built.
         /// </value>
         [JsonProperty(PropertyName = "architecture")]
-        public string Architecture { get; set; }
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SoftwarePackageArchitecture> Architecture { get; set; }
         
         /// <value>
         /// Checksum of the package.
@@ -86,10 +87,16 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<bool> IsLatest { get; set; }
         
         /// <value>
-        /// List of software sources that provide the software package.
+        /// List of software sources that provide the software package. This property is deprecated and it will be removed in a future API release.
         /// </value>
         [JsonProperty(PropertyName = "softwareSources")]
         public System.Collections.Generic.List<SoftwareSourceDetails> SoftwareSources { get; set; }
+        
+        /// <value>
+        /// The OS families the package belongs to.
+        /// </value>
+        [JsonProperty(PropertyName = "osFamilies")]
+        public System.Collections.Generic.List<OsFamily> OsFamilies { get; set; }
         
     }
 }

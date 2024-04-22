@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// OCID of target
+        /// OCID of the target
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public string TargetId { get; set; }
         
         /// <value>
-        /// OCID of TargetDetectorRecipe
+        /// OCID of the target detector recipe.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Requests
         public string TargetDetectorRecipeId { get; set; }
         
         /// <value>
-        /// The id of DetectorRule
+        /// The unique identifier of the detector rule.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,7 +50,7 @@ namespace Oci.CloudguardService.Requests
         public string DetectorRuleId { get; set; }
         
         /// <value>
-        /// The details to be updated for DetectorRule.
+        /// The details to be updated for the detector rule
         /// </value>
         /// <remarks>
         /// Required

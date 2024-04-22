@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Identifying information for the specified lifecycle stage.
+    /// Provides identifying information for the specified lifecycle stage.
     /// </summary>
     public class LifecycleStageDetails 
     {
         
         /// <value>
-        /// The OCID of the lifecycle stage.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle stage.
         /// </value>
         /// <remarks>
         /// Required

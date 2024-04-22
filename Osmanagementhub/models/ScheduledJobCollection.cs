@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a scheduled job search. Contains boh ScheduledJobSummary items and other information, such as metadata.
+    /// The set of scheduled jobs returned for the {@link #listScheduledJobs(ListScheduledJobsRequest) listScheduledJobs} operation.
     /// </summary>
     public class ScheduledJobCollection 
     {

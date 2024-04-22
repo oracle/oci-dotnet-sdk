@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Detailed information about a scheduled job.
+    /// The object that defines a scheduled job. For more information about jobs, see [Managing Jobs](https://docs.cloud.oracle.com/iaas/osmh/doc/jobs.htm).
     /// </summary>
     public class ScheduledJob 
     {
         
         /// <value>
-        /// The OCID of the scheduled job.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the scheduled job.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Scheduled job name.
+        /// User-friendly name for the scheduled job.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the compartment containing the scheduled job.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the scheduled job.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,13 +52,13 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Details describing the scheduled job.
+        /// User-specified description for the scheduled job.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The type of scheduling this scheduled job follows.
+        /// The type of scheduling frequency for the job.
         /// </value>
         /// <remarks>
         /// Required
@@ -69,7 +69,13 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ScheduleTypes> ScheduleType { get; set; }
         
         /// <value>
-        /// The time of the next execution of this scheduled job.
+        /// The list of locations this scheduled job should operate on for a job targeting on compartments. (Empty list means apply to all locations). This can only be set when managedCompartmentIds is not empty.
+        /// </value>
+        [JsonProperty(PropertyName = "locations")]
+        public System.Collections.Generic.List<ManagedInstanceLocation> Locations { get; set; }
+        
+        /// <value>
+        /// The time of the next execution of this scheduled job (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         /// <remarks>
         /// Required
@@ -79,49 +85,66 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<System.DateTime> TimeNextExecution { get; set; }
         
         /// <value>
-        /// The time of the last execution of this scheduled job.
+        /// The time of the last execution of this scheduled job (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         [JsonProperty(PropertyName = "timeLastExecution")]
         public System.Nullable<System.DateTime> TimeLastExecution { get; set; }
         
         /// <value>
-        /// The recurring rule for a RECURRING scheduled job.
+        /// The frequency schedule for a recurring scheduled job.
         /// </value>
         [JsonProperty(PropertyName = "recurringRule")]
         public string RecurringRule { get; set; }
         
         /// <value>
-        /// The list of managed instance OCIDs this scheduled job operates on (mutually exclusive with managedInstanceGroupIds, managedCompartmentIds and lifecycleStageIds).
+        /// The managed instance [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that this scheduled job operates on. 
+        /// A scheduled job can only operate on one type of target, therefore this parameter is mutually exclusive with 
+        /// managedInstanceGroupIds, managedCompartmentIds, and lifecycleStageIds.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceIds")]
         public System.Collections.Generic.List<string> ManagedInstanceIds { get; set; }
         
         /// <value>
-        /// The list of managed instance group OCIDs this scheduled job operates on (mutually exclusive with managedInstances, managedCompartmentIds and lifecycleStageIds).
+        /// The managed instance group [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that this scheduled job operates on. A scheduled job can only operate on one type of target, therefore this parameter is mutually exclusive with managedInstanceIds, managedCompartmentIds, and lifecycleStageIds.
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceGroupIds")]
         public System.Collections.Generic.List<string> ManagedInstanceGroupIds { get; set; }
         
         /// <value>
-        /// The list of target compartment OCIDs if this scheduled job operates on a compartment level (mutually exclusive with managedInstances, managedInstanceGroupIds and lifecycleStageIds).
+        /// The compartment [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that this scheduled job operates on. A scheduled job can only operate on one type of target, therefore this parameter is mutually exclusive with managedInstanceIds, managedInstanceGroupIds, and lifecycleStageIds.
         /// </value>
         [JsonProperty(PropertyName = "managedCompartmentIds")]
         public System.Collections.Generic.List<string> ManagedCompartmentIds { get; set; }
         
         /// <value>
-        /// The list of target lifecycle stage OCIDs if this scheduled job operates on lifecycle stages (mutually exclusive with managedInstances, managedInstanceGroupIds and managedCompartmentIds).
+        /// The lifecycle stage [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that this scheduled job operates on. 
+        /// A scheduled job can only operate on one type of target, therefore this parameter is mutually exclusive with 
+        /// managedInstanceIds, managedInstanceGroupIds, and managedCompartmentIds.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleStageIds")]
         public System.Collections.Generic.List<string> LifecycleStageIds { get; set; }
         
         /// <value>
-        /// Whether to create jobs for all compartments in the tenancy when managedCompartmentIds specifies the tenancy OCID.
+        /// Indicates whether to apply the scheduled job to all compartments in the tenancy when managedCompartmentIds specifies the tenancy [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) (root compartment).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isSubcompartmentIncluded")]
         public System.Nullable<bool> IsSubcompartmentIncluded { get; set; }
         
         /// <value>
-        /// The list of operations this scheduled job needs to perform (can only support one operation if the operationType is not UPDATE_PACKAGES/UPDATE_ALL/UPDATE_SECURITY/UPDATE_BUGFIX/UPDATE_ENHANCEMENT/UPDATE_OTHER/UPDATE_KSPLICE_USERSPACE/UPDATE_KSPLICE_KERNEL).
+        /// The list of operations this scheduled job needs to perform.
+        /// A scheduled job supports only one operation type, unless it is one of the following:
+        /// * UPDATE_PACKAGES
+        /// * UPDATE_ALL
+        /// * UPDATE_SECURITY
+        /// * UPDATE_BUGFIX
+        /// * UPDATE_ENHANCEMENT
+        /// * UPDATE_OTHER
+        /// * UPDATE_KSPLICE_USERSPACE
+        /// * UPDATE_KSPLICE_KERNEL
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -131,13 +154,13 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<ScheduledJobOperation> Operations { get; set; }
         
         /// <value>
-        /// The list of work request OCIDs associated with this scheduled job.
+        /// The list of work request [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) associated with this scheduled job.
         /// </value>
         [JsonProperty(PropertyName = "workRequestIds")]
         public System.Collections.Generic.List<string> WorkRequestIds { get; set; }
         
         /// <value>
-        /// The time this scheduled job was created. An RFC3339 formatted datetime string.
+        /// The time this scheduled job was created (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         /// <remarks>
         /// Required
@@ -147,7 +170,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time this scheduled job was updated. An RFC3339 formatted datetime string.
+        /// The time this scheduled job was updated (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         /// <remarks>
         /// Required
@@ -192,6 +215,12 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
+        /// Indicates whether this scheduled job is managed by the Autonomous Linux service.
+        /// </value>
+        [JsonProperty(PropertyName = "isManagedByAutonomousLinux")]
+        public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
@@ -223,10 +252,22 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
-        /// true, if the schedule job has its update/deletion capabilities restricted. (Used to track scheduled job for management station syncing).
+        /// Indicates if the schedule job has restricted update and deletion capabilities. For restricted scheduled jobs, 
+        /// you can update only the timeNextExecution, recurringRule, and tags.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isRestricted")]
         public System.Nullable<bool> IsRestricted { get; set; }
+        
+        /// <value>
+        /// The amount of time in minutes to wait until retrying the scheduled job. If set, the service will automatically retry 
+        /// a failed scheduled job after the interval. For example, you could set the interval to [2,5,10]. If the initial 
+        /// execution of the job fails, the service waits 2 minutes and then retries. If that fails, the service waits 5 minutes 
+        /// and then retries. If that fails, the service waits 10 minutes and then retries.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "retryIntervals")]
+        public System.Collections.Generic.List<int> RetryIntervals { get; set; }
         
     }
 }

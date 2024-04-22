@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A managed list is a reusable list of parameters that makes it easier to set the scope for detector and responder rules. A ManagedList object contains the reusable list of parameters, plus metadata for the list.
+    /// A managed list is a reusable list of parameters that makes it easier to set the scope for detector and responder rules. A ManagedList resource contains the reusable list of parameters, plus metadata for the list.
     /// </summary>
     public class ManagedList 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that can't be changed after creation
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// ManagedList display name.
+        /// Managed list display name
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// ManagedList description.
+        /// Managed list description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Compartment Identifier where the resource is created
+        /// Compartment OCID where the resource is created
         /// </value>
         /// <remarks>
         /// Required
@@ -58,13 +58,13 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// OCID of the Source ManagedList
+        /// OCID of the source managed list
         /// </value>
         [JsonProperty(PropertyName = "sourceManagedListId")]
         public string SourceManagedListId { get; set; }
         
         /// <value>
-        /// type of the list
+        /// Type of information contained in the managed list
         /// </value>
         /// <remarks>
         /// Required
@@ -75,20 +75,20 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ManagedListType> ListType { get; set; }
         
         /// <value>
-        /// List of ManagedListItem
+        /// List of items in the managed list
         /// </value>
         [JsonProperty(PropertyName = "listItems")]
         public System.Collections.Generic.List<string> ListItems { get; set; }
         
         /// <value>
-        /// provider of the feed
+        /// Provider of the managed list feed
         /// </value>
         [JsonProperty(PropertyName = "feedProvider")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FeedProviderType> FeedProvider { get; set; }
         
         /// <value>
-        /// If this list is editable or not
+        /// Is this list editable?
         /// </value>
         [JsonProperty(PropertyName = "isEditable")]
         public System.Nullable<bool> IsEditable { get; set; }
@@ -100,20 +100,20 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the managed list was updated. Format defined by RFC3339.
+        /// The date and time the managed list was last updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the resource.
+        /// The current lifecycle state of the resource
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
+        /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state. [DEPRECATE]
         /// </value>
         [JsonProperty(PropertyName = "lifecyleDetails")]
         public string LifecyleDetails { get; set; }

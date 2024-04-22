@@ -16,14 +16,18 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The software sources OCIDs to detach from the managed instance group.
+    /// Provides the information used to detach software sources from a managed instance group.
     /// </summary>
     public class DetachSoftwareSourcesFromManagedInstanceGroupDetails 
     {
         
         /// <value>
-        /// The list of software sources OCIDs to be detached.
+        /// List of software source [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) to detach from the group.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SoftwareSources is required.")]
         [JsonProperty(PropertyName = "softwareSources")]
         public System.Collections.Generic.List<string> SoftwareSources { get; set; }
         

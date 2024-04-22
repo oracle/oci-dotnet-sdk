@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Create ManagedList
+    /// Parameters to use to create details for a new managed list.
     /// </summary>
     public class CreateManagedListDetails 
     {
@@ -35,7 +35,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -45,13 +45,13 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// OCID of the Source ManagedList
+        /// OCID of the source managed list
         /// </value>
         [JsonProperty(PropertyName = "sourceManagedListId")]
         public string SourceManagedListId { get; set; }
         
         /// <value>
-        /// Managed list description.
+        /// Managed list description
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -60,14 +60,14 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// type of the list
+        /// Type of information stored in the list
         /// </value>
         [JsonProperty(PropertyName = "listType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ManagedListType> ListType { get; set; }
         
         /// <value>
-        /// List of ManagedListItem
+        /// List of items in the managed list
         /// </value>
         [JsonProperty(PropertyName = "listItems")]
         public System.Collections.Generic.List<string> ListItems { get; set; }

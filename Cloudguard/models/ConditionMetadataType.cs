@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// Name used to identify
+        /// Name used to identify the condition metadata type
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// collection of Service type
+        /// Collection of ServiceTypeSummary resources
         /// </value>
         /// <remarks>
         /// Required
@@ -40,6 +40,12 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "ServiceTypes is required.")]
         [JsonProperty(PropertyName = "serviceTypes")]
         public System.Collections.Generic.List<ServiceTypeSummary> ServiceTypes { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

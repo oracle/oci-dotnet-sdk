@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// Details for the new `SecurityRecipe`.
+        /// Details for the new `SecurityRecipe` resource
         /// </value>
         /// <remarks>
         /// Required

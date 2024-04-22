@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the compartment that contains the resources to list. This parameter is required.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment. This parameter is required and returns only resources contained within the specified compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,7 +50,13 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Collections.Generic.List<ClassificationTypes> ClassificationType { get; set; }
         
         /// <value>
-        /// A filter to return only profiles that match the given osFamily.
+        /// A filter to return only errata that match the given advisory types.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "advisoryType", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<AdvisoryTypes> AdvisoryType { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given operating system family.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily")]
         public System.Nullable<OsFamily> OsFamily { get; set; }

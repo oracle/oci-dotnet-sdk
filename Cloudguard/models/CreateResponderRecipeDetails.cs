@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Details of ResponderRecipe.
+    /// Parameters for creating a responder recipe.
     /// </summary>
     public class CreateResponderRecipeDetails 
     {
@@ -44,7 +44,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The id of the source responder recipe.
+        /// The unique identifier of the source responder recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.CloudguardService.Models
         public string SourceResponderRecipeId { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -64,7 +64,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Responder Rules to override from source responder recipe
+        /// List of responder rules to override from source responder recipe
         /// </value>
         [JsonProperty(PropertyName = "responderRules")]
         public System.Collections.Generic.List<UpdateResponderRecipeResponderRule> ResponderRules { get; set; }

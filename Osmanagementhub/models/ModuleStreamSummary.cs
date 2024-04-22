@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Summary information pertaining to a module stream provided by a software source.
+    /// Provides the summary information for a module stream contained within a software source.
     /// </summary>
     public class ModuleStreamSummary 
     {
@@ -60,7 +60,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<bool> IsLatest { get; set; }
         
         /// <value>
-        /// The software source id for the the module stream.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source that contains the the module stream.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "softwareSourceId")]

@@ -38,7 +38,6 @@ namespace Oci.Common.Auth
         /// <returns>The private key from key pair.</returns>
         private RsaKeyParameters ReadKey()
         {
-            AsymmetricCipherKeyPair keyPair;
             using (StreamReader reader = File.OpenText(FileUtils.ExpandUserHome(pemFilePath)))
             {
                 try
@@ -46,10 +45,9 @@ namespace Oci.Common.Auth
                     // PemReader uses password only if the private is password encrypted.
                     // If password is passed for a plain private key, it would be ignored.
                     object pemReader = new PemReader(reader, this.passPhrase == null ? null : new PasswordFinder(this.passPhrase)).ReadObject();
-                    if (pemReader is AsymmetricCipherKeyPair)
+                    if (pemReader is AsymmetricCipherKeyPair pair)
                     {
-                        keyPair = (AsymmetricCipherKeyPair)pemReader;
-                        return key = (RsaKeyParameters)keyPair.Private;
+                        return key = (RsaKeyParameters)pair.Private;
                     }
                     else if (pemReader is AsymmetricKeyParameter)
                     {

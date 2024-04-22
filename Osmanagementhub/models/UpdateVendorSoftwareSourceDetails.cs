@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Information for updating a vendor source. Tags only.
+    /// Provides the information for updating the tags of a vendor software source.
     /// </summary>
     public class UpdateVendorSoftwareSourceDetails : UpdateSoftwareSourceDetails
     {

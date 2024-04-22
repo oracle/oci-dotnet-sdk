@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A software source contains a collection of packages.
+    /// The object that defines a software source. A software source contains a collection of packages. For more information, see [Managing Software Sources](https://docs.cloud.oracle.com/iaas/osmh/doc/software-sources.htm).
     /// </summary>
     [JsonConverter(typeof(SoftwareSourceModelConverter))]
     public class SoftwareSource 
     {
         
         /// <value>
-        /// OCID for the software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the tenancy containing the software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// User friendly name for the software source.
+        /// User-friendly name for the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,8 +53,7 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The date and time the software source was created, as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the software source was created (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         /// <remarks>
@@ -65,14 +64,14 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Information specified by the user about the software source.
+        /// User-specified description for the software source.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         
         /// <value>
-        /// Possible availabilities of a software source.
+        /// Availability of the software source (for non-OCI environments).
         /// </value>
         /// <remarks>
         /// Required
@@ -83,7 +82,18 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<Availability> Availability { get; set; }
         
         /// <value>
-        /// The Repo ID for the software source.
+        /// Availability of the software source (for OCI environments).
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "AvailabilityAtOci is required.")]
+        [JsonProperty(PropertyName = "availabilityAtOci")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<Availability> AvailabilityAtOci { get; set; }
+        
+        /// <value>
+        /// The repository ID for the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -125,6 +135,8 @@ namespace Oci.OsmanagementhubService.Models
             Updating,
             [EnumMember(Value = "ACTIVE")]
             Active,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETED")]
@@ -141,13 +153,13 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Number of packages.
+        /// Number of packages the software source contains.
         /// </value>
         [JsonProperty(PropertyName = "packageCount")]
         public System.Nullable<long> PackageCount { get; set; }
         
         /// <value>
-        /// URL for the repository.
+        /// URL for the repository. For vendor software sources, this is the URL to the regional yum server. For custom software sources, this is 'custom/<repoId>'.
         /// </value>
         /// <remarks>
         /// Required
@@ -180,6 +192,12 @@ namespace Oci.OsmanagementhubService.Models
         /// </value>
         [JsonProperty(PropertyName = "gpgKeyFingerprint")]
         public string GpgKeyFingerprint { get; set; }
+        
+        /// <value>
+        /// The size of the software source in gigabytes (GB).
+        /// </value>
+        [JsonProperty(PropertyName = "size")]
+        public System.Double Size { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

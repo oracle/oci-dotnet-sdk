@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Update ManagedList
+    /// Parameters to use to update details for a managed list.
     /// </summary>
     public class UpdateManagedListDetails 
     {
@@ -38,7 +38,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// List of ManagedListItem
+        /// List of managed list items
         /// </value>
         [JsonProperty(PropertyName = "listItems")]
         public System.Collections.Generic.List<string> ListItems { get; set; }

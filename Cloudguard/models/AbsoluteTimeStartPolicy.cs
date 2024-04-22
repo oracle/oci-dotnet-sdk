@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Policy that defines the exact start time.
+    /// Start policy that defines the exact start time
     /// </summary>
     public class AbsoluteTimeStartPolicy : ContinuousQueryStartPolicy
     {
         
         /// <value>
-        /// Time when the query can start, if not specified it can start immediately.
+        /// Time when the query can start. If not specified it can start immediately
         /// </value>
         [JsonProperty(PropertyName = "queryStartTime")]
         public System.Nullable<System.DateTime> QueryStartTime { get; set; }

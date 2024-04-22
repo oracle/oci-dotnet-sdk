@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary specific to the data source type.
+    /// Summary information for a data source of a specified data source type.
     /// </summary>
     [JsonConverter(typeof(DataSourceSummaryDetailsModelConverter))]
     public class DataSourceSummaryDetails 
@@ -46,6 +46,9 @@ namespace Oci.CloudguardService.Models
             var discriminator = jsonObject["dataSourceFeedProvider"].Value<string>();
             switch (discriminator)
             {
+                case "SCHEDULEDQUERY":
+                    obj = new ScheduledQueryDataSourceSummaryObjDetails();
+                    break;
                 case "LOGGINGQUERY":
                     obj = new LoggingQueryDataSourceSummaryDetails();
                     break;

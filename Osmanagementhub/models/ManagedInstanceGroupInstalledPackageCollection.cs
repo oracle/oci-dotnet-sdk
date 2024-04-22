@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a search for installed packages on a managed instance group.
+    /// A set of installed packages returned for the {@link #listManagedInstanceGroupInstalledPackages(ListManagedInstanceGroupInstalledPackagesRequest) listManagedInstanceGroupInstalledPackages} operation.
     /// 
     /// </summary>
     public class ManagedInstanceGroupInstalledPackageCollection 

@@ -16,7 +16,11 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Details of ResponderRule.
+    /// Parameters to update details for a responder rule for a target responder recipe.
+    /// TargetResponderRuleDetails contains all configurations associated with the
+    /// ResponderRule, whereas UpdateTargetResponderRecipeResponderRuleDetails
+    /// refers to the details that are to be updated for ResponderRule.
+    /// 
     /// </summary>
     public class UpdateTargetResponderRuleDetails 
     {
@@ -25,13 +29,13 @@ namespace Oci.CloudguardService.Models
         public Condition Condition { get; set; }
         
         /// <value>
-        /// Configurations associated with the ResponderRule
+        /// List of responder rule configurations
         /// </value>
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<ResponderConfiguration> Configurations { get; set; }
         
         /// <value>
-        /// Execution Mode for ResponderRule
+        /// Execution mode for the responder rule
         /// </value>
         [JsonProperty(PropertyName = "mode")]
         [JsonConverter(typeof(StringEnumConverter))]

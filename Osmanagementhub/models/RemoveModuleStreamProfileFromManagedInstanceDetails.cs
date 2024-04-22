@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details of the module stream profile to be removed on a managed instance.
+    /// Provides the information used to remove a module stream profile on a managed instance.
     /// </summary>
     public class RemoveModuleStreamProfileFromManagedInstanceDetails 
     {

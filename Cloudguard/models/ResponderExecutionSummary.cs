@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of the Responder Execution.
+    /// A summary of detailed information on responder execution.
     /// </summary>
     public class ResponderExecutionSummary 
     {
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Responder Rule id for the responder execution
+        /// Responder rule ID for the responder execution
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string ResponderRuleId { get; set; }
         
         /// <value>
-        /// Rule Type for the responder execution
+        /// Rule type for the responder execution
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.CloudguardService.Models
         public string ResponderRuleName { get; set; }
         
         /// <value>
-        /// Problem id associated with the responder execution
+        /// Problem ID associated with the responder execution
         /// </value>
         /// <remarks>
         /// Required
@@ -93,7 +93,7 @@ namespace Oci.CloudguardService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// Target Id of the problem for the responder execution
+        /// Target ID of the problem for the responder execution
         /// </value>
         /// <remarks>
         /// Required
@@ -103,7 +103,7 @@ namespace Oci.CloudguardService.Models
         public string TargetId { get; set; }
         
         /// <value>
-        /// compartment id of the problem for the responder execution
+        /// Compartment OCID of the problem for the responder execution
         /// </value>
         /// <remarks>
         /// Required
@@ -123,7 +123,7 @@ namespace Oci.CloudguardService.Models
         public string ResourceType { get; set; }
         
         /// <value>
-        /// resource name of the problem for the responder execution. TODO-DOC link to resource definition doc
+        /// Resource name of the problem for the responder execution.
         /// </value>
         /// <remarks>
         /// Required
@@ -149,7 +149,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCompleted { get; set; }
         
         /// <value>
-        /// current execution status of the responder
+        /// Current execution status of the responder
         /// </value>
         /// <remarks>
         /// Required
@@ -160,7 +160,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ResponderExecutionStates> ResponderExecutionStatus { get; set; }
         
         /// <value>
-        /// possible type of responder execution modes
+        /// Possible type of responder execution modes
         /// </value>
         /// <remarks>
         /// Required

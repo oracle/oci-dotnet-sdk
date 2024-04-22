@@ -16,20 +16,32 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information about new Logging event detail of DataSource.
+    /// Information for a logging event for a data source.
     /// </summary>
     public class LoggingEventInfo : DataSourceEventInfo
     {
         
+        /// <value>
+        /// Observed value of DataSource for a Problem
+        /// </value>
         [JsonProperty(PropertyName = "observedValue")]
         public string ObservedValue { get; set; }
         
+        /// <value>
+        /// Triggered value of DataSource for a Problem
+        /// </value>
         [JsonProperty(PropertyName = "triggerValue")]
         public string TriggerValue { get; set; }
         
+        /// <value>
+        /// Operator details of DataSource for a Problem
+        /// </value>
         [JsonProperty(PropertyName = "operator")]
         public string Operator { get; set; }
         
+        /// <value>
+        /// Log result details of DataSource for a Problem
+        /// </value>
         [JsonProperty(PropertyName = "logResult")]
         public string LogResult { get; set; }
         

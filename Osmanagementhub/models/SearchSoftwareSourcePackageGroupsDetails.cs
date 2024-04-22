@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Contains a list of software sources to get the list of associated package groups.
+    /// Provides the software sources and search parameters to get a list of associated package groups.
     /// </summary>
     public class SearchSoftwareSourcePackageGroupsDetails 
     {
         
         /// <value>
-        /// List of software source OCIDs.
+        /// List of software source [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required
@@ -66,7 +66,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// filters results, allowing only those with a Name which contains the string.
+        /// A filter that returns package groups with a name that contains the given string.
         /// </value>
         [JsonProperty(PropertyName = "nameContains")]
         public string NameContains { get; set; }

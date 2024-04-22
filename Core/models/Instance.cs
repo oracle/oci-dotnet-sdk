@@ -75,6 +75,12 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The OCID of the cluster placement group of the instance.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
+        /// <value>
         /// The OCID of the dedicated virtual machine host that the instance is placed on.
         /// 
         /// </value>

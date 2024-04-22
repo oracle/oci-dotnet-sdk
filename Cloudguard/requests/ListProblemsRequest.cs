@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The OCID of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,31 +54,31 @@ namespace Oci.CloudguardService.Requests
         public System.Nullable<System.DateTime> TimeFirstDetectedLessThanOrEqualTo { get; set; }
         
         /// <value>
-        /// The field life cycle state. Only one state can be provided. Default value for state is active. If no value is specified state is active.
+        /// The field life cycle state. Only one state can be provided. Default value for state is active.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleDetail")]
         public System.Nullable<ProblemLifecycleDetail> LifecycleDetail { get; set; }
         
         /// <value>
-        /// The field life cycle state. Only one state can be provided. Default value for state is active. If no value is specified state is active.
+        /// The field lifecycle state. Only one state can be provided. Default value for state is active. If no value is specified state is active.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<ProblemLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// OCI Monitoring region.
+        /// OCI monitoring region.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "region")]
         public string Region { get; set; }
         
         /// <value>
-        /// Risk level of the Problem.
+        /// Risk level of the problem.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "riskLevel")]
         public string RiskLevel { get; set; }
         
         /// <value>
-        /// Resource Type associated with the resource.
+        /// Resource type associated with the resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]
         public string ResourceType { get; set; }
@@ -90,7 +90,7 @@ namespace Oci.CloudguardService.Requests
         public string City { get; set; }
         
         /// <value>
-        /// State of the problem.
+        /// State or province of the problem.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "state")]
         public string State { get; set; }
@@ -102,19 +102,19 @@ namespace Oci.CloudguardService.Requests
         public string Country { get; set; }
         
         /// <value>
-        /// Label associated with the Problem.
+        /// User-defined label associated with the problem.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "label")]
         public string Label { get; set; }
         
         /// <value>
-        /// Comma seperated list of detector rule ids to be passed in to match against Problems.
+        /// Comma seperated list of detector rule IDs to be passed in to match against Problems.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "detectorRuleIdList", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> DetectorRuleIdList { get; set; }
         
         /// <value>
-        /// The field to list the Problems by Detector Type. Valid values are IAAS_ACTIVITY_DETECTOR and IAAS_CONFIGURATION_DETECTOR
+        /// The field to list the problems by detector type.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "detectorType")]
@@ -127,7 +127,7 @@ namespace Oci.CloudguardService.Requests
         public string TargetId { get; set; }
         
         /// <value>
-        /// Setting this to `SECURITY_ZONE` returns only security-zone related violations.
+        /// Setting this to `SECURITY_ZONE` returns only security zone-related violations.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "problemCategory")]
@@ -137,7 +137,7 @@ namespace Oci.CloudguardService.Requests
         /// Default is false.
         /// When set to true, the hierarchy of compartments is traversed
         /// and all compartments and subcompartments in the tenancy are
-        /// returned depending on the the setting of `accessLevel`.
+        /// returned depending on the setting of `accessLevel`.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
@@ -178,7 +178,7 @@ namespace Oci.CloudguardService.Requests
         public string ResourceId { get; set; }
         
         /// <value>
-        /// The maximum number of items to return.
+        /// The maximum number of items to return
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
@@ -190,7 +190,7 @@ namespace Oci.CloudguardService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'.
+        /// The sort order to use
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrders> SortOrder { get; set; }

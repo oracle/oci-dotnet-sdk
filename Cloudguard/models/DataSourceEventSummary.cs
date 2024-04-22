@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information about Event details of DataSource.
+    /// Summary information about a data source event.
     /// </summary>
     public class DataSourceEventSummary 
     {
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// Data source event date time
+        /// Data source event date and time
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> EventDate { get; set; }
         
         /// <value>
-        /// Attached data Source
+        /// Unique identifier of data source.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.CloudguardService.Models
         public string DataSourceId { get; set; }
         
         /// <value>
-        /// Data source event created time
+        /// Data source event creation date and time
         /// </value>
         /// <remarks>
         /// Required

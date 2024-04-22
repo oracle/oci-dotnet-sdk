@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The information about new registration profile.
+    /// Provides the information used to create a new registration profile.
     /// </summary>
     [JsonConverter(typeof(CreateProfileDetailsModelConverter))]
     public class CreateProfileDetails 
@@ -33,7 +33,7 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the tenancy containing the registration profile.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the registration profile.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,17 +43,31 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The description of the registration profile.
+        /// User-specified description of the registration profile.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the management station.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station to associate with an instance once registered. Associating with a management station applies only to non-OCI instances.
         /// </value>
         [JsonProperty(PropertyName = "managementStationId")]
         public string ManagementStationId { get; set; }
         
+        
+        /// <value>
+        /// The type of instance to register.
+        /// </value>
+        [JsonProperty(PropertyName = "registrationType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Profile.RegistrationTypeEnum> RegistrationType { get; set; }
+        
+        /// <value>
+        /// Indicates if the profile is set as the default. There is exactly one default profile for a specified architecture, OS family, registration type, and vendor. When registering an instance with the corresonding characteristics, the default profile is used, unless another profile is specified.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDefaultProfile")]
+        public System.Nullable<bool> IsDefaultProfile { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

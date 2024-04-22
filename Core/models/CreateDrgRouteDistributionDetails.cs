@@ -60,7 +60,7 @@ namespace Oci.CoreService.Models
         public string DrgId { get; set; }
                 ///
         /// <value>
-        /// Whether this distribution defines how routes get imported into route tables or exported through DRG Attachments
+        /// Whether this distribution defines how routes get imported into route tables or exported through DRG attachments.
         /// 
         /// </value>
         ///
@@ -70,7 +70,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// Whether this distribution defines how routes get imported into route tables or exported through DRG Attachments
+        /// Whether this distribution defines how routes get imported into route tables or exported through DRG attachments.
         /// 
         /// </value>
         /// <remarks>

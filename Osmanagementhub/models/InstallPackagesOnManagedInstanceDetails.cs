@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details about the software packages to be installed.
+    /// Provides the information used to install software packages on a managed instance.
     /// </summary>
     public class InstallPackagesOnManagedInstanceDetails 
     {

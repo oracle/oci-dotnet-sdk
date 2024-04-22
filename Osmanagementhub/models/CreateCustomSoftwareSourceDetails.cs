@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Description of a custom software source to be created.
+    /// Provides the information used to create a custom software source.
     /// </summary>
     public class CreateCustomSoftwareSourceDetails : CreateSoftwareSourceDetails
     {
@@ -35,10 +35,28 @@ namespace Oci.OsmanagementhubService.Models
         public CustomSoftwareSourceFilter CustomSoftwareSourceFilter { get; set; }
         
         /// <value>
-        /// Indicates whether service should automatically update the custom software source for the user.
+        /// Indicates whether the service should automatically update the custom software source to use the latest package versions available. The service reviews packages levels once a day.
         /// </value>
         [JsonProperty(PropertyName = "isAutomaticallyUpdated")]
         public System.Nullable<bool> IsAutomaticallyUpdated { get; set; }
+        
+        /// <value>
+        /// Indicates whether the service should automatically resolve package dependencies when including specific packages in the software source.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoResolveDependencies")]
+        public System.Nullable<bool> IsAutoResolveDependencies { get; set; }
+        
+        /// <value>
+        /// Indicates whether the service should create the software source from a list of packages provided by the user.
+        /// </value>
+        [JsonProperty(PropertyName = "isCreatedFromPackageList")]
+        public System.Nullable<bool> IsCreatedFromPackageList { get; set; }
+        
+        /// <value>
+        /// A property used for compatibility only. It doesn't provide a complete list of packages. See {@link #addPackagesToSoftwareSourceDetails(AddPackagesToSoftwareSourceDetailsRequest) addPackagesToSoftwareSourceDetails} for providing the list of packages used to create the software source when isCreatedFromPackageList is set to true.
+        /// </value>
+        [JsonProperty(PropertyName = "packages")]
+        public System.Collections.Generic.List<string> Packages { get; set; }
         
         [JsonProperty(PropertyName = "softwareSourceType")]
         private readonly string softwareSourceType = "CUSTOM";

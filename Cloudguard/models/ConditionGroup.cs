@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Condition configured on a target
+    /// Details for a condition configured on a target.
     /// </summary>
     public class ConditionGroup 
     {
         
         /// <value>
-        /// compartment associated with condition
+        /// Compartment OCID associated with condition
         /// </value>
         /// <remarks>
         /// Required

@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information to be updated in DetectorRecipe
+    /// Parameters to be used to update a target detector recipe.
     /// </summary>
     public class UpdateTargetDetectorRecipeDetails 
     {
         
         /// <value>
-        /// Detector recipe identifier associated with the target
+        /// Unique identifier for the target detector recipe
         /// </value>
         [JsonProperty(PropertyName = "detectorRecipeId")]
         public string DetectorRecipeId { get; set; }
         
         /// <value>
-        /// When enabled, validation is performed for attaching the detector recipe.
+        /// Is validation to be performed for attaching the detector recipe?
         /// </value>
         [JsonProperty(PropertyName = "isValidationOnlyQuery")]
         public System.Nullable<bool> IsValidationOnlyQuery { get; set; }
         
         /// <value>
-        /// Update detector rules associated with detector recipe in a target.
+        /// List of updates to be applied to detector rules in target detector recipe
         /// </value>
         [JsonProperty(PropertyName = "detectorRules")]
         public System.Collections.Generic.List<UpdateTargetRecipeDetectorRuleDetails> DetectorRules { get; set; }

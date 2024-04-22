@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details about the software packages to be removed.
+    /// Provides the information used to remove software packages from a managed instance.
     /// </summary>
     public class RemovePackagesFromManagedInstanceDetails 
     {

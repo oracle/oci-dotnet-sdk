@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a managementstation search. Contains boh ManagementStationSummary items and other information, such as metadata.
+    /// A set of management stations returned for the {@link #listManagementStations(ListManagementStationsRequest) listManagementStations} operation.
     /// </summary>
     public class ManagementStationCollection 
     {
         
         /// <value>
-        /// List of managementStations.
+        /// List of management stations.
         /// </value>
         /// <remarks>
         /// Required

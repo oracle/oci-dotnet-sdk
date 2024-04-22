@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Collection of Resource risk scores
+    /// Collection of risk score aggregations.
     /// </summary>
     public class ResourceRiskScoreAggregationCollection 
     {
         
         /// <value>
-        /// Type of filter. Valid Values - problem_id and resource_id
+        /// Type of filter
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string FilterType { get; set; }
         
         /// <value>
-        /// Id value on which risk scores are filtered
+        /// ID for filter that to be used to filter risk scores
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.CloudguardService.Models
         public string FilterId { get; set; }
         
         /// <value>
-        /// Risk Score
+        /// Risk score value that triggers a problem
         /// </value>
         [JsonProperty(PropertyName = "riskThreshold")]
         public System.Nullable<int> RiskThreshold { get; set; }
         
         /// <value>
-        /// List of ResourceRiskScoreAggregation
+        /// List of ResourceRiskScoreAggregation resources
         /// </value>
         /// <remarks>
         /// Required

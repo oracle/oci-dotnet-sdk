@@ -23,6 +23,14 @@ namespace Oci.LockboxService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
+
+        /// <value>
+        /// For optimistic concurrency control. See `if-match`.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
+        public string Etag { get; set; }
+
         /// <value>
         /// The returned System.IO.Stream instance.  Caller must always close the stream to avoid holding resources.
         /// </value>

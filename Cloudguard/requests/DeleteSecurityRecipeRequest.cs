@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The unique identifier of the security zone recipe (`SecurityRecipe`)
+        /// The unique identifier of the security zone recipe. (`SecurityRecipe`)
         /// </value>
         /// <remarks>
         /// Required

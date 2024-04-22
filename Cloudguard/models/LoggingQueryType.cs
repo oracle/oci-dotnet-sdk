@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Logging query type for data source (Sighting/Insight)
+  /// Type of logging query for data source (Sighting/Insight)
   /// </summary>
   public enum LoggingQueryType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Detector sub type associated with the target.
+  /// Detector sub-type associated with the target.
   /// </summary>
   public enum ProblemCategoryEnum {
       [EnumMember(Value = "SECURITY_ZONE")]

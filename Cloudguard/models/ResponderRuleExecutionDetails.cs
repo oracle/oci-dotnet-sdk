@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Details of ResponderRuleExecution. A Responder Rule Execution is the entity that captures the execution of a Responder Rule for a given Problem.
+    /// Details of responder rule execution for a problem.
     /// </summary>
     public class ResponderRuleExecutionDetails 
     {
@@ -25,7 +25,7 @@ namespace Oci.CloudguardService.Models
         public Condition Condition { get; set; }
         
         /// <value>
-        /// ResponderRule configurations
+        /// List of responder rule configurations
         /// </value>
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<ResponderConfiguration> Configurations { get; set; }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Collection of Resource Profile endpoint summaries
+    /// Collection of resource profile endpoint summaries.
     /// </summary>
     public class ResourceProfileEndpointCollection 
     {
         
         /// <value>
-        /// List of ResourceProfileEndpointSummary
+        /// List of ResourceProfileEndpointSummary resources
         /// </value>
         /// <remarks>
         /// Required

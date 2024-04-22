@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Detailed information about an ManagementStation config
+    /// Provides information about the management station, including name, state, and configuration.
     /// </summary>
     public class ManagementStation 
     {
         
         /// <value>
-        /// OCID for the ManagementStation config
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.OsmanagementhubService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// OCID for the Instance associated with the Management Station.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance that is acting as the management station.
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceId")]
         public string ManagedInstanceId { get; set; }
         
         /// <value>
-        /// The OCID of the tenancy containing the Management Station.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the management station.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,19 +48,19 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// OCID of the Scheduled Job for mirror sync
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the scheduled job for the mirror sync.
         /// </value>
         [JsonProperty(PropertyName = "scheduledJobId")]
         public string ScheduledJobId { get; set; }
         
         /// <value>
-        /// OCID of the Profile associated with the Station
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the registration profile used for the management station.
         /// </value>
         [JsonProperty(PropertyName = "profileId")]
         public string ProfileId { get; set; }
         
         /// <value>
-        /// ManagementStation name
+        /// A user-friendly name for the management station.
         /// </value>
         /// <remarks>
         /// Required
@@ -70,13 +70,13 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Details describing the ManagementStation config.
+        /// User-specified description for the management station.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Name of the host
+        /// Hostname of the management station.
         /// </value>
         /// <remarks>
         /// Required
@@ -86,26 +86,26 @@ namespace Oci.OsmanagementhubService.Models
         public string Hostname { get; set; }
         
         /// <value>
-        /// Current state of the mirroring
+        /// Current state of the mirror sync for the management station.
         /// </value>
         [JsonProperty(PropertyName = "overallState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OverallState> OverallState { get; set; }
         
         /// <value>
-        /// A decimal number representing the completeness percentage
+        /// A decimal number representing the progress of the current mirror sync.
         /// </value>
         [JsonProperty(PropertyName = "overallPercentage")]
         public System.Nullable<int> OverallPercentage { get; set; }
         
         /// <value>
-        /// A decimal number representing the mirror capacity
+        /// A decimal number representing the amount of mirror capacity used by the sync.
         /// </value>
         [JsonProperty(PropertyName = "mirrorCapacity")]
         public System.Nullable<int> MirrorCapacity { get; set; }
         
         /// <value>
-        /// A decimal number representing the total of repos
+        /// The number of software sources that the station is mirroring.
         /// </value>
         [JsonProperty(PropertyName = "totalMirrors")]
         public System.Nullable<int> TotalMirrors { get; set; }
@@ -126,9 +126,12 @@ namespace Oci.OsmanagementhubService.Models
         [Required(ErrorMessage = "Mirror is required.")]
         [JsonProperty(PropertyName = "mirror")]
         public MirrorConfiguration Mirror { get; set; }
+        
+        [JsonProperty(PropertyName = "health")]
+        public StationHealth Health { get; set; }
                 ///
         /// <value>
-        /// The current state of the Management Station config.
+        /// The current state of the management station.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -150,7 +153,7 @@ namespace Oci.OsmanagementhubService.Models
         };
 
         /// <value>
-        /// The current state of the Management Station config.
+        /// The current state of the management station.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

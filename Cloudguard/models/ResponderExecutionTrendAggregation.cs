@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// The key-value pairs of dimensions and their names.
+        /// The key-value pairs of dimensions and their names
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.Dictionary<string, string> DimensionsMap { get; set; }
         
         /// <value>
-        /// Start Time in epoch seconds
+        /// Start time in epoch seconds
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<int> DurationInSeconds { get; set; }
         
         /// <value>
-        /// The number of remediations for a given time.
+        /// The number of remediations for a given time
         /// </value>
         /// <remarks>
         /// Required

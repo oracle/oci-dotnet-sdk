@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of an available package search on a managed instance.
+    /// The set of packages returned for the {@link #listManagedInstanceAvailablePackages(ListManagedInstanceAvailablePackagesRequest) listManagedInstanceAvailablePackages} operation.
     /// </summary>
     public class AvailablePackageCollection 
     {

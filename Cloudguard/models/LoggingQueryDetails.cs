@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Additional details specific to the data source type (Sighting/Insight).
+    /// Details for a logging query for a data source.
     /// </summary>
     [JsonConverter(typeof(LoggingQueryDetailsModelConverter))]
     public class LoggingQueryDetails 

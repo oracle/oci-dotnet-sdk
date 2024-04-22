@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Composite Condition object with nested Condition
+    /// Composite condition resource with nested condition.
     /// </summary>
     public class CompositeCondition : Condition
     {
@@ -24,6 +24,9 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "leftOperand")]
         public Condition LeftOperand { get; set; }
                 ///
+        /// <value>
+        /// Composite condition operator
+        /// </value>
         ///
         public enum CompositeOperatorEnum {
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -35,6 +38,9 @@ namespace Oci.CloudguardService.Models
             Or
         };
 
+        /// <value>
+        /// Composite condition operator
+        /// </value>
         [JsonProperty(PropertyName = "compositeOperator")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CompositeOperatorEnum> CompositeOperator { get; set; }

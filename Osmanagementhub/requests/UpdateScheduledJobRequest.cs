@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the scheduled job.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the scheduled job.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string ScheduledJobId { get; set; }
         
         /// <value>
-        /// The information to be updated.
+        /// Provides the information used to update the job.
         /// </value>
         /// <remarks>
         /// Required

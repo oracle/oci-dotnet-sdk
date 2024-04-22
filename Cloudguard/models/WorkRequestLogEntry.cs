@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// Human-readable log message.
+        /// A human-readable log message
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the log message was written.
+        /// The time the log message was written
         /// </value>
         /// <remarks>
         /// Required

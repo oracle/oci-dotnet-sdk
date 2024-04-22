@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Resource profile details
+    /// Resource profile details.
     /// </summary>
     public class ResourceProfile 
     {
         
         /// <value>
-        /// Number of sightings associated with this resource profile
+        /// Number of sightings associated with the resource profile
         /// </value>
         [JsonProperty(PropertyName = "sightingsCount")]
         public System.Nullable<int> SightingsCount { get; set; }
         
         /// <value>
-        /// Unique identifier for resource profile
+        /// Unique identifier for the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +38,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Unique identifier for resource profile
+        /// Unique identifier for the resource associated with the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.CloudguardService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Resource name for resource profile
+        /// Display name for the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Resource type for resource profile
+        /// Resource type for the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -68,13 +68,13 @@ namespace Oci.CloudguardService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// List of Problems associated with the resource profile.
+        /// List of problems IDs associated with the resource profile
         /// </value>
         [JsonProperty(PropertyName = "problemIds")]
         public System.Collections.Generic.List<string> ProblemIds { get; set; }
         
         /// <value>
-        /// Compartment Id for resource profile
+        /// Compartment OCID for the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -84,13 +84,13 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Target Id for resource profile
+        /// Unique target ID for the resource profile
         /// </value>
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }
         
         /// <value>
-        /// Risk Score for the resource profile
+        /// Risk score for the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -100,20 +100,20 @@ namespace Oci.CloudguardService.Models
         public System.Double RiskScore { get; set; }
         
         /// <value>
-        /// Risk Level associated with resource profile
+        /// Risk level associated with resource profile
         /// </value>
         [JsonProperty(PropertyName = "riskLevel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
         
         /// <value>
-        /// Peak Risk Score for the resource profile
+        /// Peak risk score for the resource profile
         /// </value>
         [JsonProperty(PropertyName = "peakRiskScore")]
         public System.Double PeakRiskScore { get; set; }
         
         /// <value>
-        /// The date and time for peak risk score. Format defined by RFC3339.
+        /// The date and time for the peak risk score. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timePeakScore")]
         public System.Nullable<System.DateTime> TimePeakScore { get; set; }
@@ -139,7 +139,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeLastDetected { get; set; }
         
         /// <value>
-        /// List of tactic summary associated with the resource profile.
+        /// List of tactic summaries associated with the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -147,6 +147,12 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "Tactics is required.")]
         [JsonProperty(PropertyName = "tactics")]
         public System.Collections.Generic.List<TacticSummary> Tactics { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

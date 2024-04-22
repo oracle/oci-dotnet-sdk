@@ -16,32 +16,32 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Simple Condition object.
+    /// Information for a simple condition.
     /// </summary>
     public class SimpleCondition : Condition
     {
         
         /// <value>
-        /// parameter Key
+        /// Parameter key
         /// </value>
         [JsonProperty(PropertyName = "parameter")]
         public string Parameter { get; set; }
         
         /// <value>
-        /// type of operator
+        /// Type of operator
         /// </value>
         [JsonProperty(PropertyName = "operator")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperatorType> Operator { get; set; }
         
         /// <value>
-        /// type of operator
+        /// Value of operator in condition
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
         
         /// <value>
-        /// type of value
+        /// Type of value in condition
         /// </value>
         [JsonProperty(PropertyName = "valueType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

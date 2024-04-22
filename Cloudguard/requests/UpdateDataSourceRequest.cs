@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// DataSource OCID
+        /// Data source OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public string DataSourceId { get; set; }
         
         /// <value>
-        /// Details for the DataSource to be updated
+        /// Details for the DataSource resource to be updated
         /// </value>
         /// <remarks>
         /// Required

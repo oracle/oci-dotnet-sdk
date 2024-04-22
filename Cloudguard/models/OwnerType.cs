@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Owner of the recipe
+  /// Owner of the recipe.
   /// </summary>
   public enum OwnerType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

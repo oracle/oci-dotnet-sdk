@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Details about the erratum.
+    /// An object that defines an erratum..
     /// </summary>
     public class Erratum 
     {
@@ -38,8 +38,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Synopsis { get; set; }
         
         /// <value>
-        /// Date the erratum was issued, as described
-        /// in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the erratum was issued (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeIssued")]
@@ -52,19 +51,25 @@ namespace Oci.OsmanagementhubService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Most recent date the erratum was updated, as described
-        /// in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the erratum was updated (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Type of the erratum.
+        /// Type of the erratum. This property is deprecated and it will be removed in a future API release. Please refer to the advisoryType property instead.
         /// </value>
         [JsonProperty(PropertyName = "classificationType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ClassificationTypes> ClassificationType { get; set; }
+        
+        /// <value>
+        /// The advisory type of the erratum.
+        /// </value>
+        [JsonProperty(PropertyName = "advisoryType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AdvisoryTypes> AdvisoryType { get; set; }
         
         /// <value>
         /// Information specifying from where the erratum was release.
@@ -97,7 +102,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<string> Repositories { get; set; }
         
         /// <value>
-        /// List of Packages affected by this erratum.
+        /// List of packages affected by this erratum.
         /// </value>
         [JsonProperty(PropertyName = "packages")]
         public System.Collections.Generic.List<SoftwarePackageSummary> Packages { get; set; }

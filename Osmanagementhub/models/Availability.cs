@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// Possible availabilities of a software source.
+  /// Availability status of a software source.
   /// </summary>
   public enum Availability {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -24,6 +24,8 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "SELECTED")]
       Selected,
       [EnumMember(Value = "RESTRICTED")]
-      Restricted
+      Restricted,
+      [EnumMember(Value = "UNAVAILABLE")]
+      Unavailable
   }
 }

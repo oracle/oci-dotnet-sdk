@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Information for updating an ManagementStation
+    /// Provides the information used to update the management station.
     /// </summary>
     public class UpdateManagementStationDetails 
     {
         
         /// <value>
-        /// ManagementStation name
+        /// User-friendly name for the management station. Does not have to be unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Details describing the ManagementStation config.
+        /// User-specified description of the management station. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Name of the host
+        /// Hostname of the management station.
         /// </value>
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }

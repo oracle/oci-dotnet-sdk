@@ -41,11 +41,22 @@ namespace Oci.Common.Auth
                 return this.privateKey;
             }
 
-            AsymmetricCipherKeyPair keyPair;
-
             try
             {
-                keyPair = (AsymmetricCipherKeyPair)new PemReader(new StringReader(privateKeyContent), this.passPhrase == null ? null : new PasswordFinder(this.passPhrase)).ReadObject();
+                object pemReader = new PemReader(new StringReader(privateKeyContent), this.passPhrase == null ? null : new PasswordFinder(this.passPhrase)).ReadObject();
+                if (pemReader is AsymmetricCipherKeyPair pair)
+                {
+                    return (RsaKeyParameters)pair.Private;
+                }
+                else if (pemReader is AsymmetricKeyParameter)
+                {
+                    RsaPrivateCrtKeyParameters rsaPrivateCrtKeyParameters = (RsaPrivateCrtKeyParameters)pemReader;
+                    return new RsaKeyParameters(rsaPrivateCrtKeyParameters.IsPrivate, rsaPrivateCrtKeyParameters.Modulus, rsaPrivateCrtKeyParameters.Exponent);
+                }
+                else
+                {
+                    throw new FormatException("The given key does not have the expected type");
+                }
             }
             catch (InvalidCipherTextException e)
             {
@@ -59,8 +70,6 @@ namespace Oci.Common.Auth
             {
                 throw new ArgumentException("Invalid Key has been provided", e);
             }
-
-            return (RsaKeyParameters)keyPair.Private;
         }
     }
 }

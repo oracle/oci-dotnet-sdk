@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// The target information to be updated.
     /// </summary>
     public class UpdateTargetDetails 
     {
@@ -31,20 +31,20 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The current state of the Target.
+        /// The current lifecycle state of the Target.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// The details of target detector recipes to be updated.
+        /// The details of target detector recipes to be updated
         /// </value>
         [JsonProperty(PropertyName = "targetDetectorRecipes")]
         public System.Collections.Generic.List<UpdateTargetDetectorRecipe> TargetDetectorRecipes { get; set; }
         
         /// <value>
-        /// The details of target responder recipes to be updated.
+        /// The details of target responder recipes to be updated
         /// </value>
         [JsonProperty(PropertyName = "targetResponderRecipes")]
         public System.Collections.Generic.List<UpdateTargetResponderRecipe> TargetResponderRecipes { get; set; }

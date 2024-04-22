@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Specific behavior that can trigger a Sighting
+    /// Information for a sighting type
     /// </summary>
     public class SightingType 
     {
         
         /// <value>
-        /// The unique identifier of sighting type
+        /// The unique identifier of the sighting type
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// Name of the sighting type
+        /// Display name of the sighting type
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -40,19 +40,19 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Link of the sighting type
+        /// MITRE ATT@CK framework link for the sighting type
         /// </value>
         [JsonProperty(PropertyName = "mitreLink")]
         public string MitreLink { get; set; }
         
         /// <value>
-        /// Mitre Att&ck tactic
+        /// MITRE ATT@CK framework tactic for the sighting type
         /// </value>
         [JsonProperty(PropertyName = "tactic")]
         public string Tactic { get; set; }
         
         /// <value>
-        /// List of Mitre Att&ck Techniques
+        /// List of MITRE ATT@CK framework techniques for the sighting type
         /// </value>
         [JsonProperty(PropertyName = "techniques")]
         public System.Collections.Generic.List<string> Techniques { get; set; }

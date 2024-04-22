@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Details of ResponderRule.
+    /// Detailed information for a responder rule
     /// </summary>
     public class ResponderRuleDetails 
     {
@@ -25,13 +25,13 @@ namespace Oci.CloudguardService.Models
         public Condition Condition { get; set; }
         
         /// <value>
-        /// ResponderRule configurations
+        /// List of responder rule configurations
         /// </value>
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<ResponderConfiguration> Configurations { get; set; }
         
         /// <value>
-        /// Identifies state for ResponderRule
+        /// Enabled state for the responder rule
         /// </value>
         /// <remarks>
         /// Required
@@ -41,7 +41,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// Execution Mode for ResponderRule
+        /// Execution mode for the responder rule
         /// </value>
         [JsonProperty(PropertyName = "mode")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

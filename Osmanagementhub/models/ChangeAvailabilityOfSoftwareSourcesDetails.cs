@@ -16,14 +16,18 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Request body that contains a list of software sources whose availability needs to be updated.
+    /// Provides the information used to update the availability of a list of software sources.
     /// </summary>
     public class ChangeAvailabilityOfSoftwareSourcesDetails 
     {
         
         /// <value>
-        /// List of objects containing software source ids and its availability.
+        /// List of vendor software sources and their availability statuses.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SoftwareSourceAvailabilities is required.")]
         [JsonProperty(PropertyName = "softwareSourceAvailabilities")]
         public System.Collections.Generic.List<SoftwareSourceAvailability> SoftwareSourceAvailabilities { get; set; }
         

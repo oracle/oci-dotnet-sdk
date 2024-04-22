@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Yum/DNF package group that associated with a software source.
+    /// The yum or DNF package group that is associated with a software source.
     /// </summary>
     public class PackageGroupSummary 
     {
@@ -42,13 +42,13 @@ namespace Oci.OsmanagementhubService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// description of the package group.
+        /// Description of the package group.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Indicates if this package group is visible by users.
+        /// Indicates if this package group is visible to users.
         /// </value>
         [JsonProperty(PropertyName = "isUserVisible")]
         public System.Nullable<bool> IsUserVisible { get; set; }
@@ -60,7 +60,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<bool> IsDefault { get; set; }
         
         /// <value>
-        /// the IDs of the package group's repositories.
+        /// The repository IDs of the package group.
         /// </value>
         [JsonProperty(PropertyName = "repositories")]
         public System.Collections.Generic.List<string> Repositories { get; set; }

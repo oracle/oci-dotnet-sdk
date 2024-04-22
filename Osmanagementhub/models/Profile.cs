@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Description of registration profile.
+    /// Object that defines the registration profile.
     /// </summary>
     [JsonConverter(typeof(ProfileModelConverter))]
     public class Profile 
     {
         
         /// <value>
-        /// The OCID of the profile that is immutable on creation.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the registration profile.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the tenancy containing the registration profile.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the registration profile.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name for the profile.
         /// </value>
         /// <remarks>
         /// Required
@@ -59,14 +59,14 @@ namespace Oci.OsmanagementhubService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the management station.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station to associate with an instance once registered. Associating with a management station applies only to non-OCI instances.
         /// </value>
         [JsonProperty(PropertyName = "managementStationId")]
         public string ManagementStationId { get; set; }
         
         
         /// <value>
-        /// The software source vendor name.
+        /// The vendor of the operating system for the instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -99,7 +99,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// The time the the registration profile was created. An RFC3339 formatted datetime string.
+        /// The time the registration profile was created (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
@@ -129,6 +129,42 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+                ///
+        /// <value>
+        /// The type of instance to register.
+        /// </value>
+        ///
+        public enum RegistrationTypeEnum {
+            [EnumMember(Value = "OCI_LINUX")]
+            OciLinux,
+            [EnumMember(Value = "NON_OCI_LINUX")]
+            NonOciLinux,
+            [EnumMember(Value = "OCI_WINDOWS")]
+            OciWindows,
+            [EnumMember(Value = "AUTONOMOUS_LINUX")]
+            AutonomousLinux
+        };
+
+        /// <value>
+        /// The type of instance to register.
+        /// </value>
+        [JsonProperty(PropertyName = "registrationType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<RegistrationTypeEnum> RegistrationType { get; set; }
+        
+        /// <value>
+        /// Indicates if the profile is set as the default. There is exactly one default profile for a specified architecture, OS family, registration type, and vendor. When registering an instance with the corresonding characteristics, the default profile is used, unless another profile is specified.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDefaultProfile")]
+        public System.Nullable<bool> IsDefaultProfile { get; set; }
+        
+        /// <value>
+        /// Indicates if the profile was created by the service. OS Management Hub provides a limited set of standardized profiles that can be used to register Autonomous Linux or Windows instances.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isServiceProvidedProfile")]
+        public System.Nullable<bool> IsServiceProvidedProfile { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
@@ -176,6 +212,9 @@ namespace Oci.OsmanagementhubService.Models
             var discriminator = jsonObject["profileType"].Value<string>();
             switch (discriminator)
             {
+                case "WINDOWS_STANDALONE":
+                    obj = new WindowsStandaloneProfile();
+                    break;
                 case "LIFECYCLE":
                     obj = new LifecycleProfile();
                     break;

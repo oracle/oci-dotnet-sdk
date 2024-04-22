@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Resource profile risk score trend-line
+    /// Summary of resource profile risk score aggregations.
     /// </summary>
     public class ResourceProfileRiskScoreAggregationSummary 
     {
@@ -42,13 +42,13 @@ namespace Oci.CloudguardService.Models
         public string ResourceProfileDisplayName { get; set; }
         
         /// <value>
-        /// Risk threshold
+        /// Risk score value that triggers a problem
         /// </value>
         [JsonProperty(PropertyName = "riskThreshold")]
         public System.Nullable<int> RiskThreshold { get; set; }
         
         /// <value>
-        /// List of ResourceRiskScoreAggregation
+        /// List of ResourceRiskScoreAggregation resources
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Information for creating an ManagementStation
+    /// Provides the information used to create a management station.
     /// </summary>
     public class CreateManagementStationDetails 
     {
         
         /// <value>
-        /// The OCID of the tenancy containing the Management Station.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the management station.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Management Station name
+        /// User-friendly name for the management station. Does not have to be unique and you can change the name later. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Details describing the Management Station config.
+        /// User-specified description of the management station. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Name of the host
+        /// Hostname of the management station.
         /// </value>
         /// <remarks>
         /// Required

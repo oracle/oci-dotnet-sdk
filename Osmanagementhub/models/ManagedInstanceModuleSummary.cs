@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Summary information pertaining to a module on a managed instance.
+    /// Provides summary information for a module on a managed instance.
     /// </summary>
     public class ManagedInstanceModuleSummary 
     {
@@ -58,7 +58,8 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<string> DisabledStreams { get; set; }
         
         /// <value>
-        /// The OCID of the software source that provides this module and the associated streams.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source that provides this module and the associated streams.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "softwareSourceId")]
         public string SoftwareSourceId { get; set; }

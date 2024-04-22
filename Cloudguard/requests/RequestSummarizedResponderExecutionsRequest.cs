@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The possible attributes based on which the responder executions can be distinguished
+        /// The possible attributes based on which the responder executions can be distinguished.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public System.Collections.Generic.List<ResponderDimension> ResponderExecutionsDimensions { get; set; }
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The OCID of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,16 +40,16 @@ namespace Oci.CloudguardService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The possible filters for Responder Type Dimension to distinguish Responder Executions.
-        /// If no values are passed, the metric for responder executions of all reponder types are returned
+        /// The possible filters for responder type dimension to distinguish responder executions.
+        /// If no values are passed, the metric for responder executions of all responder types are returned.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "responderTypeFilter", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ResponderType> ResponderTypeFilter { get; set; }
         
         /// <value>
-        /// The possible filters for Responder Type Dimension to distinguish Responder Executions.
-        /// If no values are passed, the metric for responder executions of all status are returned
+        /// The possible filters for responder type dimension to distinguish responder executions.
+        /// If no values are passed, the metric for responder executions of all status are returned.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "responderExecutionStatusFilter", Oci.Common.Http.CollectionFormatType.Multi)]
@@ -59,7 +59,7 @@ namespace Oci.CloudguardService.Requests
         /// Default is false.
         /// When set to true, the hierarchy of compartments is traversed
         /// and all compartments and subcompartments in the tenancy are
-        /// returned depending on the the setting of `accessLevel`.
+        /// returned depending on the setting of `accessLevel`.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
@@ -94,7 +94,7 @@ namespace Oci.CloudguardService.Requests
         public System.Nullable<AccessLevelEnum> AccessLevel { get; set; }
         
         /// <value>
-        /// The maximum number of items to return.
+        /// The maximum number of items to return
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }

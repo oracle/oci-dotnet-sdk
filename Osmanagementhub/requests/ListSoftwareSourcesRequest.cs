@@ -20,13 +20,13 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the compartment that contains the resources to list.
+        /// The OCID of the compartment that contains the resources to list. This filter returns only resources contained within the specified compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID for the software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the software source.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "softwareSourceId")]
         public string SoftwareSourceId { get; set; }
@@ -38,13 +38,13 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Collections.Generic.List<SoftwareSourceType> SoftwareSourceType { get; set; }
         
         /// <value>
-        /// A filter to return only profiles that match the given vendorName.
+        /// A filter to return only resources that match the given vendor name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vendorName")]
         public System.Nullable<VendorName> VendorName { get; set; }
         
         /// <value>
-        /// A filter to return only instances whose OS family type matches the given OS family.
+        /// A filter to return only resources that match the given operating system family.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<OsFamily> OsFamily { get; set; }
@@ -56,15 +56,31 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Collections.Generic.List<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// The availabilities of the software source for a tenant.
+        /// The availabilities of the software source in a non-OCI environment for a tenancy.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availability", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<Availability> Availability { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable.
-        /// <br/>
-        /// Example: My new resource
+        /// The availabilities of the software source in an OCI environment for a tenancy.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availabilityAtOci", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<Availability> AvailabilityAtOci { get; set; }
+        
+        /// <value>
+        /// The availabilities of the software source. Use this query parameter to filter across availabilities in different environments.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availabilityAnywhere", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<Availability> AvailabilityAnywhere { get; set; }
+        
+        /// <value>
+        /// Indicates whether the software source is mandatory for the Autonomous Linux service.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isMandatoryForAutonomousLinux")]
+        public System.Nullable<bool> IsMandatoryForAutonomousLinux { get; set; }
+        
+        /// <value>
+        /// A filter to return resources that match the given user-friendly name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
@@ -126,7 +142,7 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// A filter to return only resources whose lifecycleState matches the given lifecycleStates.
+        /// A filter to return only software sources whose state matches the given state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<SoftwareSource.LifecycleStateEnum> LifecycleState { get; set; }

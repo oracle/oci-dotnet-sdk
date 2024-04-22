@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Entities Details for a data source
+    /// Detailed information for the entities mapped to a data source.
     /// </summary>
     public class EntityDetails 
     {

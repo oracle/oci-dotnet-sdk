@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information about new Target.
+    /// Parameters used to create a new target.
     /// </summary>
     public class CreateTargetDetails 
     {
         
         /// <value>
-        /// DetectorTemplate identifier.
+        /// Display name for the target.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -35,7 +35,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier where the resource is created
+        /// Compartment OCID where the resource is created
         /// </value>
         /// <remarks>
         /// Required
@@ -54,7 +54,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// possible type of targets(COMPARTMENT/FACLOUD)
+        /// Type of resource that target support (COMPARTMENT/FACLOUD)
         /// </value>
         /// <remarks>
         /// Required
@@ -75,19 +75,19 @@ namespace Oci.CloudguardService.Models
         public string TargetResourceId { get; set; }
         
         /// <value>
-        /// List of detector recipes to associate with target
+        /// List of detector recipes to attach to target
         /// </value>
         [JsonProperty(PropertyName = "targetDetectorRecipes")]
         public System.Collections.Generic.List<CreateTargetDetectorRecipeDetails> TargetDetectorRecipes { get; set; }
         
         /// <value>
-        /// List of responder recipes to associate with target
+        /// List of responder recipes to attach to target
         /// </value>
         [JsonProperty(PropertyName = "targetResponderRecipes")]
         public System.Collections.Generic.List<CreateTargetResponderRecipeDetails> TargetResponderRecipes { get; set; }
         
         /// <value>
-        /// The current state of the DetectorRule.
+        /// The enablement state of the detector rule
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]

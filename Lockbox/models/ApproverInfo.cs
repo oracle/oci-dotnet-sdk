@@ -42,5 +42,11 @@ namespace Oci.LockboxService.Models
         [JsonProperty(PropertyName = "approverId")]
         public string ApproverId { get; set; }
         
+        /// <value>
+        /// The identity domain ocid of the approver.
+        /// </value>
+        [JsonProperty(PropertyName = "domainId")]
+        public string DomainId { get; set; }
+        
     }
 }

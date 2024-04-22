@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// All Targets selected.
+    /// Parameter to use when all targets are selected.
     /// </summary>
     public class AllTargetsSelected : TargetSelected
     {

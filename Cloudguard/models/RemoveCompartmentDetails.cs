@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// An existing compartment to remove from a security zone
+    /// Detailed information on a compartment to be removed from a security zone.
     /// </summary>
     public class RemoveCompartmentDetails 
     {

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Changing compartmentId for ManagedList
+    /// Parameters to use to move a managed list to a different compartment.
     /// </summary>
     public class ChangeManagedListCompartmentDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment into which the ManagedList should be moved
+        /// The OCID of the compartment into which the managed list is to be moved
         /// </value>
         /// <remarks>
         /// Required

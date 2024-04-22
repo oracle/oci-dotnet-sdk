@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The type of the condition meta data.
+        /// The type of the condition metadata.
         /// </value>
         /// <remarks>
         /// Required
@@ -36,13 +36,13 @@ namespace Oci.CloudguardService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// ServiceType filter for the condition meta data.
+        /// Service type filter for the condition metadata.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serviceType")]
         public string ServiceType { get; set; }
         
         /// <value>
-        /// Resource filter for the condition meta data.
+        /// Resource filter for the condition metadata.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]
         public string ResourceType { get; set; }

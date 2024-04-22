@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The OCID of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.CloudguardService.Requests
         /// Default is false.
         /// When set to true, the hierarchy of compartments is traversed
         /// and all compartments and subcompartments in the tenancy are
-        /// returned depending on the the setting of `accessLevel`.
+        /// returned depending on the setting of `accessLevel`.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
@@ -68,7 +68,7 @@ namespace Oci.CloudguardService.Requests
         public System.Nullable<AccessLevelEnum> AccessLevel { get; set; }
         
         /// <value>
-        /// The maximum number of items to return.
+        /// The maximum number of items to return
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }

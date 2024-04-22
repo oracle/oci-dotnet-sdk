@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Indicates the classification status of the Sighitng
+  /// The classification status of the sighitng.
   /// </summary>
   public enum ClassificationStatus {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

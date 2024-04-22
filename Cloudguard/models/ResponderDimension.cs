@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Possible Dimensions for distinguishing Responder Executions
+  /// Possible dimensions for distinguishing responder executions.
   /// </summary>
   public enum ResponderDimension {
       [EnumMember(Value = "RESPONDER_RULE_TYPE")]

@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of searching for available software sources for a managed instance.
+    /// The set of available software sources returned for the {@link #listManagedInstanceAvailableSoftwareSources(ListManagedInstanceAvailableSoftwareSourcesRequest) listManagedInstanceAvailableSoftwareSources} or the 
+    /// {@link #listManagedInstanceGroupAvailableSoftwareSources(ListManagedInstanceGroupAvailableSoftwareSourcesRequest) listManagedInstanceGroupAvailableSoftwareSources} operation.
+    /// 
     /// </summary>
     public class AvailableSoftwareSourceCollection 
     {

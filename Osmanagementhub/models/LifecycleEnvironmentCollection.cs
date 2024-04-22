@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a lifecycle environment search. Contains both lifecycle environment summary items and other data.
+    /// A set of lifecycle environments returned for the {@link #listLifecycleEnvironments(ListLifecycleEnvironmentsRequest) listLifecycleEnvironments} operation. The list contains a summary of each lifecycle environment and other information, such as metadata.
     /// </summary>
     public class LifecycleEnvironmentCollection 
     {

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Responder Execution Object.
+    /// Attributes for a responder execution (ResponderExecution resource).
     /// </summary>
     public class ResponderExecution 
     {
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Responder Rule id for the responder execution
+        /// Responder rule ID for the responder execution
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string ResponderRuleId { get; set; }
         
         /// <value>
-        /// Rule Type for the responder execution
+        /// Responder rule type for the responder execution
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ResponderType> ResponderRuleType { get; set; }
         
         /// <value>
-        /// Rule name for the responder execution
+        /// Responder rule name for the responder execution
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.CloudguardService.Models
         public string ResponderRuleName { get; set; }
         
         /// <value>
-        /// Problem id associated with the responder execution
+        /// Problem ID associated with the responder execution
         /// </value>
         /// <remarks>
         /// Required
@@ -73,7 +73,7 @@ namespace Oci.CloudguardService.Models
         public string ProblemId { get; set; }
         
         /// <value>
-        /// region where the problem is found
+        /// Region where the problem is found
         /// </value>
         /// <remarks>
         /// Required
@@ -83,7 +83,7 @@ namespace Oci.CloudguardService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// targetId of the problem for the responder execution
+        /// Target ID of the problem for the responder execution
         /// </value>
         /// <remarks>
         /// Required
@@ -93,7 +93,7 @@ namespace Oci.CloudguardService.Models
         public string TargetId { get; set; }
         
         /// <value>
-        /// compartment id of the responder execution for the problem
+        /// Compartment OCID of the responder execution for the problem
         /// </value>
         /// <remarks>
         /// Required
@@ -103,7 +103,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// resource type of the problem for the responder execution
+        /// Resource type of the problem for the responder execution
         /// </value>
         /// <remarks>
         /// Required
@@ -113,7 +113,7 @@ namespace Oci.CloudguardService.Models
         public string ResourceType { get; set; }
         
         /// <value>
-        /// resource name of the problem for the responder execution. TODO-DOC link to resource definition doc
+        /// Resource name of the problem for the responder execution.
         /// </value>
         /// <remarks>
         /// Required
@@ -139,7 +139,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCompleted { get; set; }
         
         /// <value>
-        /// current execution status of the responder
+        /// Current execution status of the responder
         /// </value>
         /// <remarks>
         /// Required
@@ -150,7 +150,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ResponderExecutionStates> ResponderExecutionStatus { get; set; }
         
         /// <value>
-        /// execution mode of the responder
+        /// Execution mode of the responder
         /// </value>
         /// <remarks>
         /// Required
@@ -161,13 +161,19 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ResponderExecutionModes> ResponderExecutionMode { get; set; }
         
         /// <value>
-        /// Message about the responder execution.
+        /// Message about the responder execution
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
         
         [JsonProperty(PropertyName = "responderRuleExecutionDetails")]
         public ResponderRuleExecutionDetails ResponderRuleExecutionDetails { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

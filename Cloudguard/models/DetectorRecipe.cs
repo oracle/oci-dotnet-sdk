@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A detector recipe is a collection of rules that can be configured to trigger problems that appear on the Cloud Guard Problems page. A DetectorRecipe object contains settings for a specific detector recipe, plus a list of the detector rules (DetectorRecipeDetectorRule objects) belonging to the DetectorRecipe object.
+    /// A detector recipe is a collection of rules that can be configured to trigger problems that appear on the Cloud Guard Problems page. A DetectorRecipe resource contains settings for a specific detector recipe, plus a list of the detector rules (DetectorRecipeDetectorRule resources) belonging to the DetectorRecipe resource.
     /// </summary>
     public class DetectorRecipe 
     {
         
         /// <value>
-        /// Ocid for detector recipe
+        /// OCID for detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// DisplayName of detector recipe.
+        /// Display name of detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Detector recipe description.
+        /// Detector recipe description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// compartmentId of detector recipe
+        /// Compartment OCID of detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Recipe Ocid of the Source Recipe to be cloned
+        /// Recipe OCID of the source recipe to be cloned
         /// </value>
         /// <remarks>
         /// Required
@@ -66,6 +66,13 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "SourceDetectorRecipeId is required.")]
         [JsonProperty(PropertyName = "sourceDetectorRecipeId")]
         public string SourceDetectorRecipeId { get; set; }
+        
+        /// <value>
+        /// Recipe type ( STANDARD, ENTERPRISE )
+        /// </value>
+        [JsonProperty(PropertyName = "detectorRecipeType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DetectorRecipeEnum> DetectorRecipeType { get; set; }
         
         /// <value>
         /// Owner of detector recipe
@@ -102,19 +109,19 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<DetectorRecipeDetectorRule> EffectiveDetectorRules { get; set; }
         
         /// <value>
-        /// The date and time the detector recipe was created. Format defined by RFC3339.
+        /// The date and time the detector recipe was created Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the detector recipe was updated. Format defined by RFC3339.
+        /// The date and time the detector recipe was last updated Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the resource.
+        /// The current lifecycle state of the resource
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -151,7 +158,7 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
-        /// The recipe attached to targets
+        /// List of target IDs to which the recipe is attached
         /// </value>
         [JsonProperty(PropertyName = "targetIds")]
         public System.Collections.Generic.List<string> TargetIds { get; set; }

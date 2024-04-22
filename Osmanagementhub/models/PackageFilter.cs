@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Used to select packages from VendorSoftwareSources to create/update CustomSoftwareSources.
+    /// Provides the information used to create a filter for packages from a vendor software source to create or update a custom software source.
     /// </summary>
     public class PackageFilter 
     {
@@ -40,7 +40,7 @@ namespace Oci.OsmanagementhubService.Models
         public string PackageVersion { get; set; }
         
         /// <value>
-        /// The type of the filter, which can be of two types - INCLUDE or EXCLUDE.
+        /// The type of the filter.
         /// </value>
         /// <remarks>
         /// Required

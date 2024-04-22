@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Collection of ManagedInstanceAnalyticSummary.
+    /// A set of managed instance metrics returned for the {@link #summarizeManagedInstanceAnalytics(SummarizeManagedInstanceAnalyticsRequest) summarizeManagedInstanceAnalytics} operation.
     /// </summary>
     public class ManagedInstanceAnalyticCollection 
     {
         
         /// <value>
-        /// List of managed instance analytic summary.
+        /// List of managed instance analytic summary objects.
         /// </value>
         /// <remarks>
         /// Required

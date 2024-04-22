@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 86.0.0 - 2024-04-23
+### Added
+- Support for the Cluster Placement Groups service
+- Support for new optional parameter for managing approval template in the Managed Access service
+- Support for cluster placement groups in the Compute service
+- Support for replacing boot volume for virtual machines in the Compute service
+- Support for assigning a cluster placement group to boot and block volumes in the Block Storage service
+- Support for container workload integration in the Cloud Guard service
+- Support for instances in OCI and 3rd party clouds in the OS Management service
+
+### Breaking Changes
+- The property `InstanceLocation` was removed from the models `SummarizeManagedInstanceAnalyticsRequest` and `GetManagedInstanceAnalyticContentRequest` in the OS Management service
+- The property `AdvisoryType` was removed from the models `ListManagedInstanceErrataRequest` and `GetManagedInstanceContentRequest` in the OS Management service
+- The type of property `Architecture` was changed from `string` to `SoftwarePackageArchitecture` in the models `SoftwarePackage` and `SoftwarePackageSummary` in the OS Management service
+
 ## 85.1.0 - 2024-04-16
 ### Added
 - Support for calling Oracle Cloud Infrastructure services in the me-abudhabi-3 region

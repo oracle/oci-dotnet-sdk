@@ -57,6 +57,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
         
+        /// <value>
+        /// The OCID of the cluster placement group of the instance.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
         [JsonProperty(PropertyName = "shapeConfig")]
         public InstanceReservationShapeConfigDetails ShapeConfig { get; set; }
         

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// An existing compartment to add to a security zone
+    /// Parameter for an existing compartment to be added to a security zone.
     /// </summary>
     public class AddCompartmentDetails 
     {

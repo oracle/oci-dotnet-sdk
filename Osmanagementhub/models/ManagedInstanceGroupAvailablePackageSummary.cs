@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Summary information pertaining to an available package for a managed instance group.
+    /// Provides summary information for an available package for a managed instance group.
     /// </summary>
     public class ManagedInstanceGroupAvailablePackageSummary 
     {
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Unique identifier for the package. NOTE - This is not an OCID.
+        /// Unique identifier for the package. Note that this is not an OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// Version of the installed package.
+        /// Version of the available package.
         /// </value>
         /// <remarks>
         /// Required
@@ -75,7 +75,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<SoftwareSourceDetails> SoftwareSources { get; set; }
         
         /// <value>
-        /// Flag to return only latest package versions.
+        /// Indicates whether this is the latest package version.
         /// </value>
         [JsonProperty(PropertyName = "isLatest")]
         public System.Nullable<bool> IsLatest { get; set; }

@@ -88,5 +88,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "volumeGroupReplicas")]
         public System.Collections.Generic.List<VolumeGroupReplicaDetails> VolumeGroupReplicas { get; set; }
         
+        /// <value>
+        /// The clusterPlacementGroup Id of the volume group for volume group placement.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
     }
 }

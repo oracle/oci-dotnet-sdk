@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of Service type
+    /// Summary information for a service type.
     /// </summary>
     public class ServiceTypeSummary 
     {
         
         /// <value>
-        /// name of the service type
+        /// Name of the service type
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// List of Resource
+        /// List of resource types
         /// </value>
         /// <remarks>
         /// Required

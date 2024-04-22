@@ -70,6 +70,64 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
+        /// Adds profile to a managed instance. After the profile has been added,
+        /// the instance can be registered as a managed instance.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/AttachProfileToManagedInstance.cs.html">here</a> to see an example of how to use AttachProfileToManagedInstance API.</example>
+        public async Task<AttachProfileToManagedInstanceResponse> AttachProfileToManagedInstance(AttachProfileToManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called attachProfileToManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/actions/attachProfile".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstance",
+                    OperationName = "AttachProfileToManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstance/AttachProfileToManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<AttachProfileToManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"AttachProfileToManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Adds software sources to a managed instance. After the software source has been added,
         /// then packages from that software source can be installed on the managed instance.
         /// 
@@ -123,6 +181,122 @@ namespace Oci.OsmanagementhubService
             catch (Exception e)
             {
                 logger.Error($"AttachSoftwareSourcesToManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Unregisters the specified managed instance from the service. Once unregistered, the service will no longer manage the instance. 
+        /// For Linux instances, yum or DNF repository files will be restored to their state prior to registration.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/DeleteManagedInstance.cs.html">here</a> to see an example of how to use DeleteManagedInstance API.</example>
+        public async Task<DeleteManagedInstanceResponse> DeleteManagedInstance(DeleteManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called deleteManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstance",
+                    OperationName = "DeleteManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstance/DeleteManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<DeleteManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Detaches profile from a managed instance. After the profile has been removed,
+        /// the instance cannot be registered as a managed instance.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/DetachProfileFromManagedInstance.cs.html">here</a> to see an example of how to use DetachProfileFromManagedInstance API.</example>
+        public async Task<DetachProfileFromManagedInstanceResponse> DetachProfileFromManagedInstance(DetachProfileFromManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called detachProfileFromManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/actions/detachProfile".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstance",
+                    OperationName = "DetachProfileFromManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstance/DetachProfileFromManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<DetachProfileFromManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DetachProfileFromManagedInstance failed with error: {e.Message}");
                 throw;
             }
         }
@@ -363,6 +537,120 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
+        /// Returns a Windows Update object.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/GetWindowsUpdate.cs.html">here</a> to see an example of how to use GetWindowsUpdate API.</example>
+        public async Task<GetWindowsUpdateResponse> GetWindowsUpdate(GetWindowsUpdateRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getWindowsUpdate");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/windowsUpdates/{windowsUpdateId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstance",
+                    OperationName = "GetWindowsUpdate",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/WindowsUpdate/GetWindowsUpdate",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetWindowsUpdateResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetWindowsUpdate failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Installs all of the available Windows updates for managed instances in a compartment. This applies only to standalone Windows instances. This will not update instances that belong to a group.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/InstallAllWindowsUpdatesOnManagedInstancesInCompartment.cs.html">here</a> to see an example of how to use InstallAllWindowsUpdatesOnManagedInstancesInCompartment API.</example>
+        public async Task<InstallAllWindowsUpdatesOnManagedInstancesInCompartmentResponse> InstallAllWindowsUpdatesOnManagedInstancesInCompartment(InstallAllWindowsUpdatesOnManagedInstancesInCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called installAllWindowsUpdatesOnManagedInstancesInCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/actions/installWindowsUpdates".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstance",
+                    OperationName = "InstallAllWindowsUpdatesOnManagedInstancesInCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstance/InstallAllWindowsUpdatesOnManagedInstancesInCompartment",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<InstallAllWindowsUpdatesOnManagedInstancesInCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"InstallAllWindowsUpdatesOnManagedInstancesInCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Installs a profile for an module stream.  The stream must be
         /// enabled before a profile can be installed.  If a module stream
         /// defines multiple profiles, each one can be installed independently.
@@ -479,7 +767,64 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Returns a list of available packages for a managed instance.
+        /// Installs Windows updates on the specified managed instance.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/InstallWindowsUpdatesOnManagedInstance.cs.html">here</a> to see an example of how to use InstallWindowsUpdatesOnManagedInstance API.</example>
+        public async Task<InstallWindowsUpdatesOnManagedInstanceResponse> InstallWindowsUpdatesOnManagedInstance(InstallWindowsUpdatesOnManagedInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called installWindowsUpdatesOnManagedInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/actions/installWindowsUpdates".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstance",
+                    OperationName = "InstallWindowsUpdatesOnManagedInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstance/InstallWindowsUpdatesOnManagedInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<InstallWindowsUpdatesOnManagedInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"InstallWindowsUpdatesOnManagedInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns a list of packages that are available for installation on a managed instance.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -536,7 +881,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Returns a list of available software sources for a managed instance.
+        /// Returns a list of software sources that can be attached to the specified managed instance. Any software sources already attached to the instance are not included in the list.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -588,6 +933,63 @@ namespace Oci.OsmanagementhubService
             catch (Exception e)
             {
                 logger.Error($"ListManagedInstanceAvailableSoftwareSources failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns a list of Windows updates that can be installed on the specified managed instance.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/ListManagedInstanceAvailableWindowsUpdates.cs.html">here</a> to see an example of how to use ListManagedInstanceAvailableWindowsUpdates API.</example>
+        public async Task<ListManagedInstanceAvailableWindowsUpdatesResponse> ListManagedInstanceAvailableWindowsUpdates(ListManagedInstanceAvailableWindowsUpdatesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listManagedInstanceAvailableWindowsUpdates");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/availableWindowsUpdates".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstance",
+                    OperationName = "ListManagedInstanceAvailableWindowsUpdates",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstance/ListManagedInstanceAvailableWindowsUpdates",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListManagedInstanceAvailableWindowsUpdatesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListManagedInstanceAvailableWindowsUpdates failed with error: {e.Message}");
                 throw;
             }
         }
@@ -707,18 +1109,64 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Retrieve a list of modules, along with streams of the modules, 
-        /// from a managed instance.  Filters may be applied to select
-        /// a subset of modules based on the filter criteria.
-        /// &lt;br/&gt;
-        /// The &#39;name&#39; attribute filters against the name of a module.
-        /// It accepts strings of the format \&quot;&lt;string&gt;\&quot;.  
-        /// &lt;br/&gt;
-        /// The &#39;nameContains&#39; attribute filters against the name of a module 
-        /// based on partial match. It accepts strings of the format \&quot;&lt;string&gt;\&quot;.  
-        /// If this attribute is defined, only matching modules are included 
-        /// in the result set. If it is not defined, the request  is not subject 
-        /// to this filter.
+        /// Returns a list of Windows updates that have been installed on the specified managed instance.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/ListManagedInstanceInstalledWindowsUpdates.cs.html">here</a> to see an example of how to use ListManagedInstanceInstalledWindowsUpdates API.</example>
+        public async Task<ListManagedInstanceInstalledWindowsUpdatesResponse> ListManagedInstanceInstalledWindowsUpdates(ListManagedInstanceInstalledWindowsUpdatesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listManagedInstanceInstalledWindowsUpdates");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstances/{managedInstanceId}/installedWindowsUpdates".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstance",
+                    OperationName = "ListManagedInstanceInstalledWindowsUpdates",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstance/ListManagedInstanceInstalledWindowsUpdates",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListManagedInstanceInstalledWindowsUpdatesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListManagedInstanceInstalledWindowsUpdates failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Retrieves a list of modules, along with streams of the modules, from a managed instance. Filters may be applied to select a subset of modules based on the filter criteria.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -888,66 +1336,67 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Perform an operation involving modules, streams, and profiles on a
-        /// managed instance.  Each operation may enable or disable an arbitrary
-        /// amount of module streams, and install or remove an arbitrary number
-        /// of module stream profiles.  When the operation is complete, the
-        /// state of the modules, streams, and profiles on the managed instance
-        /// will match the state indicated in the operation.
-        /// &lt;br/&gt;
-        /// Each module stream specified in the list of module streams to enable
-        /// will be in the \&quot;ENABLED\&quot; state upon completion of the operation.
-        /// If there was already a stream of that module enabled, any work
-        /// required to switch from the current stream to the new stream is
-        /// performed implicitly.
-        /// &lt;br/&gt;
-        /// Each module stream specified in the list of module streams to disable
-        /// will be in the \&quot;DISABLED\&quot; state upon completion of the operation.
-        /// Any profiles that are installed for the module stream will be removed
-        /// as part of the operation.
-        /// &lt;br/&gt;
-        /// Each module stream profile specified in the list of profiles to install
-        /// will be in the \&quot;INSTALLED\&quot; state upon completion of the operation,
-        /// indicating that any packages that are part of the profile are installed
-        /// on the managed instance.  If the module stream containing the profile
-        /// is not enabled, it will be enabled as part of the operation.  There
-        /// is an exception when attempting to install a stream of a profile when
-        /// another stream of the same module is enabled.  It is an error to attempt
-        /// to install a profile of another module stream, unless enabling the
-        /// new module stream is explicitly included in this operation.
-        /// &lt;br/&gt;
-        /// Each module stream profile specified in the list of profiles to remove
-        /// will be in the \&quot;AVAILABLE\&quot; state upon completion of the operation.
-        /// The status of packages within the profile after the operation is
-        /// complete is defined by the package manager on the managed instance.
-        /// &lt;br/&gt;
-        /// Operations that contain one or more elements that are not allowed
-        /// are rejected.
-        /// &lt;br/&gt;
-        /// The result of this request is a work request object.  The returned
-        /// work request is the parent of a structure of other WorkRequests.  Taken
-        /// as a whole, this structure indicates the entire set of work to be
-        /// performed to complete the operation.
-        /// &lt;br/&gt;
-        /// This interface can also be used to perform a dry run of the operation
-        /// rather than committing it to a managed instance.  If a dry run is
-        /// requested, the OS Management Hub service will evaluate the operation
-        /// against the current module, stream, and profile state on the managed
-        /// instance.  It will calculate the impact of the operation on all
-        /// modules, streams, and profiles on the managed instance, including those
-        /// that are implicitly impacted by the operation.
-        /// &lt;br/&gt;
-        /// The WorkRequest resulting from a dry run behaves differently than
-        /// a WorkRequest resulting from a committable operation.  Dry run
-        /// WorkRequests are always singletons and never have children.  The
-        /// impact of the operation is returned using the log and error
-        /// facilities of work requests.  The impact of operations that are
-        /// allowed by the OS Management Hub service are communicated as one or
-        /// more work request log entries.  Operations that are not allowed
-        /// by the OS Management Hub service are communicated as one or more
-        /// work request error entries.  Each entry, for either logs or errors,
-        /// contains a structured message containing the results of one
-        /// or more operations.
+        /// Lists Windows updates that have been reported to the service.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/ListWindowsUpdates.cs.html">here</a> to see an example of how to use ListWindowsUpdates API.</example>
+        public async Task<ListWindowsUpdatesResponse> ListWindowsUpdates(ListWindowsUpdatesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listWindowsUpdates");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/windowsUpdates".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstance",
+                    OperationName = "ListWindowsUpdates",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/WindowsUpdateCollection/ListWindowsUpdates",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListWindowsUpdatesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListWindowsUpdates failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Enables or disables module streams and installs or removes module stream profiles. Once complete, the state of the modules, streams, and 
+        /// profiles will match the state indicated in the operation. See {@link #manageModuleStreamsOnManagedInstanceDetails(ManageModuleStreamsOnManagedInstanceDetailsRequest) manageModuleStreamsOnManagedInstanceDetails} 
+        /// for more information. You can preform this operation as a dry run. For a dry run, the service evaluates the operation against the 
+        /// current module, stream, and profile state on the managed instance, but does not commit the changes. Instead, the service returns work request log or error entries indicating the impact of the operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1004,7 +1453,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Refresh all installed and updatable software information on a managed instance.
+        /// Refreshes the package or Windows update information on a managed instance with the latest data from the software source. This does not update packages on the instance. It provides the service with the latest package data.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1237,7 +1686,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Install all of the available package updates for all of the managed instances in a compartment.
+        /// Install all of the available package updates for all of the managed instances in a compartment. This applies only to standalone non-Windows instances. This will not update instances that belong to a group or lifecycle environment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1294,7 +1743,8 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Updates the managed instance.
+        /// Updates the specified managed instance information, such as description, ONS topic, and associated management station.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The managed instance group OCID.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance group.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string DisplayNameContains { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the resources to list.
+        /// The OCID of the compartment that contains the resources to list. This filter returns only resources contained within the specified compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -92,10 +92,7 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// A boolean variable that is used to list only the latest versions of packages, module streams,
-        /// and stream profiles when set to true. All packages, module streams, and stream profiles are
-        /// returned when set to false.
-        /// 
+        /// Indicates whether to list only the latest versions of packages, module streams, and stream profiles.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLatest")]
         public System.Nullable<bool> IsLatest { get; set; }

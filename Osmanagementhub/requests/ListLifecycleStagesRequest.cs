@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the compartment that contains the resources to list.
+        /// The OCID of the compartment that contains the resources to list. This filter returns only resources contained within the specified compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -38,13 +38,13 @@ namespace Oci.OsmanagementhubService.Requests
         public string DisplayNameContains { get; set; }
         
         /// <value>
-        /// The OCID of the lifecycle stage.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle stage.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleStageId")]
         public string LifecycleStageId { get; set; }
         
         /// <value>
-        /// The OCID for the software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source. This filter returns resources associated with this software source.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "softwareSourceId")]
         public string SoftwareSourceId { get; set; }
@@ -56,10 +56,22 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Nullable<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// A filter to return only profiles that match the given osFamily.
+        /// A filter to return only resources that match the given operating system family.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily")]
         public System.Nullable<OsFamily> OsFamily { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location matches the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "location", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> Location { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location does not match the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "locationNotEqualTo", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> LocationNotEqualTo { get; set; }
         
         /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a paginated \"List\" call.
@@ -80,7 +92,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// A filter to return only lifecycle stage whose lifecycle state matches the given lifecycle state.
+        /// A filter to return only lifecycle stages whose lifecycle state matches the given lifecycle state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleStage.LifecycleStateEnum> LifecycleState { get; set; }

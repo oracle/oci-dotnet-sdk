@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// Details for the new ManagedList.
+        /// Details for the new ManagedList resources
         /// </value>
         /// <remarks>
         /// Required

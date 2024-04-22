@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the lifecycle stage.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle stage.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string LifecycleStageId { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the resources to list.
+        /// The OCID of the compartment that contains the resources to list. This filter returns only resources contained within the specified compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -66,7 +66,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// A filter to return only lifecycle stage whose lifecycle state matches the given lifecycle state.
+        /// A filter to return only lifecycle stages whose lifecycle state matches the given lifecycle state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleStage.LifecycleStateEnum> LifecycleState { get; set; }

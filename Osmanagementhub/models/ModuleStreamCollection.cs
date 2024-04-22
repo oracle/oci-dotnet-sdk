@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a ModuleStream search. Contains both ModuleStreamSummary items and other information, such as metadata.
+    /// The set of module streams returned for {@link #listModuleStreamProfiles(ListModuleStreamProfilesRequest) listModuleStreamProfiles} operation.
     /// </summary>
     public class ModuleStreamCollection 
     {
         
         /// <value>
-        /// List of ModuleStream.
+        /// List of module streams.
         /// </value>
         /// <remarks>
         /// Required

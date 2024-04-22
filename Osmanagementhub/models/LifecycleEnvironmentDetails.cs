@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Identifying information for the specified lifecycle environment.
+    /// Provides identifying information for the specified lifecycle environment.
     /// </summary>
     public class LifecycleEnvironmentDetails 
     {
         
         /// <value>
-        /// The OCID of the lifecycle environment.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle environment.
         /// </value>
         /// <remarks>
         /// Required

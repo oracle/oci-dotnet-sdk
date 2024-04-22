@@ -73,8 +73,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Attach(add) managed instances to a lifecycle stage. 
-        /// Once added operations can be applied to all managed instances in the lifecycle stage.
+        /// Attaches (adds) managed instances to a lifecycle stage. Once added, you can apply operations to all managed instances in the lifecycle stage.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -131,7 +130,64 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Creates a new lifecycle environment.
+        /// Moves a lifecycle environment into a different compartment within the same tenancy. For information about moving resources between compartments, see [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/ChangeLifecycleEnvironmentCompartment.cs.html">here</a> to see an example of how to use ChangeLifecycleEnvironmentCompartment API.</example>
+        public async Task<ChangeLifecycleEnvironmentCompartmentResponse> ChangeLifecycleEnvironmentCompartment(ChangeLifecycleEnvironmentCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called changeLifecycleEnvironmentCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/lifecycleEnvironments/{lifecycleEnvironmentId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "LifecycleEnvironment",
+                    OperationName = "ChangeLifecycleEnvironmentCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/LifecycleEnvironment/ChangeLifecycleEnvironmentCompartment",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ChangeLifecycleEnvironmentCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeLifecycleEnvironmentCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a lifecycle environment. A lifecycle environment is a user-defined pipeline to deliver curated, versioned content in a prescribed, methodical manner.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -188,7 +244,8 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Deletes a lifecycle environment.
+        /// Deletes the specified lifecycle environment.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -244,7 +301,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Detach(remove) managed instance from a lifecycle stage.
+        /// Detaches (removes) a managed instance from a lifecycle stage.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -357,7 +414,8 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Gets information about the specified lifecycle stage.
+        /// Returns information about the specified lifecycle stage.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -529,8 +587,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Lists lifecycle stages that match the specified compartment or lifecycle stage OCID. Filter the list against 
-        /// a variety of criteria including but not limited to its name, status, architecture, and OS family.
+        /// Lists lifecycle stages that match the specified compartment or lifecycle stage [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Filter the list against
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -587,8 +644,9 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Updates the versioned custom software source content 
-        /// for specified lifecycle stage.
+        /// Updates the versioned custom software source content to the specified lifecycle stage.
+        /// A versioned custom software source OCID (softwareSourceId) is required when promoting content to the first lifecycle stage. You must promote content to the first stage before promoting to subsequent stages, otherwise the service returns an error.
+        /// The softwareSourceId is optional when promoting content to the second, third, forth, or fifth stages. If you provide a softwareSourceId, the service validates that it matches the softwareSourceId of the previous stage. If it does not match, the service returns an error. If you don&#39;t provide a softwareSourceId, the service promotes the versioned software source from the previous lifecycle stage. If the previous lifecycle stage has no software source, the service returns an error.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
