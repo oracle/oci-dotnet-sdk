@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A description of workrequest status
+    /// Detailed information about a work request (WorkRequest resource).
     /// </summary>
     public class WorkRequest 
     {
         
         /// <value>
-        /// The id of the work request.
+        /// Unique identifier of the work request
         /// </value>
         /// <remarks>
         /// Required
@@ -32,10 +32,10 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The ocid of the compartment that contains the work request. Work requests should be scoped to
+        /// The OCID of the compartment that contains the work request. Work requests should be scoped to
         /// the same compartment as the resource the work request affects. If the work request affects multiple resources,
         /// and those resources are not in the same compartment, it is up to the service team to pick the primary
-        /// resource whose compartment should be used
+        /// resource whose compartment should be used.
         /// 
         /// </value>
         /// <remarks>
@@ -46,7 +46,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Operation type of the work request.
+        /// Operation type of the work request
         /// </value>
         /// <remarks>
         /// Required
@@ -57,7 +57,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<OperationType> OperationType { get; set; }
         
         /// <value>
-        /// Operation status of the work request.
+        /// Operation status of the work request
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +68,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
-        /// The resources affected by this work request.
+        /// List of resources affected by the work request
         /// </value>
         /// <remarks>
         /// Required
@@ -78,7 +78,7 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<WorkRequestResource> Resources { get; set; }
         
         /// <value>
-        /// Percentage of the request completed.
+        /// Percentage of the work request that's completed
         /// </value>
         /// <remarks>
         /// Required
@@ -88,7 +88,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<float> PercentComplete { get; set; }
         
         /// <value>
-        /// The date and time the request was created
+        /// The date and time the work request was created
         /// </value>
         /// <remarks>
         /// Required
@@ -98,16 +98,22 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
         
         /// <value>
-        /// The date and time the request was started
+        /// The date and time the work request was started
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The date and time the object was finished
+        /// The date and time the work request was finished
         /// </value>
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

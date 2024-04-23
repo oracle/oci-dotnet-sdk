@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of an installed package search on a managed instance.
+    /// The set of installed packages on a managed instance.
     /// </summary>
     public class InstalledPackageCollection 
     {

@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// The unique identifier of the detector rule.
+        /// The unique identifier of the detector rule
         /// </value>
         /// <remarks>
         /// Required
@@ -32,25 +32,25 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Display name for DetectorRule.
+        /// Display name for the detector rule
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description for DetectorRule.
+        /// Description for the detector rule
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// recommendation for DetectorRule
+        /// Recommendation for the detector rule
         /// </value>
         [JsonProperty(PropertyName = "recommendation")]
         public string Recommendation { get; set; }
         
         /// <value>
-        /// detector for the rule
+        /// Detector recipe for the rule
         /// </value>
         /// <remarks>
         /// Required
@@ -61,7 +61,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<DetectorEnum> Detector { get; set; }
         
         /// <value>
-        /// service type of the configuration to which the rule is applied
+        /// Service type of the configuration to which the rule is applied
         /// </value>
         /// <remarks>
         /// Required
@@ -71,7 +71,7 @@ namespace Oci.CloudguardService.Models
         public string ServiceType { get; set; }
         
         /// <value>
-        /// resource type of the configuration to which the rule is applied
+        /// Resource type of the configuration to which the rule is applied
         /// </value>
         /// <remarks>
         /// Required
@@ -119,13 +119,13 @@ namespace Oci.CloudguardService.Models
         };
 
         /// <value>
-        /// List of cloudguard managed list types related to this rule
+        /// List of managed list types related to this rule
         /// </value>
         [JsonProperty(PropertyName = "managedListTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<ManagedListTypesEnum> ManagedListTypes { get; set; }
         
         /// <value>
-        /// List of CandidateResponderRule related to this rule
+        /// List of responder rules that could be used to remediate a problem triggered by this detector rule
         /// </value>
         [JsonProperty(PropertyName = "candidateResponderRules")]
         public System.Collections.Generic.List<CandidateResponderRule> CandidateResponderRules { get; set; }
@@ -143,7 +143,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the DetectorRule.
+        /// The current state of the detector rule
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -154,6 +154,12 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

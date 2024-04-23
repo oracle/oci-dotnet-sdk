@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A software package available for install on a managed instance.
+    /// Provides summary information about a software package available for installation on a managed instance.
     /// </summary>
     public class AvailablePackageSummary : PackageSummary
     {

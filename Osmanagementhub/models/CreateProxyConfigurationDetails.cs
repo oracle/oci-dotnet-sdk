@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Information for creating a proxy configuration
+    /// Information used to create the proxy configuration for a management station.
     /// </summary>
     public class CreateProxyConfigurationDetails 
     {
         
         /// <value>
-        /// To enable or disable the proxy (default true)
+        /// Indicates if the proxy should be enabled or disabled. Default is enabled.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,19 +32,19 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// List of hosts
+        /// List of hosts.
         /// </value>
         [JsonProperty(PropertyName = "hosts")]
         public System.Collections.Generic.List<string> Hosts { get; set; }
         
         /// <value>
-        /// Port that the proxy will use
+        /// Listening port used for the proxy.
         /// </value>
         [JsonProperty(PropertyName = "port")]
         public string Port { get; set; }
         
         /// <value>
-        /// URL that the proxy will forward to
+        /// The URL the proxy will forward to.
         /// </value>
         [JsonProperty(PropertyName = "forward")]
         public string Forward { get; set; }

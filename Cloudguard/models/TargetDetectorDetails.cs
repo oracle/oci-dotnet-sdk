@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Overriden settings of a Detector Rule applied on target
+    /// Overriden settings of a detector rule in recipe attached to target.
     /// </summary>
     public class TargetDetectorDetails 
     {
         
         /// <value>
-        /// Enables the control
+        /// Enablement state of the detector rule
         /// </value>
         /// <remarks>
         /// Required
@@ -32,14 +32,14 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// The Risk Level
+        /// The risk level of the detector rule
         /// </value>
         [JsonProperty(PropertyName = "riskLevel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
         
         /// <value>
-        /// Configuration details
+        /// List of detector rule configurations
         /// </value>
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<DetectorConfiguration> Configurations { get; set; }
@@ -51,19 +51,19 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<ConditionGroup> ConditionGroups { get; set; }
         
         /// <value>
-        /// user defined labels for a detector rule
+        /// User-defined labels for a detector rule
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
         
         /// <value>
-        /// configuration allowed or not
+        /// Configuration allowed or not
         /// </value>
         [JsonProperty(PropertyName = "isConfigurationAllowed")]
         public System.Nullable<bool> IsConfigurationAllowed { get; set; }
         
         /// <value>
-        /// Cutover point for an elevated resource Risk Score to create a Problem
+        /// Point at which an elevated resource risk score creates a problem
         /// </value>
         [JsonProperty(PropertyName = "problemThreshold")]
         public System.Nullable<int> ProblemThreshold { get; set; }

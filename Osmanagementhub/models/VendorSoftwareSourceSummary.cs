@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A vendor software source summary summarizes a vendor software source.
+    /// Provides summary information for a vendor software source.
     /// </summary>
     public class VendorSoftwareSourceSummary : SoftwareSourceSummary
     {
@@ -31,6 +31,12 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "vendorName")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<VendorName> VendorName { get; set; }
+        
+        /// <value>
+        /// Indicates whether the software source is required for the Autonomous Linux service.
+        /// </value>
+        [JsonProperty(PropertyName = "isMandatoryForAutonomousLinux")]
+        public System.Nullable<bool> IsMandatoryForAutonomousLinux { get; set; }
         
         [JsonProperty(PropertyName = "softwareSourceType")]
         private readonly string softwareSourceType = "VENDOR";

@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// Details for the new scheduled job.
+        /// Provides the information used to create the scheduled job.
         /// </value>
         /// <remarks>
         /// Required

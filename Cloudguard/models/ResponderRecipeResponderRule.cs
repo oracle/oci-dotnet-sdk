@@ -16,13 +16,32 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Details of ResponderRule.
+    /// A ResponderRecipeRule resource contains a specific instance of a
+    /// single responder rule.
+    /// <br/>
+    /// A ResponderRecipeRule resource:
+    /// * Is effectively a copy of a ResponderRule resource in which users can
+    /// make certain changes if it\u2019s Oracle-managed, and other changes if it\u2019s user-managed.
+    /// * Can also be created by cloning an existing ResponderRecipe resource, either
+    /// user-managed or Oracle-managed; cloning the ResponderRecipe resource also clones
+    /// its associated ResponderRule resources as ResponderRecipeRule resources.
+    /// * Is visible on the Cloud Guard Responder Recipes, Responder Details page.
+    /// * Is effectively located in a specific OCI compartment, through the ResponderRecipe
+    /// resource to which it belongs.
+    /// * Can be modified by users, programmatically or through the UI.
+    /// * Changes that can be made here apply globally, to all resources in OCI compartments
+    /// mapped to a target that attaches the associated responder recipe (in a
+    /// TargetResponderRecipe resource), but are overridden by changes made in the
+    /// corresponding TargetResponderRecipe resource (which is effectively a copy of the
+    /// ResponderRecipe resource).
+    /// type: object
+    /// 
     /// </summary>
     public class ResponderRecipeResponderRule 
     {
         
         /// <value>
-        /// Identifier for ResponderRule.
+        /// Unique identifier for the responder rule
         /// </value>
         /// <remarks>
         /// Required
@@ -32,26 +51,26 @@ namespace Oci.CloudguardService.Models
         public string ResponderRuleId { get; set; }
         
         /// <value>
-        /// ResponderRule display name.
+        /// Responder rule display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// ResponderRule description.
+        /// Responder rule description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Type of Responder
+        /// Type of responder
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResponderType> Type { get; set; }
         
         /// <value>
-        /// List of Policy
+        /// List of policies
         /// </value>
         [JsonProperty(PropertyName = "policies")]
         public System.Collections.Generic.List<string> Policies { get; set; }
@@ -68,7 +87,7 @@ namespace Oci.CloudguardService.Models
         };
 
         /// <value>
-        /// Supported Execution Modes
+        /// Supported execution modes for the responder rule
         /// </value>
         [JsonProperty(PropertyName = "supportedModes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<SupportedModesEnum> SupportedModes { get; set; }
@@ -77,7 +96,7 @@ namespace Oci.CloudguardService.Models
         public ResponderRuleDetails Details { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -93,13 +112,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the responder recipe rule was updated. Format defined by RFC3339.
+        /// The date and time the responder recipe rule was last updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the ResponderRule.
+        /// The current lifecycle state of the responder rule
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -110,6 +129,12 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

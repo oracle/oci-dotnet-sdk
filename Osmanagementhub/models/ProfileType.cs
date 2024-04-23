@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// Possible registration profile types.
+  /// Registration profile type.
   /// </summary>
   public enum ProfileType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -26,6 +26,8 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "LIFECYCLE")]
       Lifecycle,
       [EnumMember(Value = "STATION")]
-      Station
+      Station,
+      [EnumMember(Value = "WINDOWS_STANDALONE")]
+      WindowsStandalone
   }
 }

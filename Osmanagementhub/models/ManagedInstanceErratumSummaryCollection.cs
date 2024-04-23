@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of an errata search on a managed instance.
+    /// The set of errata returned for the {@link #listManagedInstanceErrata(ListManagedInstanceErrataRequest) listManagedInstanceErrata} operation.
+    /// 
     /// </summary>
     public class ManagedInstanceErratumSummaryCollection 
     {

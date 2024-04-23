@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Problems are at the core of Cloud Guard\u2019s functionality. A Problem object is created whenever an action or a configuration on a resource triggers a rule in a detector that\u2019s attached to the target containing the compartment where the resource is located. Each Problem object contains all the details for a single problem. This is the information for the problem that appears on the Cloud Guard Problems page.
+    /// Problems are at the core of Cloud Guard\u2019s functionality. A Problem resource is created whenever an action or a configuration on a resource triggers a rule in a detector that\u2019s attached to the target containing the compartment where the resource is located. Each Problem resource contains all the details for a single problem. This is the information for the problem that appears on the Cloud Guard Problems page.
     /// </summary>
     public class Problem 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that can't be changed after creation
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Compartment Identifier where the resource is created
+        /// Compartment OCID where the resource is created
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Identifier of the rule
+        /// Unique identifier of the detector rule that triggered the problem
         /// </value>
         [JsonProperty(PropertyName = "detectorRuleId")]
         public string DetectorRuleId { get; set; }
@@ -60,20 +60,20 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<string> Regions { get; set; }
         
         /// <value>
-        /// The Risk Level
+        /// The risk level for the problem
         /// </value>
         [JsonProperty(PropertyName = "riskLevel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
         
         /// <value>
-        /// Risk Score for the problem
+        /// The risk score for the problem
         /// </value>
         [JsonProperty(PropertyName = "riskScore")]
         public System.Double RiskScore { get; set; }
         
         /// <value>
-        /// The date and time for the peak risk score that is observed. Format defined by RFC3339.
+        /// The date and time for the peak risk score that is observed for the problem. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "peakRiskScoreDate")]
         public string PeakRiskScoreDate { get; set; }
@@ -97,25 +97,25 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<int> PeakRiskScoreLookupPeriodInDays { get; set; }
         
         /// <value>
-        /// Identifier of the Resource
+        /// Unique identifier of the resource affected by the problem
         /// </value>
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
         
         /// <value>
-        /// DisplayName of the Resource
+        /// Display name of the affected resource
         /// </value>
         [JsonProperty(PropertyName = "resourceName")]
         public string ResourceName { get; set; }
         
         /// <value>
-        /// Type of the Resource
+        /// Type of the affected resource
         /// </value>
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
         
         /// <value>
-        /// user defined labels on the problem
+        /// User-defined labels on the problem
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
@@ -133,34 +133,34 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeFirstDetected { get; set; }
         
         /// <value>
-        /// The current state of the Problem.
+        /// The current lifecycle state of the problem
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProblemLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// The lifecycleDetail will give more detail on the substate of the lifecycleState.
+        /// Additional details on the substate of the lifecycle state
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetail")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProblemLifecycleDetail> LifecycleDetail { get; set; }
         
         /// <value>
-        /// Id of the detector associated with the Problem.
+        /// Unique identifier of the detector rule that triggered the problem
         /// </value>
         [JsonProperty(PropertyName = "detectorId")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DetectorEnum> DetectorId { get; set; }
         
         /// <value>
-        /// targetId of the problem
+        /// Unique identifier of the target associated with the problem
         /// </value>
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }
         
         /// <value>
-        /// The additional details of the Problem
+        /// The additional details of the problem
         /// </value>
         [JsonProperty(PropertyName = "additionalDetails")]
         public System.Collections.Generic.Dictionary<string, string> AdditionalDetails { get; set; }
@@ -178,28 +178,34 @@ namespace Oci.CloudguardService.Models
         public string Recommendation { get; set; }
         
         /// <value>
-        /// User Comments
+        /// User comments on the problem
         /// </value>
         [JsonProperty(PropertyName = "comment")]
         public string Comment { get; set; }
         
         /// <value>
-        /// Identifier of the impacted Resource
+        /// Unique identifier of the resource impacted by the problem
         /// </value>
         [JsonProperty(PropertyName = "impactedResourceId")]
         public string ImpactedResourceId { get; set; }
         
         /// <value>
-        /// DisplayName of the impacted  Resource
+        /// Display name of the impacted resource
         /// </value>
         [JsonProperty(PropertyName = "impactedResourceName")]
         public string ImpactedResourceName { get; set; }
         
         /// <value>
-        /// Type of the impacted Resource
+        /// Type of the impacted resource
         /// </value>
         [JsonProperty(PropertyName = "impactedResourceType")]
         public string ImpactedResourceType { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// An object that contains a software source OCID and its availability.
+    /// An object that defines the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) and the availability of a vendor software source.
     /// </summary>
     public class SoftwareSourceAvailability 
     {
         
         /// <value>
-        /// The OCID for a vendor software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the vendor software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,15 +32,18 @@ namespace Oci.OsmanagementhubService.Models
         public string SoftwareSourceId { get; set; }
         
         /// <value>
-        /// Possible availabilities of a software source.
+        /// Availability of the software source to instances in private data centers or third-party clouds.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Availability is required.")]
         [JsonProperty(PropertyName = "availability")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Availability> Availability { get; set; }
+        
+        /// <value>
+        /// Availability of the software source to OCI instances.
+        /// </value>
+        [JsonProperty(PropertyName = "availabilityAtOci")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Availability> AvailabilityAtOci { get; set; }
         
     }
 }

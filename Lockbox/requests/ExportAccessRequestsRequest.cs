@@ -20,7 +20,7 @@ namespace Oci.LockboxService.Requests
     {
         
         /// <value>
-        /// 
+        /// Exports the list of access requests for given date range in text format
         /// </value>
         /// <remarks>
         /// Required

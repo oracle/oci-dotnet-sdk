@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information about new SecurityPolicy.
+    /// Parameters to be used to create a new security policy.
     /// </summary>
     public class CreateSecurityPolicyDetails 
     {
         
         /// <value>
-        /// SecurityPolicy friendly name
+        /// Short version of security policy name
         /// </value>
         [JsonProperty(PropertyName = "friendlyName")]
         public string FriendlyName { get; set; }
         
         /// <value>
-        /// SecurityPolicy Identifier
+        /// Security policy display name
         /// </value>
         /// <remarks>
         /// Required
@@ -44,19 +44,19 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The category of security policy.
+        /// The category of the security policy
         /// </value>
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
         
         /// <value>
-        /// The list of services for policy.
+        /// The list of services for the security policy
         /// </value>
         [JsonProperty(PropertyName = "services")]
         public System.Collections.Generic.List<string> Services { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Definition of a registration profile of type STATION.
+    /// Provides the information for a management station registration profile. A management station profile can only be used by a single management station.
     /// </summary>
     public class StationProfile : Profile
     {

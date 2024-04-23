@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// condition type provided by cloud guard
+    /// Additional information on supported condition types.
     /// </summary>
     public class ConditionMetadataTypeSummary 
     {
         
         /// <value>
-        /// Name used to identify
+        /// Unique identifier of the condition type
         /// </value>
         /// <remarks>
         /// Required
@@ -42,11 +42,17 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The current state of the resource.
+        /// The current lifecycle state of the resource
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

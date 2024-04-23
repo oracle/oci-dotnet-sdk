@@ -67,7 +67,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Returns a CSV format report of managed instances matching the given filters.
+        /// Returns a report of managed instances matching the given filters. You can select CSV, XML, or JSON format.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -124,7 +124,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Returns a CSV format report of a single managed instance whose associated Erratas match the given filters.
+        /// Returns a report for a single managed instance whose associated erratas match the given filters. You can select CSV, XML, or JSON format.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

@@ -122,6 +122,13 @@ namespace Oci.CoreService.Requests
         public string VolumeGroupId { get; set; }
         
         /// <value>
+        /// A filter to return only resources that match the given cluster placement group Id exactly.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
+        /// <value>
         /// A filter to only return resources that match the given lifecycle state. The state
         /// value is case-insensitive.
         /// 

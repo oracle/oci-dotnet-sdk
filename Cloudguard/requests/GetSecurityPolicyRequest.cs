@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The unique identifier of the security zone policy (`SecurityPolicy`)
+        /// The unique identifier of the security zone policy. (`SecurityPolicy`)
         /// </value>
         /// <remarks>
         /// Required

@@ -48,6 +48,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
+        /// <value>
+        /// The OCID of the cluster placement group of the instance.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
         [JsonProperty(PropertyName = "createVnicDetails")]
         public InstanceConfigurationCreateVnicDetails CreateVnicDetails { get; set; }
         

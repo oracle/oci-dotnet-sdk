@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the compartment that contains the resources to list.
+        /// The OCID of the compartment that contains the resources to list. This filter returns only resources contained within the specified compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -38,19 +38,19 @@ namespace Oci.OsmanagementhubService.Requests
         public string DisplayNameContains { get; set; }
         
         /// <value>
-        /// A filter to return registration profiles that match the given profileType.
+        /// A filter to return registration profiles that match the given profile type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "profileType", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ProfileType> ProfileType { get; set; }
         
         /// <value>
-        /// The OCID of the registration profile.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the registration profile. A filter used to return the specified profile.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "profileId")]
         public string ProfileId { get; set; }
         
         /// <value>
-        /// A filter to return only profiles that match the given osFamily.
+        /// A filter to return only resources that match the given operating system family.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily")]
         public System.Nullable<OsFamily> OsFamily { get; set; }
@@ -62,7 +62,27 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Nullable<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// A filter to return only profiles that match the given vendorName.
+        /// A filter to return profiles that match the given instance type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "registrationType", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<Profile.RegistrationTypeEnum> RegistrationType { get; set; }
+        
+        /// <value>
+        /// A boolean variable that is used to list only the default profile resources.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDefaultProfile")]
+        public System.Nullable<bool> IsDefaultProfile { get; set; }
+        
+        /// <value>
+        /// A filter to return only service-provided profiles.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isServiceProvidedProfile")]
+        public System.Nullable<bool> IsServiceProvidedProfile { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given vendor name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vendorName")]
         public System.Nullable<VendorName> VendorName { get; set; }
@@ -86,7 +106,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// A filter to return only registration profile whose lifecycleState matches the given lifecycleState.
+        /// A filter to return only registration profiles in the given state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Profile.LifecycleStateEnum> LifecycleState { get; set; }

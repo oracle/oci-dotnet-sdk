@@ -16,13 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Detail information for an OCI Compute instance that is being managed.
+    /// An object that defines the instance being managed by the service.
     /// </summary>
     public class ManagedInstance 
     {
         
         /// <value>
-        /// The OCID for the managed instance.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Managed instance identifier.
+        /// User-friendly name for the managed instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +43,14 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Information specified by the user about the managed instance.
+        /// User-specified description for the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID for the tenancy this managed instance resides in.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the tenancy that the managed instance resides in.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +60,8 @@ namespace Oci.OsmanagementhubService.Models
         public string TenancyId { get; set; }
         
         /// <value>
-        /// The OCID for the compartment this managed instance resides in.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the managed instance.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -68,42 +71,40 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// location of the managed instance.
+        /// The location of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "location")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ManagedInstanceLocation> Location { get; set; }
         
         /// <value>
-        /// Time at which the instance last checked in, as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// Time that the instance last checked in with the service (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeLastCheckin")]
         public System.Nullable<System.DateTime> TimeLastCheckin { get; set; }
         
         /// <value>
-        /// Time at which the instance last booted, as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// Time that the instance last booted (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeLastBoot")]
         public System.Nullable<System.DateTime> TimeLastBoot { get; set; }
         
         /// <value>
-        /// Operating System Name.
+        /// Operating system name.
         /// </value>
         [JsonProperty(PropertyName = "osName")]
         public string OsName { get; set; }
         
         /// <value>
-        /// Operating System Version.
+        /// Operating system version.
         /// </value>
         [JsonProperty(PropertyName = "osVersion")]
         public string OsVersion { get; set; }
         
         /// <value>
-        /// Operating System Kernel Version.
+        /// Operating system kernel version.
         /// </value>
         [JsonProperty(PropertyName = "osKernelVersion")]
         public string OsKernelVersion { get; set; }
@@ -122,14 +123,14 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ArchType> Architecture { get; set; }
         
         /// <value>
-        /// The Operating System type of the managed instance.
+        /// The operating system type of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "osFamily")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsFamily> OsFamily { get; set; }
         
         /// <value>
-        /// status of the managed instance.
+        /// Current status of the managed instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -140,25 +141,27 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ManagedInstanceStatus> Status { get; set; }
         
         /// <value>
-        /// The content profile of this instance.
+        /// The profile that was used to register this instance with the service.
         /// </value>
         [JsonProperty(PropertyName = "profile")]
         public string Profile { get; set; }
         
         /// <value>
-        /// Whether this managed instance is acting as an on-premise management station.
+        /// Indicates whether this managed instance is acting as an on-premises management station.
         /// </value>
         [JsonProperty(PropertyName = "isManagementStation")]
         public System.Nullable<bool> IsManagementStation { get; set; }
         
         /// <value>
-        /// The OCID of a management station to be used as the preferred primary.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station for the instance to use as primary management station.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "primaryManagementStationId")]
         public string PrimaryManagementStationId { get; set; }
         
         /// <value>
-        /// The OCID of a management station to be used as the preferred secondary.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station for the instance to use as secondary managment station.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "secondaryManagementStationId")]
         public string SecondaryManagementStationId { get; set; }
@@ -185,37 +188,43 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<bool> IsRebootRequired { get; set; }
         
         /// <value>
-        /// Number of packages installed on the system.
+        /// Number of packages installed on the instance.
         /// </value>
         [JsonProperty(PropertyName = "installedPackages")]
         public System.Nullable<int> InstalledPackages { get; set; }
         
         /// <value>
-        /// Number of updates available to be installed.
+        /// Number of Windows updates installed on the instance.
+        /// </value>
+        [JsonProperty(PropertyName = "installedWindowsUpdates")]
+        public System.Nullable<int> InstalledWindowsUpdates { get; set; }
+        
+        /// <value>
+        /// Number of updates available for installation.
         /// </value>
         [JsonProperty(PropertyName = "updatesAvailable")]
         public System.Nullable<int> UpdatesAvailable { get; set; }
         
         /// <value>
-        /// Number of security type updates available to be installed.
+        /// Number of security type updates available for installation.
         /// </value>
         [JsonProperty(PropertyName = "securityUpdatesAvailable")]
         public System.Nullable<int> SecurityUpdatesAvailable { get; set; }
         
         /// <value>
-        /// Number of bug fix type updates available to be installed.
+        /// Number of bug fix type updates available for installation.
         /// </value>
         [JsonProperty(PropertyName = "bugUpdatesAvailable")]
         public System.Nullable<int> BugUpdatesAvailable { get; set; }
         
         /// <value>
-        /// Number of enhancement type updates available to be installed.
+        /// Number of enhancement type updates available for installation.
         /// </value>
         [JsonProperty(PropertyName = "enhancementUpdatesAvailable")]
         public System.Nullable<int> EnhancementUpdatesAvailable { get; set; }
         
         /// <value>
-        /// Number of non-classified updates available to be installed.
+        /// Number of non-classified (other) updates available for installation.
         /// </value>
         [JsonProperty(PropertyName = "otherUpdatesAvailable")]
         public System.Nullable<int> OtherUpdatesAvailable { get; set; }
@@ -233,20 +242,34 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<int> WorkRequestCount { get; set; }
         
         /// <value>
-        /// The date and time the work request was created, as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the instance was created (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the work request was updated, as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the instance was last updated (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Oracle Notifications service (ONS) topic. ONS is the channel used to send notifications to the customer.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "notificationTopicId")]
+        public string NotificationTopicId { get; set; }
+        
+        [JsonProperty(PropertyName = "autonomousSettings")]
+        public AutonomousSettings AutonomousSettings { get; set; }
+        
+        /// <value>
+        /// Indicates whether the Autonomous Linux service manages the instance.
+        /// </value>
+        [JsonProperty(PropertyName = "isManagedByAutonomousLinux")]
+        public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
         
     }
 }

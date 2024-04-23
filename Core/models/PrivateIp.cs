@@ -40,7 +40,7 @@ namespace Oci.CoreService.Models
     /// {@link CreateVnicDetails} when calling either
     /// {@link #launchInstance(LaunchInstanceRequest) launchInstance} or
     /// {@link #attachVnic(AttachVnicRequest) attachVnic}. To update the hostname
-    /// for a primary private IP, you use {@link #updateVnic(UpdateVnicRequest) updateVnic}.
+    /// for a primary private IP, you use `{@link #updateVnic(UpdateVnicRequest) updateVnic}`.
     /// <br/>
     /// `PrivateIp` objects that are created for use with the Oracle Cloud VMware Solution are
     /// assigned to a VLAN and not a VNIC in a subnet. See the

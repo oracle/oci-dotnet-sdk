@@ -16,13 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The config details of the management stations to be configured for a managed instance.
+    /// Provides the management station details used to configure a managed instance.
     /// </summary>
     public class ManagementStationDetails 
     {
         
         /// <value>
-        /// The OCID of a management station to be used as the preferred primary.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station for the instance to use as primary management station.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,8 @@ namespace Oci.OsmanagementhubService.Models
         public string PrimaryManagementStationId { get; set; }
         
         /// <value>
-        /// The OCID of a management station to be used as the preferred secondary.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station for the instance to use as secondary managment station.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "secondaryManagementStationId")]
         public string SecondaryManagementStationId { get; set; }

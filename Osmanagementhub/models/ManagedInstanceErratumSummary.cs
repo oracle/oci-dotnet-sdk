@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// An erratum associated with a managed instance.
+    /// Provides summary information about an erratum associated with a managed instance.
     /// </summary>
     public class ManagedInstanceErratumSummary 
     {
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The type of the erratum.
+        /// The advisory type of the erratum.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,27 +43,26 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ClassificationTypes> AdvisoryType { get; set; }
         
         /// <value>
-        /// The date and time the package was issued by a providing erratum (if available), as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the package was issued by a providing erratum (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeIssued")]
         public System.Nullable<System.DateTime> TimeIssued { get; set; }
         
         /// <value>
-        /// Summary description of the erratum.
+        /// A summary description of the erratum.
         /// </value>
         [JsonProperty(PropertyName = "synopsis")]
         public string Synopsis { get; set; }
         
         /// <value>
-        /// List of CVEs applicable to this erratum.
+        /// The list of CVEs applicable to this erratum.
         /// </value>
         [JsonProperty(PropertyName = "relatedCves")]
         public System.Collections.Generic.List<string> RelatedCves { get; set; }
         
         /// <value>
-        /// The list of Packages affected by this erratum.
+        /// The list of packages affected by this erratum.
         /// </value>
         /// <remarks>
         /// Required

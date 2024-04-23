@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Identifying information for the specified software source.
+    /// Provides identifying information for the specified software source.
     /// </summary>
     public class SoftwareSourceDetails 
     {
         
         /// <value>
-        /// The OCID of the software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -49,6 +49,12 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "softwareSourceType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SoftwareSourceType> SoftwareSourceType { get; set; }
+        
+        /// <value>
+        /// Indicates whether this is a required software source for Autonomous Linux instances. If true, the user can't unselect it.
+        /// </value>
+        [JsonProperty(PropertyName = "isMandatoryForAutonomousLinux")]
+        public System.Nullable<bool> IsMandatoryForAutonomousLinux { get; set; }
         
     }
 }

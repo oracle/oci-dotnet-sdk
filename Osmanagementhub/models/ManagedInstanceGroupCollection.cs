@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a managed instance group search. Contains both managed instance group summary items and other data.
+    /// A set of managed instance groups returned for the {@link #listManagedInstanceGroups(ListManagedInstanceGroupsRequest) listManagedInstanceGroups} operation.
     /// </summary>
     public class ManagedInstanceGroupCollection 
     {

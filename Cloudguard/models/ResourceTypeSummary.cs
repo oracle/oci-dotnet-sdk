@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of ResourceType
+    /// A summary of detailed information on a resource type.
     /// </summary>
     public class ResourceTypeSummary 
     {
         
         /// <value>
-        /// name of the resource
+        /// Name of the resource
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// display name of the resource
+        /// Display name of the resource
         /// </value>
         /// <remarks>
         /// Required
@@ -46,6 +46,12 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "rules")]
         public System.Collections.Generic.List<RuleSummary> Rules { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

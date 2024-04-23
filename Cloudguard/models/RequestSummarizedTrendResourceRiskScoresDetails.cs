@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// ResourceRiskScores filter.
+    /// Details for requesting summarized trend risk scores.
     /// </summary>
     public class RequestSummarizedTrendResourceRiskScoresDetails 
     {
         
         /// <value>
-        /// The filter type.
+        /// The filter type
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ResourceRiskScoreDimension> Filter { get; set; }
         
         /// <value>
-        /// Id to be passed in to filter the risk scores.
+        /// ID to be passed in to filter the risk scores
         /// </value>
         /// <remarks>
         /// Required

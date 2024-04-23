@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// A list of problem ids to be passed in to update the Problem status
+        /// A list of Problem IDs to be passed in to update the Problem status
         /// </value>
         /// <remarks>
         /// Required

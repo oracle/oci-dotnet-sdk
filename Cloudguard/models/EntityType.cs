@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Entities type for data source.
+  /// Type of entitiy for data source
   /// </summary>
   public enum EntityType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

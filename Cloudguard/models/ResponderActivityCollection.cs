@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Provides the summary of responder activities and their corresponding count value.
+    /// Provides a summary of responder activities and their corresponding count values.
     /// </summary>
     public class ResponderActivityCollection 
     {
         
         /// <value>
-        /// List of ResponderActivitySummary
+        /// List of ResponderActivitySummary resources
         /// </value>
         /// <remarks>
         /// Required

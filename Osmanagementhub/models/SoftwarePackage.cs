@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details for a software package.
+    /// An object that defines a software package.
     /// </summary>
     public class SoftwarePackage 
     {
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Unique identifier for the package. NOTE - This is not an OCID.
+        /// Unique identifier for the package. Note that this is not an OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -65,10 +65,11 @@ namespace Oci.OsmanagementhubService.Models
         /// The architecture for which this software was built
         /// </value>
         [JsonProperty(PropertyName = "architecture")]
-        public string Architecture { get; set; }
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SoftwarePackageArchitecture> Architecture { get; set; }
         
         /// <value>
-        /// Date of the last update to the package.
+        /// The date and time the package was last modified (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         [JsonProperty(PropertyName = "lastModifiedDate")]
         public string LastModifiedDate { get; set; }
@@ -110,7 +111,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<SoftwarePackageFile> Files { get; set; }
         
         /// <value>
-        /// List of software sources that provide the software package.
+        /// List of software sources that provide the software package. This property is deprecated and it will be removed in a future API release.
         /// </value>
         [JsonProperty(PropertyName = "softwareSources")]
         public System.Collections.Generic.List<SoftwareSourceDetails> SoftwareSources { get; set; }
@@ -120,6 +121,12 @@ namespace Oci.OsmanagementhubService.Models
         /// </value>
         [JsonProperty(PropertyName = "isLatest")]
         public System.Nullable<bool> IsLatest { get; set; }
+        
+        /// <value>
+        /// The OS families the package belongs to.
+        /// </value>
+        [JsonProperty(PropertyName = "osFamilies")]
+        public System.Collections.Generic.List<OsFamily> OsFamilies { get; set; }
         
     }
 }

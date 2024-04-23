@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the management station.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,9 +30,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string ManagementStationId { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable.
-        /// <br/>
-        /// Example: My new resource
+        /// A filter to return resources that match the given user-friendly name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }

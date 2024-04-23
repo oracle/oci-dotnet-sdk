@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of the DetectorRule.
+    /// Summary information for the collection of detector rules.
     /// </summary>
     public class DetectorRuleCollection 
     {
         
         /// <value>
-        /// List of DetectorRuleSummary
+        /// List of DetectorRuleSummary resources
         /// </value>
         /// <remarks>
         /// Required

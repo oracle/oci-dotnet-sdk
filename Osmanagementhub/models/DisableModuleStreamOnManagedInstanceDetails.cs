@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details of the module stream to be disabled on a managed instance.
+    /// Provides the information used to disable a module stream on a managed instance.
     /// </summary>
     public class DisableModuleStreamOnManagedInstanceDetails 
     {

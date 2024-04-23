@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// OCId of the problem.
+        /// OCID of the problem.
         /// </value>
         /// <remarks>
         /// Required

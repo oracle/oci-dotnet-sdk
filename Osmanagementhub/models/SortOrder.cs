@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// Sort orders.
+  /// Order to sort by.
   /// </summary>
   public enum SortOrder {
       [EnumMember(Value = "ASC")]

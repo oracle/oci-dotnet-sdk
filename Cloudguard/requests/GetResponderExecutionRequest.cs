@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The identifier of the responder execution.
+        /// The unique identifier of the responder execution.
         /// </value>
         /// <remarks>
         /// Required

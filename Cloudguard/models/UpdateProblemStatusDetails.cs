@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The additional details for the problem
+    /// The additional details to be updated for the problem.
     /// </summary>
     public class UpdateProblemStatusDetails 
     {
@@ -33,7 +33,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ProblemLifecycleDetail> Status { get; set; }
         
         /// <value>
-        /// User Comments
+        /// User comments
         /// </value>
         [JsonProperty(PropertyName = "comment")]
         public string Comment { get; set; }

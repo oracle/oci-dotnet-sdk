@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of the Problem.
+    /// Summary information for a problem.
     /// </summary>
     public class ProblemSummary 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that can't be changed after creation
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Compartment Identifier where the resource is created
+        /// Compartment OCID where the resource is created
         /// </value>
         /// <remarks>
         /// Required
@@ -42,44 +42,44 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Identifier of the rule
+        /// Unique identifier of the detector rule
         /// </value>
         [JsonProperty(PropertyName = "detectorRuleId")]
         public string DetectorRuleId { get; set; }
         
         /// <value>
-        /// The Risk Level
+        /// The risk level of the problem
         /// </value>
         [JsonProperty(PropertyName = "riskLevel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
         
         /// <value>
-        /// Risk Score for the problem
+        /// The risk score for the problem
         /// </value>
         [JsonProperty(PropertyName = "riskScore")]
         public System.Double RiskScore { get; set; }
         
         /// <value>
-        /// Identifier of the Resource
+        /// Unique identifier of the resource that's impacted by the problem
         /// </value>
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
         
         /// <value>
-        /// DisplayName of the Resource
+        /// Display name of the resource impacted by the problem
         /// </value>
         [JsonProperty(PropertyName = "resourceName")]
         public string ResourceName { get; set; }
         
         /// <value>
-        /// Type of the Resource
+        /// Type of the resource impacted by the problem
         /// </value>
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
         
         /// <value>
-        /// user defined labels on the problem
+        /// User-defined labels on the problem
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
@@ -97,21 +97,21 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeLastDetected { get; set; }
         
         /// <value>
-        /// The current state of the Problem.
+        /// The current lifecycle state of the problem
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProblemLifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// The lifecycleDetail will give more detail on the substate of the lifecycleState.
+        /// Additional details on the substate of the lifecycle state
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetail")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ProblemLifecycleDetail> LifecycleDetail { get; set; }
         
         /// <value>
-        /// Id of detector associated with the Problem.
+        /// Unique identifier of the detector associated with the problem
         /// </value>
         [JsonProperty(PropertyName = "detectorId")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -124,16 +124,22 @@ namespace Oci.CloudguardService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// Regions where the problem is found
+        /// List of regions where the problem is found
         /// </value>
         [JsonProperty(PropertyName = "regions")]
         public System.Collections.Generic.List<string> Regions { get; set; }
         
         /// <value>
-        /// targetId associated with the problem.
+        /// Unique target identifier associated with the problem
         /// </value>
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

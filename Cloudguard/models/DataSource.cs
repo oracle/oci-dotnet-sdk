@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Details of Data source
+    /// Detailed information for a data source (DataSource resource).
     /// </summary>
     public class DataSource 
     {
         
         /// <value>
-        /// Ocid for Data source
+        /// OCID for the data source
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// DisplayName of Data source.
+        /// Display name of the data source
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<DataSourceFeedProvider> DataSourceFeedProvider { get; set; }
         
         /// <value>
-        /// CompartmentId of Data source.
+        /// Compartment OCID of data source
         /// </value>
         /// <remarks>
         /// Required
@@ -72,13 +72,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the Data source was updated. Format defined by RFC3339.
+        /// The date and time the data source was updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Status of data Source
+        /// Enablement status of the data source
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -97,11 +97,17 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<RegionStatusDetail> RegionStatusDetail { get; set; }
         
         /// <value>
-        /// The current state of the resource.
+        /// The current lifecycle state of the resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

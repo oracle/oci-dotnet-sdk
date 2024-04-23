@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Political location of a problem
+    /// The geographical location of a problem in terms of political units.
     /// </summary>
     public class PoliticalLocation 
     {
         
         /// <value>
-        /// City
+        /// City of problem's location
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string City { get; set; }
         
         /// <value>
-        /// State
+        /// State or province of problem's location
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string State { get; set; }
         
         /// <value>
-        /// Country
+        /// Country of problem's location
         /// </value>
         /// <remarks>
         /// Required

@@ -20,19 +20,19 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the compartment that contains the resources to list.
+        /// The OCID of the compartment that contains the resources to list. This filter returns only resources contained within the specified compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the managed instance group for which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance group. This filter returns resources associated with this group.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managedInstanceGroupId")]
         public string ManagedInstanceGroupId { get; set; }
         
         /// <value>
-        /// The OCID for the software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source. This filter returns resources associated with this software source.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "softwareSourceId")]
         public string SoftwareSourceId { get; set; }
@@ -56,7 +56,7 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Nullable<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// A filter to return only profiles that match the given osFamily.
+        /// A filter to return only resources that match the given operating system family.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily")]
         public System.Nullable<OsFamily> OsFamily { get; set; }
@@ -80,10 +80,29 @@ namespace Oci.OsmanagementhubService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycle state matches the given lifecycle state.
+        /// A filter to return only managed instance groups that are in the specified state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<ManagedInstanceGroup.LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location matches the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "location", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> Location { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location does not match the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "locationNotEqualTo", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> LocationNotEqualTo { get; set; }
+        
+        /// <value>
+        /// Indicates whether to list only resources managed by the Autonomous Linux service.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isManagedByAutonomousLinux")]
+        public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
         
         /// <value>
         /// The sort order to use, either 'ASC' or 'DESC'.

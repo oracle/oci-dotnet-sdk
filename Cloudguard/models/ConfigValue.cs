@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// configuration item for multi list data type
+    /// Details for a configuration value for a managed list.
     /// </summary>
     public class ConfigValue 
     {
         
         /// <value>
-        /// configuration list item type, either CUSTOM or MANAGED
+        /// Configuration list item type (CUSTOM or MANAGED)
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ConfigurationListItemType> ListType { get; set; }
         
         /// <value>
-        /// type of the managed list
+        /// Type of content in the managed list
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.CloudguardService.Models
         public string ManagedListType { get; set; }
         
         /// <value>
-        /// configuration value
+        /// Configuration value
         /// </value>
         /// <remarks>
         /// Required

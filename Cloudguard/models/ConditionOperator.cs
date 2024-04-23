@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Conditions related to the parameter data type
+    /// Conditions related to the parameter data type.
     /// </summary>
     public class ConditionOperator 
     {
         
         /// <value>
-        /// operator name
+        /// Operator name
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ConditionOperatorName> Name { get; set; }
         
         /// <value>
-        /// display name of the operator
+        /// Display name of the operator
         /// </value>
         /// <remarks>
         /// Required

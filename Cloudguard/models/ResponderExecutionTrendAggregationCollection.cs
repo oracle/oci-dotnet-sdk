@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Responder Execution Trend Collection
+    /// Collection of ResponderExecutionTrendAggregation resources.
     /// </summary>
     public class ResponderExecutionTrendAggregationCollection 
     {
         
         /// <value>
-        /// The items consist of all the ResponderExecutionTrendAggregation objects.
+        /// List of all the ResponderExecutionTrendAggregation resources.
         /// </value>
         /// <remarks>
         /// Required

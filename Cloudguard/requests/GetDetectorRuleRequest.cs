@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The Name of Detector.
+        /// Detector name.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public string DetectorId { get; set; }
         
         /// <value>
-        /// The key of Detector Rule.
+        /// The unique identifier of a detector rule.
         /// </value>
         /// <remarks>
         /// Required

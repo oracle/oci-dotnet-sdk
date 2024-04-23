@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The cloudguard list OCID to be passed in the request.
+        /// The managed list OCID to be passed in the request.
         /// </value>
         /// <remarks>
         /// Required

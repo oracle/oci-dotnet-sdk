@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The Responder details to be pushed to responder
+    /// The responder triggering details to be pushed to responder rules.
     /// </summary>
     public class TriggerResponderDetails 
     {
         
         /// <value>
-        /// ResponderRule ID
+        /// Unique identifier for the responder rule
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string ResponderRuleId { get; set; }
         
         /// <value>
-        /// ResponderRule configurations
+        /// List of responder rule configurations
         /// </value>
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<ResponderConfiguration> Configurations { get; set; }

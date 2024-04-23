@@ -16,13 +16,29 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Detector Recipe Rule
+    /// A TargetDetectorRecipeDetectorRule resource contains a specific instance of a
+    /// single detector rule in one of the supported detector types (for example,
+    /// activity, configuration, or threat).
+    /// <br/>
+    /// A TargetDetectorRecipeDetectorRule resource:
+    /// * Is effectively a copy of a DetectorRecipeRule resource (made when
+    /// a detector recipe is attached to a target) in which users can make
+    /// certain changes if it\u2019s Oracle-managed, and other changes if it\u2019s user-managed.
+    /// * Is visible on the Cloud Guard Targets, Target Details page.
+    /// * Is effectively located in a specific OCI compartment, through the
+    /// ThreatDetectorRecipe resource to which it belongs.
+    /// * Can be modified by users, programmatically or through the UI.
+    /// * Changes that can be made here apply locally, to resources in OCI compartments
+    /// mapped to the target that attaches the associated detector recipe
+    /// (in a TargetDetectorRecipe resource), and override any changes made in rules
+    /// associated with the corresponding DetectorRecipe resource.
+    /// 
     /// </summary>
     public class TargetDetectorRecipeDetectorRule 
     {
         
         /// <value>
-        /// The unique identifier of the detector rule.
+        /// The unique identifier of the detector rule
         /// </value>
         /// <remarks>
         /// Required
@@ -32,25 +48,25 @@ namespace Oci.CloudguardService.Models
         public string DetectorRuleId { get; set; }
         
         /// <value>
-        /// Display name for TargetDetectorRecipeDetectorRule. information.
+        /// Display name for TargetDetectorRecipeDetectorRule resource
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description for TargetDetectorRecipeDetectorRule. information.
+        /// Description for TargetDetectorRecipeDetectorRule resource
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Recommendation for TargetDetectorRecipeDetectorRule
+        /// Recommendation for TargetDetectorRecipeDetectorRule resource
         /// </value>
         [JsonProperty(PropertyName = "recommendation")]
         public string Recommendation { get; set; }
         
         /// <value>
-        /// detector for the rule
+        /// Detector type for the rule
         /// </value>
         /// <remarks>
         /// Required
@@ -61,7 +77,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<DetectorEnum> Detector { get; set; }
         
         /// <value>
-        /// service type of the configuration to which the rule is applied
+        /// Service type of the configuration to which the rule is applied
         /// </value>
         /// <remarks>
         /// Required
@@ -71,7 +87,14 @@ namespace Oci.CloudguardService.Models
         public string ServiceType { get; set; }
         
         /// <value>
-        /// resource type of the configuration to which the rule is applied
+        /// The type of resource which is monitored by the detector rule.
+        /// For example, Instance, Database, VCN, Policy. To find the resource type for a
+        /// particular rule, see [Detector Recipe Reference]
+        /// (/iaas/cloud-guard/using/detect-recipes.htm#detect-recipes-reference).
+        /// <br/>
+        /// Or try [Detector Recipe Reference]
+        /// (/cloud-guard/using/detect-recipes.htm#detect-recipes-reference).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -119,7 +142,7 @@ namespace Oci.CloudguardService.Models
         };
 
         /// <value>
-        /// List of cloudguard managed list types related to this rule
+        /// List of managed list types related to this rule
         /// </value>
         [JsonProperty(PropertyName = "managedListTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<ManagedListTypesEnum> ManagedListTypes { get; set; }
@@ -131,13 +154,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the target detector recipe rule was updated. Format defined by RFC3339.
+        /// The date and time the target detector recipe rule was last updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the DetectorRule.
+        /// The current lifecycle state of the detector rule
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -150,16 +173,22 @@ namespace Oci.CloudguardService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The id of the attached DataSource.
+        /// The ID of the attached data source
         /// </value>
         [JsonProperty(PropertyName = "dataSourceId")]
         public string DataSourceId { get; set; }
         
         /// <value>
-        /// Data Source entities mapping for a Detector Rule
+        /// Data source entities mapping for a detector rule
         /// </value>
         [JsonProperty(PropertyName = "entitiesMappings")]
         public System.Collections.Generic.List<EntitiesMapping> EntitiesMappings { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

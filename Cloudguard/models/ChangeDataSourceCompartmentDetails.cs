@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Changing compartmentId for DataSource
+    /// The compartmentId for the compartment into which the data source is to be moved.
     /// </summary>
     public class ChangeDataSourceCompartmentDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment into which the DataSource should be moved
+        /// The OCID of the compartment into which the data source is to be moved
         /// </value>
         /// <remarks>
         /// Required

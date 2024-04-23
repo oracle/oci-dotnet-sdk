@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of an updatable package search on a managed instance.
+    /// The set of packages returned for the {@link #listManagedInstanceUpdatablePackages(ListManagedInstanceUpdatablePackagesRequest) listManagedInstanceUpdatablePackages} operation.
     /// </summary>
     public class UpdatablePackageCollection 
     {

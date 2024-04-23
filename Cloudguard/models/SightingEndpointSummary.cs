@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Sighting Endpoints summary.
+    /// A summary of sighting endpoints.
     /// </summary>
     public class SightingEndpointSummary 
     {
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Sighitng Id for sighting endpoints
+        /// Sighting ID for sighting endpoints
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.CloudguardService.Models
         public string SightingId { get; set; }
         
         /// <value>
-        /// Problem Id for sighting endpoints
+        /// Problem ID for sighting endpoints
         /// </value>
         [JsonProperty(PropertyName = "problemId")]
         public string ProblemId { get; set; }
         
         /// <value>
-        /// IP Address
+        /// IP address involved in sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.CloudguardService.Models
         public string IpAddress { get; set; }
         
         /// <value>
-        /// IP Address type
+        /// Type of IP address involved in sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -68,49 +68,49 @@ namespace Oci.CloudguardService.Models
         public string IpAddressType { get; set; }
         
         /// <value>
-        /// IP Address classification type
+        /// IP address classification type
         /// </value>
         [JsonProperty(PropertyName = "ipClassificationType")]
         public string IpClassificationType { get; set; }
         
         /// <value>
-        /// Country
+        /// Country involved in sighting
         /// </value>
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
         
         /// <value>
-        /// Latitude
+        /// Latitude of sighting
         /// </value>
         [JsonProperty(PropertyName = "latitude")]
         public System.Double Latitude { get; set; }
         
         /// <value>
-        /// Longitude
+        /// Longitude of sighting
         /// </value>
         [JsonProperty(PropertyName = "longitude")]
         public System.Double Longitude { get; set; }
         
         /// <value>
-        /// ASN number
+        /// ASN number of sighting
         /// </value>
         [JsonProperty(PropertyName = "asnNumber")]
         public string AsnNumber { get; set; }
         
         /// <value>
-        /// Regions where activities were performed from this IP
+        /// List of regions where activities were performed from this IP address
         /// </value>
         [JsonProperty(PropertyName = "regions")]
         public System.Collections.Generic.List<string> Regions { get; set; }
         
         /// <value>
-        /// Services where activities were performed from this IP
+        /// List of services where activities were performed from this IP address
         /// </value>
         [JsonProperty(PropertyName = "services")]
         public System.Collections.Generic.List<string> Services { get; set; }
         
         /// <value>
-        /// Time when activities were created
+        /// Date and time when activities were created
         /// </value>
         /// <remarks>
         /// Required

@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// Possible package classification types.
+  /// Type of software update.
   /// </summary>
   public enum ClassificationTypes {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

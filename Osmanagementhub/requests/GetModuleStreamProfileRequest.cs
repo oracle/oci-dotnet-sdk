@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The software source OCID.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string SoftwareSourceId { get; set; }
         
         /// <value>
-        /// The name of the profile of the containing module stream.
+        /// The name of the module stream profile.
         /// </value>
         /// <remarks>
         /// Required

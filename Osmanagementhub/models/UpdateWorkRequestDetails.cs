@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Detail information for updating a work request.
+    /// Provides the information used to update a work request.
     /// </summary>
     public class UpdateWorkRequestDetails 
     {

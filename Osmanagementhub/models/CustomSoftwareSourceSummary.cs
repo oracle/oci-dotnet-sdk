@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A custom software source contains a custom collection of packages.
+    /// Indicates whether the service should create the software source from a list of packages provided by the user.
     /// </summary>
     public class CustomSoftwareSourceSummary : SoftwareSourceSummary
     {
         
         /// <value>
-        /// List of vendor software sources.
+        /// List of vendor software sources that are used for the basis of the custom software source..
         /// </value>
         /// <remarks>
         /// Required

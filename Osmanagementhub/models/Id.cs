@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// An id along with a name to simplify display for a user.
+    /// Id and name of a resource to simplify the display for the user.
     /// </summary>
     public class Id 
     {
         
         /// <value>
-        /// The OCID of the resource that is immutable on creation.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the resource that is immutable on creation.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string IdProp { get; set; }
         
         /// <value>
-        /// User friendly name.
+        /// User-friendly name.
         /// </value>
         /// <remarks>
         /// Required

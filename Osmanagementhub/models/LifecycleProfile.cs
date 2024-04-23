@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Definition of a registration profile of type LIFECYCLE.
+    /// Provides the information for a lifecycle environment registration profile.
     /// </summary>
     public class LifecycleProfile : Profile
     {

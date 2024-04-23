@@ -44,7 +44,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<OperationStatus> Status { get; set; }
         
         /// <value>
-        /// The OCID of the work request.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the work request.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,22 +72,21 @@ namespace Oci.OsmanagementhubService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The OCID of the parent work request.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the parent work request, if there is any.
         /// </value>
         [JsonProperty(PropertyName = "parentId")]
         public string ParentId { get; set; }
         
         /// <value>
-        /// The list of OCIDs for the child work requests.
+        /// The list of [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for child work requests.
         /// </value>
         [JsonProperty(PropertyName = "childrenId")]
         public System.Collections.Generic.List<string> ChildrenId { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the work request. Work requests should be scoped to
-        /// the same compartment as the resource the work request affects. If the work request affects multiple resources,
-        /// and those resources are not in the same compartment, it is up to the service team to pick the primary
-        /// resource whose compartment should be used.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the work request.
+        /// Work requests should be scoped to the same compartment as the resource it affects.
+        /// If the work request affects multiple resources the different compartments, the services selects the compartment of the primary resource.
         /// 
         /// </value>
         /// <remarks>
@@ -114,6 +113,18 @@ namespace Oci.OsmanagementhubService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The scheduled date and time to retry the work request (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// </value>
+        [JsonProperty(PropertyName = "timeScheduled")]
+        public System.Nullable<System.DateTime> TimeScheduled { get; set; }
+        
+        /// <value>
+        /// Indicates whether this work request is managed by Autonomous Linux
+        /// </value>
+        [JsonProperty(PropertyName = "isManagedByAutonomousLinux")]
+        public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
         
     }
 }

@@ -16,13 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary information for a security zone policy. A security policy defines a security requirement for resources in a security zone. If a security zone enables a policy (using a recipe), then any action that attempts to violate that policy is denied.
+    /// Summary information for a Security Zones policy. A security policy
+    /// defines a security requirement for resources in a security zone.
+    /// 
     /// </summary>
     public class SecurityPolicySummary 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that can\u2019t be changed after creation
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +40,7 @@ namespace Oci.CloudguardService.Models
         public string FriendlyName { get; set; }
         
         /// <value>
-        /// The security policy's full name
+        /// The security policy's display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -50,7 +52,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The id of the security policy's compartment
+        /// The OCID of the security policy's compartment
         /// </value>
         /// <remarks>
         /// Required
@@ -71,7 +73,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<OwnerType> Owner { get; set; }
         
         /// <value>
-        /// The category of security policy
+        /// The category of the security policy
         /// </value>
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
@@ -83,19 +85,19 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<string> Services { get; set; }
         
         /// <value>
-        /// The time the security policy was created. An RFC3339 formatted datetime string.
+        /// The date and time the security policy was created. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the security policy was last updated. An RFC3339 formatted datetime string.
+        /// The date and time the security policy was last updated. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the security policy
+        /// The current lifecycle state of the security policy
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

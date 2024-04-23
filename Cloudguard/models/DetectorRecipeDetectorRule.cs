@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A DetectorRecipeDetectorRule object defines a single recipe rule in the collection for a DetectorRecipe object.
+    /// A DetectorRecipeDetectorRule resource defines a single recipe rule in the collection for a DetectorRecipe resource.
     /// </summary>
     public class DetectorRecipeDetectorRule 
     {
@@ -32,25 +32,25 @@ namespace Oci.CloudguardService.Models
         public string DetectorRuleId { get; set; }
         
         /// <value>
-        /// Display name for DetectorRecipeDetectorRule.
+        /// Display name for DetectorRecipeDetectorRule resource
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Description for DetectorRecipeDetectorRule.
+        /// Description for DetectorRecipeDetectorRule resource
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Recommendation for DetectorRecipeDetectorRule
+        /// Recommendation for DetectorRecipeDetectorRule resource
         /// </value>
         [JsonProperty(PropertyName = "recommendation")]
         public string Recommendation { get; set; }
         
         /// <value>
-        /// detector for the rule
+        /// Detector recipe for the rule
         /// </value>
         /// <remarks>
         /// Required
@@ -61,7 +61,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<DetectorEnum> Detector { get; set; }
         
         /// <value>
-        /// service type of the configuration to which the rule is applied
+        /// Service type of the configuration to which the rule is applied
         /// </value>
         /// <remarks>
         /// Required
@@ -71,7 +71,7 @@ namespace Oci.CloudguardService.Models
         public string ServiceType { get; set; }
         
         /// <value>
-        /// resource type of the configuration to which the rule is applied
+        /// Resource type of the configuration to which the rule is applied
         /// </value>
         /// <remarks>
         /// Required
@@ -119,13 +119,13 @@ namespace Oci.CloudguardService.Models
         };
 
         /// <value>
-        /// List of cloudguard managed list types related to this rule
+        /// List of managed list types related to this rule
         /// </value>
         [JsonProperty(PropertyName = "managedListTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<ManagedListTypesEnum> ManagedListTypes { get; set; }
         
         /// <value>
-        /// List of CandidateResponderRule related to this rule
+        /// List of responder rules that can be used to remediate this detector rule
         /// </value>
         [JsonProperty(PropertyName = "candidateResponderRules")]
         public System.Collections.Generic.List<CandidateResponderRule> CandidateResponderRules { get; set; }
@@ -137,13 +137,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the detector recipe rule was updated. Format defined by RFC3339.
+        /// The date and time the detector recipe rule was last updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the DetectorRule.
+        /// The current lifecycle state of the detector rule.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -156,16 +156,22 @@ namespace Oci.CloudguardService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The id of the attached DataSource.
+        /// The unique identifier of the attached data source
         /// </value>
         [JsonProperty(PropertyName = "dataSourceId")]
         public string DataSourceId { get; set; }
         
         /// <value>
-        /// Data Source entities mapping for a Detector Rule
+        /// Data source entities mapping for the detector rule
         /// </value>
         [JsonProperty(PropertyName = "entitiesMappings")]
         public System.Collections.Generic.List<EntitiesMapping> EntitiesMappings { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

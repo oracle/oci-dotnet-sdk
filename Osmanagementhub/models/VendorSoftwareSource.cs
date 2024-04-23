@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A vendor software source contains a collection of packages.
+    /// The object that defines a vendor software source. A software source is a collection of packages. For more information, see [Managing Software Sources](https://docs.cloud.oracle.com/iaas/osmh/doc/software-sources.htm).
     /// </summary>
     public class VendorSoftwareSource : SoftwareSource
     {
@@ -31,6 +31,18 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "vendorName")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<VendorName> VendorName { get; set; }
+        
+        /// <value>
+        /// This property applies only to replicated vendor software sources. This is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the vendor software source in the root compartment.
+        /// </value>
+        [JsonProperty(PropertyName = "originSoftwareSourceId")]
+        public string OriginSoftwareSourceId { get; set; }
+        
+        /// <value>
+        /// Indicates whether the software source is required for the Autonomous Linux service.
+        /// </value>
+        [JsonProperty(PropertyName = "isMandatoryForAutonomousLinux")]
+        public System.Nullable<bool> IsMandatoryForAutonomousLinux { get; set; }
         
         [JsonProperty(PropertyName = "softwareSourceType")]
         private readonly string softwareSourceType = "VENDOR";

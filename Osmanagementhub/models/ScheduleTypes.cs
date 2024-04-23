@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// Possible schedule types.
+  /// The type of scheduling frequency for the job.
   /// </summary>
   public enum ScheduleTypes {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

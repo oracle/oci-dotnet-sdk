@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Resource Profile impacted resource summary.
+    /// Summary information on impacted resource in resource profile.
     /// </summary>
     public class ResourceProfileImpactedResourceSummary 
     {
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Resource profile Id associated with the imacted resource
+        /// Resource profile ID associated with the impacted resource
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.CloudguardService.Models
         public string ResourceProfileId { get; set; }
         
         /// <value>
-        /// Problem Id for impacted resource
+        /// Problem ID associated with the impacted resource
         /// </value>
         [JsonProperty(PropertyName = "problemId")]
         public string ProblemId { get; set; }
         
         /// <value>
-        /// Compartment Id for impacted resource
+        /// Compartment ID for impacted resource
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Impacted resource Id
+        /// Impacted resource ID
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +68,7 @@ namespace Oci.CloudguardService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Resource name
+        /// Impacted resource name
         /// </value>
         /// <remarks>
         /// Required
@@ -78,7 +78,7 @@ namespace Oci.CloudguardService.Models
         public string ResourceName { get; set; }
         
         /// <value>
-        /// Resource type
+        /// Impacted resource type
         /// </value>
         /// <remarks>
         /// Required
@@ -88,7 +88,7 @@ namespace Oci.CloudguardService.Models
         public string ResourceType { get; set; }
         
         /// <value>
-        /// Identifier for the sighting type
+        /// Sighting type for impacted resource
         /// </value>
         /// <remarks>
         /// Required
@@ -98,7 +98,7 @@ namespace Oci.CloudguardService.Models
         public string SightingType { get; set; }
         
         /// <value>
-        /// Name of the sighting type
+        /// Display name of the sighting type
         /// </value>
         /// <remarks>
         /// Required
@@ -118,7 +118,7 @@ namespace Oci.CloudguardService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// Time when the impacted resource is identified for given resource profile.
+        /// Time when the impacted resource is identified for the resource profile.
         /// </value>
         /// <remarks>
         /// Required

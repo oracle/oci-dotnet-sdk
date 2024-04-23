@@ -22,16 +22,23 @@ namespace Oci.OsmanagementhubService.Models
     {
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name for the profile. Does not have to be unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Details describing the scheduled job.
+        /// User-specified description of the profile.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
+        /// <value>
+        /// Indicates if the profile is set as the default. There is exactly one default profile for a specified architecture, OS family, registration type, and vendor. When registering an instance with the corresonding characteristics, the default profile is used, unless another profile is specified.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDefaultProfile")]
+        public System.Nullable<bool> IsDefaultProfile { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Information for updating a custom or software source.
+    /// Provides the information used to update a custom software source.
     /// </summary>
     public class UpdateCustomSoftwareSourceDetails : UpdateSoftwareSourceDetails
     {
         
         /// <value>
-        /// List of vendor software sources.
+        /// List of vendor software sources that are used for the basis of the custom software source.
         /// </value>
         [JsonProperty(PropertyName = "vendorSoftwareSources")]
         public System.Collections.Generic.List<Id> VendorSoftwareSources { get; set; }
@@ -31,10 +31,16 @@ namespace Oci.OsmanagementhubService.Models
         public CustomSoftwareSourceFilter CustomSoftwareSourceFilter { get; set; }
         
         /// <value>
-        /// Indicates whether service should automatically update the custom software source for the user.
+        /// Indicates whether the service should automatically update the custom software source to use the latest package versions available. The service reviews packages levels once a day.
         /// </value>
         [JsonProperty(PropertyName = "isAutomaticallyUpdated")]
         public System.Nullable<bool> IsAutomaticallyUpdated { get; set; }
+        
+        /// <value>
+        /// Indicates whether the service should automatically resolve package dependencies when including specific packages in the software source.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoResolveDependencies")]
+        public System.Nullable<bool> IsAutoResolveDependencies { get; set; }
         
         [JsonProperty(PropertyName = "softwareSourceType")]
         private readonly string softwareSourceType = "CUSTOM";

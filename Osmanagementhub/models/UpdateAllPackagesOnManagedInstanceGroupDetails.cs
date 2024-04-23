@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The work request details for the update operation on the managed instance group.
+    /// Provides the details for updating the packages on the managed instance.
     /// </summary>
     public class UpdateAllPackagesOnManagedInstanceGroupDetails 
     {

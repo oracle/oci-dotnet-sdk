@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Target Selection eg select ALL or select on basis of TargetResourceTypes or TargetIds.
+    /// Specification of how targets are to be selected (select ALL, or select by TargetResourceType or TargetId).
     /// </summary>
     [JsonConverter(typeof(TargetSelectedModelConverter))]
     public class TargetSelected 
     {
                 ///
         /// <value>
-        /// Target selection.
+        /// Kind of target selection to be used
         /// </value>
         ///
         public enum KindEnum {

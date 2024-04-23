@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Creation of Data Source.
+    /// Parameters for creating a data source (DataSource resource).
     /// </summary>
     public class CreateDataSourceDetails 
     {
         
         /// <value>
-        /// Data Source display name.
+        /// Data source display name
         /// </value>
         /// <remarks>
         /// Required
@@ -32,14 +32,14 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Status of DataSource. Default value is DISABLED.
+        /// Enablement status of data source.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DataSourceStatus> Status { get; set; }
         
         /// <value>
-        /// CompartmentId of Data Source.
+        /// Compartment OCID of the data source
         /// </value>
         /// <remarks>
         /// Required
@@ -49,7 +49,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Possible type of dataSourceFeed Provider(LoggingQuery)
+        /// Type of data source feed provider (LoggingQuery)
         /// </value>
         /// <remarks>
         /// Required

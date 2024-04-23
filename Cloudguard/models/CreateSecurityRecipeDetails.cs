@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Details about a new security zone recipe
+    /// Parameters to be used to create a security recipe.
     /// </summary>
     public class CreateSecurityRecipeDetails 
     {
         
         /// <value>
-        /// The recipe's name
+        /// The recipe's display name.
+        /// <br/>
+        /// Avoid entering confidential information.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +41,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The list of `SecurityPolicy` ids to include in the recipe
+        /// The list of security policy IDs to include in the recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +51,7 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<string> SecurityPolicies { get; set; }
         
         /// <value>
-        /// The compartment in which to create the recipe
+        /// The OCID of the compartment in which to create the recipe
         /// </value>
         /// <remarks>
         /// Required

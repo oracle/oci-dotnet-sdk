@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Possible problem info states.
+  /// Success/failure status of data source event.
   /// </summary>
   public enum DataSourceEventInfoStatus {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

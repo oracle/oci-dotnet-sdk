@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of Data Source
+    /// Summary information for a specific data source.
     /// </summary>
     public class DataSourceSummary 
     {
         
         /// <value>
-        /// Ocid for Data Source
+        /// OCID for the data source
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// DisplayName of Data Source
+        /// Display name of the data source
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Possible type of dataSourceFeed Provider(LoggingQuery)
+        /// Type of data source feed provider(LoggingQuery)
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<DataSourceFeedProvider> DataSourceFeedProvider { get; set; }
         
         /// <value>
-        /// CompartmentId of Data Source.
+        /// Compartment OCID of the data source
         /// </value>
         /// <remarks>
         /// Required
@@ -78,7 +78,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Status of data Source
+        /// Status of data source
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -88,7 +88,7 @@ namespace Oci.CloudguardService.Models
         public LoggingQueryDetails LoggingQueryDetails { get; set; }
         
         /// <value>
-        /// The current state of the resource.
+        /// The current lifecycle state of the resource
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Indication that represents the threat level of a Sighting
+  /// The threat level of a sighting.
   /// </summary>
   public enum Severity {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

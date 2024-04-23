@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Collection of ResponderExecutionAggregation objects
+    /// Collection of ResponderExecutionAggregation resources.
     /// </summary>
     public class ResponderExecutionAggregationCollection 
     {
         
         /// <value>
-        /// The items consist of all the ResponderExecutionAggregation objects.
+        /// List of all the ResponderExecutionAggregation resources
         /// </value>
         /// <remarks>
         /// Required

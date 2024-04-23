@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// status of the managed instance.
+  /// Status of the managed instance.
   /// </summary>
   public enum ManagedInstanceStatus {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -28,6 +28,10 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "WARNING")]
       Warning,
       [EnumMember(Value = "REGISTRATION_ERROR")]
-      RegistrationError
+      RegistrationError,
+      [EnumMember(Value = "DELETING")]
+      Deleting,
+      [EnumMember(Value = "ONBOARDING")]
+      Onboarding
   }
 }

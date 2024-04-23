@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// Operating system types.
+  /// Type of operating system.
   /// </summary>
   public enum OsFamily {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -24,6 +24,16 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "ORACLE_LINUX_8")]
       OracleLinux8,
       [EnumMember(Value = "ORACLE_LINUX_7")]
-      OracleLinux7
+      OracleLinux7,
+      [EnumMember(Value = "ORACLE_LINUX_6")]
+      OracleLinux6,
+      [EnumMember(Value = "WINDOWS_SERVER_2016")]
+      WindowsServer2016,
+      [EnumMember(Value = "WINDOWS_SERVER_2019")]
+      WindowsServer2019,
+      [EnumMember(Value = "WINDOWS_SERVER_2022")]
+      WindowsServer2022,
+      [EnumMember(Value = "ALL")]
+      All
   }
 }

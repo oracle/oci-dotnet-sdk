@@ -20,15 +20,13 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the compartment that contains the resources to list.
+        /// The OCID of the compartment that contains the resources to list. This filter returns only resources contained within the specified compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable.
-        /// <br/>
-        /// Example: My new resource
+        /// A filter to return resources that match the given user-friendly name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
@@ -40,49 +38,49 @@ namespace Oci.OsmanagementhubService.Requests
         public string DisplayNameContains { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only scheduled jobs currently in the given state.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<ScheduledJob.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The OCID of the managed instance for which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance. This filter returns resources associated with this managed instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managedInstanceId")]
         public string ManagedInstanceId { get; set; }
         
         /// <value>
-        /// The OCID of the managed instance group for which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance group. This filter returns resources associated with this group.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managedInstanceGroupId")]
         public string ManagedInstanceGroupId { get; set; }
         
         /// <value>
-        /// The OCID of the managed compartment for which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed compartment. This filter returns resources associated with this compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managedCompartmentId")]
         public string ManagedCompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the lifecycle stage for which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle stage. This resource returns resources associated with this lifecycle stage.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleStageId")]
         public string LifecycleStageId { get; set; }
         
         /// <value>
-        /// The operation type for which to list resources.
+        /// A filter to return only scheduled jobs with the given operation type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operationType")]
         public System.Nullable<OperationTypes> OperationType { get; set; }
         
         /// <value>
-        /// The schedule type for which to list resources.
+        /// A filter to return only scheduled jobs of the given scheduling type (one-time or recurring).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scheduleType")]
         public System.Nullable<ScheduleTypes> ScheduleType { get; set; }
         
         /// <value>
-        /// The start time after which to list all schedules, in ISO 8601 format.
+        /// A filter to return only resources with a date on or after the given value, in ISO 8601 format.
         /// <br/>
         /// Example: 2017-07-14T02:40:00.000Z
         /// </value>
@@ -90,7 +88,7 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Nullable<System.DateTime> TimeStart { get; set; }
         
         /// <value>
-        /// The cut-off time before which to list all upcoming schedules, in ISO 8601 format.
+        /// A filter to return only resources with a date on or before the given value, in ISO 8601 format.
         /// <br/>
         /// Example: 2017-07-14T02:40:00.000Z
         /// </value>
@@ -148,21 +146,40 @@ namespace Oci.OsmanagementhubService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// If true, will only filter out restricted scheduled job.
+        /// A filter to return only restricted scheduled jobs.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isRestricted")]
         public System.Nullable<bool> IsRestricted { get; set; }
         
         /// <value>
-        /// The OCID of the scheduled job.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the scheduled job. A filter to return the specified job.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// Default is false. When set to true ,returns results from {compartmentId} or any of its subcompartment.
+        /// Indicates whether to include subcompartments in the returned results. Default is false.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
         public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location matches the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "location", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> Location { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location does not match the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "locationNotEqualTo", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> LocationNotEqualTo { get; set; }
+        
+        /// <value>
+        /// Indicates whether to list only resources managed by the Autonomous Linux service.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isManagedByAutonomousLinux")]
+        public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
     }
 }

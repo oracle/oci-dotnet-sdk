@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a software package search. Contains boh software package summary items and other information, such as metadata.
+    /// A set of software packages returned for the {@link #listSoftwarePackages(ListSoftwarePackagesRequest) listSoftwarePackages} operation or {@link #listAllSoftwarePackages(ListAllSoftwarePackagesRequest) listAllSoftwarePackages} operation.
     /// </summary>
     public class SoftwarePackageCollection 
     {

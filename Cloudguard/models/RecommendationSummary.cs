@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Recommendation Definition.
+    /// Recommendation definition.
     /// </summary>
     public class RecommendationSummary 
     {
         
         /// <value>
-        /// Unique identifier for Recommendation
+        /// Unique identifier for the recommendation
         /// </value>
         /// <remarks>
         /// Required
@@ -39,13 +39,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<RecommendationType> Type { get; set; }
         
         /// <value>
-        /// Tenant Identifier
+        /// Tenant identifier
         /// </value>
         [JsonProperty(PropertyName = "tenantId")]
         public string TenantId { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -55,7 +55,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// targetId associated with the problem
+        /// Target ID associated with the problem
         /// </value>
         /// <remarks>
         /// Required
@@ -75,7 +75,7 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.Dictionary<string, string> Details { get; set; }
         
         /// <value>
-        /// The Risk Level
+        /// The risk level of the problem
         /// </value>
         [JsonProperty(PropertyName = "riskLevel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -92,7 +92,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<long> ProblemCount { get; set; }
         
         /// <value>
-        /// The current state of the Recommendation.
+        /// The current lifecycle state of the recommendation
         /// </value>
         /// <remarks>
         /// Required
@@ -103,7 +103,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<LifecycleState> LifecycleState { get; set; }
         
         /// <value>
-        /// The lifecycleDetail will give more detail on the substate of the lifecycleState.
+        /// Additional details on the substate of the lifecycle state
         /// </value>
         /// <remarks>
         /// Required
@@ -114,19 +114,19 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<RecommendationLifecycleDetail> LifecycleDetail { get; set; }
         
         /// <value>
-        /// problem creating time
+        /// The date and time the problem was first created
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// problem updating time
+        /// The date and time the problem was last updated
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// recommendation string showing on UX
+        /// Recommendation string that appears in the UI for the problem
         /// </value>
         /// <remarks>
         /// Required
@@ -136,7 +136,7 @@ namespace Oci.CloudguardService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// description of the recommendation
+        /// Description of the recommendation
         /// </value>
         /// <remarks>
         /// Required

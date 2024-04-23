@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Description of a software source to be created.
+    /// Provides the information used to create a software source.
     /// </summary>
     [JsonConverter(typeof(CreateSoftwareSourceDetailsModelConverter))]
     public class CreateSoftwareSourceDetails 
     {
         
         /// <value>
-        /// The OCID of the tenancy containing the software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,17 +33,13 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// User friendly name for the software source.
+        /// User-friendly name for the software source. Does not have to be unique and you can change the name later. Avoid entering confidential information.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Information specified by the user about the software source.
+        /// User-specified description for the software source. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
@@ -89,6 +85,9 @@ namespace Oci.OsmanagementhubService.Models
             {
                 case "CUSTOM":
                     obj = new CreateCustomSoftwareSourceDetails();
+                    break;
+                case "VENDOR":
+                    obj = new CreateVendorSoftwareSourceDetails();
                     break;
                 case "VERSIONED":
                     obj = new CreateVersionedCustomSoftwareSourceDetails();

@@ -16,22 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// Provides the information used to update the managed instance group.
     /// </summary>
     public class UpdateManagedInstanceGroupDetails 
     {
         
         /// <value>
-        /// A user-friendly name for the managed instance group job. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name for the managed instance group. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// User specified information about the managed instance group. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// User-specified description of the managed instance group. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Oracle Notifications service (ONS) topic. ONS is the channel used to send notifications to the customer.
+        /// </value>
+        [JsonProperty(PropertyName = "notificationTopicId")]
+        public string NotificationTopicId { get; set; }
+        
+        [JsonProperty(PropertyName = "autonomousSettings")]
+        public UpdatableAutonomousSettings AutonomousSettings { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

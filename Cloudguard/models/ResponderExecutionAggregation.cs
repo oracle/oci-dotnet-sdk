@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.Dictionary<string, string> DimensionsMap { get; set; }
         
         /// <value>
-        /// The number of occurences with given dimension(s)
+        /// The number of occurrences with given dimensions
         /// </value>
         /// <remarks>
         /// Required

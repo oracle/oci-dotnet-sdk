@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Description of a group registration profile to be created.
+    /// Provides the information used to create a group registration profile.
     /// </summary>
     public class CreateGroupProfileDetails : CreateProfileDetails
     {
         
         /// <value>
-        /// The OCID of the managed instance group from which the registration profile will inherit its software sources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance group that the instance will join after registration.
         /// </value>
         /// <remarks>
         /// Required

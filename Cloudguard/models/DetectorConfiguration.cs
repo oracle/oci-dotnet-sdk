@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A single configuration applied to a detector
+    /// Configuration details for a detector.
     /// </summary>
     public class DetectorConfiguration 
     {
         
         /// <value>
-        /// Unique name of the configuration
+        /// Unique identifier of the configuration
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string ConfigKey { get; set; }
         
         /// <value>
-        /// configuration name
+        /// Configuration name
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.CloudguardService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// configuration value
+        /// Configuration value
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
         
         /// <value>
-        /// configuration data type
+        /// Configuration data type
         /// </value>
         [JsonProperty(PropertyName = "dataType")]
         public string DataType { get; set; }
@@ -58,6 +58,18 @@ namespace Oci.CloudguardService.Models
         /// </value>
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<ConfigValue> Values { get; set; }
+        
+        /// <value>
+        /// Map property Value data type
+        /// </value>
+        [JsonProperty(PropertyName = "allowedValuesDataType")]
+        public string AllowedValuesDataType { get; set; }
+        
+        /// <value>
+        /// Map of possible values for configuration
+        /// </value>
+        [JsonProperty(PropertyName = "allowedValues")]
+        public System.Collections.Generic.List<PropertyTuple> AllowedValues { get; set; }
         
     }
 }

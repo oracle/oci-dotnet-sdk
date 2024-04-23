@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Update of Data Source
+    /// Parameters to update a data source.
     /// </summary>
     public class UpdateDataSourceDetails 
     {
         
         /// <value>
-        /// Data Source display name.
+        /// Display name for data source
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Status of DataSource.
+        /// Enablement status of data source
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(StringEnumConverter))]

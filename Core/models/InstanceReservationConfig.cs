@@ -70,5 +70,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "usedCount")]
         public System.Nullable<long> UsedCount { get; set; }
         
+        /// <value>
+        /// The OCID of the cluster placement group for this instance reservation capacity configuration.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
     }
 }

@@ -20,33 +20,33 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// This compartmentId is used to list managed instances within a compartment.
-        /// Or serve as an additional filter to restrict only managed instances with in certain compartment if other filter presents.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment. 
+        /// This filter returns only resources contained within the specified compartment.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the managed instance group for which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance group. This filter returns resources associated with this group.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managedInstanceGroupId")]
         public string ManagedInstanceGroupId { get; set; }
         
         /// <value>
-        /// The OCID of the lifecycle environment.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle environment. This filter returns only resource contained with the specified lifecycle environment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleEnvironmentId")]
         public string LifecycleEnvironmentId { get; set; }
         
         /// <value>
-        /// The OCID of the lifecycle stage for which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle stage. This resource returns resources associated with this lifecycle stage.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleStageId")]
         public string LifecycleStageId { get; set; }
         
         /// <value>
-        /// A filter to return only instances whose managed instance status matches the given status.
+        /// A filter to return only managed instances whose status matches the status provided.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ManagedInstanceStatus> Status { get; set; }
@@ -64,34 +64,95 @@ namespace Oci.OsmanagementhubService.Requests
         public string DisplayNameContains { get; set; }
         
         /// <value>
-        /// Filter instances by Location. Used when report target type is compartment or group.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "instanceLocation")]
-        public System.Nullable<ManagedInstanceLocation> InstanceLocation { get; set; }
-        
-        /// <value>
-        /// A filter to return instances with number of available security updates equals to the number specified.
+        /// A filter to return instances that have the specified number of available security updates.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "securityUpdatesAvailableEqualsTo")]
         public System.Nullable<int> SecurityUpdatesAvailableEqualsTo { get; set; }
         
         /// <value>
-        /// A filter to return instances with number of available bug updates equals to the number specified.
+        /// A filter to return instances that have the specified number of available bug updates.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "bugUpdatesAvailableEqualsTo")]
         public System.Nullable<int> BugUpdatesAvailableEqualsTo { get; set; }
         
         /// <value>
-        /// A filter to return instances with number of available security updates greater than the number specified.
+        /// A filter to return instances that have more available security updates than the number specified.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "securityUpdatesAvailableGreaterThan")]
         public System.Nullable<int> SecurityUpdatesAvailableGreaterThan { get; set; }
         
         /// <value>
-        /// A filter to return instances with number of available bug updates greater than the number specified.
+        /// A filter to return instances that have more available bug updates than the number specified.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "bugUpdatesAvailableGreaterThan")]
         public System.Nullable<int> BugUpdatesAvailableGreaterThan { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location matches the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "location", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> Location { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location does not match the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "locationNotEqualTo", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> LocationNotEqualTo { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given operating system family.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<OsFamily> OsFamily { get; set; }
+        
+        /// <value>
+        /// Indicates whether to list only resources managed by the Autonomous Linux service.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isManagedByAutonomousLinux")]
+        public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
+        
+        ///
+        /// <value>
+        /// The format of the report to download. Default is CSV.
+        /// </value>
+        ///
+        public enum ReportFormatEnum {
+            [EnumMember(Value = "csv")]
+            Csv,
+            [EnumMember(Value = "json")]
+            Json,
+            [EnumMember(Value = "xml")]
+            Xml
+        };
+
+        /// <value>
+        /// The format of the report to download. Default is CSV.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "reportFormat")]
+        public System.Nullable<ReportFormatEnum> ReportFormat { get; set; }
+        
+        ///
+        /// <value>
+        /// The type of the report the user wants to download. Default is ALL.
+        /// </value>
+        ///
+        public enum ReportTypeEnum {
+            [EnumMember(Value = "SECURITY")]
+            Security,
+            [EnumMember(Value = "BUGFIX")]
+            Bugfix,
+            [EnumMember(Value = "ACTIVITY")]
+            Activity,
+            [EnumMember(Value = "ALL")]
+            All
+        };
+
+        /// <value>
+        /// The type of the report the user wants to download. Default is ALL.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "reportType")]
+        public System.Nullable<ReportTypeEnum> ReportType { get; set; }
         
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.

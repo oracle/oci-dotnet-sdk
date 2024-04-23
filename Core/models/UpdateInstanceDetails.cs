@@ -119,6 +119,9 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "shapeConfig")]
         public UpdateInstanceShapeConfigDetails ShapeConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceDetails")]
+        public UpdateInstanceSourceDetails SourceDetails { get; set; }
                 ///
         /// <value>
         /// The parameter acts as a fail-safe to prevent unwanted downtime when updating a running instance.

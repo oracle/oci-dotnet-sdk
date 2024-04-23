@@ -22,6 +22,8 @@ namespace Oci.CloudguardService.Models
       SecurityCondition,
       [EnumMember(Value = "CloudGuardCondition")]
       CloudGuardCondition,
+      [EnumMember(Value = "InstanceSecurityCondition")]
+      InstanceSecurityCondition,
       [EnumMember(Value = "ThreatCondition")]
       ThreatCondition
   }

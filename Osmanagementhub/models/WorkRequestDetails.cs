@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details of the user-friendly names to be used for actions.
+    /// Provides the name and description of the job.
     /// </summary>
     public class WorkRequestDetails 
     {
         
         /// <value>
-        /// A user-friendly name for the resulting job. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name for the job. The name does not have to be unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// User specified information about the resulting job. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// User-specified information about the job. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

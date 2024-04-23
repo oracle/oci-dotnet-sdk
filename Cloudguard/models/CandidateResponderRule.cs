@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Candidate Responder Rule list in Detector rule
+    /// Information for a responder rule that can be used to remediate a problem triggered by specific detector rule.
     /// </summary>
     public class CandidateResponderRule 
     {
         
         /// <value>
-        /// The unique identifier of the Responder rule
+        /// The unique identifier of the responder rule
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The display name of the Responder rule
+        /// The display name of the responder rule
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Preferred state
+        /// Is this the preferred state?
         /// </value>
         [JsonProperty(PropertyName = "isPreferred")]
         public System.Nullable<bool> IsPreferred { get; set; }

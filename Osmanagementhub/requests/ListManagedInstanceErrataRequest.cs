@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the managed instance.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -29,25 +29,11 @@ namespace Oci.OsmanagementhubService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "managedInstanceId")]
         public string ManagedInstanceId { get; set; }
         
-        ///
         /// <value>
-        /// A filter to return only errata that match the given advisory types.
+        /// A filter to return only packages that match the given update classification type.
         /// </value>
-        ///
-        public enum AdvisoryTypeEnum {
-            [EnumMember(Value = "SECURITY")]
-            Security,
-            [EnumMember(Value = "BUGFIX")]
-            Bugfix,
-            [EnumMember(Value = "ENHANCEMENT")]
-            Enhancement
-        };
-
-        /// <value>
-        /// A filter to return only errata that match the given advisory types.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "advisoryType", Oci.Common.Http.CollectionFormatType.Multi)]
-        public System.Collections.Generic.List<AdvisoryTypeEnum> AdvisoryType { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "classificationType", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ClassificationTypes> ClassificationType { get; set; }
         
         /// <value>
         /// The assigned erratum name. It's unique and not changeable.
@@ -64,7 +50,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string NameContains { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the resources to list.
+        /// The OCID of the compartment that contains the resources to list. This filter returns only resources contained within the specified compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }

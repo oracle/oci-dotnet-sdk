@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The information about new managed instance group.
+    /// Provides the information used to create a new managed instance group.
     /// </summary>
     public class CreateManagedInstanceGroupDetails 
     {
         
         /// <value>
-        /// A user-friendly name for the managed instance group. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name for the managed instance group. Does not have to be unique and you can change the name later. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Details about the managed instance group.
+        /// User-specified description of the managed instance group. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the tenancy containing the managed instance group.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the managed instance group.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The operating system type of the managed instance(s) that this managed instance group will contain.
+        /// The operating system type of the managed instances that will be attached to this group.
         /// 
         /// </value>
         /// <remarks>
@@ -60,7 +60,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<OsFamily> OsFamily { get; set; }
         
         /// <value>
-        /// The CPU architecture type of the managed instance(s) that this managed instance group will contain.
+        /// The CPU architecture type of the managed instances that will be attached to this group.
         /// 
         /// </value>
         /// <remarks>
@@ -72,7 +72,8 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// The software source vendor name.
+        /// The vendor of the operating system that will be used by the managed instances in the group.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -83,20 +84,33 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<VendorName> VendorName { get; set; }
         
         /// <value>
-        /// The list of software source OCIDs available to the managed instances in the managed instance group.
+        /// The location of managed instances attached to the group. If no location is provided, the default is on premises.
+        /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SoftwareSourceIds is required.")]
+        [JsonProperty(PropertyName = "location")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ManagedInstanceLocation> Location { get; set; }
+        
+        /// <value>
+        /// The list of software source [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) available to the managed instances in the group.
+        /// </value>
         [JsonProperty(PropertyName = "softwareSourceIds")]
         public System.Collections.Generic.List<string> SoftwareSourceIds { get; set; }
         
         /// <value>
-        /// The list of managed instance OCIDs to be added to the managed instance group.
+        /// The list of managed instance [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) to be added to the group.
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceIds")]
         public System.Collections.Generic.List<string> ManagedInstanceIds { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Oracle Notifications service (ONS) topic. ONS is the channel used to send notifications to the customer.
+        /// </value>
+        [JsonProperty(PropertyName = "notificationTopicId")]
+        public string NotificationTopicId { get; set; }
+        
+        [JsonProperty(PropertyName = "autonomousSettings")]
+        public UpdatableAutonomousSettings AutonomousSettings { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

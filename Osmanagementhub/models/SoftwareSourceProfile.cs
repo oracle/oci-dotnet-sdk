@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Definition of a registration profile of type SoftwareSource.
+    /// Provides the information for a software source registration profile.
     /// </summary>
     public class SoftwareSourceProfile : Profile
     {

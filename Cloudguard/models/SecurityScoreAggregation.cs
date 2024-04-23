@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// The key-value pairs of dimensions and their names.
+        /// The key-value pairs of dimensions and their names
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.Dictionary<string, string> DimensionsMap { get; set; }
         
         /// <value>
-        /// The security rating with given dimension/s
+        /// The security rating with given parameters
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<SecurityRating> SecurityRating { get; set; }
         
         /// <value>
-        /// The security score with given dimension/s
+        /// The security score with given parameters
         /// </value>
         /// <remarks>
         /// Required

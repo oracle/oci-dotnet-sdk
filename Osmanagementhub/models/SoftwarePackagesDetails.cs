@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details about the software packages to be installed/removed/updated.
+    /// Provides the information used to install, remove, or update software packages.
     /// </summary>
     public class SoftwarePackagesDetails 
     {

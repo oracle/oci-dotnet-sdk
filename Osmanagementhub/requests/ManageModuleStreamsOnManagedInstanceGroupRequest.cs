@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The managed instance group OCID.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance group.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string ManagedInstanceGroupId { get; set; }
         
         /// <value>
-        /// A description of an operation to perform against the modules, streams, and profiles of a managed instance group
+        /// The set of changes to make to the modules, streams, and profiles on a managed instance group.
         /// </value>
         /// <remarks>
         /// Required

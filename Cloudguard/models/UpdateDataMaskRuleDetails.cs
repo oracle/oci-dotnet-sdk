@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// The information to be updated for a data mask rule.
     /// </summary>
     public class UpdateDataMaskRuleDetails 
     {
         
         /// <value>
-        /// Data mask rule Name.
+        /// Data mask rule display name
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -31,13 +31,13 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier where the resource is created
+        /// Compartment OCID where the resource is created
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// IAM Group id associated with the data mask rule
+        /// IAM group ID associated with the data mask rule
         /// </value>
         [JsonProperty(PropertyName = "iamGroupId")]
         public string IamGroupId { get; set; }
@@ -46,13 +46,13 @@ namespace Oci.CloudguardService.Models
         public TargetSelected TargetSelected { get; set; }
         
         /// <value>
-        /// Data Mask Categories
+        /// Data mask rule categories
         /// </value>
         [JsonProperty(PropertyName = "dataMaskCategories", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<DataMaskCategory> DataMaskCategories { get; set; }
         
         /// <value>
-        /// The status of the dataMaskRule.
+        /// The status of the data mask rule
         /// </value>
         [JsonProperty(PropertyName = "dataMaskRuleStatus")]
         [JsonConverter(typeof(StringEnumConverter))]

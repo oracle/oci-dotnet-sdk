@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Sighting summary Definition.
+    /// Sighting summary definition.
     /// </summary>
     public class SightingSummary 
     {
         
         /// <value>
-        /// Unique identifier for finding event
+        /// Unique identifier for sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Compartment Id where the resource is created
+        /// Compartment OCID where the impacted resource is created
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Problem Id to which the Sighting is associated
+        /// Problem ID associated with sighting
         /// </value>
         [JsonProperty(PropertyName = "problemId")]
         public string ProblemId { get; set; }
@@ -54,19 +54,19 @@ namespace Oci.CloudguardService.Models
         public string ActorPrincipalId { get; set; }
         
         /// <value>
-        /// Name of the principal actor
+        /// Name of principal actor
         /// </value>
         [JsonProperty(PropertyName = "actorPrincipalName")]
         public string ActorPrincipalName { get; set; }
         
         /// <value>
-        /// Type of the principal actor
+        /// Type of principal actor
         /// </value>
         [JsonProperty(PropertyName = "actorPrincipalType")]
         public string ActorPrincipalType { get; set; }
         
         /// <value>
-        /// Unique identifier of the rule
+        /// Unique identifier of the detector rule that was triggered
         /// </value>
         /// <remarks>
         /// Required
@@ -76,7 +76,7 @@ namespace Oci.CloudguardService.Models
         public string DetectorRuleId { get; set; }
         
         /// <value>
-        /// ClassificationStatus of the sighting event
+        /// Classification status of the sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -87,7 +87,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ClassificationStatus> ClassificationStatus { get; set; }
         
         /// <value>
-        /// Identifier for the sighting type
+        /// Type of sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -97,7 +97,7 @@ namespace Oci.CloudguardService.Models
         public string SightingType { get; set; }
         
         /// <value>
-        /// Name of the sighting type
+        /// Display name of the sighting type
         /// </value>
         /// <remarks>
         /// Required
@@ -107,7 +107,7 @@ namespace Oci.CloudguardService.Models
         public string SightingTypeDisplayName { get; set; }
         
         /// <value>
-        /// Name of the Mitre att&ck tactic
+        /// Name of the MITRE ATT@CK framework tactic
         /// </value>
         /// <remarks>
         /// Required
@@ -117,7 +117,7 @@ namespace Oci.CloudguardService.Models
         public string TacticName { get; set; }
         
         /// <value>
-        /// Name of the Mitre att&ck technique
+        /// Name of the MITRE ATT@CK framework technique
         /// </value>
         /// <remarks>
         /// Required
@@ -148,7 +148,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<Severity> Severity { get; set; }
         
         /// <value>
-        /// Confidence of the sighting
+        /// Confidence level that the sighting is not a false positive
         /// </value>
         /// <remarks>
         /// Required
@@ -179,7 +179,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeLastDetected { get; set; }
         
         /// <value>
-        /// Regions involved in the sighting
+        /// List of regions involved in the sighting
         /// </value>
         /// <remarks>
         /// Required

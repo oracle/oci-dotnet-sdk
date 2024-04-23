@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details about the software packages to be updated.
+    /// Provides the information used to update software packages on a managed instance.
     /// </summary>
     public class UpdatePackagesOnManagedInstanceDetails 
     {
@@ -28,7 +28,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<string> PackageNames { get; set; }
         
         /// <value>
-        /// The type of updates to be applied.
+        /// The types of updates to be applied.
         /// </value>
         [JsonProperty(PropertyName = "updateTypes", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<UpdateTypes> UpdateTypes { get; set; }

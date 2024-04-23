@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Possible operation status.
+  /// Possible operation status
   /// </summary>
   public enum OperationStatus {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

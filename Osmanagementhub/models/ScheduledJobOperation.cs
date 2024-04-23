@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Defines an operation in a scheduled job.
+    /// Defines an operation that is performed by a scheduled job.
     /// </summary>
     public class ScheduledJobOperation 
     {
@@ -33,10 +33,18 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<OperationTypes> OperationType { get; set; }
         
         /// <value>
-        /// The names of the target packages (only if operation type is INSTALL_PACKAGES/UPDATE_PACKAGES/REMOVE_PACKAGES).
+        /// The names of the target packages. This parameter only applies when the scheduled job is for installing, updating, or removing packages.
         /// </value>
         [JsonProperty(PropertyName = "packageNames")]
         public System.Collections.Generic.List<string> PackageNames { get; set; }
+        
+        /// <value>
+        /// Unique identifier for the Windows update. This parameter only applies if the scheduled job is for installing Windows updates.
+        /// Note that this is not an OCID, but is a unique identifier assigned by Microsoft.
+        /// For Example: '6981d463-cd91-4a26-b7c4-ea4ded9183ed'.
+        /// </value>
+        [JsonProperty(PropertyName = "windowsUpdateNames")]
+        public System.Collections.Generic.List<string> WindowsUpdateNames { get; set; }
         
         [JsonProperty(PropertyName = "manageModuleStreamsDetails")]
         public ManageModuleStreamsInScheduledJobDetails ManageModuleStreamsDetails { get; set; }
@@ -45,7 +53,9 @@ namespace Oci.OsmanagementhubService.Models
         public ModuleStreamDetails SwitchModuleStreamsDetails { get; set; }
         
         /// <value>
-        /// The OCIDs for the software sources (only if operation type is ATTACH_SOFTWARE_SOURCES/DETACH_SOFTWARE_SOURCES).
+        /// The software source [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). 
+        /// This parameter only applies when the scheduled job is for attaching or detaching software sources.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "softwareSourceIds")]
         public System.Collections.Generic.List<string> SoftwareSourceIds { get; set; }

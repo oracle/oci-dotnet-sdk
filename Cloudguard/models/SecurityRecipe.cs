@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A security zone recipe is a collection of security zone policies. Oracle Cloud Infrastructure enforces these policies on security zones that use the recipe.
+    /// A security zone recipe (SecurityRecipe resource) is a collection of security zone policies
+    /// (SecurityPolicy resources). Oracle Cloud Infrastructure enforces
+    /// these policies on security zones that use the recipe.
+    /// 
     /// </summary>
     public class SecurityRecipe 
     {
         
         /// <value>
-        /// Unique identifier that is immutable on creation
+        /// Unique identifier that can\u2019t be changed after creation
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +35,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The recipe's name
+        /// The recipe's display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -44,7 +47,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The id of the compartment that contains the recipe
+        /// The OCID of the compartment that contains the recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -65,7 +68,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<OwnerType> Owner { get; set; }
         
         /// <value>
-        /// The list of `SecurityPolicy` ids that are included in the recipe
+        /// The list of security policy IDs that are included in the recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -87,7 +90,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the recipe
+        /// The current lifecycle state of the recipe
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the managed instance.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -28,6 +28,16 @@ namespace Oci.OsmanagementhubService.Requests
         [Required(ErrorMessage = "ManagedInstanceId is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "managedInstanceId")]
         public string ManagedInstanceId { get; set; }
+        
+        /// <value>
+        /// A filter to return only vulnerabilities matching the given types.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "VulnerabilityType is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vulnerabilityType", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<VulnerabilityTypes> VulnerabilityType { get; set; }
         
         /// <value>
         /// The assigned erratum name. It's unique and not changeable.
@@ -43,25 +53,43 @@ namespace Oci.OsmanagementhubService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "advisoryNameContains")]
         public string AdvisoryNameContains { get; set; }
         
-        ///
-        /// <value>
-        /// A filter to return only errata that match the given advisory types.
-        /// </value>
-        ///
-        public enum AdvisoryTypeEnum {
-            [EnumMember(Value = "SECURITY")]
-            Security,
-            [EnumMember(Value = "BUGFIX")]
-            Bugfix,
-            [EnumMember(Value = "ENHANCEMENT")]
-            Enhancement
-        };
-
         /// <value>
         /// A filter to return only errata that match the given advisory types.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "advisoryType", Oci.Common.Http.CollectionFormatType.Multi)]
-        public System.Collections.Generic.List<AdvisoryTypeEnum> AdvisoryType { get; set; }
+        public System.Collections.Generic.List<AdvisoryTypes> AdvisoryType { get; set; }
+        
+        /// <value>
+        /// A filter to return vulnerabilities that match the given name. For Linux instances, this refers to the advisory name. For Windows instances, this refers to the Windows update display name.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vulnerabilityName", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> VulnerabilityName { get; set; }
+        
+        /// <value>
+        /// A filter to return vulnerabilities that partially match the given name. For Linux instances, this refers to the advisory name. For Windows instances, this refers to the Windows update display name.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vulnerabilityNameContains")]
+        public string VulnerabilityNameContains { get; set; }
+        
+        ///
+        /// <value>
+        /// The format of the report to download. Default is CSV.
+        /// </value>
+        ///
+        public enum ReportFormatEnum {
+            [EnumMember(Value = "csv")]
+            Csv,
+            [EnumMember(Value = "json")]
+            Json,
+            [EnumMember(Value = "xml")]
+            Xml
+        };
+
+        /// <value>
+        /// The format of the report to download. Default is CSV.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "reportFormat")]
+        public System.Nullable<ReportFormatEnum> ReportFormat { get; set; }
         
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.

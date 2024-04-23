@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A software source which can be added to a managed instance. Once a software source is added, packages from that software source can be installed on that managed instance.
+    /// Provides summary information about an available software source. 
+    /// An available software source can be added to a managed instance. 
+    /// After a software source is added, packages from that software source can be installed on that managed instance.
+    /// 
     /// </summary>
     public class AvailableSoftwareSourceSummary 
     {
         
         /// <value>
-        /// unique identifier that is immutable on creation.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +35,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID for the compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +45,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// User friendly name for the software source.
+        /// User-friendly name for the software source.
         /// </value>
         /// <remarks>
         /// Required

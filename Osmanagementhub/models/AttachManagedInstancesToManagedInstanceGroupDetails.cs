@@ -16,14 +16,18 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The managed instance OCIDs to attach to the managed instance group.
+    /// Provides the information used to attach managed instances to a group.
     /// </summary>
     public class AttachManagedInstancesToManagedInstanceGroupDetails 
     {
         
         /// <value>
-        /// The list of managed instance OCIDs to be attached.
+        /// List of managed instance [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) to attach to the group.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ManagedInstances is required.")]
         [JsonProperty(PropertyName = "managedInstances")]
         public System.Collections.Generic.List<string> ManagedInstances { get; set; }
         

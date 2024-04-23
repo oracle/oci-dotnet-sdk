@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Data Source Entities mappings
+    /// Parameters for entities mapping to data source.
     /// </summary>
     public class EntitiesMapping 
     {
         
         /// <value>
-        /// The display name of entity
+        /// Display name of the entity
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -38,7 +38,7 @@ namespace Oci.CloudguardService.Models
         public string QueryField { get; set; }
         
         /// <value>
-        /// Possible type of entity
+        /// Type of entity
         /// </value>
         [JsonProperty(PropertyName = "entityType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

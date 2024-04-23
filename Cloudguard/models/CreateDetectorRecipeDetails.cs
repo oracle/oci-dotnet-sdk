@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Create of Detector recipe.
+    /// Parameters to use to create details for a detector recipe.
     /// </summary>
     public class CreateDetectorRecipeDetails 
     {
@@ -44,20 +44,20 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// detector for the rule
+        /// Detector for the rule
         /// </value>
         [JsonProperty(PropertyName = "detector")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DetectorEnum> Detector { get; set; }
         
         /// <value>
-        /// The id of the source detector recipe.
+        /// The ID of the source detector recipe
         /// </value>
         [JsonProperty(PropertyName = "sourceDetectorRecipeId")]
         public string SourceDetectorRecipeId { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -67,7 +67,7 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Detector Rules to override from source detector recipe
+        /// Detector rules to override from source detector recipe
         /// </value>
         [JsonProperty(PropertyName = "detectorRules")]
         public System.Collections.Generic.List<UpdateDetectorRecipeDetectorRule> DetectorRules { get; set; }

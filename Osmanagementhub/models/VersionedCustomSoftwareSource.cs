@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// An immutable custom software source that is assigned a version and contains a custom collection of packages.
+    /// The object that defines a versioned custom software source.
     /// </summary>
     public class VersionedCustomSoftwareSource : SoftwareSource
     {
         
         /// <value>
-        /// List of vendor software sources.
+        /// List of vendor software sources that are used for the basis of the versioned custom software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,6 +43,24 @@ namespace Oci.OsmanagementhubService.Models
         [Required(ErrorMessage = "SoftwareSourceVersion is required.")]
         [JsonProperty(PropertyName = "softwareSourceVersion")]
         public string SoftwareSourceVersion { get; set; }
+        
+        /// <value>
+        /// Indicates whether the service should automatically resolve package dependencies when including specific packages in the software source.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoResolveDependencies")]
+        public System.Nullable<bool> IsAutoResolveDependencies { get; set; }
+        
+        /// <value>
+        /// Indicates whether the service should create the software source from a list of packages provided by the user.
+        /// </value>
+        [JsonProperty(PropertyName = "isCreatedFromPackageList")]
+        public System.Nullable<bool> IsCreatedFromPackageList { get; set; }
+        
+        /// <value>
+        /// The packages in the software source.
+        /// </value>
+        [JsonProperty(PropertyName = "packages")]
+        public System.Collections.Generic.List<string> Packages { get; set; }
         
         [JsonProperty(PropertyName = "softwareSourceType")]
         private readonly string softwareSourceType = "VERSIONED";

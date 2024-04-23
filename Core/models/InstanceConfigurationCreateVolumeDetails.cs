@@ -116,6 +116,12 @@ namespace Oci.CoreService.Models
         public System.Nullable<long> VpusPerGB { get; set; }
         
         /// <value>
+        /// The clusterPlacementGroup Id of the volume for volume placement.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
+        /// <value>
         /// The size of the volume in GBs.
         /// </value>
         [JsonProperty(PropertyName = "sizeInGBs")]

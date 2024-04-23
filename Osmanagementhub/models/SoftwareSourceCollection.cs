@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a SoftwareSource search. Contains boh SoftwareSourceSummary items and other information, such as metadata.
+    /// A set of software sources returned for the {@link #listSoftwareSources(ListSoftwareSourcesRequest) listSoftwareSources} operation.
     /// </summary>
     public class SoftwareSourceCollection 
     {
         
         /// <value>
-        /// List of SoftwareSources.
+        /// List of software sources.
         /// </value>
         /// <remarks>
         /// Required

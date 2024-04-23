@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// provider of the feed (Oracle/Customer)
+  /// Provider of the feed (Oracle/Customer).
   /// </summary>
   public enum FeedProviderType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

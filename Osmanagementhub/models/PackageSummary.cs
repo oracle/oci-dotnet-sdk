@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A software package summary.
+    /// Provides summary information for a software package.
     /// </summary>
     [JsonConverter(typeof(PackageSummaryModelConverter))]
     public class PackageSummary 
@@ -70,13 +70,13 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ArchType> Architecture { get; set; }
         
         /// <value>
-        /// list of software sources that provide the software package.
+        /// List of software sources that provide the software package.
         /// </value>
         [JsonProperty(PropertyName = "softwareSources")]
         public System.Collections.Generic.List<SoftwareSourceDetails> SoftwareSources { get; set; }
                 ///
         /// <value>
-        /// classifier for child instances of this object.
+        /// Status of the software package.
         /// </value>
         ///
         public enum PackageClassificationEnum {

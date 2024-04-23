@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The identifier of the responder execution.
+        /// The unique identifier of the responder execution.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public string ResponderExecutionId { get; set; }
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The OCID of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +68,7 @@ namespace Oci.CloudguardService.Requests
         public string OpcRetryToken { get; set; }
         
         /// <value>
-        /// Details for Responder Configuration
+        /// Details for responder configuration
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
         public ExecuteResponderExecutionDetails ExecuteResponderExecutionDetails { get; set; }

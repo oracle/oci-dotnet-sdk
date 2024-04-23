@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Problem History Definition.
+    /// Problem history definition.
     /// </summary>
     public class ProblemHistorySummary 
     {
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// problemId for which history is associated to.
+        /// Problem ID with which history is associated
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string ProblemId { get; set; }
         
         /// <value>
-        /// Actor type who performed the operation
+        /// Type of actor who performed the operation
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ActorType> ActorType { get; set; }
         
         /// <value>
-        /// Resource Name who performed activity
+        /// Resource name who performed the activity
         /// </value>
         /// <remarks>
         /// Required
@@ -73,7 +73,7 @@ namespace Oci.CloudguardService.Models
         public string Explanation { get; set; }
         
         /// <value>
-        /// Problem Lifecycle Detail Status
+        /// Additional details on the substate of the lifecycle state
         /// </value>
         /// <remarks>
         /// Required
@@ -91,7 +91,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<EventStatus> EventStatus { get; set; }
         
         /// <value>
-        /// Type of the Entity
+        /// Date and time the problem was created
         /// </value>
         /// <remarks>
         /// Required
@@ -101,7 +101,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Impacted Resource Names in a comma-separated string.
+        /// Impacted resource names in a comma-separated string
         /// </value>
         /// <remarks>
         /// Required
@@ -111,10 +111,16 @@ namespace Oci.CloudguardService.Models
         public string Delta { get; set; }
         
         /// <value>
-        /// User Defined Comments
+        /// User-defined comments
         /// </value>
         [JsonProperty(PropertyName = "comment")]
         public string Comment { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

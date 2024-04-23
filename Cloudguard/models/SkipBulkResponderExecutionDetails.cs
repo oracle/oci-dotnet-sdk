@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// List of responder execution ids to skip the execution
+    /// Details of responders to skip execution.
     /// </summary>
     public class SkipBulkResponderExecutionDetails 
     {
         
         /// <value>
-        /// List of responder execution ids to skip the execution
+        /// List of responder execution IDs to skip execution
         /// </value>
         /// <remarks>
         /// Required

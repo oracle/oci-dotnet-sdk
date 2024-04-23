@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of Detector recipe
+    /// Summary information for a detector recipe.
     /// </summary>
     public class DetectorRecipeSummary 
     {
         
         /// <value>
-        /// Ocid for detector recipe
+        /// OCID for detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// DisplayName of detector recipe
+        /// Display name for detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// compartmentId of detector recipe
+        /// Compartment OCID of detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -58,13 +58,13 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Recipe Ocid of the Source Recipe to be cloned
+        /// Recipe OCID of the source recipe to be cloned
         /// </value>
         [JsonProperty(PropertyName = "sourceDetectorRecipeId")]
         public string SourceDetectorRecipeId { get; set; }
         
         /// <value>
-        /// Owner of detector recipe
+        /// Owner of the detector recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -73,6 +73,13 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "owner")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OwnerType> Owner { get; set; }
+        
+        /// <value>
+        /// Recipe type ( STANDARD, ENTERPRISE )
+        /// </value>
+        [JsonProperty(PropertyName = "detectorRecipeType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DetectorRecipeEnum> DetectorRecipeType { get; set; }
         
         /// <value>
         /// Type of detector
@@ -86,7 +93,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<DetectorEnum> Detector { get; set; }
         
         /// <value>
-        /// List of detetor rules for the detector type
+        /// List of detector rules for the detector type
         /// </value>
         [JsonProperty(PropertyName = "detectorRules")]
         public System.Collections.Generic.List<DetectorRecipeDetectorRule> DetectorRules { get; set; }
@@ -98,13 +105,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the detector recipe was updated. Format defined by RFC3339.
+        /// The date and time the detector recipe was last updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the resource.
+        /// The current lifecycle state of the resource
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

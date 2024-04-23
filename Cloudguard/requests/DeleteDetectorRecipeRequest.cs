@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// DetectorRecipe OCID
+        /// Detector recipe OCID
         /// </value>
         /// <remarks>
         /// Required

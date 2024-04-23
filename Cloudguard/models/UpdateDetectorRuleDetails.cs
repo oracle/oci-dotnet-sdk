@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Details of a Detector Rule to be overriden in Detector Recipe
+    /// Parameters to be updated for a detector rule within a detector recipe.
     /// </summary>
     public class UpdateDetectorRuleDetails 
     {
         
         /// <value>
-        /// Enables the control
+        /// Enablement status of the detector rule
         /// </value>
         /// <remarks>
         /// Required
@@ -32,14 +32,14 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
-        /// The Risk Level
+        /// The risk level of the detector rule
         /// </value>
         [JsonProperty(PropertyName = "riskLevel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RiskLevel> RiskLevel { get; set; }
         
         /// <value>
-        /// Configuration details
+        /// List of detector rule configurations
         /// </value>
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<DetectorConfiguration> Configurations { get; set; }
@@ -48,31 +48,31 @@ namespace Oci.CloudguardService.Models
         public Condition Condition { get; set; }
         
         /// <value>
-        /// user defined labels for a detector rule
+        /// User-defined labels for a detector rule
         /// </value>
         [JsonProperty(PropertyName = "labels")]
         public System.Collections.Generic.List<string> Labels { get; set; }
         
         /// <value>
-        /// Description for DetectorRecipeDetectorRule.
+        /// Description for the detector rule
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Recommendation for DetectorRecipeDetectorRule
+        /// Recommendation for the detector rule
         /// </value>
         [JsonProperty(PropertyName = "recommendation")]
         public string Recommendation { get; set; }
         
         /// <value>
-        /// The id of the attached DataSource.
+        /// The unique identifier of the attached data source
         /// </value>
         [JsonProperty(PropertyName = "dataSourceId")]
         public string DataSourceId { get; set; }
         
         /// <value>
-        /// Data Source entities mapping for a Detector Rule
+        /// Data source entities mapping for a detector rule
         /// </value>
         [JsonProperty(PropertyName = "entitiesMappings")]
         public System.Collections.Generic.List<EntitiesMapping> EntitiesMappings { get; set; }

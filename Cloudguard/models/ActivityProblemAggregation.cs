@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// The key-value pairs of dimensions and their names.
+        /// The key-value pairs of dimensions and their names
         /// </value>
         /// <remarks>
         /// Required
@@ -46,7 +46,7 @@ namespace Oci.CloudguardService.Models
         public GeographicalLocation GeographicalLocation { get; set; }
         
         /// <value>
-        /// The number of occurences with given dimension/s
+        /// The number of occurrences with given dimensions
         /// </value>
         /// <remarks>
         /// Required

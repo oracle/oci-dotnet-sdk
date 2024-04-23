@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// Possible update classification types.
+  /// Type of software package update.
   /// </summary>
   public enum UpdateTypes {
       [EnumMember(Value = "SECURITY")]

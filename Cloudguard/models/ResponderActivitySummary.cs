@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Responder Activity summary Definition.
+    /// Responder activity summary definition.
     /// </summary>
     public class ResponderActivitySummary 
     {
         
         /// <value>
-        /// Unique id for Responder activity.
+        /// Unique ID for responder activity
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// problemId for which Responder activity is associated to.
+        /// Unique ID of problem associated with responder activity
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string ProblemId { get; set; }
         
         /// <value>
-        /// Id of the responder rule for the problem
+        /// Unique ID of the responder rule associated with the problem
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.CloudguardService.Models
         public string ResponderRuleId { get; set; }
         
         /// <value>
-        /// responder rule type for performing the operation
+        /// Responder rule type for performing the operation
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ResponderType> ResponderType { get; set; }
         
         /// <value>
-        /// responder rule name
+        /// Responder rule name
         /// </value>
         /// <remarks>
         /// Required
@@ -73,7 +73,7 @@ namespace Oci.CloudguardService.Models
         public string ResponderRuleName { get; set; }
         
         /// <value>
-        /// Responder activity types
+        /// Responder activity type
         /// </value>
         /// <remarks>
         /// Required
@@ -84,7 +84,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ResponderActivityType> ResponderActivityType { get; set; }
         
         /// <value>
-        /// the responder execution status
+        /// Responder execution status
         /// </value>
         /// <remarks>
         /// Required
@@ -95,7 +95,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ResponderExecutionStates> ResponderExecutionStatus { get; set; }
         
         /// <value>
-        /// responder activity starting time
+        /// Responder activity starting time
         /// </value>
         /// <remarks>
         /// Required
@@ -105,7 +105,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// additional message related to this operation
+        /// Additional message related to this operation
         /// </value>
         /// <remarks>
         /// Required

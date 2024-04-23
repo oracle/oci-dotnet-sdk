@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The unique identifier of the security zone (`SecurityZone`)
+        /// The unique identifier of the security zone (`SecurityZone` resource).
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public string SecurityZoneId { get; set; }
         
         /// <value>
-        /// The compartment to add to the security zone.
+        /// Parameters for an existing compartment to be added to a security zone
         /// </value>
         /// <remarks>
         /// Required

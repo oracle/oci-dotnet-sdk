@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Resource Profile Endpoints summary.
+    /// Summary information for resource profile endpoints.
     /// </summary>
     public class ResourceProfileEndpointSummary 
     {
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Resource profile Id associated with the imacted resource
+        /// Resource profile ID associated with the impacted resource
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.CloudguardService.Models
         public string ResourceProfileId { get; set; }
         
         /// <value>
-        /// Problem Id for sighting endpoints
+        /// Problem ID for sighting endpoints
         /// </value>
         [JsonProperty(PropertyName = "problemId")]
         public string ProblemId { get; set; }
         
         /// <value>
-        /// Identifier for the sighting type
+        /// Type of sighting for sighting endpoints
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.CloudguardService.Models
         public string SightingType { get; set; }
         
         /// <value>
-        /// Name of the sighting type
+        /// Display name of the sighting type
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +68,7 @@ namespace Oci.CloudguardService.Models
         public string SightingTypeDisplayName { get; set; }
         
         /// <value>
-        /// IP Address
+        /// IP address for sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -78,7 +78,7 @@ namespace Oci.CloudguardService.Models
         public string IpAddress { get; set; }
         
         /// <value>
-        /// IP Address type
+        /// Type of IP address for sighting
         /// </value>
         /// <remarks>
         /// Required
@@ -88,49 +88,49 @@ namespace Oci.CloudguardService.Models
         public string IpAddressType { get; set; }
         
         /// <value>
-        /// IP Address classification type
+        /// IP address classification type
         /// </value>
         [JsonProperty(PropertyName = "ipClassificationType")]
         public string IpClassificationType { get; set; }
         
         /// <value>
-        /// Country
+        /// Country of sighting
         /// </value>
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
         
         /// <value>
-        /// Latitude
+        /// Latitude of sighting
         /// </value>
         [JsonProperty(PropertyName = "latitude")]
         public System.Double Latitude { get; set; }
         
         /// <value>
-        /// Longitude
+        /// Longitude of sighting
         /// </value>
         [JsonProperty(PropertyName = "longitude")]
         public System.Double Longitude { get; set; }
         
         /// <value>
-        /// ASN number
+        /// ASN number of sighting
         /// </value>
         [JsonProperty(PropertyName = "asnNumber")]
         public string AsnNumber { get; set; }
         
         /// <value>
-        /// Regions where activities were performed from this IP
+        /// Regions where activities were performed from this IP address
         /// </value>
         [JsonProperty(PropertyName = "regions")]
         public System.Collections.Generic.List<string> Regions { get; set; }
         
         /// <value>
-        /// Services where activities were performed from this IP
+        /// List of services where activities were performed from this IP address
         /// </value>
         [JsonProperty(PropertyName = "services")]
         public System.Collections.Generic.List<string> Services { get; set; }
         
         /// <value>
-        /// Time when activities were created
+        /// Date and time when activities were created
         /// </value>
         /// <remarks>
         /// Required

@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The OCID of the compartment that contains the resources to list.
+        /// The OCID of the compartment that contains the resources to list. This filter returns only resources contained within the specified compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -38,13 +38,13 @@ namespace Oci.OsmanagementhubService.Requests
         public string DisplayNameContains { get; set; }
         
         /// <value>
-        /// The OCID of the managed instance for which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance. This filter returns resources associated with this managed instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managedInstanceId")]
         public string ManagedInstanceId { get; set; }
         
         /// <value>
-        /// A filter to return only instances whose managed instance status matches the given status.
+        /// A filter to return only managed instances whose status matches the status provided.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ManagedInstanceStatus> Status { get; set; }
@@ -56,13 +56,13 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Collections.Generic.List<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// A filter to return only instances whose OS family type matches the given OS family.
+        /// A filter to return only resources that match the given operating system family.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<OsFamily> OsFamily { get; set; }
         
         /// <value>
-        /// A filter to return only managed instances acting as management stations.
+        /// A filter to return only managed instances that are acting as management stations.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isManagementStation")]
         public System.Nullable<bool> IsManagementStation { get; set; }
@@ -98,7 +98,7 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Nullable<bool> IsAttachedToGroupOrLifecycleStage { get; set; }
         
         /// <value>
-        /// The OCID for the software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source. This filter returns resources associated with this software source.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "softwareSourceId")]
         public string SoftwareSourceId { get; set; }
@@ -110,6 +110,55 @@ namespace Oci.OsmanagementhubService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "advisoryName", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> AdvisoryName { get; set; }
+        
+        /// <value>
+        /// A filter to return only managed instances in a specific lifecycle environment.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleEnvironment")]
+        public string LifecycleEnvironment { get; set; }
+        
+        /// <value>
+        /// A filter to return only managed instances that aren't in a specific lifecycle environment.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleEnvironmentNotEqualTo")]
+        public string LifecycleEnvironmentNotEqualTo { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location matches the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "location", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> Location { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location does not match the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "locationNotEqualTo", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> LocationNotEqualTo { get; set; }
+        
+        /// <value>
+        /// A multi filter to return only managed instances that match the given profile ids.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "profile", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> Profile { get; set; }
+        
+        /// <value>
+        /// A multi filter to return only managed instances that don't contain the given profile [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "profileNotEqualTo", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> ProfileNotEqualTo { get; set; }
+        
+        /// <value>
+        /// A filter to return only managed instances with a registration profile attached.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isProfileAttached")]
+        public System.Nullable<bool> IsProfileAttached { get; set; }
+        
+        /// <value>
+        /// Indicates whether to list only resources managed by the Autonomous Linux service.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isManagedByAutonomousLinux")]
+        public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
         
         /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a paginated \"List\" call.

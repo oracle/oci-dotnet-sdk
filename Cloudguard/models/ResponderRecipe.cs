@@ -16,13 +16,29 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Details of ResponderRecipe.
+    /// A ResponderRecipe resource contains a specific instance of one of
+    /// the supported detector types (for example, activity, configuration,
+    /// or threat).
+    /// <br/>
+    /// A ResponderRecipe resource:
+    /// * Is effectively a copy of a Responder resource in which users can make
+    /// very limited changes if it\u2019s Oracle-managed, and more changes if it\u2019s user-managed.
+    /// * Can also be created by cloning an existing ResponderRecipe resource, either
+    /// user-managed or Oracle-managed.
+    /// * Is visible on Cloud Guard\u2019s Responder Recipes page.
+    /// * Is located in a specific OCI compartment.
+    /// * Can be modified by users, programmatically or through the UI.
+    /// * Changes that can be made here apply globally, to resources in all OCI compartments
+    /// mapped to a target that attaches the responder recipe, but are overridden by
+    /// any changes made in the corresponding TargetResponderRecipe resource (effectively
+    /// created when the responder recipe is attached to the target).
+    /// 
     /// </summary>
     public class ResponderRecipe 
     {
         
         /// <value>
-        /// Identifier for ResponderRecipe.
+        /// Unique identifier for the responder recip
         /// </value>
         /// <remarks>
         /// Required
@@ -32,19 +48,19 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// ResponderRecipe display name.
+        /// Responder recipe display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// ResponderRecipe description.
+        /// Responder recipe description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Owner of ResponderRecipe
+        /// Owner of responder recipe
         /// </value>
         [JsonProperty(PropertyName = "owner")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -57,19 +73,19 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<ResponderRecipeResponderRule> ResponderRules { get; set; }
         
         /// <value>
-        /// List of responder rules associated with the recipe
+        /// List of currently enabled responder rules for the responder type, for recipe after applying defaults
         /// </value>
         [JsonProperty(PropertyName = "effectiveResponderRules")]
         public System.Collections.Generic.List<ResponderRecipeResponderRule> EffectiveResponderRules { get; set; }
         
         /// <value>
-        /// The id of the source responder recipe.
+        /// The unique identifier of the source responder recipe
         /// </value>
         [JsonProperty(PropertyName = "sourceResponderRecipeId")]
         public string SourceResponderRecipeId { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -85,13 +101,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the responder recipe was updated. Format defined by RFC3339.
+        /// The date and time the responder recipe was last updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the Example.
+        /// The current lifecycle state of the example
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

@@ -22,7 +22,7 @@ namespace Oci.OsmanagementhubService.Models
     {
         
         /// <value>
-        /// OCID for the Management Station
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.OsmanagementhubService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// OCID for the Instance associated with the Management Station
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance that is acting as the management station.
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceId")]
         public string ManagedInstanceId { get; set; }
         
         /// <value>
-        /// The OCID of the tenancy containing the Management Station.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the management station.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,25 +48,25 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// OCID of the Registration Profile associated with the Management Station
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the registration profile used for the management station.
         /// </value>
         [JsonProperty(PropertyName = "profileId")]
         public string ProfileId { get; set; }
         
         /// <value>
-        /// OCID of the Scheduled Job for mirror sync
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the scheduled job for the mirror sync.
         /// </value>
         [JsonProperty(PropertyName = "scheduledJobId")]
         public string ScheduledJobId { get; set; }
         
         /// <value>
-        /// the time/date of the next scheduled execution of the Scheduled Job
+        /// The date and time of the next scheduled mirror sync (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         [JsonProperty(PropertyName = "timeNextExecution")]
         public System.Nullable<System.DateTime> TimeNextExecution { get; set; }
         
         /// <value>
-        /// ManagementStation name
+        /// User-friendly name for the management station.
         /// </value>
         /// <remarks>
         /// Required
@@ -76,13 +76,13 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Details describing the Management Station config.
+        /// User-specified description of the management station.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Name of the host
+        /// Hostname of the management station.
         /// </value>
         /// <remarks>
         /// Required
@@ -92,26 +92,33 @@ namespace Oci.OsmanagementhubService.Models
         public string Hostname { get; set; }
         
         /// <value>
-        /// Current state of the mirroring
+        /// Current state of the mirror sync for the management station.
         /// </value>
         [JsonProperty(PropertyName = "overallState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OverallState> OverallState { get; set; }
         
         /// <value>
-        /// A decimal number representing the completeness percentage
+        /// Overall health status of the managment station.
+        /// </value>
+        [JsonProperty(PropertyName = "healthState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<HealthState> HealthState { get; set; }
+        
+        /// <value>
+        /// A decimal number representing the progress of the current mirror sync.
         /// </value>
         [JsonProperty(PropertyName = "overallPercentage")]
         public System.Nullable<int> OverallPercentage { get; set; }
         
         /// <value>
-        /// A decimal number representing the mirror capacity
+        /// A decimal number representing the amount of mirror capacity used by the sync.
         /// </value>
         [JsonProperty(PropertyName = "mirrorCapacity")]
         public System.Nullable<int> MirrorCapacity { get; set; }
         
         /// <value>
-        /// The current state of the Management Station config.
+        /// The current state of the management station.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

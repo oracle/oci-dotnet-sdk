@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Description of a lifecycle registration profile to be created.
+    /// Provides the information used to create a lifecycle environment registration profile.
     /// </summary>
     public class CreateLifecycleProfileDetails : CreateProfileDetails
     {
         
         /// <value>
-        /// The OCID of the lifecycle stage from which the registration profile will inherit its software source.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle stage that the instance will be associated with.
         /// </value>
         /// <remarks>
         /// Required

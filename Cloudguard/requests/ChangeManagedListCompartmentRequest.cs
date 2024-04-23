@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The cloudguard list OCID to be passed in the request.
+        /// The managed list OCID to be passed in the request.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public string ManagedListId { get; set; }
         
         /// <value>
-        /// The compartment id of the ManagedList
+        /// The compartment OCID of the ManagedList
         /// </value>
         /// <remarks>
         /// Required

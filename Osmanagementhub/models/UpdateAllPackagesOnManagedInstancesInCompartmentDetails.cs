@@ -16,13 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The details about the package types to be updated.
+    /// Provides the information used to update all packages of a specified type on managed instances within the specified compartment.
+    /// 
     /// </summary>
     public class UpdateAllPackagesOnManagedInstancesInCompartmentDetails 
     {
         
         /// <value>
-        /// The compartment being targeted by this operation.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The type of updates to be applied.
+        /// The types of updates to be applied.
         /// </value>
         [JsonProperty(PropertyName = "updateTypes", ItemConverterType = typeof(StringEnumConverter))]
         public System.Collections.Generic.List<UpdateTypes> UpdateTypes { get; set; }

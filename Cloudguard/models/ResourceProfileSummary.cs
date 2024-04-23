@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Resource profile summary.
+    /// Summary information for a resource profile.
     /// </summary>
     public class ResourceProfileSummary 
     {
         
         /// <value>
-        /// Number of sightings associated with this resource profile
+        /// Number of sightings associated with the resource profile
         /// </value>
         [JsonProperty(PropertyName = "sightingsCount")]
         public System.Nullable<int> SightingsCount { get; set; }
         
         /// <value>
-        /// Unique identifier for resource profile
+        /// Unique identifier for the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +38,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Unique identifier for resource profile
+        /// Unique identifier for the resource associated with the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.CloudguardService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Resource name for resource profile
+        /// Display name for the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +58,7 @@ namespace Oci.CloudguardService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Resource type for resource profile
+        /// Resource type for the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +68,7 @@ namespace Oci.CloudguardService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// Risk Score for the resource profile
+        /// Risk score for the resource profile
         /// </value>
         /// <remarks>
         /// Required
@@ -78,7 +78,7 @@ namespace Oci.CloudguardService.Models
         public System.Double RiskScore { get; set; }
         
         /// <value>
-        /// List of tactic summary associated with the resource profile.
+        /// List of tactic summaries associated with the resource profile
         /// </value>
         /// <remarks>
         /// Required

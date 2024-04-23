@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A software package available for install on a managed instance.
+    /// Provides summary information for a software package available for installation on a managed instance.
     /// </summary>
     public class UpdatablePackageSummary : PackageSummary
     {
         
         /// <value>
-        /// The version of this upgradable package already installed on the instance.
+        /// The version of the package that is currently installed on the instance.
         /// </value>
         [JsonProperty(PropertyName = "installedVersion")]
         public string InstalledVersion { get; set; }
         
         /// <value>
-        /// The classification of this update.
+        /// The type of update.
         /// </value>
         /// <remarks>
         /// Required
@@ -39,7 +39,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ClassificationTypes> UpdateType { get; set; }
         
         /// <value>
-        /// List of errata containing this update.
+        /// List of errata applicable to this update.
         /// </value>
         [JsonProperty(PropertyName = "errata")]
         public System.Collections.Generic.List<string> Errata { get; set; }

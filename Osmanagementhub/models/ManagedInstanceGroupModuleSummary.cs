@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Summary information pertaining to a module on a managed instance group.
+    /// Provides the summary information about a module on a managed instance group.
     /// </summary>
     public class ManagedInstanceGroupModuleSummary 
     {
         
         /// <value>
-        /// The name of the module that contains the stream.
+        /// The name of the module.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The name of the module that contains the stream.
+        /// The name of the module stream that is enabled for the group.
         /// </value>
         [JsonProperty(PropertyName = "enabledStream")]
         public string EnabledStream { get; set; }
@@ -44,7 +44,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<string> InstalledProfiles { get; set; }
         
         /// <value>
-        /// The OCID of the software source that provides this module stream.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source that provides this module stream.
         /// </value>
         [JsonProperty(PropertyName = "softwareSourceId")]
         public string SoftwareSourceId { get; set; }

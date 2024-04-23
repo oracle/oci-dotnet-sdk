@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of the ResponderRecipe.
+    /// Summary information for a responder recipe.
     /// </summary>
     public class ResponderRecipeSummary 
     {
         
         /// <value>
-        /// Identifier for ResponderRecipe.
+        /// Unique identifier for the responder recipe
         /// </value>
         /// <remarks>
         /// Required
@@ -32,38 +32,38 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// ResponderRecipe display name.
+        /// Responder recipe display name
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// ResponderRecipe description.
+        /// Responder recipe description
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Owner of ResponderRecipe
+        /// Responder recipe description
         /// </value>
         [JsonProperty(PropertyName = "owner")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OwnerType> Owner { get; set; }
         
         /// <value>
-        /// List of responder rules associated with the recipe
+        /// List of responder rules associated with the responder recipe
         /// </value>
         [JsonProperty(PropertyName = "responderRules")]
         public System.Collections.Generic.List<ResponderRecipeResponderRule> ResponderRules { get; set; }
         
         /// <value>
-        /// The id of the source responder recipe.
+        /// Unique identifier of the source responder recipe
         /// </value>
         [JsonProperty(PropertyName = "sourceResponderRecipeId")]
         public string SourceResponderRecipeId { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -79,13 +79,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the responder recipe was updated. Format defined by RFC3339.
+        /// The date and time the responder recipe was last updated. Format defined by RFC3339.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the Example.
+        /// The current lifecycle state of the example
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

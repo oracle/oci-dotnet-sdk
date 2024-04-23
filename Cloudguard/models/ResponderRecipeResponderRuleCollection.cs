@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of the ResponderRule within ResponderRecipe.
+    /// The collection of responder rule summaries for a responder recipe.
     /// </summary>
     public class ResponderRecipeResponderRuleCollection 
     {
         
         /// <value>
-        /// List of ResponderRecipeResponderRuleSummary
+        /// List of ResponderRecipeResponderRuleSummary resources
         /// </value>
         /// <remarks>
         /// Required

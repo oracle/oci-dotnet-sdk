@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// Parameters to be used to update a security policy.
     /// </summary>
     public class UpdateSecurityPolicyDetails 
     {
         
         /// <value>
-        /// SecurityPolicy Identifier
+        /// Dis;lay name for the security policy
         /// </value>
         /// <remarks>
         /// Required

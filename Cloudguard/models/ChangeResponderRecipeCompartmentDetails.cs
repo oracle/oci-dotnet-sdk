@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Changing compartmentId for ResponderRecipe
+    /// Parameters to use to move a responder recipe to a different compartment.
     /// </summary>
     public class ChangeResponderRecipeCompartmentDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment into which the ResponderRecipe should be moved
+        /// The OCID of the compartment into which the responder recipe is to be moved
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Summary of the ManagedInstance.
+    /// Provides summary information for a managed instance.
     /// </summary>
     public class ManagedInstanceSummary 
     {
         
         /// <value>
-        /// The OCID for the managed instance.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Managed instance identifier.
+        /// User-friendly name for the managed instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +43,14 @@ namespace Oci.OsmanagementhubService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Information specified by the user about the managed instance.
+        /// User-specified description of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID for the tenancy this managed instance resides in.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the tenancy this managed instance resides in.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -58,7 +60,8 @@ namespace Oci.OsmanagementhubService.Models
         public string TenancyId { get; set; }
         
         /// <value>
-        /// The OCID for the compartment this managed instance resides in.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the managed instance.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -68,7 +71,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Location of the managed instance.
+        /// The location of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "location")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -82,14 +85,14 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ArchType> Architecture { get; set; }
         
         /// <value>
-        /// The Operating System type of the managed instance.
+        /// The operating system type of the managed instance.
         /// </value>
         [JsonProperty(PropertyName = "osFamily")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsFamily> OsFamily { get; set; }
         
         /// <value>
-        /// status of the managed instance.
+        /// Current status of the managed instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -115,16 +118,32 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<bool> IsRebootRequired { get; set; }
         
         /// <value>
-        /// Number of updates available to be installed.
+        /// Number of updates available for installation.
         /// </value>
         [JsonProperty(PropertyName = "updatesAvailable")]
         public System.Nullable<int> UpdatesAvailable { get; set; }
         
         /// <value>
-        /// Whether this managed instance is acting as an on-premise management station.
+        /// Whether this managed instance is acting as an on-premises management station.
         /// </value>
         [JsonProperty(PropertyName = "isManagementStation")]
         public System.Nullable<bool> IsManagementStation { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Oracle Notifications service (ONS) topic. ONS is the channel used to send notifications to the customer.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "notificationTopicId")]
+        public string NotificationTopicId { get; set; }
+        
+        [JsonProperty(PropertyName = "autonomousSettings")]
+        public AutonomousSettings AutonomousSettings { get; set; }
+        
+        /// <value>
+        /// Indicates whether Autonomous Linux manages this instance.
+        /// </value>
+        [JsonProperty(PropertyName = "isManagedByAutonomousLinux")]
+        public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
         
     }
 }

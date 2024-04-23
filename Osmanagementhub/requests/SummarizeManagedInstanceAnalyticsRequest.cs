@@ -30,36 +30,61 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Collections.Generic.List<MetricName> MetricNames { get; set; }
         
         /// <value>
-        /// This compartmentId is used to list managed instances within a compartment.
-        /// Or serve as an additional filter to restrict only managed instances with in certain compartment if other filter presents.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment. 
+        /// This filter returns only resources contained within the specified compartment.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the managed instance group for which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance group. This filter returns resources associated with this group.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managedInstanceGroupId")]
         public string ManagedInstanceGroupId { get; set; }
         
         /// <value>
-        /// The OCID of the lifecycle environment.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle environment. This filter returns only resource contained with the specified lifecycle environment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleEnvironmentId")]
         public string LifecycleEnvironmentId { get; set; }
         
         /// <value>
-        /// The OCID of the lifecycle stage for which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle stage. This resource returns resources associated with this lifecycle stage.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleStageId")]
         public string LifecycleStageId { get; set; }
         
         /// <value>
-        /// A filter to return only instances whose managed instance status matches the given status.
+        /// A filter to return only managed instances whose status matches the status provided.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ManagedInstanceStatus> Status { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location matches the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "location", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> Location { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location does not match the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "locationNotEqualTo", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> LocationNotEqualTo { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given operating system family.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "osFamily", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<OsFamily> OsFamily { get; set; }
+        
+        /// <value>
+        /// Indicates whether to list only resources managed by the Autonomous Linux service.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isManagedByAutonomousLinux")]
+        public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
         
         /// <value>
         /// A filter to return resources that match the given display names.
@@ -72,12 +97,6 @@ namespace Oci.OsmanagementhubService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayNameContains")]
         public string DisplayNameContains { get; set; }
-        
-        /// <value>
-        /// Filter instances by Location. Used when report target type is compartment or group.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "instanceLocation")]
-        public System.Nullable<ManagedInstanceLocation> InstanceLocation { get; set; }
         
         /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a paginated \"List\" call.
@@ -99,17 +118,23 @@ namespace Oci.OsmanagementhubService.Requests
         
         ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for name is ascending.
+        /// The field to sort by. Only one sort order may be provided. The default is to sort in ascending order by metricName (previously name, which is now depricated). 
+        /// You can also sort by displayName (default is ascending order).
         /// 
         /// </value>
         ///
         public enum SortByEnum {
             [EnumMember(Value = "name")]
-            Name
+            Name,
+            [EnumMember(Value = "metricName")]
+            MetricName,
+            [EnumMember(Value = "displayName")]
+            DisplayName
         };
 
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for name is ascending.
+        /// The field to sort by. Only one sort order may be provided. The default is to sort in ascending order by metricName (previously name, which is now depricated). 
+        /// You can also sort by displayName (default is ascending order).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

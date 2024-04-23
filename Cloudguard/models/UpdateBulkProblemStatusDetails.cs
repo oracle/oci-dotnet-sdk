@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// List of problem ids to be passed in to update the Problem status.
+    /// List of problem IDs to be passed in to update problem status.
     /// </summary>
     public class UpdateBulkProblemStatusDetails 
     {
@@ -33,7 +33,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ProblemLifecycleDetail> Status { get; set; }
         
         /// <value>
-        /// List of ProblemIds to be passed in to update the Problem status.
+        /// List of problem IDs to be passed in to update the problem status
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<string> ProblemIds { get; set; }
         
         /// <value>
-        /// User defined comment to be passed in to update the problem.
+        /// User-defined comment to be passed in to update the problem
         /// </value>
         [JsonProperty(PropertyName = "comment")]
         public string Comment { get; set; }

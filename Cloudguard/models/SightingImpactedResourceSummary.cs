@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Sighting Impacted Resource summary.
+    /// Summary of resources impacted by a sighting.
     /// </summary>
     public class SightingImpactedResourceSummary 
     {
         
         /// <value>
-        /// Unique identifier for impacted resource
+        /// Unique identifier for an impacted resource
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Impacted resource Id
+        /// Impacted resource ID
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Sighting Id
+        /// Sighting ID for impacted resource
         /// </value>
         /// <remarks>
         /// Required
@@ -52,13 +52,13 @@ namespace Oci.CloudguardService.Models
         public string SightingId { get; set; }
         
         /// <value>
-        /// Problem Id for impacted resource
+        /// Problem ID for impacted resource
         /// </value>
         [JsonProperty(PropertyName = "problemId")]
         public string ProblemId { get; set; }
         
         /// <value>
-        /// Compartment Id for impacted resource
+        /// Compartment ID for impacted resource
         /// </value>
         /// <remarks>
         /// Required
@@ -98,7 +98,7 @@ namespace Oci.CloudguardService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// Time when the impacted resource is identified for given sighting.
+        /// Date and time when the impacted resource is identified for given sighting
         /// </value>
         /// <remarks>
         /// Required

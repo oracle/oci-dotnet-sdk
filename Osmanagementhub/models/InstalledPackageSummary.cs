@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A software package installed on a managed instance.
+    /// Provides summary information for a software package installed on a managed instance.
     /// </summary>
     public class InstalledPackageSummary : PackageSummary
     {
@@ -34,8 +34,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<System.DateTime> TimeInstalled { get; set; }
         
         /// <value>
-        /// The date and time the package was issued by a providing erratum (if available), as described in
-        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the package was issued by a providing erratum (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeIssued")]

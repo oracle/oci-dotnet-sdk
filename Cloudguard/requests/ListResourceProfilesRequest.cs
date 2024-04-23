@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The OCID of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required
@@ -57,7 +57,7 @@ namespace Oci.CloudguardService.Requests
         /// Default is false.
         /// When set to true, the hierarchy of compartments is traversed
         /// and all compartments and subcompartments in the tenancy are
-        /// returned depending on the the setting of `accessLevel`.
+        /// returned depending on the setting of `accessLevel`.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
@@ -92,25 +92,25 @@ namespace Oci.CloudguardService.Requests
         public System.Nullable<AccessLevelEnum> AccessLevel { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the list of resource types given
+        /// A filter to return only resources that match the list of resource types given.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceTypes", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> ResourceTypes { get; set; }
         
         /// <value>
-        /// risk score filter
+        /// Risk score filter.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "riskScoreGreaterThanOrEqualTo")]
         public System.Double RiskScoreGreaterThanOrEqualTo { get; set; }
         
         /// <value>
-        /// risk score filter
+        /// Risk score filter,
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "riskScoreLessThanOrEqualTo")]
         public System.Double RiskScoreLessThanOrEqualTo { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the list of techniques given
+        /// A filter to return only resources that match the list of techniques given.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "techniques", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> Techniques { get; set; }
@@ -122,7 +122,7 @@ namespace Oci.CloudguardService.Requests
         public System.Collections.Generic.List<string> Tactics { get; set; }
         
         /// <value>
-        /// The maximum number of items to return.
+        /// The maximum number of items to return
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
@@ -134,7 +134,7 @@ namespace Oci.CloudguardService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// The sort order to use, either 'asc' or 'desc'.
+        /// The sort order to use
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrders> SortOrder { get; set; }

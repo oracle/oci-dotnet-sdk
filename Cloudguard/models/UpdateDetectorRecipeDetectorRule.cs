@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The details to be updated in DetectorRule
+    /// Parameters to use to update a detector rule.
     /// </summary>
     public class UpdateDetectorRecipeDetectorRule 
     {
         
         /// <value>
-        /// DetectorRecipeRule Identifier
+        /// Detector recipe rule ID
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The information about problem entities details of DataSource for a CloudGuard Problem.
+    /// Summary information about problem entities for a data source for a problem.
     /// </summary>
     public class ProblemEntitySummary 
     {
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeFirstDetected { get; set; }
         
         /// <value>
-        /// Attached problem id
+        /// Attached problem ID
         /// </value>
         /// <remarks>
         /// Required
@@ -62,13 +62,13 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeLastDetected { get; set; }
         
         /// <value>
-        /// Log result query url for a data source query
+        /// Log result query URL for a data source query
         /// </value>
         [JsonProperty(PropertyName = "resultUrl")]
         public string ResultUrl { get; set; }
         
         /// <value>
-        /// List of event related to a DataSource
+        /// List of entity details related to a data source
         /// </value>
         [JsonProperty(PropertyName = "entityDetails")]
         public System.Collections.Generic.List<EntityDetails> EntityDetails { get; set; }

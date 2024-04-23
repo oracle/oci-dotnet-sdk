@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a managed instance search. Contains both managed instance summary items and other data.
+    /// The set of managed instances returned for the {@link #listManagedInstances(ListManagedInstancesRequest) listManagedInstances} operation.
+    /// 
     /// </summary>
     public class ManagedInstanceCollection 
     {

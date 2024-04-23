@@ -73,10 +73,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Adds managed instances to the specified managed instance group. After the managed
-        /// instances have been added, then operations can be performed on the managed
-        /// instance group which will then apply to all managed instances in the
-        /// group.
+        /// Adds managed instances to the specified managed instance group. After adding instances to the group, any operation applied to the group will be applied to all instances in the group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -133,7 +130,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Attaches software sources to the specified managed instance group. The software sources must be compatible with the content for the managed instance group.
+        /// Attaches software sources to the specified managed instance group. The software sources must be compatible with the type of instances in the group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -185,6 +182,63 @@ namespace Oci.OsmanagementhubService
             catch (Exception e)
             {
                 logger.Error($"AttachSoftwareSourcesToManagedInstanceGroup failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Moves the specified managed instance group to a different compartment within the same tenancy. For information about moving resources between compartments, see [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/ChangeManagedInstanceGroupCompartment.cs.html">here</a> to see an example of how to use ChangeManagedInstanceGroupCompartment API.</example>
+        public async Task<ChangeManagedInstanceGroupCompartmentResponse> ChangeManagedInstanceGroupCompartment(ChangeManagedInstanceGroupCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called changeManagedInstanceGroupCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstanceGroups/{managedInstanceGroupId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstanceGroup",
+                    OperationName = "ChangeManagedInstanceGroupCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstanceGroup/ChangeManagedInstanceGroupCompartment",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ChangeManagedInstanceGroupCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeManagedInstanceGroupCompartment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -247,7 +301,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Deletes a specified managed instance group.
+        /// Deletes the specified managed instance group.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -360,7 +414,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Detaches software sources from a group.
+        /// Detaches the specified software sources from a managed instance group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -417,10 +471,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Disables a module stream on a managed instance group. After the stream is
-        /// disabled, it is no longer possible to install the profiles that are
-        /// contained by the stream. All installed profiles must be removed prior
-        /// to disabling a module stream.
+        /// Disables a module stream on a managed instance group. After the stream is disabled, you can no longer install the profiles contained by the stream.  Before removing the stream, you must remove all installed profiles for the stream by using the {@link #removeModuleStreamProfileFromManagedInstanceGroup(RemoveModuleStreamProfileFromManagedInstanceGroupRequest) removeModuleStreamProfileFromManagedInstanceGroup} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -477,11 +528,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Enables a module stream on a managed instance group.  After the stream is
-        /// enabled, it is possible to install the profiles that are contained
-        /// by the stream.  Enabling a stream that is already enabled will
-        /// succeed.  Attempting to enable a different stream for a module that
-        /// already has a stream enabled results in an error.
+        /// Enables a module stream on a managed instance group.  After the stream is enabled, you can install a module stream profile. Enabling a stream that is already enabled will succeed.  Enabling a different stream for a module that already has a stream enabled results in an error. Instead, use the {@link #switchModuleStreamOnManagedInstanceGroup(SwitchModuleStreamOnManagedInstanceGroupRequest) switchModuleStreamOnManagedInstanceGroup} operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -594,9 +641,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Installs a profile for an module stream. The stream must be
-        /// enabled before a profile can be installed. If a module stream
-        /// defines multiple profiles, each one can be installed independently.
+        /// Installs a profile for an enabled module stream. If a module stream defines multiple profiles, you can install each one independently.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -653,8 +698,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Installs package(s) on each managed instance in a managed instance group. The package must be compatible with the
-        /// instances in the managed instance group.
+        /// Installs the specified packages on each managed instance in a managed instance group. The package must be compatible with the instances in the group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -711,8 +755,64 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Lists available modules that for the specified managed instance group. Filter the list against a variety of 
-        /// criteria including but not limited to its name.
+        /// Installs Windows updates on each managed instance in the managed instance group.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/InstallWindowsUpdatesOnManagedInstanceGroup.cs.html">here</a> to see an example of how to use InstallWindowsUpdatesOnManagedInstanceGroup API.</example>
+        public async Task<InstallWindowsUpdatesOnManagedInstanceGroupResponse> InstallWindowsUpdatesOnManagedInstanceGroup(InstallWindowsUpdatesOnManagedInstanceGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called installWindowsUpdatesOnManagedInstanceGroup");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstanceGroups/{managedInstanceGroupId}/actions/installWindowsUpdates".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstanceGroup",
+                    OperationName = "InstallWindowsUpdatesOnManagedInstanceGroup",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstanceGroup/InstallWindowsUpdatesOnManagedInstanceGroup",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<InstallWindowsUpdatesOnManagedInstanceGroupResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"InstallWindowsUpdatesOnManagedInstanceGroup failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// List modules that are available for installation on the specified managed instance group. Filter the list against a variety of criteria including but not limited to module name.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -827,8 +927,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Lists available software sources for a specified managed instance group. Filter the list against a variety of 
-        /// criteria including but not limited to its name.
+        /// Lists available software sources for a specified managed instance group. Filter the list against a variety of criteria including but not limited to the software source name. The results list only software sources that have not already been added to the group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1020,8 +1119,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Lists managed instance groups that match the specified compartment or managed instance group OCID. Filter the 
-        /// list against a variety of criteria including but not limited to its name, status, architecture, and OS family.
+        /// Lists managed instance groups that match the specified compartment or managed instance group [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Filter the list against a variety of criteria including but not limited to name, status, architecture, and OS family.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1078,66 +1176,8 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Perform an operation involving modules, streams, and profiles on a
-        /// managed instance group.  Each operation may enable or disable an arbitrary
-        /// amount of module streams, and install or remove an arbitrary number
-        /// of module stream profiles.  When the operation is complete, the
-        /// state of the modules, streams, and profiles on the managed instance group
-        /// will match the state indicated in the operation.
-        /// &lt;br/&gt;
-        /// Each module stream specified in the list of module streams to enable
-        /// will be in the \&quot;ENABLED\&quot; state upon completion of the operation.
-        /// If there was already a stream of that module enabled, any work
-        /// required to switch from the current stream to the new stream is
-        /// performed implicitly.
-        /// &lt;br/&gt;
-        /// Each module stream specified in the list of module streams to disable
-        /// will be in the \&quot;DISABLED\&quot; state upon completion of the operation.
-        /// Any profiles that are installed for the module stream will be removed
-        /// as part of the operation.
-        /// &lt;br/&gt;
-        /// Each module stream profile specified in the list of profiles to install
-        /// will be in the \&quot;INSTALLED\&quot; state upon completion of the operation,
-        /// indicating that any packages that are part of the profile are installed
-        /// on the managed instance.  If the module stream containing the profile
-        /// is not enabled, it will be enabled as part of the operation. There
-        /// is an exception when attempting to install a stream of a profile when
-        /// another stream of the same module is enabled.  It is an error to attempt
-        /// to install a profile of another module stream, unless enabling the
-        /// new module stream is explicitly included in this operation.
-        /// &lt;br/&gt;
-        /// Each module stream profile specified in the list of profiles to remove
-        /// will be in the \&quot;AVAILABLE\&quot; state upon completion of the operation.
-        /// The status of packages within the profile after the operation is
-        /// complete is defined by the package manager on the managed instance group.
-        /// &lt;br/&gt;
-        /// Operations that contain one or more elements that are not allowed
-        /// are rejected.
-        /// &lt;br/&gt;
-        /// The result of this request is a work request object. The returned
-        /// work request is the parent of a structure of other work requests.  Taken
-        /// as a whole, this structure indicates the entire set of work to be
-        /// performed to complete the operation.
-        /// &lt;br/&gt;
-        /// This interface can also be used to perform a dry run of the operation
-        /// rather than committing it to a managed instance group.  If a dry run is
-        /// requested, the OS Management Hub service will evaluate the operation
-        /// against the current module, stream, and profile state on the managed
-        /// instance.  It will calculate the impact of the operation on all
-        /// modules, streams, and profiles on the managed instance, including those
-        /// that are implicitly impacted by the operation.
-        /// &lt;br/&gt;
-        /// The work request resulting from a dry run behaves differently than
-        /// a work request resulting from a committable operation.  Dry run
-        /// work requests are always singletons and never have children. The
-        /// impact of the operation is returned using the log and error
-        /// facilities of work requests. The impact of operations that are
-        /// allowed by the OS Management Hub service are communicated as one or
-        /// more work request log entries.  Operations that are not allowed
-        /// by the OS Management Hub service are communicated as one or more
-        /// work request error entries.  Each entry, for either logs or errors,
-        /// contains a structured message containing the results of one
-        /// or more operations.
+        /// Enables or disables module streams and installs or removes module stream profiles. Once complete, the state of the modules, streams, and profiles will match the state indicated in the operation. See {@link #manageModuleStreamsOnManagedInstanceGroupDetails(ManageModuleStreamsOnManagedInstanceGroupDetailsRequest) manageModuleStreamsOnManagedInstanceGroupDetails} for more information.
+        /// You can preform this operation as a dry run. For a dry run, the service evaluates the operation against the current module, stream, and profile state on the managed instance, but does not commit the changes. Instead, the service returns work request log or error entries indicating the impact of the operation.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1194,9 +1234,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Removes a profile for a module stream that is installed on a managed instance group.
-        /// If a module stream is provided, rather than a fully qualified profile, all
-        /// profiles that have been installed for the module stream will be removed.
+        /// Removes a profile for a module stream that is installed on a managed instance group. Providing the module stream name (without specifying a profile name) removes all profiles that have been installed for the module stream.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1253,7 +1291,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Removes package(s) from each managed instance in a specified managed instance group.
+        /// Removes the specified packages from each managed instance in a managed instance group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1305,6 +1343,66 @@ namespace Oci.OsmanagementhubService
             catch (Exception e)
             {
                 logger.Error($"RemovePackagesFromManagedInstanceGroup failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Enables a new stream for a module that already has a stream enabled.
+        /// If any profiles or packages from the original module are installed,
+        /// switching to a new stream will remove the existing packages and
+        /// install their counterparts in the new stream.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/osmanagementhub/SwitchModuleStreamOnManagedInstanceGroup.cs.html">here</a> to see an example of how to use SwitchModuleStreamOnManagedInstanceGroup API.</example>
+        public async Task<SwitchModuleStreamOnManagedInstanceGroupResponse> SwitchModuleStreamOnManagedInstanceGroup(SwitchModuleStreamOnManagedInstanceGroupRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called switchModuleStreamOnManagedInstanceGroup");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/managedInstanceGroups/{managedInstanceGroupId}/actions/moduleStreams/switchModuleStream".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "ManagedInstanceGroup",
+                    OperationName = "SwitchModuleStreamOnManagedInstanceGroup",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/osmh/20220901/ManagedInstanceGroup/SwitchModuleStreamOnManagedInstanceGroup",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<SwitchModuleStreamOnManagedInstanceGroupResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"SwitchModuleStreamOnManagedInstanceGroup failed with error: {e.Message}");
                 throw;
             }
         }

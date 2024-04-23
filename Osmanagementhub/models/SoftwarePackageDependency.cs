@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// A dependency for a software package.
+    /// Identifies the dependency for a software package.
     /// </summary>
     public class SoftwarePackageDependency 
     {

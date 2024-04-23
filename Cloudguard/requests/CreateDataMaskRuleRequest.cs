@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// Definition for the new Data Mask Rule.
+        /// Definition for the new data mask rule
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Important changes for software. This can include security advisories, bug fixes, or enhancements.
+    /// Provides summary information for an erratum. An erratum is an important software change which can include security advisories, bug fixes, or enhancements.
     /// </summary>
     public class ErratumSummary 
     {
@@ -38,23 +38,21 @@ namespace Oci.OsmanagementhubService.Models
         public string Synopsis { get; set; }
         
         /// <value>
-        /// Date the erratum was issued, as described
-        /// in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the erratum was issued (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeIssued")]
         public System.Nullable<System.DateTime> TimeIssued { get; set; }
         
         /// <value>
-        /// Most recent date the erratum was updated, as described
-        /// in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+        /// The date and time the erratum was updated (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Type of the erratum.
+        /// Type of the erratum. This property is deprecated and it will be removed in a future API release. Please refer to the advisoryType property instead.
         /// </value>
         [JsonProperty(PropertyName = "classificationType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -78,6 +76,13 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "advisorySeverity")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AdvisorySeverity> AdvisorySeverity { get; set; }
+        
+        /// <value>
+        /// The advisory type of the erratum.
+        /// </value>
+        [JsonProperty(PropertyName = "advisoryType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AdvisoryTypes> AdvisoryType { get; set; }
         
     }
 }

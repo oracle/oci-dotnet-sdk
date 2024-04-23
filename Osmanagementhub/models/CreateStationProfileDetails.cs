@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Description of a group registration profile to be created.
+    /// Provides the information used to create the management station profile.
     /// </summary>
     public class CreateStationProfileDetails : CreateProfileDetails
     {
         
         /// <value>
-        /// The software source vendor name.
+        /// The vendor of the operating system for the instance.
         /// </value>
         [JsonProperty(PropertyName = "vendorName")]
         [JsonConverter(typeof(StringEnumConverter))]

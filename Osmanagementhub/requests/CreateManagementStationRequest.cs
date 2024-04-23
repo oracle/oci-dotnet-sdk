@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// Details for the new ManagementStation.
+        /// Provides the information used to create a management station.
         /// </value>
         /// <remarks>
         /// Required

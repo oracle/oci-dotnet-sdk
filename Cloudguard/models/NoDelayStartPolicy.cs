@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Continuous query start policy that starts the query immediately.
+    /// Continuous query start policy that starts the query immediately
     /// </summary>
     public class NoDelayStartPolicy : ContinuousQueryStartPolicy
     {

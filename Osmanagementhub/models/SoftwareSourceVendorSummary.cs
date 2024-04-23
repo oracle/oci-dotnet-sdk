@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Software vendor name, list of osFamily and archType.
+    /// Provides summary information about a software source vendor, including name, operating system family, and architecture type.
     /// </summary>
     public class SoftwareSourceVendorSummary 
     {
@@ -33,7 +33,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<VendorName> Name { get; set; }
         
         /// <value>
-        /// List of corresponding osFamilies.
+        /// List of corresponding operating system families.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Collections.Generic.List<OsFamily> OsFamilies { get; set; }
         
         /// <value>
-        /// List of corresponding archTypes.
+        /// List of corresponding architecture types.
         /// </value>
         /// <remarks>
         /// Required

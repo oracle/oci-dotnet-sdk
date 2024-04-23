@@ -16,14 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// An error encountered while executing a work request.
+    /// Summary information for an error (WorkRequestError resource)
+    /// encountered while executing a work request
+    /// 
     /// </summary>
     public class WorkRequestError 
     {
         
         /// <value>
         /// A machine-usable code for the error that occured. Error codes are listed on
-        /// (https://docs.cloud.oracle.com/Content/API/References/apierrors.htm)
+        /// (https://docs.cloud.oracle.com/Content/API/References/apierrors.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +36,7 @@ namespace Oci.CloudguardService.Models
         public string Code { get; set; }
         
         /// <value>
-        /// A human readable description of the issue encountered.
+        /// A human readable description of the issue encountered
         /// </value>
         /// <remarks>
         /// Required
@@ -44,7 +46,7 @@ namespace Oci.CloudguardService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the error occured.
+        /// The time the error occured
         /// </value>
         /// <remarks>
         /// Required

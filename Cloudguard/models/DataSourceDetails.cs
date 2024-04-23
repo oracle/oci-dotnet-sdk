@@ -46,6 +46,9 @@ namespace Oci.CloudguardService.Models
             var discriminator = jsonObject["dataSourceFeedProvider"].Value<string>();
             switch (discriminator)
             {
+                case "SCHEDULEDQUERY":
+                    obj = new ScheduledQueryDataSourceObjDetails();
+                    break;
                 case "LOGGINGQUERY":
                     obj = new LoggingQueryDataSourceDetails();
                     break;

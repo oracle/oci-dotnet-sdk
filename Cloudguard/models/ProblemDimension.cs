@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Possible dimensions for distinguishing Problems
+  /// Possible dimensions for distinguishing problems.
   /// </summary>
   public enum ProblemDimension {
       [EnumMember(Value = "RESOURCE_TYPE")]

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A single configuration applied to a responder
+    /// Details for a configuration to be applied to a responder.
     /// </summary>
     public class ResponderConfiguration 
     {
         
         /// <value>
-        /// Unique name of the configuration
+        /// Unique identifier of the configuration
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string ConfigKey { get; set; }
         
         /// <value>
-        /// configuration name
+        /// Configuration name
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// configuration value
+        /// Configuration value
         /// </value>
         /// <remarks>
         /// Required

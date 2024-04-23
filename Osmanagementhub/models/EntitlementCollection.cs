@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a Entitlement search. Contains boh EntitlementSummary items and other information, such as metadata.
+    /// The set of entitlements returned for the {@link #listEntitlements(ListEntitlementsRequest) listEntitlements}.
     /// </summary>
     public class EntitlementCollection 
     {
         
         /// <value>
-        /// List of Entitlement.
+        /// List of entitlements.
         /// </value>
         /// <remarks>
         /// Required

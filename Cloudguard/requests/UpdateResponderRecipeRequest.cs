@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// OCID of ResponderRecipe
+        /// OCID of the responder recipe.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CloudguardService.Requests
         public string ResponderRecipeId { get; set; }
         
         /// <value>
-        /// The details to be updated.
+        /// The details to be updated
         /// </value>
         /// <remarks>
         /// Required

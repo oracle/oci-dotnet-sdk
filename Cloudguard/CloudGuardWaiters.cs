@@ -32,6 +32,34 @@ namespace Oci.CloudguardService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAdhocQueryRequest, GetAdhocQueryResponse> ForAdhocQuery(GetAdhocQueryRequest request, params LifecycleState[] targetStates)
+        {
+            return this.ForAdhocQuery(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAdhocQueryRequest, GetAdhocQueryResponse> ForAdhocQuery(GetAdhocQueryRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetAdhocQueryRequest, GetAdhocQueryResponse>(
+                request,
+                request => client.GetAdhocQuery(request),
+                response => targetStates.Contains(response.AdhocQuery.LifecycleState.Value),
+                targetStates.Contains(LifecycleState.Deleted)
+            );
+            return new Waiter<GetAdhocQueryRequest, GetAdhocQueryResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDataMaskRuleRequest, GetDataMaskRuleResponse> ForDataMaskRule(GetDataMaskRuleRequest request, params LifecycleState[] targetStates)
         {
             return this.ForDataMaskRule(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -332,6 +360,34 @@ namespace Oci.CloudguardService
                 targetStates.Contains(LifecycleState.Deleted)
             );
             return new Waiter<GetResponderRuleRequest, GetResponderRuleResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSavedQueryRequest, GetSavedQueryResponse> ForSavedQuery(GetSavedQueryRequest request, params LifecycleState[] targetStates)
+        {
+            return this.ForSavedQuery(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSavedQueryRequest, GetSavedQueryResponse> ForSavedQuery(GetSavedQueryRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSavedQueryRequest, GetSavedQueryResponse>(
+                request,
+                request => client.GetSavedQuery(request),
+                response => targetStates.Contains(response.SavedQuery.LifecycleState.Value),
+                targetStates.Contains(LifecycleState.Deleted)
+            );
+            return new Waiter<GetSavedQueryRequest, GetSavedQueryResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

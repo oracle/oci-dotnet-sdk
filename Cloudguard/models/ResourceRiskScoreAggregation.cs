@@ -22,7 +22,7 @@ namespace Oci.CloudguardService.Models
     {
         
         /// <value>
-        /// Tactics used for evaluating the risk scrore
+        /// List of tactics used for evaluating the risk score
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<decimal> ScoreTimestamp { get; set; }
         
         /// <value>
-        /// Risk Score
+        /// The risk score
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.CloudguardService.Models
         public System.Double RiskScore { get; set; }
         
         /// <value>
-        /// The Risk Level
+        /// The risk level
         /// </value>
         /// <remarks>
         /// Required

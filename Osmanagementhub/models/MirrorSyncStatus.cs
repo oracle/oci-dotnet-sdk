@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Status summary of all repos
+    /// Status summary of the mirror sync.
     /// </summary>
     public class MirrorSyncStatus 
     {
         
         /// <value>
-        /// Total of mirrors in 'failed' state
+        /// Total number of software sources that have not yet been synced.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<int> Unsynced { get; set; }
         
         /// <value>
-        /// Total of mirrors in 'queued' state
+        /// Total number of software sources that are queued for sync.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<int> Queued { get; set; }
         
         /// <value>
-        /// Total of mirrors in 'syncing' state
+        /// Total number of software sources currently syncing.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<int> Syncing { get; set; }
         
         /// <value>
-        /// Total of mirrors in 'synced' state
+        /// Total number of software sources that successfully synced.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<int> Synced { get; set; }
         
         /// <value>
-        /// Total of mirrors in 'failed' state
+        /// Total number of software sources that failed to sync.
         /// </value>
         /// <remarks>
         /// Required

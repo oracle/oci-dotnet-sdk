@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Activity Problem Aggregation Collection.
+    /// A collection of ProblemAggregation resources for problem analytics.
     /// </summary>
     public class ActivityProblemAggregationCollection 
     {
         
         /// <value>
-        /// The items consists of all the ActivityProblemAggregation objects.
+        /// List of all the ActivityProblemAggregation resources
         /// </value>
         /// <remarks>
         /// Required

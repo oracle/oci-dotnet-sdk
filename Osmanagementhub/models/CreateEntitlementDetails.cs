@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Creates an entitlement for the specified compartment OCID and CSI.
+    /// Provides the information used to create an entitlement using the Customer Support Identifier (CSI).
     /// </summary>
     public class CreateEntitlementDetails 
     {
         
         /// <value>
-        /// The OCID of the tenancy containing the entitlement.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the tenancy containing the entitlement.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A Customer Support Identifier (CSI) is a unique key given to a customer to unlock software sources. It uniquely identifies the entitlement.
+        /// The Customer Support Identifier (CSI) which unlocks the software sources. The CSI is is a unique key given to a customer and it uniquely identifies the entitlement.
         /// </value>
         /// <remarks>
         /// Required

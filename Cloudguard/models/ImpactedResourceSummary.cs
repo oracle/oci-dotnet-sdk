@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// A summary of detailed information on a resource that\u2019s been impacted by a detected problem.
+    /// Summary of information on a resource that\u2019s been impacted by a detected problem.
     /// </summary>
     public class ImpactedResourceSummary 
     {
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Unique id of the Impacted Resource
+        /// Unique identifier of the impacted resource
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Problem Id to which the Impacted Resource is associated
+        /// Problem ID associated with the Impacted resource
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.CloudguardService.Models
         public string ProblemId { get; set; }
         
         /// <value>
-        /// Compartment Id where the resource is created
+        /// Compartment OCID where the impacted resource is created
         /// </value>
         /// <remarks>
         /// Required
@@ -62,19 +62,19 @@ namespace Oci.CloudguardService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Identifier for the sighting type
+        /// Sighting type involved
         /// </value>
         [JsonProperty(PropertyName = "sightingType")]
         public string SightingType { get; set; }
         
         /// <value>
-        /// Name of the sighting type
+        /// Display name of the sighting type
         /// </value>
         [JsonProperty(PropertyName = "sightingTypeDisplayName")]
         public string SightingTypeDisplayName { get; set; }
         
         /// <value>
-        /// Name of the Impacted Resource
+        /// Name of the impacted resource
         /// </value>
         /// <remarks>
         /// Required
@@ -84,7 +84,7 @@ namespace Oci.CloudguardService.Models
         public string ResourceName { get; set; }
         
         /// <value>
-        /// Type of the Impacted Resource
+        /// Type of the impacted resource
         /// </value>
         /// <remarks>
         /// Required
@@ -104,7 +104,7 @@ namespace Oci.CloudguardService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// Time when the problem was identified
+        /// Date and time when the problem was identified
         /// </value>
         /// <remarks>
         /// Required

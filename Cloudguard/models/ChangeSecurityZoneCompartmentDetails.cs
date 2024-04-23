@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// The compartment for the security zone
+    /// Parameters to be used to move a security zone to a different compartment.
     /// </summary>
     public class ChangeSecurityZoneCompartmentDetails 
     {

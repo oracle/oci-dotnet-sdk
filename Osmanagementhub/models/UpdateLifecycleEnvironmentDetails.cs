@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// Provides the information used to update the lifecycle environment.
     /// </summary>
     public class UpdateLifecycleEnvironmentDetails 
     {
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name for the lifecycle environment. Does not have to be unique. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// User specified information about the lifecycle environment. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// User-specified list of lifecycle stages used within the lifecycle environment. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

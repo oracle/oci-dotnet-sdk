@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Summary of rules
+    /// Summary information for a rule.
     /// </summary>
     public class RuleSummary 
     {
         
         /// <value>
-        /// id of the rule
+        /// Unique identifier of the rule
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// description of the rule
+        /// Description of the rule
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// List of parameters applicable for rule
+        /// List of parameters applicable for the rule
         /// </value>
         /// <remarks>
         /// Required

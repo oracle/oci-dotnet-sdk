@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Risk Levels
+  /// Possible risk level values
   /// </summary>
   public enum RiskLevel {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

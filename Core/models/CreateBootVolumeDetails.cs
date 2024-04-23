@@ -86,6 +86,12 @@ namespace Oci.CoreService.Models
         public System.Nullable<long> SizeInGBs { get; set; }
         
         /// <value>
+        /// The clusterPlacementGroup Id of the volume for volume placement.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
+        /// <value>
         /// The number of volume performance units (VPUs) that will be applied to this volume per GB,
         /// representing the Block Volume service's elastic performance options.
         /// See [Block Volume Performance Levels](https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/blockvolumeperformance.htm#perf_levels) for more information.

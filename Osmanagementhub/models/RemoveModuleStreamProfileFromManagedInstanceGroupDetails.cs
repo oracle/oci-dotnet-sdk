@@ -16,14 +16,18 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// The work request details for the module stream profile operation on the managed instance group.
+    /// Provides the details for removing a module stream profile from a managed instance group.
     /// </summary>
     public class RemoveModuleStreamProfileFromManagedInstanceGroupDetails 
     {
         
         /// <value>
-        /// The name of a module.
+        /// The name of the module.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ModuleName is required.")]
         [JsonProperty(PropertyName = "moduleName")]
         public string ModuleName { get; set; }
         
@@ -38,6 +42,12 @@ namespace Oci.OsmanagementhubService.Models
         /// </value>
         [JsonProperty(PropertyName = "profileName")]
         public string ProfileName { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source that provides the module stream
+        /// </value>
+        [JsonProperty(PropertyName = "softwareSourceId")]
+        public string SoftwareSourceId { get; set; }
         
         [JsonProperty(PropertyName = "workRequestDetails")]
         public WorkRequestDetails WorkRequestDetails { get; set; }

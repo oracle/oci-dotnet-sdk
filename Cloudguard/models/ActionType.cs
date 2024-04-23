@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Possible types of actions.
+  /// Possible types of actions
   /// </summary>
   public enum ActionType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

@@ -13,13 +13,15 @@ using System.Runtime.Serialization;
 namespace Oci.CloudguardService.Models
 {
   /// <summary>
-  /// Data Source Feed Provider
+  /// Provider of data source feed
   /// </summary>
   public enum DataSourceFeedProvider {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "LOGGINGQUERY")]
-      Loggingquery
+      Loggingquery,
+      [EnumMember(Value = "SCHEDULEDQUERY")]
+      Scheduledquery
   }
 }

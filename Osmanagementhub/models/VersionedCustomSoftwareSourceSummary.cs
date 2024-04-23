@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// An immutable custom software source that is assigned a version and contains a custom collection of packages.
+    /// Provides summary information for a versioned custom software source.
     /// </summary>
     public class VersionedCustomSoftwareSourceSummary : SoftwareSourceSummary
     {
         
         /// <value>
-        /// List of vendor software sources.
+        /// List of vendor software sources that are used for the basis of the versioned custom software source.
         /// </value>
         /// <remarks>
         /// Required

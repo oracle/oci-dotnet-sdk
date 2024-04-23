@@ -20,7 +20,7 @@ namespace Oci.OsmanagementhubService.Requests
     {
         
         /// <value>
-        /// The managed instance group OCID.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance group.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,7 +50,7 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Nullable<System.DateTime> TimeInstallDateStart { get; set; }
         
         /// <value>
-        /// The install date before which to list all packages, in ISO 8601 format.
+        /// A filter to return only packages that were installed on or before the date provided, in ISO 8601 format.
         /// <br/>
         /// Example: 2017-07-14T02:40:00.000Z
         /// </value>
@@ -58,7 +58,7 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Nullable<System.DateTime> TimeInstallDateEnd { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the resources to list.
+        /// The OCID of the compartment that contains the resources to list. This filter returns only resources contained within the specified compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }

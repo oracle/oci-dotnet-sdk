@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Status of Region query replication.
+    /// Status of replication of a data source query in a region
     /// </summary>
     public class RegionStatusDetail 
     {
         
         /// <value>
-        /// Data Source replication region.
+        /// Data source replication region
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.CloudguardService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// Data Source replication region status.
+        /// Data source replication region status
         /// </value>
         /// <remarks>
         /// Required

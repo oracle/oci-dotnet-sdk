@@ -20,7 +20,7 @@ namespace Oci.CloudguardService.Requests
     {
         
         /// <value>
-        /// Details for the new DataSource.
+        /// Details for the new DataSource resource
         /// </value>
         /// <remarks>
         /// Required
