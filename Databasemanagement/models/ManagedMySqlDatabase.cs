@@ -88,19 +88,19 @@ namespace Oci.DatabasemanagementService.Models
         public string HeatWaveClusterDisplayName { get; set; }
         
         /// <value>
-        /// If HeatWave is enabled for this db system or not.
+        /// Indicates whether HeatWave is enabled for the MySQL Database System or not.
         /// </value>
         [JsonProperty(PropertyName = "isHeatWaveEnabled")]
         public System.Nullable<bool> IsHeatWaveEnabled { get; set; }
         
         /// <value>
-        /// If HeatWave Lakehouse is enabled for the db system or not.
+        /// Indicates whether HeatWave Lakehouse is enabled for the MySQL Database System or not.
         /// </value>
         [JsonProperty(PropertyName = "isLakehouseEnabled")]
         public System.Nullable<bool> IsLakehouseEnabled { get; set; }
         
         /// <value>
-        /// Shape of the nodes in the HeatWave cluster.
+        /// The shape of the nodes in the HeatWave cluster.
         /// </value>
         [JsonProperty(PropertyName = "heatWaveNodeShape")]
         public string HeatWaveNodeShape { get; set; }
@@ -112,13 +112,13 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> HeatWaveMemorySize { get; set; }
         
         /// <value>
-        /// The information about an individual HeatWave nodes in the cluster.
+        /// The information about individual HeatWave nodes in the cluster.
         /// </value>
         [JsonProperty(PropertyName = "heatWaveNodes")]
         public System.Collections.Generic.List<HeatWaveNode> HeatWaveNodes { get; set; }
         
         /// <value>
-        /// If the HeatWave cluster is active or not.
+        /// Indicates whether the HeatWave cluster is active or not.
         /// </value>
         [JsonProperty(PropertyName = "isHeatWaveActive")]
         public System.Nullable<bool> IsHeatWaveActive { get; set; }

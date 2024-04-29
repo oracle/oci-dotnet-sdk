@@ -32,6 +32,12 @@ namespace Oci.DatabasemanagementService.Requests
         public string ExternalDbSystemId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the external database.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "externalDatabaseId")]
+        public string ExternalDatabaseId { get; set; }
+        
+        /// <value>
         /// A filter to only return the resources that match the entire display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]

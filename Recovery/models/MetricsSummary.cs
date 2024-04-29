@@ -67,5 +67,11 @@ namespace Oci.RecoveryService.Models
         [JsonProperty(PropertyName = "currentRetentionPeriodInSeconds")]
         public System.Nullable<float> CurrentRetentionPeriodInSeconds { get; set; }
         
+        /// <value>
+        /// Number of days of redo/archive to be applied to recover database.
+        /// </value>
+        [JsonProperty(PropertyName = "minimumRecoveryNeededInDays")]
+        public System.Nullable<float> MinimumRecoveryNeededInDays { get; set; }
+        
     }
 }

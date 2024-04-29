@@ -275,6 +275,8 @@ namespace Oci.DatasafeService.Models
             PatchDifference,
             [EnumMember(Value = "APPLY_DIFFERENCE")]
             ApplyDifference,
+            [EnumMember(Value = "MASK_POLICY_GENERATE_HEALTH_REPORT")]
+            MaskPolicyGenerateHealthReport,
             [EnumMember(Value = "ABORT_MASKING")]
             AbortMasking,
             [EnumMember(Value = "CREATE_SECURITY_POLICY_REPORT")]

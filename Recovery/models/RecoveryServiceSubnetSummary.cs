@@ -63,7 +63,8 @@ namespace Oci.RecoveryService.Models
         public string VcnId { get; set; }
         
         /// <value>
-        /// The OCID of the subnet associated with the recovery service subnet. You can create a single backup network per virtual cloud network (VCN).
+        /// Deprecated. One of the subnets associated with the Recovery Service subnet.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -71,6 +72,22 @@ namespace Oci.RecoveryService.Models
         [Required(ErrorMessage = "SubnetId is required.")]
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+        
+        /// <value>
+        /// A list of OCIDs of all the subnets associated with the Recovery Service subnet.
+        /// </value>
+        [JsonProperty(PropertyName = "subnets")]
+        public System.Collections.Generic.List<string> Subnets { get; set; }
+        
+        /// <value>
+        /// A list of network security group (NSG) OCIDs that are associated with the Recovery Service subnet.
+        /// You can specify a maximum of 5 unique OCIDs, which implies that you can associate a maximum of 5 NSGs to each Recovery Service subnet.
+        /// Specify an empty array if you want to remove all the associated NSGs from a Recovery Service subnet.
+        /// See {@link NetworkSecurityGroup} for more information.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nsgIds")]
+        public System.Collections.Generic.List<string> NsgIds { get; set; }
         
         /// <value>
         /// An RFC3339 formatted datetime string that indicates the last created time for a recovery service subnet. For Example: '2020-05-22T21:10:29.600Z'.
@@ -86,13 +103,6 @@ namespace Oci.RecoveryService.Models
         
         /// <value>
         /// The current state of the recovery service subnet.
-        /// Allowed values are:
-        ///   - CREATING
-        ///   - UPDATING
-        ///   - ACTIVE
-        ///   - DELETING
-        ///   - DELETED
-        ///   - FAILED
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]

@@ -267,5 +267,11 @@ namespace Oci.DatacatalogService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to return only process entities.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isProcess")]
+        public System.Nullable<bool> IsProcess { get; set; }
     }
 }

@@ -314,7 +314,9 @@ namespace Oci.DatabasemanagementService.Models
             [EnumMember(Value = "OLD")]
             Old,
             [EnumMember(Value = "NEW")]
-            New
+            New,
+            [EnumMember(Value = "NULL")]
+            Null
         };
 
         /// <value>

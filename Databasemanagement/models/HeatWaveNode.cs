@@ -43,7 +43,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<HeatWaveNodeStatus> Status { get; set; }
         
         /// <value>
-        /// The date and time the node was created.
+        /// The date and time the HeatWave node was created.
         /// </value>
         /// <remarks>
         /// Required

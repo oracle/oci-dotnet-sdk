@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 87.0.0 - 2024-04-30
+### Added
+- Support for enabling unified auditing for DBHome in the Database service
+- Support for listing minor Grid Infrastructure (GI) versions available for custom GI software image creation in the Database service
+- Support for network security groups in the Recovery Cloud service 
+- Support for lineage metadata import in the Data Catalog service
+- Support for workspace properties in workspace create and update operations in the Data Integration service
+- Support for monitoring ExaCC databases in the Database Management service
+- Support for validations on target and policy before the masking process in the Data Safe service
+ 
+### Breaking Changes
+- The type of property `Enabled` was changed from string to `EnabledEnum` in the models `SqlPlanBaseline` and `SqlPlanBaselineSummary` in the Database Management service
+- The type of property `Accepted` was changed from string to `AcceptedEnum` in the models `SqlPlanBaseline` and `SqlPlanBaselineSummary` in the Database Management service
+- The type of property `Fixed` was changed from string to `FixedEnum` in the models `SqlPlanBaseline` and `SqlPlanBaselineSummary` in the Database Management service
+- The type of property `Reproduced` was changed from string to `ReproducedEnum` in the models `SqlPlanBaseline` and `SqlPlanBaselineSummary` in the Database Management service
+- The type of property `AutoPurge` was changed from string to `AutoPurgeEnum` in the models `SqlPlanBaseline` and `SqlPlanBaselineSummary` in the Database Management service
+- The type of property `Adaptive` was changed from string to `AdaptiveEnum` in the models `SqlPlanBaseline` and `SqlPlanBaselineSummary` in the Database Management service
+- The type of property `AllSqlStatementsFetched` was changed from string to `AllSqlStatementsFetchedEnum` in the model `SqlTuningSet` in the Database Management service
+
 ## 86.0.0 - 2024-04-23
 ### Added
 - Support for the Cluster Placement Groups service

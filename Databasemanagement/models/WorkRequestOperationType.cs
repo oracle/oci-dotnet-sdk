@@ -46,6 +46,24 @@ namespace Oci.DatabasemanagementService.Models
       [EnumMember(Value = "DELETE_EXADATA_INFRASTRUCTURE")]
       DeleteExadataInfrastructure,
       [EnumMember(Value = "CHANGE_EXADATA_COMPARTMENT")]
-      ChangeExadataCompartment
+      ChangeExadataCompartment,
+      [EnumMember(Value = "ENABLE_SQL_WATCH")]
+      EnableSqlWatch,
+      [EnumMember(Value = "DISABLE_SQL_WATCH")]
+      DisableSqlWatch,
+      [EnumMember(Value = "MODIFY_SQL_WATCH")]
+      ModifySqlWatch,
+      [EnumMember(Value = "ENABLE_DBLM")]
+      EnableDblm,
+      [EnumMember(Value = "DISABLE_DBLM")]
+      DisableDblm,
+      [EnumMember(Value = "MODIFY_DBLM")]
+      ModifyDblm,
+      [EnumMember(Value = "ENABLE_DBMGMT")]
+      EnableDbmgmt,
+      [EnumMember(Value = "DISABLE_DBMGMT")]
+      DisableDbmgmt,
+      [EnumMember(Value = "MODIFY_DBMGMT")]
+      ModifyDbmgmt
   }
 }

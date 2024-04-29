@@ -70,6 +70,13 @@ namespace Oci.RecoveryService.Models
         public System.Nullable<bool> IsPredefinedPolicy { get; set; }
         
         /// <value>
+        /// An RFC3339 formatted datetime string that specifies the exact date and time for the retention lock to take effect and permanently lock the retention period defined in the policy.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "policyLockedDateTime")]
+        public string PolicyLockedDateTime { get; set; }
+        
+        /// <value>
         /// An RFC3339 formatted datetime string that indicates the created time for the protection policy. For Example: '2020-05-22T21:10:29.600Z'.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
@@ -82,13 +89,7 @@ namespace Oci.RecoveryService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the protection policy. Allowed values are:
-        ///   - CREATING
-        ///   - UPDATING
-        ///   - ACTIVE
-        ///   - DELETING
-        ///   - DELETED
-        ///   - FAILED
+        /// The current state of the protection policy.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]

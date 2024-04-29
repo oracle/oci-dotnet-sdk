@@ -105,7 +105,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<MySqlDatabaseStatus> DatabaseStatus { get; set; }
         
         /// <value>
-        /// If HeatWave is enabled for this db system or not.
+        /// Indicates whether HeatWave is enabled for the MySQL Database System or not.
         /// </value>
         [JsonProperty(PropertyName = "isHeatWaveEnabled")]
         public System.Nullable<bool> IsHeatWaveEnabled { get; set; }

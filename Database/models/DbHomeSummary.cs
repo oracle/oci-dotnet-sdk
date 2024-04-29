@@ -178,5 +178,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
         public string DatabaseSoftwareImageId { get; set; }
         
+        /// <value>
+        /// Indicates whether unified autiding is enabled or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isUnifiedAuditingEnabled")]
+        public System.Nullable<bool> IsUnifiedAuditingEnabled { get; set; }
+        
     }
 }

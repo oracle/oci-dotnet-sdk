@@ -30,6 +30,15 @@ namespace Oci.RecoveryService.Requests
         public string ProtectedDatabaseId { get; set; }
         
         /// <value>
+        /// Defines a preferred schedule to delete a protected database after you terminate the source database.
+        /// * The default schedule is DELETE_AFTER_72_HOURS, so that the delete operation can occur 72 hours (3 days) after the source database is terminated .
+        /// * The alternate schedule is DELETE_AFTER_RETENTION_PERIOD. Specify this option if you want to delete a protected database only after the policy-defined backup retention period expires.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "deletionSchedule")]
+        public System.Nullable<DeletionSchedule> DeletionSchedule { get; set; }
+        
+        /// <value>
         /// For optimistic concurrency control. In the PUT or DELETE call
         /// for a resource, set the `if-match` parameter to the value of the
         /// etag from a previous GET or POST response for that resource.

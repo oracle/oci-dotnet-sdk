@@ -13909,7 +13909,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of supported GI versions for the Exadata Cloud@Customer VM cluster.
+        /// Gets a list of supported GI versions.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -18657,7 +18657,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// If no database is associated with the key store, edit the key store.
+        /// Edit the key store.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

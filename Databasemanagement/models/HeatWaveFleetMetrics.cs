@@ -52,7 +52,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Collections.Generic.List<HeatWaveClusterUsageMetrics> FleetClusters { get; set; }
         
         /// <value>
-        /// A summary of the inventory count and the metrics that describe the aggregated usage of CPU, storage, and so on of all the HeatWave clusters in the fleet.
+        /// The number of HeatWave clusters in the fleet and a summary of the metrics that provide the aggregated usage of CPU, storage, and so on of all the clusters.
         /// </value>
         /// <remarks>
         /// Required

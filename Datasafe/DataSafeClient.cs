@@ -310,7 +310,7 @@ namespace Oci.DatasafeService
         /// of difference columns is used for processing. You should first use PatchSdmMaskingPolicyDifferenceColumns to set the plannedAction
         /// attribute of the difference columns you want to process. ApplySdmMaskingPolicyDifference automatically reads the plannedAction
         /// attribute and updates the masking policy to reflect the actions you planned. If the sdmMaskingPolicydifferenceId is not passed, the
-        /// latest sdmMaskingPolicydifference is used. Note that if the masking policy associated with the SdmMaskingPolicyDifference used for this 
+        /// latest sdmMaskingPolicydifference is used. Note that if the masking policy associated with the SdmMaskingPolicyDifference used for this
         /// operation is not associated with the original SDM anymore, this operation won&#39;t be allowed.
         /// 
         /// </summary>
@@ -1037,6 +1037,62 @@ namespace Oci.DatasafeService
             catch (Exception e)
             {
                 logger.Error($"ChangeMaskingPolicyCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Moves the specified masking policy health report and its dependent resources into a different compartment.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ChangeMaskingPolicyHealthReportCompartment.cs.html">here</a> to see an example of how to use ChangeMaskingPolicyHealthReportCompartment API.</example>
+        public async Task<ChangeMaskingPolicyHealthReportCompartmentResponse> ChangeMaskingPolicyHealthReportCompartment(ChangeMaskingPolicyHealthReportCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called changeMaskingPolicyHealthReportCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/maskingPolicyHealthReports/{maskingPolicyHealthReportId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataSafe",
+                    OperationName = "ChangeMaskingPolicyHealthReportCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-safe/20181201/MaskingPolicyHealthReport/ChangeMaskingPolicyHealthReportCompartment",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ChangeMaskingPolicyHealthReportCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeMaskingPolicyHealthReportCompartment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2189,7 +2245,7 @@ namespace Oci.DatasafeService
         /// format entries. The combined output of all the format entries is used for masking.
         /// It provides the flexibility to define a masking format that can generate different
         /// parts of a data value separately and then combine them to get the final data value
-        /// for masking. Note that you cannot define masking condition in a library masking format. 
+        /// for masking. Note that you cannot define masking condition in a library masking format.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2257,7 +2313,7 @@ namespace Oci.DatasafeService
         /// Using the maskingFormats attribute, you can assign one or more masking formats
         /// to a column. You need to specify a condition as part of each masking format. It
         /// enables you to do &lt;a href&#x3D;\&quot;https://docs.oracle.com/en/cloud/paas/data-safe/udscs/conditional-masking.html\&quot;&gt;conditional masking&lt;/a&gt;
-        /// so that you can mask the column data values differently using different 
+        /// so that you can mask the column data values differently using different
         /// masking conditions. A masking format can have one or more format entries. The
         /// combined output of all the format entries is used for masking. It provides the
         /// flexibility to define a masking format that can generate different parts of a data
@@ -2324,7 +2380,7 @@ namespace Oci.DatasafeService
         /// <summary>
         /// Creates a new masking policy and associates it with a sensitive data model or a target database.
         /// &lt;br/&gt;
-        /// To use a sensitive data model as the source of masking columns, set the columnSource attribute to 
+        /// To use a sensitive data model as the source of masking columns, set the columnSource attribute to
         /// SENSITIVE_DATA_MODEL and provide the sensitiveDataModelId attribute. After creating a masking policy,
         /// you can use the AddMaskingColumnsFromSdm operation to automatically add all the columns from
         /// the associated sensitive data model. In this case, the target database associated with the
@@ -2337,7 +2393,7 @@ namespace Oci.DatasafeService
         /// &lt;br/&gt;
         /// After creating a masking policy, you can use the CreateMaskingColumn or PatchMaskingColumns
         /// operation to manually add columns to the policy. You need to add the parent columns only,
-        /// and it automatically adds the child columns (in referential relationship with the parent columns) 
+        /// and it automatically adds the child columns (in referential relationship with the parent columns)
         /// from the associated sensitive data model or target database.
         /// 
         /// </summary>
@@ -3597,6 +3653,62 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Deletes the specified masking policy health report.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/DeleteMaskingPolicyHealthReport.cs.html">here</a> to see an example of how to use DeleteMaskingPolicyHealthReport API.</example>
+        public async Task<DeleteMaskingPolicyHealthReportResponse> DeleteMaskingPolicyHealthReport(DeleteMaskingPolicyHealthReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called deleteMaskingPolicyHealthReport");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/maskingPolicyHealthReports/{maskingPolicyHealthReportId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataSafe",
+                    OperationName = "DeleteMaskingPolicyHealthReport",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-safe/20181201/MaskingPolicyHealthReport/DeleteMaskingPolicyHealthReport",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<DeleteMaskingPolicyHealthReportResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteMaskingPolicyHealthReport failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Deletes the specified on-premises connector.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4513,7 +4625,7 @@ namespace Oci.DatasafeService
         /// Downloads an already-generated file corresponding to the specified masking policy.
         /// Note that the GenerateMaskingPolicyForDownload operation is a prerequisite for the
         /// DownloadMaskingPolicy operation. Use GenerateMaskingPolicyForDownload to generate
-        /// a masking policy file and then use DownloadMaskingPolicy to download the generated file. 
+        /// a masking policy file and then use DownloadMaskingPolicy to download the generated file.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4572,7 +4684,7 @@ namespace Oci.DatasafeService
         /// <summary>
         /// Downloads an already-generated masking report. Note that the GenerateMaskingReportForDownload
         /// operation is a prerequisite for the DownloadMaskingReport operation. Use GenerateMaskingReportForDownload
-        /// to generate a masking report file and then use DownloadMaskingReport to download the generated file. 
+        /// to generate a masking report file and then use DownloadMaskingReport to download the generated file.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -4979,11 +5091,67 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Performs health check on the masking policy.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/GenerateHealthReport.cs.html">here</a> to see an example of how to use GenerateHealthReport API.</example>
+        public async Task<GenerateHealthReportResponse> GenerateHealthReport(GenerateHealthReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called generateHealthReport");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/maskingPolicies/{maskingPolicyId}/actions/generateHealthReport".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataSafe",
+                    OperationName = "GenerateHealthReport",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-safe/20181201/MaskingPolicyHealthReport/GenerateHealthReport",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GenerateHealthReportResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GenerateHealthReport failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Generates a downloadable file corresponding to the specified masking policy. It&#39;s
         /// a prerequisite for the DownloadMaskingPolicy operation. Use this endpoint to generate
         /// a masking policy file and then use DownloadMaskingPolicy to download the generated file.
         /// Note that file generation and download are serial operations. The download operation
-        /// can&#39;t be invoked while the generate operation is in progress. 
+        /// can&#39;t be invoked while the generate operation is in progress.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5041,9 +5209,9 @@ namespace Oci.DatasafeService
 
         /// <summary>
         /// Generates a downloadable masking report. It&#39;s a prerequisite for the
-        /// DownloadMaskingReport operation. Use this endpoint to generate a 
+        /// DownloadMaskingReport operation. Use this endpoint to generate a
         /// masking report file and then use DownloadMaskingReport to download
-        /// the generated file. 
+        /// the generated file.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5787,7 +5955,7 @@ namespace Oci.DatasafeService
         /// Numeric - Includes NUMBER, FLOAT, RAW, BINARY_FLOAT, and BINARY_DOUBLE
         /// Date - Includes DATE and TIMESTAMP
         /// LOB - Includes BLOB, CLOB, and NCLOB
-        /// All - Includes all the supported data types 
+        /// All - Includes all the supported data types
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -5847,7 +6015,7 @@ namespace Oci.DatasafeService
         /// Gets a list of library masking formats compatible with the existing sensitive types.
         /// For each sensitive type, it returns the assigned default masking format as well as
         /// the other library masking formats that have the sensitiveTypeIds attribute containing
-        /// the OCID of the sensitive type. 
+        /// the OCID of the sensitive type.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -6515,6 +6683,62 @@ namespace Oci.DatasafeService
             catch (Exception e)
             {
                 logger.Error($"GetMaskingPolicy failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the details of the specified masking policy health report.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/GetMaskingPolicyHealthReport.cs.html">here</a> to see an example of how to use GetMaskingPolicyHealthReport API.</example>
+        public async Task<GetMaskingPolicyHealthReportResponse> GetMaskingPolicyHealthReport(GetMaskingPolicyHealthReportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getMaskingPolicyHealthReport");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/maskingPolicyHealthReports/{maskingPolicyHealthReportId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataSafe",
+                    OperationName = "GetMaskingPolicyHealthReport",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-safe/20181201/MaskingPolicyHealthReport/GetMaskingPolicyHealthReport",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetMaskingPolicyHealthReportResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetMaskingPolicyHealthReport failed with error: {e.Message}");
                 throw;
             }
         }
@@ -9597,7 +9821,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Gets a list of library masking formats based on the specified query parameters. 
+        /// Gets a list of library masking formats based on the specified query parameters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -9770,7 +9994,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Gets a list of masking columns present in the specified masking policy and based on the specified query parameters. 
+        /// Gets a list of masking columns present in the specified masking policy and based on the specified query parameters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -9827,7 +10051,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Gets a list of masking objects present in the specified masking policy and based on the specified query parameters. 
+        /// Gets a list of masking objects present in the specified masking policy and based on the specified query parameters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -9940,6 +10164,119 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Gets a list of errors and warnings from a masking policy health check.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ListMaskingPolicyHealthReportLogs.cs.html">here</a> to see an example of how to use ListMaskingPolicyHealthReportLogs API.</example>
+        public async Task<ListMaskingPolicyHealthReportLogsResponse> ListMaskingPolicyHealthReportLogs(ListMaskingPolicyHealthReportLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listMaskingPolicyHealthReportLogs");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/maskingPolicyHealthReports/{maskingPolicyHealthReportId}/logs".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataSafe",
+                    OperationName = "ListMaskingPolicyHealthReportLogs",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-safe/20181201/MaskingPolicyHealthReport/ListMaskingPolicyHealthReportLogs",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListMaskingPolicyHealthReportLogsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListMaskingPolicyHealthReportLogs failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of masking policy health reports based on the specified query parameters.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ListMaskingPolicyHealthReports.cs.html">here</a> to see an example of how to use ListMaskingPolicyHealthReports API.</example>
+        public async Task<ListMaskingPolicyHealthReportsResponse> ListMaskingPolicyHealthReports(ListMaskingPolicyHealthReportsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listMaskingPolicyHealthReports");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/maskingPolicyHealthReports".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataSafe",
+                    OperationName = "ListMaskingPolicyHealthReports",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-safe/20181201/MaskingPolicyHealthReport/ListMaskingPolicyHealthReports",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListMaskingPolicyHealthReportsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListMaskingPolicyHealthReports failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets a list of masking reports based on the specified query parameters.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -9996,7 +10333,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Gets a list of masking schemas present in the specified masking policy and based on the specified query parameters. 
+        /// Gets a list of masking schemas present in the specified masking policy and based on the specified query parameters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -12817,7 +13154,7 @@ namespace Oci.DatasafeService
         /// <summary>
         /// Patches one or more columns in the specified masking policy. Use it to create, or update
         /// masking columns. To create masking columns, use CreateMaskingColumnDetails as the patch
-        /// value. And to update masking columns, use UpdateMaskingColumnDetails as the patch value. 
+        /// value. And to update masking columns, use UpdateMaskingColumnDetails as the patch value.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -14741,7 +15078,7 @@ namespace Oci.DatasafeService
 
         /// <summary>
         /// Updates one or more attributes of the specified masking column. Note that updating the maskingFormats
-        /// attribute replaces the currently assigned masking formats with the specified masking formats. 
+        /// attribute replaces the currently assigned masking formats with the specified masking formats.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -15815,7 +16152,7 @@ namespace Oci.DatasafeService
         /// To create a new masking policy using a file, first use the CreateMaskingPolicy operation
         /// to create an empty masking policy and then use this endpoint to upload the masking policy file.
         /// Note that the upload operation replaces the content of the specified masking policy,
-        /// including all the existing columns and masking formats, with the content of the file. 
+        /// including all the existing columns and masking formats, with the content of the file.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

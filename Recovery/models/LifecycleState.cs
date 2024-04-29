@@ -25,6 +25,8 @@ namespace Oci.RecoveryService.Models
       Updating,
       [EnumMember(Value = "ACTIVE")]
       Active,
+      [EnumMember(Value = "DELETE_SCHEDULED")]
+      DeleteScheduled,
       [EnumMember(Value = "DELETING")]
       Deleting,
       [EnumMember(Value = "DELETED")]

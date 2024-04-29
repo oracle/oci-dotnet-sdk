@@ -31,6 +31,22 @@ namespace Oci.RecoveryService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
+
+        /// <value>
+        /// Contains filename passed in header.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-filename")]
+        public string OpcFilename { get; set; }
+
+
+        /// <value>
+        /// Contains file checksum passed in header.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-checksum")]
+        public string OpcChecksum { get; set; }
+
         /// <value>
         /// The returned System.IO.Stream instance.  Caller must always close the stream to avoid holding resources.
         /// </value>
