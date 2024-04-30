@@ -33,7 +33,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<HeatWaveClusterStatus> Status { get; set; }
         
         /// <value>
-        /// The OCID for the DB system associated with the HeatWave cluster.
+        /// The OCID of the MySQL Database System associated with the HeatWave cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DatabasemanagementService.Models
         public string DbSystemId { get; set; }
         
         /// <value>
-        /// The name of the DB system associated with the HeatWave cluster.
+        /// The name of the MySQL Database System associated with the HeatWave cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.DatabasemanagementService.Models
         public string HeatWaveClusterDisplayName { get; set; }
         
         /// <value>
-        /// Number of nodes in the HeatWave cluster.
+        /// The number of nodes in the HeatWave cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -73,7 +73,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> NodeCount { get; set; }
         
         /// <value>
-        /// If Lakehouse is enabled for the HeatWave cluster or not.
+        /// Indicates whether Lakehouse is enabled for the HeatWave cluster or not.
         /// </value>
         /// <remarks>
         /// Required
@@ -83,7 +83,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<bool> IsLakehouseEnabled { get; set; }
         
         /// <value>
-        /// Shape of the nodes in the HeatWave cluster.
+        /// The shape of the nodes in the HeatWave cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -103,7 +103,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> MemorySize { get; set; }
         
         /// <value>
-        /// A list of the database health metrics like CPU and Memory.
+        /// A list of the HeatWave cluster health metrics like CPU and Memory.
         /// </value>
         /// <remarks>
         /// Required

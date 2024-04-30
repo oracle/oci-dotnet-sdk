@@ -127,5 +127,11 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "endpointCompartmentId")]
         public string EndpointCompartmentId { get; set; }
         
+        /// <value>
+        /// Key-values pairs of workspace for storing properties on the workspace.
+        /// </value>
+        [JsonProperty(PropertyName = "workspaceProperties")]
+        public System.Collections.Generic.Dictionary<string, string> WorkspaceProperties { get; set; }
+        
     }
 }

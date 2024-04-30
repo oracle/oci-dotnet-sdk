@@ -84,39 +84,138 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeLastExecuted")]
         public System.Nullable<System.DateTime> TimeLastExecuted { get; set; }
-        
+                ///
+        /// <value>
+        /// Indicates whether the plan baseline is enabled (`YES`) or disabled (`NO`).
+        /// </value>
+        ///
+        public enum EnabledEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "YES")]
+            Yes,
+            [EnumMember(Value = "NO")]
+            No
+        };
+
         /// <value>
         /// Indicates whether the plan baseline is enabled (`YES`) or disabled (`NO`).
         /// </value>
         [JsonProperty(PropertyName = "enabled")]
-        public string Enabled { get; set; }
-        
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<EnabledEnum> Enabled { get; set; }
+                ///
+        /// <value>
+        /// Indicates whether the plan baseline is accepted (`YES`) or not (`NO`).
+        /// </value>
+        ///
+        public enum AcceptedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "YES")]
+            Yes,
+            [EnumMember(Value = "NO")]
+            No
+        };
+
         /// <value>
         /// Indicates whether the plan baseline is accepted (`YES`) or not (`NO`).
         /// </value>
         [JsonProperty(PropertyName = "accepted")]
-        public string Accepted { get; set; }
-        
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AcceptedEnum> Accepted { get; set; }
+                ///
+        /// <value>
+        /// Indicates whether the plan baseline is fixed (`YES`) or not (`NO`).
+        /// </value>
+        ///
+        public enum FixedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "YES")]
+            Yes,
+            [EnumMember(Value = "NO")]
+            No
+        };
+
         /// <value>
         /// Indicates whether the plan baseline is fixed (`YES`) or not (`NO`).
         /// </value>
         [JsonProperty(PropertyName = "fixed")]
-        public string Fixed { get; set; }
-        
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<FixedEnum> Fixed { get; set; }
+                ///
+        /// <value>
+        /// Indicates whether the optimizer was able to reproduce the plan (`YES`) or not (`NO`).
+        /// The value is set to `YES` when a plan is initially added to the plan baseline.
+        /// 
+        /// </value>
+        ///
+        public enum ReproducedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "YES")]
+            Yes,
+            [EnumMember(Value = "NO")]
+            No
+        };
+
         /// <value>
         /// Indicates whether the optimizer was able to reproduce the plan (`YES`) or not (`NO`).
         /// The value is set to `YES` when a plan is initially added to the plan baseline.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "reproduced")]
-        public string Reproduced { get; set; }
-        
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ReproducedEnum> Reproduced { get; set; }
+                ///
+        /// <value>
+        /// Indicates whether the plan baseline is auto-purged (`YES`) or not (`NO`).
+        /// </value>
+        ///
+        public enum AutoPurgeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "YES")]
+            Yes,
+            [EnumMember(Value = "NO")]
+            No
+        };
+
         /// <value>
         /// Indicates whether the plan baseline is auto-purged (`YES`) or not (`NO`).
         /// </value>
         [JsonProperty(PropertyName = "autoPurge")]
-        public string AutoPurge { get; set; }
-        
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AutoPurgeEnum> AutoPurge { get; set; }
+                ///
+        /// <value>
+        /// Indicates whether a plan that is automatically captured by SQL plan management is marked adaptive or not.
+        /// <br/>
+        /// When a new adaptive plan is found for a SQL statement that has an existing SQL plan baseline, that new plan
+        /// will be added to the SQL plan baseline as an unaccepted plan, and the `ADAPTIVE` property will be marked `YES`.
+        /// When this new plan is verified (either manually or via the auto evolve task), the plan will be test executed
+        /// and the final plan determined at execution will become an accepted plan if its performance is better than
+        /// the existing plan baseline. At this point, the value of the `ADAPTIVE` property is set to `NO` since the plan
+        /// is no longer adaptive, but resolved.
+        /// 
+        /// </value>
+        ///
+        public enum AdaptiveEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "YES")]
+            Yes,
+            [EnumMember(Value = "NO")]
+            No
+        };
+
         /// <value>
         /// Indicates whether a plan that is automatically captured by SQL plan management is marked adaptive or not.
         /// <br/>
@@ -129,7 +228,8 @@ namespace Oci.DatabasemanagementService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "adaptive")]
-        public string Adaptive { get; set; }
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AdaptiveEnum> Adaptive { get; set; }
         
         /// <value>
         /// The application module name.

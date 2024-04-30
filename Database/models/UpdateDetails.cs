@@ -50,5 +50,11 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<UpdateActionEnum> UpdateAction { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a grid infrastructure software image. This is a database software image of the type `GRID_IMAGE`.
+        /// </value>
+        [JsonProperty(PropertyName = "giSoftwareImageId")]
+        public string GiSoftwareImageId { get; set; }
+        
     }
 }

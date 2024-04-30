@@ -89,7 +89,27 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
-        
+                ///
+        /// <value>
+        /// In OCI database management, there is a limit to fetch only 2000 rows.
+        /// This flag indicates whether all Sql statements of this Sql tuning set matching the filter criteria are fetched or not.
+        /// Possible values are 'Yes' or 'No'
+        ///   - Yes - All Sql statements matching the filter criteria are fetched.
+        ///   - No  - There are more Sql statements matching the fitler criteria.
+        ///           User should fine tune the filter criteria to narrow down the result set.
+        /// 
+        /// </value>
+        ///
+        public enum AllSqlStatementsFetchedEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "YES")]
+            Yes,
+            [EnumMember(Value = "NO")]
+            No
+        };
+
         /// <value>
         /// In OCI database management, there is a limit to fetch only 2000 rows.
         /// This flag indicates whether all Sql statements of this Sql tuning set matching the filter criteria are fetched or not.
@@ -100,7 +120,8 @@ namespace Oci.DatabasemanagementService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "allSqlStatementsFetched")]
-        public string AllSqlStatementsFetched { get; set; }
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AllSqlStatementsFetchedEnum> AllSqlStatementsFetched { get; set; }
         
         /// <value>
         /// A list of the Sqls associated with the Sql tuning set.

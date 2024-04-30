@@ -134,6 +134,12 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> BackupNetworkNsgIds { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a grid infrastructure software image. This is a database software image of the type `GRID_IMAGE`.
+        /// </value>
+        [JsonProperty(PropertyName = "giSoftwareImageId")]
+        public string GiSoftwareImageId { get; set; }
+        
+        /// <value>
         /// Memory allocated to the DB system, in gigabytes.
         /// </value>
         [JsonProperty(PropertyName = "memorySizeInGBs")]

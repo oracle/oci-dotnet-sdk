@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// A summary of the inventory count and the metrics that describe the aggregated usage of CPU, storage, and so on of all the HeatWave clusters in the fleet.
+    /// The inventory count of HeatWave clusters in the fleet and a summary of the metrics that provide the aggregated usage of CPU, storage, and so on of all the clusters.
     /// </summary>
     public class HeatWaveFleetSummary 
     {
         
         /// <value>
-        /// The usage metrics for the Managed HeatWave clusters in the fleet.
+        /// The usage metrics for the HeatWave clusters in the fleet.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Collections.Generic.List<HeatWaveFleetMetricSummaryDefinition> AggregatedMetrics { get; set; }
         
         /// <value>
-        /// Summary counts of HeatWave clusters in the fleet grouped by cluster type.
+        /// The number of HeatWave clusters in the fleet, grouped by cluster type or other properties.
         /// </value>
         /// <remarks>
         /// Required

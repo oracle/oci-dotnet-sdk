@@ -40,7 +40,7 @@ namespace Oci.DatasafeService.Responses
 
 
         /// <value>
-        /// The URI of the masking policy. 
+        /// The URI of the masking policy.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "location")]

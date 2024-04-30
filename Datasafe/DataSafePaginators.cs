@@ -1716,6 +1716,104 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListMaskingPolicyHealthReportLogs operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListMaskingPolicyHealthReportLogsResponse> ListMaskingPolicyHealthReportLogsResponseEnumerator(ListMaskingPolicyHealthReportLogsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListMaskingPolicyHealthReportLogsRequest, ListMaskingPolicyHealthReportLogsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMaskingPolicyHealthReportLogs(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the MaskingPolicyHealthReportLogSummary objects
+        /// contained in responses from the ListMaskingPolicyHealthReportLogs operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<MaskingPolicyHealthReportLogSummary> ListMaskingPolicyHealthReportLogsRecordEnumerator(ListMaskingPolicyHealthReportLogsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListMaskingPolicyHealthReportLogsRequest, ListMaskingPolicyHealthReportLogsResponse, MaskingPolicyHealthReportLogSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMaskingPolicyHealthReportLogs(request, retryConfiguration, cancellationToken),
+                response => response.MaskingPolicyHealthReportLogCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListMaskingPolicyHealthReports operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListMaskingPolicyHealthReportsResponse> ListMaskingPolicyHealthReportsResponseEnumerator(ListMaskingPolicyHealthReportsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListMaskingPolicyHealthReportsRequest, ListMaskingPolicyHealthReportsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMaskingPolicyHealthReports(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the MaskingPolicyHealthReportSummary objects
+        /// contained in responses from the ListMaskingPolicyHealthReports operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<MaskingPolicyHealthReportSummary> ListMaskingPolicyHealthReportsRecordEnumerator(ListMaskingPolicyHealthReportsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListMaskingPolicyHealthReportsRequest, ListMaskingPolicyHealthReportsResponse, MaskingPolicyHealthReportSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMaskingPolicyHealthReports(request, retryConfiguration, cancellationToken),
+                response => response.MaskingPolicyHealthReportCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListMaskingReports operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

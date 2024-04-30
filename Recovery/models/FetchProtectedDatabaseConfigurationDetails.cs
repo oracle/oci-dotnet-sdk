@@ -32,6 +32,8 @@ namespace Oci.RecoveryService.Models
             Tnsnames,
             [EnumMember(Value = "HOSTS")]
             Hosts,
+            [EnumMember(Value = "RCVCONF")]
+            Rcvconf,
             [EnumMember(Value = "ALL")]
             All
         };

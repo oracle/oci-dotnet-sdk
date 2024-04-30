@@ -32,6 +32,12 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<int> MetricValue { get; set; }
         
         /// <value>
+        /// The value of the metric.
+        /// </value>
+        [JsonProperty(PropertyName = "metricValueDouble")]
+        public System.Double MetricValueDouble { get; set; }
+        
+        /// <value>
         /// The name of the metric.
         /// </value>
         /// <remarks>

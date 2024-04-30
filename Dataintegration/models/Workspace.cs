@@ -195,5 +195,11 @@ namespace Oci.DataintegrationService.Models
         [JsonProperty(PropertyName = "registryId")]
         public string RegistryId { get; set; }
         
+        /// <value>
+        /// key-value pairs of workspace properties
+        /// </value>
+        [JsonProperty(PropertyName = "workspaceProperties")]
+        public System.Collections.Generic.Dictionary<string, string> WorkspaceProperties { get; set; }
+        
     }
 }

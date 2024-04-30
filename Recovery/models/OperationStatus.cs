@@ -21,6 +21,8 @@ namespace Oci.RecoveryService.Models
       UnknownEnumValue,
       [EnumMember(Value = "ACCEPTED")]
       Accepted,
+      [EnumMember(Value = "WAITING")]
+      Waiting,
       [EnumMember(Value = "IN_PROGRESS")]
       InProgress,
       [EnumMember(Value = "FAILED")]

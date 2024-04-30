@@ -92,6 +92,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isDesupportedVersion")]
         public System.Nullable<bool> IsDesupportedVersion { get; set; }
         
+        /// <value>
+        /// Indicates whether unified autiding is enabled or not. Set to True to enable unified auditing on respective DBHome.
+        /// </value>
+        [JsonProperty(PropertyName = "isUnifiedAuditingEnabled")]
+        public System.Nullable<bool> IsUnifiedAuditingEnabled { get; set; }
+        
     }
 
     public class CreateDbHomeBaseModelConverter : JsonConverter

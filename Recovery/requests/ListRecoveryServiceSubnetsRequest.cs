@@ -31,13 +31,6 @@ namespace Oci.RecoveryService.Requests
         
         /// <value>
         /// A filter to return only the resources that match the specified lifecycle state.
-        /// Allowed values are:
-        ///   - CREATING
-        ///   - UPDATING
-        ///   - ACTIVE
-        ///   - DELETING
-        ///   - DELETED
-        ///   - FAILED
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<LifecycleState> LifecycleState { get; set; }

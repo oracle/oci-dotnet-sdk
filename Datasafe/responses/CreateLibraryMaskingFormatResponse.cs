@@ -40,7 +40,7 @@ namespace Oci.DatasafeService.Responses
 
 
         /// <value>
-        /// The URI of the library masking format. 
+        /// The URI of the library masking format.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "location")]
