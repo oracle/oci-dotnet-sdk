@@ -43,7 +43,9 @@ namespace Oci.LoadbalancerService.Models
             [EnumMember(Value = "REDIRECT")]
             Redirect,
             [EnumMember(Value = "HTTP_HEADER")]
-            HttpHeader
+            HttpHeader,
+            [EnumMember(Value = "IP_BASED_MAX_CONNECTIONS")]
+            IpBasedMaxConnections
         };
 
         
@@ -90,6 +92,9 @@ namespace Oci.LoadbalancerService.Models
                     break;
                 case "ALLOW":
                     obj = new AllowRule();
+                    break;
+                case "IP_BASED_MAX_CONNECTIONS":
+                    obj = new IpBasedMaxConnectionsRule();
                     break;
                 case "HTTP_HEADER":
                     obj = new HttpHeaderRule();

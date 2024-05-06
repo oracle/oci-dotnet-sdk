@@ -76,6 +76,14 @@ namespace Oci.LoadbalancerService.Models
         public System.Nullable<int> Weight { get; set; }
         
         /// <value>
+        /// The maximum number of simultaneous connections the load balancer can make to the backend.
+        /// <br/>
+        /// Example: 300
+        /// </value>
+        [JsonProperty(PropertyName = "maxConnections")]
+        public System.Nullable<int> MaxConnections { get; set; }
+        
+        /// <value>
         /// Whether the load balancer should drain this server. Servers marked \"drain\" receive no new
         /// incoming traffic.
         /// <br/>

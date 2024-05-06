@@ -41,6 +41,12 @@ namespace Oci.BdsService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<PatchHistorySummary.LifecycleStateEnum> LifecycleState { get; set; }
         
+        /// <value>
+        /// The version of the patch
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "patchVersion")]
+        public string PatchVersion { get; set; }
+        
         ///
         /// <value>
         /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending. If no value is specified timeCreated is default.
@@ -60,12 +66,6 @@ namespace Oci.BdsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
-        
-        /// <value>
-        /// The version of the patch
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "patchVersion")]
-        public string PatchVersion { get; set; }
         
         /// <value>
         /// The sort order to use, either 'asc' or 'desc'.

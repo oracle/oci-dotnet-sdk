@@ -149,6 +149,19 @@ namespace Oci.LoadbalancerService.Models
         public System.Nullable<bool> IsPrivate { get; set; }
         
         /// <value>
+        /// Whether or not the load balancer has delete protection enabled.
+        /// <br/>
+        /// If \"true\", the loadbalancer will be protected against deletion if configured to accept traffic.
+        /// <br/>
+        /// If \"false\", the loadbalancer will not be protected against deletion.
+        /// <br/>
+        /// Delete protection is not be enabled unless this field is set to \"true\".
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isDeleteProtectionEnabled")]
+        public System.Nullable<bool> IsDeleteProtectionEnabled { get; set; }
+        
+        /// <value>
         /// An array of subnet [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         [JsonProperty(PropertyName = "subnetIds")]

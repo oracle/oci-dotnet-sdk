@@ -243,5 +243,17 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "timeMaintenanceRebootDue")]
         public System.Nullable<System.DateTime> TimeMaintenanceRebootDue { get; set; }
         
+        /// <value>
+        /// BDS-assigned Operating System version for the node.
+        /// </value>
+        [JsonProperty(PropertyName = "osVersion")]
+        public string OsVersion { get; set; }
+        
+        /// <value>
+        /// Indicates if the node requires a reboot to either reflect the latest os kernel or take actions for maintenance reboot.
+        /// </value>
+        [JsonProperty(PropertyName = "isRebootRequired")]
+        public System.Nullable<bool> IsRebootRequired { get; set; }
+        
     }
 }

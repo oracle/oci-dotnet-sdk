@@ -59,6 +59,15 @@ namespace Oci.DisasterrecoveryService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A flag indicating whether this group should be enabled for execution.
+        /// This flag is only applicable to the `USER_DEFINED_PAUSE` group. The flag should be null for the remaining group types.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isPauseEnabled")]
+        public System.Nullable<bool> IsPauseEnabled { get; set; }
+        
+        /// <value>
         /// The list of steps in the group.
         /// 
         /// </value>
