@@ -195,9 +195,9 @@ namespace Oci.LoadbalancerService.Models
     /// <br/>
     /// *  __oci-default-http2-tls-13-ssl-cipher-suite-v1__
     /// <br/>
-    ///         \"TLS-AES-128-GCM-SHA256\"
-    ///         \"TLS-AES-256-GCM-SHA384\"
-    ///         \"TLS-CHACHA20-POLY1305-SHA256\"
+    ///         \"TLS_AES_128_GCM_SHA256\"
+    ///         \"TLS_AES_256_GCM_SHA384\"
+    ///         \"TLS_CHACHA20_POLY1305_SHA256\"
     /// <br/>
     /// *  __oci-default-http2-tls-12-13-ssl-cipher-suite-v1__
     /// <br/>
@@ -207,21 +207,21 @@ namespace Oci.LoadbalancerService.Models
     ///         \"ECDHE-ECDSA-AES128-GCM-SHA256\"
     ///         \"DHE-RSA-AES256-GCM-SHA384\"
     ///         \"DHE-RSA-AES128-GCM-SHA256\"
-    ///         \"TLS-AES-128-GCM-SHA256\"
-    ///         \"TLS-AES-256-GCM-SHA384\"
-    ///         \"TLS-CHACHA20-POLY1305-SHA256\"
+    ///         \"TLS_AES_128_GCM_SHA256\"
+    ///         \"TLS_AES_256_GCM_SHA384\"
+    ///         \"TLS_CHACHA20_POLY1305_SHA256\"
     /// <br/>
     /// *  __oci-tls-13-recommended-ssl-cipher-suite-v1__
     /// <br/>
-    ///         \"TLS-AES-128-GCM-SHA256\"
-    ///         \"TLS-AES-256-GCM-SHA384\"
-    ///         \"TLS-CHACHA20-POLY1305-SHA256\"
+    ///         \"TLS_AES_128_GCM_SHA256\"
+    ///         \"TLS_AES_256_GCM_SHA384\"
+    ///         \"TLS_CHACHA20_POLY1305_SHA256\"
     /// <br/>
     /// *  __oci-tls-12-13-wider-ssl-cipher-suite-v1__
     /// <br/>
-    ///         \"TLS-AES-128-GCM-SHA256\"
-    ///         \"TLS-AES-256-GCM-SHA384\"
-    ///         \"TLS-CHACHA20-POLY1305-SHA256\"
+    ///         \"TLS_AES_128_GCM_SHA256\"
+    ///         \"TLS_AES_256_GCM_SHA384\"
+    ///         \"TLS_CHACHA20_POLY1305_SHA256\"
     ///         \"ECDHE-ECDSA-AES128-GCM-SHA256\"
     ///         \"ECDHE-RSA-AES128-GCM-SHA256\"
     ///         \"ECDHE-ECDSA-AES128-SHA256\"
@@ -236,9 +236,9 @@ namespace Oci.LoadbalancerService.Models
     ///         \"AES256-SHA256\"
     /// <br/>
     ///   *  __oci-tls-11-12-13-wider-ssl-cipher-suite-v1__
-    ///         \"TLS-AES-128-GCM-SHA256\"
-    ///         \"TLS-AES-256-GCM-SHA384\"
-    ///         \"TLS-CHACHA20-POLY1305-SHA256\"
+    ///         \"TLS_AES_128_GCM_SHA256\"
+    ///         \"TLS_AES_256_GCM_SHA384\"
+    ///         \"TLS_CHACHA20_POLY1305_SHA256\"
     ///         \"ECDHE-ECDSA-AES128-GCM-SHA256\"
     ///         \"ECDHE-RSA-AES128-GCM-SHA256\"
     ///         \"ECDHE-ECDSA-AES128-SHA256\"
@@ -296,11 +296,11 @@ namespace Oci.LoadbalancerService.Models
         /// <br/>
         /// *  __TLSv1.3 ciphers__
         /// <br/>
-        ///         \"TLS-AES-128-GCM-SHA256\"
-        ///         \"TLS-AES-256-GCM-SHA384\"
-        ///         \"TLS-CHACHA20-POLY1305-SHA256\"
-        ///         \"TLS-AES-128-CCM-SHA256\"
-        ///         \"TLS-AES-128-CCM-8-SHA256\"
+        ///         \"TLS_AES_128_GCM_SHA256\"
+        ///         \"TLS_AES_256_GCM_SHA384\"
+        ///         \"TLS_CHACHA20_POLY1305_SHA256\"
+        ///         \"TLS_AES_128_CCM_SHA256\"
+        ///         \"TLS_AES_128_CCM_8_SHA256\"
         /// <br/>
         /// *  __TLSv1.2 ciphers__
         /// <br/>

@@ -16,8 +16,8 @@ namespace Oci.DisasterrecoveryService.Models
   /// The types of DR plan that can be created, updated, or deleted by the user.
     /// - SWITCHOVER - Switchover from primary to standby.
     /// - FAILOVER - Failover to standby.
-    /// - START_DRILL - Start DR drill.
-    /// - STOP_DRILL - Stop DR drill.
+    /// - START_DRILL - Start DR Drill.
+    /// - STOP_DRILL - Stop DR Drill.
     /// 
   /// </summary>
   public enum DrPlanType {

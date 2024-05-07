@@ -52,7 +52,7 @@ namespace Oci.LoadbalancerService.Models
         /// To get a list of available shapes, use the {@link #listShapes(ListShapesRequest) listShapes}
         /// operation.
         /// <br/>
-        /// Example: flexibleNOTE: Starting May 2023, Fixed shapes - 10Mbps, 100Mbps, 400Mbps, 8000Mbps would be deprecated and only shape      allowed would be Flexible
+        /// Example: flexibleNOTE: After May 2023, Fixed shapes - 10Mbps, 100Mbps, 400Mbps, 8000Mbps would be deprecated and only shape      allowed would be Flexible
         /// </value>
         /// <remarks>
         /// Required
@@ -83,6 +83,19 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPrivate")]
         public System.Nullable<bool> IsPrivate { get; set; }
+        
+        /// <value>
+        /// Whether or not the load balancer has delete protection enabled.
+        /// <br/>
+        /// If \"true\", the loadbalancer will be protected against deletion if configured to accept traffic.
+        /// <br/>
+        /// If \"false\", the loadbalancer will not be protected against deletion.
+        /// <br/>
+        /// Delete protection will not be enabled unless a value of \"true\" is provided.
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isDeleteProtectionEnabled")]
+        public System.Nullable<bool> IsDeleteProtectionEnabled { get; set; }
                 ///
         /// <value>
         /// Whether the load balancer has an IPv4 or IPv6 IP address.

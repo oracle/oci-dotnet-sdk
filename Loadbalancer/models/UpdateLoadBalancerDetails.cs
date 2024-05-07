@@ -34,6 +34,20 @@ namespace Oci.LoadbalancerService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Whether or not the load balancer has delete protection enabled.
+        /// <br/>
+        /// If \"true\", the loadbalancer will be protected against deletion if configured to accept traffic.
+        /// <br/>
+        /// If \"false\", the loadbalancer will not be protected against deletion.
+        /// <br/>
+        /// If null or unset, the value for delete protection will not be changed.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isDeleteProtectionEnabled")]
+        public System.Nullable<bool> IsDeleteProtectionEnabled { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

@@ -17,6 +17,7 @@ namespace Oci.DisasterrecoveryService.Models
     /// - USER_DEFINED - DR plan group whose contents are defined by the user.
     /// - BUILT_IN - DR plan group whose contents are pre-defined by the service.  These groups cannot be modified by the user.
     /// - BUILT_IN_PRECHECK - DR plan precheck group whose contents are pre-defined by the service. These groups cannot be modified by the user.
+    /// - USER_DEFINED_PAUSE - DR plan user-defined pause group.
     /// 
   /// </summary>
   public enum DrPlanGroupType {
@@ -28,6 +29,8 @@ namespace Oci.DisasterrecoveryService.Models
       [EnumMember(Value = "BUILT_IN")]
       BuiltIn,
       [EnumMember(Value = "BUILT_IN_PRECHECK")]
-      BuiltInPrecheck
+      BuiltInPrecheck,
+      [EnumMember(Value = "USER_DEFINED_PAUSE")]
+      UserDefinedPause
   }
 }

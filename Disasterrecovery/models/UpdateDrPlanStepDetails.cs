@@ -38,7 +38,8 @@ namespace Oci.DisasterrecoveryService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The error mode for this step.
+        /// The error mode for this step. 
+        /// The default error mode for the step is `STOP_ON_ERROR`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "errorMode")]
@@ -47,6 +48,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// The timeout in seconds for executing this step.
+        /// When creating a new step, if no timeout is specified, the default timeout is set to `3600` seconds. 
         /// <br/>
         /// Example: 600
         /// </value>
@@ -55,6 +57,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// A flag indicating whether this step should be enabled for execution.
+        /// The default value for the isEnabled flag is `true`.
         /// <br/>
         /// Example: true
         /// </value>

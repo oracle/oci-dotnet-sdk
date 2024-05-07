@@ -288,5 +288,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "monthlyDbServerVersion")]
         public string MonthlyDbServerVersion { get; set; }
         
+        /// <value>
+        /// Details of the file system configuration of the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "definedFileSystemConfigurations")]
+        public System.Collections.Generic.List<DefinedFileSystemConfiguration> DefinedFileSystemConfigurations { get; set; }
+        
     }
 }

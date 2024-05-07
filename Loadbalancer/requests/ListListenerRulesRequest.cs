@@ -31,7 +31,7 @@ namespace Oci.LoadbalancerService.Requests
         
         /// <value>
         /// The name of the listener the rules are associated with.
-        /// 
+        /// Example: example_listener
         /// </value>
         /// <remarks>
         /// Required

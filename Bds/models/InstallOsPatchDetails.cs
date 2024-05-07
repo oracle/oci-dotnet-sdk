@@ -41,5 +41,8 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
         
+        [JsonProperty(PropertyName = "patchingConfigs")]
+        public PatchingConfigs PatchingConfigs { get; set; }
+        
     }
 }

@@ -65,6 +65,15 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "backends")]
         public System.Collections.Generic.List<Backend> Backends { get; set; }
         
+        /// <value>
+        /// The maximum number of simultaneous connections the load balancer can make to any backend
+        /// in the backend set unless the backend has its own maxConnections setting.
+        /// <br/>
+        /// Example: 300
+        /// </value>
+        [JsonProperty(PropertyName = "backendMaxConnections")]
+        public System.Nullable<int> BackendMaxConnections { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>
