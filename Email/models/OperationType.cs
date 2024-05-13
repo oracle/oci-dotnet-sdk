@@ -34,6 +34,12 @@ namespace Oci.EmailService.Models
       [EnumMember(Value = "MOVE_EMAIL_DOMAIN")]
       MoveEmailDomain,
       [EnumMember(Value = "UPDATE_EMAIL_DOMAIN")]
-      UpdateEmailDomain
+      UpdateEmailDomain,
+      [EnumMember(Value = "CREATE_RETURN_PATH")]
+      CreateReturnPath,
+      [EnumMember(Value = "DELETE_RETURN_PATH")]
+      DeleteReturnPath,
+      [EnumMember(Value = "UPDATE_RETURN_PATH")]
+      UpdateReturnPath
   }
 }

@@ -19,6 +19,16 @@ namespace Oci.MarketplacepublisherService.Models
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
+      [EnumMember(Value = "CREATE_OFFER")]
+      CreateOffer,
+      [EnumMember(Value = "UPDATE_OFFER")]
+      UpdateOffer,
+      [EnumMember(Value = "DELETE_OFFER")]
+      DeleteOffer,
+      [EnumMember(Value = "MOVE_OFFER")]
+      MoveOffer,
+      [EnumMember(Value = "DELETE_OFFER_ATTACHMENT")]
+      DeleteOfferAttachment,
       [EnumMember(Value = "PUBLISH_LISTING_REVISION_PACKAGE")]
       PublishListingRevisionPackage,
       [EnumMember(Value = "UNPUBLISH_LISTING_REVISION_PACKAGE")]

@@ -99,6 +99,19 @@ namespace Oci.EmailService.Models
         public System.Nullable<bool> IsSpf { get; set; }
         
         /// <value>
+        /// The current domain verification status.
+        /// </value>
+        [JsonProperty(PropertyName = "domainVerificationStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DomainVerificationStatusType> DomainVerificationStatus { get; set; }
+        
+        /// <value>
+        /// Id for Domain in Domain Management (under governance) if DOMAINID verification method used.
+        /// </value>
+        [JsonProperty(PropertyName = "domainVerificationId")]
+        public string DomainVerificationId { get; set; }
+        
+        /// <value>
         /// The description of an email domain.
         /// </value>
         [JsonProperty(PropertyName = "description")]

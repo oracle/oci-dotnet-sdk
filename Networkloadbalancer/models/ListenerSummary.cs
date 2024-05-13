@@ -83,5 +83,11 @@ namespace Oci.NetworkloadbalancerService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IpVersion> IpVersion { get; set; }
         
+        /// <value>
+        /// Property to enable/disable PPv2 feature for this listener.
+        /// </value>
+        [JsonProperty(PropertyName = "isPpv2Enabled")]
+        public System.Nullable<bool> IsPpv2Enabled { get; set; }
+        
     }
 }

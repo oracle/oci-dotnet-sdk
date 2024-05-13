@@ -195,5 +195,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "systemVersion")]
         public string SystemVersion { get; set; }
         
+        /// <value>
+        /// Details of the file system configuration of the VM cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "fileSystemConfigurationDetails")]
+        public System.Collections.Generic.List<FileSystemConfigurationDetail> FileSystemConfigurationDetails { get; set; }
+        
     }
 }
