@@ -23,6 +23,12 @@ namespace Oci.EmailService.Models
     {
         
         /// <value>
+        /// Id for Domain in Domain Management (under governance) if DOMAINID verification method used.
+        /// </value>
+        [JsonProperty(PropertyName = "domainVerificationId")]
+        public string DomainVerificationId { get; set; }
+        
+        /// <value>
         /// A string that describes the details about the domain. It does not have to be unique,
         /// and you can change it. Avoid entering confidential information.
         /// 

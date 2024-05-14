@@ -71,6 +71,12 @@ namespace Oci.EmailService.Models
             Creating,
             [EnumMember(Value = "ACTIVE")]
             Active,
+            [EnumMember(Value = "NEEDS_ATTENTION")]
+            NeedsAttention,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            [EnumMember(Value = "FAILED")]
+            Failed,
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETED")]

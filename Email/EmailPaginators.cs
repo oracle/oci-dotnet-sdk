@@ -148,6 +148,55 @@ namespace Oci.EmailService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListEmailReturnPaths operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListEmailReturnPathsResponse> ListEmailReturnPathsResponseEnumerator(ListEmailReturnPathsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListEmailReturnPathsRequest, ListEmailReturnPathsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListEmailReturnPaths(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the EmailReturnPathSummary objects
+        /// contained in responses from the ListEmailReturnPaths operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<EmailReturnPathSummary> ListEmailReturnPathsRecordEnumerator(ListEmailReturnPathsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListEmailReturnPathsRequest, ListEmailReturnPathsResponse, EmailReturnPathSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListEmailReturnPaths(request, retryConfiguration, cancellationToken),
+                response => response.EmailReturnPathCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListSenders operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
