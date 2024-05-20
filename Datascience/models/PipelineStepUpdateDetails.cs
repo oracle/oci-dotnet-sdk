@@ -30,7 +30,9 @@ namespace Oci.DatascienceService.Models
             [EnumMember(Value = "ML_JOB")]
             MlJob,
             [EnumMember(Value = "CUSTOM_SCRIPT")]
-            CustomScript
+            CustomScript,
+            [EnumMember(Value = "CONTAINER")]
+            Container
         };
 
         
@@ -80,6 +82,9 @@ namespace Oci.DatascienceService.Models
                     break;
                 case "CUSTOM_SCRIPT":
                     obj = new PipelineCustomScriptStepUpdateDetails();
+                    break;
+                case "CONTAINER":
+                    obj = new PipelineContainerStepUpdateDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

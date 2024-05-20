@@ -21,6 +21,9 @@ namespace Oci.DatascienceService.Models
     public class PipelineCustomScriptStepUpdateDetails : PipelineStepUpdateDetails
     {
         
+        [JsonProperty(PropertyName = "stepInfrastructureConfigurationDetails")]
+        public PipelineInfrastructureConfigurationDetails StepInfrastructureConfigurationDetails { get; set; }
+        
         [JsonProperty(PropertyName = "stepType")]
         private readonly string stepType = "CUSTOM_SCRIPT";
     }

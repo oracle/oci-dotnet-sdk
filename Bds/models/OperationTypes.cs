@@ -90,6 +90,24 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "EXECUTE_BOOTSTRAP_SCRIPT")]
       ExecuteBootstrapScript,
       [EnumMember(Value = "ODH_SERVICE_CERTIFICATE_UPDATE")]
-      OdhServiceCertificateUpdate
+      OdhServiceCertificateUpdate,
+      [EnumMember(Value = "CREATE_BACKUP_CONFIG")]
+      CreateBackupConfig,
+      [EnumMember(Value = "UPDATE_BACKUP_CONFIG")]
+      UpdateBackupConfig,
+      [EnumMember(Value = "DELETE_BACKUP_CONFIG")]
+      DeleteBackupConfig,
+      [EnumMember(Value = "CREATE_NODE_REPLACE_CONFIG")]
+      CreateNodeReplaceConfig,
+      [EnumMember(Value = "UPDATE_NODE_REPLACE_CONFIG")]
+      UpdateNodeReplaceConfig,
+      [EnumMember(Value = "DELETE_NODE_REPLACE_CONFIG")]
+      DeleteNodeReplaceConfig,
+      [EnumMember(Value = "BACKUP_NODES")]
+      BackupNodes,
+      [EnumMember(Value = "DELETE_NODE_BACKUP")]
+      DeleteNodeBackup,
+      [EnumMember(Value = "REPLACE_NODE")]
+      ReplaceNode
   }
 }

@@ -69,6 +69,8 @@ namespace Oci.DatascienceService.Models
             IntelSkylake,
             [EnumMember(Value = "NVIDIA_GPU")]
             NvidiaGpu,
+            [EnumMember(Value = "GENERIC")]
+            Generic,
             [EnumMember(Value = "LEGACY")]
             Legacy,
             [EnumMember(Value = "ARM")]

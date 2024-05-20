@@ -110,7 +110,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "ActivateClusterPlacementGroup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/ClusterPlacementGroup/ActivateClusterPlacementGroup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -166,7 +166,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "CancelWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/WorkRequest/CancelWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -226,7 +226,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "ChangeClusterPlacementGroupCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/ClusterPlacementGroup/ChangeClusterPlacementGroupCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -283,7 +283,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "CreateClusterPlacementGroup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/ClusterPlacementGroup/CreateClusterPlacementGroup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -339,7 +339,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "DeactivateClusterPlacementGroup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/ClusterPlacementGroup/DeactivateClusterPlacementGroup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -395,7 +395,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "DeleteClusterPlacementGroup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/ClusterPlacementGroup/DeleteClusterPlacementGroup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -451,7 +451,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "GetClusterPlacementGroup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/ClusterPlacementGroup/GetClusterPlacementGroup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -507,7 +507,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -564,7 +564,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "ListClusterPlacementGroups",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/ClusterPlacementGroupCollection/ListClusterPlacementGroups",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -621,7 +621,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -678,7 +678,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -735,7 +735,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/WorkRequest/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -791,7 +791,7 @@ namespace Oci.ClusterplacementgroupsService
                     ServiceName = "ClusterPlacementGroupsCP",
                     OperationName = "UpdateClusterPlacementGroup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/clusterplacementgroups/20230801/ClusterPlacementGroup/UpdateClusterPlacementGroup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

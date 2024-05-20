@@ -42,6 +42,13 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "blockStorageSizeInGBs")]
         public System.Nullable<int> BlockStorageSizeInGBs { get; set; }
         
+        /// <value>
+        /// The subnet to create a secondary vnic in to attach to the instance running the pipeline step.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
+        
         [JsonProperty(PropertyName = "shapeConfigDetails")]
         public PipelineShapeConfigDetails ShapeConfigDetails { get; set; }
         
