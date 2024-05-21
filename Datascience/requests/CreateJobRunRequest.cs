@@ -42,5 +42,12 @@ namespace Oci.DatascienceService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
+        
+        /// <value>
+        /// URL to fetch the Resource Principal Token from the parent resource.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-parent-rpt-url")]
+        public string OpcParentRptUrl { get; set; }
     }
 }

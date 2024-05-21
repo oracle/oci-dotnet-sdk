@@ -30,7 +30,9 @@ namespace Oci.DatascienceService.Models
             [EnumMember(Value = "ML_JOB")]
             MlJob,
             [EnumMember(Value = "CUSTOM_SCRIPT")]
-            CustomScript
+            CustomScript,
+            [EnumMember(Value = "CONTAINER")]
+            Container
         };
 
         
@@ -82,6 +84,9 @@ namespace Oci.DatascienceService.Models
             var discriminator = jsonObject["stepType"].Value<string>();
             switch (discriminator)
             {
+                case "CONTAINER":
+                    obj = new PipelineContainerStepDetails();
+                    break;
                 case "ML_JOB":
                     obj = new PipelineMLJobStepDetails();
                     break;

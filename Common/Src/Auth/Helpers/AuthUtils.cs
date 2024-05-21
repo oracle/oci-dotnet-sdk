@@ -7,6 +7,8 @@ using System;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using Oci.Common.Auth.Internal;
+using Org.BouncyCastle.Crypto.Parameters;
+using Org.BouncyCastle.X509;
 
 namespace Oci.Common.Auth.Utils
 {
@@ -57,6 +59,19 @@ namespace Oci.Common.Auth.Utils
                 }
             }
             return bar.ToString().TrimEnd(':');
+        }
+
+        public static string GetBase64EncodedKey(RsaKeyParameters key)
+        {
+            try
+            {
+                byte[] publicKeyDer = SubjectPublicKeyInfoFactory.CreateSubjectPublicKeyInfo(key).GetDerEncoded();
+                return Convert.ToBase64String(publicKeyDer);
+            }
+            catch (Exception e)
+            {
+                throw new InvalidOperationException("Failed to convert public key from RsaKeyParameters type to string type", e);
+            }
         }
     }
 }

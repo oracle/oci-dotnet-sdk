@@ -5,6 +5,7 @@
 
 using System;
 using System.IdentityModel.Tokens.Jwt;
+using Org.BouncyCastle.Asn1.Cms;
 
 namespace Oci.Common.Auth
 {
@@ -45,7 +46,7 @@ namespace Oci.Common.Auth
         /// Copy and paste the token here: https://jwt.io/ to find keys and values
         /// </summary>
         /// <returns> true if valid </returns>
-        public bool IsValid()
+        public bool IsValid(double time = 0d)
         {
             if (jwt == null)
             {
@@ -54,6 +55,7 @@ namespace Oci.Common.Auth
             }
 
             var expDateTime = jwt.ValidTo;
+            expDateTime.Subtract(TimeSpan.FromMilliseconds(time));
             if (expDateTime != null && expDateTime.CompareTo(DateTime.UtcNow) > 0)
             {
                 logger.Debug("Security token is not expired");
@@ -91,6 +93,20 @@ namespace Oci.Common.Auth
                 logger.Debug("Claim not found");
                 return null;
             }
+        }
+
+        /// <summary>
+        /// Return the total milliseconds the jwt token is valid for
+        /// </summary>
+        public double GetTokenValidDuration()
+        {
+            if (jwt == null)
+            {
+                return 0d;
+            }
+            var issueDateTime = jwt.ValidFrom;
+            var expDateTime = jwt.ValidTo;
+            return expDateTime.Subtract(issueDateTime).TotalMilliseconds;
         }
     }
 }

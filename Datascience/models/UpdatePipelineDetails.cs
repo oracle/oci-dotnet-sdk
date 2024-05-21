@@ -36,11 +36,14 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "configurationDetails")]
         public PipelineConfigurationDetails ConfigurationDetails { get; set; }
         
+        [JsonProperty(PropertyName = "infrastructureConfigurationDetails")]
+        public PipelineInfrastructureConfigurationDetails InfrastructureConfigurationDetails { get; set; }
+        
         [JsonProperty(PropertyName = "logConfigurationDetails")]
         public PipelineLogConfigurationDetails LogConfigurationDetails { get; set; }
         
         /// <value>
-        /// Array of update details for each step. Only step configurations are allowed to be updated.
+        /// Array of update details for each step. Only step configurations and step infrastructure configurations are allowed to be updated.
         /// </value>
         [JsonProperty(PropertyName = "stepDetails")]
         public System.Collections.Generic.List<PipelineStepUpdateDetails> StepDetails { get; set; }

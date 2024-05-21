@@ -94,7 +94,7 @@ namespace Oci.Examples
             catch (Exception ex)
             {
                 logger.Info($"Exception occurred with GenerativeAiInferenceClient: {ex}");
-                throw ex;
+                throw;
             }
         }
 

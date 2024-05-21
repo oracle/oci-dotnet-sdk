@@ -181,5 +181,10 @@ namespace Oci.Common.Utils
 
             return clone;
         }
+
+        public static string GenerateRequestID()
+        {
+            return Guid.NewGuid().ToString().Replace("-", "").ToLower();
+        }
     }
 }

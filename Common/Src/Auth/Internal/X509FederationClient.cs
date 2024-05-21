@@ -11,7 +11,6 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using Newtonsoft.Json;
 using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.X509;
 using Oci.Common.Auth.Utils;
 using Oci.Common.Http.Internal;
 using Oci.Common.Http.Signing;
@@ -178,16 +177,7 @@ namespace Oci.Common.Auth.Internal
                 throw new InvalidOperationException("Public key is missing in the key pair");
             }
 
-            string publicKeyDerBase64 = null;
-            try
-            {
-                byte[] publicKeyDer = SubjectPublicKeyInfoFactory.CreateSubjectPublicKeyInfo(publicKey).GetDerEncoded();
-                publicKeyDerBase64 = Convert.ToBase64String(publicKeyDer);
-            }
-            catch (Exception e)
-            {
-                throw new InvalidOperationException("Failed to convert public key from RsaKeyParameters type to string type", e);
-            }
+            string publicKeyDerBase64 = AuthUtils.GetBase64EncodedKey(publicKey);
 
             var certificateAndKeyPair = leafCertificateSupplier.GetCertificateAndKeyPair();
             if (certificateAndKeyPair == null)

@@ -53,5 +53,11 @@ namespace Oci.DatascienceService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]
         public string IfMatch { get; set; }
+        
+        /// <value>
+        /// A boolean value to specify whether to terminate pipeline run gracefully.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "terminateGracefully")]
+        public System.Nullable<bool> TerminateGracefully { get; set; }
     }
 }

@@ -255,5 +255,17 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "isRebootRequired")]
         public System.Nullable<bool> IsRebootRequired { get; set; }
         
+        /// <value>
+        /// The date and time the instance was replaced by a new vm with a node backup.
+        /// </value>
+        [JsonProperty(PropertyName = "timeReplaced")]
+        public System.Nullable<System.DateTime> TimeReplaced { get; set; }
+        
+        /// <value>
+        /// The node back id that was used for replacing the node.
+        /// </value>
+        [JsonProperty(PropertyName = "nodeBackupId")]
+        public string NodeBackupId { get; set; }
+        
     }
 }
