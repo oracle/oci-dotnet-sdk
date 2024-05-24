@@ -16,6 +16,9 @@ namespace Oci.JmsjavadownloadsService.Models
   /// The field to sort the Java download record.
   /// </summary>
   public enum JavaDownloadRecordSortBy {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "timeDownloaded")]
       TimeDownloaded,
       [EnumMember(Value = "downloadSourceId")]

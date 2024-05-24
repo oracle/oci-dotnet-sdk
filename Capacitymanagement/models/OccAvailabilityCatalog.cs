@@ -200,7 +200,7 @@ namespace Oci.CapacitymanagementService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
-        /// Details about capacity available for  different resources in catalog.
+        /// Details about capacity available for different resources in catalog.
         /// </value>
         [JsonProperty(PropertyName = "details")]
         public System.Collections.Generic.List<OccAvailabilitySummary> Details { get; set; }

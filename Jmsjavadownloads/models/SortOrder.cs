@@ -16,6 +16,9 @@ namespace Oci.JmsjavadownloadsService.Models
   /// Sort orders.
   /// </summary>
   public enum SortOrder {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ASC")]
       Asc,
       [EnumMember(Value = "DESC")]

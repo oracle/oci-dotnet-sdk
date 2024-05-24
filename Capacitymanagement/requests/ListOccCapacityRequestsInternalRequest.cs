@@ -54,6 +54,12 @@ namespace Oci.CapacitymanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A filter to return only the resources that match the request type. The match is not case sensitive.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "requestType")]
+        public System.Nullable<OccCapacityRequest.RequestTypeEnum> RequestType { get; set; }
+        
+        /// <value>
         /// A filter to return the list of capacity requests based on the OCID of the capacity request. This is done for the users who have INSPECT permission on the resource but do not have READ permission.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]

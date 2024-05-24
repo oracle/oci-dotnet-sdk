@@ -82,6 +82,37 @@ namespace Oci.DatabasemanagementService.Models
         public string DatabaseContainerId { get; set; }
         
         /// <value>
+        /// The Database id of the Managed Database. Every database had its own id and that value is captured here.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseId")]
+        public string DatabaseId { get; set; }
+        
+        /// <value>
+        /// The Primary Database id of the Managed Database.
+        /// </value>
+        [JsonProperty(PropertyName = "primaryDbId")]
+        public string PrimaryDbId { get; set; }
+        
+        /// <value>
+        /// The Primary Database unique name of the Managed Database.
+        /// </value>
+        [JsonProperty(PropertyName = "primaryDbUniqueName")]
+        public string PrimaryDbUniqueName { get; set; }
+        
+        /// <value>
+        /// The Database unique name of the Managed Database.
+        /// </value>
+        [JsonProperty(PropertyName = "dbUniqueName")]
+        public string DbUniqueName { get; set; }
+        
+        /// <value>
+        /// The Database role of the Managed Database.
+        /// </value>
+        [JsonProperty(PropertyName = "dbRole")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DbRole> DbRole { get; set; }
+        
+        /// <value>
         /// A list of the database health metrics like CPU, Storage, and Memory.
         /// </value>
         [JsonProperty(PropertyName = "metrics")]

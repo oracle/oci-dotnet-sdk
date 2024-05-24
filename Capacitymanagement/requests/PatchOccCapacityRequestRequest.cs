@@ -20,7 +20,7 @@ namespace Oci.CapacitymanagementService.Requests
     {
         
         /// <value>
-        /// Request to update the properties of the capacity request.
+        /// Request to update the details of the capacity request.
         /// </value>
         /// <remarks>
         /// Required

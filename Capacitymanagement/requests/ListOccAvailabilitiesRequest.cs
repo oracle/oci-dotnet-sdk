@@ -45,13 +45,13 @@ namespace Oci.CapacitymanagementService.Requests
         /// Resource type using which the capacity constraints of an availability catalog can be filtered.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]
-        public System.Nullable<OccAvailabilitySummary.ResourceTypeEnum> ResourceType { get; set; }
+        public string ResourceType { get; set; }
         
         /// <value>
         /// Workload type using the resources in an availability catalog can be filtered.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "workloadType")]
-        public System.Nullable<OccAvailabilitySummary.WorkloadTypeEnum> WorkloadType { get; set; }
+        public string WorkloadType { get; set; }
         
         /// <value>
         /// The maximum number of items to return.

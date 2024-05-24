@@ -132,6 +132,13 @@ namespace Oci.CapacitymanagementService.Models
         public System.Nullable<OccCapacityRequest.RequestStateEnum> RequestState { get; set; }
         
         /// <value>
+        /// Type of Capacity Request(New or Transfer)
+        /// </value>
+        [JsonProperty(PropertyName = "requestType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<OccCapacityRequest.RequestTypeEnum> RequestType { get; set; }
+        
+        /// <value>
         /// The time when the capacity request was created.
         /// </value>
         /// <remarks>

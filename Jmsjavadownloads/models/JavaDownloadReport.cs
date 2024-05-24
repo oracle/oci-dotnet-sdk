@@ -105,7 +105,7 @@ namespace Oci.JmsjavadownloadsService.Models
         public Principal CreatedBy { get; set; }
         
         /// <value>
-        /// The time the Java download report was created. An RFC3339 formatted datetime string.
+        /// The time the Java download report was created, displayed as an [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required
@@ -113,6 +113,34 @@ namespace Oci.JmsjavadownloadsService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The start time from when the download records are included (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeStart")]
+        public System.Nullable<System.DateTime> TimeStart { get; set; }
+        
+        /// <value>
+        /// The end time until when the download records are included (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeEnd")]
+        public System.Nullable<System.DateTime> TimeEnd { get; set; }
+        
+        /// <value>
+        /// The property used for sorting the records.
+        /// </value>
+        [JsonProperty(PropertyName = "sortBy")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<JavaDownloadRecordSortBy> SortBy { get; set; }
+        
+        /// <value>
+        /// The sort order for the records.
+        /// </value>
+        [JsonProperty(PropertyName = "sortOrder")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SortOrder> SortOrder { get; set; }
         
         /// <value>
         /// The current state of the Java download report.

@@ -33,7 +33,7 @@ namespace Oci.JmsjavadownloadsService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Group as property specifying the aggregation type for download counts.
+        /// The property that specifies the aggregation type for the download counts.
         /// </value>
         /// <remarks>
         /// Required

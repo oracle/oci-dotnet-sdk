@@ -35,10 +35,6 @@ namespace Oci.CapacitymanagementService.Models
         /// <value>
         /// The OCID of the availability catalog against which capacity request is made.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OccAvailabilityCatalogId is required.")]
         [JsonProperty(PropertyName = "occAvailabilityCatalogId")]
         public string OccAvailabilityCatalogId { get; set; }
         
@@ -72,6 +68,13 @@ namespace Oci.CapacitymanagementService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+        
+        /// <value>
+        /// Type of Capacity Request(New or Transfer)
+        /// </value>
+        [JsonProperty(PropertyName = "requestType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OccCapacityRequest.RequestTypeEnum> RequestType { get; set; }
         
         /// <value>
         /// Meaningful text about the capacity request.

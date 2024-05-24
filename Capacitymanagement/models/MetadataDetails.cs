@@ -30,7 +30,9 @@ namespace Oci.CapacitymanagementService.Models
             [EnumMember(Value = null)]
             UnknownEnumValue,
             [EnumMember(Value = "V1")]
-            V1
+            V1,
+            [EnumMember(Value = "V2")]
+            V2
         };
 
         /// <value>
