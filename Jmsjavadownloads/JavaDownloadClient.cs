@@ -188,6 +188,7 @@ namespace Oci.JmsjavadownloadsService
 
         /// <summary>
         /// Creates a new JavaDownloadToken in the tenancy with specified attributes.
+        /// Ensure that you review the license terms before token generation. Visit the &lt;a href&#x3D;\&quot;https://www.oracle.com/java/technologies/downloads\&quot;/&gt;Oracle Java Downloads&lt;/a&gt; page to understand the license terms of the Java version for which you are generating a token. By generating a token, you agree to the associated license terms. See &lt;a href&#x3D;\&quot;https://www.oracle.com/cis/java/technologies/javase/jdk-faqs.html\&quot;&gt;Oracle JDK Licensing - FAQs&lt;/a&gt; for detailed information.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

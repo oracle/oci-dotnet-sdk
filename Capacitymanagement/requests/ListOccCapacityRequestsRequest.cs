@@ -42,6 +42,12 @@ namespace Oci.CapacitymanagementService.Requests
         public System.Nullable<Namespace> Namespace { get; set; }
         
         /// <value>
+        /// A filter to return only the resources that match the request type. The match is not case sensitive.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "requestType")]
+        public System.Nullable<OccCapacityRequest.RequestTypeEnum> RequestType { get; set; }
+        
+        /// <value>
         /// A filter to return only the resources that match the entire display name. The match is not case sensitive.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]

@@ -62,21 +62,7 @@ namespace Oci.CapacitymanagementService.Models
         [Required(ErrorMessage = "DateExpectedCapacityHandover is required.")]
         [JsonProperty(PropertyName = "dateExpectedCapacityHandover")]
         public System.Nullable<System.DateTime> DateExpectedCapacityHandover { get; set; }
-                ///
-        /// <value>
-        /// The different types of resources against which customers can place capacity requests.
-        /// </value>
-        ///
-        public enum ResourceTypeEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "SERVER_HW")]
-            ServerHw,
-            [EnumMember(Value = "CAPACITY_CONSTRAINT")]
-            CapacityConstraint
-        };
-
+        
         /// <value>
         /// The different types of resources against which customers can place capacity requests.
         /// </value>
@@ -85,25 +71,8 @@ namespace Oci.CapacitymanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "ResourceType is required.")]
         [JsonProperty(PropertyName = "resourceType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<ResourceTypeEnum> ResourceType { get; set; }
-                ///
-        /// <value>
-        /// The type of workload (Generic/ROW).
-        /// </value>
-        ///
-        public enum WorkloadTypeEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "GENERIC")]
-            Generic,
-            [EnumMember(Value = "ROW")]
-            Row,
-            [EnumMember(Value = "US_PROD")]
-            UsProd
-        };
-
+        public string ResourceType { get; set; }
+        
         /// <value>
         /// The type of workload (Generic/ROW).
         /// </value>
@@ -112,8 +81,7 @@ namespace Oci.CapacitymanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "WorkloadType is required.")]
         [JsonProperty(PropertyName = "workloadType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<WorkloadTypeEnum> WorkloadType { get; set; }
+        public string WorkloadType { get; set; }
         
         /// <value>
         /// The name of the resource that the customer can request.
@@ -126,7 +94,7 @@ namespace Oci.CapacitymanagementService.Models
         public string ResourceName { get; set; }
         
         /// <value>
-        /// The quantity of available resource that the customer can request.
+        /// The quantity of resource currently available that the customer can request.
         /// </value>
         /// <remarks>
         /// Required
@@ -134,6 +102,26 @@ namespace Oci.CapacitymanagementService.Models
         [Required(ErrorMessage = "AvailableQuantity is required.")]
         [JsonProperty(PropertyName = "availableQuantity")]
         public System.Nullable<long> AvailableQuantity { get; set; }
+        
+        /// <value>
+        /// The total quantity of resource that the customer can request.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TotalAvailableQuantity is required.")]
+        [JsonProperty(PropertyName = "totalAvailableQuantity")]
+        public System.Nullable<long> TotalAvailableQuantity { get; set; }
+        
+        /// <value>
+        /// The quantity of resource currently demanded by the customer.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DemandedQuantity is required.")]
+        [JsonProperty(PropertyName = "demandedQuantity")]
+        public System.Nullable<long> DemandedQuantity { get; set; }
         
         /// <value>
         /// The unit in which the resource available is measured.
@@ -144,6 +132,13 @@ namespace Oci.CapacitymanagementService.Models
         [Required(ErrorMessage = "Unit is required.")]
         [JsonProperty(PropertyName = "unit")]
         public string Unit { get; set; }
+        
+        /// <value>
+        /// System tags for this resource. Each key is predefined and scoped to a namespace.
+        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
     }
 }

@@ -52,7 +52,7 @@ namespace Oci.JmsjavadownloadsService.Models
         public string Architecture { get; set; }
         
         /// <value>
-        /// The package type(typically the file extension) of the artifact.
+        /// The package type (typically the file extension) of the artifact.
         /// </value>
         [JsonProperty(PropertyName = "packageType")]
         public string PackageType { get; set; }

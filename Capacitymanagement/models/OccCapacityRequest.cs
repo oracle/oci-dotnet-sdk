@@ -89,6 +89,27 @@ namespace Oci.CapacitymanagementService.Models
         [Required(ErrorMessage = "OccCustomerGroupId is required.")]
         [JsonProperty(PropertyName = "occCustomerGroupId")]
         public string OccCustomerGroupId { get; set; }
+                ///
+        /// <value>
+        /// Type of Capacity Request(New or Transfer)
+        /// </value>
+        ///
+        public enum RequestTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "NEW")]
+            New,
+            [EnumMember(Value = "TRANSFER")]
+            Transfer
+        };
+
+        /// <value>
+        /// Type of Capacity Request(New or Transfer)
+        /// </value>
+        [JsonProperty(PropertyName = "requestType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<RequestTypeEnum> RequestType { get; set; }
         
         /// <value>
         /// The name of the region for which the capacity request was made.

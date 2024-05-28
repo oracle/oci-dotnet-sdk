@@ -291,6 +291,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Marketplacepr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Resourcescheduler", "Resourcescheduler\OCI.DotNetSDK.Resourcescheduler.csproj", "{EC8002F0-EB71-491D-ADCE-940B81DF26FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Demandsignal", "Demandsignal\OCI.DotNetSDK.Demandsignal.csproj", "{58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2647,5 +2649,17 @@ Global
         {EC8002F0-EB71-491D-ADCE-940B81DF26FD}.Release|x64.Build.0 = Release|Any CPU
         {EC8002F0-EB71-491D-ADCE-940B81DF26FD}.Release|x86.ActiveCfg = Release|Any CPU
         {EC8002F0-EB71-491D-ADCE-940B81DF26FD}.Release|x86.Build.0 = Release|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Debug|x64.Build.0 = Debug|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Debug|x86.Build.0 = Debug|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Release|Any CPU.Build.0 = Release|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Release|x64.ActiveCfg = Release|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Release|x64.Build.0 = Release|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Release|x86.ActiveCfg = Release|Any CPU
+        {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

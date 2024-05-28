@@ -54,7 +54,7 @@ namespace Oci.CapacitymanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// An user-friendly name for the availability catalog. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// An user-friendly name for the availability catalog. Does not have to be unique, and is changeable. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required

@@ -84,7 +84,7 @@ namespace Oci.JmsjavadownloadsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// The time the JavaDownloadToken was created. An RFC3339 formatted datetime string.
+        /// The time the JavaDownloadToken was created, displayed as an [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required
@@ -94,19 +94,19 @@ namespace Oci.JmsjavadownloadsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the JavaDownloadToken was updated. An RFC3339 formatted datetime string.
+        /// The time the JavaDownloadToken was updated, displayed as an [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The time the JavaDownloadToken was last used for download. An RFC3339 formatted datetime string.
+        /// The time the JavaDownloadToken was last used for download, displayed as an [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeLastUsed")]
         public System.Nullable<System.DateTime> TimeLastUsed { get; set; }
         
         /// <value>
-        /// The expiry time of the JavaDownloadToken. An RFC3339 formatted datetime string.
+        /// The expiry time of the JavaDownloadToken, displayed as an [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required

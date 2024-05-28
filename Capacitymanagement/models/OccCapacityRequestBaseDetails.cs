@@ -11,26 +11,25 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
+
 
 namespace Oci.CapacitymanagementService.Models
 {
     /// <summary>
     /// The details of the create capacity request. This model serves as a base for different namespaces.
     /// </summary>
-    [JsonConverter(typeof(OccCapacityRequestBaseDetailsModelConverter))]
     public class OccCapacityRequestBaseDetails 
     {
-                ///
+        
         /// <value>
         /// The type of the resource against which the user wants to place a capacity request.
         /// </value>
-        ///
-        public enum ResourceTypeEnum {
-            [EnumMember(Value = "SERVER_HW")]
-            ServerHw
-        };
-
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ResourceType is required.")]
+        [JsonProperty(PropertyName = "resourceType")]
+        public string ResourceType { get; set; }
         
         /// <value>
         /// The type of the workload (Generic/ROW).
@@ -40,8 +39,13 @@ namespace Oci.CapacitymanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "WorkloadType is required.")]
         [JsonProperty(PropertyName = "workloadType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<OccAvailabilitySummary.WorkloadTypeEnum> WorkloadType { get; set; }
+        public string WorkloadType { get; set; }
+        
+        /// <value>
+        /// The WorkloadType from where capacity request are to be transferred.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceWorkloadType")]
+        public string SourceWorkloadType { get; set; }
         
         /// <value>
         /// The incremental quantity of resources supplied as the provisioning is underway.
@@ -67,42 +71,25 @@ namespace Oci.CapacitymanagementService.Models
         [JsonProperty(PropertyName = "dateActualHandover")]
         public System.Nullable<System.DateTime> DateActualHandover { get; set; }
         
-    }
-
-    public class OccCapacityRequestBaseDetailsModelConverter : JsonConverter
-    {
-        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
-        public override bool CanWrite => false;
-        public override bool CanRead => true;
-        public override bool CanConvert(System.Type type)
-        {
-            return type == typeof(OccCapacityRequestBaseDetails);
-        }
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-        {
-            throw new System.InvalidOperationException("Use default serialization.");
-        }
-
-        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
-        {
-            var jsonObject = JObject.Load(reader);
-            var obj = default(OccCapacityRequestBaseDetails);
-            var discriminator = jsonObject["resourceType"].Value<string>();
-            switch (discriminator)
-            {
-                case "SERVER_HW":
-                    obj = new OccCapacityRequestComputeDetails();
-                    break;
-            }
-            if (obj != null)
-            {
-                serializer.Populate(jsonObject.CreateReader(), obj);
-            }
-            else
-            {
-                logger.Warn($"The type {discriminator} is not present under OccCapacityRequestBaseDetails! Returning null value.");
-            }
-            return obj;
-        }
+        /// <value>
+        /// The name of the COMPUTE server shape for which the request is made. Do not use CAPACITY_CONSTRAINT as the resource name.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ResourceName is required.")]
+        [JsonProperty(PropertyName = "resourceName")]
+        public string ResourceName { get; set; }
+        
+        /// <value>
+        /// The number of compute server's with name <resourceName> required by the user.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DemandQuantity is required.")]
+        [JsonProperty(PropertyName = "demandQuantity")]
+        public System.Nullable<long> DemandQuantity { get; set; }
+        
     }
 }

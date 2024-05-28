@@ -74,7 +74,7 @@ namespace Oci.JmsjavadownloadsService.Models
         public Principal LastUpdatedBy { get; set; }
         
         /// <value>
-        /// The date and time of license acceptance(formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// The date and time of license acceptance (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// 
         /// </value>
         /// <remarks>
@@ -85,7 +85,7 @@ namespace Oci.JmsjavadownloadsService.Models
         public System.Nullable<System.DateTime> TimeAccepted { get; set; }
         
         /// <value>
-        /// The date and time of last update(formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// The date and time of last update (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeLastUpdated")]

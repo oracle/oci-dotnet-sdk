@@ -68,7 +68,9 @@ namespace Oci.DatabasemanagementService.Models
             [EnumMember(Value = "SYSDBA")]
             Sysdba,
             [EnumMember(Value = "NORMAL")]
-            Normal
+            Normal,
+            [EnumMember(Value = "SYSDG")]
+            Sysdg
         };
 
         /// <value>
