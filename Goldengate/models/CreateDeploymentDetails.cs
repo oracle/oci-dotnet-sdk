@@ -81,6 +81,12 @@ namespace Oci.GoldengateService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<AddResourceLockDetails> Locks { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the backup being referenced.
         /// 
         /// </value>
@@ -89,6 +95,8 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet of the deployment's private endpoint.
+        /// The subnet must be a private subnet. For backward compatibility, public subnets are allowed until May 31 2025,
+        /// after which the private subnet will be enforced.
         /// 
         /// </value>
         /// <remarks>
@@ -101,7 +109,7 @@ namespace Oci.GoldengateService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a public subnet in the customer tenancy.
         /// Can be provided only for public deployments. If provided, the loadbalancer will be created in this subnet instead of the service tenancy.
-        /// For backward compatiblity this is an optional property for now, but it will become mandatory (for public deployments only) after October 1, 2024.
+        /// For backward compatibility, this is an optional property. It will become mandatory for public deployments after October 1, 2024.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "loadBalancerSubnetId")]

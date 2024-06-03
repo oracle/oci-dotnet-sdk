@@ -66,6 +66,15 @@ namespace Oci.GoldengateService.Models
         public string ConnectionString { get; set; }
         
         /// <value>
+        /// Authentication mode. It can be provided at creation of Oracle Autonomous Database Serverless connections,
+        /// when a databaseId is provided. The default value is MTLS.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "authenticationMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OracleConnection.AuthenticationModeEnum> AuthenticationMode { get; set; }
+        
+        /// <value>
         /// The wallet contents Oracle GoldenGate uses to make connections to a database.  This
         /// attribute is expected to be base64 encoded.
         /// 

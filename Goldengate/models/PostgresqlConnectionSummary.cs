@@ -119,6 +119,13 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the database system being referenced.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dbSystemId")]
+        public string DbSystemId { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "POSTGRESQL";
     }

@@ -90,6 +90,13 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "keyStorePassword")]
         public string KeyStorePassword { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Redis cluster.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "redisClusterId")]
+        public string RedisClusterId { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "REDIS";
     }

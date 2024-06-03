@@ -45,6 +45,20 @@ namespace Oci.GoldengateService.Models
         public string DeploymentId { get; set; }
         
         /// <value>
+        /// The type of deployment, which can be any one of the Allowed values. 
+        /// NOTE: Use of the value 'OGG' is maintained for backward compatibility purposes. 
+        ///     Its use is discouraged in favor of 'DATABASE_ORACLE'.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DeploymentType is required.")]
+        [JsonProperty(PropertyName = "deploymentType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DeploymentType> DeploymentType { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment being referenced.
         /// 
         /// </value>
@@ -191,6 +205,12 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
     }
 }

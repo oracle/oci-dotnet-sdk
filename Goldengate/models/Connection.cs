@@ -157,6 +157,12 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
+        /// <value>
         /// Refers to the customer's vault OCID. 
         /// If provided, it references a vault where GoldenGate can manage secrets. Customers must add policies to permit GoldenGate
         /// to manage secrets contained within this vault.
@@ -237,6 +243,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "JAVA_MESSAGE_SERVICE":
                     obj = new JavaMessageServiceConnection();
+                    break;
+                case "DB2":
+                    obj = new Db2Connection();
                     break;
                 case "ELASTICSEARCH":
                     obj = new ElasticsearchConnection();

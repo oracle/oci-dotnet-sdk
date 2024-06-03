@@ -574,6 +574,9 @@ namespace Oci.DatabaseService.Models
                 case "CROSS_REGION_DISASTER_RECOVERY":
                     obj = new CreateCrossRegionDisasterRecoveryDetails();
                     break;
+                case "CROSS_TENANCY_DISASTER_RECOVERY":
+                    obj = new CreateCrossTenancyDisasterRecoveryDetails();
+                    break;
                 case "BACKUP_FROM_TIMESTAMP":
                     obj = new CreateAutonomousDatabaseFromBackupTimestampDetails();
                     break;

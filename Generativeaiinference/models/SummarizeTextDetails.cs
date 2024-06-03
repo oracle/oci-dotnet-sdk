@@ -39,7 +39,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public ServingMode ServingMode { get; set; }
         
         /// <value>
-        /// The OCID of compartment that the user is authorized to use to call into the Generative AI service.
+        /// The OCID of compartment in which to call the Generative AI service to summarize text.
         /// </value>
         /// <remarks>
         /// Required

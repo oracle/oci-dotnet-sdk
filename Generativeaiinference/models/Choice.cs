@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// Represents a single instance of generated text.
+    /// Represents a single instance of the generated text.
     /// </summary>
     public class Choice 
     {

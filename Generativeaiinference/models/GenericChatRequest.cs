@@ -22,13 +22,13 @@ namespace Oci.GenerativeaiinferenceService.Models
     {
         
         /// <value>
-        /// The series of messages associated with this chat completion request. It should include previous messages in the conversation. Each message has a role and content.
+        /// The series of messages in a chat request. Includes the previous messages in a conversation. Each message includes a role (`USER` or the `CHATBOT`) and content.
         /// </value>
         [JsonProperty(PropertyName = "messages")]
         public System.Collections.Generic.List<Message> Messages { get; set; }
         
         /// <value>
-        /// Whether to stream back partial progress. If set, tokens are sent as data-only server-sent events as they become available.
+        /// Whether to stream back partial progress. If set to true, as tokens become available, they are sent as data-only server-sent events.
         /// </value>
         [JsonProperty(PropertyName = "isStream")]
         public System.Nullable<bool> IsStream { get; set; }
@@ -40,7 +40,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Nullable<int> NumGenerations { get; set; }
         
         /// <value>
-        /// Whether or not to return the user prompt in the response. Applies only to non-stream results.
+        /// Whether to include the user prompt in the response. Applies only to non-stream results.
         /// </value>
         [JsonProperty(PropertyName = "isEcho")]
         public System.Nullable<bool> IsEcho { get; set; }
@@ -103,13 +103,17 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Nullable<int> LogProbs { get; set; }
         
         /// <value>
-        /// The maximum number of tokens that can be generated per output sequence. The token count of your prompt plus max_tokens cannot exceed the model's context length.
+        /// The maximum number of tokens that can be generated per output sequence. The token count of your prompt plus `maxTokens` must not exceed the model's context length.
+        /// Not setting a value for maxTokens results in the possible use of model's full context length.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "maxTokens")]
         public System.Nullable<int> MaxTokens { get; set; }
         
         /// <value>
-        /// Modify the likelihood of specified tokens appearing in the completion.
+        /// Modifies the likelihood of specified tokens that appear in the completion.
+        /// <br/>
+        /// Example: '{&quot;6395&quot;: 2, &quot;8134&quot;: 1, &quot;21943&quot;: 0.5, &quot;5923&quot;: -100}'
         /// </value>
         [JsonProperty(PropertyName = "logitBias")]
         public System.Object LogitBias { get; set; }

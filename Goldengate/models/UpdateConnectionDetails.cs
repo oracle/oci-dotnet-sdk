@@ -182,6 +182,9 @@ namespace Oci.GoldengateService.Models
                 case "KAFKA":
                     obj = new UpdateKafkaConnectionDetails();
                     break;
+                case "DB2":
+                    obj = new UpdateDb2ConnectionDetails();
+                    break;
                 case "GENERIC":
                     obj = new UpdateGenericConnectionDetails();
                     break;

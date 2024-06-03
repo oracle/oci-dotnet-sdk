@@ -30,7 +30,9 @@ namespace Oci.GenerativeaiService.Models
             [EnumMember(Value = "TFEW_TRAINING_CONFIG")]
             TfewTrainingConfig,
             [EnumMember(Value = "VANILLA_TRAINING_CONFIG")]
-            VanillaTrainingConfig
+            VanillaTrainingConfig,
+            [EnumMember(Value = "LORA_TRAINING_CONFIG")]
+            LoraTrainingConfig
         };
 
         
@@ -97,6 +99,9 @@ namespace Oci.GenerativeaiService.Models
             var discriminator = jsonObject["trainingConfigType"].Value<string>();
             switch (discriminator)
             {
+                case "LORA_TRAINING_CONFIG":
+                    obj = new LoraTrainingConfig();
+                    break;
                 case "VANILLA_TRAINING_CONFIG":
                     obj = new VanillaTrainingConfig();
                     break;

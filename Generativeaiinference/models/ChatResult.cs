@@ -22,7 +22,7 @@ namespace Oci.GenerativeaiinferenceService.Models
     {
         
         /// <value>
-        /// The OCID of the model used in this inference request.
+        /// The OCID of the model that's used in this inference request.
         /// </value>
         /// <remarks>
         /// Required

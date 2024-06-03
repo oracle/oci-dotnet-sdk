@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// Represents a single instance of text chat content.
+    /// Represents a single instance of text in the chat content.
     /// </summary>
     public class TextContent : ChatContent
     {
