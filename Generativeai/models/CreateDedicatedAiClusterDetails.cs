@@ -74,9 +74,13 @@ namespace Oci.GenerativeaiService.Models
         /// <br/>
         /// Allowed values are:
         /// - LARGE_COHERE
+        /// - LARGE_COHERE_V2
         /// - SMALL_COHERE
+        /// - SMALL_COHERE_V2
         /// - EMBED_COHERE
         /// - LLAMA2_70
+        /// - LARGE_GENERIC
+        /// - LARGE_COHERE_V2_2
         /// 
         /// </value>
         /// <remarks>

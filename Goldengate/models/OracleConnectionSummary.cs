@@ -54,6 +54,15 @@ namespace Oci.GoldengateService.Models
         public string ConnectionString { get; set; }
         
         /// <value>
+        /// Authentication mode. It can be provided at creation of Oracle Autonomous Database Serverless connections,
+        /// when a databaseId is provided. The default value is MTLS.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "authenticationMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OracleConnection.AuthenticationModeEnum> AuthenticationMode { get; set; }
+        
+        /// <value>
         /// The mode of the database connection session to be established by the data client.
         /// 'REDIRECT' - for a RAC database, 'DIRECT' - for a non-RAC database.
         /// Connection to a RAC database involves a redirection received from the SCAN listeners

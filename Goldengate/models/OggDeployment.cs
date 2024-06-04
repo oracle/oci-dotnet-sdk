@@ -53,7 +53,7 @@ namespace Oci.GoldengateService.Models
         public string OggVersion { get; set; }
         
         /// <value>
-        /// A PEM-encoded SSL certificate.
+        /// The base64 encoded content of the PEM file containing the SSL certificate.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "certificate")]

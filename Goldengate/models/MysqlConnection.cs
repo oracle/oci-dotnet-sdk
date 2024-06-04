@@ -42,6 +42,10 @@ namespace Oci.GoldengateService.Models
             GoogleCloudSqlMysql,
             [EnumMember(Value = "MARIADB")]
             Mariadb,
+            [EnumMember(Value = "MYSQL_HEATWAVE_ON_AZURE")]
+            MysqlHeatwaveOnAzure,
+            [EnumMember(Value = "MYSQL_HEATWAVE_ON_AWS")]
+            MysqlHeatwaveOnAws,
             [EnumMember(Value = "MYSQL_SERVER")]
             MysqlServer,
             [EnumMember(Value = "OCI_MYSQL")]

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// A section of the generated reply which cites external knowledge.
+    /// A section of the generated response which cites the documents that were used for generating the response.
     /// </summary>
     public class Citation 
     {
         
         /// <value>
-        /// The index of text that the citation starts at, counting from zero.
+        /// Counting from zero, the index of the text where the citation starts.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Nullable<int> Start { get; set; }
         
         /// <value>
-        /// The index of text that the citation ends after, counting from zero.
+        /// Counting from zero, the index of the text that the citation ends after.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Nullable<int> End { get; set; }
         
         /// <value>
-        /// The text of the citation
+        /// The text of the citation.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public string Text { get; set; }
         
         /// <value>
-        /// Identifiers of documents cited by this section of the generated reply.
+        /// Identifiers for the documents cited in the current generated response.
         /// </value>
         /// <remarks>
         /// Required

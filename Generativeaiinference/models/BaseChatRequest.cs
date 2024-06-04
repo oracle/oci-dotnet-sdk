@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// Base class for chat inference requests
+    /// The base class to use for the chat inference request.
     /// </summary>
     [JsonConverter(typeof(BaseChatRequestModelConverter))]
     public class BaseChatRequest 
     {
                 ///
         /// <value>
-        /// The api format for the model's request
+        /// The API format for the model's request.
         /// </value>
         ///
         public enum ApiFormatEnum {

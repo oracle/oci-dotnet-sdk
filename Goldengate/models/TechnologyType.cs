@@ -25,16 +25,22 @@ namespace Oci.GoldengateService.Models
       OciAutonomousDatabase,
       [EnumMember(Value = "OCI_AUTONOMOUS_JSON_DATABASE")]
       OciAutonomousJsonDatabase,
+      [EnumMember(Value = "OCI_CACHE_WITH_REDIS")]
+      OciCacheWithRedis,
       [EnumMember(Value = "OCI_MYSQL")]
       OciMysql,
       [EnumMember(Value = "OCI_OBJECT_STORAGE")]
       OciObjectStorage,
+      [EnumMember(Value = "OCI_POSTGRESQL")]
+      OciPostgresql,
       [EnumMember(Value = "OCI_STREAMING")]
       OciStreaming,
       [EnumMember(Value = "ORACLE_DATABASE")]
       OracleDatabase,
       [EnumMember(Value = "ORACLE_EXADATA")]
       OracleExadata,
+      [EnumMember(Value = "ORACLE_EXADATA_DATABASE_AT_AZURE")]
+      OracleExadataDatabaseAtAzure,
       [EnumMember(Value = "ORACLE_NOSQL")]
       OracleNosql,
       [EnumMember(Value = "ORACLE_WEBLOGIC_JMS")]
@@ -63,6 +69,8 @@ namespace Oci.GoldengateService.Models
       ApacheKafka,
       [EnumMember(Value = "AZURE_COSMOS_DB_FOR_MONGODB")]
       AzureCosmosDbForMongodb,
+      [EnumMember(Value = "AZURE_COSMOS_DB_FOR_POSTGRESQL")]
+      AzureCosmosDbForPostgresql,
       [EnumMember(Value = "AZURE_DATA_LAKE_STORAGE")]
       AzureDataLakeStorage,
       [EnumMember(Value = "AZURE_EVENT_HUBS")]
@@ -81,6 +89,8 @@ namespace Oci.GoldengateService.Models
       ConfluentKafka,
       [EnumMember(Value = "CONFLUENT_SCHEMA_REGISTRY")]
       ConfluentSchemaRegistry,
+      [EnumMember(Value = "DB2_ZOS")]
+      Db2Zos,
       [EnumMember(Value = "ELASTICSEARCH")]
       Elasticsearch,
       [EnumMember(Value = "GOOGLE_BIGQUERY")]
@@ -103,6 +113,10 @@ namespace Oci.GoldengateService.Models
       Mongodb,
       [EnumMember(Value = "MYSQL_SERVER")]
       MysqlServer,
+      [EnumMember(Value = "MYSQL_HEATWAVE_ON_AZURE")]
+      MysqlHeatwaveOnAzure,
+      [EnumMember(Value = "MYSQL_HEATWAVE_ON_AWS")]
+      MysqlHeatwaveOnAws,
       [EnumMember(Value = "POSTGRESQL_SERVER")]
       PostgresqlServer,
       [EnumMember(Value = "REDIS")]

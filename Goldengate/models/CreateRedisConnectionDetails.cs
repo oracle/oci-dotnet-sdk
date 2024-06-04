@@ -39,10 +39,6 @@ namespace Oci.GoldengateService.Models
         /// Used for establishing the initial connection to the Redis cluster.
         /// Example: &quot;server1.example.com:6379,server2.example.com:6379&quot;
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Servers is required.")]
         [JsonProperty(PropertyName = "servers")]
         public string Servers { get; set; }
         
@@ -112,6 +108,13 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "keyStorePassword")]
         public string KeyStorePassword { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Redis cluster.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "redisClusterId")]
+        public string RedisClusterId { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "REDIS";

@@ -11,47 +11,78 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// An message that represents a single dialogue of chat
+    /// A message that represents a single chat dialog.
     /// </summary>
+    [JsonConverter(typeof(CohereMessageModelConverter))]
     public class CohereMessage 
     {
                 ///
         /// <value>
-        /// One of CHATBOT|USER to identify who the message is coming from.
+        /// To identify who the message is coming from, a role is associated to each message.
         /// </value>
         ///
         public enum RoleEnum {
             [EnumMember(Value = "CHATBOT")]
             Chatbot,
             [EnumMember(Value = "USER")]
-            User
+            User,
+            [EnumMember(Value = "SYSTEM")]
+            System,
+            [EnumMember(Value = "TOOL")]
+            Tool
         };
 
-        /// <value>
-        /// One of CHATBOT|USER to identify who the message is coming from.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Role is required.")]
-        [JsonProperty(PropertyName = "role")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<RoleEnum> Role { get; set; }
         
-        /// <value>
-        /// Contents of the chat message.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Message is required.")]
-        [JsonProperty(PropertyName = "message")]
-        public string Message { get; set; }
-        
+    }
+
+    public class CohereMessageModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(CohereMessage);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(CohereMessage);
+            var discriminator = jsonObject["role"].Value<string>();
+            switch (discriminator)
+            {
+                case "CHATBOT":
+                    obj = new CohereChatBotMessage();
+                    break;
+                case "SYSTEM":
+                    obj = new CohereSystemMessage();
+                    break;
+                case "TOOL":
+                    obj = new CohereToolMessage();
+                    break;
+                case "USER":
+                    obj = new CohereUserMessage();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under CohereMessage! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

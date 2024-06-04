@@ -30,6 +30,8 @@ namespace Oci.GoldengateService.Models
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
             [EnumMember(Value = null)]
             UnknownEnumValue,
+            [EnumMember(Value = "OCI_POSTGRESQL")]
+            OciPostgresql,
             [EnumMember(Value = "POSTGRESQL_SERVER")]
             PostgresqlServer,
             [EnumMember(Value = "AMAZON_AURORA_POSTGRESQL")]
@@ -38,6 +40,8 @@ namespace Oci.GoldengateService.Models
             AmazonRdsPostgresql,
             [EnumMember(Value = "AZURE_POSTGRESQL")]
             AzurePostgresql,
+            [EnumMember(Value = "AZURE_COSMOS_DB_FOR_POSTGRESQL")]
+            AzureCosmosDbForPostgresql,
             [EnumMember(Value = "GOOGLE_CLOUD_SQL_POSTGRESQL")]
             GoogleCloudSqlPostgresql
         };
@@ -172,6 +176,13 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the database system being referenced.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dbSystemId")]
+        public string DbSystemId { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "POSTGRESQL";

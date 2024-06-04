@@ -28,7 +28,9 @@ namespace Oci.GenerativeaiService.Models
         ///
         public enum ModelMetricsTypeEnum {
             [EnumMember(Value = "TEXT_GENERATION_MODEL_METRICS")]
-            TextGenerationModelMetrics
+            TextGenerationModelMetrics,
+            [EnumMember(Value = "CHAT_MODEL_METRICS")]
+            ChatModelMetrics
         };
 
         
@@ -57,6 +59,9 @@ namespace Oci.GenerativeaiService.Models
             {
                 case "TEXT_GENERATION_MODEL_METRICS":
                     obj = new TextGenerationModelMetrics();
+                    break;
+                case "CHAT_MODEL_METRICS":
+                    obj = new ChatModelMetrics();
                     break;
             }
             if (obj != null)

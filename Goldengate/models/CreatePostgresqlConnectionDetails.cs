@@ -48,10 +48,6 @@ namespace Oci.GoldengateService.Models
         /// The name or address of a host.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Host is required.")]
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
         
@@ -59,10 +55,6 @@ namespace Oci.GoldengateService.Models
         /// The port of an endpoint usually specified for a connection.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Port is required.")]
         [JsonProperty(PropertyName = "port")]
         public System.Nullable<int> Port { get; set; }
         
@@ -159,6 +151,13 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the database system being referenced.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dbSystemId")]
+        public string DbSystemId { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "POSTGRESQL";

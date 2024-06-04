@@ -103,7 +103,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Nullable<int> LogProbs { get; set; }
         
         /// <value>
-        /// The maximum number of tokens that can be generated per output sequence. The token count of your prompt plus max_tokens cannot exceed the model's context length.
+        /// The maximum number of tokens that can be generated per output sequence. The token count of the prompt plus `maxTokens` cannot exceed the model's context length.
         /// </value>
         [JsonProperty(PropertyName = "maxTokens")]
         public System.Nullable<int> MaxTokens { get; set; }

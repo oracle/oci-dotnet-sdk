@@ -159,14 +159,20 @@ namespace Oci.GenerativeaiService.Models
             UnknownEnumValue,
             [EnumMember(Value = "LARGE_COHERE")]
             LargeCohere,
+            [EnumMember(Value = "LARGE_COHERE_V2")]
+            LargeCohereV2,
             [EnumMember(Value = "SMALL_COHERE")]
             SmallCohere,
+            [EnumMember(Value = "SMALL_COHERE_V2")]
+            SmallCohereV2,
             [EnumMember(Value = "EMBED_COHERE")]
             EmbedCohere,
             [EnumMember(Value = "LLAMA2_70")]
             Llama270,
-            [EnumMember(Value = "LARGE_COHERE_V2")]
-            LargeCohereV2
+            [EnumMember(Value = "LARGE_GENERIC")]
+            LargeGeneric,
+            [EnumMember(Value = "LARGE_COHERE_V2_2")]
+            LargeCohereV22
         };
 
         /// <value>

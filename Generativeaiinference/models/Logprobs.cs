@@ -16,7 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// Returns if the logarithmic probabilites is set.
+    /// Includes the logarithmic probabilities for the most likely output tokens and the chosen tokens.
+    /// <br/>
+    /// For example, if the log probability is 5, the API returns a list of the 5 most likely tokens. The API returns the log probability of the sampled token, so there might be up to logprobs+1 elements in the response.
+    /// 
     /// </summary>
     public class Logprobs 
     {

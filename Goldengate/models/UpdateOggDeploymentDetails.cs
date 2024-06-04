@@ -62,14 +62,14 @@ namespace Oci.GoldengateService.Models
         public string AdminPassword { get; set; }
         
         /// <value>
-        /// A PEM-encoded SSL certificate.
+        /// The base64 encoded content of the PEM file containing the SSL certificate.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "certificate")]
         public string Certificate { get; set; }
         
         /// <value>
-        /// A PEM-encoded private key.
+        /// The base64 encoded content of the PEM file containing the private key.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "key")]

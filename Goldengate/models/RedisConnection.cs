@@ -31,7 +31,9 @@ namespace Oci.GoldengateService.Models
             [EnumMember(Value = null)]
             UnknownEnumValue,
             [EnumMember(Value = "REDIS")]
-            Redis
+            Redis,
+            [EnumMember(Value = "OCI_CACHE_WITH_REDIS")]
+            OciCacheWithRedis
         };
 
         /// <value>
@@ -118,6 +120,13 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Redis cluster.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "redisClusterId")]
+        public string RedisClusterId { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "REDIS";

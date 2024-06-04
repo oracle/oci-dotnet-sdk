@@ -22,7 +22,7 @@ namespace Oci.GenerativeaiinferenceService.Models
     {
         
         /// <value>
-        /// The unique ID of a model to use. Can use list Models API to list available models.
+        /// The unique ID of a model to use. You can use the {@link #listModels(ListModelsRequest) listModels} API to list the available models.
         /// </value>
         /// <remarks>
         /// Required

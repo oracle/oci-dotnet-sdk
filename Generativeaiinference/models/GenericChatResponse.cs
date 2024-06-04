@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// The response to the chat conversation.
+    /// The response for a chat conversation.
     /// </summary>
     public class GenericChatResponse : BaseChatResponse
     {
         
         /// <value>
-        /// The Unix timestamp (in seconds) of when the generation was created.
+        /// The Unix timestamp (in seconds) of when the response text was generated.
         /// </value>
         /// <remarks>
         /// Required

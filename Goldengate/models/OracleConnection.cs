@@ -37,7 +37,9 @@ namespace Oci.GoldengateService.Models
             [EnumMember(Value = "ORACLE_DATABASE")]
             OracleDatabase,
             [EnumMember(Value = "ORACLE_EXADATA")]
-            OracleExadata
+            OracleExadata,
+            [EnumMember(Value = "ORACLE_EXADATA_DATABASE_AT_AZURE")]
+            OracleExadataDatabaseAtAzure
         };
 
         /// <value>
@@ -70,6 +72,31 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "connectionString")]
         public string ConnectionString { get; set; }
+                ///
+        /// <value>
+        /// Authentication mode. It can be provided at creation of Oracle Autonomous Database Serverless connections,
+        /// when a databaseId is provided. The default value is MTLS.
+        /// 
+        /// </value>
+        ///
+        public enum AuthenticationModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "TLS")]
+            Tls,
+            [EnumMember(Value = "MTLS")]
+            Mtls
+        };
+
+        /// <value>
+        /// Authentication mode. It can be provided at creation of Oracle Autonomous Database Serverless connections,
+        /// when a databaseId is provided. The default value is MTLS.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "authenticationMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AuthenticationModeEnum> AuthenticationMode { get; set; }
                 ///
         /// <value>
         /// The mode of the database connection session to be established by the data client.

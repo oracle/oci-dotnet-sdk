@@ -186,6 +186,12 @@ namespace Oci.GoldengateService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RoutingMethod> RoutingMethod { get; set; }
         
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
     }
 
     public class ConnectionSummaryModelConverter : JsonConverter
@@ -268,6 +274,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "ELASTICSEARCH":
                     obj = new ElasticsearchConnectionSummary();
+                    break;
+                case "DB2":
+                    obj = new Db2ConnectionSummary();
                     break;
                 case "AMAZON_REDSHIFT":
                     obj = new AmazonRedshiftConnectionSummary();

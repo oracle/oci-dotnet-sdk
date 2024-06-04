@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// The model's serving mode, which could be on-demand serving or dedicated serving.
+    /// The model's serving mode, which is either on-demand serving or dedicated serving.
     /// </summary>
     [JsonConverter(typeof(ServingModeModelConverter))]
     public class ServingMode 
     {
                 ///
         /// <value>
-        /// The serving mode type, which could be on-demand serving or dedicated serving.
+        /// The serving mode type, which is either on-demand serving or dedicated serving.
         /// </value>
         ///
         public enum ServingTypeEnum {

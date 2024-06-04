@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 89.0.0 - 2024-06-04
+### Added
+- Support for creating cross-region autonomous data guards in the Database service
+- Support for listing autonomous database peers in the Database service
+- Support for dedicated AI clusters in the Generative AI service
+- Support for Llama chat and Lora Fine-Tuning method in the Generative AI service
+- Support for adding and removing locks for connections, deployments, and deployment backups in the GoldenGate service
+- Support for additional connection types for deployments and connections in the GoldenGate service
+ 
+### Breaking Changes
+- The property `Role` was removed in the `Message` model in the Generative AI service
+- The properties `Role` and `Message` were removed in the `CohereMessage` model in the Generative AI service
+- The enum members `OPENAI` and `DALLE3` were removed in the `RuntimeTypeEnum` in the model `LlmInferenceResponse` in the Generative AI service
+
 ## 88.0.0 - 2024-05-28
 ### Added
 - Support for Demand Signal service

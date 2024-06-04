@@ -22,7 +22,7 @@ namespace Oci.GenerativeaiinferenceService.Models
     {
         
         /// <value>
-        /// The OCID of compartment that the user is authorized to use to call into the Generative AI service.
+        /// The OCID of compartment in which to call the Generative AI service to chat.
         /// </value>
         /// <remarks>
         /// Required
@@ -38,6 +38,10 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "servingMode")]
         public ServingMode ServingMode { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ChatRequest is required.")]
         [JsonProperty(PropertyName = "chatRequest")]
         public BaseChatRequest ChatRequest { get; set; }
         

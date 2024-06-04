@@ -71,6 +71,12 @@ namespace Oci.GoldengateService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<AddResourceLockDetails> Locks { get; set; }
+        
+        /// <value>
         /// Refers to the customer's vault OCID. 
         /// If provided, it references a vault where GoldenGate can manage secrets. Customers must add policies to permit GoldenGate
         /// to manage secrets contained within this vault.
@@ -169,6 +175,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "OCI_OBJECT_STORAGE":
                     obj = new CreateOciObjectStorageConnectionDetails();
+                    break;
+                case "DB2":
+                    obj = new CreateDb2ConnectionDetails();
                     break;
                 case "ELASTICSEARCH":
                     obj = new CreateElasticsearchConnectionDetails();

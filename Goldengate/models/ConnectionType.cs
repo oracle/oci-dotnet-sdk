@@ -56,6 +56,8 @@ namespace Oci.GoldengateService.Models
       AmazonKinesis,
       [EnumMember(Value = "AMAZON_REDSHIFT")]
       AmazonRedshift,
+      [EnumMember(Value = "DB2")]
+      Db2,
       [EnumMember(Value = "REDIS")]
       Redis,
       [EnumMember(Value = "ELASTICSEARCH")]
