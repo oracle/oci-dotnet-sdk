@@ -50,6 +50,108 @@ namespace Oci.FusionappsService.Models
         [Required(ErrorMessage = "ServiceName is required.")]
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
+                ///
+        /// <value>
+        /// Lifecycle state of the subscription.
+        /// </value>
+        ///
+        public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "CREATING")]
+            Creating,
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
+            [EnumMember(Value = "DELETING")]
+            Deleting,
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            [EnumMember(Value = "NEEDS_ATTENTION")]
+            NeedsAttention
+        };
+
+        /// <value>
+        /// Lifecycle state of the subscription.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+                ///
+        /// <value>
+        /// Subscription resource intermediate states.
+        /// </value>
+        ///
+        public enum LifecycleDetailsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            [EnumMember(Value = "PURGED")]
+            Purged,
+            [EnumMember(Value = "CANCELED")]
+            Canceled,
+            [EnumMember(Value = "PAID_PURGED")]
+            PaidPurged,
+            [EnumMember(Value = "INITIALIZED")]
+            Initialized,
+            [EnumMember(Value = "SOFT_TERMINATED")]
+            SoftTerminated,
+            [EnumMember(Value = "DISABLED")]
+            Disabled,
+            [EnumMember(Value = "BEGIN_TERMINATION")]
+            BeginTermination,
+            [EnumMember(Value = "MIGRATED")]
+            Migrated,
+            [EnumMember(Value = "PENDING_CANCELATION")]
+            PendingCancelation,
+            [EnumMember(Value = "ARCHIVED")]
+            Archived,
+            [EnumMember(Value = "NON_RECOVERABLE")]
+            NonRecoverable,
+            [EnumMember(Value = "BEGIN_SOFT_TERMINATION")]
+            BeginSoftTermination,
+            [EnumMember(Value = "ACTIVATED")]
+            Activated,
+            [EnumMember(Value = "ACCESS_DISABLED")]
+            AccessDisabled,
+            [EnumMember(Value = "PENDING_REGISTRATION")]
+            PendingRegistration,
+            [EnumMember(Value = "TERMINATED")]
+            Terminated,
+            [EnumMember(Value = "RELOCATING")]
+            Relocating,
+            [EnumMember(Value = "DEPROVISIONED")]
+            Deprovisioned,
+            [EnumMember(Value = "PROVISIONED")]
+            Provisioned,
+            [EnumMember(Value = "BEGIN_TERMINATION_PASSIVE")]
+            BeginTerminationPassive,
+            [EnumMember(Value = "LOCKED")]
+            Locked,
+            [EnumMember(Value = "PENDING_DEPROVISIONING")]
+            PendingDeprovisioning,
+            [EnumMember(Value = "REGISTERED")]
+            Registered,
+            [EnumMember(Value = "CANCELLED")]
+            Cancelled,
+            [EnumMember(Value = "EXPIRED")]
+            Expired
+        };
+
+        /// <value>
+        /// Subscription resource intermediate states.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<LifecycleDetailsEnum> LifecycleDetails { get; set; }
         
         /// <value>
         /// Stock keeping unit.

@@ -20,6 +20,44 @@ namespace Oci.GloballydistributeddatabaseService.Models
     /// </summary>
     public class DedicatedShardedDatabase : ShardedDatabase
     {
+                ///
+        /// <value>
+        /// The Replication method for sharded database. Use RAFT for Raft replication, and DG for
+        /// DataGuard. If replicationMethod is not provided, it defaults to DG.
+        /// 
+        /// </value>
+        ///
+        public enum ReplicationMethodEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "RAFT")]
+            Raft,
+            [EnumMember(Value = "DG")]
+            Dg
+        };
+
+        /// <value>
+        /// The Replication method for sharded database. Use RAFT for Raft replication, and DG for
+        /// DataGuard. If replicationMethod is not provided, it defaults to DG.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicationMethod")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ReplicationMethodEnum> ReplicationMethod { get; set; }
+        
+        /// <value>
+        /// The Replication factor for RAFT replication based sharded database. Currently supported values are 3, 5 and 7.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicationFactor")]
+        public System.Nullable<int> ReplicationFactor { get; set; }
+        
+        /// <value>
+        /// For RAFT replication based sharded database, the value should be atleast twice the number of shards.
+        /// </value>
+        [JsonProperty(PropertyName = "replicationUnit")]
+        public System.Nullable<int> ReplicationUnit { get; set; }
         
         /// <value>
         /// The certificate common name used in all cloudAutonomousVmClusters for the sharded database topology. Eg. Production.

@@ -87,6 +87,18 @@ namespace Oci.QueueService.Models
         [JsonProperty(PropertyName = "expireAfter")]
         public System.Nullable<System.DateTime> ExpireAfter { get; set; }
         
+        /// <value>
+        /// The time when message was created in queue.
+        /// <br/>
+        /// Example: 2018-04-20T00:00:07.405Z
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CreatedAt is required.")]
+        [JsonProperty(PropertyName = "createdAt")]
+        public System.Nullable<System.DateTime> CreatedAt { get; set; }
+        
         [JsonProperty(PropertyName = "metadata")]
         public MessageMetadata Metadata { get; set; }
         

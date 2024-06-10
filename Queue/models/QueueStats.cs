@@ -36,7 +36,7 @@ namespace Oci.QueueService.Models
         public Stats Dlq { get; set; }
         
         /// <value>
-        /// If channelId is presented in GetStats call, the channel id will be returned in the GetStats response.
+        /// If channelId is present in GetStats call, the channel id will be returned in the GetStats response.
         /// </value>
         [JsonProperty(PropertyName = "channelId")]
         public string ChannelId { get; set; }

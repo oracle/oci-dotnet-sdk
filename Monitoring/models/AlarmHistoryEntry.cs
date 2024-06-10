@@ -24,6 +24,22 @@ namespace Oci.MonitoringService.Models
     {
         
         /// <value>
+        /// Customizable alarm summary (`alarmSummary` [alarm message parameter](https://docs.cloud.oracle.com/iaas/Content/Monitoring/alarm-message-format.htm)).
+        /// Optionally include [dynamic variables](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/update-alarm-dynamic-variables.htm).
+        /// The alarm summary appears within the body of the alarm message and in responses to 
+        /// {@link #listAlarmsStatus(ListAlarmsStatusRequest) listAlarmsStatus} 
+        /// {@link #getAlarmHistory(GetAlarmHistoryRequest) getAlarmHistory} and
+        /// {@link #retrieveDimensionStates(RetrieveDimensionStatesRequest) retrieveDimensionStates}.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "AlarmSummary is required.")]
+        [JsonProperty(PropertyName = "alarmSummary")]
+        public string AlarmSummary { get; set; }
+        
+        /// <value>
         /// Description for this alarm history entry.
         /// <br/>
         /// Example 1 - alarm state history entry: `The alarm state is FIRING`

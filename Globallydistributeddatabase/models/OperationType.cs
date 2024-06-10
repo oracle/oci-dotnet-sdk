@@ -54,6 +54,30 @@ namespace Oci.GloballydistributeddatabaseService.Models
       [EnumMember(Value = "GENERATE_GSM_CERT_SIGNING_REQ")]
       GenerateGsmCertSigningReq,
       [EnumMember(Value = "CONFIGURE_SHARDING")]
-      ConfigureSharding
+      ConfigureSharding,
+      [EnumMember(Value = "EXECUTE_VALIDATE_NETWORK_TESTS")]
+      ExecuteValidateNetworkTests,
+      [EnumMember(Value = "UPDATE_SHARD")]
+      UpdateShard,
+      [EnumMember(Value = "PRIVATE_DELETE_SDB")]
+      PrivateDeleteSdb,
+      [EnumMember(Value = "PROCESS_SHARDED_DATABASE")]
+      ProcessShardedDatabase,
+      [EnumMember(Value = "CREATE_CATALOGS")]
+      CreateCatalogs,
+      [EnumMember(Value = "CREATE_SHARDS")]
+      CreateShards,
+      [EnumMember(Value = "CREATE_GSM_NODES")]
+      CreateGsmNodes,
+      [EnumMember(Value = "ADD_GSM_NODES")]
+      AddGsmNodes,
+      [EnumMember(Value = "PRIVATE_DELETE_ATPD_CATALOG")]
+      PrivateDeleteAtpdCatalog,
+      [EnumMember(Value = "PRIVATE_DELETE_ATPD_SHARD")]
+      PrivateDeleteAtpdShard,
+      [EnumMember(Value = "PRIVATE_DELETE_GSM")]
+      PrivateDeleteGsm,
+      [EnumMember(Value = "REINSTATE_PROXY_INSTANCE")]
+      ReinstateProxyInstance
   }
 }

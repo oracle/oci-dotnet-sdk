@@ -246,8 +246,7 @@ namespace Oci.MonitoringService.Models
         
         /// <value>
         /// Identifier of the alarm's base values for alarm evaluation, for use when the alarm contains overrides. 
-        /// A valid ruleName value starts with an alphabetic character and includes only alphanumeric characters, underscores and square brackets. 
-        /// Minimum number of characters: 3. Default value is `BASE`. For information about alarm overrides, see {@link #alarmOverride(AlarmOverrideRequest) alarmOverride}.
+        /// Default value is `BASE`. For information about alarm overrides, see {@link #alarmOverride(AlarmOverrideRequest) alarmOverride}.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ruleName")]
@@ -260,6 +259,47 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "notificationVersion")]
         public string NotificationVersion { get; set; }
+        
+        /// <value>
+        /// Customizable notification title (`title` [alarm message parameter](https://docs.cloud.oracle.com/iaas/Content/Monitoring/alarm-message-format.htm)).
+        /// Optionally include [dynamic variables](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/update-alarm-dynamic-variables.htm).
+        /// The notification title appears as the subject line in a formatted email message and as the title in a Slack message.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "notificationTitle")]
+        public string NotificationTitle { get; set; }
+        
+        /// <value>
+        /// Customizable slack period to wait for metric ingestion before evaluating the alarm.
+        /// Specify a string in ISO 8601 format (`PT10M` for ten minutes or `PT1H`
+        /// for one hour). Minimum: PT3M. Maximum: PT2H. Default: PT3M.
+        /// For more information about the slack period, see
+        /// [About the Internal Reset Period](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#reset).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "evaluationSlackDuration")]
+        public string EvaluationSlackDuration { get; set; }
+        
+        /// <value>
+        /// Customizable alarm summary (`alarmSummary` [alarm message parameter](https://docs.cloud.oracle.com/iaas/Content/Monitoring/alarm-message-format.htm)).
+        /// Optionally include [dynamic variables](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/update-alarm-dynamic-variables.htm).
+        /// The alarm summary appears within the body of the alarm message and in responses to 
+        /// {@link #listAlarmsStatus(ListAlarmsStatusRequest) listAlarmsStatus} 
+        /// {@link #getAlarmHistory(GetAlarmHistoryRequest) getAlarmHistory} and
+        /// {@link #retrieveDimensionStates(RetrieveDimensionStatesRequest) retrieveDimensionStates}.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "alarmSummary")]
+        public string AlarmSummaryProp { get; set; }
+        
+        /// <value>
+        /// Resource group that you want to match. A null value returns only metric data that has no resource groups. The specified resource group must exist in the definition of the posted metric. Only one resource group can be applied per metric.
+        /// A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
+        /// <br/>
+        /// Example: frontend-fleet
+        /// </value>
+        [JsonProperty(PropertyName = "resourceGroup")]
+        public string ResourceGroup { get; set; }
         
     }
 }

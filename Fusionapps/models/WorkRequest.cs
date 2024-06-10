@@ -70,7 +70,19 @@ namespace Oci.FusionappsService.Models
             [EnumMember(Value = "EXECUTE_COLD_PATCH")]
             ExecuteColdPatch,
             [EnumMember(Value = "DATA_MASK_FUSION_ENVIRONMENT")]
-            DataMaskFusionEnvironment
+            DataMaskFusionEnvironment,
+            [EnumMember(Value = "INITIATE_EXTRACT")]
+            InitiateExtract,
+            [EnumMember(Value = "SUBSCRIPTION_SUSPEND")]
+            SubscriptionSuspend,
+            [EnumMember(Value = "SUBSCRIPTION_EXPIRE")]
+            SubscriptionExpire,
+            [EnumMember(Value = "SUBSCRIPTION_UPDATE")]
+            SubscriptionUpdate,
+            [EnumMember(Value = "SUBSCRIPTION_RESUME")]
+            SubscriptionResume,
+            [EnumMember(Value = "SUBSCRIPTION_TERMINATE")]
+            SubscriptionTerminate
         };
 
         /// <value>

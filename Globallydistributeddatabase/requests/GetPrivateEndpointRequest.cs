@@ -30,6 +30,17 @@ namespace Oci.GloballydistributeddatabaseService.Requests
         public string PrivateEndpointId { get; set; }
         
         /// <value>
+        /// For conditional requests. In the GET call for a resource, set the
+        /// `If-None-Match` header to the value of the ETag from a previous GET (or
+        /// POST or PUT) response for that resource. The server will return with
+        /// either a 304 Not Modified response if the resource has not changed, or a
+        /// 200 OK response with the updated representation.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-none-match")]
+        public string IfNoneMatch { get; set; }
+        
+        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

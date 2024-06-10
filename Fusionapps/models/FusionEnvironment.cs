@@ -250,5 +250,11 @@ namespace Oci.FusionappsService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// Environment suspended status
+        /// </value>
+        [JsonProperty(PropertyName = "isSuspended")]
+        public System.Nullable<bool> IsSuspended { get; set; }
+        
     }
 }

@@ -88,7 +88,7 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<TacticSummary> Tactics { get; set; }
         
         /// <value>
-        /// The date and time the resource profile was first detected. Format defined by RFC3339.
+        /// Time the activities were first detected. Format defined by RFC3339.
         /// </value>
         /// <remarks>
         /// Required
@@ -98,7 +98,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<System.DateTime> TimeFirstDetected { get; set; }
         
         /// <value>
-        /// The date and time the resource profile was last detected. Format defined by RFC3339.
+        /// Time the activities were last detected. Format defined by RFC3339.
         /// </value>
         /// <remarks>
         /// Required
@@ -106,6 +106,18 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "TimeLastDetected is required.")]
         [JsonProperty(PropertyName = "timeLastDetected")]
         public System.Nullable<System.DateTime> TimeLastDetected { get; set; }
+        
+        /// <value>
+        /// Time the activities were first performed. Format defined by RFC3339.
+        /// </value>
+        [JsonProperty(PropertyName = "timeFirstOccurred")]
+        public System.Nullable<System.DateTime> TimeFirstOccurred { get; set; }
+        
+        /// <value>
+        /// Time the activities were last performed. Format defined by RFC3339.
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastOccurred")]
+        public System.Nullable<System.DateTime> TimeLastOccurred { get; set; }
         
         /// <value>
         /// Number of problems associated with this resource profile
