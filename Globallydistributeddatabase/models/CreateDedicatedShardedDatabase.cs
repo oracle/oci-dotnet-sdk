@@ -22,6 +22,26 @@ namespace Oci.GloballydistributeddatabaseService.Models
     {
         
         /// <value>
+        /// The Replication method for sharded database.
+        /// </value>
+        [JsonProperty(PropertyName = "replicationMethod")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DedicatedShardedDatabase.ReplicationMethodEnum> ReplicationMethod { get; set; }
+        
+        /// <value>
+        /// The Replication factor for RAFT replication based sharded database. Currently supported values are 3, 5 and 7.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicationFactor")]
+        public System.Nullable<int> ReplicationFactor { get; set; }
+        
+        /// <value>
+        /// For RAFT replication based sharded database, the value should be atleast twice the number of shards.
+        /// </value>
+        [JsonProperty(PropertyName = "replicationUnit")]
+        public System.Nullable<int> ReplicationUnit { get; set; }
+        
+        /// <value>
         /// The certificate common name used in all cloudAutonomousVmClusters for the sharded database topology. Eg. Production.
         /// All the clusters used in one sharded database topology shall have same CABundle setup. Valid characterset for
         /// clusterCertificateCommonName include uppercase or lowercase letters, numbers, hyphens, underscores, and period.

@@ -110,7 +110,13 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<string> Services { get; set; }
         
         /// <value>
-        /// Date and time when activities were created
+        /// Time the activities were first detected.
+        /// </value>
+        [JsonProperty(PropertyName = "timeFirstDetected")]
+        public System.Nullable<System.DateTime> TimeFirstDetected { get; set; }
+        
+        /// <value>
+        /// Time the activities were last detected.
         /// </value>
         /// <remarks>
         /// Required
@@ -118,6 +124,18 @@ namespace Oci.CloudguardService.Models
         [Required(ErrorMessage = "TimeLastDetected is required.")]
         [JsonProperty(PropertyName = "timeLastDetected")]
         public System.Nullable<System.DateTime> TimeLastDetected { get; set; }
+        
+        /// <value>
+        /// Time the activities were first performed.
+        /// </value>
+        [JsonProperty(PropertyName = "timeFirstOccurred")]
+        public System.Nullable<System.DateTime> TimeFirstOccurred { get; set; }
+        
+        /// <value>
+        /// Time the activities were last performed.
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastOccurred")]
+        public System.Nullable<System.DateTime> TimeLastOccurred { get; set; }
         
     }
 }

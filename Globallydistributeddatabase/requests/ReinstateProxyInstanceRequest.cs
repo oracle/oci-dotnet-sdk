@@ -14,20 +14,20 @@ using Oci.GloballydistributeddatabaseService.Models;
 namespace Oci.GloballydistributeddatabaseService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/globallydistributeddatabase/GenerateGsmCertificateSigningRequest.cs.html">here</a> to see an example of how to use GenerateGsmCertificateSigningRequest request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/globallydistributeddatabase/ReinstateProxyInstance.cs.html">here</a> to see an example of how to use ReinstateProxyInstance request.
     /// </example>
-    public class GenerateGsmCertificateSigningRequestRequest : Oci.Common.IOciRequest
+    public class ReinstateProxyInstanceRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
-        /// Sharded Database identifier
+        /// Oracle Sharded Database PrivateEndpoint identifier
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ShardedDatabaseId is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "shardedDatabaseId")]
-        public string ShardedDatabaseId { get; set; }
+        [Required(ErrorMessage = "PrivateEndpointId is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "privateEndpointId")]
+        public string PrivateEndpointId { get; set; }
         
         /// <value>
         /// The client request ID for tracing.
@@ -56,11 +56,5 @@ namespace Oci.GloballydistributeddatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
-        
-        /// <value>
-        /// The ID of the Ca Bundle.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "caBundleId")]
-        public string CaBundleId { get; set; }
     }
 }

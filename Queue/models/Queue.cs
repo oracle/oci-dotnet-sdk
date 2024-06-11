@@ -90,7 +90,9 @@ namespace Oci.QueueService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive
         };
 
         /// <value>

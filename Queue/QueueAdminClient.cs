@@ -582,7 +582,7 @@ namespace Oci.QueueService
         }
 
         /// <summary>
-        /// Deletes all messages present in the queue, or deletes all the messages in the specific channel at the time of invocation. Only one concurrent purge operation is supported for any given queue. 
+        /// Deletes all messages present in the queue, or deletes all the messages in the specific channel at the time of invocation. Only one concurrent purge operation is supported for any given queue.
         /// However multiple concurrent purge operations are supported for different queues.
         /// Purge request without specification of target channels will clean up all messages in the queue and in the child channels.
         /// 

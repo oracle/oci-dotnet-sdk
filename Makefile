@@ -18,7 +18,7 @@ make unit-test:
     Default will run all unit tests.
 endef
 
-.PHONY: help 
+.PHONY: help
 
 export HELP_MESSAGE
 help:

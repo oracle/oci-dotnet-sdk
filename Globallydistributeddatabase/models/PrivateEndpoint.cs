@@ -158,6 +158,12 @@ namespace Oci.GloballydistributeddatabaseService.Models
         public string LifecycleStateDetails { get; set; }
         
         /// <value>
+        /// The identifier of the proxy compute instance.
+        /// </value>
+        [JsonProperty(PropertyName = "proxyComputeInstanceId")]
+        public string ProxyComputeInstanceId { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
