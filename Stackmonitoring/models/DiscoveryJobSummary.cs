@@ -68,7 +68,9 @@ namespace Oci.StackmonitoringService.Models
             [EnumMember(Value = "CUSTOM_RESOURCE")]
             CustomResource,
             [EnumMember(Value = "ORACLE_HTTP_SERVER")]
-            OracleHttpServer
+            OracleHttpServer,
+            [EnumMember(Value = "MICROSOFT_IIS")]
+            MicrosoftIis
         };
 
         /// <value>
