@@ -38,6 +38,8 @@ namespace Oci.AidocumentService.Models
       [EnumMember(Value = "PAYSLIP")]
       Payslip,
       [EnumMember(Value = "OTHERS")]
-      Others
+      Others,
+      [EnumMember(Value = "INSURANCE_CLAIM")]
+      InsuranceClaim
   }
 }

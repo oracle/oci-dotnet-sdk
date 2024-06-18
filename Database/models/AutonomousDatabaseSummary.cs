@@ -393,6 +393,12 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "connectionUrls")]
         public AutonomousDatabaseConnectionUrls ConnectionUrls { get; set; }
+        
+        /// <value>
+        /// The Public URLs of Private Endpoint database for accessing Oracle Application Express (APEX) and SQL Developer Web with a browser from a Compute instance within your VCN or that has a direct connection to your VCN.
+        /// </value>
+        [JsonProperty(PropertyName = "publicConnectionUrls")]
+        public AutonomousDatabaseConnectionUrls PublicConnectionUrls { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
@@ -480,6 +486,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateEndpoint")]
         public string PrivateEndpoint { get; set; }
+        
+        /// <value>
+        /// The public endpoint for the private endpoint enabled resource.
+        /// </value>
+        [JsonProperty(PropertyName = "publicEndpoint")]
+        public string PublicEndpoint { get; set; }
         
         /// <value>
         /// The resource's private endpoint label.
