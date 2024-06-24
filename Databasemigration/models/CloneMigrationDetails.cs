@@ -11,41 +11,34 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Details that will override an existing Migration configuration that will be cloned.
-    /// 
+    /// Customizable details when performing cloning of a migration.
     /// </summary>
+    [JsonConverter(typeof(CloneMigrationDetailsModelConverter))]
     public class CloneMigrationDetails 
     {
         
+        
         /// <value>
-        /// Migration Display Name
+        /// A user-friendly name. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// OCID of the compartment
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the registered on-premises ODMS Agent. Only valid for Offline Logical Migrations.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "agentId")]
-        public string AgentId { get; set; }
-        
-        /// <value>
-        /// The OCID of the Source Database Connection.
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,16 +48,7 @@ namespace Oci.DatabasemigrationService.Models
         public string SourceDatabaseConnectionId { get; set; }
         
         /// <value>
-        /// The OCID of the Source Container Database Connection. Only used for Online migrations.
-        /// Only Connections of type Non-Autonomous can be used as source container databases.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "sourceContainerDatabaseConnectionId")]
-        public string SourceContainerDatabaseConnectionId { get; set; }
-        
-        /// <value>
-        /// The OCID of the Target Database Connection.
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         /// <remarks>
         /// Required
@@ -74,25 +58,8 @@ namespace Oci.DatabasemigrationService.Models
         public string TargetDatabaseConnectionId { get; set; }
         
         /// <value>
-        /// Database objects to exclude from migration, cannot be specified alongside 'includeObjects'
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "excludeObjects")]
-        public System.Collections.Generic.List<DatabaseObject> ExcludeObjects { get; set; }
-        
-        /// <value>
-        /// Database objects to include from migration, cannot be specified alongside 'excludeObjects'
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "includeObjects")]
-        public System.Collections.Generic.List<DatabaseObject> IncludeObjects { get; set; }
-        
-        [JsonProperty(PropertyName = "vaultDetails")]
-        public CreateVaultDetails VaultDetails { get; set; }
-        
-        /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. 
+        /// For more information, see Resource Tags. Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
@@ -104,5 +71,37 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+    }
+
+    public class CloneMigrationDetailsModelConverter : JsonConverter
+    {
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(CloneMigrationDetails);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(CloneMigrationDetails);
+            var discriminator = jsonObject["databaseCombination"].Value<string>();
+            switch (discriminator)
+            {
+                case "ORACLE":
+                    obj = new OracleCloneMigrationDetails();
+                    break;
+                case "MYSQL":
+                    obj = new MySqlCloneMigrationDetails();
+                    break;
+            }
+            serializer.Populate(jsonObject.CreateReader(), obj);
+            return obj;
+        }
     }
 }

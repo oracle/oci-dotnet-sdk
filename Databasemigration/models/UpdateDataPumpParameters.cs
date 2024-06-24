@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Optional parameters for Data Pump Export and Import. Refer to [Configuring Optional Initial Load Advanced Settings](https://docs-uat.us.oracle.com/en/cloud/paas/database-migration/dmsus/working-migration-resources.html#GUID-24BD3054-FDF8-48FF-8492-636C1D4B71ED)
+    /// Optional parameters for Data Pump Export and Import.
     /// If an empty object is specified, the stored Data Pump Parameter details will be removed.
     /// 
     /// </summary>
@@ -24,15 +24,13 @@ namespace Oci.DatabasemigrationService.Models
     {
         
         /// <value>
-        /// Set to false to force Data Pump worker processes to run on one instance.
-        /// 
+        /// Set to false to force Data Pump worker process to run on one instance.
         /// </value>
         [JsonProperty(PropertyName = "isCluster")]
         public System.Nullable<bool> IsCluster { get; set; }
         
         /// <value>
         /// Estimate size of dumps that will be generated.
-        /// 
         /// </value>
         [JsonProperty(PropertyName = "estimate")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -47,8 +45,7 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<DataPumpTableExistsAction> TableExistsAction { get; set; }
         
         /// <value>
-        /// Exclude paratemers for Export and Import. If specified, the stored list will be replaced.
-        /// 
+        /// Exclude paratemers for Export and Import.
         /// </value>
         [JsonProperty(PropertyName = "excludeParameters")]
         public System.Collections.Generic.List<DataPumpExcludeParameters> ExcludeParameters { get; set; }
@@ -63,7 +60,6 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// Maximum number of worker processes that can be used for a Data Pump Export job.
-        /// 
         /// </value>
         [JsonProperty(PropertyName = "exportParallelismDegree")]
         public System.Nullable<int> ExportParallelismDegree { get; set; }

@@ -32,35 +32,7 @@ namespace Oci.DatabasemigrationService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetAgentRequest, GetAgentResponse> ForAgent(GetAgentRequest request, params LifecycleStates[] targetStates)
-        {
-            return this.ForAgent(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
-        }
-
-        /// <summary>
-        /// Creates a waiter using the provided configuration.
-        /// </summary>
-        /// <param name="request">Request to send.</param>
-        /// <param name="config">Wait Configuration</param>
-        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
-        /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetAgentRequest, GetAgentResponse> ForAgent(GetAgentRequest request, WaiterConfiguration config, params LifecycleStates[] targetStates)
-        {
-            var agent = new WaiterAgent<GetAgentRequest, GetAgentResponse>(
-                request,
-                request => client.GetAgent(request),
-                response => targetStates.Contains(response.Agent.LifecycleState.Value),
-                targetStates.Contains(LifecycleStates.Deleted)
-            );
-            return new Waiter<GetAgentRequest, GetAgentResponse>(config, agent);
-        }
-        /// <summary>
-        /// Creates a waiter using default wait configuration.
-        /// </summary>
-        /// <param name="request">Request to send.</param>
-        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
-        /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetConnectionRequest, GetConnectionResponse> ForConnection(GetConnectionRequest request, params LifecycleStates[] targetStates)
+        public Waiter<GetConnectionRequest, GetConnectionResponse> ForConnection(GetConnectionRequest request, params Connection.LifecycleStateEnum[] targetStates)
         {
             return this.ForConnection(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
         }
@@ -72,13 +44,13 @@ namespace Oci.DatabasemigrationService
         /// <param name="config">Wait Configuration</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetConnectionRequest, GetConnectionResponse> ForConnection(GetConnectionRequest request, WaiterConfiguration config, params LifecycleStates[] targetStates)
+        public Waiter<GetConnectionRequest, GetConnectionResponse> ForConnection(GetConnectionRequest request, WaiterConfiguration config, params Connection.LifecycleStateEnum[] targetStates)
         {
             var agent = new WaiterAgent<GetConnectionRequest, GetConnectionResponse>(
                 request,
                 request => client.GetConnection(request),
                 response => targetStates.Contains(response.Connection.LifecycleState.Value),
-                targetStates.Contains(LifecycleStates.Deleted)
+                targetStates.Contains(Connection.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetConnectionRequest, GetConnectionResponse>(config, agent);
         }

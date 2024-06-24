@@ -20,8 +20,7 @@ namespace Oci.DatabasemigrationService.Requests
     {
         
         /// <value>
-        /// The OCID of the database connection
-        /// 
+        /// The OCID of the database connection.
         /// </value>
         /// <remarks>
         /// Required

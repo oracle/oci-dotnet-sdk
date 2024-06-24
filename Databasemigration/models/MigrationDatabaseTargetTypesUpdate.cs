@@ -14,7 +14,6 @@ namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
   /// Possible Migration Database Target types to specify.
-    /// 
   /// </summary>
   public enum MigrationDatabaseTargetTypesUpdate {
       [EnumMember(Value = "ADB_S_REMAP")]

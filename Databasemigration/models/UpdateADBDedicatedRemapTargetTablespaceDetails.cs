@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Migration tablespace settings valid for ADB-D target type using remap target.
+    /// Remap tablespace settings that are valid for Dedicated Autonomous Databases.
     /// 
     /// </summary>
     public class UpdateADBDedicatedRemapTargetTablespaceDetails : UpdateTargetTypeTablespaceDetails
     {
         
         /// <value>
-        /// Name of tablespace at target to which the source database tablespace need to be remapped.
+        /// Name of the tablespace on the target database to which the source database tablespace is to be remapped.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "remapTarget")]

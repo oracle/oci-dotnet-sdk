@@ -20,10 +20,6 @@ namespace Oci.DatabasemigrationService.Models
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "CREATE_AGENT")]
-      CreateAgent,
-      [EnumMember(Value = "DELETE_AGENT")]
-      DeleteAgent,
       [EnumMember(Value = "CREATE_MIGRATION")]
       CreateMigration,
       [EnumMember(Value = "CLONE_MIGRATION")]

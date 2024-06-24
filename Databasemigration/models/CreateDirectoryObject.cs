@@ -26,7 +26,6 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// Name of directory object in database
-        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -37,7 +36,6 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// Absolute path of directory on database server
-        /// 
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }

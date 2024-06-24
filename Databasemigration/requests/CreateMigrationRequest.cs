@@ -21,7 +21,6 @@ namespace Oci.DatabasemigrationService.Requests
         
         /// <value>
         /// Migration properties.
-        /// 
         /// </value>
         /// <remarks>
         /// Required

@@ -20,6 +20,16 @@ namespace Oci.DatabasemigrationService.Requests
     {
         
         /// <value>
+        /// The connection type for migration objects.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ConnectionType is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "connectionType")]
+        public System.Nullable<ConnectionType> ConnectionType { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a
         /// particular request, please provide the request ID.
         /// 

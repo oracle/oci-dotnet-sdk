@@ -26,7 +26,7 @@ namespace Oci.DatabasemigrationService
     public class DatabaseMigrationClient : RegionalClientBase
     {
         private readonly RetryConfiguration retryConfiguration;
-        private const string basePathWithoutHost = "/20210929";
+        private const string basePathWithoutHost = "/20230518";
 
         public DatabaseMigrationPaginators Paginators { get; }
 
@@ -110,7 +110,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "AbortJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Job/AbortJob",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Job/AbortJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -167,7 +167,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "AddMigrationObjects",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Migration/AddMigrationObjects",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Migration/AddMigrationObjects",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -182,63 +182,6 @@ namespace Oci.DatabasemigrationService
             catch (Exception e)
             {
                 logger.Error($"AddMigrationObjects failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Used to configure an ODMS Agent Compartment ID.
-        /// 
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemigration/ChangeAgentCompartment.cs.html">here</a> to see an example of how to use ChangeAgentCompartment API.</example>
-        public async Task<ChangeAgentCompartmentResponse> ChangeAgentCompartment(ChangeAgentCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called changeAgentCompartment");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/agents/{agentId}/actions/changeCompartment".Trim('/')));
-            HttpMethod method = new HttpMethod("POST");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "DatabaseMigration",
-                    OperationName = "ChangeAgentCompartment",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Agent/ChangeAgentCompartment",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<ChangeAgentCompartmentResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"ChangeAgentCompartment failed with error: {e.Message}");
                 throw;
             }
         }
@@ -281,7 +224,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ChangeConnectionCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Connection/ChangeConnectionCompartment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Connection/ChangeConnectionCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -338,7 +281,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ChangeMigrationCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Migration/ChangeMigrationCompartment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Migration/ChangeMigrationCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -395,7 +338,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "CloneMigration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Migration/CloneMigration",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Migration/CloneMigration",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -452,7 +395,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ConnectionDiagnostics",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Connection/ConnectionDiagnostics",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Connection/ConnectionDiagnostics",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -569,7 +512,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "CreateMigration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Migration/CreateMigration",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -584,63 +527,6 @@ namespace Oci.DatabasemigrationService
             catch (Exception e)
             {
                 logger.Error($"CreateMigration failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Delete the ODMS Agent represented by the specified ODMS Agent ID.
-        /// 
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemigration/DeleteAgent.cs.html">here</a> to see an example of how to use DeleteAgent API.</example>
-        public async Task<DeleteAgentResponse> DeleteAgent(DeleteAgentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called deleteAgent");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/agents/{agentId}".Trim('/')));
-            HttpMethod method = new HttpMethod("DELETE");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "DatabaseMigration",
-                    OperationName = "DeleteAgent",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Agent/DeleteAgent",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<DeleteAgentResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"DeleteAgent failed with error: {e.Message}");
                 throw;
             }
         }
@@ -683,7 +569,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "DeleteConnection",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Connection/DeleteConnection",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Connection/DeleteConnection",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -740,7 +626,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "DeleteJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Job/DeleteJob",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Job/DeleteJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -797,7 +683,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "DeleteMigration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Migration/DeleteMigration",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Migration/DeleteMigration",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -854,7 +740,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "EvaluateMigration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Job/EvaluateMigration",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Job/EvaluateMigration",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -911,7 +797,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "GetAdvisorReport",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Job/GetAdvisorReport",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Job/GetAdvisorReport",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -926,63 +812,6 @@ namespace Oci.DatabasemigrationService
             catch (Exception e)
             {
                 logger.Error($"GetAdvisorReport failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Display the ODMS Agent configuration.
-        /// 
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemigration/GetAgent.cs.html">here</a> to see an example of how to use GetAgent API.</example>
-        public async Task<GetAgentResponse> GetAgent(GetAgentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called getAgent");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/agents/{agentId}".Trim('/')));
-            HttpMethod method = new HttpMethod("GET");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "DatabaseMigration",
-                    OperationName = "GetAgent",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Agent/GetAgent",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<GetAgentResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"GetAgent failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1025,7 +854,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "GetConnection",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Connection/GetConnection",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Connection/GetConnection",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1082,7 +911,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "GetJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Job/GetJob",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Job/GetJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1139,7 +968,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "GetJobOutputContent",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Job/GetJobOutputContent",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Job/GetJobOutputContent",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1196,7 +1025,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "GetMigration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Migration/GetMigration",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Migration/GetMigration",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1253,7 +1082,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/WorkRequest/GetWorkRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1268,120 +1097,6 @@ namespace Oci.DatabasemigrationService
             catch (Exception e)
             {
                 logger.Error($"GetWorkRequest failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Get details of the ODMS Agent Images available to install on-premises.
-        /// 
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemigration/ListAgentImages.cs.html">here</a> to see an example of how to use ListAgentImages API.</example>
-        public async Task<ListAgentImagesResponse> ListAgentImages(ListAgentImagesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called listAgentImages");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/agentImages".Trim('/')));
-            HttpMethod method = new HttpMethod("GET");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "DatabaseMigration",
-                    OperationName = "ListAgentImages",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/AgentImageSummary/ListAgentImages",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<ListAgentImagesResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"ListAgentImages failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Display the name of all the existing ODMS Agents in the server.
-        /// 
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemigration/ListAgents.cs.html">here</a> to see an example of how to use ListAgents API.</example>
-        public async Task<ListAgentsResponse> ListAgents(ListAgentsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called listAgents");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/agents".Trim('/')));
-            HttpMethod method = new HttpMethod("GET");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "DatabaseMigration",
-                    OperationName = "ListAgents",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/AgentSummary/ListAgents",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<ListAgentsResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"ListAgents failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1424,7 +1139,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ListConnections",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/ConnectionSummary/ListConnections",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/ConnectionSummary/ListConnections",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1481,7 +1196,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ListExcludedObjects",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/ExcludedObjectSummary/ListExcludedObjects",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/ExcludedObjectSummary/ListExcludedObjects",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1538,7 +1253,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ListJobOutputs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/JobOutputSummary/ListJobOutputs",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/JobOutputSummary/ListJobOutputs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1596,7 +1311,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ListJobs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/JobSummary/ListJobs",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/JobSummary/ListJobs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1653,7 +1368,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ListMigrationObjectTypes",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/MigrationObjectTypeSummary/ListMigrationObjectTypes",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/MigrationObjectTypeSummary/ListMigrationObjectTypes",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1710,7 +1425,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ListMigrationObjects",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/MigrationObjectCollection/ListMigrationObjects",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/MigrationObjectCollection/ListMigrationObjects",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1767,7 +1482,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ListMigrations",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/MigrationSummary/ListMigrations",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/MigrationSummary/ListMigrations",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1824,7 +1539,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/WorkRequestError/ListWorkRequestErrors",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1881,7 +1596,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/WorkRequestLogEntry/ListWorkRequestLogs",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1938,7 +1653,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/WorkRequestSummary/ListWorkRequests",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/WorkRequestSummary/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1995,7 +1710,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "RemoveMigrationObjects",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Migration/RemoveMigrationObjects",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Migration/RemoveMigrationObjects",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2052,7 +1767,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "ResumeJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Job/ResumeJob",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Job/ResumeJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2109,7 +1824,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "RetrieveSupportedPhases",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Migration/RetrieveSupportedPhases",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Migration/RetrieveSupportedPhases",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2166,7 +1881,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "StartMigration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Job/StartMigration",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Job/StartMigration",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2181,63 +1896,6 @@ namespace Oci.DatabasemigrationService
             catch (Exception e)
             {
                 logger.Error($"StartMigration failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Modifies the ODMS Agent represented by the given ODMS Agent ID.
-        /// 
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemigration/UpdateAgent.cs.html">here</a> to see an example of how to use UpdateAgent API.</example>
-        public async Task<UpdateAgentResponse> UpdateAgent(UpdateAgentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called updateAgent");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/agents/{agentId}".Trim('/')));
-            HttpMethod method = new HttpMethod("PUT");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "DatabaseMigration",
-                    OperationName = "UpdateAgent",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Agent/UpdateAgent",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<UpdateAgentResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"UpdateAgent failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2280,7 +1938,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "UpdateConnection",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Connection/UpdateConnection",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Connection/UpdateConnection",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2337,7 +1995,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "UpdateJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Job/UpdateJob",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Job/UpdateJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2394,7 +2052,7 @@ namespace Oci.DatabasemigrationService
                     ServiceName = "DatabaseMigration",
                     OperationName = "UpdateMigration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20210929/Migration/UpdateMigration",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-migration/20230518/Migration/UpdateMigration",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

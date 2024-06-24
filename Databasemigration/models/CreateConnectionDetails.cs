@@ -11,20 +11,40 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Details to create a Database Connection resource.
-    /// 
+    /// The information about a new Connection.
     /// </summary>
+    [JsonConverter(typeof(CreateConnectionDetailsModelConverter))]
     public class CreateConnectionDetails 
     {
         
+        
         /// <value>
-        /// OCID of the compartment
+        /// A user-friendly name. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
         /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DisplayName is required.")]
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
+        
+        /// <value>
+        /// A user-friendly description. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        /// <value>
+        /// The OCID of the compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -34,90 +54,8 @@ namespace Oci.DatabasemigrationService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Database Connection display name identifier.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "displayName")]
-        public string DisplayName { get; set; }
-        
-        /// <value>
-        /// Database connection type.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DatabaseType is required.")]
-        [JsonProperty(PropertyName = "databaseType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<DatabaseConnectionTypes> DatabaseType { get; set; }
-        
-        /// <value>
-        /// Database manual connection subtype. This value can only be specified for manual connections.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "manualDatabaseSubType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<DatabaseManualConnectionSubTypes> ManualDatabaseSubType { get; set; }
-        
-        /// <value>
-        /// The OCID of the cloud database. Required if the database connection type is Autonomous.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "databaseId")]
-        public string DatabaseId { get; set; }
-        
-        [JsonProperty(PropertyName = "connectDescriptor")]
-        public CreateConnectDescriptor ConnectDescriptor { get; set; }
-        
-        /// <value>
-        /// This name is the distinguished name used while creating the certificate on target database. Requires a TLS wallet to be specified.
-        /// Not required for source container database connections.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "certificateTdn")]
-        public string CertificateTdn { get; set; }
-        
-        /// <value>
-        /// cwallet.sso containing containing the TCPS/SSL certificate; base64 encoded String. Not required for source container database connections.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "tlsWallet")]
-        public string TlsWallet { get; set; }
-        
-        /// <value>
-        /// keystore.jks file contents; base64 encoded String. Requires a TLS wallet to be specified. Not required for source container database connections.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "tlsKeystore")]
-        public string TlsKeystore { get; set; }
-        
-        [JsonProperty(PropertyName = "sshDetails")]
-        public CreateSshDetails SshDetails { get; set; }
-        
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AdminCredentials is required.")]
-        [JsonProperty(PropertyName = "adminCredentials")]
-        public CreateAdminCredentials AdminCredentials { get; set; }
-        
-        [JsonProperty(PropertyName = "replicationCredentials")]
-        public CreateAdminCredentials ReplicationCredentials { get; set; }
-        
-        [JsonProperty(PropertyName = "privateEndpoint")]
-        public CreatePrivateEndpoint PrivateEndpoint { get; set; }
-        
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VaultDetails is required.")]
-        [JsonProperty(PropertyName = "vaultDetails")]
-        public CreateVaultDetails VaultDetails { get; set; }
-        
-        /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. 
+        /// For more information, see Resource Tags. Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
@@ -130,11 +68,105 @@ namespace Oci.DatabasemigrationService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
+        /// OCI resource ID.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "VaultId is required.")]
+        [JsonProperty(PropertyName = "vaultId")]
+        public string VaultId { get; set; }
+        
+        /// <value>
+        /// The OCID of the key used in cryptographic operations.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "KeyId is required.")]
+        [JsonProperty(PropertyName = "keyId")]
+        public string KeyId { get; set; }
+        
+        /// <value>
+        /// OCI resource ID.
+        /// </value>
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
+        
+        /// <value>
         /// An array of Network Security Group OCIDs used to define network access for Connections.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
+        /// <value>
+        /// The username (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Username is required.")]
+        [JsonProperty(PropertyName = "username")]
+        public string Username { get; set; }
+        
+        /// <value>
+        /// The password (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Password is required.")]
+        [JsonProperty(PropertyName = "password")]
+        public string Password { get; set; }
+        
+        /// <value>
+        /// The username (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicationUsername")]
+        public string ReplicationUsername { get; set; }
+        
+        /// <value>
+        /// The password (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicationPassword")]
+        public string ReplicationPassword { get; set; }
+        
+    }
+
+    public class CreateConnectionDetailsModelConverter : JsonConverter
+    {
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(CreateConnectionDetails);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(CreateConnectionDetails);
+            var discriminator = jsonObject["connectionType"].Value<string>();
+            switch (discriminator)
+            {
+                case "MYSQL":
+                    obj = new CreateMysqlConnectionDetails();
+                    break;
+                case "ORACLE":
+                    obj = new CreateOracleConnectionDetails();
+                    break;
+            }
+            serializer.Populate(jsonObject.CreateReader(), obj);
+            return obj;
+        }
     }
 }

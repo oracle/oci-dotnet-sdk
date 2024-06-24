@@ -27,14 +27,12 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// Name of directory object in database
-        /// 
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
         /// Absolute path of directory on database server
-        /// 
         /// </value>
         [JsonProperty(PropertyName = "path")]
         public string Path { get; set; }

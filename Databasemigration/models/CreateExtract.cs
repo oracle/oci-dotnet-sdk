@@ -17,7 +17,6 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Parameters for GoldenGate Extract processes.
-    /// 
     /// </summary>
     public class CreateExtract 
     {

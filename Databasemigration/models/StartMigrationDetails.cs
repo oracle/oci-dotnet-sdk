@@ -17,7 +17,6 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Parameters to specify to a Migration job operation.
-    /// 
     /// </summary>
     public class StartMigrationDetails 
     {

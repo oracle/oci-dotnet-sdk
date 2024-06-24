@@ -17,14 +17,12 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Migration Object Type
-    /// 
     /// </summary>
     public class MigrationObjectTypeSummary 
     {
         
         /// <value>
         /// Object type name
-        /// 
         /// </value>
         /// <remarks>
         /// Required

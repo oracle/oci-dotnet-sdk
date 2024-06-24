@@ -17,7 +17,6 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Parameters for Extract processes.
-    /// 
     /// </summary>
     public class Extract 
     {

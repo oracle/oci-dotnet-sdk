@@ -16,22 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Optional parameters for Data Pump Export and Import. Refer to [Configuring Optional Initial Load Advanced Settings](https://docs.us.oracle.com/en/cloud/paas/database-migration/dmsus/working-migration-resources.html#GUID-24BD3054-FDF8-48FF-8492-636C1D4B71ED)
-    /// 
+    /// Optional parameters for Data Pump Export and Import.
     /// </summary>
     public class DataPumpParameters 
     {
         
         /// <value>
-        /// Set to false to force Data Pump worker processes to run on one instance.
-        /// 
+        /// Set to false to force Data Pump worker process to run on one instance.
         /// </value>
         [JsonProperty(PropertyName = "isCluster")]
         public System.Nullable<bool> IsCluster { get; set; }
         
         /// <value>
         /// Estimate size of dumps that will be generated.
-        /// 
         /// </value>
         [JsonProperty(PropertyName = "estimate")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -47,7 +44,6 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// Exclude paratemers for Export and Import.
-        /// 
         /// </value>
         [JsonProperty(PropertyName = "excludeParameters")]
         public System.Collections.Generic.List<DataPumpExcludeParameters> ExcludeParameters { get; set; }
@@ -62,7 +58,6 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// Maximum number of worker processes that can be used for a Data Pump Export job.
-        /// 
         /// </value>
         [JsonProperty(PropertyName = "exportParallelismDegree")]
         public System.Nullable<int> ExportParallelismDegree { get; set; }

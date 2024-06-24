@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Migration tablespace settings valid for ADB-S target type using remap feature.
+    /// Migration tablespace settings valid for Autonomous Database Serverless target type using remap feature.
     /// 
     /// </summary>
     public class UpdateADBServerlesTablespaceDetails : UpdateTargetTypeTablespaceDetails

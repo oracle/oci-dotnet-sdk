@@ -11,20 +11,19 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Migration resource
-    /// 
     /// </summary>
+    [JsonConverter(typeof(MigrationSummaryModelConverter))]
     public class MigrationSummary 
     {
         
         /// <value>
-        /// The OCID of the resource
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,8 +32,10 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
+        
         /// <value>
-        /// Migration Display Name
+        /// A user-friendly name. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         /// <remarks>
@@ -45,8 +46,7 @@ namespace Oci.DatabasemigrationService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// OCID of the compartment
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         /// <remarks>
         /// Required
@@ -56,8 +56,8 @@ namespace Oci.DatabasemigrationService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Migration type.
-        /// 
+        /// The type of the migration to be performed.
+        /// Example: ONLINE if no downtime is preferred for a migration. This method uses Oracle GoldenGate for replication.
         /// </value>
         /// <remarks>
         /// Required
@@ -68,8 +68,7 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<MigrationTypes> Type { get; set; }
         
         /// <value>
-        /// The OCID of the Source Database Connection.
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         /// <remarks>
         /// Required
@@ -79,15 +78,7 @@ namespace Oci.DatabasemigrationService.Models
         public string SourceDatabaseConnectionId { get; set; }
         
         /// <value>
-        /// The OCID of the Source Container Database Connection.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "sourceContainerDatabaseConnectionId")]
-        public string SourceContainerDatabaseConnectionId { get; set; }
-        
-        /// <value>
-        /// The OCID of the Target Database Connection.
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         /// <remarks>
         /// Required
@@ -97,24 +88,13 @@ namespace Oci.DatabasemigrationService.Models
         public string TargetDatabaseConnectionId { get; set; }
         
         /// <value>
-        /// OCID of the current ODMS Job in execution for the Migration, if any.
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         [JsonProperty(PropertyName = "executingJobId")]
         public string ExecutingJobId { get; set; }
         
         /// <value>
-        /// The OCID of the registered on-premises ODMS Agent. Only valid for Offline Migrations.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "agentId")]
-        public string AgentId { get; set; }
-        
-        [JsonProperty(PropertyName = "vaultDetails")]
-        public VaultDetails VaultDetails { get; set; }
-        
-        /// <value>
-        /// The time the Migration was created. An RFC3339 formatted datetime string.
+        /// An RFC3339 formatted datetime string such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         /// <remarks>
@@ -125,22 +105,21 @@ namespace Oci.DatabasemigrationService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time of the last Migration details update. An RFC3339 formatted datetime string.
+        /// An RFC3339 formatted datetime string such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The time of last Migration. An RFC3339 formatted datetime string.
+        /// An RFC3339 formatted datetime string such as `2016-08-25T21:10:29.600Z`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeLastMigration")]
         public System.Nullable<System.DateTime> TimeLastMigration { get; set; }
         
         /// <value>
-        /// The current state of the Migration.
-        /// 
+        /// The current state of the Migration resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -152,15 +131,14 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// Additional status related to the execution and current state of the Migration.
-        /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MigrationStatus> LifecycleDetails { get; set; }
         
         /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. 
+        /// For more information, see Resource Tags. Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
@@ -179,5 +157,45 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+    }
+
+    public class MigrationSummaryModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(MigrationSummary);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(MigrationSummary);
+            var discriminator = jsonObject["databaseCombination"].Value<string>();
+            switch (discriminator)
+            {
+                case "ORACLE":
+                    obj = new OracleMigrationSummary();
+                    break;
+                case "MYSQL":
+                    obj = new MySqlMigrationSummary();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under MigrationSummary! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

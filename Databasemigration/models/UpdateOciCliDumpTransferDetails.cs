@@ -17,14 +17,12 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Optional dump transfer details for OCI-CLI-based dump transfer in source or target host.
-    /// 
     /// </summary>
     public class UpdateOciCliDumpTransferDetails : UpdateHostDumpTransferDetails
     {
         
         /// <value>
         /// Path to the OCI CLI installation in the node.
-        /// 
         /// </value>
         /// <remarks>
         /// Required
