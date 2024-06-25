@@ -16,8 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Optional additional properties for dump transfer in source or target host. Default kind is CURL
-    /// 
+    /// Optional additional properties for dump transfer in source or target host. Default kind is CURL.
     /// </summary>
     [JsonConverter(typeof(CreateHostDumpTransferDetailsModelConverter))]
     public class CreateHostDumpTransferDetails 
@@ -31,8 +30,7 @@ namespace Oci.DatabasemigrationService.Models
         public string WalletLocation { get; set; }
                 ///
         /// <value>
-        /// Type of dump transfer to use during migration in source or target host. Default kind is CURL
-        /// 
+        /// Type of dump transfer to use during migration in source or target host. Default kind is CURL.
         /// </value>
         ///
         public enum KindEnum {

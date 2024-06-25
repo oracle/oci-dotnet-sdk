@@ -14,7 +14,6 @@ namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
   /// Size of Oracle database blocks in KB.
-    /// 
   /// </summary>
   public enum DataPumpTablespaceBlockSizesInKb {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

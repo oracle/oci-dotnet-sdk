@@ -16,28 +16,30 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Migration tablespace settings valid for ADB-D target type using auto create feature
+    /// Auto create tablespace settings that are valid for Dedicated Autonomous Databases.
     /// 
     /// </summary>
     public class ADBDedicatedAutoCreateTablespaceDetails : TargetTypeTablespaceDetails
     {
         
         /// <value>
-        /// True to auto-create tablespace in the target Database.
+        /// Set this property to true to auto-create tablespaces in the target Database.
+        /// Note: This is not applicable for Autonomous Database Serverless databases.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoCreate")]
         public System.Nullable<bool> IsAutoCreate { get; set; }
         
         /// <value>
-        /// True set tablespace to big file.
+        /// Set this property to true to enable tablespace of the type big file.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isBigFile")]
         public System.Nullable<bool> IsBigFile { get; set; }
         
         /// <value>
-        /// Size of extend in MB. Can only be specified if 'isBigFile' property is set to true.
+        /// Size to extend the tablespace in MB. 
+        /// Note: Only applicable if 'isBigFile' property is set to true.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "extendSizeInMBs")]

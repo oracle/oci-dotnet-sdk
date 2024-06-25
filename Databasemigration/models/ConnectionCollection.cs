@@ -16,15 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Results of a Database Connection search. Contains DatabaseConnectionSummary items.
-    /// 
+    /// Array of connection summary objects.
     /// </summary>
     public class ConnectionCollection 
     {
         
         /// <value>
-        /// Items in collection.
-        /// 
+        /// An array of Connection summaries.
         /// </value>
         /// <remarks>
         /// Required

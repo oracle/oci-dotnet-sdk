@@ -11,72 +11,37 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Details to update in a Database Connection resource.
-    /// 
+    /// The information to update a Connection.
     /// </summary>
+    [JsonConverter(typeof(UpdateConnectionDetailsModelConverter))]
     public class UpdateConnectionDetails 
     {
         
+        
         /// <value>
-        /// Database Connection display name identifier.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the cloud database.
+        /// A user-friendly description. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "databaseId")]
-        public string DatabaseId { get; set; }
-        
-        [JsonProperty(PropertyName = "connectDescriptor")]
-        public UpdateConnectDescriptor ConnectDescriptor { get; set; }
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
         
         /// <value>
-        /// This name is the distinguished name used while creating the certificate on target database. Not required for source container database connections.
-        /// </value>
-        [JsonProperty(PropertyName = "certificateTdn")]
-        public string CertificateTdn { get; set; }
-        
-        /// <value>
-        /// cwallet.sso containing containing the TCPS/SSL certificate; base64 encoded String. Not required for source container database connections.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "tlsWallet")]
-        public string TlsWallet { get; set; }
-        
-        /// <value>
-        /// keystore.jks file contents; base64 encoded String. Not required for source container database connections.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "tlsKeystore")]
-        public string TlsKeystore { get; set; }
-        
-        [JsonProperty(PropertyName = "sshDetails")]
-        public UpdateSshDetails SshDetails { get; set; }
-        
-        [JsonProperty(PropertyName = "adminCredentials")]
-        public UpdateAdminCredentials AdminCredentials { get; set; }
-        
-        [JsonProperty(PropertyName = "replicationCredentials")]
-        public UpdateAdminCredentials ReplicationCredentials { get; set; }
-        
-        [JsonProperty(PropertyName = "privateEndpoint")]
-        public UpdatePrivateEndpoint PrivateEndpoint { get; set; }
-        
-        [JsonProperty(PropertyName = "vaultDetails")]
-        public UpdateVaultDetails VaultDetails { get; set; }
-        
-        /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. 
+        /// For more information, see Resource Tags. Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
@@ -89,11 +54,89 @@ namespace Oci.DatabasemigrationService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
+        /// OCI resource ID.
+        /// </value>
+        [JsonProperty(PropertyName = "vaultId")]
+        public string VaultId { get; set; }
+        
+        /// <value>
+        /// The OCID of the key used in cryptographic operations.
+        /// </value>
+        [JsonProperty(PropertyName = "keyId")]
+        public string KeyId { get; set; }
+        
+        /// <value>
+        /// OCI resource ID.
+        /// </value>
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
+        
+        /// <value>
         /// An array of Network Security Group OCIDs used to define network access for Connections.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
+        /// <value>
+        /// The username (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "username")]
+        public string Username { get; set; }
+        
+        /// <value>
+        /// The password (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "password")]
+        public string Password { get; set; }
+        
+        /// <value>
+        /// The username (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicationUsername")]
+        public string ReplicationUsername { get; set; }
+        
+        /// <value>
+        /// The password (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicationPassword")]
+        public string ReplicationPassword { get; set; }
+        
+    }
+
+    public class UpdateConnectionDetailsModelConverter : JsonConverter
+    {
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(UpdateConnectionDetails);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(UpdateConnectionDetails);
+            var discriminator = jsonObject["connectionType"].Value<string>();
+            switch (discriminator)
+            {
+                case "ORACLE":
+                    obj = new UpdateOracleConnectionDetails();
+                    break;
+                case "MYSQL":
+                    obj = new UpdateMysqlConnectionDetails();
+                    break;
+            }
+            serializer.Populate(jsonObject.CreateReader(), obj);
+            return obj;
+        }
     }
 }

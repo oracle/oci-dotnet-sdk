@@ -25,7 +25,6 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// Namespace name of the object store bucket.
-        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -36,7 +35,6 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// Bucket name.
-        /// 
         /// </value>
         /// <remarks>
         /// Required

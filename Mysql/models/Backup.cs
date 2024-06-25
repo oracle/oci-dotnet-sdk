@@ -238,5 +238,26 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The OCID of the immediate source DB system backup from which this DB system backup was copied.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "immediateSourceBackupId")]
+        public string ImmediateSourceBackupId { get; set; }
+        
+        /// <value>
+        /// The OCID of the original source DB system backup from which this DB system backup was copied.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "originalSourceBackupId")]
+        public string OriginalSourceBackupId { get; set; }
+        
+        /// <value>
+        /// The date and time the DB system backup copy was created, as described by [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeCopyCreated")]
+        public System.Nullable<System.DateTime> TimeCopyCreated { get; set; }
+        
     }
 }

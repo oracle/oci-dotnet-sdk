@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Pre-Migration advisor report details.
+    /// Premigration Advisor report details.
     /// 
     /// </summary>
     public class AdvisorReport 
@@ -26,7 +26,7 @@ namespace Oci.DatabasemigrationService.Models
         public AdvisorReportLocationDetails ReportLocationDetails { get; set; }
         
         /// <value>
-        /// Pre-Migration advisor result.
+        /// Premigration Advisor result.
         /// 
         /// </value>
         /// <remarks>

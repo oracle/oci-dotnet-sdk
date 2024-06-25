@@ -61,6 +61,8 @@ namespace Oci.MysqlService.Models
       ResetChannel,
       [EnumMember(Value = "DELETE_CHANNEL")]
       DeleteChannel,
+      [EnumMember(Value = "COPY_BACKUP")]
+      CopyBackup,
       [EnumMember(Value = "CREATE_BACKUP")]
       CreateBackup,
       [EnumMember(Value = "DELETE_BACKUP")]

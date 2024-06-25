@@ -17,7 +17,6 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Migration tablespace settings.
-    /// 
     /// </summary>
     [JsonConverter(typeof(CreateTargetTypeTablespaceDetailsModelConverter))]
     public class CreateTargetTypeTablespaceDetails 

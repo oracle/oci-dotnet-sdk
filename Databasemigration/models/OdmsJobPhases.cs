@@ -28,8 +28,6 @@ namespace Oci.DatabasemigrationService.Models
       OdmsValidatePremigrationAdvisor,
       [EnumMember(Value = "ODMS_VALIDATE_GG_HUB")]
       OdmsValidateGgHub,
-      [EnumMember(Value = "ODMS_VALIDATE_GG_SERVICE")]
-      OdmsValidateGgService,
       [EnumMember(Value = "ODMS_VALIDATE_DATAPUMP_SETTINGS")]
       OdmsValidateDatapumpSettings,
       [EnumMember(Value = "ODMS_VALIDATE_DATAPUMP_SETTINGS_SRC")]
@@ -40,16 +38,22 @@ namespace Oci.DatabasemigrationService.Models
       OdmsValidateDatapumpSrc,
       [EnumMember(Value = "ODMS_VALIDATE_DATAPUMP_ESTIMATE_SRC")]
       OdmsValidateDatapumpEstimateSrc,
-      [EnumMember(Value = "ODMS_INITIALIZE_GGS")]
-      OdmsInitializeGgs,
+      [EnumMember(Value = "ODMS_FETCH_METADATA_SRC")]
+      OdmsFetchMetadataSrc,
+      [EnumMember(Value = "ODMS_FETCH_METADATA_TGT")]
+      OdmsFetchMetadataTgt,
       [EnumMember(Value = "ODMS_VALIDATE")]
       OdmsValidate,
       [EnumMember(Value = "ODMS_PREPARE")]
       OdmsPrepare,
+      [EnumMember(Value = "ODMS_INITIALIZE_REPLICATION_INFRASTRUCTURE")]
+      OdmsInitializeReplicationInfrastructure,
       [EnumMember(Value = "ODMS_INITIAL_LOAD_EXPORT")]
       OdmsInitialLoadExport,
       [EnumMember(Value = "ODMS_DATA_UPLOAD")]
       OdmsDataUpload,
+      [EnumMember(Value = "ODMS_INITIAL_LOAD_EXPORT_DATA_UPLOAD")]
+      OdmsInitialLoadExportDataUpload,
       [EnumMember(Value = "ODMS_INITIAL_LOAD_IMPORT")]
       OdmsInitialLoadImport,
       [EnumMember(Value = "ODMS_POST_INITIAL_LOAD")]

@@ -17,7 +17,6 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Optional properties for Curl-based dump transfer in source or target host.
-    /// 
     /// </summary>
     public class CreateCurlTransferDetails : CreateHostDumpTransferDetails
     {

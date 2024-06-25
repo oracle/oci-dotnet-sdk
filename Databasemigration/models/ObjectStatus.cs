@@ -13,8 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// exclude/include/ status.
-    /// 
+  /// exclude/include status.
   /// </summary>
   public enum ObjectStatus {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

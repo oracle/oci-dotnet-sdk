@@ -11,105 +11,57 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Update Migration resource parameters.
-    /// 
+    /// Common Update Migration details.
     /// </summary>
+    [JsonConverter(typeof(UpdateMigrationDetailsModelConverter))]
     public class UpdateMigrationDetails 
     {
         
         /// <value>
-        /// Migration type.
+        /// A user-friendly description. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
         /// 
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        
+        /// <value>
+        /// The type of the migration to be performed.
+        /// Example: ONLINE if no downtime is preferred for a migration. This method uses Oracle GoldenGate for replication.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MigrationTypes> Type { get; set; }
         
         /// <value>
-        /// Migration Display Name
+        /// A user-friendly name. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the registered ODMS Agent.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "agentId")]
-        public string AgentId { get; set; }
-        
-        /// <value>
-        /// The OCID of the Source Database Connection.
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         [JsonProperty(PropertyName = "sourceDatabaseConnectionId")]
         public string SourceDatabaseConnectionId { get; set; }
         
         /// <value>
-        /// The OCID of the Source Container Database Connection. Only used for Online migrations.
-        /// Only Connections of type Non-Autonomous can be used as source container databases.
-        /// An empty value would remove the stored Connection ID.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "sourceContainerDatabaseConnectionId")]
-        public string SourceContainerDatabaseConnectionId { get; set; }
-        
-        /// <value>
-        /// The OCID of the Target Database Connection.
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         [JsonProperty(PropertyName = "targetDatabaseConnectionId")]
         public string TargetDatabaseConnectionId { get; set; }
         
-        [JsonProperty(PropertyName = "dataTransferMediumDetailsV2")]
-        public DataTransferMediumDetailsV2 DataTransferMediumDetailsV2 { get; set; }
-        
-        [JsonProperty(PropertyName = "dataTransferMediumDetails")]
-        public UpdateDataTransferMediumDetails DataTransferMediumDetails { get; set; }
-        
-        [JsonProperty(PropertyName = "dumpTransferDetails")]
-        public UpdateDumpTransferDetails DumpTransferDetails { get; set; }
-        
-        [JsonProperty(PropertyName = "datapumpSettings")]
-        public UpdateDataPumpSettings DatapumpSettings { get; set; }
-        
-        [JsonProperty(PropertyName = "advisorSettings")]
-        public UpdateAdvisorSettings AdvisorSettings { get; set; }
-        
         /// <value>
-        /// Database objects to exclude from migration, cannot be specified alongside 'includeObjects'.
-        /// If specified, the list will be replaced entirely. Empty list will remove stored excludeObjects details.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "excludeObjects")]
-        public System.Collections.Generic.List<DatabaseObject> ExcludeObjects { get; set; }
-        
-        /// <value>
-        /// Database objects to include from migration, cannot be specified alongside 'excludeObjects'.
-        /// If specified, the list will be replaced entirely. Empty list will remove stored includeObjects details.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "includeObjects")]
-        public System.Collections.Generic.List<DatabaseObject> IncludeObjects { get; set; }
-        
-        [JsonProperty(PropertyName = "goldenGateServiceDetails")]
-        public UpdateGoldenGateServiceDetails GoldenGateServiceDetails { get; set; }
-        
-        [JsonProperty(PropertyName = "goldenGateDetails")]
-        public UpdateGoldenGateDetails GoldenGateDetails { get; set; }
-        
-        [JsonProperty(PropertyName = "vaultDetails")]
-        public UpdateVaultDetails VaultDetails { get; set; }
-        
-        /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. 
+        /// For more information, see Resource Tags. Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
@@ -121,5 +73,37 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+    }
+
+    public class UpdateMigrationDetailsModelConverter : JsonConverter
+    {
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(UpdateMigrationDetails);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(UpdateMigrationDetails);
+            var discriminator = jsonObject["databaseCombination"].Value<string>();
+            switch (discriminator)
+            {
+                case "MYSQL":
+                    obj = new UpdateMySqlMigrationDetails();
+                    break;
+                case "ORACLE":
+                    obj = new UpdateOracleMigrationDetails();
+                    break;
+            }
+            serializer.Populate(jsonObject.CreateReader(), obj);
+            return obj;
+        }
     }
 }

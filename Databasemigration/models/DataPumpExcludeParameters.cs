@@ -14,7 +14,6 @@ namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
   /// Supported Import/Export exclude parameters
-    /// 
   /// </summary>
   public enum DataPumpExcludeParameters {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

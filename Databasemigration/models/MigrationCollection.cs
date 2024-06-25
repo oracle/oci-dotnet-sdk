@@ -17,14 +17,12 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Results of a Migration search. Contains MigrationSummary items.
-    /// 
     /// </summary>
     public class MigrationCollection 
     {
         
         /// <value>
         /// Items in collection.
-        /// 
         /// </value>
         /// <remarks>
         /// Required

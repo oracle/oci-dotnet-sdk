@@ -11,20 +11,20 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Database Connection Summary.
-    /// 
+    /// Represents the parameters common for all connections in list operation.
     /// </summary>
+    [JsonConverter(typeof(ConnectionSummaryModelConverter))]
     public class ConnectionSummary 
     {
         
+        
         /// <value>
-        /// The OCID of the resource
-        /// 
+        /// The OCID of the connection being referenced.
         /// </value>
         /// <remarks>
         /// Required
@@ -34,45 +34,8 @@ namespace Oci.DatabasemigrationService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// OCID of the compartment
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
-        
-        /// <value>
-        /// Database connection type.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DatabaseType is required.")]
-        [JsonProperty(PropertyName = "databaseType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<DatabaseConnectionTypes> DatabaseType { get; set; }
-        
-        /// <value>
-        /// Database manual connection subtype. This value can only be specified for manual connections.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "manualDatabaseSubType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<DatabaseManualConnectionSubTypes> ManualDatabaseSubType { get; set; }
-        
-        /// <value>
-        /// True if the Autonomous Connection is dedicated. Not provided for Non-Autonomous Connections.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "isDedicated")]
-        public System.Nullable<bool> IsDedicated { get; set; }
-        
-        /// <value>
-        /// Database Connection display name identifier.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         /// <remarks>
@@ -83,53 +46,26 @@ namespace Oci.DatabasemigrationService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the cloud database.
+        /// A user-friendly description. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "databaseId")]
-        public string DatabaseId { get; set; }
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
         
         /// <value>
-        /// The time the Connection resource was created. An RFC3339 formatted datetime string.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TimeCreated is required.")]
-        [JsonProperty(PropertyName = "timeCreated")]
-        public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        
-        /// <value>
-        /// The time of the last Connection resource details update. An RFC3339 formatted datetime string.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "timeUpdated")]
-        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-        
-        /// <value>
-        /// The current state of the Connection resource.
-        /// 
+        /// The OCID of the compartment.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "LifecycleState is required.")]
-        [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
         
         /// <value>
-        /// A message describing the current state in more detail. For example, can be used to provide actionable information
-        /// for a resource in Failed state.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "lifecycleDetails")]
-        public string LifecycleDetails { get; set; }
-        
-        /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. 
+        /// For more information, see Resource Tags. Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
@@ -149,11 +85,118 @@ namespace Oci.DatabasemigrationService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
+        /// Lifecycle state for connection.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifecycleState is required.")]
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<Connection.LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// A message describing the current state in more detail. For example, can be used to provide actionable information
+        /// for a resource in Failed state.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// The time when this resource was created.
+        /// An RFC3339 formatted datetime string such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeCreated is required.")]
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The time when this resource was updated.
+        /// An RFC3339 formatted datetime string such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeUpdated is required.")]
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// OCI resource ID.
+        /// </value>
+        [JsonProperty(PropertyName = "vaultId")]
+        public string VaultId { get; set; }
+        
+        /// <value>
+        /// The OCID of the key used in cryptographic operations.
+        /// </value>
+        [JsonProperty(PropertyName = "keyId")]
+        public string KeyId { get; set; }
+        
+        /// <value>
+        /// OCI resource ID.
+        /// </value>
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
+        
+        /// <value>
+        /// List of ingress IP addresses from where to connect to this connection's privateIp.
+        /// </value>
+        [JsonProperty(PropertyName = "ingressIps")]
+        public System.Collections.Generic.List<IngressIpDetails> IngressIps { get; set; }
+        
+        /// <value>
         /// An array of Network Security Group OCIDs used to define network access for Connections.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
+    }
+
+    public class ConnectionSummaryModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(ConnectionSummary);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(ConnectionSummary);
+            var discriminator = jsonObject["connectionType"].Value<string>();
+            switch (discriminator)
+            {
+                case "ORACLE":
+                    obj = new OracleConnectionSummary();
+                    break;
+                case "MYSQL":
+                    obj = new MysqlConnectionSummary();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under ConnectionSummary! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

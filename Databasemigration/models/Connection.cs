@@ -11,20 +11,20 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Database Connection resource used for migrations.
-    /// 
+    /// Represents the common details required for creating a new connection.
     /// </summary>
+    [JsonConverter(typeof(ConnectionModelConverter))]
     public class Connection 
     {
         
+        
         /// <value>
-        /// The OCID of the resource
-        /// 
+        /// The OCID of the connection being referenced.
         /// </value>
         /// <remarks>
         /// Required
@@ -34,45 +34,8 @@ namespace Oci.DatabasemigrationService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// OCID of the compartment
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
-        
-        /// <value>
-        /// Database connection type.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DatabaseType is required.")]
-        [JsonProperty(PropertyName = "databaseType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<DatabaseConnectionTypes> DatabaseType { get; set; }
-        
-        /// <value>
-        /// Database manual connection subtype. This value can only be specified for manual connections.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "manualDatabaseSubType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<DatabaseManualConnectionSubTypes> ManualDatabaseSubType { get; set; }
-        
-        /// <value>
-        /// True if the Autonomous Connection is dedicated. Not provided for Non-Autonomous Connections.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "isDedicated")]
-        public System.Nullable<bool> IsDedicated { get; set; }
-        
-        /// <value>
-        /// Database Connection display name identifier.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
         /// 
         /// </value>
         /// <remarks>
@@ -83,85 +46,26 @@ namespace Oci.DatabasemigrationService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the cloud database.
+        /// A user-friendly description. Does not have to be unique, and it's changeable. 
+        /// Avoid entering confidential information.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "databaseId")]
-        public string DatabaseId { get; set; }
-        
-        [JsonProperty(PropertyName = "connectDescriptor")]
-        public ConnectDescriptor ConnectDescriptor { get; set; }
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
         
         /// <value>
-        /// OCID of the Secret in the OCI vault containing the Database Connection credentials.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "credentialsSecretId")]
-        public string CredentialsSecretId { get; set; }
-        
-        /// <value>
-        /// This name is the distinguished name used while creating the certificate on target database.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "certificateTdn")]
-        public string CertificateTdn { get; set; }
-        
-        [JsonProperty(PropertyName = "sshDetails")]
-        public SshDetails SshDetails { get; set; }
-        
-        [JsonProperty(PropertyName = "adminCredentials")]
-        public AdminCredentials AdminCredentials { get; set; }
-        
-        [JsonProperty(PropertyName = "replicationCredentials")]
-        public AdminCredentials ReplicationCredentials { get; set; }
-        
-        [JsonProperty(PropertyName = "privateEndpoint")]
-        public PrivateEndpointDetails PrivateEndpoint { get; set; }
-        
-        [JsonProperty(PropertyName = "vaultDetails")]
-        public VaultDetails VaultDetails { get; set; }
-        
-        /// <value>
-        /// The current state of the Connection resource.
-        /// 
+        /// The OCID of the compartment.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "LifecycleState is required.")]
-        [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
         
         /// <value>
-        /// A message describing the current state in more detail. For example, can be used to provide actionable information
-        /// for a resource in Failed state.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "lifecycleDetails")]
-        public string LifecycleDetails { get; set; }
-        
-        /// <value>
-        /// The time the Connection resource was created. An RFC3339 formatted datetime string.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TimeCreated is required.")]
-        [JsonProperty(PropertyName = "timeCreated")]
-        public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        
-        /// <value>
-        /// The time of the last Connection resource details update. An RFC3339 formatted datetime string.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "timeUpdated")]
-        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-        
-        /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. 
+        /// For more information, see Resource Tags. Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
@@ -179,6 +83,94 @@ namespace Oci.DatabasemigrationService.Models
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+                ///
+        /// <value>
+        /// The Connection's current lifecycle state.
+        /// </value>
+        ///
+        public enum LifecycleStateEnum {
+            [EnumMember(Value = "CREATING")]
+            Creating,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            [EnumMember(Value = "DELETING")]
+            Deleting,
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            [EnumMember(Value = "FAILED")]
+            Failed
+        };
+
+        /// <value>
+        /// The Connection's current lifecycle state.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifecycleState is required.")]
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// The message describing the current state of the connection's lifecycle in detail.
+        /// For example, can be used to provide actionable information for a connection in a Failed state.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// The time when this resource was created.
+        /// An RFC3339 formatted datetime string such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeCreated is required.")]
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The time when this resource was updated.
+        /// An RFC3339 formatted datetime string such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeUpdated is required.")]
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// OCI resource ID.
+        /// </value>
+        [JsonProperty(PropertyName = "vaultId")]
+        public string VaultId { get; set; }
+        
+        /// <value>
+        /// The OCID of the key used in cryptographic operations.
+        /// </value>
+        [JsonProperty(PropertyName = "keyId")]
+        public string KeyId { get; set; }
+        
+        /// <value>
+        /// OCI resource ID.
+        /// </value>
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
+        
+        /// <value>
+        /// List of ingress IP addresses from where to connect to this connection's privateIp.
+        /// </value>
+        [JsonProperty(PropertyName = "ingressIps")]
+        public System.Collections.Generic.List<IngressIpDetails> IngressIps { get; set; }
         
         /// <value>
         /// An array of Network Security Group OCIDs used to define network access for Connections.
@@ -187,5 +179,89 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
+        /// <value>
+        /// The username (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Username is required.")]
+        [JsonProperty(PropertyName = "username")]
+        public string Username { get; set; }
+        
+        /// <value>
+        /// The password (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "password")]
+        public string Password { get; set; }
+        
+        /// <value>
+        /// The username (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicationUsername")]
+        public string ReplicationUsername { get; set; }
+        
+        /// <value>
+        /// The password (credential) used when creating or updating this resource.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicationPassword")]
+        public string ReplicationPassword { get; set; }
+        
+        /// <value>
+        /// The OCID of the resource being referenced.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
+        
+        /// <value>
+        /// The OCID of the resource being referenced.
+        /// </value>
+        [JsonProperty(PropertyName = "privateEndpointId")]
+        public string PrivateEndpointId { get; set; }
+        
+    }
+
+    public class ConnectionModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(Connection);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(Connection);
+            var discriminator = jsonObject["connectionType"].Value<string>();
+            switch (discriminator)
+            {
+                case "MYSQL":
+                    obj = new MysqlConnection();
+                    break;
+                case "ORACLE":
+                    obj = new OracleConnection();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under Connection! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

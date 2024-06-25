@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Details to access Pre-Migration Advisor report.
+    /// Details to access Premigration Advisor report.
     /// 
     /// </summary>
     public class AdvisorReportLocationDetails 
@@ -26,7 +26,7 @@ namespace Oci.DatabasemigrationService.Models
         public AdvisorReportBucketDetails ObjectStorageDetails { get; set; }
         
         /// <value>
-        /// Path in the Source Registered Connection where the Pre-Migration advisor report can be accessed.
+        /// File system path on the Source Database host where the Premigration Advisor report can be accessed.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "locationInSource")]

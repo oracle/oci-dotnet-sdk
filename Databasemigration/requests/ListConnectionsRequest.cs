@@ -39,6 +39,24 @@ namespace Oci.DatabasemigrationService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
+        /// The array of technology types.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "technologyType", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<TechnologyType> TechnologyType { get; set; }
+        
+        /// <value>
+        /// The array of connection types.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "connectionType", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ConnectionType> ConnectionType { get; set; }
+        
+        /// <value>
+        /// The OCID of the source database connection.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceConnectionId")]
+        public string SourceConnectionId { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that match the entire display name given.
         /// 
         /// </value>

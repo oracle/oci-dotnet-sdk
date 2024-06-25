@@ -17,7 +17,6 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Parameters for Replicat processes.
-    /// 
     /// </summary>
     public class Replicat 
     {
@@ -29,27 +28,6 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "performanceProfile")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ReplicatPerformanceProfile> PerformanceProfile { get; set; }
-        
-        /// <value>
-        /// Number of threads used to read trail files (valid for Parallel Replicat)
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "mapParallelism")]
-        public System.Nullable<int> MapParallelism { get; set; }
-        
-        /// <value>
-        /// Defines the range in which Replicat automatically adjusts its apply parallelism (valid for Parallel Replicat)
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "minApplyParallelism")]
-        public System.Nullable<int> MinApplyParallelism { get; set; }
-        
-        /// <value>
-        /// Defines the range in which Replicat automatically adjusts its apply parallelism (valid for Parallel Replicat)
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "maxApplyParallelism")]
-        public System.Nullable<int> MaxApplyParallelism { get; set; }
         
     }
 }

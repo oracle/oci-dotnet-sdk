@@ -16,15 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Change Migration compartment details.
-    /// 
+    /// Details pertaining to change of a migration's compartment.
     /// </summary>
     public class ChangeMigrationCompartmentDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment to move the resource to.
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         /// <remarks>
         /// Required

@@ -11,34 +11,57 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Database objects to migrate.
-    /// 
+    /// Common Migration Objects collection.
     /// </summary>
+    [JsonConverter(typeof(MigrationObjectCollectionModelConverter))]
     public class MigrationObjectCollection 
     {
         
-        /// <value>
-        /// Database objects to exclude/include from migration
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Items is required.")]
-        [JsonProperty(PropertyName = "items")]
-        public System.Collections.Generic.List<MigrationObjectSummary> Items { get; set; }
         
-        /// <value>
-        /// Database objects to exclude/include from migration in CSV format. The items field will be ignored if this field is not null.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "csvText")]
-        public string CsvText { get; set; }
-        
+    }
+
+    public class MigrationObjectCollectionModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(MigrationObjectCollection);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(MigrationObjectCollection);
+            var discriminator = jsonObject["databaseCombination"].Value<string>();
+            switch (discriminator)
+            {
+                case "MYSQL":
+                    obj = new MySqlMigrationObjectCollection();
+                    break;
+                case "ORACLE":
+                    obj = new OracleMigrationObjectCollection();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under MigrationObjectCollection! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

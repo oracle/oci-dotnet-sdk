@@ -17,14 +17,12 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Details about Oracle GoldenGate GGS Deployment.
-    /// 
     /// </summary>
     public class GgsDeployment 
     {
         
         /// <value>
-        /// OCID of a GoldenGate Deployment
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         /// <remarks>
         /// Required
@@ -34,8 +32,7 @@ namespace Oci.DatabasemigrationService.Models
         public string DeploymentId { get; set; }
         
         /// <value>
-        /// OCID of a VaultSecret containing the Admin Credentials for the GGS Deployment
-        /// 
+        /// The OCID of the resource being referenced.
         /// </value>
         /// <remarks>
         /// Required

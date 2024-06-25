@@ -56,7 +56,6 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// Specifies the value which needs to be reset.
-        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -67,7 +66,6 @@ namespace Oci.DatabasemigrationService.Models
         
         /// <value>
         /// Specifies the new value that oldValue should be translated into.
-        /// 
         /// </value>
         /// <remarks>
         /// Required

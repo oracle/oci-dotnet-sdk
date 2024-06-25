@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Details to access Pre-Migration Advisor report in the specified Object Storage bucket, if any.
+    /// Details to access Premigration Advisor report in the specified Object Storage bucket.
     /// 
     /// </summary>
     public class AdvisorReportBucketDetails 
     {
         
         /// <value>
-        /// Name of the bucket containing the Pre-Migration Advisor report.
+        /// Name of the bucket containing the Premigration Advisor report.
         /// 
         /// </value>
         /// <remarks>
@@ -45,7 +45,7 @@ namespace Oci.DatabasemigrationService.Models
         public string Namespace { get; set; }
         
         /// <value>
-        /// Pre-Migration Advisor report object name.
+        /// Premigration Advisor report object name.
         /// 
         /// </value>
         /// <remarks>
