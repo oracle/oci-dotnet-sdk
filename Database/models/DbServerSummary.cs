@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details of the Exadata Cloud@Customer Db server.
+    /// Details of the Db server.
     /// 
     /// </summary>
     public class DbServerSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exacc Db server.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Db server.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }

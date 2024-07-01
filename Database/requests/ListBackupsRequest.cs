@@ -42,5 +42,31 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
+        
+        ///
+        /// <value>
+        /// If provided, filters the results to the set of database versions which are supported for the given shape family.
+        /// </value>
+        ///
+        public enum ShapeFamilyEnum {
+            [EnumMember(Value = "SINGLENODE")]
+            Singlenode,
+            [EnumMember(Value = "YODA")]
+            Yoda,
+            [EnumMember(Value = "VIRTUALMACHINE")]
+            Virtualmachine,
+            [EnumMember(Value = "EXADATA")]
+            Exadata,
+            [EnumMember(Value = "EXACC")]
+            Exacc,
+            [EnumMember(Value = "EXADB_XS")]
+            ExadbXs
+        };
+
+        /// <value>
+        /// If provided, filters the results to the set of database versions which are supported for the given shape family.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shapeFamily")]
+        public System.Nullable<ShapeFamilyEnum> ShapeFamily { get; set; }
     }
 }

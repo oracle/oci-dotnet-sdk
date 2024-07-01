@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// Logical grouping used for Operations Insights Enterprise Manager Bridge operations.
+    /// Logical grouping used for Ops Insights Enterprise Manager Bridge operations.
     /// </summary>
     public class EnterpriseManagerBridges 
     {

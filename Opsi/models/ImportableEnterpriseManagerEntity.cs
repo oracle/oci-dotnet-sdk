@@ -62,7 +62,7 @@ namespace Oci.OpsiService.Models
         public string EnterpriseManagerEntityIdentifier { get; set; }
         
         /// <value>
-        /// Operations Insights internal representation of the resource type.
+        /// Ops Insights internal representation of the resource type.
         /// </value>
         [JsonProperty(PropertyName = "opsiEntityType")]
         public string OpsiEntityType { get; set; }

@@ -22,7 +22,7 @@ namespace Oci.OpsiService.Models
     {
         
         /// <value>
-        /// User provided ADW wallet password for the Operations Insights Warehouse.
+        /// User provided ADW wallet password for the Ops Insights Warehouse.
         /// </value>
         /// <remarks>
         /// Required

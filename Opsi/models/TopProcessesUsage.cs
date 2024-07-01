@@ -32,6 +32,12 @@ namespace Oci.OpsiService.Models
         public string Command { get; set; }
         
         /// <value>
+        /// Container id if this process corresponds to a running container in the host.
+        /// </value>
+        [JsonProperty(PropertyName = "containerId")]
+        public string ContainerId { get; set; }
+        
+        /// <value>
         /// Unique identifier for a process.
         /// </value>
         /// <remarks>

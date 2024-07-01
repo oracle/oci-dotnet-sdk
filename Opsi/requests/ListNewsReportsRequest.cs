@@ -26,7 +26,7 @@ namespace Oci.OpsiService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Unique Operations Insights news report identifier
+        /// Unique Ops Insights news report identifier
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "newsReportId")]
         public string NewsReportId { get; set; }

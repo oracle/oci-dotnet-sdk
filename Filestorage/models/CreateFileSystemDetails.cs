@@ -83,6 +83,30 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "sourceSnapshotId")]
         public string SourceSnapshotId { get; set; }
+                ///
+        /// <value>
+        /// Specifies whether the clone file system is attached to its parent file system.
+        /// If the value is set to 'DETACH', then the file system will be created, which is deep copied from the snapshot
+        /// specified by sourceSnapshotId, else will remain attached to its parent.
+        /// 
+        /// </value>
+        ///
+        public enum CloneAttachStatusEnum {
+            [EnumMember(Value = "DETACH")]
+            Detach,
+            [EnumMember(Value = "ATTACH")]
+            Attach
+        };
+
+        /// <value>
+        /// Specifies whether the clone file system is attached to its parent file system.
+        /// If the value is set to 'DETACH', then the file system will be created, which is deep copied from the snapshot
+        /// specified by sourceSnapshotId, else will remain attached to its parent.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "cloneAttachStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<CloneAttachStatusEnum> CloneAttachStatus { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the associated file system snapshot policy, which

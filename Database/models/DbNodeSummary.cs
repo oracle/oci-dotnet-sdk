@@ -179,7 +179,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = null)]
             UnknownEnumValue,
             [EnumMember(Value = "VMDB_REBOOT_MIGRATION")]
-            VmdbRebootMigration
+            VmdbRebootMigration,
+            [EnumMember(Value = "EXADBXS_REBOOT_MIGRATION")]
+            ExadbxsRebootMigration
         };
 
         /// <value>
@@ -247,6 +249,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "dbNodeStorageSizeInGBs")]
         public System.Nullable<int> DbNodeStorageSizeInGBs { get; set; }
+        
+        /// <value>
+        /// The total number of CPU cores reserved on the Db node.
+        /// </value>
+        [JsonProperty(PropertyName = "totalCpuCoreCount")]
+        public System.Nullable<int> TotalCpuCoreCount { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exacc Db server associated with the database node.

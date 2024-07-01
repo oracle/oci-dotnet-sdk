@@ -114,7 +114,7 @@ namespace Oci.OpsiService.Models
         public string PrivateEndpointStatusDetails { get; set; }
         
         /// <value>
-        /// The flag is to identify if private endpoint is used for rac database or not
+        /// The flag is to identify if private endpoint is used for rac database or not. This flag is deprecated and no longer is used.
         /// </value>
         [JsonProperty(PropertyName = "isUsedForRacDbs")]
         public System.Nullable<bool> IsUsedForRacDbs { get; set; }

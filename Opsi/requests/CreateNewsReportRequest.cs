@@ -20,7 +20,7 @@ namespace Oci.OpsiService.Requests
     {
         
         /// <value>
-        /// Details for the news report that will be created in Operations Insights.
+        /// Details for the news report that will be created in Ops Insights.
         /// </value>
         /// <remarks>
         /// Required

@@ -17,7 +17,7 @@ namespace Oci.DatabaseService.Models
 {
     /// <summary>
     /// An Oracle Autonomous Database.
-    /// <br/>
+    ///     
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
@@ -306,6 +306,11 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// The quantity of data in the database, in terabytes.
+        /// <br/>
+        /// The following points apply to Autonomous Databases on Serverless Infrastructure:
+        /// - This is an integer field whose value remains null when the data size is in GBs and cannot be converted to TBs (by dividing the GB value by 1024) without rounding error.
+        /// - To get the exact value of data storage size without rounding error, please see `dataStorageSizeInGBs` of Autonomous Database.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -315,7 +320,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> DataStorageSizeInTBs { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) enabled per ECPU or OCPU. 
+        /// The amount of memory (in GBs) enabled per ECPU or OCPU.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
@@ -323,6 +328,9 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// The quantity of data in the database, in gigabytes.
+        /// <br/>
+        /// For Autonomous Transaction Processing databases using ECPUs on Serverless Infrastructure, this value is always populated. In all the other cases, this value will be null and `dataStorageSizeInTBs` will be populated instead.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Nullable<int> DataStorageSizeInGBs { get; set; }
@@ -434,7 +442,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         /// <value>
-        /// The amount of storage that has been used, in terabytes.
+        /// The amount of storage that has been used for Autonomous Databases in dedicated infrastructure, in terabytes.
         /// </value>
         [JsonProperty(PropertyName = "usedDataStorageSizeInTBs")]
         public System.Nullable<int> UsedDataStorageSizeInTBs { get; set; }

@@ -60,7 +60,7 @@ namespace Oci.OpsiService.Models
         public string HostDisplayName { get; set; }
         
         /// <value>
-        /// Operations Insights internal representation of the host type. Possible value is EXTERNAL-HOST.
+        /// Ops Insights internal representation of the host type. Possible value is EXTERNAL-HOST.
         /// </value>
         [JsonProperty(PropertyName = "hostType")]
         public string HostType { get; set; }

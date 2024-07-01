@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// Basic configuration item summary. Value and defaultValue fields will contain the custom value stored in the resource and default value from Operations Insights respectively.
+    /// Basic configuration item summary. Value and defaultValue fields will contain the custom value stored in the resource and default value from Ops Insights respectively.
     /// 
     /// </summary>
     public class OpsiConfigurationBasicConfigurationItemSummary : OpsiConfigurationConfigurationItemSummary

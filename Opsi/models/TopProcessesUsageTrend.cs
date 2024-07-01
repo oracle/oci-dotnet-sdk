@@ -32,6 +32,12 @@ namespace Oci.OpsiService.Models
         public System.Nullable<System.DateTime> EndTimestamp { get; set; }
         
         /// <value>
+        /// Container id if this process corresponds to a running container in the host.
+        /// </value>
+        [JsonProperty(PropertyName = "containerId")]
+        public string ContainerId { get; set; }
+        
+        /// <value>
         /// Process CPU usage.
         /// </value>
         /// <remarks>

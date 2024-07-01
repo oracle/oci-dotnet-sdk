@@ -29,7 +29,13 @@ namespace Oci.OpsiService.Models
         ///
         public enum MetricRecommendationNameEnum {
             [EnumMember(Value = "HOST_CPU_RECOMMENDATIONS")]
-            HostCpuRecommendations
+            HostCpuRecommendations,
+            [EnumMember(Value = "HOST_MEMORY_RECOMMENDATIONS")]
+            HostMemoryRecommendations,
+            [EnumMember(Value = "HOST_NETWORK_RECOMMENDATIONS")]
+            HostNetworkRecommendations,
+            [EnumMember(Value = "HOST_STORAGE_RECOMMENDATIONS")]
+            HostStorageRecommendations
         };
 
         
@@ -58,6 +64,15 @@ namespace Oci.OpsiService.Models
             {
                 case "HOST_CPU_RECOMMENDATIONS":
                     obj = new HostCpuRecommendations();
+                    break;
+                case "HOST_NETWORK_RECOMMENDATIONS":
+                    obj = new HostNetworkRecommendations();
+                    break;
+                case "HOST_MEMORY_RECOMMENDATIONS":
+                    obj = new HostMemoryRecommendations();
+                    break;
+                case "HOST_STORAGE_RECOMMENDATIONS":
+                    obj = new HostStorageRecommendations();
                     break;
             }
             if (obj != null)

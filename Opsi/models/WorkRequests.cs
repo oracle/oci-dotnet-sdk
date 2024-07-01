@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// Logical grouping used for Operations Insights Work Request operations.
+    /// Logical grouping used for Ops Insights Work Request operations.
     /// </summary>
     public class WorkRequests 
     {
