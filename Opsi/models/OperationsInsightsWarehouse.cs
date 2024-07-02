@@ -42,7 +42,7 @@ namespace Oci.OpsiService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// User-friedly name of Operations Insights Warehouse that does not have to be unique.
+        /// User-friedly name of Ops Insights Warehouse that does not have to be unique.
         /// </value>
         /// <remarks>
         /// Required
@@ -90,13 +90,13 @@ namespace Oci.OpsiService.Models
         public string DynamicGroupId { get; set; }
         
         /// <value>
-        /// Tenancy Identifier of Operations Insights service
+        /// Tenancy Identifier of Ops Insights service
         /// </value>
         [JsonProperty(PropertyName = "operationsInsightsTenancyId")]
         public string OperationsInsightsTenancyId { get; set; }
         
         /// <value>
-        /// The time at which the ADW wallet was last rotated for the Operations Insights Warehouse. An RFC3339 formatted datetime string
+        /// The time at which the ADW wallet was last rotated for the Ops Insights Warehouse. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeLastWalletRotated")]
         public System.Nullable<System.DateTime> TimeLastWalletRotated { get; set; }

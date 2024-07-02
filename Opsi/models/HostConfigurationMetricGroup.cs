@@ -44,7 +44,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "HOST_ENTITES")]
             HostEntites,
             [EnumMember(Value = "HOST_FILESYSTEM_CONFIGURATION")]
-            HostFilesystemConfiguration
+            HostFilesystemConfiguration,
+            [EnumMember(Value = "HOST_GPU_CONFIGURATION")]
+            HostGpuConfiguration
         };
 
         
@@ -101,6 +103,9 @@ namespace Oci.OpsiService.Models
                     break;
                 case "HOST_CPU_HARDWARE_CONFIGURATION":
                     obj = new HostCpuHardwareConfiguration();
+                    break;
+                case "HOST_GPU_CONFIGURATION":
+                    obj = new HostGpuConfiguration();
                     break;
                 case "HOST_HARDWARE_CONFIGURATION":
                     obj = new HostHardwareConfiguration();

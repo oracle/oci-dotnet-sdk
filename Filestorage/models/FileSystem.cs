@@ -100,6 +100,8 @@ namespace Oci.FilestorageService.Models
             Creating,
             [EnumMember(Value = "ACTIVE")]
             Active,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETED")]
@@ -176,6 +178,35 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "isHydrated")]
         public System.Nullable<bool> IsHydrated { get; set; }
+        
+        /// <value>
+        /// Specifies the total number of children of a file system.
+        /// </value>
+        [JsonProperty(PropertyName = "cloneCount")]
+        public System.Nullable<int> CloneCount { get; set; }
+                ///
+        /// <value>
+        /// Specifies whether the file system is attached to its parent file system.
+        /// </value>
+        ///
+        public enum CloneAttachStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ATTACHED")]
+            Attached,
+            [EnumMember(Value = "DETACHING")]
+            Detaching,
+            [EnumMember(Value = "DETACHED")]
+            Detached
+        };
+
+        /// <value>
+        /// Specifies whether the file system is attached to its parent file system.
+        /// </value>
+        [JsonProperty(PropertyName = "cloneAttachStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<CloneAttachStatusEnum> CloneAttachStatus { get; set; }
         
         /// <value>
         /// Additional information about the current 'lifecycleState'.

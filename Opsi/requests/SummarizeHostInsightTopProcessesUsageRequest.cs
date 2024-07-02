@@ -154,5 +154,11 @@ namespace Oci.OpsiService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "statistic")]
         public System.Nullable<StatisticEnum> Statistic { get; set; }
+        
+        /// <value>
+        /// Resource Status
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ResourceStatus> Status { get; set; }
     }
 }

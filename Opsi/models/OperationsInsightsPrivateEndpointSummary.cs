@@ -72,7 +72,7 @@ namespace Oci.OpsiService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// The flag to identify if private endpoint is used for rac database or not
+        /// The flag to identify if private endpoint is used for rac database or not. This flag is deprecated and no longer is used.
         /// </value>
         [JsonProperty(PropertyName = "isUsedForRacDbs")]
         public System.Nullable<bool> IsUsedForRacDbs { get; set; }

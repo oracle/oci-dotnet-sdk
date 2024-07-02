@@ -106,7 +106,7 @@ namespace Oci.FilestorageService.Models
         
         /// <value>
         /// The hour of the day to create a DAILY, WEEKLY, MONTHLY, or YEARLY snapshot.
-        /// If not set, a value will be chosen at creation time.
+        /// If not set, the system chooses a value at creation time.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "hourOfDay")]
@@ -115,6 +115,7 @@ namespace Oci.FilestorageService.Models
         /// <value>
         /// The day of the week to create a scheduled snapshot.
         /// Used for WEEKLY snapshot schedules.
+        /// If not set, the system chooses a value at creation time.
         /// 
         /// </value>
         ///
@@ -141,6 +142,7 @@ namespace Oci.FilestorageService.Models
         /// <value>
         /// The day of the week to create a scheduled snapshot.
         /// Used for WEEKLY snapshot schedules.
+        /// If not set, the system chooses a value at creation time.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dayOfWeek")]
@@ -151,6 +153,7 @@ namespace Oci.FilestorageService.Models
         /// The day of the month to create a scheduled snapshot.
         /// If the day does not exist for the month, snapshot creation will be skipped.
         /// Used for MONTHLY and YEARLY snapshot schedules.
+        /// If not set, the system chooses a value at creation time.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dayOfMonth")]
@@ -159,6 +162,7 @@ namespace Oci.FilestorageService.Models
         /// <value>
         /// The month to create a scheduled snapshot.
         /// Used only for YEARLY snapshot schedules.
+        /// If not set, the system chooses a value at creation time.
         /// 
         /// </value>
         ///
@@ -195,6 +199,7 @@ namespace Oci.FilestorageService.Models
         /// <value>
         /// The month to create a scheduled snapshot.
         /// Used only for YEARLY snapshot schedules.
+        /// If not set, the system chooses a value at creation time.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "month")]

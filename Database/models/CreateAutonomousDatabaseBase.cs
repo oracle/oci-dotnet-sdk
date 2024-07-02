@@ -17,12 +17,12 @@ namespace Oci.DatabaseService.Models
 {
     /// <summary>
     /// Details to create an Oracle Autonomous Database.
-    /// <br/>
+    ///     
     /// **Notes:**
     /// - To specify OCPU core count, you must use either `ocpuCount` or `cpuCoreCount`. You cannot use both parameters at the same time. For Autonomous Database Serverless instances, `ocpuCount` is not used.
     /// - To specify a storage allocation, you must use  either `dataStorageSizeInGBs` or `dataStorageSizeInTBs`.
     /// - See the individual parameter discriptions for more information on the OCPU and storage value parameters.
-    /// <br/>
+    ///     
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
     /// </summary>
@@ -574,11 +574,11 @@ namespace Oci.DatabaseService.Models
                 case "CROSS_REGION_DISASTER_RECOVERY":
                     obj = new CreateCrossRegionDisasterRecoveryDetails();
                     break;
-                case "CROSS_TENANCY_DISASTER_RECOVERY":
-                    obj = new CreateCrossTenancyDisasterRecoveryDetails();
-                    break;
                 case "BACKUP_FROM_TIMESTAMP":
                     obj = new CreateAutonomousDatabaseFromBackupTimestampDetails();
+                    break;
+                case "CROSS_TENANCY_DISASTER_RECOVERY":
+                    obj = new CreateCrossTenancyDisasterRecoveryDetails();
                     break;
                 case "CROSS_REGION_DATAGUARD":
                     obj = new CreateCrossRegionAutonomousDatabaseDataGuardDetails();

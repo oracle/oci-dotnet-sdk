@@ -20,7 +20,7 @@ namespace Oci.OpsiService.Requests
     {
         
         /// <value>
-        /// Details using which an Operations Insights Warehouse resource will be created in Operations Insights.
+        /// Details using which an Ops Insights Warehouse resource will be created in Ops Insights.
         /// </value>
         /// <remarks>
         /// Required

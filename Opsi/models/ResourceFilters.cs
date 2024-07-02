@@ -72,5 +72,12 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "compartmentIdInSubtree")]
         public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
         
+        /// <value>
+        /// Filter resources by status, multiple options could be chosen to show authorized resources even if those are disabled or deleted.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceStatus", ItemConverterType = typeof(StringEnumConverter))]
+        public System.Collections.Generic.List<ResourceStatus> ResourceStatus { get; set; }
+        
     }
 }

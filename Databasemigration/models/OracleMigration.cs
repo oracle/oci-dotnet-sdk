@@ -42,6 +42,12 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "sourceContainerDatabaseConnectionId")]
         public string SourceContainerDatabaseConnectionId { get; set; }
         
+        /// <value>
+        /// List of Migration Parameter objects.
+        /// </value>
+        [JsonProperty(PropertyName = "advancedParameters")]
+        public System.Collections.Generic.List<MigrationParameterDetails> AdvancedParameters { get; set; }
+        
         [JsonProperty(PropertyName = "databaseCombination")]
         private readonly string databaseCombination = "ORACLE";
     }

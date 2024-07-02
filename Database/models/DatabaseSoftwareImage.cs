@@ -153,7 +153,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "EXADATA_SHAPE")]
             ExadataShape,
             [EnumMember(Value = "EXACC_SHAPE")]
-            ExaccShape
+            ExaccShape,
+            [EnumMember(Value = "EXADBXS_SHAPE")]
+            ExadbxsShape
         };
 
         /// <value>

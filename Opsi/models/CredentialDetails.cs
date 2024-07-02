@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// User credential details to connect to the database. This is supplied via the External Database Service.
+    /// User credential details to connect to the database.
     /// 
     /// </summary>
     [JsonConverter(typeof(CredentialDetailsModelConverter))]
@@ -35,6 +35,7 @@ namespace Oci.OpsiService.Models
                 ///
         /// <value>
         /// Credential type.
+        /// 
         /// </value>
         ///
         public enum CredentialTypeEnum {

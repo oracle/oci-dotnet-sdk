@@ -32,7 +32,7 @@ namespace Oci.OpsiService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// User-friedly name of Operations Insights Warehouse that does not have to be unique.
+        /// User-friedly name of Ops Insights Warehouse that does not have to be unique.
         /// </value>
         /// <remarks>
         /// Required

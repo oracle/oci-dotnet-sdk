@@ -20,7 +20,7 @@ namespace Oci.OpsiService.Requests
     {
         
         /// <value>
-        /// Details for the host to be enabled in Operations Insights.
+        /// Details for the host to be enabled in Ops Insights.
         /// </value>
         /// <remarks>
         /// Required

@@ -83,6 +83,12 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "totalProcesses")]
         public System.Nullable<decimal> TotalProcesses { get; set; }
         
+        /// <value>
+        /// Container id if this process corresponds to a running container in the host
+        /// </value>
+        [JsonProperty(PropertyName = "containerId")]
+        public string ContainerId { get; set; }
+        
         [JsonProperty(PropertyName = "metricName")]
         private readonly string metricName = "HOST_TOP_PROCESSES";
     }

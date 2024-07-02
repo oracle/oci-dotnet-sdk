@@ -95,9 +95,9 @@ namespace Oci.OpsiService.Requests
         /// </value>
         ///
         public enum IsChangedEnum {
-            [EnumMember(Value = "true")]
+            [EnumMember(Value = "TRUE")]
             True,
-            [EnumMember(Value = "false")]
+            [EnumMember(Value = "FALSE")]
             False
         };
 
@@ -117,9 +117,9 @@ namespace Oci.OpsiService.Requests
         /// </value>
         ///
         public enum IsDefaultEnum {
-            [EnumMember(Value = "true")]
+            [EnumMember(Value = "TRUE")]
             True,
-            [EnumMember(Value = "false")]
+            [EnumMember(Value = "FALSE")]
             False
         };
 
@@ -139,9 +139,9 @@ namespace Oci.OpsiService.Requests
         /// </value>
         ///
         public enum HasRecommendationsEnum {
-            [EnumMember(Value = "true")]
+            [EnumMember(Value = "TRUE")]
             True,
-            [EnumMember(Value = "false")]
+            [EnumMember(Value = "FALSE")]
             False
         };
 

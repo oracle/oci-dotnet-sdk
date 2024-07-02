@@ -37,6 +37,12 @@ namespace Oci.DatabasemigrationService.Models
         public CreateOracleGgsDeploymentDetails GgsDetails { get; set; }
         
         /// <value>
+        /// List of Migration Parameter objects.
+        /// </value>
+        [JsonProperty(PropertyName = "advancedParameters")]
+        public System.Collections.Generic.List<MigrationParameterDetails> AdvancedParameters { get; set; }
+        
+        /// <value>
         /// The OCID of the resource being referenced.
         /// </value>
         [JsonProperty(PropertyName = "sourceContainerDatabaseConnectionId")]

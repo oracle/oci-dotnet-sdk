@@ -20,7 +20,7 @@ namespace Oci.OpsiService.Requests
     {
         
         /// <value>
-        /// Unique Operations Insights Warehouse identifier
+        /// Unique Ops Insights Warehouse identifier
         /// </value>
         /// <remarks>
         /// Required

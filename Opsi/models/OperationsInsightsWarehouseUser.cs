@@ -52,7 +52,7 @@ namespace Oci.OpsiService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Username for schema which would have access to AWR Data,  Enterprise Manager Data and Operations Insights OPSI Hub.
+        /// Username for schema which would have access to AWR Data,  Enterprise Manager Data and Ops Insights OPSI Hub.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.OpsiService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// User provided connection password for the AWR Data,  Enterprise Manager Data and Operations Insights OPSI Hub.
+        /// User provided connection password for the AWR Data,  Enterprise Manager Data and Ops Insights OPSI Hub.
         /// </value>
         [JsonProperty(PropertyName = "connectionPassword")]
         public string ConnectionPassword { get; set; }

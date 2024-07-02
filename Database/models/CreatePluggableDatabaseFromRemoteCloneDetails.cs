@@ -59,6 +59,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "refreshableCloneDetails")]
         public CreatePluggableDatabaseRefreshableCloneDetails RefreshableCloneDetails { get; set; }
         
+        /// <value>
+        /// True if Pluggable Database needs to be thin cloned and false if Pluggable Database needs to be thick cloned.
+        /// </value>
+        [JsonProperty(PropertyName = "isThinClone")]
+        public System.Nullable<bool> IsThinClone { get; set; }
+        
         [JsonProperty(PropertyName = "creationType")]
         private readonly string creationType = "REMOTE_CLONE_PDB";
     }

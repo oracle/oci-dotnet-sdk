@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// Logical grouping used for Operations Insights Warehouse operations.
+    /// Logical grouping used for Ops Insights Warehouse operations.
     /// </summary>
     public class OperationsInsightsWarehouses 
     {
         
         /// <value>
-        /// Operations Insights Warehouse Object.
+        /// Ops Insights Warehouse Object.
         /// </value>
         [JsonProperty(PropertyName = "operationsInsightsWarehouses")]
         public System.Object OperationsInsightsWarehousesProp { get; set; }

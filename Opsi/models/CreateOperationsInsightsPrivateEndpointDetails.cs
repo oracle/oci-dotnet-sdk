@@ -62,7 +62,9 @@ namespace Oci.OpsiService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// The flag to identify if private endpoint is used for rac database or not
+        /// This flag was previously used to create a private endpoint with scan proxy. Setting this to true will now create a private endpoint with a
+        /// DNS proxy causing `isProxyEnabled` flag to be true; this is used exclusively for full feature support for dedicated Autonomous Databases.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

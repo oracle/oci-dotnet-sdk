@@ -20,7 +20,7 @@ namespace Oci.OpsiService.Requests
     {
         
         /// <value>
-        /// Details for the host for which a Host Insight resource will be created in Operations Insights.
+        /// Details for the host for which a Host Insight resource will be created in Ops Insights.
         /// </value>
         /// <remarks>
         /// Required

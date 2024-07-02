@@ -77,6 +77,8 @@ namespace Oci.FilestorageService.Requests
             Creating,
             [EnumMember(Value = "ACTIVE")]
             Active,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETED")]

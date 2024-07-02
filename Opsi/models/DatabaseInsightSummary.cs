@@ -61,7 +61,7 @@ namespace Oci.OpsiService.Models
         public string DatabaseDisplayName { get; set; }
         
         /// <value>
-        /// Operations Insights internal representation of the database type.
+        /// Ops Insights internal representation of the database type.
         /// </value>
         [JsonProperty(PropertyName = "databaseType")]
         public string DatabaseType { get; set; }

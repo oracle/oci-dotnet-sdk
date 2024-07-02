@@ -47,5 +47,13 @@ namespace Oci.FilestorageService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// If the value is set to true, then the file system will be deleted by detaching its child file system, turning
+        /// the child file system into an independent File System.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "canDetachChildFileSystem")]
+        public System.Nullable<bool> CanDetachChildFileSystem { get; set; }
     }
 }

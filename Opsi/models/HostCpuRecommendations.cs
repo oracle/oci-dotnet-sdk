@@ -23,7 +23,7 @@ namespace Oci.OpsiService.Models
     {
                 ///
         /// <value>
-        /// Show if OPSI recommend to convert an instance to a burstable instance and show recommended cpu baseline if positive recommendation.
+        /// Show if OPSI recommends to convert an instance to a burstable instance and show recommended cpu baseline if positive recommendation.
         /// </value>
         ///
         public enum BurstableEnum {
@@ -41,11 +41,46 @@ namespace Oci.OpsiService.Models
         };
 
         /// <value>
-        /// Show if OPSI recommend to convert an instance to a burstable instance and show recommended cpu baseline if positive recommendation.
+        /// Show if OPSI recommends to convert an instance to a burstable instance and show recommended cpu baseline if positive recommendation.
         /// </value>
         [JsonProperty(PropertyName = "burstable")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BurstableEnum> Burstable { get; set; }
+        
+        /// <value>
+        /// Show if OPSI recommends to change the shape of an instance and show recommended shape based on CPU utilization.
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        public string Shape { get; set; }
+                ///
+        /// <value>
+        /// Identify unused instances based on cpu, memory and network metrics.
+        /// </value>
+        ///
+        public enum UnusedInstanceEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "IN_USE")]
+            InUse,
+            [EnumMember(Value = "NOT_IN_USE")]
+            NotInUse,
+            [EnumMember(Value = "IS_NOT_DETERMINED")]
+            IsNotDetermined
+        };
+
+        /// <value>
+        /// Identify unused instances based on cpu, memory and network metrics.
+        /// </value>
+        [JsonProperty(PropertyName = "unusedInstance")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<UnusedInstanceEnum> UnusedInstance { get; set; }
+        
+        /// <value>
+        /// Identify if an instance is abandoned.
+        /// </value>
+        [JsonProperty(PropertyName = "isAbandonedInstance")]
+        public System.Nullable<bool> IsAbandonedInstance { get; set; }
         
         [JsonProperty(PropertyName = "metricRecommendationName")]
         private readonly string metricRecommendationName = "HOST_CPU_RECOMMENDATIONS";

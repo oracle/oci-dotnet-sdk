@@ -308,7 +308,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsDstFileUpdateEnabled { get; set; }
         
         /// <value>
-        /// DST Time-zone File version of the Autonomous Container Database.
+        /// DST Time-Zone File version of the Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "dstFileVersion")]
         public string DstFileVersion { get; set; }
@@ -393,7 +393,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
         
         /// <value>
-        /// Sum of CPUs available on the Autonomous VM Cluster + Sum of reclaimable CPUs available in the Autonomous Container Database.    
+        /// Sum of CPUs available on the Autonomous VM Cluster + Sum of reclaimable CPUs available in the Autonomous Container Database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availableCpus")]

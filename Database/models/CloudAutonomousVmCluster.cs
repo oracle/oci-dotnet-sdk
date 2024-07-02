@@ -357,7 +357,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> AvailableCpus { get; set; }
         
         /// <value>
-        /// CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.          
+        /// CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "reclaimableCpus")]

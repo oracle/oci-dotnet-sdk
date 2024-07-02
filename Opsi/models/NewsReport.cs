@@ -111,7 +111,7 @@ namespace Oci.OpsiService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
-        /// Indicates the status of a news report in Operations Insights.
+        /// Indicates the status of a news report in Ops Insights.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

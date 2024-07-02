@@ -32,7 +32,7 @@ namespace Oci.OpsiService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Unique Operations Insights Warehouse identifier
+        /// Unique Ops Insights Warehouse identifier
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
