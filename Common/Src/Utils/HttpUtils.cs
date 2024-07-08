@@ -48,15 +48,15 @@ namespace Oci.Common.Utils
                 }
                 else if (collectionFormat == CollectionFormatType.Pipes)
                 {
-                    return $"{queryKey}={string.Join(Uri.EscapeUriString("|"), queryValues)}";
+                    return $"{queryKey}={string.Join(Uri.EscapeDataString("|"), queryValues)}";
                 }
                 else if (collectionFormat == CollectionFormatType.Ssv)
                 {
-                    return $"{queryKey}={string.Join(Uri.EscapeUriString(" "), queryValues)}";
+                    return $"{queryKey}={string.Join(Uri.EscapeDataString(" "), queryValues)}";
                 }
                 else if (collectionFormat == CollectionFormatType.Tsv)
                 {
-                    return $"{queryKey}={string.Join(Uri.EscapeUriString("\t"), queryValues)}";
+                    return $"{queryKey}={string.Join(Uri.EscapeDataString("\t"), queryValues)}";
                 }
                 else if (collectionFormat == CollectionFormatType.Multi)
                 {
@@ -97,7 +97,7 @@ namespace Oci.Common.Utils
             {
                 return GetEnumString(queryParam);
             }
-            return Uri.EscapeUriString(queryParam.ToString());
+            return Uri.EscapeDataString(queryParam.ToString());
         }
 
         /// <summary>Gets the actual Enum string representation that will be passed in HTTP request and recognized by service backend.</summary>
@@ -109,9 +109,9 @@ namespace Oci.Common.Utils
             var attr = memInfo[0].GetCustomAttributes(false).OfType<EnumMemberAttribute>().FirstOrDefault();
             if (attr != null)
             {
-                return Uri.EscapeUriString(attr.Value);
+                return Uri.EscapeDataString(attr.Value);
             }
-            return Uri.EscapeUriString(enumObject.ToString());
+            return Uri.EscapeDataString(enumObject.ToString());
         }
 
         /// <summary>Builds the string containing the query in request URL.</summary>
