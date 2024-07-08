@@ -157,5 +157,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "sidPrefix")]
         public string SidPrefix { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the key store of Oracle Vault.
+        /// </value>
+        [JsonProperty(PropertyName = "keyStoreId")]
+        public string KeyStoreId { get; set; }
+        
     }
 }

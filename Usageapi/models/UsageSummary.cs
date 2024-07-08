@@ -162,6 +162,18 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<decimal> ComputedQuantity { get; set; }
         
         /// <value>
+        /// The attributed cost with a max value of 9999999999.999999999999 and a minimum value of 0.
+        /// </value>
+        [JsonProperty(PropertyName = "attributedCost")]
+        public string AttributedCost { get; set; }
+        
+        /// <value>
+        /// The attributed usage with a max value of 9999999999.999999999999 and a minimum value of 0.
+        /// </value>
+        [JsonProperty(PropertyName = "attributedUsage")]
+        public string AttributedUsage { get; set; }
+        
+        /// <value>
         /// The SPM OverageFlag.
         /// </value>
         [JsonProperty(PropertyName = "overagesFlag")]

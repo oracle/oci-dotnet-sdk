@@ -69,7 +69,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "DELETED")]
-            Deleted
+            Deleted,
+            [EnumMember(Value = "NEEDS_ATTENTION")]
+            NeedsAttention
         };
 
         /// <value>
