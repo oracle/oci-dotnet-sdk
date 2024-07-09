@@ -1258,6 +1258,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ConfirmKeyStoreDetailsAreCorrectRequest, ConfirmKeyStoreDetailsAreCorrectResponse> ForConfirmKeyStoreDetailsAreCorrect(ConfirmKeyStoreDetailsAreCorrectRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForConfirmKeyStoreDetailsAreCorrect(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ConfirmKeyStoreDetailsAreCorrectRequest, ConfirmKeyStoreDetailsAreCorrectResponse> ForConfirmKeyStoreDetailsAreCorrect(ConfirmKeyStoreDetailsAreCorrectRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ConfirmKeyStoreDetailsAreCorrectRequest, ConfirmKeyStoreDetailsAreCorrectResponse>(() =>
+            {
+                var response = client.ConfirmKeyStoreDetailsAreCorrect(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<ConvertToPdbRequest, ConvertToPdbResponse> ForConvertToPdb(ConvertToPdbRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForConvertToPdb(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
