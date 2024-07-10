@@ -69,10 +69,12 @@ namespace Oci.Common.Utils
         [DisplayTestMethodNameAttribute]
         public void EncodeQueryParam_String()
         {
-            var str = "string with space";
+            var str = "string with space and #";
             var escapedString = HttpUtils.EncodeQueryParam("key", str, Oci.Common.Http.CollectionFormatType.Csv);
             Assert.False(escapedString.Contains(" "), $"Escaped string {escapedString} should not contain \" \"");
+            Assert.False(escapedString.Contains("#"), $"Escaped string {escapedString} should not contain \"#\"");
             Assert.True(escapedString.Contains("%20"), $"Escaped string {escapedString} should contain \"%20\"");
+            Assert.True(escapedString.Contains("%23"), $"Escaped string {escapedString} should contain \"%23\"");
         }
 
         [Theory]
@@ -88,11 +90,11 @@ namespace Oci.Common.Utils
 
         public static IEnumerable<object[]> CollectionFormatTestData()
         {
-            yield return new object[] { new List<string> { "val1", "val2" }, Oci.Common.Http.CollectionFormatType.Csv, "key=val1,val2" };
-            yield return new object[] { new List<string> { "val1", "val2" }, Oci.Common.Http.CollectionFormatType.Multi, "key=val1&key=val2" };
-            yield return new object[] { new List<string> { "val1", "val2" }, Oci.Common.Http.CollectionFormatType.Pipes, "key=val1%7Cval2" };
-            yield return new object[] { new List<string> { "val1", "val2" }, Oci.Common.Http.CollectionFormatType.Ssv, "key=val1%20val2" };
-            yield return new object[] { new List<string> { "val1", "val2" }, Oci.Common.Http.CollectionFormatType.Tsv, "key=val1%09val2" };
+            yield return new object[] { new List<string> { "val&1%", "val#2" }, Oci.Common.Http.CollectionFormatType.Csv, "key=val%261%25,val%232" };
+            yield return new object[] { new List<string> { "val&1", "val #2" }, Oci.Common.Http.CollectionFormatType.Multi, "key=val%261&key=val%20%232" };
+            yield return new object[] { new List<string> { "val&1", "val#2" }, Oci.Common.Http.CollectionFormatType.Pipes, "key=val%261%7Cval%232" };
+            yield return new object[] { new List<string> { "val&1", "val#2" }, Oci.Common.Http.CollectionFormatType.Ssv, "key=val%261%20val%232" };
+            yield return new object[] { new List<string> { "val&1", "val#2" }, Oci.Common.Http.CollectionFormatType.Tsv, "key=val%261%09val%232" };
         }
     }
 }
