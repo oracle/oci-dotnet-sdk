@@ -37,6 +37,8 @@ namespace Oci.Common.Utils
             {
                 logger.Info($"collection format is {collectionFormat}");
 
+                queryKey = EncodeQueryParamSingleValue(queryKey);
+
                 List<string> queryValues = new List<string>();
                 foreach (object value in (IList)queryParam)
                 {
@@ -74,7 +76,7 @@ namespace Oci.Common.Utils
             }
             else
             {
-                return $"{queryKey}={EncodeQueryParamSingleValue(queryParam)}";
+                return $"{EncodeQueryParamSingleValue(queryKey)}={EncodeQueryParamSingleValue(queryParam)}";
             }
         }
 
