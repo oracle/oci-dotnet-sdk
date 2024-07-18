@@ -103,7 +103,12 @@ namespace Oci.Common
                         else if (httpRequestAttr.Target == TargetEnum.Path)
                         {
                             logger.Debug($"Adding path parameter {httpRequestAttr.Name}: {prop.GetValue(request)}");
-                            updatedUri = updatedUri.Replace(Uri.EscapeUriString($"{{{httpRequestAttr.Name}}}"), HeaderUtils.FromValue(prop.GetValue(request)));
+                            // https://www.rfc-editor.org/rfc/rfc3986#appendix-A and https://www.rfc-editor.org/rfc/rfc2396
+                            // Both reference that path components can be encoded as % in all cases, so over encoding in the path is safe.
+                            // EscapeUriDataString escapes all unreserved characeter which are
+                            // all except [0-9a-zA-Z] or valid mark "-" | "_" | "." | "!" | "~" | "*" | "'" | "(" | ")".
+                            // This makes it safe to use on all parts of a URI path and query parameters.
+                            updatedUri = updatedUri.Replace(Uri.EscapeDataString($"{{{httpRequestAttr.Name}}}"), Uri.EscapeDataString(HeaderUtils.FromValue(prop.GetValue(request))));
                         }
                     }
                 }
