@@ -43,6 +43,12 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subscription with which resource needs to be associated with.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionId")]
+        public string SubscriptionId { get; set; }
                 ///
         /// <value>
         /// The current state of the Autonomous Database.
@@ -440,6 +446,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "licenseModel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
+        
+        /// <value>
+        /// The maximum number of CPUs allowed with a Bring Your Own License (BYOL), including those used for auto-scaling, disaster recovery, tools, etc. Any CPU usage above this limit is considered as License Included and billed.
+        /// </value>
+        [JsonProperty(PropertyName = "byolComputeCountLimit")]
+        public System.Nullable<float> ByolComputeCountLimit { get; set; }
         
         /// <value>
         /// The amount of storage that has been used for Autonomous Databases in dedicated infrastructure, in terabytes.

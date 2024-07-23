@@ -156,6 +156,9 @@ namespace Oci.OpsiService.Models
                 case "PE_COMANAGED_DATABASE":
                     obj = new PeComanagedManagedExternalDatabaseConfigurationSummary();
                     break;
+                case "MDS_MYSQL_DATABASE_SYSTEM":
+                    obj = new MdsMysqlDatabaseConfigurationSummary();
+                    break;
             }
             if (obj != null)
             {

@@ -8383,7 +8383,7 @@ namespace Oci.DatasafeService
         /// By default the ListAuditEventAnalytics operation will return all of the summary columns. To filter for a specific summary column, specify
         /// it in the &#x60;summaryField&#x60; query parameter.
         /// &lt;br/&gt;
-        /// **Example:** 
+        /// **Example:**
         /// /ListAuditEventAnalytics?summaryField&#x3D;targetName&amp;summaryField&#x3D;userName&amp;summaryField&#x3D;clientHostname
         /// &amp;summaryField&#x3D;dmls&amp;summaryField&#x3D;privilegeChanges&amp;summaryField&#x3D;ddls&amp;summaryField&#x3D;loginFailure&amp;summaryField&#x3D;loginSuccess
         /// &amp;summaryField&#x3D;allRecord&amp;q&#x3D;(auditEventTime ge \&quot;2021-06-13T23:49:14\&quot;)
@@ -8599,7 +8599,7 @@ namespace Oci.DatasafeService
         /// principal doesn&#39;t have access to even one of the child compartments. This is valid only when
         /// &#x60;compartmentIdInSubtree&#x60; is set to &#x60;true&#x60;.
         /// &lt;br/&gt;
-        /// The parameter &#x60;compartmentIdInSubtree&#x60; applies when you perform SummarizedAuditPolicyInfo on the specified 
+        /// The parameter &#x60;compartmentIdInSubtree&#x60; applies when you perform SummarizedAuditPolicyInfo on the specified
         /// &#x60;compartmentId&#x60; and when it is set to true, the entire hierarchy of compartments can be returned.
         /// To get a full list of all compartments and subcompartments in the tenancy (root compartment),
         /// set the parameter &#x60;compartmentIdInSubtree&#x60; to true and &#x60;accessLevel&#x60; to ACCESSIBLE.
@@ -9237,7 +9237,7 @@ namespace Oci.DatasafeService
 
         /// <summary>
         /// Retrieves a list of all database table access entries in Data Safe.
-        ///   
+        /// &lt;br/&gt;
         /// The ListDatabaseTableAccessEntries operation returns only the database table access reports for the specified security policy report.
         /// 
         /// </summary>
@@ -9582,7 +9582,7 @@ namespace Oci.DatasafeService
 
         /// <summary>
         /// Gets a list of findings aggregated details in the specified compartment. This provides information about the overall state
-        /// of security assessment findings. You can use groupBy to get the count of findings under a certain risk level and with a certain findingKey, 
+        /// of security assessment findings. You can use groupBy to get the count of findings under a certain risk level and with a certain findingKey,
         /// and as well as get the list of the targets that match the condition.
         /// This data is especially useful content for the statistic chart or to support analytics.
         /// &lt;br/&gt;
@@ -10503,7 +10503,7 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Gets a list of aggregated user profile details in the specified compartment. This provides information about the 
+        /// Gets a list of aggregated user profile details in the specified compartment. This provides information about the
         /// overall profiles available. For example, the user profile details include how many users have the profile assigned
         /// and do how many use password verification function. This data is especially useful content for dashboards or to support analytics.
         /// &lt;br/&gt;
@@ -10580,8 +10580,8 @@ namespace Oci.DatasafeService
         /// id is provided, then profile information for all the targets belonging to the pertaining compartment is returned.
         /// The list does not include any subcompartments of the compartment under consideration.
         /// &lt;br/&gt;
-        /// The parameter &#39;accessLevel&#39; specifies whether to return only those compartments for which the requestor has 
-        /// INSPECT permissions on at least one resource directly or indirectly (ACCESSIBLE) (the resource can be in a 
+        /// The parameter &#39;accessLevel&#39; specifies whether to return only those compartments for which the requestor has
+        /// INSPECT permissions on at least one resource directly or indirectly (ACCESSIBLE) (the resource can be in a
         /// subcompartment) or to return Not Authorized if Principal doesn&#39;t have access to even one of the child compartments.
         /// This is valid only when &#39;compartmentIdInSubtree&#39; is set to &#39;true&#39;.
         /// &lt;br/&gt;
@@ -11507,6 +11507,63 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Gets a list of sensitive type Ids present in the specified sensitive data model.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/datasafe/ListSensitiveDataModelSensitiveTypes.cs.html">here</a> to see an example of how to use ListSensitiveDataModelSensitiveTypes API.</example>
+        public async Task<ListSensitiveDataModelSensitiveTypesResponse> ListSensitiveDataModelSensitiveTypes(ListSensitiveDataModelSensitiveTypesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listSensitiveDataModelSensitiveTypes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/sensitiveDataModels/{sensitiveDataModelId}/sensitiveTypes".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DataSafe",
+                    OperationName = "ListSensitiveDataModelSensitiveTypes",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/data-safe/20181201/SensitiveDataModelSensitiveTypeCollection/ListSensitiveDataModelSensitiveTypes",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListSensitiveDataModelSensitiveTypesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListSensitiveDataModelSensitiveTypes failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets a list of sensitive data models based on the specified query parameters.
         /// 
         /// </summary>
@@ -12150,7 +12207,7 @@ namespace Oci.DatasafeService
         /// principal doesn&#39;t have access to even one of the child compartments. This is valid only when
         /// &#x60;compartmentIdInSubtree&#x60; is set to &#x60;true&#x60;.
         /// &lt;br/&gt;
-        /// The parameter &#x60;compartmentIdInSubtree&#x60; applies when you perform SummarizedSqlFirewallPolicyInfo on the specified 
+        /// The parameter &#x60;compartmentIdInSubtree&#x60; applies when you perform SummarizedSqlFirewallPolicyInfo on the specified
         /// &#x60;compartmentId&#x60; and when it is set to true, the entire hierarchy of compartments can be returned.
         /// To get a full list of all compartments and subcompartments in the tenancy (root compartment),
         /// set the parameter &#x60;compartmentIdInSubtree&#x60; to true and &#x60;accessLevel&#x60; to ACCESSIBLE.
@@ -14457,7 +14514,8 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Removes the baseline setting for the saved security assessment. The saved security assessment is no longer considered a baseline.
+        /// Removes the baseline setting for the saved security assessment associated with the targetId passed via body.
+        /// If no body or empty body is passed then the baseline settings of all the saved security assessments pertaining to the baseline assessment OCID provided in the path will be removed.
         /// Sets the if-match parameter to the value of the etag from a previous GET or POST response for that resource.
         /// 
         /// </summary>
@@ -14515,7 +14573,8 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
-        /// Removes the baseline setting for the saved user assessment. The saved user assessment is no longer considered a baseline.
+        /// Removes the baseline setting for the saved user assessment associated with the targetId passed via body.
+        /// If no body or empty body is passed then the baseline settings of all the saved user assessments pertaining to the baseline assessment OCID provided in the path will be removed.
         /// Sets the if-match parameter to the value of the etag from a previous GET or POST response for that resource.
         /// 
         /// </summary>

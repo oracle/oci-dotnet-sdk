@@ -394,6 +394,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeAutonomousDatabaseSubscriptionRequest, ChangeAutonomousDatabaseSubscriptionResponse> ForChangeAutonomousDatabaseSubscription(ChangeAutonomousDatabaseSubscriptionRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForChangeAutonomousDatabaseSubscription(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeAutonomousDatabaseSubscriptionRequest, ChangeAutonomousDatabaseSubscriptionResponse> ForChangeAutonomousDatabaseSubscription(ChangeAutonomousDatabaseSubscriptionRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ChangeAutonomousDatabaseSubscriptionRequest, ChangeAutonomousDatabaseSubscriptionResponse>(() =>
+            {
+                var response = client.ChangeAutonomousDatabaseSubscription(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<ChangeAutonomousExadataInfrastructureCompartmentRequest, ChangeAutonomousExadataInfrastructureCompartmentResponse> ForChangeAutonomousExadataInfrastructureCompartment(ChangeAutonomousExadataInfrastructureCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForChangeAutonomousExadataInfrastructureCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -574,6 +610,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeCloudExadataInfrastructureSubscriptionRequest, ChangeCloudExadataInfrastructureSubscriptionResponse> ForChangeCloudExadataInfrastructureSubscription(ChangeCloudExadataInfrastructureSubscriptionRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForChangeCloudExadataInfrastructureSubscription(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeCloudExadataInfrastructureSubscriptionRequest, ChangeCloudExadataInfrastructureSubscriptionResponse> ForChangeCloudExadataInfrastructureSubscription(ChangeCloudExadataInfrastructureSubscriptionRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ChangeCloudExadataInfrastructureSubscriptionRequest, ChangeCloudExadataInfrastructureSubscriptionResponse>(() =>
+            {
+                var response = client.ChangeCloudExadataInfrastructureSubscription(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<ChangeCloudVmClusterCompartmentRequest, ChangeCloudVmClusterCompartmentResponse> ForChangeCloudVmClusterCompartment(ChangeCloudVmClusterCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForChangeCloudVmClusterCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -591,6 +663,42 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeCloudVmClusterCompartmentRequest, ChangeCloudVmClusterCompartmentResponse>(() =>
             {
                 var response = client.ChangeCloudVmClusterCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeCloudVmClusterSubscriptionRequest, ChangeCloudVmClusterSubscriptionResponse> ForChangeCloudVmClusterSubscription(ChangeCloudVmClusterSubscriptionRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForChangeCloudVmClusterSubscription(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeCloudVmClusterSubscriptionRequest, ChangeCloudVmClusterSubscriptionResponse> ForChangeCloudVmClusterSubscription(ChangeCloudVmClusterSubscriptionRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ChangeCloudVmClusterSubscriptionRequest, ChangeCloudVmClusterSubscriptionResponse>(() =>
+            {
+                var response = client.ChangeCloudVmClusterSubscription(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;

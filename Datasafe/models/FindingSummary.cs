@@ -101,6 +101,12 @@ namespace Oci.DatasafeService.Models
         public string Summary { get; set; }
         
         /// <value>
+        /// Provides a recommended approach to take to remediate the finding reported.
+        /// </value>
+        [JsonProperty(PropertyName = "oneline")]
+        public string Oneline { get; set; }
+        
+        /// <value>
         /// Provides information on whether the finding is related to a CIS Oracle Database Benchmark recommendation, a STIG rule, or a GDPR Article/Recital.
         /// </value>
         [JsonProperty(PropertyName = "references")]

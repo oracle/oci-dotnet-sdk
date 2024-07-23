@@ -148,6 +148,13 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<string> SchemasForDiscovery { get; set; }
         
         /// <value>
+        /// The data discovery jobs will scan the tables specified here, including both schemas and tables.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tablesForDiscovery")]
+        public System.Collections.Generic.List<TablesForDiscovery> TablesForDiscovery { get; set; }
+        
+        /// <value>
         /// The OCIDs of the sensitive types used for data discovery.
         /// </value>
         [JsonProperty(PropertyName = "sensitiveTypeIdsForDiscovery")]

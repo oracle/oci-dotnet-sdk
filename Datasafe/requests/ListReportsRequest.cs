@@ -126,6 +126,27 @@ namespace Oci.DatasafeService.Requests
         public string ReportDefinitionId { get; set; }
         
         /// <value>
+        /// A filter to return only the resources that were generated after the specified date and time, as defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// Using TimeGeneratedGreaterThanOrEqualToQueryParam parameter retrieves all resources generated after that date.
+        /// <br/>
+        /// **Example: ** 2016-12-19T16:39:57.600Z
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeGeneratedGreaterThanOrEqualTo")]
+        public System.Nullable<System.DateTime> TimeGeneratedGreaterThanOrEqualTo { get; set; }
+        
+        /// <value>
+        /// Search for resources that were generated before a specific date.
+        /// Specifying this parameter corresponding `timeGeneratedLessThan`
+        /// parameter will retrieve all resources generated before the
+        /// specified generated date, in \"YYYY-MM-ddThh:mmZ\" format with a Z offset, as
+        /// defined by RFC 3339.
+        /// <br/>
+        /// **Example: ** 2016-12-19T16:39:57.600Z
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeGeneratedLessThan")]
+        public System.Nullable<System.DateTime> TimeGeneratedLessThan { get; set; }
+        
+        /// <value>
         /// Unique identifier for the request.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

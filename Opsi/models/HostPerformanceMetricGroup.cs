@@ -42,7 +42,11 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "HOST_GPU_USAGE")]
             HostGpuUsage,
             [EnumMember(Value = "HOST_GPU_PROCESSES")]
-            HostGpuProcesses
+            HostGpuProcesses,
+            [EnumMember(Value = "HOST_IO_USAGE")]
+            HostIoUsage,
+            [EnumMember(Value = "HOST_CONTAINERS")]
+            HostContainers
         };
 
         
@@ -88,6 +92,9 @@ namespace Oci.OpsiService.Models
                 case "HOST_CPU_USAGE":
                     obj = new HostCpuUsage();
                     break;
+                case "HOST_CONTAINERS":
+                    obj = new HostContainers();
+                    break;
                 case "HOST_GPU_USAGE":
                     obj = new HostGpuUsage();
                     break;
@@ -96,6 +103,9 @@ namespace Oci.OpsiService.Models
                     break;
                 case "HOST_FILESYSTEM_USAGE":
                     obj = new HostFilesystemUsage();
+                    break;
+                case "HOST_IO_USAGE":
+                    obj = new HostIoUsage();
                     break;
                 case "HOST_NETWORK_ACTIVITY_SUMMARY":
                     obj = new HostNetworkActivitySummary();

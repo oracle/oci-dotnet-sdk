@@ -183,7 +183,7 @@ namespace Oci.DatasafeService.Models
         public string Schedule { get; set; }
                 ///
         /// <value>
-        /// Specifies the format of the report ( either .xls or .pdf )
+        /// Specifies the format of the report ( either .xls or .pdf or .json)
         /// </value>
         ///
         public enum ScheduledReportMimeTypeEnum {
@@ -197,7 +197,7 @@ namespace Oci.DatasafeService.Models
         };
 
         /// <value>
-        /// Specifies the format of the report ( either .xls or .pdf )
+        /// Specifies the format of the report ( either .xls or .pdf or .json)
         /// </value>
         [JsonProperty(PropertyName = "scheduledReportMimeType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

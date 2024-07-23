@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// The freeformTags and definedTags to be updated.
     /// </summary>
     public class UpdateMacsManagedExternalDatabaseInsightDetails : UpdateDatabaseInsightDetails
     {

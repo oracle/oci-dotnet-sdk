@@ -165,6 +165,8 @@ namespace Oci.DatasafeService.Models
             PurgeSqlCollectionLogs,
             [EnumMember(Value = "REFRESH_VIOLATIONS")]
             RefreshViolations,
+            [EnumMember(Value = "CREATE_ARCHIVAL")]
+            CreateArchival,
             [EnumMember(Value = "UPDATE_SECURITY_POLICY")]
             UpdateSecurityPolicy,
             [EnumMember(Value = "CHANGE_SECURITY_POLICY_COMPARTMENT")]
@@ -277,6 +279,8 @@ namespace Oci.DatasafeService.Models
             ApplyDifference,
             [EnumMember(Value = "MASK_POLICY_GENERATE_HEALTH_REPORT")]
             MaskPolicyGenerateHealthReport,
+            [EnumMember(Value = "MASK_POLICY_DELETE_HEALTH_REPORT")]
+            MaskPolicyDeleteHealthReport,
             [EnumMember(Value = "ABORT_MASKING")]
             AbortMasking,
             [EnumMember(Value = "CREATE_SECURITY_POLICY_REPORT")]

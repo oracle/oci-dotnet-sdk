@@ -30,6 +30,10 @@ namespace Oci.ApmsyntheticsService.Models
       [EnumMember(Value = "NETWORK")]
       Network,
       [EnumMember(Value = "DNS")]
-      Dns
+      Dns,
+      [EnumMember(Value = "FTP")]
+      Ftp,
+      [EnumMember(Value = "SQL")]
+      Sql
   }
 }

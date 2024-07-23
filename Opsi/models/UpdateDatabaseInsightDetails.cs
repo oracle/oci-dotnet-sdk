@@ -71,6 +71,9 @@ namespace Oci.OpsiService.Models
                 case "AUTONOMOUS_DATABASE":
                     obj = new UpdateAutonomousDatabaseInsightDetails();
                     break;
+                case "MDS_MYSQL_DATABASE_SYSTEM":
+                    obj = new UpdateMdsMySqlDatabaseInsight();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;
