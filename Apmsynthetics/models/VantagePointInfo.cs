@@ -41,5 +41,11 @@ namespace Oci.ApmsyntheticsService.Models
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
+        /// <value>
+        /// List of workers running the assigned monitor.
+        /// </value>
+        [JsonProperty(PropertyName = "workerList")]
+        public System.Collections.Generic.List<string> WorkerList { get; set; }
+        
     }
 }

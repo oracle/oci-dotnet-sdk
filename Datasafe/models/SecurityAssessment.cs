@@ -179,6 +179,12 @@ namespace Oci.DatasafeService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// Indicates whether the assessment is scheduled to run.
+        /// </value>
+        [JsonProperty(PropertyName = "isAssessmentScheduled")]
+        public System.Nullable<bool> IsAssessmentScheduled { get; set; }
+        
+        /// <value>
         /// Schedule to save the assessment periodically in the specified format:
         /// <version-string>;<version-specific-schedule>
         /// <br/>

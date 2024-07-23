@@ -34,6 +34,9 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "fileSystemAvailInPercent")]
         public System.Double FileSystemAvailInPercent { get; set; }
         
+        [JsonProperty(PropertyName = "fileSystemAvailInGBs")]
+        public System.Double FileSystemAvailInGBs { get; set; }
+        
         [JsonProperty(PropertyName = "metricName")]
         private readonly string metricName = "HOST_FILESYSTEM_USAGE";
     }

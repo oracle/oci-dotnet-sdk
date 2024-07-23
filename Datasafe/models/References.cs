@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// References to the sections of STIG, CIS, and/or GDPR relevant to the current finding.
+    /// References to the sections of STIG, CIS, GDPR and/or OBP relevant to the current finding.
     /// </summary>
     public class References 
     {
@@ -38,6 +38,12 @@ namespace Oci.DatasafeService.Models
         /// </value>
         [JsonProperty(PropertyName = "gdpr")]
         public string Gdpr { get; set; }
+        
+        /// <value>
+        /// Relevant section from OBP.
+        /// </value>
+        [JsonProperty(PropertyName = "obp")]
+        public string Obp { get; set; }
         
     }
 }

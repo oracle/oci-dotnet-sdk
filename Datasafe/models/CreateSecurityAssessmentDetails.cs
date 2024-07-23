@@ -54,6 +54,12 @@ namespace Oci.DatasafeService.Models
         public string TargetId { get; set; }
         
         /// <value>
+        /// Indicates whether the assessment is scheduled to run.
+        /// </value>
+        [JsonProperty(PropertyName = "isAssessmentScheduled")]
+        public System.Nullable<bool> IsAssessmentScheduled { get; set; }
+        
+        /// <value>
         /// To schedule the assessment for running periodically, specify the schedule in this attribute.
         /// Create or schedule one assessment per compartment. If not defined, the assessment runs immediately.
         /// Format -

@@ -89,5 +89,17 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "totalHostCapacity")]
         public System.Double TotalHostCapacity { get; set; }
         
+        /// <value>
+        /// Specifies if MYSQL DB System has heatwave cluster attached.
+        /// </value>
+        [JsonProperty(PropertyName = "isHeatWaveClusterAttached")]
+        public System.Nullable<bool> IsHeatWaveClusterAttached { get; set; }
+        
+        /// <value>
+        /// Specifies if MYSQL DB System is highly available.
+        /// </value>
+        [JsonProperty(PropertyName = "isHighlyAvailable")]
+        public System.Nullable<bool> IsHighlyAvailable { get; set; }
+        
     }
 }

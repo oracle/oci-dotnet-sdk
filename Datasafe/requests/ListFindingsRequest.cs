@@ -128,6 +128,12 @@ namespace Oci.DatasafeService.Requests
         public System.Nullable<AccessLevelEnum> AccessLevel { get; set; }
         
         /// <value>
+        /// A filter to return only items related to a specific target OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetId")]
+        public string TargetId { get; set; }
+        
+        /// <value>
         /// Each finding in security assessment has an associated key (think of key as a finding's name).
         /// For a given finding, the key will be the same across targets. The user can use these keys to filter the findings.
         /// 

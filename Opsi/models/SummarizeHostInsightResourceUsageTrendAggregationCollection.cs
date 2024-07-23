@@ -60,7 +60,11 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "STORAGE")]
             Storage,
             [EnumMember(Value = "NETWORK")]
-            Network
+            Network,
+            [EnumMember(Value = "GPU_UTILIZATION")]
+            GpuUtilization,
+            [EnumMember(Value = "GPU_MEMORY_USAGE")]
+            GpuMemoryUsage
         };
 
         /// <value>

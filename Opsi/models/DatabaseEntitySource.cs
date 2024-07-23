@@ -19,6 +19,8 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "EM_MANAGED_EXTERNAL_DATABASE")]
       EmManagedExternalDatabase,
       [EnumMember(Value = "PE_COMANAGED_DATABASE")]
-      PeComanagedDatabase
+      PeComanagedDatabase,
+      [EnumMember(Value = "MDS_MYSQL_DATABASE_SYSTEM")]
+      MdsMysqlDatabaseSystem
   }
 }

@@ -48,6 +48,9 @@ namespace Oci.OpsiService.Models
                 case "EM_MANAGED_EXTERNAL_DATABASE":
                     obj = new EnableEmManagedExternalDatabaseInsightDetails();
                     break;
+                case "MDS_MYSQL_DATABASE_SYSTEM":
+                    obj = new EnableMdsMySqlDatabaseInsightDetails();
+                    break;
                 case "PE_COMANAGED_DATABASE":
                     obj = new EnablePeComanagedDatabaseInsightDetails();
                     break;

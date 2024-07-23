@@ -334,6 +334,13 @@ namespace Oci.OpsiService.Requests
         public string InterfaceName { get; set; }
         
         /// <value>
+        /// GPU identifier.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "gpuId")]
+        public System.Nullable<int> GpuId { get; set; }
+        
+        /// <value>
         /// Resource Status
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status", Oci.Common.Http.CollectionFormatType.Multi)]

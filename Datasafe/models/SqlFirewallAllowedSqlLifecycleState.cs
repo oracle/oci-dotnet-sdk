@@ -22,6 +22,8 @@ namespace Oci.DatasafeService.Models
       [EnumMember(Value = "ACTIVE")]
       Active,
       [EnumMember(Value = "DELETED")]
-      Deleted
+      Deleted,
+      [EnumMember(Value = "FAILED")]
+      Failed
   }
 }

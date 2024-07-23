@@ -358,6 +358,18 @@ namespace Oci.DatasafeService.Models
         public string DatabaseUniqueName { get; set; }
         
         /// <value>
+        /// Semicolon-seperated list of application context namespace, attribute, value information in (APPCTX_NSPACE,APPCTX_ATTRIBUTE=<value>) format.
+        /// </value>
+        [JsonProperty(PropertyName = "applicationContexts")]
+        public string ApplicationContexts { get; set; }
+        
+        /// <value>
+        /// Fine-grained auditing (FGA) policy name that generated this audit record.
+        /// </value>
+        [JsonProperty(PropertyName = "fgaPolicyName")]
+        public string FgaPolicyName { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

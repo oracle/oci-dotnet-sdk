@@ -89,6 +89,36 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "containerId")]
         public string ContainerId { get; set; }
         
+        /// <value>
+        /// Bytes Read
+        /// </value>
+        [JsonProperty(PropertyName = "diskBytesRead")]
+        public System.Double DiskBytesRead { get; set; }
+        
+        /// <value>
+        /// Bytes Written
+        /// </value>
+        [JsonProperty(PropertyName = "diskBytesWritten")]
+        public System.Double DiskBytesWritten { get; set; }
+        
+        /// <value>
+        /// Read transactions per second
+        /// </value>
+        [JsonProperty(PropertyName = "diskIopsRead")]
+        public System.Double DiskIopsRead { get; set; }
+        
+        /// <value>
+        /// Write transactions per second
+        /// </value>
+        [JsonProperty(PropertyName = "diskIopsWritten")]
+        public System.Double DiskIopsWritten { get; set; }
+        
+        /// <value>
+        /// IO Transactions per second
+        /// </value>
+        [JsonProperty(PropertyName = "diskIops")]
+        public System.Double DiskIops { get; set; }
+        
         [JsonProperty(PropertyName = "metricName")]
         private readonly string metricName = "HOST_TOP_PROCESSES";
     }

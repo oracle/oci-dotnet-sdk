@@ -42,7 +42,11 @@ namespace Oci.ApmsyntheticsService.Models
             [EnumMember(Value = "DNS_TRACE_CONFIG")]
             DnsTraceConfig,
             [EnumMember(Value = "DNSSEC_CONFIG")]
-            DnssecConfig
+            DnssecConfig,
+            [EnumMember(Value = "FTP_CONFIG")]
+            FtpConfig,
+            [EnumMember(Value = "SQL_CONFIG")]
+            SqlConfig
         };
 
         
@@ -78,11 +82,17 @@ namespace Oci.ApmsyntheticsService.Models
             var discriminator = jsonObject["configType"].Value<string>();
             switch (discriminator)
             {
+                case "FTP_CONFIG":
+                    obj = new FtpMonitorConfiguration();
+                    break;
                 case "DNSSEC_CONFIG":
                     obj = new DnsSecMonitorConfiguration();
                     break;
                 case "DNS_TRACE_CONFIG":
                     obj = new DnsTraceMonitorConfiguration();
+                    break;
+                case "SQL_CONFIG":
+                    obj = new SqlMonitorConfiguration();
                     break;
                 case "SCRIPTED_REST_CONFIG":
                     obj = new ScriptedRestMonitorConfiguration();

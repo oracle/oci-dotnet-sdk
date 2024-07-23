@@ -75,6 +75,15 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<string> SchemasForDiscovery { get; set; }
         
         /// <value>
+        /// The data discovery jobs will scan the tables specified here, including both schemas and tables.
+        /// For instance, the input could be in the format: [{schemaName: \"HR\", tableName: [\"T1\", \"T2\"]}, {schemaName: 
+        /// \"OE\", tableName : [\"T3\", \"T4\"]}].
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tablesForDiscovery")]
+        public System.Collections.Generic.List<TablesForDiscovery> TablesForDiscovery { get; set; }
+        
+        /// <value>
         /// The OCIDs of the sensitive types to be used by data discovery jobs. If OCID of a sensitive category is provided,
         /// all its child sensitive types are used for data discovery.
         /// 

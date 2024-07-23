@@ -53,7 +53,7 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Nullable<MonitorTypes> MonitorType { get; set; }
         
         /// <value>
-        /// List of public and dedicated vantage points where the monitor is running.
+        /// List of public, dedicated and onPremise vantage points where the monitor is running.
         /// </value>
         /// <remarks>
         /// Required
@@ -143,10 +143,10 @@ namespace Oci.ApmsyntheticsService.Models
         
         /// <value>
         /// Specify the endpoint on which to run the monitor.
-        /// For BROWSER, REST and NETWORK monitor types, target is mandatory.
+        /// For BROWSER, REST, NETWORK, DNS and FTP monitor types, target is mandatory.
         /// If target is specified in the SCRIPTED_BROWSER monitor type, then the monitor will run the selected script (specified by scriptId in monitor) against the specified target endpoint.
         /// If target is not specified in the SCRIPTED_BROWSER monitor type, then the monitor will run the selected script as it is.
-        /// For NETWORK monitor with TCP protocol, a port needs to be provided along with target. Example: 192.168.0.1:80
+        /// For NETWORK monitor with TCP protocol, a port needs to be provided along with target. Example: 192.168.0.1:80.
         /// </value>
         [JsonProperty(PropertyName = "target")]
         public string Target { get; set; }
@@ -217,6 +217,24 @@ namespace Oci.ApmsyntheticsService.Models
         [Required(ErrorMessage = "BatchIntervalInSeconds is required.")]
         [JsonProperty(PropertyName = "batchIntervalInSeconds")]
         public System.Nullable<int> BatchIntervalInSeconds { get; set; }
+        
+        /// <value>
+        /// If enabled, domain name will resolve to an IPv6 address.
+        /// </value>
+        [JsonProperty(PropertyName = "isIPv6")]
+        public System.Nullable<bool> IsIPv6 { get; set; }
+        
+        /// <value>
+        /// Name of the user that created the monitor.
+        /// </value>
+        [JsonProperty(PropertyName = "createdBy")]
+        public string CreatedBy { get; set; }
+        
+        /// <value>
+        /// Name of the user that recently updated the monitor.
+        /// </value>
+        [JsonProperty(PropertyName = "lastUpdatedBy")]
+        public string LastUpdatedBy { get; set; }
         
     }
 }

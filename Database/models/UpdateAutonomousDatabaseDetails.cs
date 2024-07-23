@@ -259,6 +259,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LicenseModelEnum> LicenseModel { get; set; }
         
         /// <value>
+        /// The maximum number of CPUs allowed with a Bring Your Own License (BYOL), including those used for auto-scaling, disaster recovery, tools, etc. Any CPU usage above this limit is considered as License Included and billed.
+        /// </value>
+        [JsonProperty(PropertyName = "byolComputeCountLimit")]
+        public System.Nullable<float> ByolComputeCountLimit { get; set; }
+        
+        /// <value>
         /// Indicates if the database-level access control is enabled.
         /// If disabled, database access is defined by the network security rules.
         /// If enabled, database access is restricted to the IP addresses defined by the rules specified with the `whitelistedIps` property. While specifying `whitelistedIps` rules is optional,

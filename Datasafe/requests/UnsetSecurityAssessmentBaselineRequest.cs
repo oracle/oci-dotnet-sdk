@@ -55,5 +55,11 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Details of the target associated with the security assessment for which the user intents to unset the baseline.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public UnsetSecurityAssessmentBaselineDetails UnsetSecurityAssessmentBaselineDetails { get; set; }
     }
 }
