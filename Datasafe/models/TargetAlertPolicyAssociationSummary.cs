@@ -103,6 +103,12 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<AlertPolicyLifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// Details about the current state of the target-alert policy association.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

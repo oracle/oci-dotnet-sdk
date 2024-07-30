@@ -19,9 +19,13 @@ namespace Oci.DatabasemigrationService.Models
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
+      [EnumMember(Value = "SIZE_2K")]
+      Size2K,
       [EnumMember(Value = "SIZE_8K")]
       Size8K,
       [EnumMember(Value = "SIZE_16K")]
-      Size16K
+      Size16K,
+      [EnumMember(Value = "SIZE_32K")]
+      Size32K
   }
 }

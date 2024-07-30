@@ -95,5 +95,19 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "progress")]
         public System.Nullable<int> Progress { get; set; }
         
+        /// <value>
+        /// This is returned as true if the current phase can be suspended.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSuspendAvailable")]
+        public System.Nullable<bool> IsSuspendAvailable { get; set; }
+        
+        /// <value>
+        /// Attribute that returns an array of names and types of GoldenGate configuration files that are available for read or update.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "editableParameterFiles", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<JobParameterFileVersionKind> EditableParameterFiles { get; set; }
+        
     }
 }

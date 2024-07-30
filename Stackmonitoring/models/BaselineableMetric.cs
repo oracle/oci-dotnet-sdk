@@ -22,30 +22,6 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// Created user id
-        /// </value>
-        [JsonProperty(PropertyName = "createdBy")]
-        public string CreatedBy { get; set; }
-        
-        /// <value>
-        /// last Updated user id
-        /// </value>
-        [JsonProperty(PropertyName = "lastUpdatedBy")]
-        public string LastUpdatedBy { get; set; }
-        
-        /// <value>
-        /// creation date
-        /// </value>
-        [JsonProperty(PropertyName = "timeCreated")]
-        public System.Nullable<System.DateTime> TimeCreated { get; set; }
-        
-        /// <value>
-        /// last updated time
-        /// </value>
-        [JsonProperty(PropertyName = "timeLastUpdated")]
-        public System.Nullable<System.DateTime> TimeLastUpdated { get; set; }
-        
-        /// <value>
         /// OCID of the metric
         /// </value>
         /// <remarks>
@@ -115,6 +91,12 @@ namespace Oci.StackmonitoringService.Models
         public string ResourceGroup { get; set; }
         
         /// <value>
+        /// Resource type of the metric
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        public string ResourceType { get; set; }
+        
+        /// <value>
         /// Is the metric created out of box, default false
         /// </value>
         /// <remarks>
@@ -123,6 +105,30 @@ namespace Oci.StackmonitoringService.Models
         [Required(ErrorMessage = "IsOutOfBox is required.")]
         [JsonProperty(PropertyName = "isOutOfBox")]
         public System.Nullable<bool> IsOutOfBox { get; set; }
+        
+        /// <value>
+        /// Created user id
+        /// </value>
+        [JsonProperty(PropertyName = "createdBy")]
+        public string CreatedBy { get; set; }
+        
+        /// <value>
+        /// last Updated user id
+        /// </value>
+        [JsonProperty(PropertyName = "lastUpdatedBy")]
+        public string LastUpdatedBy { get; set; }
+        
+        /// <value>
+        /// creation date
+        /// </value>
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// last updated time
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastUpdated")]
+        public System.Nullable<System.DateTime> TimeLastUpdated { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

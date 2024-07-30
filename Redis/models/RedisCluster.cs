@@ -155,7 +155,9 @@ namespace Oci.RedisService.Models
             [EnumMember(Value = null)]
             UnknownEnumValue,
             [EnumMember(Value = "V7_0_5")]
-            V705
+            V705,
+            [EnumMember(Value = "REDIS_7_0")]
+            Redis70
         };
 
         /// <value>
@@ -199,7 +201,10 @@ namespace Oci.RedisService.Models
         public NodeCollection NodeCollection { get; set; }
         
         /// <value>
-        /// OCIDs of the NSGs to control access in the customer network
+        /// A list of Network Security Group (NSG) [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)
+        /// associated with this cluster. For more information,
+        /// see [Using an NSG for Redis Clusters](https://docs.cloud.oracle.com/iaas/Content/redis/connecttorediscluster.htm#connecttorediscluster__networksecuritygroup).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }

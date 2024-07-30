@@ -47,5 +47,24 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
         
+        /// <value>
+        /// The current state of the alert policy rule.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AlertPolicyRuleLifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// The display name of the alert policy rule.
+        /// </value>
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
+        
+        /// <value>
+        /// Creation date and time of the alert policy rule, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// </value>
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
     }
 }

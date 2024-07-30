@@ -169,6 +169,18 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<AlertLifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// The key of the rule of alert policy that triggered alert.
+        /// </value>
+        [JsonProperty(PropertyName = "alertPolicyRuleKey")]
+        public string AlertPolicyRuleKey { get; set; }
+        
+        /// <value>
+        /// The display name of the rule of alert policy that triggered alert.
+        /// </value>
+        [JsonProperty(PropertyName = "alertPolicyRuleName")]
+        public string AlertPolicyRuleName { get; set; }
+        
+        /// <value>
         /// Map that contains maps of values.
         ///  Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>

@@ -116,6 +116,13 @@ namespace Oci.DatabasemigrationService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
+        /// A list of parameter file versions that can be viewed or edited for the current job.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "parameterFileVersions")]
+        public System.Collections.Generic.List<ParameterFileVersionSummary> ParameterFileVersions { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. 
         /// For more information, see Resource Tags. Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>

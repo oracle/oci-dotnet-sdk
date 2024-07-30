@@ -34,6 +34,19 @@ namespace Oci.StackmonitoringService.Requests
         public string ResourceGroup { get; set; }
         
         /// <value>
+        /// Resource Type
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]
+        public string ResourceType { get; set; }
+        
+        /// <value>
+        /// Is the baseline enabled metric defined out of box by Oracle or by end-user
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isOutOfBox")]
+        public System.Nullable<bool> IsOutOfBox { get; set; }
+        
+        /// <value>
         /// Metric Name
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]

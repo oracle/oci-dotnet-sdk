@@ -716,6 +716,33 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetInstanceMaintenanceEventRequest, GetInstanceMaintenanceEventResponse> ForInstanceMaintenanceEvent(GetInstanceMaintenanceEventRequest request, params InstanceMaintenanceEvent.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForInstanceMaintenanceEvent(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetInstanceMaintenanceEventRequest, GetInstanceMaintenanceEventResponse> ForInstanceMaintenanceEvent(GetInstanceMaintenanceEventRequest request, WaiterConfiguration config, params InstanceMaintenanceEvent.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetInstanceMaintenanceEventRequest, GetInstanceMaintenanceEventResponse>(
+                request,
+                request => client.GetInstanceMaintenanceEvent(request),
+                response => targetStates.Contains(response.InstanceMaintenanceEvent.LifecycleState.Value)
+            );
+            return new Waiter<GetInstanceMaintenanceEventRequest, GetInstanceMaintenanceEventResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetVnicAttachmentRequest, GetVnicAttachmentResponse> ForVnicAttachment(GetVnicAttachmentRequest request, params VnicAttachment.LifecycleStateEnum[] targetStates)
         {
             return this.ForVnicAttachment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -895,6 +922,42 @@ namespace Oci.CoreService
             return new Waiter<UpdateInstanceRequest, UpdateInstanceResponse>(() =>
             {
                 var response = client.UpdateInstance(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateInstanceMaintenanceEventRequest, UpdateInstanceMaintenanceEventResponse> ForUpdateInstanceMaintenanceEvent(UpdateInstanceMaintenanceEventRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateInstanceMaintenanceEvent(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateInstanceMaintenanceEventRequest, UpdateInstanceMaintenanceEventResponse> ForUpdateInstanceMaintenanceEvent(UpdateInstanceMaintenanceEventRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateInstanceMaintenanceEventRequest, UpdateInstanceMaintenanceEventResponse>(() =>
+            {
+                var response = client.UpdateInstanceMaintenanceEvent(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;

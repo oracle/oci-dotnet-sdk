@@ -477,21 +477,6 @@ namespace Oci.IdentitydomainsService.Models
         public System.Collections.Generic.List<string> OauthClients { get; set; }
         
         /// <value>
-        /// The value of all the authorized OCI Service Principals.
-        /// <br/>
-        /// **SCIM++ Properties:**
-        ///  - idcsSearchable: false
-        ///  - multiValued: true
-        ///  - mutability: readWrite
-        ///  - required: false
-        ///  - returned: default
-        ///  - type: string
-        ///  - uniqueness: none
-        /// </value>
-        [JsonProperty(PropertyName = "servicePrincipals")]
-        public System.Collections.Generic.List<string> ServicePrincipals { get; set; }
-        
-        /// <value>
         /// Allow customers to define whether the resulting token should contain the authenticated user as the subject or whether the token should impersonate another Application Principal in IAM.
         /// <br/>
         /// **SCIM++ Properties:**

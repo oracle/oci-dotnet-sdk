@@ -294,7 +294,21 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "UPDATE_ALL_ALERT")]
             UpdateAllAlert,
             [EnumMember(Value = "PATCH_TARGET_ALERT_POLICY_ASSOCIATION")]
-            PatchTargetAlertPolicyAssociation
+            PatchTargetAlertPolicyAssociation,
+            [EnumMember(Value = "CREATE_ALERT_POLICY")]
+            CreateAlertPolicy,
+            [EnumMember(Value = "UPDATE_ALERT_POLICY")]
+            UpdateAlertPolicy,
+            [EnumMember(Value = "DELETE_ALERT_POLICY")]
+            DeleteAlertPolicy,
+            [EnumMember(Value = "CREATE_ALERT_POLICY_RULE")]
+            CreateAlertPolicyRule,
+            [EnumMember(Value = "UPDATE_ALERT_POLICY_RULE")]
+            UpdateAlertPolicyRule,
+            [EnumMember(Value = "DELETE_ALERT_POLICY_RULE")]
+            DeleteAlertPolicyRule,
+            [EnumMember(Value = "CHANGE_ALERT_POLICY_COMPARTMENT")]
+            ChangeAlertPolicyCompartment
         };
 
         /// <value>

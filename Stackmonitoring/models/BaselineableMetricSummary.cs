@@ -91,6 +91,12 @@ namespace Oci.StackmonitoringService.Models
         public string ResourceGroup { get; set; }
         
         /// <value>
+        /// Resource type of the metric
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        public string ResourceType { get; set; }
+        
+        /// <value>
         /// Is the metric created out of box, default false
         /// </value>
         /// <remarks>
