@@ -31,6 +31,13 @@ namespace Oci.FleetsoftwareupdateService.Models
         [JsonProperty(PropertyName = "infrastructureId")]
         public string InfrastructureId { get; set; }
         
+        /// <value>
+        /// OCID of the Grid Infrastructure software image.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "softwareImageId")]
+        public string SoftwareImageId { get; set; }
+        
         [JsonProperty(PropertyName = "entityType")]
         private readonly string entityType = "CLOUDVMCLUSTER";
     }

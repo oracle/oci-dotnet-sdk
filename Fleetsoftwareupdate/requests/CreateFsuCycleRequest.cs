@@ -20,7 +20,8 @@ namespace Oci.FleetsoftwareupdateService.Requests
     {
         
         /// <value>
-        /// Details for the new Exadata Fleet Update Cycle.
+        /// Details for the new Exadata Fleet Update Maintenance Cycle.
+        /// Targets can only exist in one active Fleet Software Update Maintenance Cycle.
         /// 
         /// </value>
         /// <remarks>

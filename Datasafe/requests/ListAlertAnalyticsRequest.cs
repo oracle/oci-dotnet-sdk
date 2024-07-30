@@ -198,7 +198,13 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "low")]
             Low,
             [EnumMember(Value = "alertcount")]
-            Alertcount
+            Alertcount,
+            [EnumMember(Value = "alertPolicyRuleKey")]
+            AlertPolicyRuleKey,
+            [EnumMember(Value = "alertPolicyRuleName")]
+            AlertPolicyRuleName,
+            [EnumMember(Value = "throttled")]
+            Throttled
         };
 
         /// <value>
@@ -228,7 +234,11 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "timeCreated")]
             TimeCreated,
             [EnumMember(Value = "policyId")]
-            PolicyId
+            PolicyId,
+            [EnumMember(Value = "alertPolicyRuleKey")]
+            AlertPolicyRuleKey,
+            [EnumMember(Value = "alertPolicyRuleName")]
+            AlertPolicyRuleName
         };
 
         /// <value>

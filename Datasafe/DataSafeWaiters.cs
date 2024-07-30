@@ -87,6 +87,33 @@ namespace Oci.DatasafeService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAlertPolicyRuleRequest, GetAlertPolicyRuleResponse> ForAlertPolicyRule(GetAlertPolicyRuleRequest request, params AlertPolicyRuleLifecycleState[] targetStates)
+        {
+            return this.ForAlertPolicyRule(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAlertPolicyRuleRequest, GetAlertPolicyRuleResponse> ForAlertPolicyRule(GetAlertPolicyRuleRequest request, WaiterConfiguration config, params AlertPolicyRuleLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetAlertPolicyRuleRequest, GetAlertPolicyRuleResponse>(
+                request,
+                request => client.GetAlertPolicyRule(request),
+                response => targetStates.Contains(response.AlertPolicyRule.LifecycleState.Value)
+            );
+            return new Waiter<GetAlertPolicyRuleRequest, GetAlertPolicyRuleResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetAuditArchiveRetrievalRequest, GetAuditArchiveRetrievalResponse> ForAuditArchiveRetrieval(GetAuditArchiveRetrievalRequest request, params AuditArchiveRetrievalLifecycleState[] targetStates)
         {
             return this.ForAuditArchiveRetrieval(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

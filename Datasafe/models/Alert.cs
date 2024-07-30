@@ -180,6 +180,18 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// The key of the rule of alert policy that triggered alert.
+        /// </value>
+        [JsonProperty(PropertyName = "alertPolicyRuleKey")]
+        public string AlertPolicyRuleKey { get; set; }
+        
+        /// <value>
+        /// The display name of the rule of alert policy that triggered alert.
+        /// </value>
+        [JsonProperty(PropertyName = "alertPolicyRuleName")]
+        public string AlertPolicyRuleName { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

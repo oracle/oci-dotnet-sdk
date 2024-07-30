@@ -44,6 +44,78 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> AccountLinkingEnabled { get; set; }
         
         /// <value>
+        /// Whether social auto redirect is enabled. The IDP policy should be configured with only one Social IDP, and without username/password selected.
+        /// <br/>
+        /// **Added In:** 2310202314
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: true
+        ///  - idcsSearchable: true
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: boolean
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "autoRedirectEnabled")]
+        public System.Nullable<bool> AutoRedirectEnabled { get; set; }
+        
+        /// <value>
+        /// Whether Social JIT Provisioning is enabled
+        /// <br/>
+        /// **Added In:** 2307282043
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: true
+        ///  - idcsSearchable: true
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: boolean
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "socialJitProvisioningEnabled")]
+        public System.Nullable<bool> SocialJitProvisioningEnabled { get; set; }
+        
+        /// <value>
+        /// Set to true to indicate Social JIT User Provisioning Groups should be assigned from a static list
+        /// <br/>
+        /// **Added In:** 2310202314
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - idcsSearchable: false
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: boolean
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "jitProvGroupStaticListEnabled")]
+        public System.Nullable<bool> JitProvGroupStaticListEnabled { get; set; }
+        
+        /// <value>
+        /// Lists the groups each social JIT-provisioned user is a member. Just-in-Time user-provisioning applies this static list when jitProvGroupStaticListEnabled:true.
+        /// <br/>
+        /// **Added In:** 2310202314
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - idcsCompositeKey: [value]
+        ///  - idcsSearchable: false
+        ///  - multiValued: true
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: complex
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "jitProvAssignedGroups")]
+        public System.Collections.Generic.List<IdentityProviderJitProvAssignedGroups> JitProvAssignedGroups { get; set; }
+        
+        /// <value>
         /// Whether registration is enabled
         /// <br/>
         /// **Added In:** 20.1.3

@@ -33,5 +33,11 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
         
+        /// <value>
+        /// The display name of the alert policy rule.
+        /// </value>
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
+        
     }
 }

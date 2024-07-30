@@ -116,6 +116,9 @@ namespace Oci.FleetsoftwareupdateService.Models
         [JsonProperty(PropertyName = "goalVersionDetails")]
         public FsuGoalVersionDetails GoalVersionDetails { get; set; }
         
+        [JsonProperty(PropertyName = "diagnosticsCollection")]
+        public DiagnosticsCollectionDetails DiagnosticsCollection { get; set; }
+        
         /// <value>
         /// The date and time the Exadata Fleet Update Cycle was created, as described in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.

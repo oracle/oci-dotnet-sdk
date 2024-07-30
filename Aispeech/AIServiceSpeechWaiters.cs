@@ -32,6 +32,34 @@ namespace Oci.AispeechService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCustomizationRequest, GetCustomizationResponse> ForCustomization(GetCustomizationRequest request, params Customization.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForCustomization(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCustomizationRequest, GetCustomizationResponse> ForCustomization(GetCustomizationRequest request, WaiterConfiguration config, params Customization.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCustomizationRequest, GetCustomizationResponse>(
+                request,
+                request => client.GetCustomization(request),
+                response => targetStates.Contains(response.Customization.LifecycleState.Value),
+                targetStates.Contains(Customization.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetCustomizationRequest, GetCustomizationResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetTranscriptionJobRequest, GetTranscriptionJobResponse> ForTranscriptionJob(GetTranscriptionJobRequest request, params TranscriptionJob.LifecycleStateEnum[] targetStates)
         {
             return this.ForTranscriptionJob(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

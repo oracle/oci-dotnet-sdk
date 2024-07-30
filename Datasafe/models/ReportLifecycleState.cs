@@ -22,6 +22,10 @@ namespace Oci.DatasafeService.Models
       [EnumMember(Value = "UPDATING")]
       Updating,
       [EnumMember(Value = "ACTIVE")]
-      Active
+      Active,
+      [EnumMember(Value = "CREATING")]
+      Creating,
+      [EnumMember(Value = "FAILED")]
+      Failed
   }
 }

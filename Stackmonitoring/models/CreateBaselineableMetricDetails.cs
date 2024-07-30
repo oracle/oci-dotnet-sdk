@@ -34,10 +34,6 @@ namespace Oci.StackmonitoringService.Models
         /// <value>
         /// name of the metric
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
@@ -64,12 +60,14 @@ namespace Oci.StackmonitoringService.Models
         /// <value>
         /// Resource group of the metric
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ResourceGroup is required.")]
         [JsonProperty(PropertyName = "resourceGroup")]
         public string ResourceGroup { get; set; }
+        
+        /// <value>
+        /// Resource type of the metric
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        public string ResourceType { get; set; }
         
     }
 }
