@@ -32,6 +32,8 @@ namespace Oci.JmsService.Models
       [EnumMember(Value = "NEEDS_ATTENTION")]
       NeedsAttention,
       [EnumMember(Value = "RETRYING")]
-      Retrying
+      Retrying,
+      [EnumMember(Value = "SKIPPED")]
+      Skipped
   }
 }

@@ -56,6 +56,13 @@ namespace Oci.JmsService.Models
         public string ServerInstanceName { get; set; }
         
         /// <value>
+        /// The port of the Java Server instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "serverInstancePort")]
+        public System.Nullable<int> ServerInstancePort { get; set; }
+        
+        /// <value>
         /// The internal identifier of the related Java Server.
         /// 
         /// </value>

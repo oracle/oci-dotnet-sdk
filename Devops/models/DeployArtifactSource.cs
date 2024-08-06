@@ -34,7 +34,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "GENERIC_ARTIFACT")]
             GenericArtifact,
             [EnumMember(Value = "HELM_CHART")]
-            HelmChart
+            HelmChart,
+            [EnumMember(Value = "HELM_COMMAND_SPEC")]
+            HelmCommandSpec
         };
 
         

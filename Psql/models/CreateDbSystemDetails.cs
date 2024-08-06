@@ -115,6 +115,10 @@ namespace Oci.PsqlService.Models
         [JsonProperty(PropertyName = "instancesDetails")]
         public System.Collections.Generic.List<CreateDbInstanceDetails> InstancesDetails { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Credentials is required.")]
         [JsonProperty(PropertyName = "credentials")]
         public Credentials Credentials { get; set; }
         

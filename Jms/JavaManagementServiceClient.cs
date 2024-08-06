@@ -109,7 +109,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "AddFleetInstallationSites",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/InstallationSiteSummary/AddFleetInstallationSites",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -165,7 +165,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "CancelWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/WorkRequest/CancelWorkRequest",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -222,7 +222,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ChangeFleetCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/ChangeFleetCompartment",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -279,7 +279,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "CreateBlocklist",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Blocklist/CreateBlocklist",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -299,7 +299,7 @@ namespace Oci.JmsService
         }
 
         /// <summary>
-        /// Request to perform validaition of the DRS file and create the file to the Object Storage.
+        /// Request to perform validation of the DRS file and create the file to the Object Storage.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -336,7 +336,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "CreateDrsFile",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/CreateDrsFile",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -399,7 +399,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "CreateFleet",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/CreateFleet",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -414,6 +414,65 @@ namespace Oci.JmsService
             catch (Exception e)
             {
                 logger.Error($"CreateFleet failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Registers an agent&#39;s JmsPlugin, optionally attaching to an existing fleet of the tenancy.
+        /// JmsPlugins registered fleet-less are created with lifecycle state INACTIVE.
+        /// For the operation to be authorized, the agent must exist, and the authorized user requires JMS_PLUGIN_CREATE permission for the agent&#39;s compartment.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/jms/CreateJmsPlugin.cs.html">here</a> to see an example of how to use CreateJmsPlugin API.</example>
+        public async Task<CreateJmsPluginResponse> CreateJmsPlugin(CreateJmsPluginRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called createJmsPlugin");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jmsPlugins".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "JavaManagementService",
+                    OperationName = "CreateJmsPlugin",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<CreateJmsPluginResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateJmsPlugin failed with error: {e.Message}");
                 throw;
             }
         }
@@ -455,7 +514,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "DeleteBlocklist",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Blocklist/DeleteBlocklist",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -511,7 +570,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "DeleteCryptoAnalysisResult",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/CryptoAnalysisResult/DeleteCryptoAnalysisResult",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -568,7 +627,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "DeleteDrsFile",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/DrsFile/DeleteDrsFile",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -624,7 +683,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "DeleteFleet",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/DeleteFleet",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -680,7 +739,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "DeleteJavaMigrationAnalysisResult",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JavaMigrationAnalysisResult/DeleteJavaMigrationAnalysisResult",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -695,6 +754,64 @@ namespace Oci.JmsService
             catch (Exception e)
             {
                 logger.Error($"DeleteJavaMigrationAnalysisResult failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Deletes a JmsPlugin. The JmsPlugin may be visible for some time with state DELETED.
+        /// Deleted plugins will not be able to communicate with the JMS service.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/jms/DeleteJmsPlugin.cs.html">here</a> to see an example of how to use DeleteJmsPlugin API.</example>
+        public async Task<DeleteJmsPluginResponse> DeleteJmsPlugin(DeleteJmsPluginRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called deleteJmsPlugin");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jmsPlugins/{jmsPluginId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "JavaManagementService",
+                    OperationName = "DeleteJmsPlugin",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<DeleteJmsPluginResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteJmsPlugin failed with error: {e.Message}");
                 throw;
             }
         }
@@ -736,7 +853,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "DeletePerformanceTuningAnalysisResult",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/PerformanceTuningAnalysisResult/DeletePerformanceTuningAnalysisResult",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -793,7 +910,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "DisableDrs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/DisableDrs",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -850,7 +967,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "EnableDrs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/EnableDrs",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -907,7 +1024,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GenerateAgentDeployScript",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/GenerateAgentDeployScript",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -922,6 +1039,120 @@ namespace Oci.JmsService
             catch (Exception e)
             {
                 logger.Error($"GenerateAgentDeployScript failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Generates the agent installer configuration using the information provided.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/jms/GenerateAgentInstallerConfiguration.cs.html">here</a> to see an example of how to use GenerateAgentInstallerConfiguration API.</example>
+        public async Task<GenerateAgentInstallerConfigurationResponse> GenerateAgentInstallerConfiguration(GenerateAgentInstallerConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called generateAgentInstallerConfiguration");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/agentInstallers/actions/generateAgentInstallerConfiguration".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "text/plain");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "JavaManagementService",
+                    OperationName = "GenerateAgentInstallerConfiguration",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GenerateAgentInstallerConfigurationResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GenerateAgentInstallerConfiguration failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Generates Load Pipeline Script
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/jms/GenerateLoadPipelineScript.cs.html">here</a> to see an example of how to use GenerateLoadPipelineScript API.</example>
+        public async Task<GenerateLoadPipelineScriptResponse> GenerateLoadPipelineScript(GenerateLoadPipelineScriptRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called generateLoadPipelineScript");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fleets/{fleetId}/actions/generateLoadPipelineScript".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "text/plain");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "JavaManagementService",
+                    OperationName = "GenerateLoadPipelineScript",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GenerateLoadPipelineScriptResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GenerateLoadPipelineScript failed with error: {e.Message}");
                 throw;
             }
         }
@@ -963,7 +1194,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetCryptoAnalysisResult",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/CryptoAnalysisResult/GetCryptoAnalysisResult",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1019,7 +1250,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetDrsFile",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/DrsFile/GetDrsFile",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1039,7 +1270,7 @@ namespace Oci.JmsService
         }
 
         /// <summary>
-        /// Returns export setting for the specified Fleet.
+        /// Returns export setting for the specified fleet.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1075,7 +1306,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetExportSetting",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/ExportSetting/GetExportSetting",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1095,7 +1326,7 @@ namespace Oci.JmsService
         }
 
         /// <summary>
-        /// Returns last export status for the specified Fleet.
+        /// Returns last export status for the specified fleet.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1131,7 +1362,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetExportStatus",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/ExportStatus/GetExportStatus",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1187,7 +1418,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetFleet",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/GetFleet",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1244,7 +1475,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetFleetAdvancedFeatureConfiguration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/FleetAdvancedFeatureConfiguration/GetFleetAdvancedFeatureConfiguration",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1300,7 +1531,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetFleetAgentConfiguration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/FleetAgentConfiguration/GetFleetAgentConfiguration",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1357,7 +1588,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetJavaFamily",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JavaFamily/GetJavaFamily",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1413,7 +1644,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetJavaMigrationAnalysisResult",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JavaMigrationAnalysisResult/GetJavaMigrationAnalysisResult",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1469,7 +1700,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetJavaRelease",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JavaRelease/GetJavaRelease",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1484,6 +1715,62 @@ namespace Oci.JmsService
             catch (Exception e)
             {
                 logger.Error($"GetJavaRelease failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns the JmsPlugin.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/jms/GetJmsPlugin.cs.html">here</a> to see an example of how to use GetJmsPlugin API.</example>
+        public async Task<GetJmsPluginResponse> GetJmsPlugin(GetJmsPluginRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getJmsPlugin");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jmsPlugins/{jmsPluginId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "JavaManagementService",
+                    OperationName = "GetJmsPlugin",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetJmsPluginResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetJmsPlugin failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1525,7 +1812,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetPerformanceTuningAnalysisResult",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/PerformanceTuningAnalysisResult/GetPerformanceTuningAnalysisResult",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1581,7 +1868,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/WorkRequest/GetWorkRequest",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1596,6 +1883,63 @@ namespace Oci.JmsService
             catch (Exception e)
             {
                 logger.Error($"GetWorkRequest failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns a list of the agent installer information.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/jms/ListAgentInstallers.cs.html">here</a> to see an example of how to use ListAgentInstallers API.</example>
+        public async Task<ListAgentInstallersResponse> ListAgentInstallers(ListAgentInstallersRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listAgentInstallers");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/agentInstallers".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "JavaManagementService",
+                    OperationName = "ListAgentInstallers",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListAgentInstallersResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListAgentInstallers failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1637,7 +1981,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListAnnouncements",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/AnnouncementCollection/ListAnnouncements",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1694,7 +2038,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListBlocklists",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Blocklist/ListBlocklists",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1750,7 +2094,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListCryptoAnalysisResults",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/CryptoAnalysisResult/ListCryptoAnalysisResults",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1806,7 +2150,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListDrsFiles",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/DrsFileCollection/ListDrsFiles",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1863,7 +2207,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListFleetDiagnoses",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/FleetDiagnosisSummary/ListFleetDiagnoses",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1921,7 +2265,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListFleets",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/ListFleets",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1977,7 +2321,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListInstallationSites",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/InstallationSiteSummary/ListInstallationSites",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2035,7 +2379,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListJavaFamilies",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JavaFamily/ListJavaFamilies",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2091,7 +2435,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListJavaMigrationAnalysisResults",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JavaMigrationAnalysisResult/ListJavaMigrationAnalysisResults",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2148,7 +2492,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListJavaReleases",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JavaRelease/ListJavaReleases",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2163,6 +2507,62 @@ namespace Oci.JmsService
             catch (Exception e)
             {
                 logger.Error($"ListJavaReleases failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the JmsPlugins.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/jms/ListJmsPlugins.cs.html">here</a> to see an example of how to use ListJmsPlugins API.</example>
+        public async Task<ListJmsPluginsResponse> ListJmsPlugins(ListJmsPluginsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listJmsPlugins");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jmsPlugins".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "JavaManagementService",
+                    OperationName = "ListJmsPlugins",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListJmsPluginsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListJmsPlugins failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2204,7 +2604,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListJreUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JreUsage/ListJreUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2260,7 +2660,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListPerformanceTuningAnalysisResults",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/PerformanceTuningAnalysisResult/ListPerformanceTuningAnalysisResults",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2317,7 +2717,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListWorkItems",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/WorkItemSummary/ListWorkItems",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2374,7 +2774,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/WorkRequestError/ListWorkRequestErrors",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2431,7 +2831,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/WorkRequestLogEntry/ListWorkRequestLogs",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2488,7 +2888,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/WorkRequest/ListWorkRequests",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2544,7 +2944,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "RemoveFleetInstallationSites",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/InstallationSiteSummary/RemoveFleetInstallationSites",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2601,7 +3001,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "RequestCryptoAnalyses",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/RequestCryptoAnalyses",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2616,6 +3016,64 @@ namespace Oci.JmsService
             catch (Exception e)
             {
                 logger.Error($"RequestCryptoAnalyses failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Request to perform a deployed Java migration analyses. The results of the deployed Java migration analyses will be uploaded to the
+        /// Object Storage bucket that you designate when you enable the Java Migration Analyses feature.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/jms/RequestDeployedApplicationMigrationAnalyses.cs.html">here</a> to see an example of how to use RequestDeployedApplicationMigrationAnalyses API.</example>
+        public async Task<RequestDeployedApplicationMigrationAnalysesResponse> RequestDeployedApplicationMigrationAnalyses(RequestDeployedApplicationMigrationAnalysesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called requestDeployedApplicationMigrationAnalyses");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fleets/{fleetId}/actions/requestDeployedApplicationMigrationAnalyses".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "JavaManagementService",
+                    OperationName = "RequestDeployedApplicationMigrationAnalyses",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<RequestDeployedApplicationMigrationAnalysesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RequestDeployedApplicationMigrationAnalyses failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2659,7 +3117,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "RequestJavaMigrationAnalyses",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/RequestJavaMigrationAnalyses",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2716,7 +3174,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "RequestJfrRecordings",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/RequestJfrRecordings",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2774,7 +3232,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "RequestPerformanceTuningAnalyses",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/RequestPerformanceTuningAnalyses",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2830,7 +3288,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ScanJavaServerUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JavaServerUsage/ScanJavaServerUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2886,7 +3344,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "ScanLibraryUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/LibraryUsage/ScanLibraryUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2943,7 +3401,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "SummarizeApplicationInstallationUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/ApplicationInstallationUsageSummary/SummarizeApplicationInstallationUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2999,7 +3457,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "SummarizeApplicationUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/ApplicationUsage/SummarizeApplicationUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3056,7 +3514,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "SummarizeDeployedApplicationInstallationUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/DeployedApplicationInstallationUsageSummary/SummarizeDeployedApplicationInstallationUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3113,7 +3571,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "SummarizeDeployedApplicationUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/DeployedApplicationUsage/SummarizeDeployedApplicationUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3169,7 +3627,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "SummarizeInstallationUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/InstallationUsage/SummarizeInstallationUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3226,7 +3684,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "SummarizeJavaServerInstanceUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JavaServerInstanceUsage/SummarizeJavaServerInstanceUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3283,7 +3741,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "SummarizeJavaServerUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JavaServerUsage/SummarizeJavaServerUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3339,7 +3797,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "SummarizeJreUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/JreUsage/SummarizeJreUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3396,7 +3854,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "SummarizeLibraryUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/LibraryUsage/SummarizeLibraryUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3452,7 +3910,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "SummarizeManagedInstanceUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/ManagedInstanceUsage/SummarizeManagedInstanceUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3509,7 +3967,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "SummarizeResourceInventory",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/SummarizeResourceInventory",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3529,7 +3987,7 @@ namespace Oci.JmsService
         }
 
         /// <summary>
-        /// Request to perform validaition of the DRS file and update the existing file in the Object Storage.
+        /// Request to perform validation of the DRS file and update the existing file in the Object Storage.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3566,7 +4024,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "UpdateDrsFile",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/UpdateDrsFile",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3586,7 +4044,7 @@ namespace Oci.JmsService
         }
 
         /// <summary>
-        /// Updates existing export setting for the specified Fleet.
+        /// Updates existing export setting for the specified fleet.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3622,7 +4080,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "UpdateExportSetting",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/ExportSetting/UpdateExportSetting",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3678,7 +4136,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "UpdateFleet",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/Fleet/UpdateFleet",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3736,7 +4194,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "UpdateFleetAdvancedFeatureConfiguration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/FleetAdvancedFeatureConfiguration/UpdateFleetAdvancedFeatureConfiguration",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3792,7 +4250,7 @@ namespace Oci.JmsService
                     ServiceName = "JavaManagementService",
                     OperationName = "UpdateFleetAgentConfiguration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/jms/20210610/FleetAgentConfiguration/UpdateFleetAgentConfiguration",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3807,6 +4265,62 @@ namespace Oci.JmsService
             catch (Exception e)
             {
                 logger.Error($"UpdateFleetAgentConfiguration failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the Fleet of a JmsPlugin.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/jms/UpdateJmsPlugin.cs.html">here</a> to see an example of how to use UpdateJmsPlugin API.</example>
+        public async Task<UpdateJmsPluginResponse> UpdateJmsPlugin(UpdateJmsPluginRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called updateJmsPlugin");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/jmsPlugins/{jmsPluginId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "JavaManagementService",
+                    OperationName = "UpdateJmsPlugin",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<UpdateJmsPluginResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateJmsPlugin failed with error: {e.Message}");
                 throw;
             }
         }

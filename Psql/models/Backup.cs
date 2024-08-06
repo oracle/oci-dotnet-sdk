@@ -79,7 +79,7 @@ namespace Oci.PsqlService.Models
         public System.Nullable<SourceTypeEnum> SourceType { get; set; }
         
         /// <value>
-        /// The date and time the backup was created, expressed in
+        /// The date and time the backup request was received, expressed in
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z

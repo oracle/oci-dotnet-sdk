@@ -27,7 +27,7 @@ namespace Oci.JmsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The ID of the Fleet.
+        /// The ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }

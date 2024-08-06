@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Attributes to update a Export setting.
+    /// Attributes to update an export setting.
     /// </summary>
     public class UpdateExportSettingDetails 
     {
@@ -59,7 +59,7 @@ namespace Oci.JmsService.Models
         public string TargetBucketNamespace { get; set; }
         
         /// <value>
-        /// The namespace of the bucket where data will be exported.
+        /// The id of the region of the target bucket.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "targetBucketRegion")]

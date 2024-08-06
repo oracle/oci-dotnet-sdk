@@ -61,5 +61,17 @@ namespace Oci.JmsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managedInstanceId")]
         public string ManagedInstanceId { get; set; }
+        
+        /// <value>
+        /// The operation type of the work request.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operationType")]
+        public System.Nullable<OperationType> OperationType { get; set; }
+        
+        /// <value>
+        /// The status of the work request.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<OperationStatus> Status { get; set; }
     }
 }

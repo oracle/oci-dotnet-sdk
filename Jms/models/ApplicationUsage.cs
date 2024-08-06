@@ -25,7 +25,7 @@ namespace Oci.JmsService.Models
     {
         
         /// <value>
-        /// An internal identifier for the application that is unique to a Fleet.
+        /// An internal identifier for the application that is unique to a fleet.
         /// 
         /// </value>
         /// <remarks>
@@ -46,7 +46,7 @@ namespace Oci.JmsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The type of the application, denoted by how the application was started.
+        /// The type of the application denoted by how the application was started.
         /// </value>
         /// <remarks>
         /// Required
@@ -78,6 +78,13 @@ namespace Oci.JmsService.Models
         /// </value>
         [JsonProperty(PropertyName = "approximateManagedInstanceCount")]
         public System.Nullable<int> ApproximateManagedInstanceCount { get; set; }
+        
+        /// <value>
+        /// The approximate count of libraries in this application.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "approximateLibraryCount")]
+        public System.Nullable<int> ApproximateLibraryCount { get; set; }
         
         /// <value>
         /// Lower bound of the specified time period filter. JMS provides a view of the data that is _per day_. The query uses only the date element of the parameter.

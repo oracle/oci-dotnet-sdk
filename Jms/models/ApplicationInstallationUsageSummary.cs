@@ -105,6 +105,18 @@ namespace Oci.JmsService.Models
         public System.Nullable<int> ApproximateManagedInstanceCount { get; set; }
         
         /// <value>
+        /// The approximate count of libraries in this application.
+        /// </value>
+        [JsonProperty(PropertyName = "approximateLibraryCount")]
+        public System.Nullable<int> ApproximateLibraryCount { get; set; }
+        
+        /// <value>
+        /// Comma separated list of user names that invoked application installations.
+        /// </value>
+        [JsonProperty(PropertyName = "applicationInvokedBy")]
+        public string ApplicationInvokedBy { get; set; }
+        
+        /// <value>
         /// Lower bound of the specified time period filter. JMS provides a view of the data that is _per day_. The query uses only the date element of the parameter.
         /// </value>
         [JsonProperty(PropertyName = "timeStart")]

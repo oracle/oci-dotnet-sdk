@@ -32,7 +32,9 @@ namespace Oci.JmsService.Models
             [EnumMember(Value = "APPLICATION")]
             Application,
             [EnumMember(Value = "LCM")]
-            Lcm
+            Lcm,
+            [EnumMember(Value = "DEPLOYED_APPLICATION")]
+            DeployedApplication
         };
 
         
@@ -66,6 +68,9 @@ namespace Oci.JmsService.Models
             var discriminator = jsonObject["kind"].Value<string>();
             switch (discriminator)
             {
+                case "DEPLOYED_APPLICATION":
+                    obj = new DeployedApplicationWorkItemDetails();
+                    break;
                 case "LCM":
                     obj = new LcmWorkItemDetails();
                     break;

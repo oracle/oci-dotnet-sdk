@@ -42,6 +42,48 @@ namespace Oci.JmsService.Requests
         public string ManagedInstanceId { get; set; }
         
         /// <value>
+        /// The host [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the managed instance.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostName")]
+        public string HostName { get; set; }
+        
+        /// <value>
+        /// Non Compliant Finding Count of CryptoAnalysis Report.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nonCompliantFindingCount")]
+        public System.Nullable<int> NonCompliantFindingCount { get; set; }
+        
+        /// <value>
+        /// Non Compliant Finding Count of CryptoAnalysis Report.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nonCompliantFindingCountGreaterThan")]
+        public System.Nullable<int> NonCompliantFindingCountGreaterThan { get; set; }
+        
+        /// <value>
+        /// FindingCount of CryptoAnalysis Report.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "findingCount")]
+        public System.Nullable<int> FindingCount { get; set; }
+        
+        /// <value>
+        /// FindingCount of CryptoAnalysis Report.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "findingCountGreaterThan")]
+        public System.Nullable<int> FindingCountGreaterThan { get; set; }
+        
+        /// <value>
+        /// The start of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeStart")]
+        public System.Nullable<System.DateTime> TimeStart { get; set; }
+        
+        /// <value>
+        /// The end of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeEnd")]
+        public System.Nullable<System.DateTime> TimeEnd { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
@@ -74,17 +116,5 @@ namespace Oci.JmsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
-        
-        /// <value>
-        /// The start of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeStart")]
-        public System.Nullable<System.DateTime> TimeStart { get; set; }
-        
-        /// <value>
-        /// The end of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeEnd")]
-        public System.Nullable<System.DateTime> TimeEnd { get; set; }
     }
 }

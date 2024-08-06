@@ -109,7 +109,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "CancelWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/WorkRequest/CancelWorkRequest",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -165,7 +165,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "ChangeEmWarehouseCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouse/ChangeEmWarehouseCompartment",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -222,7 +222,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "CreateEmWarehouse",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouse/CreateEmWarehouse",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -278,7 +278,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "DeleteEmWarehouse",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouse/DeleteEmWarehouse",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -334,7 +334,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "GetEmWarehouse",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouse/GetEmWarehouse",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -390,7 +390,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "GetEmWarehouseResourceUsage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/ResourceUsage/GetEmWarehouseResourceUsage",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -446,7 +446,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/WorkRequest/GetWorkRequest",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -503,7 +503,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "ListEmWarehouses",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouseCollection/ListEmWarehouses",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -559,7 +559,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "ListEtlRuns",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EtlRunCollection/ListEtlRuns",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -616,7 +616,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/WorkRequestError/ListWorkRequestErrors",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -673,7 +673,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/WorkRequestLogEntry/ListWorkRequestLogs",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -730,7 +730,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/WorkRequest/ListWorkRequests",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -786,7 +786,7 @@ namespace Oci.EmwarehouseService
                     ServiceName = "EmWarehouse",
                     OperationName = "UpdateEmWarehouse",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/em-warehouse/20180828/EmWarehouse/UpdateEmWarehouse",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

@@ -246,7 +246,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Registers the necessary entitlement credentials for OS vendor software sources.
+        /// Registers the necessary entitlement credentials for OS vendor software sources for a tenancy.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

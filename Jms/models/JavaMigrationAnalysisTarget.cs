@@ -17,7 +17,7 @@ namespace Oci.JmsService.Models
 {
     /// <summary>
     /// The target describes the input data for Java migration analysis.
-    /// A target contains a managed instance, application Installation Key, sourceJdkVersion, and targetJdkVersion.
+    /// A target contains a managed instance, application Installation Key, sourceJdkVersion, targetJdkVersion and optional excludePackagePrefixes.
     /// 
     /// </summary>
     public class JavaMigrationAnalysisTarget 
@@ -62,6 +62,12 @@ namespace Oci.JmsService.Models
         [Required(ErrorMessage = "TargetJdkVersion is required.")]
         [JsonProperty(PropertyName = "targetJdkVersion")]
         public string TargetJdkVersion { get; set; }
+        
+        /// <value>
+        /// Excludes the packages that starts with the prefix from the migration analysis result.
+        /// </value>
+        [JsonProperty(PropertyName = "excludePackagePrefixes")]
+        public System.Collections.Generic.List<string> ExcludePackagePrefixes { get; set; }
         
     }
 }
