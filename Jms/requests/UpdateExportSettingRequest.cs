@@ -30,7 +30,7 @@ namespace Oci.JmsService.Requests
         public string FleetId { get; set; }
         
         /// <value>
-        /// The new details for the Export setting.
+        /// The new details for the export setting.
         /// </value>
         /// <remarks>
         /// Required

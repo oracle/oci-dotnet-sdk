@@ -32,7 +32,7 @@ namespace Oci.PsqlService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Verison of the PostgreSQL database, such as 14.9.
+        /// Version of the PostgreSQL database, such as 14.9.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dbVersion")]
         public string DbVersion { get; set; }

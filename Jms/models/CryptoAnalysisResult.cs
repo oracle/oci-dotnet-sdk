@@ -132,6 +132,18 @@ namespace Oci.JmsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
+        /// The time the JFR recording has started.
+        /// </value>
+        [JsonProperty(PropertyName = "timeStarted")]
+        public System.Nullable<System.DateTime> TimeStarted { get; set; }
+        
+        /// <value>
+        /// The time the JFR recording has finished.
+        /// </value>
+        [JsonProperty(PropertyName = "timeFinished")]
+        public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
+        /// <value>
         /// The Crypto Roadmap version used to perform the analysis.
         /// </value>
         /// <remarks>

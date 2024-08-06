@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// Patching configurations which allows patch the nodes batch by batch.
+    /// Configuration that applies the patch in batches, the batch size is a user defined parameter.
     /// </summary>
     public class BatchingBasedPatchingConfigs : PatchingConfigs
     {

@@ -108,6 +108,14 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "DELETE_NODE_BACKUP")]
       DeleteNodeBackup,
       [EnumMember(Value = "REPLACE_NODE")]
-      ReplaceNode
+      ReplaceNode,
+      [EnumMember(Value = "CREATE_RESOURCE_PRINCIPAL_CONFIGURATION")]
+      CreateResourcePrincipalConfiguration,
+      [EnumMember(Value = "DELETE_RESOURCE_PRINCIPAL_CONFIGURATION")]
+      DeleteResourcePrincipalConfiguration,
+      [EnumMember(Value = "UPDATE_RESOURCE_PRINCIPAL_CONFIGURATION")]
+      UpdateResourcePrincipalConfiguration,
+      [EnumMember(Value = "REFRESH_RESOURCE_PRINCIPAL")]
+      RefreshResourcePrincipal
   }
 }

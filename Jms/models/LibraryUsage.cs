@@ -63,6 +63,13 @@ namespace Oci.JmsService.Models
         public string LibraryVersion { get; set; }
         
         /// <value>
+        /// The Common Vulnerabilities and Exposures (CVE) ID.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "cveId")]
+        public string CveId { get; set; }
+        
+        /// <value>
         /// The Common Vulnerability Scoring System (CVSS) score.
         /// 
         /// </value>
@@ -128,6 +135,13 @@ namespace Oci.JmsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeLastSeen")]
         public System.Nullable<System.DateTime> TimeLastSeen { get; set; }
+        
+        /// <value>
+        /// The date and time of the last CVEs refresh was completed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastCveRefreshed")]
+        public System.Nullable<System.DateTime> TimeLastCveRefreshed { get; set; }
         
     }
 }

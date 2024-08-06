@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.JmsService.Models
 {
   /// <summary>
-  /// Potential fields to include into response model to summarize managed instances endpoints.
+  /// Potential fields to include in the response model to summarize managed instances endpoints.
   /// </summary>
   public enum SummarizeManagedInstanceUsageFields {
       [EnumMember(Value = "approximateJreCount")]

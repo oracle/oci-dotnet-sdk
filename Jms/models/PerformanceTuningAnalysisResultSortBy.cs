@@ -21,6 +21,8 @@ namespace Oci.JmsService.Models
       [EnumMember(Value = "managedInstanceId")]
       ManagedInstanceId,
       [EnumMember(Value = "workRequestId")]
-      WorkRequestId
+      WorkRequestId,
+      [EnumMember(Value = "warningCount")]
+      WarningCount
   }
 }

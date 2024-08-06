@@ -48,6 +48,16 @@ namespace Oci.PsqlService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// Version of the PostgreSQL database.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DbVersion is required.")]
+        [JsonProperty(PropertyName = "dbVersion")]
+        public string DbVersion { get; set; }
+        
+        /// <value>
         /// The name of the shape for the configuration.
         /// Example: VM.Standard.E4.Flex
         /// </value>
@@ -59,34 +69,26 @@ namespace Oci.PsqlService.Models
         public string Shape { get; set; }
         
         /// <value>
-        /// Version of the PostgreSQL database.
+        /// Whether the configuration supports flexible shapes.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DbVersion is required.")]
-        [JsonProperty(PropertyName = "dbVersion")]
-        public string DbVersion { get; set; }
+        [JsonProperty(PropertyName = "isFlexible")]
+        public System.Nullable<bool> IsFlexible { get; set; }
         
         /// <value>
         /// CPU core count.
+        /// <br/>
+        /// Skip or set it's value to 0 if configuration is for a flexible shape.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "InstanceOcpuCount is required.")]
         [JsonProperty(PropertyName = "instanceOcpuCount")]
         public System.Nullable<int> InstanceOcpuCount { get; set; }
         
         /// <value>
         /// Memory size in gigabytes with 1GB increment.
+        /// <br/>
+        /// Skip or set it's value to 0 if configuration is for a flexible shape.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "InstanceMemorySizeInGBs is required.")]
         [JsonProperty(PropertyName = "instanceMemorySizeInGBs")]
         public System.Nullable<int> InstanceMemorySizeInGBs { get; set; }
         

@@ -27,6 +27,12 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "headRef")]
         public string HeadRef { get; set; }
         
+        /// <value>
+        /// The target branch for pull requests; not applicable for push requests.
+        /// </value>
+        [JsonProperty(PropertyName = "baseRef")]
+        public string BaseRef { get; set; }
+        
         [JsonProperty(PropertyName = "fileFilter")]
         public FileFilter FileFilter { get; set; }
         

@@ -58,6 +58,20 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "agentPollingIntervalInMinutes")]
         public System.Nullable<int> AgentPollingIntervalInMinutes { get; set; }
         
+        /// <value>
+        /// Collect JMS agent metrics on all managed instances in the fleet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCollectingManagedInstanceMetricsEnabled")]
+        public System.Nullable<bool> IsCollectingManagedInstanceMetricsEnabled { get; set; }
+        
+        /// <value>
+        /// Collect username for application invocations for all managed instances in the fleet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCollectingUsernamesEnabled")]
+        public System.Nullable<bool> IsCollectingUsernamesEnabled { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

@@ -22,7 +22,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Upstream git repository connection identifer.
+        /// Upstream git repository connection identifier.
         /// </value>
         [JsonProperty(PropertyName = "connectorId")]
         public string ConnectorId { get; set; }

@@ -91,9 +91,23 @@ namespace Oci.DevopsService.Models
       DeleteRepository,
       [EnumMember(Value = "MIRROR_REPOSITORY")]
       MirrorRepository,
+      [EnumMember(Value = "FORK_REPOSITORY")]
+      ForkRepository,
+      [EnumMember(Value = "SYNC_FORK_REPOSITORY")]
+      SyncForkRepository,
       [EnumMember(Value = "SCHEDULE_CASCADING_PROJECT_DELETION")]
       ScheduleCascadingProjectDeletion,
       [EnumMember(Value = "CANCEL_SCHEDULED_CASCADING_PROJECT_DELETION")]
-      CancelScheduledCascadingProjectDeletion
+      CancelScheduledCascadingProjectDeletion,
+      [EnumMember(Value = "CREATE_PULL_REQUEST")]
+      CreatePullRequest,
+      [EnumMember(Value = "UPDATE_PULL_REQUEST")]
+      UpdatePullRequest,
+      [EnumMember(Value = "DELETE_PULL_REQUEST")]
+      DeletePullRequest,
+      [EnumMember(Value = "MOVE_PULL_REQUEST")]
+      MovePullRequest,
+      [EnumMember(Value = "MERGE_PULL_REQUEST")]
+      MergePullRequest
   }
 }

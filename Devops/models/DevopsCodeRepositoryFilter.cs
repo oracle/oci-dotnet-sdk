@@ -27,7 +27,11 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = null)]
             UnknownEnumValue,
             [EnumMember(Value = "PUSH")]
-            Push
+            Push,
+            [EnumMember(Value = "PULL_REQUEST_CREATED")]
+            PullRequestCreated,
+            [EnumMember(Value = "PULL_REQUEST_UPDATED")]
+            PullRequestUpdated
         };
 
         /// <value>

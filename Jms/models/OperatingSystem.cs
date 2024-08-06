@@ -23,7 +23,7 @@ namespace Oci.JmsService.Models
     {
         
         /// <value>
-        /// The operating system type, such as Windows or Linux
+        /// The operating system type, such as Windows, Linux or macOS
         /// </value>
         /// <remarks>
         /// Required

@@ -42,6 +42,12 @@ namespace Oci.DevopsService.Models
         public string ProjectId { get; set; }
         
         /// <value>
+        /// The OCID of the parent repository.
+        /// </value>
+        [JsonProperty(PropertyName = "parentRepositoryId")]
+        public string ParentRepositoryId { get; set; }
+        
+        /// <value>
         /// The default branch of the repository.
         /// </value>
         [JsonProperty(PropertyName = "defaultBranch")]
@@ -51,6 +57,7 @@ namespace Oci.DevopsService.Models
         /// Type of repository. Allowed values: 
         /// `MIRRORED` 
         /// `HOSTED`
+        /// `FORKED`
         /// 
         /// </value>
         /// <remarks>

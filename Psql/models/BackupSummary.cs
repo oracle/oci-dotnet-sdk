@@ -91,7 +91,7 @@ namespace Oci.PsqlService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// Specifies whether the backup was created manually, or by a management policy.
+        /// Specifies whether the backup was created manually, taken on schedule defined in the a backup policy, or copied from the remote location.
         /// </value>
         [JsonProperty(PropertyName = "sourceType")]
         [JsonConverter(typeof(StringEnumConverter))]

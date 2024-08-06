@@ -92,6 +92,12 @@ namespace Oci.JmsService.Models
         public System.Nullable<DrsFileStatus> DrsFileStatus { get; set; }
         
         /// <value>
+        /// Comma separated list of user names that invoked applications within this managed instance.
+        /// </value>
+        [JsonProperty(PropertyName = "applicationInvokedBy")]
+        public string ApplicationInvokedBy { get; set; }
+        
+        /// <value>
         /// Lower bound of the specified time period filter. JMS provides a view of the data that is _per day_. The query uses only the date element of the parameter.
         /// </value>
         [JsonProperty(PropertyName = "timeStart")]

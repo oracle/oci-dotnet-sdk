@@ -169,7 +169,7 @@ namespace Oci.JmsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the JFR capture started.
+        /// The time the JFR recording has started.
         /// </value>
         /// <remarks>
         /// Required
@@ -179,7 +179,7 @@ namespace Oci.JmsService.Models
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The time the JFR capture finished.
+        /// The time the JFR recording has finished.
         /// </value>
         /// <remarks>
         /// Required
