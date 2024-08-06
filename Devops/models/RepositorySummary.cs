@@ -58,6 +58,12 @@ namespace Oci.DevopsService.Models
         public string ProjectId { get; set; }
         
         /// <value>
+        /// The OCID of the parent repository.
+        /// </value>
+        [JsonProperty(PropertyName = "parentRepositoryId")]
+        public string ParentRepositoryId { get; set; }
+        
+        /// <value>
         /// Tenancy unique namespace.
         /// </value>
         [JsonProperty(PropertyName = "namespace")]
@@ -85,6 +91,7 @@ namespace Oci.DevopsService.Models
         /// Type of repository. Allowed values: 
         /// `MIRRORED` 
         /// `HOSTED`
+        /// `FORKED`
         /// 
         /// </value>
         [JsonProperty(PropertyName = "repositoryType")]

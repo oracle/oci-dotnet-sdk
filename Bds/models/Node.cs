@@ -256,6 +256,12 @@ namespace Oci.BdsService.Models
         public System.Nullable<bool> IsRebootRequired { get; set; }
         
         /// <value>
+        /// Version of the ODH (Oracle Distribution including Apache Hadoop) for the node.
+        /// </value>
+        [JsonProperty(PropertyName = "odhVersion")]
+        public string OdhVersion { get; set; }
+        
+        /// <value>
         /// The date and time the instance was replaced by a new vm with a node backup.
         /// </value>
         [JsonProperty(PropertyName = "timeReplaced")]

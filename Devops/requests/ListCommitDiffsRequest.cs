@@ -50,6 +50,12 @@ namespace Oci.DevopsService.Requests
         public string TargetVersion { get; set; }
         
         /// <value>
+        /// The target repository identifier
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetRepositoryId")]
+        public string TargetRepositoryId { get; set; }
+        
+        /// <value>
         /// Boolean value to indicate whether to use merge base or most recent revision.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isComparisonFromMergeBase")]

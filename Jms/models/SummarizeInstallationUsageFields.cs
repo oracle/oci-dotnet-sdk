@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.JmsService.Models
 {
   /// <summary>
-  /// Potential fields to include into response model to summarize installations endpoints.
+  /// Potential fields to include in the response model to summarize installations endpoints.
   /// </summary>
   public enum SummarizeInstallationUsageFields {
       [EnumMember(Value = "approximateApplicationCount")]

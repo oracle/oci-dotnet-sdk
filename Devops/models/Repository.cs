@@ -64,6 +64,12 @@ namespace Oci.DevopsService.Models
         public string ProjectId { get; set; }
         
         /// <value>
+        /// The OCID of the parent repository.
+        /// </value>
+        [JsonProperty(PropertyName = "parentRepositoryId")]
+        public string ParentRepositoryId { get; set; }
+        
+        /// <value>
         /// Unique project name in a namespace.
         /// </value>
         [JsonProperty(PropertyName = "projectName")]
@@ -97,6 +103,7 @@ namespace Oci.DevopsService.Models
         /// Type of repository:
         /// MIRRORED - Repository created by mirroring an existing repository.
         /// HOSTED - Repository created and hosted using OCI DevOps code repository.
+        /// FORKED - Repository created by forking an existing repository.
         /// 
         /// </value>
         ///
@@ -107,13 +114,16 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = "MIRRORED")]
             Mirrored,
             [EnumMember(Value = "HOSTED")]
-            Hosted
+            Hosted,
+            [EnumMember(Value = "FORKED")]
+            Forked
         };
 
         /// <value>
         /// Type of repository:
         /// MIRRORED - Repository created by mirroring an existing repository.
         /// HOSTED - Repository created and hosted using OCI DevOps code repository.
+        /// FORKED - Repository created by forking an existing repository.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "repositoryType")]
@@ -149,6 +159,8 @@ namespace Oci.DevopsService.Models
             Creating,
             [EnumMember(Value = "DELETED")]
             Deleted,
+            [EnumMember(Value = "FAILED")]
+            Failed,
             [EnumMember(Value = "DELETING")]
             Deleting
         };

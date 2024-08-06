@@ -309,6 +309,34 @@ namespace Oci.DevopsService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPullRequestRequest, GetPullRequestResponse> ForPullRequest(GetPullRequestRequest request, params PullRequest.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForPullRequest(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPullRequestRequest, GetPullRequestResponse> ForPullRequest(GetPullRequestRequest request, WaiterConfiguration config, params PullRequest.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetPullRequestRequest, GetPullRequestResponse>(
+                request,
+                request => client.GetPullRequest(request),
+                response => targetStates.Contains(response.PullRequest.LifecycleState.Value),
+                targetStates.Contains(PullRequest.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetPullRequestRequest, GetPullRequestResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetRepositoryRequest, GetRepositoryResponse> ForRepository(GetRepositoryRequest request, params Repository.LifecycleStateEnum[] targetStates)
         {
             return this.ForRepository(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

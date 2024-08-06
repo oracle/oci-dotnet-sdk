@@ -105,5 +105,12 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "isSupportedVersion")]
         public System.Nullable<bool> IsSupportedVersion { get; set; }
         
+        /// <value>
+        /// The date on which the Java release family was first made available (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "releaseDate")]
+        public System.Nullable<System.DateTime> ReleaseDate { get; set; }
+        
     }
 }

@@ -33,6 +33,25 @@ namespace Oci.PsqlService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
+        /// <value>
+        /// The name of the shape for the database system nodes.
+        /// Example: VM.Standard.E4.Flex
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        public string Shape { get; set; }
+        
+        /// <value>
+        /// The total number of OCPUs available to each database system node.
+        /// </value>
+        [JsonProperty(PropertyName = "instanceOcpuCount")]
+        public System.Nullable<int> InstanceOcpuCount { get; set; }
+        
+        /// <value>
+        /// The total amount of memory available to each database system node, in gigabytes.
+        /// </value>
+        [JsonProperty(PropertyName = "instanceMemorySizeInGBs")]
+        public System.Nullable<int> InstanceMemorySizeInGBs { get; set; }
+        
         [JsonProperty(PropertyName = "dbConfigurationParams")]
         public UpdateDbConfigParams DbConfigurationParams { get; set; }
         
@@ -41,6 +60,9 @@ namespace Oci.PsqlService.Models
         
         [JsonProperty(PropertyName = "storageDetails")]
         public UpdateStorageDetailsParams StorageDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "networkDetails")]
+        public UpdateNetworkDetails NetworkDetails { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

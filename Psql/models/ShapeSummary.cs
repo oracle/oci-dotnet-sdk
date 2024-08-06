@@ -39,6 +39,12 @@ namespace Oci.PsqlService.Models
         public string Shape { get; set; }
         
         /// <value>
+        /// Indicates if the shape is a flex shape.
+        /// </value>
+        [JsonProperty(PropertyName = "isFlexible")]
+        public System.Nullable<bool> IsFlexible { get; set; }
+        
+        /// <value>
         /// The number of OCPUs.
         /// </value>
         /// <remarks>
@@ -57,6 +63,12 @@ namespace Oci.PsqlService.Models
         [Required(ErrorMessage = "MemorySizeInGBs is required.")]
         [JsonProperty(PropertyName = "memorySizeInGBs")]
         public System.Nullable<int> MemorySizeInGBs { get; set; }
+        
+        [JsonProperty(PropertyName = "shapeOcpuOptions")]
+        public ShapeOcpuOptions ShapeOcpuOptions { get; set; }
+        
+        [JsonProperty(PropertyName = "shapeMemoryOptions")]
+        public ShapeMemoryOptions ShapeMemoryOptions { get; set; }
         
     }
 }

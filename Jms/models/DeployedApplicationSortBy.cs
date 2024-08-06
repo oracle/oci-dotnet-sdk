@@ -25,6 +25,10 @@ namespace Oci.JmsService.Models
       IsClustered,
       [EnumMember(Value = "javaServerInstanceCount")]
       JavaServerInstanceCount,
+      [EnumMember(Value = "approximateJavaServerInstanceCount")]
+      ApproximateJavaServerInstanceCount,
+      [EnumMember(Value = "approximateLibraryCount")]
+      ApproximateLibraryCount,
       [EnumMember(Value = "timeFirstSeen")]
       TimeFirstSeen,
       [EnumMember(Value = "timeLastSeen")]

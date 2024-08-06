@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.BdsService.Models
 {
     /// <summary>
-    /// Detailed configurations for defining the behavior when installing os patches. If not provided, nodes will be patched and rebooted AD/FD by AD/FD.
+    /// Detailed configurations for defining the behavior when installing os patches. If not provided, nodes will be patched and rebooted AD/FD by AD/FD for regular patches or will be patched with down time if the patch is an emergent patch.
     /// </summary>
     [JsonConverter(typeof(PatchingConfigsModelConverter))]
     public class PatchingConfigs 
@@ -30,7 +30,9 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = "DOWNTIME_BASED")]
             DowntimeBased,
             [EnumMember(Value = "BATCHING_BASED")]
-            BatchingBased
+            BatchingBased,
+            [EnumMember(Value = "DOMAIN_BASED")]
+            DomainBased
         };
 
         
@@ -61,6 +63,9 @@ namespace Oci.BdsService.Models
                     break;
                 case "DOWNTIME_BASED":
                     obj = new DowntimeBasedPatchingConfigs();
+                    break;
+                case "DOMAIN_BASED":
+                    obj = new DomainBasedPatchingConfigs();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

@@ -106,6 +106,37 @@ namespace Oci.PsqlService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
+        /// Version of the PostgreSQL database.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DbVersion is required.")]
+        [JsonProperty(PropertyName = "dbVersion")]
+        public string DbVersion { get; set; }
+                ///
+        /// <value>
+        /// The type of configuration. Either user-created or a default configuration.
+        /// </value>
+        ///
+        public enum ConfigTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "DEFAULT")]
+            Default,
+            [EnumMember(Value = "CUSTOM")]
+            Custom
+        };
+
+        /// <value>
+        /// The type of configuration. Either user-created or a default configuration.
+        /// </value>
+        [JsonProperty(PropertyName = "configType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ConfigTypeEnum> ConfigType { get; set; }
+        
+        /// <value>
         /// The name of the shape for the configuration.
         /// Example: VM.Standard.E4.Flex
         /// </value>
@@ -117,7 +148,15 @@ namespace Oci.PsqlService.Models
         public string Shape { get; set; }
         
         /// <value>
+        /// Whether the configuration supports flexible shapes.
+        /// </value>
+        [JsonProperty(PropertyName = "isFlexible")]
+        public System.Nullable<bool> IsFlexible { get; set; }
+        
+        /// <value>
         /// CPU core count.
+        /// <br/>
+        /// It's value is set to 0 if configuration is for a flexible shape.
         /// 
         /// </value>
         /// <remarks>
@@ -129,6 +168,8 @@ namespace Oci.PsqlService.Models
         
         /// <value>
         /// Memory size in gigabytes with 1GB increment.
+        /// <br/>
+        /// It's value is set to 0 if configuration is for a flexible shape.
         /// 
         /// </value>
         /// <remarks>
@@ -137,16 +178,6 @@ namespace Oci.PsqlService.Models
         [Required(ErrorMessage = "InstanceMemorySizeInGBs is required.")]
         [JsonProperty(PropertyName = "instanceMemorySizeInGBs")]
         public System.Nullable<int> InstanceMemorySizeInGBs { get; set; }
-        
-        /// <value>
-        /// Version of the PostgreSQL database.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DbVersion is required.")]
-        [JsonProperty(PropertyName = "dbVersion")]
-        public string DbVersion { get; set; }
         
         /// <remarks>
         /// Required

@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.JmsService.Models
 {
   /// <summary>
-  /// Potential fields to include into response model to summarize JREs endpoints.
+  /// Potential fields to include in the response model to summarize JREs endpoints.
   /// </summary>
   public enum SummarizeJreUsageFields {
       [EnumMember(Value = "approximateInstallationCount")]

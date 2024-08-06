@@ -22,7 +22,7 @@ namespace Oci.BdsService.Models
     {
                 ///
         /// <value>
-        /// Allowed value is CPU_UTILIZATION.
+        /// Allowed values are CPU_UTILIZATION and MEMORY_UTILIZATION.
         /// </value>
         ///
         public enum MetricTypeEnum {
@@ -30,11 +30,13 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = null)]
             UnknownEnumValue,
             [EnumMember(Value = "CPU_UTILIZATION")]
-            CpuUtilization
+            CpuUtilization,
+            [EnumMember(Value = "MEMORY_UTILIZATION")]
+            MemoryUtilization
         };
 
         /// <value>
-        /// Allowed value is CPU_UTILIZATION.
+        /// Allowed values are CPU_UTILIZATION and MEMORY_UTILIZATION.
         /// </value>
         /// <remarks>
         /// Required

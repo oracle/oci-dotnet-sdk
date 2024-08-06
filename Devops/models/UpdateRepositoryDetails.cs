@@ -43,6 +43,7 @@ namespace Oci.DevopsService.Models
         /// Type of repository. Allowed values: 
         /// `MIRRORED` 
         /// `HOSTED`
+        /// `FORKED`
         /// 
         /// </value>
         [JsonProperty(PropertyName = "repositoryType")]

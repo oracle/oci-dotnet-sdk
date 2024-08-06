@@ -28,6 +28,8 @@ namespace Oci.JmsService.Models
       ApproximateInstallationCount,
       [EnumMember(Value = "approximateManagedInstanceCount")]
       ApproximateManagedInstanceCount,
+      [EnumMember(Value = "approximateLibraryCount")]
+      ApproximateLibraryCount,
       [EnumMember(Value = "osName")]
       OsName
   }
