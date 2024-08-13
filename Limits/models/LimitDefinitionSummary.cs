@@ -101,5 +101,19 @@ namespace Oci.LimitsService.Models
         [JsonProperty(PropertyName = "isDynamic")]
         public System.Nullable<bool> IsDynamic { get; set; }
         
+        /// <value>
+        /// An array of subscription types supported by the limit. e,g The type of subscription, such as 'SAAS', 'ERP', 'CRM'.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "supportedSubscriptions")]
+        public System.Collections.Generic.List<string> SupportedSubscriptions { get; set; }
+        
+        /// <value>
+        /// Supported quota family names for creation of quota policy.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "supportedQuotaFamilies")]
+        public System.Collections.Generic.List<string> SupportedQuotaFamilies { get; set; }
+        
     }
 }

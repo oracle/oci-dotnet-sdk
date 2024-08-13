@@ -33,5 +33,12 @@ namespace Oci.LimitsService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
+        /// <value>
+        /// An array of subscription types supported by the service. e,g The type of subscription, such as 'SAAS', 'ERP', 'CRM'.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "supportedSubscriptions")]
+        public System.Collections.Generic.List<string> SupportedSubscriptions { get; set; }
+        
     }
 }

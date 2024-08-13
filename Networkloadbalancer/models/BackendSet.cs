@@ -18,7 +18,7 @@ namespace Oci.NetworkloadbalancerService.Models
     /// <summary>
     /// The configuration of a network load balancer backend set.
     /// For more information about backend set configuration, see
-    /// [Managing Backend Sets](https://docs.cloud.oracle.com/Content/NetworkLoadBalancer/BackendSets/backend-set-management.htm).
+    /// [Managing Backend Sets](https://docs.cloud.oracle.com/Content/Balance/Tasks/managingbackendsets.htm).
     /// <br/>
     /// **Caution:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
@@ -82,12 +82,16 @@ namespace Oci.NetworkloadbalancerService.Models
         public System.Nullable<IpVersion> IpVersion { get; set; }
         
         /// <value>
-        /// Array of backends.
+        /// An array of backends.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "backends")]
         public System.Collections.Generic.List<Backend> Backends { get; set; }
         
+        /// <value>
+        /// The health check policy configuration.
+        /// 
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

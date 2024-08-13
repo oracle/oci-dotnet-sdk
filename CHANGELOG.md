@@ -30,6 +30,13 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 92.1.0 - 2024-08-13
+### Added
+ - Support for calling Oracle Cloud Infrastructure services in the `me-abudhabi-4` region
+ - Support for viewing subscription limits in the Limits service
+ - Support for TCP idle timeout on network load balancer create and update operations in the Network Load Balancing service
+ - Support for creating integration instances of type Healthcare in the Integration Cloud service
+
 ## 91.0.0 - 2024-07-30
 ### Added 
 - Support for cluster placement groups on get operations in the Database service 

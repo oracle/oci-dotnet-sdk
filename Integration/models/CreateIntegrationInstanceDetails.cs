@@ -60,7 +60,9 @@ namespace Oci.IntegrationService.Models
             [EnumMember(Value = "STANDARDX")]
             Standardx,
             [EnumMember(Value = "ENTERPRISEX")]
-            Enterprisex
+            Enterprisex,
+            [EnumMember(Value = "HEALTHCARE")]
+            Healthcare
         };
 
         /// <value>

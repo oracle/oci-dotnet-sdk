@@ -40,6 +40,13 @@ namespace Oci.LimitsService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serviceName")]
         public string ServiceName { get; set; }
         
+        /// <value>
+        /// The OCID of the subscription assigned to tenant
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionId")]
+        public string SubscriptionId { get; set; }
+        
         ///
         /// <value>
         /// Filter entries by scope type.
