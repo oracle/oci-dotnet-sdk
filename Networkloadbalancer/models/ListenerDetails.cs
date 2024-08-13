@@ -17,8 +17,8 @@ namespace Oci.NetworkloadbalancerService.Models
 {
     /// <summary>
     /// The listener's configuration.
-    /// For more information about listener configuration, see
-    /// [Managing Load Balancer Listeners](https://docs.cloud.oracle.com/Content/NetworkLoadBalancer/Listeners/listener-management.htm).
+    /// For more information about backend set configuration, see
+    /// [Managing Load Balancer Listeners](https://docs.cloud.oracle.com/Content/Balance/Tasks/managinglisteners.htm).
     /// 
     /// </summary>
     public class ListenerDetails 
@@ -88,6 +88,20 @@ namespace Oci.NetworkloadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPpv2Enabled")]
         public System.Nullable<bool> IsPpv2Enabled { get; set; }
+        
+        /// <value>
+        /// The duration for TCP idle timeout in seconds.
+        /// Example: 300
+        /// </value>
+        [JsonProperty(PropertyName = "tcpIdleTimeout")]
+        public System.Nullable<int> TcpIdleTimeout { get; set; }
+        
+        /// <value>
+        /// The duration for UDP idle timeout in seconds.
+        /// Example: 120
+        /// </value>
+        [JsonProperty(PropertyName = "udpIdleTimeout")]
+        public System.Nullable<int> UdpIdleTimeout { get; set; }
         
     }
 }

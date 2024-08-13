@@ -120,7 +120,7 @@ namespace Oci.NetworkloadbalancerService.Models
         /// A public network load balancer is accessible from the internet, depending the
         /// [security list rules](https://docs.cloud.oracle.com/Content/network/Concepts/securitylists.htm) for your virtual cloudn network. For more information about public and
         /// private network load balancers,
-        /// see [How Network Load Balancing Works](https://docs.cloud.oracle.com/Content/NetworkLoadBalancer/overview.htm).
+        /// see [How Network Load Balancing Works](https://docs.cloud.oracle.com/Content/Balance/Concepts/balanceoverview.htm#how-network-load-balancing-works).
         /// This value is true by default.
         /// <br/>
         /// Example: true
@@ -145,7 +145,7 @@ namespace Oci.NetworkloadbalancerService.Models
         public System.Nullable<bool> IsSymmetricHashEnabled { get; set; }
         
         /// <value>
-        /// The subnet in which the network load balancer is spawned [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).\"
+        /// The subnet in which the network load balancer is spawned [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required

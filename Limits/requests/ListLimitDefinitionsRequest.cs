@@ -31,6 +31,13 @@ namespace Oci.LimitsService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The OCID of the subscription assigned to tenant
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionId")]
+        public string SubscriptionId { get; set; }
+        
+        /// <value>
         /// The target service name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "serviceName")]
