@@ -24,6 +24,8 @@ namespace Oci.AnalyticsService.Models
         
         /// <value>
         /// The capacity model to use.
+        /// Accepted values are:
+        /// OLPU_COUNT, USER_COUNT
         /// 
         /// </value>
         /// <remarks>
@@ -35,8 +37,8 @@ namespace Oci.AnalyticsService.Models
         public System.Nullable<CapacityType> CapacityType { get; set; }
         
         /// <value>
-        /// The capacity value selected (OLPU count, number of users, ...etc...). This parameter affects the
-        /// number of CPUs, amount of memory or other resources allocated to the instance.
+        /// The capacity value selected, either the number of OCPUs (OLPU_COUNT) or the number of users (USER_COUNT).
+        /// This parameter affects the number of OCPUs, amount of memory, and other resources allocated to the instance.
         /// 
         /// </value>
         /// <remarks>

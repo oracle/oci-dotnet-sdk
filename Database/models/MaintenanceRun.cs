@@ -216,7 +216,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "SECURITY_MONTHLY")]
             SecurityMonthly,
             [EnumMember(Value = "TIMEZONE")]
-            Timezone
+            Timezone,
+            [EnumMember(Value = "CUSTOM_DATABASE_SOFTWARE_IMAGE")]
+            CustomDatabaseSoftwareImage
         };
 
         /// <value>
@@ -352,6 +354,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "estimatedComponentPatchingStartTime")]
         public System.Nullable<System.DateTime> EstimatedComponentPatchingStartTime { get; set; }
+        
+        /// <value>
+        /// The Autonomous Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// </value>
+        [JsonProperty(PropertyName = "databaseSoftwareImageId")]
+        public string DatabaseSoftwareImageId { get; set; }
         
     }
 }

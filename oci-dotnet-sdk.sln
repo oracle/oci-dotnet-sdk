@@ -293,6 +293,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Resourcesched
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Demandsignal", "Demandsignal\OCI.DotNetSDK.Demandsignal.csproj", "{58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Fleetappsmanagement", "Fleetappsmanagement\OCI.DotNetSDK.Fleetappsmanagement.csproj", "{C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2661,5 +2663,17 @@ Global
         {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Release|x64.Build.0 = Release|Any CPU
         {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Release|x86.ActiveCfg = Release|Any CPU
         {58AE8C48-C32E-4A46-BAA0-248DEB91C1BD}.Release|x86.Build.0 = Release|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Debug|x64.Build.0 = Debug|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Debug|x86.Build.0 = Debug|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Release|Any CPU.Build.0 = Release|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Release|x64.ActiveCfg = Release|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Release|x64.Build.0 = Release|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Release|x86.ActiveCfg = Release|Any CPU
+        {C305BCBE-BA4A-4D89-BBFB-FE76C3E8113E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

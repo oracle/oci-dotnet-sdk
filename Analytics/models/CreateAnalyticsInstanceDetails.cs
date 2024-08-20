@@ -118,11 +118,33 @@ namespace Oci.AnalyticsService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the OCI Vault Key encrypting the customer data stored in this Analytics instance. A null value indicates Oracle managed default encryption.
+        /// OCID of the OCI Vault Key encrypting the customer data stored in this Analytics instance. A null value indicates Oracle managed default encryption.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
+        
+        /// <value>
+        /// domain id for which the user is authorized.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "domainId")]
+        public string DomainId { get; set; }
+        
+        /// <value>
+        /// user name of the authorized user.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "adminUser")]
+        public string AdminUser { get; set; }
+        
+        /// <value>
+        /// The feature set of an Analytics instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "featureBundle")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<FeatureBundle> FeatureBundle { get; set; }
         
     }
 }

@@ -62,6 +62,12 @@ namespace Oci.DatabasemanagementService.Models
                 case "DIAGNOSTICS_AND_MANAGEMENT":
                     obj = new DatabaseDiagnosticsAndManagementFeatureDetails();
                     break;
+                case "DB_LIFECYCLE_MANAGEMENT":
+                    obj = new DatabaseLifecycleManagementFeatureDetails();
+                    break;
+                case "SQLWATCH":
+                    obj = new DatabaseSqlWatchFeatureDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

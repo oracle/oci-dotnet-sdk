@@ -73,7 +73,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<PatchingModeEnum> PatchingMode { get; set; }
                 ///
         /// <value>
-        /// Patch type, either \"QUARTERLY\" or \"TIMEZONE\".
+        /// Patch type, either \"QUARTERLY\", \"TIMEZONE\" or \"CUSTOM_DATABASE_SOFTWARE_IMAGE\".
         /// 
         /// </value>
         ///
@@ -81,11 +81,13 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "QUARTERLY")]
             Quarterly,
             [EnumMember(Value = "TIMEZONE")]
-            Timezone
+            Timezone,
+            [EnumMember(Value = "CUSTOM_DATABASE_SOFTWARE_IMAGE")]
+            CustomDatabaseSoftwareImage
         };
 
         /// <value>
-        /// Patch type, either \"QUARTERLY\" or \"TIMEZONE\".
+        /// Patch type, either \"QUARTERLY\", \"TIMEZONE\" or \"CUSTOM_DATABASE_SOFTWARE_IMAGE\".
         /// 
         /// </value>
         /// <remarks>
@@ -101,6 +103,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The Autonomous Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// </value>
+        [JsonProperty(PropertyName = "databaseSoftwareImageId")]
+        public string DatabaseSoftwareImageId { get; set; }
         
     }
 }

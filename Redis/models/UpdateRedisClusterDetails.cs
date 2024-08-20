@@ -16,10 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.RedisService.Models
 {
     /// <summary>
-    /// The configuration to update for an existing Redis cluster.
+    /// The configuration to update for an existing cluster.
     /// </summary>
     public class UpdateRedisClusterDetails 
     {
+        
+        /// <value>
+        /// The number of shards in sharded cluster. Only applicable when clusterMode is SHARDED.
+        /// </value>
+        [JsonProperty(PropertyName = "shardCount")]
+        public System.Nullable<int> ShardCount { get; set; }
         
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
@@ -28,13 +34,13 @@ namespace Oci.RedisService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The number of nodes in the Redis cluster.
+        /// The number of nodes per shard in the cluster when clusterMode is SHARDED. This is the total number of nodes when clusterMode is NONSHARDED.
         /// </value>
         [JsonProperty(PropertyName = "nodeCount")]
         public System.Nullable<int> NodeCount { get; set; }
         
         /// <value>
-        /// The amount of memory allocated to the Redis cluster's nodes, in gigabytes.
+        /// The amount of memory allocated to the cluster's nodes, in gigabytes.
         /// </value>
         [JsonProperty(PropertyName = "nodeMemoryInGBs")]
         public System.Nullable<float> NodeMemoryInGBs { get; set; }
@@ -42,7 +48,7 @@ namespace Oci.RedisService.Models
         /// <value>
         /// A list of Network Security Group (NSG) [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)
         /// associated with this cluster. For more information,
-        /// see [Using an NSG for Redis Clusters](https://docs.cloud.oracle.com/iaas/Content/redis/connecttorediscluster.htm#connecttorediscluster__networksecuritygroup).
+        /// see [Using an NSG for Clusters](https://docs.cloud.oracle.com/iaas/Content/ocicache/connecttocluster.htm#connecttocluster__networksecuritygroup).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]

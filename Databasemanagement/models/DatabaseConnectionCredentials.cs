@@ -34,7 +34,9 @@ namespace Oci.DatabasemanagementService.Models
             [EnumMember(Value = "DETAILS")]
             Details,
             [EnumMember(Value = "SSL_DETAILS")]
-            SslDetails
+            SslDetails,
+            [EnumMember(Value = "NAMED_CREDENTIALS")]
+            NamedCredentials
         };
 
         
@@ -61,6 +63,9 @@ namespace Oci.DatabasemanagementService.Models
             var discriminator = jsonObject["credentialType"].Value<string>();
             switch (discriminator)
             {
+                case "NAMED_CREDENTIAL":
+                    obj = new DatabaseNamedCredentialConnectionDetails();
+                    break;
                 case "NAME_REFERENCE":
                     obj = new DatabaseConnectionCredentailsByName();
                     break;

@@ -133,5 +133,11 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AutonomousDatabaseSoftwareImage.ImageShapeFamilyEnum> ImageShapeFamily { get; set; }
         
+        /// <value>
+        /// DST Time-Zone File version of the Autonomous Container Database.
+        /// </value>
+        [JsonProperty(PropertyName = "dstFileVersion")]
+        public string DstFileVersion { get; set; }
+        
     }
 }

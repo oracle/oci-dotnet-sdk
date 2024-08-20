@@ -75,8 +75,14 @@ namespace Oci.DisasterrecoveryService.Models
                 case "COMPUTE_INSTANCE_NON_MOVABLE":
                     obj = new UpdateDrProtectionGroupMemberComputeInstanceNonMovableDetails();
                     break;
+                case "AUTONOMOUS_CONTAINER_DATABASE":
+                    obj = new UpdateDrProtectionGroupMemberAutonomousContainerDatabaseDetails();
+                    break;
                 case "LOAD_BALANCER":
                     obj = new UpdateDrProtectionGroupMemberLoadBalancerDetails();
+                    break;
+                case "OBJECT_STORAGE_BUCKET":
+                    obj = new UpdateDrProtectionGroupMemberObjectStorageBucketDetails();
                     break;
                 case "COMPUTE_INSTANCE_MOVABLE":
                     obj = new UpdateDrProtectionGroupMemberComputeInstanceMovableDetails();

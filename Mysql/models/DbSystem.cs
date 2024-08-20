@@ -149,7 +149,8 @@ namespace Oci.MysqlService.Models
         public string ConfigurationId { get; set; }
         
         /// <value>
-        /// Initial size of the data volume in GiBs that will be created and attached.
+        /// DEPRECATED: User specified size of the data volume. May be less than current allocatedStorageSizeInGBs.
+        /// Replaced by dataStorage.dataStorageSizeInGBs.
         /// 
         /// </value>
         /// <remarks>
@@ -158,6 +159,13 @@ namespace Oci.MysqlService.Models
         [Required(ErrorMessage = "DataStorageSizeInGBs is required.")]
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Nullable<int> DataStorageSizeInGBs { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DataStorage is required.")]
+        [JsonProperty(PropertyName = "dataStorage")]
+        public DataStorage DataStorage { get; set; }
         
         /// <value>
         /// The hostname for the primary endpoint of the DB System. Used for DNS.

@@ -60,7 +60,7 @@ namespace Oci.DatabasemanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "FeatureStatus is required.")]
         [JsonProperty(PropertyName = "featureStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<FeatureStatusEnum> FeatureStatus { get; set; }
         
         [JsonProperty(PropertyName = "connectorDetails")]
@@ -73,6 +73,7 @@ namespace Oci.DatabasemanagementService.Models
 
     public class DatabaseFeatureConfigurationModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -94,8 +95,21 @@ namespace Oci.DatabasemanagementService.Models
                 case "DIAGNOSTICS_AND_MANAGEMENT":
                     obj = new DatabaseDiagnosticsAndManagementFeatureConfiguration();
                     break;
+                case "DB_LIFECYCLE_MANAGEMENT":
+                    obj = new DatabaseLifecycleFeatureConfiguration();
+                    break;
+                case "SQLWATCH":
+                    obj = new DatabaseSqlWatchFeatureConfiguration();
+                    break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under DatabaseFeatureConfiguration! Returning null value.");
+            }
             return obj;
         }
     }

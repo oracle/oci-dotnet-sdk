@@ -137,6 +137,9 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Nullable<int> DataStorageSizeInGBs { get; set; }
         
+        [JsonProperty(PropertyName = "dataStorage")]
+        public DataStorageDetails DataStorage { get; set; }
+        
         /// <value>
         /// The hostname for the primary endpoint of the DB System. Used for DNS.
         /// The value is the hostname portion of the primary private IP's fully qualified domain name (FQDN)

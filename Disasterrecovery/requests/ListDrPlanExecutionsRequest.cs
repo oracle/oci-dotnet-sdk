@@ -47,12 +47,6 @@ namespace Oci.DisasterrecoveryService.Requests
         public string DrPlanExecutionId { get; set; }
         
         /// <value>
-        /// The DR plan execution type.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "drPlanExecutionType")]
-        public System.Nullable<DrPlanExecutionType> DrPlanExecutionType { get; set; }
-        
-        /// <value>
         /// A filter to return only resources that match the given display name.
         /// <br/>
         /// Example: MyResourceDisplayName

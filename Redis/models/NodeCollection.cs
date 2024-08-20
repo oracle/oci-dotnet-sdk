@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.RedisService.Models
 {
     /// <summary>
-    /// The collection of Redis cluster nodes.
+    /// The collection of  cluster nodes.
     /// </summary>
     public class NodeCollection 
     {
