@@ -52,6 +52,12 @@ namespace Oci.DatabasemanagementService.Models
             var discriminator = jsonObject["feature"].Value<string>();
             switch (discriminator)
             {
+                case "DB_LIFECYCLE_MANAGEMENT":
+                    obj = new ExternalDatabaseLifecycleManagementFeatureDetails();
+                    break;
+                case "SQLWATCH":
+                    obj = new ExternalDatabaseSqlWatchFeatureDetails();
+                    break;
                 case "DIAGNOSTICS_AND_MANAGEMENT":
                     obj = new ExternalDatabaseDiagnosticsAndManagementFeatureDetails();
                     break;

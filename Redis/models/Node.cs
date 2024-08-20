@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.RedisService.Models
 {
     /// <summary>
-    /// The details of each node in the Redis cluster.
+    /// The details of each node in the cluster.
     /// </summary>
     public class Node 
     {
@@ -42,7 +42,7 @@ namespace Oci.RedisService.Models
         public string PrivateEndpointIpAddress { get; set; }
         
         /// <value>
-        /// A user-friendly name of a Redis cluster node.
+        /// A user-friendly name of a cluster node.
         /// </value>
         /// <remarks>
         /// Required

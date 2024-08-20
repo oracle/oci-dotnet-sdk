@@ -52,8 +52,8 @@ namespace Oci.IntegrationService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Standard or Enterprise type, 
-        /// Oracle Integration Generation 2 uses ENTERPRISE and STANDARD, 
+        /// Standard or Enterprise type,
+        /// Oracle Integration Generation 2 uses ENTERPRISE and STANDARD,
         /// Oracle Integration 3 uses ENTERPRISEX and STANDARDX
         /// 
         /// </value>
@@ -75,8 +75,8 @@ namespace Oci.IntegrationService.Models
         };
 
         /// <value>
-        /// Standard or Enterprise type, 
-        /// Oracle Integration Generation 2 uses ENTERPRISE and STANDARD, 
+        /// Standard or Enterprise type,
+        /// Oracle Integration Generation 2 uses ENTERPRISE and STANDARD,
         /// Oracle Integration 3 uses ENTERPRISEX and STANDARDX
         /// 
         /// </value>
@@ -121,7 +121,9 @@ namespace Oci.IntegrationService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "STANDBY")]
+            Standby
         };
 
         /// <value>
@@ -261,6 +263,29 @@ namespace Oci.IntegrationService.Models
         
         [JsonProperty(PropertyName = "privateEndpointOutboundConnection")]
         public OutboundConnection PrivateEndpointOutboundConnection { get; set; }
+                ///
+        /// <value>
+        /// Data retention period set for given integration instance
+        /// </value>
+        ///
+        public enum DataRetentionPeriodEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MONTHS_1")]
+            Months1,
+            [EnumMember(Value = "MONTHS_3")]
+            Months3,
+            [EnumMember(Value = "MONTHS_6")]
+            Months6
+        };
+
+        /// <value>
+        /// Data retention period set for given integration instance
+        /// </value>
+        [JsonProperty(PropertyName = "dataRetentionPeriod")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DataRetentionPeriodEnum> DataRetentionPeriod { get; set; }
         
     }
 }

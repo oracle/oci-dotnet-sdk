@@ -170,5 +170,17 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        /// <value>
+        /// The list of feature configurations
+        /// </value>
+        [JsonProperty(PropertyName = "dbmgmtFeatureConfigs")]
+        public System.Collections.Generic.List<DatabaseFeatureConfiguration> DbmgmtFeatureConfigs { get; set; }
+        
+        /// <value>
+        /// The operating system of database.
+        /// </value>
+        [JsonProperty(PropertyName = "databasePlatformName")]
+        public string DatabasePlatformName { get; set; }
+        
     }
 }

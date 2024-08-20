@@ -20,6 +20,7 @@ namespace Oci.DisasterrecoveryService.Models
     /// - VOLUME_GROUP - A volume group.
     /// - DATABASE - An Oracle Database instance from Base Database service, or Exadata Database service.
     /// - AUTONOMOUS_DATABASE - An Oracle Autonomous Database Serverless.
+    /// - AUTONOMOUS_CONTAINER_DATABASE - An Oracle Autonomous Container Database.
     /// - LOAD_BALANCER - A load balancer.
     /// - NETWORK_LOAD_BALANCER - A network load balancer.
     /// - FILE_SYSTEM - A file system.
@@ -41,11 +42,15 @@ namespace Oci.DisasterrecoveryService.Models
       Database,
       [EnumMember(Value = "AUTONOMOUS_DATABASE")]
       AutonomousDatabase,
+      [EnumMember(Value = "AUTONOMOUS_CONTAINER_DATABASE")]
+      AutonomousContainerDatabase,
       [EnumMember(Value = "LOAD_BALANCER")]
       LoadBalancer,
       [EnumMember(Value = "NETWORK_LOAD_BALANCER")]
       NetworkLoadBalancer,
       [EnumMember(Value = "FILE_SYSTEM")]
-      FileSystem
+      FileSystem,
+      [EnumMember(Value = "OBJECT_STORAGE_BUCKET")]
+      ObjectStorageBucket
   }
 }

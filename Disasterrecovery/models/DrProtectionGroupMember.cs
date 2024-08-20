@@ -64,6 +64,9 @@ namespace Oci.DisasterrecoveryService.Models
                 case "NETWORK_LOAD_BALANCER":
                     obj = new DrProtectionGroupMemberNetworkLoadBalancer();
                     break;
+                case "OBJECT_STORAGE_BUCKET":
+                    obj = new DrProtectionGroupMemberObjectStorageBucket();
+                    break;
                 case "FILE_SYSTEM":
                     obj = new DrProtectionGroupMemberFileSystem();
                     break;
@@ -81,6 +84,9 @@ namespace Oci.DisasterrecoveryService.Models
                     break;
                 case "COMPUTE_INSTANCE_NON_MOVABLE":
                     obj = new DrProtectionGroupMemberComputeInstanceNonMovable();
+                    break;
+                case "AUTONOMOUS_CONTAINER_DATABASE":
+                    obj = new DrProtectionGroupMemberAutonomousContainerDatabase();
                     break;
                 case "DATABASE":
                     obj = new DrProtectionGroupMemberDatabase();

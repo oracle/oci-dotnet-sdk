@@ -55,6 +55,12 @@ namespace Oci.DatabasemanagementService.Models
                 case "DIAGNOSTICS_AND_MANAGEMENT":
                     obj = new ExternalPluggableDatabaseDiagnosticsAndManagementFeatureDetails();
                     break;
+                case "DB_LIFECYCLE_MANAGEMENT":
+                    obj = new ExternalPluggableDatabaseLifecycleManagementFeatureDetails();
+                    break;
+                case "SQLWATCH":
+                    obj = new ExternalPluggableDatabaseSqlWatchFeatureDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

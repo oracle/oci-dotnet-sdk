@@ -63,7 +63,7 @@ namespace Oci.IntegrationService.Models
         
         /// <value>
         /// The URL used as the primary audience for integration flows in this instance
-        /// type: string   
+        /// type: string
         /// 
         /// </value>
         /// <remarks>

@@ -20,7 +20,7 @@ namespace Oci.RedisService.Requests
     {
         
         /// <value>
-        /// Details for the new RedisCluster.
+        /// Details for the new cluster.
         /// </value>
         /// <remarks>
         /// Required

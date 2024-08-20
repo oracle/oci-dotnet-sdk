@@ -155,7 +155,14 @@ namespace Oci.AnalyticsService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the OCI Vault Key encrypting the customer data stored in this Analytics instance. A null value indicates Oracle managed default encryption.
+        /// System tags for this resource. These predefined keys are scoped to namespaces.
+        /// Example: {&quot;orcl-cloud&quot;: {&quot;key&quot;: &quot;value&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
+        /// <value>
+        /// OCID of the OCI Vault Key encrypting the customer data stored in this Analytics instance. A null value indicates Oracle managed default encryption.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyId")]
@@ -181,6 +188,21 @@ namespace Oci.AnalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The feature set of an Analytics instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "featureBundle")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<FeatureBundle> FeatureBundle { get; set; }
+        
+        /// <value>
+        /// Identity domain OCID.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "domainId")]
+        public string DomainId { get; set; }
         
     }
 }

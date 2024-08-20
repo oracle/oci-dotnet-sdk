@@ -22,9 +22,9 @@ namespace Oci.IntegrationService.Models
     {
                 ///
         /// <value>
-        /// The role of the target attachment. 
-        ///    * `PARENT` - The target instance is the parent of this attachment. 
-        ///    * `CHILD` - The target instance is the child of this attachment. 
+        /// The role of the target attachment.
+        ///    * `PARENT` - The target instance is the parent of this attachment.
+        ///    * `CHILD` - The target instance is the child of this attachment.
         /// 
         /// </value>
         ///
@@ -39,9 +39,9 @@ namespace Oci.IntegrationService.Models
         };
 
         /// <value>
-        /// The role of the target attachment. 
-        ///    * `PARENT` - The target instance is the parent of this attachment. 
-        ///    * `CHILD` - The target instance is the child of this attachment. 
+        /// The role of the target attachment.
+        ///    * `PARENT` - The target instance is the parent of this attachment.
+        ///    * `CHILD` - The target instance is the child of this attachment.
         /// 
         /// </value>
         /// <remarks>
@@ -53,7 +53,7 @@ namespace Oci.IntegrationService.Models
         public System.Nullable<TargetRoleEnum> TargetRole { get; set; }
         
         /// <value>
-        /// * If role == `PARENT`, the attached instance was created by this service instance 
+        /// * If role == `PARENT`, the attached instance was created by this service instance
         /// * If role == `CHILD`, this instance was created from attached instance on behalf of a user
         /// 
         /// </value>

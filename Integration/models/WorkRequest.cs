@@ -42,7 +42,9 @@ namespace Oci.IntegrationService.Models
             [EnumMember(Value = "CHANGE_PRIVATE_ENDPOINT_OUTBOUND_CONNECTION")]
             ChangePrivateEndpointOutboundConnection,
             [EnumMember(Value = "ENABLE_PROCESS_AUTOMATION")]
-            EnableProcessAutomation
+            EnableProcessAutomation,
+            [EnumMember(Value = "EXTEND_DATA_RETENTION")]
+            ExtendDataRetention
         };
 
         /// <value>

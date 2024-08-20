@@ -22,6 +22,25 @@ namespace Oci.DisasterrecoveryService.Models
     public class DrProtectionGroupMemberAutonomousDatabase : DrProtectionGroupMember
     {
         
+        /// <value>
+        /// This specifies the mechanism used to create a temporary Autonomous Database instance for DR Drills.
+        /// See https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-clone-about.html for information about these clone types.
+        /// See https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-data-guard-snapshot-standby.html for information about snapshot standby.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousDatabaseStandbyTypeForDrDrills")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AutonomousDatabaseStandbyTypeForDrDrills> AutonomousDatabaseStandbyTypeForDrDrills { get; set; }
+        
+        /// <value>
+        /// The OCID of the vault secret where the database SYSDBA password is stored.
+        /// This password is required and used for performing database DR Drill operations when using full clone.
+        /// <br/>
+        /// Example: ocid1.vaultsecret.oc1..uniqueID
+        /// </value>
+        [JsonProperty(PropertyName = "passwordVaultSecretId")]
+        public string PasswordVaultSecretId { get; set; }
+        
         [JsonProperty(PropertyName = "memberType")]
         private readonly string memberType = "AUTONOMOUS_DATABASE";
     }

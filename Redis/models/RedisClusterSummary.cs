@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.RedisService.Models
 {
     /// <summary>
-    /// Summary of information about a Redis cluster. A Redis cluster is a memory-based storage solution. For more information, see [OCI Caching Service with Redis](https://docs.cloud.oracle.com/iaas/Content/redis/home.htm).
+    /// Summary of information about a cluster. A cluster is a memory-based storage solution. For more information, see [OCI Cache](https://docs.cloud.oracle.com/iaas/Content/ocicache/home.htm).
     /// 
     /// </summary>
     public class RedisClusterSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm#Oracle) of the Redis cluster.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm#Oracle) of the cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.RedisService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm#Oracle) of the compartment that contains the Redis cluster.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm#Oracle) of the compartment that contains the cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.RedisService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The current state of the Redis cluster.
+        /// The current state of the cluster.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -66,7 +66,7 @@ namespace Oci.RedisService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The number of nodes in the Redis cluster.
+        /// The number of nodes per shard in the cluster when clusterMode is SHARDED. This is the total number of nodes when clusterMode is NONSHARDED.
         /// </value>
         /// <remarks>
         /// Required
@@ -76,7 +76,7 @@ namespace Oci.RedisService.Models
         public System.Nullable<int> NodeCount { get; set; }
         
         /// <value>
-        /// The amount of memory allocated to the Redis cluster's nodes, in gigabytes.
+        /// The amount of memory allocated to the cluster's nodes, in gigabytes.
         /// </value>
         /// <remarks>
         /// Required
@@ -86,7 +86,7 @@ namespace Oci.RedisService.Models
         public System.Nullable<float> NodeMemoryInGBs { get; set; }
         
         /// <value>
-        /// The fully qualified domain name (FQDN) of the API endpoint for the Redis cluster's primary node.
+        /// The fully qualified domain name (FQDN) of the API endpoint for the cluster's primary node.
         /// </value>
         /// <remarks>
         /// Required
@@ -96,7 +96,7 @@ namespace Oci.RedisService.Models
         public string PrimaryFqdn { get; set; }
         
         /// <value>
-        /// The private IP address of the API endpoint for the Redis cluster's primary node.
+        /// The private IP address of the API endpoint for the cluster's primary node.
         /// </value>
         /// <remarks>
         /// Required
@@ -106,7 +106,7 @@ namespace Oci.RedisService.Models
         public string PrimaryEndpointIpAddress { get; set; }
         
         /// <value>
-        /// The fully qualified domain name (FQDN) of the API endpoint for the Redis cluster's replica nodes.
+        /// The fully qualified domain name (FQDN) of the API endpoint for the cluster's replica nodes.
         /// </value>
         /// <remarks>
         /// Required
@@ -116,7 +116,7 @@ namespace Oci.RedisService.Models
         public string ReplicasFqdn { get; set; }
         
         /// <value>
-        /// The private IP address of the API endpoint for the Redis cluster's replica nodes.
+        /// The private IP address of the API endpoint for the cluster's replica nodes.
         /// </value>
         /// <remarks>
         /// Required
@@ -126,7 +126,7 @@ namespace Oci.RedisService.Models
         public string ReplicasEndpointIpAddress { get; set; }
         
         /// <value>
-        /// The Redis version that the cluster is running.
+        /// The OCI Cache engine version that the cluster is running.
         /// </value>
         /// <remarks>
         /// Required
@@ -137,7 +137,7 @@ namespace Oci.RedisService.Models
         public System.Nullable<RedisCluster.SoftwareVersionEnum> SoftwareVersion { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm#Oracle) of the Redis cluster's subnet.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm#Oracle) of the cluster's subnet.
         /// </value>
         /// <remarks>
         /// Required
@@ -147,21 +147,34 @@ namespace Oci.RedisService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// The date and time the Redis cluster was created. An [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted datetime string.
+        /// The date and time the cluster was created. An [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the Redis cluster was updated. An [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted datetime string.
+        /// The date and time the cluster was updated. An [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// Specifies whether the cluster is sharded or non-sharded.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RedisCluster.ClusterModeEnum> ClusterMode { get; set; }
+        
+        /// <value>
+        /// The number of shards in a sharded cluster. Only applicable when clusterMode is SHARDED.
+        /// </value>
+        [JsonProperty(PropertyName = "shardCount")]
+        public System.Nullable<int> ShardCount { get; set; }
+        
+        /// <value>
         /// A list of Network Security Group (NSG) [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)
         /// associated with this cluster. For more information,
-        /// see [Using an NSG for Redis Clusters](https://docs.cloud.oracle.com/iaas/Content/redis/connecttorediscluster.htm#connecttorediscluster__networksecuritygroup).
+        /// see [Using an NSG for Clusters](https://docs.cloud.oracle.com/iaas/Content/ocicache/connecttocluster.htm#connecttocluster__networksecuritygroup).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]

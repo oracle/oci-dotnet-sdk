@@ -40,6 +40,38 @@ namespace Oci.DisasterrecoveryService.Models
       AutonomousDatabaseSwitchoverPrecheck,
       [EnumMember(Value = "AUTONOMOUS_DATABASE_FAILOVER_PRECHECK")]
       AutonomousDatabaseFailoverPrecheck,
+      [EnumMember(Value = "AUTONOMOUS_CONTAINER_DATABASE_SWITCHOVER_PRECHECK")]
+      AutonomousContainerDatabaseSwitchoverPrecheck,
+      [EnumMember(Value = "AUTONOMOUS_CONTAINER_DATABASE_FAILOVER_PRECHECK")]
+      AutonomousContainerDatabaseFailoverPrecheck,
+      [EnumMember(Value = "AUTONOMOUS_CONTAINER_DATABASE_START_DRILL_CONVERT_TO_SNAPSHOT_STANDBY_PRECHECK")]
+      AutonomousContainerDatabaseStartDrillConvertToSnapshotStandbyPrecheck,
+      [EnumMember(Value = "AUTONOMOUS_CONTAINER_DATABASE_STOP_DRILL_CONVERT_TO_PHYSICAL_STANDBY_PRECHECK")]
+      AutonomousContainerDatabaseStopDrillConvertToPhysicalStandbyPrecheck,
+      [EnumMember(Value = "AUTONOMOUS_CONTAINER_DATABASE_SWITCHOVER")]
+      AutonomousContainerDatabaseSwitchover,
+      [EnumMember(Value = "AUTONOMOUS_CONTAINER_DATABASE_FAILOVER")]
+      AutonomousContainerDatabaseFailover,
+      [EnumMember(Value = "AUTONOMOUS_CONTAINER_DATABASE_START_DRILL_CONVERT_TO_SNAPSHOT_STANDBY")]
+      AutonomousContainerDatabaseStartDrillConvertToSnapshotStandby,
+      [EnumMember(Value = "AUTONOMOUS_CONTAINER_DATABASE_STOP_DRILL_CONVERT_TO_PHYSICAL_STANDBY")]
+      AutonomousContainerDatabaseStopDrillConvertToPhysicalStandby,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_START_DRILL_CREATE_CLONE_STANDBY_PRECHECK")]
+      AutonomousDatabaseStartDrillCreateCloneStandbyPrecheck,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_STOP_DRILL_DELETE_CLONE_STANDBY_PRECHECK")]
+      AutonomousDatabaseStopDrillDeleteCloneStandbyPrecheck,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_START_DRILL_CONVERT_TO_SNAPSHOT_STANDBY_PRECHECK")]
+      AutonomousDatabaseStartDrillConvertToSnapshotStandbyPrecheck,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_STOP_DRILL_CONVERT_TO_PHYSICAL_STANDBY_PRECHECK")]
+      AutonomousDatabaseStopDrillConvertToPhysicalStandbyPrecheck,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_START_DRILL_CREATE_CLONE_STANDBY")]
+      AutonomousDatabaseStartDrillCreateCloneStandby,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_STOP_DRILL_DELETE_CLONE_STANDBY")]
+      AutonomousDatabaseStopDrillDeleteCloneStandby,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_START_DRILL_CONVERT_TO_SNAPSHOT_STANDBY")]
+      AutonomousDatabaseStartDrillConvertToSnapshotStandby,
+      [EnumMember(Value = "AUTONOMOUS_DATABASE_STOP_DRILL_CONVERT_TO_PHYSICAL_STANDBY")]
+      AutonomousDatabaseStopDrillConvertToPhysicalStandby,
       [EnumMember(Value = "USER_DEFINED_PRECHECK")]
       UserDefinedPrecheck,
       [EnumMember(Value = "COMPUTE_INSTANCE_LAUNCH")]
@@ -157,6 +189,22 @@ namespace Oci.DisasterrecoveryService.Models
       [EnumMember(Value = "COMPUTE_CAPACITY_AVAILABILITY_SWITCHOVER_PRECHECK")]
       ComputeCapacityAvailabilitySwitchoverPrecheck,
       [EnumMember(Value = "COMPUTE_CAPACITY_AVAILABILITY_FAILOVER_PRECHECK")]
-      ComputeCapacityAvailabilityFailoverPrecheck
+      ComputeCapacityAvailabilityFailoverPrecheck,
+      [EnumMember(Value = "OBJECT_STORAGE_BUCKET_SWITCHOVER_DELETE_REPLICATION_PRIMARY_PRECHECK")]
+      ObjectStorageBucketSwitchoverDeleteReplicationPrimaryPrecheck,
+      [EnumMember(Value = "OBJECT_STORAGE_BUCKET_SWITCHOVER_SETUP_REVERSE_REPLICATION_STANDBY_PRECHECK")]
+      ObjectStorageBucketSwitchoverSetupReverseReplicationStandbyPrecheck,
+      [EnumMember(Value = "OBJECT_STORAGE_BUCKET_FAILOVER_DELETE_REPLICATION_STANDBY_PRECHECK")]
+      ObjectStorageBucketFailoverDeleteReplicationStandbyPrecheck,
+      [EnumMember(Value = "OBJECT_STORAGE_BUCKET_FAILOVER_SETUP_REVERSE_REPLICATION_STANDBY_PRECHECK")]
+      ObjectStorageBucketFailoverSetupReverseReplicationStandbyPrecheck,
+      [EnumMember(Value = "OBJECT_STORAGE_BUCKET_SWITCHOVER_DELETE_REPLICATION_PRIMARY")]
+      ObjectStorageBucketSwitchoverDeleteReplicationPrimary,
+      [EnumMember(Value = "OBJECT_STORAGE_BUCKET_SWITCHOVER_SETUP_REVERSE_REPLICATION_STANDBY")]
+      ObjectStorageBucketSwitchoverSetupReverseReplicationStandby,
+      [EnumMember(Value = "OBJECT_STORAGE_BUCKET_FAILOVER_DELETE_REPLICATION_STANDBY")]
+      ObjectStorageBucketFailoverDeleteReplicationStandby,
+      [EnumMember(Value = "OBJECT_STORAGE_BUCKET_FAILOVER_SETUP_REVERSE_REPLICATION_STANDBY")]
+      ObjectStorageBucketFailoverSetupReverseReplicationStandby
   }
 }
