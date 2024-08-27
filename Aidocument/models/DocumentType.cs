@@ -39,7 +39,7 @@ namespace Oci.AidocumentService.Models
       Payslip,
       [EnumMember(Value = "OTHERS")]
       Others,
-      [EnumMember(Value = "INSURANCE_CLAIM")]
-      InsuranceClaim
+      [EnumMember(Value = "HEALTH_INSURANCE_ID")]
+      HealthInsuranceId
   }
 }

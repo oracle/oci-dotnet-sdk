@@ -129,5 +129,11 @@ namespace Oci.AidocumentService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
     }
 }

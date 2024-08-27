@@ -32,7 +32,7 @@ namespace Oci.ObjectstorageService.Responses
 
 
         /// <value>
-        /// The base-64 encoded MD5 hash of the request body as computed by the server.
+        /// The base64-encoded MD5 hash of the request body as computed by the server.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-content-md5")]
         public string OpcContentMd5 { get; set; }

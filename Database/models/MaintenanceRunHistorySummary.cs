@@ -40,5 +40,17 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dbServersHistoryDetails")]
         public System.Collections.Generic.List<DbServerHistorySummary> DbServersHistoryDetails { get; set; }
         
+        /// <value>
+        /// The OCID of the current execution window.
+        /// </value>
+        [JsonProperty(PropertyName = "currentExecutionWindow")]
+        public string CurrentExecutionWindow { get; set; }
+        
+        /// <value>
+        /// The list of granular maintenance history details.
+        /// </value>
+        [JsonProperty(PropertyName = "granularMaintenanceHistory")]
+        public System.Collections.Generic.List<GranularMaintenanceHistoryDetails> GranularMaintenanceHistory { get; set; }
+        
     }
 }

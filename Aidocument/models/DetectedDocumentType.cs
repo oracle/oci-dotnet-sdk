@@ -32,12 +32,6 @@ namespace Oci.AidocumentService.Models
         public string DocumentType { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Key-Value Extraction model that was used to extract the key-value pairs.
-        /// </value>
-        [JsonProperty(PropertyName = "documentId")]
-        public string DocumentId { get; set; }
-        
-        /// <value>
         /// The confidence score between 0 and 1.
         /// </value>
         /// <remarks>

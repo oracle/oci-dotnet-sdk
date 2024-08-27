@@ -304,5 +304,12 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// Usage of system tag keys. These predefined keys are scoped to namespaces.
+        /// Example: {orcl-cloud: {free-tier-retain: true}}
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
     }
 }

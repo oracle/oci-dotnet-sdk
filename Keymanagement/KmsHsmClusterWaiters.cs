@@ -77,7 +77,8 @@ namespace Oci.KeymanagementService
             var agent = new WaiterAgent<GetHsmPartitionRequest, GetHsmPartitionResponse>(
                 request,
                 request => client.GetHsmPartition(request),
-                response => targetStates.Contains(response.HsmPartition.LifecycleState.Value)
+                response => targetStates.Contains(response.HsmPartition.LifecycleState.Value),
+                targetStates.Contains(HsmPartition.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetHsmPartitionRequest, GetHsmPartitionResponse>(config, agent);
         }

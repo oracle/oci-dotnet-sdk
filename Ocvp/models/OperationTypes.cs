@@ -44,6 +44,32 @@ namespace Oci.OcvpService.Models
       [EnumMember(Value = "REPLACE_HOST")]
       ReplaceHost,
       [EnumMember(Value = "IN_PLACE_UPGRADE")]
-      InPlaceUpgrade
+      InPlaceUpgrade,
+      [EnumMember(Value = "CREATE_DATASTORE")]
+      CreateDatastore,
+      [EnumMember(Value = "UPDATE_DATASTORE")]
+      UpdateDatastore,
+      [EnumMember(Value = "ADD_BLOCK_VOLUME_TO_DATASTORE")]
+      AddBlockVolumeToDatastore,
+      [EnumMember(Value = "DELETE_DATASTORE")]
+      DeleteDatastore,
+      [EnumMember(Value = "CREATE_DATASTORE_CLUSTER")]
+      CreateDatastoreCluster,
+      [EnumMember(Value = "UPDATE_DATASTORE_CLUSTER")]
+      UpdateDatastoreCluster,
+      [EnumMember(Value = "ATTACH_DATASTORE_CLUSTER_TO_ESXI_HOST")]
+      AttachDatastoreClusterToEsxiHost,
+      [EnumMember(Value = "ATTACH_DATASTORE_CLUSTER_TO_CLUSTER")]
+      AttachDatastoreClusterToCluster,
+      [EnumMember(Value = "DETACH_DATASTORE_CLUSTER_FROM_ESXI_HOST")]
+      DetachDatastoreClusterFromEsxiHost,
+      [EnumMember(Value = "DETACH_DATASTORE_CLUSTER_FROM_CLUSTER")]
+      DetachDatastoreClusterFromCluster,
+      [EnumMember(Value = "DELETE_DATASTORE_CLUSTER")]
+      DeleteDatastoreCluster,
+      [EnumMember(Value = "ADD_DATASTORE_TO_DATASTORE_CLUSTER")]
+      AddDatastoreToDatastoreCluster,
+      [EnumMember(Value = "REMOVE_DATASTORE_FROM_DATASTORE_CLUSTER")]
+      RemoveDatastoreFromDatastoreCluster
   }
 }

@@ -58,6 +58,12 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<bool> IsCluster { get; set; }
         
         /// <value>
+        /// Specifies whether the Database Management private endpoint has DNS proxy server enabled to resolve private host name.
+        /// </value>
+        [JsonProperty(PropertyName = "isDnsResolutionEnabled")]
+        public System.Nullable<bool> IsDnsResolutionEnabled { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the VCN.
         /// </value>
         /// <remarks>

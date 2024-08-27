@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.KeymanagementService.Models
 {
     /// <summary>
-    /// HsmPartitionCollection object with page of HsmPartitionSummary objects.
+    /// HsmPartitionCollection object with page of HsmPartitionSummary objects. A HsmPartitionSummary object contains details about the corresponding HSM.
     /// </summary>
     public class HsmPartitionCollection 
     {

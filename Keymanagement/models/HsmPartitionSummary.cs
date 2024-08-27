@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.KeymanagementService.Models
 {
     /// <summary>
-    /// The details of the Hsm.
+    /// An object which encapsulates the details of a given HSM.
     /// </summary>
     public class HsmPartitionSummary 
     {
         
         /// <value>
-        /// The OCID of the HSM resource.
+        /// The OCID of the HSM resource. Each HSM resource will have a unique OCID identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,9 @@ namespace Oci.KeymanagementService.Models
         public string HsmClusterId { get; set; }
         
         /// <value>
-        /// The Hsm's current lifecycle state.
+        /// A HSMCluster resource's current lifecycle state.
+        /// <br/>
+        /// Example: ACTIVE
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +65,7 @@ namespace Oci.KeymanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Port summary.
+        /// Details of a single portInformation item include the PortNumber (an integer used as an identifier) and the PortType (refers to either an enum value of Managementutility,Clientutility, or null)
         /// </value>
         /// <remarks>
         /// Required

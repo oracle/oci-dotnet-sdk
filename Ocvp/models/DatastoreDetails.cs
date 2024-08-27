@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OcvpService.Models
 {
     /// <summary>
-    /// Datastore summary for a getting an Sddc.
+    /// Datastore details for a getting an Sddc.
     /// 
     /// </summary>
     public class DatastoreDetails 

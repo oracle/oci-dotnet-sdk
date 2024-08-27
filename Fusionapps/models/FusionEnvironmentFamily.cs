@@ -135,5 +135,11 @@ namespace Oci.FusionappsService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// Indicates when the family received the last subscription update
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastSubscriptionUpdate")]
+        public System.Nullable<System.DateTime> TimeLastSubscriptionUpdate { get; set; }
+        
     }
 }

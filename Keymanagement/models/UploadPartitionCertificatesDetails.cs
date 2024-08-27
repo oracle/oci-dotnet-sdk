@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.KeymanagementService.Models
 {
     /// <summary>
-    /// The details of the partition certificates.
+    /// An object that encapsulates the necessary partition certificates.
     /// </summary>
     public class UploadPartitionCertificatesDetails 
     {
         
         /// <value>
-        /// Base64 encoded (StandardCharsets.UTF_8) Partition Certificate.
+        /// Base64 encoded (StandardCharsets.UTF_8) Partition Certificate, which gets created when the CSR is signed.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.KeymanagementService.Models
         public string PartitionCertificate { get; set; }
         
         /// <value>
-        /// Base64 encoded (StandardCharsets.UTF_8) Partition Owner Certificate.
+        /// Base64 encoded (StandardCharsets.UTF_8) Partition Owner Certificate, which is used to help sign the CSR.
         /// </value>
         /// <remarks>
         /// Required

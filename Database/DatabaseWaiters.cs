@@ -286,6 +286,78 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CancelExecutionWindowRequest, CancelExecutionWindowResponse> ForCancelExecutionWindow(CancelExecutionWindowRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCancelExecutionWindow(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CancelExecutionWindowRequest, CancelExecutionWindowResponse> ForCancelExecutionWindow(CancelExecutionWindowRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CancelExecutionWindowRequest, CancelExecutionWindowResponse>(() =>
+            {
+                var response = client.CancelExecutionWindow(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CascadingDeleteSchedulingPlanRequest, CascadingDeleteSchedulingPlanResponse> ForCascadingDeleteSchedulingPlan(CascadingDeleteSchedulingPlanRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCascadingDeleteSchedulingPlan(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CascadingDeleteSchedulingPlanRequest, CascadingDeleteSchedulingPlanResponse> ForCascadingDeleteSchedulingPlan(CascadingDeleteSchedulingPlanRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CascadingDeleteSchedulingPlanRequest, CascadingDeleteSchedulingPlanResponse>(() =>
+            {
+                var response = client.CascadingDeleteSchedulingPlan(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<ChangeAutonomousContainerDatabaseCompartmentRequest, ChangeAutonomousContainerDatabaseCompartmentResponse> ForChangeAutonomousContainerDatabaseCompartment(ChangeAutonomousContainerDatabaseCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForChangeAutonomousContainerDatabaseCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1167,6 +1239,78 @@ namespace Oci.DatabaseService
             return new Waiter<ChangeOneoffPatchCompartmentRequest, ChangeOneoffPatchCompartmentResponse>(() =>
             {
                 var response = client.ChangeOneoffPatchCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeSchedulingPlanCompartmentRequest, ChangeSchedulingPlanCompartmentResponse> ForChangeSchedulingPlanCompartment(ChangeSchedulingPlanCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForChangeSchedulingPlanCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeSchedulingPlanCompartmentRequest, ChangeSchedulingPlanCompartmentResponse> ForChangeSchedulingPlanCompartment(ChangeSchedulingPlanCompartmentRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ChangeSchedulingPlanCompartmentRequest, ChangeSchedulingPlanCompartmentResponse>(() =>
+            {
+                var response = client.ChangeSchedulingPlanCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeSchedulingPolicyCompartmentRequest, ChangeSchedulingPolicyCompartmentResponse> ForChangeSchedulingPolicyCompartment(ChangeSchedulingPolicyCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForChangeSchedulingPolicyCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeSchedulingPolicyCompartmentRequest, ChangeSchedulingPolicyCompartmentResponse> ForChangeSchedulingPolicyCompartment(ChangeSchedulingPolicyCompartmentRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ChangeSchedulingPolicyCompartmentRequest, ChangeSchedulingPolicyCompartmentResponse>(() =>
+            {
+                var response = client.ChangeSchedulingPolicyCompartment(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;
@@ -2194,6 +2338,78 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateExecutionActionRequest, CreateExecutionActionResponse> ForCreateExecutionAction(CreateExecutionActionRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCreateExecutionAction(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateExecutionActionRequest, CreateExecutionActionResponse> ForCreateExecutionAction(CreateExecutionActionRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CreateExecutionActionRequest, CreateExecutionActionResponse>(() =>
+            {
+                var response = client.CreateExecutionAction(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateExecutionWindowRequest, CreateExecutionWindowResponse> ForCreateExecutionWindow(CreateExecutionWindowRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCreateExecutionWindow(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateExecutionWindowRequest, CreateExecutionWindowResponse> ForCreateExecutionWindow(CreateExecutionWindowRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CreateExecutionWindowRequest, CreateExecutionWindowResponse>(() =>
+            {
+                var response = client.CreateExecutionWindow(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<CreateExternalBackupJobRequest, CreateExternalBackupJobResponse> ForCreateExternalBackupJob(CreateExternalBackupJobRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForCreateExternalBackupJob(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -2427,6 +2643,150 @@ namespace Oci.DatabaseService
             return new Waiter<CreatePluggableDatabaseRequest, CreatePluggableDatabaseResponse>(() =>
             {
                 var response = client.CreatePluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateScheduledActionRequest, CreateScheduledActionResponse> ForCreateScheduledAction(CreateScheduledActionRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCreateScheduledAction(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateScheduledActionRequest, CreateScheduledActionResponse> ForCreateScheduledAction(CreateScheduledActionRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CreateScheduledActionRequest, CreateScheduledActionResponse>(() =>
+            {
+                var response = client.CreateScheduledAction(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateSchedulingPlanRequest, CreateSchedulingPlanResponse> ForCreateSchedulingPlan(CreateSchedulingPlanRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCreateSchedulingPlan(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateSchedulingPlanRequest, CreateSchedulingPlanResponse> ForCreateSchedulingPlan(CreateSchedulingPlanRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CreateSchedulingPlanRequest, CreateSchedulingPlanResponse>(() =>
+            {
+                var response = client.CreateSchedulingPlan(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateSchedulingPolicyRequest, CreateSchedulingPolicyResponse> ForCreateSchedulingPolicy(CreateSchedulingPolicyRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCreateSchedulingPolicy(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateSchedulingPolicyRequest, CreateSchedulingPolicyResponse> ForCreateSchedulingPolicy(CreateSchedulingPolicyRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CreateSchedulingPolicyRequest, CreateSchedulingPolicyResponse>(() =>
+            {
+                var response = client.CreateSchedulingPolicy(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateSchedulingWindowRequest, CreateSchedulingWindowResponse> ForCreateSchedulingWindow(CreateSchedulingWindowRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCreateSchedulingWindow(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateSchedulingWindowRequest, CreateSchedulingWindowResponse> ForCreateSchedulingWindow(CreateSchedulingWindowRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CreateSchedulingWindowRequest, CreateSchedulingWindowResponse>(() =>
+            {
+                var response = client.CreateSchedulingWindow(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;
@@ -3166,6 +3526,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteExecutionActionRequest, DeleteExecutionActionResponse> ForDeleteExecutionAction(DeleteExecutionActionRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForDeleteExecutionAction(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteExecutionActionRequest, DeleteExecutionActionResponse> ForDeleteExecutionAction(DeleteExecutionActionRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<DeleteExecutionActionRequest, DeleteExecutionActionResponse>(() =>
+            {
+                var response = client.DeleteExecutionAction(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<DeleteExternalContainerDatabaseRequest, DeleteExternalContainerDatabaseResponse> ForDeleteExternalContainerDatabase(DeleteExternalContainerDatabaseRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForDeleteExternalContainerDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -3363,6 +3759,78 @@ namespace Oci.DatabaseService
             return new Waiter<DeletePluggableDatabaseRequest, DeletePluggableDatabaseResponse>(() =>
             {
                 var response = client.DeletePluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteScheduledActionRequest, DeleteScheduledActionResponse> ForDeleteScheduledAction(DeleteScheduledActionRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForDeleteScheduledAction(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteScheduledActionRequest, DeleteScheduledActionResponse> ForDeleteScheduledAction(DeleteScheduledActionRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<DeleteScheduledActionRequest, DeleteScheduledActionResponse>(() =>
+            {
+                var response = client.DeleteScheduledAction(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteSchedulingPlanRequest, DeleteSchedulingPlanResponse> ForDeleteSchedulingPlan(DeleteSchedulingPlanRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForDeleteSchedulingPlan(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteSchedulingPlanRequest, DeleteSchedulingPlanResponse> ForDeleteSchedulingPlan(DeleteSchedulingPlanRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<DeleteSchedulingPlanRequest, DeleteSchedulingPlanResponse>(() =>
+            {
+                var response = client.DeleteSchedulingPlan(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;
@@ -5407,6 +5875,62 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExecutionActionRequest, GetExecutionActionResponse> ForExecutionAction(GetExecutionActionRequest request, params ExecutionAction.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExecutionAction(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExecutionActionRequest, GetExecutionActionResponse> ForExecutionAction(GetExecutionActionRequest request, WaiterConfiguration config, params ExecutionAction.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExecutionActionRequest, GetExecutionActionResponse>(
+                request,
+                request => client.GetExecutionAction(request),
+                response => targetStates.Contains(response.ExecutionAction.LifecycleState.Value),
+                targetStates.Contains(ExecutionAction.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExecutionActionRequest, GetExecutionActionResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExecutionWindowRequest, GetExecutionWindowResponse> ForExecutionWindow(GetExecutionWindowRequest request, params ExecutionWindow.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForExecutionWindow(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExecutionWindowRequest, GetExecutionWindowResponse> ForExecutionWindow(GetExecutionWindowRequest request, WaiterConfiguration config, params ExecutionWindow.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExecutionWindowRequest, GetExecutionWindowResponse>(
+                request,
+                request => client.GetExecutionWindow(request),
+                response => targetStates.Contains(response.ExecutionWindow.LifecycleState.Value),
+                targetStates.Contains(ExecutionWindow.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetExecutionWindowRequest, GetExecutionWindowResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetExternalContainerDatabaseRequest, GetExternalContainerDatabaseResponse> ForExternalContainerDatabase(GetExternalContainerDatabaseRequest request, params ExternalContainerDatabase.LifecycleStateEnum[] targetStates)
         {
             return this.ForExternalContainerDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -5651,6 +6175,118 @@ namespace Oci.DatabaseService
                 targetStates.Contains(PluggableDatabase.LifecycleStateEnum.Terminated)
             );
             return new Waiter<GetPluggableDatabaseRequest, GetPluggableDatabaseResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetScheduledActionRequest, GetScheduledActionResponse> ForScheduledAction(GetScheduledActionRequest request, params ScheduledAction.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForScheduledAction(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetScheduledActionRequest, GetScheduledActionResponse> ForScheduledAction(GetScheduledActionRequest request, WaiterConfiguration config, params ScheduledAction.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetScheduledActionRequest, GetScheduledActionResponse>(
+                request,
+                request => client.GetScheduledAction(request),
+                response => targetStates.Contains(response.ScheduledAction.LifecycleState.Value),
+                targetStates.Contains(ScheduledAction.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetScheduledActionRequest, GetScheduledActionResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSchedulingPlanRequest, GetSchedulingPlanResponse> ForSchedulingPlan(GetSchedulingPlanRequest request, params SchedulingPlan.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSchedulingPlan(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSchedulingPlanRequest, GetSchedulingPlanResponse> ForSchedulingPlan(GetSchedulingPlanRequest request, WaiterConfiguration config, params SchedulingPlan.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSchedulingPlanRequest, GetSchedulingPlanResponse>(
+                request,
+                request => client.GetSchedulingPlan(request),
+                response => targetStates.Contains(response.SchedulingPlan.LifecycleState.Value),
+                targetStates.Contains(SchedulingPlan.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetSchedulingPlanRequest, GetSchedulingPlanResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSchedulingPolicyRequest, GetSchedulingPolicyResponse> ForSchedulingPolicy(GetSchedulingPolicyRequest request, params SchedulingPolicy.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSchedulingPolicy(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSchedulingPolicyRequest, GetSchedulingPolicyResponse> ForSchedulingPolicy(GetSchedulingPolicyRequest request, WaiterConfiguration config, params SchedulingPolicy.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSchedulingPolicyRequest, GetSchedulingPolicyResponse>(
+                request,
+                request => client.GetSchedulingPolicy(request),
+                response => targetStates.Contains(response.SchedulingPolicy.LifecycleState.Value),
+                targetStates.Contains(SchedulingPolicy.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetSchedulingPolicyRequest, GetSchedulingPolicyResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSchedulingWindowRequest, GetSchedulingWindowResponse> ForSchedulingWindow(GetSchedulingWindowRequest request, params SchedulingWindow.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSchedulingWindow(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSchedulingWindowRequest, GetSchedulingWindowResponse> ForSchedulingWindow(GetSchedulingWindowRequest request, WaiterConfiguration config, params SchedulingWindow.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSchedulingWindowRequest, GetSchedulingWindowResponse>(
+                request,
+                request => client.GetSchedulingWindow(request),
+                response => targetStates.Contains(response.SchedulingWindow.LifecycleState.Value),
+                targetStates.Contains(SchedulingWindow.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetSchedulingWindowRequest, GetSchedulingWindowResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.
@@ -6020,6 +6656,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<MoveExecutionActionMemberRequest, MoveExecutionActionMemberResponse> ForMoveExecutionActionMember(MoveExecutionActionMemberRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForMoveExecutionActionMember(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<MoveExecutionActionMemberRequest, MoveExecutionActionMemberResponse> ForMoveExecutionActionMember(MoveExecutionActionMemberRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<MoveExecutionActionMemberRequest, MoveExecutionActionMemberResponse>(() =>
+            {
+                var response = client.MoveExecutionActionMember(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<RefreshPluggableDatabaseRequest, RefreshPluggableDatabaseResponse> ForRefreshPluggableDatabase(RefreshPluggableDatabaseRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForRefreshPluggableDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -6289,6 +6961,78 @@ namespace Oci.DatabaseService
             return new Waiter<RemoveVirtualMachineFromVmClusterRequest, RemoveVirtualMachineFromVmClusterResponse>(() =>
             {
                 var response = client.RemoveVirtualMachineFromVmCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ReorderExecutionActionsRequest, ReorderExecutionActionsResponse> ForReorderExecutionActions(ReorderExecutionActionsRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForReorderExecutionActions(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ReorderExecutionActionsRequest, ReorderExecutionActionsResponse> ForReorderExecutionActions(ReorderExecutionActionsRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ReorderExecutionActionsRequest, ReorderExecutionActionsResponse>(() =>
+            {
+                var response = client.ReorderExecutionActions(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ReorderScheduledActionsRequest, ReorderScheduledActionsResponse> ForReorderScheduledActions(ReorderScheduledActionsRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForReorderScheduledActions(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ReorderScheduledActionsRequest, ReorderScheduledActionsResponse> ForReorderScheduledActions(ReorderScheduledActionsRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ReorderScheduledActionsRequest, ReorderScheduledActionsResponse>(() =>
+            {
+                var response = client.ReorderScheduledActions(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;
@@ -8108,6 +8852,78 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateExecutionActionRequest, UpdateExecutionActionResponse> ForUpdateExecutionAction(UpdateExecutionActionRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateExecutionAction(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateExecutionActionRequest, UpdateExecutionActionResponse> ForUpdateExecutionAction(UpdateExecutionActionRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateExecutionActionRequest, UpdateExecutionActionResponse>(() =>
+            {
+                var response = client.UpdateExecutionAction(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateExecutionWindowRequest, UpdateExecutionWindowResponse> ForUpdateExecutionWindow(UpdateExecutionWindowRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateExecutionWindow(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateExecutionWindowRequest, UpdateExecutionWindowResponse> ForUpdateExecutionWindow(UpdateExecutionWindowRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateExecutionWindowRequest, UpdateExecutionWindowResponse>(() =>
+            {
+                var response = client.UpdateExecutionWindow(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<UpdateExternalContainerDatabaseRequest, UpdateExternalContainerDatabaseResponse> ForUpdateExternalContainerDatabase(UpdateExternalContainerDatabaseRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForUpdateExternalContainerDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -8269,6 +9085,114 @@ namespace Oci.DatabaseService
             return new Waiter<UpdatePluggableDatabaseRequest, UpdatePluggableDatabaseResponse>(() =>
             {
                 var response = client.UpdatePluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateScheduledActionRequest, UpdateScheduledActionResponse> ForUpdateScheduledAction(UpdateScheduledActionRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateScheduledAction(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateScheduledActionRequest, UpdateScheduledActionResponse> ForUpdateScheduledAction(UpdateScheduledActionRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateScheduledActionRequest, UpdateScheduledActionResponse>(() =>
+            {
+                var response = client.UpdateScheduledAction(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateSchedulingPolicyRequest, UpdateSchedulingPolicyResponse> ForUpdateSchedulingPolicy(UpdateSchedulingPolicyRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateSchedulingPolicy(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateSchedulingPolicyRequest, UpdateSchedulingPolicyResponse> ForUpdateSchedulingPolicy(UpdateSchedulingPolicyRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateSchedulingPolicyRequest, UpdateSchedulingPolicyResponse>(() =>
+            {
+                var response = client.UpdateSchedulingPolicy(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateSchedulingWindowRequest, UpdateSchedulingWindowResponse> ForUpdateSchedulingWindow(UpdateSchedulingWindowRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateSchedulingWindow(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateSchedulingWindowRequest, UpdateSchedulingWindowResponse> ForUpdateSchedulingWindow(UpdateSchedulingWindowRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateSchedulingWindowRequest, UpdateSchedulingWindowResponse>(() =>
+            {
+                var response = client.UpdateSchedulingWindow(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;

@@ -28,7 +28,9 @@ namespace Oci.WafService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "STATIC_TEXT")]
-            StaticText
+            StaticText,
+            [EnumMember(Value = "DYNAMIC")]
+            Dynamic
         };
 
         
@@ -55,6 +57,9 @@ namespace Oci.WafService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "DYNAMIC":
+                    obj = new DynamicHttpResponseBody();
+                    break;
                 case "STATIC_TEXT":
                     obj = new StaticTextHttpResponseBody();
                     break;

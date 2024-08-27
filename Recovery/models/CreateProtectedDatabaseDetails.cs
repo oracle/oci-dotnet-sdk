@@ -124,6 +124,14 @@ namespace Oci.RecoveryService.Models
         public System.Nullable<bool> IsRedoLogsShipped { get; set; }
         
         /// <value>
+        /// The OCID of the cloud service subscription to which you want to link the protected database. 
+        /// For example, specify the Microsoft Azure subscription ID if you want to provision the protected database in Azure.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionId")]
+        public string SubscriptionId { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

@@ -90,7 +90,9 @@ namespace Oci.FilestorageService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>
@@ -133,6 +135,39 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
+        /// <value>
+        /// The date and time the mount target current billing cycle will end, expressed in 
+        /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format. Once a cycle ends, it is updated 
+        /// automatically to next timestamp which is after 30 days.
+        /// <br/>
+        ///   Example: 2016-08-25T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "timeBillingCycleEnd")]
+        public System.Nullable<System.DateTime> TimeBillingCycleEnd { get; set; }
+        
+        /// <value>
+        /// Current billed throughput for mount target in Gbps. This corresponds to shape of mount target.
+        /// Available shapes and corresponding throughput are listed at [Mount Target Performance](https://docs.oracle.com/iaas/Content/File/Tasks/managingmounttargets.htm#performance).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "observedThroughput")]
+        public System.Nullable<long> ObservedThroughput { get; set; }
+        
+        /// <value>
+        /// - New throughput for mount target at the end of billing cycle in Gbps.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "requestedThroughput")]
+        public System.Nullable<long> RequestedThroughput { get; set; }
+        
+        /// <value>
+        /// - Reserved capacity (GB) associated with this mount target. Reserved capacity depends on observedThroughput value
+        /// of mount target. Value is listed at [Mount Target Performance](https://docs.oracle.com/iaas/Content/File/Tasks/managingmounttargets.htm#performance).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "reservedStorageCapacity")]
+        public System.Nullable<long> ReservedStorageCapacity { get; set; }
         
         /// <value>
         /// The date and time the mount target was created, expressed

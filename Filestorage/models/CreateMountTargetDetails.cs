@@ -82,14 +82,6 @@ namespace Oci.FilestorageService.Models
         /// the subnet's CIDR. If you don't specify a value, Oracle automatically
         /// assigns a private IP address from the subnet.
         /// <br/>
-        /// Note: This attribute value is stored in the [PrivateIp](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/20160918/PrivateIp/) resource,
-        /// not in the `mountTarget` resource.
-        /// To update the `ipAddress`, use `GetMountTarget` to obtain the
-        /// [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the mount target's
-        /// private IPs (`privateIpIds`). Then, you can use
-        /// [UpdatePrivateIp](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/20160918/PrivateIp/UpdatePrivateIp)
-        /// to update the `ipAddress` value.
-        /// <br/>
         /// Example: 10.0.3.3
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
@@ -145,6 +137,14 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// Throughput for mount target in Gbps. Currently only 1 Gbps of requestedThroughput is supported during create MountTarget.
+        /// Available shapes and corresponding throughput are listed at [Mount Target Performance](https://docs.oracle.com/iaas/Content/File/Tasks/managingmounttargets.htm#performance).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "requestedThroughput")]
+        public System.Nullable<long> RequestedThroughput { get; set; }
         
     }
 }

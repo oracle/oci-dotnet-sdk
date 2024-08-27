@@ -47,13 +47,13 @@ namespace Oci.ObjectstorageService.Requests
         public string Prefix { get; set; }
         
         /// <value>
-        /// Object names returned by a list query must be greater or equal to this parameter.
+        /// Returns object names which are lexicographically greater than or equal to this parameter.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "start")]
         public string Start { get; set; }
         
         /// <value>
-        /// Object names returned by a list query must be strictly less than this parameter.
+        /// Returns object names which are lexicographically strictly less than this parameter.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "end")]
         public string End { get; set; }
@@ -96,7 +96,7 @@ namespace Oci.ObjectstorageService.Requests
         public string OpcClientRequestId { get; set; }
         
         /// <value>
-        /// Object names returned by a list query must be greater than this parameter.
+        /// Returns object names which are lexicographically strictly greater than this parameter.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "startAfter")]
         public string StartAfter { get; set; }

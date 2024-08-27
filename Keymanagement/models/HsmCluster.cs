@@ -42,7 +42,7 @@ namespace Oci.KeymanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A user-friendly name for the HSMCluster resource. It does not have to be unique, and it is changeable.
+        /// A user-friendly display name for the HSMCluster resource. It does not have to be unique, and it is changeable.
         /// Avoid entering confidential information.
         /// 
         /// </value>
@@ -125,7 +125,7 @@ namespace Oci.KeymanagementService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// DNS name for the Hsm Cluster.
+        /// DNS name for the HSM Cluster -- this will contain information about the region as well.
         /// </value>
         /// <remarks>
         /// Required

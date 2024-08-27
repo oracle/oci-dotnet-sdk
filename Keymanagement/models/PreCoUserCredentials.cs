@@ -22,7 +22,7 @@ namespace Oci.KeymanagementService.Models
     {
         
         /// <value>
-        /// The pre crypto officer username..
+        /// The pre crypto officer username, which should be chosen as a non confidential string.
         /// </value>
         /// <remarks>
         /// Required

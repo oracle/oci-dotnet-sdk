@@ -356,6 +356,18 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> EstimatedComponentPatchingStartTime { get; set; }
         
         /// <value>
+        /// If `FALSE`, the maintenance run doesn't support granular maintenance.
+        /// </value>
+        [JsonProperty(PropertyName = "isMaintenanceRunGranular")]
+        public System.Nullable<bool> IsMaintenanceRunGranular { get; set; }
+        
+        /// <value>
+        /// The total time taken by corresponding resource activity in minutes.
+        /// </value>
+        [JsonProperty(PropertyName = "totalTimeTakenInMins")]
+        public System.Nullable<int> TotalTimeTakenInMins { get; set; }
+        
+        /// <value>
         /// The Autonomous Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
