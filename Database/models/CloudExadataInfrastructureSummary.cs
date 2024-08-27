@@ -300,5 +300,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedFileSystemConfigurations")]
         public System.Collections.Generic.List<DefinedFileSystemConfiguration> DefinedFileSystemConfigurations { get; set; }
         
+        /// <value>
+        /// If true, the infrastructure is using granular maintenance scheduling preference.
+        /// </value>
+        [JsonProperty(PropertyName = "isSchedulingPolicyAssociated")]
+        public System.Nullable<bool> IsSchedulingPolicyAssociated { get; set; }
+        
     }
 }

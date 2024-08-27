@@ -27,6 +27,8 @@ namespace Oci.DatabasemanagementService.Models
         ///   - PE: Private endpoint
         ///   - MACS: Management agent
         ///   - EXTERNAL: External database connector
+        /// <br/>
+        ///   - DIRECT: Direct connection
         /// 
         /// </value>
         ///
@@ -36,7 +38,9 @@ namespace Oci.DatabasemanagementService.Models
             [EnumMember(Value = "MACS")]
             Macs,
             [EnumMember(Value = "EXTERNAL")]
-            External
+            External,
+            [EnumMember(Value = "DIRECT")]
+            Direct
         };
 
         
@@ -65,6 +69,9 @@ namespace Oci.DatabasemanagementService.Models
             {
                 case "EXTERNAL":
                     obj = new ExternalConnectorDetails();
+                    break;
+                case "DIRECT":
+                    obj = new DirectConnectorDetails();
                     break;
                 case "MACS":
                     obj = new MacsConnectorDetails();

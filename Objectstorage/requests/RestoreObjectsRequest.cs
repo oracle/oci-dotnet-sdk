@@ -41,7 +41,7 @@ namespace Oci.ObjectstorageService.Requests
         public string BucketName { get; set; }
         
         /// <value>
-        /// Request to restore objects.
+        /// Request to restore object.
         /// </value>
         /// <remarks>
         /// Required

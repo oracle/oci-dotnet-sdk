@@ -105,5 +105,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "timeDisasterRecoveryRoleChanged")]
         public System.Nullable<System.DateTime> TimeDisasterRecoveryRoleChanged { get; set; }
         
+        /// <value>
+        /// The availability domain of a local Autonomous Data Guard standby database of an Autonomous Database Serverless instance.
+        /// </value>
+        [JsonProperty(PropertyName = "availabilityDomain")]
+        public string AvailabilityDomain { get; set; }
+        
     }
 }

@@ -115,6 +115,15 @@ namespace Oci.DatabaseService.Models
         public string Hostname { get; set; }
         
         /// <value>
+        /// A domain name used for the DB system. If the Oracle-provided Internet and VCN
+        /// Resolver is enabled for the specified subnet, the domain name for the subnet is used
+        /// (do not provide one). Otherwise, provide a valid DNS domain name. Hyphens (-) are not permitted.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "domain")]
+        public string Domain { get; set; }
+        
+        /// <value>
         /// The time zone of the dataguard standby DB system. For details, see [DB System Time Zones](https://docs.cloud.oracle.com/Content/Database/References/timezones.htm).
         /// </value>
         [JsonProperty(PropertyName = "timeZone")]

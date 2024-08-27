@@ -263,7 +263,9 @@ namespace Oci.AnnouncementsService.Models
             [EnumMember(Value = "IAAS")]
             Iaas,
             [EnumMember(Value = "SAAS")]
-            Saas
+            Saas,
+            [EnumMember(Value = "PAAS")]
+            Paas
         };
 
         /// <value>

@@ -32,7 +32,13 @@ namespace Oci.ObjectstorageService.Models
             [EnumMember(Value = "COPY_OBJECT")]
             CopyObject,
             [EnumMember(Value = "REENCRYPT")]
-            Reencrypt
+            Reencrypt,
+            [EnumMember(Value = "PRIVATE_ENDPOINT_CREATE")]
+            PrivateEndpointCreate,
+            [EnumMember(Value = "PRIVATE_ENDPOINT_UPDATE")]
+            PrivateEndpointUpdate,
+            [EnumMember(Value = "PRIVATE_ENDPOINT_DELETE")]
+            PrivateEndpointDelete
         };
 
         /// <value>

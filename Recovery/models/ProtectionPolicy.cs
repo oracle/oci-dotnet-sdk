@@ -77,6 +77,12 @@ namespace Oci.RecoveryService.Models
         public string PolicyLockedDateTime { get; set; }
         
         /// <value>
+        /// Indicates whether the protection policy enforces Recovery Service to retain backups in the same cloud service environment where your Oracle Database is provisioned.
+        /// </value>
+        [JsonProperty(PropertyName = "mustEnforceCloudLocality")]
+        public System.Nullable<bool> MustEnforceCloudLocality { get; set; }
+        
+        /// <value>
         /// An RFC3339 formatted datetime string that indicates the created time for the protection policy. For Example: '2020-05-22T21:10:29.600Z'.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]

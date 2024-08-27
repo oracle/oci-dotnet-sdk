@@ -416,5 +416,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// If true, the infrastructure is using granular maintenance scheduling preference.
+        /// </value>
+        [JsonProperty(PropertyName = "isSchedulingPolicyAssociated")]
+        public System.Nullable<bool> IsSchedulingPolicyAssociated { get; set; }
+        
     }
 }

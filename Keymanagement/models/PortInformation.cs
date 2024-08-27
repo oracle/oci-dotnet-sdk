@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.KeymanagementService.Models
 {
     /// <summary>
-    /// The details of the port.
+    /// Details of a single portInformation item include the PortNumber (an integer used as an identifier) and the PortType (this refers to either an enum value of Management Utility, Client Utility, or null)
     /// </summary>
     public class PortInformation 
     {
         
         /// <value>
-        /// The port number of the cavium server.
+        /// The port number is a unique identifier which is typically used as the loadbalancer listener.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.KeymanagementService.Models
         public System.Nullable<int> PortNumber { get; set; }
                 ///
         /// <value>
-        /// Port type associated for the port number.
+        /// Port type associated for the port number. The two port type enums are `CLIENTUTILITY` and `MANAGEMENTUTILITY`. The CLIENTUTILITY enum corresponds to a port which is used by the client daemon. The MANAGEMENTUTILITY enum corresponds to a port used by user management utility.
         /// </value>
         ///
         public enum PortTypeEnum {
@@ -46,7 +46,7 @@ namespace Oci.KeymanagementService.Models
         };
 
         /// <value>
-        /// Port type associated for the port number.
+        /// Port type associated for the port number. The two port type enums are `CLIENTUTILITY` and `MANAGEMENTUTILITY`. The CLIENTUTILITY enum corresponds to a port which is used by the client daemon. The MANAGEMENTUTILITY enum corresponds to a port used by user management utility.
         /// </value>
         /// <remarks>
         /// Required

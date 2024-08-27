@@ -23,6 +23,8 @@ namespace Oci.ObjectstorageService.Models
       [EnumMember(Value = "BUCKET")]
       Bucket,
       [EnumMember(Value = "OBJECT")]
-      Object
+      Object,
+      [EnumMember(Value = "PRIVATE_ENDPOINT_NAME")]
+      PrivateEndpointName
   }
 }

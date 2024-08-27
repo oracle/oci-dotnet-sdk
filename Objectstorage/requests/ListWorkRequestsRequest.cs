@@ -30,6 +30,12 @@ namespace Oci.ObjectstorageService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The name of the privateEndpoint for which to list work requests.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "privateEndpointName")]
+        public string PrivateEndpointName { get; set; }
+        
+        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-client-request-id")]

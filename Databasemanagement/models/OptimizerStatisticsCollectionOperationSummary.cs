@@ -76,7 +76,9 @@ namespace Oci.DatabasemanagementService.Models
             [EnumMember(Value = "FAILED")]
             Failed,
             [EnumMember(Value = "TIMED_OUT")]
-            TimedOut
+            TimedOut,
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown
         };
 
         /// <value>

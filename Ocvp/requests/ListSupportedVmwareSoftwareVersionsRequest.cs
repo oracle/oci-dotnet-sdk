@@ -66,5 +66,11 @@ namespace Oci.OcvpService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostShapeName")]
         public string HostShapeName { get; set; }
+        
+        /// <value>
+        /// A filter to return only VMware software versions that the given VMware software version can be upgraded to.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "versionToUpgrade")]
+        public string VersionToUpgrade { get; set; }
     }
 }

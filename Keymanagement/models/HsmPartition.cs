@@ -22,7 +22,7 @@ namespace Oci.KeymanagementService.Models
     {
         
         /// <value>
-        /// The OCID of the HSM resource.
+        /// The OCID of the HSM resource. Each HSM resource has a unique OCID as an identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.KeymanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Details of PortNumber and PortType.
+        /// Details of a single portInformation item include the PortNumber (an integer used as an identifier) and the PortType (refers to either an enum value of Managementutility,Clientutility, or null)
         /// </value>
         /// <remarks>
         /// Required
@@ -76,7 +76,9 @@ namespace Oci.KeymanagementService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// The HSMPartition's current lifecycle state.
+        /// A HSMCluster resource's current lifecycle state.
+        /// <br/>
+        /// Example: ACTIVE
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -90,11 +92,21 @@ namespace Oci.KeymanagementService.Models
             [EnumMember(Value = "ACTIVATING")]
             Activating,
             [EnumMember(Value = "ACTIVATION_REQUIRED")]
-            ActivationRequired
+            ActivationRequired,
+            [EnumMember(Value = "SCHEDULING_DELETION")]
+            SchedulingDeletion,
+            [EnumMember(Value = "PENDING_DELETION")]
+            PendingDeletion,
+            [EnumMember(Value = "DELETING")]
+            Deleting,
+            [EnumMember(Value = "DELETED")]
+            Deleted
         };
 
         /// <value>
-        /// The HSMPartition's current lifecycle state.
+        /// A HSMCluster resource's current lifecycle state.
+        /// <br/>
+        /// Example: ACTIVE
         /// </value>
         /// <remarks>
         /// Required

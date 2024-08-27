@@ -216,6 +216,12 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "isPrimary")]
         public System.Nullable<bool> IsPrimary { get; set; }
         
+        /// <value>
+        /// A Boolean value that indicates whether the Vault has cross region replication capability. Always true for Virtual Private Vaults.
+        /// </value>
+        [JsonProperty(PropertyName = "isVaultReplicable")]
+        public System.Nullable<bool> IsVaultReplicable { get; set; }
+        
         [JsonProperty(PropertyName = "externalKeyManagerMetadataSummary")]
         public ExternalKeyManagerMetadataSummary ExternalKeyManagerMetadataSummary { get; set; }
         

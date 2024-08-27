@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.KeymanagementService.Models
 {
     /// <summary>
-    /// The details of the HSM resource that you want to create.
+    /// The details of the HSM cluster resource that you want to create.
     /// </summary>
     public class CreateHsmClusterDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment where you want to create this HSM resource.
+        /// The OCID of the compartment where you want to create this HSM cluster resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.KeymanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A user-friendly name for the HSM resource. It does not have to be unique, and it is changeable.
+        /// A user-friendly display name for the HSM cluster resource. It does not have to be unique, and it is changeable.
         /// Avoid entering confidential information.
         /// 
         /// </value>

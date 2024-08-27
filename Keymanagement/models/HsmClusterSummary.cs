@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.KeymanagementService.Models
 {
     /// <summary>
-    /// The details of the HSM resource.
+    /// An object which encapsulates the details of a given HSM Cluster.
     /// </summary>
     public class HsmClusterSummary 
     {
@@ -67,7 +67,7 @@ namespace Oci.KeymanagementService.Models
         public System.Nullable<HsmCluster.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// DNS name for the HSMCluster.
+        /// DNS name for the HSMCluster -- this will contain information about the region as well.
         /// </value>
         /// <remarks>
         /// Required

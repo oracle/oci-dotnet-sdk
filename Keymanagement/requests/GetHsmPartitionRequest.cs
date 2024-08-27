@@ -20,7 +20,7 @@ namespace Oci.KeymanagementService.Requests
     {
         
         /// <value>
-        /// The OCID of the HSM Cluster.
+        /// The OCID of the HSM Cluster. This is a unique identifier assigned to each hsmCluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.KeymanagementService.Requests
         public string HsmClusterId { get; set; }
         
         /// <value>
-        /// The OCID of the HSM Partition.
+        /// The OCID of the HSM Partition. This is a unique identifier which each hsmPartition will have.
         /// </value>
         /// <remarks>
         /// Required

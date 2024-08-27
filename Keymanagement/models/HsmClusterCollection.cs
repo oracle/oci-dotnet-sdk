@@ -22,7 +22,7 @@ namespace Oci.KeymanagementService.Models
     {
         
         /// <value>
-        /// List of Hsm Clusters.
+        /// List of HSM Cluster Summary Objects.
         /// </value>
         /// <remarks>
         /// Required

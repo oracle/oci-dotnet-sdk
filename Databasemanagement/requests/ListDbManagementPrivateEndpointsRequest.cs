@@ -49,6 +49,14 @@ namespace Oci.DatabasemanagementService.Requests
         public System.Nullable<bool> IsCluster { get; set; }
         
         /// <value>
+        /// The option to filter Database Management private endpoints which are endbled with DNS proxy server. This should be used along with the vcnId query parameter.
+        /// Only one of this parameter and IsClusterDbManagementPrivateEndpointQueryParam should be set to true at one time.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDnsResolutionEnabled")]
+        public System.Nullable<bool> IsDnsResolutionEnabled { get; set; }
+        
+        /// <value>
         /// The lifecycle state of a resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

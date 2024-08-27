@@ -62,6 +62,8 @@ namespace Oci.LoadbalancerService.Models
         
         /// <value>
         /// The maximum number of simultaneous connections the load balancer can make to the backend.
+        /// If this is not set then number of simultaneous connections the load balancer can make to
+        /// the backend is unlimited.
         /// <br/>
         /// Example: 300
         /// </value>
