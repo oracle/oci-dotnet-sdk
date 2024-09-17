@@ -72,6 +72,19 @@ namespace Oci.CapacitymanagementService.Models
         public System.Nullable<System.DateTime> DateActualHandover { get; set; }
         
         /// <value>
+        /// The availability domain of the resource which is to be transferred. Note that this is only required for Capacity Request Transfer requests.
+        /// </value>
+        [JsonProperty(PropertyName = "availabilityDomain")]
+        public string AvailabilityDomain { get; set; }
+        
+        /// <value>
+        /// A list containing details about occHandoverResourceBlocks which were handed over for the corresponding resource name.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "associatedOccHandoverResourceBlockList")]
+        public System.Collections.Generic.List<AssociatedOccHandoverResourceBlock> AssociatedOccHandoverResourceBlockList { get; set; }
+        
+        /// <value>
         /// The name of the COMPUTE server shape for which the request is made. Do not use CAPACITY_CONSTRAINT as the resource name.
         /// </value>
         /// <remarks>

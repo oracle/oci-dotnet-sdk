@@ -109,7 +109,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementRunbooks",
                     OperationName = "GetRunbook",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/Runbook/GetRunbook",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -165,7 +165,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementRunbooks",
                     OperationName = "GetTaskRecord",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/TaskRecord/GetTaskRecord",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -222,7 +222,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementRunbooks",
                     OperationName = "ListRunbooks",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/RunbookCollection/ListRunbooks",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -279,7 +279,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementRunbooks",
                     OperationName = "ListTaskRecords",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/TaskRecordCollection/ListTaskRecords",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

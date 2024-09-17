@@ -23,6 +23,8 @@ namespace Oci.FleetsoftwareupdateService.Models
       [EnumMember(Value = "GI_18")]
       Gi18,
       [EnumMember(Value = "GI_19")]
-      Gi19
+      Gi19,
+      [EnumMember(Value = "GI_23")]
+      Gi23
   }
 }

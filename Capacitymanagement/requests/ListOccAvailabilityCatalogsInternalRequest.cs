@@ -30,6 +30,16 @@ namespace Oci.CapacitymanagementService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The customer group ocid by which we would filter the list.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "OccCustomerGroupId is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "occCustomerGroupId")]
+        public string OccCustomerGroupId { get; set; }
+        
+        /// <value>
         /// The namespace by which we would filter the list.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "namespace")]
@@ -52,12 +62,6 @@ namespace Oci.CapacitymanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "catalogState")]
         public System.Nullable<OccAvailabilityCatalog.CatalogStateEnum> CatalogState { get; set; }
-        
-        /// <value>
-        /// The customer group ocid by which we would filter the list.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "occCustomerGroupId")]
-        public string OccCustomerGroupId { get; set; }
         
         /// <value>
         /// The maximum number of items to return.

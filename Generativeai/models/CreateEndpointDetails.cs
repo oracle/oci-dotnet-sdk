@@ -44,7 +44,7 @@ namespace Oci.GenerativeaiService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The ID of the model that's used to create this endpoint.
+        /// The OCID of the model that's used to create this endpoint.
         /// </value>
         /// <remarks>
         /// Required

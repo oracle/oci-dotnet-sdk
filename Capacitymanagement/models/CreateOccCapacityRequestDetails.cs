@@ -103,12 +103,8 @@ namespace Oci.CapacitymanagementService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The availability domain (AD) for which the capacity request is made. If this is specified then the capacity will be validated and fulfilled within the scope of this AD.
+        /// The availability domain (AD) in which the new resource is to be placed. If this is specified then the capacity will be validated and fulfilled within the scope of this AD. Note that this field is NOT required for Capacity request Transfer requests.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AvailabilityDomain is required.")]
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
         

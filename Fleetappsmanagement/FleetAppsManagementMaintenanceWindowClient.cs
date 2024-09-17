@@ -110,7 +110,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementMaintenanceWindow",
                     OperationName = "CreateMaintenanceWindow",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/MaintenanceWindow/CreateMaintenanceWindow",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -166,7 +166,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementMaintenanceWindow",
                     OperationName = "DeleteMaintenanceWindow",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/MaintenanceWindow/DeleteMaintenanceWindow",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -222,7 +222,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementMaintenanceWindow",
                     OperationName = "GetMaintenanceWindow",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/MaintenanceWindow/GetMaintenanceWindow",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -279,7 +279,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementMaintenanceWindow",
                     OperationName = "ListMaintenanceWindows",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/MaintenanceWindowCollection/ListMaintenanceWindows",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -335,7 +335,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementMaintenanceWindow",
                     OperationName = "UpdateMaintenanceWindow",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/MaintenanceWindow/UpdateMaintenanceWindow",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

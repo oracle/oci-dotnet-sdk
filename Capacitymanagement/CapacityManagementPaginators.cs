@@ -99,6 +99,104 @@ namespace Oci.CapacitymanagementService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListInternalOccHandoverResourceBlockDetails operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListInternalOccHandoverResourceBlockDetailsResponse> ListInternalOccHandoverResourceBlockDetailsResponseEnumerator(ListInternalOccHandoverResourceBlockDetailsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListInternalOccHandoverResourceBlockDetailsRequest, ListInternalOccHandoverResourceBlockDetailsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListInternalOccHandoverResourceBlockDetails(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the OccHandoverResourceBlockDetailSummary objects
+        /// contained in responses from the ListInternalOccHandoverResourceBlockDetails operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<OccHandoverResourceBlockDetailSummary> ListInternalOccHandoverResourceBlockDetailsRecordEnumerator(ListInternalOccHandoverResourceBlockDetailsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListInternalOccHandoverResourceBlockDetailsRequest, ListInternalOccHandoverResourceBlockDetailsResponse, OccHandoverResourceBlockDetailSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListInternalOccHandoverResourceBlockDetails(request, retryConfiguration, cancellationToken),
+                response => response.OccHandoverResourceBlockDetailCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListInternalOccHandoverResourceBlocks operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListInternalOccHandoverResourceBlocksResponse> ListInternalOccHandoverResourceBlocksResponseEnumerator(ListInternalOccHandoverResourceBlocksRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListInternalOccHandoverResourceBlocksRequest, ListInternalOccHandoverResourceBlocksResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListInternalOccHandoverResourceBlocks(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the OccHandoverResourceBlockSummary objects
+        /// contained in responses from the ListInternalOccHandoverResourceBlocks operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<OccHandoverResourceBlockSummary> ListInternalOccHandoverResourceBlocksRecordEnumerator(ListInternalOccHandoverResourceBlocksRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListInternalOccHandoverResourceBlocksRequest, ListInternalOccHandoverResourceBlocksResponse, OccHandoverResourceBlockSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListInternalOccHandoverResourceBlocks(request, retryConfiguration, cancellationToken),
+                response => response.OccHandoverResourceBlockCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListOccAvailabilities operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -389,6 +487,104 @@ namespace Oci.CapacitymanagementService
                 },
                 request => client.ListOccCustomerGroups(request, retryConfiguration, cancellationToken),
                 response => response.OccCustomerGroupCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListOccHandoverResourceBlockDetails operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListOccHandoverResourceBlockDetailsResponse> ListOccHandoverResourceBlockDetailsResponseEnumerator(ListOccHandoverResourceBlockDetailsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListOccHandoverResourceBlockDetailsRequest, ListOccHandoverResourceBlockDetailsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOccHandoverResourceBlockDetails(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the OccHandoverResourceBlockDetailSummary objects
+        /// contained in responses from the ListOccHandoverResourceBlockDetails operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<OccHandoverResourceBlockDetailSummary> ListOccHandoverResourceBlockDetailsRecordEnumerator(ListOccHandoverResourceBlockDetailsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListOccHandoverResourceBlockDetailsRequest, ListOccHandoverResourceBlockDetailsResponse, OccHandoverResourceBlockDetailSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOccHandoverResourceBlockDetails(request, retryConfiguration, cancellationToken),
+                response => response.OccHandoverResourceBlockDetailCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListOccHandoverResourceBlocks operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListOccHandoverResourceBlocksResponse> ListOccHandoverResourceBlocksResponseEnumerator(ListOccHandoverResourceBlocksRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListOccHandoverResourceBlocksRequest, ListOccHandoverResourceBlocksResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOccHandoverResourceBlocks(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the OccHandoverResourceBlockSummary objects
+        /// contained in responses from the ListOccHandoverResourceBlocks operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<OccHandoverResourceBlockSummary> ListOccHandoverResourceBlocksRecordEnumerator(ListOccHandoverResourceBlocksRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListOccHandoverResourceBlocksRequest, ListOccHandoverResourceBlocksResponse, OccHandoverResourceBlockSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListOccHandoverResourceBlocks(request, retryConfiguration, cancellationToken),
+                response => response.OccHandoverResourceBlockCollection.Items
             );
         }
 

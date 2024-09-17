@@ -66,5 +66,12 @@ namespace Oci.LockboxService.Models
         [JsonProperty(PropertyName = "accessDuration")]
         public string AccessDuration { get; set; }
         
+        /// <value>
+        /// The ticket number raised by external customers 
+        /// Example: 3-37509643121
+        /// </value>
+        [JsonProperty(PropertyName = "ticketNumber")]
+        public string TicketNumber { get; set; }
+        
     }
 }

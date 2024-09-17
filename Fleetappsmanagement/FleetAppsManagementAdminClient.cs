@@ -110,7 +110,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementAdmin",
                     OperationName = "CreateOnboarding",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/Onboarding/CreateOnboarding",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -167,7 +167,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementAdmin",
                     OperationName = "CreateProperty",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/Property/CreateProperty",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -223,7 +223,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementAdmin",
                     OperationName = "DeleteProperty",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/Property/DeleteProperty",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -279,7 +279,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementAdmin",
                     OperationName = "GetProperty",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/Property/GetProperty",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -336,7 +336,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementAdmin",
                     OperationName = "ListOnboardingPolicies",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/OnboardingPolicyCollection/ListOnboardingPolicies",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -393,7 +393,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementAdmin",
                     OperationName = "ListOnboardings",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/OnboardingCollection/ListOnboardings",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -450,7 +450,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementAdmin",
                     OperationName = "ListProperties",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/PropertyCollection/ListProperties",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -506,7 +506,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementAdmin",
                     OperationName = "UpdateProperty",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/Property/UpdateProperty",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
