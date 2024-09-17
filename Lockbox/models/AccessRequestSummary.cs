@@ -129,6 +129,13 @@ namespace Oci.LockboxService.Models
         public System.Nullable<System.DateTime> TimeExpired { get; set; }
         
         /// <value>
+        /// The ticket number raised by external customers 
+        /// Example: 3-37509643121
+        /// </value>
+        [JsonProperty(PropertyName = "ticketNumber")]
+        public string TicketNumber { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

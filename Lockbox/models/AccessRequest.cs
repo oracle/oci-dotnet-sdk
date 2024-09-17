@@ -237,5 +237,12 @@ namespace Oci.LockboxService.Models
         [JsonProperty(PropertyName = "requestorLocation")]
         public string RequestorLocation { get; set; }
         
+        /// <value>
+        /// The ticket number raised by external customers 
+        /// Example: 3-37509643121
+        /// </value>
+        [JsonProperty(PropertyName = "ticketNumber")]
+        public string TicketNumber { get; set; }
+        
     }
 }

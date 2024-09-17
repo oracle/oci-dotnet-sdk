@@ -32,6 +32,10 @@ namespace Oci.CapacitymanagementService.Requests
         /// <value>
         /// The customer group ocid by which we would filter the list.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "OccCustomerGroupId is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "occCustomerGroupId")]
         public string OccCustomerGroupId { get; set; }
         
