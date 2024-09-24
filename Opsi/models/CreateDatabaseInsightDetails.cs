@@ -69,6 +69,9 @@ namespace Oci.OpsiService.Models
             var discriminator = jsonObject["entitySource"].Value<string>();
             switch (discriminator)
             {
+                case "MACS_MANAGED_CLOUD_DATABASE":
+                    obj = new CreateMacsManagedCloudDatabaseInsightDetails();
+                    break;
                 case "MDS_MYSQL_DATABASE_SYSTEM":
                     obj = new CreateMdsMySqlDatabaseInsightDetails();
                     break;

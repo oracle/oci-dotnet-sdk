@@ -18,6 +18,7 @@ namespace Oci.MonitoringService.Models
     /// <summary>
     /// The configuration details for an alarm-wide suppression.
     /// For dimension-specific suppressions, see {@link AlarmSuppression}.
+    /// <br/>
     /// For information about alarms, see
     /// [Alarms Overview](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#AlarmsOverview).
     /// 

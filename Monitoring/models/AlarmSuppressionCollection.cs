@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MonitoringService.Models
 {
     /// <summary>
-    /// Collection of property summaries for dimension-specific alarm suppressions.
+    /// Collection of property summaries for alarm suppressions.
     /// 
     /// </summary>
     public class AlarmSuppressionCollection 
     {
         
         /// <value>
-        /// List of property summaries for dimension-specific alarm suppressions.
+        /// List of property summaries for alarm suppressions.
         /// 
         /// </value>
         /// <remarks>

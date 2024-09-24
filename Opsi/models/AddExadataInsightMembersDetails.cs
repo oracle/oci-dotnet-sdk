@@ -51,6 +51,9 @@ namespace Oci.OpsiService.Models
                 case "EM_MANAGED_EXTERNAL_EXADATA":
                     obj = new AddEmManagedExternalExadataInsightMembersDetails();
                     break;
+                case "MACS_MANAGED_CLOUD_EXADATA":
+                    obj = new AddMacsManagedCloudExadataInsightMembersDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

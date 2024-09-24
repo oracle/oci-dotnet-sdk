@@ -26,6 +26,8 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "MACS_MANAGED_CLOUD_HOST")]
       MacsManagedCloudHost,
       [EnumMember(Value = "PE_COMANAGED_HOST")]
-      PeComanagedHost
+      PeComanagedHost,
+      [EnumMember(Value = "MACS_MANAGED_CLOUD_DB_HOST")]
+      MacsManagedCloudDbHost
   }
 }

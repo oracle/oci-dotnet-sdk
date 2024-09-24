@@ -59,6 +59,9 @@ namespace Oci.OpsiService.Models
             var discriminator = jsonObject["entitySource"].Value<string>();
             switch (discriminator)
             {
+                case "MACS_MANAGED_CLOUD_DB_HOST":
+                    obj = new UpdateMacsManagedCloudDatabaseHostInsightDetails();
+                    break;
                 case "EM_MANAGED_EXTERNAL_HOST":
                     obj = new UpdateEmManagedExternalHostInsightDetails();
                     break;

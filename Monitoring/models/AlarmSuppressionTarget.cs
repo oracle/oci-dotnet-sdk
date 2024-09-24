@@ -28,7 +28,9 @@ namespace Oci.MonitoringService.Models
         ///
         public enum TargetTypeEnum {
             [EnumMember(Value = "ALARM")]
-            Alarm
+            Alarm,
+            [EnumMember(Value = "COMPARTMENT")]
+            Compartment
         };
 
         
@@ -57,6 +59,9 @@ namespace Oci.MonitoringService.Models
             {
                 case "ALARM":
                     obj = new AlarmSuppressionAlarmTarget();
+                    break;
+                case "COMPARTMENT":
+                    obj = new AlarmSuppressionCompartmentTarget();
                     break;
             }
             if (obj != null)

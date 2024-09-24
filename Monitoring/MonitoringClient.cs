@@ -197,7 +197,10 @@ namespace Oci.MonitoringService
         }
 
         /// <summary>
-        /// Creates a dimension-specific suppression for an alarm.
+        /// Creates a new alarm suppression at the specified level (alarm-wide or dimension-specific).
+        /// For more information, see
+        /// [Adding an Alarm-wide Suppression](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/add-alarm-suppression.htm) and
+        /// [Adding a Dimension-Specific Alarm Suppression](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/create-alarm-suppression.htm).
         /// &lt;br/&gt;
         /// For important limits information, see
         /// [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#limits).
@@ -326,7 +329,9 @@ namespace Oci.MonitoringService
         }
 
         /// <summary>
-        /// Deletes the specified alarm suppression.
+        /// Deletes the specified alarm suppression. For more information, see
+        /// [Removing an Alarm-wide Suppression](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/remove-alarm-suppression.htm) and
+        /// [Removing a Dimension-Specific Alarm Suppression](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/delete-alarm-suppression.htm).
         /// &lt;br/&gt;
         /// For important limits information, see
         /// [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#limits).
@@ -520,7 +525,8 @@ namespace Oci.MonitoringService
         }
 
         /// <summary>
-        /// Gets the specified alarm suppression.
+        /// Gets the specified alarm suppression. For more information, see
+        /// [Getting an Alarm-wide Suppression](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/get-alarm-suppression.htm).
         /// &lt;br/&gt;
         /// For important limits information, see
         /// [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#limits).
@@ -584,8 +590,8 @@ namespace Oci.MonitoringService
         }
 
         /// <summary>
-        /// Lists alarm suppressions for the specified alarm.
-        /// Only dimension-level suppressions are listed. Alarm-level suppressions are not listed.
+        /// Lists alarm suppressions for the specified alarm. For more information, see
+        /// [Listing Alarm Suppressions](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/list-alarm-suppression.htm).
         /// &lt;br/&gt;
         /// For important limits information, see
         /// [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#limits).
@@ -718,6 +724,7 @@ namespace Oci.MonitoringService
         /// Status is collective, across all metric streams in the alarm.
         /// To list alarm status for each metric stream, use {@link #retrieveDimensionStates(RetrieveDimensionStatesRequest) retrieveDimensionStates}.
         /// Optionally filter by resource or status value.
+        /// &lt;br/&gt;
         /// For more information, see
         /// [Listing Alarm Statuses](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/list-alarm-status.htm).
         /// For important limits information, see
@@ -999,6 +1006,7 @@ namespace Oci.MonitoringService
         /// <summary>
         /// Lists the current alarm status of each metric stream, where status is derived from the metric stream&#39;s last associated transition.
         /// Optionally filter by status value and one or more dimension key-value pairs.
+        /// &lt;br/&gt;
         /// For more information, see
         /// [Listing Metric Stream Status in an Alarm](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/list-alarm-status-metric-stream.htm).
         /// &lt;br/&gt;
@@ -1064,7 +1072,8 @@ namespace Oci.MonitoringService
         }
 
         /// <summary>
-        /// Returns history of suppressions for the specified alarm, including both dimension-specific and and alarm-wide suppressions.
+        /// Returns history of suppressions for the specified alarm, including both dimension-specific and and alarm-wide suppressions. For more information, see
+        /// [Getting Suppression History for an Alarm](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/summarize-alarm-suppression-history.htm).
         /// &lt;br/&gt;
         /// For important limits information, see
         /// [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#limits).

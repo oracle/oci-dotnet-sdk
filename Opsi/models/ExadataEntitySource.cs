@@ -22,6 +22,8 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "EM_MANAGED_EXTERNAL_EXADATA")]
       EmManagedExternalExadata,
       [EnumMember(Value = "PE_COMANAGED_EXADATA")]
-      PeComanagedExadata
+      PeComanagedExadata,
+      [EnumMember(Value = "MACS_MANAGED_CLOUD_EXADATA")]
+      MacsManagedCloudExadata
   }
 }

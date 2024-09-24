@@ -169,6 +169,9 @@ namespace Oci.OpsiService.Models
             var discriminator = jsonObject["entitySource"].Value<string>();
             switch (discriminator)
             {
+                case "MACS_MANAGED_CLOUD_EXADATA":
+                    obj = new MacsManagedCloudExadataInsightSummary();
+                    break;
                 case "EM_MANAGED_EXTERNAL_EXADATA":
                     obj = new EmManagedExternalExadataInsightSummary();
                     break;

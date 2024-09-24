@@ -125,6 +125,12 @@ namespace Oci.DatasafeService.Models
             UnsetSecurityAssessmentBaseline,
             [EnumMember(Value = "GENERATE_SECURITY_ASSESSMENT_REPORT")]
             GenerateSecurityAssessmentReport,
+            [EnumMember(Value = "DELETE_SQL_FIREWALL_ALLOWED_SQL")]
+            DeleteSqlFirewallAllowedSql,
+            [EnumMember(Value = "BULK_CREATE_SQL_FIREWALL_ALLOWED_SQL")]
+            BulkCreateSqlFirewallAllowedSql,
+            [EnumMember(Value = "BULK_DELETE_SQL_FIREWALL_ALLOWED_SQL")]
+            BulkDeleteSqlFirewallAllowedSql,
             [EnumMember(Value = "CREATE_AUDIT_PROFILE")]
             CreateAuditProfile,
             [EnumMember(Value = "CALCULATE_VOLUME")]

@@ -97,6 +97,12 @@ namespace Oci.OpsiService.Requests
             ComanagedExacsPdb,
             [EnumMember(Value = "COMANAGED-EXACS-NONCDB")]
             ComanagedExacsNoncdb,
+            [EnumMember(Value = "COMANAGED-EXACC-CDB")]
+            ComanagedExaccCdb,
+            [EnumMember(Value = "COMANAGED-EXACC-PDB")]
+            ComanagedExaccPdb,
+            [EnumMember(Value = "COMANAGED-EXACC-NONCDB")]
+            ComanagedExaccNoncdb,
             [EnumMember(Value = "MDS-MYSQL")]
             MdsMysql
         };

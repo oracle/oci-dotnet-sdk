@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MonitoringService.Models
 {
     /// <summary>
-    /// A summary of properties for the specified dimension-specific alarm suppression.
+    /// A summary of properties for the specified alarm suppression.
     /// 
     /// </summary>
     public class AlarmSuppressionSummary 
@@ -50,6 +50,27 @@ namespace Oci.MonitoringService.Models
         public AlarmSuppressionTarget AlarmSuppressionTarget { get; set; }
         
         /// <value>
+        /// The level of this alarm suppression.
+        /// `ALARM` indicates a suppression of the entire alarm, regardless of dimension.
+        /// `DIMENSION` indicates a suppression configured for specified dimensions.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Level is required.")]
+        [JsonProperty(PropertyName = "level")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AlarmSuppression.LevelEnum> Level { get; set; }
+        
+        /// <value>
+        /// Array of all preconditions for alarm suppression.
+        /// Example: [{  conditionType: &quot;RECURRENCE&quot;,  suppressionRecurrence: &quot;FRQ=DAILY;BYHOUR=10&quot;,  suppressionDuration: &quot;PT1H&quot;}]
+        /// </value>
+        [JsonProperty(PropertyName = "suppressionConditions")]
+        public System.Collections.Generic.List<SuppressionCondition> SuppressionConditions { get; set; }
+        
+        /// <value>
         /// A user-friendly name for the alarm suppression. It does not have to be unique, and it's changeable. Avoid entering confidential information.
         /// </value>
         /// <remarks>
@@ -77,10 +98,6 @@ namespace Oci.MonitoringService.Models
         /// <br/>
         /// Example: {&quot;resourceId&quot;: &quot;ocid1.instance.region1.phx.exampleuniqueID&quot;}
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Dimensions is required.")]
         [JsonProperty(PropertyName = "dimensions")]
         public System.Collections.Generic.Dictionary<string, string> Dimensions { get; set; }
         

@@ -74,7 +74,9 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "PDF")]
             Pdf,
             [EnumMember(Value = "XLS")]
-            Xls
+            Xls,
+            [EnumMember(Value = "JSON")]
+            Json
         };
 
         /// <value>

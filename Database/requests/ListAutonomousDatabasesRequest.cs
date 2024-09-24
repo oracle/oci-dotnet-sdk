@@ -102,6 +102,12 @@ namespace Oci.DatabaseService.Requests
         public System.Nullable<AutonomousDatabaseSummary.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
+        /// A filter to return only resources that not match the given lifecycle state.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleStateNotEqualTo")]
+        public System.Nullable<AutonomousDatabaseSummary.LifecycleStateEnum> LifecycleStateNotEqualTo { get; set; }
+        
+        /// <value>
         /// A filter to return only autonomous database resources that match the specified workload type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dbWorkload")]

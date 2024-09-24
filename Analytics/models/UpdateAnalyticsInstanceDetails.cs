@@ -63,5 +63,13 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
+        /// <value>
+        /// Analytics instance update channel.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "updateChannel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<UpdateChannel> UpdateChannel { get; set; }
+        
     }
 }

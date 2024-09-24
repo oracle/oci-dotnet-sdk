@@ -33,6 +33,12 @@ namespace Oci.FusionappsService.Models
         public string SourceFusionEnvironmentId { get; set; }
         
         /// <value>
+        /// Represents if the customer opted for Data Masking or not during refreshActivity.
+        /// </value>
+        [JsonProperty(PropertyName = "isDataMaskingOpted")]
+        public System.Nullable<bool> IsDataMaskingOpted { get; set; }
+        
+        /// <value>
         /// Current time the refresh activity is scheduled to start. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeScheduledStart")]

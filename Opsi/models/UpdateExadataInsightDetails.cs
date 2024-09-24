@@ -62,6 +62,9 @@ namespace Oci.OpsiService.Models
                 case "PE_COMANAGED_EXADATA":
                     obj = new UpdatePeComanagedExadataInsightDetails();
                     break;
+                case "MACS_MANAGED_CLOUD_EXADATA":
+                    obj = new UpdateMacsManagedCloudExadataInsightDetails();
+                    break;
                 case "EM_MANAGED_EXTERNAL_EXADATA":
                     obj = new UpdateEmManagedExternalExadataInsightDetails();
                     break;

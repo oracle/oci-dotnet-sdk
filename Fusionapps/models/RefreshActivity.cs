@@ -154,6 +154,12 @@ namespace Oci.FusionappsService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// Represents if the customer opted for Data Masking or not during refreshActivity.
+        /// </value>
+        [JsonProperty(PropertyName = "isDataMaskingOpted")]
+        public System.Nullable<bool> IsDataMaskingOpted { get; set; }
+        
+        /// <value>
         /// Details of refresh investigation information, each item represents a different issue.
         /// </value>
         [JsonProperty(PropertyName = "refreshIssueDetailsList")]

@@ -108,6 +108,14 @@ namespace Oci.AnalyticsService.Models
         [JsonProperty(PropertyName = "emailNotification")]
         public string EmailNotification { get; set; }
         
+        /// <value>
+        /// Analytics instance update channel.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "updateChannel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<UpdateChannel> UpdateChannel { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

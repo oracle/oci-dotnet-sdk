@@ -142,6 +142,9 @@ namespace Oci.OpsiService.Models
                 case "PE_COMANAGED_EXADATA":
                     obj = new ExadataExacsConfigurationSummary();
                     break;
+                case "MACS_MANAGED_CLOUD_EXADATA":
+                    obj = new ExadataExaccConfigurationSummary();
+                    break;
             }
             if (obj != null)
             {

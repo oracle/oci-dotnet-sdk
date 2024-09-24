@@ -441,6 +441,8 @@ namespace Oci.DatabaseService.Models
             BackupFromId,
             [EnumMember(Value = "BACKUP_FROM_TIMESTAMP")]
             BackupFromTimestamp,
+            [EnumMember(Value = "UNDELETE_ADB")]
+            UndeleteAdb,
             [EnumMember(Value = "CLONE_TO_REFRESHABLE")]
             CloneToRefreshable,
             [EnumMember(Value = "CROSS_REGION_DATAGUARD")]
@@ -574,6 +576,9 @@ namespace Oci.DatabaseService.Models
             var discriminator = jsonObject["source"].Value<string>();
             switch (discriminator)
             {
+                case "UNDELETE_ADB":
+                    obj = new UndeleteAutonomousDatabaseDetails();
+                    break;
                 case "DATABASE":
                     obj = new CreateAutonomousDatabaseCloneDetails();
                     break;

@@ -102,6 +102,9 @@ namespace Oci.DatasafeService.Models
         /// </value>
         ///
         public enum SqlLevelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "USER_ISSUED_SQL")]
             UserIssuedSql,
             [EnumMember(Value = "ALL_SQL")]
@@ -119,7 +122,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "SqlLevel is required.")]
         [JsonProperty(PropertyName = "sqlLevel")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SqlLevelEnum> SqlLevel { get; set; }
         
         /// <value>
@@ -162,7 +165,7 @@ namespace Oci.DatasafeService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SqlFirewallAllowedSqlLifecycleState> LifecycleState { get; set; }
         
         /// <value>

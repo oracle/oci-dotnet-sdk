@@ -36,7 +36,15 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "DB_OS_CONFIG_INSTANCE")]
             DbOsConfigInstance,
             [EnumMember(Value = "DB_PARAMETERS")]
-            DbParameters
+            DbParameters,
+            [EnumMember(Value = "DB_CONNECTION_STATUS")]
+            DbConnectionStatus,
+            [EnumMember(Value = "HOST_RESOURCE_ALLOCATION")]
+            HostResourceAllocation,
+            [EnumMember(Value = "ASM_ENTITY")]
+            AsmEntity,
+            [EnumMember(Value = "EXADATA_CELL_CONFIG")]
+            ExadataCellConfig
         };
 
         
@@ -78,8 +86,20 @@ namespace Oci.OpsiService.Models
                 case "DB_PARAMETERS":
                     obj = new DBParameters();
                     break;
+                case "DB_CONNECTION_STATUS":
+                    obj = new DBConnectionStatus();
+                    break;
+                case "HOST_RESOURCE_ALLOCATION":
+                    obj = new HostAllocation();
+                    break;
+                case "EXADATA_CELL_CONFIG":
+                    obj = new ExadataCellConfig();
+                    break;
                 case "DB_EXTERNAL_PROPERTIES":
                     obj = new DBExternalProperties();
+                    break;
+                case "ASM_ENTITY":
+                    obj = new ExadataAsmEntity();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
