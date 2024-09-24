@@ -118,6 +118,14 @@ namespace Oci.AnalyticsService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
+        /// Analytics instance update channel.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "updateChannel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<UpdateChannel> UpdateChannel { get; set; }
+        
+        /// <value>
         /// OCID of the OCI Vault Key encrypting the customer data stored in this Analytics instance. A null value indicates Oracle managed default encryption.
         /// 
         /// </value>

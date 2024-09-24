@@ -140,6 +140,10 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "ENABLE_AWRHUB_SOURCE")]
       EnableAwrhubSource,
       [EnumMember(Value = "DISABLE_AWRHUB_SOURCE")]
-      DisableAwrhubSource
+      DisableAwrhubSource,
+      [EnumMember(Value = "CHANGE_MACS_MANAGED_CLOUD_DATABASE_INSIGHT_CONNECTION_DETAILS")]
+      ChangeMacsManagedCloudDatabaseInsightConnectionDetails,
+      [EnumMember(Value = "TEST_MACS_MANAGED_CLOUD_DATABASE_INSIGHT_CONNECTION_DETAILS")]
+      TestMacsManagedCloudDatabaseInsightConnectionDetails
   }
 }

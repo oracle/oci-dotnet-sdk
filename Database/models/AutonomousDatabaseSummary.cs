@@ -382,6 +382,13 @@ namespace Oci.DatabaseService.Models
         public string AutonomousContainerDatabaseId { get; set; }
         
         /// <value>
+        /// The date and time the Autonomous Database was most recently undeleted.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeUndeleted")]
+        public System.Nullable<System.DateTime> TimeUndeleted { get; set; }
+        
+        /// <value>
         /// The date and time the Autonomous Database was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]

@@ -30,6 +30,52 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "Hostname is required.")]
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
+                ///
+        /// <value>
+        /// Indicates if custom endpoint is managed by oracle or customer.
+        /// </value>
+        ///
+        public enum ManagedTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ORACLE_MANAGED")]
+            OracleManaged,
+            [EnumMember(Value = "CUSTOMER_MANAGED")]
+            CustomerManaged
+        };
+
+        /// <value>
+        /// Indicates if custom endpoint is managed by oracle or customer.
+        /// </value>
+        [JsonProperty(PropertyName = "managedType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ManagedTypeEnum> ManagedType { get; set; }
+        
+        /// <value>
+        /// DNS Zone name
+        /// </value>
+        [JsonProperty(PropertyName = "dnsZoneName")]
+        public string DnsZoneName { get; set; }
+                ///
+        /// <value>
+        /// Type of DNS.
+        /// </value>
+        ///
+        public enum DnsTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "OCI")]
+            Oci
+        };
+
+        /// <value>
+        /// Type of DNS.
+        /// </value>
+        [JsonProperty(PropertyName = "dnsType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DnsTypeEnum> DnsType { get; set; }
         
         /// <value>
         /// Optional OCID of a vault/secret containing a private SSL certificate bundle to be used for the custom hostname.

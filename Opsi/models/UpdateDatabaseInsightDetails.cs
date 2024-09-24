@@ -74,6 +74,9 @@ namespace Oci.OpsiService.Models
                 case "MDS_MYSQL_DATABASE_SYSTEM":
                     obj = new UpdateMdsMySqlDatabaseInsight();
                     break;
+                case "MACS_MANAGED_CLOUD_DATABASE":
+                    obj = new UpdateMacsManagedCloudDatabaseInsightDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

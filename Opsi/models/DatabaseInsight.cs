@@ -172,6 +172,9 @@ namespace Oci.OpsiService.Models
                 case "PE_COMANAGED_DATABASE":
                     obj = new PeComanagedDatabaseInsight();
                     break;
+                case "MACS_MANAGED_CLOUD_DATABASE":
+                    obj = new MacsManagedCloudDatabaseInsight();
+                    break;
                 case "AUTONOMOUS_DATABASE":
                     obj = new AutonomousDatabaseInsight();
                     break;

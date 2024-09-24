@@ -35,7 +35,7 @@ namespace Oci.OpsiService.Models
         public string ContainerName { get; set; }
         
         /// <value>
-        /// Container Image (may include tag version)
+        /// Container Image
         /// </value>
         [JsonProperty(PropertyName = "containerImage")]
         public string ContainerImage { get; set; }

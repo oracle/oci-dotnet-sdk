@@ -44,7 +44,11 @@ namespace Oci.IntegrationService.Models
             [EnumMember(Value = "ENABLE_PROCESS_AUTOMATION")]
             EnableProcessAutomation,
             [EnumMember(Value = "EXTEND_DATA_RETENTION")]
-            ExtendDataRetention
+            ExtendDataRetention,
+            [EnumMember(Value = "CREATE_CUSTOM_ENDPOINT")]
+            CreateCustomEndpoint,
+            [EnumMember(Value = "DELETE_CUSTOM_ENDPOINT")]
+            DeleteCustomEndpoint
         };
 
         /// <value>

@@ -121,9 +121,7 @@ namespace Oci.IntegrationService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed,
-            [EnumMember(Value = "STANDBY")]
-            Standby
+            Failed
         };
 
         /// <value>
@@ -181,6 +179,12 @@ namespace Oci.IntegrationService.Models
         [Required(ErrorMessage = "InstanceUrl is required.")]
         [JsonProperty(PropertyName = "instanceUrl")]
         public string InstanceUrl { get; set; }
+        
+        /// <value>
+        /// The Integration Instance Design Time URL
+        /// </value>
+        [JsonProperty(PropertyName = "instanceDesignTimeUrl")]
+        public string InstanceDesignTimeUrl { get; set; }
         
         /// <value>
         /// The number of configured message packs (if any)

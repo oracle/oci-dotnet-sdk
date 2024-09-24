@@ -20,6 +20,8 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "cloudExadataInfrastructure")]
-      CloudExadataInfrastructure
+      CloudExadataInfrastructure,
+      [EnumMember(Value = "exadataInfrastructure")]
+      ExadataInfrastructure
   }
 }

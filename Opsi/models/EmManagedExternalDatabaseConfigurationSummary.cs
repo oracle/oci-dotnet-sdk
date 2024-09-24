@@ -58,6 +58,46 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "exadataDetails")]
         public ExadataDetails ExadataDetails { get; set; }
         
+        /// <value>
+        /// Enterprise Manager Entity Unique Identifier
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EnterpriseManagerEntityIdentifier is required.")]
+        [JsonProperty(PropertyName = "enterpriseManagerEntityIdentifier")]
+        public string EnterpriseManagerEntityIdentifier { get; set; }
+        
+        /// <value>
+        /// Enterprise Manager Console Url
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EnterpriseManagerConsoleUrl is required.")]
+        [JsonProperty(PropertyName = "enterpriseManagerConsoleUrl")]
+        public string EnterpriseManagerConsoleUrl { get; set; }
+        
+        /// <value>
+        /// Enterprise Manager OMS Version
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EnterpriseManagerOmsVer is required.")]
+        [JsonProperty(PropertyName = "enterpriseManagerOmsVer")]
+        public string EnterpriseManagerOmsVer { get; set; }
+        
+        /// <value>
+        /// Enterprise Manager Entity Type
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EnterpriseManagerEntityType is required.")]
+        [JsonProperty(PropertyName = "enterpriseManagerEntityType")]
+        public string EnterpriseManagerEntityType { get; set; }
+        
         [JsonProperty(PropertyName = "entitySource")]
         private readonly string entitySource = "EM_MANAGED_EXTERNAL_DATABASE";
     }

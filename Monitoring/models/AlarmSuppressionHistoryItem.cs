@@ -125,5 +125,12 @@ namespace Oci.MonitoringService.Models
         [JsonProperty(PropertyName = "timeEffectiveUntil")]
         public System.Nullable<System.DateTime> TimeEffectiveUntil { get; set; }
         
+        /// <value>
+        /// Array of all preconditions for alarm suppression.
+        /// Example: [{  conditionType: &quot;RECURRENCE&quot;,  suppressionRecurrence: &quot;FRQ=DAILY;BYHOUR=10&quot;,  suppressionDuration: &quot;PT1H&quot;}]
+        /// </value>
+        [JsonProperty(PropertyName = "suppressionConditions")]
+        public System.Collections.Generic.List<SuppressionCondition> SuppressionConditions { get; set; }
+        
     }
 }

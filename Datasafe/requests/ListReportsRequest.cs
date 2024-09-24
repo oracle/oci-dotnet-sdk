@@ -119,6 +119,26 @@ namespace Oci.DatasafeService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
+        ///
+        /// <value>
+        /// An optional filter to return only resources that match the specified mime type.
+        /// </value>
+        ///
+        public enum MimeTypeEnum {
+            [EnumMember(Value = "PDF")]
+            Pdf,
+            [EnumMember(Value = "XLS")]
+            Xls,
+            [EnumMember(Value = "JSON")]
+            Json
+        };
+
+        /// <value>
+        /// An optional filter to return only resources that match the specified mime type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "mimeType")]
+        public System.Nullable<MimeTypeEnum> MimeType { get; set; }
+        
         /// <value>
         /// The ID of the report definition to filter the list of reports
         /// </value>

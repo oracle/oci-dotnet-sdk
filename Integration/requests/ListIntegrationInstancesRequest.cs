@@ -56,9 +56,7 @@ namespace Oci.IntegrationService.Requests
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed,
-            [EnumMember(Value = "STANDBY")]
-            Standby
+            Failed
         };
 
         /// <value>

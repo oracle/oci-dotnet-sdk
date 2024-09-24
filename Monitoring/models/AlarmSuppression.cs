@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MonitoringService.Models
 {
     /// <summary>
-    /// The configuration details for a dimension-specific alarm suppression.
+    /// The configuration details for an alarm suppression.
     /// 
     /// </summary>
     public class AlarmSuppression 
@@ -48,6 +48,44 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "AlarmSuppressionTarget is required.")]
         [JsonProperty(PropertyName = "alarmSuppressionTarget")]
         public AlarmSuppressionTarget AlarmSuppressionTarget { get; set; }
+                ///
+        /// <value>
+        /// The level of this alarm suppression.
+        /// `ALARM` indicates a suppression of the entire alarm, regardless of dimension.
+        /// `DIMENSION` indicates a suppression configured for specified dimensions.
+        /// 
+        /// </value>
+        ///
+        public enum LevelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ALARM")]
+            Alarm,
+            [EnumMember(Value = "DIMENSION")]
+            Dimension
+        };
+
+        /// <value>
+        /// The level of this alarm suppression.
+        /// `ALARM` indicates a suppression of the entire alarm, regardless of dimension.
+        /// `DIMENSION` indicates a suppression configured for specified dimensions.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Level is required.")]
+        [JsonProperty(PropertyName = "level")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<LevelEnum> Level { get; set; }
+        
+        /// <value>
+        /// Array of all preconditions for alarm suppression.
+        /// Example: [{  conditionType: &quot;RECURRENCE&quot;,  suppressionRecurrence: &quot;FRQ=DAILY;BYHOUR=10&quot;,  suppressionDuration: &quot;PT1H&quot;}]
+        /// </value>
+        [JsonProperty(PropertyName = "suppressionConditions")]
+        public System.Collections.Generic.List<SuppressionCondition> SuppressionConditions { get; set; }
         
         /// <value>
         /// A user-friendly name for the alarm suppression. It does not have to be unique, and it's changeable. Avoid entering confidential information.
@@ -77,10 +115,6 @@ namespace Oci.MonitoringService.Models
         /// <br/>
         /// Example: {&quot;resourceId&quot;: &quot;ocid1.instance.region1.phx.exampleuniqueID&quot;}
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Dimensions is required.")]
         [JsonProperty(PropertyName = "dimensions")]
         public System.Collections.Generic.Dictionary<string, string> Dimensions { get; set; }
         

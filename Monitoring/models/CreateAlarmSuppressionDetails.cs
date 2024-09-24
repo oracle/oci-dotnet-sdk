@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MonitoringService.Models
 {
     /// <summary>
-    /// The configuration details for creating a dimension-specific alarm suppression.
+    /// The configuration details for creating an alarm suppression.
     /// 
     /// </summary>
     public class CreateAlarmSuppressionDetails 
@@ -28,6 +28,18 @@ namespace Oci.MonitoringService.Models
         [Required(ErrorMessage = "AlarmSuppressionTarget is required.")]
         [JsonProperty(PropertyName = "alarmSuppressionTarget")]
         public AlarmSuppressionTarget AlarmSuppressionTarget { get; set; }
+        
+        /// <value>
+        /// The level of this alarm suppression.
+        /// `ALARM` indicates a suppression of the entire alarm, regardless of dimension.
+        /// `DIMENSION` indicates a suppression configured for specified dimensions.
+        /// <br/>
+        /// Defaut: `DIMENSION`
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "level")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AlarmSuppression.LevelEnum> Level { get; set; }
         
         /// <value>
         /// A user-friendly name for the alarm suppression. It does not have to be unique, and it's changeable. Avoid entering confidential information.
@@ -58,16 +70,12 @@ namespace Oci.MonitoringService.Models
         /// and the alarm state entry corresponds to the set {\"availabilityDomain\": \"phx-ad-1\" and \"resourceId\": \"ocid1.instance.region1.phx.exampleuniqueID\"},
         /// then this alarm will be included for suppression.
         /// <br/>
-        /// The value cannot be an empty object.
+        /// This is required only when the value of level is `DIMENSION`. If required, the value cannot be an empty object.
         /// Only a single value is allowed per key. No grouping of multiple values is allowed under the same key.
         /// Maximum characters (after serialization): 4000. This maximum satisfies typical use cases.
         /// The response for an exceeded maximum is `HTTP 400` with an \"dimensions values are too long\" message.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Dimensions is required.")]
         [JsonProperty(PropertyName = "dimensions")]
         public System.Collections.Generic.Dictionary<string, string> Dimensions { get; set; }
         
@@ -108,6 +116,13 @@ namespace Oci.MonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// Array of all preconditions for alarm suppression.
+        /// Example: [{  conditionType: &quot;RECURRENCE&quot;,  suppressionRecurrence: &quot;FRQ=DAILY;BYHOUR=10&quot;,  suppressionDuration: &quot;PT1H&quot;}]
+        /// </value>
+        [JsonProperty(PropertyName = "suppressionConditions")]
+        public System.Collections.Generic.List<SuppressionCondition> SuppressionConditions { get; set; }
         
     }
 }

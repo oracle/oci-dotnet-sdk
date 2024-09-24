@@ -118,6 +118,12 @@ namespace Oci.FusionappsService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// Represents if the customer opted for Data Masking or not during refreshActivity.
+        /// </value>
+        [JsonProperty(PropertyName = "isDataMaskingOpted")]
+        public System.Nullable<bool> IsDataMaskingOpted { get; set; }
+        
+        /// <value>
         /// A message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]

@@ -28,6 +28,14 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "EIGHTH")]
       Eighth,
       [EnumMember(Value = "FLEX")]
-      Flex
+      Flex,
+      [EnumMember(Value = "BASE")]
+      Base,
+      [EnumMember(Value = "ELASTIC")]
+      Elastic,
+      [EnumMember(Value = "ELASTIC_BASE")]
+      ElasticBase,
+      [EnumMember(Value = "ELASTIC_LARGE")]
+      ElasticLarge
   }
 }

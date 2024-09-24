@@ -173,6 +173,9 @@ namespace Oci.OpsiService.Models
                 case "AUTONOMOUS_DATABASE":
                     obj = new AutonomousDatabaseInsightSummary();
                     break;
+                case "MACS_MANAGED_CLOUD_DATABASE":
+                    obj = new MacsManagedCloudDatabaseInsightSummary();
+                    break;
                 case "MDS_MYSQL_DATABASE_SYSTEM":
                     obj = new MdsMySqlDatabaseInsightSummary();
                     break;
