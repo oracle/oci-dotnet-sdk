@@ -99,6 +99,14 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
+        /// Security Attributes for this resource. This is unique to ZPR, and helps identify which resources are allowed to be accessed by what permission controls.
+        /// <br/>
+        /// Example: {&quot;Oracle-DataSecurity-ZPR&quot;: {&quot;MaxEgressCount&quot;: {&quot;value&quot;:&quot;42&quot;,&quot;mode&quot;:&quot;audit&quot;}}}
+        /// </value>
+        [JsonProperty(PropertyName = "securityAttributes")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SecurityAttributes { get; set; }
+        
+        /// <value>
         /// The hostname for the VNIC's primary private IP. Used for DNS. The value is the hostname
         /// portion of the primary private IP's fully qualified domain name (FQDN)
         /// (for example, `bminstance1` in FQDN `bminstance1.subnet123.vcn1.oraclevcn.com`).

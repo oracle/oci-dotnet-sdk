@@ -26,6 +26,9 @@ namespace Oci.DatabasemanagementService.Models
         /// </value>
         ///
         public enum RackSizeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "FULL")]
             Full,
             [EnumMember(Value = "HALF")]
@@ -40,7 +43,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The size of the Exadata infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "rackSize")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RackSizeEnum> RackSize { get; set; }
         
         [JsonProperty(PropertyName = "entityType")]

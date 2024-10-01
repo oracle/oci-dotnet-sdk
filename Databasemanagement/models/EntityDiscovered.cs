@@ -87,7 +87,7 @@ namespace Oci.DatabasemanagementService.Models
         /// The status of the entity discovery.
         /// </value>
         [JsonProperty(PropertyName = "discoverStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DiscoverStatusEnum> DiscoverStatus { get; set; }
         
         /// <value>
@@ -124,6 +124,7 @@ namespace Oci.DatabasemanagementService.Models
 
     public class EntityDiscoveredModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -158,7 +159,14 @@ namespace Oci.DatabasemanagementService.Models
                     obj = new ExternalStorageServerDiscoverySummary();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under EntityDiscovered! Returning null value.");
+            }
             return obj;
         }
     }

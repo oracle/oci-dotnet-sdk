@@ -66,7 +66,7 @@ namespace Oci.OsmanagementhubService.Models
         /// The architecture for which this package was built.
         /// </value>
         [JsonProperty(PropertyName = "architecture")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ArchType> Architecture { get; set; }
         
         /// <value>
@@ -93,6 +93,7 @@ namespace Oci.OsmanagementhubService.Models
 
     public class PackageSummaryModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -121,7 +122,14 @@ namespace Oci.OsmanagementhubService.Models
                     obj = new UpdatablePackageSummary();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under PackageSummary! Returning null value.");
+            }
             return obj;
         }
     }

@@ -89,6 +89,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum TaskExecutionStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "SUCCESS")]
             Success,
             [EnumMember(Value = "ERROR")]
@@ -101,7 +104,7 @@ namespace Oci.DataintegrationService.Models
         /// The status of the task run.
         /// </value>
         [JsonProperty(PropertyName = "taskExecutionStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TaskExecutionStatusEnum> TaskExecutionStatus { get; set; }
         
         [JsonProperty(PropertyName = "flow")]

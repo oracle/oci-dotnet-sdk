@@ -81,6 +81,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum LifecycleDetailsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AVAILABLE")]
             Available,
             [EnumMember(Value = "DEGRADED")]
@@ -93,7 +96,7 @@ namespace Oci.CoreService.Models
         /// The lifecycle state details of the compute bare metal host.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleDetailsEnum> LifecycleDetails { get; set; }
                 ///
         /// <value>
@@ -101,6 +104,9 @@ namespace Oci.CoreService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "INACTIVE")]
@@ -115,7 +121,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

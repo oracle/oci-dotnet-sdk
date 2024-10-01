@@ -26,6 +26,9 @@ namespace Oci.FusionappsService.Models
         /// </value>
         ///
         public enum MonthlyPatchingOverrideEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ENABLED")]
             Enabled,
             [EnumMember(Value = "DISABLED")]
@@ -38,7 +41,7 @@ namespace Oci.FusionappsService.Models
         /// When \"ENABLED\", the Fusion environment is patched monthly. When \"DISABLED\", the Fusion environment is not patched monthly. This setting overrides the environment family setting. When not set, the environment follows the environment family policy.
         /// </value>
         [JsonProperty(PropertyName = "monthlyPatchingOverride")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MonthlyPatchingOverrideEnum> MonthlyPatchingOverride { get; set; }
                 ///
         /// <value>
@@ -46,6 +49,9 @@ namespace Oci.FusionappsService.Models
         /// </value>
         ///
         public enum EnvironmentMaintenanceOverrideEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "PROD")]
             Prod,
             [EnumMember(Value = "NON_PROD")]
@@ -58,7 +64,7 @@ namespace Oci.FusionappsService.Models
         /// User choice to upgrade both test and prod pods at the same time. Overrides fusion environment families'.
         /// </value>
         [JsonProperty(PropertyName = "environmentMaintenanceOverride")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<EnvironmentMaintenanceOverrideEnum> EnvironmentMaintenanceOverride { get; set; }
         
     }

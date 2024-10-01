@@ -75,7 +75,7 @@ namespace Oci.FleetappsmanagementService.Models
         /// Last known compliance state of Target.
         /// </value>
         [JsonProperty(PropertyName = "complianceState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ComplianceState> ComplianceState { get; set; }
                 ///
         /// <value>
@@ -83,6 +83,9 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "DELETED")]
@@ -95,7 +98,7 @@ namespace Oci.FleetappsmanagementService.Models
         /// The current state of the FleetTarget.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

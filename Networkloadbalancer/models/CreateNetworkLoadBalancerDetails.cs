@@ -175,5 +175,14 @@ namespace Oci.NetworkloadbalancerService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// ZPR tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
+        /// Example: {&quot;oracle-zpr&quot;: {&quot;td&quot;: {&quot;value&quot;: &quot;42&quot;, &quot;mode&quot;: &quot;audit&quot;}}}
+        /// </value>
+        [JsonProperty(PropertyName = "securityAttributes")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SecurityAttributes { get; set; }
+        
     }
 }

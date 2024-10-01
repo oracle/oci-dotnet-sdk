@@ -60,7 +60,7 @@ namespace Oci.AnnouncementsService.Models
         /// </remarks>
         [Required(ErrorMessage = "PreferenceType is required.")]
         [JsonProperty(PropertyName = "preferenceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PreferenceTypeEnum> PreferenceType { get; set; }
         
         /// <value>
@@ -73,6 +73,7 @@ namespace Oci.AnnouncementsService.Models
 
     public class BaseCreateAnnouncementsPreferencesDetailsModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -98,7 +99,14 @@ namespace Oci.AnnouncementsService.Models
                     obj = new UpdateAnnouncementsPreferencesDetails();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under BaseCreateAnnouncementsPreferencesDetails! Returning null value.");
+            }
             return obj;
         }
     }

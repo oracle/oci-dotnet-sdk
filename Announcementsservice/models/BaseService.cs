@@ -71,7 +71,7 @@ namespace Oci.AnnouncementsService.Models
         /// </remarks>
         [Required(ErrorMessage = "PlatformType is required.")]
         [JsonProperty(PropertyName = "platformType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PlatformType> PlatformType { get; set; }
         
         /// <value>
@@ -82,7 +82,7 @@ namespace Oci.AnnouncementsService.Models
         /// </remarks>
         [Required(ErrorMessage = "CommsManagerName is required.")]
         [JsonProperty(PropertyName = "commsManagerName")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CommsManagerName> CommsManagerName { get; set; }
         
         /// <value>
@@ -132,13 +132,14 @@ namespace Oci.AnnouncementsService.Models
         /// Current state of the service object.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
     }
 
     public class BaseServiceModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -167,7 +168,14 @@ namespace Oci.AnnouncementsService.Models
                     obj = new NotificationsSummary();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under BaseService! Returning null value.");
+            }
             return obj;
         }
     }

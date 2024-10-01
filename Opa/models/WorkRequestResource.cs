@@ -66,7 +66,6 @@ namespace Oci.OpaService.Models
         /// Additional information that helps to explain the resource.
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
         
     }

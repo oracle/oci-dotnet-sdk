@@ -3623,6 +3623,12 @@ namespace Oci.CoreService
         /// with the signature. To get the image ID for the LaunchInstance operation, call
         /// {@link #getAppCatalogListingResourceVersion(GetAppCatalogListingResourceVersionRequest) getAppCatalogListingResourceVersion}.
         /// &lt;br/&gt;
+        /// When launching an instance, you may provide the &#x60;securityAttributes&#x60; parameter in
+        /// {@link LaunchInstanceDetails} to manage security attributes via the instance, 
+        /// or in the embedded {@link CreateVnicDetails} to manage security attributes
+        /// via the VNIC directly, but not both.  Providing &#x60;securityAttributes&#x60; in both locations will return a
+        /// 400 Bad Request response.
+        /// &lt;br/&gt;
         /// To determine whether capacity is available for a specific shape before you create an instance,
         /// use the {@link #createComputeCapacityReport(CreateComputeCapacityReportRequest) createComputeCapacityReport}
         /// operation.

@@ -45,6 +45,8 @@ namespace Oci.IntegrationService.Models
             EnableProcessAutomation,
             [EnumMember(Value = "EXTEND_DATA_RETENTION")]
             ExtendDataRetention,
+            [EnumMember(Value = "DISASTER_RECOVERY_FAILOVER")]
+            DisasterRecoveryFailover,
             [EnumMember(Value = "CREATE_CUSTOM_ENDPOINT")]
             CreateCustomEndpoint,
             [EnumMember(Value = "DELETE_CUSTOM_ENDPOINT")]

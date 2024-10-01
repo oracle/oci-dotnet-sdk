@@ -132,6 +132,12 @@ namespace Oci.IntegrationService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
+        /// Additional details of lifecycleState or substates
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
         /// An message describing the current state in more detail. For example, can be used to provide actionable information for a resource in Failed state.
         /// </value>
         [JsonProperty(PropertyName = "stateMessage")]
@@ -277,6 +283,15 @@ namespace Oci.IntegrationService.Models
         
         [JsonProperty(PropertyName = "privateEndpointOutboundConnection")]
         public OutboundConnection PrivateEndpointOutboundConnection { get; set; }
+        
+        /// <value>
+        /// Is Disaster Recovery enabled for the integrationInstance
+        /// </value>
+        [JsonProperty(PropertyName = "isDisasterRecoveryEnabled")]
+        public System.Nullable<bool> IsDisasterRecoveryEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "disasterRecoveryDetails")]
+        public DisasterRecoveryDetails DisasterRecoveryDetails { get; set; }
                 ///
         /// <value>
         /// Data retention period set for given integration instance
