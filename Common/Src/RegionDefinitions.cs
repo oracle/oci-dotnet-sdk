@@ -98,6 +98,10 @@ namespace Oci.Common
         // OC21
         public static readonly Region ME_DCC_DOHA_1 = Register("me-dcc-doha-1", Realm.OC21, "doh");
 
+        // OC23
+        public static readonly Region US_SOMERSET_1 = Register("us-somerset-1", Realm.OC23, "ebb");
+        public static readonly Region US_THAMES_1 = Register("us-thames-1", Realm.OC23, "ebl");
+
         // OC24
         public static readonly Region EU_DCC_ZURICH_1 = Register("eu-dcc-zurich-1", Realm.OC24, "avz");
         public static readonly Region EU_CRISSIER_1 = Register("eu-crissier-1", Realm.OC24, "avf");

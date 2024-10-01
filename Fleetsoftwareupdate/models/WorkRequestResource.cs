@@ -71,7 +71,6 @@ namespace Oci.FleetsoftwareupdateService.Models
         /// 
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
         
     }

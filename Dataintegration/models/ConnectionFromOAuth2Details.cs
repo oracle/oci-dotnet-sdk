@@ -51,6 +51,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum GrantTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CLIENT_CREDENTIALS")]
             ClientCredentials
         };
@@ -59,7 +62,7 @@ namespace Oci.DataintegrationService.Models
         /// Specifies the OAuth2 grant mechanism. Example CLIENT_CREDENTIALS, Implicit Flow etc.
         /// </value>
         [JsonProperty(PropertyName = "grantType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<GrantTypeEnum> GrantType { get; set; }
         
         [JsonProperty(PropertyName = "modelType")]

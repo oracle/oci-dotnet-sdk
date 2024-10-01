@@ -67,7 +67,6 @@ namespace Oci.MarketplaceService.Models
         /// Additional information about the resource.
         /// </value>
         [JsonProperty(PropertyName = "metadata")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
         
     }

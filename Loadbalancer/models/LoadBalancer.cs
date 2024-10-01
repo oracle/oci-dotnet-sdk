@@ -254,6 +254,14 @@ namespace Oci.LoadbalancerService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
+        /// Extended Defined tags for ZPR for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
+        /// Example: {&quot;Oracle-ZPR&quot;: {&quot;MaxEgressCount&quot;: {&quot;value&quot;:&quot;42&quot;,&quot;mode&quot;:&quot;audit&quot;, &quot;usagetype&quot; : &quot;zpr&quot;}}}
+        /// </value>
+        [JsonProperty(PropertyName = "zprTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> ZprTags { get; set; }
+        
+        /// <value>
         /// System tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// System tags can be viewed by users, but can only be created by the system.

@@ -26,6 +26,9 @@ namespace Oci.BlockchainService.Models
         /// </value>
         ///
         public enum AdsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "AD1")]
             Ad1,
             [EnumMember(Value = "AD2")]
@@ -38,7 +41,7 @@ namespace Oci.BlockchainService.Models
         /// Availability Domain Identifiers
         /// </value>
         [JsonProperty(PropertyName = "ads")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AdsEnum> Ads { get; set; }
         
     }

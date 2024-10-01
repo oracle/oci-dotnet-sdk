@@ -30,6 +30,20 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 96.1.0 - 2024-10-01
+### Added
+ - Support for calling Oracle Cloud Infrastructure services in the us-somerset-1 region
+ - Support for calling Oracle Cloud Infrastructure services in the us-thames-1 region
+ - Support for Security Attribute service
+ - Support for Zero Trust Packet Routing service
+ - Support for zero trust packet routing security attributes in the Database service
+ - Support for zero trust packet routing security attributes in the Networking service
+ - Support for zero trust packet routing security attributes in the Network Load Balancer service
+ - Support for disaster recovery failover in the Integration Cloud service   
+
+### Fixed
+ - WorkRequest responses with the `Metadata` field no longer fail while parsing
+
 ## 96.0.0 - 2024-09-24
 ### Added
  - Support for Generative AI Agent service

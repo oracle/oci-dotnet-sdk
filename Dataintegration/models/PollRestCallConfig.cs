@@ -26,6 +26,9 @@ namespace Oci.DataintegrationService.Models
         /// </value>
         ///
         public enum MethodTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "GET")]
             Get,
             [EnumMember(Value = "POST")]
@@ -42,7 +45,7 @@ namespace Oci.DataintegrationService.Models
         /// The REST method to use.
         /// </value>
         [JsonProperty(PropertyName = "methodType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MethodTypeEnum> MethodType { get; set; }
         
         /// <value>

@@ -51,6 +51,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         ///
         public enum TargetResourceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "EXADATA_DB_SYSTEM")]
             ExadataDbSystem,
             [EnumMember(Value = "CLOUD_EXADATA_INFRASTRUCTURE")]
@@ -63,7 +66,7 @@ namespace Oci.DatabaseService.Models
         /// The resource type of the target Exadata infrastructure resource that will receive the system software update.
         /// </value>
         [JsonProperty(PropertyName = "targetResourceType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TargetResourceTypeEnum> TargetResourceType { get; set; }
         
         /// <value>

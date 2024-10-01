@@ -40,7 +40,7 @@ namespace Oci.DatacatalogService.Models
         /// </remarks>
         [Required(ErrorMessage = "Direction is required.")]
         [JsonProperty(PropertyName = "direction")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LineageDirection> Direction { get; set; }
         
         /// <value>

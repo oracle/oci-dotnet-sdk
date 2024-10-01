@@ -41,6 +41,7 @@ namespace Oci.OsmanagementhubService.Models
 
     public class EventContentModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
@@ -66,7 +67,14 @@ namespace Oci.OsmanagementhubService.Models
                     obj = new ExploitAttemptEventContent();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under EventContent! Returning null value.");
+            }
             return obj;
         }
     }

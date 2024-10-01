@@ -164,6 +164,12 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "isFileServerEnabled")]
         public System.Nullable<bool> IsFileServerEnabled { get; set; }
         
+        /// <value>
+        /// Is Disaster Recovery enabled or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isDisasterRecoveryEnabled")]
+        public System.Nullable<bool> IsDisasterRecoveryEnabled { get; set; }
+        
         [JsonProperty(PropertyName = "networkEndpointDetails")]
         public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
                 ///

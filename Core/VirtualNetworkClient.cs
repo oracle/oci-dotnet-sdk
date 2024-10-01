@@ -302,7 +302,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Adds one or more security rules to the specified network security group.
+        /// Adds up to 25 security rules to the specified network security group. Adding more than 25 rules requires multiple operations.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3661,6 +3661,9 @@ namespace Oci.CoreService
         /// &lt;br/&gt;
         /// You may optionally specify a *display name* for the service gateway, otherwise a default is provided.
         /// It does not have to be unique, and you can change it. Avoid entering confidential information.
+        /// &lt;br/&gt;
+        /// Use the {@link #listServices(ListServicesRequest) listServices} operation to find service CIDR labels
+        /// available in the region.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -10752,7 +10755,7 @@ namespace Oci.CoreService
                     ServiceName = "VirtualNetwork",
                     OperationName = "ListIpInventory",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/Vcn/ListIpInventory",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/IpInventoryCollection/ListIpInventory",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -11793,7 +11796,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// The deprecated operation lists available bandwidth levels for virtual circuits. For the compartment ID, provide the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of your tenancy (the root compartment).
+        /// The operation lists available bandwidth levels for virtual circuits. For the compartment ID, provide the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of your tenancy (the root compartment).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

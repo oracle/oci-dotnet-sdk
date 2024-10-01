@@ -103,5 +103,13 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// Extended Defined tags for ZPR for this resource. Each key is predefined and scoped to a namespace.
+        /// <br/>
+        /// Example: {&quot;Oracle-ZPR&quot;: {&quot;MaxEgressCount&quot;: {&quot;value&quot;:&quot;42&quot;,&quot;mode&quot;:&quot;audit&quot;, &quot;usagetype&quot; : &quot;zpr&quot;}}}
+        /// </value>
+        [JsonProperty(PropertyName = "zprTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> ZprTags { get; set; }
+        
     }
 }
