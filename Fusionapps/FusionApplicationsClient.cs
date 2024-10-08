@@ -2109,7 +2109,7 @@ namespace Oci.FusionappsService
         }
 
         /// <summary>
-        /// Resets the password of the Fusion Environment Administrator.
+        /// Reset FusionEnvironment admin password. This API will be deprecated on Mon, 15 Jan 2024 01:00:00 GMT. Users can reset password themselves, FAaaS will no longer provide an API for this.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

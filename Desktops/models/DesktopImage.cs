@@ -41,5 +41,11 @@ namespace Oci.DesktopsService.Models
         [JsonProperty(PropertyName = "imageName")]
         public string ImageName { get; set; }
         
+        /// <value>
+        /// The operating system of the desktop image, e.g. \"Oracle Linux\", \"Windows\".
+        /// </value>
+        [JsonProperty(PropertyName = "operatingSystem")]
+        public string OperatingSystem { get; set; }
+        
     }
 }

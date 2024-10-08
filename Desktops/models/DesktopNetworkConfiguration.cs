@@ -22,7 +22,8 @@ namespace Oci.DesktopsService.Models
     {
         
         /// <value>
-        /// The OCID of the VCN used by the desktop pool.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the customer VCN.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +33,9 @@ namespace Oci.DesktopsService.Models
         public string VcnId { get; set; }
         
         /// <value>
-        /// The OCID of the subnet to use for the desktop pool.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet in the customer VCN where the
+        /// connectivity will be established.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

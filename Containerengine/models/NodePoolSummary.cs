@@ -28,7 +28,7 @@ namespace Oci.ContainerengineService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The state of the nodepool.
+        /// The state of the nodepool. For more information, see [Monitoring Clusters](https://docs.cloud.oracle.com/Content/ContEng/Tasks/contengmonitoringclusters.htm)
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

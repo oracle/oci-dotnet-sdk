@@ -116,6 +116,34 @@ namespace Oci.StackmonitoringService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMaintenanceWindowRequest, GetMaintenanceWindowResponse> ForMaintenanceWindow(GetMaintenanceWindowRequest request, params MaintenanceWindowLifecycleState[] targetStates)
+        {
+            return this.ForMaintenanceWindow(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMaintenanceWindowRequest, GetMaintenanceWindowResponse> ForMaintenanceWindow(GetMaintenanceWindowRequest request, WaiterConfiguration config, params MaintenanceWindowLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetMaintenanceWindowRequest, GetMaintenanceWindowResponse>(
+                request,
+                request => client.GetMaintenanceWindow(request),
+                response => targetStates.Contains(response.MaintenanceWindow.LifecycleState.Value),
+                targetStates.Contains(MaintenanceWindowLifecycleState.Deleted)
+            );
+            return new Waiter<GetMaintenanceWindowRequest, GetMaintenanceWindowResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetMetricExtensionRequest, GetMetricExtensionResponse> ForMetricExtension(GetMetricExtensionRequest request, params MetricExtensionLifeCycleStates[] targetStates)
         {
             return this.ForMetricExtension(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

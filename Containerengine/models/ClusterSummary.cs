@@ -94,7 +94,7 @@ namespace Oci.ContainerengineService.Models
         public ClusterMetadata Metadata { get; set; }
         
         /// <value>
-        /// The state of the cluster masters.
+        /// The state of the cluster masters. For more information, see [Monitoring Clusters](https://docs.cloud.oracle.com/Content/ContEng/Tasks/contengmonitoringclusters.htm)
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
