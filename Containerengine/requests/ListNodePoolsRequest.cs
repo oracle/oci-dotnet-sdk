@@ -93,7 +93,7 @@ namespace Oci.ContainerengineService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// A list of nodepool lifecycle states on which to filter on, matching any of the list items (OR logic). eg. [ACTIVE, DELETING]
+        /// A list of nodepool lifecycle states on which to filter on, matching any of the list items (OR logic). eg. [ACTIVE, DELETING]. For more information, see [Monitoring Clusters](https://docs.cloud.oracle.com/Content/ContEng/Tasks/contengmonitoringclusters.htm)
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<NodePoolLifecycleState> LifecycleState { get; set; }

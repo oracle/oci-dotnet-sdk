@@ -30,7 +30,7 @@ namespace Oci.ContainerengineService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A cluster lifecycle state to filter on. Can have multiple parameters of this name.
+        /// A cluster lifecycle state to filter on. Can have multiple parameters of this name. For more information, see [Monitoring Clusters](https://docs.cloud.oracle.com/Content/ContEng/Tasks/contengmonitoringclusters.htm)
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<ClusterLifecycleState> LifecycleState { get; set; }

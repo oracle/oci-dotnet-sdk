@@ -46,6 +46,14 @@ namespace Oci.StackmonitoringService.Models
       [EnumMember(Value = "UPDATE_AND_PROPAGATE_TAGS")]
       UpdateAndPropagateTags,
       [EnumMember(Value = "IMPORT_RESOURCES")]
-      ImportResources
+      ImportResources,
+      [EnumMember(Value = "CREATE_MAINTENANCE_WINDOW")]
+      CreateMaintenanceWindow,
+      [EnumMember(Value = "UPDATE_MAINTENANCE_WINDOW")]
+      UpdateMaintenanceWindow,
+      [EnumMember(Value = "DELETE_MAINTENANCE_WINDOW")]
+      DeleteMaintenanceWindow,
+      [EnumMember(Value = "STOP_MAINTENANCE_WINDOW")]
+      StopMaintenanceWindow
   }
 }

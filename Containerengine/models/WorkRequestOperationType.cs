@@ -25,6 +25,8 @@ namespace Oci.ContainerengineService.Models
       ClusterUpdate,
       [EnumMember(Value = "CLUSTER_DELETE")]
       ClusterDelete,
+      [EnumMember(Value = "CREATE_NAMESPACE")]
+      CreateNamespace,
       [EnumMember(Value = "NODEPOOL_CREATE")]
       NodepoolCreate,
       [EnumMember(Value = "NODEPOOL_UPDATE")]

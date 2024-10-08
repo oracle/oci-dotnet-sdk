@@ -306,5 +306,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "fileSystemConfigurationDetails")]
         public System.Collections.Generic.List<FileSystemConfigurationDetail> FileSystemConfigurationDetails { get; set; }
         
+        [JsonProperty(PropertyName = "cloudAutomationUpdateDetails")]
+        public CloudAutomationUpdateDetails CloudAutomationUpdateDetails { get; set; }
+        
     }
 }

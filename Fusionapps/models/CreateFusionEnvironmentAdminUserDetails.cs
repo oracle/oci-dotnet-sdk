@@ -34,10 +34,6 @@ namespace Oci.FusionappsService.Models
         /// <value>
         /// The password for the administrator.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Password is required.")]
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
         

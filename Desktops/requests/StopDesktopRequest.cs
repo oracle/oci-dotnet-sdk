@@ -46,5 +46,11 @@ namespace Oci.DesktopsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
+        
+        /// <value>
+        /// Force a STOP(power off) of the desktop if set to false
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isSoftStop")]
+        public System.Nullable<bool> IsSoftStop { get; set; }
     }
 }

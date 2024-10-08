@@ -22,7 +22,7 @@ namespace Oci.ContainerengineService.Models
     {
         
         /// <value>
-        /// The duration in days(in ISO 8601 notation eg. P5D) after which the old credentials should be retired. Maximum delay duration is 14 days.
+        /// The duration in days(in ISO 8601 notation eg. P5D) after which the old credentials should be retired. Maximum delay duration is 90 days.
         /// </value>
         /// <remarks>
         /// Required

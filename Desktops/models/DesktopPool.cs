@@ -110,6 +110,32 @@ namespace Oci.DesktopsService.Models
         [JsonProperty(PropertyName = "shapeName")]
         public string ShapeName { get; set; }
         
+        [JsonProperty(PropertyName = "shapeConfig")]
+        public DesktopPoolShapeConfig ShapeConfig { get; set; }
+                ///
+        /// <value>
+        /// Indicates whether the desktop pool uses dedicated virtual machine hosts.
+        /// </value>
+        ///
+        public enum UseDedicatedVmHostEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "TRUE")]
+            True,
+            [EnumMember(Value = "FALSE")]
+            False,
+            [EnumMember(Value = "AUTO")]
+            Auto
+        };
+
+        /// <value>
+        /// Indicates whether the desktop pool uses dedicated virtual machine hosts.
+        /// </value>
+        [JsonProperty(PropertyName = "useDedicatedVmHost")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<UseDedicatedVmHostEnum> UseDedicatedVmHost { get; set; }
+        
         /// <value>
         /// Indicates whether storage is enabled for the desktop pool.
         /// </value>
@@ -167,6 +193,9 @@ namespace Oci.DesktopsService.Models
         [Required(ErrorMessage = "NetworkConfiguration is required.")]
         [JsonProperty(PropertyName = "networkConfiguration")]
         public DesktopNetworkConfiguration NetworkConfiguration { get; set; }
+        
+        [JsonProperty(PropertyName = "sessionLifecycleActions")]
+        public DesktopSessionLifecycleActions SessionLifecycleActions { get; set; }
         
         /// <value>
         /// The start time of the desktop pool.
@@ -228,10 +257,13 @@ namespace Oci.DesktopsService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A list of network security groups for the desktop pool.
+        /// A list of network security groups for the network.
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
+        [JsonProperty(PropertyName = "privateAccessDetails")]
+        public DesktopPoolPrivateAccessDetails PrivateAccessDetails { get; set; }
         
     }
 }

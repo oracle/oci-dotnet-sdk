@@ -105,7 +105,7 @@ namespace Oci.ContainerengineService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
                 ///
         /// <value>
-        /// The state of the node.
+        /// The state of the node. For more information, see [Monitoring Clusters](https://docs.cloud.oracle.com/Content/ContEng/Tasks/contengmonitoringclusters.htm)
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -129,7 +129,7 @@ namespace Oci.ContainerengineService.Models
         };
 
         /// <value>
-        /// The state of the node.
+        /// The state of the node. For more information, see [Monitoring Clusters](https://docs.cloud.oracle.com/Content/ContEng/Tasks/contengmonitoringclusters.htm)
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

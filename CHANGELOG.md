@@ -30,6 +30,15 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 96.2.0 - 2024-10-08
+### Added
+ - Support for OCI Secure Desktops service
+ - Support for window preferences on cloud automation tooling updates on ExaCC and ExaCS VM clusters in the Database service
+ - Support for maintenance windows in the Stack Monitoring service
+ - Renamed service OCI Container Engine to OCI Kubernetes Engine
+ - Support for password as an optional parameter on creating admin users in the Fusion Apps as a Service
+ - Support for IAM credentials for autonomous databases in the Operations Insights service
+
 ## 96.1.0 - 2024-10-01
 ### Added
  - Support for calling Oracle Cloud Infrastructure services in the us-somerset-1 region
