@@ -33,6 +33,18 @@ namespace Oci.GoldengateService.Responses
         public string OpcRequestId { get; set; }
 
 
+        /// <value>
+        /// For optimistic concurrency control. See `if-match`.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
+        public string Etag { get; set; }
+
+        /// <value>
+        /// The returned DeploymentBackup instance.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public DeploymentBackup DeploymentBackup { get; set; }
 
     }
 }

@@ -30,6 +30,19 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 97.0.0 - 2024-10-15
+### Added
+ - Support for open id connect discovery in the Oracle Kubernetes Engine service
+ - Support for DNS security extensions (DNSSEC) in the DNS service
+ - Support for restoring delta between backups to a new volume in the Block Volume service
+ - Support for cross region backup copy and replication for volumes encrypted with customer keys in the Block Volume service
+ - Support for list operation on deployment environments in the GoldenGate service
+ - Support for defining environment types for deployments in the GoldenGate service   
+
+### Breaking Changes
+ - The type of property `Category` was changed from `CategoryEnum` to `DeploymentCategory` in the model `DeploymentTypeSummary` in the GoldenGate service
+ - The enum `CategoryEnum` was removed from the model `DeploymentTypeSummary` in the GoldenGate service
+
 ## 96.2.0 - 2024-10-08
 ### Added
  - Support for OCI Secure Desktops service

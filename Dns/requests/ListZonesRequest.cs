@@ -178,5 +178,12 @@ namespace Oci.DnsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "tsigKeyId")]
         public string TsigKeyId { get; set; }
+        
+        /// <value>
+        /// Search for zones that have the given `DnssecState`.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dnssecState")]
+        public System.Nullable<ZoneDnssecState> DnssecState { get; set; }
     }
 }

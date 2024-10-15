@@ -17,6 +17,7 @@ namespace Oci.GoldengateService.Models
 {
     /// <summary>
     /// The result of the connectivity test performed between the GoldenGate deployment and the associated database / service.
+    /// The 'error' property is deprecated and will not contain values in the future. So, the error(s) will be returned in just the 'errors' property.
     /// 
     /// </summary>
     public class TestConnectionAssignmentResult 
@@ -53,6 +54,13 @@ namespace Oci.GoldengateService.Models
         
         [JsonProperty(PropertyName = "error")]
         public TestConnectionAssignmentError Error { get; set; }
+        
+        /// <value>
+        /// List of test connection assignment error objects.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "errors")]
+        public System.Collections.Generic.List<TestConnectionAssignmentError> Errors { get; set; }
         
     }
 }

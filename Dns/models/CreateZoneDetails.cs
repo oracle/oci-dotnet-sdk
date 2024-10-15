@@ -76,6 +76,38 @@ namespace Oci.DnsService.Models
         [JsonProperty(PropertyName = "externalDownstreams")]
         public System.Collections.Generic.List<ExternalDownstream> ExternalDownstreams { get; set; }
         
+        /// <value>
+        /// The state of DNSSEC on the zone.
+        /// <br/>
+        /// For DNSSEC to function, every parent zone in the DNS tree up to the top-level domain (or an independent
+        /// trust anchor) must also have DNSSEC correctly set up.
+        /// After enabling DNSSEC, you must add a DS record to the zone's parent zone containing the
+        /// `KskDnssecKeyVersion` data. You can find the DS data in the `dsData` attribute of the `KskDnssecKeyVersion`.
+        /// Then, use the `PromoteZoneDnssecKeyVersion` operation to promote the `KskDnssecKeyVersion`.
+        /// <br/>
+        /// New `KskDnssecKeyVersion`s are generated annually, a week before the existing `KskDnssecKeyVersion`'s expiration.
+        /// To rollover a `KskDnssecKeyVersion`, you must replace the parent zone's DS record containing the old
+        /// `KskDnssecKeyVersion` data with the data from the new `KskDnssecKeyVersion`.
+        /// <br/>
+        /// To remove the old DS record without causing service disruption, wait until the old DS record's TTL has
+        /// expired, and the new DS record has propagated. After the DS replacement has been completed, then the
+        /// `PromoteZoneDnssecKeyVersion` operation must be called.
+        /// <br/>
+        /// Metrics are emitted in the `oci_dns` namespace daily for each `KskDnssecKeyVersion` indicating how many
+        /// days are left until expiration.
+        /// We recommend that you set up alarms and notifications for KskDnssecKeyVersion expiration so that the
+        /// necessary parent zone updates can be made and the `PromoteZoneDnssecKeyVersion` operation can be called.
+        /// <br/>
+        /// Enabling DNSSEC results in additional records in DNS responses which increases their size and can
+        /// cause higher response latency.
+        /// <br/>
+        /// For more information, see [DNSSEC](https://docs.cloud.oracle.com/iaas/Content/DNS/Concepts/dnssec.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dnssecState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ZoneDnssecState> DnssecState { get; set; }
+        
         [JsonProperty(PropertyName = "migrationSource")]
         private readonly string migrationSource = "NONE";
     }

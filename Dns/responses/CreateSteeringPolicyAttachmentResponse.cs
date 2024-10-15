@@ -41,6 +41,15 @@ namespace Oci.DnsService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
+
+        /// <value>
+        /// Unique Oracle-assigned identifier for the asynchronous request.
+        /// You can use this to query status of the asynchronous operation.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
+        public string OpcWorkRequestId { get; set; }
+
         /// <value>
         /// The returned SteeringPolicyAttachment instance.
         /// </value>

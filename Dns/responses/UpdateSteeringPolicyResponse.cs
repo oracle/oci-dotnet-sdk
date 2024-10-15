@@ -25,6 +25,15 @@ namespace Oci.DnsService.Responses
 
 
         /// <value>
+        /// Unique Oracle-assigned identifier for the asynchronous request.
+        /// You can use this to query status of the asynchronous operation.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
+        public string OpcWorkRequestId { get; set; }
+
+
+        /// <value>
         /// The current version of the resource, ending with a
         /// representation-specific suffix. This value may be used in If-Match
         /// and If-None-Match headers for later requests of the same resource.

@@ -81,5 +81,8 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "passwordSecretId")]
         public string PasswordSecretId { get; set; }
         
+        [JsonProperty(PropertyName = "groupToRolesMapping")]
+        public GroupToRolesMappingDetails GroupToRolesMapping { get; set; }
+        
     }
 }

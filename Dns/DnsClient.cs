@@ -69,7 +69,7 @@ namespace Oci.DnsService
 
             this.retryConfiguration = clientConfigurationToUse.RetryConfiguration;
             Paginators = new DnsPaginators(this);
-            Waiters = new DnsWaiters(this);
+            Waiters = new DnsWaiters(this, new Oci.WorkrequestsService.WorkRequestClient(authenticationDetailsProvider, clientConfiguration, endpoint));
         }
 
         /// <summary>
@@ -2564,6 +2564,133 @@ namespace Oci.DnsService
             catch (Exception e)
             {
                 logger.Error($"PatchZoneRecords failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Promotes a specified &#x60;DnssecKeyVersion&#x60; on the zone.
+        /// &lt;br/&gt;
+        /// If the &#x60;DnssecKeyVersion&#x60; identified in the request body is a key signing key (KSK) that is replacing
+        /// another &#x60;DnssecKeyVersion&#x60;, then the old &#x60;DnssecKeyVersion&#x60; is scheduled for removal from the zone.
+        /// &lt;br/&gt;
+        /// For key signing keys (KSKs), you must create the DS record with the new key information **before** promoting
+        /// the new key to establish a chain of trust. To avoid a service disruption, remove the old DS record as soon
+        /// as its TTL (time to live) expires.
+        /// &lt;br/&gt;
+        /// For more information, see [DNSSEC](https://docs.cloud.oracle.com/iaas/Content/DNS/Concepts/dnssec.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dns/PromoteZoneDnssecKeyVersion.cs.html">here</a> to see an example of how to use PromoteZoneDnssecKeyVersion API.</example>
+        public async Task<PromoteZoneDnssecKeyVersionResponse> PromoteZoneDnssecKeyVersion(PromoteZoneDnssecKeyVersionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called promoteZoneDnssecKeyVersion");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/zones/{zoneId}/actions/promoteDnssecKeyVersion".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Dns",
+                    OperationName = "PromoteZoneDnssecKeyVersion",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dns/20180115/Zone/PromoteZoneDnssecKeyVersion",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<PromoteZoneDnssecKeyVersionResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"PromoteZoneDnssecKeyVersion failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Stages a new &#x60;DnssecKeyVersion&#x60; on the zone. Staging is a process that generates a new \&quot;successor\&quot; key version
+        /// that replaces an existing \&quot;predecessor\&quot; key version.
+        /// **Note:** A new key-signing key (KSK) version is inert until you update the parent zone DS records.
+        /// &lt;br/&gt;
+        /// For more information, see the [DNSSEC](https://docs.cloud.oracle.com/iaas/Content/DNS/Concepts/dnssec.htm) documentation.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dns/StageZoneDnssecKeyVersion.cs.html">here</a> to see an example of how to use StageZoneDnssecKeyVersion API.</example>
+        public async Task<StageZoneDnssecKeyVersionResponse> StageZoneDnssecKeyVersion(StageZoneDnssecKeyVersionRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called stageZoneDnssecKeyVersion");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/zones/{zoneId}/actions/stageDnssecKeyVersion".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Dns",
+                    OperationName = "StageZoneDnssecKeyVersion",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dns/20180115/Zone/StageZoneDnssecKeyVersion",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<StageZoneDnssecKeyVersionResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"StageZoneDnssecKeyVersion failed with error: {e.Message}");
                 throw;
             }
         }
