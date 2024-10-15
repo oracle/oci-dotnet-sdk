@@ -33,5 +33,11 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "serviceLbConfig")]
         public ServiceLbConfigDetails ServiceLbConfig { get; set; }
         
+        [JsonProperty(PropertyName = "openIdConnectTokenAuthenticationConfig")]
+        public OpenIdConnectTokenAuthenticationConfig OpenIdConnectTokenAuthenticationConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "openIdConnectDiscovery")]
+        public OpenIdConnectDiscovery OpenIdConnectDiscovery { get; set; }
+        
     }
 }

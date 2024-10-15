@@ -94,5 +94,8 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "oggVersion")]
         public string OggVersion { get; set; }
         
+        [JsonProperty(PropertyName = "groupToRolesMapping")]
+        public GroupToRolesMappingDetails GroupToRolesMapping { get; set; }
+        
     }
 }

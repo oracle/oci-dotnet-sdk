@@ -75,8 +75,8 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<OracleConnection.AuthenticationModeEnum> AuthenticationMode { get; set; }
         
         /// <value>
-        /// The wallet contents Oracle GoldenGate uses to make connections to a database.  This
-        /// attribute is expected to be base64 encoded.
+        /// The wallet contents Oracle GoldenGate uses to make connections to a database.
+        /// This attribute is expected to be base64 encoded.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "wallet")]

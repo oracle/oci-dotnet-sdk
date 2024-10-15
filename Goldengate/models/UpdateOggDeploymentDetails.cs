@@ -75,5 +75,8 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
         
+        [JsonProperty(PropertyName = "groupToRolesMapping")]
+        public UpdateGroupToRolesMappingDetails GroupToRolesMapping { get; set; }
+        
     }
 }

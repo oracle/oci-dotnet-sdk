@@ -57,6 +57,9 @@ namespace Oci.CoreService.Models
                 case "volumeBackup":
                     obj = new VolumeSourceFromVolumeBackupDetails();
                     break;
+                case "volumeBackupDelta":
+                    obj = new VolumeSourceFromVolumeBackupDeltaDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

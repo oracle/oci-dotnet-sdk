@@ -158,6 +158,27 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<LicenseModel> LicenseModel { get; set; }
         
         /// <value>
+        /// Specifies whether the deployment is used in a production or development/testing environment.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "environmentType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<EnvironmentType> EnvironmentType { get; set; }
+        
+        /// <value>
+        /// The deployment category defines the broad separation of the deployment type into three categories.
+        /// Currently the separation is 'DATA_REPLICATION', 'STREAM_ANALYTICS' and 'DATA_TRANSFORMS'.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Category is required.")]
+        [JsonProperty(PropertyName = "category")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DeploymentCategory> Category { get; set; }
+        
+        /// <value>
         /// A three-label Fully Qualified Domain Name (FQDN) for a resource.
         /// 
         /// </value>
@@ -243,6 +264,10 @@ namespace Oci.GoldengateService.Models
         ///     Its use is discouraged in favor of 'DATABASE_ORACLE'.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DeploymentType is required.")]
         [JsonProperty(PropertyName = "deploymentType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DeploymentType> DeploymentType { get; set; }
@@ -255,6 +280,7 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<long> StorageUtilizationInBytes { get; set; }
         
         /// <value>
+        /// Deprecated: This field is not updated and will be removed in future versions. If storage utilization exceeds the limit, the respective warning message will appear in deployment messages, which can be accessed through /messages?deploymentId=.
         /// Indicator will be true if the amount of storage being utilized exceeds the allowable storage utilization limit.  Exceeding the limit may be an indication of a misconfiguration of the deployment's GoldenGate service.
         /// 
         /// </value>

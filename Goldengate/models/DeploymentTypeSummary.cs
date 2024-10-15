@@ -17,29 +17,14 @@ namespace Oci.GoldengateService.Models
 {
     /// <summary>
     /// The meta-data specific on particular deployment type represented by deploymentType field.
+    /// <br/>
+    /// Deprecated properties: `sourceTechnologies` and `targetTechnologies` are not populated. They will be removed after September 15 2025.
+    /// The list of supported source and target technologies can be accessed using the url provided in `supportedTechnologiesUrl` property.
     /// 
     /// </summary>
     public class DeploymentTypeSummary 
     {
-                ///
-        /// <value>
-        /// The deployment category defines the broad separation of the deployment type into three categories.
-        /// Currently the separation is 'DATA_REPLICATION', 'STREAM_ANALYTICS' and 'DATA_TRANSFORMS'.
-        /// 
-        /// </value>
-        ///
-        public enum CategoryEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "DATA_REPLICATION")]
-            DataReplication,
-            [EnumMember(Value = "STREAM_ANALYTICS")]
-            StreamAnalytics,
-            [EnumMember(Value = "DATA_TRANSFORMS")]
-            DataTransforms
-        };
-
+        
         /// <value>
         /// The deployment category defines the broad separation of the deployment type into three categories.
         /// Currently the separation is 'DATA_REPLICATION', 'STREAM_ANALYTICS' and 'DATA_TRANSFORMS'.
@@ -51,7 +36,7 @@ namespace Oci.GoldengateService.Models
         [Required(ErrorMessage = "Category is required.")]
         [JsonProperty(PropertyName = "category")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<CategoryEnum> Category { get; set; }
+        public System.Nullable<DeploymentCategory> Category { get; set; }
         
         /// <value>
         /// An object's Display Name.

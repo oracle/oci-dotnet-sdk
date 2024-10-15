@@ -46,6 +46,14 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<LicenseModel> LicenseModel { get; set; }
         
         /// <value>
+        /// Specifies whether the deployment is used in a production or development/testing environment.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "environmentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<EnvironmentType> EnvironmentType { get; set; }
+        
+        /// <value>
         /// Metadata about this specific object.
         /// 
         /// </value>

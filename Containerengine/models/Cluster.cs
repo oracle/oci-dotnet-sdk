@@ -144,5 +144,12 @@ namespace Oci.ContainerengineService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ClusterType> Type { get; set; }
         
+        /// <value>
+        /// The cluster-specific OpenID Connect Discovery endpoint
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "openIdConnectDiscoveryEndpoint")]
+        public string OpenIdConnectDiscoveryEndpoint { get; set; }
+        
     }
 }
