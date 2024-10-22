@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The information about new FleetProperty.
+    /// The information about new Property to manage fleet metadata details.
     /// </summary>
     public class CreateFleetPropertyDetails 
     {
@@ -32,7 +32,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Value of the Property
+        /// Value of the Property.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// Property Id.
+        /// OCID referring to global level metadata property.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Details for script based execution
+    /// Details for script-based execution.
     /// </summary>
     public class ScriptBasedExecutionDetails : ExecutionDetails
     {
@@ -28,10 +28,19 @@ namespace Oci.FleetappsmanagementService.Models
         public ContentDetails Content { get; set; }
         
         /// <value>
-        /// Optional Command to execute the content.
+        /// Optional command to execute the content.
+        /// You can provide any commands/arguments that can't be part of the script.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "command")]
         public string Command { get; set; }
+        
+        /// <value>
+        /// Credentials required for executing the task.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "credentials")]
+        public System.Collections.Generic.List<ConfigAssociationDetails> Credentials { get; set; }
         
         [JsonProperty(PropertyName = "executionType")]
         private readonly string executionType = "SCRIPT";

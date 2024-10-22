@@ -21,6 +21,10 @@ namespace Oci.FleetappsmanagementService.Models
     public class Details 
     {
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ExecutionDetails is required.")]
         [JsonProperty(PropertyName = "executionDetails")]
         public ExecutionDetails ExecutionDetails { get; set; }
         
@@ -54,6 +58,20 @@ namespace Oci.FleetappsmanagementService.Models
         
         [JsonProperty(PropertyName = "properties")]
         public Properties Properties { get; set; }
+        
+        /// <value>
+        /// Is this a discovery output task?
+        /// </value>
+        [JsonProperty(PropertyName = "isDiscoveryOutputTask")]
+        public System.Nullable<bool> IsDiscoveryOutputTask { get; set; }
+        
+        /// <value>
+        /// Is this an Apply Subject Task? 
+        /// Set this to true for a Patch Execution Task which applies patches(subjects) on a target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isApplySubjectTask")]
+        public System.Nullable<bool> IsApplySubjectTask { get; set; }
         
     }
 }

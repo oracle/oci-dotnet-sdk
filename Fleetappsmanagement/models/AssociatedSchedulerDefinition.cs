@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Associated SchedulerDefinition with the job.
+    /// SchedulerDefinition  associated with the job.
     /// </summary>
     public class AssociatedSchedulerDefinition 
     {
@@ -55,7 +55,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string TenancyId { get; set; }
         
         /// <value>
-        /// Is this recurring schedule?
+        /// Is this a recurring schedule?
         /// </value>
         /// <remarks>
         /// Required

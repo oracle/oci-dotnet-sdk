@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Details of the targets that needs to be confirmed for FAMS management
+    /// Details of the targets to be confirmed for Fleet Application Management.
     /// 
     /// </summary>
     public class ConfirmTargetsDetails 

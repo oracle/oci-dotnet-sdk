@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CloudbridgeService.Models
 {
     /// <summary>
-    /// The information about the new asset source.
+    /// Asset source update request.
     /// </summary>
     [JsonConverter(typeof(UpdateAssetSourceDetailsModelConverter))]
     public class UpdateAssetSourceDetails 
@@ -36,6 +36,12 @@ namespace Oci.CloudbridgeService.Models
         /// </value>
         [JsonProperty(PropertyName = "assetsCompartmentId")]
         public string AssetsCompartmentId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the discovery schedule that is going to be assigned to an asset source.
+        /// </value>
+        [JsonProperty(PropertyName = "discoveryScheduleId")]
+        public string DiscoveryScheduleId { get; set; }
         
         /// <value>
         /// The freeform tags associated with this resource, if any. Each tag is a simple key-value pair with no
@@ -85,6 +91,9 @@ namespace Oci.CloudbridgeService.Models
             {
                 case "VMWARE":
                     obj = new UpdateVmWareAssetSourceDetails();
+                    break;
+                case "AWS":
+                    obj = new UpdateAwsAssetSourceDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

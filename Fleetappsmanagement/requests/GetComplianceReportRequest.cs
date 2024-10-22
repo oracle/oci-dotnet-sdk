@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// unique Fleet identifier
+        /// Unique Fleet identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string FleetId { get; set; }
         
         /// <value>
-        /// compliance report identifier
+        /// compliance report identifier.
         /// </value>
         /// <remarks>
         /// Required

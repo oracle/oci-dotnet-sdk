@@ -174,8 +174,14 @@ namespace Oci.CloudbridgeService.Models
             var discriminator = jsonObject["assetType"].Value<string>();
             switch (discriminator)
             {
+                case "AWS_EC2":
+                    obj = new AwsEc2Asset();
+                    break;
                 case "VMWARE_VM":
                     obj = new VmwareVmAsset();
+                    break;
+                case "AWS_EBS":
+                    obj = new AwsEbsAsset();
                     break;
                 case "VM":
                     obj = new VmAsset();

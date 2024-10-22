@@ -76,8 +76,14 @@ namespace Oci.CloudbridgeService.Models
                 case "VM":
                     obj = new UpdateVmAssetDetails();
                     break;
+                case "AWS_EBS":
+                    obj = new UpdateAwsEbsAssetDetails();
+                    break;
                 case "VMWARE_VM":
                     obj = new UpdateVmwareVmAssetDetails();
+                    break;
+                case "AWS_EC2":
+                    obj = new UpdateAwsEc2AssetDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

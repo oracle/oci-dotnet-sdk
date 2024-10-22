@@ -70,13 +70,13 @@ namespace Oci.FleetappsmanagementService.Models
         public string Compartment { get; set; }
         
         /// <value>
-        /// Region the resource belongs to.
+        /// The region the resource belongs to.
         /// </value>
         [JsonProperty(PropertyName = "resourceRegion")]
         public string ResourceRegion { get; set; }
         
         /// <value>
-        /// Last known compliance state of fleet.
+        /// The last known compliance state of the fleet.
         /// </value>
         /// <remarks>
         /// Required
@@ -87,7 +87,9 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<ComplianceState> ComplianceState { get; set; }
         
         /// <value>
-        /// Products assocaited with the Fleet.Only products belonging to managed targets will be shown.
+        /// Products associated with the Fleet. 
+        /// Only the products belonging to managed targets will be shown.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "products")]
         public System.Collections.Generic.List<ComplianceReportProduct> Products { get; set; }

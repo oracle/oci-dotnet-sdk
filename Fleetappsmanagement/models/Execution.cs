@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// Unique Id assocaited with the Task Execution
+        /// Unique Id associated with the task execution.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,31 +32,33 @@ namespace Oci.FleetappsmanagementService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of taskRecord
+        /// The OCID of taskRecord.
         /// </value>
         [JsonProperty(PropertyName = "taskRecordId")]
         public string TaskRecordId { get; set; }
         
         /// <value>
-        /// Name of the step
+        /// Name of the step.
         /// </value>
         [JsonProperty(PropertyName = "stepName")]
         public string StepName { get; set; }
         
         /// <value>
-        /// Unique process reference identifier returned by the execution client
+        /// Unique process-reference identifier returned by the execution client.
+        /// In some cases, this can be a runcommand OCID.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "processReferenceId")]
         public string ProcessReferenceId { get; set; }
         
         /// <value>
-        /// The sequence of the task
+        /// The sequence of the task.
         /// </value>
         [JsonProperty(PropertyName = "sequence")]
         public string Sequence { get; set; }
         
         /// <value>
-        /// Subjects which are tied to the task
+        /// Subjects that are tied to the task.
         /// </value>
         [JsonProperty(PropertyName = "subjects")]
         public System.Collections.Generic.List<string> Subjects { get; set; }
@@ -76,22 +78,42 @@ namespace Oci.FleetappsmanagementService.Models
         public Outcome Outcome { get; set; }
         
         /// <value>
-        /// Target associated with the execution
+        /// Target associated with the execution.
         /// </value>
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }
         
         /// <value>
-        /// The time the task started. An RFC3339 formatted datetime string
+        /// The time the task started. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The time the task ended. An RFC3339 formatted datetime string
+        /// The time the task ended. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
+        
+        /// <value>
+        /// Is this a rollback task?
+        /// </value>
+        [JsonProperty(PropertyName = "isRollbackTask")]
+        public System.Nullable<bool> IsRollbackTask { get; set; }
+        
+        /// <value>
+        /// Description of the Execution status.
+        /// If there are any errors, this can also include a short error message.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        /// <value>
+        /// Resource Identifier associated with the Work Request.
+        /// </value>
+        [JsonProperty(PropertyName = "resourceId")]
+        public string ResourceId { get; set; }
         
         /// <value>
         /// System tags for this resource. Each key is predefined and scoped to a namespace.

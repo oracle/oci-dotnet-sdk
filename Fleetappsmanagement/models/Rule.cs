@@ -16,19 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Rule Selection Criteria
+    /// Rule for DYNAMIC selection.
+    /// 
     /// </summary>
     public class Rule 
     {
         
         /// <value>
-        /// Rule to be be applied on.
+        /// Based on what the rule is created.
+        /// It can be based on a resourceProperty or a tag.  
+        /// If based on a tag, basis will be 'definedTagEquals'
+        /// If based on a resource property, basis will be 'inventoryProperties'
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "basis")]
         public string Basis { get; set; }
         
         /// <value>
-        /// Please provide the root compartmentId (TenancyId).
+        /// Tenancy Id (Root Compartment Id)for which the rule is created.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +44,9 @@ namespace Oci.FleetappsmanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Resource Compartment Id.Provide the compartmentId the resource belongs to.
+        /// The Compartment ID to dynamically search resources.
+        /// Provide the compartment ID to which the rule is applicable.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

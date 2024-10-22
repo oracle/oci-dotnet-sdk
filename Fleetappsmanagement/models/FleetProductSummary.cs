@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Summary of the FleetProduct.
+    /// Summary of a product associated with a Fleet.
     /// </summary>
     public class FleetProductSummary 
     {
@@ -41,7 +41,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Count of targets associated with the Product
+        /// Count of the targets associated with the Product.
         /// </value>
         [JsonProperty(PropertyName = "targetCount")]
         public System.Nullable<int> TargetCount { get; set; }

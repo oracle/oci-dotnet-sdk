@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Details of the Product
+    /// Details of the Product.
     /// </summary>
     public class ComplianceReportProduct 
     {
         
         /// <value>
-        /// Product Name
+        /// Product Name.
         /// </value>
         /// <remarks>
         /// Required

@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// unique Fleet identifier
+        /// Unique Fleet identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -36,7 +36,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<FleetCredential.LifecycleStateEnum> LifecycleState { get; set; }
@@ -48,13 +48,25 @@ namespace Oci.FleetappsmanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Credential Level.
+        /// Resource Identifier
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
+        public string ResourceId { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose target matches the given target name.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "target")]
+        public string Target { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose credentialLevel matches the given credentialLevel.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "credentialLevel")]
         public System.Nullable<CredentialEntitySpecificDetails.CredentialLevelEnum> CredentialLevel { get; set; }
         
         /// <value>
-        /// unique FleetCredential identifier
+        /// A filter to return only resources whose credential identifier matches the given identifier.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }

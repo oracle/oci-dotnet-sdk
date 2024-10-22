@@ -32,6 +32,34 @@ namespace Oci.FleetappsmanagementService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPatchRequest, GetPatchResponse> ForPatch(GetPatchRequest request, params Patch.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForPatch(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetPatchRequest, GetPatchResponse> ForPatch(GetPatchRequest request, WaiterConfiguration config, params Patch.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetPatchRequest, GetPatchResponse>(
+                request,
+                request => client.GetPatch(request),
+                response => targetStates.Contains(response.Patch.LifecycleState.Value),
+                targetStates.Contains(Patch.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetPatchRequest, GetPatchResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetSchedulerDefinitionRequest, GetSchedulerDefinitionResponse> ForSchedulerDefinition(GetSchedulerDefinitionRequest request, params SchedulerDefinition.LifecycleStateEnum[] targetStates)
         {
             return this.ForSchedulerDefinition(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

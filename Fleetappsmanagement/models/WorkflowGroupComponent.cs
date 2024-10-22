@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// Provide the name of the group.
+        /// Name of the group.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.FleetappsmanagementService.Models
         
         /// <value>
         /// Tasks within the Group.
-        /// Provide the stepName for all tasks that are applicable
+        /// Provide the stepName for all applicable tasks.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "steps")]

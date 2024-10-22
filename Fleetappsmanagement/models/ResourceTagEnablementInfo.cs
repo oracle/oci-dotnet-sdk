@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Resource tag enablement Information
+    /// Resource tag enablement Information.
     /// </summary>
     public class ResourceTagEnablementInfo 
     {
@@ -32,7 +32,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// A value which represents if resource can be tagged with Fleet name
+        /// A value that represents if the resource can be tagged with a Fleet name.
         /// </value>
         /// <remarks>
         /// Required

@@ -41,7 +41,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Text selection of the category
+        /// Text selection of the property.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<Selection> Selection { get; set; }
         
         /// <value>
-        /// Format of the value
+        /// Format of the value.
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<ValueType> ValueType { get; set; }
         
         /// <value>
-        /// Values of the property (must be a single value if selection = 'single choice')
+        /// Values of the property (must be a single value if selection = 'SINGLE_CHOICE').
         /// </value>
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<string> Values { get; set; }

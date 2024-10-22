@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Request to check resource tagging
+    /// Request to check resource tagging.
     /// </summary>
     public class CheckResourceTaggingDetails 
     {
@@ -32,13 +32,13 @@ namespace Oci.FleetappsmanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Fleet Name
+        /// Fleet Display Name.
         /// </value>
         [JsonProperty(PropertyName = "fleetDisplayName")]
         public string FleetDisplayName { get; set; }
         
         /// <value>
-        /// Resource OCIDS that need to be verified if tag can be enabled
+        /// Resource OCIDS that need to be verified if a tag can be enabled for them.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Results of a fleetResource search. Contains boh FleetResourceSummary items and other information, such as metadata.
+    /// Results of a fleetResource search. Contains both FleetResourceSummary items and other information, such as metadata.
     /// </summary>
     public class FleetResourceCollection 
     {

@@ -71,61 +71,64 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Scheduled date for the Job.
+        /// The scheduled date and time for the Job.
         /// </value>
         [JsonProperty(PropertyName = "timeScheduled")]
         public System.Nullable<System.DateTime> TimeScheduled { get; set; }
         
         /// <value>
-        /// Actual Start time for the Job
+        /// Actual start date and time for the Job.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// Actual End time for the Job
+        /// Actual end date and time for the Job.
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
         
         /// <value>
-        /// Count of ActionGroups affected by the Schedule.
+        /// Count of Action Groups affected by the Schedule.
+        /// An action group is a group of entities grouped for a lifecycle activity.
+        /// Example - A Fleet will be considered an Action Group for any lifecycle activity.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "countOfAffectedActionGroups")]
         public System.Nullable<int> CountOfAffectedActionGroups { get; set; }
         
         /// <value>
-        /// Count of Resources affected by the Schedule
+        /// Count of resources affected by the schedule.
         /// </value>
         [JsonProperty(PropertyName = "countOfAffectedResources")]
         public System.Nullable<int> CountOfAffectedResources { get; set; }
         
         /// <value>
-        /// Count of Targets affected by the Schedule
+        /// Count of targets affected by the schedule.
         /// </value>
         [JsonProperty(PropertyName = "countOfAffectedTargets")]
         public System.Nullable<int> CountOfAffectedTargets { get; set; }
         
         /// <value>
-        /// All ActionGroup Types part of the schedule.
+        /// All Action Group types are part of the schedule.
         /// </value>
         [JsonProperty(PropertyName = "actionGroupTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<LifeCycleActionGroupType> ActionGroupTypes { get; set; }
         
         /// <value>
-        /// All application types part of the schedule for ENVIRONMENT ActionGroup Type.
+        /// All application types that are part of the schedule for an ENVIRONMENT action group Type.
         /// </value>
         [JsonProperty(PropertyName = "applicationTypes")]
         public System.Collections.Generic.List<string> ApplicationTypes { get; set; }
         
         /// <value>
-        /// All products part of the schedule for PRODUCT AcionGroup Type.
+        /// All products that are part of the schedule for a PRODUCT action group type.
         /// </value>
         [JsonProperty(PropertyName = "products")]
         public System.Collections.Generic.List<string> Products { get; set; }
         
         /// <value>
-        /// All LifeCycle Operations part of the schedule
+        /// All LifeCycle Operations that are part of the schedule.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleOperations")]
         public System.Collections.Generic.List<string> LifecycleOperations { get; set; }

@@ -19,7 +19,7 @@ namespace Oci.OpsiService.Models
     /// Host Containers details
     /// 
     /// </summary>
-    public class HostContainers : HostPerformanceMetricGroup
+    public class HostContainers : HostConfigurationMetricGroup
     {
         
         /// <value>
@@ -39,6 +39,18 @@ namespace Oci.OpsiService.Models
         /// </value>
         [JsonProperty(PropertyName = "containerImage")]
         public string ContainerImage { get; set; }
+        
+        /// <value>
+        /// Container Image Tag (version)
+        /// </value>
+        [JsonProperty(PropertyName = "containerImageTag")]
+        public string ContainerImageTag { get; set; }
+        
+        /// <value>
+        /// Container Image Digest
+        /// </value>
+        [JsonProperty(PropertyName = "containerImageDigest")]
+        public string ContainerImageDigest { get; set; }
         
         /// <value>
         /// Container open ports

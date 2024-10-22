@@ -26,7 +26,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Runbook.LifecycleStateEnum> LifecycleState { get; set; }
@@ -38,31 +38,31 @@ namespace Oci.FleetappsmanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// unique Runbook identifier
+        /// A filter to return runbooks whose identifier matches the given identifier.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The ID of the runbook type.
+        /// A filter to return runbooks whose type matches the given type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
         public System.Nullable<Runbook.TypeEnum> Type { get; set; }
         
         /// <value>
-        /// The runbook relevance of product or full-stack.
+        /// A filter to return runbooks whose runbookRelevance matches the given runbookRelevance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "runbookRelevance")]
         public System.Nullable<Runbook.RunbookRelevanceEnum> RunbookRelevance { get; set; }
         
         /// <value>
-        /// The ID of the runbook platform.
+        /// A filter to return runbooks whose platform matches the given platform.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platform")]
         public string Platform { get; set; }
         
         /// <value>
-        /// The runbook lifecycle.
+        /// A filter to return runbooks whose operation matches the given lifecycle operation.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operation")]
         public string Operation { get; set; }

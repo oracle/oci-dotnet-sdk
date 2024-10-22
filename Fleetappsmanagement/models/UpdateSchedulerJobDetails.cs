@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// The information to be updated for the job.
     /// </summary>
     public class UpdateSchedulerJobDetails 
     {
         
         /// <value>
-        /// Scheduled date for the Job.Provide only the date
+        /// The scheduled date and time for the Job.
         /// </value>
         [JsonProperty(PropertyName = "timeScheduled")]
         public System.Nullable<System.DateTime> TimeScheduled { get; set; }

@@ -8,11 +8,11 @@
 
 
 using System.Runtime.Serialization;
-using Oci.CloudbridgeService.Models;
+using Oci.FleetappsmanagementService.Models;
 
-namespace Oci.CloudbridgeService.Responses
+namespace Oci.FleetappsmanagementService.Responses
 {
-    public class UpdatePluginResponse : Oci.Common.OciResponse
+    public class CreateTaskRecordResponse : Oci.Common.OciResponse
     {
 
         /// <value>
@@ -32,10 +32,10 @@ namespace Oci.CloudbridgeService.Responses
         public string OpcRequestId { get; set; }
 
         /// <value>
-        /// The returned Plugin instance.
+        /// The returned TaskRecord instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public Plugin Plugin { get; set; }
+        public TaskRecord TaskRecord { get; set; }
 
     }
 }

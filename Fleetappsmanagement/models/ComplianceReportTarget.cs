@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Details of the Patch.
+    /// Details of the target and patches.
     /// </summary>
     public class ComplianceReportTarget 
     {
         
         /// <value>
-        /// Target Identifier.
+        /// Target Identifier.Can be the target name if a separate ID is not available.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,13 +42,13 @@ namespace Oci.FleetappsmanagementService.Models
         public string TargetName { get; set; }
         
         /// <value>
-        /// Current version.
+        /// Current version of the target.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
         
         /// <value>
-        /// Last known compliance state of target.
+        /// The last known compliance state of the target.
         /// </value>
         /// <remarks>
         /// Required

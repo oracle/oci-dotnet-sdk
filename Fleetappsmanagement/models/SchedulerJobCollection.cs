@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Results of a schedulerJob search. Contains boh SchedulerJobSummary items and other information, such as metadata.
+    /// Results of a schedulerJob search. Contains SchedulerJobSummary items and other information, such as metadata.
     /// </summary>
     public class SchedulerJobCollection 
     {

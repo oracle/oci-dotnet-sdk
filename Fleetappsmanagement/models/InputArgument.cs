@@ -36,7 +36,7 @@ namespace Oci.FleetappsmanagementService.Models
 
         
         /// <value>
-        /// The name of the argument
+        /// The name of the argument.
         /// </value>
         /// <remarks>
         /// Required

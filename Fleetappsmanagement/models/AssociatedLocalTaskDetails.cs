@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The details of the task.
+    /// The details of the local task.
+    /// The local tasks are specific to a single runbook.
+    /// 
     /// </summary>
     public class AssociatedLocalTaskDetails : AssociatedTaskDetails
     {
@@ -59,6 +61,18 @@ namespace Oci.FleetappsmanagementService.Models
         
         [JsonProperty(PropertyName = "properties")]
         public Properties Properties { get; set; }
+        
+        /// <value>
+        /// Is this a discovery output task?
+        /// </value>
+        [JsonProperty(PropertyName = "isDiscoveryOutputTask")]
+        public System.Nullable<bool> IsDiscoveryOutputTask { get; set; }
+        
+        /// <value>
+        /// Is this an Apply Subject Task? Ex. Patch Execution Task
+        /// </value>
+        [JsonProperty(PropertyName = "isApplySubjectTask")]
+        public System.Nullable<bool> IsApplySubjectTask { get; set; }
         
         /// <value>
         /// The name of the task

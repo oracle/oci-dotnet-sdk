@@ -78,7 +78,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "HOST_STORAGE_STATISTICS")]
             HostStorageStatistics,
             [EnumMember(Value = "HOST_NETWORK_STATISTICS")]
-            HostNetworkStatistics
+            HostNetworkStatistics,
+            [EnumMember(Value = "HOST_IO_STATISTICS")]
+            HostIoStatistics
         };
 
         
@@ -113,6 +115,9 @@ namespace Oci.OpsiService.Models
                     break;
                 case "HOST_MEMORY_STATISTICS":
                     obj = new HostMemoryStatistics();
+                    break;
+                case "HOST_IO_STATISTICS":
+                    obj = new HostIoStatistics();
                     break;
                 case "HOST_CPU_STATISTICS":
                     obj = new HostCpuStatistics();

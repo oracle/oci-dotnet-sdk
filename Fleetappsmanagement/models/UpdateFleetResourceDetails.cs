@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// The information to be updated for the resource.
     /// </summary>
     public class UpdateFleetResourceDetails 
     {

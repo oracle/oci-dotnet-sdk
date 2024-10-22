@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Execution Workflow.
+    /// Execution Workflow details.
     /// </summary>
     public class ExecutionWorkflowDetails 
     {

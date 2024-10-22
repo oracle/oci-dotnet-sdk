@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Results of a fleetProperty search. Contains boh FleetPropertySummary items and other information, such as metadata.
+    /// Results of a fleetProperty search. Contains both FleetPropertySummary items and other information, such as metadata.
     /// </summary>
     public class FleetPropertyCollection 
     {
         
         /// <value>
-        /// List of fleetPropertys.
+        /// List of fleet properties in Fleet Application Management.
         /// </value>
         /// <remarks>
         /// Required

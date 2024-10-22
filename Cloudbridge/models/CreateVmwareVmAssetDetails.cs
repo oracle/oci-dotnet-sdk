@@ -21,15 +21,31 @@ namespace Oci.CloudbridgeService.Models
     public class CreateVmwareVmAssetDetails : CreateAssetDetails
     {
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Compute is required.")]
         [JsonProperty(PropertyName = "compute")]
         public ComputeProperties Compute { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Vm is required.")]
         [JsonProperty(PropertyName = "vm")]
         public VmProperties Vm { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "VmwareVm is required.")]
         [JsonProperty(PropertyName = "vmwareVm")]
         public VmwareVmProperties VmwareVm { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "VmwareVCenter is required.")]
         [JsonProperty(PropertyName = "vmwareVCenter")]
         public VmwareVCenterProperties VmwareVCenter { get; set; }
         

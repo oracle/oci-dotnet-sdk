@@ -450,5 +450,8 @@ namespace Oci.CoreService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<VirtualCircuitIpMtu> IpMtu { get; set; }
         
+        [JsonProperty(PropertyName = "virtualCircuitRedundancyMetadata")]
+        public VirtualCircuitRedundancyMetadata VirtualCircuitRedundancyMetadata { get; set; }
+        
     }
 }

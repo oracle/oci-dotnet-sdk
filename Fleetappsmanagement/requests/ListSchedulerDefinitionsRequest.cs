@@ -26,7 +26,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only scheduleDefinitions whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<SchedulerDefinition.LifecycleStateEnum> LifecycleState { get; set; }
@@ -38,22 +38,28 @@ namespace Oci.FleetappsmanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return only Scheduler Definitions whose assocaited product matches the given product
+        /// A filter to return only dchedule definitions whose assocaited product matches the given product
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "product")]
         public string Product { get; set; }
         
         /// <value>
-        /// unique SchedulerDefinition identifier
+        /// A filter to return only schedule definitions whose identifier matches the given identifier.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// unique MaintenanceWindow identifier
+        /// A filter to return only schedule definitions whose associated maintenanceWindowId matches the given maintenanceWindowId.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "maintenanceWindowId")]
         public string MaintenanceWindowId { get; set; }
+        
+        /// <value>
+        /// A filter to return only schedule definitions whose associated runbookId matches the given runbookId.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "runbookId")]
+        public string RunbookId { get; set; }
         
         /// <value>
         /// unique Fleet identifier

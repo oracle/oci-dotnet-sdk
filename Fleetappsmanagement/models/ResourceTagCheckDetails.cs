@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Request to check resource tagging
+    /// Request to check resource tagging.
     /// </summary>
     public class ResourceTagCheckDetails 
     {
         
         /// <value>
-        /// Tag enablement Information for resources.
+        /// Tag enablement Information for the resources.
         /// </value>
         /// <remarks>
         /// Required

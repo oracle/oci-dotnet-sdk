@@ -64,7 +64,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "GPU_UTILIZATION")]
             GpuUtilization,
             [EnumMember(Value = "GPU_MEMORY_USAGE")]
-            GpuMemoryUsage
+            GpuMemoryUsage,
+            [EnumMember(Value = "IO")]
+            Io
         };
 
         /// <value>

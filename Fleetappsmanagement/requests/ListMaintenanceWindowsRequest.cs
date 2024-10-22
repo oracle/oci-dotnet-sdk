@@ -26,7 +26,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<MaintenanceWindow.LifecycleStateEnum> LifecycleState { get; set; }
@@ -38,7 +38,13 @@ namespace Oci.FleetappsmanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// unique MaintenanceWindow identifier
+        /// A filter to return only resources whose timeScheduleStart is greater than or equal to the provided date and time.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeScheduleStartGreaterThanOrEqualTo")]
+        public System.Nullable<System.DateTime> TimeScheduleStartGreaterThanOrEqualTo { get; set; }
+        
+        /// <value>
+        /// A filter to return only the Maintenance Windows whose identifier matches the given identifier.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }

@@ -66,6 +66,8 @@ namespace Oci.DatascienceService.Models
       [EnumMember(Value = "PRIVATE_ENDPOINT_MOVE")]
       PrivateEndpointMove,
       [EnumMember(Value = "PRIVATE_ENDPOINT_UPDATE")]
-      PrivateEndpointUpdate
+      PrivateEndpointUpdate,
+      [EnumMember(Value = "RESTORE_ARCHIVED_MODEL")]
+      RestoreArchivedModel
   }
 }

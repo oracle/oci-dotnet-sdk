@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// The value corresponding to the credential
+        /// The value corresponding to the credential.
         /// </value>
         /// <remarks>
         /// Required

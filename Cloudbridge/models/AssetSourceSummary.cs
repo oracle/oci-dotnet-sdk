@@ -168,6 +168,9 @@ namespace Oci.CloudbridgeService.Models
                 case "VMWARE":
                     obj = new VmWareAssetSourceSummary();
                     break;
+                case "AWS":
+                    obj = new AwsAssetSourceSummary();
+                    break;
             }
             if (obj != null)
             {

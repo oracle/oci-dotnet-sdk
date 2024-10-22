@@ -73,7 +73,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Check if FAMS tags can be added for the resources
+        /// Check if Fleet Application Management tags can be added to the resources.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -130,7 +130,8 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Confirm targets to be managed for a Fleet.Only targets that are confirmed will be managed by FAMS
+        /// Confirm targets to be managed for a Fleet.
+        /// Only targets that are confirmed will be managed by Fleet Application Management
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -187,8 +188,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Creates a new fleet instance that includes fleet resources and properties.
-        /// For more information, please see the documentation.
+        /// Create a product, environment, group, or generic type of fleet in Fleet Application Management.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -245,7 +245,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Creates a new FleetCredential.
+        /// Add credentials to a fleet in Fleet Application Management.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -302,7 +302,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Creates a new FleetProperty.
+        /// Add an existing global property to a fleet in Fleet Application Management.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -359,7 +359,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Creates a new FleetResource.
+        /// Add resource to a fleet in\u00A0Fleet Application Management.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -416,7 +416,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Deletes a Fleet resource by identifier
+        /// Delete a fleet in Fleet Application Management.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -472,7 +472,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Deletes a FleetCredential resource by identifier
+        /// Delete a credential associated with a fleet product or application in\u00A0Fleet Application Management.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -528,7 +528,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Deletes a FleetProperty resource by identifier
+        /// Delete a property associated with a fleet in Fleet Application Management.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -584,7 +584,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Deletes a FleetResource resource by identifier
+        /// Removes a resource from the fleet in Fleet Application Management.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -640,7 +640,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Request to generate compliance report for a Fleet
+        /// Generate compliance reports for a Fleet.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -697,7 +697,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Retrieve compiane report for a Fleet
+        /// Retrieve compliance report for a fleet.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -753,7 +753,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Gets a Fleet by identifier
+        /// Get the details of a fleet in Fleet Application Management.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -809,7 +809,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Gets a FleetCredential by identifier
+        /// Gets a FleetCredential by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -865,7 +865,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Gets a FleetProperty by identifier
+        /// Gets a Fleet Property by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -921,7 +921,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Gets a FleetResource by identifier
+        /// Gets a Fleet Resource by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1033,7 +1033,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Return a list of AnnouncementSummary items
+        /// Return a list of AnnouncementSummary items.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1089,7 +1089,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Returns a list of FleetCredentials.
+        /// List credentials in Fleet Application Management.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1146,7 +1146,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Returns a list of FleetProducts.
+        /// Returns a list of products associated with the confirmed targets.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1203,7 +1203,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Returns a list of FleetProperties.
+        /// List fleet properties in Fleet Application Management.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1260,7 +1260,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Returns a list of FleetResources.
+        /// List resources for a fleet in Fleet Application Management.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1317,7 +1317,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Returns a list of FleetTargets.
+        /// Returns the list of all confirmed targets within a fleet.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1488,7 +1488,8 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Returns a list of FleetTargets.
+        /// Return all targets belonging to the resources within a fleet.
+        /// It will include both confirmed and unconfirmed targets.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1716,7 +1717,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Request validation for resources with in a fleet
+        /// Request validation for resources within a fleet.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1773,7 +1774,8 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Confirm targets to be managed for a Fleet.Only targets that are confirmed will be managed by FAMS
+        /// Confirm targets to be managed for a Fleet.
+        /// Only targets that are confirmed will be managed by Fleet Application Management
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1830,7 +1832,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Updates the Fleet
+        /// Update fleet information in Fleet Application Management.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1886,7 +1888,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Updates the FleetCredential
+        /// Edit credentials associated with a product or application in\u00A0Fleet Application Management.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1942,7 +1944,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Updates the FleetProperty
+        /// Edit a property associated with a fleet in Fleet Application Management.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1998,7 +2000,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Updates the FleetResource
+        /// Updates the FleetResource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

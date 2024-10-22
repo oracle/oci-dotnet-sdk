@@ -30,7 +30,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public CreateFleetResourceDetails CreateFleetResourceDetails { get; set; }
         
         /// <value>
-        /// unique Fleet identifier
+        /// Unique Fleet identifier.
         /// </value>
         /// <remarks>
         /// Required

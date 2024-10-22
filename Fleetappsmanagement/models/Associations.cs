@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// JSON content with required associations
+    /// Associations for the runbook.
     /// </summary>
     public class Associations 
     {
         
         /// <value>
-        /// A set of tasks to execute in the runbook
+        /// A set of tasks to execute in the runbook.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,8 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Collections.Generic.List<Task> Tasks { get; set; }
         
         /// <value>
-        /// The groups of the runbook
+        /// The groups of the runbook.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -47,6 +48,9 @@ namespace Oci.FleetappsmanagementService.Models
         [Required(ErrorMessage = "ExecutionWorkflowDetails is required.")]
         [JsonProperty(PropertyName = "executionWorkflowDetails")]
         public ExecutionWorkflowDetails ExecutionWorkflowDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "rollbackWorkflowDetails")]
+        public RollbackWorkflowDetails RollbackWorkflowDetails { get; set; }
         
         /// <value>
         /// The version of the runbook.

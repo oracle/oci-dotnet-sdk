@@ -209,6 +209,12 @@ namespace Oci.FilestorageService.Models
         public System.Nullable<CloneAttachStatusEnum> CloneAttachStatus { get; set; }
         
         /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
+        /// <value>
         /// Additional information about the current 'lifecycleState'.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]

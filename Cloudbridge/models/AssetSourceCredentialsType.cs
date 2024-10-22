@@ -20,6 +20,8 @@ namespace Oci.CloudbridgeService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "BASIC")]
-      Basic
+      Basic,
+      [EnumMember(Value = "API_KEY")]
+      ApiKey
   }
 }

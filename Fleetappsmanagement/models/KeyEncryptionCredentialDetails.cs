@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Details for Credentials using key encryption.
+    /// Details for the Credentials that use key encryption.
     /// </summary>
     public class KeyEncryptionCredentialDetails : CredentialDetails
     {
         
         /// <value>
-        /// The value corresponding to the credential
+        /// The value corresponding to the credential.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string KeyVersion { get; set; }
         
         /// <value>
-        /// OCID for the Vault that will be used to fetch key to encrypt/decrypt the value given.
+        /// OCID for the Vault that will be used to fetch the key to encrypt/decrypt the value given.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudbridgeService.Models
 {
     /// <summary>
-    /// Asset source update details.
+    /// VMware asset source update request.
     /// </summary>
     public class UpdateVmWareAssetSourceDetails : UpdateAssetSourceDetails
     {
@@ -44,12 +44,6 @@ namespace Oci.CloudbridgeService.Models
         /// </value>
         [JsonProperty(PropertyName = "areRealtimeMetricsCollected")]
         public System.Nullable<bool> AreRealtimeMetricsCollected { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the discovery schedule that is going to be assigned to an asset source.
-        /// </value>
-        [JsonProperty(PropertyName = "discoveryScheduleId")]
-        public string DiscoveryScheduleId { get; set; }
         
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "VMWARE";

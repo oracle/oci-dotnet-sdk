@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The information about new FleetResource.
+    /// The information about the resource to be added to the fleet.
     /// </summary>
     public class CreateFleetResourceDetails 
     {

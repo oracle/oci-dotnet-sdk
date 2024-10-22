@@ -22,7 +22,9 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// Attribute Group.
+        /// Attribute Group. Provide a Tag namespace if the rule is based on a tag.
+        /// Provide resource type if the rule is based on a resource property.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +34,9 @@ namespace Oci.FleetappsmanagementService.Models
         public string AttrGroup { get; set; }
         
         /// <value>
-        /// Attribute Key.
+        /// Attribute Key.Provide Tag key if the rule is based on a tag.
+        /// Provide resource property name if the rule is based on a resource property.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +46,9 @@ namespace Oci.FleetappsmanagementService.Models
         public string AttrKey { get; set; }
         
         /// <value>
-        /// Attribute Value.
+        /// Attribute Value.Provide Tag value if the rule is based on a tag.
+        /// Provide resource property value if the rule is based on a resource property.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

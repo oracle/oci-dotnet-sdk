@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The details of the task.
+    /// The details of the shared task.
+    /// Tasks that are part of the task library and can be reused across runbooks.
+    /// 
     /// </summary>
     public class AssociatedSharedTaskDetails : AssociatedTaskDetails
     {

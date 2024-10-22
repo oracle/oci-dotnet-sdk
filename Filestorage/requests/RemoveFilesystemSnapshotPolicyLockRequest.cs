@@ -9,45 +9,35 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using Oci.CloudbridgeService.Models;
+using Oci.FilestorageService.Models;
 
-namespace Oci.CloudbridgeService.Requests
+namespace Oci.FilestorageService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cloudbridge/UpdatePlugin.cs.html">here</a> to see an example of how to use UpdatePlugin request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/filestorage/RemoveFilesystemSnapshotPolicyLock.cs.html">here</a> to see an example of how to use RemoveFilesystemSnapshotPolicyLock request.
     /// </example>
-    public class UpdatePluginRequest : Oci.Common.IOciRequest
+    public class RemoveFilesystemSnapshotPolicyLockRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
-        /// Unique Agent identifier path parameter.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the file system snapshot policy.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "AgentId is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "agentId")]
-        public string AgentId { get; set; }
+        [Required(ErrorMessage = "FilesystemSnapshotPolicyId is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "filesystemSnapshotPolicyId")]
+        public string FilesystemSnapshotPolicyId { get; set; }
         
         /// <value>
-        /// Unique plugin identifier path parameter.
+        /// The details to be updated for the RemoveLock.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "PluginName is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "pluginName")]
-        public string PluginName { get; set; }
-        
-        /// <value>
-        /// The information to be updated.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "UpdatePluginDetails is required.")]
+        [Required(ErrorMessage = "RemoveFilesystemSnapshotPolicyLockDetails is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public UpdatePluginDetails UpdatePluginDetails { get; set; }
+        public ResourceLock RemoveFilesystemSnapshotPolicyLockDetails { get; set; }
         
         /// <value>
         /// For optimistic concurrency control. In the PUT or DELETE call
@@ -61,7 +51,9 @@ namespace Oci.CloudbridgeService.Requests
         public string IfMatch { get; set; }
         
         /// <value>
-        /// The client request ID for tracing.
+        /// Unique identifier for the request.
+        /// If you need to contact Oracle about a particular request, please provide the request ID.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }

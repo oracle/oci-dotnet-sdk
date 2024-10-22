@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Content Source Details
+    /// Execution details.
     /// </summary>
     [JsonConverter(typeof(ExecutionDetailsModelConverter))]
     public class ExecutionDetails 

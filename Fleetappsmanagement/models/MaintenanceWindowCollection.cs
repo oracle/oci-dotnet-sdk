@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Results of a maintenanceWindow search. Contains boh MaintenanceWindowSummary items and other information, such as metadata.
+    /// Results of a maintenanceWindow search. Contains both MaintenanceWindowSummary items and other information, such as metadata.
     /// </summary>
     public class MaintenanceWindowCollection 
     {

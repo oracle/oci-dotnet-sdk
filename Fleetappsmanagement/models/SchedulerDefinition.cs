@@ -85,13 +85,13 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Scheduled date for the next run of the Job.
+        /// The scheduled date for the next run of the Job.
         /// </value>
         [JsonProperty(PropertyName = "timeOfNextRun")]
         public System.Nullable<System.DateTime> TimeOfNextRun { get; set; }
         
         /// <value>
-        /// Activity Initiation Cut Off
+        /// Activity Initiation Cut Off.
         /// </value>
         [JsonProperty(PropertyName = "activityInitiationCutOff")]
         public System.Nullable<int> ActivityInitiationCutOff { get; set; }
@@ -106,38 +106,38 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<int> CountOfAffectedActionGroups { get; set; }
         
         /// <value>
-        /// Count of Resources affected by the Schedule
+        /// Count of Resources affected by the Schedule.
         /// </value>
         [JsonProperty(PropertyName = "countOfAffectedResources")]
         public System.Nullable<int> CountOfAffectedResources { get; set; }
         
         /// <value>
-        /// Count of Targets affected by the Schedule
+        /// Count of Targets affected by the Schedule.
         /// </value>
         [JsonProperty(PropertyName = "countOfAffectedTargets")]
         public System.Nullable<int> CountOfAffectedTargets { get; set; }
         
         /// <value>
-        /// All ActionGroup Types part of the schedule.
+        /// All ActionGroup Types that are part of the schedule.
         /// </value>
         [JsonProperty(PropertyName = "actionGroupTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Collections.Generic.List<LifeCycleActionGroupType> ActionGroupTypes { get; set; }
         
         /// <value>
-        /// All application types part of the schedule for ENVIRONMENT ActionGroup Type.
+        /// All application types that are part of the schedule for ENVIRONMENT ActionGroup Type.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "applicationTypes")]
         public System.Collections.Generic.List<string> ApplicationTypes { get; set; }
         
         /// <value>
-        /// All products part of the schedule for PRODUCT ActionGroup Type.
+        /// All products that are part of the schedule for PRODUCT ActionGroup Type.
         /// </value>
         [JsonProperty(PropertyName = "products")]
         public System.Collections.Generic.List<string> Products { get; set; }
         
         /// <value>
-        /// All LifeCycle Operations part of the schedule
+        /// All LifeCycle Operations that are part of the schedule.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleOperations")]
         public System.Collections.Generic.List<string> LifecycleOperations { get; set; }

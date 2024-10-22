@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// An summary of announcements for Fleet Application Management Service
+    /// A summary of announcements for Fleet Application Management.
     /// </summary>
     public class AnnouncementSummary 
     {
@@ -77,7 +77,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Type of announcement
+        /// Type of announcement.
         /// </value>
         /// <remarks>
         /// Required
@@ -87,7 +87,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// Summary of the announcement
+        /// Summary of the announcement.
         /// </value>
         /// <remarks>
         /// Required
@@ -97,19 +97,19 @@ namespace Oci.FleetappsmanagementService.Models
         public string Summary { get; set; }
         
         /// <value>
-        /// Details of the announcement
+        /// Announcement Details.
         /// </value>
         [JsonProperty(PropertyName = "details")]
         public string Details { get; set; }
         
         /// <value>
-        /// URL to the announcement
+        /// URL to the announcement.
         /// </value>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
         
         /// <value>
-        /// Date to start displaying announcement to user
+        /// Announcement start date.
         /// </value>
         /// <remarks>
         /// Required
@@ -119,7 +119,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<System.DateTime> AnnouncementStart { get; set; }
         
         /// <value>
-        /// Date to end displaying annonucement to user
+        /// Announcement end date
         /// </value>
         /// <remarks>
         /// Required

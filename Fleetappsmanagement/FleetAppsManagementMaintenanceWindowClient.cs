@@ -73,7 +73,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Creates a new MaintenanceWindow.
+        /// Create a maintenance window in Fleet Application Management.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -130,7 +130,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Deletes a MaintenanceWindow resource by identifier
+        /// Delete a maintenance window in Fleet Application Management.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -186,7 +186,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Gets a MaintenanceWindow by identifier
+        /// Get the details for a maintenance window in Fleet Application Management.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -242,7 +242,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Returns a list of MaintenanceWindows in the specified Tenancy.
+        /// List maintenance windows for a specified tenancy in\u00A0Fleet Application Management.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -299,7 +299,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Updates the MaintenanceWindow
+        /// Update a maintenance window in Fleet Application Management.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

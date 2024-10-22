@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Execution Outcome
+    /// Execution Outcome.
     /// </summary>
     public class Outcome 
     {
         
         /// <value>
-        /// A shortened version of Execution Output
+        /// A shortened version of Execution output.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.FleetappsmanagementService.Models
         public string Output { get; set; }
         
         /// <value>
-        /// Errors if any associated with the execution
+        /// Errors if any, associated with the execution.
         /// </value>
         [JsonProperty(PropertyName = "error")]
         public string Error { get; set; }
         
         /// <value>
-        /// Exit Code
+        /// Exit Code.
         /// </value>
         [JsonProperty(PropertyName = "exitCode")]
         public string ExitCode { get; set; }

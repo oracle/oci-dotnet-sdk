@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return fleets whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Fleet.LifecycleStateEnum> LifecycleState { get; set; }
@@ -32,25 +32,25 @@ namespace Oci.FleetappsmanagementService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their fleetType matches the given fleetType.
+        /// A filter to return fleets whose fleetType matches the given fleetType.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fleetType")]
         public System.Nullable<Fleet.FleetTypeEnum> FleetType { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the Application Type given.
+        /// A filter to return resources that match the Application Type/Product Stack given..
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "applicationType")]
         public string ApplicationType { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the Product Type given.
+        /// A filter to return resources that match the Product given.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "product")]
         public string Product { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the Environment Type given.
+        /// A filter to return resources that match the Environment Type given.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "environmentType")]
         public string EnvironmentType { get; set; }
@@ -62,7 +62,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// unique Fleet identifier
+        /// A filter to return fleets whose id matches the given Fleet identifier
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }

@@ -13,20 +13,17 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.CloudbridgeService.Models
+namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// Credential Config Category Details.
+    /// Defines credential placeholders deemed necessary by product standards later mapped and used by lifecycle management operations for the supported products.
+    /// 
     /// </summary>
-    public class UpdatePluginDetails 
+    public class CredentialConfigCategoryDetails : ConfigCategoryDetails
     {
         
-        /// <value>
-        /// State to which the customer wants the plugin to move to.
-        /// </value>
-        [JsonProperty(PropertyName = "desiredState")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<Plugin.DesiredStateEnum> DesiredState { get; set; }
-        
+        [JsonProperty(PropertyName = "configCategory")]
+        private readonly string configCategory = "CREDENTIAL";
     }
 }

@@ -127,6 +127,9 @@ namespace Oci.CloudbridgeService.Models
                 case "VMWARE":
                     obj = new CreateVmWareAssetSourceDetails();
                     break;
+                case "AWS":
+                    obj = new CreateAwsAssetSourceDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

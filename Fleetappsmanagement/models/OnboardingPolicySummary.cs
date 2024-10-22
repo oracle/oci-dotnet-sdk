@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Summary of the FleetAppManagementService Onboard Policy.
+    /// Summary of the Fleet Application Management Onboard Policy.
     /// </summary>
     public class OnboardingPolicySummary 
     {

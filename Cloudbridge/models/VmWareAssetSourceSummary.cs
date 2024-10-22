@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudbridgeService.Models
 {
     /// <summary>
-    /// Description of an asset source.
+    /// Summary of an VMware asset source provided in the list.
     /// </summary>
     public class VmWareAssetSourceSummary : AssetSourceSummary
     {

@@ -16,20 +16,20 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Request to initiate target discovery
+    /// Request to initiate target discovery.
     /// 
     /// </summary>
     public class RequestTargetDiscoveryDetails 
     {
         
         /// <value>
-        /// A boolean flag which decides if all resources within the fleet should be part of discovery.
+        /// A boolean flag that decides if all resources within the fleet should be part of discovery.
         /// </value>
         [JsonProperty(PropertyName = "isApplicableToAllResources")]
         public System.Nullable<bool> IsApplicableToAllResources { get; set; }
         
         /// <value>
-        /// Resource OCIDS that need to be included for discovery.
+        /// Resource OCIDS to be included for discovery.
         /// </value>
         [JsonProperty(PropertyName = "resourceIds")]
         public System.Collections.Generic.List<string> ResourceIds { get; set; }

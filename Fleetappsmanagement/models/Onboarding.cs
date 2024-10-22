@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// FleetAppManagementService onboarding resource.
+    /// Fleet Application Management onboarding resource.
+    /// The onboarding process lets\u00A0Fleet Application Management\u00A0create a few required policies that you need to start using it and its features.
+    /// 
     /// </summary>
     public class Onboarding 
     {
@@ -60,22 +62,35 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// A value determining FAMS tag is enabled or not
+        /// A value determining if the Fleet Application Management tagging is enabled or not.
+        /// Allow Fleet Application Management to tag resources with fleet name using \"Oracle$FAMS-Tags.FleetName\" tag.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isFamsTagEnabled")]
         public System.Nullable<bool> IsFamsTagEnabled { get; set; }
         
         /// <value>
-        /// Version of FAMS the tenant is onboarded to.
+        /// The version of Fleet Application Management that the tenant is onboarded to.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
         
         /// <value>
-        /// A value determining if cost tracking tag is enabled or not
+        /// A value determining if the cost tracking tag is enabled or not.
+        /// Allow Fleet Application Management to tag resources with cost tracking tag using \"Oracle$FAMS-Tags.FAMSManaged\" tag.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isCostTrackingTagEnabled")]
         public System.Nullable<bool> IsCostTrackingTagEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "appliedPolicies")]
+        public OnboardingPolicySummary AppliedPolicies { get; set; }
+        
+        /// <value>
+        /// Provide discovery frequency.
+        /// </value>
+        [JsonProperty(PropertyName = "discoveryFrequency")]
+        public string DiscoveryFrequency { get; set; }
                 ///
         /// <value>
         /// The current state of the Onboarding.

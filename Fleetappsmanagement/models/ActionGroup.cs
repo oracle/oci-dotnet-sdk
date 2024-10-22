@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// Provide the ID of the resource; Ex- fleetId.
+        /// Provide the ID of the resource. Example fleet ID.
         /// </value>
         /// <remarks>
         /// Required
