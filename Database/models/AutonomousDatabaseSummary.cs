@@ -137,6 +137,9 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "kmsKeyLifecycleDetails")]
         public string KmsKeyLifecycleDetails { get; set; }
         
+        [JsonProperty(PropertyName = "encryptionKey")]
+        public AutonomousDatabaseEncryptionKeyDetails EncryptionKey { get; set; }
+        
         /// <value>
         /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation. Autonomous Database Serverless does not use key versions, hence is not applicable for Autonomous Database Serverless instances.
         /// 
@@ -231,6 +234,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "keyHistoryEntry")]
         public System.Collections.Generic.List<AutonomousDatabaseKeyHistoryEntry> KeyHistoryEntry { get; set; }
+        
+        /// <value>
+        /// Key History Entry.
+        /// </value>
+        [JsonProperty(PropertyName = "encryptionKeyHistoryEntry")]
+        public System.Collections.Generic.List<AutonomousDatabaseEncryptionKeyHistoryEntry> EncryptionKeyHistoryEntry { get; set; }
         
         /// <value>
         /// The number of CPU cores to be made available to the database. When the ECPU is selected, the value for cpuCoreCount is 0. For Autonomous Database on Dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-database&id=ATPFG-GUID-B0F033C1-CC5A-42F0-B2E7-3CECFEDA1FD1) for shape details.

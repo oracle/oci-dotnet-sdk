@@ -97,20 +97,20 @@ namespace Oci.FleetappsmanagementService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Compliance State of the Resource
+        /// Compliance State of the Resource.
         /// </value>
         [JsonProperty(PropertyName = "complianceState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ComplianceState> ComplianceState { get; set; }
         
         /// <value>
-        /// Resource Tenancy Name
+        /// Resource Tenancy Name.
         /// </value>
         [JsonProperty(PropertyName = "tenancyName")]
         public string TenancyName { get; set; }
         
         /// <value>
-        /// Resource Compartment
+        /// Resource Compartment name.
         /// </value>
         [JsonProperty(PropertyName = "compartment")]
         public string Compartment { get; set; }
@@ -132,26 +132,30 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<int> ProductCount { get; set; }
         
         /// <value>
-        /// Count of targets  within the resource.
+        /// Count of targets within the resource.
         /// </value>
         [JsonProperty(PropertyName = "targetCount")]
         public System.Nullable<int> TargetCount { get; set; }
         
         /// <value>
-        /// Product associated with the resource when resource type is fleet.Will only be returned for PRODUCT fleets that are part of a GROUP Fleet
+        /// Product associated with the resource when the resource type is fleet.
+        /// Will only be returned for PRODUCT fleets that are part of a GROUP Fleet.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "product")]
         public string Product { get; set; }
         
         /// <value>
-        /// Application Type associated with the resource when resource type is fleet.Will only be returned for ENVIRONMENT fleets that are part of a GROUP Fleet.
+        /// Application Type associated with the resource when the resource type is fleet.
+        /// Will only be returned for ENVIRONMENT fleets that are part of a GROUP Fleet. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "applicationType")]
         public string ApplicationType { get; set; }
         
         /// <value>
-        /// Environment Type associated with the Fleet when resource type is fleet.Will only be returned for ENVIRONMENT fleets that are part of a GROUP Fleet.
+        /// Environment Type associated with the Fleet when the resource type is fleet.
+        /// Will only be returned for ENVIRONMENT fleets that are part of a GROUP Fleet.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "environmentType")]

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Details for API based execution
+    /// Details for API-based execution.
     /// </summary>
     public class ApiBasedExecutionDetails : ExecutionDetails
     {

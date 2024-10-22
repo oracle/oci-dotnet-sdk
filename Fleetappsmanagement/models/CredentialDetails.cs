@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Credential Details
+    /// Credential Details.
     /// </summary>
     [JsonConverter(typeof(CredentialDetailsModelConverter))]
     public class CredentialDetails 
     {
                 ///
         /// <value>
-        /// Credential Type
+        /// Credential Type.
         /// </value>
         ///
         public enum CredentialTypeEnum {

@@ -21,9 +21,17 @@ namespace Oci.CloudbridgeService.Models
     public class VmAsset : Asset
     {
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Compute is required.")]
         [JsonProperty(PropertyName = "compute")]
         public ComputeProperties Compute { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Vm is required.")]
         [JsonProperty(PropertyName = "vm")]
         public VmProperties Vm { get; set; }
         

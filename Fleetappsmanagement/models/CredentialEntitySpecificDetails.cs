@@ -16,17 +16,21 @@ using Newtonsoft.Json.Linq;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Credential Details
+    /// Credential specific Details.
     /// </summary>
     [JsonConverter(typeof(CredentialEntitySpecificDetailsModelConverter))]
     public class CredentialEntitySpecificDetails 
     {
                 ///
         /// <value>
-        /// Credential Level.
+        /// At what level the credential is provided?
         /// </value>
         ///
         public enum CredentialLevelEnum {
+            [EnumMember(Value = "FLEET")]
+            Fleet,
+            [EnumMember(Value = "RESOURCE")]
+            Resource,
             [EnumMember(Value = "TARGET")]
             Target
         };
@@ -57,6 +61,12 @@ namespace Oci.FleetappsmanagementService.Models
             {
                 case "TARGET":
                     obj = new TargetCredentialEntitySpecificDetails();
+                    break;
+                case "FLEET":
+                    obj = new FleetCredentialEntitySpecificDetails();
+                    break;
+                case "RESOURCE":
+                    obj = new ResourceCredentialEntitySpecificDetails();
                     break;
             }
             if (obj != null)

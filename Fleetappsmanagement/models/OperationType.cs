@@ -54,6 +54,38 @@ namespace Oci.FleetappsmanagementService.Models
       [EnumMember(Value = "DELETE_FLEET_RESOURCE")]
       DeleteFleetResource,
       [EnumMember(Value = "CREATE_FAMS_ONBOARDING")]
-      CreateFamsOnboarding
+      CreateFamsOnboarding,
+      [EnumMember(Value = "CREATE_RUNBOOK")]
+      CreateRunbook,
+      [EnumMember(Value = "UPDATE_RUNBOOK")]
+      UpdateRunbook,
+      [EnumMember(Value = "DELETE_RUNBOOK")]
+      DeleteRunbook,
+      [EnumMember(Value = "PUBLISH_RUNBOOK")]
+      PublishRunbook,
+      [EnumMember(Value = "UPDATE_TASK")]
+      UpdateTask,
+      [EnumMember(Value = "DELETE_TASK")]
+      DeleteTask,
+      [EnumMember(Value = "UPDATE_FAMS_ONBOARDING")]
+      UpdateFamsOnboarding,
+      [EnumMember(Value = "DELETE_FAMS_ONBOARDING")]
+      DeleteFamsOnboarding,
+      [EnumMember(Value = "CREATE_COMPLIANCE_POLICY_RULE")]
+      CreateCompliancePolicyRule,
+      [EnumMember(Value = "UPDATE_COMPLIANCE_POLICY_RULE")]
+      UpdateCompliancePolicyRule,
+      [EnumMember(Value = "DELETE_COMPLIANCE_POLICY_RULE")]
+      DeleteCompliancePolicyRule,
+      [EnumMember(Value = "UPDATE_PATCH")]
+      UpdatePatch,
+      [EnumMember(Value = "DELETE_PATCH")]
+      DeletePatch,
+      [EnumMember(Value = "MANAGE_JOB_EXECUTION")]
+      ManageJobExecution,
+      [EnumMember(Value = "DELETE_PLATFORM_CONFIGURATION")]
+      DeletePlatformConfiguration,
+      [EnumMember(Value = "UPDATE_PLATFORM_CONFIGURATION")]
+      UpdatePlatformConfiguration
   }
 }

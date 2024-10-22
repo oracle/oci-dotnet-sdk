@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Activity Resource and execution details including outcome.
+    /// Resource level execution status and target associations.
     /// </summary>
     public class EntityExecutionDetails 
     {
         
         /// <value>
-        /// Resource Identifier associated with the Work Request
+        /// Resource Identifier associated with the Work Request.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,31 +32,33 @@ namespace Oci.FleetappsmanagementService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Resource Display Name
+        /// Resource Display Name.
         /// </value>
         [JsonProperty(PropertyName = "resourceDisplayName")]
         public string ResourceDisplayName { get; set; }
         
         /// <value>
-        /// Description of the Work Request
+        /// Description of the Resource Execution status.
+        /// If there are any errors, this can also include a short error message.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The sequence of the Resource
+        /// The sequence of the Resource.
         /// </value>
         [JsonProperty(PropertyName = "sequence")]
         public string Sequence { get; set; }
         
         /// <value>
-        /// Targets associated.
+        /// Targets associated with the resource.
         /// </value>
         [JsonProperty(PropertyName = "targets")]
         public System.Collections.Generic.List<ActivityResourceTarget> Targets { get; set; }
         
         /// <value>
-        /// Status of the Job at Resource Level
+        /// Status of the Job at Resource Level.
         /// </value>
         /// <remarks>
         /// Required

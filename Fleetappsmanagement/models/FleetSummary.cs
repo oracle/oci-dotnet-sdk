@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Summary of the Fleet.
+    /// Summary of a Fleet.A fleet is a collection or grouping of resources based on criteria.
+    /// 
     /// </summary>
     public class FleetSummary 
     {
@@ -78,6 +79,11 @@ namespace Oci.FleetappsmanagementService.Models
         
         /// <value>
         /// Type of the Fleet.
+        /// PRODUCT - A fleet of product-specific resources for a product type.
+        /// ENVIRONMENT - A fleet of environment-specific resources for a product stack.
+        /// GROUP - A fleet of a fleet of either environment or product fleets.
+        /// GENERIC - A fleet of resources selected dynamically or manually for reporting purposes
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -88,13 +94,15 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<Fleet.FleetTypeEnum> FleetType { get; set; }
         
         /// <value>
-        /// Environment Type associated with the Fleet.Applicable for ENVIRONMENT fleet types.
+        /// Environment Type associated with the Fleet.
+        /// Applicable for ENVIRONMENT fleet types.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "environmentType")]
         public string EnvironmentType { get; set; }
         
         /// <value>
-        /// The current state of the Fleet.
+        /// The lifecycle state of the Fleet.
         /// </value>
         /// <remarks>
         /// Required

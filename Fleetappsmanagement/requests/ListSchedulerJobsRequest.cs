@@ -26,7 +26,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<SchedulerJob.LifecycleStateEnum> LifecycleState { get; set; }
@@ -54,6 +54,12 @@ namespace Oci.FleetappsmanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isRemediationJobNeeded")]
         public System.Nullable<bool> IsRemediationJobNeeded { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources their subState matches the given subState.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subState")]
+        public string SubState { get; set; }
         
         /// <value>
         /// A filter to return only resources that match the entire display name given.

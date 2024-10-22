@@ -30,7 +30,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string FleetCredentialId { get; set; }
         
         /// <value>
-        /// unique Fleet identifier
+        /// Unique Fleet identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string FleetId { get; set; }
         
         /// <value>
-        /// The information to be updated.
+        /// The credential information to be updated.
         /// </value>
         /// <remarks>
         /// Required

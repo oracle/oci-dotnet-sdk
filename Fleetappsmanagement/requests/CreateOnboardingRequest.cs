@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// Details for onboarding FAMS.
+        /// Details for onboarding Fleet Application Management.
         /// </value>
         /// <remarks>
         /// Required

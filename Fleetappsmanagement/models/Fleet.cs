@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Description of Fleet.
+    /// A fleet is a collection or grouping of resources based on criteria.
+    /// 
     /// </summary>
     public class Fleet 
     {
@@ -86,6 +87,11 @@ namespace Oci.FleetappsmanagementService.Models
                 ///
         /// <value>
         /// Type of the Fleet.
+        /// PRODUCT - A fleet of product-specific resources for a product type.
+        /// ENVIRONMENT - A fleet of environment-specific resources for a product stack.
+        /// GROUP - A fleet of a fleet of either environment or product fleets.
+        /// GENERIC - A fleet of resources selected dynamically or manually for reporting purposes
+        /// 
         /// </value>
         ///
         public enum FleetTypeEnum {
@@ -104,6 +110,11 @@ namespace Oci.FleetappsmanagementService.Models
 
         /// <value>
         /// Type of the Fleet.
+        /// PRODUCT - A fleet of product-specific resources for a product type.
+        /// ENVIRONMENT - A fleet of environment-specific resources for a product stack.
+        /// GROUP - A fleet of a fleet of either environment or product fleets.
+        /// GENERIC - A fleet of resources selected dynamically or manually for reporting purposes
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -114,25 +125,31 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<FleetTypeEnum> FleetType { get; set; }
         
         /// <value>
-        /// Products associated with the Fleet
+        /// Products associated with the Fleet.
         /// </value>
         [JsonProperty(PropertyName = "products")]
         public System.Collections.Generic.List<string> Products { get; set; }
         
         /// <value>
-        /// Application Type associated with the Fleet.Applicable for ENVIRONMENT fleet types.
+        /// Product stack associated with the Fleet.
+        /// Applicable for ENVIRONMENT fleet types.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "applicationType")]
         public string ApplicationType { get; set; }
         
         /// <value>
-        /// Environment Type associated with the Fleet.Applicable for ENVIRONMENT fleet types.
+        /// Environment Type associated with the Fleet.
+        /// Applicable for ENVIRONMENT fleet types.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "environmentType")]
         public string EnvironmentType { get; set; }
                 ///
         /// <value>
-        /// Group Type associated with Group Fleet.Applicable for GROUP fleet types.
+        /// Group Type associated with Group Fleet.
+        /// Applicable for GROUP fleet types.
+        /// 
         /// </value>
         ///
         public enum GroupTypeEnum {
@@ -146,14 +163,18 @@ namespace Oci.FleetappsmanagementService.Models
         };
 
         /// <value>
-        /// Group Type associated with Group Fleet.Applicable for GROUP fleet types.
+        /// Group Type associated with Group Fleet.
+        /// Applicable for GROUP fleet types.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "groupType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<GroupTypeEnum> GroupType { get; set; }
                 ///
         /// <value>
-        /// Type of resource selection in a fleet.
+        /// Type of resource selection in a Fleet.
+        /// Select resources manually or select resources based on rules.
+        /// 
         /// </value>
         ///
         public enum ResourceSelectionTypeEnum {
@@ -167,7 +188,9 @@ namespace Oci.FleetappsmanagementService.Models
         };
 
         /// <value>
-        /// Type of resource selection in a fleet.
+        /// Type of resource selection in a Fleet.
+        /// Select resources manually or select resources based on rules.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "resourceSelectionType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -180,25 +203,27 @@ namespace Oci.FleetappsmanagementService.Models
         public NotificationPreferences NotificationPreferences { get; set; }
         
         /// <value>
-        /// Resources to be added during fleet creation when Resource selection type is Manual.
+        /// Resources associated with the Fleet if resourceSelectionType is MANUAL.
         /// </value>
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<AssociatedFleetResourceDetails> Resources { get; set; }
         
         /// <value>
-        /// Properties to be added during fleet creation.
+        /// Properties associated with the Fleet.
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.List<AssociatedFleetPropertyDetails> Properties { get; set; }
         
         /// <value>
-        /// Credentials to be added during fleet creation.
+        /// Credentials associated with the Fleet.
         /// </value>
         [JsonProperty(PropertyName = "credentials")]
         public System.Collections.Generic.List<AssociatedFleetCredentialDetails> Credentials { get; set; }
         
         /// <value>
-        /// A value which represents if auto confirming of the targets can be enabled
+        /// A value that represents if auto-confirming of the targets can be enabled.
+        /// This will allow targets to be auto-confirmed in the fleet without manual intervention.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isTargetAutoConfirm")]
         public System.Nullable<bool> IsTargetAutoConfirm { get; set; }

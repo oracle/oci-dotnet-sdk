@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Details of the Patch
+    /// Details of the Patch.
     /// </summary>
     public class ComplianceReportPatchDetail 
     {
         
         /// <value>
-        /// The OCID to identify this analysis results.
+        /// Patch name.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,19 +32,19 @@ namespace Oci.FleetappsmanagementService.Models
         public string PatchName { get; set; }
         
         /// <value>
-        /// The OCID of the work request to start the analysis.
+        /// Patch description.
         /// </value>
         [JsonProperty(PropertyName = "patchDescription")]
         public string PatchDescription { get; set; }
         
         /// <value>
-        /// Time the patch was applied
+        /// Time the patch was applied.
         /// </value>
         [JsonProperty(PropertyName = "timeApplied")]
         public System.Nullable<System.DateTime> TimeApplied { get; set; }
         
         /// <value>
-        /// Date on which patch was released.
+        /// The date on which patch was released.
         /// </value>
         [JsonProperty(PropertyName = "timeReleased")]
         public System.Nullable<System.DateTime> TimeReleased { get; set; }

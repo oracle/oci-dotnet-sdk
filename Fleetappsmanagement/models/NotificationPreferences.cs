@@ -16,13 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Conditions when met to send notifications on the fleet activities
+    /// Notification information to get notified when the fleet status changes.
     /// </summary>
     public class NotificationPreferences 
     {
         
         /// <value>
-        /// Topic Id where the notifications will be directed
+        /// Topic Id where the notifications will be directed.
+        /// A topic is a communication channel for sending messages on chosen events to subscriptions.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +34,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string TopicId { get; set; }
         
         /// <value>
-        /// Copartment Id of the topic where the notifications will be directed
+        /// Compartment ID the topic belongs to.
         /// </value>
         /// <remarks>
         /// Required

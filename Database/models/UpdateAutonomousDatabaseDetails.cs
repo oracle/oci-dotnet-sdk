@@ -586,5 +586,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "secretVersionNumber")]
         public System.Nullable<int> SecretVersionNumber { get; set; }
         
+        [JsonProperty(PropertyName = "encryptionKey")]
+        public AutonomousDatabaseEncryptionKeyDetails EncryptionKey { get; set; }
+        
     }
 }

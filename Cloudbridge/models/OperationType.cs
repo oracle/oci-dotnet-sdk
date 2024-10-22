@@ -56,6 +56,12 @@ namespace Oci.CloudbridgeService.Models
       [EnumMember(Value = "CREATE_ASSET_SOURCE")]
       CreateAssetSource,
       [EnumMember(Value = "UPDATE_ASSET_SOURCE")]
-      UpdateAssetSource
+      UpdateAssetSource,
+      [EnumMember(Value = "CLOUD_AWS_DISCOVERY")]
+      CloudAwsDiscovery,
+      [EnumMember(Value = "COLLECT_AWS_REALTIME_METRICS")]
+      CollectAwsRealtimeMetrics,
+      [EnumMember(Value = "COLLECT_AWS_HISTORICAL_METRICS")]
+      CollectAwsHistoricalMetrics
   }
 }

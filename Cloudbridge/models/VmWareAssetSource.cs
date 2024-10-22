@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudbridgeService.Models
 {
     /// <summary>
-    /// Description of an asset source.
+    /// VMware asset source. Used for discovery of virtual machines (VMs) registered in the VMware vCenter installation.
+    /// 
     /// </summary>
     public class VmWareAssetSource : AssetSource
     {

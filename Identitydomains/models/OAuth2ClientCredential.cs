@@ -307,6 +307,21 @@ namespace Oci.IdentitydomainsService.Models
         public System.Nullable<bool> IsResetSecret { get; set; }
         
         /// <value>
+        /// Secret
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - type: string
+        ///  - mutability: readOnly
+        ///  - required: false
+        ///  - returned: default
+        ///  - idcsScimCompliant: false
+        ///  - idcsSensitive: hash_sc
+        /// </value>
+        [JsonProperty(PropertyName = "secret")]
+        public string Secret { get; set; }
+        
+        /// <value>
         /// Scopes
         /// <br/>
         /// **SCIM++ Properties:**

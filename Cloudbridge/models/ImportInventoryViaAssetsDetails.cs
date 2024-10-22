@@ -24,12 +24,20 @@ namespace Oci.CloudbridgeService.Models
         /// <value>
         /// The file body to be sent in the request.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Data is required.")]
         [JsonProperty(PropertyName = "data")]
         public System.Byte[] Data { get; set; }
         
         /// <value>
         /// The type of asset.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "AssetType is required.")]
         [JsonProperty(PropertyName = "assetType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AssetType> AssetType { get; set; }

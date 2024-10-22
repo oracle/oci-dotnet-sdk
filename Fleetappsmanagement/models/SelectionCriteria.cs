@@ -16,13 +16,17 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Rule Selection Criteria
+    /// Rule Selection Criteria for DYNAMIC resource selection for a GENERIC fleet.
+    /// Rules define what resources are members of this fleet. All resources that meet the criteria are added automatically.
+    /// 
     /// </summary>
     public class SelectionCriteria 
     {
                 ///
         /// <value>
-        /// Rule selection match condition.
+        /// Match condition for the rule selection.
+        /// Include resources that match all rules or any of the rules.
+        /// 
         /// </value>
         ///
         public enum MatchConditionEnum {
@@ -36,7 +40,9 @@ namespace Oci.FleetappsmanagementService.Models
         };
 
         /// <value>
-        /// Rule selection match condition.
+        /// Match condition for the rule selection.
+        /// Include resources that match all rules or any of the rules.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

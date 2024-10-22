@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Preferences to send notifications on the fleet activities
+    /// Preferences to send notifications on the fleet activities.
     /// </summary>
     public class Preferences 
     {
@@ -28,7 +28,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<bool> OnUpcomingSchedule { get; set; }
         
         /// <value>
-        /// Enables or disables notification on Job Failures.'
+        /// Enables or disables notification on Job Failures.
         /// </value>
         [JsonProperty(PropertyName = "onJobFailure")]
         public System.Nullable<bool> OnJobFailure { get; set; }

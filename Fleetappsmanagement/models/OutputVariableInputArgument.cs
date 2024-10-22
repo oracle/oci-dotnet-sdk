@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The details of the output variable that will be used as Input argument.
+    /// The details of the output variable that will be used as the Input argument.
     /// </summary>
     public class OutputVariableInputArgument : InputArgument
     {

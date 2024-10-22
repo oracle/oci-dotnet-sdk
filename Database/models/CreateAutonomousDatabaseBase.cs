@@ -209,6 +209,9 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "vaultId")]
         public string VaultId { get; set; }
         
+        [JsonProperty(PropertyName = "encryptionKey")]
+        public AutonomousDatabaseEncryptionKeyDetails EncryptionKey { get; set; }
+        
         /// <value>
         /// **Important** The `adminPassword` or `secretId` must be specified for all Autonomous Databases except for refreshable clones. The password must be between 12 and 30 characters long, and must contain at least 1 uppercase, 1 lowercase, and 1 numeric character. It cannot contain the double quote symbol (\") or the username \"admin\", regardless of casing.
         /// <br/>

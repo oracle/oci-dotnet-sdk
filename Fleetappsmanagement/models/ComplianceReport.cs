@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Summary of a compliance report.
+    /// Compliance details for a fleet in Fleet Application Management.
     /// </summary>
     public class ComplianceReport 
     {
@@ -42,7 +42,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string FleetId { get; set; }
         
         /// <value>
-        /// Last known compliance state of fleet.
+        /// The last known compliance state of the fleet.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<ComplianceState> ComplianceState { get; set; }
         
         /// <value>
-        /// Resources assocaited with the Fleet.
+        /// Resources associated with the Fleet.
         /// </value>
         [JsonProperty(PropertyName = "resources")]
         public System.Collections.Generic.List<ComplianceReportResource> Resources { get; set; }

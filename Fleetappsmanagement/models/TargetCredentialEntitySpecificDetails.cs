@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Fleet Credential Specific Details.
+    /// Target credential details.
     /// </summary>
     public class TargetCredentialEntitySpecificDetails : CredentialEntitySpecificDetails
     {
         
         /// <value>
-        /// OCID of the resource associated with the target for which credential is created
+        /// OCID of the resource associated with the target for which the credential is created.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Target associated with the Credential
+        /// Target name for which the credential is provided.
         /// </value>
         /// <remarks>
         /// Required

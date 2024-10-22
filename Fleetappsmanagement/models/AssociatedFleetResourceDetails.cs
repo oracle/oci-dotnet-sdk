@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// OCID of the reosurce.
+        /// OCID of the resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -38,7 +38,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string FleetResourceType { get; set; }
         
         /// <value>
-        /// Compartment Identifier.
+        /// Compartment Identifier[OCID].
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Tenancy Identifier.
+        /// Tenancy Identifier[OCID].
         /// </value>
         /// <remarks>
         /// Required

@@ -73,5 +73,11 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "versionLabel")]
         public string VersionLabel { get; set; }
         
+        [JsonProperty(PropertyName = "retentionSetting")]
+        public RetentionSetting RetentionSetting { get; set; }
+        
+        [JsonProperty(PropertyName = "backupSetting")]
+        public BackupSetting BackupSetting { get; set; }
+        
     }
 }

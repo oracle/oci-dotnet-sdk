@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Results of a
+    /// A collection of ExecutionSummary.
     /// </summary>
     public class ExecutionCollection 
     {

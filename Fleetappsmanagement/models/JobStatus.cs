@@ -40,6 +40,8 @@ namespace Oci.FleetappsmanagementService.Models
       [EnumMember(Value = "ABORTED")]
       Aborted,
       [EnumMember(Value = "TIMED_OUT")]
-      TimedOut
+      TimedOut,
+      [EnumMember(Value = "PAUSED")]
+      Paused
   }
 }

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Resource Information for the Target
+    /// Resource Information for the Target.
     /// </summary>
     public class TargetResource 
     {

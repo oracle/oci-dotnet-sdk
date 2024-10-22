@@ -32,13 +32,17 @@ namespace Oci.FleetappsmanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A value determining FAMS tag is enabled or not
+        /// A value determining if the Fleet Application Management tagging is enabled or not.
+        /// Allow Fleet Application Management to tag resources with fleet name using \"Oracle$FAMS-Tags.FleetName\" tag.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isFamsTagEnabled")]
         public System.Nullable<bool> IsFamsTagEnabled { get; set; }
         
         /// <value>
-        /// A value determining if cost tracking tag is enabled or not
+        /// A value determining if the cost tracking tag is enabled or not.
+        /// Allow Fleet Application Management to tag resources with cost tracking tag using \"Oracle$FAMS-Tags.FAMSManaged\" tag.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isCostTrackingTagEnabled")]
         public System.Nullable<bool> IsCostTrackingTagEnabled { get; set; }

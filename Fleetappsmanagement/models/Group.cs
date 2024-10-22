@@ -16,13 +16,18 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The group of the runbook
+    /// The group of the runbook.
+    /// 
     /// </summary>
     public class Group 
     {
                 ///
         /// <value>
-        /// The type of the group
+        /// The type of the group.
+        /// PARALLEL_TASK_GROUP : Helps to execute tasks parallelly inside a resource.
+        /// PARALLEL_RESOURCE_GROUP : Executes tasks across resources parallelly.
+        /// ROLLING_RESOURCE_GROUP : Executes tasks across resources in a rolling order.
+        /// 
         /// </value>
         ///
         public enum TypeEnum {
@@ -38,7 +43,11 @@ namespace Oci.FleetappsmanagementService.Models
         };
 
         /// <value>
-        /// The type of the group
+        /// The type of the group.
+        /// PARALLEL_TASK_GROUP : Helps to execute tasks parallelly inside a resource.
+        /// PARALLEL_RESOURCE_GROUP : Executes tasks across resources parallelly.
+        /// ROLLING_RESOURCE_GROUP : Executes tasks across resources in a rolling order.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -49,7 +58,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
-        /// The name of the group
+        /// The name of the group.
         /// </value>
         /// <remarks>
         /// Required

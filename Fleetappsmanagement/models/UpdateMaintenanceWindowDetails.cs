@@ -47,36 +47,43 @@ namespace Oci.FleetappsmanagementService.Models
         
         /// <value>
         /// Does the maintenenace window cause outage?
+        /// An outage indicates whether a maintenance window can consider operations that require downtime.
+        /// It means a period when the application is not accessible.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isOutage")]
         public System.Nullable<bool> IsOutage { get; set; }
         
         /// <value>
-        /// Start time of schedule
+        /// Specify the date and time of the day that the maintenance window starts.
         /// </value>
         [JsonProperty(PropertyName = "timeScheduleStart")]
         public System.Nullable<System.DateTime> TimeScheduleStart { get; set; }
         
         /// <value>
-        /// Duration if schedule type is Custom
+        /// Duration of the maintenance window.
+        /// Specify how long the maintenance window remains open.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "duration")]
         public string Duration { get; set; }
         
         /// <value>
-        /// Is this is a recurring maintenance window
+        /// Is this a recurring maintenance window?
         /// </value>
         [JsonProperty(PropertyName = "isRecurring")]
         public System.Nullable<bool> IsRecurring { get; set; }
         
         /// <value>
-        /// Recurrence rule specification if recurring
+        /// Recurrence rule specification if maintenance window recurring.
+        /// Specify the frequency of running the maintenance window.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "recurrences")]
         public string Recurrences { get; set; }
         
         /// <value>
-        /// Task initiation cutoff
+        /// Task initiation cutoff time for the maintenance window.
         /// </value>
         [JsonProperty(PropertyName = "taskInitiationCutoff")]
         public System.Nullable<int> TaskInitiationCutoff { get; set; }

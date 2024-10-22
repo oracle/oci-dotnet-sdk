@@ -295,6 +295,19 @@ namespace Oci.IdentitydomainsService.Models
         [JsonProperty(PropertyName = "accessKey")]
         public string AccessKey { get; set; }
         
+        /// <value>
+        /// The secret key.
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: true
+        ///  - type: string
+        ///  - mutability: readOnly
+        ///  - required: false
+        ///  - returned: default
+        /// </value>
+        [JsonProperty(PropertyName = "secretKey")]
+        public string SecretKey { get; set; }
+        
         [JsonProperty(PropertyName = "user")]
         public CustomerSecretKeyUser User { get; set; }
         

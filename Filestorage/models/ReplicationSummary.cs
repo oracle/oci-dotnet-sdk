@@ -105,6 +105,12 @@ namespace Oci.FilestorageService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
+        /// <value>
         /// Duration in minutes between replication snapshots.
         /// </value>
         [JsonProperty(PropertyName = "replicationInterval")]

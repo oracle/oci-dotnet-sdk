@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Content Source Details.
+    /// Content Source details.
     /// </summary>
     [JsonConverter(typeof(ContentDetailsModelConverter))]
     public class ContentDetails 
     {
                 ///
         /// <value>
-        /// Content Source Details.
+        /// Content Source type details.
         /// 
         /// </value>
         ///

@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// Filter the list with summary contains the given value.
+        /// Filter the list of announcements that contains the given summary value.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "summaryContains")]
@@ -51,8 +51,8 @@ namespace Oci.FleetappsmanagementService.Requests
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
         /// <value>
-        /// The field to sort AnnouncementSummary by.  Only one sort order may be provided.
-        /// If no value is specified _timeReleased_ is default.
+        /// The field to sort AnnouncementSummary by. Only one sort order may be provided.
+        /// If no value is specified timeReleased is default.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

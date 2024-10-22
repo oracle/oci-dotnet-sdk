@@ -79,6 +79,16 @@ namespace Oci.DatascienceService.Models
         public System.Nullable<ModelLifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// Details about the lifecycle state of the model.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifecycleDetails is required.")]
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
         /// The date and time the resource was created in the timestamp format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// Example: 2019-08-25T21:10:29.41Z
         /// </value>
@@ -176,6 +186,34 @@ namespace Oci.DatascienceService.Models
         [Required(ErrorMessage = "VersionLabel is required.")]
         [JsonProperty(PropertyName = "versionLabel")]
         public string VersionLabel { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RetentionSetting is required.")]
+        [JsonProperty(PropertyName = "retentionSetting")]
+        public RetentionSetting RetentionSetting { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "BackupSetting is required.")]
+        [JsonProperty(PropertyName = "backupSetting")]
+        public BackupSetting BackupSetting { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RetentionOperationDetails is required.")]
+        [JsonProperty(PropertyName = "retentionOperationDetails")]
+        public RetentionOperationDetails RetentionOperationDetails { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "BackupOperationDetails is required.")]
+        [JsonProperty(PropertyName = "backupOperationDetails")]
+        public BackupOperationDetails BackupOperationDetails { get; set; }
         
     }
 }

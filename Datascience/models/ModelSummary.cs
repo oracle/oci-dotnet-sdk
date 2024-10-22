@@ -94,6 +94,12 @@ namespace Oci.DatascienceService.Models
         public System.Nullable<ModelLifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// Details about the lifecycle state of the model.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
         /// The OCID of the model version set that the model is associated to.
         /// </value>
         /// <remarks>

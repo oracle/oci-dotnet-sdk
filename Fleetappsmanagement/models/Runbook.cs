@@ -17,6 +17,8 @@ namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
     /// Runbook definition.
+    /// Runbooks allow you to capture procedural tasks for handling a workflow.
+    /// 
     /// </summary>
     public class Runbook 
     {
@@ -80,7 +82,8 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
                 ///
         /// <value>
-        /// Type of runbook structure.
+        /// Relevance of the runbook.
+        /// 
         /// </value>
         ///
         public enum RunbookRelevanceEnum {
@@ -94,7 +97,8 @@ namespace Oci.FleetappsmanagementService.Models
         };
 
         /// <value>
-        /// Type of runbook structure.
+        /// Relevance of the runbook.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -105,7 +109,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<RunbookRelevanceEnum> RunbookRelevance { get; set; }
         
         /// <value>
-        /// The lifecycle operation performed by the task.
+        /// The lifecycle operation performed by the runbook.
         /// </value>
         /// <remarks>
         /// Required
@@ -137,6 +141,8 @@ namespace Oci.FleetappsmanagementService.Models
         
         /// <value>
         /// Is the runbook default?
+        /// Sets this runbook as the default for the chosen product/product stack for the specified lifecycle operation.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -146,7 +152,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<bool> IsDefault { get; set; }
         
         /// <value>
-        /// Estimated time to successfully complete the runbook execution
+        /// Estimated time to successfully complete the runbook execution.
         /// </value>
         [JsonProperty(PropertyName = "estimatedTime")]
         public string EstimatedTime { get; set; }
@@ -164,7 +170,15 @@ namespace Oci.FleetappsmanagementService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            [EnumMember(Value = "CREATING")]
+            Creating,
+            [EnumMember(Value = "DELETING")]
+            Deleting,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>
