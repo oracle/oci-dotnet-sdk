@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Description of FleetCredential.
+    /// Credential in Fleet Application Management.
     /// </summary>
     public class FleetCredential 
     {

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Results of list announcements . Contains AnnouncementSummary items
+    /// Results of list announcements. Contains AnnouncementSummary items.
     /// </summary>
     public class AnnouncementCollection 
     {

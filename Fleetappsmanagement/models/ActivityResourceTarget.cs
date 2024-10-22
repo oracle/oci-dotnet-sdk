@@ -32,11 +32,19 @@ namespace Oci.FleetappsmanagementService.Models
         public string TargetName { get; set; }
         
         /// <value>
-        /// Status of the Job at Resource Target Level.
+        /// Status of the Job at target Level.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobStatus> Status { get; set; }
+        
+        /// <value>
+        /// Description of the Execution status.
+        /// If there are any errors, this can also include a short error message. 
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
         
     }
 }

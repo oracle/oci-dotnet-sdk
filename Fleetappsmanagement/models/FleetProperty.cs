@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Property associated with a Fleet.
+    /// Property to manage fleet metadata details in\u00A0Fleet Application Management.
     /// </summary>
     public class FleetProperty 
     {
@@ -71,19 +71,19 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Value of the Property
+        /// Value of the Property.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
         
         /// <value>
-        /// Property Id Ocid.
+        /// OCID referring to global level metadata property.
         /// </value>
         [JsonProperty(PropertyName = "propertyId")]
         public string PropertyId { get; set; }
         
         /// <value>
-        /// Text selection of the category
+        /// Text selection of the property.
         /// </value>
         /// <remarks>
         /// Required
@@ -94,7 +94,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<Selection> SelectionType { get; set; }
         
         /// <value>
-        /// Format of the value
+        /// Format of the value.
         /// </value>
         /// <remarks>
         /// Required
@@ -105,7 +105,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<ValueType> ValueType { get; set; }
         
         /// <value>
-        /// Values of the category (must be a single value if selection = 'single choice')
+        /// Values of the property (must be a single value if selectionType = 'SINGLE_CHOICE').
         /// </value>
         [JsonProperty(PropertyName = "allowedValues")]
         public System.Collections.Generic.List<string> AllowedValues { get; set; }

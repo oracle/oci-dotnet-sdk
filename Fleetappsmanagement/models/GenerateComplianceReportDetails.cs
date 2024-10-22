@@ -16,14 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Request to generate compliance report fort the fleet
+    /// Request to generate compliance report for the fleet.
     /// 
     /// </summary>
     public class GenerateComplianceReportDetails 
     {
         
         /// <value>
-        /// Are compliance details required at target level also
+        /// A value that specifies if compliance details are required at the target level also?
+        /// Allowed values are N and Y.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "areDetailsRequired")]
         public string AreDetailsRequired { get; set; }

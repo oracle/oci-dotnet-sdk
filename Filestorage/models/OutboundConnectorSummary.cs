@@ -103,6 +103,12 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair

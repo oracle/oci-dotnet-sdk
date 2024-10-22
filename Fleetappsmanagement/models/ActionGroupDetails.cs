@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Action Group.
+    /// Action Group details.
     /// </summary>
     public class ActionGroupDetails 
     {
         
         /// <value>
-        /// The ID of the ActionGroup resource .
+        /// The ID of the ActionGroup resource.
         /// Ex:fleetId.
         /// 
         /// </value>
@@ -63,7 +63,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Product { get; set; }
         
         /// <value>
-        /// LifeCycle Operation
+        /// LifeCycle Operation.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleOperation")]
         public string LifecycleOperation { get; set; }
@@ -75,26 +75,26 @@ namespace Oci.FleetappsmanagementService.Models
         public string ActivityId { get; set; }
         
         /// <value>
-        /// Status of the Job at Action Group Level
+        /// Status of the Job at Action Group Level.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<JobStatus> Status { get; set; }
         
         /// <value>
-        /// The time the the Scheduler Job started. An RFC3339 formatted datetime string
+        /// The time the Scheduler Job started. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The time the Scheduler Job ended. An RFC3339 formatted datetime string
+        /// The time the Scheduler Job ended. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
         
         /// <value>
-        /// ID of the runbook
+        /// OCID of the runbook.
         /// </value>
         /// <remarks>
         /// Required

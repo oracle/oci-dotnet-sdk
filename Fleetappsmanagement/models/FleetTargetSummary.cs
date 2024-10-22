@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Summary of the FleetTarget.
+    /// Summary of a confirmed target within a fleet.
     /// </summary>
     public class FleetTargetSummary 
     {
@@ -51,7 +51,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Current version of Target
+        /// Current version of target.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
@@ -66,11 +66,29 @@ namespace Oci.FleetappsmanagementService.Models
         public TargetResource Resource { get; set; }
         
         /// <value>
-        /// Last known compliance state of Target.
+        /// The last known compliance state of the target.
         /// </value>
         [JsonProperty(PropertyName = "complianceState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ComplianceState> ComplianceState { get; set; }
+        
+        /// <value>
+        /// The time when the last successful discovery was made.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfLastSuccessfulDiscovery")]
+        public System.Nullable<System.DateTime> TimeOfLastSuccessfulDiscovery { get; set; }
+        
+        /// <value>
+        /// The time when last discovery was attempted.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOfLastDiscoveryAttempt")]
+        public System.Nullable<System.DateTime> TimeOfLastDiscoveryAttempt { get; set; }
+        
+        /// <value>
+        /// A boolean flag that represents whether the last discovery attempt was successful.
+        /// </value>
+        [JsonProperty(PropertyName = "isLastDiscoveryAttemptSuccessful")]
+        public System.Nullable<bool> IsLastDiscoveryAttemptSuccessful { get; set; }
         
         /// <value>
         /// The current state of the FleetTarget.

@@ -16,20 +16,20 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Request to initiate resource validation
+    /// Request to initiate resource validation.
     /// 
     /// </summary>
     public class RequestResourceValidationDetails 
     {
         
         /// <value>
-        /// A boolean flag which decides if all resources within the fleet should be part of vaidation.
+        /// A boolean flag that decides if all resources within the fleet should be part of the validation.
         /// </value>
         [JsonProperty(PropertyName = "isApplicableToAllResources")]
         public System.Nullable<bool> IsApplicableToAllResources { get; set; }
         
         /// <value>
-        /// Resource OCIDS that need to be included for validation.
+        /// Resource OCIDS to be included for validation.
         /// </value>
         [JsonProperty(PropertyName = "resourceIds")]
         public System.Collections.Generic.List<string> ResourceIds { get; set; }

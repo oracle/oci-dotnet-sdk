@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// List of FleetAppManagementService Onboardings.
+    /// List of Fleet Application Management Onboardings.
     /// </summary>
     public class OnboardingCollection 
     {
         
         /// <value>
-        /// List of FleetAppManagementService Onboardings.
+        /// List of Fleet Application Management Onboardings.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,25 +16,29 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The properties of the task.
+    /// The properties of the component.
     /// </summary>
     public class ComponentProperties 
     {
         
         /// <value>
-        /// The hosts to execute on.
+        /// The runOn condition for the task/group/container.
+        /// Build task execution conditions if applicable to product and product-specific components.
+        /// This condition is relevant when handling product stack workflows.
+        /// Example: target.product.name = Oracle WebLogic Server OR target.product.name = Oracle HTTP Server
         /// </value>
         [JsonProperty(PropertyName = "runOn")]
         public string RunOn { get; set; }
         
         /// <value>
-        /// The condition in which the task is to be executed.
+        /// Build control flow conditions that determine the relevance of the task execution.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "condition")]
         public string Condition { get; set; }
                 ///
         /// <value>
-        /// The action to be taken in case of task failure.
+        /// The action to be taken in case of a failure.
         /// </value>
         ///
         public enum ActionOnFailureEnum {
@@ -50,7 +54,7 @@ namespace Oci.FleetappsmanagementService.Models
         };
 
         /// <value>
-        /// The action to be taken in case of task failure.
+        /// The action to be taken in case of a failure.
         /// </value>
         /// <remarks>
         /// Required
@@ -59,6 +63,12 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "actionOnFailure")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ActionOnFailureEnum> ActionOnFailure { get; set; }
+        
+        [JsonProperty(PropertyName = "pauseDetails")]
+        public PauseDetails PauseDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "notificationPreferences")]
+        public TaskNotificationPreferences NotificationPreferences { get; set; }
         
     }
 }

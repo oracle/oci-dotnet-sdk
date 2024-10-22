@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// unique Fleet identifier
+        /// Unique Fleet identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Resource Display Name
+        /// Resource Display Name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceDisplayName")]
         public string ResourceDisplayName { get; set; }

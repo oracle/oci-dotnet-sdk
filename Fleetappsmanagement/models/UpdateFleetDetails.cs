@@ -45,7 +45,9 @@ namespace Oci.FleetappsmanagementService.Models
         public SelectionCriteria RuleSelectionCriteria { get; set; }
         
         /// <value>
-        /// A value which represents if auto confirming of the targets can be enabled
+        /// A value that represents if auto-confirming of the targets can be enabled.
+        /// This will allow targets to be auto-confirmed in the fleet without manual intervention.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isTargetAutoConfirm")]
         public System.Nullable<bool> IsTargetAutoConfirm { get; set; }

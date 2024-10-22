@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// unique Fleet identifier
+        /// Unique Fleet identifier.
         /// </value>
         /// <remarks>
         /// Required
@@ -36,7 +36,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<FleetProperty.LifecycleStateEnum> LifecycleState { get; set; }
@@ -48,7 +48,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// unique FleetProperty identifier
+        /// A filter to return only resources whose fleetProperty identifier matches the given identifier.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }

@@ -75,7 +75,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<Runbook.RunbookRelevanceEnum> RunbookRelevance { get; set; }
         
         /// <value>
-        /// The lifecycle operation performed by the task.
+        /// The lifecycle operation performed by the runbook.
         /// </value>
         /// <remarks>
         /// Required
@@ -107,6 +107,8 @@ namespace Oci.FleetappsmanagementService.Models
         
         /// <value>
         /// Is the runbook default?
+        /// Sets this runbook as the default for the chosen product/product stack for the specified lifecycle operation.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -116,7 +118,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<bool> IsDefault { get; set; }
         
         /// <value>
-        /// Estimated time to successfully complete the runbook execution
+        /// Estimated time to successfully complete the runbook execution.
         /// </value>
         [JsonProperty(PropertyName = "estimatedTime")]
         public string EstimatedTime { get; set; }

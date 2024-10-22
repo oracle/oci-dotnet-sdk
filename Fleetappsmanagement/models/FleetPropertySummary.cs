@@ -42,7 +42,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Property Id.
+        /// OCID referring to global level metadata property.
         /// </value>
         /// <remarks>
         /// Required
@@ -81,13 +81,13 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Value of the Property
+        /// Value of the Property.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
         
         /// <value>
-        /// Type of the FleetProperty.
+        /// Format of the value.
         /// </value>
         /// <remarks>
         /// Required

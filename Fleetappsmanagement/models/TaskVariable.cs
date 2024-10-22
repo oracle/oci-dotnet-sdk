@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The variable of the task.Atleast one of dynamicArguments or output needs to be provided.
+    /// The variable of the task.
+    /// At least one of the dynamicArguments or output needs to be provided.
+    /// 
     /// </summary>
     public class TaskVariable 
     {

@@ -65,19 +65,19 @@ namespace Oci.FleetappsmanagementService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// Compartment Id of the resource
+        /// Compartment Id of the resource.
         /// </value>
         [JsonProperty(PropertyName = "resourceCompartmentId")]
         public string ResourceCompartmentId { get; set; }
         
         /// <value>
-        /// Availability Domain of the resource
+        /// Availability Domain of the resource.
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// Region the resource belongs to
+        /// The region the resource belongs to.
         /// </value>
         [JsonProperty(PropertyName = "resourceRegion")]
         public string ResourceRegion { get; set; }

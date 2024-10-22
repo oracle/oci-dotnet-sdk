@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// Provide the name of the group.
+        /// Name of the group.
         /// </value>
         /// <remarks>
         /// Required

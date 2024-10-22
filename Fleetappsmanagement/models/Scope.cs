@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.FleetappsmanagementService.Models
 {
   /// <summary>
-  /// Possible scopes for Category
+  /// Possible scopes for Property
   /// </summary>
   public enum Scope {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

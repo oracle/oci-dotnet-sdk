@@ -32,7 +32,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string StepName { get; set; }
         
         /// <value>
-        /// The name of the output variable whose value that has to be mapped.
+        /// The name of the output variable whose value has to be mapped.
         /// </value>
         /// <remarks>
         /// Required

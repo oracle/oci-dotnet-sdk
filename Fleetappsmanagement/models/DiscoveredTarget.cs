@@ -23,7 +23,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// OCID of the Target.
+        /// ID of the Target. Can be the target name if a separate ID is not available.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Product { get; set; }
         
         /// <value>
-        /// Unique key that identify the resource that target belongs to.
+        /// Unique key that identifies the resource that the target belongs to.
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Current version of Target
+        /// Current version of the target.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }

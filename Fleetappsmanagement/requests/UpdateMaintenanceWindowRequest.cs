@@ -30,7 +30,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string MaintenanceWindowId { get; set; }
         
         /// <value>
-        /// The information to be updated.
+        /// The information to be updated for the maintenance window.
         /// </value>
         /// <remarks>
         /// Required

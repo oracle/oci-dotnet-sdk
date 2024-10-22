@@ -98,27 +98,27 @@ namespace Oci.FleetappsmanagementService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// Text selection of the category
+        /// Text selection of the property.
         /// </value>
         [JsonProperty(PropertyName = "selection")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Selection> Selection { get; set; }
         
         /// <value>
-        /// Format of the value
+        /// Format of the value.
         /// </value>
         [JsonProperty(PropertyName = "valueType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ValueType> ValueType { get; set; }
         
         /// <value>
-        /// Values of the property (must be a single value if selection = 'single choice')
+        /// Values of the property (must be a single value if selection = 'SINGLE_CHOICE').
         /// </value>
         [JsonProperty(PropertyName = "values")]
         public System.Collections.Generic.List<string> Values { get; set; }
         
         /// <value>
-        /// The scope of the property
+        /// The scope of the property.
         /// </value>
         [JsonProperty(PropertyName = "scope")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

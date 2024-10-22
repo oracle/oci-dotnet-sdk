@@ -17,7 +17,7 @@ namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
     /// Details about Object Storage Bucket source.
-    /// Restricted to the region this is called
+    /// Restricted to the region this is called.
     /// 
     /// </summary>
     public class ObjectStorageBucketContentDetails : ContentDetails
@@ -54,7 +54,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string ObjectName { get; set; }
         
         /// <value>
-        /// SHA256 checksum of the artifact.
+        /// md5 checksum of the artifact.
         /// </value>
         /// <remarks>
         /// Required

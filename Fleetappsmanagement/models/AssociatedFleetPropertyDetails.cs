@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The information about new FleetProperty.
+    /// The information about associated FleetProperty.
     /// </summary>
     public class AssociatedFleetPropertyDetails 
     {
@@ -66,13 +66,13 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<FleetPropertyTypeEnum> FleetPropertyType { get; set; }
         
         /// <value>
-        /// Value of the Property
+        /// Value of the Property.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
         
         /// <value>
-        /// Property is required or not
+        /// Property is required or not.
         /// </value>
         [JsonProperty(PropertyName = "isRequired")]
         public System.Nullable<bool> IsRequired { get; set; }

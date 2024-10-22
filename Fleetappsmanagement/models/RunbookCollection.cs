@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Results of a runbook search. Contains boh RunbookSummary items and other information, such as metadata.
+    /// Results of a runbook search. Contains RunbookSummary items and other information, such as metadata.
     /// </summary>
     public class RunbookCollection 
     {

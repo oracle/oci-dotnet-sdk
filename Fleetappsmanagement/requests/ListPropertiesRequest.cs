@@ -26,7 +26,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return only resources their lifecycleState matches the given lifecycleState.
+        /// A filter to return only resources whose lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Property.LifecycleStateEnum> LifecycleState { get; set; }
@@ -38,13 +38,13 @@ namespace Oci.FleetappsmanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// unique Property identifier
+        /// A filter to return only resources whose Property identifier matches the given identifier.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// A filter to return only resources their scope matches the given lifecycleState.
+        /// A filter to return only resources their scope matches the given scope.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scope")]
         public System.Nullable<Scope> Scope { get; set; }

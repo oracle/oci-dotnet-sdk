@@ -16,13 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Description of JobActivity.
+    /// Activity details including status corresponding to an Action Group.
     /// </summary>
     public class JobActivity 
     {
         
         /// <value>
-        /// Unique activity id at action group level
+        /// Unique activity id at the action group level.
+        /// In most cases, this would be a generated ActionGroupId.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +34,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Status of the Job at Action Group Level
+        /// Status of the Job at Action Group Level.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,31 +45,39 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<JobStatus> Status { get; set; }
         
         /// <value>
-        /// The time the the Scheduler Job started. An RFC3339 formatted datetime string
+        /// The time the execution for the Action Group started. An RFC3339 formatted datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeStarted")]
         public System.Nullable<System.DateTime> TimeStarted { get; set; }
         
         /// <value>
-        /// The time the Scheduler Job ended. An RFC3339 formatted datetime string
+        /// The time the execution for the Action Group ended. An RFC3339 formatted datetime string
         /// </value>
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
         
         /// <value>
-        /// ID of the runbook
+        /// OCID of the runbook associated with the Action Group.
         /// </value>
         [JsonProperty(PropertyName = "runbookId")]
         public string RunbookId { get; set; }
         
         /// <value>
-        /// Name of the runbook
+        /// Name of the runbook associated with the Action Group.
         /// </value>
         [JsonProperty(PropertyName = "runbookName")]
         public string RunbookName { get; set; }
         
         /// <value>
-        /// Resources execution details and outcomes associated with the Task.
+        /// A description of the Job Activity status.
+        /// If there are any errors, this can also include a short error message.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        /// <value>
+        /// List of Resource executions associated with the Action Group.
         /// </value>
         [JsonProperty(PropertyName = "resourceLevelExecutions")]
         public System.Collections.Generic.List<EntityExecutionDetails> ResourceLevelExecutions { get; set; }

@@ -110,6 +110,12 @@ namespace Oci.FilestorageService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
+        /// <value>
         /// The prefix to apply to all snapshots created by this policy.
         /// <br/>
         /// Example: acme

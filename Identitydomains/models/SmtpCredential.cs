@@ -286,6 +286,20 @@ namespace Oci.IdentitydomainsService.Models
         [JsonProperty(PropertyName = "userName")]
         public string UserName { get; set; }
         
+        /// <value>
+        /// Password
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: true
+        ///  - type: string
+        ///  - mutability: readOnly
+        ///  - required: false
+        ///  - returned: default
+        ///  - idcsSensitive: hash_sc
+        /// </value>
+        [JsonProperty(PropertyName = "password")]
+        public string Password { get; set; }
+        
         [JsonProperty(PropertyName = "user")]
         public SmtpCredentialUser User { get; set; }
         

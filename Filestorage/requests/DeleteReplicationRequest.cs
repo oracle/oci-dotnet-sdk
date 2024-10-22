@@ -75,5 +75,11 @@ namespace Oci.FilestorageService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "deleteMode")]
         public System.Nullable<DeleteModeEnum> DeleteMode { get; set; }
+        
+        /// <value>
+        /// Whether to override locks (if any exist).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLockOverride")]
+        public System.Nullable<bool> IsLockOverride { get; set; }
     }
 }

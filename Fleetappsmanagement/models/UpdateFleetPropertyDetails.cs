@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// The information to be updated for the fleet property.
     /// </summary>
     public class UpdateFleetPropertyDetails 
     {
         
         /// <value>
-        /// Value of the Property
+        /// Value of the Property.
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }

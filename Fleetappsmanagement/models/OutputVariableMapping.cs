@@ -16,13 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The details of the output variable that will be used as Input argument.
+    /// Output variable to Input variable mapping details.
+    /// Output variable of a task can be used as an input variable for a subsequent task.
+    /// 
     /// </summary>
     public class OutputVariableMapping 
     {
         
         /// <value>
-        /// The name of the input variable
+        /// The name of the input variable.
         /// </value>
         /// <remarks>
         /// Required

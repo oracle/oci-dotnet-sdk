@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// Details for Checking if FAMS tags can be added for the resources
+        /// Details for checking if Fleet Application Management tags can be added to the resources.
         /// </value>
         /// <remarks>
         /// Required

@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// Details for generating Compliance Report fort the Fleet.
+        /// Details for generating Compliance Report for the Fleet.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public GenerateComplianceReportDetails GenerateComplianceReportDetails { get; set; }
         
         /// <value>
-        /// unique Fleet identifier
+        /// Unique Fleet identifier.
         /// </value>
         /// <remarks>
         /// Required

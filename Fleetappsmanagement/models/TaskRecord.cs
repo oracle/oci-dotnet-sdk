@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Description of TaskRecord.
+    /// Details of a task.
     /// </summary>
     public class TaskRecord 
     {
