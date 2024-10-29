@@ -28,6 +28,8 @@ namespace Oci.NetworkloadbalancerService.Models
       [EnumMember(Value = "UDP")]
       Udp,
       [EnumMember(Value = "TCP_AND_UDP")]
-      TcpAndUdp
+      TcpAndUdp,
+      [EnumMember(Value = "L3IP")]
+      L3Ip
   }
 }

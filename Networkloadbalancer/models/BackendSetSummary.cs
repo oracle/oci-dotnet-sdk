@@ -15,7 +15,14 @@ using Newtonsoft.Json.Converters;
 
 namespace Oci.NetworkloadbalancerService.Models
 {
-    
+    /// <summary>
+    /// The configuration of a network load balancer backend set.
+    /// For more information about backend set configuration, see
+    /// [Managing Backend Sets](https://docs.cloud.oracle.com/Content/Balance/Tasks/managingbackendsets.htm).
+    /// <br/>
+    /// **Caution:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
+    /// 
+    /// </summary>
     public class BackendSetSummary 
     {
         
@@ -89,10 +96,6 @@ namespace Oci.NetworkloadbalancerService.Models
         [JsonProperty(PropertyName = "backends")]
         public System.Collections.Generic.List<Backend> Backends { get; set; }
         
-        /// <value>
-        /// The health check policy configuration.
-        /// 
-        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

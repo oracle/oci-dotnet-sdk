@@ -79,5 +79,12 @@ namespace Oci.NetworkloadbalancerService.Models
         [JsonProperty(PropertyName = "udpIdleTimeout")]
         public System.Nullable<int> UdpIdleTimeout { get; set; }
         
+        /// <value>
+        /// The duration for L3IP idle timeout in seconds.
+        /// Example: 200
+        /// </value>
+        [JsonProperty(PropertyName = "l3IpIdleTimeout")]
+        public System.Nullable<int> L3IpIdleTimeout { get; set; }
+        
     }
 }
