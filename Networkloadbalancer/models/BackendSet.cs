@@ -88,10 +88,6 @@ namespace Oci.NetworkloadbalancerService.Models
         [JsonProperty(PropertyName = "backends")]
         public System.Collections.Generic.List<Backend> Backends { get; set; }
         
-        /// <value>
-        /// The health check policy configuration.
-        /// 
-        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

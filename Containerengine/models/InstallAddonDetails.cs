@@ -43,5 +43,11 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "configurations")]
         public System.Collections.Generic.List<AddonConfiguration> Configurations { get; set; }
         
+        /// <value>
+        /// Whether or not to override an existing addon installation. Defaults to false. If set to true, any existing addon installation would be overridden as per new installation details.
+        /// </value>
+        [JsonProperty(PropertyName = "isOverrideExisting")]
+        public System.Nullable<bool> IsOverrideExisting { get; set; }
+        
     }
 }

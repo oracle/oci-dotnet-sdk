@@ -30,6 +30,11 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 98.1.0 - 2024-10-29
+### Added
+ - Support for L3IP (Layer 3 IP) listeners in the Network Load Balancing service
+ - Support for overriding an existing add-on installation in the Kubernetes Engine service
+
 ## 98.0.0 - 2024-10-22
 ### Added
  - Support for resource locking in the File storage service
