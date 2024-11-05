@@ -50,6 +50,12 @@ namespace Oci.CimsService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// Indicates whether multi-subscription is supported
+        /// </value>
+        [JsonProperty(PropertyName = "isSubscriptionsSupported")]
+        public System.Nullable<bool> IsSubscriptionsSupported { get; set; }
+        
+        /// <value>
         /// The service category list.
         /// </value>
         [JsonProperty(PropertyName = "serviceCategoryList")]
@@ -64,8 +70,8 @@ namespace Oci.CimsService.Models
         /// <value>
         /// The service categories list for MOS Taxonomy.
         /// </value>
-        [JsonProperty(PropertyName = "serviceCategories")]
-        public System.Collections.Generic.List<ServiceCategories> ServiceCategories { get; set; }
+        [JsonProperty(PropertyName = "services")]
+        public System.Collections.Generic.List<ServiceCategories> Services { get; set; }
         
     }
 }

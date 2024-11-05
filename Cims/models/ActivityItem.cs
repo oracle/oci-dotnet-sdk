@@ -32,7 +32,7 @@ namespace Oci.CimsService.Models
         public string Comments { get; set; }
         
         /// <value>
-        /// The time when the activity was created, in milliseconds since epoch time.
+        /// The time when the activity was created, in seconds since epoch time.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.CimsService.Models
         public System.Nullable<int> TimeCreated { get; set; }
         
         /// <value>
-        /// The time when the activity was updated, in milliseconds since epoch time.
+        /// The time when the activity was updated, in seconds since epoch time.
         /// </value>
         /// <remarks>
         /// Required
@@ -140,6 +140,12 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "itemStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ItemStatusEnum> ItemStatus { get; set; }
+        
+        /// <value>
+        /// attachmentID for the ItemType Attachments only for Alloy realm.
+        /// </value>
+        [JsonProperty(PropertyName = "attachmentID")]
+        public string AttachmentID { get; set; }
         
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "activity";

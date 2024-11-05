@@ -40,6 +40,8 @@ namespace Oci.DataflowService.Models
       [EnumMember(Value = "UPDATING")]
       Updating,
       [EnumMember(Value = "NEEDS_ATTENTION")]
-      NeedsAttention
+      NeedsAttention,
+      [EnumMember(Value = "INACTIVE")]
+      Inactive
   }
 }

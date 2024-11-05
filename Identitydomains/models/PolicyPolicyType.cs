@@ -31,7 +31,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// PolicyType identifier
+        /// PolicyType identifier.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
