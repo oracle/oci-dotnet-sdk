@@ -16,28 +16,34 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// List of Service Categories of a Service for MOS Taxonomy.
+    /// List of subcategories under a service.
     /// </summary>
-    public class ServiceCategories 
+    public class SubCategories 
     {
         
         /// <value>
-        /// Service Category list.
+        /// Subcategory list.
         /// </value>
-        [JsonProperty(PropertyName = "service")]
-        public System.Collections.Generic.Dictionary<string, string> Service { get; set; }
+        [JsonProperty(PropertyName = "serviceCategory")]
+        public System.Collections.Generic.Dictionary<string, string> ServiceCategory { get; set; }
         
         /// <value>
-        /// Schema of a Service Category.
+        /// Schema of a subcategory.
         /// </value>
         [JsonProperty(PropertyName = "schema")]
         public string Schema { get; set; }
         
         /// <value>
-        /// The service categories list for MOS Taxonomy.
+        /// Flag to identify if subComponent is present
         /// </value>
-        [JsonProperty(PropertyName = "subCategories")]
-        public System.Collections.Generic.List<SubCategories> SubCategories { get; set; }
+        [JsonProperty(PropertyName = "hasSubCategory")]
+        public string HasSubCategory { get; set; }
+        
+        /// <value>
+        /// The sub component list for MOS Taxonomy.
+        /// </value>
+        [JsonProperty(PropertyName = "subComponents")]
+        public System.Collections.Generic.List<SubComponents> SubComponents { get; set; }
         
     }
 }

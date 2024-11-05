@@ -14,9 +14,9 @@ using Oci.IdentitydomainsService.Models;
 namespace Oci.IdentitydomainsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identitydomains/CreateRule.cs.html">here</a> to see an example of how to use CreateRule request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identitydomains/CreateRestoreOciConsolePolicy.cs.html">here</a> to see an example of how to use CreateRestoreOciConsolePolicy request.
     /// </example>
-    public class CreateRuleRequest : Oci.Common.IOciRequest
+    public class CreateRestoreOciConsolePolicyRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
@@ -32,19 +32,7 @@ namespace Oci.IdentitydomainsService.Requests
         public string ResourceTypeSchemaVersion { get; set; }
         
         /// <value>
-        /// A comma-delimited string that specifies the names of resource attributes that should be returned in the response. By default, a response that contains resource attributes contains only attributes that are defined in the schema for that resource type as returned=always or returned=default. An attribute that is defined as returned=request is returned in a response only if the request specifies its name in the value of this query parameter. If a request specifies this query parameter, the response contains the attributes that this query parameter specifies, as well as any attribute that is defined as returned=always.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "attributes")]
-        public string Attributes { get; set; }
-        
-        /// <value>
-        /// A multi-valued list of strings indicating the return type of attribute definition. The specified set of attributes can be fetched by the return type of the attribute. One or more values can be given together to fetch more than one group of attributes. If 'attributes' query parameter is also available, union of the two is fetched. Valid values - all, always, never, request, default. Values are case-insensitive.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "attributeSets", Oci.Common.Http.CollectionFormatType.Multi)]
-        public System.Collections.Generic.List<AttributeSets> AttributeSets { get; set; }
-        
-        /// <value>
-        /// Rule schema.
+        /// RestoreOciConsolePolicy schema.
         /// <br/>
         /// Before you specify an attribute-value in a request to create a resource, please check the **'mutability'** property of that attribute in the resource-type schema below. Clicking on an attribute-row will expand that row to show the **SCIM++ Properties** of that attribute.
         /// <br/>
@@ -62,7 +50,7 @@ namespace Oci.IdentitydomainsService.Requests
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public Rule Rule { get; set; }
+        public RestoreOciConsolePolicy RestoreOciConsolePolicy { get; set; }
         
         /// <value>
         /// A token you supply to uniquely identify the request and provide idempotency if the request is retried. Idempotency tokens expire after 24 hours.

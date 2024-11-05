@@ -8,34 +8,24 @@
 
 
 using System.Runtime.Serialization;
-using Oci.CloudbridgeService.Models;
+using Oci.IdentitydomainsService.Models;
 
-namespace Oci.CloudbridgeService.Responses
+namespace Oci.IdentitydomainsService.Responses
 {
-    public class UpdatePluginResponse : Oci.Common.OciResponse
+    public class GetOciConsoleSignOnPolicyConsentResponse : Oci.Common.OciResponse
     {
 
         /// <value>
-        /// For optimistic concurrency control. See `if-match`.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
-        public string Etag { get; set; }
-
-
-        /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact
-        /// Oracle about a particular request, please provide the request ID.
-        /// 
+        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
         /// <value>
-        /// The returned Plugin instance.
+        /// The returned OciConsoleSignOnPolicyConsent instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public Plugin Plugin { get; set; }
+        public OciConsoleSignOnPolicyConsent OciConsoleSignOnPolicyConsent { get; set; }
 
     }
 }

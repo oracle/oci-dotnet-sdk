@@ -16,59 +16,66 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// Condition or ConditionGroup assigned to the rule
+    /// The modified Policy, Rule, ConditionGroup or Condition during consent signing.
     /// <br/>
     /// **SCIM++ Properties:**
-    ///  - idcsSearchable: true
+    ///  - idcsSearchable: false
     ///  - multiValued: false
-    ///  - mutability: readWrite
-    ///  - required: false
+    ///  - mutability: immutable
+    ///  - required: true
     ///  - returned: default
     ///  - type: complex
     ///  - uniqueness: none
     /// </summary>
-    public class RuleConditionGroup 
+    public class OciConsoleSignOnPolicyConsentModifiedResource 
     {
         
         /// <value>
-        /// Condition or ConditionGroup identifier.
+        /// Modified Policy, Rule, ConditionGroup or Condition Id.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
-        ///  - idcsSearchable: true
+        ///  - idcsSearchable: false
         ///  - multiValued: false
-        ///  - mutability: readWrite
-        ///  - required: false
+        ///  - mutability: immutable
+        ///  - required: true
         ///  - returned: default
         ///  - type: string
-        ///  - uniqueness: none
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
         
         /// <value>
-        /// ConditionGroup URI
+        /// The modified Policy, Rule, ConditionGroup, or Condition OCID.
         /// <br/>
         /// **SCIM++ Properties:**
+        ///  - caseExact: true
         ///  - idcsSearchable: false
         ///  - multiValued: false
-        ///  - mutability: readOnly
-        ///  - required: false
+        ///  - mutability: immutable
+        ///  - required: true
         ///  - returned: default
-        ///  - type: reference
-        ///  - uniqueness: none
+        ///  - type: string
         /// </value>
-        [JsonProperty(PropertyName = "$ref")]
-        public string Ref { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Ocid is required.")]
+        [JsonProperty(PropertyName = "ocid")]
+        public string Ocid { get; set; }
                 ///
         /// <value>
-        /// A label that indicates whether this is Condition or ConditionGroup.
+        /// The Modified Resource type - Policy, Rule, ConditionGroup, or Condition. A label that indicates the resource type.
         /// <br/>
         /// **SCIM++ Properties:**
-        ///  - idcsDefaultValue: Condition
         ///  - idcsSearchable: false
         ///  - multiValued: false
-        ///  - mutability: readWrite
+        ///  - mutability: immutable
+        ///  - idcsDefaultValue: Policy
         ///  - required: true
         ///  - returned: default
         ///  - type: string
@@ -79,20 +86,24 @@ namespace Oci.IdentitydomainsService.Models
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
             [EnumMember(Value = null)]
             UnknownEnumValue,
-            [EnumMember(Value = "Condition")]
-            Condition,
+            [EnumMember(Value = "Policy")]
+            Policy,
+            [EnumMember(Value = "Rule")]
+            Rule,
             [EnumMember(Value = "ConditionGroup")]
-            ConditionGroup
+            ConditionGroup,
+            [EnumMember(Value = "Condition")]
+            Condition
         };
 
         /// <value>
-        /// A label that indicates whether this is Condition or ConditionGroup.
+        /// The Modified Resource type - Policy, Rule, ConditionGroup, or Condition. A label that indicates the resource type.
         /// <br/>
         /// **SCIM++ Properties:**
-        ///  - idcsDefaultValue: Condition
         ///  - idcsSearchable: false
         ///  - multiValued: false
-        ///  - mutability: readWrite
+        ///  - mutability: immutable
+        ///  - idcsDefaultValue: Policy
         ///  - required: true
         ///  - returned: default
         ///  - type: string
@@ -105,23 +116,6 @@ namespace Oci.IdentitydomainsService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-        
-        /// <value>
-        /// Condition or ConditionGroup name
-        /// <br/>
-        /// **Added In:** 17.4.2
-        /// <br/>
-        /// **SCIM++ Properties:**
-        ///  - idcsSearchable: false
-        ///  - multiValued: false
-        ///  - mutability: readOnly
-        ///  - required: false
-        ///  - returned: default
-        ///  - type: string
-        ///  - uniqueness: none
-        /// </value>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
         
     }
 }

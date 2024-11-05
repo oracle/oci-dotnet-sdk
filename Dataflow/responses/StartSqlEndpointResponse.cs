@@ -8,24 +8,30 @@
 
 
 using System.Runtime.Serialization;
-using Oci.CimsService.Models;
+using Oci.DataflowService.Models;
 
-namespace Oci.CimsService.Responses
+namespace Oci.DataflowService.Responses
 {
-    public class GetStatusResponse : Oci.Common.OciResponse
+    public class StartSqlEndpointResponse : Oci.Common.OciResponse
     {
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
+        /// Unique Oracle assigned identifier for the request.
+        /// If you need to contact Oracle about a particular request, please provide the request ID.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
+
         /// <value>
-        /// The returned Status instance.
+        /// Unique Oracle assigned identifier for a work request.
+        /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public Status Status { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
+        public string OpcWorkRequestId { get; set; }
+
+
 
     }
 }

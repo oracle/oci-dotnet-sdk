@@ -677,7 +677,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Create a Condition
+        /// Create a condition
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2021,7 +2021,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Create a Policy
+        /// Create a Policy.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -2077,7 +2077,63 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Create a Rule
+        /// Create a RestoreOciConsolePolicy entry to restore Policy to factory default.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identitydomains/CreateRestoreOciConsolePolicy.cs.html">here</a> to see an example of how to use CreateRestoreOciConsolePolicy API.</example>
+        public async Task<CreateRestoreOciConsolePolicyResponse> CreateRestoreOciConsolePolicy(CreateRestoreOciConsolePolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called createRestoreOciConsolePolicy");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/RestoreOciConsolePolicy".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "IdentityDomains",
+                    OperationName = "CreateRestoreOciConsolePolicy",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<CreateRestoreOciConsolePolicyResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateRestoreOciConsolePolicy failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Create a Rule.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -3029,7 +3085,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Delete a Condition
+        /// Delete a condition.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4205,7 +4261,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Delete a Policy
+        /// Delete a Policy.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -4261,7 +4317,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Delete a Rule
+        /// Delete a Rule.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -5437,7 +5493,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Get a Condition
+        /// Get a condition.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -6949,6 +7005,62 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
+        /// Get a OciConsoleSignOnPolicyConsent Entry.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identitydomains/GetOciConsoleSignOnPolicyConsent.cs.html">here</a> to see an example of how to use GetOciConsoleSignOnPolicyConsent API.</example>
+        public async Task<GetOciConsoleSignOnPolicyConsentResponse> GetOciConsoleSignOnPolicyConsent(GetOciConsoleSignOnPolicyConsentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getOciConsoleSignOnPolicyConsent");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OciConsoleSignOnPolicyConsents/{ociConsoleSignOnPolicyConsentId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "IdentityDomains",
+                    OperationName = "GetOciConsoleSignOnPolicyConsent",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/OciConsoleSignOnPolicyConsent/GetOciConsoleSignOnPolicyConsent",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetOciConsoleSignOnPolicyConsentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetOciConsoleSignOnPolicyConsent failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Get a password policy.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -7005,7 +7117,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Get a Policy
+        /// Get a Policy.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -7061,7 +7173,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Get a Rule
+        /// Get a Rule.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -8461,7 +8573,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Search Conditions
+        /// Search conditions.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -8497,7 +8609,7 @@ namespace Oci.IdentitydomainsService
                     ServiceName = "IdentityDomains",
                     OperationName = "ListConditions",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Conditions/ListConditions",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Condition/ListConditions",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -10085,6 +10197,62 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
+        /// Search OciConsoleSignOnPolicyConsent entries
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identitydomains/ListOciConsoleSignOnPolicyConsents.cs.html">here</a> to see an example of how to use ListOciConsoleSignOnPolicyConsents API.</example>
+        public async Task<ListOciConsoleSignOnPolicyConsentsResponse> ListOciConsoleSignOnPolicyConsents(ListOciConsoleSignOnPolicyConsentsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listOciConsoleSignOnPolicyConsents");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OciConsoleSignOnPolicyConsents".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "IdentityDomains",
+                    OperationName = "ListOciConsoleSignOnPolicyConsents",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/OciConsoleSignOnPolicyConsent/ListOciConsoleSignOnPolicyConsents",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListOciConsoleSignOnPolicyConsentsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListOciConsoleSignOnPolicyConsents failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Search for password policies.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -10141,7 +10309,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Search Policies
+        /// Search Policies.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -10177,7 +10345,7 @@ namespace Oci.IdentitydomainsService
                     ServiceName = "IdentityDomains",
                     OperationName = "ListPolicies",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Policies/ListPolicies",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Policy/ListPolicies",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -10253,7 +10421,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Search Rules
+        /// Search Rules.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -10289,7 +10457,7 @@ namespace Oci.IdentitydomainsService
                     ServiceName = "IdentityDomains",
                     OperationName = "ListRules",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Rules/ListRules",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Rule/ListRules",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -11429,7 +11597,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Update a Condition
+        /// Update a condition.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -12605,7 +12773,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Update a Policy
+        /// Update a Policy.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -12661,7 +12829,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Update a Rule
+        /// Update a Rule.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -13669,7 +13837,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Replace a Condition
+        /// Replace a condition.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -14341,7 +14509,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Replace a Policy
+        /// Replace a Policy.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -14397,7 +14565,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Replace a Rule
+        /// Replace a Rule.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -15517,7 +15685,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Search Conditions Using POST
+        /// Search Conditions Using POST.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -15553,7 +15721,7 @@ namespace Oci.IdentitydomainsService
                     ServiceName = "IdentityDomains",
                     OperationName = "SearchConditions",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Conditions/SearchConditions",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Condition/SearchConditions",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -16469,6 +16637,62 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
+        /// Search OciConsoleSignOnPolicyConsents Using POST
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/identitydomains/SearchOciConsoleSignOnPolicyConsents.cs.html">here</a> to see an example of how to use SearchOciConsoleSignOnPolicyConsents API.</example>
+        public async Task<SearchOciConsoleSignOnPolicyConsentsResponse> SearchOciConsoleSignOnPolicyConsents(SearchOciConsoleSignOnPolicyConsentsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called searchOciConsoleSignOnPolicyConsents");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/admin/v1/OciConsoleSignOnPolicyConsents/.search".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json, application/scim+json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "IdentityDomains",
+                    OperationName = "SearchOciConsoleSignOnPolicyConsents",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/OciConsoleSignOnPolicyConsent/SearchOciConsoleSignOnPolicyConsents",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<SearchOciConsoleSignOnPolicyConsentsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"SearchOciConsoleSignOnPolicyConsents failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Search for password policies using POST.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -16561,7 +16785,7 @@ namespace Oci.IdentitydomainsService
                     ServiceName = "IdentityDomains",
                     OperationName = "SearchPolicies",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Policies/SearchPolicies",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Policy/SearchPolicies",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -16637,7 +16861,7 @@ namespace Oci.IdentitydomainsService
         }
 
         /// <summary>
-        /// Search Rules Using POST
+        /// Search Rules Using POST.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -16673,7 +16897,7 @@ namespace Oci.IdentitydomainsService
                     ServiceName = "IdentityDomains",
                     OperationName = "SearchRules",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Rules/SearchRules",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/identity-domains/v1/Rule/SearchRules",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

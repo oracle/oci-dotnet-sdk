@@ -25,10 +25,6 @@ namespace Oci.CimsService.Models
         /// <value>
         /// Unique identifier for the item.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ItemKey is required.")]
         [JsonProperty(PropertyName = "itemKey")]
         public string ItemKey { get; set; }
         

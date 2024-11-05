@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DataflowService.Models
 {
     /// <summary>
-    /// Currently only the tags of a SQL Endpoint can be updated.
+    /// The information about all updatable parameters of a SQL Endpoint.
     /// </summary>
     public class UpdateSqlEndpointDetails 
     {
@@ -35,6 +35,68 @@ namespace Oci.DataflowService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        /// <value>
+        /// The SQL Endpoint name, which can be changed.
+        /// </value>
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
+        
+        /// <value>
+        /// The description of CreateSQLEndpointDetails.
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        /// <value>
+        /// The shape of the SQL Endpoint driver instance.
+        /// </value>
+        [JsonProperty(PropertyName = "driverShape")]
+        public string DriverShape { get; set; }
+        
+        [JsonProperty(PropertyName = "driverShapeConfig")]
+        public ShapeConfig DriverShapeConfig { get; set; }
+        
+        /// <value>
+        /// The shape of the SQL Endpoint worker instance.
+        /// </value>
+        [JsonProperty(PropertyName = "executorShape")]
+        public string ExecutorShape { get; set; }
+        
+        [JsonProperty(PropertyName = "executorShapeConfig")]
+        public ShapeConfig ExecutorShapeConfig { get; set; }
+        
+        /// <value>
+        /// The minimum number of executors.
+        /// </value>
+        [JsonProperty(PropertyName = "minExecutorCount")]
+        public System.Nullable<int> MinExecutorCount { get; set; }
+        
+        /// <value>
+        /// The maximum number of executors.
+        /// </value>
+        [JsonProperty(PropertyName = "maxExecutorCount")]
+        public System.Nullable<int> MaxExecutorCount { get; set; }
+        
+        /// <value>
+        /// Metastore OCID
+        /// </value>
+        [JsonProperty(PropertyName = "metastoreId")]
+        public string MetastoreId { get; set; }
+        
+        /// <value>
+        /// OCI lake OCID
+        /// </value>
+        [JsonProperty(PropertyName = "lakeId")]
+        public string LakeId { get; set; }
+        
+        /// <value>
+        /// The Spark configuration passed to the running process.
+        /// See https://spark.apache.org/docs/latest/configuration.html#available-properties.
+        /// Example: { &quot;spark.app.name&quot; : &quot;My App Name&quot;, &quot;spark.shuffle.io.maxRetries&quot; : &quot;4&quot; }Note: Not all Spark properties are permitted to be set.  Attempting to set a property that isnot allowed to be overwritten will cause a 400 status to be returned.
+        /// </value>
+        [JsonProperty(PropertyName = "sparkAdvancedConfigurations")]
+        public System.Collections.Generic.Dictionary<string, string> SparkAdvancedConfigurations { get; set; }
         
     }
 }

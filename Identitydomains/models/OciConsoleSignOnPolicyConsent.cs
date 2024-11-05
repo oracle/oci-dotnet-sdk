@@ -16,9 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// Policy resource. A named list of rules.
+    /// The \"Security Policy for OCI Console\" sign-on policy consent resource used to record consents. The schema to record the \"Security Policy for OCI Console\" sign-on policy consent.
     /// </summary>
-    public class Policy 
+    public class OciConsoleSignOnPolicyConsent 
     {
         
         /// <value>
@@ -194,113 +194,159 @@ namespace Oci.IdentitydomainsService.Models
         [JsonProperty(PropertyName = "tenancyOcid")]
         public string TenancyOcid { get; set; }
         
-        /// <value>
-        /// An identifier for the Resource as defined by the Service Consumer. The externalId may simplify identification of the Resource between Service Consumer and Service provider by allowing the Consumer to refer to the Resource with its own identifier, obviating the need to store a local mapping between the local identifier of the Resource and the identifier used by the Service Provider. Each Resource MAY include a non-empty externalId value.  The value of the externalId attribute is always issued be the Service Consumer and can never be specified by the Service Provider. The Service Provider MUST always interpret the externalId as scoped to the Service Consumer's tenant.
-        /// <br/>
-        /// **SCIM++ Properties:**
-        ///  - caseExact: false
-        ///  - idcsSearchable: true
-        ///  - multiValued: false
-        ///  - mutability: readWrite
-        ///  - required: false
-        ///  - returned: default
-        ///  - type: string
-        ///  - uniqueness: none
-        /// </value>
-        [JsonProperty(PropertyName = "externalId")]
-        public string ExternalId { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ConsentSignedBy is required.")]
+        [JsonProperty(PropertyName = "consentSignedBy")]
+        public OciConsoleSignOnPolicyConsentConsentSignedBy ConsentSignedBy { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ModifiedResource is required.")]
+        [JsonProperty(PropertyName = "modifiedResource")]
+        public OciConsoleSignOnPolicyConsentModifiedResource ModifiedResource { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "PolicyResource is required.")]
+        [JsonProperty(PropertyName = "policyResource")]
+        public OciConsoleSignOnPolicyConsentPolicyResource PolicyResource { get; set; }
+                ///
         /// <value>
-        /// Policy name
+        /// Change Type - MODIFIED or RESTORED_TO_FACTORY_DEFAULT
         /// <br/>
         /// **SCIM++ Properties:**
-        ///  - caseExact: false
         ///  - idcsSearchable: true
         ///  - multiValued: false
-        ///  - mutability: readWrite
+        ///  - mutability: immutable
         ///  - required: true
-        ///  - returned: always
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        ///
+        public enum ChangeTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MODIFIED")]
+            Modified,
+            [EnumMember(Value = "RESTORED_TO_FACTORY_DEFAULT")]
+            RestoredToFactoryDefault
+        };
+
+        /// <value>
+        /// Change Type - MODIFIED or RESTORED_TO_FACTORY_DEFAULT
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - idcsSearchable: true
+        ///  - multiValued: false
+        ///  - mutability: immutable
+        ///  - required: true
+        ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Name is required.")]
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
+        [Required(ErrorMessage = "ChangeType is required.")]
+        [JsonProperty(PropertyName = "changeType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ChangeTypeEnum> ChangeType { get; set; }
         
         /// <value>
-        /// Policy Description
+        /// Client IP of the Consent Signer
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsSearchable: false
         ///  - multiValued: false
-        ///  - mutability: readWrite
+        ///  - mutability: immutable
+        ///  - required: true
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ClientIp is required.")]
+        [JsonProperty(PropertyName = "clientIp")]
+        public string ClientIp { get; set; }
+        
+        /// <value>
+        /// The justification for the change when an identity domain administrator opts to modify the Oracle security defaults for the \"Security Policy for OCI Console\" sign-on policy shipped by Oracle.
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - idcsSearchable: false
+        ///  - multiValued: false
+        ///  - mutability: immutable
+        ///  - required: true
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Justification is required.")]
+        [JsonProperty(PropertyName = "justification")]
+        public string Justification { get; set; }
+        
+        /// <value>
+        /// The detailed reason for the change when an identity domain administrator opts to modify the Oracle security defaults for the \"Security Policy for OCI Console\" sign-on policy shipped by Oracle.
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - idcsSearchable: false
+        ///  - multiValued: false
+        ///  - mutability: immutable
         ///  - required: false
         ///  - returned: default
         ///  - type: string
         ///  - uniqueness: none
         /// </value>
-        [JsonProperty(PropertyName = "description")]
-        public string Description { get; set; }
+        [JsonProperty(PropertyName = "reason")]
+        public string Reason { get; set; }
         
         /// <value>
-        /// If true, Policy is active.
-        /// <br/>
-        /// **SCIM++ Properties:**
-        ///  - caseExact: false
-        ///  - idcsSearchable: true
-        ///  - multiValued: false
-        ///  - mutability: readWrite
-        ///  - required: false
-        ///  - returned: default
-        ///  - type: boolean
-        ///  - uniqueness: none
-        /// </value>
-        [JsonProperty(PropertyName = "active")]
-        public System.Nullable<bool> Active { get; set; }
-        
-        /// <value>
-        /// The Groovy script that is run instead of the policy, if the policy type allows the policy to be a Groovy script.
+        /// Time when Consent was signed.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsSearchable: false
         ///  - multiValued: false
-        ///  - mutability: readWrite
-        ///  - required: false
+        ///  - mutability: immutable
+        ///  - required: true
         ///  - returned: default
-        ///  - type: string
+        ///  - type: dateTime
         ///  - uniqueness: none
         /// </value>
-        [JsonProperty(PropertyName = "policyGroovy")]
-        public string PolicyGroovy { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeConsentSigned is required.")]
+        [JsonProperty(PropertyName = "timeConsentSigned")]
+        public string TimeConsentSigned { get; set; }
         
         /// <value>
-        /// Rules assigned to this policy
+        /// The recipients of the email notification for the change in consent.
         /// <br/>
         /// **SCIM++ Properties:**
-        ///  - idcsCompositeKey: [value]
-        ///  - idcsSearchable: true
+        ///  - idcsSearchable: false
         ///  - multiValued: true
-        ///  - mutability: readWrite
-        ///  - required: false
-        ///  - returned: request
-        ///  - type: complex
-        ///  - uniqueness: none
+        ///  - mutability: immutable
+        ///  - required: true
+        ///  - returned: default
+        ///  - type: string
         /// </value>
-        [JsonProperty(PropertyName = "rules")]
-        public System.Collections.Generic.List<PolicyRules> Rules { get; set; }
-        
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "PolicyType is required.")]
-        [JsonProperty(PropertyName = "policyType")]
-        public PolicyPolicyType PolicyType { get; set; }
-        
-        [JsonProperty(PropertyName = "urn:ietf:params:scim:schemas:oracle:idcs:extension:ociconsolesignonpolicyconsent:Policy")]
-        public PolicyExtensionOciconsolesignonpolicyconsentPolicy UrnIetfParamsScimSchemasOracleIdcsExtensionOciconsolesignonpolicyconsentPolicy { get; set; }
+        [Required(ErrorMessage = "NotificationRecipients is required.")]
+        [JsonProperty(PropertyName = "notificationRecipients")]
+        public System.Collections.Generic.List<string> NotificationRecipients { get; set; }
         
     }
 }

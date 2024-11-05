@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// PolicyType on which the policy is based
+    /// Policy Resource
     /// <br/>
     /// **SCIM++ Properties:**
     ///  - idcsSearchable: true
@@ -27,11 +27,11 @@ namespace Oci.IdentitydomainsService.Models
     ///  - type: complex
     ///  - uniqueness: none
     /// </summary>
-    public class PolicyPolicyType 
+    public class OciConsoleSignOnPolicyConsentPolicyResource 
     {
         
         /// <value>
-        /// PolicyType identifier.
+        /// Policy Resource Id
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
@@ -41,7 +41,6 @@ namespace Oci.IdentitydomainsService.Models
         ///  - required: true
         ///  - returned: default
         ///  - type: string
-        ///  - uniqueness: none
         /// </value>
         /// <remarks>
         /// Required
@@ -51,19 +50,23 @@ namespace Oci.IdentitydomainsService.Models
         public string Value { get; set; }
         
         /// <value>
-        /// PolicyType URI
+        /// Policy Resource Ocid
         /// <br/>
         /// **SCIM++ Properties:**
-        ///  - idcsSearchable: false
+        ///  - caseExact: true
+        ///  - idcsSearchable: true
         ///  - multiValued: false
-        ///  - mutability: readOnly
-        ///  - required: false
+        ///  - mutability: immutable
+        ///  - required: true
         ///  - returned: default
-        ///  - type: reference
-        ///  - uniqueness: none
+        ///  - type: string
         /// </value>
-        [JsonProperty(PropertyName = "$ref")]
-        public string Ref { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Ocid is required.")]
+        [JsonProperty(PropertyName = "ocid")]
+        public string Ocid { get; set; }
         
     }
 }

@@ -70,7 +70,9 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// Operation to create a support ticket.
+        /// Creates a support ticket in the specified tenancy.
+        /// For more information, see [Creating Support Requests](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -126,63 +128,9 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// Fetches csi number of the user.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cims/GetCsiNumber.cs.html">here</a> to see an example of how to use GetCsiNumber API.</example>
-        public async Task<GetCsiNumberResponse> GetCsiNumber(GetCsiNumberRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called getCsiNumber");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/v2/incidents/getCsiNumber".Trim('/')));
-            HttpMethod method = new HttpMethod("GET");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "Incident",
-                    OperationName = "GetCsiNumber",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<GetCsiNumberResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"GetCsiNumber failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Gets details about the specified support ticket.
+        /// Gets the specified support ticket.
+        /// For more information, see [Getting Details for a Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/get-incident.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -238,63 +186,15 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// Gets the status of the service.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send. Required.</param>
-        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
-        /// <param name="completionOption">The completion option for this operation. Optional.</param>
-        /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cims/GetStatus.cs.html">here</a> to see an example of how to use GetStatus API.</example>
-        public async Task<GetStatusResponse> GetStatus(GetStatusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
-        {
-            logger.Trace("Called getStatus");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/v2/incidents/status".Trim('/')));
-            HttpMethod method = new HttpMethod("GET");
-            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
-            requestMessage.Headers.Add("Accept", "application/json");
-            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
-                if (retryingClient != null)
-                {
-                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
-                }
-                else
-                {
-                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
-                }
-                stopWatch.Stop();
-                ApiDetails apiDetails = new ApiDetails
-                {
-                    ServiceName = "Incident",
-                    OperationName = "GetStatus",
-                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/incidentmanagement/20181231/Status/GetStatus",
-                    UserAgent = this.GetUserAgent()
-                };
-                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
-                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<GetStatusResponse>(responseMessage);
-            }
-            catch (OciException e)
-            {
-                logger.Error(e);
-                throw;
-            }
-            catch (Exception e)
-            {
-                logger.Error($"GetStatus failed with error: {e.Message}");
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// During support ticket creation, returns the list of all possible products that Oracle Cloud Infrastructure supports.
+        /// Depending on the selected &#x60;productType&#x60;, either
+        /// lists available products (service groups, services, service categories, and subcategories) for technical support tickets or
+        /// lists limits and current usage for limit increase tickets.
+        /// This operation is called during creation of technical support and limit increase tickets.
+        /// For more information about listing products, see
+        /// [Listing Products for Support Requests](https://docs.cloud.oracle.com/iaas/Content/GSG/support/list-incident-resource-types-taxonomy.htm).
+        /// For more information about listing limits, see
+        /// [Listing Limits for Service Limit Increase Requests](https://docs.cloud.oracle.com/iaas/Content/GSG/support/list-incident-resource-types-limit.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -350,7 +250,9 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// Returns the list of support tickets raised by the tenancy.
+        /// Lists support tickets for the specified tenancy.
+        /// For more information, see [Listing Support Requests](https://docs.cloud.oracle.com/iaas/Content/GSG/support/list-incidents.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -406,7 +308,9 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// Updates the specified support ticket&#39;s information.
+        /// Updates the specified support ticket.
+        /// For more information, see [Updating Support Requests](https://docs.cloud.oracle.com/iaas/Content/GSG/support/update-incident.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -463,6 +367,8 @@ namespace Oci.CimsService
 
         /// <summary>
         /// Checks whether the requested user is valid.
+        /// For more information, see [Validating a User](https://docs.cloud.oracle.com/iaas/Content/GSG/support/validate-user.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

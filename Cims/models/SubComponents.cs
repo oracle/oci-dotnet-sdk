@@ -16,14 +16,22 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details about the issue that the account support ticket relates to. Avoid entering confidential information.
-    /// For information about `ACCOUNT` support tickets, see [Creating a Billing Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-billing.htm).
-    /// 
+    /// List of subcomponents under a subcategory.
     /// </summary>
-    public class CreateAccountItemDetails : CreateItemDetails
+    public class SubComponents 
     {
         
-        [JsonProperty(PropertyName = "type")]
-        private readonly string type = "account";
+        /// <value>
+        /// Subcategory list.
+        /// </value>
+        [JsonProperty(PropertyName = "subCategory")]
+        public System.Collections.Generic.Dictionary<string, string> SubCategory { get; set; }
+        
+        /// <value>
+        /// Schema of a subcategory.
+        /// </value>
+        [JsonProperty(PropertyName = "schema")]
+        public string Schema { get; set; }
+        
     }
 }

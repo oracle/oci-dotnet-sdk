@@ -16,87 +16,109 @@ using Newtonsoft.Json.Converters;
 namespace Oci.IdentitydomainsService.Models
 {
     /// <summary>
-    /// Condition or ConditionGroup assigned to the rule
+    /// User or App that signs the consent.
     /// <br/>
     /// **SCIM++ Properties:**
     ///  - idcsSearchable: true
     ///  - multiValued: false
-    ///  - mutability: readWrite
-    ///  - required: false
+    ///  - mutability: immutable
+    ///  - required: true
     ///  - returned: default
     ///  - type: complex
     ///  - uniqueness: none
     /// </summary>
-    public class RuleConditionGroup 
+    public class OciConsoleSignOnPolicyConsentConsentSignedBy 
     {
         
         /// <value>
-        /// Condition or ConditionGroup identifier.
+        /// Id of the User or App that signed consent.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true
         ///  - idcsSearchable: true
         ///  - multiValued: false
-        ///  - mutability: readWrite
-        ///  - required: false
+        ///  - mutability: immutable
+        ///  - required: true
         ///  - returned: default
         ///  - type: string
-        ///  - uniqueness: none
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Value is required.")]
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
         
         /// <value>
-        /// ConditionGroup URI
+        /// OCID of the User or App that signed consent.
         /// <br/>
         /// **SCIM++ Properties:**
-        ///  - idcsSearchable: false
+        ///  - caseExact: true
+        ///  - idcsSearchable: true
         ///  - multiValued: false
-        ///  - mutability: readOnly
-        ///  - required: false
-        ///  - returned: default
-        ///  - type: reference
-        ///  - uniqueness: none
-        /// </value>
-        [JsonProperty(PropertyName = "$ref")]
-        public string Ref { get; set; }
-                ///
-        /// <value>
-        /// A label that indicates whether this is Condition or ConditionGroup.
-        /// <br/>
-        /// **SCIM++ Properties:**
-        ///  - idcsDefaultValue: Condition
-        ///  - idcsSearchable: false
-        ///  - multiValued: false
-        ///  - mutability: readWrite
+        ///  - mutability: immutable
         ///  - required: true
         ///  - returned: default
         ///  - type: string
-        ///  - uniqueness: none
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Ocid is required.")]
+        [JsonProperty(PropertyName = "ocid")]
+        public string Ocid { get; set; }
+        
+        /// <value>
+        /// Name of the User or App that signed consent.
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: false
+        ///  - idcsSearchable: false
+        ///  - multiValued: false
+        ///  - mutability: immutable
+        ///  - required: true
+        ///  - returned: default
+        ///  - type: string
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DisplayName is required.")]
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
+                ///
+        /// <value>
+        /// Type of principal that signed consent: User or App.
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - idcsSearchable: true
+        ///  - multiValued: false
+        ///  - mutability: immutable
+        ///  - required: true
+        ///  - returned: default
+        ///  - type: string
         /// </value>
         ///
         public enum TypeEnum {
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
             [EnumMember(Value = null)]
             UnknownEnumValue,
-            [EnumMember(Value = "Condition")]
-            Condition,
-            [EnumMember(Value = "ConditionGroup")]
-            ConditionGroup
+            [EnumMember(Value = "User")]
+            User,
+            [EnumMember(Value = "App")]
+            App
         };
 
         /// <value>
-        /// A label that indicates whether this is Condition or ConditionGroup.
+        /// Type of principal that signed consent: User or App.
         /// <br/>
         /// **SCIM++ Properties:**
-        ///  - idcsDefaultValue: Condition
-        ///  - idcsSearchable: false
+        ///  - idcsSearchable: true
         ///  - multiValued: false
-        ///  - mutability: readWrite
+        ///  - mutability: immutable
         ///  - required: true
         ///  - returned: default
         ///  - type: string
-        ///  - uniqueness: none
         /// </value>
         /// <remarks>
         /// Required
@@ -105,23 +127,6 @@ namespace Oci.IdentitydomainsService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-        
-        /// <value>
-        /// Condition or ConditionGroup name
-        /// <br/>
-        /// **Added In:** 17.4.2
-        /// <br/>
-        /// **SCIM++ Properties:**
-        ///  - idcsSearchable: false
-        ///  - multiValued: false
-        ///  - mutability: readOnly
-        ///  - required: false
-        ///  - returned: default
-        ///  - type: string
-        ///  - uniqueness: none
-        /// </value>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
         
     }
 }

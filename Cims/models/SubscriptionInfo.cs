@@ -13,20 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.CloudbridgeService.Models
+namespace Oci.CimsService.Models
 {
-    /// <summary>
-    /// The information to be updated.
-    /// </summary>
-    public class UpdatePluginDetails 
+    
+    public class SubscriptionInfo 
     {
         
         /// <value>
-        /// State to which the customer wants the plugin to move to.
+        /// customer support identifier issued for a subscription
         /// </value>
-        [JsonProperty(PropertyName = "desiredState")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<Plugin.DesiredStateEnum> DesiredState { get; set; }
+        [JsonProperty(PropertyName = "csi")]
+        public string Csi { get; set; }
+        
+        /// <value>
+        /// subscription type of customer which determines payment profile
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionType")]
+        public string SubscriptionType { get; set; }
         
     }
 }

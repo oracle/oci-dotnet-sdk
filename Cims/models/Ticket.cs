@@ -83,13 +83,13 @@ namespace Oci.CimsService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The time when the ticket was created, in milliseconds since epoch time.
+        /// The time when the ticket was created, in seconds since epoch time.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<int> TimeCreated { get; set; }
         
         /// <value>
-        /// The time when the ticket was updated, in milliseconds since epoch time.
+        /// The time when the ticket was updated, in seconds since epoch time.
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<int> TimeUpdated { get; set; }

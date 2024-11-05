@@ -17,6 +17,8 @@ namespace Oci.CimsService.Models
 {
     /// <summary>
     /// Details about the service limit increase request. Avoid entering confidential information.
+    /// For information about `LIMIT` support tickets, see [Creating a Service Limit Increase Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-limit.htm).
+    /// 
     /// </summary>
     public class CreateLimitItemDetails : CreateItemDetails
     {
@@ -49,7 +51,9 @@ namespace Oci.CimsService.Models
             [EnumMember(Value = "PARTIALLY_APPROVED")]
             PartiallyApproved,
             [EnumMember(Value = "NOT_APPROVED")]
-            NotApproved
+            NotApproved,
+            [EnumMember(Value = "REJECTED")]
+            Rejected
         };
 
         /// <value>

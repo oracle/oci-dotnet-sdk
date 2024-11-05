@@ -30,19 +30,33 @@ namespace Oci.CimsService.Requests
         public string IncidentKey { get; set; }
         
         /// <value>
+        /// The OCID of the tenancy.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, please provide the request ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The Customer Support Identifier (CSI) associated with the support account.
+        /// The Customer Support Identifier (CSI) number associated with the support account.
+        /// The CSI is required for technical support tickets and optional for limits and billing tickets.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "csi")]
         public string Csi { get; set; }
         
         /// <value>
         /// User OCID for Oracle Identity Cloud Service (IDCS) users who also have a federated Oracle Cloud Infrastructure account.
+        /// User OCID is mandatory for OCI Users and optional for Multicloud users.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "ocid")]
         public string Ocid { get; set; }
@@ -52,12 +66,6 @@ namespace Oci.CimsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "homeregion")]
         public string Homeregion { get; set; }
-        
-        /// <value>
-        /// The OCID of the tenancy.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
-        public string CompartmentId { get; set; }
         
         /// <value>
         /// The kind of support request.
@@ -85,6 +93,8 @@ namespace Oci.CimsService.Requests
         
         /// <value>
         /// The OCID of identity domain.
+        /// DomainID is mandatory if the user is part of Non Default Identity domain.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "domainid")]
         public string Domainid { get; set; }

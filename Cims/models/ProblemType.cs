@@ -13,7 +13,14 @@ using System.Runtime.Serialization;
 namespace Oci.CimsService.Models
 {
   /// <summary>
-  /// The kind of support ticket, such as a technical support request or a limit increase request.
+  /// The kind of support ticket (type of support request).
+    /// For information about `ACCOUNT` support tickets, see 
+    /// [Creating a Billing Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-billing.htm).
+    /// For information about `LIMIT` support tickets, see 
+    /// [Creating a Service Limit Increase Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-limit.htm).
+    /// For information about `TECH` support tickets, see 
+    /// [Creating a Technical Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-technical.htm).
+    /// 
   /// </summary>
   public enum ProblemType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

@@ -52,7 +52,9 @@ namespace Oci.CimsService.Models
             [EnumMember(Value = "PARTIALLY_APPROVED")]
             PartiallyApproved,
             [EnumMember(Value = "NOT_APPROVED")]
-            NotApproved
+            NotApproved,
+            [EnumMember(Value = "REJECTED")]
+            Rejected
         };
 
         /// <value>
@@ -61,6 +63,12 @@ namespace Oci.CimsService.Models
         [JsonProperty(PropertyName = "limitStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LimitStatusEnum> LimitStatus { get; set; }
+        
+        /// <value>
+        /// Message to customer for partial approval and rejected limit requests
+        /// </value>
+        [JsonProperty(PropertyName = "customerMessage")]
+        public string CustomerMessage { get; set; }
         
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "limit";
