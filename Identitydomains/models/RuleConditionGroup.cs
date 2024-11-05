@@ -31,7 +31,7 @@ namespace Oci.IdentitydomainsService.Models
     {
         
         /// <value>
-        /// Condition or ConditionGroup identifier
+        /// Condition or ConditionGroup identifier.
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - caseExact: true

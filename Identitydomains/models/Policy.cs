@@ -102,6 +102,7 @@ namespace Oci.IdentitydomainsService.Models
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsCompositeKey: [key, value]
+        ///  - idcsCsvAttributeNameMappings: [[columnHeaderName:Tag Key, mapsTo:tags.key], [columnHeaderName:Tag Value, mapsTo:tags.value]]
         ///  - idcsSearchable: true
         ///  - multiValued: true
         ///  - mutability: readWrite
@@ -297,6 +298,9 @@ namespace Oci.IdentitydomainsService.Models
         [Required(ErrorMessage = "PolicyType is required.")]
         [JsonProperty(PropertyName = "policyType")]
         public PolicyPolicyType PolicyType { get; set; }
+        
+        [JsonProperty(PropertyName = "urn:ietf:params:scim:schemas:oracle:idcs:extension:ociconsolesignonpolicyconsent:Policy")]
+        public PolicyExtensionOciconsolesignonpolicyconsentPolicy UrnIetfParamsScimSchemasOracleIdcsExtensionOciconsolesignonpolicyconsentPolicy { get; set; }
         
     }
 }

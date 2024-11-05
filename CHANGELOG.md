@@ -30,6 +30,21 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 99.0.0 - 2024-11-05
+### Added
+ - Support for calling Oracle Cloud Infrastructure services in the `ap-seoul-2` region
+ - Support for calling Oracle Cloud Infrastructure services in the `ap-suwon-1` region
+ - Support for calling Oracle Cloud Infrastructure services in the `ap-chuncheon-2` region
+ - Support for MFA Enablement v2 in the Identity Domains service
+ - Support for starting, stopping and updating min/max executor count for SQL Endpoints in the Data Flow service
+ - Support for customer message in the Customer Incident Management Service
+ - Support for REJECTED limitStatus in the Customer Incident Management Service   
+
+### Breaking Changes
+ - The operations `GetCsiNumber` and `GetStatus` were removed from the `IncidentClient` in the Customer Incident Management Service
+ - The property `ServiceCategories` was removed from the model `IncidentResourceType` in the Customer Incident Management Service
+ - The properties `ServiceCategory` and `IssueType` were removed from the model `ServiceCategories` in the Customer Incident Management Service
+
 ## 98.1.0 - 2024-10-29
 ### Added
  - Support for L3IP (Layer 3 IP) listeners in the Network Load Balancing service

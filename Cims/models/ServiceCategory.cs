@@ -52,6 +52,12 @@ namespace Oci.CimsService.Models
         public System.Collections.Generic.List<IssueType> IssueTypeList { get; set; }
         
         /// <value>
+        /// List of supported subscriptions
+        /// </value>
+        [JsonProperty(PropertyName = "supportedSubscriptions")]
+        public System.Collections.Generic.List<string> SupportedSubscriptions { get; set; }
+        
+        /// <value>
         /// The scope of the incident.
         /// </value>
         [JsonProperty(PropertyName = "scope")]

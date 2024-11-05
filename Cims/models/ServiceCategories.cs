@@ -24,8 +24,8 @@ namespace Oci.CimsService.Models
         /// <value>
         /// Service Category list.
         /// </value>
-        [JsonProperty(PropertyName = "serviceCategory")]
-        public System.Collections.Generic.Dictionary<string, string> ServiceCategory { get; set; }
+        [JsonProperty(PropertyName = "service")]
+        public System.Collections.Generic.Dictionary<string, string> Service { get; set; }
         
         /// <value>
         /// Schema of a Service Category.
@@ -34,10 +34,10 @@ namespace Oci.CimsService.Models
         public string Schema { get; set; }
         
         /// <value>
-        /// Issue type list.
+        /// The service categories list for MOS Taxonomy.
         /// </value>
-        [JsonProperty(PropertyName = "issueType")]
-        public System.Collections.Generic.Dictionary<string, string> IssueType { get; set; }
+        [JsonProperty(PropertyName = "subCategories")]
+        public System.Collections.Generic.List<SubCategories> SubCategories { get; set; }
         
     }
 }

@@ -102,6 +102,7 @@ namespace Oci.IdentitydomainsService.Models
         /// <br/>
         /// **SCIM++ Properties:**
         ///  - idcsCompositeKey: [key, value]
+        ///  - idcsCsvAttributeNameMappings: [[columnHeaderName:Tag Key, mapsTo:tags.key], [columnHeaderName:Tag Value, mapsTo:tags.value]]
         ///  - idcsSearchable: true
         ///  - multiValued: true
         ///  - mutability: readWrite
@@ -341,6 +342,9 @@ namespace Oci.IdentitydomainsService.Models
         [Required(ErrorMessage = "Return is required.")]
         [JsonProperty(PropertyName = "return")]
         public System.Collections.Generic.List<RuleReturn> Return { get; set; }
+        
+        [JsonProperty(PropertyName = "urn:ietf:params:scim:schemas:oracle:idcs:extension:ociconsolesignonpolicyconsent:Policy")]
+        public RuleExtensionOciconsolesignonpolicyconsentPolicy UrnIetfParamsScimSchemasOracleIdcsExtensionOciconsolesignonpolicyconsentPolicy { get; set; }
         
     }
 }

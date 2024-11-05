@@ -37,6 +37,8 @@ namespace Oci.CimsService.Requests
         
         /// <value>
         /// User OCID for Oracle Identity Cloud Service (IDCS) users who also have a federated Oracle Cloud Infrastructure account.
+        /// User OCID is mandatory for OCI Users and optional for Multicloud users.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "ocid")]
         public string Ocid { get; set; }
@@ -67,6 +69,8 @@ namespace Oci.CimsService.Requests
         
         /// <value>
         /// The OCID of identity domain.
+        /// DomainID is mandatory if the user is part of Non Default Identity domain.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "domainid")]
         public string Domainid { get; set; }
