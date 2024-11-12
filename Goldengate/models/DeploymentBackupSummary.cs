@@ -207,6 +207,12 @@ namespace Oci.GoldengateService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
+        /// Parameter to allow users to create backup without trails
+        /// </value>
+        [JsonProperty(PropertyName = "isMetadataOnly")]
+        public System.Nullable<bool> IsMetadataOnly { get; set; }
+        
+        /// <value>
         /// Locks associated with this resource.
         /// </value>
         [JsonProperty(PropertyName = "locks")]

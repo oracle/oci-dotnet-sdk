@@ -184,6 +184,26 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "dbSystemId")]
         public string DbSystemId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the password is stored.
+        /// The password Oracle GoldenGate uses to connect the associated system of the given technology.
+        /// It must conform to the specific security requirements including length, case sensitivity, and so on.
+        /// If secretId is used plaintext field must not be provided.
+        /// Note: When provided, 'password' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "passwordSecretId")]
+        public string PasswordSecretId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the Client Key
+        /// - The content of a .pem or .crt file containing the client private key (for 2-way SSL).
+        /// Note: When provided, 'sslKey' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sslKeySecretId")]
+        public string SslKeySecretId { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "MYSQL";
     }

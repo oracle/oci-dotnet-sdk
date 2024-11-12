@@ -23,7 +23,10 @@ namespace Oci.GenerativeaiinferenceService.Models
     {
                 ///
         /// <value>
-        /// The API format for the model's request.
+        /// The API format for the model's family group.
+        /// COHERE is for the Cohere family models such as the cohere.command-r-16k and cohere.command-r-plus models.
+        /// GENERIC is for other model families such as the meta.llama-3-70b-instruct model.
+        /// 
         /// </value>
         ///
         public enum ApiFormatEnum {

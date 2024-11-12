@@ -86,6 +86,14 @@ namespace Oci.GoldengateService.Models
         public string JndiSecurityCredentials { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the security credentials are stored associated to the principal.
+        /// Note: When provided, 'jndiSecurityCredentials' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "jndiSecurityCredentialsSecretId")]
+        public string JndiSecurityCredentialsSecretId { get; set; }
+        
+        /// <value>
         /// Connectin URL of the Java Message Service, specifying the protocol, host, and port.
         /// e.g.: 'mq://myjms.host.domain:7676'
         /// 
@@ -118,6 +126,15 @@ namespace Oci.GoldengateService.Models
         public string Password { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the password is stored,
+        /// that Oracle GoldenGate uses to connect the associated Java Message Service.
+        /// Note: When provided, 'password' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "passwordSecretId")]
+        public string PasswordSecretId { get; set; }
+        
+        /// <value>
         /// Security protocol for Java Message Service. If not provided, default is PLAIN.
         /// Optional until 2024-06-27, in the release after it will be made required.
         /// 
@@ -143,11 +160,27 @@ namespace Oci.GoldengateService.Models
         public string TrustStore { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the content of the TrustStore file is stored.
+        /// Note: When provided, 'trustStore' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "trustStoreSecretId")]
+        public string TrustStoreSecretId { get; set; }
+        
+        /// <value>
         /// The TrustStore password.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "trustStorePassword")]
         public string TrustStorePassword { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the TrustStore password is stored.
+        /// Note: When provided, 'trustStorePassword' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "trustStorePasswordSecretId")]
+        public string TrustStorePasswordSecretId { get; set; }
         
         /// <value>
         /// The base64 encoded content of the KeyStore file.
@@ -157,11 +190,27 @@ namespace Oci.GoldengateService.Models
         public string KeyStore { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the content of the KeyStore file is stored.
+        /// Note: When provided, 'keyStore' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "keyStoreSecretId")]
+        public string KeyStoreSecretId { get; set; }
+        
+        /// <value>
         /// The KeyStore password.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "keyStorePassword")]
         public string KeyStorePassword { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the KeyStore password is stored.
+        /// Note: When provided, 'keyStorePassword' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "keyStorePasswordSecretId")]
+        public string KeyStorePasswordSecretId { get; set; }
         
         /// <value>
         /// The password for the cert inside of the KeyStore.
@@ -170,6 +219,15 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "sslKeyPassword")]
         public string SslKeyPassword { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the password is stored for the cert inside of the Keystore.
+        /// In case it differs from the KeyStore password, it should be provided.
+        /// Note: When provided, 'sslKeyPassword' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sslKeyPasswordSecretId")]
+        public string SslKeyPasswordSecretId { get; set; }
         
         /// <value>
         /// Deprecated: this field will be removed in future versions. Either specify the private IP in the connectionString or host 

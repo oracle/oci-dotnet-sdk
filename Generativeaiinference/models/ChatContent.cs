@@ -28,7 +28,9 @@ namespace Oci.GenerativeaiinferenceService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "TEXT")]
-            Text
+            Text,
+            [EnumMember(Value = "IMAGE")]
+            Image
         };
 
         
@@ -55,6 +57,9 @@ namespace Oci.GenerativeaiinferenceService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "IMAGE":
+                    obj = new ImageContent();
+                    break;
                 case "TEXT":
                     obj = new TextContent();
                     break;
