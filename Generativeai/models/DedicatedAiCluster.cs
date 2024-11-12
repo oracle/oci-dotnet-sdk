@@ -19,7 +19,7 @@ namespace Oci.GenerativeaiService.Models
     /// Dedicated AI clusters are compute resources that you can use for fine-tuning custom models or for hosting endpoints for custom models. The clusters are dedicated to your models and not shared with users in other tenancies.
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized, talk to an administrator who gives OCI resource access to users. See
-    /// [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/policiesgs/get-started-with-policies.htm) and [Getting Access to Generative AI Resouces](https://docs.cloud.oracle.com/iaas/Content/generative-ai/iam-policies.htm).
+    /// [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/policiesgs/get-started-with-policies.htm) and [Getting Access to Generative AI Resources](https://docs.cloud.oracle.com/iaas/Content/generative-ai/iam-policies.htm).
     /// 
     /// </summary>
     public class DedicatedAiCluster 
@@ -165,6 +165,8 @@ namespace Oci.GenerativeaiService.Models
             SmallCohere,
             [EnumMember(Value = "SMALL_COHERE_V2")]
             SmallCohereV2,
+            [EnumMember(Value = "SMALL_COHERE_4")]
+            SmallCohere4,
             [EnumMember(Value = "EMBED_COHERE")]
             EmbedCohere,
             [EnumMember(Value = "LLAMA2_70")]
@@ -174,7 +176,13 @@ namespace Oci.GenerativeaiService.Models
             [EnumMember(Value = "LARGE_COHERE_V2_2")]
             LargeCohereV22,
             [EnumMember(Value = "LARGE_GENERIC_4")]
-            LargeGeneric4
+            LargeGeneric4,
+            [EnumMember(Value = "SMALL_GENERIC_V2")]
+            SmallGenericV2,
+            [EnumMember(Value = "LARGE_GENERIC_2")]
+            LargeGeneric2,
+            [EnumMember(Value = "LARGE_GENERIC_V2")]
+            LargeGenericV2
         };
 
         /// <value>

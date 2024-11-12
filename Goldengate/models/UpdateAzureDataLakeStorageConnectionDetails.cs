@@ -46,6 +46,14 @@ namespace Oci.GoldengateService.Models
         public string AccountKey { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the account key is stored.
+        /// Note: When provided, 'accountKey' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "accountKeySecretId")]
+        public string AccountKeySecretId { get; set; }
+        
+        /// <value>
         /// Credential that uses a shared access signature (SAS) to authenticate to an Azure Service. This property is
         /// required when 'authenticationType' is set to 'SHARED_ACCESS_SIGNATURE'.
         /// e.g.: ?sv=2020-06-08&ss=bfqt&srt=sco&sp=rwdlacupyx&se=2020-09-10T20:27:28Z&st=2022-08-05T12:27:28Z&spr=https&sig=C1IgHsiLBmTSStYkXXGLTP8it0xBrArcgCqOsZbXwIQ%3D
@@ -53,6 +61,14 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "sasToken")]
         public string SasToken { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the sas token is stored.
+        /// Note: When provided, 'sasToken' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sasTokenSecretId")]
+        public string SasTokenSecretId { get; set; }
         
         /// <value>
         /// Azure tenant ID of the application. This property is required when 'authenticationType' is set to 'AZURE_ACTIVE_DIRECTORY'.
@@ -77,6 +93,14 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "clientSecret")]
         public string ClientSecret { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the client secret is stored.
+        /// Note: When provided, 'clientSecret' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "clientSecretSecretId")]
+        public string ClientSecretSecretId { get; set; }
         
         /// <value>
         /// Azure Storage service endpoint.

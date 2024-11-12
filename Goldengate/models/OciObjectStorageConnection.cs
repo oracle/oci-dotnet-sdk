@@ -71,6 +71,23 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "userId")]
         public string UserId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the content of the private key file (PEM file) corresponding to the API key of the fingerprint.
+        /// See documentation: https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm
+        /// Note: When provided, 'privateKeyFile' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateKeyFileSecretId")]
+        public string PrivateKeyFileSecretId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the passphrase of the private key.
+        /// Note: When provided, 'privateKeyPassphrase' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateKeyPassphraseSecretId")]
+        public string PrivateKeyPassphraseSecretId { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "OCI_OBJECT_STORAGE";
     }

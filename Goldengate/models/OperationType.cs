@@ -62,6 +62,8 @@ namespace Oci.GoldengateService.Models
       GoldengateConnectionDelete,
       [EnumMember(Value = "GOLDENGATE_CONNECTION_MOVE")]
       GoldengateConnectionMove,
+      [EnumMember(Value = "GOLDENGATE_CONNECTION_REFRESH")]
+      GoldengateConnectionRefresh,
       [EnumMember(Value = "GOLDENGATE_CONNECTION_ASSIGNMENT_CREATE")]
       GoldengateConnectionAssignmentCreate,
       [EnumMember(Value = "GOLDENGATE_CONNECTION_ASSIGNMENT_DELETE")]

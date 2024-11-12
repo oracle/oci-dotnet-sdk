@@ -38,12 +38,17 @@ namespace Oci.GoldengateService.Models
         /// the credentials required to use Google BigQuery.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ServiceAccountKeyFile is required.")]
         [JsonProperty(PropertyName = "serviceAccountKeyFile")]
         public string ServiceAccountKeyFile { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the content of the service account key file is stored,
+        /// which containing the credentials required to use Google BigQuery.
+        /// Note: When provided, 'serviceAccountKeyFile' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "serviceAccountKeyFileSecretId")]
+        public string ServiceAccountKeyFileSecretId { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "GOOGLE_BIGQUERY";

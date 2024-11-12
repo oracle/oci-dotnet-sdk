@@ -46,6 +46,9 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "documents")]
         public System.Collections.Generic.List<System.Object> Documents { get; set; }
         
+        [JsonProperty(PropertyName = "responseFormat")]
+        public CohereResponseFormat ResponseFormat { get; set; }
+        
         /// <value>
         /// When set to true, the response contains only a list of generated search queries without the search results and the model will not respond to the user's message.
         /// 
@@ -74,6 +77,12 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Nullable<int> MaxTokens { get; set; }
         
         /// <value>
+        /// The maximum number of input tokens to send to the model. If not specified, max_input_tokens is the model's context length limit minus a small buffer.
+        /// </value>
+        [JsonProperty(PropertyName = "maxInputTokens")]
+        public System.Nullable<int> MaxInputTokens { get; set; }
+        
+        /// <value>
         /// A number that sets the randomness of the generated output. A lower temperature means less random generations.
         /// Use lower numbers for tasks such as question answering or summarizing. High temperatures can generate hallucinations or factually incorrect information. Start with temperatures lower than 1.0 and increase the temperature for more creative outputs, as you regenerate the prompts to refine the outputs.
         /// 
@@ -100,7 +109,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Double TopP { get; set; }
                 ///
         /// <value>
-        /// Defaults to OFF. Dictates how the prompt will be constructed. With `prompt_truncation` set to AUTO_PRESERVE_ORDER, some elements from `chat_history` and `documents` will be dropped to construct a prompt that fits within the model's context length limit. During this process the order of the documents and chat history will be preserved. With `prompt_truncation` set to OFF, no elements will be dropped.
+        /// Defaults to OFF. Dictates how the prompt will be constructed. With `promptTruncation` set to AUTO_PRESERVE_ORDER, some elements from `chatHistory` and `documents` will be dropped to construct a prompt that fits within the model's context length limit. During this process the order of the documents and chat history will be preserved. With `prompt_truncation` set to OFF, no elements will be dropped.
         /// 
         /// </value>
         ///
@@ -112,7 +121,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         };
 
         /// <value>
-        /// Defaults to OFF. Dictates how the prompt will be constructed. With `prompt_truncation` set to AUTO_PRESERVE_ORDER, some elements from `chat_history` and `documents` will be dropped to construct a prompt that fits within the model's context length limit. During this process the order of the documents and chat history will be preserved. With `prompt_truncation` set to OFF, no elements will be dropped.
+        /// Defaults to OFF. Dictates how the prompt will be constructed. With `promptTruncation` set to AUTO_PRESERVE_ORDER, some elements from `chatHistory` and `documents` will be dropped to construct a prompt that fits within the model's context length limit. During this process the order of the documents and chat history will be preserved. With `prompt_truncation` set to OFF, no elements will be dropped.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "promptTruncation")]

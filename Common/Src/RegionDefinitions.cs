@@ -108,6 +108,7 @@ namespace Oci.Common
 
         // OC26
         public static readonly Region ME_ABUDHABI_3 = Register("me-abudhabi-3", Realm.OC26, "ahu");
+        public static readonly Region ME_ALAIN_1 = Register("me-alain-1", Realm.OC26, "rba");
 
         // OC29
         public static readonly Region ME_ABUDHABI_2 = Register("me-abudhabi-2", Realm.OC29, "rkt");

@@ -212,6 +212,13 @@ namespace Oci.GoldengateService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RoutingMethod> RoutingMethod { get; set; }
         
+        /// <value>
+        /// Indicates that sensitive attributes are provided via Secrets.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "doesUseSecretIds")]
+        public System.Nullable<bool> DoesUseSecretIds { get; set; }
+        
     }
 
     public class ConnectionModelConverter : JsonConverter

@@ -48,12 +48,16 @@ namespace Oci.GoldengateService.Models
         /// Secret access key to access the Amazon Kinesis.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SecretAccessKey is required.")]
         [JsonProperty(PropertyName = "secretAccessKey")]
         public string SecretAccessKey { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the secret access key is stored.
+        /// Note: When provided, 'secretAccessKey' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "secretAccessKeySecretId")]
+        public string SecretAccessKeySecretId { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "AMAZON_KINESIS";
