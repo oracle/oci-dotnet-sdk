@@ -97,6 +97,33 @@ namespace Oci.GoldengateService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<Db2Connection.SecurityProtocolEnum> SecurityProtocol { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the password is stored, 
+        /// that Oracle GoldenGate uses to connect the associated DB2 database.
+        /// Note: When provided, 'password' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "passwordSecretId")]
+        public string PasswordSecretId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the keystore file stored, 
+        /// which created at the client containing the server certificate / CA root certificate.
+        /// Note: When provided, 'sslClientKeystoredb' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sslClientKeystoredbSecretId")]
+        public string SslClientKeystoredbSecretId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the keystash file is stored, 
+        /// which contains the encrypted password to the key database file.
+        /// Note: When provided, 'sslClientKeystash' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sslClientKeystashSecretId")]
+        public string SslClientKeystashSecretId { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "DB2";
     }

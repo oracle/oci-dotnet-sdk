@@ -45,6 +45,14 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "accessKeyId")]
         public string AccessKeyId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the Secret Access Key is stored.
+        /// Note: When provided, 'secretAccessKey' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "secretAccessKeySecretId")]
+        public string SecretAccessKeySecretId { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "AMAZON_S3";
     }

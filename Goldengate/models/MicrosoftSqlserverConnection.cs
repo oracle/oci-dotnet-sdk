@@ -160,6 +160,14 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the password Oracle GoldenGate uses to connect the associated Microsoft SQL Server.
+        /// Note: When provided, 'password' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "passwordSecretId")]
+        public string PasswordSecretId { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "MICROSOFT_SQLSERVER";
     }

@@ -192,6 +192,13 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "locks")]
         public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
+        /// <value>
+        /// Indicates that sensitive attributes are provided via Secrets.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "doesUseSecretIds")]
+        public System.Nullable<bool> DoesUseSecretIds { get; set; }
+        
     }
 
     public class ConnectionSummaryModelConverter : JsonConverter

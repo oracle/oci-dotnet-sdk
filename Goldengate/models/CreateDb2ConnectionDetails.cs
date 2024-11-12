@@ -82,12 +82,17 @@ namespace Oci.GoldengateService.Models
         /// The password Oracle GoldenGate uses to connect the associated DB2 database.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Password is required.")]
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the password is stored, 
+        /// that Oracle GoldenGate uses to connect the associated DB2 database.
+        /// Note: When provided, 'password' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "passwordSecretId")]
+        public string PasswordSecretId { get; set; }
         
         /// <value>
         /// An array of name-value pair attribute entries.
@@ -116,11 +121,29 @@ namespace Oci.GoldengateService.Models
         public string SslClientKeystoredb { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the keystore file stored, 
+        /// which created at the client containing the server certificate / CA root certificate.
+        /// Note: When provided, 'sslClientKeystoredb' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sslClientKeystoredbSecretId")]
+        public string SslClientKeystoredbSecretId { get; set; }
+        
+        /// <value>
         /// The base64 encoded keystash file which contains the encrypted password to the key database file.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sslClientKeystash")]
         public string SslClientKeystash { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the keystash file is stored, 
+        /// which contains the encrypted password to the key database file.
+        /// Note: When provided, 'sslClientKeystash' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sslClientKeystashSecretId")]
+        public string SslClientKeystashSecretId { get; set; }
         
         /// <value>
         /// The base64 encoded file which contains the self-signed server certificate / Certificate Authority (CA) certificate.
