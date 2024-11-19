@@ -40,28 +40,6 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "requestedLimit")]
         public System.Nullable<int> RequestedLimit { get; set; }
-                ///
-        /// <value>
-        /// The current status of the request.
-        /// </value>
-        ///
-        public enum LimitStatusEnum {
-            [EnumMember(Value = "APPROVED")]
-            Approved,
-            [EnumMember(Value = "PARTIALLY_APPROVED")]
-            PartiallyApproved,
-            [EnumMember(Value = "NOT_APPROVED")]
-            NotApproved,
-            [EnumMember(Value = "REJECTED")]
-            Rejected
-        };
-
-        /// <value>
-        /// The current status of the request.
-        /// </value>
-        [JsonProperty(PropertyName = "limitStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<LimitStatusEnum> LimitStatus { get; set; }
         
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "limit";

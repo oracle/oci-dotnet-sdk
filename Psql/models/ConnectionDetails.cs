@@ -51,5 +51,8 @@ namespace Oci.PsqlService.Models
         [JsonProperty(PropertyName = "instanceEndpoints")]
         public System.Collections.Generic.List<DbInstanceEndpoint> InstanceEndpoints { get; set; }
         
+        [JsonProperty(PropertyName = "readerEndpoint")]
+        public Endpoint ReaderEndpoint { get; set; }
+        
     }
 }
