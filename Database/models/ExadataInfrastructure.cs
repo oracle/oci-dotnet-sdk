@@ -422,5 +422,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isSchedulingPolicyAssociated")]
         public System.Nullable<bool> IsSchedulingPolicyAssociated { get; set; }
         
+        [JsonProperty(PropertyName = "exascaleConfig")]
+        public ExascaleConfigDetails ExascaleConfig { get; set; }
+        
     }
 }

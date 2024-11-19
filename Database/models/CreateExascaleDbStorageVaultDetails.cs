@@ -96,5 +96,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "exadataInfrastructureId")]
+        public string ExadataInfrastructureId { get; set; }
+        
     }
 }

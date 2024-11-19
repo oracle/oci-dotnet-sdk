@@ -16,28 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// List of Service Categories of a Service for MOS Taxonomy.
+    /// Identifier and name of the technical support request's user group (`userGroupId` and `userGroupName`).
+    /// 
     /// </summary>
-    public class ServiceCategories 
+    public class CmosUserGroupInfo 
     {
         
         /// <value>
-        /// Service Category list.
+        /// Technical support type (`TECH`) only: The identifier of the support request's user group in My Oracle Cloud Support portal.
+        /// 
         /// </value>
-        [JsonProperty(PropertyName = "service")]
-        public System.Collections.Generic.Dictionary<string, string> Service { get; set; }
+        [JsonProperty(PropertyName = "userGroupId")]
+        public string UserGroupId { get; set; }
         
         /// <value>
-        /// Schema of a Service Category.
+        /// Technical support type (`TECH`) only: Name of the support request's user group in My Oracle Cloud Support portal.
+        /// 
         /// </value>
-        [JsonProperty(PropertyName = "schema")]
-        public string Schema { get; set; }
-        
-        /// <value>
-        /// The service categories list for MOS Taxonomy.
-        /// </value>
-        [JsonProperty(PropertyName = "subCategories")]
-        public System.Collections.Generic.List<SubCategories> SubCategories { get; set; }
+        [JsonProperty(PropertyName = "userGroupName")]
+        public string UserGroupName { get; set; }
         
     }
 }

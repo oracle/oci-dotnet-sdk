@@ -73,5 +73,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// Indicates whether unified auditing is enabled or not
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isUnifiedAuditingEnabled")]
+        public System.Nullable<bool> IsUnifiedAuditingEnabled { get; set; }
+        
     }
 }

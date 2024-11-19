@@ -252,5 +252,32 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "cloudAutomationUpdateDetails")]
         public CloudAutomationUpdateDetails CloudAutomationUpdateDetails { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata Database Storage Vault.
+        /// </value>
+        [JsonProperty(PropertyName = "exascaleDbStorageVaultId")]
+        public string ExascaleDbStorageVaultId { get; set; }
+                ///
+        /// <value>
+        /// Specifies whether the type of storage management for the VM cluster is ASM or Exascale.
+        /// </value>
+        ///
+        public enum StorageManagementTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ASM")]
+            Asm,
+            [EnumMember(Value = "EXASCALE")]
+            Exascale
+        };
+
+        /// <value>
+        /// Specifies whether the type of storage management for the VM cluster is ASM or Exascale.
+        /// </value>
+        [JsonProperty(PropertyName = "storageManagementType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<StorageManagementTypeEnum> StorageManagementType { get; set; }
+        
     }
 }

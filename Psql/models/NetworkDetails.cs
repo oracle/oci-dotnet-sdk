@@ -45,5 +45,11 @@ namespace Oci.PsqlService.Models
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
+        /// <value>
+        /// Specifies if the reader endpoint is enabled on the dbSystem.
+        /// </value>
+        [JsonProperty(PropertyName = "isReaderEndpointEnabled")]
+        public System.Nullable<bool> IsReaderEndpointEnabled { get; set; }
+        
     }
 }

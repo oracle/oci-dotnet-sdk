@@ -97,5 +97,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to return only list of Vaults that are linked to the exadata infrastructure Id.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "exadataInfrastructureId")]
+        public string ExadataInfrastructureId { get; set; }
     }
 }

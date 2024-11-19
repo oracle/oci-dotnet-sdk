@@ -51,7 +51,7 @@ namespace Oci.CimsService.Requests
         
         /// <value>
         /// The Customer Support Identifier (CSI) number associated with the support account.
-        /// The CSI is required for technical support tickets and optional for limits and billing tickets.
+        /// The CSI is optional for all support request types.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "csi")]

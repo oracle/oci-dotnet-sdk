@@ -30,6 +30,22 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 100.0.0 - 2024-11-19
+### Added
+ - Support for optional parameters for unified auditing in the Database service
+ - Support for user groups for creating technical requests in the Support Management service
+ - Support for additional checksum algorithms (SHA-256, SHA-384, CRC32C) in the Object Storage service
+ - Support for single Read Only (RO) endpoint for the read replicas in the PostgreSQL service
+ - Support for exascale database vaults in the Database service
+ - Support for virtual machine clusters with database vaults in the Database service
+ - Support for N3-Gi version in the Database service    
+
+### Breaking Changes
+ - The model `ServiceCategories` was removed in the Customer Incident Management Service
+ - The property `SubComponents` was removed from the `SubCategories` model in the Customer Incident Management Service
+ - The property `LimitStatus` and the enum `LimitStatusEnum` were removed from the model `CreateLimitItemDetails` in the Customer Incident Management Service
+ - The type of property `Services` was changed to list of `Services` from a list of `ServiceCategories` in the Customer Incident Management Service
+
 ## 99.1.0 - 2024-11-12
 ### Added
  - Support for calling Oracle Cloud Infrastructure services in the `me-alain-1` region

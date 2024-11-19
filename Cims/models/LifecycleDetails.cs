@@ -23,6 +23,8 @@ namespace Oci.CimsService.Models
       PendingWithOracle,
       [EnumMember(Value = "PENDING_WITH_CUSTOMER")]
       PendingWithCustomer,
+      [EnumMember(Value = "PENDING_WITH_SUPPORT")]
+      PendingWithSupport,
       [EnumMember(Value = "CLOSE_REQUESTED")]
       CloseRequested,
       [EnumMember(Value = "CLOSED")]

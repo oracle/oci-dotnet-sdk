@@ -50,6 +50,49 @@ namespace Oci.CimsService.Models
         public IncidentType IncidentType { get; set; }
         
         /// <value>
+        /// Technical support type (`TECH`) only: The identifier of the support request's user group in My Oracle Cloud Support portal.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "userGroupId")]
+        public string UserGroupId { get; set; }
+        
+        /// <value>
+        /// Technical support type (`TECH`) only: Name of the support request's user group in My Oracle Cloud Support portal.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "userGroupName")]
+        public string UserGroupName { get; set; }
+        
+        /// <value>
+        /// Technical support type (`TECH`) only: The identifier of the support request's primary contact (`primaryContactPartyName`) in My Oracle Cloud Support portal.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "primaryContactPartyId")]
+        public string PrimaryContactPartyId { get; set; }
+        
+        /// <value>
+        /// Technical support type (`TECH`) only: The name of the support request's primary contact in My Oracle Cloud Support portal.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "primaryContactPartyName")]
+        public string PrimaryContactPartyName { get; set; }
+        
+        /// <value>
+        /// Technical support type (`TECH`) only: Allows update of the support request in My Oracle Cloud Support portal, 
+        /// when the user has write permission to the support request's user group.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isWritePermitted")]
+        public System.Nullable<bool> IsWritePermitted { get; set; }
+        
+        /// <value>
+        /// Technical support type (`TECH`) only: Message indicating the user group (`userGroupId`) that was auto-selected for a new support request. This message appears when no user group was specified in the create request for a new technical support request.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "warnMessage")]
+        public string WarnMessage { get; set; }
+        
+        /// <value>
         /// The kind of support ticket (type of support request).
         /// For information about `ACCOUNT` support tickets, see 
         /// [Creating a Billing Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-billing.htm).

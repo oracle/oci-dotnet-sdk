@@ -17,6 +17,7 @@ namespace Oci.CimsService.Models
 {
     /// <summary>
     /// The validation response returned when checking whether the requested user is valid.
+    /// 
     /// </summary>
     public class ValidationResponse 
     {
@@ -26,6 +27,13 @@ namespace Oci.CimsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isValidUser")]
         public System.Nullable<bool> IsValidUser { get; set; }
+        
+        /// <value>
+        /// Technical support type (`TECH`) only: Identifier and name of the support request's user group (`userGroupId` and `userGroupName`).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "writePermittedUserGroupInfos")]
+        public System.Collections.Generic.List<CmosUserGroupInfo> WritePermittedUserGroupInfos { get; set; }
         
     }
 }

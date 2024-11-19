@@ -31,6 +31,13 @@ namespace Oci.DatabaseService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Indicates whether unified auditing is enabled or not
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isUnifiedAuditingEnabled")]
+        public System.Nullable<bool> IsUnifiedAuditingEnabled { get; set; }
+        
+        /// <value>
         /// The database software image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the image to be used to restore a database.
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]

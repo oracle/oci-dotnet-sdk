@@ -106,5 +106,13 @@ namespace Oci.ObjectstorageService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-sse-kms-key-id")]
         public string OpcSseKmsKeyId { get; set; }
+        
+        /// <value>
+        /// The optional checksum algorithm to use to compute and store the checksum of the body of the HTTP request (or the parts in case of multipart uploads),
+        /// in addition to the default MD5 checksum.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-checksum-algorithm")]
+        public System.Nullable<ChecksumAlgorithm> OpcChecksumAlgorithm { get; set; }
     }
 }
