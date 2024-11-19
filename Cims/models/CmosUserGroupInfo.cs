@@ -16,24 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// The validation response returned when checking whether the requested user is valid.
+    /// Identifier and name of the technical support request's user group (`userGroupId` and `userGroupName`).
     /// 
     /// </summary>
-    public class ValidationResponse 
+    public class CmosUserGroupInfo 
     {
         
         /// <value>
-        /// Boolean value that indicates whether the requested user is valid.
-        /// </value>
-        [JsonProperty(PropertyName = "isValidUser")]
-        public System.Nullable<bool> IsValidUser { get; set; }
-        
-        /// <value>
-        /// Technical support type (`TECH`) only: Identifier and name of the support request's user group (`userGroupId` and `userGroupName`).
+        /// Technical support type (`TECH`) only: The identifier of the support request's user group in My Oracle Cloud Support portal.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "writePermittedUserGroupInfos")]
-        public System.Collections.Generic.List<CmosUserGroupInfo> WritePermittedUserGroupInfos { get; set; }
+        [JsonProperty(PropertyName = "userGroupId")]
+        public string UserGroupId { get; set; }
+        
+        /// <value>
+        /// Technical support type (`TECH`) only: Name of the support request's user group in My Oracle Cloud Support portal.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "userGroupName")]
+        public string UserGroupName { get; set; }
         
     }
 }

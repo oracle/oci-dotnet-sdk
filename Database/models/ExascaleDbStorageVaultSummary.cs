@@ -144,5 +144,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "vmClusterCount")]
         public System.Nullable<int> VmClusterCount { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "exadataInfrastructureId")]
+        public string ExadataInfrastructureId { get; set; }
+        
     }
 }

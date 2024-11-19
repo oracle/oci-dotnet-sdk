@@ -39,6 +39,27 @@ namespace Oci.ObjectstorageService.Responses
 
 
         /// <value>
+        /// The base64-encoded, 32-bit CRC32C (Castagnoli) checksum of the request body as computed by the server. Applicable only if CRC32C was specified in opc-checksum-algorithm request header during upload.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-content-crc32c")]
+        public string OpcContentCrc32c { get; set; }
+
+
+        /// <value>
+        /// The base64-encoded SHA256 hash of the request body as computed by the server. Applicable only if SHA256 was specified in opc-checksum-algorithm request header during upload.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-content-sha256")]
+        public string OpcContentSha256 { get; set; }
+
+
+        /// <value>
+        /// The base64-encoded SHA384 hash of the request body as computed by the server. Applicable only if SHA384 was specified in opc-checksum-algorithm request header during upload.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-content-sha384")]
+        public string OpcContentSha384 { get; set; }
+
+
+        /// <value>
         /// The entity tag (ETag) for the object.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "ETag")]

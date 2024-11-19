@@ -71,7 +71,7 @@ namespace Oci.CimsService.Models
         /// The service categories list for MOS Taxonomy.
         /// </value>
         [JsonProperty(PropertyName = "services")]
-        public System.Collections.Generic.List<ServiceCategories> Services { get; set; }
+        public System.Collections.Generic.List<Services> Services { get; set; }
         
     }
 }

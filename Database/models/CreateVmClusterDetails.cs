@@ -204,5 +204,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "cloudAutomationUpdateDetails")]
         public CloudAutomationUpdateDetails CloudAutomationUpdateDetails { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata Database Storage Vault.
+        /// </value>
+        [JsonProperty(PropertyName = "exascaleDbStorageVaultId")]
+        public string ExascaleDbStorageVaultId { get; set; }
+        
     }
 }

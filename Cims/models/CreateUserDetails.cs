@@ -54,40 +54,24 @@ namespace Oci.CimsService.Models
         /// <value>
         /// CSI associated with the user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Csi is required.")]
         [JsonProperty(PropertyName = "csi")]
         public string Csi { get; set; }
         
         /// <value>
         /// Contact number of the user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Phone is required.")]
         [JsonProperty(PropertyName = "phone")]
         public string Phone { get; set; }
         
         /// <value>
         /// Timezone of the user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Timezone is required.")]
         [JsonProperty(PropertyName = "timezone")]
         public string Timezone { get; set; }
         
         /// <value>
         /// Organization of the user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OrganizationName is required.")]
         [JsonProperty(PropertyName = "organizationName")]
         public string OrganizationName { get; set; }
         

@@ -13,39 +13,30 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.PsqlService.Models
+namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Information about the database instance node endpoint.
+    /// The exascale config response details for the Exadata Cloud@Customer infrastructure or cloud Exadata infrastructure . Applies to both Exadata Cloud@Customer instances and Exadata Cloud Service instances.
+    /// 
     /// </summary>
-    public class Endpoint 
+    public class ExascaleConfigDetails 
     {
         
         /// <value>
-        /// The FQDN of the endpoint.
+        /// Storage size needed for Exascale in GBs.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Fqdn is required.")]
-        [JsonProperty(PropertyName = "fqdn")]
-        public string Fqdn { get; set; }
+        [Required(ErrorMessage = "TotalStorageInGBs is required.")]
+        [JsonProperty(PropertyName = "totalStorageInGBs")]
+        public System.Nullable<int> TotalStorageInGBs { get; set; }
         
         /// <value>
-        /// The IP address of the endpoint.
+        /// Available storage size for Exascale in GBs.
         /// </value>
-        [JsonProperty(PropertyName = "ipAddress")]
-        public string IpAddress { get; set; }
-        
-        /// <value>
-        /// The port address of the endpoint.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Port is required.")]
-        [JsonProperty(PropertyName = "port")]
-        public System.Nullable<int> Port { get; set; }
+        [JsonProperty(PropertyName = "availableStorageInGBs")]
+        public System.Nullable<int> AvailableStorageInGBs { get; set; }
         
     }
 }

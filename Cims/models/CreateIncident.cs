@@ -41,11 +41,18 @@ namespace Oci.CimsService.Models
         
         /// <value>
         /// The Customer Support Identifier (CSI) number associated with the support account.
-        /// The CSI is required for technical support tickets and optional for limits and billing tickets.
+        /// The CSI is optional for all support request types.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "csi")]
         public string Csi { get; set; }
+        
+        /// <value>
+        /// Technical support type (`TECH`) only: The identifier of the support request's user group in My Oracle Cloud Support portal.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "userGroupId")]
+        public string UserGroupId { get; set; }
         
         /// <value>
         /// The kind of support ticket (type of support request).

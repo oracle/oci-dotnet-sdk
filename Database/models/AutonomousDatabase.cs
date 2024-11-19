@@ -277,7 +277,7 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// The compute amount (CPUs) available to the database. Minimum and maximum values depend on the compute model and whether the database is an Autonomous Database Serverless instance or an Autonomous Database on Dedicated Exadata Infrastructure. 
-        /// For an Autonomous Database Serverless instance, the 'ECPU' compute model requires a minimum value of one, for databases in the elastic resource pool and minimum value of two, otherwise. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value. Providing `computeModel` and `computeCount` is the preferred method for both OCPU and ECPU.
+        /// The 'ECPU' compute model requires a minimum value of one, for databases in the elastic resource pool and minimum value of two, otherwise. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value. Providing `computeModel` and `computeCount` is the preferred method for both OCPU and ECPU.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeCount")]
@@ -356,6 +356,7 @@ namespace Oci.DatabaseService.Models
                 ///
         /// <value>
         /// The infrastructure type this resource belongs to.
+        /// 
         /// </value>
         ///
         public enum InfrastructureTypeEnum {
@@ -370,6 +371,7 @@ namespace Oci.DatabaseService.Models
 
         /// <value>
         /// The infrastructure type this resource belongs to.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "infrastructureType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -1241,6 +1243,7 @@ namespace Oci.DatabaseService.Models
                 ///
         /// <value>
         /// Enabling SHARED server architecture enables a database server to allow many client processes to share very few server processes, thereby increasing the number of supported users.
+        /// 
         /// </value>
         ///
         public enum NetServicesArchitectureEnum {
@@ -1255,6 +1258,7 @@ namespace Oci.DatabaseService.Models
 
         /// <value>
         /// Enabling SHARED server architecture enables a database server to allow many client processes to share very few server processes, thereby increasing the number of supported users.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "netServicesArchitecture")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

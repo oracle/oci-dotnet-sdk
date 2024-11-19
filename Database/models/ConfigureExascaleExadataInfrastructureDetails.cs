@@ -13,25 +13,24 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.PsqlService.Models
+namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Network details for the database system.
+    /// The exascale config request details for the Exadata Cloud@Customer infrastructure.
+    /// 
     /// </summary>
-    public class UpdateNetworkDetails 
+    public class ConfigureExascaleExadataInfrastructureDetails 
     {
         
         /// <value>
-        /// List of Network Security Group [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) associated with the database system.
+        /// Storage size needed for Exascale in GBs.
         /// </value>
-        [JsonProperty(PropertyName = "nsgIds")]
-        public System.Collections.Generic.List<string> NsgIds { get; set; }
-        
-        /// <value>
-        /// Specifies if the reader endpoint is enabled on the dbSystem.
-        /// </value>
-        [JsonProperty(PropertyName = "isReaderEndpointEnabled")]
-        public System.Nullable<bool> IsReaderEndpointEnabled { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TotalStorageInGBs is required.")]
+        [JsonProperty(PropertyName = "totalStorageInGBs")]
+        public System.Nullable<int> TotalStorageInGBs { get; set; }
         
     }
 }
