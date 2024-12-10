@@ -66,6 +66,15 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanStepType> Type { get; set; }
         
         /// <value>
+        /// The DR plan step refresh status.
+        /// <br/>
+        /// Example: STEP_ADDED
+        /// </value>
+        [JsonProperty(PropertyName = "refreshStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DrPlanStepRefreshStatus> RefreshStatus { get; set; }
+        
+        /// <value>
         /// The display name of the group.
         /// <br/>
         /// Example: DATABASE_SWITCHOVER

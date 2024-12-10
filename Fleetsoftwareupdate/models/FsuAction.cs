@@ -159,6 +159,9 @@ namespace Oci.FleetsoftwareupdateService.Models
                 case "PRECHECK":
                     obj = new PrecheckAction();
                     break;
+                case "ROLLBACK_MAINTENANCE_CYCLE":
+                    obj = new RollbackCycleAction();
+                    break;
                 case "STAGE":
                     obj = new StageAction();
                     break;

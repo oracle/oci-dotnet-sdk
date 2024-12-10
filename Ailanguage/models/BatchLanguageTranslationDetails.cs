@@ -22,6 +22,24 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
+        /// Unique name to identify an endpoint to be used for inferencing
+        /// </value>
+        [JsonProperty(PropertyName = "alias")]
+        public string Alias { get; set; }
+        
+        /// <value>
+        /// The endpoint that has to be used for inferencing.
+        /// </value>
+        [JsonProperty(PropertyName = "endpointId")]
+        public string EndpointId { get; set; }
+        
+        /// <value>
+        /// List of words not to be translated
+        /// </value>
+        [JsonProperty(PropertyName = "noTranslate")]
+        public System.Collections.Generic.List<string> NoTranslate { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that calls the API, inference will be served from pre trained model
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]

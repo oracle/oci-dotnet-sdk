@@ -72,5 +72,8 @@ namespace Oci.VisualbuilderService.Models
         [JsonProperty(PropertyName = "alternateCustomEndpoints")]
         public System.Collections.Generic.List<UpdateCustomEndpointDetails> AlternateCustomEndpoints { get; set; }
         
+        [JsonProperty(PropertyName = "networkEndpointDetails")]
+        public UpdateNetworkEndpointDetails NetworkEndpointDetails { get; set; }
+        
     }
 }

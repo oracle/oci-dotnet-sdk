@@ -32,6 +32,33 @@ namespace Oci.AilanguageService.Models
         public string Id { get; set; }
         
         /// <value>
+        /// Unique name across user tenancy in a region to identify an endpoint to be used for inferencing.
+        /// </value>
+        [JsonProperty(PropertyName = "alias")]
+        public string Alias { get; set; }
+                ///
+        /// <value>
+        /// Compute infra type for endpoint.
+        /// </value>
+        ///
+        public enum ComputeTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "CPU")]
+            Cpu,
+            [EnumMember(Value = "GPU")]
+            Gpu
+        };
+
+        /// <value>
+        /// Compute infra type for endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "computeType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ComputeTypeEnum> ComputeType { get; set; }
+        
+        /// <value>
         /// A user-friendly display name for the resource. It should be unique and can be modified. Avoid entering confidential information.
         /// </value>
         /// <remarks>

@@ -132,6 +132,15 @@ namespace Oci.DisasterrecoveryService.Models
         public string PeerRegion { get; set; }
         
         /// <value>
+        /// If this is a cloned DR plan, the OCID of the source DR plan that was used to clone this DR plan.
+        /// If this DR plan was not cloned, then the value for this will be `null`.
+        /// <br/>
+        /// Example: ocid1.drplan.oc1..uniqueID
+        /// </value>
+        [JsonProperty(PropertyName = "sourcePlanId")]
+        public string SourcePlanId { get; set; }
+        
+        /// <value>
         /// The list of groups in this DR plan.
         /// 
         /// </value>
@@ -153,6 +162,14 @@ namespace Oci.DisasterrecoveryService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DrPlanLifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// The current state of the DR plan.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleSubState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DrPlanLifecycleSubState> LifecycleSubState { get; set; }
         
         /// <value>
         /// A message describing the DR plan's current state in more detail.

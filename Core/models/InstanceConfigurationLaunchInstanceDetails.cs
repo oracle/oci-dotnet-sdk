@@ -320,5 +320,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "preemptibleInstanceConfig")]
         public PreemptibleInstanceConfigDetails PreemptibleInstanceConfig { get; set; }
         
+        /// <value>
+        /// List of licensing configurations associated with target launch values.
+        /// </value>
+        [JsonProperty(PropertyName = "licensingConfigs")]
+        public System.Collections.Generic.List<LaunchInstanceLicensingConfig> LicensingConfigs { get; set; }
+        
     }
 }

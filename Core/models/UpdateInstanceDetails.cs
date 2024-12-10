@@ -221,5 +221,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "platformConfig")]
         public UpdateInstancePlatformConfig PlatformConfig { get; set; }
         
+        /// <value>
+        /// The list of liscensing configurations with target update values.
+        /// </value>
+        [JsonProperty(PropertyName = "licensingConfigs")]
+        public System.Collections.Generic.List<UpdateInstanceLicensingConfig> LicensingConfigs { get; set; }
+        
     }
 }

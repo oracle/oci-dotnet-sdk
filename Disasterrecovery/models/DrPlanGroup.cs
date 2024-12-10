@@ -47,6 +47,15 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanGroupType> Type { get; set; }
         
         /// <value>
+        /// The DR plan group refresh status.
+        /// <br/>
+        /// Example: GROUP_MODIFIED
+        /// </value>
+        [JsonProperty(PropertyName = "refreshStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DrPlanGroupRefreshStatus> RefreshStatus { get; set; }
+        
+        /// <value>
         /// The display name of the group.
         /// <br/>
         /// Example: DATABASE_SWITCHOVER

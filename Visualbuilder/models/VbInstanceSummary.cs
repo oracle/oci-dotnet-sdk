@@ -184,5 +184,8 @@ namespace Oci.VisualbuilderService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        [JsonProperty(PropertyName = "networkEndpointDetails")]
+        public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
+        
     }
 }

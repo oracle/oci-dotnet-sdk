@@ -146,6 +146,15 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<DrPlanLifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// The current sub state of the DR plan.
+        /// <br/>
+        /// Example: NEEDS_REFRESH
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleSubState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DrPlanLifecycleSubState> LifecycleSubState { get; set; }
+        
+        /// <value>
         /// A message describing the DR plan's current state in more detail.
         /// 
         /// </value>

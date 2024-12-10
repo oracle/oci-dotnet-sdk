@@ -45,6 +45,8 @@ namespace Oci.FleetsoftwareupdateService.Models
       MoveMaintenanceCycle,
       [EnumMember(Value = "CLONE_MAINTENANCE_CYCLE")]
       CloneMaintenanceCycle,
+      [EnumMember(Value = "ROLLBACK_MAINTENANCE_CYCLE_ACTION")]
+      RollbackMaintenanceCycleAction,
       [EnumMember(Value = "CREATE_ACTION")]
       CreateAction,
       [EnumMember(Value = "UPDATE_ACTION")]

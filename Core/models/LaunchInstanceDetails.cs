@@ -313,5 +313,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "instanceConfigurationId")]
         public string InstanceConfigurationId { get; set; }
         
+        /// <value>
+        /// List of licensing configurations associated with target launch values.
+        /// </value>
+        [JsonProperty(PropertyName = "licensingConfigs")]
+        public System.Collections.Generic.List<LaunchInstanceLicensingConfig> LicensingConfigs { get; set; }
+        
     }
 }
