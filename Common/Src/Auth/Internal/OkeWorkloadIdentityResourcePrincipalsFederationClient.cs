@@ -172,7 +172,14 @@ namespace Oci.Common.Auth.Internal
                 }
                 else
                 {
-                    throw new OciException(response.StatusCode, "Request to get OKE Resource Principals Token failed", response.ReasonPhrase, opcRequestId);
+                    if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    {
+                         throw new OciException(response.StatusCode, "Please ensure the cluster type is enhanced", response.ReasonPhrase, opcRequestId);
+                    }
+                    else
+                    {
+                         throw new OciException(response.StatusCode, "Request to get OKE Resource Principals Token failed", response.ReasonPhrase, opcRequestId);
+                    }
                 }
             }
             catch (Exception)

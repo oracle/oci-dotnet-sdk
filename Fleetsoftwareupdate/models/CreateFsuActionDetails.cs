@@ -78,6 +78,9 @@ namespace Oci.FleetsoftwareupdateService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "ROLLBACK_MAINTENANCE_CYCLE":
+                    obj = new CreateRollbackCycleApplyActionDetails();
+                    break;
                 case "APPLY":
                     obj = new CreateApplyActionDetails();
                     break;

@@ -22,6 +22,8 @@ namespace Oci.DataflowService.Models
       UnknownEnumValue,
       [EnumMember(Value = "ACTIVE")]
       Active,
+      [EnumMember(Value = "DELETING")]
+      Deleting,
       [EnumMember(Value = "DELETED")]
       Deleted,
       [EnumMember(Value = "INACTIVE")]

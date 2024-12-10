@@ -49,8 +49,6 @@ namespace Oci.AilanguageService.Models
             PreTrainedLanguageDetection,
             [EnumMember(Value = "PRE_TRAINED_PII")]
             PreTrainedPii,
-            [EnumMember(Value = "PRE_TRAINED_TRANSLATION")]
-            PreTrainedTranslation,
             [EnumMember(Value = "PRE_TRAINED_HEALTH_NLU")]
             PreTrainedHealthNlu,
             [EnumMember(Value = "PRE_TRAINED_SUMMARIZATION")]
@@ -58,7 +56,11 @@ namespace Oci.AilanguageService.Models
             [EnumMember(Value = "PRE_TRAINED_UNIVERSAL")]
             PreTrainedUniversal,
             [EnumMember(Value = "PII")]
-            Pii
+            Pii,
+            [EnumMember(Value = "PRE_TRAINED_TRANSLATION")]
+            PreTrainedTranslation,
+            [EnumMember(Value = "HEALTH_NLU")]
+            HealthNlu
         };
 
         
@@ -88,11 +90,29 @@ namespace Oci.AilanguageService.Models
                 case "PRE_TRAINED_KEYPHRASE_EXTRACTION":
                     obj = new PreTrainedKeyPhraseExtractionModelDetails();
                     break;
+                case "PRE_TRAINED_TRANSLATION":
+                    obj = new PreTrainedTranslationModelDetails();
+                    break;
                 case "PRE_TRAINED_HEALTH_NLU":
                     obj = new PreTrainedHealthNluModelDetails();
                     break;
                 case "PRE_TRAINED_UNIVERSAL":
                     obj = new PreTrainedUniversalModel();
+                    break;
+                case "PRE_TRAINED_LANGUAGE_DETECTION":
+                    obj = new PreTrainedLanguageDetectionModelDetails();
+                    break;
+                case "PRE_TRAINED_SENTIMENT_ANALYSIS":
+                    obj = new PreTrainedSentimentAnalysisModelDetails();
+                    break;
+                case "TEXT_CLASSIFICATION":
+                    obj = new TextClassificationModelDetails();
+                    break;
+                case "HEALTH_NLU":
+                    obj = new HealthNluModelDetails();
+                    break;
+                case "PRE_TRAINED_SUMMARIZATION":
+                    obj = new PreTrainedSummarization();
                     break;
                 case "NAMED_ENTITY_RECOGNITION":
                     obj = new NamedEntityRecognitionModelDetails();
@@ -100,23 +120,11 @@ namespace Oci.AilanguageService.Models
                 case "PII":
                     obj = new PiiModelDetails();
                     break;
-                case "PRE_TRAINED_LANGUAGE_DETECTION":
-                    obj = new PreTrainedLanguageDetectionModelDetails();
-                    break;
                 case "PRE_TRAINED_NAMED_ENTITY_RECOGNITION":
                     obj = new PreTrainedNamedEntityRecognitionModelDetails();
                     break;
-                case "PRE_TRAINED_SENTIMENT_ANALYSIS":
-                    obj = new PreTrainedSentimentAnalysisModelDetails();
-                    break;
                 case "PRE_TRAINED_TEXT_CLASSIFICATION":
                     obj = new PreTrainedTextClassificationModelDetails();
-                    break;
-                case "TEXT_CLASSIFICATION":
-                    obj = new TextClassificationModelDetails();
-                    break;
-                case "PRE_TRAINED_SUMMARIZATION":
-                    obj = new PreTrainedSummarization();
                     break;
                 case "PRE_TRAINED_PII":
                     obj = new PreTrainedPiiModelDetails();

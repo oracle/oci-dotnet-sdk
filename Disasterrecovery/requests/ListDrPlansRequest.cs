@@ -121,5 +121,12 @@ namespace Oci.DisasterrecoveryService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to return only DR plans that match the given lifecycle sub-state.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleSubState")]
+        public System.Nullable<DrPlanLifecycleSubState> LifecycleSubState { get; set; }
     }
 }

@@ -184,16 +184,6 @@ namespace Oci.VisualbuilderService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConsumptionModelEnum> ConsumptionModel { get; set; }
         
-        [JsonProperty(PropertyName = "idcsInfo")]
-        public IdcsInfoDetails IdcsInfo { get; set; }
-        
-        /// <value>
-        /// A list of associated attachments to other services
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "attachments")]
-        public System.Collections.Generic.List<AttachmentDetails> Attachments { get; set; }
-        
         /// <value>
         /// The NAT gateway IP address for the VB service VCN
         /// </value>
@@ -217,6 +207,9 @@ namespace Oci.VisualbuilderService.Models
         /// </value>
         [JsonProperty(PropertyName = "managementVcnId")]
         public string ManagementVcnId { get; set; }
+        
+        [JsonProperty(PropertyName = "networkEndpointDetails")]
+        public NetworkEndpointDetails NetworkEndpointDetails { get; set; }
         
     }
 }

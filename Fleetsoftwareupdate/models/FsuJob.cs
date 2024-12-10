@@ -166,6 +166,9 @@ namespace Oci.FleetsoftwareupdateService.Models
                 case "APPLY":
                     obj = new ApplyFsuJob();
                     break;
+                case "ROLLBACK_MAINTENANCE_CYCLE":
+                    obj = new RollbackCycleFsuJob();
+                    break;
                 case "STAGE":
                     obj = new StageFsuJob();
                     break;

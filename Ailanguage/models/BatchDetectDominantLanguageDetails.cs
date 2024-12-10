@@ -22,6 +22,12 @@ namespace Oci.AilanguageService.Models
     {
         
         /// <value>
+        /// Unique name across user tenancy in a region to identify an endpoint to be used for inferencing.
+        /// </value>
+        [JsonProperty(PropertyName = "alias")]
+        public string Alias { get; set; }
+        
+        /// <value>
         /// Specifies whether to consider or ignore transliteration. For example \"hi, aap kaise ho? sab kuch teek hai? I will call you tomorrow.\" would be detected as English when ignore transliteration=true, Hindi when ignoreTransliteration=false.
         /// </value>
         [JsonProperty(PropertyName = "shouldIgnoreTransliteration")]

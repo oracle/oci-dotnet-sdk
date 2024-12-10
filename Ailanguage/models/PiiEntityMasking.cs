@@ -36,6 +36,18 @@ namespace Oci.AilanguageService.Models
         };
 
         
+        /// <value>
+        /// List of offsets/entities to be removed from anonymization.
+        /// </value>
+        [JsonProperty(PropertyName = "exclude")]
+        public System.Collections.Generic.List<string> Exclude { get; set; }
+        
+        /// <value>
+        /// To include excluded entities from masking in detected entities or not.
+        /// </value>
+        [JsonProperty(PropertyName = "shouldDetect")]
+        public System.Nullable<bool> ShouldDetect { get; set; }
+        
     }
 
     public class PiiEntityMaskingModelConverter : JsonConverter

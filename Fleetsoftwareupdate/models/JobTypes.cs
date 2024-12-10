@@ -28,6 +28,8 @@ namespace Oci.FleetsoftwareupdateService.Models
       Apply,
       [EnumMember(Value = "ROLLBACK_AND_REMOVE_TARGET")]
       RollbackAndRemoveTarget,
+      [EnumMember(Value = "ROLLBACK_MAINTENANCE_CYCLE")]
+      RollbackMaintenanceCycle,
       [EnumMember(Value = "CLEANUP")]
       Cleanup
   }

@@ -581,6 +581,65 @@ namespace Oci.VisualbuilderService
         }
 
         /// <summary>
+        /// Reconfigures the Private Endpoint associated with the private visual builder instance. Use this action in case the Private Endpoint is not working and needs to be reset.
+        /// The VB instance has to be in ACTIVE state and should be a private instance to perform this operation.
+        /// If the previous state is not ACTIVE, then the state of the vbInstance will not be changed and a 409 response returned.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/visualbuilder/ReconfigurePrivateEndpointVbInstance.cs.html">here</a> to see an example of how to use ReconfigurePrivateEndpointVbInstance API.</example>
+        public async Task<ReconfigurePrivateEndpointVbInstanceResponse> ReconfigurePrivateEndpointVbInstance(ReconfigurePrivateEndpointVbInstanceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called reconfigurePrivateEndpointVbInstance");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/vbInstances/{vbInstanceId}/actions/reconfigurePrivateEndpoint".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "VbInstance",
+                    OperationName = "ReconfigurePrivateEndpointVbInstance",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/visual-builder/20210601/VbInstance/ReconfigurePrivateEndpointVbInstance",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ReconfigurePrivateEndpointVbInstanceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ReconfigurePrivateEndpointVbInstance failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Summarizes the applications for a vb instance.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

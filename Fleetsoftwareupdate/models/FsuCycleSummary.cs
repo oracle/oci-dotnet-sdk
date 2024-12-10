@@ -101,6 +101,23 @@ namespace Oci.FleetsoftwareupdateService.Models
         public System.Collections.Generic.List<NextActionToExecuteDetails> NextActionToExecute { get; set; }
         
         /// <value>
+        /// OCID identifier for the latest Action the Exadata Fleet Update Cycle.
+        /// No value would indicate that the Cycle has not completed any Action yet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lastCompletedActionId")]
+        public string LastCompletedActionId { get; set; }
+        
+        /// <value>
+        /// Current rollback cycle state if rollback maintenance cycle action has been attempted.
+        /// No value would indicate that the Cycle has not run a rollback maintenance cycle action before.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "rollbackCycleState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<RollbackCycleStates> RollbackCycleState { get; set; }
+        
+        /// <value>
         /// The latest Action type that was completed in the Exadata Fleet Update Cycle.
         /// No value would indicate that the Cycle has not completed any Action yet.
         /// 
