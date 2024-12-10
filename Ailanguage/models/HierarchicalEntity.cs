@@ -21,6 +21,9 @@ namespace Oci.AilanguageService.Models
     public class HierarchicalEntity 
     {
         
+        [JsonProperty(PropertyName = "metaInfo")]
+        public MetaInfo MetaInfo { get; set; }
+        
         /// <value>
         /// The number of Unicode code points preceding this entity in the submitted text.
         /// </value>

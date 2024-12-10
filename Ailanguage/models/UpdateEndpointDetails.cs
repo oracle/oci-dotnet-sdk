@@ -28,6 +28,12 @@ namespace Oci.AilanguageService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Unique name across user tenancy in a region to identify an endpoint to be used for inferencing.
+        /// </value>
+        [JsonProperty(PropertyName = "alias")]
+        public string Alias { get; set; }
+        
+        /// <value>
         /// A short description of the endpoint.
         /// </value>
         [JsonProperty(PropertyName = "description")]

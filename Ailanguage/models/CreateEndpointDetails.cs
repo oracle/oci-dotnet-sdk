@@ -26,6 +26,30 @@ namespace Oci.AilanguageService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+                ///
+        /// <value>
+        /// Compute infra type for endpoint.
+        /// </value>
+        ///
+        public enum ComputeTypeEnum {
+            [EnumMember(Value = "CPU")]
+            Cpu,
+            [EnumMember(Value = "GPU")]
+            Gpu
+        };
+
+        /// <value>
+        /// Compute infra type for endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "computeType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ComputeTypeEnum> ComputeType { get; set; }
+        
+        /// <value>
+        /// Unique name across user tenancy in a region to identify an endpoint to be used for inferencing.
+        /// </value>
+        [JsonProperty(PropertyName = "alias")]
+        public string Alias { get; set; }
         
         /// <value>
         /// A short description of the an endpoint.

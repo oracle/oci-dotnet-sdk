@@ -394,5 +394,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "instanceConfigurationId")]
         public string InstanceConfigurationId { get; set; }
         
+        /// <value>
+        /// List of licensing configurations associated with the instance.
+        /// </value>
+        [JsonProperty(PropertyName = "licensingConfigs")]
+        public System.Collections.Generic.List<LicensingConfig> LicensingConfigs { get; set; }
+        
     }
 }

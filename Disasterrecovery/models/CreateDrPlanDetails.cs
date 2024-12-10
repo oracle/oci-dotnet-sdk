@@ -58,6 +58,14 @@ namespace Oci.DisasterrecoveryService.Models
         public string DrProtectionGroupId { get; set; }
         
         /// <value>
+        /// The OCID of the source DR plan that should be cloned.
+        /// <br/>
+        /// Example: ocid1.drplan.oc1..uniqueID
+        /// </value>
+        [JsonProperty(PropertyName = "sourcePlanId")]
+        public string SourcePlanId { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

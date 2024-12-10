@@ -55,5 +55,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Key details provided by the user for rotate key operation for Autonomous Database.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public RotateAutonomousContainerDatabaseEncryptionKeyDetails RotateAutonomousContainerDatabaseEncryptionKeyDetails { get; set; }
     }
 }

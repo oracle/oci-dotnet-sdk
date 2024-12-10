@@ -39,6 +39,10 @@ namespace Oci.DisasterrecoveryService.Models
       UpdateDrPlan,
       [EnumMember(Value = "DELETE_DR_PLAN")]
       DeleteDrPlan,
+      [EnumMember(Value = "REFRESH_DR_PLAN")]
+      RefreshDrPlan,
+      [EnumMember(Value = "VERIFY_DR_PLAN")]
+      VerifyDrPlan,
       [EnumMember(Value = "CREATE_DR_PLAN_EXECUTION")]
       CreateDrPlanExecution,
       [EnumMember(Value = "UPDATE_DR_PLAN_EXECUTION")]
