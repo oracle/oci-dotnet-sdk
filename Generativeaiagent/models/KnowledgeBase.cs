@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **KnowledgeBase**
-    /// <br/>
     /// A knowledge base is the base for all the data sources that an agent can use to retrieve information for its responses.
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized, talk to an administrator. If you're an administrator who needs to write policies to give users access, see [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/policiesgs/get-started-with-policies.htm).
@@ -68,6 +66,9 @@ namespace Oci.GenerativeaiagentService.Models
         [Required(ErrorMessage = "IndexConfig is required.")]
         [JsonProperty(PropertyName = "indexConfig")]
         public IndexConfig IndexConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "knowledgeBaseStatistics")]
+        public KnowledgeBaseStatistics KnowledgeBaseStatistics { get; set; }
         
         /// <value>
         /// The date and time the knowledge base was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).

@@ -55,6 +55,9 @@ namespace Oci.StackmonitoringService.Models
                 case "JMX":
                     obj = new JmxQueryProperties();
                     break;
+                case "HTTP":
+                    obj = new HttpQueryProperties();
+                    break;
             }
             if (obj != null)
             {

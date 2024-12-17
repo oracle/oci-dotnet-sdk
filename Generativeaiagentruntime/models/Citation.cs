@@ -31,5 +31,23 @@ namespace Oci.GenerativeaiagentruntimeService.Models
         [JsonProperty(PropertyName = "sourceLocation")]
         public SourceLocation SourceLocation { get; set; }
         
+        /// <value>
+        /// The title of the source text, if available.
+        /// </value>
+        [JsonProperty(PropertyName = "title")]
+        public string Title { get; set; }
+        
+        /// <value>
+        /// The id of the retrieved document, if available.
+        /// </value>
+        [JsonProperty(PropertyName = "docId")]
+        public string DocId { get; set; }
+        
+        /// <value>
+        /// The page numbers on the retrieved document, if available.
+        /// </value>
+        [JsonProperty(PropertyName = "pageNumbers")]
+        public System.Collections.Generic.List<int> PageNumbers { get; set; }
+        
     }
 }

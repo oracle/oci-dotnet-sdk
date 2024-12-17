@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **WorkRequestSummaryCollection**
-    /// <br/>
     /// A list of work requests. Can contain both work requests and other information, such as metadata.
     /// 
     /// </summary>

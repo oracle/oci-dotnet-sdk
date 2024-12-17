@@ -63,5 +63,11 @@ namespace Oci.CloudbridgeService.Models
         [JsonProperty(PropertyName = "persistentMode")]
         public string PersistentMode { get; set; }
         
+        /// <value>
+        /// Indicates that CBT (change disk tracking) is enabled for this virtual disk.
+        /// </value>
+        [JsonProperty(PropertyName = "isCbtEnabled")]
+        public System.Nullable<bool> IsCbtEnabled { get; set; }
+        
     }
 }

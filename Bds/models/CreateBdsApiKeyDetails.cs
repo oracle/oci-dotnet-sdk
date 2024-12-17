@@ -61,5 +61,11 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "keyAlias")]
         public string KeyAlias { get; set; }
         
+        /// <value>
+        /// Identity domain OCID , where user is present. For default domain , this field will be optional.
+        /// </value>
+        [JsonProperty(PropertyName = "domainOcid")]
+        public string DomainOcid { get; set; }
+        
     }
 }

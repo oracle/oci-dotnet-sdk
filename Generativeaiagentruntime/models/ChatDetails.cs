@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentruntimeService.Models
 {
     /// <summary>
-    /// Chat details.
+    /// Chat details for managing user interactions and tool executions.
     /// 
     /// </summary>
     public class ChatDetails 

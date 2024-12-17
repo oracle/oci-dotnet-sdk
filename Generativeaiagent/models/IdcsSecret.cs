@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **IdcsSecret**
-    /// <br/>
     /// The details of IDCS configured as OpenID setting in OpenSearch.
     /// 
     /// </summary>

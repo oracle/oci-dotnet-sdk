@@ -113,7 +113,7 @@ namespace Oci.BlockchainService.Models
         public System.Nullable<PlatformRoleEnum> PlatformRole { get; set; }
                 ///
         /// <value>
-        /// Compute shape - STANDARD or ENTERPRISE_SMALL or ENTERPRISE_MEDIUM or ENTERPRISE_LARGE or ENTERPRISE_EXTRA_LARGE or ENTERPRISE_CUSTOM
+        /// Compute shape - STANDARD or ENTERPRISE_SMALL or ENTERPRISE_MEDIUM or ENTERPRISE_LARGE or ENTERPRISE_EXTRA_LARGE or ENTERPRISE_CUSTOM or DIGITAL_ASSETS_MEDIUM or DIGITAL_ASSETS_LARGE or DIGITAL_ASSETS_EXTRA_LARGE
         /// </value>
         ///
         public enum ComputeShapeEnum {
@@ -131,11 +131,17 @@ namespace Oci.BlockchainService.Models
             [EnumMember(Value = "ENTERPRISE_EXTRA_LARGE")]
             EnterpriseExtraLarge,
             [EnumMember(Value = "ENTERPRISE_CUSTOM")]
-            EnterpriseCustom
+            EnterpriseCustom,
+            [EnumMember(Value = "DIGITAL_ASSETS_MEDIUM")]
+            DigitalAssetsMedium,
+            [EnumMember(Value = "DIGITAL_ASSETS_LARGE")]
+            DigitalAssetsLarge,
+            [EnumMember(Value = "DIGITAL_ASSETS_EXTRA_LARGE")]
+            DigitalAssetsExtraLarge
         };
 
         /// <value>
-        /// Compute shape - STANDARD or ENTERPRISE_SMALL or ENTERPRISE_MEDIUM or ENTERPRISE_LARGE or ENTERPRISE_EXTRA_LARGE or ENTERPRISE_CUSTOM
+        /// Compute shape - STANDARD or ENTERPRISE_SMALL or ENTERPRISE_MEDIUM or ENTERPRISE_LARGE or ENTERPRISE_EXTRA_LARGE or ENTERPRISE_CUSTOM or DIGITAL_ASSETS_MEDIUM or DIGITAL_ASSETS_LARGE or DIGITAL_ASSETS_EXTRA_LARGE
         /// </value>
         /// <remarks>
         /// Required

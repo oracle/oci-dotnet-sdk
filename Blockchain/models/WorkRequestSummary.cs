@@ -46,7 +46,9 @@ namespace Oci.BlockchainService.Models
             [EnumMember(Value = "CUSTOMIZE_PLATFORM")]
             CustomizePlatform,
             [EnumMember(Value = "SCALE_STORAGE")]
-            ScaleStorage
+            ScaleStorage,
+            [EnumMember(Value = "WORKREQUEST_CLEANUP")]
+            WorkrequestCleanup
         };
 
         /// <value>

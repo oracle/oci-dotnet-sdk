@@ -31,6 +31,12 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "waitTimeBetweenDomainInSeconds")]
         public System.Nullable<int> WaitTimeBetweenDomainInSeconds { get; set; }
         
+        /// <value>
+        /// Acceptable number of failed-to-be-patched nodes in each domain. The maximum number of failed-to-patch nodes cannot exceed 20% of the number of non-utility and non-master nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "toleranceThresholdPerDomain")]
+        public System.Nullable<int> ToleranceThresholdPerDomain { get; set; }
+        
         [JsonProperty(PropertyName = "patchingConfigStrategy")]
         private readonly string patchingConfigStrategy = "DOMAIN_BASED";
     }

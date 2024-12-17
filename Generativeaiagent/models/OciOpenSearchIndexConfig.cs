@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **OciOpenSearchIndexConfig**
-    /// <br/>
     /// The details of customer managed OCI OpenSearch.
     /// 
     /// </summary>

@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **WorkRequestErrorCollection**
-    /// <br/>
     /// A list of work request errors. Can contain both errors and other information, such as metadata.
     /// 
     /// </summary>

@@ -16,8 +16,6 @@ using Newtonsoft.Json.Linq;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **SecretDetail**
-    /// <br/>
     /// The details of configured security configuration on OpenSearch.
     /// 
     /// </summary>

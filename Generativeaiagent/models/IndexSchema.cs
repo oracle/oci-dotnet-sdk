@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **IndexSchema**
-    /// <br/>
     /// The index schema details.
     /// 
     /// </summary>

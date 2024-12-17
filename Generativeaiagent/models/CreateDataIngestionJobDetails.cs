@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **CreateDataIngestionJobDetails**  
-    /// <br/>
     /// The data to create a data ingestion job.
     /// 
     /// </summary>

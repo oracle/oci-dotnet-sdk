@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **SessionConfig**
-    /// <br/>
     /// Session Configuration on AgentEndpoint.
     /// 
     /// </summary>

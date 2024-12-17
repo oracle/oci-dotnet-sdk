@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **DataIngestionJobStatistics**
-    /// <br/>
     /// The statistics of data ingestion job.
     /// 
     /// </summary>

@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **WorkRequestResource**
-    /// <br/>
     /// A resource created or operated on by a work request.
     /// 
     /// </summary>

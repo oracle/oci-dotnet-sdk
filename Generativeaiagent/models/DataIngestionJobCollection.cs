@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **DataIngestionJobCollection**
-    /// <br/>
     /// Results of a data ingestion job search. Contains both DataIngestionJobSummary items and other information, such as metadata.
     /// 
     /// </summary>

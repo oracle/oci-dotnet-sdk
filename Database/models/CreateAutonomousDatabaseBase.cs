@@ -551,6 +551,12 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<DatabaseTool> DbToolsDetails { get; set; }
         
         /// <value>
+        /// True if the Autonomous Database is backup retention locked.
+        /// </value>
+        [JsonProperty(PropertyName = "isBackupRetentionLocked")]
+        public System.Nullable<bool> IsBackupRetentionLocked { get; set; }
+        
+        /// <value>
         /// The OCI vault secret [/Content/General/Concepts/identifiers.htm]OCID.
         /// <br/>
         /// This cannot be used in conjunction with adminPassword.

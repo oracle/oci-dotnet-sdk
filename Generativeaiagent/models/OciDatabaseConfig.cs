@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **OciDatabaseConfig**
-    /// <br/>
     /// The details of the customer Database Connection.
     /// 
     /// </summary>

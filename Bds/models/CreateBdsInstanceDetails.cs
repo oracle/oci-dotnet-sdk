@@ -146,5 +146,8 @@ namespace Oci.BdsService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<BdsInstance.ClusterProfileEnum> ClusterProfile { get; set; }
         
+        [JsonProperty(PropertyName = "bdsClusterVersionSummary")]
+        public BdsClusterVersionSummary BdsClusterVersionSummary { get; set; }
+        
     }
 }

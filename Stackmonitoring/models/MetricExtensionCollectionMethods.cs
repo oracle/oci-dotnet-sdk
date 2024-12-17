@@ -24,6 +24,8 @@ namespace Oci.StackmonitoringService.Models
       [EnumMember(Value = "SQL")]
       Sql,
       [EnumMember(Value = "JMX")]
-      Jmx
+      Jmx,
+      [EnumMember(Value = "HTTP")]
+      Http
   }
 }

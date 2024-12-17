@@ -16,8 +16,6 @@ using Newtonsoft.Json.Linq;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **IndexConfig**
-    /// <br/>
     /// The index configuration of Knowledge bases.
     /// 
     /// </summary>
