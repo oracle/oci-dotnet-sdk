@@ -73,8 +73,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **CancelWorkRequest**
-        /// &lt;br/&gt;
         /// Cancels a work request.
         /// 
         /// </summary>
@@ -132,8 +130,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **ChangeAgentCompartment**
-        /// &lt;br/&gt;
         /// Moves an agent into a different compartment within the same tenancy. For information about moving resources between
         /// compartments, see [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
         /// 
@@ -192,8 +188,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **ChangeAgentEndpointCompartment**
-        /// &lt;br/&gt;
         /// Moves an endpoint into a different compartment within the same tenancy. For information about moving resources between
         /// compartments, see [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
         /// 
@@ -252,8 +246,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **ChangeKnowledgeBaseCompartment**
-        /// &lt;br/&gt;
         /// Moves a knowledge base into a different compartment within the same tenancy. For information about moving resources between
         /// compartments, see [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
         /// 
@@ -312,8 +304,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **CreateAgent**
-        /// &lt;br/&gt;
         /// Creates an agent.
         /// 
         /// </summary>
@@ -371,8 +361,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **CreateAgentEndpoint**
-        /// &lt;br/&gt;
         /// Creates an endpoint.
         /// 
         /// </summary>
@@ -430,8 +418,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **CreateDataIngestionJob**
-        /// &lt;br/&gt;
         /// Creates a data ingestion job.
         /// 
         /// </summary>
@@ -489,8 +475,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **CreateDataSource**
-        /// &lt;br/&gt;
         /// Creates a data source.
         /// 
         /// </summary>
@@ -548,8 +532,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **CreateKnowledgeBase**
-        /// &lt;br/&gt;
         /// Creates a knowledge base.
         /// 
         /// </summary>
@@ -607,8 +589,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **DeleteAgent**
-        /// &lt;br/&gt;
         /// Deletes an agent.
         /// 
         /// </summary>
@@ -666,8 +646,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **DeleteAgentEndpoint**
-        /// &lt;br/&gt;
         /// Deletes an endpoint.
         /// 
         /// </summary>
@@ -725,8 +703,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **DeleteDataIngestionJob**
-        /// &lt;br/&gt;
         /// Deletes a data ingestion job.
         /// 
         /// </summary>
@@ -784,8 +760,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **DeleteDataSource**
-        /// &lt;br/&gt;
         /// Deletes a data source.
         /// 
         /// </summary>
@@ -843,8 +817,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **DeleteKnowledgeBase**
-        /// &lt;br/&gt;
         /// Deletes a knowledge base.
         /// 
         /// </summary>
@@ -902,8 +874,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **GetAgent**
-        /// &lt;br/&gt;
         /// Gets information about an agent.
         /// 
         /// </summary>
@@ -961,8 +931,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **GetAgentEndpoint**
-        /// &lt;br/&gt;
         /// Gets information about an endpoint.
         /// 
         /// </summary>
@@ -1020,8 +988,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **GetDataIngestionJob**
-        /// &lt;br/&gt;
         /// Gets information about a data ingestion job.
         /// 
         /// </summary>
@@ -1079,8 +1045,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **GetDataIngestionJobLogContent**
-        /// &lt;br/&gt;
         /// Returns the raw log file for the specified data ingestion job in text format.
         /// 
         /// </summary>
@@ -1138,8 +1102,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **GetDataSource**
-        /// &lt;br/&gt;
         /// Gets information about a data source.
         /// 
         /// </summary>
@@ -1197,8 +1159,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **GetKnowledgeBase**
-        /// &lt;br/&gt;
         /// Gets information about a knowledge base.
         /// 
         /// </summary>
@@ -1256,8 +1216,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **GetWorkRequest**
-        /// &lt;br/&gt;
         /// Gets the details of a work request.
         /// 
         /// </summary>
@@ -1315,8 +1273,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **ListAgentEndpoints**
-        /// &lt;br/&gt;
         /// Gets a list of endpoints.
         /// 
         /// </summary>
@@ -1374,8 +1330,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **ListAgents** 
-        /// &lt;br/&gt;
         /// Gets a list of agents.
         /// 
         /// </summary>
@@ -1433,8 +1387,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **ListDataIngestionJobs**
-        /// &lt;br/&gt;
         /// Gets a list of data ingestion jobs.
         /// 
         /// </summary>
@@ -1492,8 +1444,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **ListDataSources**
-        /// &lt;br/&gt;
         /// Gets a list of data sources.
         /// 
         /// </summary>
@@ -1551,8 +1501,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **ListKnowledgeBases**
-        /// &lt;br/&gt;
         /// Gets a list of knowledge bases.
         /// 
         /// </summary>
@@ -1610,8 +1558,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **ListWorkRequestErrors**
-        /// &lt;br/&gt;
         /// Lists the errors for a work request.
         /// 
         /// </summary>
@@ -1669,8 +1615,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **ListWorkRequestLogs**
-        /// &lt;br/&gt;
         /// Lists the logs for a work request.
         /// 
         /// </summary>
@@ -1728,8 +1672,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **ListWorkRequests**
-        /// &lt;br/&gt;
         /// Lists the work requests in a compartment.
         /// 
         /// </summary>
@@ -1787,8 +1729,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **UpdateAgent**
-        /// &lt;br/&gt;
         /// Updates an agent.
         /// 
         /// </summary>
@@ -1846,8 +1786,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **UpdateAgentEndpoint**
-        /// &lt;br/&gt;
         /// Updates an endpoint.
         /// 
         /// </summary>
@@ -1905,8 +1843,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **UpdateDataSource**
-        /// &lt;br/&gt;
         /// Updates a data source.
         /// 
         /// </summary>
@@ -1964,8 +1900,6 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
-        /// **UpdateKnowledgeBase**
-        /// &lt;br/&gt;
         /// Updates a knowledge base.
         /// 
         /// </summary>

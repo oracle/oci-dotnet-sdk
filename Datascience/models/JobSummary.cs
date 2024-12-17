@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// Summary information for a Job.
+    /// Summary information for a job.
     /// </summary>
     public class JobSummary 
     {

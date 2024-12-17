@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **CreateAgentDetails**    
-    /// <br/>
     /// The data to create an agent.
     /// 
     /// </summary>

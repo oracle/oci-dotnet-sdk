@@ -16,14 +16,18 @@ using Newtonsoft.Json.Linq;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **DataSourceConfig**
-    /// <br/>
     /// The details of data source.
     /// 
     /// </summary>
     [JsonConverter(typeof(DataSourceConfigModelConverter))]
     public class DataSourceConfig 
     {
+        
+        /// <value>
+        /// Flag to enable or disable multi modality such as image processing while ingestion of data. True enable the processing and false exclude the multi modality contents during ingestion.
+        /// </value>
+        [JsonProperty(PropertyName = "shouldEnableMultiModality")]
+        public System.Nullable<bool> ShouldEnableMultiModality { get; set; }
                 ///
         /// <value>
         /// The type of the tool.

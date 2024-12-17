@@ -52,6 +52,12 @@ namespace Oci.GenerativeaiagentService.Models
       [EnumMember(Value = "CREATE_DATA_INGESTION_JOB")]
       CreateDataIngestionJob,
       [EnumMember(Value = "DELETE_DATA_INGESTION_JOB")]
-      DeleteDataIngestionJob
+      DeleteDataIngestionJob,
+      [EnumMember(Value = "CREATE_TOOL")]
+      CreateTool,
+      [EnumMember(Value = "UPDATE_TOOL")]
+      UpdateTool,
+      [EnumMember(Value = "DELETE_TOOL")]
+      DeleteTool
   }
 }

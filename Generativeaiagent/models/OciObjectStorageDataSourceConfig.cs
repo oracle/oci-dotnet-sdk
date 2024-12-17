@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **OciObjectStorageDataSourceConfig**
-    /// <br/>
     /// The details of OCI Search with OpenSearch data source information.
     /// 
     /// </summary>
@@ -27,10 +25,6 @@ namespace Oci.GenerativeaiagentService.Models
         /// <value>
         /// The locations of data items in Object Storage, can either be an object (File) or a prefix (folder).
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ObjectStoragePrefixes is required.")]
         [JsonProperty(PropertyName = "objectStoragePrefixes")]
         public System.Collections.Generic.List<ObjectStoragePrefix> ObjectStoragePrefixes { get; set; }
         

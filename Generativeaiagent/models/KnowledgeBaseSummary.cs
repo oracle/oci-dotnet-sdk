@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **KnowledgeBaseSummary**
-    /// <br/>
     /// Summary information about a knowledge base.
     /// 
     /// </summary>

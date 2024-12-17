@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **AgentSummary**
-    /// <br/>
     /// Summary information about an agent.
     /// 
     /// </summary>

@@ -41,5 +41,12 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
         
+        /// <value>
+        /// The OCID of a Data Science private endpoint.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateEndpointId")]
+        public string PrivateEndpointId { get; set; }
+        
     }
 }

@@ -85,6 +85,18 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_CERTIFICATE_CREATE")]
       GoldengateDeploymentCertificateCreate,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_CERTIFICATE_DELETE")]
-      GoldengateDeploymentCertificateDelete
+      GoldengateDeploymentCertificateDelete,
+      [EnumMember(Value = "GOLDENGATE_PIPELINE_CREATE")]
+      GoldengatePipelineCreate,
+      [EnumMember(Value = "GOLDENGATE_PIPELINE_START")]
+      GoldengatePipelineStart,
+      [EnumMember(Value = "GOLDENGATE_PIPELINE_STOP")]
+      GoldengatePipelineStop,
+      [EnumMember(Value = "GOLDENGATE_PIPELINE_UPDATE")]
+      GoldengatePipelineUpdate,
+      [EnumMember(Value = "GOLDENGATE_PIPELINE_DELETE")]
+      GoldengatePipelineDelete,
+      [EnumMember(Value = "GOLDENGATE_PIPELINE_MOVE")]
+      GoldengatePipelineMove
   }
 }

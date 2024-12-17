@@ -132,5 +132,11 @@ namespace Oci.BdsService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
+        /// <value>
+        /// Identity domain OCID ,where user is present. For default domain ,this field will be optional.
+        /// </value>
+        [JsonProperty(PropertyName = "domainOcid")]
+        public string DomainOcid { get; set; }
+        
     }
 }

@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **DataIngestionJob**
-    /// <br/>
     /// When you create a data source, you specify the location of the data files. To make those files usable by an agent, you must download them into the agent's associated knowledge base, a process known as data ingestion. Data ingestion is a process that extracts data from data source documents, converts it into a structured format suitable for analysis, and then stores it in a knowledge base.
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized, talk to an administrator. If you're an administrator who needs to write policies to give users access, see [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/policiesgs/get-started-with-policies.htm).
@@ -71,6 +69,12 @@ namespace Oci.GenerativeaiagentService.Models
         [Required(ErrorMessage = "DataSourceId is required.")]
         [JsonProperty(PropertyName = "dataSourceId")]
         public string DataSourceId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the parent KnowledgeBase.
+        /// </value>
+        [JsonProperty(PropertyName = "knowledgeBaseId")]
+        public string KnowledgeBaseId { get; set; }
         
         /// <remarks>
         /// Required

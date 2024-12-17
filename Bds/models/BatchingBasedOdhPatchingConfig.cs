@@ -41,6 +41,12 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "waitTimeBetweenBatchInSeconds")]
         public System.Nullable<int> WaitTimeBetweenBatchInSeconds { get; set; }
         
+        /// <value>
+        /// Acceptable number of failed-to-be-patched nodes in each batch. The maximum number of failed-to-patch nodes cannot exceed 20% of the number of non-utility and non-master nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "toleranceThresholdPerBatch")]
+        public System.Nullable<int> ToleranceThresholdPerBatch { get; set; }
+        
         [JsonProperty(PropertyName = "patchingConfigStrategy")]
         private readonly string patchingConfigStrategy = "BATCHING_BASED";
     }

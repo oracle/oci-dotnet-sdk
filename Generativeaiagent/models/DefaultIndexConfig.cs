@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **DefaultIndexConfig**
-    /// <br/>
     /// The default index is service managed vector store on behalf of the customer.
     /// 
     /// </summary>

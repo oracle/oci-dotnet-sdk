@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **WorkRequestLogEntry**
-    /// <br/>
     /// A log message from performing an operation that is tracked by a work request.
     /// 
     /// </summary>

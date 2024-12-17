@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **ObjectStoragePrefix**
-    /// <br/>
     /// The details of OCI Object Storage object.
     /// 
     /// </summary>

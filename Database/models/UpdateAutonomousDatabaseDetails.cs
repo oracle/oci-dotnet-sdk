@@ -540,6 +540,12 @@ namespace Oci.DatabaseService.Models
         public ResourcePoolSummary ResourcePoolSummary { get; set; }
         
         /// <value>
+        /// True if the Autonomous Database is backup retention locked.
+        /// </value>
+        [JsonProperty(PropertyName = "isBackupRetentionLocked")]
+        public System.Nullable<bool> IsBackupRetentionLocked { get; set; }
+        
+        /// <value>
         /// The list of scheduled operations. Consists of values such as dayOfWeek, scheduledStartTime, scheduledStopTime.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.

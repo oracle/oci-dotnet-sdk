@@ -16,8 +16,6 @@ using Newtonsoft.Json.Linq;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **DatabaseConnection**
-    /// <br/>
     /// The connection type for Databases.
     /// 
     /// </summary>
