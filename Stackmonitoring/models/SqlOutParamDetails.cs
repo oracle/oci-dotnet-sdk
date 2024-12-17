@@ -22,7 +22,7 @@ namespace Oci.StackmonitoringService.Models
     {
         
         /// <value>
-        /// Position of PL/SQL procedure OUT parameter
+        /// Position of PL/SQL procedure OUT parameter. The value of this property is ignored during update, if \"outParamType\" is set to NO_OUT_PARAM value.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.StackmonitoringService.Models
         public System.Nullable<int> OutParamPosition { get; set; }
         
         /// <value>
-        /// SQL Type of PL/SQL procedure OUT parameter
+        /// SQL Type of PL/SQL procedure OUT parameter. During the update, to completely remove the out parameter, use the value NO_OUT_PARAM. In that case, the value of \"outParamPosition\" will be ignored.
         /// </value>
         /// <remarks>
         /// Required
@@ -41,6 +41,12 @@ namespace Oci.StackmonitoringService.Models
         [JsonProperty(PropertyName = "outParamType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SqlOutParamTypes> OutParamType { get; set; }
+        
+        /// <value>
+        /// Name of the Out Parameter
+        /// </value>
+        [JsonProperty(PropertyName = "outParamName")]
+        public string OutParamName { get; set; }
         
     }
 }

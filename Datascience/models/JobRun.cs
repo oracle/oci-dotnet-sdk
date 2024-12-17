@@ -64,7 +64,7 @@ namespace Oci.DatascienceService.Models
         public string CreatedBy { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the project to associate the job with.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the project to associate the job run with.
         /// </value>
         /// <remarks>
         /// Required
@@ -74,7 +74,7 @@ namespace Oci.DatascienceService.Models
         public string ProjectId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where you want to create the job.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment where you want to create the job run.
         /// </value>
         /// <remarks>
         /// Required
@@ -84,7 +84,7 @@ namespace Oci.DatascienceService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the job run.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the job.
         /// </value>
         /// <remarks>
         /// Required

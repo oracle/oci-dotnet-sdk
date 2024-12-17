@@ -55,5 +55,8 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
         
+        [JsonProperty(PropertyName = "networkConfig")]
+        public NetworkConfig NetworkConfig { get; set; }
+        
     }
 }

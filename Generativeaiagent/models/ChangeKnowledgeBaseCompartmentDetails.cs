@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **ChangeKnowledgeBaseCompartmentDetails**
-    /// <br/>
     /// The configuration details for the move operation.
     /// 
     /// </summary>

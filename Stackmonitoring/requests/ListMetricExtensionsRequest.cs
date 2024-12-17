@@ -20,16 +20,6 @@ namespace Oci.StackmonitoringService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which data is listed.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
-        public string CompartmentId { get; set; }
-        
-        /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a
         /// paginated \"List\" call. For important details about how pagination works, see
         /// [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
@@ -63,6 +53,12 @@ namespace Oci.StackmonitoringService.Requests
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
         /// <value>
+        /// The ID of the compartment in which data is listed.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// A filter to return resources based on resource type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]
@@ -91,6 +87,12 @@ namespace Oci.StackmonitoringService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "enabledOnResourceId")]
         public string EnabledOnResourceId { get; set; }
+        
+        /// <value>
+        /// Identifier for the metric extension
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "metricExtensionId")]
+        public string MetricExtensionId { get; set; }
         
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a

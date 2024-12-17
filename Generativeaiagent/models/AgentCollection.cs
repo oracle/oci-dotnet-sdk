@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **AgentCollection**    
-    /// <br/>
     /// Results of an agent search. Contains both AgentSummary items and other information, such as metadata.
     /// 
     /// </summary>

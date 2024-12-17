@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.StackmonitoringService.Models
 {
   /// <summary>
-  /// Possible out parameter types of SQL collection method
+  /// Possible out parameter types of SQL collection method. During the update, to completely remove the out parameter, use the value NO_OUT_PARAM
   /// </summary>
   public enum SqlOutParamTypes {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -22,6 +22,8 @@ namespace Oci.StackmonitoringService.Models
       [EnumMember(Value = "SQL_CURSOR")]
       SqlCursor,
       [EnumMember(Value = "ARRAY")]
-      Array
+      Array,
+      [EnumMember(Value = "NO_OUT_PARAM")]
+      NoOutParam
   }
 }

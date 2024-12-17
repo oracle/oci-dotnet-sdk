@@ -32,7 +32,7 @@ namespace Oci.CloudbridgeService.Models
         public System.Double Amount { get; set; }
         
         /// <value>
-        /// Currency code as defined by ISO-4217.
+        /// Currency code
         /// </value>
         /// <remarks>
         /// Required

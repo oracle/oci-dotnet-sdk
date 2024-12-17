@@ -393,6 +393,12 @@ namespace Oci.DatabaseService.Models
         public string AutonomousContainerDatabaseId { get; set; }
         
         /// <value>
+        /// Indicates if the Autonomous Database is backup retention locked.
+        /// </value>
+        [JsonProperty(PropertyName = "isBackupRetentionLocked")]
+        public System.Nullable<bool> IsBackupRetentionLocked { get; set; }
+        
+        /// <value>
         /// The date and time the Autonomous Database was most recently undeleted.
         /// 
         /// </value>

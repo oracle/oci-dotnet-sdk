@@ -19,6 +19,8 @@ namespace Oci.StackmonitoringService.Models
       [EnumMember(Value = "NAME")]
       Name,
       [EnumMember(Value = "TIME_CREATED")]
-      TimeCreated
+      TimeCreated,
+      [EnumMember(Value = "ENABLED_ON_RESOURCE_COUNT")]
+      EnabledOnResourceCount
   }
 }

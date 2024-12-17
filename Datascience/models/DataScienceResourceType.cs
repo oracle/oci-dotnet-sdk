@@ -20,6 +20,8 @@ namespace Oci.DatascienceService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "NOTEBOOK_SESSION")]
-      NotebookSession
+      NotebookSession,
+      [EnumMember(Value = "MODEL_DEPLOYMENT")]
+      ModelDeployment
   }
 }

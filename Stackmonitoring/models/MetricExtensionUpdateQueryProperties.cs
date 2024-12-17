@@ -54,6 +54,9 @@ namespace Oci.StackmonitoringService.Models
                 case "OS_COMMAND":
                     obj = new OsCommandUpdateQueryProperties();
                     break;
+                case "HTTP":
+                    obj = new HttpUpdateQueryProperties();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

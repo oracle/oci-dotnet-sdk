@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **CreateDataSourceDetails**
-    /// <br/>
     /// The data to create a data source.
     /// 
     /// </summary>

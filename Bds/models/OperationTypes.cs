@@ -116,6 +116,24 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "UPDATE_RESOURCE_PRINCIPAL_CONFIGURATION")]
       UpdateResourcePrincipalConfiguration,
       [EnumMember(Value = "REFRESH_RESOURCE_PRINCIPAL")]
-      RefreshResourcePrincipal
+      RefreshResourcePrincipal,
+      [EnumMember(Value = "CREATE_IDENTITY_CONFIG")]
+      CreateIdentityConfig,
+      [EnumMember(Value = "DELETE_IDENTITY_CONFIG")]
+      DeleteIdentityConfig,
+      [EnumMember(Value = "UPDATE_IDENTITY_CONFIG")]
+      UpdateIdentityConfig,
+      [EnumMember(Value = "ACTIVATE_UPST_CONFIG")]
+      ActivateUpstConfig,
+      [EnumMember(Value = "DEACTIVATE_UPST_CONFIG")]
+      DeactivateUpstConfig,
+      [EnumMember(Value = "REFRESH_CONFIDENTIAL_APPLICATION")]
+      RefreshConfidentialApplication,
+      [EnumMember(Value = "REFRESH_TOKEN_EXCHANGE_KEYTAB")]
+      RefreshTokenExchangeKeytab,
+      [EnumMember(Value = "ACTIVATE_IAM_USER_SYNC_CONFIG")]
+      ActivateIamUserSyncConfig,
+      [EnumMember(Value = "DEACTIVATE_IAM_USER_SYNC_CONFIG")]
+      DeactivateIamUserSyncConfig
   }
 }

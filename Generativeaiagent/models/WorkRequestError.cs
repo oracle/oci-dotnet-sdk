@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **WorkRequestError**
-    /// <br/>
     /// An error encountered while performing an operation that is tracked by a work request.
     /// 
     /// </summary>

@@ -16,8 +16,6 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// **WorkRequestSummary**
-    /// <br/>
     /// Summary information about an asynchronous work request.
     /// 
     /// </summary>

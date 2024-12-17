@@ -31,5 +31,8 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
         
+        [JsonProperty(PropertyName = "startClusterShapeConfigs")]
+        public StartClusterShapeConfigs StartClusterShapeConfigs { get; set; }
+        
     }
 }

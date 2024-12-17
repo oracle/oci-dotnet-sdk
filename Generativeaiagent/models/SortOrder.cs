@@ -13,10 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.GenerativeaiagentService.Models
 {
   /// <summary>
-  /// **SortOrder**
-    /// <br/>
-    ///    
-    /// The sort order to use, either ascending (`ASC`) or descending (`DESC`). The `displayName`
+  /// The sort order to use, either ascending (`ASC`) or descending (`DESC`). The `displayName`
     /// sort order is case sensitive.
     /// 
   /// </summary>

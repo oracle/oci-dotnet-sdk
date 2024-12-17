@@ -144,6 +144,34 @@ namespace Oci.BdsService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetIdentityConfigurationRequest, GetIdentityConfigurationResponse> ForIdentityConfiguration(GetIdentityConfigurationRequest request, params IdentityConfiguration.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForIdentityConfiguration(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetIdentityConfigurationRequest, GetIdentityConfigurationResponse> ForIdentityConfiguration(GetIdentityConfigurationRequest request, WaiterConfiguration config, params IdentityConfiguration.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetIdentityConfigurationRequest, GetIdentityConfigurationResponse>(
+                request,
+                request => client.GetIdentityConfiguration(request),
+                response => targetStates.Contains(response.IdentityConfiguration.LifecycleState.Value),
+                targetStates.Contains(IdentityConfiguration.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetIdentityConfigurationRequest, GetIdentityConfigurationResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetNodeBackupRequest, GetNodeBackupResponse> ForNodeBackup(GetNodeBackupRequest request, params NodeBackup.LifecycleStateEnum[] targetStates)
         {
             return this.ForNodeBackup(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

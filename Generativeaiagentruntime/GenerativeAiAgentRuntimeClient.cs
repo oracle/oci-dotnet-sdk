@@ -104,7 +104,7 @@ namespace Oci.GenerativeaiagentruntimeService
                     ServiceName = "GenerativeAiAgentRuntime",
                     OperationName = "Chat",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/generative-ai-agents-client/20240531/Session/Chat",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/generative-ai-agents-client/20240531/AgentEndpoint/Chat",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
