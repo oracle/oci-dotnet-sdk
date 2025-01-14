@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Redundancy level details of the virtual circuit
+    /// This resource provides redundancy level details for the virtual circuit. For more about redundancy, see [FastConnect Redundancy Best Practices](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/fastconnectresiliency.htm).
     /// 
     /// </summary>
     public class VirtualCircuitRedundancyMetadata 
     {
                 ///
         /// <value>
-        /// The configured redundancy level of the virtual circuit
+        /// The configured redundancy level of the virtual circuit.
         /// </value>
         ///
         public enum ConfiguredRedundancyLevelEnum {
@@ -43,14 +43,15 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// The configured redundancy level of the virtual circuit
+        /// The configured redundancy level of the virtual circuit.
         /// </value>
         [JsonProperty(PropertyName = "configuredRedundancyLevel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ConfiguredRedundancyLevelEnum> ConfiguredRedundancyLevel { get; set; }
                 ///
         /// <value>
-        /// IPV4 BGP redundancy status indicates if the configured redundancy level is met
+        /// Indicates if the configured level is met for IPv4 BGP redundancy.
+        /// 
         /// </value>
         ///
         public enum Ipv4bgpSessionRedundancyStatusEnum {
@@ -66,14 +67,16 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// IPV4 BGP redundancy status indicates if the configured redundancy level is met
+        /// Indicates if the configured level is met for IPv4 BGP redundancy.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "ipv4bgpSessionRedundancyStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Ipv4bgpSessionRedundancyStatusEnum> Ipv4bgpSessionRedundancyStatus { get; set; }
                 ///
         /// <value>
-        /// IPV6 BGP redundancy status indicates if the configured redundancy level is met
+        /// Indicates if the configured level is met for IPv6 BGP redundancy.
+        /// 
         /// </value>
         ///
         public enum Ipv6bgpSessionRedundancyStatusEnum {
@@ -89,7 +92,8 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// IPV6 BGP redundancy status indicates if the configured redundancy level is met
+        /// Indicates if the configured level is met for IPv6 BGP redundancy.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "ipv6bgpSessionRedundancyStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
