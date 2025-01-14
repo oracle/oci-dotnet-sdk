@@ -30,6 +30,12 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 101.2.0 - 2025-01-14
+### Added
+ - Support for attaching route tables to VNICs and private IPs in the Networking service
+ - Support for Cross Cluster Search(CCS) for an opensearch cluster in the OpenSearch service
+ - Support for patch-level updates of the autonomous databases after provisioning in the Database service
+
 ## 101.1.0 - 2024-12-17
 ### Added
  - Support for backup retention locks on autonomous database create and update operations in the Database service

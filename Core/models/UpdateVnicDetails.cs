@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -46,7 +46,9 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// Security Attributes for this resource. This is unique to ZPR, and helps identify which resources are allowed to be accessed by what permission controls.
+        /// [Security attributes](https://docs.cloud.oracle.com/iaas/Content/zero-trust-packet-routing/zpr-artifacts.htm#security-attributes) are labels
+        /// for a resource that can be referenced in a [Zero Trust Packet Routing](https://docs.cloud.oracle.com/iaas/Content/zero-trust-packet-routing/overview.htm)
+        /// (ZPR) policy to control access to ZPR-supported resources.
         /// <br/>
         /// Example: {&quot;Oracle-DataSecurity-ZPR&quot;: {&quot;MaxEgressCount&quot;: {&quot;value&quot;:&quot;42&quot;,&quot;mode&quot;:&quot;audit&quot;}}}
         /// </value>
@@ -100,6 +102,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "skipSourceDestCheck")]
         public System.Nullable<bool> SkipSourceDestCheck { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the PrivateIp will use.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "routeTableId")]
+        public string RouteTableId { get; set; }
         
     }
 }

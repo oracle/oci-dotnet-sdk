@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -12,10 +12,12 @@ using System.Threading;
 using Newtonsoft.Json;
 using Org.BouncyCastle.Crypto.Parameters;
 using Oci.Common.Auth.Utils;
+using Oci.Common.CircuitBreaker;
 using Oci.Common.Http.Internal;
 using Oci.Common.Http.Signing;
 using Oci.Common.Model;
 using Oci.Common.Utils;
+using Polly;
 
 namespace Oci.Common.Auth.Internal
 {
@@ -36,6 +38,22 @@ namespace Oci.Common.Auth.Internal
         protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public HttpClient Client { get; set; }
         public IFederationRequestSigner FederationSigner { get; set; }
+        public Polly.CircuitBreaker.AsyncCircuitBreakerPolicy DefaultAuthClientCircuitBreakerPolicy = CircuitBreakerFactory.GetCircuitBreakerPolicy(
+            exceptionsAllowedBeforeBreaking: Constants.DEFAULT_AUTH_CIRCUIT_BREAKER_THRESHOLD,
+            durationOfBreak: TimeSpan.FromSeconds(30),
+            onBreak: (exception, breakDelay) =>
+                    {
+                        logger.Info($"Circuit broken! Exception: {exception.Message}. Break time: {breakDelay.TotalSeconds} seconds.");
+                    },
+                    onReset: () =>
+                    {
+                        logger.Info("Circuit reset.");
+                    },
+                    onHalfOpen: () =>
+                    {
+                        logger.Info("Circuit is half-open, allowing trial execution.");
+                    }
+            );
 
         public X509FederationClient(
                 string federationEndpoint,
@@ -225,26 +243,61 @@ namespace Oci.Common.Auth.Internal
             var requestContent = httpRequestMsg.Content.ReadAsStringAsync().Result;
             logger.Debug($"request content to Auth service is {requestContent}");
 
+            var retryPolicy = Policy
+                .Handle<HttpRequestException>()
+                .Or<TimeoutException>()
+                .OrResult<HttpResponseMessage>(response =>
+                {
+                    // Don't retry for success (200 OK) or any other success status
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return false;
+                    }
+                    // Don't retry on 4xx
+                    if ((int)response.StatusCode >= 400 && (int)response.StatusCode < 500)
+                    {
+                        logger.Info($"Not retrying for 4xx error: {(int)response.StatusCode} {response.ReasonPhrase}");
+                        return false;
+                    }
+                    return true;
+                })
+                .WaitAndRetryAsync
+                (
+                    retryCount: Constants.DEFAULT_AUTH_CLIENT_RETRIES,
+                    sleepDurationProvider: attempt => TimeSpan.FromMilliseconds(Constants.RETRY_MILLIS),
+                    onRetry: (response, timeSpan, attempt, context) =>
+                    {
+                        if (response.Exception != null)
+                        {
+                            logger.Info($"Retry {attempt} after {timeSpan.Seconds} seconds due to exception: {response.Exception.Message}");
+                        }
+                        else
+                        {
+                            logger.Info($"Retry {attempt} after {timeSpan.Seconds} seconds for HTTP status: {(int)response.Result.StatusCode} {response.Result.ReasonPhrase}");
+                        }
+                    }
+                );
+
+            var authCircuitBreakerEnabled = !string.Equals(Environment.GetEnvironmentVariable(Constants.OCI_SDK_AUTH_CLIENT_CIRCUIT_BREAKER_ENABLED)?.Trim(), "false", StringComparison.OrdinalIgnoreCase);
+            if (authCircuitBreakerEnabled)
+            {
+                // Combine retry and circuit breaker policies
+                retryPolicy.WrapAsync(DefaultAuthClientCircuitBreakerPolicy);
+            }
+
             HttpResponseMessage response = null;
             try
             {
-                if(Client == null)
-                {
-                    Client = new HttpClient();
-                }
-                for (int retry = 0; retry < Constants.RETRIES; retry++)
+                Client ??= new HttpClient();
+                response = retryPolicy.ExecuteAsync(async () =>
                 {
                     // A new copy of the request message needs to be created because it is disposed each time it is sent, and
                     // resending the same request will result in the following error message:
                     // "The request message was already sent. Cannot send the same request message multiple times."
                     var newRequestMessage = HttpUtils.CloneHttpRequestMessage(httpRequestMsg).GetAwaiter().GetResult();
-                    response = Client.SendAsync(newRequestMessage).Result;
-                    if (response.IsSuccessStatusCode)
-                    {
-                        break;
-                    }
-                    Thread.Sleep(Constants.RETRY_MILLIS);
-                }
+                    return await Client.SendAsync(newRequestMessage);
+                }).Result;
+
                 if (response == null || !response.IsSuccessStatusCode)
                 {
                     logger.Debug("Received non successful response while trying to get the AUTH token");
