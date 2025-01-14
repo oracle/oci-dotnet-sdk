@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -403,6 +403,36 @@ namespace Oci.OpensearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "securityMasterUserPasswordHash")]
         public string SecurityMasterUserPasswordHash { get; set; }
+        
+        [JsonProperty(PropertyName = "securitySamlConfig")]
+        public SecuritySamlConfig SecuritySamlConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "backupPolicy")]
+        public BackupPolicy BackupPolicy { get; set; }
+        
+        /// <value>
+        /// The customer IP addresses of the endpoint in customer VCN
+        /// </value>
+        [JsonProperty(PropertyName = "reverseConnectionEndpointCustomerIps")]
+        public System.Collections.Generic.List<string> ReverseConnectionEndpointCustomerIps { get; set; }
+        
+        /// <value>
+        /// The list of reverse connection endpoints.
+        /// </value>
+        [JsonProperty(PropertyName = "reverseConnectionEndpoints")]
+        public System.Collections.Generic.List<ReverseConnectionEndpoint> ReverseConnectionEndpoints { get; set; }
+        
+        [JsonProperty(PropertyName = "outboundClusterConfig")]
+        public OutboundClusterConfig OutboundClusterConfig { get; set; }
+        
+        /// <value>
+        /// List of inbound clusters for which this cluster is an outbound cluster
+        /// </value>
+        [JsonProperty(PropertyName = "inboundClusterIds")]
+        public System.Collections.Generic.List<string> InboundClusterIds { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceDetails")]
+        public MaintenanceDetails MaintenanceDetails { get; set; }
         
     }
 }

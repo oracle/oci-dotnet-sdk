@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -54,6 +54,24 @@ namespace Oci.OpensearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "securityMasterUserPasswordHash")]
         public string SecurityMasterUserPasswordHash { get; set; }
+        
+        [JsonProperty(PropertyName = "securitySamlConfig")]
+        public SecuritySamlConfig SecuritySamlConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "backupPolicy")]
+        public BackupPolicy BackupPolicy { get; set; }
+        
+        /// <value>
+        /// The customer IP addresses of the endpoint in customer VCN
+        /// </value>
+        [JsonProperty(PropertyName = "reverseConnectionEndpointCustomerIps")]
+        public System.Collections.Generic.List<string> ReverseConnectionEndpointCustomerIps { get; set; }
+        
+        [JsonProperty(PropertyName = "outboundClusterConfig")]
+        public OutboundClusterConfig OutboundClusterConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "maintenanceDetails")]
+        public UpdateMaintenanceDetails MaintenanceDetails { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2024, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -538,6 +538,28 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "resourcePoolSummary")]
         public ResourcePoolSummary ResourcePoolSummary { get; set; }
+                ///
+        /// <value>
+        /// The maintenance schedule type of the Autonomous Database Serverless. An EARLY maintenance schedule
+        /// follows a schedule applying patches prior to the REGULAR schedule. A REGULAR maintenance schedule follows the normal cycle
+        /// 
+        /// </value>
+        ///
+        public enum AutonomousMaintenanceScheduleTypeEnum {
+            [EnumMember(Value = "EARLY")]
+            Early,
+            [EnumMember(Value = "REGULAR")]
+            Regular
+        };
+
+        /// <value>
+        /// The maintenance schedule type of the Autonomous Database Serverless. An EARLY maintenance schedule
+        /// follows a schedule applying patches prior to the REGULAR schedule. A REGULAR maintenance schedule follows the normal cycle
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "autonomousMaintenanceScheduleType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AutonomousMaintenanceScheduleTypeEnum> AutonomousMaintenanceScheduleType { get; set; }
         
         /// <value>
         /// True if the Autonomous Database is backup retention locked.
