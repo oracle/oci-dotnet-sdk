@@ -53,6 +53,9 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "DatabaseAdminPassword is required.")]
         [JsonProperty(PropertyName = "databaseAdminPassword")]
         public string DatabaseAdminPassword { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceEncryptionKeyLocationDetails")]
+        public EncryptionKeyLocationDetails SourceEncryptionKeyLocationDetails { get; set; }
                 ///
         /// <value>
         /// The protection mode to set up between the primary and standby databases. For more information, see

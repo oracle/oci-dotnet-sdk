@@ -262,5 +262,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "keyStoreWalletName")]
         public string KeyStoreWalletName { get; set; }
         
+        [JsonProperty(PropertyName = "dataGuardGroup")]
+        public DataGuardGroup DataGuardGroup { get; set; }
+        
+        [JsonProperty(PropertyName = "encryptionKeyLocationDetails")]
+        public EncryptionKeyLocationDetails EncryptionKeyLocationDetails { get; set; }
+        
     }
 }
