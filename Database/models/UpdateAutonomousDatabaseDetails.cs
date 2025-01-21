@@ -617,5 +617,14 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "encryptionKey")]
         public AutonomousDatabaseEncryptionKeyDetails EncryptionKey { get; set; }
         
+        /// <value>
+        /// If true, this will disconnect the Autonomous Database from its peer and the Autonomous Database can work permanently as a standalone database.
+        /// <br/>
+        /// To disconnect a cross region standby, please also provide the OCID of the standby database in the `peerDbId` parameter.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDisconnectPeer")]
+        public System.Nullable<bool> IsDisconnectPeer { get; set; }
+        
     }
 }

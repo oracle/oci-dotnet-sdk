@@ -934,6 +934,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeEncryptionKeyLocationRequest, ChangeEncryptionKeyLocationResponse> ForChangeEncryptionKeyLocation(ChangeEncryptionKeyLocationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForChangeEncryptionKeyLocation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeEncryptionKeyLocationRequest, ChangeEncryptionKeyLocationResponse> ForChangeEncryptionKeyLocation(ChangeEncryptionKeyLocationRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ChangeEncryptionKeyLocationRequest, ChangeEncryptionKeyLocationResponse>(() =>
+            {
+                var response = client.ChangeEncryptionKeyLocation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<ChangeExadataInfrastructureCompartmentRequest, ChangeExadataInfrastructureCompartmentResponse> ForChangeExadataInfrastructureCompartment(ChangeExadataInfrastructureCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForChangeExadataInfrastructureCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1635,6 +1671,42 @@ namespace Oci.DatabaseService
             return new Waiter<ConvertToRegularPluggableDatabaseRequest, ConvertToRegularPluggableDatabaseResponse>(() =>
             {
                 var response = client.ConvertToRegularPluggableDatabase(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ConvertToStandaloneRequest, ConvertToStandaloneResponse> ForConvertToStandalone(ConvertToStandaloneRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForConvertToStandalone(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ConvertToStandaloneRequest, ConvertToStandaloneResponse> ForConvertToStandalone(ConvertToStandaloneRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ConvertToStandaloneRequest, ConvertToStandaloneResponse>(() =>
+            {
+                var response = client.ConvertToStandalone(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;
@@ -4930,6 +5002,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<FailoverDataGuardRequest, FailoverDataGuardResponse> ForFailoverDataGuard(FailoverDataGuardRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForFailoverDataGuard(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<FailoverDataGuardRequest, FailoverDataGuardResponse> ForFailoverDataGuard(FailoverDataGuardRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<FailoverDataGuardRequest, FailoverDataGuardResponse>(() =>
+            {
+                var response = client.FailoverDataGuard(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<FailoverDataGuardAssociationRequest, FailoverDataGuardAssociationResponse> ForFailoverDataGuardAssociation(FailoverDataGuardAssociationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForFailoverDataGuardAssociation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -6548,6 +6656,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<MigrateDataGuardAssociationToMultiDataGuardsRequest, MigrateDataGuardAssociationToMultiDataGuardsResponse> ForMigrateDataGuardAssociationToMultiDataGuards(MigrateDataGuardAssociationToMultiDataGuardsRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForMigrateDataGuardAssociationToMultiDataGuards(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<MigrateDataGuardAssociationToMultiDataGuardsRequest, MigrateDataGuardAssociationToMultiDataGuardsResponse> ForMigrateDataGuardAssociationToMultiDataGuards(MigrateDataGuardAssociationToMultiDataGuardsRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<MigrateDataGuardAssociationToMultiDataGuardsRequest, MigrateDataGuardAssociationToMultiDataGuardsResponse>(() =>
+            {
+                var response = client.MigrateDataGuardAssociationToMultiDataGuards(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<MigrateExadataDbSystemResourceModelRequest, MigrateExadataDbSystemResourceModelResponse> ForMigrateExadataDbSystemResourceModel(MigrateExadataDbSystemResourceModelRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForMigrateExadataDbSystemResourceModel(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -6817,6 +6961,42 @@ namespace Oci.DatabaseService
             return new Waiter<ReinstateAutonomousContainerDatabaseDataguardAssociationRequest, ReinstateAutonomousContainerDatabaseDataguardAssociationResponse>(() =>
             {
                 var response = client.ReinstateAutonomousContainerDatabaseDataguardAssociation(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ReinstateDataGuardRequest, ReinstateDataGuardResponse> ForReinstateDataGuard(ReinstateDataGuardRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForReinstateDataGuard(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ReinstateDataGuardRequest, ReinstateDataGuardResponse> ForReinstateDataGuard(ReinstateDataGuardRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ReinstateDataGuardRequest, ReinstateDataGuardResponse>(() =>
+            {
+                var response = client.ReinstateDataGuard(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;
@@ -7916,6 +8096,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<SwitchOverDataGuardRequest, SwitchOverDataGuardResponse> ForSwitchOverDataGuard(SwitchOverDataGuardRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForSwitchOverDataGuard(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<SwitchOverDataGuardRequest, SwitchOverDataGuardResponse> ForSwitchOverDataGuard(SwitchOverDataGuardRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<SwitchOverDataGuardRequest, SwitchOverDataGuardResponse>(() =>
+            {
+                var response = client.SwitchOverDataGuard(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<SwitchoverAutonomousContainerDatabaseDataguardAssociationRequest, SwitchoverAutonomousContainerDatabaseDataguardAssociationResponse> ForSwitchoverAutonomousContainerDatabaseDataguardAssociation(SwitchoverAutonomousContainerDatabaseDataguardAssociationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForSwitchoverAutonomousContainerDatabaseDataguardAssociation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -8617,6 +8833,42 @@ namespace Oci.DatabaseService
             return new Waiter<UpdateConsoleHistoryRequest, UpdateConsoleHistoryResponse>(() =>
             {
                 var response = client.UpdateConsoleHistory(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateDataGuardRequest, UpdateDataGuardResponse> ForUpdateDataGuard(UpdateDataGuardRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateDataGuard(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateDataGuardRequest, UpdateDataGuardResponse> ForUpdateDataGuard(UpdateDataGuardRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateDataGuardRequest, UpdateDataGuardResponse>(() =>
+            {
+                var response = client.UpdateDataGuard(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;

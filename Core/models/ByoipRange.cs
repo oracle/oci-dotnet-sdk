@@ -72,6 +72,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
+        [JsonProperty(PropertyName = "originAsn")]
+        public ByoipRangeOriginAsn OriginAsn { get; set; }
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the `ByoipRange` resource.
         /// </value>
