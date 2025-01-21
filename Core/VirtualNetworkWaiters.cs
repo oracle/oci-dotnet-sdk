@@ -430,6 +430,34 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetByoasnRequest, GetByoasnResponse> ForByoasn(GetByoasnRequest request, params Byoasn.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForByoasn(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetByoasnRequest, GetByoasnResponse> ForByoasn(GetByoasnRequest request, WaiterConfiguration config, params Byoasn.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetByoasnRequest, GetByoasnResponse>(
+                request,
+                request => client.GetByoasn(request),
+                response => targetStates.Contains(response.Byoasn.LifecycleState.Value),
+                targetStates.Contains(Byoasn.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetByoasnRequest, GetByoasnResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetByoipRangeRequest, GetByoipRangeResponse> ForByoipRange(GetByoipRangeRequest request, params ByoipRange.LifecycleStateEnum[] targetStates)
         {
             return this.ForByoipRange(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1513,6 +1541,42 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<SetOriginAsnRequest, SetOriginAsnResponse> ForSetOriginAsn(SetOriginAsnRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForSetOriginAsn(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<SetOriginAsnRequest, SetOriginAsnResponse> ForSetOriginAsn(SetOriginAsnRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<SetOriginAsnRequest, SetOriginAsnResponse>(() =>
+            {
+                var response = client.SetOriginAsn(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<UpdateVtapRequest, UpdateVtapResponse> ForUpdateVtap(UpdateVtapRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForUpdateVtap(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1566,6 +1630,42 @@ namespace Oci.CoreService
             return new Waiter<UpgradeDrgRequest, UpgradeDrgResponse>(() =>
             {
                 var response = client.UpgradeDrg(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ValidateByoasnRequest, ValidateByoasnResponse> ForValidateByoasn(ValidateByoasnRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForValidateByoasn(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ValidateByoasnRequest, ValidateByoasnResponse> ForValidateByoasn(ValidateByoasnRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ValidateByoasnRequest, ValidateByoasnResponse>(() =>
+            {
+                var response = client.ValidateByoasn(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;

@@ -120,7 +120,7 @@ namespace Oci.NetworkloadbalancerService.Models
         /// A public network load balancer is accessible from the internet, depending the
         /// [security list rules](https://docs.cloud.oracle.com/Content/network/Concepts/securitylists.htm) for your virtual cloudn network. For more information about public and
         /// private network load balancers,
-        /// see [How Network Load Balancing Works](https://docs.cloud.oracle.com/Content/Balance/Concepts/balanceoverview.htm#how-network-load-balancing-works).
+        /// see [Network Load Balancer Types](https://docs.cloud.oracle.com/Content/NetworkLoadBalancer/introduction.htm#NetworkLoadBalancerTypes).
         /// This value is true by default.
         /// <br/>
         /// Example: true

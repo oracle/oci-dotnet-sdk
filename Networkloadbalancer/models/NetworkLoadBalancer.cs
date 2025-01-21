@@ -17,7 +17,7 @@ namespace Oci.NetworkloadbalancerService.Models
 {
     /// <summary>
     /// The properties that define a network load balancer. For more information, see
-    /// [Managing a network load balancer](https://docs.cloud.oracle.com/Content/Balance/Tasks/managingloadbalancer.htm).
+    /// [Introduction to Network Load Balancer](https://docs.cloud.oracle.com/Content/NetworkLoadBalancer/introduction.htm).
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you are not authorized,
     /// contact an administrator. If you are an administrator who writes policies to give users access, then see
@@ -130,7 +130,7 @@ namespace Oci.NetworkloadbalancerService.Models
         /// A public network load balancer is accessible from the internet, depending the
         /// [security list rules](https://docs.cloud.oracle.com/Content/network/Concepts/securitylists.htm) for your virtual cloudn network. For more information about public and
         /// private network load balancers,
-        /// see [How Network Load Balancing Works](https://docs.cloud.oracle.com/Content/Balance/Concepts/balanceoverview.htm#how-network-load-balancing-works).
+        /// see [Network Load Balancer Types](https://docs.cloud.oracle.com/Content/NetworkLoadBalancer/introduction.htm#NetworkLoadBalancerTypes).
         /// This value is true by default.
         /// <br/>
         /// Example: true

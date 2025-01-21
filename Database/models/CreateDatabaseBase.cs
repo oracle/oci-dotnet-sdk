@@ -48,6 +48,7 @@ namespace Oci.DatabaseService.Models
         /// The source of the database:
         /// Use `NONE` for creating a new database.
         /// Use `DB_BACKUP` for creating a new database by restoring from a backup.
+        /// Use `DATAGUARD` for creating a new STANDBY database for a Data Guard setup..
         /// The default is `NONE`.
         /// 
         /// </value>
@@ -56,7 +57,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "NONE")]
             None,
             [EnumMember(Value = "DB_BACKUP")]
-            DbBackup
+            DbBackup,
+            [EnumMember(Value = "DATAGUARD")]
+            Dataguard
         };
 
         
@@ -97,6 +100,9 @@ namespace Oci.DatabaseService.Models
             {
                 case "NONE":
                     obj = new CreateNewDatabaseDetails();
+                    break;
+                case "DATAGUARD":
+                    obj = new CreateStandByDatabaseDetails();
                     break;
                 case "DB_BACKUP":
                     obj = new CreateDatabaseFromBackup();
