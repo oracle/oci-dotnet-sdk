@@ -155,5 +155,21 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "areChildCompartmentsIncluded")]
         public System.Nullable<bool> AreChildCompartmentsIncluded { get; set; }
         
+        /// <value>
+        /// List of tag filters; each filter composed by a namespace, key, and value.
+        /// Example for defined tags - '<TagNamespace>.<TagKey>=<TagValue>'.
+        /// Example for freeform tags - '<TagKey>=<TagValue>'.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tagFilters")]
+        public System.Collections.Generic.List<string> TagFilters { get; set; }
+        
+        /// <value>
+        /// Match rule used for tag filters.
+        /// </value>
+        [JsonProperty(PropertyName = "matchRule")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<MatchRule> MatchRule { get; set; }
+        
     }
 }

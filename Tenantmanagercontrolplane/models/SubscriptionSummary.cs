@@ -55,7 +55,7 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The type of subscription, such as 'UCM', 'SAAS', 'ERP', 'CRM'.
+        /// The type of subscription, such as 'CLOUDCM', 'AUTOANALYTICS', 'ERP', 'CRM'.
         /// </value>
         /// <remarks>
         /// Required
@@ -107,6 +107,13 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         [Required(ErrorMessage = "DefinedTags is required.")]
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// Usage of system tag keys. These predefined keys are scoped to namespaces.
+        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
     }
 

@@ -21,6 +21,7 @@ namespace Oci.DisasterrecoveryService.Models
     /// - DATABASE - An Oracle Database instance from Base Database service, or Exadata Database service.
     /// - AUTONOMOUS_DATABASE - An Oracle Autonomous Database Serverless.
     /// - AUTONOMOUS_CONTAINER_DATABASE - An Oracle Autonomous Container Database.
+    /// - OKE_CLUSTER - OCI Container Engine for Kubernetes(OKE) cluster.
     /// - LOAD_BALANCER - A load balancer.
     /// - NETWORK_LOAD_BALANCER - A network load balancer.
     /// - FILE_SYSTEM - A file system.
@@ -50,6 +51,8 @@ namespace Oci.DisasterrecoveryService.Models
       NetworkLoadBalancer,
       [EnumMember(Value = "FILE_SYSTEM")]
       FileSystem,
+      [EnumMember(Value = "OKE_CLUSTER")]
+      OkeCluster,
       [EnumMember(Value = "OBJECT_STORAGE_BUCKET")]
       ObjectStorageBucket
   }

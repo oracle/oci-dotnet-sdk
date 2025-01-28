@@ -49,6 +49,12 @@ namespace Oci.DatabasemanagementService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
         
+        /// <value>
+        /// The parameter to filter by MySQL database type. Allowed values are EXTERNAL or MDS.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filterByMySqlDatabaseTypeParam")]
+        public System.Nullable<MySqlType> FilterByMySqlDatabaseTypeParam { get; set; }
+        
         ///
         /// <value>
         /// The field to sort information by. Only one sortOrder can be used. The default sort order

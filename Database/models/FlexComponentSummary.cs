@@ -54,5 +54,62 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "availableDbStorageInGBs")]
         public System.Nullable<int> AvailableDbStorageInGBs { get; set; }
         
+        /// <value>
+        /// The runtime minimum number of CPU cores that can be enabled for this Flex Component.
+        /// </value>
+        [JsonProperty(PropertyName = "runtimeMinimumCoreCount")]
+        public System.Nullable<int> RuntimeMinimumCoreCount { get; set; }
+        
+        /// <value>
+        /// The name of the DB system shape for this Flex Component.
+        /// </value>
+        [JsonProperty(PropertyName = "shape")]
+        public string Shape { get; set; }
+        
+        /// <value>
+        /// The maximum memory size that can be enabled on the DB Server for this Flex Component.
+        /// </value>
+        [JsonProperty(PropertyName = "availableMemoryInGBs")]
+        public System.Nullable<int> AvailableMemoryInGBs { get; set; }
+        
+        /// <value>
+        /// The maximum local storage that can be enabled on the DB Server for this Flex Component.
+        /// </value>
+        [JsonProperty(PropertyName = "availableLocalStorageInGBs")]
+        public System.Nullable<int> AvailableLocalStorageInGBs { get; set; }
+        
+        /// <value>
+        /// The compute model of the DB Server for this Flex Component.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        public string ComputeModel { get; set; }
+                ///
+        /// <value>
+        /// The hardware type of the DB (Compute) or Storage (Cell) Server for this Flex Component.
+        /// </value>
+        ///
+        public enum HardwareTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "COMPUTE")]
+            Compute,
+            [EnumMember(Value = "CELL")]
+            Cell
+        };
+
+        /// <value>
+        /// The hardware type of the DB (Compute) or Storage (Cell) Server for this Flex Component.
+        /// </value>
+        [JsonProperty(PropertyName = "hardwareType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<HardwareTypeEnum> HardwareType { get; set; }
+        
+        /// <value>
+        /// The description summary for this Flex Component.
+        /// </value>
+        [JsonProperty(PropertyName = "descriptionSummary")]
+        public string DescriptionSummary { get; set; }
+        
     }
 }

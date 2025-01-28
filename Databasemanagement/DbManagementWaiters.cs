@@ -452,6 +452,34 @@ namespace Oci.DatabasemanagementService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalMySqlDatabaseConnectorRequest, GetExternalMySqlDatabaseConnectorResponse> ForExternalMySqlDatabaseConnector(GetExternalMySqlDatabaseConnectorRequest request, params LifecycleStates[] targetStates)
+        {
+            return this.ForExternalMySqlDatabaseConnector(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetExternalMySqlDatabaseConnectorRequest, GetExternalMySqlDatabaseConnectorResponse> ForExternalMySqlDatabaseConnector(GetExternalMySqlDatabaseConnectorRequest request, WaiterConfiguration config, params LifecycleStates[] targetStates)
+        {
+            var agent = new WaiterAgent<GetExternalMySqlDatabaseConnectorRequest, GetExternalMySqlDatabaseConnectorResponse>(
+                request,
+                request => client.GetExternalMySqlDatabaseConnector(request),
+                response => targetStates.Contains(response.ExternalMySqlDatabaseConnector.LifecycleState.Value),
+                targetStates.Contains(LifecycleStates.Deleted)
+            );
+            return new Waiter<GetExternalMySqlDatabaseConnectorRequest, GetExternalMySqlDatabaseConnectorResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetJobRequest, GetJobResponse> ForJob(GetJobRequest request, params Job.LifecycleStateEnum[] targetStates)
         {
             return this.ForJob(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

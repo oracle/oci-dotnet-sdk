@@ -102,6 +102,24 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<decimal> MaxTimerWait { get; set; }
         
         /// <value>
+        /// The maximum amount of controlled memory used by a statement during execution.
+        /// </value>
+        [JsonProperty(PropertyName = "maxControlledMemory")]
+        public System.Nullable<long> MaxControlledMemory { get; set; }
+        
+        /// <value>
+        /// The maximum amount of memory used by a statement during execution.
+        /// </value>
+        [JsonProperty(PropertyName = "maxTotalMemory")]
+        public System.Nullable<long> MaxTotalMemory { get; set; }
+        
+        /// <value>
+        /// The total amount of time spent on CPU for this statement.
+        /// </value>
+        [JsonProperty(PropertyName = "sumCpuTime")]
+        public System.Nullable<long> SumCpuTime { get; set; }
+        
+        /// <value>
         /// The total amount of time that has been spent waiting for table locks.
         /// </value>
         /// <remarks>

@@ -51,9 +51,19 @@ namespace Oci.TenantmanagercontrolplaneService.Models
       RestoreTenancy,
       [EnumMember(Value = "LOG_TENANCY_TERMINATION_REQUEST")]
       LogTenancyTerminationRequest,
+      [EnumMember(Value = "STANDALONE_TENANCY_TERMINATION_REQUEST")]
+      StandaloneTenancyTerminationRequest,
       [EnumMember(Value = "SELF_OPT_IN")]
       SelfOptIn,
       [EnumMember(Value = "SELF_OPT_OUT")]
-      SelfOptOut
+      SelfOptOut,
+      [EnumMember(Value = "ORDER_PAYLOADS_BACKFILL_ETL")]
+      OrderPayloadsBackfillEtl,
+      [EnumMember(Value = "PUBLISH_TO_TOPIC")]
+      PublishToTopic,
+      [EnumMember(Value = "TERMINATE_LINK")]
+      TerminateLink,
+      [EnumMember(Value = "TRANSFER_SUBSCRIPTION")]
+      TransferSubscription
   }
 }

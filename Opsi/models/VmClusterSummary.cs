@@ -22,7 +22,7 @@ namespace Oci.OpsiService.Models
     {
         
         /// <value>
-        /// The name of the vm cluster.
+        /// The name of the VM Cluster.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,19 +32,19 @@ namespace Oci.OpsiService.Models
         public string VmclusterName { get; set; }
         
         /// <value>
-        /// The memory allocated on a vm cluster.
+        /// The memory allocated on a VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "memoryAllocatedInGBs")]
         public System.Nullable<int> MemoryAllocatedInGBs { get; set; }
         
         /// <value>
-        /// The cpu allocated on a vm cluster.
+        /// The CPU allocated on a VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "cpuAllocated")]
         public System.Nullable<int> CpuAllocated { get; set; }
         
         /// <value>
-        /// The number of DB nodes on a vm cluster.
+        /// The number of DB nodes on a VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "dbNodesCount")]
         public System.Nullable<int> DbNodesCount { get; set; }

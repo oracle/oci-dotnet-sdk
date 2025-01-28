@@ -63,5 +63,11 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "sqlInsightsPerformanceDegradationResources")]
         public System.Collections.Generic.List<NewsSqlInsightsContentTypesResource> SqlInsightsPerformanceDegradationResources { get; set; }
         
+        /// <value>
+        /// Supported resources for actionable insights content type.
+        /// </value>
+        [JsonProperty(PropertyName = "actionableInsightsResources")]
+        public System.Collections.Generic.List<ActionableInsightsContentTypesResource> ActionableInsightsResources { get; set; }
+        
     }
 }
