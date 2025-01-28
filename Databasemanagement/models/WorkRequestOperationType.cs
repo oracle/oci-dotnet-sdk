@@ -64,6 +64,16 @@ namespace Oci.DatabasemanagementService.Models
       [EnumMember(Value = "DISABLE_DBMGMT")]
       DisableDbmgmt,
       [EnumMember(Value = "MODIFY_DBMGMT")]
-      ModifyDbmgmt
+      ModifyDbmgmt,
+      [EnumMember(Value = "CHECK_EXTERNAL_MYSQL_CONNECTION")]
+      CheckExternalMysqlConnection,
+      [EnumMember(Value = "UPDATE_EXTERNAL_MYSQL_CREDENTIAL")]
+      UpdateExternalMysqlCredential,
+      [EnumMember(Value = "CREATE_EXTERNAL_MYSQL_CONNECTOR")]
+      CreateExternalMysqlConnector,
+      [EnumMember(Value = "DELETE_EXTERNAL_MYSQL_CONNECTOR")]
+      DeleteExternalMysqlConnector,
+      [EnumMember(Value = "DELETE_EXTERNAL_MYSQL_DATABASE")]
+      DeleteExternalMysqlDatabase
   }
 }

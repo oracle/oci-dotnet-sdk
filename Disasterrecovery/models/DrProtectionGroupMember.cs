@@ -91,6 +91,9 @@ namespace Oci.DisasterrecoveryService.Models
                 case "DATABASE":
                     obj = new DrProtectionGroupMemberDatabase();
                     break;
+                case "OKE_CLUSTER":
+                    obj = new DrProtectionGroupMemberOkeCluster();
+                    break;
             }
             if (obj != null)
             {

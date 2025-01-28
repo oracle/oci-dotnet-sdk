@@ -45,6 +45,24 @@ namespace Oci.DatabasemanagementService.Models
         public string DbName { get; set; }
         
         /// <value>
+        /// The unique name of the database.
+        /// </value>
+        [JsonProperty(PropertyName = "dbUniqueName")]
+        public string DbUniqueName { get; set; }
+        
+        /// <value>
+        /// The internal ID of the database where the AWR snapshot data was collected.
+        /// </value>
+        [JsonProperty(PropertyName = "srcDbId")]
+        public string SrcDbId { get; set; }
+        
+        /// <value>
+        /// The name of the database where the AWR snapshot data was collected.
+        /// </value>
+        [JsonProperty(PropertyName = "srcDbName")]
+        public string SrcDbName { get; set; }
+        
+        /// <value>
         /// The database instance numbers.
         /// </value>
         [JsonProperty(PropertyName = "instanceList")]

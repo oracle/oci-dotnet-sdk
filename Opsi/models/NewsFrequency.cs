@@ -15,6 +15,8 @@ namespace Oci.OpsiService.Models
   /// <summary>
   /// Frequency in which the news report will be sent.
     /// WEEKLY: Receive an OPSI news report every week.
+    /// DAILY: Receive an OPSI news report every day.
+    /// HOURLY: Receive an actionable insights report every hour if there are significant changes to the customer's resources.
     /// 
   /// </summary>
   public enum NewsFrequency {
@@ -22,6 +24,10 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "WEEKLY")]
-      Weekly
+      Weekly,
+      [EnumMember(Value = "DAILY")]
+      Daily,
+      [EnumMember(Value = "HOURLY")]
+      Hourly
   }
 }

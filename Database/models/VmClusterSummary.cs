@@ -278,6 +278,27 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "storageManagementType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StorageManagementTypeEnum> StorageManagementType { get; set; }
+                ///
+        /// <value>
+        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. ECPU compute model is the recommended model and OCPU compute model is legacy.
+        /// </value>
+        ///
+        public enum ComputeModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ECPU")]
+            Ecpu,
+            [EnumMember(Value = "OCPU")]
+            Ocpu
+        };
+
+        /// <value>
+        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. ECPU compute model is the recommended model and OCPU compute model is legacy.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
     }
 }

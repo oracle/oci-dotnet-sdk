@@ -63,6 +63,9 @@ namespace Oci.DisasterrecoveryService.Models
                 case "NETWORK_LOAD_BALANCER":
                     obj = new UpdateDrProtectionGroupMemberNetworkLoadBalancerDetails();
                     break;
+                case "OKE_CLUSTER":
+                    obj = new UpdateDrProtectionGroupMemberOkeClusterDetails();
+                    break;
                 case "AUTONOMOUS_DATABASE":
                     obj = new UpdateDrProtectionGroupMemberAutonomousDatabaseDetails();
                     break;

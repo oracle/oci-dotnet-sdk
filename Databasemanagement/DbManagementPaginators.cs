@@ -1177,6 +1177,55 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListExternalMySqlDatabases operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListExternalMySqlDatabasesResponse> ListExternalMySqlDatabasesResponseEnumerator(ListExternalMySqlDatabasesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListExternalMySqlDatabasesRequest, ListExternalMySqlDatabasesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListExternalMySqlDatabases(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ExternalMySqlDatabaseSummary objects
+        /// contained in responses from the ListExternalMySqlDatabases operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ExternalMySqlDatabaseSummary> ListExternalMySqlDatabasesRecordEnumerator(ListExternalMySqlDatabasesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListExternalMySqlDatabasesRequest, ListExternalMySqlDatabasesResponse, ExternalMySqlDatabaseSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListExternalMySqlDatabases(request, retryConfiguration, cancellationToken),
+                response => response.ExternalMySqlDatabaseCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListJobExecutions operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -1418,6 +1467,55 @@ namespace Oci.DatabasemanagementService
                 },
                 request => client.ListManagedDatabases(request, retryConfiguration, cancellationToken),
                 response => response.ManagedDatabaseCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListMySqlDatabaseConnectors operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListMySqlDatabaseConnectorsResponse> ListMySqlDatabaseConnectorsResponseEnumerator(ListMySqlDatabaseConnectorsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListMySqlDatabaseConnectorsRequest, ListMySqlDatabaseConnectorsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMySqlDatabaseConnectors(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the MySqlDatabaseConnectorSummary objects
+        /// contained in responses from the ListMySqlDatabaseConnectors operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<MySqlDatabaseConnectorSummary> ListMySqlDatabaseConnectorsRecordEnumerator(ListMySqlDatabaseConnectorsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListMySqlDatabaseConnectorsRequest, ListMySqlDatabaseConnectorsResponse, MySqlDatabaseConnectorSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMySqlDatabaseConnectors(request, retryConfiguration, cancellationToken),
+                response => response.MySqlConnectorCollection.Items
             );
         }
 

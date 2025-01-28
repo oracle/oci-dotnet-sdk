@@ -72,6 +72,13 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         [JsonProperty(PropertyName = "csiNumber")]
         public string CsiNumber { get; set; }
         
+        /// <value>
+        /// Service or component which is used to provision and manage the subscription.
+        /// </value>
+        [JsonProperty(PropertyName = "managedBy")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ClassicSubscriptionManagedBy> ManagedBy { get; set; }
+        
         [JsonProperty(PropertyName = "entityVersion")]
         private readonly string entityVersion = "V1";
     }

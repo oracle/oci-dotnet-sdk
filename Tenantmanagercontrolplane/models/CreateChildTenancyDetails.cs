@@ -74,5 +74,11 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<GovernanceStatus> GovernanceStatus { get; set; }
         
+        /// <value>
+        /// OCID of the subscription that needs to be assigned to the child tenancy.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionId")]
+        public string SubscriptionId { get; set; }
+        
     }
 }

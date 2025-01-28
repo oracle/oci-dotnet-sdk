@@ -114,5 +114,17 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "customerContacts")]
         public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
         
+        /// <value>
+        /// The database server type of the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseServerType")]
+        public string DatabaseServerType { get; set; }
+        
+        /// <value>
+        /// The storage server type of the Exadata infrastructure.
+        /// </value>
+        [JsonProperty(PropertyName = "storageServerType")]
+        public string StorageServerType { get; set; }
+        
     }
 }

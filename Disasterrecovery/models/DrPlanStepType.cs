@@ -99,6 +99,22 @@ namespace Oci.DisasterrecoveryService.Models
     /// - COMPUTE_CAPACITY_RESERVATION_FAILOVER_PRECHECK - A precheck step for validating a capacity reservation during a failover.
     /// - COMPUTE_CAPACITY_AVAILABILITY_SWITCHOVER_PRECHECK - A precheck step for validating a compute capacity availability during a switchover.
     /// - COMPUTE_CAPACITY_AVAILABILITY_FAILOVER_PRECHECK - A precheck step for validating a compute capacity availability during a failover.
+    /// - OKE_CLUSTER_SWITCHOVER_CLEANUP_PRIMARY_PRECHECK - A precheck step for validating clean up of an OKE cluster in the primary region during a switchover.
+    /// - OKE_CLUSTER_SWITCHOVER_RESTORE_STANDBY_PRECHECK - A precheck step for validating restoration of an OKE cluster in the standby region during a switchover.
+    /// - OKE_CLUSTER_FAILOVER_RESTORE_STANDBY_PRECHECK - A precheck step for validating restoration of an OKE cluster in the standby region during a failover.
+    /// - OKE_CLUSTER_STOP_DRILL_CLEANUP_STANDBY_PRECHECK - A precheck step for validating clean up of an OKE cluster in the standby region during a stop drill.
+    /// - OKE_CLUSTER_START_DRILL_RESTORE_STANDBY_PRECHECK - A precheck step for validating restoration of an OKE cluster in the standby region during a start drill.
+    /// - OKE_CLUSTER_SWITCHOVER_CLEANUP_PRIMARY - A DR plan step to clean up an OKE cluster in the primary region during a switchover.
+    /// - OKE_CLUSTER_SWITCHOVER_SCALE_UP_STANDBY - A DR plan step to scale up the node pool of an OKE cluster in the standby during a switchover.
+    /// - OKE_CLUSTER_SWITCHOVER_RESTORE_STANDBY - A DR plan step to restore an OKE cluster in the standby region during a switchover.
+    /// - OKE_CLUSTER_SWITCHOVER_REVERSE_BACKUP_STANDBY - A DR plan step to reverse an OKE cluster backup in the standby during a switchover.
+    /// - OKE_CLUSTER_SWITCHOVER_SCALE_DOWN_PRIMARY - A DR plan step to scale down the node pool of an OKE cluster in the primary during a switchover.
+    /// - OKE_CLUSTER_FAILOVER_RESTORE_STANDBY - A DR plan step to restore an OKE cluster in the standby region during a failover.
+    /// - OKE_CLUSTER_FAILOVER_SCALE_UP_STANDBY - A DR plan step to scale up the node pool of an OKE cluster in the standby region during a failover.
+    /// - OKE_CLUSTER_START_DRILL_RESTORE_STANDBY - A DR plan step to restore an OKE cluster in the standby region during a start drill.
+    /// - OKE_CLUSTER_START_DRILL_SCALE_UP_STANDBY - A DR plan step to scale up the node pool of an OKE cluster in the standby region during a start drill.
+    /// - OKE_CLUSTER_STOP_DRILL_CLEANUP_STANDBY - A DR plan step to clean up an OKE cluster in the standby region during a stop drill.
+    /// - OKE_CLUSTER_STOP_DRILL_SCALE_DOWN_STANDBY - A DR plan step to scale down the node pool of an OKE cluster in the standby region during a stop drill.
     /// - OBJECT_STORAGE_BUCKET_SWITCHOVER_DELETE_REPLICATION_PRIMARY_PRECHECK - A precheck step for validating the deletion of an object storage bucket replication in the primary region during a switchover.
     /// - OBJECT_STORAGE_BUCKET_SWITCHOVER_SETUP_REVERSE_REPLICATION_STANDBY_PRECHECK - A precheck step for validating an object storage bucket reverse replication set up in the standby region during a switchover.
     /// - OBJECT_STORAGE_BUCKET_FAILOVER_DELETE_REPLICATION_STANDBY_PRECHECK - A precheck step for validating the deletion of an object storage bucket replication in the standby region during a failover.
@@ -283,6 +299,38 @@ namespace Oci.DisasterrecoveryService.Models
       ComputeCapacityAvailabilitySwitchoverPrecheck,
       [EnumMember(Value = "COMPUTE_CAPACITY_AVAILABILITY_FAILOVER_PRECHECK")]
       ComputeCapacityAvailabilityFailoverPrecheck,
+      [EnumMember(Value = "OKE_CLUSTER_SWITCHOVER_CLEANUP_PRIMARY_PRECHECK")]
+      OkeClusterSwitchoverCleanupPrimaryPrecheck,
+      [EnumMember(Value = "OKE_CLUSTER_SWITCHOVER_RESTORE_STANDBY_PRECHECK")]
+      OkeClusterSwitchoverRestoreStandbyPrecheck,
+      [EnumMember(Value = "OKE_CLUSTER_FAILOVER_RESTORE_STANDBY_PRECHECK")]
+      OkeClusterFailoverRestoreStandbyPrecheck,
+      [EnumMember(Value = "OKE_CLUSTER_STOP_DRILL_CLEANUP_STANDBY_PRECHECK")]
+      OkeClusterStopDrillCleanupStandbyPrecheck,
+      [EnumMember(Value = "OKE_CLUSTER_START_DRILL_RESTORE_STANDBY_PRECHECK")]
+      OkeClusterStartDrillRestoreStandbyPrecheck,
+      [EnumMember(Value = "OKE_CLUSTER_SWITCHOVER_CLEANUP_PRIMARY")]
+      OkeClusterSwitchoverCleanupPrimary,
+      [EnumMember(Value = "OKE_CLUSTER_SWITCHOVER_SCALE_UP_STANDBY")]
+      OkeClusterSwitchoverScaleUpStandby,
+      [EnumMember(Value = "OKE_CLUSTER_SWITCHOVER_RESTORE_STANDBY")]
+      OkeClusterSwitchoverRestoreStandby,
+      [EnumMember(Value = "OKE_CLUSTER_SWITCHOVER_REVERSE_BACKUP_STANDBY")]
+      OkeClusterSwitchoverReverseBackupStandby,
+      [EnumMember(Value = "OKE_CLUSTER_SWITCHOVER_SCALE_DOWN_PRIMARY")]
+      OkeClusterSwitchoverScaleDownPrimary,
+      [EnumMember(Value = "OKE_CLUSTER_FAILOVER_RESTORE_STANDBY")]
+      OkeClusterFailoverRestoreStandby,
+      [EnumMember(Value = "OKE_CLUSTER_FAILOVER_SCALE_UP_STANDBY")]
+      OkeClusterFailoverScaleUpStandby,
+      [EnumMember(Value = "OKE_CLUSTER_START_DRILL_RESTORE_STANDBY")]
+      OkeClusterStartDrillRestoreStandby,
+      [EnumMember(Value = "OKE_CLUSTER_START_DRILL_SCALE_UP_STANDBY")]
+      OkeClusterStartDrillScaleUpStandby,
+      [EnumMember(Value = "OKE_CLUSTER_STOP_DRILL_CLEANUP_STANDBY")]
+      OkeClusterStopDrillCleanupStandby,
+      [EnumMember(Value = "OKE_CLUSTER_STOP_DRILL_SCALE_DOWN_STANDBY")]
+      OkeClusterStopDrillScaleDownStandby,
       [EnumMember(Value = "OBJECT_STORAGE_BUCKET_SWITCHOVER_DELETE_REPLICATION_PRIMARY_PRECHECK")]
       ObjectStorageBucketSwitchoverDeleteReplicationPrimaryPrecheck,
       [EnumMember(Value = "OBJECT_STORAGE_BUCKET_SWITCHOVER_SETUP_REVERSE_REPLICATION_STANDBY_PRECHECK")]

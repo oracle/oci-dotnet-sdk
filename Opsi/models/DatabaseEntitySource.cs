@@ -22,6 +22,8 @@ namespace Oci.OpsiService.Models
       PeComanagedDatabase,
       [EnumMember(Value = "MDS_MYSQL_DATABASE_SYSTEM")]
       MdsMysqlDatabaseSystem,
+      [EnumMember(Value = "EXTERNAL_MYSQL_DATABASE_SYSTEM")]
+      ExternalMysqlDatabaseSystem,
       [EnumMember(Value = "MACS_MANAGED_CLOUD_DATABASE")]
       MacsManagedCloudDatabase
   }
