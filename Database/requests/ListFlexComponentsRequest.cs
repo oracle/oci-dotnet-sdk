@@ -35,6 +35,12 @@ namespace Oci.DatabaseService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
         public string Name { get; set; }
         
+        /// <value>
+        /// A filter to return only resources that belong to the entire shape name given. The match is not case sensitive.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shape")]
+        public string Shape { get; set; }
+        
         ///
         /// <value>
         /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).

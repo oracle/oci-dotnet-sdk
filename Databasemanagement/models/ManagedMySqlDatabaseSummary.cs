@@ -81,5 +81,28 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
+        /// <value>
+        /// The type of the MySQL Database. Indicates whether the database
+        /// is external or MDS.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "databaseType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<MySqlType> DatabaseType { get; set; }
+        
+        /// <value>
+        /// Indicates database management status.
+        /// </value>
+        [JsonProperty(PropertyName = "managementState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ManagementState> ManagementState { get; set; }
+        
+        /// <value>
+        /// Indicates lifecycle  state of the resource.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<LifecycleStates> LifecycleState { get; set; }
+        
     }
 }

@@ -37,7 +37,9 @@ namespace Oci.DatabasemanagementService.Models
             [EnumMember(Value = "DEFERRABLE")]
             Deferrable,
             [EnumMember(Value = "INFO")]
-            Info
+            Info,
+            [EnumMember(Value = "OTHER")]
+            Other
         };
 
         /// <value>
@@ -70,7 +72,9 @@ namespace Oci.DatabasemanagementService.Models
             [EnumMember(Value = "NOTIFICATION")]
             Notification,
             [EnumMember(Value = "TRACE")]
-            Trace
+            Trace,
+            [EnumMember(Value = "OTHER")]
+            Other
         };
 
         /// <value>

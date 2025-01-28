@@ -104,7 +104,9 @@ namespace Oci.OpsiService.Requests
             [EnumMember(Value = "COMANAGED-EXACC-NONCDB")]
             ComanagedExaccNoncdb,
             [EnumMember(Value = "MDS-MYSQL")]
-            MdsMysql
+            MdsMysql,
+            [EnumMember(Value = "EXTERNAL-MYSQL")]
+            ExternalMysql
         };
 
         /// <value>

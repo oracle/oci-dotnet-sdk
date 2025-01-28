@@ -168,6 +168,39 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> MinDataStorageInTBs { get; set; }
         
         /// <value>
+        /// The display name of the shape used for the DB system.
+        /// </value>
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
+                ///
+        /// <value>
+        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. ECPU compute model is the recommended model and OCPU compute model is legacy.
+        /// </value>
+        ///
+        public enum ComputeModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ECPU")]
+            Ecpu,
+            [EnumMember(Value = "OCPU")]
+            Ocpu
+        };
+
+        /// <value>
+        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. ECPU compute model is the recommended model and OCPU compute model is legacy.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
+        
+        /// <value>
+        /// If true, the shape supports configurable DB and Storage Server types.
+        /// </value>
+        [JsonProperty(PropertyName = "areServerTypesSupported")]
+        public System.Nullable<bool> AreServerTypesSupported { get; set; }
+        
+        /// <value>
         /// The minimum number of compute servers available for this shape.
         /// </value>
         [JsonProperty(PropertyName = "minimumNodeCount")]

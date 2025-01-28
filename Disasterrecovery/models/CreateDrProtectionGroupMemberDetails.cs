@@ -81,6 +81,9 @@ namespace Oci.DisasterrecoveryService.Models
                 case "VOLUME_GROUP":
                     obj = new CreateDrProtectionGroupMemberVolumeGroupDetails();
                     break;
+                case "OKE_CLUSTER":
+                    obj = new CreateDrProtectionGroupMemberOkeClusterDetails();
+                    break;
                 case "FILE_SYSTEM":
                     obj = new CreateDrProtectionGroupMemberFileSystemDetails();
                     break;

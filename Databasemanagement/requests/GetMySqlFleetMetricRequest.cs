@@ -78,6 +78,12 @@ namespace Oci.DatabasemanagementService.Requests
         public System.Nullable<MdsType> FilterByMdsDeploymentType { get; set; }
         
         /// <value>
+        /// The parameter to filter by MySQL database type. Allowed values are EXTERNAL or MDS.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filterByMySqlDatabaseTypeParam")]
+        public System.Nullable<MySqlType> FilterByMySqlDatabaseTypeParam { get; set; }
+        
+        /// <value>
         /// The parameter to filter by MySQL Database status.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "filterByMySqlStatus")]

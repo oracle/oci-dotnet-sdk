@@ -144,6 +144,8 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "CHANGE_MACS_MANAGED_CLOUD_DATABASE_INSIGHT_CONNECTION_DETAILS")]
       ChangeMacsManagedCloudDatabaseInsightConnectionDetails,
       [EnumMember(Value = "TEST_MACS_MANAGED_CLOUD_DATABASE_INSIGHT_CONNECTION_DETAILS")]
-      TestMacsManagedCloudDatabaseInsightConnectionDetails
+      TestMacsManagedCloudDatabaseInsightConnectionDetails,
+      [EnumMember(Value = "CHANGE_EXTERNAL_MYSQL_DATABASE_INSIGHT_CONNECTION_DETAILS")]
+      ChangeExternalMysqlDatabaseInsightConnectionDetails
   }
 }
