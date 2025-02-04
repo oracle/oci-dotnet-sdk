@@ -40,6 +40,13 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Nullable<int> NumGenerations { get; set; }
         
         /// <value>
+        /// If specified, the backend will make a best effort to sample tokens deterministically, so that repeated requests with the same seed and parameters yield the same result. However, determinism cannot be fully guaranteed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "seed")]
+        public System.Nullable<int> Seed { get; set; }
+        
+        /// <value>
         /// Whether to include the user prompt in the response. Applies only to non-stream results.
         /// </value>
         [JsonProperty(PropertyName = "isEcho")]
@@ -117,6 +124,15 @@ namespace Oci.GenerativeaiinferenceService.Models
         /// </value>
         [JsonProperty(PropertyName = "logitBias")]
         public System.Object LogitBias { get; set; }
+        
+        [JsonProperty(PropertyName = "toolChoice")]
+        public ToolChoice ToolChoice { get; set; }
+        
+        /// <value>
+        /// A list of tools the model may call. Use this to provide a list of functions the model may generate JSON inputs for. A max of 128 functions are supported.
+        /// </value>
+        [JsonProperty(PropertyName = "tools")]
+        public System.Collections.Generic.List<ToolDefinition> Tools { get; set; }
         
         [JsonProperty(PropertyName = "apiFormat")]
         private readonly string apiFormat = "GENERIC";

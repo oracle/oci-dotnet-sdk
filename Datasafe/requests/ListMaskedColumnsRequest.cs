@@ -69,7 +69,11 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "schemaName")]
             SchemaName,
             [EnumMember(Value = "objectName")]
-            ObjectName
+            ObjectName,
+            [EnumMember(Value = "sensitiveTypeId")]
+            SensitiveTypeId,
+            [EnumMember(Value = "maskingColumnGroupId")]
+            MaskingColumnGroupId
         };
 
         /// <value>

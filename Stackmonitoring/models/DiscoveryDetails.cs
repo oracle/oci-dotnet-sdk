@@ -70,7 +70,15 @@ namespace Oci.StackmonitoringService.Models
             [EnumMember(Value = "ORACLE_HTTP_SERVER")]
             OracleHttpServer,
             [EnumMember(Value = "MICROSOFT_IIS")]
-            MicrosoftIis
+            MicrosoftIis,
+            [EnumMember(Value = "NGINX")]
+            Nginx,
+            [EnumMember(Value = "JBOSS_SERVER")]
+            JbossServer,
+            [EnumMember(Value = "JBOSS_DOMAIN")]
+            JbossDomain,
+            [EnumMember(Value = "ORACLE_JVM")]
+            OracleJvm
         };
 
         /// <value>

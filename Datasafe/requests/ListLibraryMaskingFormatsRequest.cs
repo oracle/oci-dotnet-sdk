@@ -150,7 +150,11 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "displayName")]
             DisplayName,
             [EnumMember(Value = "timeCreated")]
-            TimeCreated
+            TimeCreated,
+            [EnumMember(Value = "timeUpdated")]
+            TimeUpdated,
+            [EnumMember(Value = "lifecycleState")]
+            LifecycleState
         };
 
         /// <value>

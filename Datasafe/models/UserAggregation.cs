@@ -24,7 +24,8 @@ namespace Oci.DatasafeService.Models
     {
         
         /// <value>
-        /// The array of user aggregation data.
+        /// List containing maps as values.
+        /// Example: {&quot;Operations&quot;: [ {&quot;CostCenter&quot;: &quot;42&quot;} ] }
         /// </value>
         /// <remarks>
         /// Required

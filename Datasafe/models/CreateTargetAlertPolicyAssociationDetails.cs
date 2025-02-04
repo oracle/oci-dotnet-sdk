@@ -84,7 +84,6 @@ namespace Oci.DatasafeService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
-        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]

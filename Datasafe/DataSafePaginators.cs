@@ -1814,6 +1814,55 @@ namespace Oci.DatasafeService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListMaskingPolicyReferentialRelations operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListMaskingPolicyReferentialRelationsResponse> ListMaskingPolicyReferentialRelationsResponseEnumerator(ListMaskingPolicyReferentialRelationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListMaskingPolicyReferentialRelationsRequest, ListMaskingPolicyReferentialRelationsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMaskingPolicyReferentialRelations(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the MaskingPolicyReferentialRelationSummary objects
+        /// contained in responses from the ListMaskingPolicyReferentialRelations operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<MaskingPolicyReferentialRelationSummary> ListMaskingPolicyReferentialRelationsRecordEnumerator(ListMaskingPolicyReferentialRelationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListMaskingPolicyReferentialRelationsRequest, ListMaskingPolicyReferentialRelationsResponse, MaskingPolicyReferentialRelationSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMaskingPolicyReferentialRelations(request, retryConfiguration, cancellationToken),
+                response => response.MaskingPolicyReferentialRelationCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListMaskingReports operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -2104,6 +2153,55 @@ namespace Oci.DatasafeService
                 },
                 request => client.ListProfileSummaries(request, retryConfiguration, cancellationToken),
                 response => response.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListReferentialRelations operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListReferentialRelationsResponse> ListReferentialRelationsResponseEnumerator(ListReferentialRelationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListReferentialRelationsRequest, ListReferentialRelationsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListReferentialRelations(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ReferentialRelationSummary objects
+        /// contained in responses from the ListReferentialRelations operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ReferentialRelationSummary> ListReferentialRelationsRecordEnumerator(ListReferentialRelationsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListReferentialRelationsRequest, ListReferentialRelationsResponse, ReferentialRelationSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListReferentialRelations(request, retryConfiguration, cancellationToken),
+                response => response.ReferentialRelationCollection.Items
             );
         }
 
@@ -2986,6 +3084,55 @@ namespace Oci.DatasafeService
                 },
                 request => client.ListSensitiveTypes(request, retryConfiguration, cancellationToken),
                 response => response.SensitiveTypeCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListSensitiveTypesExports operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListSensitiveTypesExportsResponse> ListSensitiveTypesExportsResponseEnumerator(ListSensitiveTypesExportsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListSensitiveTypesExportsRequest, ListSensitiveTypesExportsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListSensitiveTypesExports(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the SensitiveTypesExportSummary objects
+        /// contained in responses from the ListSensitiveTypesExports operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<SensitiveTypesExportSummary> ListSensitiveTypesExportsRecordEnumerator(ListSensitiveTypesExportsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListSensitiveTypesExportsRequest, ListSensitiveTypesExportsResponse, SensitiveTypesExportSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListSensitiveTypesExports(request, retryConfiguration, cancellationToken),
+                response => response.SensitiveTypesExportCollection.Items
             );
         }
 

@@ -324,6 +324,78 @@ namespace Oci.MysqlService.Models
         
         [JsonProperty(PropertyName = "secureConnections")]
         public SecureConnectionDetails SecureConnections { get; set; }
+                ///
+        /// <value>
+        /// The database mode indicating the types of statements that are allowed to run in the the DB system.
+        /// This mode applies only to statements run by user connections. Replicated write statements continue 
+        /// to be allowed regardless of the DatabaseMode.
+        ///   - READ_WRITE: allow running read and write statements on the DB system;
+        ///   - READ_ONLY: only allow running read statements on the DB system.
+        /// 
+        /// </value>
+        ///
+        public enum DatabaseModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "READ_WRITE")]
+            ReadWrite,
+            [EnumMember(Value = "READ_ONLY")]
+            ReadOnly
+        };
+
+        /// <value>
+        /// The database mode indicating the types of statements that are allowed to run in the the DB system.
+        /// This mode applies only to statements run by user connections. Replicated write statements continue 
+        /// to be allowed regardless of the DatabaseMode.
+        ///   - READ_WRITE: allow running read and write statements on the DB system;
+        ///   - READ_ONLY: only allow running read statements on the DB system.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DatabaseMode is required.")]
+        [JsonProperty(PropertyName = "databaseMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DatabaseModeEnum> DatabaseMode { get; set; }
+                ///
+        /// <value>
+        /// The access mode indicating if the database access is unrestricted (to all MySQL user accounts), 
+        /// or restricted (to only certain users with specific privileges):
+        ///  - UNRESTRICTED: the access to the database is not restricted;
+        ///  - RESTRICTED: access allowed only to users with specific privileges;
+        ///    RESTRICTED will correspond to setting the MySQL system variable 
+        ///    [offline_mode](https://dev.mysql.com/doc/en/server-system-variables.html#sysvar_offline_mode) to ON.
+        /// 
+        /// </value>
+        ///
+        public enum AccessModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "UNRESTRICTED")]
+            Unrestricted,
+            [EnumMember(Value = "RESTRICTED")]
+            Restricted
+        };
+
+        /// <value>
+        /// The access mode indicating if the database access is unrestricted (to all MySQL user accounts), 
+        /// or restricted (to only certain users with specific privileges):
+        ///  - UNRESTRICTED: the access to the database is not restricted;
+        ///  - RESTRICTED: access allowed only to users with specific privileges;
+        ///    RESTRICTED will correspond to setting the MySQL system variable 
+        ///    [offline_mode](https://dev.mysql.com/doc/en/server-system-variables.html#sysvar_offline_mode) to ON.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "AccessMode is required.")]
+        [JsonProperty(PropertyName = "accessMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AccessModeEnum> AccessMode { get; set; }
         
         /// <value>
         /// The list of customer email addresses that receive information from Oracle about the specified OCI DB System resource. 
@@ -333,6 +405,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerContacts")]
         public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
+        [JsonProperty(PropertyName = "readEndpoint")]
+        public ReadEndpointDetails ReadEndpoint { get; set; }
         
     }
 }

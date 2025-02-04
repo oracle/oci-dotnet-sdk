@@ -28,7 +28,7 @@ namespace Oci.DatasafeService.Models
         public string TargetId { get; set; }
         
         /// <value>
-        /// The OCID of the masking policy..
+        /// The OCID of the masking policy.
         /// </value>
         [JsonProperty(PropertyName = "policyId")]
         public string PolicyId { get; set; }
