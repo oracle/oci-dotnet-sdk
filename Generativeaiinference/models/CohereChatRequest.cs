@@ -145,7 +145,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Double PresencePenalty { get; set; }
         
         /// <value>
-        /// If specified, the backend will make a best effort to sample tokens deterministically, such that repeated requests with the same seed and parameters should return the same result. However, determinism cannot be totally guaranteed.
+        /// If specified, the backend will make a best effort to sample tokens deterministically, so that repeated requests with the same seed and parameters yield the same result. However, determinism cannot be fully guaranteed.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "seed")]

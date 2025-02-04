@@ -28,7 +28,7 @@ namespace Oci.DatasafeService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The display name of the audit trail. The name does not have to be unique, and it's changeable.
+        /// The display name of the audit trail. The name does not have to be unique, and it's updatable.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -51,7 +51,6 @@ namespace Oci.DatasafeService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
-        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]

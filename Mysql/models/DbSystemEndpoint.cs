@@ -121,7 +121,9 @@ namespace Oci.MysqlService.Models
             [EnumMember(Value = "READ_REPLICA")]
             ReadReplica,
             [EnumMember(Value = "LOAD_BALANCER")]
-            LoadBalancer
+            LoadBalancer,
+            [EnumMember(Value = "READ_ENDPOINT")]
+            ReadEndpoint
         };
 
         /// <value>

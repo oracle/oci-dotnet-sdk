@@ -16,25 +16,29 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details for the new audit policy.
+    /// Details to create a new sensitive types export. To specify some sensitive types for export, use 
+    /// sensitiveTypeIdsForExport attribute. But if you want to include all sensitive types, you can set 
+    /// isIncludeAllSensitiveTypes attributes to true. In the latter case, you do not need to list all 
+    /// sensitive types.
+    /// 
     /// </summary>
-    public class CreateAuditPolicyDetails 
+    public class CreateSensitiveTypesExportDetails 
     {
         
         /// <value>
-        /// The display name of the audit policy. The name does not have to be unique, and it is changeable.
+        /// The display name of the sensitive types export. The name does not have to be unique, and it's changeable.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The description of the audit policy.
+        /// The description of the sensitive types export.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the compartment where you want to create the audit policy.
+        /// The OCID of the compartment where the sensitive types export should be created.
         /// </value>
         /// <remarks>
         /// Required
@@ -44,14 +48,19 @@ namespace Oci.DatasafeService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the target for which the audit policy has to be created.
+        /// The OCIDs of the sensitive types used to create sensitive types export.
+        /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TargetId is required.")]
-        [JsonProperty(PropertyName = "targetId")]
-        public string TargetId { get; set; }
+        [JsonProperty(PropertyName = "sensitiveTypeIdsForExport")]
+        public System.Collections.Generic.List<string> SensitiveTypeIdsForExport { get; set; }
+        
+        /// <value>
+        /// Indicates if all the existing user-defined sensitive types are used for export. If it's set to true, the
+        /// sensitiveTypeIdsForExport attribute is ignored and all user-defined sensitive types are used.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isIncludeAllSensitiveTypes")]
+        public System.Nullable<bool> IsIncludeAllSensitiveTypes { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
@@ -63,7 +72,6 @@ namespace Oci.DatasafeService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
-        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]

@@ -42,6 +42,30 @@ namespace Oci.MysqlService.Models
         public string SubnetId { get; set; }
         
         /// <value>
+        /// The database mode indicating the types of statements that will be allowed to run in the DB system.
+        /// This mode will apply only to statements run by user connections. Replicated write statements will continue 
+        /// to be allowed regardless of the DatabaseMode.
+        ///   - READ_WRITE: allow running read and write statements on the DB system;
+        ///   - READ_ONLY: only allow running read statements on the DB system.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "databaseMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DbSystem.DatabaseModeEnum> DatabaseMode { get; set; }
+        
+        /// <value>
+        /// The access mode indicating if the database access will be restricted only to administrators or not:
+        ///  - UNRESTRICTED: the access to the database is not restricted;
+        ///  - RESTRICTED: the access will be allowed only to users with specific privileges; 
+        ///    RESTRICTED will correspond to setting the MySQL system variable 
+        ///    [offline_mode](https://dev.mysql.com/doc/en/server-system-variables.html#sysvar_offline_mode) to ON.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "accessMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<DbSystem.AccessModeEnum> AccessMode { get; set; }
+        
+        /// <value>
         /// Specifies if the DB System is highly available.
         /// <br/>
         /// Set to true to enable high availability. Two secondary MySQL instances are created and placed in the unused
@@ -224,6 +248,9 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerContacts")]
         public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
+        [JsonProperty(PropertyName = "readEndpoint")]
+        public UpdateReadEndpointDetails ReadEndpoint { get; set; }
         
     }
 }
