@@ -43,6 +43,8 @@ namespace Oci.DatasafeService.Models
             In,
             [EnumMember(Value = "EQ")]
             Eq,
+            [EnumMember(Value = "EQ_CS")]
+            EqCs,
             [EnumMember(Value = "GT")]
             Gt,
             [EnumMember(Value = "GE")]
@@ -59,6 +61,8 @@ namespace Oci.DatasafeService.Models
             Ne,
             [EnumMember(Value = "CO")]
             Co,
+            [EnumMember(Value = "CO_CS")]
+            CoCs,
             [EnumMember(Value = "NOT")]
             Not,
             [EnumMember(Value = "NOT_IN")]

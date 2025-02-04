@@ -30,6 +30,23 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 103.0.0 - 2025-02-04
+### Added
+ - Support for Cohere Embed v3 in the Generative AI Inference service
+ - Support for Llama 3.2 tools in the Generative AI Inference service
+ - Support for nginx discovery and monitoring in the Stack Monitoring service
+ - Support for Oracle JVM runtime discovery and monitoring in the Stack Monitoring service
+ - Support for JBoss discovery and monitoring in the Stack Monitoring service
+ - Support for Service Managed Container(SMC) endpoints on list service operation in the Data Science service
+ - Support for schedulers in the Data Science service
+ - Support for DB system database and access modes in the HeatWave service
+ - Support for DB system read endpoints in the HeatWave service
+ - Support for sensitive types for data discovery in the Data Safe service
+ - Support for referential relation APIs in the Data Safe service   
+
+### Breaking Changes
+ - The models `CreateAuditPolicyDetails` and `CreateAuditProfileDetails` were removed in the Data Safe service
+
 ## 102.0.0 - 2025-01-28
 ### Added
  - Support for external MySQL database management in the Database Management service

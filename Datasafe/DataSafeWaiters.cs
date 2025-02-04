@@ -531,6 +531,33 @@ namespace Oci.DatasafeService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetReferentialRelationRequest, GetReferentialRelationResponse> ForReferentialRelation(GetReferentialRelationRequest request, params ReferentialRelationLifecycleState[] targetStates)
+        {
+            return this.ForReferentialRelation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetReferentialRelationRequest, GetReferentialRelationResponse> ForReferentialRelation(GetReferentialRelationRequest request, WaiterConfiguration config, params ReferentialRelationLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetReferentialRelationRequest, GetReferentialRelationResponse>(
+                request,
+                request => client.GetReferentialRelation(request),
+                response => targetStates.Contains(response.ReferentialRelation.LifecycleState.Value)
+            );
+            return new Waiter<GetReferentialRelationRequest, GetReferentialRelationResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetReportRequest, GetReportResponse> ForReport(GetReportRequest request, params ReportLifecycleState[] targetStates)
         {
             return this.ForReport(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -829,6 +856,34 @@ namespace Oci.DatasafeService
                 targetStates.Contains(DiscoveryLifecycleState.Deleted)
             );
             return new Waiter<GetSensitiveTypeRequest, GetSensitiveTypeResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSensitiveTypesExportRequest, GetSensitiveTypesExportResponse> ForSensitiveTypesExport(GetSensitiveTypesExportRequest request, params SensitiveTypesExportLifecycleState[] targetStates)
+        {
+            return this.ForSensitiveTypesExport(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSensitiveTypesExportRequest, GetSensitiveTypesExportResponse> ForSensitiveTypesExport(GetSensitiveTypesExportRequest request, WaiterConfiguration config, params SensitiveTypesExportLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSensitiveTypesExportRequest, GetSensitiveTypesExportResponse>(
+                request,
+                request => client.GetSensitiveTypesExport(request),
+                response => targetStates.Contains(response.SensitiveTypesExport.LifecycleState.Value),
+                targetStates.Contains(SensitiveTypesExportLifecycleState.Deleted)
+            );
+            return new Waiter<GetSensitiveTypesExportRequest, GetSensitiveTypesExportResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

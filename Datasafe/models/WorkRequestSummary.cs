@@ -285,6 +285,12 @@ namespace Oci.DatasafeService.Models
             MaskPolicyGenerateHealthReport,
             [EnumMember(Value = "MASK_POLICY_DELETE_HEALTH_REPORT")]
             MaskPolicyDeleteHealthReport,
+            [EnumMember(Value = "CREATE_SENSITIVE_TYPES_EXPORT")]
+            CreateSensitiveTypesExport,
+            [EnumMember(Value = "UPDATE_SENSITIVE_TYPES_EXPORT")]
+            UpdateSensitiveTypesExport,
+            [EnumMember(Value = "BULK_CREATE_SENSITIVE_TYPES")]
+            BulkCreateSensitiveTypes,
             [EnumMember(Value = "ABORT_MASKING")]
             AbortMasking,
             [EnumMember(Value = "CREATE_SECURITY_POLICY_REPORT")]

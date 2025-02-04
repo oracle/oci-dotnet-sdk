@@ -91,7 +91,7 @@ namespace Oci.DatasafeService.Requests
         /// text, date, and time values must be enclosed in quotation marks, with date and time values using ISO-8601 format.
         /// (Numeric and boolean values should not be quoted.)
         /// <br/>
-        /// **Example: ** (operationTime ge &quot;2021-06-04T12:00:00.000Z&quot;) and (eventName eq &quot;LOGON&quot;)
+        /// **Example: ** (operationTime ge &quot;2021-06-04T01-00-26&quot;) and (eventName eq &quot;LOGON&quot;)The attrExp or the field (for example, operationTime and eventName in above example) which is used to filter can be any of the fields returned by AuditEventSummary.adminUser, commonUser, sensitiveActivity, dsActivity can only have eq operation and value 1.These define admin user activity, common user activity, sensitive data activity and data safe activity**
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scimQuery")]
         public string ScimQuery { get; set; }

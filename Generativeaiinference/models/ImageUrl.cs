@@ -16,13 +16,22 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// Represents a single instance of chat image url.
+    /// Provide a base64 encoded image.
     /// </summary>
     public class ImageUrl 
     {
         
         /// <value>
-        /// The URL of the image.
+        /// The base64 encoded image data.
+        /// <br/>
+        /// Example for a png image:
+        ///   `{
+        ///     \"type\": \"IMAGE\",
+        ///     \"imageUrl\": {
+        ///       \"url\": \"data:image/png;base64,<base64 encoded image content>\"
+        ///     }
+        ///   }`
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +41,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public string Url { get; set; }
                 ///
         /// <value>
-        /// The level of the detail.
+        /// The default value is AUTO and only AUTO is supported. This option controls how to convert the base64 encoded image to tokens.
         /// </value>
         ///
         public enum DetailEnum {
@@ -48,7 +57,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         };
 
         /// <value>
-        /// The level of the detail.
+        /// The default value is AUTO and only AUTO is supported. This option controls how to convert the base64 encoded image to tokens.
         /// </value>
         [JsonProperty(PropertyName = "detail")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

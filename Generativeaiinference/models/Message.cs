@@ -32,7 +32,9 @@ namespace Oci.GenerativeaiinferenceService.Models
             [EnumMember(Value = "USER")]
             User,
             [EnumMember(Value = "ASSISTANT")]
-            Assistant
+            Assistant,
+            [EnumMember(Value = "TOOL")]
+            Tool
         };
 
         
@@ -73,6 +75,9 @@ namespace Oci.GenerativeaiinferenceService.Models
                     break;
                 case "USER":
                     obj = new UserMessage();
+                    break;
+                case "TOOL":
+                    obj = new ToolMessage();
                     break;
             }
             if (obj != null)

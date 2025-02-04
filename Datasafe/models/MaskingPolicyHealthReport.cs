@@ -127,6 +127,18 @@ namespace Oci.DatasafeService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// The count of errors in the masking health report.
+        /// </value>
+        [JsonProperty(PropertyName = "errorCount")]
+        public System.Nullable<long> ErrorCount { get; set; }
+        
+        /// <value>
+        /// The count of warnings in the masking health report.
+        /// </value>
+        [JsonProperty(PropertyName = "warningCount")]
+        public System.Nullable<long> WarningCount { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
@@ -140,7 +152,6 @@ namespace Oci.DatasafeService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
-        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         /// <remarks>

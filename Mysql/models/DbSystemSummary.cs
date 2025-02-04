@@ -196,5 +196,41 @@ namespace Oci.MysqlService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DatabaseManagementStatus> DatabaseManagement { get; set; }
         
+        /// <value>
+        /// The database mode indicating the types of statements that are allowed to run in the DB system.
+        /// This mode applies only to statements run by user connections. Replicated write statements continue 
+        /// to be allowed regardless of the DatabaseMode.
+        ///   - READ_WRITE: allow running read and write statements on the DB system;
+        ///   - READ_ONLY: only allow running read statements on the DB system.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DatabaseMode is required.")]
+        [JsonProperty(PropertyName = "databaseMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DbSystem.DatabaseModeEnum> DatabaseMode { get; set; }
+        
+        /// <value>
+        /// The access mode indicating if the database access is unrestricted (to all MySQL user accounts), 
+        /// or restricted (to only certain users with specific privileges):
+        ///  - UNRESTRICTED: the access to the database is not restricted;
+        ///  - RESTRICTED: the access is allowed only to users with specific privileges; 
+        ///    RESTRICTED will correspond to setting the MySQL system variable 
+        ///    [offline_mode](https://dev.mysql.com/doc/en/server-system-variables.html#sysvar_offline_mode) to ON.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "AccessMode is required.")]
+        [JsonProperty(PropertyName = "accessMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DbSystem.AccessModeEnum> AccessMode { get; set; }
+        
+        [JsonProperty(PropertyName = "readEndpoint")]
+        public ReadEndpointDetails ReadEndpoint { get; set; }
+        
     }
 }

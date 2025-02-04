@@ -23,7 +23,7 @@ namespace Oci.DatasafeService.Models
         
         /// <value>
         /// Indicates the number of months the audit records will be stored online in Oracle Data Safe audit repository for
-        /// immediate reporting and analysis. Minimum: 1; Maximum:12 months
+        /// immediate reporting and analysis. Minimum: 1; Maximum: 12 months
         /// 
         /// </value>
         [JsonProperty(PropertyName = "onlineMonths")]

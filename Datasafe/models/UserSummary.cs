@@ -17,7 +17,8 @@ namespace Oci.DatasafeService.Models
 {
     /// <summary>
     /// The summary of information about the database user. It includes details such as user type, account status,
-    /// last login time, user creation time, authentication type, user profile, and time and date of the last password change.
+    /// last login time, user creation time, authentication type, user profile, and time and date of the last password change and
+    /// the date and time of the expiration of the password.
     /// It also contains the user category derived from these user details, as well as granted privileges.
     /// 
     /// </summary>
@@ -150,6 +151,12 @@ namespace Oci.DatasafeService.Models
         /// </value>
         [JsonProperty(PropertyName = "timePasswordChanged")]
         public System.Nullable<System.DateTime> TimePasswordChanged { get; set; }
+        
+        /// <value>
+        /// The date and time the user's password will expire, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// </value>
+        [JsonProperty(PropertyName = "timePasswordExpiry")]
+        public System.Nullable<System.DateTime> TimePasswordExpiry { get; set; }
                 ///
         ///
         public enum UserTypesEnum {

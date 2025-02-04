@@ -237,5 +237,8 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }
         
+        [JsonProperty(PropertyName = "readEndpoint")]
+        public ReadEndpointDetails ReadEndpoint { get; set; }
+        
     }
 }

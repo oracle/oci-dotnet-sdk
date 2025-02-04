@@ -90,6 +90,18 @@ namespace Oci.DatascienceService.Requests
             PrivateEndpointMove,
             [EnumMember(Value = "PRIVATE_ENDPOINT_UPDATE")]
             PrivateEndpointUpdate,
+            [EnumMember(Value = "SCHEDULE_CREATE")]
+            ScheduleCreate,
+            [EnumMember(Value = "SCHEDULE_UPDATE")]
+            ScheduleUpdate,
+            [EnumMember(Value = "SCHEDULE_DELETE")]
+            ScheduleDelete,
+            [EnumMember(Value = "SCHEDULE_MOVE")]
+            ScheduleMove,
+            [EnumMember(Value = "SCHEDULE_ACTIVATE")]
+            ScheduleActivate,
+            [EnumMember(Value = "SCHEDULE_DEACTIVATE")]
+            ScheduleDeactivate,
             [EnumMember(Value = "RESTORE_ARCHIVED_MODEL")]
             RestoreArchivedModel
         };
