@@ -57,6 +57,7 @@ namespace Oci.GoldengateService.Models
         /// <value>
         /// The password Oracle GoldenGate uses to connect the associated system of the given technology.
         /// It must conform to the specific security requirements including length, case sensitivity, and so on.
+        /// Deprecated: This field is deprecated and replaced by \"passwordSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "password")]
@@ -75,6 +76,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The base64 encoded content of the TrustStore file.
+        /// Deprecated: This field is deprecated and replaced by \"trustStoreSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "trustStore")]
@@ -90,6 +92,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The TrustStore password.
+        /// Deprecated: This field is deprecated and replaced by \"trustStorePasswordSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "trustStorePassword")]
@@ -105,6 +108,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The base64 encoded content of the KeyStore file.
+        /// Deprecated: This field is deprecated and replaced by \"keyStoreSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "keyStore")]
@@ -120,6 +124,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The KeyStore password.
+        /// Deprecated: This field is deprecated and replaced by \"keyStorePasswordSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "keyStorePassword")]

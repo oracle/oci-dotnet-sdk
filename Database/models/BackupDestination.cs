@@ -172,5 +172,23 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The total storage size of the backup destination in GBs, rounded to the nearest integer.
+        /// </value>
+        [JsonProperty(PropertyName = "totalStorageSizeInGBs")]
+        public System.Nullable<int> TotalStorageSizeInGBs { get; set; }
+        
+        /// <value>
+        /// The total amount of space utilized on the backup destination (in GBs), rounded to the nearest integer.
+        /// </value>
+        [JsonProperty(PropertyName = "utilizedStorageSizeInGBs")]
+        public System.Nullable<int> UtilizedStorageSizeInGBs { get; set; }
+        
+        /// <value>
+        /// The time when the total storage size and the utilized storage size of the backup destination are updated.
+        /// </value>
+        [JsonProperty(PropertyName = "timeAtWhichStorageDetailsAreUpdated")]
+        public System.Nullable<System.DateTime> TimeAtWhichStorageDetailsAreUpdated { get; set; }
+        
     }
 }

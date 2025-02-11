@@ -35,7 +35,11 @@ namespace Oci.GoldengateService.Models
             [EnumMember(Value = "OCI_AUTONOMOUS_JSON_DATABASE")]
             OciAutonomousJsonDatabase,
             [EnumMember(Value = "AZURE_COSMOS_DB_FOR_MONGODB")]
-            AzureCosmosDbForMongodb
+            AzureCosmosDbForMongodb,
+            [EnumMember(Value = "AMAZON_DOCUMENT_DB")]
+            AmazonDocumentDb,
+            [EnumMember(Value = "ORACLE_JSON_COLLECTION")]
+            OracleJsonCollection
         };
 
         /// <value>
@@ -71,6 +75,29 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "databaseId")]
         public string DatabaseId { get; set; }
+                ///
+        /// <value>
+        /// Security Protocol for MongoDB.
+        /// </value>
+        ///
+        public enum SecurityProtocolEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "PLAIN")]
+            Plain,
+            [EnumMember(Value = "TLS")]
+            Tls,
+            [EnumMember(Value = "MTLS")]
+            Mtls
+        };
+
+        /// <value>
+        /// Security Protocol for MongoDB.
+        /// </value>
+        [JsonProperty(PropertyName = "securityProtocol")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SecurityProtocolEnum> SecurityProtocol { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the password Oracle GoldenGate uses to connect the associated database.
@@ -79,6 +106,23 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "passwordSecretId")]
         public string PasswordSecretId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the certificate key file of the mtls connection.
+        /// - The content of a .pem file containing the client private key (for 2-way SSL).
+        /// Note: When provided, 'tlsCertificateKeyFile' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tlsCertificateKeyFileSecretId")]
+        public string TlsCertificateKeyFileSecretId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the password of the tls certificate key file.
+        /// Note: When provided, 'tlsCertificateKeyFilePassword' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tlsCertificateKeyFilePasswordSecretId")]
+        public string TlsCertificateKeyFilePasswordSecretId { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "MONGODB";

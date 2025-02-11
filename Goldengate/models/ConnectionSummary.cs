@@ -222,14 +222,11 @@ namespace Oci.GoldengateService.Models
             var discriminator = jsonObject["connectionType"].Value<string>();
             switch (discriminator)
             {
-                case "GOLDENGATE":
-                    obj = new GoldenGateConnectionSummary();
+                case "MICROSOFT_FABRIC":
+                    obj = new MicrosoftFabricConnectionSummary();
                     break;
                 case "KAFKA_SCHEMA_REGISTRY":
                     obj = new KafkaSchemaRegistryConnectionSummary();
-                    break;
-                case "JAVA_MESSAGE_SERVICE":
-                    obj = new JavaMessageServiceConnectionSummary();
                     break;
                 case "MICROSOFT_SQLSERVER":
                     obj = new MicrosoftSqlserverConnectionSummary();
@@ -240,6 +237,36 @@ namespace Oci.GoldengateService.Models
                 case "ORACLE":
                     obj = new OracleConnectionSummary();
                     break;
+                case "OCI_OBJECT_STORAGE":
+                    obj = new OciObjectStorageConnectionSummary();
+                    break;
+                case "AZURE_SYNAPSE_ANALYTICS":
+                    obj = new AzureSynapseConnectionSummary();
+                    break;
+                case "MONGODB":
+                    obj = new MongoDbConnectionSummary();
+                    break;
+                case "AMAZON_S3":
+                    obj = new AmazonS3ConnectionSummary();
+                    break;
+                case "MYSQL":
+                    obj = new MysqlConnectionSummary();
+                    break;
+                case "ELASTICSEARCH":
+                    obj = new ElasticsearchConnectionSummary();
+                    break;
+                case "GOOGLE_PUBSUB":
+                    obj = new GooglePubSubConnectionSummary();
+                    break;
+                case "GOOGLE_CLOUD_STORAGE":
+                    obj = new GoogleCloudStorageConnectionSummary();
+                    break;
+                case "GOLDENGATE":
+                    obj = new GoldenGateConnectionSummary();
+                    break;
+                case "JAVA_MESSAGE_SERVICE":
+                    obj = new JavaMessageServiceConnectionSummary();
+                    break;
                 case "SNOWFLAKE":
                     obj = new SnowflakeConnectionSummary();
                     break;
@@ -249,29 +276,14 @@ namespace Oci.GoldengateService.Models
                 case "REDIS":
                     obj = new RedisConnectionSummary();
                     break;
-                case "OCI_OBJECT_STORAGE":
-                    obj = new OciObjectStorageConnectionSummary();
-                    break;
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new AzureDataLakeStorageConnectionSummary();
-                    break;
-                case "AZURE_SYNAPSE_ANALYTICS":
-                    obj = new AzureSynapseConnectionSummary();
-                    break;
-                case "MONGODB":
-                    obj = new MongoDbConnectionSummary();
                     break;
                 case "GOOGLE_BIGQUERY":
                     obj = new GoogleBigQueryConnectionSummary();
                     break;
-                case "AMAZON_S3":
-                    obj = new AmazonS3ConnectionSummary();
-                    break;
                 case "POSTGRESQL":
                     obj = new PostgresqlConnectionSummary();
-                    break;
-                case "MYSQL":
-                    obj = new MysqlConnectionSummary();
                     break;
                 case "GENERIC":
                     obj = new GenericConnectionSummary();
@@ -279,20 +291,17 @@ namespace Oci.GoldengateService.Models
                 case "KAFKA":
                     obj = new KafkaConnectionSummary();
                     break;
-                case "ELASTICSEARCH":
-                    obj = new ElasticsearchConnectionSummary();
-                    break;
                 case "DB2":
                     obj = new Db2ConnectionSummary();
                     break;
                 case "AMAZON_REDSHIFT":
                     obj = new AmazonRedshiftConnectionSummary();
                     break;
+                case "DATABRICKS":
+                    obj = new DatabricksConnectionSummary();
+                    break;
                 case "HDFS":
                     obj = new HdfsConnectionSummary();
-                    break;
-                case "GOOGLE_CLOUD_STORAGE":
-                    obj = new GoogleCloudStorageConnectionSummary();
                     break;
             }
             if (obj != null)

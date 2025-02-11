@@ -78,7 +78,13 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "FULL")]
             Full,
             [EnumMember(Value = "LONGTERM")]
-            Longterm
+            Longterm,
+            [EnumMember(Value = "VIRTUAL_FULL")]
+            VirtualFull,
+            [EnumMember(Value = "CUMULATIVE_INCREMENTAL")]
+            CumulativeIncremental,
+            [EnumMember(Value = "ROLL_FORWARD_IMAGE_COPY")]
+            RollForwardImageCopy
         };
 
         /// <value>

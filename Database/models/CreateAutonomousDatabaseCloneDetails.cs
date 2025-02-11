@@ -40,7 +40,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "FULL")]
             Full,
             [EnumMember(Value = "METADATA")]
-            Metadata
+            Metadata,
+            [EnumMember(Value = "PARTIAL")]
+            Partial
         };
 
         /// <value>

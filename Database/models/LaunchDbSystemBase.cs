@@ -324,6 +324,14 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
         
+        /// <value>
+        /// A private IPv6 address of your choice. Must be an available IP address within the subnet's CIDR.
+        /// If you don't specify a value and the subnet is dual stack, Oracle automatically assigns a private IPv6 address from the subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateIpV6")]
+        public string PrivateIpV6 { get; set; }
+        
         [JsonProperty(PropertyName = "dataCollectionOptions")]
         public DataCollectionOptions DataCollectionOptions { get; set; }
         

@@ -46,5 +46,11 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "vcnHostnameEndpoint")]
         public string VcnHostnameEndpoint { get; set; }
         
+        /// <value>
+        /// The IPv6 networking Kubernetes API server endpoint.
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6Endpoint")]
+        public string Ipv6Endpoint { get; set; }
+        
     }
 }
