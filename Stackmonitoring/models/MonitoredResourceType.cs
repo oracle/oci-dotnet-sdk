@@ -113,6 +113,12 @@ namespace Oci.StackmonitoringService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        /// <value>
+        /// Key/Value pair for additional namespaces used by stack monitoring services for SYSTEM (SMB) resource types.
+        /// </value>
+        [JsonProperty(PropertyName = "additionalNamespaceMap")]
+        public System.Collections.Generic.Dictionary<string, string> AdditionalNamespaceMap { get; set; }
+        
         [JsonProperty(PropertyName = "metadata")]
         public ResourceTypeMetadataDetails Metadata { get; set; }
         

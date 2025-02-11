@@ -40,7 +40,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "FULL")]
             Full,
             [EnumMember(Value = "METADATA")]
-            Metadata
+            Metadata,
+            [EnumMember(Value = "PARTIAL")]
+            Partial
         };
 
         /// <value>
@@ -53,6 +55,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "cloneType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CloneTypeEnum> CloneType { get; set; }
+        
+        /// <value>
+        /// A list of the source Autonomous Database's table space number(s) used to create this partial clone from the backup.
+        /// </value>
+        [JsonProperty(PropertyName = "cloneTableSpaceList")]
+        public System.Collections.Generic.List<int> CloneTableSpaceList { get; set; }
         
         [JsonProperty(PropertyName = "source")]
         private readonly string source = "BACKUP_FROM_ID";

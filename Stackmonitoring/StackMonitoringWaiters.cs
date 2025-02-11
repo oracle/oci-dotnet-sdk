@@ -32,6 +32,34 @@ namespace Oci.StackmonitoringService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAlarmConditionRequest, GetAlarmConditionResponse> ForAlarmCondition(GetAlarmConditionRequest request, params AlarmConditionLifeCycleStates[] targetStates)
+        {
+            return this.ForAlarmCondition(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAlarmConditionRequest, GetAlarmConditionResponse> ForAlarmCondition(GetAlarmConditionRequest request, WaiterConfiguration config, params AlarmConditionLifeCycleStates[] targetStates)
+        {
+            var agent = new WaiterAgent<GetAlarmConditionRequest, GetAlarmConditionResponse>(
+                request,
+                request => client.GetAlarmCondition(request),
+                response => targetStates.Contains(response.AlarmCondition.LifecycleState.Value),
+                targetStates.Contains(AlarmConditionLifeCycleStates.Deleted)
+            );
+            return new Waiter<GetAlarmConditionRequest, GetAlarmConditionResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetBaselineableMetricRequest, GetBaselineableMetricResponse> ForBaselineableMetric(GetBaselineableMetricRequest request, params BaselineableMetricLifeCycleStates[] targetStates)
         {
             return this.ForBaselineableMetric(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -248,6 +276,34 @@ namespace Oci.StackmonitoringService
                 targetStates.Contains(ResourceTypeLifecycleState.Deleted)
             );
             return new Waiter<GetMonitoredResourceTypeRequest, GetMonitoredResourceTypeResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMonitoringTemplateRequest, GetMonitoringTemplateResponse> ForMonitoringTemplate(GetMonitoringTemplateRequest request, params MonitoringTemplateLifeCycleStates[] targetStates)
+        {
+            return this.ForMonitoringTemplate(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMonitoringTemplateRequest, GetMonitoringTemplateResponse> ForMonitoringTemplate(GetMonitoringTemplateRequest request, WaiterConfiguration config, params MonitoringTemplateLifeCycleStates[] targetStates)
+        {
+            var agent = new WaiterAgent<GetMonitoringTemplateRequest, GetMonitoringTemplateResponse>(
+                request,
+                request => client.GetMonitoringTemplate(request),
+                response => targetStates.Contains(response.MonitoringTemplate.LifecycleState.Value),
+                targetStates.Contains(MonitoringTemplateLifeCycleStates.Deleted)
+            );
+            return new Waiter<GetMonitoringTemplateRequest, GetMonitoringTemplateResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

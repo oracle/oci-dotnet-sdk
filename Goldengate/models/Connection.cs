@@ -248,9 +248,6 @@ namespace Oci.GoldengateService.Models
                 case "POSTGRESQL":
                     obj = new PostgresqlConnection();
                     break;
-                case "JAVA_MESSAGE_SERVICE":
-                    obj = new JavaMessageServiceConnection();
-                    break;
                 case "DB2":
                     obj = new Db2Connection();
                     break;
@@ -259,6 +256,36 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "AMAZON_REDSHIFT":
                     obj = new AmazonRedshiftConnection();
+                    break;
+                case "AMAZON_S3":
+                    obj = new AmazonS3Connection();
+                    break;
+                case "MONGODB":
+                    obj = new MongoDbConnection();
+                    break;
+                case "HDFS":
+                    obj = new HdfsConnection();
+                    break;
+                case "OCI_OBJECT_STORAGE":
+                    obj = new OciObjectStorageConnection();
+                    break;
+                case "MICROSOFT_SQLSERVER":
+                    obj = new MicrosoftSqlserverConnection();
+                    break;
+                case "GENERIC":
+                    obj = new GenericConnection();
+                    break;
+                case "AZURE_SYNAPSE_ANALYTICS":
+                    obj = new AzureSynapseConnection();
+                    break;
+                case "MICROSOFT_FABRIC":
+                    obj = new MicrosoftFabricConnection();
+                    break;
+                case "DATABRICKS":
+                    obj = new DatabricksConnection();
+                    break;
+                case "JAVA_MESSAGE_SERVICE":
+                    obj = new JavaMessageServiceConnection();
                     break;
                 case "SNOWFLAKE":
                     obj = new SnowflakeConnection();
@@ -269,9 +296,6 @@ namespace Oci.GoldengateService.Models
                 case "MYSQL":
                     obj = new MysqlConnection();
                     break;
-                case "AMAZON_S3":
-                    obj = new AmazonS3Connection();
-                    break;
                 case "GOOGLE_BIGQUERY":
                     obj = new GoogleBigQueryConnection();
                     break;
@@ -281,38 +305,23 @@ namespace Oci.GoldengateService.Models
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new AzureDataLakeStorageConnection();
                     break;
-                case "MONGODB":
-                    obj = new MongoDbConnection();
-                    break;
-                case "HDFS":
-                    obj = new HdfsConnection();
-                    break;
                 case "GOOGLE_CLOUD_STORAGE":
                     obj = new GoogleCloudStorageConnection();
-                    break;
-                case "OCI_OBJECT_STORAGE":
-                    obj = new OciObjectStorageConnection();
                     break;
                 case "KAFKA_SCHEMA_REGISTRY":
                     obj = new KafkaSchemaRegistryConnection();
                     break;
-                case "MICROSOFT_SQLSERVER":
-                    obj = new MicrosoftSqlserverConnection();
-                    break;
                 case "AMAZON_KINESIS":
                     obj = new AmazonKinesisConnection();
-                    break;
-                case "GENERIC":
-                    obj = new GenericConnection();
                     break;
                 case "ORACLE_NOSQL":
                     obj = new OracleNosqlConnection();
                     break;
-                case "AZURE_SYNAPSE_ANALYTICS":
-                    obj = new AzureSynapseConnection();
-                    break;
                 case "REDIS":
                     obj = new RedisConnection();
+                    break;
+                case "GOOGLE_PUBSUB":
+                    obj = new GooglePubSubConnection();
                     break;
             }
             if (obj != null)

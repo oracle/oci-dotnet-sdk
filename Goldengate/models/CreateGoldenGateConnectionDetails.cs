@@ -63,6 +63,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The password used to connect to the Oracle GoldenGate accessed trough this connection.
+        /// Deprecated: This field is deprecated and replaced by \"passwordSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "password")]

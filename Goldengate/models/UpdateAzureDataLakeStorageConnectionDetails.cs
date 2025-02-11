@@ -40,6 +40,7 @@ namespace Oci.GoldengateService.Models
         /// <value>
         /// Azure storage account key. This property is required when 'authenticationType' is set to 'SHARED_KEY'.
         /// e.g.: pa3WbhVATzj56xD4DH1VjOUhApRGEGHvOo58eQJVWIzX+j8j4CUVFcTjpIqDSRaSa1Wo2LbWY5at+AStEgLOIQ==
+        /// Deprecated: This field is deprecated and replaced by \"accountKeySecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "accountKey")]
@@ -57,6 +58,7 @@ namespace Oci.GoldengateService.Models
         /// Credential that uses a shared access signature (SAS) to authenticate to an Azure Service. This property is
         /// required when 'authenticationType' is set to 'SHARED_ACCESS_SIGNATURE'.
         /// e.g.: ?sv=2020-06-08&ss=bfqt&srt=sco&sp=rwdlacupyx&se=2020-09-10T20:27:28Z&st=2022-08-05T12:27:28Z&spr=https&sig=C1IgHsiLBmTSStYkXXGLTP8it0xBrArcgCqOsZbXwIQ%3D
+        /// Deprecated: This field is deprecated and replaced by \"sasTokenSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sasToken")]
@@ -89,6 +91,7 @@ namespace Oci.GoldengateService.Models
         /// <value>
         /// Azure client secret (aka application password) for authentication. This property is required when 'authenticationType' is set to 'AZURE_ACTIVE_DIRECTORY'.
         /// e.g.: dO29Q~F5-VwnA.lZdd11xFF_t5NAXCaGwDl9NbT1
+        /// Deprecated: This field is deprecated and replaced by \"clientSecretSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "clientSecret")]

@@ -25,10 +25,6 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The time to restore the database to.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Timestamp is required.")]
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
         

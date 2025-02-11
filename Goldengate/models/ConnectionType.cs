@@ -67,6 +67,12 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "GOOGLE_CLOUD_STORAGE")]
       GoogleCloudStorage,
       [EnumMember(Value = "GOOGLE_BIGQUERY")]
-      GoogleBigquery
+      GoogleBigquery,
+      [EnumMember(Value = "DATABRICKS")]
+      Databricks,
+      [EnumMember(Value = "GOOGLE_PUBSUB")]
+      GooglePubsub,
+      [EnumMember(Value = "MICROSOFT_FABRIC")]
+      MicrosoftFabric
   }
 }

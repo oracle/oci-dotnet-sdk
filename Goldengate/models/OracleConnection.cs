@@ -39,7 +39,17 @@ namespace Oci.GoldengateService.Models
             [EnumMember(Value = "ORACLE_EXADATA")]
             OracleExadata,
             [EnumMember(Value = "ORACLE_EXADATA_DATABASE_AT_AZURE")]
-            OracleExadataDatabaseAtAzure
+            OracleExadataDatabaseAtAzure,
+            [EnumMember(Value = "ORACLE_AUTONOMOUS_DATABASE_AT_AZURE")]
+            OracleAutonomousDatabaseAtAzure,
+            [EnumMember(Value = "ORACLE_EXADATA_DATABASE_AT_GOOGLE_CLOUD")]
+            OracleExadataDatabaseAtGoogleCloud,
+            [EnumMember(Value = "ORACLE_AUTONOMOUS_DATABASE_AT_GOOGLE_CLOUD")]
+            OracleAutonomousDatabaseAtGoogleCloud,
+            [EnumMember(Value = "ORACLE_EXADATA_DATABASE_AT_AWS")]
+            OracleExadataDatabaseAtAws,
+            [EnumMember(Value = "ORACLE_AUTONOMOUS_DATABASE_AT_AWS")]
+            OracleAutonomousDatabaseAtAws
         };
 
         /// <value>

@@ -1282,5 +1282,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "clusterPlacementGroupId")]
         public string ClusterPlacementGroupId { get; set; }
         
+        /// <value>
+        /// A list of the source Autonomous Database's table space number(s) used to create this partial clone from the backup.
+        /// </value>
+        [JsonProperty(PropertyName = "cloneTableSpaceList")]
+        public System.Collections.Generic.List<int> CloneTableSpaceList { get; set; }
+        
     }
 }

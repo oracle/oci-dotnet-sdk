@@ -158,6 +158,14 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
+        
+        /// <value>
+        /// The IPv6 address from the provided OCI subnet which needs to be assigned to the VNIC. If not provided, it will
+        /// be auto-assigned with an available IPv6 address from the subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateIpV6")]
+        public string PrivateIpV6 { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to all the databases on the dataguard standby DB system. The default is LICENSE_INCLUDED. Bring your own license (BYOL) allows you to select the DB edition using the optional parameter, for Autonomous Database Serverless.

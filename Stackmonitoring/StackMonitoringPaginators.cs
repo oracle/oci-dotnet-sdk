@@ -50,6 +50,55 @@ namespace Oci.StackmonitoringService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAlarmConditions operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAlarmConditionsResponse> ListAlarmConditionsResponseEnumerator(ListAlarmConditionsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAlarmConditionsRequest, ListAlarmConditionsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAlarmConditions(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AlarmConditionSummary objects
+        /// contained in responses from the ListAlarmConditions operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AlarmConditionSummary> ListAlarmConditionsRecordEnumerator(ListAlarmConditionsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAlarmConditionsRequest, ListAlarmConditionsResponse, AlarmConditionSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAlarmConditions(request, retryConfiguration, cancellationToken),
+                response => response.AlarmConditionCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListBaselineableMetrics operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -144,6 +193,55 @@ namespace Oci.StackmonitoringService
                 },
                 request => client.ListConfigs(request, retryConfiguration, cancellationToken),
                 response => response.ConfigCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListDefinedMonitoringTemplates operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListDefinedMonitoringTemplatesResponse> ListDefinedMonitoringTemplatesResponseEnumerator(ListDefinedMonitoringTemplatesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListDefinedMonitoringTemplatesRequest, ListDefinedMonitoringTemplatesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListDefinedMonitoringTemplates(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the DefinedMonitoringTemplateSummary objects
+        /// contained in responses from the ListDefinedMonitoringTemplates operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<DefinedMonitoringTemplateSummary> ListDefinedMonitoringTemplatesRecordEnumerator(ListDefinedMonitoringTemplatesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListDefinedMonitoringTemplatesRequest, ListDefinedMonitoringTemplatesResponse, DefinedMonitoringTemplateSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListDefinedMonitoringTemplates(request, retryConfiguration, cancellationToken),
+                response => response.DefinedMonitoringTemplateCollection.Items
             );
         }
 
@@ -487,6 +585,55 @@ namespace Oci.StackmonitoringService
                 },
                 request => client.ListMonitoredResources(request, retryConfiguration, cancellationToken),
                 response => response.MonitoredResourceCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListMonitoringTemplates operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListMonitoringTemplatesResponse> ListMonitoringTemplatesResponseEnumerator(ListMonitoringTemplatesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListMonitoringTemplatesRequest, ListMonitoringTemplatesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMonitoringTemplates(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the MonitoringTemplateSummary objects
+        /// contained in responses from the ListMonitoringTemplates operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<MonitoringTemplateSummary> ListMonitoringTemplatesRecordEnumerator(ListMonitoringTemplatesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListMonitoringTemplatesRequest, ListMonitoringTemplatesResponse, MonitoringTemplateSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMonitoringTemplates(request, retryConfiguration, cancellationToken),
+                response => response.MonitoringTemplateCollection.Items
             );
         }
 

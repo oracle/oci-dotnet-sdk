@@ -167,7 +167,7 @@ namespace Oci.StackmonitoringService.Models
         public MetricExtensionQueryProperties QueryProperties { get; set; }
         
         /// <value>
-        /// List of resource objects on which this metric extension is enabled.
+        /// List of resource details objects having resourceIds on which this metric extension is enabled.
         /// </value>
         [JsonProperty(PropertyName = "enabledOnResources")]
         public System.Collections.Generic.List<EnabledResourceDetails> EnabledOnResources { get; set; }

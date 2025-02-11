@@ -74,6 +74,15 @@ namespace Oci.StackmonitoringService.Models
         [JsonProperty(PropertyName = "validPropertyValues")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> ValidPropertyValues { get; set; }
         
+        /// <value>
+        /// List of valid sub-resource types for a composite resource type.
+        /// The sub-resource types will be obtained from the valid association pairs corresponding to the composite resource types.
+        /// It will be empty for non composite resource types
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "validSubResourceTypes")]
+        public System.Collections.Generic.List<string> ValidSubResourceTypes { get; set; }
+        
         [JsonProperty(PropertyName = "format")]
         private readonly string format = "SYSTEM_FORMAT";
     }

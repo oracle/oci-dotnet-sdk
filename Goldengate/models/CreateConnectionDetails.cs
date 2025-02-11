@@ -156,20 +156,44 @@ namespace Oci.GoldengateService.Models
                 case "MICROSOFT_SQLSERVER":
                     obj = new CreateMicrosoftSqlserverConnectionDetails();
                     break;
+                case "AMAZON_KINESIS":
+                    obj = new CreateAmazonKinesisConnectionDetails();
+                    break;
+                case "AZURE_DATA_LAKE_STORAGE":
+                    obj = new CreateAzureDataLakeStorageConnectionDetails();
+                    break;
+                case "GOOGLE_PUBSUB":
+                    obj = new CreateGooglePubSubConnectionDetails();
+                    break;
+                case "HDFS":
+                    obj = new CreateHdfsConnectionDetails();
+                    break;
+                case "OCI_OBJECT_STORAGE":
+                    obj = new CreateOciObjectStorageConnectionDetails();
+                    break;
+                case "REDIS":
+                    obj = new CreateRedisConnectionDetails();
+                    break;
+                case "MICROSOFT_FABRIC":
+                    obj = new CreateMicrosoftFabricConnectionDetails();
+                    break;
+                case "GOOGLE_CLOUD_STORAGE":
+                    obj = new CreateGoogleCloudStorageConnectionDetails();
+                    break;
+                case "KAFKA":
+                    obj = new CreateKafkaConnectionDetails();
+                    break;
+                case "ORACLE_NOSQL":
+                    obj = new CreateOracleNosqlConnectionDetails();
+                    break;
                 case "JAVA_MESSAGE_SERVICE":
                     obj = new CreateJavaMessageServiceConnectionDetails();
                     break;
                 case "GOOGLE_BIGQUERY":
                     obj = new CreateGoogleBigQueryConnectionDetails();
                     break;
-                case "AMAZON_KINESIS":
-                    obj = new CreateAmazonKinesisConnectionDetails();
-                    break;
                 case "SNOWFLAKE":
                     obj = new CreateSnowflakeConnectionDetails();
-                    break;
-                case "AZURE_DATA_LAKE_STORAGE":
-                    obj = new CreateAzureDataLakeStorageConnectionDetails();
                     break;
                 case "MONGODB":
                     obj = new CreateMongoDbConnectionDetails();
@@ -177,11 +201,8 @@ namespace Oci.GoldengateService.Models
                 case "AMAZON_S3":
                     obj = new CreateAmazonS3ConnectionDetails();
                     break;
-                case "HDFS":
-                    obj = new CreateHdfsConnectionDetails();
-                    break;
-                case "OCI_OBJECT_STORAGE":
-                    obj = new CreateOciObjectStorageConnectionDetails();
+                case "DATABRICKS":
+                    obj = new CreateDatabricksConnectionDetails();
                     break;
                 case "DB2":
                     obj = new CreateDb2ConnectionDetails();
@@ -192,20 +213,11 @@ namespace Oci.GoldengateService.Models
                 case "AZURE_SYNAPSE_ANALYTICS":
                     obj = new CreateAzureSynapseConnectionDetails();
                     break;
-                case "REDIS":
-                    obj = new CreateRedisConnectionDetails();
-                    break;
                 case "MYSQL":
                     obj = new CreateMysqlConnectionDetails();
                     break;
                 case "GENERIC":
                     obj = new CreateGenericConnectionDetails();
-                    break;
-                case "GOOGLE_CLOUD_STORAGE":
-                    obj = new CreateGoogleCloudStorageConnectionDetails();
-                    break;
-                case "KAFKA":
-                    obj = new CreateKafkaConnectionDetails();
                     break;
                 case "ORACLE":
                     obj = new CreateOracleConnectionDetails();
@@ -215,9 +227,6 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "AMAZON_REDSHIFT":
                     obj = new CreateAmazonRedshiftConnectionDetails();
-                    break;
-                case "ORACLE_NOSQL":
-                    obj = new CreateOracleNosqlConnectionDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

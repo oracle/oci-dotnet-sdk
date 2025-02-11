@@ -74,6 +74,7 @@ namespace Oci.GoldengateService.Models
         /// <value>
         /// The password Oracle GoldenGate uses to connect the associated system of the given technology.
         /// It must conform to the specific security requirements including length, case sensitivity, and so on.
+        /// Deprecated: This field is deprecated and replaced by \"passwordSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "password")]
@@ -140,6 +141,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The base64 encoded private key of the PostgreSQL server. The supported file formats are .pem and .crt.
+        /// Deprecated: This field is deprecated and replaced by \"sslKeySecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sslKey")]

@@ -109,7 +109,7 @@ namespace Oci.AispeechService.Models
         
         /// <value>
         /// If set to true, the service will not fail connection attempt if it encounters any issues that prevent the loading of all specified user customizations. Any invalid customizations will simply be ignored and connection will continue being established with the default base model and any remaining valid customizations.
-        /// If set to false,  if the service is unable to load any of the specified customizations, an error detailing why will be returned and the session will end.
+        /// If set to false, if the service is unable to load any of the specified customizations, an error detailing why will be returned and the session will end.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "shouldIgnoreInvalidCustomizations")]
@@ -120,6 +120,34 @@ namespace Oci.AispeechService.Models
         /// </value>
         [JsonProperty(PropertyName = "customizations")]
         public System.Collections.Generic.List<CustomizationInference> Customizations { get; set; }
+                ///
+        /// <value>
+        /// Configure punctuations in the generated transcriptions. Disabled by default.
+        /// - NONE: No punctuation in the transcription response
+        /// - SPOKEN: Punctuations in response only when verbally spoken
+        /// - AUTO: Automatic punctuation in the response, spoken punctuations are disabled
+        /// 
+        /// </value>
+        ///
+        public enum PunctuationEnum {
+            [EnumMember(Value = "NONE")]
+            None,
+            [EnumMember(Value = "SPOKEN")]
+            Spoken,
+            [EnumMember(Value = "AUTO")]
+            Auto
+        };
+
+        /// <value>
+        /// Configure punctuations in the generated transcriptions. Disabled by default.
+        /// - NONE: No punctuation in the transcription response
+        /// - SPOKEN: Punctuations in response only when verbally spoken
+        /// - AUTO: Automatic punctuation in the response, spoken punctuations are disabled
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "punctuation")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<PunctuationEnum> Punctuation { get; set; }
         
     }
 }
