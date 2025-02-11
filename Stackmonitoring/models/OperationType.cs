@@ -39,6 +39,10 @@ namespace Oci.StackmonitoringService.Models
       DisableMetricExtension,
       [EnumMember(Value = "TEST_METRIC_EXTENSION")]
       TestMetricExtension,
+      [EnumMember(Value = "APPLY_MONITORING_TEMPLATE")]
+      ApplyMonitoringTemplate,
+      [EnumMember(Value = "UNAPPLY_MONITORING_TEMPLATE")]
+      UnapplyMonitoringTemplate,
       [EnumMember(Value = "BULK_ADD_RESOURCES")]
       BulkAddResources,
       [EnumMember(Value = "BULK_DELETE_RESOURCES")]

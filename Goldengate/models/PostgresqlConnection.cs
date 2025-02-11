@@ -43,7 +43,9 @@ namespace Oci.GoldengateService.Models
             [EnumMember(Value = "AZURE_COSMOS_DB_FOR_POSTGRESQL")]
             AzureCosmosDbForPostgresql,
             [EnumMember(Value = "GOOGLE_CLOUD_SQL_POSTGRESQL")]
-            GoogleCloudSqlPostgresql
+            GoogleCloudSqlPostgresql,
+            [EnumMember(Value = "GOOGLE_ALLOY_DB_FOR_POSTGRESQL")]
+            GoogleAlloyDbForPostgresql
         };
 
         /// <value>

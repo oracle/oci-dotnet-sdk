@@ -372,6 +372,21 @@ namespace Oci.DatabaseService.Models
         public AutonomousContainerDatabaseBackupConfig BackupConfig { get; set; }
         
         /// <value>
+        /// This list describes the backup destination properties associated with the Autonomous Container Database (ACD) 's preferred backup destination. The object at a given index is associated with the destination present at the same index in the backup destination details list of the ACD Backup Configuration.
+        /// </value>
+        [JsonProperty(PropertyName = "backupDestinationPropertiesList")]
+        public System.Collections.Generic.List<BackupDestinationProperties> BackupDestinationPropertiesList { get; set; }
+        
+        /// <value>
+        /// A backup config object holds information about preferred backup destinations only. This object holds information about the associated backup destinations, such as secondary backup destinations created for local backups or remote replicated backups.
+        /// </value>
+        [JsonProperty(PropertyName = "associatedBackupConfigurationDetails")]
+        public System.Collections.Generic.List<BackupDestinationConfigurationSummary> AssociatedBackupConfigurationDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "recoveryApplianceDetails")]
+        public RecoveryApplianceDetails RecoveryApplianceDetails { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the key store of Oracle Vault.
         /// </value>
         [JsonProperty(PropertyName = "keyStoreId")]

@@ -100,6 +100,12 @@ namespace Oci.StackmonitoringService.Models
         public ResourceTypeMetadataDetails Metadata { get; set; }
         
         /// <value>
+        /// Key/Value pair for additional namespaces used by stack monitoring services for SYSTEM (SMB) resource types.
+        /// </value>
+        [JsonProperty(PropertyName = "additionalNamespaceMap")]
+        public System.Collections.Generic.Dictionary<string, string> AdditionalNamespaceMap { get; set; }
+        
+        /// <value>
         /// The date and time when the monitored resource type was created, expressed in 
         /// [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// 

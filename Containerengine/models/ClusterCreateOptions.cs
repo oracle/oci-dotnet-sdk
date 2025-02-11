@@ -26,6 +26,23 @@ namespace Oci.ContainerengineService.Models
         /// </value>
         [JsonProperty(PropertyName = "serviceLbSubnetIds")]
         public System.Collections.Generic.List<string> ServiceLbSubnetIds { get; set; }
+                ///
+        ///
+        public enum IpFamiliesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "IPv4")]
+            IPv4,
+            [EnumMember(Value = "IPv6")]
+            IPv6
+        };
+
+        /// <value>
+        /// IP family to use for single stack or define the order of IP families for dual-stack
+        /// </value>
+        [JsonProperty(PropertyName = "ipFamilies", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<IpFamiliesEnum> IpFamilies { get; set; }
         
         /// <value>
         /// Network configuration for Kubernetes.

@@ -23,6 +23,8 @@ namespace Oci.StackmonitoringService.Models
       [EnumMember(Value = "STANDARD_EDITION")]
       StandardEdition,
       [EnumMember(Value = "ENTERPRISE_EDITION")]
-      EnterpriseEdition
+      EnterpriseEdition,
+      [EnumMember(Value = "ENTERPRISE_EDITION_FOR_GPU_INFRASTRUCTURE")]
+      EnterpriseEditionForGpuInfrastructure
   }
 }

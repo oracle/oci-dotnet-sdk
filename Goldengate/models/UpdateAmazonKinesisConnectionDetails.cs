@@ -31,6 +31,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// Secret access key to access the Amazon Kinesis.
+        /// Deprecated: This field is deprecated and replaced by \"secretAccessKeySecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "secretAccessKey")]

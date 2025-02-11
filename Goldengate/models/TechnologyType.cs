@@ -44,6 +44,18 @@ namespace Oci.GoldengateService.Models
       OracleExadata,
       [EnumMember(Value = "ORACLE_EXADATA_DATABASE_AT_AZURE")]
       OracleExadataDatabaseAtAzure,
+      [EnumMember(Value = "ORACLE_AUTONOMOUS_DATABASE_AT_AZURE")]
+      OracleAutonomousDatabaseAtAzure,
+      [EnumMember(Value = "ORACLE_JSON_COLLECTION")]
+      OracleJsonCollection,
+      [EnumMember(Value = "ORACLE_EXADATA_DATABASE_AT_GOOGLE_CLOUD")]
+      OracleExadataDatabaseAtGoogleCloud,
+      [EnumMember(Value = "ORACLE_AUTONOMOUS_DATABASE_AT_GOOGLE_CLOUD")]
+      OracleAutonomousDatabaseAtGoogleCloud,
+      [EnumMember(Value = "ORACLE_EXADATA_DATABASE_AT_AWS")]
+      OracleExadataDatabaseAtAws,
+      [EnumMember(Value = "ORACLE_AUTONOMOUS_DATABASE_AT_AWS")]
+      OracleAutonomousDatabaseAtAws,
       [EnumMember(Value = "ORACLE_NOSQL")]
       OracleNosql,
       [EnumMember(Value = "ORACLE_WEBLOGIC_JMS")]
@@ -58,6 +70,8 @@ namespace Oci.GoldengateService.Models
       AmazonAuroraMysql,
       [EnumMember(Value = "AMAZON_AURORA_POSTGRESQL")]
       AmazonAuroraPostgresql,
+      [EnumMember(Value = "AMAZON_DOCUMENT_DB")]
+      AmazonDocumentDb,
       [EnumMember(Value = "AMAZON_KINESIS")]
       AmazonKinesis,
       [EnumMember(Value = "AMAZON_REDSHIFT")]
@@ -92,10 +106,14 @@ namespace Oci.GoldengateService.Models
       ConfluentKafka,
       [EnumMember(Value = "CONFLUENT_SCHEMA_REGISTRY")]
       ConfluentSchemaRegistry,
+      [EnumMember(Value = "DATABRICKS")]
+      Databricks,
       [EnumMember(Value = "DB2_ZOS")]
       Db2Zos,
       [EnumMember(Value = "ELASTICSEARCH")]
       Elasticsearch,
+      [EnumMember(Value = "GOOGLE_ALLOY_DB_FOR_POSTGRESQL")]
+      GoogleAlloyDbForPostgresql,
       [EnumMember(Value = "GOOGLE_BIGQUERY")]
       GoogleBigquery,
       [EnumMember(Value = "GOOGLE_CLOUD_STORAGE")]
@@ -106,12 +124,18 @@ namespace Oci.GoldengateService.Models
       GoogleCloudSqlPostgresql,
       [EnumMember(Value = "GOOGLE_CLOUD_SQL_SQLSERVER")]
       GoogleCloudSqlSqlserver,
+      [EnumMember(Value = "GOOGLE_PUBSUB")]
+      GooglePubsub,
       [EnumMember(Value = "HDFS")]
       Hdfs,
       [EnumMember(Value = "MARIADB")]
       Mariadb,
       [EnumMember(Value = "MICROSOFT_SQLSERVER")]
       MicrosoftSqlserver,
+      [EnumMember(Value = "MICROSOFT_FABRIC_LAKEHOUSE")]
+      MicrosoftFabricLakehouse,
+      [EnumMember(Value = "MICROSOFT_FABRIC_MIRROR")]
+      MicrosoftFabricMirror,
       [EnumMember(Value = "MONGODB")]
       Mongodb,
       [EnumMember(Value = "MYSQL_SERVER")]

@@ -57,12 +57,36 @@ namespace Oci.GoldengateService.Models
         public string DatabaseId { get; set; }
         
         /// <value>
+        /// Security Type for MongoDB.
+        /// </value>
+        [JsonProperty(PropertyName = "securityProtocol")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<MongoDbConnection.SecurityProtocolEnum> SecurityProtocol { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the password Oracle GoldenGate uses to connect the associated database.
         /// Note: When provided, 'password' field must not be provided.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "passwordSecretId")]
         public string PasswordSecretId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the certificate key file of the mtls connection.
+        /// - The content of a .pem file containing the client private key (for 2-way SSL).
+        /// Note: When provided, 'tlsCertificateKeyFile' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tlsCertificateKeyFileSecretId")]
+        public string TlsCertificateKeyFileSecretId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the password of the tls certificate key file.
+        /// Note: When provided, 'tlsCertificateKeyFilePassword' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tlsCertificateKeyFilePasswordSecretId")]
+        public string TlsCertificateKeyFilePasswordSecretId { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "MONGODB";

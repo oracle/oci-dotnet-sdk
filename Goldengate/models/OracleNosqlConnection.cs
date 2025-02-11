@@ -54,6 +54,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The name of the region. e.g.: us-ashburn-1
+        /// If the region is not provided, backend will default to the default region.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "region")]
@@ -62,6 +63,7 @@ namespace Oci.GoldengateService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the OCI user who will access the Oracle NoSQL database.
         /// The user must have write access to the table they want to connect to.
+        /// If the user is not provided, backend will default to the user who is calling the API endpoint.
         /// 
         /// </value>
         /// <remarks>
@@ -87,6 +89,13 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateKeyPassphraseSecretId")]
         public string PrivateKeyPassphraseSecretId { get; set; }
+        
+        /// <value>
+        /// Indicates that the user intents to connect to the instance through resource principal.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shouldUseResourcePrincipal")]
+        public System.Nullable<bool> ShouldUseResourcePrincipal { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "ORACLE_NOSQL";

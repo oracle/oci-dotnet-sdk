@@ -150,6 +150,27 @@ namespace Oci.GoldengateService.Models
                 case "GOOGLE_CLOUD_STORAGE":
                     obj = new UpdateGoogleCloudStorageConnectionDetails();
                     break;
+                case "MICROSOFT_FABRIC":
+                    obj = new UpdateMicrosoftFabricConnectionDetails();
+                    break;
+                case "POSTGRESQL":
+                    obj = new UpdatePostgresqlConnectionDetails();
+                    break;
+                case "MICROSOFT_SQLSERVER":
+                    obj = new UpdateMicrosoftSqlserverConnectionDetails();
+                    break;
+                case "SNOWFLAKE":
+                    obj = new UpdateSnowflakeConnectionDetails();
+                    break;
+                case "HDFS":
+                    obj = new UpdateHdfsConnectionDetails();
+                    break;
+                case "DATABRICKS":
+                    obj = new UpdateDatabricksConnectionDetails();
+                    break;
+                case "KAFKA":
+                    obj = new UpdateKafkaConnectionDetails();
+                    break;
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new UpdateAzureDataLakeStorageConnectionDetails();
                     break;
@@ -162,11 +183,8 @@ namespace Oci.GoldengateService.Models
                 case "GOLDENGATE":
                     obj = new UpdateGoldenGateConnectionDetails();
                     break;
-                case "POSTGRESQL":
-                    obj = new UpdatePostgresqlConnectionDetails();
-                    break;
-                case "MICROSOFT_SQLSERVER":
-                    obj = new UpdateMicrosoftSqlserverConnectionDetails();
+                case "GOOGLE_PUBSUB":
+                    obj = new UpdateGooglePubSubConnectionDetails();
                     break;
                 case "ORACLE_NOSQL":
                     obj = new UpdateOracleNosqlConnectionDetails();
@@ -177,17 +195,8 @@ namespace Oci.GoldengateService.Models
                 case "AMAZON_S3":
                     obj = new UpdateAmazonS3ConnectionDetails();
                     break;
-                case "SNOWFLAKE":
-                    obj = new UpdateSnowflakeConnectionDetails();
-                    break;
-                case "HDFS":
-                    obj = new UpdateHdfsConnectionDetails();
-                    break;
                 case "MYSQL":
                     obj = new UpdateMysqlConnectionDetails();
-                    break;
-                case "KAFKA":
-                    obj = new UpdateKafkaConnectionDetails();
                     break;
                 case "DB2":
                     obj = new UpdateDb2ConnectionDetails();

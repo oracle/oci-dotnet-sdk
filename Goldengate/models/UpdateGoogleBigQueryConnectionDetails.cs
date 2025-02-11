@@ -25,6 +25,7 @@ namespace Oci.GoldengateService.Models
         /// <value>
         /// The base64 encoded content of the service account key file containing
         /// the credentials required to use Google BigQuery.
+        /// Deprecated: This field is deprecated and replaced by \"serviceAccountKeyFileSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "serviceAccountKeyFile")]

@@ -53,6 +53,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The password Oracle GoldenGate uses to connect the associated Microsoft SQL Server.
+        /// Deprecated: This field is deprecated and replaced by \"passwordSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "password")]

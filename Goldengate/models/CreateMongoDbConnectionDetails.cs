@@ -51,6 +51,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The password Oracle GoldenGate uses to connect the associated database.
+        /// Deprecated: This field is deprecated and replaced by \"passwordSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "password")]
@@ -70,6 +71,53 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "databaseId")]
         public string DatabaseId { get; set; }
+        
+        /// <value>
+        /// Security Type for MongoDB.
+        /// </value>
+        [JsonProperty(PropertyName = "securityProtocol")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<MongoDbConnection.SecurityProtocolEnum> SecurityProtocol { get; set; }
+        
+        /// <value>
+        /// Database Certificate - The base64 encoded content of a .pem file, containing the server public key (for 1 and 2-way SSL).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tlsCaFile")]
+        public string TlsCaFile { get; set; }
+        
+        /// <value>
+        /// Client Certificate - The base64 encoded content of a .pem file, containing the client public key (for 2-way SSL).
+        /// Deprecated: This field is deprecated and replaced by \"tlsCertificateKeyFileSecretId\". This field will be removed after February 15 2026.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tlsCertificateKeyFile")]
+        public string TlsCertificateKeyFile { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the certificate key file of the mtls connection.
+        /// - The content of a .pem file containing the client private key (for 2-way SSL).
+        /// Note: When provided, 'tlsCertificateKeyFile' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tlsCertificateKeyFileSecretId")]
+        public string TlsCertificateKeyFileSecretId { get; set; }
+        
+        /// <value>
+        /// Client Certificate key file password.
+        /// Deprecated: This field is deprecated and replaced by \"tlsCertificateKeyFilePasswordSecretId\". This field will be removed after February 15 2026.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tlsCertificateKeyFilePassword")]
+        public string TlsCertificateKeyFilePassword { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the password of the tls certificate key file.
+        /// Note: When provided, 'tlsCertificateKeyFilePassword' field must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tlsCertificateKeyFilePasswordSecretId")]
+        public string TlsCertificateKeyFilePasswordSecretId { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "MONGODB";
