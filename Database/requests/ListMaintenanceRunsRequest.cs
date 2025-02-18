@@ -59,6 +59,12 @@ namespace Oci.DatabaseService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
         
+        /// <value>
+        /// A filter to return the maintenance history results for the local standby Autonomous Database Serverless only.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLocalAdg")]
+        public System.Nullable<bool> IsLocalAdg { get; set; }
+        
         ///
         /// <value>
         /// The field to sort by.  You can provide one sort order (`sortOrder`).  Default order for TIME_SCHEDULED and TIME_ENDED is descending. Default order for DISPLAYNAME is ascending. The DISPLAYNAME sort order is case sensitive.

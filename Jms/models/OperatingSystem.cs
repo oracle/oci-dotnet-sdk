@@ -44,6 +44,12 @@ namespace Oci.JmsService.Models
         public string Name { get; set; }
         
         /// <value>
+        /// The name of the Operating System distribution, such as Oracle Linux 9, Windows 10, or macOS X.
+        /// </value>
+        [JsonProperty(PropertyName = "distribution")]
+        public string Distribution { get; set; }
+        
+        /// <value>
         /// The version of the operating system as provided by the Java system property os.version.
         /// </value>
         /// <remarks>

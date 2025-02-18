@@ -16,30 +16,31 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Attributes to generate agent installer parameters for a fleet.
+    /// Aggregation of PluginErrors
     /// </summary>
-    public class GenerateAgentInstallerConfigurationDetails 
+    public class PluginErrorAggregation 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the management agent install key for which to generate the configuration file.
+        /// Enum that uniquely identifies the plugin error.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "InstallKeyId is required.")]
-        [JsonProperty(PropertyName = "installKeyId")]
-        public string InstallKeyId { get; set; }
+        [Required(ErrorMessage = "Reason is required.")]
+        [JsonProperty(PropertyName = "reason")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<PluginErrorReason> Reason { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the fleet for which to generate the configuration file.
+        /// Number of FleetErrors encountered for the specific reason.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "FleetId is required.")]
-        [JsonProperty(PropertyName = "fleetId")]
-        public string FleetId { get; set; }
+        [Required(ErrorMessage = "Count is required.")]
+        [JsonProperty(PropertyName = "count")]
+        public System.Nullable<int> Count { get; set; }
         
     }
 }

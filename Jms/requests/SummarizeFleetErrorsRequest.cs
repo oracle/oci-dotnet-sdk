@@ -14,9 +14,9 @@ using Oci.JmsService.Models;
 namespace Oci.JmsService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/jms/SummarizeResourceInventory.cs.html">here</a> to see an example of how to use SummarizeResourceInventory request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/jms/SummarizeFleetErrors.cs.html">here</a> to see an example of how to use SummarizeFleetErrors request.
     /// </example>
-    public class SummarizeResourceInventoryRequest : Oci.Common.IOciRequest
+    public class SummarizeFleetErrorsRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
@@ -34,16 +34,16 @@ namespace Oci.JmsService.Requests
         public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
         
         /// <value>
-        /// The start of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// The maximum number of items to return.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeStart")]
-        public System.Nullable<System.DateTime> TimeStart { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
+        public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// The end of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+        /// The page token representing the page at which to start retrieving results. The token is usually retrieved from a previous list call.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeEnd")]
-        public System.Nullable<System.DateTime> TimeEnd { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
+        public string Page { get; set; }
         
         /// <value>
         /// The client request ID for tracing.

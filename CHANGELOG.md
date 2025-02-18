@@ -30,6 +30,13 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 103.2.0 - 2025-02-18
+### Added
+ - Support for Customer Onboarding Success(COS) in the Java Management service
+ - Support for filtering performance tuning analysis results in the Java Management service
+ - Support for improved plugin filtering in the Java Management service
+ - Support for operating system distribution information in the Java Management service
+
 ## 103.1.0 - 2025-02-11
 ### Added
  - Support for backups and recovery enhancements in autonomous databases in the Database service
