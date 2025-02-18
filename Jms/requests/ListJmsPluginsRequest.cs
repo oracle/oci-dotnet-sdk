@@ -64,6 +64,12 @@ namespace Oci.JmsService.Requests
         public System.Nullable<JmsPluginAvailabilityStatus> AvailabilityStatus { get; set; }
         
         /// <value>
+        /// Filter JmsPlugin with agent type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "agentType")]
+        public System.Nullable<AgentType> AgentType { get; set; }
+        
+        /// <value>
         /// If present, only plugins with a registration time before this parameter are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeRegisteredLessThanOrEqualTo")]

@@ -106,6 +106,24 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeDisasterRecoveryRoleChanged { get; set; }
         
         /// <value>
+        /// The date and time when maintenance will begin.
+        /// </value>
+        [JsonProperty(PropertyName = "timeMaintenanceBegin")]
+        public System.Nullable<System.DateTime> TimeMaintenanceBegin { get; set; }
+        
+        /// <value>
+        /// The date and time when maintenance will end.
+        /// </value>
+        [JsonProperty(PropertyName = "timeMaintenanceEnd")]
+        public System.Nullable<System.DateTime> TimeMaintenanceEnd { get; set; }
+        
+        /// <value>
+        /// The component chosen for maintenance.
+        /// </value>
+        [JsonProperty(PropertyName = "maintenanceTargetComponent")]
+        public string MaintenanceTargetComponent { get; set; }
+        
+        /// <value>
         /// The availability domain of a local Autonomous Data Guard standby database of an Autonomous Database Serverless instance.
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
