@@ -16,30 +16,30 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Attributes to generate agent installer parameters for a fleet.
+    /// High level view of plugin error aggregations.
     /// </summary>
-    public class GenerateAgentInstallerConfigurationDetails 
+    public class PluginErrorAggregationSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the management agent install key for which to generate the configuration file.
+        /// Count of plugins with no problems.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "InstallKeyId is required.")]
-        [JsonProperty(PropertyName = "installKeyId")]
-        public string InstallKeyId { get; set; }
+        [Required(ErrorMessage = "HealthyPluginCount is required.")]
+        [JsonProperty(PropertyName = "healthyPluginCount")]
+        public System.Nullable<int> HealthyPluginCount { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the fleet for which to generate the configuration file.
+        /// List of plugin aggregation errors.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "FleetId is required.")]
-        [JsonProperty(PropertyName = "fleetId")]
-        public string FleetId { get; set; }
+        [Required(ErrorMessage = "PluginErrorAggregations is required.")]
+        [JsonProperty(PropertyName = "pluginErrorAggregations")]
+        public System.Collections.Generic.List<PluginErrorAggregation> PluginErrorAggregations { get; set; }
         
     }
 }

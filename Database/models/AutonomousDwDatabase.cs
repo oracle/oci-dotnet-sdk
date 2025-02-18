@@ -754,6 +754,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeMaintenanceEnd { get; set; }
         
         /// <value>
+        /// The component chosen for maintenance.
+        /// </value>
+        [JsonProperty(PropertyName = "maintenanceTargetComponent")]
+        public string MaintenanceTargetComponent { get; set; }
+        
+        /// <value>
         /// Indicates if the Autonomous Database is a refreshable clone.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.

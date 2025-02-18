@@ -42,6 +42,12 @@ namespace Oci.JmsService.Requests
         public string ApplicationId { get; set; }
         
         /// <value>
+        /// The name of the application.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "applicationName")]
+        public string ApplicationName { get; set; }
+        
+        /// <value>
         /// The host [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the managed instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "hostName")]

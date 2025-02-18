@@ -16,30 +16,30 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// Attributes to generate agent installer parameters for a fleet.
+    /// High level view of fleet error aggregations.
     /// </summary>
-    public class GenerateAgentInstallerConfigurationDetails 
+    public class FleetErrorAggregationSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the management agent install key for which to generate the configuration file.
+        /// Count of fleets with no problems.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "InstallKeyId is required.")]
-        [JsonProperty(PropertyName = "installKeyId")]
-        public string InstallKeyId { get; set; }
+        [Required(ErrorMessage = "HealthyFleetCount is required.")]
+        [JsonProperty(PropertyName = "healthyFleetCount")]
+        public System.Nullable<int> HealthyFleetCount { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the fleet for which to generate the configuration file.
+        /// List of fleet error aggregations.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "FleetId is required.")]
-        [JsonProperty(PropertyName = "fleetId")]
-        public string FleetId { get; set; }
+        [Required(ErrorMessage = "FleetErrorAggregations is required.")]
+        [JsonProperty(PropertyName = "fleetErrorAggregations")]
+        public System.Collections.Generic.List<FleetErrorAggregation> FleetErrorAggregations { get; set; }
         
     }
 }
