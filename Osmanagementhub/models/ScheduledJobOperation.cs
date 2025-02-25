@@ -60,5 +60,13 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "softwareSourceIds")]
         public System.Collections.Generic.List<string> SoftwareSourceIds { get; set; }
         
+        /// <value>
+        /// The number of minutes the service waits for the reboot to complete. If the instance doesn't reboot within the 
+        /// timeout, the service marks the reboot job as failed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "rebootTimeoutInMins")]
+        public System.Nullable<int> RebootTimeoutInMins { get; set; }
+        
     }
 }

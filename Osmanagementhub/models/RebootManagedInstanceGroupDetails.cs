@@ -13,26 +13,24 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.ContainerinstancesService.Models
+namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Container Health Check with command type.
+    /// Provides the information used for the reboot job.
     /// </summary>
-    public class ContainerCommandHealthCheck : ContainerHealthCheck
+    public class RebootManagedInstanceGroupDetails 
     {
         
         /// <value>
-        /// The list of strings that will be simplified to a single command for checking the status of the container.
+        /// The number of minutes the service waits for the reboot to complete. If the instances in the group don't reboot 
+        /// within this time, the reboot job status is set to failed.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Command is required.")]
-        [JsonProperty(PropertyName = "command")]
-        public System.Collections.Generic.List<string> Command { get; set; }
+        [JsonProperty(PropertyName = "rebootTimeoutInMins")]
+        public System.Nullable<int> RebootTimeoutInMins { get; set; }
         
-        [JsonProperty(PropertyName = "healthCheckType")]
-        private readonly string healthCheckType = "COMMAND";
+        [JsonProperty(PropertyName = "workRequestDetails")]
+        public WorkRequestDetails WorkRequestDetails { get; set; }
+        
     }
 }

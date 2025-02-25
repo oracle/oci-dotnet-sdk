@@ -56,19 +56,19 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Collections.Generic.List<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// The availabilities of the software source in a non-OCI environment for a tenancy.
+        /// The availability of the software source in a non-OCI environment for a tenancy.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availability", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<Availability> Availability { get; set; }
         
         /// <value>
-        /// The availabilities of the software source in an OCI environment for a tenancy.
+        /// The availability of the software source in an OCI environment for a tenancy.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availabilityAtOci", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<Availability> AvailabilityAtOci { get; set; }
         
         /// <value>
-        /// The availabilities of the software source. Use this query parameter to filter across availabilities in different environments.
+        /// The availability of the software source. Use this query parameter to filter across availabilities in different environments.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "availabilityAnywhere", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<Availability> AvailabilityAnywhere { get; set; }
@@ -78,6 +78,12 @@ namespace Oci.OsmanagementhubService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isMandatoryForAutonomousLinux")]
         public System.Nullable<bool> IsMandatoryForAutonomousLinux { get; set; }
+        
+        /// <value>
+        /// A filter to return software sources which can be synced to a management station.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isMirrorSyncAllowed")]
+        public System.Nullable<bool> IsMirrorSyncAllowed { get; set; }
         
         /// <value>
         /// A filter to return resources that match the given user-friendly name.

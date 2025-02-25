@@ -82,11 +82,17 @@ namespace Oci.OsmanagementhubService.Models
                 case "CUSTOM":
                     obj = new UpdateCustomSoftwareSourceDetails();
                     break;
+                case "PRIVATE":
+                    obj = new UpdatePrivateSoftwareSourceDetails();
+                    break;
                 case "VERSIONED":
                     obj = new UpdateVersionedCustomSoftwareSourceDetails();
                     break;
                 case "VENDOR":
                     obj = new UpdateVendorSoftwareSourceDetails();
+                    break;
+                case "THIRD_PARTY":
+                    obj = new UpdateThirdPartySoftwareSourceDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

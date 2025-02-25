@@ -23,7 +23,9 @@ namespace Oci.OsmanagementhubService.Models
     {
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// A user-friendly name. Does not have to be unique and you can change the name later. Avoid entering 
+        /// confidential information.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -49,7 +51,9 @@ namespace Oci.OsmanagementhubService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station to associate with an instance once registered. Associating with a management station applies only to non-OCI instances.
+        /// description: The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station to associate 
+        /// with an instance once registered. This is required when creating a profile for non-OCI instances.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "managementStationId")]
         public string ManagementStationId { get; set; }
@@ -109,6 +113,9 @@ namespace Oci.OsmanagementhubService.Models
             {
                 case "GROUP":
                     obj = new CreateGroupProfileDetails();
+                    break;
+                case "WINDOWS_STANDALONE":
+                    obj = new CreateWindowsStandAloneProfileDetails();
                     break;
                 case "STATION":
                     obj = new CreateStationProfileDetails();

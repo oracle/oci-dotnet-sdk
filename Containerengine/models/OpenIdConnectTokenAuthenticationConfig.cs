@@ -105,5 +105,12 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "isOpenIdConnectAuthEnabled")]
         public System.Nullable<bool> IsOpenIdConnectAuthEnabled { get; set; }
         
+        /// <value>
+        /// A Base64 encoded string of a Kubernetes OIDC Auth Config file. More info [here](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#using-authentication-configuration)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "configurationFile")]
+        public string ConfigurationFile { get; set; }
+        
     }
 }

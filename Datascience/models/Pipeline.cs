@@ -105,6 +105,12 @@ namespace Oci.DatascienceService.Models
         public PipelineInfrastructureConfigurationDetails InfrastructureConfigurationDetails { get; set; }
         
         /// <value>
+        /// The storage mount details to mount to the instance running the pipeline step.
+        /// </value>
+        [JsonProperty(PropertyName = "storageMountConfigurationDetailsList")]
+        public System.Collections.Generic.List<StorageMountConfigurationDetails> StorageMountConfigurationDetailsList { get; set; }
+        
+        /// <value>
         /// Array of step details for each step.
         /// </value>
         /// <remarks>

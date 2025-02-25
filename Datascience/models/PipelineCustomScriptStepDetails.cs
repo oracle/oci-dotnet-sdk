@@ -25,6 +25,12 @@ namespace Oci.DatascienceService.Models
         public PipelineInfrastructureConfigurationDetails StepInfrastructureConfigurationDetails { get; set; }
         
         /// <value>
+        /// The storage mount details to mount to the instance running the pipeline step.
+        /// </value>
+        [JsonProperty(PropertyName = "stepStorageMountConfigurationDetailsList")]
+        public System.Collections.Generic.List<StorageMountConfigurationDetails> StepStorageMountConfigurationDetailsList { get; set; }
+        
+        /// <value>
         /// A flag to indicate whether the artifact has been uploaded for this step or not.
         /// </value>
         [JsonProperty(PropertyName = "isArtifactUploaded")]

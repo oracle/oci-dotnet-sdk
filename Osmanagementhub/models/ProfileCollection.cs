@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a registration profile search. Contains both registration profile summary items and other data.
+    /// The set of registration profiles returned for the {@link #listProfiles(ListProfilesRequest) listProfiles} operation.
+    /// 
     /// </summary>
     public class ProfileCollection 
     {

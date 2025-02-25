@@ -258,8 +258,8 @@ namespace Oci.LoadbalancerService.Models
         /// <br/>
         /// Example: {&quot;Oracle-ZPR&quot;: {&quot;MaxEgressCount&quot;: {&quot;value&quot;:&quot;42&quot;,&quot;mode&quot;:&quot;audit&quot;, &quot;usagetype&quot; : &quot;zpr&quot;}}}
         /// </value>
-        [JsonProperty(PropertyName = "zprTags")]
-        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> ZprTags { get; set; }
+        [JsonProperty(PropertyName = "securityAttributes")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SecurityAttributes { get; set; }
         
         /// <value>
         /// System tags for this resource. Each key is predefined and scoped to a namespace.

@@ -147,6 +147,12 @@ namespace Oci.OsmanagementhubService.Models
         public string Profile { get; set; }
         
         /// <value>
+        /// The version of the profile that was used to register this instance with the service.
+        /// </value>
+        [JsonProperty(PropertyName = "profileVersion")]
+        public string ProfileVersion { get; set; }
+        
+        /// <value>
         /// Indicates whether this managed instance is acting as an on-premises management station.
         /// </value>
         [JsonProperty(PropertyName = "isManagementStation")]
@@ -160,7 +166,7 @@ namespace Oci.OsmanagementhubService.Models
         public string PrimaryManagementStationId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station for the instance to use as secondary managment station.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station for the instance to use as secondary management station.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "secondaryManagementStationId")]
@@ -270,6 +276,12 @@ namespace Oci.OsmanagementhubService.Models
         /// </value>
         [JsonProperty(PropertyName = "isManagedByAutonomousLinux")]
         public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
+        
+        /// <value>
+        /// The version of osmh-agent running on the managed instance
+        /// </value>
+        [JsonProperty(PropertyName = "agentVersion")]
+        public string AgentVersion { get; set; }
         
     }
 }

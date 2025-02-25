@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// Mirror type.
+  /// Type of mirrored software source.
   /// </summary>
   public enum MirrorType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -24,6 +24,10 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "VENDOR")]
       Vendor,
       [EnumMember(Value = "VERSIONED")]
-      Versioned
+      Versioned,
+      [EnumMember(Value = "PRIVATE")]
+      Private,
+      [EnumMember(Value = "THIRD_PARTY")]
+      ThirdParty
   }
 }

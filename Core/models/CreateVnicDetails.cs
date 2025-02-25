@@ -115,17 +115,17 @@ namespace Oci.CoreService.Models
         /// Must be unique across all VNICs in the subnet and comply with
         /// [RFC 952](https://tools.ietf.org/html/rfc952) and
         /// [RFC 1123](https://tools.ietf.org/html/rfc1123).
-        /// The value appears in the `{@link Vnic}` object and also the
-        /// `{@link PrivateIp}` object returned by
-        /// `{@link #listPrivateIps(ListPrivateIpsRequest) listPrivateIps}` and
-        /// `{@link #getPrivateIp(GetPrivateIpRequest) getPrivateIp}`.
+        /// The value appears in the {@link Vnic} object and also the
+        /// {@link PrivateIp} object returned by
+        /// {@link #listPrivateIps(ListPrivateIpsRequest) listPrivateIps} and
+        /// {@link #getPrivateIp(GetPrivateIpRequest) getPrivateIp}.
         /// <br/>
         /// For more information, see
         /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/dns.htm).
         /// <br/>
         /// When launching an instance, use this `hostnameLabel` instead
         /// of the deprecated `hostnameLabel` in
-        /// `{@link #launchInstanceDetails(LaunchInstanceDetailsRequest) launchInstanceDetails}`.
+        /// {@link #launchInstanceDetails(LaunchInstanceDetailsRequest) launchInstanceDetails}.
         /// If you provide both, the values must match.
         /// <br/>
         /// Example: bminstance1If you specify a vlanId, the hostnameLabel cannot be specified. VNICs on a VLANcan not be assigned a hostname. See {@link Vlan}.
@@ -162,10 +162,10 @@ namespace Oci.CoreService.Models
         /// available IP address within the subnet's CIDR. If you don't specify a
         /// value, Oracle automatically assigns a private IP address from the subnet.
         /// This is the VNIC's *primary* private IP address. The value appears in
-        /// the `{@link Vnic}` object and also the
-        /// `{@link PrivateIp}` object returned by
-        /// `{@link #listPrivateIps(ListPrivateIpsRequest) listPrivateIps}` and
-        /// `{@link #getPrivateIp(GetPrivateIpRequest) getPrivateIp}`.
+        /// the {@link Vnic} object and also the
+        /// {@link PrivateIp} object returned by
+        /// {@link #listPrivateIps(ListPrivateIpsRequest) listPrivateIps} and
+        /// {@link #getPrivateIp(GetPrivateIpRequest) getPrivateIp}.
         /// <br/>
         /// 
         /// If you specify a `vlanId`, the `privateIp` cannot be specified.

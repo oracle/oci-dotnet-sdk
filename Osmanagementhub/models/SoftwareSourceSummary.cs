@@ -124,7 +124,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<Availability> AvailabilityAtOci { get; set; }
         
         /// <value>
-        /// The OS family the software source belongs to.
+        /// The OS family of the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -159,7 +159,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<SoftwareSource.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The size of the software source in gigabytes (GB).
+        /// The size of the software source in bytes (B).
         /// </value>
         [JsonProperty(PropertyName = "size")]
         public System.Double Size { get; set; }
@@ -210,11 +210,17 @@ namespace Oci.OsmanagementhubService.Models
             var discriminator = jsonObject["softwareSourceType"].Value<string>();
             switch (discriminator)
             {
+                case "PRIVATE":
+                    obj = new PrivateSoftwareSourceSummary();
+                    break;
                 case "VENDOR":
                     obj = new VendorSoftwareSourceSummary();
                     break;
                 case "VERSIONED":
                     obj = new VersionedCustomSoftwareSourceSummary();
+                    break;
+                case "THIRD_PARTY":
+                    obj = new ThirdPartySoftwareSourceSummary();
                     break;
                 case "CUSTOM":
                     obj = new CustomSoftwareSourceSummary();

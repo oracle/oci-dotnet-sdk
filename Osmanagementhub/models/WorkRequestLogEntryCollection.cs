@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a work request log search. Contains both work request log items and other information, such as metadata.
+    /// The set of work request logs returned for the {@link #listWorkRequestLogs(ListWorkRequestLogsRequest) listWorkRequestLogs} operation.
     /// </summary>
     public class WorkRequestLogEntryCollection 
     {

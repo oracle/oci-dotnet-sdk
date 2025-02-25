@@ -58,6 +58,22 @@ namespace Oci.CoreService.Requests
         public string VnicId { get; set; }
         
         /// <value>
+        /// State of the IP address. If an IP address is assigned to a VNIC it is ASSIGNED otherwise AVAILABLE
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "ipState")]
+        public string IpState { get; set; }
+        
+        /// <value>
+        /// Lifetime of the IP address.
+        /// There are two types of IPs:
+        ///  - Ephemeral
+        ///  - Reserved
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifetime")]
+        public string Lifetime { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vlanId")]

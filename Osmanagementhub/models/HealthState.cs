@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.OsmanagementhubService.Models
 {
   /// <summary>
-  /// Overall health status of the managment station.
+  /// Overall health status of the management station.
   /// </summary>
   public enum HealthState {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -22,6 +22,8 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "HEALTHY")]
       Healthy,
       [EnumMember(Value = "UNHEALTHY")]
-      Unhealthy
+      Unhealthy,
+      [EnumMember(Value = "UNAVAILABLE")]
+      Unavailable
   }
 }

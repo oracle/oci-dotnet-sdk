@@ -34,6 +34,10 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "AGENT")]
       Agent,
       [EnumMember(Value = "MANAGEMENT_STATION")]
-      ManagementStation
+      ManagementStation,
+      [EnumMember(Value = "SYSADMIN")]
+      Sysadmin,
+      [EnumMember(Value = "REBOOT")]
+      Reboot
   }
 }

@@ -21,6 +21,10 @@ namespace Oci.OsmanagementhubService.Models
     public class AttachManagedInstancesToLifecycleStageDetails 
     {
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ManagedInstanceDetails is required.")]
         [JsonProperty(PropertyName = "managedInstanceDetails")]
         public ManagedInstancesDetails ManagedInstanceDetails { get; set; }
         

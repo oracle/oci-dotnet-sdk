@@ -103,7 +103,7 @@ namespace Oci.OsmanagementhubService.Models
         public string RepoId { get; set; }
         
         /// <value>
-        /// The OS family the software source belongs to.
+        /// The OS family of the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -142,7 +142,9 @@ namespace Oci.OsmanagementhubService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "NEEDS_ATTENTION")]
+            NeedsAttention
         };
 
         /// <value>
@@ -176,7 +178,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ChecksumType> ChecksumType { get; set; }
         
         /// <value>
-        /// URL of the GPG key for this software source.
+        /// URI of the GPG key for this software source.
         /// </value>
         [JsonProperty(PropertyName = "gpgKeyUrl")]
         public string GpgKeyUrl { get; set; }
@@ -194,7 +196,7 @@ namespace Oci.OsmanagementhubService.Models
         public string GpgKeyFingerprint { get; set; }
         
         /// <value>
-        /// The size of the software source in gigabytes (GB).
+        /// The size of the software source in bytes (B).
         /// </value>
         [JsonProperty(PropertyName = "size")]
         public System.Double Size { get; set; }
@@ -248,11 +250,17 @@ namespace Oci.OsmanagementhubService.Models
                 case "VENDOR":
                     obj = new VendorSoftwareSource();
                     break;
+                case "THIRD_PARTY":
+                    obj = new ThirdPartySoftwareSource();
+                    break;
                 case "CUSTOM":
                     obj = new CustomSoftwareSource();
                     break;
                 case "VERSIONED":
                     obj = new VersionedCustomSoftwareSource();
+                    break;
+                case "PRIVATE":
+                    obj = new PrivateSoftwareSource();
                     break;
             }
             if (obj != null)

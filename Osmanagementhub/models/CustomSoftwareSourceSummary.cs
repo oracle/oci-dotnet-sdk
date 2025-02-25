@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Indicates whether the service should create the software source from a list of packages provided by the user.
+    /// Provides summary information for a custom software source.
     /// </summary>
     public class CustomSoftwareSourceSummary : SoftwareSourceSummary
     {
@@ -30,6 +30,13 @@ namespace Oci.OsmanagementhubService.Models
         [Required(ErrorMessage = "VendorSoftwareSources is required.")]
         [JsonProperty(PropertyName = "vendorSoftwareSources")]
         public System.Collections.Generic.List<Id> VendorSoftwareSources { get; set; }
+        
+        /// <value>
+        /// Identifies how the custom software source was created.
+        /// </value>
+        [JsonProperty(PropertyName = "softwareSourceSubType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SoftwareSourceSubType> SoftwareSourceSubType { get; set; }
         
         [JsonProperty(PropertyName = "softwareSourceType")]
         private readonly string softwareSourceType = "CUSTOM";

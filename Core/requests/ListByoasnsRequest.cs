@@ -72,7 +72,7 @@ namespace Oci.CoreService.Requests
         
         ///
         /// <value>
-        /// The field to sort by, for byoasn List operation. 
+        /// The field to sort by, for byoasn List operation.
         /// 
         /// </value>
         ///
@@ -84,7 +84,7 @@ namespace Oci.CoreService.Requests
         };
 
         /// <value>
-        /// The field to sort by, for byoasn List operation. 
+        /// The field to sort by, for byoasn List operation.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Provides the information for a windows standalone registration profile.
+    /// Provides the information for a Windows standalone registration profile.
     /// </summary>
     public class WindowsStandaloneProfile : Profile
     {
