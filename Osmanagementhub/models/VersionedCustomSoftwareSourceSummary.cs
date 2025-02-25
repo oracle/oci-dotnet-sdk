@@ -41,6 +41,13 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "softwareSourceVersion")]
         public string SoftwareSourceVersion { get; set; }
         
+        /// <value>
+        /// Identifies how the versioned custom software source was created.
+        /// </value>
+        [JsonProperty(PropertyName = "softwareSourceSubType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SoftwareSourceSubType> SoftwareSourceSubType { get; set; }
+        
         [JsonProperty(PropertyName = "softwareSourceType")]
         private readonly string softwareSourceType = "VERSIONED";
     }

@@ -41,7 +41,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ScheduleTypes> ScheduleType { get; set; }
         
         /// <value>
-        /// The desired time of the next execution of this scheduled job (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// The time of the next execution of this scheduled job (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         [JsonProperty(PropertyName = "timeNextExecution")]
         public System.Nullable<System.DateTime> TimeNextExecution { get; set; }

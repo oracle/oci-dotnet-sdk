@@ -50,6 +50,55 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListProfileAvailableSoftwareSources operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListProfileAvailableSoftwareSourcesResponse> ListProfileAvailableSoftwareSourcesResponseEnumerator(ListProfileAvailableSoftwareSourcesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListProfileAvailableSoftwareSourcesRequest, ListProfileAvailableSoftwareSourcesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListProfileAvailableSoftwareSources(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AvailableSoftwareSourceSummary objects
+        /// contained in responses from the ListProfileAvailableSoftwareSources operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AvailableSoftwareSourceSummary> ListProfileAvailableSoftwareSourcesRecordEnumerator(ListProfileAvailableSoftwareSourcesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListProfileAvailableSoftwareSourcesRequest, ListProfileAvailableSoftwareSourcesResponse, AvailableSoftwareSourceSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListProfileAvailableSoftwareSources(request, retryConfiguration, cancellationToken),
+                response => response.AvailableSoftwareSourceCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListProfiles operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

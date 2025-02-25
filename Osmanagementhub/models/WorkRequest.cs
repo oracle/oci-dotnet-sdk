@@ -72,13 +72,13 @@ namespace Oci.OsmanagementhubService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The OCID of the parent work request, if there is any.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the parent work request, if there is any.
         /// </value>
         [JsonProperty(PropertyName = "parentId")]
         public string ParentId { get; set; }
         
         /// <value>
-        /// The list of OCIDs for the child work requests.
+        /// The list of [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the child work requests.
         /// </value>
         [JsonProperty(PropertyName = "childrenId")]
         public System.Collections.Generic.List<string> ChildrenId { get; set; }
@@ -210,7 +210,18 @@ namespace Oci.OsmanagementhubService.Models
         public string RetryOfId { get; set; }
         
         /// <value>
-        /// Indicates whether this work request is managed by the Autonomous Linux service.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the original work request that is being rerun.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "rerunOfId")]
+        public string RerunOfId { get; set; }
+        
+        /// <value>
+        /// The amount of time in minutes to wait until retrying the work request. If set, the service will automatically retry 
+        /// a failed work request after the interval. For example, An interval set to [2,5,10]. If the initial 
+        /// execution of the work request fails, the service waits 2 minutes and then retries. If that fails, the service waits 5 minutes 
+        /// and then retries. If that fails, the service waits 10 minutes and then retries.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "retryIntervals")]
         public System.Collections.Generic.List<int> RetryIntervals { get; set; }
@@ -220,6 +231,12 @@ namespace Oci.OsmanagementhubService.Models
         /// </value>
         [JsonProperty(PropertyName = "isManagedByAutonomousLinux")]
         public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
+        
+        /// <value>
+        /// The number of minutes the service waits for the reboot to complete. If the managed instance doesn't reboot within the timeout, the service marks the reboot job as failed.
+        /// </value>
+        [JsonProperty(PropertyName = "rebootTimeoutInMins")]
+        public System.Nullable<int> RebootTimeoutInMins { get; set; }
         
     }
 }

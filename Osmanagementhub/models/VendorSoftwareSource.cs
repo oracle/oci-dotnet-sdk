@@ -33,7 +33,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<VendorName> VendorName { get; set; }
         
         /// <value>
-        /// This property applies only to replicated vendor software sources. This is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the vendor software source in the root compartment.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the vendor software source in the root compartment. This property applies only to replicated vendor software sources.
         /// </value>
         [JsonProperty(PropertyName = "originSoftwareSourceId")]
         public string OriginSoftwareSourceId { get; set; }

@@ -59,7 +59,9 @@ namespace Oci.OsmanagementhubService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station to associate with an instance once registered. Associating with a management station applies only to non-OCI instances.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station to associate with an 
+        /// instance once registered. Management stations are only used by non-OCI instances.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "managementStationId")]
         public string ManagementStationId { get; set; }
@@ -103,6 +105,18 @@ namespace Oci.OsmanagementhubService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The time the registration profile was last modified (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// </value>
+        [JsonProperty(PropertyName = "timeModified")]
+        public System.Nullable<System.DateTime> TimeModified { get; set; }
+        
+        /// <value>
+        /// The version of the profile. The version is automatically incremented each time the profiled is edited.
+        /// </value>
+        [JsonProperty(PropertyName = "profileVersion")]
+        public string ProfileVersion { get; set; }
                 ///
         /// <value>
         /// The current state of the registration profile.
@@ -115,6 +129,8 @@ namespace Oci.OsmanagementhubService.Models
             Updating,
             [EnumMember(Value = "ACTIVE")]
             Active,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETED")]

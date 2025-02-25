@@ -173,5 +173,11 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "isManagedByAutonomousLinux")]
         public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the work request that will be rerun.
+        /// </value>
+        [JsonProperty(PropertyName = "workRequestId")]
+        public string WorkRequestId { get; set; }
+        
     }
 }

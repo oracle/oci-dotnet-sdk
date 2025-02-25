@@ -99,6 +99,55 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAvailableSoftwarePackages operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAvailableSoftwarePackagesResponse> ListAvailableSoftwarePackagesResponseEnumerator(ListAvailableSoftwarePackagesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAvailableSoftwarePackagesRequest, ListAvailableSoftwarePackagesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAvailableSoftwarePackages(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the SoftwarePackageSummary objects
+        /// contained in responses from the ListAvailableSoftwarePackages operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<SoftwarePackageSummary> ListAvailableSoftwarePackagesRecordEnumerator(ListAvailableSoftwarePackagesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAvailableSoftwarePackagesRequest, ListAvailableSoftwarePackagesResponse, SoftwarePackageSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAvailableSoftwarePackages(request, retryConfiguration, cancellationToken),
+                response => response.SoftwarePackageCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListEntitlements operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

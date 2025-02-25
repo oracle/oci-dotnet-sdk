@@ -32,7 +32,9 @@ namespace Oci.DatascienceService.Models
             [EnumMember(Value = "CUSTOM_SCRIPT")]
             CustomScript,
             [EnumMember(Value = "CONTAINER")]
-            Container
+            Container,
+            [EnumMember(Value = "DATAFLOW")]
+            Dataflow
         };
 
         
@@ -89,6 +91,9 @@ namespace Oci.DatascienceService.Models
                     break;
                 case "ML_JOB":
                     obj = new PipelineMLJobStepDetails();
+                    break;
+                case "DATAFLOW":
+                    obj = new PipelineDataflowStepDetails();
                     break;
                 case "CUSTOM_SCRIPT":
                     obj = new PipelineCustomScriptStepDetails();

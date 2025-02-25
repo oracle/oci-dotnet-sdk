@@ -68,6 +68,18 @@ namespace Oci.OsmanagementhubService.Requests
         public string Page { get; set; }
         
         /// <value>
+        /// A filter to return only resources whose location matches the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "location", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> Location { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources whose location does not match the given value.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "locationNotEqualTo", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ManagedInstanceLocation> LocationNotEqualTo { get; set; }
+        
+        /// <value>
         /// The sort order to use, either 'ASC' or 'DESC'.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]

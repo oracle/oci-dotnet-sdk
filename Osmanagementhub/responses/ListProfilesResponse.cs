@@ -31,6 +31,14 @@ namespace Oci.OsmanagementhubService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]
         public string OpcNextPage { get; set; }
 
+
+        /// <value>
+        /// The total number of items in the result. Used for pagination of a list of items.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-total-items")]
+        public System.Nullable<int> OpcTotalItems { get; set; }
+
         /// <value>
         /// The returned ProfileCollection instance.
         /// </value>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Summary of the Management Station.
+    /// Provides summary information for a management station.
     /// </summary>
     public class ManagementStationSummary 
     {
@@ -123,6 +123,13 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ManagementStation.LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// The location of the instance that is acting as the management station.
+        /// </value>
+        [JsonProperty(PropertyName = "location")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ManagedInstanceLocation> Location { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

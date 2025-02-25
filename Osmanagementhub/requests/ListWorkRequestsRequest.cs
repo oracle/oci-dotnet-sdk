@@ -134,6 +134,13 @@ namespace Oci.OsmanagementhubService.Requests
         public string RetryOfId { get; set; }
         
         /// <value>
+        /// A filter to return the work requests that are a rerun of the given work request [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "rerunOfId")]
+        public string RerunOfId { get; set; }
+        
+        /// <value>
         /// A filter to return work requests that were created before the date provided (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format). Example: '2023-08-25T21:10:29.600Z'
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeCreatedLessThan")]

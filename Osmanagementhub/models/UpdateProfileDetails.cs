@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Information for updating a registration profile
+    /// Provides the information used to update a registration profile.
     /// </summary>
     public class UpdateProfileDetails 
     {

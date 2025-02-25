@@ -157,7 +157,9 @@ namespace Oci.RedisService.Models
             [EnumMember(Value = "V7_0_5")]
             V705,
             [EnumMember(Value = "REDIS_7_0")]
-            Redis70
+            Redis70,
+            [EnumMember(Value = "VALKEY_7_2")]
+            Valkey72
         };
 
         /// <value>

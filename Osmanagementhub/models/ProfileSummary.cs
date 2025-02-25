@@ -54,7 +54,9 @@ namespace Oci.OsmanagementhubService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station to associate with an instance once registered. Associating with a management station applies only to non-OCI instances.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station to associate with an 
+        /// instance once registered. Management stations are only used with non-OCI instances.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "managementStationId")]
         public string ManagementStationId { get; set; }
@@ -95,7 +97,8 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// The time the the Onboarding was created. An RFC3339 formatted datetime string
+        /// The time the registration profile was created (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }

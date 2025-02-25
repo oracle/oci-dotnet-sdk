@@ -70,6 +70,13 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "packages")]
         public System.Collections.Generic.List<string> Packages { get; set; }
         
+        /// <value>
+        /// The creation type of a software source.
+        /// </value>
+        [JsonProperty(PropertyName = "softwareSourceSubType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<SoftwareSourceSubType> SoftwareSourceSubType { get; set; }
+        
         [JsonProperty(PropertyName = "softwareSourceType")]
         private readonly string softwareSourceType = "CUSTOM";
     }

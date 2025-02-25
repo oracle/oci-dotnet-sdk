@@ -92,6 +92,8 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "REMOVE_CONTENT")]
       RemoveContent,
       [EnumMember(Value = "UNREGISTER_MANAGED_INSTANCE")]
-      UnregisterManagedInstance
+      UnregisterManagedInstance,
+      [EnumMember(Value = "REBOOT")]
+      Reboot
   }
 }

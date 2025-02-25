@@ -28,6 +28,8 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "NOARCH")]
       Noarch,
       [EnumMember(Value = "SRC")]
-      Src
+      Src,
+      [EnumMember(Value = "I386")]
+      I386
   }
 }

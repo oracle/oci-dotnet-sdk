@@ -22,7 +22,7 @@ namespace Oci.OsmanagementhubService.Models
     {
         
         /// <value>
-        /// List of packages specified by the full package name (NEVRA.rpm).
+        /// List of packages specified by the name of the package (N) or the full package name (NVRA or NEVRA).
         /// </value>
         /// <remarks>
         /// Required
@@ -30,6 +30,12 @@ namespace Oci.OsmanagementhubService.Models
         [Required(ErrorMessage = "Packages is required.")]
         [JsonProperty(PropertyName = "packages")]
         public System.Collections.Generic.List<string> Packages { get; set; }
+        
+        /// <value>
+        /// Indicates whether the service should generate a custom software source when the package list contains invalid values. When set to true, the service ignores any invalid packages and generates the custom software source with using the valid packages.
+        /// </value>
+        [JsonProperty(PropertyName = "isContinueOnMissingPackages")]
+        public System.Nullable<bool> IsContinueOnMissingPackages { get; set; }
         
     }
 }

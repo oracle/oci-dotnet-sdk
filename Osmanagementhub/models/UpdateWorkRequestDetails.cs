@@ -22,7 +22,7 @@ namespace Oci.OsmanagementhubService.Models
     {
         
         /// <value>
-        /// status of current work request.
+        /// Status of current work request.
         /// </value>
         /// <remarks>
         /// Required

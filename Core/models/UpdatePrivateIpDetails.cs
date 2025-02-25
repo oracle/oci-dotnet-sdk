@@ -68,9 +68,36 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }
+                ///
+        /// <value>
+        /// Lifetime of the IP address.
+        /// There are two types of IPv6 IPs:
+        ///  - Ephemeral
+        ///  - Reserved
+        /// 
+        /// </value>
+        ///
+        public enum LifetimeEnum {
+            [EnumMember(Value = "EPHEMERAL")]
+            Ephemeral,
+            [EnumMember(Value = "RESERVED")]
+            Reserved
+        };
+
+        /// <value>
+        /// Lifetime of the IP address.
+        /// There are two types of IPv6 IPs:
+        ///  - Ephemeral
+        ///  - Reserved
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifetime")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<LifetimeEnum> Lifetime { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the PrivateIp will use.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the IP address or VNIC will use. For more information, see
+        /// [Source Based Routing](https://docs.oracle.com/iaas/Content/Network/Tasks/managingroutetables.htm#Overview_of_Routing_for_Your_VCN__source_routing).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]

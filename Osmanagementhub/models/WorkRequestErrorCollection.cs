@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Results of a work request error search. Contains both work request error items and other information, such as metadata.
+    /// The set of work request errors returned for the {@link #listWorkRequestErrors(ListWorkRequestErrorsRequest) listWorkRequestErrors} operation.
     /// </summary>
     public class WorkRequestErrorCollection 
     {

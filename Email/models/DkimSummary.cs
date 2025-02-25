@@ -97,6 +97,18 @@ namespace Oci.EmailService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// Indicates whether the DKIM was imported.
+        /// </value>
+        [JsonProperty(PropertyName = "isImported")]
+        public System.Nullable<bool> IsImported { get; set; }
+        
+        /// <value>
+        /// Length of the RSA key used in the DKIM.
+        /// </value>
+        [JsonProperty(PropertyName = "keyLength")]
+        public System.Nullable<int> KeyLength { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

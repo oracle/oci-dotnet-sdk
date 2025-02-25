@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Summary of a Mirror
+    /// Provides summary information for a software source mirror.
     /// </summary>
     public class MirrorSummary 
     {
         
         /// <value>
-        /// OCID of a software source
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the software source.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,34 +32,34 @@ namespace Oci.OsmanagementhubService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Display name of the mirror
+        /// Display name of the mirror.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Type of the mirror
+        /// Type of software source.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MirrorType> Type { get; set; }
         
         /// <value>
-        /// The OS family the Software Source belongs to
+        /// The OS family of the software source.
         /// </value>
         [JsonProperty(PropertyName = "osFamily")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsFamily> OsFamily { get; set; }
         
         /// <value>
-        /// The architecture type supported by the Software Source
+        /// The architecture type supported by the software source.
         /// </value>
         [JsonProperty(PropertyName = "archType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ArchType> ArchType { get; set; }
         
         /// <value>
-        /// Current state of the mirror
+        /// Current state of the software source mirror.
         /// </value>
         /// <remarks>
         /// Required
@@ -70,7 +70,7 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<MirrorState> State { get; set; }
         
         /// <value>
-        /// A decimal number representing the completness percentage
+        /// A decimal number representing the percentage of the software source that has been synced.
         /// </value>
         /// <remarks>
         /// Required
@@ -80,7 +80,8 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<int> Percentage { get; set; }
         
         /// <value>
-        /// Timestamp of the last time the mirror was sync
+        /// Time that the software source was last synced (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -98,6 +99,26 @@ namespace Oci.OsmanagementhubService.Models
         [Required(ErrorMessage = "Log is required.")]
         [JsonProperty(PropertyName = "log")]
         public string Log { get; set; }
+        
+        /// <value>
+        /// The number of packages within the mirrored software source.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "PackageCount is required.")]
+        [JsonProperty(PropertyName = "packageCount")]
+        public System.Nullable<int> PackageCount { get; set; }
+        
+        /// <value>
+        /// The size the mirrored software source in bytes.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Size is required.")]
+        [JsonProperty(PropertyName = "size")]
+        public System.Nullable<long> Size { get; set; }
         
     }
 }

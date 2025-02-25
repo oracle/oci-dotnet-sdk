@@ -32,6 +32,8 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "DELETING")]
       Deleting,
       [EnumMember(Value = "ONBOARDING")]
-      Onboarding
+      Onboarding,
+      [EnumMember(Value = "REBOOTING")]
+      Rebooting
   }
 }

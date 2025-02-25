@@ -28,27 +28,27 @@ namespace Oci.CoreService.Models
     /// <br/>
     /// After creating an NSG, you can add VNICs and security rules to it. For example, when you create
     /// an instance, you can specify one or more NSGs to add the instance to (see
-    /// `{@link #createVnicDetails(CreateVnicDetailsRequest) createVnicDetails})`. Or you can add an existing
-    /// instance to an NSG with `{@link #updateVnic(UpdateVnicRequest) updateVnic}`.
+    /// {@link #createVnicDetails(CreateVnicDetailsRequest) createVnicDetails}). Or you can add an existing
+    /// instance to an NSG with {@link #updateVnic(UpdateVnicRequest) updateVnic}.
     /// <br/>
     /// To add security rules to an NSG, see
-    /// `{@link #addNetworkSecurityGroupSecurityRules(AddNetworkSecurityGroupSecurityRulesRequest) addNetworkSecurityGroupSecurityRules}`.
+    /// {@link #addNetworkSecurityGroupSecurityRules(AddNetworkSecurityGroupSecurityRulesRequest) addNetworkSecurityGroupSecurityRules}.
     /// <br/>
     /// To list the VNICs in an NSG, see
-    /// `{@link #listNetworkSecurityGroupVnics(ListNetworkSecurityGroupVnicsRequest) listNetworkSecurityGroupVnics}`.
+    /// {@link #listNetworkSecurityGroupVnics(ListNetworkSecurityGroupVnicsRequest) listNetworkSecurityGroupVnics}.
     /// <br/>
     /// To list the security rules in an NSG, see
-    /// `{@link #listNetworkSecurityGroupSecurityRules(ListNetworkSecurityGroupSecurityRulesRequest) listNetworkSecurityGroupSecurityRules}`.
+    /// {@link #listNetworkSecurityGroupSecurityRules(ListNetworkSecurityGroupSecurityRulesRequest) listNetworkSecurityGroupSecurityRules}.
     /// <br/>
     /// For more information about network security groups, see
-    /// `[Network Security Groups](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/networksecuritygroups.htm)`.
+    /// [Network Security Groups](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/networksecuritygroups.htm).
     /// <br/>
     /// **Important:** Oracle Cloud Infrastructure Compute service images automatically include firewall rules (for example,
     /// Linux iptables, Windows firewall). If there are issues with some type of access to an instance,
     /// make sure all of the following are set correctly:
     /// <br/>
     ///   * Any security rules in any NSGs the instance's VNIC belongs to
-    ///   * Any `{@link SecurityList}` associated with the instance's subnet
+    ///   * Any {@link SecurityList} associated with the instance's subnet
     ///   * The instance's OS firewall rules
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,

@@ -22,8 +22,6 @@ namespace Oci.ContainerinstancesService.Models
       [EnumMember(Value = "HTTP")]
       Http,
       [EnumMember(Value = "TCP")]
-      Tcp,
-      [EnumMember(Value = "COMMAND")]
-      Command
+      Tcp
   }
 }

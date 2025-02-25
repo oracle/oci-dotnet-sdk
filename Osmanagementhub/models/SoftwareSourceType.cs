@@ -24,6 +24,10 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "CUSTOM")]
       Custom,
       [EnumMember(Value = "VERSIONED")]
-      Versioned
+      Versioned,
+      [EnumMember(Value = "PRIVATE")]
+      Private,
+      [EnumMember(Value = "THIRD_PARTY")]
+      ThirdParty
   }
 }
