@@ -34,7 +34,9 @@ namespace Oci.OsmanagementhubService.Models
             [EnumMember(Value = "SYNC_MANAGEMENT_STATION_MIRROR")]
             SyncManagementStationMirror,
             [EnumMember(Value = "UPDATE_MANAGEMENT_STATION_SOFTWARE")]
-            UpdateManagementStationSoftware
+            UpdateManagementStationSoftware,
+            [EnumMember(Value = "SET_MANAGEMENT_STATION_HEALTH_STATE")]
+            SetManagementStationHealthState
         };
 
         /// <value>
@@ -47,6 +49,29 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "operationType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationTypeEnum> OperationType { get; set; }
+                ///
+        /// <value>
+        /// Health state of the management station
+        /// </value>
+        ///
+        public enum HealthStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "HEALTHY")]
+            Healthy,
+            [EnumMember(Value = "UNHEALTHY")]
+            Unhealthy,
+            [EnumMember(Value = "UNAVAILABLE")]
+            Unavailable
+        };
+
+        /// <value>
+        /// Health state of the management station
+        /// </value>
+        [JsonProperty(PropertyName = "healthState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<HealthStateEnum> HealthState { get; set; }
         
         /// <value>
         /// Status of the management station operation.

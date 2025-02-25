@@ -145,5 +145,11 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "isManagedByAutonomousLinux")]
         public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
         
+        /// <value>
+        /// The version of osmh-agent running on the managed instance
+        /// </value>
+        [JsonProperty(PropertyName = "agentVersion")]
+        public string AgentVersion { get; set; }
+        
     }
 }

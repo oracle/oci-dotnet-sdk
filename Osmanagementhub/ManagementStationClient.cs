@@ -129,7 +129,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Create a management station. You must provide proxy and mirror configuration information.
+        /// Creates a management station using the proxy and mirror configuration information provided.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -186,7 +186,9 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Deletes a management station.
+        /// Deletes a management station. You can&#39;t delete a station if there are resources associated with the station 
+        /// (such as instances using the station or profiles associated with the station). Switch stations and edit profiles
+        /// as needed before deleting the station.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -243,7 +245,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Gets information about the specified management station.
+        /// Returns information about the specified management station.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -300,7 +302,8 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Lists management stations in a compartment.
+        /// Lists management stations within the specified compartment. Filter the list against a variety of criteria 
+        /// including but not limited to name, status, and location.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -414,7 +417,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Refreshes the list of software sources mirrored by the management station to support the associated instances.
+        /// Refreshes the list of software sources mirrored by the management station.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -471,7 +474,7 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
-        /// Synchronize the specified software sources mirrors on the management station.
+        /// Synchronize the specified software sources mirrored on the management station.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

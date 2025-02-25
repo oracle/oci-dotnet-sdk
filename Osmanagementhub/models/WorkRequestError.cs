@@ -22,7 +22,7 @@ namespace Oci.OsmanagementhubService.Models
     {
         
         /// <value>
-        /// A machine-usable code for the error that occured. Error codes are listed on
+        /// A machine-usable code for the error that occurred. Error codes are listed on
         /// (https://docs.cloud.oracle.com/Content/API/References/apierrors.htm).
         /// 
         /// </value>
@@ -44,7 +44,7 @@ namespace Oci.OsmanagementhubService.Models
         public string Message { get; set; }
         
         /// <value>
-        /// The time the error occured. (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// The time the error occurred. (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
         /// </value>
         /// <remarks>
         /// Required

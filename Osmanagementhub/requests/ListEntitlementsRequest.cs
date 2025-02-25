@@ -30,7 +30,7 @@ namespace Oci.OsmanagementhubService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return entitlements that match the given CSI.
+        /// A filter to return entitlements that match the given customer support identifier (CSI).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "csi")]
         public string Csi { get; set; }

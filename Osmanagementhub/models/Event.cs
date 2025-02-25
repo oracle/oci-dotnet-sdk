@@ -209,6 +209,12 @@ namespace Oci.OsmanagementhubService.Models
                 case "KERNEL_CRASH":
                     obj = new KernelCrashEvent();
                     break;
+                case "SYSADMIN":
+                    obj = new SysadminEvent();
+                    break;
+                case "REBOOT":
+                    obj = new RebootEvent();
+                    break;
                 case "EXPLOIT_ATTEMPT":
                     obj = new ExploitAttemptEvent();
                     break;

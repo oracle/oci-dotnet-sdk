@@ -97,9 +97,6 @@ namespace Oci.ContainerinstancesService.Models
                 case "HTTP":
                     obj = new CreateContainerHttpHealthCheckDetails();
                     break;
-                case "COMMAND":
-                    obj = new CreateContainerCommandHealthCheckDetails();
-                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

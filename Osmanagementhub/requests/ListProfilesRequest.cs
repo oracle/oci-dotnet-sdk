@@ -68,7 +68,7 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Collections.Generic.List<Profile.RegistrationTypeEnum> RegistrationType { get; set; }
         
         /// <value>
-        /// A boolean variable that is used to list only the default profile resources.
+        /// A filter to return only default profiles.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDefaultProfile")]
@@ -80,6 +80,28 @@ namespace Oci.OsmanagementhubService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isServiceProvidedProfile")]
         public System.Nullable<bool> IsServiceProvidedProfile { get; set; }
+        
+        /// <value>
+        /// A filter to return resources that are associated with the specified management 
+        /// station [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managementStation", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> ManagementStation { get; set; }
+        
+        /// <value>
+        /// A filter to return resources that aren't associated with the specified management 
+        /// station [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managementStationNotEqualTo", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> ManagementStationNotEqualTo { get; set; }
+        
+        /// <value>
+        /// The version of the registration profile.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "profileVersion")]
+        public string ProfileVersion { get; set; }
         
         /// <value>
         /// A filter to return only resources that match the given vendor name.

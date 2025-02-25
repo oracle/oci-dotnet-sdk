@@ -161,6 +161,34 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
         
         /// <value>
+        /// A filter to return only managed instances with the specified version of osmh-agent running.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "agentVersion")]
+        public string AgentVersion { get; set; }
+        
+        /// <value>
+        /// A filter to return resources that are associated with the specified management 
+        /// station [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managementStation", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> ManagementStation { get; set; }
+        
+        /// <value>
+        /// A filter to return resources that aren't associated with the specified management 
+        /// station [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managementStationNotEqualTo", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> ManagementStationNotEqualTo { get; set; }
+        
+        /// <value>
+        /// A filter to return only managed instances that require a reboot to install updates.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isRebootRequired")]
+        public System.Nullable<bool> IsRebootRequired { get; set; }
+        
+        /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a paginated \"List\" call.
         /// For important details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
         /// <br/>

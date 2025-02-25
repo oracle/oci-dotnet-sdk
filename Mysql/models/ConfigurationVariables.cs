@@ -52,6 +52,678 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "bigTables")]
         public System.Nullable<bool> BigTables { get; set; }
+                ///
+        /// <value>
+        /// The server's default character set. If you set this variable, you should also set collation_server to specify the collation for the character set.
+        /// <br/>
+        /// characterSetServer corresponds to the MySQL server variable [character_set_server](https://dev.mysql.com/doc/refman/en/server-system-variables.html#sysvar_character_set_server).
+        /// 
+        /// </value>
+        ///
+        public enum CharacterSetServerEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ARMSCII8")]
+            Armscii8,
+            [EnumMember(Value = "ASCII")]
+            Ascii,
+            [EnumMember(Value = "BIG5")]
+            Big5,
+            [EnumMember(Value = "BINARY")]
+            Binary,
+            [EnumMember(Value = "CP1250")]
+            Cp1250,
+            [EnumMember(Value = "CP1251")]
+            Cp1251,
+            [EnumMember(Value = "CP1256")]
+            Cp1256,
+            [EnumMember(Value = "CP1257")]
+            Cp1257,
+            [EnumMember(Value = "CP850")]
+            Cp850,
+            [EnumMember(Value = "CP852")]
+            Cp852,
+            [EnumMember(Value = "CP866")]
+            Cp866,
+            [EnumMember(Value = "CP932")]
+            Cp932,
+            [EnumMember(Value = "DEC8")]
+            Dec8,
+            [EnumMember(Value = "EUCJPMS")]
+            Eucjpms,
+            [EnumMember(Value = "EUCKR")]
+            Euckr,
+            [EnumMember(Value = "GB18030")]
+            Gb18030,
+            [EnumMember(Value = "GB2312")]
+            Gb2312,
+            [EnumMember(Value = "GBK")]
+            Gbk,
+            [EnumMember(Value = "GEOSTD8")]
+            Geostd8,
+            [EnumMember(Value = "GREEK")]
+            Greek,
+            [EnumMember(Value = "HEBREW")]
+            Hebrew,
+            [EnumMember(Value = "HP8")]
+            Hp8,
+            [EnumMember(Value = "KEYBCS2")]
+            Keybcs2,
+            [EnumMember(Value = "KOI8R")]
+            Koi8R,
+            [EnumMember(Value = "KOI8U")]
+            Koi8U,
+            [EnumMember(Value = "LATIN1")]
+            Latin1,
+            [EnumMember(Value = "LATIN2")]
+            Latin2,
+            [EnumMember(Value = "LATIN5")]
+            Latin5,
+            [EnumMember(Value = "LATIN7")]
+            Latin7,
+            [EnumMember(Value = "MACCE")]
+            Macce,
+            [EnumMember(Value = "MACROMAN")]
+            Macroman,
+            [EnumMember(Value = "SJIS")]
+            Sjis,
+            [EnumMember(Value = "SWE7")]
+            Swe7,
+            [EnumMember(Value = "TIS620")]
+            Tis620,
+            [EnumMember(Value = "UCS2")]
+            Ucs2,
+            [EnumMember(Value = "UJIS")]
+            Ujis,
+            [EnumMember(Value = "UTF16")]
+            Utf16,
+            [EnumMember(Value = "UTF16LE")]
+            Utf16Le,
+            [EnumMember(Value = "UTF32")]
+            Utf32,
+            [EnumMember(Value = "UTF8MB3")]
+            Utf8Mb3,
+            [EnumMember(Value = "UTF8MB4")]
+            Utf8Mb4
+        };
+
+        /// <value>
+        /// The server's default character set. If you set this variable, you should also set collation_server to specify the collation for the character set.
+        /// <br/>
+        /// characterSetServer corresponds to the MySQL server variable [character_set_server](https://dev.mysql.com/doc/refman/en/server-system-variables.html#sysvar_character_set_server).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "characterSetServer")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<CharacterSetServerEnum> CharacterSetServer { get; set; }
+                ///
+        /// <value>
+        /// The server's default collation.
+        /// <br/>
+        /// collationServer corresponds to the MySQL server variable [collation_server](https://dev.mysql.com/doc/refman/en/server-system-variables.html#sysvar_collation_server).
+        /// 
+        /// </value>
+        ///
+        public enum CollationServerEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ARMSCII8_GENERAL_CI")]
+            Armscii8GeneralCi,
+            [EnumMember(Value = "ARMSCII8_BIN")]
+            Armscii8Bin,
+            [EnumMember(Value = "ASCII_GENERAL_CI")]
+            AsciiGeneralCi,
+            [EnumMember(Value = "ASCII_BIN")]
+            AsciiBin,
+            [EnumMember(Value = "BIG5_CHINESE_CI")]
+            Big5ChineseCi,
+            [EnumMember(Value = "BIG5_BIN")]
+            Big5Bin,
+            [EnumMember(Value = "BINARY")]
+            Binary,
+            [EnumMember(Value = "CP1250_GENERAL_CI")]
+            Cp1250GeneralCi,
+            [EnumMember(Value = "CP1250_BIN")]
+            Cp1250Bin,
+            [EnumMember(Value = "CP1250_CROATIAN_CI")]
+            Cp1250CroatianCi,
+            [EnumMember(Value = "CP1250_CZECH_CS")]
+            Cp1250CzechCs,
+            [EnumMember(Value = "CP1250_POLISH_CI")]
+            Cp1250PolishCi,
+            [EnumMember(Value = "CP1251_GENERAL_CI")]
+            Cp1251GeneralCi,
+            [EnumMember(Value = "CP1251_BIN")]
+            Cp1251Bin,
+            [EnumMember(Value = "CP1251_BULGARIAN_CI")]
+            Cp1251BulgarianCi,
+            [EnumMember(Value = "CP1251_GENERAL_CS")]
+            Cp1251GeneralCs,
+            [EnumMember(Value = "CP1251_UKRAINIAN_CI")]
+            Cp1251UkrainianCi,
+            [EnumMember(Value = "CP1256_GENERAL_CI")]
+            Cp1256GeneralCi,
+            [EnumMember(Value = "CP1256_BIN")]
+            Cp1256Bin,
+            [EnumMember(Value = "CP1257_GENERAL_CI")]
+            Cp1257GeneralCi,
+            [EnumMember(Value = "CP1257_BIN")]
+            Cp1257Bin,
+            [EnumMember(Value = "CP1257_LITHUANIAN_CI")]
+            Cp1257LithuanianCi,
+            [EnumMember(Value = "CP850_GENERAL_CI")]
+            Cp850GeneralCi,
+            [EnumMember(Value = "CP850_BIN")]
+            Cp850Bin,
+            [EnumMember(Value = "CP852_GENERAL_CI")]
+            Cp852GeneralCi,
+            [EnumMember(Value = "CP852_BIN")]
+            Cp852Bin,
+            [EnumMember(Value = "CP866_GENERAL_CI")]
+            Cp866GeneralCi,
+            [EnumMember(Value = "CP866_BIN")]
+            Cp866Bin,
+            [EnumMember(Value = "CP932_JAPANESE_CI")]
+            Cp932JapaneseCi,
+            [EnumMember(Value = "CP932_BIN")]
+            Cp932Bin,
+            [EnumMember(Value = "DEC8_SWEDISH_CI")]
+            Dec8SwedishCi,
+            [EnumMember(Value = "DEC8_BIN")]
+            Dec8Bin,
+            [EnumMember(Value = "EUCJPMS_JAPANESE_CI")]
+            EucjpmsJapaneseCi,
+            [EnumMember(Value = "EUCJPMS_BIN")]
+            EucjpmsBin,
+            [EnumMember(Value = "EUCKR_KOREAN_CI")]
+            EuckrKoreanCi,
+            [EnumMember(Value = "EUCKR_BIN")]
+            EuckrBin,
+            [EnumMember(Value = "GB18030_CHINESE_CI")]
+            Gb18030ChineseCi,
+            [EnumMember(Value = "GB18030_BIN")]
+            Gb18030Bin,
+            [EnumMember(Value = "GB18030_UNICODE_520_CI")]
+            Gb18030Unicode520Ci,
+            [EnumMember(Value = "GB2312_CHINESE_CI")]
+            Gb2312ChineseCi,
+            [EnumMember(Value = "GB2312_BIN")]
+            Gb2312Bin,
+            [EnumMember(Value = "GBK_CHINESE_CI")]
+            GbkChineseCi,
+            [EnumMember(Value = "GBK_BIN")]
+            GbkBin,
+            [EnumMember(Value = "GEOSTD8_GENERAL_CI")]
+            Geostd8GeneralCi,
+            [EnumMember(Value = "GEOSTD8_BIN")]
+            Geostd8Bin,
+            [EnumMember(Value = "GREEK_GENERAL_CI")]
+            GreekGeneralCi,
+            [EnumMember(Value = "GREEK_BIN")]
+            GreekBin,
+            [EnumMember(Value = "HEBREW_GENERAL_CI")]
+            HebrewGeneralCi,
+            [EnumMember(Value = "HEBREW_BIN")]
+            HebrewBin,
+            [EnumMember(Value = "HP8_ENGLISH_CI")]
+            Hp8EnglishCi,
+            [EnumMember(Value = "HP8_BIN")]
+            Hp8Bin,
+            [EnumMember(Value = "KEYBCS2_GENERAL_CI")]
+            Keybcs2GeneralCi,
+            [EnumMember(Value = "KEYBCS2_BIN")]
+            Keybcs2Bin,
+            [EnumMember(Value = "KOI8R_GENERAL_CI")]
+            Koi8RGeneralCi,
+            [EnumMember(Value = "KOI8R_BIN")]
+            Koi8RBin,
+            [EnumMember(Value = "KOI8U_GENERAL_CI")]
+            Koi8UGeneralCi,
+            [EnumMember(Value = "KOI8U_BIN")]
+            Koi8UBin,
+            [EnumMember(Value = "LATIN1_SWEDISH_CI")]
+            Latin1SwedishCi,
+            [EnumMember(Value = "LATIN1_BIN")]
+            Latin1Bin,
+            [EnumMember(Value = "LATIN1_DANISH_CI")]
+            Latin1DanishCi,
+            [EnumMember(Value = "LATIN1_GENERAL_CI")]
+            Latin1GeneralCi,
+            [EnumMember(Value = "LATIN1_GENERAL_CS")]
+            Latin1GeneralCs,
+            [EnumMember(Value = "LATIN1_GERMAN1_CI")]
+            Latin1German1Ci,
+            [EnumMember(Value = "LATIN1_GERMAN2_CI")]
+            Latin1German2Ci,
+            [EnumMember(Value = "LATIN1_SPANISH_CI")]
+            Latin1SpanishCi,
+            [EnumMember(Value = "LATIN2_GENERAL_CI")]
+            Latin2GeneralCi,
+            [EnumMember(Value = "LATIN2_BIN")]
+            Latin2Bin,
+            [EnumMember(Value = "LATIN2_CROATIAN_CI")]
+            Latin2CroatianCi,
+            [EnumMember(Value = "LATIN2_CZECH_CS")]
+            Latin2CzechCs,
+            [EnumMember(Value = "LATIN2_HUNGARIAN_CI")]
+            Latin2HungarianCi,
+            [EnumMember(Value = "LATIN5_TURKISH_CI")]
+            Latin5TurkishCi,
+            [EnumMember(Value = "LATIN5_BIN")]
+            Latin5Bin,
+            [EnumMember(Value = "LATIN7_GENERAL_CI")]
+            Latin7GeneralCi,
+            [EnumMember(Value = "LATIN7_BIN")]
+            Latin7Bin,
+            [EnumMember(Value = "LATIN7_ESTONIAN_CS")]
+            Latin7EstonianCs,
+            [EnumMember(Value = "LATIN7_GENERAL_CS")]
+            Latin7GeneralCs,
+            [EnumMember(Value = "MACCE_GENERAL_CI")]
+            MacceGeneralCi,
+            [EnumMember(Value = "MACCE_BIN")]
+            MacceBin,
+            [EnumMember(Value = "MACROMAN_GENERAL_CI")]
+            MacromanGeneralCi,
+            [EnumMember(Value = "MACROMAN_BIN")]
+            MacromanBin,
+            [EnumMember(Value = "SJIS_JAPANESE_CI")]
+            SjisJapaneseCi,
+            [EnumMember(Value = "SJIS_BIN")]
+            SjisBin,
+            [EnumMember(Value = "SWE7_SWEDISH_CI")]
+            Swe7SwedishCi,
+            [EnumMember(Value = "SWE7_BIN")]
+            Swe7Bin,
+            [EnumMember(Value = "TIS620_THAI_CI")]
+            Tis620ThaiCi,
+            [EnumMember(Value = "TIS620_BIN")]
+            Tis620Bin,
+            [EnumMember(Value = "UCS2_GENERAL_CI")]
+            Ucs2GeneralCi,
+            [EnumMember(Value = "UCS2_BIN")]
+            Ucs2Bin,
+            [EnumMember(Value = "UCS2_CROATIAN_CI")]
+            Ucs2CroatianCi,
+            [EnumMember(Value = "UCS2_CZECH_CI")]
+            Ucs2CzechCi,
+            [EnumMember(Value = "UCS2_DANISH_CI")]
+            Ucs2DanishCi,
+            [EnumMember(Value = "UCS2_ESPERANTO_CI")]
+            Ucs2EsperantoCi,
+            [EnumMember(Value = "UCS2_ESTONIAN_CI")]
+            Ucs2EstonianCi,
+            [EnumMember(Value = "UCS2_GENERAL_MYSQL500_CI")]
+            Ucs2GeneralMysql500Ci,
+            [EnumMember(Value = "UCS2_GERMAN2_CI")]
+            Ucs2German2Ci,
+            [EnumMember(Value = "UCS2_HUNGARIAN_CI")]
+            Ucs2HungarianCi,
+            [EnumMember(Value = "UCS2_ICELANDIC_CI")]
+            Ucs2IcelandicCi,
+            [EnumMember(Value = "UCS2_LATVIAN_CI")]
+            Ucs2LatvianCi,
+            [EnumMember(Value = "UCS2_LITHUANIAN_CI")]
+            Ucs2LithuanianCi,
+            [EnumMember(Value = "UCS2_PERSIAN_CI")]
+            Ucs2PersianCi,
+            [EnumMember(Value = "UCS2_POLISH_CI")]
+            Ucs2PolishCi,
+            [EnumMember(Value = "UCS2_ROMANIAN_CI")]
+            Ucs2RomanianCi,
+            [EnumMember(Value = "UCS2_ROMAN_CI")]
+            Ucs2RomanCi,
+            [EnumMember(Value = "UCS2_SINHALA_CI")]
+            Ucs2SinhalaCi,
+            [EnumMember(Value = "UCS2_SLOVAK_CI")]
+            Ucs2SlovakCi,
+            [EnumMember(Value = "UCS2_SLOVENIAN_CI")]
+            Ucs2SlovenianCi,
+            [EnumMember(Value = "UCS2_SPANISH2_CI")]
+            Ucs2Spanish2Ci,
+            [EnumMember(Value = "UCS2_SPANISH_CI")]
+            Ucs2SpanishCi,
+            [EnumMember(Value = "UCS2_SWEDISH_CI")]
+            Ucs2SwedishCi,
+            [EnumMember(Value = "UCS2_TURKISH_CI")]
+            Ucs2TurkishCi,
+            [EnumMember(Value = "UCS2_UNICODE_520_CI")]
+            Ucs2Unicode520Ci,
+            [EnumMember(Value = "UCS2_UNICODE_CI")]
+            Ucs2UnicodeCi,
+            [EnumMember(Value = "UCS2_VIETNAMESE_CI")]
+            Ucs2VietnameseCi,
+            [EnumMember(Value = "UJIS_JAPANESE_CI")]
+            UjisJapaneseCi,
+            [EnumMember(Value = "UJIS_BIN")]
+            UjisBin,
+            [EnumMember(Value = "UTF16_GENERAL_CI")]
+            Utf16GeneralCi,
+            [EnumMember(Value = "UTF16_BIN")]
+            Utf16Bin,
+            [EnumMember(Value = "UTF16_CROATIAN_CI")]
+            Utf16CroatianCi,
+            [EnumMember(Value = "UTF16_CZECH_CI")]
+            Utf16CzechCi,
+            [EnumMember(Value = "UTF16_DANISH_CI")]
+            Utf16DanishCi,
+            [EnumMember(Value = "UTF16_ESPERANTO_CI")]
+            Utf16EsperantoCi,
+            [EnumMember(Value = "UTF16_ESTONIAN_CI")]
+            Utf16EstonianCi,
+            [EnumMember(Value = "UTF16_GERMAN2_CI")]
+            Utf16German2Ci,
+            [EnumMember(Value = "UTF16_HUNGARIAN_CI")]
+            Utf16HungarianCi,
+            [EnumMember(Value = "UTF16_ICELANDIC_CI")]
+            Utf16IcelandicCi,
+            [EnumMember(Value = "UTF16_LATVIAN_CI")]
+            Utf16LatvianCi,
+            [EnumMember(Value = "UTF16_LITHUANIAN_CI")]
+            Utf16LithuanianCi,
+            [EnumMember(Value = "UTF16_PERSIAN_CI")]
+            Utf16PersianCi,
+            [EnumMember(Value = "UTF16_POLISH_CI")]
+            Utf16PolishCi,
+            [EnumMember(Value = "UTF16_ROMANIAN_CI")]
+            Utf16RomanianCi,
+            [EnumMember(Value = "UTF16_ROMAN_CI")]
+            Utf16RomanCi,
+            [EnumMember(Value = "UTF16_SINHALA_CI")]
+            Utf16SinhalaCi,
+            [EnumMember(Value = "UTF16_SLOVAK_CI")]
+            Utf16SlovakCi,
+            [EnumMember(Value = "UTF16_SLOVENIAN_CI")]
+            Utf16SlovenianCi,
+            [EnumMember(Value = "UTF16_SPANISH2_CI")]
+            Utf16Spanish2Ci,
+            [EnumMember(Value = "UTF16_SPANISH_CI")]
+            Utf16SpanishCi,
+            [EnumMember(Value = "UTF16_SWEDISH_CI")]
+            Utf16SwedishCi,
+            [EnumMember(Value = "UTF16_TURKISH_CI")]
+            Utf16TurkishCi,
+            [EnumMember(Value = "UTF16_UNICODE_520_CI")]
+            Utf16Unicode520Ci,
+            [EnumMember(Value = "UTF16_UNICODE_CI")]
+            Utf16UnicodeCi,
+            [EnumMember(Value = "UTF16_VIETNAMESE_CI")]
+            Utf16VietnameseCi,
+            [EnumMember(Value = "UTF16LE_GENERAL_CI")]
+            Utf16LeGeneralCi,
+            [EnumMember(Value = "UTF16LE_BIN")]
+            Utf16LeBin,
+            [EnumMember(Value = "UTF32_GENERAL_CI")]
+            Utf32GeneralCi,
+            [EnumMember(Value = "UTF32_BIN")]
+            Utf32Bin,
+            [EnumMember(Value = "UTF32_CROATIAN_CI")]
+            Utf32CroatianCi,
+            [EnumMember(Value = "UTF32_CZECH_CI")]
+            Utf32CzechCi,
+            [EnumMember(Value = "UTF32_DANISH_CI")]
+            Utf32DanishCi,
+            [EnumMember(Value = "UTF32_ESPERANTO_CI")]
+            Utf32EsperantoCi,
+            [EnumMember(Value = "UTF32_ESTONIAN_CI")]
+            Utf32EstonianCi,
+            [EnumMember(Value = "UTF32_GERMAN2_CI")]
+            Utf32German2Ci,
+            [EnumMember(Value = "UTF32_HUNGARIAN_CI")]
+            Utf32HungarianCi,
+            [EnumMember(Value = "UTF32_ICELANDIC_CI")]
+            Utf32IcelandicCi,
+            [EnumMember(Value = "UTF32_LATVIAN_CI")]
+            Utf32LatvianCi,
+            [EnumMember(Value = "UTF32_LITHUANIAN_CI")]
+            Utf32LithuanianCi,
+            [EnumMember(Value = "UTF32_PERSIAN_CI")]
+            Utf32PersianCi,
+            [EnumMember(Value = "UTF32_POLISH_CI")]
+            Utf32PolishCi,
+            [EnumMember(Value = "UTF32_ROMANIAN_CI")]
+            Utf32RomanianCi,
+            [EnumMember(Value = "UTF32_ROMAN_CI")]
+            Utf32RomanCi,
+            [EnumMember(Value = "UTF32_SINHALA_CI")]
+            Utf32SinhalaCi,
+            [EnumMember(Value = "UTF32_SLOVAK_CI")]
+            Utf32SlovakCi,
+            [EnumMember(Value = "UTF32_SLOVENIAN_CI")]
+            Utf32SlovenianCi,
+            [EnumMember(Value = "UTF32_SPANISH2_CI")]
+            Utf32Spanish2Ci,
+            [EnumMember(Value = "UTF32_SPANISH_CI")]
+            Utf32SpanishCi,
+            [EnumMember(Value = "UTF32_SWEDISH_CI")]
+            Utf32SwedishCi,
+            [EnumMember(Value = "UTF32_TURKISH_CI")]
+            Utf32TurkishCi,
+            [EnumMember(Value = "UTF32_UNICODE_520_CI")]
+            Utf32Unicode520Ci,
+            [EnumMember(Value = "UTF32_UNICODE_CI")]
+            Utf32UnicodeCi,
+            [EnumMember(Value = "UTF32_VIETNAMESE_CI")]
+            Utf32VietnameseCi,
+            [EnumMember(Value = "UTF8_GENERAL_CI")]
+            Utf8GeneralCi,
+            [EnumMember(Value = "UTF8_BIN")]
+            Utf8Bin,
+            [EnumMember(Value = "UTF8_CROATIAN_CI")]
+            Utf8CroatianCi,
+            [EnumMember(Value = "UTF8_CZECH_CI")]
+            Utf8CzechCi,
+            [EnumMember(Value = "UTF8_DANISH_CI")]
+            Utf8DanishCi,
+            [EnumMember(Value = "UTF8_ESPERANTO_CI")]
+            Utf8EsperantoCi,
+            [EnumMember(Value = "UTF8_ESTONIAN_CI")]
+            Utf8EstonianCi,
+            [EnumMember(Value = "UTF8_GENERAL_MYSQL500_CI")]
+            Utf8GeneralMysql500Ci,
+            [EnumMember(Value = "UTF8_GERMAN2_CI")]
+            Utf8German2Ci,
+            [EnumMember(Value = "UTF8_HUNGARIAN_CI")]
+            Utf8HungarianCi,
+            [EnumMember(Value = "UTF8_ICELANDIC_CI")]
+            Utf8IcelandicCi,
+            [EnumMember(Value = "UTF8_LATVIAN_CI")]
+            Utf8LatvianCi,
+            [EnumMember(Value = "UTF8_LITHUANIAN_CI")]
+            Utf8LithuanianCi,
+            [EnumMember(Value = "UTF8_PERSIAN_CI")]
+            Utf8PersianCi,
+            [EnumMember(Value = "UTF8_POLISH_CI")]
+            Utf8PolishCi,
+            [EnumMember(Value = "UTF8_ROMANIAN_CI")]
+            Utf8RomanianCi,
+            [EnumMember(Value = "UTF8_ROMAN_CI")]
+            Utf8RomanCi,
+            [EnumMember(Value = "UTF8_SINHALA_CI")]
+            Utf8SinhalaCi,
+            [EnumMember(Value = "UTF8_SLOVAK_CI")]
+            Utf8SlovakCi,
+            [EnumMember(Value = "UTF8_SLOVENIAN_CI")]
+            Utf8SlovenianCi,
+            [EnumMember(Value = "UTF8_SPANISH2_CI")]
+            Utf8Spanish2Ci,
+            [EnumMember(Value = "UTF8_SPANISH_CI")]
+            Utf8SpanishCi,
+            [EnumMember(Value = "UTF8_SWEDISH_CI")]
+            Utf8SwedishCi,
+            [EnumMember(Value = "UTF8_TOLOWER_CI")]
+            Utf8TolowerCi,
+            [EnumMember(Value = "UTF8_TURKISH_CI")]
+            Utf8TurkishCi,
+            [EnumMember(Value = "UTF8_UNICODE_520_CI")]
+            Utf8Unicode520Ci,
+            [EnumMember(Value = "UTF8_UNICODE_CI")]
+            Utf8UnicodeCi,
+            [EnumMember(Value = "UTF8_VIETNAMESE_CI")]
+            Utf8VietnameseCi,
+            [EnumMember(Value = "UTF8MB4_0900_AI_CI")]
+            Utf8Mb40900AiCi,
+            [EnumMember(Value = "UTF8MB4_0900_AS_CI")]
+            Utf8Mb40900AsCi,
+            [EnumMember(Value = "UTF8MB4_0900_AS_CS")]
+            Utf8Mb40900AsCs,
+            [EnumMember(Value = "UTF8MB4_0900_BIN")]
+            Utf8Mb40900Bin,
+            [EnumMember(Value = "UTF8MB4_BIN")]
+            Utf8Mb4Bin,
+            [EnumMember(Value = "UTF8MB4_CROATIAN_CI")]
+            Utf8Mb4CroatianCi,
+            [EnumMember(Value = "UTF8MB4_CS_0900_AI_CI")]
+            Utf8Mb4Cs0900AiCi,
+            [EnumMember(Value = "UTF8MB4_CS_0900_AS_CS")]
+            Utf8Mb4Cs0900AsCs,
+            [EnumMember(Value = "UTF8MB4_CZECH_CI")]
+            Utf8Mb4CzechCi,
+            [EnumMember(Value = "UTF8MB4_DANISH_CI")]
+            Utf8Mb4DanishCi,
+            [EnumMember(Value = "UTF8MB4_DA_0900_AI_CI")]
+            Utf8Mb4Da0900AiCi,
+            [EnumMember(Value = "UTF8MB4_DA_0900_AS_CS")]
+            Utf8Mb4Da0900AsCs,
+            [EnumMember(Value = "UTF8MB4_DE_PB_0900_AI_CI")]
+            Utf8Mb4DePb0900AiCi,
+            [EnumMember(Value = "UTF8MB4_DE_PB_0900_AS_CS")]
+            Utf8Mb4DePb0900AsCs,
+            [EnumMember(Value = "UTF8MB4_EO_0900_AI_CI")]
+            Utf8Mb4Eo0900AiCi,
+            [EnumMember(Value = "UTF8MB4_EO_0900_AS_CS")]
+            Utf8Mb4Eo0900AsCs,
+            [EnumMember(Value = "UTF8MB4_ESPERANTO_CI")]
+            Utf8Mb4EsperantoCi,
+            [EnumMember(Value = "UTF8MB4_ESTONIAN_CI")]
+            Utf8Mb4EstonianCi,
+            [EnumMember(Value = "UTF8MB4_ES_0900_AI_CI")]
+            Utf8Mb4Es0900AiCi,
+            [EnumMember(Value = "UTF8MB4_ES_0900_AS_CS")]
+            Utf8Mb4Es0900AsCs,
+            [EnumMember(Value = "UTF8MB4_ES_TRAD_0900_AI_CI")]
+            Utf8Mb4EsTrad0900AiCi,
+            [EnumMember(Value = "UTF8MB4_ES_TRAD_0900_AS_CS")]
+            Utf8Mb4EsTrad0900AsCs,
+            [EnumMember(Value = "UTF8MB4_ET_0900_AI_CI")]
+            Utf8Mb4Et0900AiCi,
+            [EnumMember(Value = "UTF8MB4_ET_0900_AS_CS")]
+            Utf8Mb4Et0900AsCs,
+            [EnumMember(Value = "UTF8MB4_GENERAL_CI")]
+            Utf8Mb4GeneralCi,
+            [EnumMember(Value = "UTF8MB4_GERMAN2_CI")]
+            Utf8Mb4German2Ci,
+            [EnumMember(Value = "UTF8MB4_HR_0900_AI_CI")]
+            Utf8Mb4Hr0900AiCi,
+            [EnumMember(Value = "UTF8MB4_HR_0900_AS_CS")]
+            Utf8Mb4Hr0900AsCs,
+            [EnumMember(Value = "UTF8MB4_HUNGARIAN_CI")]
+            Utf8Mb4HungarianCi,
+            [EnumMember(Value = "UTF8MB4_HU_0900_AI_CI")]
+            Utf8Mb4Hu0900AiCi,
+            [EnumMember(Value = "UTF8MB4_HU_0900_AS_CS")]
+            Utf8Mb4Hu0900AsCs,
+            [EnumMember(Value = "UTF8MB4_ICELANDIC_CI")]
+            Utf8Mb4IcelandicCi,
+            [EnumMember(Value = "UTF8MB4_IS_0900_AI_CI")]
+            Utf8Mb4Is0900AiCi,
+            [EnumMember(Value = "UTF8MB4_IS_0900_AS_CS")]
+            Utf8Mb4Is0900AsCs,
+            [EnumMember(Value = "UTF8MB4_JA_0900_AS_CS")]
+            Utf8Mb4Ja0900AsCs,
+            [EnumMember(Value = "UTF8MB4_JA_0900_AS_CS_KS")]
+            Utf8Mb4Ja0900AsCsKs,
+            [EnumMember(Value = "UTF8MB4_LATVIAN_CI")]
+            Utf8Mb4LatvianCi,
+            [EnumMember(Value = "UTF8MB4_LA_0900_AI_CI")]
+            Utf8Mb4La0900AiCi,
+            [EnumMember(Value = "UTF8MB4_LA_0900_AS_CS")]
+            Utf8Mb4La0900AsCs,
+            [EnumMember(Value = "UTF8MB4_LITHUANIAN_CI")]
+            Utf8Mb4LithuanianCi,
+            [EnumMember(Value = "UTF8MB4_LT_0900_AI_CI")]
+            Utf8Mb4Lt0900AiCi,
+            [EnumMember(Value = "UTF8MB4_LT_0900_AS_CS")]
+            Utf8Mb4Lt0900AsCs,
+            [EnumMember(Value = "UTF8MB4_LV_0900_AI_CI")]
+            Utf8Mb4Lv0900AiCi,
+            [EnumMember(Value = "UTF8MB4_LV_0900_AS_CS")]
+            Utf8Mb4Lv0900AsCs,
+            [EnumMember(Value = "UTF8MB4_PERSIAN_CI")]
+            Utf8Mb4PersianCi,
+            [EnumMember(Value = "UTF8MB4_PL_0900_AI_CI")]
+            Utf8Mb4Pl0900AiCi,
+            [EnumMember(Value = "UTF8MB4_PL_0900_AS_CS")]
+            Utf8Mb4Pl0900AsCs,
+            [EnumMember(Value = "UTF8MB4_POLISH_CI")]
+            Utf8Mb4PolishCi,
+            [EnumMember(Value = "UTF8MB4_ROMANIAN_CI")]
+            Utf8Mb4RomanianCi,
+            [EnumMember(Value = "UTF8MB4_ROMAN_CI")]
+            Utf8Mb4RomanCi,
+            [EnumMember(Value = "UTF8MB4_RO_0900_AI_CI")]
+            Utf8Mb4Ro0900AiCi,
+            [EnumMember(Value = "UTF8MB4_RO_0900_AS_CS")]
+            Utf8Mb4Ro0900AsCs,
+            [EnumMember(Value = "UTF8MB4_RU_0900_AI_CI")]
+            Utf8Mb4Ru0900AiCi,
+            [EnumMember(Value = "UTF8MB4_RU_0900_AS_CS")]
+            Utf8Mb4Ru0900AsCs,
+            [EnumMember(Value = "UTF8MB4_SINHALA_CI")]
+            Utf8Mb4SinhalaCi,
+            [EnumMember(Value = "UTF8MB4_SK_0900_AI_CI")]
+            Utf8Mb4Sk0900AiCi,
+            [EnumMember(Value = "UTF8MB4_SK_0900_AS_CS")]
+            Utf8Mb4Sk0900AsCs,
+            [EnumMember(Value = "UTF8MB4_SLOVAK_CI")]
+            Utf8Mb4SlovakCi,
+            [EnumMember(Value = "UTF8MB4_SLOVENIAN_CI")]
+            Utf8Mb4SlovenianCi,
+            [EnumMember(Value = "UTF8MB4_SL_0900_AI_CI")]
+            Utf8Mb4Sl0900AiCi,
+            [EnumMember(Value = "UTF8MB4_SL_0900_AS_CS")]
+            Utf8Mb4Sl0900AsCs,
+            [EnumMember(Value = "UTF8MB4_SPANISH2_CI")]
+            Utf8Mb4Spanish2Ci,
+            [EnumMember(Value = "UTF8MB4_SPANISH_CI")]
+            Utf8Mb4SpanishCi,
+            [EnumMember(Value = "UTF8MB4_SV_0900_AI_CI")]
+            Utf8Mb4Sv0900AiCi,
+            [EnumMember(Value = "UTF8MB4_SV_0900_AS_CS")]
+            Utf8Mb4Sv0900AsCs,
+            [EnumMember(Value = "UTF8MB4_SWEDISH_CI")]
+            Utf8Mb4SwedishCi,
+            [EnumMember(Value = "UTF8MB4_TR_0900_AI_CI")]
+            Utf8Mb4Tr0900AiCi,
+            [EnumMember(Value = "UTF8MB4_TR_0900_AS_CS")]
+            Utf8Mb4Tr0900AsCs,
+            [EnumMember(Value = "UTF8MB4_TURKISH_CI")]
+            Utf8Mb4TurkishCi,
+            [EnumMember(Value = "UTF8MB4_UNICODE_520_CI")]
+            Utf8Mb4Unicode520Ci,
+            [EnumMember(Value = "UTF8MB4_UNICODE_CI")]
+            Utf8Mb4UnicodeCi,
+            [EnumMember(Value = "UTF8MB4_VIETNAMESE_CI")]
+            Utf8Mb4VietnameseCi,
+            [EnumMember(Value = "UTF8MB4_VI_0900_AI_CI")]
+            Utf8Mb4Vi0900AiCi,
+            [EnumMember(Value = "UTF8MB4_VI_0900_AS_CS")]
+            Utf8Mb4Vi0900AsCs,
+            [EnumMember(Value = "UTF8MB4_ZH_0900_AS_CS")]
+            Utf8Mb4Zh0900AsCs
+        };
+
+        /// <value>
+        /// The server's default collation.
+        /// <br/>
+        /// collationServer corresponds to the MySQL server variable [collation_server](https://dev.mysql.com/doc/refman/en/server-system-variables.html#sysvar_collation_server).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "collationServer")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<CollationServerEnum> CollationServer { get; set; }
         
         /// <value>
         /// Set the chunking size for updates to the global memory usage counter Global_connection_memory.
@@ -72,7 +744,17 @@ namespace Oci.MysqlService.Models
         public System.Nullable<long> ConnectionMemoryLimit { get; set; }
                 ///
         /// <value>
-        /// (\"default_authentication_plugin\")
+        /// The default authentication plugin. This must be a plugin that uses internal credentials storage, so these values are permitted:
+        /// mysql_native_password, sha256_password, caching_sha2_password.
+        /// <br/>
+        /// As of MySQL 8.0.27, which introduces multifactor authentication, default_authentication_plugin is still used,
+        /// but in conjunction with and at a lower precedence than the authentication_policy system variable.
+        /// For details, see The Default Authentication Plugin. Because of this diminished role, default_authentication_plugin is deprecated as of MySQL 8.0.27
+        /// and subject to removal in a future MySQL version.
+        /// <br/>
+        /// defaultAuthenticationPlugin corresponds to the MySQL system variable
+        /// [default_authentication_plugin](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin).
+        /// 
         /// </value>
         ///
         public enum DefaultAuthenticationPluginEnum {
@@ -88,7 +770,17 @@ namespace Oci.MysqlService.Models
         };
 
         /// <value>
-        /// (\"default_authentication_plugin\")
+        /// The default authentication plugin. This must be a plugin that uses internal credentials storage, so these values are permitted:
+        /// mysql_native_password, sha256_password, caching_sha2_password.
+        /// <br/>
+        /// As of MySQL 8.0.27, which introduces multifactor authentication, default_authentication_plugin is still used,
+        /// but in conjunction with and at a lower precedence than the authentication_policy system variable.
+        /// For details, see The Default Authentication Plugin. Because of this diminished role, default_authentication_plugin is deprecated as of MySQL 8.0.27
+        /// and subject to removal in a future MySQL version.
+        /// <br/>
+        /// defaultAuthenticationPlugin corresponds to the MySQL system variable
+        /// [default_authentication_plugin](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin).
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "defaultAuthenticationPlugin")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -249,6 +941,15 @@ namespace Oci.MysqlService.Models
         public System.Nullable<GroupReplicationConsistencyEnum> GroupReplicationConsistency { get; set; }
         
         /// <value>
+        /// Specifies the maximum permitted result length in bytes for the GROUP_CONCAT() function.
+        /// <br/>
+        /// This is the MySQL variable \"group_concat_max_len\". For more information, please see the [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "groupConcatMaxLen")]
+        public System.Nullable<long> GroupConcatMaxLen { get; set; }
+        
+        /// <value>
         /// (\"innodb_ft_enable_stopword\")
         /// </value>
         [JsonProperty(PropertyName = "innodbFtEnableStopword")]
@@ -264,7 +965,12 @@ namespace Oci.MysqlService.Models
         public System.Nullable<bool> InnodbLogWriterThreads { get; set; }
         
         /// <value>
-        /// (\"local_infile\")
+        /// This variable controls server-side LOCAL capability for LOAD DATA statements. Depending on the local_infile setting,
+        /// the server refuses or permits local data loading by clients that have LOCAL enabled on the client side. 
+        /// <br/>
+        /// local_infile corresponds to the MySQL Server system variable
+        /// [local_infile](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_local_infile)
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "localInfile")]
         public System.Nullable<bool> LocalInfile { get; set; }
@@ -559,6 +1265,16 @@ namespace Oci.MysqlService.Models
         public System.Nullable<long> InnodbStatsTransientSamplePages { get; set; }
         
         /// <value>
+        /// When you enable innodbStrictMode, the InnoDB storage engine returns errors instead of warnings for invalid or incompatible table options.
+        /// <br/>
+        /// innodbStrictMode corresponds to the MySQL InnoDB system variable
+        /// [innodb_strict_mode](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbStrictMode")]
+        public System.Nullable<bool> InnodbStrictMode { get; set; }
+        
+        /// <value>
         /// The maximum size of one packet or any generated/intermediate string.
         /// <br/>
         /// This is the mysql variable \"max_allowed_packet\".
@@ -805,6 +1521,477 @@ namespace Oci.MysqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeZone")]
         public string TimeZone { get; set; }
+        
+        /// <value>
+        /// This variable controls the block encryption mode for block-based algorithms such as AES. It affects encryption for AES_ENCRYPT() and AES_DECRYPT().
+        ///  
+        /// block_encryption_mode takes a value in aes-keylen-mode format, where keylen is the key length in bits and mode is the encryption mode. The value is not case-sensitive.
+        /// Permitted keylen values are 128, 192, and 256. Permitted mode values are ECB, CBC, CFB1, CFB8, CFB128, and OFB.
+        /// <br/>
+        /// block_encryption_mode corresponds to the MySQL Server Administration system variable
+        /// [block_encryption_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_block_encryption_mode)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "blockEncryptionMode")]
+        public string BlockEncryptionMode { get; set; }
+        
+        /// <value>
+        /// Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+        /// There is no delay by default. Setting this variable to a microsecond delay enables more transactions to be synchronized
+        /// together to disk at once, reducing the overall time to commit a group of transactions because the larger groups required
+        /// fewer time units per group.
+        /// <br/>
+        /// binlogGroupCommitSyncDelay corresponds to the MySQL Replication system variable
+        /// [binlog_group_commit_sync_delay](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "binlogGroupCommitSyncDelay")]
+        public System.Nullable<int> BinlogGroupCommitSyncDelay { get; set; }
+        
+        /// <value>
+        /// The maximum number of transactions to wait for before aborting the current delay as specified by binlog_group_commit_sync_delay.
+        /// If binlog_group_commit_sync_delay is set to 0, then this option has no effect.
+        /// <br/>
+        /// binlogGroupCommitSyncNoDelayCount corresponds to the MySQL Replication system variable
+        /// [binlog_group_commit_sync_no_delay_count](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_no_delay_count)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "binlogGroupCommitSyncNoDelayCount")]
+        public System.Nullable<int> BinlogGroupCommitSyncNoDelayCount { get; set; }
+        
+        /// <value>
+        /// Specifies the number of seconds to wait for more data or a heartbeat signal from the source before the replica considers the connection broken,
+        /// aborts the read, and tries to reconnect. Setting this variable has no immediate effect. The state of the variable applies on all subsequent START REPLICA commands.
+        /// <br/>
+        /// replicaNetTimeout corresponds to the MySQL Replica server system variable
+        /// [replica_net_timeout](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_replica_net_timeout)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicaNetTimeout")]
+        public System.Nullable<int> ReplicaNetTimeout { get; set; }
+        
+        /// <value>
+        /// Whether client connections to the server are required to use some form of secure transport.
+        /// When this variable is enabled, the server permits only TCP/IP connections encrypted using TLS/SSL, or connections that use a socket file or shared memory.
+        /// The server rejects nonsecure connection attempts, which fail with an ER_SECURE_TRANSPORT_REQUIRED error.
+        /// <br/>
+        /// require_secure_transport corresponds to the MySQL Server Administration system variable
+        /// [require_secure_transport](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_require_secure_transport)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "requireSecureTransport")]
+        public System.Nullable<bool> RequireSecureTransport { get; set; }
+        
+        /// <value>
+        /// Defines the amount of disk space occupied by redo log files. innodb_redo_log_capacity supercedes the innodb_log_files_in_group and innodb_log_file_size variables,
+        /// which are both ignored if innodb_redo_log_capacity is defined. If innodb_redo_log_capacity is not defined, and if neither innodb_log_file_size or innodb_log_files_in_group are defined,
+        /// then the default innodb_redo_log_capacity value is used.
+        /// <br/>
+        /// innodbRedoLogCapacity corresponds to the InnoDB Startup Options and System Variables
+        /// [innodb_redo_log_capacity](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_redo_log_capacity)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbRedoLogCapacity")]
+        public System.Nullable<long> InnodbRedoLogCapacity { get; set; }
+        
+        /// <value>
+        /// The delay period before executing a new transaction, in milliseconds. The maximum value is 300000 (5 minutes).
+        /// A transaction delay can be used in cases where parallel transactions affect the performance of other operations due to resource contention.
+        /// For example, if parallel transactions affect index creation or an online buffer pool resizing operation,
+        /// you can configure a transaction delay to reduce resource contention while those operations are running. 
+        /// <br/>
+        /// threadPoolTransactionDelay corresponds to the MySQL Server system variable
+        /// [thread_pool_transaction_delay](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_transaction_delay)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "threadPoolTransactionDelay")]
+        public System.Nullable<int> ThreadPoolTransactionDelay { get; set; }
+        
+        /// <value>
+        /// The maximum number of query threads permitted in a thread group.
+        /// The maximum value is 4096, but if thread_pool_max_transactions_limit is set, thread_pool_query_threads_per_group must not exceed that value.
+        /// The default value of 1 means there is one active query thread in each thread group, which works well for many loads.
+        /// When you are using the high concurrency thread pool algorithm (thread_pool_algorithm = 1),
+        /// consider increasing the value if you experience slower response times due to long-running transactions. 
+        /// <br/>
+        /// threadPoolQueryThreadsPerGroup corresponds to the MySQL Server system variable
+        /// [thread_pool_query_threads_per_group](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_query_threads_per_group)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "threadPoolQueryThreadsPerGroup")]
+        public System.Nullable<int> ThreadPoolQueryThreadsPerGroup { get; set; }
+                ///
+        /// <value>
+        /// This variable determines the default output format used by EXPLAIN in the absence of a FORMAT option when displaying a query execution plan.
+        /// <br/>
+        /// explainFormat corresponds to the MySQL system variable
+        /// [explain_format](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_explain_format).
+        /// 
+        /// </value>
+        ///
+        public enum ExplainFormatEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "TRADITIONAL")]
+            Traditional,
+            [EnumMember(Value = "JSON")]
+            Json,
+            [EnumMember(Value = "TREE")]
+            Tree
+        };
+
+        /// <value>
+        /// This variable determines the default output format used by EXPLAIN in the absence of a FORMAT option when displaying a query execution plan.
+        /// <br/>
+        /// explainFormat corresponds to the MySQL system variable
+        /// [explain_format](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_explain_format).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "explainFormat")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ExplainFormatEnum> ExplainFormat { get; set; }
+        
+        /// <value>
+        /// This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+        /// By default, explicit_defaults_for_timestamp is enabled, which disables the nonstandard behaviors. Disabling explicit_defaults_for_timestamp results in a warning.
+        /// <br/>
+        /// explicit_defaults_for_timestamp corresponds to the MySQL Server Administration system variable
+        /// [explicit_defaults_for_timestamp](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "explicitDefaultsForTimestamp")]
+        public System.Nullable<bool> ExplicitDefaultsForTimestamp { get; set; }
+        
+        /// <value>
+        /// Whether GIPK mode is in effect, in which case a MySQL replication source server adds a generated invisible primary key to any InnoDB table that is created without one.
+        /// <br/>
+        /// sqlGenerateInvisiblePrimaryKey corresponds to the MySQL system variable
+        /// [sql_generate_invisible_primary_key] (https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_generate_invisible_primary_key).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sqlGenerateInvisiblePrimaryKey")]
+        public System.Nullable<bool> SqlGenerateInvisiblePrimaryKey { get; set; }
+        
+        /// <value>
+        /// Defines the maximum amount of memory that can be occupied by the TempTable storage engine before it starts storing data on disk.
+        /// The default value is 1073741824 bytes (1GiB). For more information, see Section 10.4.4, \u201CInternal Temporary Table Use in MySQL\u201D.
+        /// <br/>
+        /// temptableMaxRam corresponds to the MySQL system variable
+        /// [temptable_max_ram] (https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_temptable_max_ram).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "temptableMaxRam")]
+        public System.Nullable<long> TemptableMaxRam { get; set; }
+                ///
+        /// <value>
+        /// Whether InnoDB performs change buffering, an optimization that delays write operations to secondary indexes so that the I/O operations can be performed sequentially.
+        /// Permitted values are described in the following table. Values may also be specified numerically.
+        /// <br/>
+        /// innodbChangeBuffering corresponds to the MySQL InnoDB Startup Options and System Variables
+        /// [innodb_change_buffering] (https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_change_buffering).
+        /// 
+        /// </value>
+        ///
+        public enum InnodbChangeBufferingEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "NONE")]
+            None,
+            [EnumMember(Value = "INSERTS")]
+            Inserts,
+            [EnumMember(Value = "DELETES")]
+            Deletes,
+            [EnumMember(Value = "CHANGES")]
+            Changes,
+            [EnumMember(Value = "PURGES")]
+            Purges,
+            [EnumMember(Value = "ALL")]
+            All
+        };
+
+        /// <value>
+        /// Whether InnoDB performs change buffering, an optimization that delays write operations to secondary indexes so that the I/O operations can be performed sequentially.
+        /// Permitted values are described in the following table. Values may also be specified numerically.
+        /// <br/>
+        /// innodbChangeBuffering corresponds to the MySQL InnoDB Startup Options and System Variables
+        /// [innodb_change_buffering] (https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_change_buffering).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbChangeBuffering")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<InnodbChangeBufferingEnum> InnodbChangeBuffering { get; set; }
+        
+        /// <value>
+        /// Whether the InnoDB adaptive hash index is enabled or disabled.
+        /// It may be desirable, depending on your workload, to dynamically enable or disable adaptive hash indexing to improve query performance.
+        /// Because the adaptive hash index may not be useful for all workloads, conduct benchmarks with it both enabled and disabled, using realistic workloads.
+        /// <br/>
+        /// innodbAdaptiveHashIndex corresponds to the MySQL InnoDB Startup Options and System Variables
+        /// [innodb_adaptive_hash_index] (https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbAdaptiveHashIndex")]
+        public System.Nullable<bool> InnodbAdaptiveHashIndex { get; set; }
+        
+        /// <value>
+        /// When enabled, undo tablespaces that exceed the threshold value defined by innodb_max_undo_log_size are marked for truncation.
+        /// Only undo tablespaces can be truncated. Truncating undo logs that reside in the system tablespace is not supported.
+        /// For truncation to occur, there must be at least two undo tablespaces.
+        /// <br/>
+        /// innodbUndoLogTruncate corresponds to the MySQL InnoDB Startup Options and System Variables
+        /// [innodb_undo_log_truncate] (https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_undo_log_truncate).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbUndoLogTruncate")]
+        public System.Nullable<bool> InnodbUndoLogTruncate { get; set; }
+        
+        /// <value>
+        /// The number of table definitions that can be stored in the table definition cache.
+        /// If you use a large number of tables, you can create a large table definition cache to speed up opening of tables.
+        /// The table definition cache takes less space and does not use file descriptors, unlike the normal table cache.
+        /// <br/>
+        /// table_definition_cache corresponds to the MySQL Server Administration system variable
+        /// [table_definition_cache](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_table_definition_cache)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tableDefinitionCache")]
+        public System.Nullable<int> TableDefinitionCache { get; set; }
+        
+        /// <value>
+        /// The number of open tables for all threads. Increasing this value increases the number of file descriptors that mysqld requires.
+        /// <br/>
+        /// table_open_cache corresponds to the MySQL Server Administration system variable
+        /// [table_open_cache](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_table_open_cache)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tableOpenCache")]
+        public System.Nullable<int> TableOpenCache { get; set; }
+        
+        /// <value>
+        /// The maximum amount of space to use for all relay logs.
+        /// <br/>
+        /// relayLogSpaceLimit corresponds to the MySQL Replica Server Options variable
+        /// [relay_log_space_limit] (https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_relay_log_space_limit).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "relayLogSpaceLimit")]
+        public System.Nullable<long> RelayLogSpaceLimit { get; set; }
+        
+        /// <value>
+        /// The optimizer_switch system variable enables control over optimizer behavior.
+        /// The value of this variable is a set of flags, each of which has a value of on or off to indicate whether the corresponding optimizer behavior is enabled or disabled.
+        /// This variable has global and session values and can be changed at runtime. The global default can be set at server startup.
+        /// <br/>
+        /// Setting hypergraph_optimizer=on for cloud builds below 9.0.0 will fail.
+        /// <br/>
+        /// optimizerSwitch corresponds to the MySQL Server System variable
+        /// [optimizer_switch] (https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "optimizerSwitch")]
+        public string OptimizerSwitch { get; set; }
+        
+        /// <value>
+        /// From MySQL 8.0.26, use replica_type_conversions in place of slave_type_conversions, which is deprecated from that release.
+        /// In releases before MySQL 8.0.26, use slave_type_conversions.
+        /// <br/>
+        /// replica_type_conversions controls the type conversion mode in effect on the replica when using row-based replication.
+        /// Its value is a comma-delimited set of zero or more elements from the list: ALL_LOSSY, ALL_NON_LOSSY, ALL_SIGNED, ALL_UNSIGNED.
+        /// Set this variable to an empty string to disallow type conversions between the source and the replica.
+        /// Setting this variable takes effect for all replication channels immediately, including running channels. 
+        /// <br/>
+        /// replica_type_conversions corresponds to the MySQL Replica Server Options variable
+        /// [replica_type_conversions] (https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_replica_type_conversions).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicaTypeConversions")]
+        public string ReplicaTypeConversions { get; set; }
+        
+        /// <value>
+        /// Beginning with MySQL 8.0.26, slave_parallel_workers is deprecated, and you should use replica_parallel_workers instead.
+        /// (Prior to MySQL 8.0.26, you must use slave_parallel_workers to set the number of applier threads.)
+        /// <br/>
+        /// replicaParallelWorkers corresponds to the MySQL Replica Server Options variable
+        /// [replica_parallel_workers] (https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_replica_parallel_workers).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "replicaParallelWorkers")]
+        public System.Nullable<int> ReplicaParallelWorkers { get; set; }
+        
+        /// <value>
+        /// Whether to resolve host names when checking client connections. If this variable is OFF, mysqld resolves host names when checking client connections.
+        /// If it is ON, mysqld uses only IP numbers; in this case, all Host column values in the grant tables must be IP addresses.
+        /// See Section 7.1.12.3, \u201CDNS Lookups and the Host Cache\u201D.
+        /// <br/>
+        /// skipNameResolve corresponds to the MySQL Server System variable
+        /// [skip_name_resolve] (https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_skip_name_resolve).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "skipNameResolve")]
+        public System.Nullable<bool> SkipNameResolve { get; set; }
+        
+        /// <value>
+        /// The maximum number of simultaneous connections permitted to any given MySQL user account.
+        /// A value of 0 (the default) means \u201Cno limit.\u201D This variable has a global value that can be set at server startup or runtime.
+        /// It also has a read-only session value that indicates the effective simultaneous-connection limit that applies to the account associated with the current session.
+        /// <br/>
+        /// maxUserConnections corresponds to the MySQL Server System variable
+        /// [max_user_connections] (https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_user_connections).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxUserConnections")]
+        public System.Nullable<long> MaxUserConnections { get; set; }
+        
+        /// <value>
+        /// The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+        /// In MySQL 8.0.18 and later, this variable also controls the amount of memory used for hash joins. Normally, the best way to get fast joins is to add indexes.
+        /// Increase the value of join_buffer_size to get a faster full join when adding indexes is not possible. One join buffer is allocated for each full join between two tables.
+        /// For a complex join between several tables for which indexes are not used, multiple join buffers might be necessary.
+        /// <br/>
+        /// joinBufferSize corresponds to the MySQL Server System variable
+        /// [join_buffer_size] (https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_join_buffer_size).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "joinBufferSize")]
+        public System.Nullable<long> JoinBufferSize { get; set; }
+        
+        /// <value>
+        /// Limit the assumed maximum number of seeks when looking up rows based on a key.
+        /// The MySQL optimizer assumes that no more than this number of key seeks are required when searching for matching rows in a table by scanning an index,
+        /// regardless of the actual cardinality of the index (see Section 15.7.7.22, \u201CSHOW INDEX Statement\u201D).
+        /// By setting this to a low value (say, 100), you can force MySQL to prefer indexes instead of table scans.
+        /// <br/>
+        /// maxSeeksForKey corresponds to the MySQL Server System variable
+        /// [max_seeks_for_key] (https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_seeks_for_key).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxSeeksForKey")]
+        public System.Nullable<long> MaxSeeksForKey { get; set; }
+        
+        /// <value>
+        /// The limit on memory consumption for the range optimizer. A value of 0 means \u201Cno limit.\u201D
+        /// If an execution plan considered by the optimizer uses the range access method but the optimizer estimates that the amount of memory needed for this method would exceed the limit,
+        /// it abandons the plan and considers other plans. 
+        /// <br/>
+        /// rangeOptimizerMaxMemSize corresponds to the MySQL Server System variable
+        /// [range_optimizer_max_mem_size] (https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "rangeOptimizerMaxMemSize")]
+        public System.Nullable<long> RangeOptimizerMaxMemSize { get; set; }
+        
+        /// <value>
+        /// auto_increment_increment and auto_increment_offset are intended for use with circular (source-to-source) replication,
+        /// and can be used to control the operation of AUTO_INCREMENT columns. Both variables have global and session values,
+        /// and each can assume an integer value between 1 and 65,535 inclusive.
+        /// <br/>
+        /// autoIncrementIncrement corresponds to the MySQL Replication Source Options variable
+        /// [auto_increment_increment] (https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "autoIncrementIncrement")]
+        public System.Nullable<int> AutoIncrementIncrement { get; set; }
+        
+        /// <value>
+        /// This variable has a default value of 1. If it is left with its default value,
+        /// and Group Replication is started on the server in multi-primary mode, it is changed to the server ID.
+        /// <br/>
+        /// autoIncrementOffset corresponds to the MySQL Replication Source Options variable
+        /// [auto_increment_offset] (https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "autoIncrementOffset")]
+        public System.Nullable<int> AutoIncrementOffset { get; set; }
+        
+        /// <value>
+        /// The lock mode to use for generating auto-increment values.
+        /// Permissible values are 0, 1, or 2, for traditional, consecutive, or interleaved, respectively.
+        /// <br/>
+        /// innodbAutoincLockMode corresponds to the MySQL InnoDB Startup Options and System Variables
+        /// [innodb_autoinc_lock_mode] (https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_autoinc_lock_mode).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbAutoincLockMode")]
+        public System.Nullable<int> InnodbAutoincLockMode { get; set; }
+        
+        /// <value>
+        /// InnoDB rolls back only the last statement on a transaction timeout by default.
+        /// If --innodb-rollback-on-timeout is specified, a transaction timeout causes InnoDB to abort and roll back the entire transaction.
+        /// <br/>
+        /// innodbRollbackOnTimeout corresponds to the MySQL InnoDB Startup Options and System Variables
+        /// [innodb_rollback_on_timeout] (https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_rollback_on_timeout).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbRollbackOnTimeout")]
+        public System.Nullable<bool> InnodbRollbackOnTimeout { get; set; }
+        
+        /// <value>
+        /// Specifies an upper limit in bytes on the size of the temporary log files used during online DDL operations for InnoDB tables.
+        /// There is one such log file for each index being created or table being altered.
+        /// This log file stores data inserted, updated, or deleted in the table during the DDL operation.
+        /// <br/>
+        /// innodbOnlineAlterLogMaxSize corresponds to the MySQL InnoDB Startup Options and System Variables
+        /// [innodb_online_alter_log_max_size] (https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_online_alter_log_max_size).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbOnlineAlterLogMaxSize")]
+        public System.Nullable<long> InnodbOnlineAlterLogMaxSize { get; set; }
+        
+        /// <value>
+        /// This variable defines:
+        /// <br/>
+        /// * The sort buffer size for online DDL operations that create or rebuild secondary indexes.
+        ///   However, as of MySQL 8.0.27, this responsibility is subsumed by the innodb_ddl_buffer_size variable.
+        /// <br/>
+        /// * The amount by which the temporary log file is extended when recording concurrent DML during an online DDL operation,
+        ///   and the size of the temporary log file read buffer and write buffer.
+        /// <br/>
+        /// innodbSortBufferSize corresponds to the MySQL InnoDB Startup Options and System Variables
+        /// [innodb_sort_buffer_size] (https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_sort_buffer_size).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbSortBufferSize")]
+        public System.Nullable<int> InnodbSortBufferSize { get; set; }
+        
+        /// <value>
+        /// Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+        /// When innodb_numa_interleave is enabled, the NUMA memory policy is set to MPOL_INTERLEAVE for the mysqld process.
+        /// After the InnoDB buffer pool is allocated, the NUMA memory policy is set back to MPOL_DEFAULT.
+        /// For the innodb_numa_interleave option to be available, MySQL must be compiled on a NUMA-enabled Linux system.
+        /// <br/>
+        /// innodbNumaInterleave corresponds to the MySQL InnoDB Startup Options and System Variables
+        /// [innodb_numa_interleave] (https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "innodbNumaInterleave")]
+        public System.Nullable<bool> InnodbNumaInterleave { get; set; }
+        
+        /// <value>
+        /// The number of thread groups in the thread pool. This is the most important parameter controlling thread pool performance.
+        /// It affects how many statements can execute simultaneously. If a value outside the range of permissible values is specified,
+        /// the thread pool plugin does not load and the server writes a message to the error log.
+        /// <br/>
+        /// threadPoolSize corresponds to the MySQL Server System variable
+        /// [thread_pool_size] (https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_size).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "threadPoolSize")]
+        public System.Nullable<int> ThreadPoolSize { get; set; }
+        
+        /// <value>
+        /// If a query takes longer than this many seconds, the server increments the Slow_queries status variable.
+        /// If the slow query log is enabled, the query is logged to the slow query log file.
+        /// This value is measured in real time, not CPU time,
+        /// so a query that is under the threshold on a lightly loaded system might be above the threshold on a heavily loaded one.
+        /// <br/>
+        /// longQueryTime corresponds to the MySQL Server System variable
+        /// [long_query_time] (https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_long_query_time).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "longQueryTime")]
+        public System.Nullable<int> LongQueryTime { get; set; }
         
     }
 }

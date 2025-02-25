@@ -62,6 +62,10 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "INSTALL_ENHANCEMENT_WINDOWS_UPDATES")]
       InstallEnhancementWindowsUpdates,
       [EnumMember(Value = "INSTALL_OTHER_WINDOWS_UPDATES")]
-      InstallOtherWindowsUpdates
+      InstallOtherWindowsUpdates,
+      [EnumMember(Value = "REBOOT")]
+      Reboot,
+      [EnumMember(Value = "RERUN_WORK_REQUEST")]
+      RerunWorkRequest
   }
 }

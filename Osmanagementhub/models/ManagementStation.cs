@@ -160,6 +160,59 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
+        /// When enabled, the station setup script automatically runs to configure the firewall and SELinux settings on the station.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoConfigEnabled")]
+        public System.Nullable<bool> IsAutoConfigEnabled { get; set; }
+        
+        /// <value>
+        /// A list of other management stations that are behind the same load balancer within a high availability configuration. Stations are identified as peers if they have the same hostname and compartment.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "PeerManagementStations is required.")]
+        [JsonProperty(PropertyName = "peerManagementStations")]
+        public System.Collections.Generic.List<PeerManagementStation> PeerManagementStations { get; set; }
+        
+        /// <value>
+        /// The location of the instance that is acting as the management station.
+        /// </value>
+        [JsonProperty(PropertyName = "location")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ManagedInstanceLocation> Location { get; set; }
+        
+        /// <value>
+        /// Amount of available mirror storage in bytes.
+        /// </value>
+        [JsonProperty(PropertyName = "mirrorStorageAvailableSize")]
+        public System.Nullable<long> MirrorStorageAvailableSize { get; set; }
+        
+        /// <value>
+        /// Total mirror storage size in bytes.
+        /// </value>
+        [JsonProperty(PropertyName = "mirrorStorageSize")]
+        public System.Nullable<long> MirrorStorageSize { get; set; }
+        
+        /// <value>
+        /// The total size of all software source mirrors in bytes.
+        /// </value>
+        [JsonProperty(PropertyName = "mirrorSize")]
+        public System.Nullable<long> MirrorSize { get; set; }
+        
+        /// <value>
+        /// The total number of unique packages within the mirrored software sources on the station. Each package is counted only once, regardless of how many versions it has.
+        /// </value>
+        [JsonProperty(PropertyName = "mirrorUniquePackageCount")]
+        public System.Nullable<int> MirrorUniquePackageCount { get; set; }
+        
+        /// <value>
+        /// The total number of all packages within the mirrored software sources.
+        /// </value>
+        [JsonProperty(PropertyName = "mirrorPackageCount")]
+        public System.Nullable<int> MirrorPackageCount { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

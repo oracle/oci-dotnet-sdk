@@ -89,8 +89,14 @@ namespace Oci.OsmanagementhubService.Models
                 case "VENDOR":
                     obj = new CreateVendorSoftwareSourceDetails();
                     break;
+                case "PRIVATE":
+                    obj = new CreatePrivateSoftwareSourceDetails();
+                    break;
                 case "VERSIONED":
                     obj = new CreateVersionedCustomSoftwareSourceDetails();
+                    break;
+                case "THIRD_PARTY":
+                    obj = new CreateThirdPartySoftwareSourceDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

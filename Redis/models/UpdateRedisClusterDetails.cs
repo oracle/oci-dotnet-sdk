@@ -46,6 +46,13 @@ namespace Oci.RedisService.Models
         public System.Nullable<float> NodeMemoryInGBs { get; set; }
         
         /// <value>
+        /// The OCI Cache engine version that the cluster is running.
+        /// </value>
+        [JsonProperty(PropertyName = "softwareVersion")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RedisCluster.SoftwareVersionEnum> SoftwareVersion { get; set; }
+        
+        /// <value>
         /// A list of Network Security Group (NSG) [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)
         /// associated with this cluster. For more information,
         /// see [Using an NSG for Clusters](https://docs.cloud.oracle.com/iaas/Content/ocicache/connecttocluster.htm#connecttocluster__networksecuritygroup).

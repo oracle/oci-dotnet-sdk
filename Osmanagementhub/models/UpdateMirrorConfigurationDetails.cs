@@ -57,5 +57,11 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "sslcert")]
         public string Sslcert { get; set; }
         
+        /// <value>
+        /// When enabled, the SSL certificate is verified whenever an instance installs or updates a package from a software source that is mirrored on the management station.
+        /// </value>
+        [JsonProperty(PropertyName = "isSslverifyEnabled")]
+        public System.Nullable<bool> IsSslverifyEnabled { get; set; }
+        
     }
 }

@@ -70,6 +70,20 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "packages")]
         public System.Collections.Generic.List<string> Packages { get; set; }
         
+        /// <value>
+        /// Identifies how the custom software source was created.
+        /// </value>
+        [JsonProperty(PropertyName = "softwareSourceSubType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SoftwareSourceSubType> SoftwareSourceSubType { get; set; }
+        
+        /// <value>
+        /// The date and time the metadata for this software source was last updated (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeMetadataUpdated")]
+        public System.Nullable<System.DateTime> TimeMetadataUpdated { get; set; }
+        
         [JsonProperty(PropertyName = "softwareSourceType")]
         private readonly string softwareSourceType = "CUSTOM";
     }

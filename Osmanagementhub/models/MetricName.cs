@@ -46,6 +46,10 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "INSTANCE_SECURITY_ADVISORY_COUNT")]
       InstanceSecurityAdvisoryCount,
       [EnumMember(Value = "INSTANCE_BUGFIX_ADVISORY_COUNT")]
-      InstanceBugfixAdvisoryCount
+      InstanceBugfixAdvisoryCount,
+      [EnumMember(Value = "REBOOTING_INSTANCE_COUNT")]
+      RebootingInstanceCount,
+      [EnumMember(Value = "NEEDS_REBOOTING_INSTANCE_COUNT")]
+      NeedsRebootingInstanceCount
   }
 }

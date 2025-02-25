@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// List of mirrors associated with a Management Station
+    /// The set of software source mirrors returned for the 
+    /// {@link #listMirrors(ListMirrorsRequest) listMirrors} operation.
+    /// 
     /// </summary>
     public class MirrorsCollection 
     {

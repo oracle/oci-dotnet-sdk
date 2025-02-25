@@ -150,15 +150,64 @@ namespace Oci.CoreService.Models
         /// The VNIC and IPv6 must be in the same subnet.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "VnicId is required.")]
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }
+                ///
+        /// <value>
+        /// State of the IP address. If an IP address is assigned to a VNIC it is ASSIGNED, otherwise it is AVAILABLE.
+        /// 
+        /// </value>
+        ///
+        public enum IpStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ASSIGNED")]
+            Assigned,
+            [EnumMember(Value = "AVAILABLE")]
+            Available
+        };
+
+        /// <value>
+        /// State of the IP address. If an IP address is assigned to a VNIC it is ASSIGNED, otherwise it is AVAILABLE.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<IpStateEnum> IpState { get; set; }
+                ///
+        /// <value>
+        /// Lifetime of the IP address.
+        /// There are two types of IPv6 IPs:
+        ///  - Ephemeral
+        ///  - Reserved
+        /// 
+        /// </value>
+        ///
+        public enum LifetimeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "EPHEMERAL")]
+            Ephemeral,
+            [EnumMember(Value = "RESERVED")]
+            Reserved
+        };
+
+        /// <value>
+        /// Lifetime of the IP address.
+        /// There are two types of IPv6 IPs:
+        ///  - Ephemeral
+        ///  - Reserved
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifetime")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<LifetimeEnum> Lifetime { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the PrivateIp will use.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the IP address or VNIC will use. For more information, see
+        /// [Source Based Routing](https://docs.oracle.com/iaas/Content/Network/Tasks/managingroutetables.htm#Overview_of_Routing_for_Your_VCN__source_routing).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]

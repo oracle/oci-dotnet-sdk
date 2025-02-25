@@ -57,6 +57,12 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "hostname")]
         public string Hostname { get; set; }
         
+        /// <value>
+        /// When enabled, the station setup script automatically runs to configure the firewall and SELinux settings on the station.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoConfigEnabled")]
+        public System.Nullable<bool> IsAutoConfigEnabled { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

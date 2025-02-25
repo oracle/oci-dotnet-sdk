@@ -123,9 +123,6 @@ namespace Oci.ContainerinstancesService.Models
                 case "HTTP":
                     obj = new ContainerHttpHealthCheck();
                     break;
-                case "COMMAND":
-                    obj = new ContainerCommandHealthCheck();
-                    break;
             }
             if (obj != null)
             {

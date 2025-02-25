@@ -34,5 +34,11 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "workRequestDetails")]
         public WorkRequestDetails WorkRequestDetails { get; set; }
         
+        /// <value>
+        /// Indicates whether this is the latest package version.
+        /// </value>
+        [JsonProperty(PropertyName = "isLatest")]
+        public System.Nullable<bool> IsLatest { get; set; }
+        
     }
 }

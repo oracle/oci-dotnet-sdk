@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// Details for syncing selected mirrors
+    /// Detailed information about software source mirrors to be synced.
     /// </summary>
     public class SynchronizeMirrorsDetails 
     {
         
         /// <value>
-        /// List of Software Source OCIDs to synchronize
+        /// List of software source [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) to synchronize.
         /// </value>
         /// <remarks>
         /// Required
