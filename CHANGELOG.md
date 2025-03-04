@@ -30,6 +30,19 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 105.0.0 - 2025-03-04
+### Added
+ - Support for user quotas on file system resources in the File Storage service
+ - Support for long term retention backups in the Autonomous Recovery service
+ - Support for Cross Region Replication(CRR) in the PostgreSQL service
+ - Support for subscriptions and cluster placement groups on exascale infrastructure in the Database service
+ - Support for multiple standby databases for autonomous dataguard associations in the Database service
+ - Support for major version upgrade of clusters in the OpenSearch service
+ - Support for Customer Service Identifier(CSI) number in list assigned subscriptions response in the Organizations service    
+
+### Breaking Changes
+ - The property `OpcWorkRequestId` was removed from the model `CreateSubscriptionMappingResponse` in the Organizations service
+
 ## 104.0.0 - 2025-02-25
 ### Added
  - Support for Database Lifecycle Management service
