@@ -44,6 +44,9 @@ namespace Oci.PsqlService.Models
         [JsonProperty(PropertyName = "retentionDays")]
         public System.Nullable<int> RetentionDays { get; set; }
         
+        [JsonProperty(PropertyName = "copyPolicy")]
+        public BackupCopyPolicy CopyPolicy { get; set; }
+        
     }
 
     public class BackupPolicyModelConverter : JsonConverter

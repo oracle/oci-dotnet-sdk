@@ -239,6 +239,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "peerMaintenanceRunId")]
         public string PeerMaintenanceRunId { get; set; }
+        
+        /// <value>
+        /// The list of OCIDs for the maintenance runs associated with their Autonomous Data Guard peer container databases.
+        /// </value>
+        [JsonProperty(PropertyName = "peerMaintenanceRunIds")]
+        public System.Collections.Generic.List<string> PeerMaintenanceRunIds { get; set; }
                 ///
         /// <value>
         /// Cloud Exadata infrastructure node patching method, either \"ROLLING\" or \"NONROLLING\". Default value is ROLLING.

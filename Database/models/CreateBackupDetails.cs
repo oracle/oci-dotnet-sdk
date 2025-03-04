@@ -44,5 +44,17 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
+        /// <value>
+        /// The retention period of the long term backup in days.
+        /// </value>
+        [JsonProperty(PropertyName = "retentionPeriodInDays")]
+        public System.Nullable<int> RetentionPeriodInDays { get; set; }
+        
+        /// <value>
+        /// The retention period of the long term backup in years.
+        /// </value>
+        [JsonProperty(PropertyName = "retentionPeriodInYears")]
+        public System.Nullable<int> RetentionPeriodInYears { get; set; }
+        
     }
 }

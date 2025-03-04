@@ -126,6 +126,12 @@ namespace Oci.TenantmanagercontrolplaneService.Models
         [JsonProperty(PropertyName = "endDate")]
         public System.Nullable<System.DateTime> EndDate { get; set; }
         
+        /// <value>
+        /// This list will contain up to 5 regions where the subscription has a physical presence
+        /// </value>
+        [JsonProperty(PropertyName = "regionAssignments")]
+        public System.Collections.Generic.List<string> RegionAssignments { get; set; }
+        
         [JsonProperty(PropertyName = "entityVersion")]
         private readonly string entityVersion = "V1";
     }
