@@ -542,5 +542,28 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<NetServicesArchitectureEnum> NetServicesArchitecture { get; set; }
         
+        /// <value>
+        /// Whether it is multiple standby Autonomous Dataguard
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isMultipleStandby")]
+        public System.Nullable<bool> IsMultipleStandby { get; set; }
+        
+        /// <value>
+        /// **Deprecated.** Indicates whether the Autonomous Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to Autonomous Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDataGuardEnabled")]
+        public System.Nullable<bool> IsDataGuardEnabled { get; set; }
+        
+        [JsonProperty(PropertyName = "dataguard")]
+        public AutonomousContainerDatabaseDataguard Dataguard { get; set; }
+        
+        /// <value>
+        /// Array of Dg associations.
+        /// </value>
+        [JsonProperty(PropertyName = "dataguardGroupMembers")]
+        public System.Collections.Generic.List<AutonomousContainerDatabaseDataguard> DataguardGroupMembers { get; set; }
+        
     }
 }

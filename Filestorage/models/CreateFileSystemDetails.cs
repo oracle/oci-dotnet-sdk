@@ -124,5 +124,11 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "filesystemSnapshotPolicyId")]
         public string FilesystemSnapshotPolicyId { get; set; }
         
+        /// <value>
+        /// Specifies the enforcement of quota rules on the file system.
+        /// </value>
+        [JsonProperty(PropertyName = "areQuotaRulesEnabled")]
+        public System.Nullable<bool> AreQuotaRulesEnabled { get; set; }
+        
     }
 }

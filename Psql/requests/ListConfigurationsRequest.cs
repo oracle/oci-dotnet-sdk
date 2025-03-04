@@ -32,6 +32,12 @@ namespace Oci.PsqlService.Requests
         public System.Nullable<Configuration.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
+        /// A filter to return only resources if their `configType` matches the given `configType`.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "configType")]
+        public System.Nullable<Configuration.ConfigTypeEnum> ConfigType { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that match the entire display name given.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]

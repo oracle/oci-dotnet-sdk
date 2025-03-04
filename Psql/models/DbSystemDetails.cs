@@ -42,5 +42,11 @@ namespace Oci.PsqlService.Models
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
         
+        /// <value>
+        /// OCID of the configuration that was applied on the source dbSystem at the time when backup was taken.
+        /// </value>
+        [JsonProperty(PropertyName = "configId")]
+        public string ConfigId { get; set; }
+        
     }
 }

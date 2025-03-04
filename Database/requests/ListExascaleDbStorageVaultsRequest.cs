@@ -86,6 +86,12 @@ namespace Oci.DatabaseService.Requests
         public System.Nullable<ExascaleDbStorageVault.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
+        /// A filter to return only resources that match the given cluster placement group ID exactly.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that match the entire display name given. The match is not case sensitive.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]

@@ -156,6 +156,12 @@ namespace Oci.FilestorageService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
+        /// Specifies the total number of replications for which this file system is a source.
+        /// </value>
+        [JsonProperty(PropertyName = "replicationSourceCount")]
+        public System.Nullable<int> ReplicationSourceCount { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the KMS key used to encrypt the encryption keys associated with this file system.
         /// 
         /// </value>
@@ -211,6 +217,35 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "cloneAttachStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CloneAttachStatusEnum> CloneAttachStatus { get; set; }
+                ///
+        /// <value>
+        /// Displays the state of enforcement of quota rules on the file system.
+        /// </value>
+        ///
+        public enum QuotaEnforcementStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ENABLING")]
+            Enabling,
+            [EnumMember(Value = "ENABLED")]
+            Enabled,
+            [EnumMember(Value = "DISABLING")]
+            Disabling,
+            [EnumMember(Value = "DISABLED")]
+            Disabled,
+            [EnumMember(Value = "SYNCING")]
+            Syncing,
+            [EnumMember(Value = "FAILED")]
+            Failed
+        };
+
+        /// <value>
+        /// Displays the state of enforcement of quota rules on the file system.
+        /// </value>
+        [JsonProperty(PropertyName = "quotaEnforcementState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<QuotaEnforcementStateEnum> QuotaEnforcementState { get; set; }
         
     }
 }
