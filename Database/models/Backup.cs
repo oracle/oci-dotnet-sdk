@@ -110,6 +110,8 @@ namespace Oci.DatabaseService.Models
             Failed,
             [EnumMember(Value = "RESTORING")]
             Restoring,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
             [EnumMember(Value = "CANCELING")]
             Canceling,
             [EnumMember(Value = "CANCELED")]
@@ -199,6 +201,57 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "keyStoreWalletName")]
         public string KeyStoreWalletName { get; set; }
+        
+        /// <value>
+        /// List of OCIDs of the key containers used as the secondary encryption key in database transparent data encryption (TDE) operations.
+        /// </value>
+        [JsonProperty(PropertyName = "secondaryKmsKeyIds")]
+        public System.Collections.Generic.List<string> SecondaryKmsKeyIds { get; set; }
+        
+        /// <value>
+        /// The retention period of the long term backup in days.
+        /// </value>
+        [JsonProperty(PropertyName = "retentionPeriodInDays")]
+        public System.Nullable<int> RetentionPeriodInDays { get; set; }
+        
+        /// <value>
+        /// The retention period of the long term backup in years.
+        /// </value>
+        [JsonProperty(PropertyName = "retentionPeriodInYears")]
+        public System.Nullable<int> RetentionPeriodInYears { get; set; }
+        
+        /// <value>
+        /// Expiration time of the long term database backup.
+        /// </value>
+        [JsonProperty(PropertyName = "timeExpiryScheduled")]
+        public System.Nullable<System.DateTime> TimeExpiryScheduled { get; set; }
+        
+        /// <value>
+        /// True if Oracle Managed Keys is required for restore of the backup.
+        /// </value>
+        [JsonProperty(PropertyName = "isUsingOracleManagedKeys")]
+        public System.Nullable<bool> IsUsingOracleManagedKeys { get; set; }
+                ///
+        /// <value>
+        /// Type of the backup destination.
+        /// </value>
+        ///
+        public enum BackupDestinationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "OBJECT_STORE")]
+            ObjectStore,
+            [EnumMember(Value = "DBRS")]
+            Dbrs
+        };
+
+        /// <value>
+        /// Type of the backup destination.
+        /// </value>
+        [JsonProperty(PropertyName = "backupDestinationType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<BackupDestinationTypeEnum> BackupDestinationType { get; set; }
         
         [JsonProperty(PropertyName = "encryptionKeyLocationDetails")]
         public EncryptionKeyLocationDetails EncryptionKeyLocationDetails { get; set; }

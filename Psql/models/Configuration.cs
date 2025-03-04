@@ -126,7 +126,9 @@ namespace Oci.PsqlService.Models
             [EnumMember(Value = "DEFAULT")]
             Default,
             [EnumMember(Value = "CUSTOM")]
-            Custom
+            Custom,
+            [EnumMember(Value = "COPIED")]
+            Copied
         };
 
         /// <value>

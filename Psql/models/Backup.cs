@@ -58,7 +58,7 @@ namespace Oci.PsqlService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Specifies whether the backup was created manually, or by a management policy.
+        /// Specifies whether the backup was created manually, taken on schedule defined in the a backup policy, or copied from the remote location.
         /// </value>
         ///
         public enum SourceTypeEnum {
@@ -68,11 +68,13 @@ namespace Oci.PsqlService.Models
             [EnumMember(Value = "SCHEDULED")]
             Scheduled,
             [EnumMember(Value = "MANUAL")]
-            Manual
+            Manual,
+            [EnumMember(Value = "COPIED")]
+            Copied
         };
 
         /// <value>
-        /// Specifies whether the backup was created manually, or by a management policy.
+        /// Specifies whether the backup was created manually, taken on schedule defined in the a backup policy, or copied from the remote location.
         /// </value>
         [JsonProperty(PropertyName = "sourceType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -90,6 +92,16 @@ namespace Oci.PsqlService.Models
         [Required(ErrorMessage = "TimeCreated is required.")]
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The date and time the backup was created.
+        /// This is the time the actual point-in-time data snapshot was taken,
+        /// expressed in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) timestamp format.
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "timeCreatedPrecise")]
+        public System.Nullable<System.DateTime> TimeCreatedPrecise { get; set; }
         
         /// <value>
         /// The date and time the backup was updated, expressed in
@@ -166,6 +178,9 @@ namespace Oci.PsqlService.Models
         [JsonProperty(PropertyName = "dbSystemDetails")]
         public DbSystemDetails DbSystemDetails { get; set; }
         
+        [JsonProperty(PropertyName = "sourceBackupDetails")]
+        public SourceBackupDetails SourceBackupDetails { get; set; }
+        
         /// <value>
         /// lastAcceptedRequestToken from MP.
         /// </value>
@@ -177,6 +192,12 @@ namespace Oci.PsqlService.Models
         /// </value>
         [JsonProperty(PropertyName = "lastCompletedRequestToken")]
         public string LastCompletedRequestToken { get; set; }
+        
+        /// <value>
+        /// List of status for Backup Copy
+        /// </value>
+        [JsonProperty(PropertyName = "copyStatus")]
+        public System.Collections.Generic.List<BackupCopyStatusDetails> CopyStatus { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

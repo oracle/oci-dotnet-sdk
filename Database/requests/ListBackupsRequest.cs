@@ -68,5 +68,41 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shapeFamily")]
         public System.Nullable<ShapeFamilyEnum> ShapeFamily { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given database version.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "version")]
+        public string Version { get; set; }
+        
+        /// <value>
+        /// A filter to return only backups that matches with the given type of Backup.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
+        public string Type { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given lifecycle state exactly.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        public System.Nullable<BackupSummary.LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// The start of date-time range of expiration for the long term backups to be fetched.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeExpiryScheduledGreaterThanOrEqualTo")]
+        public System.Nullable<System.DateTime> TimeExpiryScheduledGreaterThanOrEqualTo { get; set; }
+        
+        /// <value>
+        /// The end of date-time range of expiration for the long term backups to be fetched.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeExpiryScheduledLessThan")]
+        public System.Nullable<System.DateTime> TimeExpiryScheduledLessThan { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given backup destination type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "backupDestinationType")]
+        public string BackupDestinationType { get; set; }
     }
 }
