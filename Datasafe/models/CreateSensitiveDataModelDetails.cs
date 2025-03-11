@@ -92,6 +92,14 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<string> SensitiveTypeIdsForDiscovery { get; set; }
         
         /// <value>
+        /// The OCIDs of the sensitive type groups to be used by data discovery jobs. All the sensitive types present in
+        /// sensitive type group will be used for discovery.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sensitiveTypeGroupIdsForDiscovery")]
+        public System.Collections.Generic.List<string> SensitiveTypeGroupIdsForDiscovery { get; set; }
+        
+        /// <value>
         /// Indicates if data discovery jobs should collect and store sample data values for the discovered columns.
         /// Sample data helps review the discovered columns and ensure that they actually contain sensitive data.
         /// As it collects original data from the target database, it's disabled by default and should be used only

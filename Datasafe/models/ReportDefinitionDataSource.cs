@@ -23,6 +23,8 @@ namespace Oci.DatasafeService.Models
       Events,
       [EnumMember(Value = "ALERTS")]
       Alerts,
+      [EnumMember(Value = "SECURITY_ASSESSMENT")]
+      SecurityAssessment,
       [EnumMember(Value = "VIOLATIONS")]
       Violations,
       [EnumMember(Value = "ALLOWED_SQL")]

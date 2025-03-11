@@ -51,6 +51,15 @@ namespace Oci.MysqlService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Number of days to retain the copied DB system backup.
+        /// <br/>
+        /// **Note:** The maximum value for an automatic backup is 35, and the maximum value for a manual backup is 365.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "backupCopyRetentionInDays")]
+        public System.Nullable<int> BackupCopyRetentionInDays { get; set; }
+        
+        /// <value>
         /// The OCID of DB system backup to be copied.
         /// 
         /// </value>

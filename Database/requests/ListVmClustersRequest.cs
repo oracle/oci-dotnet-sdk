@@ -103,5 +103,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to return only vmclusters that match the given vmcluster type exactly.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vmClusterType")]
+        public System.Nullable<VmClusterSummary.VmClusterTypeEnum> VmClusterType { get; set; }
     }
 }

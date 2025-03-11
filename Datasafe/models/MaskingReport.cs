@@ -195,6 +195,43 @@ namespace Oci.DatasafeService.Models
         /// </value>
         [JsonProperty(PropertyName = "recompile")]
         public string Recompile { get; set; }
+                ///
+        /// <value>
+        /// The status of the masking job.
+        /// </value>
+        ///
+        public enum MaskingStatusEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            [EnumMember(Value = "SUCCESS")]
+            Success
+        };
+
+        /// <value>
+        /// The status of the masking job.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "MaskingStatus is required.")]
+        [JsonProperty(PropertyName = "maskingStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<MaskingStatusEnum> MaskingStatus { get; set; }
+        
+        /// <value>
+        /// The total number of errors in pre-masking script.
+        /// </value>
+        [JsonProperty(PropertyName = "totalPreMaskingScriptErrors")]
+        public System.Nullable<long> TotalPreMaskingScriptErrors { get; set; }
+        
+        /// <value>
+        /// The total number of errors in post-masking script.
+        /// </value>
+        [JsonProperty(PropertyName = "totalPostMaskingScriptErrors")]
+        public System.Nullable<long> TotalPostMaskingScriptErrors { get; set; }
         
     }
 }

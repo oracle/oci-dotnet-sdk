@@ -115,6 +115,17 @@ namespace Oci.DatascienceService.Models
         public string CreatedBy { get; set; }
         
         /// <value>
+        /// The category of the model version set.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Category is required.")]
+        [JsonProperty(PropertyName = "category")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ModelVersionSetCategory> Category { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>

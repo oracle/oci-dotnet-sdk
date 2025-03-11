@@ -863,6 +863,34 @@ namespace Oci.DatasafeService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSensitiveTypeGroupRequest, GetSensitiveTypeGroupResponse> ForSensitiveTypeGroup(GetSensitiveTypeGroupRequest request, params SensitiveTypeGroupLifecycleState[] targetStates)
+        {
+            return this.ForSensitiveTypeGroup(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSensitiveTypeGroupRequest, GetSensitiveTypeGroupResponse> ForSensitiveTypeGroup(GetSensitiveTypeGroupRequest request, WaiterConfiguration config, params SensitiveTypeGroupLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSensitiveTypeGroupRequest, GetSensitiveTypeGroupResponse>(
+                request,
+                request => client.GetSensitiveTypeGroup(request),
+                response => targetStates.Contains(response.SensitiveTypeGroup.LifecycleState.Value),
+                targetStates.Contains(SensitiveTypeGroupLifecycleState.Deleted)
+            );
+            return new Waiter<GetSensitiveTypeGroupRequest, GetSensitiveTypeGroupResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetSensitiveTypesExportRequest, GetSensitiveTypesExportResponse> ForSensitiveTypesExport(GetSensitiveTypesExportRequest request, params SensitiveTypesExportLifecycleState[] targetStates)
         {
             return this.ForSensitiveTypesExport(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpensearchService.Models
 {
     /// <summary>
-    /// The list of cluster pieplines returned in a cluster pipeline search.
+    /// The list of cluster pipelines returned in a cluster pipeline search.
     /// </summary>
     public class OpensearchClusterPipelineCollection 
     {

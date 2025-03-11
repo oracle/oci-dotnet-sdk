@@ -84,7 +84,7 @@ namespace Oci.OpensearchService.Models
         public string VcnCompartmentId { get; set; }
         
         /// <value>
-        /// The OCID for the compartment where the pipwline's subnet is located.
+        /// The OCID for the compartment where the pipeline's subnet is located.
         /// </value>
         /// <remarks>
         /// Required
@@ -94,44 +94,34 @@ namespace Oci.OpensearchService.Models
         public string SubnetCompartmentId { get; set; }
         
         /// <value>
-        /// The maximum pipeline capacity, in OCPUs.
+        /// The number of OCPUs configured for each pipeline node.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "MaxOcpuCount is required.")]
-        [JsonProperty(PropertyName = "maxOcpuCount")]
-        public System.Nullable<int> MaxOcpuCount { get; set; }
+        [Required(ErrorMessage = "OcpuCount is required.")]
+        [JsonProperty(PropertyName = "ocpuCount")]
+        public System.Nullable<int> OcpuCount { get; set; }
         
         /// <value>
-        /// The maximum pipeline capacity, in OCPUs.
+        /// The amount of memory in GB, for each pipeline node.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "MinOcpuCount is required.")]
-        [JsonProperty(PropertyName = "minOcpuCount")]
-        public System.Nullable<int> MinOcpuCount { get; set; }
+        [Required(ErrorMessage = "MemoryGB is required.")]
+        [JsonProperty(PropertyName = "memoryGB")]
+        public System.Nullable<int> MemoryGB { get; set; }
         
         /// <value>
-        /// The maximum amount of memory in GB, for the pipeline.
+        /// The number of nodes configured for the pipeline.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "MaxMemoryGB is required.")]
-        [JsonProperty(PropertyName = "maxMemoryGB")]
-        public System.Nullable<int> MaxMemoryGB { get; set; }
-        
-        /// <value>
-        /// The minimum amount of memory in GB, for the pipeline.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "MinMemoryGB is required.")]
-        [JsonProperty(PropertyName = "minMemoryGB")]
-        public System.Nullable<int> MinMemoryGB { get; set; }
+        [Required(ErrorMessage = "NodeCount is required.")]
+        [JsonProperty(PropertyName = "nodeCount")]
+        public System.Nullable<int> NodeCount { get; set; }
         
         /// <value>
         /// The pipeline configuration in YAML format. The command accepts the pipeline configuration as a string or within a .yaml file. If you provide the configuration as a string, each new line must be escaped with \\.
@@ -143,6 +133,17 @@ namespace Oci.OpensearchService.Models
         [Required(ErrorMessage = "PipelineConfigurationBody is required.")]
         [JsonProperty(PropertyName = "pipelineConfigurationBody")]
         public string PipelineConfigurationBody { get; set; }
+        
+        /// <value>
+        /// The data prepper config in YAML format. The command accepts the data prepper config as a string or within a .yaml file. If you provide the configuration as a string, each new line must be escaped with \\.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DataPrepperConfigurationBody is required.")]
+        [JsonProperty(PropertyName = "dataPrepperConfigurationBody")]
+        public string DataPrepperConfigurationBody { get; set; }
         
         /// <value>
         /// The fully qualified domain name (FQDN) for the cluster's API endpoint.
@@ -169,6 +170,9 @@ namespace Oci.OpensearchService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "UPDATING")]
@@ -191,8 +195,33 @@ namespace Oci.OpensearchService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+                ///
+        /// <value>
+        /// The current state of the pipeline.
+        /// </value>
+        ///
+        public enum PipelineModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "RUNNING")]
+            Running,
+            [EnumMember(Value = "STOPPED")]
+            Stopped
+        };
+
+        /// <value>
+        /// The current state of the pipeline.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "PipelineMode is required.")]
+        [JsonProperty(PropertyName = "pipelineMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<PipelineModeEnum> PipelineMode { get; set; }
         
         /// <value>
         /// The date and time the cluster pipeline was created. Format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
@@ -205,6 +234,18 @@ namespace Oci.OpensearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The customer IP and the corresponding fully qualified domain name that the pipeline will connect to.
+        /// </value>
+        [JsonProperty(PropertyName = "reverseConnectionEndpoints")]
+        public System.Collections.Generic.List<OpensearchPipelineReverseConnectionEndpoint> ReverseConnectionEndpoints { get; set; }
+        
+        /// <value>
+        /// The OCID of the NSG where the pipeline private endpoint vnic will be attached.
+        /// </value>
+        [JsonProperty(PropertyName = "nsgId")]
+        public string NsgId { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

@@ -114,6 +114,12 @@ namespace Oci.DatabaseService.Requests
         public string PatchSetGreaterThanOrEqualTo { get; set; }
         
         /// <value>
+        /// The DB system [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm). If provided, filters the results to the set of database versions which are supported for the DB system.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dbSystemId")]
+        public string DbSystemId { get; set; }
+        
+        /// <value>
         /// If provided, filters the results to the set of database versions which are supported for Upgrade.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isUpgradeSupported")]

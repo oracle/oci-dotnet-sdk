@@ -30,6 +30,23 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 106.0.0 - 2025-03-11
+### Added
+ - Support for pipelines in the OpenSearch service
+ - Support for uploading and downloading the model metadata artifacts in the Data Science service
+ - Support for model references via native API in the Data Science service
+ - Support for scheduling cross-region database backups in the HeatWave service
+ - Support for specifying backup retention days for manual cross-region backups in the HeatWave service
+ - Support for IPv6 addresses for dedicated infrastructure in the Database service
+ - Support for NewDev edition for the development community in the Database service
+ - Support for grouping sensitive types across the tenancies and reuse of groups in the discovery workflow in the Data Safe service
+ - Support for generating custom assessment reports in the Data Safe service     
+
+### Breaking Changes
+ - The properties `MaxMemoryGB`, `MaxOcpuCount`, `MinMemoryGB`, `MinOcpuCount` were removed from the models `CreateOpensearchClusterPipelineDetails`, `OpensearchClusterPipeline`, `OpensearchClusterPipelineSummary`, and `UpdateOpensearchClusterPipelineDetails` in the OpenSearch service
+ - The property `SystemTags` was removed from the model `CreateOpensearchClusterPipelineDetails` in the OpenSearch service
+ - The models `OpensearchPipelineValidationResponse`, `ValidateOpensearchPipelineDetails`, and `PipelineValidationErrorDetails` were removed in the OpenSearch service
+
 ## 105.0.0 - 2025-03-04
 ### Added
  - Support for user quotas on file system resources in the File Storage service

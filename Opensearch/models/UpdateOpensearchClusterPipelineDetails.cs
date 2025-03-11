@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpensearchService.Models
 {
     /// <summary>
-    /// The configuration to update on an existing OpenSearch cluster pipeline. You can only edit capaccity limits and pipeline configuration. You can't edit its name or network settings.
+    /// The configuration to update on an existing OpenSearch cluster pipeline. You can only edit capacity limits and pipeline configurations. You can't edit its network settings.
     /// 
     /// </summary>
     public class UpdateOpensearchClusterPipelineDetails 
@@ -33,28 +33,22 @@ namespace Oci.OpensearchService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The maximum pipeline capacity, in OCPUs.
+        /// The number of OCPUs configured for each pipeline node.
         /// </value>
-        [JsonProperty(PropertyName = "maxOcpuCount")]
-        public System.Nullable<int> MaxOcpuCount { get; set; }
+        [JsonProperty(PropertyName = "ocpuCount")]
+        public System.Nullable<int> OcpuCount { get; set; }
         
         /// <value>
-        /// The minimum pipeline capacity, in OCPUs.
+        /// The amount of memory in GB, for each pipeline node.
         /// </value>
-        [JsonProperty(PropertyName = "minOcpuCount")]
-        public System.Nullable<int> MinOcpuCount { get; set; }
+        [JsonProperty(PropertyName = "memoryGB")]
+        public System.Nullable<int> MemoryGB { get; set; }
         
         /// <value>
-        /// The maximum amount of memory in GB, for the pipeline.
+        /// The number of nodes configured for the pipeline.
         /// </value>
-        [JsonProperty(PropertyName = "maxMemoryGB")]
-        public System.Nullable<int> MaxMemoryGB { get; set; }
-        
-        /// <value>
-        /// The minimum amount of memory in GB, for the pipeline.
-        /// </value>
-        [JsonProperty(PropertyName = "minMemoryGB")]
-        public System.Nullable<int> MinMemoryGB { get; set; }
+        [JsonProperty(PropertyName = "nodeCount")]
+        public System.Nullable<int> NodeCount { get; set; }
         
         /// <value>
         /// The pipeline configuration in YAML format. The command accepts the pipeline configuration as a string or within a .yaml file. If you provide the configuration as a string, each new line must be escaped with \\.
@@ -62,6 +56,63 @@ namespace Oci.OpensearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "pipelineConfigurationBody")]
         public string PipelineConfigurationBody { get; set; }
+        
+        /// <value>
+        /// The data prepper config in YAML format. The command accepts the data prepper config as a string or within a .yaml file. If you provide the configuration as a string, each new line must be escaped with \\.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dataPrepperConfigurationBody")]
+        public string DataPrepperConfigurationBody { get; set; }
+        
+        /// <value>
+        /// The OCID of the pipeline's VCN.
+        /// </value>
+        [JsonProperty(PropertyName = "vcnId")]
+        public string VcnId { get; set; }
+        
+        /// <value>
+        /// The OCID of the pipeline's subnet.
+        /// </value>
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
+        
+        /// <value>
+        /// The OCID for the compartment where the pipeline's VCN is located.
+        /// </value>
+        [JsonProperty(PropertyName = "vcnCompartmentId")]
+        public string VcnCompartmentId { get; set; }
+        
+        /// <value>
+        /// The OCID for the compartment where the pipeline's subnet is located.
+        /// </value>
+        [JsonProperty(PropertyName = "subnetCompartmentId")]
+        public string SubnetCompartmentId { get; set; }
+        
+        /// <value>
+        /// The OCID of the NSG where the pipeline private endpoint vnic will be attached.
+        /// </value>
+        [JsonProperty(PropertyName = "nsgId")]
+        public string NsgId { get; set; }
+        
+        /// <value>
+        /// The customer IP and the corresponding fully qualified domain name that the pipeline will connect to.
+        /// </value>
+        [JsonProperty(PropertyName = "reverseConnectionEndpoints")]
+        public System.Collections.Generic.List<OpensearchPipelineReverseConnectionEndpoint> ReverseConnectionEndpoints { get; set; }
+        
+        /// <value>
+        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
+        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
+        /// </value>
+        [JsonProperty(PropertyName = "freeformTags")]
+        public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
+        
+        /// <value>
+        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
+        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "definedTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
     }
 }

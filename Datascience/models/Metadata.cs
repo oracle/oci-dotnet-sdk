@@ -30,6 +30,11 @@ namespace Oci.DatascienceService.Models
         ///          * estimatorClass
         ///          * hyperParameters
         ///          * testArtifactresults
+        ///          * fineTuningConfiguration
+        ///          * deploymentConfiguration
+        ///          * readme
+        ///          * license
+        ///          * evaluationConfiguration
         /// 
         /// </value>
         [JsonProperty(PropertyName = "key")]
@@ -61,6 +66,18 @@ namespace Oci.DatascienceService.Models
         /// </value>
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
+        
+        /// <value>
+        /// list of keywords for searching
+        /// </value>
+        [JsonProperty(PropertyName = "keywords")]
+        public System.Collections.Generic.List<string> Keywords { get; set; }
+        
+        /// <value>
+        /// Is there any artifact present for the metadata.
+        /// </value>
+        [JsonProperty(PropertyName = "hasArtifact")]
+        public System.Nullable<bool> HasArtifact { get; set; }
         
     }
 }
