@@ -54,10 +54,16 @@ namespace Oci.DatabaseService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// The application virtual IP (VIP) address.
+        /// The application virtual IP (VIP) IPv4 address.
         /// </value>
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
+        
+        /// <value>
+        /// The application virtual IP (VIP) IPv6 address.
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6Address")]
+        public string Ipv6Address { get; set; }
         
         /// <value>
         /// The hostname of the application virtual IP (VIP) address.

@@ -16,30 +16,26 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpensearchService.Models
 {
     /// <summary>
-    /// Details for validation of customer input pipeline configuration.
+    /// force patching a pipeline.
     /// </summary>
-    public class OpensearchPipelineValidationResponse 
+    public class ForcePatchPipelineDetails 
     {
         
         /// <value>
-        /// An array of errors in the pipeline configuration which is given for validation.
+        /// OCID of the Opensearch Pipeline.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Errors is required.")]
-        [JsonProperty(PropertyName = "errors")]
-        public System.Collections.Generic.List<PipelineValidationErrorDetails> Errors { get; set; }
+        [Required(ErrorMessage = "PipelineId is required.")]
+        [JsonProperty(PropertyName = "pipelineId")]
+        public string PipelineId { get; set; }
         
         /// <value>
-        /// Boolean value which tells us if the pipeline configuration given by user is valid or not.
+        /// flex shape name for the instances in the pipeline
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "IsValid is required.")]
-        [JsonProperty(PropertyName = "isValid")]
-        public System.Nullable<bool> IsValid { get; set; }
+        [JsonProperty(PropertyName = "flexShape")]
+        public string FlexShape { get; set; }
         
     }
 }

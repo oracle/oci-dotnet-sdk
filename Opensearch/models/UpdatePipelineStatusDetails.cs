@@ -16,31 +16,30 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpensearchService.Models
 {
     /// <summary>
-    /// The configuration details for validating pipeline configuration provided as input.
+    /// update pipeline status.
     /// </summary>
-    public class ValidateOpensearchPipelineDetails 
+    public class UpdatePipelineStatusDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment where the pipeline will be created.
+        /// OCID of the OpenSearch Pipeline.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
+        [Required(ErrorMessage = "PipelineId is required.")]
+        [JsonProperty(PropertyName = "pipelineId")]
+        public string PipelineId { get; set; }
         
         /// <value>
-        /// The pipeline configuration in YAML format. The command accepts the pipeline configuration as a string or within a .yaml file. If you provide the configuration as a string, each new line must be escaped with \\.
-        /// 
+        /// the new status of the OpenSearch Pipeline
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "PipelineConfigurationBody is required.")]
-        [JsonProperty(PropertyName = "pipelineConfigurationBody")]
-        public string PipelineConfigurationBody { get; set; }
+        [Required(ErrorMessage = "LifecycleState is required.")]
+        [JsonProperty(PropertyName = "lifecycleState")]
+        public string LifecycleState { get; set; }
         
     }
 }

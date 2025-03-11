@@ -32,6 +32,18 @@ namespace Oci.MysqlService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
+        /// List of policies of a DB system to schedule cross-region DB system backup copy.
+        /// <br/>
+        /// The policy includes the name of the destination region to which the DB system backup will be copied, and
+        /// an optional parameter which specifies the retention period of the copied DB system backup in days.
+        /// <br/>
+        /// **Note:** Currently, only one policy can be specified in the list.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "copyPolicies")]
+        public System.Collections.Generic.List<CopyPolicy> CopyPolicies { get; set; }
+        
+        /// <value>
         /// The start of a 30-minute window of time in which daily, automated backups occur.
         /// <br/>
         /// This should be in the format of the \"Time\" portion of an RFC3339-formatted timestamp. Any second or sub-second time data will be truncated to zero.

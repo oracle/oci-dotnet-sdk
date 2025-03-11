@@ -102,6 +102,8 @@ namespace Oci.DatascienceService.Requests
             ScheduleActivate,
             [EnumMember(Value = "SCHEDULE_DEACTIVATE")]
             ScheduleDeactivate,
+            [EnumMember(Value = "REGISTER_MODEL_ARTIFACT")]
+            RegisterModelArtifact,
             [EnumMember(Value = "RESTORE_ARCHIVED_MODEL")]
             RestoreArchivedModel
         };

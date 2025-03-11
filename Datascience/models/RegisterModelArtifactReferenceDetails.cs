@@ -13,20 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.OpensearchService.Models
+namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// The configuration details for validating pipeline configuration provided as input.
+    /// Parameters that are required to register a model artifact reference collection.
     /// </summary>
-    public class PipelineValidationErrorDetails 
+    public class RegisterModelArtifactReferenceDetails 
     {
         
+        /// <value>
+        /// A list of model artifact references to register.
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Message is required.")]
-        [JsonProperty(PropertyName = "message")]
-        public string Message { get; set; }
+        [Required(ErrorMessage = "ModelArtifactReferences is required.")]
+        [JsonProperty(PropertyName = "modelArtifactReferences")]
+        public System.Collections.Generic.List<ModelArtifactReferenceDetails> ModelArtifactReferences { get; set; }
         
     }
 }
