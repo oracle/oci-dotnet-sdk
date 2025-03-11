@@ -134,6 +134,76 @@ namespace Oci.DatasafeService.Requests
         public string TargetId { get; set; }
         
         /// <value>
+        /// The scimQuery query parameter accepts filter expressions that use the syntax described in Section 3.2.2.2
+        /// of the System for Cross-Domain Identity Management (SCIM) specification, which is available
+        /// at [RFC3339](https://tools.ietf.org/html/draft-ietf-scim-api-12). In SCIM filtering expressions,
+        /// text, date, and time values must be enclosed in quotation marks, with date and time values using ISO-8601 format.
+        /// (Numeric and boolean values should not be quoted.)
+        /// <br/>
+        /// **Example: ** |scimQuery=(severity eq 'high') and (targetId eq 'target_1')scimQuery=(category eq &quot;Users&quot;) and (targetId eq &quot;target_1&quot;)scimQuery=(reference eq 'CIS') and (targetId eq 'target_1')Supported fields:severityfindingKeyreferencetargetIdisTopFindingtitlecategoryremarksdetailssummaryisRiskModified    
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scimQuery")]
+        public string ScimQuery { get; set; }
+        
+        ///
+        /// <value>
+        /// Specifies a subset of fields to be returned in the response.
+        /// </value>
+        ///
+        public enum FieldEnum {
+            [EnumMember(Value = "severity")]
+            Severity,
+            [EnumMember(Value = "findingKey")]
+            FindingKey,
+            [EnumMember(Value = "reference")]
+            Reference,
+            [EnumMember(Value = "targetId")]
+            TargetId,
+            [EnumMember(Value = "isTopFinding")]
+            IsTopFinding,
+            [EnumMember(Value = "title")]
+            Title,
+            [EnumMember(Value = "category")]
+            Category,
+            [EnumMember(Value = "remarks")]
+            Remarks,
+            [EnumMember(Value = "details")]
+            Details,
+            [EnumMember(Value = "summary")]
+            Summary,
+            [EnumMember(Value = "isRiskModified")]
+            IsRiskModified
+        };
+
+        /// <value>
+        /// Specifies a subset of fields to be returned in the response.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "field", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<FieldEnum> Field { get; set; }
+        
+        ///
+        /// <value>
+        /// The field to sort by. You can specify only one sort order(sortOrder). The default order for category is alphabetical.
+        /// 
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "category")]
+            Category,
+            [EnumMember(Value = "findingKey")]
+            FindingKey,
+            [EnumMember(Value = "severity")]
+            Severity
+        };
+
+        /// <value>
+        /// The field to sort by. You can specify only one sort order(sortOrder). The default order for category is alphabetical.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
         /// Each finding in security assessment has an associated key (think of key as a finding's name).
         /// For a given finding, the key will be the same across targets. The user can use these keys to filter the findings.
         /// 

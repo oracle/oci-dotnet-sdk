@@ -36,7 +36,7 @@ namespace Oci.ApmsyntheticsService.Models
         public System.Nullable<FtpRequestType> FtpRequestType { get; set; }
         
         /// <value>
-        /// If enabled, Active mode will be used for the FTP connection.
+        /// If enabled, Active mode will be used for the FTP connection. Not supported for SFTP protocol.
         /// </value>
         [JsonProperty(PropertyName = "isActiveMode")]
         public System.Nullable<bool> IsActiveMode { get; set; }

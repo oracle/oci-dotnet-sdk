@@ -308,6 +308,24 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "cloudAutomationUpdateDetails")]
         public CloudAutomationUpdateDetails CloudAutomationUpdateDetails { get; set; }
+                ///
+        /// <value>
+        /// The vmcluster type for the VM cluster/Cloud VM cluster.
+        /// </value>
+        ///
+        public enum VmClusterTypeEnum {
+            [EnumMember(Value = "REGULAR")]
+            Regular,
+            [EnumMember(Value = "DEVELOPER")]
+            Developer
+        };
+
+        /// <value>
+        /// The vmcluster type for the VM cluster/Cloud VM cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "vmClusterType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<VmClusterTypeEnum> VmClusterType { get; set; }
         
     }
 }

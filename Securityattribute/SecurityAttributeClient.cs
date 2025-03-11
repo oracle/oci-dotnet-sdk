@@ -85,9 +85,9 @@ namespace Oci.SecurityattributeService
         /// When all security attributes have been removed, the state changes to DELETED. You cannot restore a deleted security attribute. After the security attribute state
         /// changes to DELETED, you can use the same security attribute name again.
         ///   
-        /// After you start this operation, you cannot start either the {@link #deleteSecurityAttribute(DeleteSecurityAttributeRequest) deleteSecurityAttribute} or the {@link #cascadeDeleteSecurityAttributeNamespace(CascadeDeleteSecurityAttributeNamespaceRequest) cascadeDeleteSecurityAttributeNamespace} operation until this process completes.
+        /// After you start this operation, you cannot start either the {@link #deleteSecurityAttribute(DeleteSecurityAttributeRequest) deleteSecurityAttribute} or the {@link #cascadingDeleteSecurityAttributeNamespace(CascadingDeleteSecurityAttributeNamespaceRequest) cascadingDeleteSecurityAttributeNamespace} operation until this process completes.
         ///   
-        /// In order to delete security attribute, you must first retire the security attribute. Use {@link #updateSecurityAttribute(UpdateSecurityAttributeRequest) updateSecurityAttribute}
+        /// In order to delete security attribute, you must first retire the security attribute. Use {@link #updateSecurityAttributeNamespace(UpdateSecurityAttributeNamespaceRequest) updateSecurityAttributeNamespace}
         /// to retire a security attribute.
         /// 
         /// </summary>
@@ -434,7 +434,7 @@ namespace Oci.SecurityattributeService
         /// &lt;br/&gt;
         /// You must also specify a *description* for the namespace.
         /// It does not have to be unique, and you can change it with
-        /// {@link #securityAttributeNamespace(SecurityAttributeNamespaceRequest) securityAttributeNamespace}.
+        /// {@link #updateSecurityAttributeNamespace(UpdateSecurityAttributeNamespaceRequest) updateSecurityAttributeNamespace}.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -501,7 +501,7 @@ namespace Oci.SecurityattributeService
         /// When all attributes have been removed, the state changes to DELETED. You cannot restore a deleted attribute. Once the deleted attribute
         /// changes its state to DELETED, you can use the same security attribute name again.
         /// &lt;br/&gt;
-        /// After you start this operation, you cannot start either the {@link #bulkDeleteSecurityAttributes(BulkDeleteSecurityAttributesRequest) bulkDeleteSecurityAttributes} or the {@link #cascadeDeleteTagNamespace(CascadeDeleteTagNamespaceRequest) cascadeDeleteTagNamespace} operation until this process completes.
+        /// After you start this operation, you cannot start either the {@link #bulkDeleteSecurityAttributes(BulkDeleteSecurityAttributesRequest) bulkDeleteSecurityAttributes} or the {@link #cascadingDeleteSecurityAttributeNamespace(CascadingDeleteSecurityAttributeNamespaceRequest) cascadingDeleteSecurityAttributeNamespace} operation until this process completes.
         /// &lt;br/&gt;
         /// To delete a security attribute, you must first retire it. Use {@link #updateSecurityAttribute(UpdateSecurityAttributeRequest) updateSecurityAttribute}
         /// to retire a security attribute.
@@ -1138,7 +1138,7 @@ namespace Oci.SecurityattributeService
         /// Updating &#x60;isRetired&#x60; to &#39;true&#39; retires the namespace and all the security attributes in the namespace. Reactivating a
         /// namespace (changing &#x60;isRetired&#x60; from &#39;true&#39; to &#39;false&#39;) does not reactivate security attributes.
         /// To reactivate the security attributes, you must reactivate each one individually *after* you reactivate the namespace,
-        /// using {@link #updateTag(UpdateTagRequest) updateTag}. For more information about retiring security attribute namespaces, see
+        /// using {@link #updateSecurityAttribute(UpdateSecurityAttributeRequest) updateSecurityAttribute}. For more information about retiring security attribute namespaces, see
         /// [Managing Security Attribute Namespaces](https://docs.cloud.oracle.com/Content/zero-trust-packet-routing/managing-security-attribute-namespaces.htm).
         /// &lt;br/&gt;
         /// You can&#39;t add a namespace with the same name as a retired namespace in the same tenancy.

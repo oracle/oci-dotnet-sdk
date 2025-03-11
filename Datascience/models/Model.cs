@@ -187,6 +187,27 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "versionLabel")]
         public string VersionLabel { get; set; }
         
+        /// <value>
+        /// The category of the model.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Category is required.")]
+        [JsonProperty(PropertyName = "category")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ModelCategory> Category { get; set; }
+        
+        /// <value>
+        /// Identifier to indicate whether a model artifact resides in the Service Tenancy or Customer Tenancy.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsModelByReference is required.")]
+        [JsonProperty(PropertyName = "isModelByReference")]
+        public System.Nullable<bool> IsModelByReference { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

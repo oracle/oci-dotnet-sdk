@@ -34,6 +34,10 @@ namespace Oci.OpensearchService.Models
         /// <value>
         /// The name of the cluster pipeline. Avoid entering confidential information.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
@@ -48,44 +52,46 @@ namespace Oci.OpensearchService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The maximum pipeline capacity, in OCPUs.
+        /// The OCID of the pipeline's VCN.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "MaxOcpuCount is required.")]
-        [JsonProperty(PropertyName = "maxOcpuCount")]
-        public System.Nullable<int> MaxOcpuCount { get; set; }
+        [JsonProperty(PropertyName = "vcnId")]
+        public string VcnId { get; set; }
         
         /// <value>
-        /// The maximum pipeline capacity, in OCPUs.
+        /// The OCID of the pipeline's subnet.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "MinOcpuCount is required.")]
-        [JsonProperty(PropertyName = "minOcpuCount")]
-        public System.Nullable<int> MinOcpuCount { get; set; }
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
         
         /// <value>
-        /// The maximum amount of memory in GB, for the pipeline.
+        /// The number of OCPUs configured for each pipeline node.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "MaxMemoryGB is required.")]
-        [JsonProperty(PropertyName = "maxMemoryGB")]
-        public System.Nullable<int> MaxMemoryGB { get; set; }
+        [Required(ErrorMessage = "OcpuCount is required.")]
+        [JsonProperty(PropertyName = "ocpuCount")]
+        public System.Nullable<int> OcpuCount { get; set; }
         
         /// <value>
-        /// The minimum amount of memory in GB, for the pipeline.
+        /// The amount of memory in GB, for each pipeline node.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "MinMemoryGB is required.")]
-        [JsonProperty(PropertyName = "minMemoryGB")]
-        public System.Nullable<int> MinMemoryGB { get; set; }
+        [Required(ErrorMessage = "MemoryGB is required.")]
+        [JsonProperty(PropertyName = "memoryGB")]
+        public System.Nullable<int> MemoryGB { get; set; }
+        
+        /// <value>
+        /// The number of nodes configured for the pipeline.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "NodeCount is required.")]
+        [JsonProperty(PropertyName = "nodeCount")]
+        public System.Nullable<int> NodeCount { get; set; }
         
         /// <value>
         /// The pipeline configuration in YAML format. The command accepts the pipeline configuration as a string or within a .yaml file. If you provide the configuration as a string, each new line must be escaped with \\.
@@ -99,6 +105,39 @@ namespace Oci.OpensearchService.Models
         public string PipelineConfigurationBody { get; set; }
         
         /// <value>
+        /// The data prepper config in YAML format. The command accepts the data prepper config as a string or within a .yaml file. If you provide the configuration as a string, each new line must be escaped with \\.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DataPrepperConfigurationBody is required.")]
+        [JsonProperty(PropertyName = "dataPrepperConfigurationBody")]
+        public string DataPrepperConfigurationBody { get; set; }
+        
+        /// <value>
+        /// The current state of the cluster pipeline.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LifecycleState is required.")]
+        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OpensearchClusterPipeline.LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// The current state of the pipeline.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "PipelineMode is required.")]
+        [JsonProperty(PropertyName = "pipelineMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OpensearchClusterPipeline.PipelineModeEnum> PipelineMode { get; set; }
+        
+        /// <value>
         /// The date and time the cluster pipeline was created. Format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
@@ -109,17 +148,6 @@ namespace Oci.OpensearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-        
-        /// <value>
-        /// The current state of the cluster backup.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "LifecycleState is required.")]
-        [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<OpensearchClusterPipeline.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

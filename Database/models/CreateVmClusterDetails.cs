@@ -200,6 +200,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "fileSystemConfigurationDetails")]
         public System.Collections.Generic.List<FileSystemConfigurationDetail> FileSystemConfigurationDetails { get; set; }
+                ///
+        /// <value>
+        /// The vmcluster type for the VM cluster/Cloud VM cluster.
+        /// </value>
+        ///
+        public enum VmClusterTypeEnum {
+            [EnumMember(Value = "REGULAR")]
+            Regular,
+            [EnumMember(Value = "DEVELOPER")]
+            Developer
+        };
+
+        /// <value>
+        /// The vmcluster type for the VM cluster/Cloud VM cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "vmClusterType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<VmClusterTypeEnum> VmClusterType { get; set; }
         
         [JsonProperty(PropertyName = "cloudAutomationUpdateDetails")]
         public CloudAutomationUpdateDetails CloudAutomationUpdateDetails { get; set; }

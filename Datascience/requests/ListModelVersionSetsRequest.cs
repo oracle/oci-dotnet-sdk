@@ -29,6 +29,26 @@ namespace Oci.DatascienceService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
         
+        ///
+        /// <value>
+        /// Specifies the type of model version sets to list. By default, user model version sets are listed.
+        /// 
+        /// </value>
+        ///
+        public enum CategoryEnum {
+            [EnumMember(Value = "USER")]
+            User,
+            [EnumMember(Value = "SERVICE")]
+            Service
+        };
+
+        /// <value>
+        /// Specifies the type of model version sets to list. By default, user model version sets are listed.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "category")]
+        public System.Nullable<CategoryEnum> Category { get; set; }
+        
         /// <value>
         /// <b>Filter</b> results by [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for the resource type.
         /// 
