@@ -47,17 +47,5 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the `IpAnycast` resource.
-        /// </value>
-        [JsonProperty(PropertyName = "ipAnycastId")]
-        public string IpAnycastId { get; set; }
-        
-        /// <value>
-        /// The IP address of the CIDR for Prefix Monitoring.
-        /// </value>
-        [JsonProperty(PropertyName = "monitorIp")]
-        public string MonitorIp { get; set; }
-        
     }
 }

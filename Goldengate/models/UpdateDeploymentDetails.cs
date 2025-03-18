@@ -131,5 +131,8 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "maintenanceConfiguration")]
         public UpdateMaintenanceConfigurationDetails MaintenanceConfiguration { get; set; }
         
+        [JsonProperty(PropertyName = "backupSchedule")]
+        public UpdateBackupScheduleDetails BackupSchedule { get; set; }
+        
     }
 }

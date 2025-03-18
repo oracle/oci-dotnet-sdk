@@ -250,6 +250,42 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateComputeGpuMemoryClusterRequest, CreateComputeGpuMemoryClusterResponse> ForCreateComputeGpuMemoryCluster(CreateComputeGpuMemoryClusterRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCreateComputeGpuMemoryCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CreateComputeGpuMemoryClusterRequest, CreateComputeGpuMemoryClusterResponse> ForCreateComputeGpuMemoryCluster(CreateComputeGpuMemoryClusterRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CreateComputeGpuMemoryClusterRequest, CreateComputeGpuMemoryClusterResponse>(() =>
+            {
+                var response = client.CreateComputeGpuMemoryCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<CreateDedicatedVmHostRequest, CreateDedicatedVmHostResponse> ForCreateDedicatedVmHost(CreateDedicatedVmHostRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForCreateDedicatedVmHost(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -375,6 +411,42 @@ namespace Oci.CoreService
             return new Waiter<DeleteComputeCapacityTopologyRequest, DeleteComputeCapacityTopologyResponse>(() =>
             {
                 var response = client.DeleteComputeCapacityTopology(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteComputeGpuMemoryClusterRequest, DeleteComputeGpuMemoryClusterResponse> ForDeleteComputeGpuMemoryCluster(DeleteComputeGpuMemoryClusterRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForDeleteComputeGpuMemoryCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<DeleteComputeGpuMemoryClusterRequest, DeleteComputeGpuMemoryClusterResponse> ForDeleteComputeGpuMemoryCluster(DeleteComputeGpuMemoryClusterRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<DeleteComputeGpuMemoryClusterRequest, DeleteComputeGpuMemoryClusterResponse>(() =>
+            {
+                var response = client.DeleteComputeGpuMemoryCluster(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;
@@ -570,6 +642,61 @@ namespace Oci.CoreService
                 targetStates.Contains(ComputeCluster.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetComputeClusterRequest, GetComputeClusterResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetComputeGpuMemoryClusterRequest, GetComputeGpuMemoryClusterResponse> ForComputeGpuMemoryCluster(GetComputeGpuMemoryClusterRequest request, params ComputeGpuMemoryCluster.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForComputeGpuMemoryCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetComputeGpuMemoryClusterRequest, GetComputeGpuMemoryClusterResponse> ForComputeGpuMemoryCluster(GetComputeGpuMemoryClusterRequest request, WaiterConfiguration config, params ComputeGpuMemoryCluster.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetComputeGpuMemoryClusterRequest, GetComputeGpuMemoryClusterResponse>(
+                request,
+                request => client.GetComputeGpuMemoryCluster(request),
+                response => targetStates.Contains(response.ComputeGpuMemoryCluster.LifecycleState.Value),
+                targetStates.Contains(ComputeGpuMemoryCluster.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetComputeGpuMemoryClusterRequest, GetComputeGpuMemoryClusterResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetComputeGpuMemoryFabricRequest, GetComputeGpuMemoryFabricResponse> ForComputeGpuMemoryFabric(GetComputeGpuMemoryFabricRequest request, params ComputeGpuMemoryFabric.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForComputeGpuMemoryFabric(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetComputeGpuMemoryFabricRequest, GetComputeGpuMemoryFabricResponse> ForComputeGpuMemoryFabric(GetComputeGpuMemoryFabricRequest request, WaiterConfiguration config, params ComputeGpuMemoryFabric.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetComputeGpuMemoryFabricRequest, GetComputeGpuMemoryFabricResponse>(
+                request,
+                request => client.GetComputeGpuMemoryFabric(request),
+                response => targetStates.Contains(response.ComputeGpuMemoryFabric.LifecycleState.Value)
+            );
+            return new Waiter<GetComputeGpuMemoryFabricRequest, GetComputeGpuMemoryFabricResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.
@@ -886,6 +1013,42 @@ namespace Oci.CoreService
             return new Waiter<UpdateComputeCapacityTopologyRequest, UpdateComputeCapacityTopologyResponse>(() =>
             {
                 var response = client.UpdateComputeCapacityTopology(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateComputeGpuMemoryClusterRequest, UpdateComputeGpuMemoryClusterResponse> ForUpdateComputeGpuMemoryCluster(UpdateComputeGpuMemoryClusterRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateComputeGpuMemoryCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateComputeGpuMemoryClusterRequest, UpdateComputeGpuMemoryClusterResponse> ForUpdateComputeGpuMemoryCluster(UpdateComputeGpuMemoryClusterRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateComputeGpuMemoryClusterRequest, UpdateComputeGpuMemoryClusterResponse>(() =>
+            {
+                var response = client.UpdateComputeGpuMemoryCluster(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;
