@@ -307,6 +307,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Zpr", "Zpr\OC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Dblm", "Dblm\OCI.DotNetSDK.Dblm.csproj", "{5A79FD16-3A64-42FE-ADAD-C2571258C80D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Mngdmac", "Mngdmac\OCI.DotNetSDK.Mngdmac.csproj", "{59C80711-6154-4609-B4E7-DA5813B17958}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2759,5 +2761,17 @@ Global
         {5A79FD16-3A64-42FE-ADAD-C2571258C80D}.Release|x64.Build.0 = Release|Any CPU
         {5A79FD16-3A64-42FE-ADAD-C2571258C80D}.Release|x86.ActiveCfg = Release|Any CPU
         {5A79FD16-3A64-42FE-ADAD-C2571258C80D}.Release|x86.Build.0 = Release|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Debug|x64.Build.0 = Debug|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Debug|x86.Build.0 = Debug|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Release|Any CPU.Build.0 = Release|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Release|x64.ActiveCfg = Release|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Release|x64.Build.0 = Release|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Release|x86.ActiveCfg = Release|Any CPU
+        {59C80711-6154-4609-B4E7-DA5813B17958}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -82,6 +82,31 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "isAutomatic")]
         public System.Nullable<bool> IsAutomatic { get; set; }
+                ///
+        /// <value>
+        /// Possible deployment backup source types.
+        /// 
+        /// </value>
+        ///
+        public enum BackupSourceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MANUAL")]
+            Manual,
+            [EnumMember(Value = "AUTOMATIC")]
+            Automatic,
+            [EnumMember(Value = "SCHEDULED")]
+            Scheduled
+        };
+
+        /// <value>
+        /// Possible deployment backup source types.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "backupSourceType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<BackupSourceTypeEnum> BackupSourceType { get; set; }
         
         /// <value>
         /// Possible lifecycle states.
