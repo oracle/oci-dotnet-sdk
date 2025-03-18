@@ -365,6 +365,25 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "timeOggVersionSupportedUntil")]
         public System.Nullable<System.DateTime> TimeOggVersionSupportedUntil { get; set; }
         
+        [JsonProperty(PropertyName = "backupSchedule")]
+        public BackupSchedule BackupSchedule { get; set; }
+        
+        /// <value>
+        /// The timestamp of last deployment backup scheduled. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2024-10-25T18:19:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastBackupScheduled")]
+        public System.Nullable<System.DateTime> TimeLastBackupScheduled { get; set; }
+        
+        /// <value>
+        /// The timestamp of next deployment backup scheduled. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2024-10-26T20:19:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeNextBackupScheduled")]
+        public System.Nullable<System.DateTime> TimeNextBackupScheduled { get; set; }
+        
         /// <value>
         /// List of ingress IP addresses from where the GoldenGate deployment connects to this connection's privateIp. 
         /// Customers may optionally set up ingress security rules to restrict traffic from these IP addresses.
