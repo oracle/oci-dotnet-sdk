@@ -58,6 +58,10 @@ namespace Oci.StackmonitoringService.Models
       [EnumMember(Value = "DELETE_MAINTENANCE_WINDOW")]
       DeleteMaintenanceWindow,
       [EnumMember(Value = "STOP_MAINTENANCE_WINDOW")]
-      StopMaintenanceWindow
+      StopMaintenanceWindow,
+      [EnumMember(Value = "UPDATE_AGENT_RECEIVER")]
+      UpdateAgentReceiver,
+      [EnumMember(Value = "UPDATE_RESOURCE_TYPE_CONFIGS")]
+      UpdateResourceTypeConfigs
   }
 }

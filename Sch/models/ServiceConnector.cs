@@ -107,6 +107,16 @@ namespace Oci.SchService.Models
         /// information for a resource in a `FAILED` state.
         /// 
         /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// *Please note this property is deprecated and will be removed on January 27, 2026. Use `lifecycleDetails` instead.*
+        /// A message describing the current state in more detail.
+        /// For example, the message might provide actionable
+        /// information for a resource in a `FAILED` state.
+        /// 
+        /// </value>
         [JsonProperty(PropertyName = "lifecyleDetails")]
         public string LifecyleDetails { get; set; }
         

@@ -42,6 +42,12 @@ namespace Oci.StackmonitoringService.Models
         public string Name { get; set; }
         
         /// <value>
+        /// Type of the task.
+        /// </value>
+        [JsonProperty(PropertyName = "type")]
+        public string Type { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment identifier.
         /// 
         /// </value>

@@ -41,7 +41,9 @@ namespace Oci.StackmonitoringService.Requests
             [EnumMember(Value = "license")]
             License,
             [EnumMember(Value = "parentResourceId")]
-            ParentResourceId
+            ParentResourceId,
+            [EnumMember(Value = "namespace")]
+            Namespace
         };
 
         /// <value>

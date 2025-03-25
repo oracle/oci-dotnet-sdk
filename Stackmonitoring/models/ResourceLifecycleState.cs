@@ -26,6 +26,8 @@ namespace Oci.StackmonitoringService.Models
       Updating,
       [EnumMember(Value = "ACTIVE")]
       Active,
+      [EnumMember(Value = "INACTIVE")]
+      Inactive,
       [EnumMember(Value = "DELETING")]
       Deleting,
       [EnumMember(Value = "DELETED")]

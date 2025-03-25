@@ -37,7 +37,6 @@ namespace Oci.SchService.Models
         
         /// <value>
         /// The namespace of the metric.
-        /// <br/>
         /// Example: oci_computeagent
         /// </value>
         /// <remarks>
@@ -49,7 +48,6 @@ namespace Oci.SchService.Models
         
         /// <value>
         /// The name of the metric.
-        /// <br/>
         /// Example: CpuUtilization
         /// </value>
         /// <remarks>

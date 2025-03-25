@@ -57,7 +57,7 @@ namespace Oci.GenerativeaiagentService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// List of [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the knowledgeBases associated with agent.
+        /// List of [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the knowledgeBases associated with agent. This field is deprecated and will be removed after March 26 2026.
         /// </value>
         [JsonProperty(PropertyName = "knowledgeBaseIds")]
         public System.Collections.Generic.List<string> KnowledgeBaseIds { get; set; }
@@ -67,6 +67,9 @@ namespace Oci.GenerativeaiagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "welcomeMessage")]
         public string WelcomeMessage { get; set; }
+        
+        [JsonProperty(PropertyName = "llmConfig")]
+        public LlmConfig LlmConfig { get; set; }
         
         /// <value>
         /// The date and time the agent was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).

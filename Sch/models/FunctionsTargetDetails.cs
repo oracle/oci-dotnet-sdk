@@ -37,6 +37,7 @@ namespace Oci.SchService.Models
         
         /// <value>
         /// The batch rollover size in kilobytes.
+        /// Only one size option can be specified: `batchSizeInKbs` or `batchSizeInNum`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "batchSizeInKbs")]
@@ -44,6 +45,7 @@ namespace Oci.SchService.Models
         
         /// <value>
         /// The batch rollover size in number of messages.
+        /// Only one size option can be specified: `batchSizeInKbs` or `batchSizeInNum`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "batchSizeInNum")]

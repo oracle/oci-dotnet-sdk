@@ -58,6 +58,14 @@ namespace Oci.GenerativeaiagentService.Models
       [EnumMember(Value = "UPDATE_TOOL")]
       UpdateTool,
       [EnumMember(Value = "DELETE_TOOL")]
-      DeleteTool
+      DeleteTool,
+      [EnumMember(Value = "CREATE_PROVISIONED_CAPACITY")]
+      CreateProvisionedCapacity,
+      [EnumMember(Value = "UPDATE_PROVISIONED_CAPACITY")]
+      UpdateProvisionedCapacity,
+      [EnumMember(Value = "DELETE_PROVISIONED_CAPACITY")]
+      DeleteProvisionedCapacity,
+      [EnumMember(Value = "MOVE_PROVISIONED_CAPACITY")]
+      MoveProvisionedCapacity
   }
 }

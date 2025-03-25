@@ -38,5 +38,11 @@ namespace Oci.GenerativeaiagentruntimeService.Models
         [JsonProperty(PropertyName = "citations")]
         public System.Collections.Generic.List<Citation> Citations { get; set; }
         
+        /// <value>
+        /// A list of citations used to generate the paragraphs of the agent message.
+        /// </value>
+        [JsonProperty(PropertyName = "paragraphCitations")]
+        public System.Collections.Generic.List<ParagraphCitation> ParagraphCitations { get; set; }
+        
     }
 }

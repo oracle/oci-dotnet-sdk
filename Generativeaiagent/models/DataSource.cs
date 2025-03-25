@@ -78,6 +78,12 @@ namespace Oci.GenerativeaiagentService.Models
         public DataSourceConfig DataSourceConfig { get; set; }
         
         /// <value>
+        /// Key-value pairs to allow additional configurations.
+        /// </value>
+        [JsonProperty(PropertyName = "metadata")]
+        public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
+        
+        /// <value>
         /// The date and time the data source was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
