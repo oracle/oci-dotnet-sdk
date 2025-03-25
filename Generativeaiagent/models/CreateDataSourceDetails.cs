@@ -52,6 +52,12 @@ namespace Oci.GenerativeaiagentService.Models
         public DataSourceConfig DataSourceConfig { get; set; }
         
         /// <value>
+        /// Key-value pairs to allow additional configurations.
+        /// </value>
+        [JsonProperty(PropertyName = "metadata")]
+        public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to create the data source in.
         /// 
         /// </value>

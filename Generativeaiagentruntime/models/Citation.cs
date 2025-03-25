@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentruntimeService.Models
 {
     /// <summary>
-    /// The citation displays the location of source text that is the agent uses to create the responses.
+    /// The source of information for the agent's response.
     /// 
     /// </summary>
     public class Citation 
@@ -48,6 +48,12 @@ namespace Oci.GenerativeaiagentruntimeService.Models
         /// </value>
         [JsonProperty(PropertyName = "pageNumbers")]
         public System.Collections.Generic.List<int> PageNumbers { get; set; }
+        
+        /// <value>
+        /// The metadata of the retrieved document, if available.
+        /// </value>
+        [JsonProperty(PropertyName = "metadata")]
+        public System.Collections.Generic.Dictionary<string, System.Object> Metadata { get; set; }
         
     }
 }

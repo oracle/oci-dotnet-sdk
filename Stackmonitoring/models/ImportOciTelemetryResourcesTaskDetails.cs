@@ -27,6 +27,8 @@ namespace Oci.StackmonitoringService.Models
         /// Possible values:
         ///   * OCI_TELEMETRY_NATIVE      - The metrics are pushed to telemetry from OCI Native Services.
         ///   * OCI_TELEMETRY_PROMETHEUS  - The metrics are pushed to telemetry from Prometheus.
+        ///   * OCI_TELEMETRY_TELEGRAF    - The metrics are pushed to telemetry from Telegraf receiver.
+        ///   * OCI_TELEMETRY_COLLECTD    - The metrics are pushed to telemetry from CollectD receiver.
         /// 
         /// </value>
         ///
@@ -37,7 +39,11 @@ namespace Oci.StackmonitoringService.Models
             [EnumMember(Value = "OCI_TELEMETRY_NATIVE")]
             OciTelemetryNative,
             [EnumMember(Value = "OCI_TELEMETRY_PROMETHEUS")]
-            OciTelemetryPrometheus
+            OciTelemetryPrometheus,
+            [EnumMember(Value = "OCI_TELEMETRY_TELEGRAF")]
+            OciTelemetryTelegraf,
+            [EnumMember(Value = "OCI_TELEMETRY_COLLECTD")]
+            OciTelemetryCollectd
         };
 
         /// <value>
@@ -45,6 +51,8 @@ namespace Oci.StackmonitoringService.Models
         /// Possible values:
         ///   * OCI_TELEMETRY_NATIVE      - The metrics are pushed to telemetry from OCI Native Services.
         ///   * OCI_TELEMETRY_PROMETHEUS  - The metrics are pushed to telemetry from Prometheus.
+        ///   * OCI_TELEMETRY_TELEGRAF    - The metrics are pushed to telemetry from Telegraf receiver.
+        ///   * OCI_TELEMETRY_COLLECTD    - The metrics are pushed to telemetry from CollectD receiver.
         /// 
         /// </value>
         /// <remarks>
@@ -149,9 +157,9 @@ namespace Oci.StackmonitoringService.Models
         
         /// <value>
         /// List of metrics to be used to calculate the availability of the resource.
-        /// Resource is considered to be up if at least one of the specified metrics is available for
-        /// the resource during the specified interval using the property
-        /// 'availabilityProxyMetricCollectionIntervalInSeconds'.
+        /// Resource is considered to be up if at least one of the specified metrics is available for 
+        /// the resource during the specified interval using the property 
+        /// 'availabilityProxyMetricCollectionInterval'.
         /// If no metrics are specified, availability will not be calculated for the resource.
         /// 
         /// </value>

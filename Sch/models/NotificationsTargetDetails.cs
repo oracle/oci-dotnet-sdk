@@ -37,7 +37,6 @@ namespace Oci.SchService.Models
         
         /// <value>
         /// Whether to apply a simplified, user-friendly format to the message. Applies only when friendly formatting is supported by the connector source and the subscription protocol.
-        /// <br/>
         /// Example: true
         /// </value>
         [JsonProperty(PropertyName = "enableFormattedMessaging")]

@@ -106,6 +106,42 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeComputeHostCompartmentRequest, ChangeComputeHostCompartmentResponse> ForChangeComputeHostCompartment(ChangeComputeHostCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForChangeComputeHostCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ChangeComputeHostCompartmentRequest, ChangeComputeHostCompartmentResponse> ForChangeComputeHostCompartment(ChangeComputeHostCompartmentRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ChangeComputeHostCompartmentRequest, ChangeComputeHostCompartmentResponse>(() =>
+            {
+                var response = client.ChangeComputeHostCompartment(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<ChangeDedicatedVmHostCompartmentRequest, ChangeDedicatedVmHostCompartmentResponse> ForChangeDedicatedVmHostCompartment(ChangeDedicatedVmHostCompartmentRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForChangeDedicatedVmHostCompartment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -704,6 +740,33 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetComputeHostRequest, GetComputeHostResponse> ForComputeHost(GetComputeHostRequest request, params ComputeHost.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForComputeHost(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetComputeHostRequest, GetComputeHostResponse> ForComputeHost(GetComputeHostRequest request, WaiterConfiguration config, params ComputeHost.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetComputeHostRequest, GetComputeHostResponse>(
+                request,
+                request => client.GetComputeHost(request),
+                response => targetStates.Contains(response.ComputeHost.LifecycleState.Value)
+            );
+            return new Waiter<GetComputeHostRequest, GetComputeHostResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetConsoleHistoryRequest, GetConsoleHistoryResponse> ForConsoleHistory(GetConsoleHistoryRequest request, params ConsoleHistory.LifecycleStateEnum[] targetStates)
         {
             return this.ForConsoleHistory(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1049,6 +1112,42 @@ namespace Oci.CoreService
             return new Waiter<UpdateComputeGpuMemoryClusterRequest, UpdateComputeGpuMemoryClusterResponse>(() =>
             {
                 var response = client.UpdateComputeGpuMemoryCluster(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateComputeHostRequest, UpdateComputeHostResponse> ForUpdateComputeHost(UpdateComputeHostRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUpdateComputeHost(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UpdateComputeHostRequest, UpdateComputeHostResponse> ForUpdateComputeHost(UpdateComputeHostRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UpdateComputeHostRequest, UpdateComputeHostResponse>(() =>
+            {
+                var response = client.UpdateComputeHost(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;

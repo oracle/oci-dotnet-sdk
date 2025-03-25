@@ -43,7 +43,7 @@ namespace Oci.GenerativeaiagentService.Models
         public string BucketName { get; set; }
         
         /// <value>
-        /// The name of the object (file) or prefix (folder).
+        /// The prefix of file object(s) or folder prefix.
         /// </value>
         [JsonProperty(PropertyName = "prefix")]
         public string Prefix { get; set; }

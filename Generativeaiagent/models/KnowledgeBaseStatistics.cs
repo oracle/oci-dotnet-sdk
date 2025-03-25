@@ -25,7 +25,7 @@ namespace Oci.GenerativeaiagentService.Models
         /// Knowledge Base size in bytes.
         /// </value>
         [JsonProperty(PropertyName = "sizeInBytes")]
-        public System.Nullable<int> SizeInBytes { get; set; }
+        public System.Nullable<long> SizeInBytes { get; set; }
         
     }
 }
