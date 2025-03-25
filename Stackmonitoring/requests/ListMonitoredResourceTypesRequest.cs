@@ -58,6 +58,18 @@ namespace Oci.StackmonitoringService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "metricNamespace")]
         public string MetricNamespace { get; set; }
         
+        /// <value>
+        /// A filter to return only resources with matching source type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sourceType")]
+        public System.Nullable<SourceType> SourceType { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources with matching resource category.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceCategory")]
+        public System.Nullable<ResourceCategory> ResourceCategory { get; set; }
+        
         ///
         /// <value>
         /// The field to sort by. Only one sort order may be provided. 

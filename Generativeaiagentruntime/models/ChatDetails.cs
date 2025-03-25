@@ -25,10 +25,6 @@ namespace Oci.GenerativeaiagentruntimeService.Models
         /// <value>
         /// The input user message content for the chat.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "UserMessage is required.")]
         [JsonProperty(PropertyName = "userMessage")]
         public string UserMessage { get; set; }
         
@@ -43,6 +39,18 @@ namespace Oci.GenerativeaiagentruntimeService.Models
         /// </value>
         [JsonProperty(PropertyName = "sessionId")]
         public string SessionId { get; set; }
+        
+        /// <value>
+        /// A map where each key is a toolId and the value contains tool type and additional dynamic parameters.
+        /// </value>
+        [JsonProperty(PropertyName = "toolParameters")]
+        public System.Collections.Generic.Dictionary<string, string> ToolParameters { get; set; }
+        
+        /// <value>
+        /// A list of actions that have been performed based on prior required actions.
+        /// </value>
+        [JsonProperty(PropertyName = "performedActions")]
+        public System.Collections.Generic.List<PerformedAction> PerformedActions { get; set; }
         
     }
 }

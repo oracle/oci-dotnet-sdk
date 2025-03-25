@@ -25,6 +25,8 @@ namespace Oci.StackmonitoringService.Models
       Database,
       [EnumMember(Value = "MIDDLEWARE")]
       Middleware,
+      [EnumMember(Value = "INFRASTRUCTURE")]
+      Infrastructure,
       [EnumMember(Value = "UNKNOWN")]
       Unknown
   }

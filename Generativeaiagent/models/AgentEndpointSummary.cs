@@ -67,6 +67,21 @@ namespace Oci.GenerativeaiagentService.Models
         [JsonProperty(PropertyName = "contentModerationConfig")]
         public ContentModerationConfig ContentModerationConfig { get; set; }
         
+        [JsonProperty(PropertyName = "guardrailConfig")]
+        public GuardrailConfig GuardrailConfig { get; set; }
+        
+        /// <value>
+        /// Key-value pairs to allow additional configurations.
+        /// </value>
+        [JsonProperty(PropertyName = "metadata")]
+        public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
+        
+        [JsonProperty(PropertyName = "humanInputConfig")]
+        public HumanInputConfig HumanInputConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "outputConfig")]
+        public OutputConfig OutputConfig { get; set; }
+        
         /// <value>
         /// Whether to show traces in the chat result.
         /// </value>
@@ -84,6 +99,12 @@ namespace Oci.GenerativeaiagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "shouldEnableSession")]
         public System.Nullable<bool> ShouldEnableSession { get; set; }
+        
+        /// <value>
+        /// Whether to enable multi-language for chat.
+        /// </value>
+        [JsonProperty(PropertyName = "shouldEnableMultiLanguage")]
+        public System.Nullable<bool> ShouldEnableMultiLanguage { get; set; }
         
         [JsonProperty(PropertyName = "sessionConfig")]
         public SessionConfig SessionConfig { get; set; }

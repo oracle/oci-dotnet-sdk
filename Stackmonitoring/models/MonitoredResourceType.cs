@@ -64,7 +64,7 @@ namespace Oci.StackmonitoringService.Models
         public string MetricNamespace { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the tenancy containing the resource type.
+        /// Compartment Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </value>
         /// <remarks>
@@ -73,6 +73,25 @@ namespace Oci.StackmonitoringService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// Tenancy Identifier [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tenancyId")]
+        public string TenancyId { get; set; }
+        
+        [JsonProperty(PropertyName = "availabilityMetricsConfig")]
+        public AvailabilityMetricsDetails AvailabilityMetricsConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "handlerConfig")]
+        public AgentExtensionHandlerConfiguration HandlerConfig { get; set; }
+        
+        /// <value>
+        /// If boolean flag is true, then the resource type cannot be modified or deleted.
+        /// </value>
+        [JsonProperty(PropertyName = "isSystemDefined")]
+        public System.Nullable<bool> IsSystemDefined { get; set; }
         
         /// <value>
         /// Lifecycle state of the monitored resource type.

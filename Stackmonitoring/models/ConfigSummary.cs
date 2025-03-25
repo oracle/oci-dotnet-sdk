@@ -121,6 +121,12 @@ namespace Oci.StackmonitoringService.Models
                 case "LICENSE_AUTO_ASSIGN":
                     obj = new LicenseAutoAssignConfigSummary();
                     break;
+                case "COMPUTE_AUTO_ACTIVATE_PLUGIN":
+                    obj = new ComputeAutoActivatePluginConfigSummary();
+                    break;
+                case "ONBOARD":
+                    obj = new OnboardConfigSummary();
+                    break;
                 case "LICENSE_ENTERPRISE_EXTENSIBILITY":
                     obj = new LicenseEnterpriseExtensibilityConfigSummary();
                     break;

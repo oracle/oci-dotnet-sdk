@@ -35,7 +35,7 @@ namespace Oci.GenerativeaiagentService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// List of [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the knowledgeBases associated with agent.
+        /// List of [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the knowledgeBases associated with agent. This field is deprecated and will be removed after March 26 2026.
         /// </value>
         [JsonProperty(PropertyName = "knowledgeBaseIds")]
         public System.Collections.Generic.List<string> KnowledgeBaseIds { get; set; }
@@ -45,6 +45,9 @@ namespace Oci.GenerativeaiagentService.Models
         /// </value>
         [JsonProperty(PropertyName = "welcomeMessage")]
         public string WelcomeMessage { get; set; }
+        
+        [JsonProperty(PropertyName = "llmConfig")]
+        public LlmConfig LlmConfig { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

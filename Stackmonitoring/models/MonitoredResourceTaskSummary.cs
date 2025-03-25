@@ -42,6 +42,12 @@ namespace Oci.StackmonitoringService.Models
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
+        /// <value>
+        /// Type of the task.
+        /// </value>
+        [JsonProperty(PropertyName = "type")]
+        public string Type { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

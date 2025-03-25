@@ -65,6 +65,9 @@ namespace Oci.StackmonitoringService.Models
             var discriminator = jsonObject["configType"].Value<string>();
             switch (discriminator)
             {
+                case "COMPUTE_AUTO_ACTIVATE_PLUGIN":
+                    obj = new UpdateComputeAutoActivatePluginConfigDetails();
+                    break;
                 case "LICENSE_ENTERPRISE_EXTENSIBILITY":
                     obj = new UpdateLicenseEnterpriseExtensibilityConfigDetails();
                     break;
@@ -73,6 +76,9 @@ namespace Oci.StackmonitoringService.Models
                     break;
                 case "LICENSE_AUTO_ASSIGN":
                     obj = new UpdateLicenseAutoAssignConfigDetails();
+                    break;
+                case "ONBOARD":
+                    obj = new UpdateOnboardConfigDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

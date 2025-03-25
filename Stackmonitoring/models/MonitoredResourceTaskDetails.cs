@@ -28,7 +28,11 @@ namespace Oci.StackmonitoringService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "IMPORT_OCI_TELEMETRY_RESOURCES")]
-            ImportOciTelemetryResources
+            ImportOciTelemetryResources,
+            [EnumMember(Value = "UPDATE_AGENT_RECEIVER")]
+            UpdateAgentReceiver,
+            [EnumMember(Value = "UPDATE_RESOURCE_TYPE_CONFIGS")]
+            UpdateResourceTypeConfigs
         };
 
         
@@ -57,6 +61,12 @@ namespace Oci.StackmonitoringService.Models
             {
                 case "IMPORT_OCI_TELEMETRY_RESOURCES":
                     obj = new ImportOciTelemetryResourcesTaskDetails();
+                    break;
+                case "UPDATE_AGENT_RECEIVER":
+                    obj = new UpdateAgentReceiverTaskDetails();
+                    break;
+                case "UPDATE_RESOURCE_TYPE_CONFIGS":
+                    obj = new UpdateResourceTypeConfigTaskDetails();
                     break;
             }
             if (obj != null)

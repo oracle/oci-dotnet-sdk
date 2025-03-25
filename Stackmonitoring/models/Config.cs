@@ -103,10 +103,14 @@ namespace Oci.StackmonitoringService.Models
         public enum ConfigTypeEnum {
             [EnumMember(Value = "AUTO_PROMOTE")]
             AutoPromote,
+            [EnumMember(Value = "COMPUTE_AUTO_ACTIVATE_PLUGIN")]
+            ComputeAutoActivatePlugin,
             [EnumMember(Value = "LICENSE_AUTO_ASSIGN")]
             LicenseAutoAssign,
             [EnumMember(Value = "LICENSE_ENTERPRISE_EXTENSIBILITY")]
-            LicenseEnterpriseExtensibility
+            LicenseEnterpriseExtensibility,
+            [EnumMember(Value = "ONBOARD")]
+            Onboard
         };
 
         
@@ -154,8 +158,14 @@ namespace Oci.StackmonitoringService.Models
             var discriminator = jsonObject["configType"].Value<string>();
             switch (discriminator)
             {
+                case "ONBOARD":
+                    obj = new OnboardConfigDetails();
+                    break;
                 case "LICENSE_ENTERPRISE_EXTENSIBILITY":
                     obj = new LicenseEnterpriseExtensibilityConfigDetails();
+                    break;
+                case "COMPUTE_AUTO_ACTIVATE_PLUGIN":
+                    obj = new ComputeAutoActivatePluginConfigDetails();
                     break;
                 case "LICENSE_AUTO_ASSIGN":
                     obj = new LicenseAutoAssignConfigDetails();
