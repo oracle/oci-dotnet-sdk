@@ -116,6 +116,143 @@ namespace Oci.DatascienceService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMlApplicationRequest, GetMlApplicationResponse> ForMlApplication(GetMlApplicationRequest request, params MlApplication.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForMlApplication(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMlApplicationRequest, GetMlApplicationResponse> ForMlApplication(GetMlApplicationRequest request, WaiterConfiguration config, params MlApplication.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetMlApplicationRequest, GetMlApplicationResponse>(
+                request,
+                request => client.GetMlApplication(request),
+                response => targetStates.Contains(response.MlApplication.LifecycleState.Value)
+            );
+            return new Waiter<GetMlApplicationRequest, GetMlApplicationResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMlApplicationImplementationRequest, GetMlApplicationImplementationResponse> ForMlApplicationImplementation(GetMlApplicationImplementationRequest request, params MlApplicationImplementation.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForMlApplicationImplementation(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMlApplicationImplementationRequest, GetMlApplicationImplementationResponse> ForMlApplicationImplementation(GetMlApplicationImplementationRequest request, WaiterConfiguration config, params MlApplicationImplementation.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetMlApplicationImplementationRequest, GetMlApplicationImplementationResponse>(
+                request,
+                request => client.GetMlApplicationImplementation(request),
+                response => targetStates.Contains(response.MlApplicationImplementation.LifecycleState.Value)
+            );
+            return new Waiter<GetMlApplicationImplementationRequest, GetMlApplicationImplementationResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMlApplicationImplementationVersionRequest, GetMlApplicationImplementationVersionResponse> ForMlApplicationImplementationVersion(GetMlApplicationImplementationVersionRequest request, params MlApplicationImplementationVersion.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForMlApplicationImplementationVersion(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMlApplicationImplementationVersionRequest, GetMlApplicationImplementationVersionResponse> ForMlApplicationImplementationVersion(GetMlApplicationImplementationVersionRequest request, WaiterConfiguration config, params MlApplicationImplementationVersion.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetMlApplicationImplementationVersionRequest, GetMlApplicationImplementationVersionResponse>(
+                request,
+                request => client.GetMlApplicationImplementationVersion(request),
+                response => targetStates.Contains(response.MlApplicationImplementationVersion.LifecycleState.Value)
+            );
+            return new Waiter<GetMlApplicationImplementationVersionRequest, GetMlApplicationImplementationVersionResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMlApplicationInstanceRequest, GetMlApplicationInstanceResponse> ForMlApplicationInstance(GetMlApplicationInstanceRequest request, params MlApplicationInstance.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForMlApplicationInstance(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMlApplicationInstanceRequest, GetMlApplicationInstanceResponse> ForMlApplicationInstance(GetMlApplicationInstanceRequest request, WaiterConfiguration config, params MlApplicationInstance.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetMlApplicationInstanceRequest, GetMlApplicationInstanceResponse>(
+                request,
+                request => client.GetMlApplicationInstance(request),
+                response => targetStates.Contains(response.MlApplicationInstance.LifecycleState.Value),
+                targetStates.Contains(MlApplicationInstance.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetMlApplicationInstanceRequest, GetMlApplicationInstanceResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMlApplicationInstanceViewRequest, GetMlApplicationInstanceViewResponse> ForMlApplicationInstanceView(GetMlApplicationInstanceViewRequest request, params MlApplicationInstanceView.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForMlApplicationInstanceView(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMlApplicationInstanceViewRequest, GetMlApplicationInstanceViewResponse> ForMlApplicationInstanceView(GetMlApplicationInstanceViewRequest request, WaiterConfiguration config, params MlApplicationInstanceView.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetMlApplicationInstanceViewRequest, GetMlApplicationInstanceViewResponse>(
+                request,
+                request => client.GetMlApplicationInstanceView(request),
+                response => targetStates.Contains(response.MlApplicationInstanceView.LifecycleState.Value),
+                targetStates.Contains(MlApplicationInstanceView.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetMlApplicationInstanceViewRequest, GetMlApplicationInstanceViewResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetModelRequest, GetModelResponse> ForModel(GetModelRequest request, params ModelLifecycleState[] targetStates)
         {
             return this.ForModel(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

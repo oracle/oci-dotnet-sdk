@@ -6,6 +6,7 @@
 using System;
 using System.Net.Http;
 using System.Security.Authentication;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -28,6 +29,26 @@ namespace Oci.Common.Http
                 var msg = "Please upgrade to .NET Framework 4.7.2 or higher." +
                 "Or make sure TLS 1.2 is enabled in your operating system. If your API calls to OCI succeed then TLS 1.2 is enabled";
                 logger.Warn($"Received exception as SslProtocols property is not supported on this platform: {e}, {msg}");
+            }
+        }
+
+        public RestClientHandler(RequestCallback callback, ClientConfiguration clientConfiguration)
+        {
+            this.callback = callback;
+            try
+            {
+                SslProtocols = SslProtocols.Tls12;
+            }
+            catch (PlatformNotSupportedException e)
+            {
+                var msg = "Please upgrade to .NET Framework 4.7.2 or higher." +
+                "Or make sure TLS 1.2 is enabled in your operating system. If your API calls to OCI succeed then TLS 1.2 is enabled";
+                logger.Warn($"Received exception as SslProtocols property is not supported on this platform: {e}, {msg}");
+            }
+            ClientCertificateOptions = clientConfiguration.ClientCertificateOption;
+            if (clientConfiguration.ClientCertificates != null && clientConfiguration.ClientCertificates.Length > 0)
+            {
+                ClientCertificates.AddRange(clientConfiguration.ClientCertificates);
             }
         }
 

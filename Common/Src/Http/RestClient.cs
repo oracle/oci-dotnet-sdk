@@ -61,10 +61,15 @@ namespace Oci.Common.Http
             this.availableRequestSigners = GetAvailableRequestSigners(this.authProvider);
         }
 
-        public RestClient(IBasicAuthenticationDetailsProvider authProvider, ClientConfiguration clientConfiguration, RequestSigner requestSigner) : this(authProvider, requestSigner)
+        public RestClient(IBasicAuthenticationDetailsProvider authProvider, ClientConfiguration clientConfiguration, RequestSigner requestSigner)
         {
+            this.authProvider = authProvider;
+            this.restClientHandler = new RestClientHandler(RequestReceptor, clientConfiguration);
+            this.httpClient = new HttpClient(restClientHandler);
             this.httpClient.Timeout = TimeSpan.FromMilliseconds(clientConfiguration.TimeoutMillis);
             this.httpClient.MaxResponseContentBufferSize = clientConfiguration.ResponseContentBufferBytes;
+            this.requestSigner = requestSigner;
+            this.availableRequestSigners = GetAvailableRequestSigners(this.authProvider);
         }
 
         public RestClient() : this(null as IBasicAuthenticationDetailsProvider, null as RequestSigner) { }

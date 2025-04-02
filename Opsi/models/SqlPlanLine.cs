@@ -50,6 +50,20 @@ namespace Oci.OpsiService.Models
         public System.Nullable<long> PlanHash { get; set; }
         
         /// <value>
+        /// Force matching signature
+        /// Example: &quot;18067345456756876713&quot;
+        /// </value>
+        [JsonProperty(PropertyName = "forceMatchingSignature")]
+        public string ForceMatchingSignature { get; set; }
+        
+        /// <value>
+        /// Generation time stamp
+        /// Example: &quot;2020-05-05T02:10:00.000Z&quot;
+        /// </value>
+        [JsonProperty(PropertyName = "timeGenerated")]
+        public System.Nullable<System.DateTime> TimeGenerated { get; set; }
+        
+        /// <value>
         /// Collection time stamp
         /// Example: &quot;2020-05-06T00:00:00.000Z&quot;
         /// </value>

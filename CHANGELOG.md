@@ -30,6 +30,14 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 108.1.0 - 2025-04-02
+### Added
+ - Support for the Lustre File service
+ - Support for machine learning applications in the Data Science service
+ - Support for action endpoints to export and import configurations in the Application Performance Monitoring service
+ - Support for ECPU (Elastic Compute Unit) compute model based warehouses in the Operations insights service
+ - Support for setting ClientCertificateOptions and ClientCertificates for the underlying HttpClient in the ClientConfiguration
+
 ## 108.0.0 - 2025-03-25
 ### Added
  - Support for agent platforms and Retrieval Augmented Generation (RAG) agents in the Generative AI Agent service
