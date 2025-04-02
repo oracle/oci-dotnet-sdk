@@ -3,6 +3,8 @@
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
+using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 using Oci.Common.Retry;
 
 namespace Oci.Common
@@ -29,5 +31,12 @@ namespace Oci.Common
 
         /// <summary>The retry configuration to use.  Default is no retry.</summary>
         public RetryConfiguration RetryConfiguration { get; set; }
+
+        /// <summary>Optional ClientCertificateOption.  Default is Automatic.</summary>
+        public ClientCertificateOption ClientCertificateOption { get; set; } = ClientCertificateOption.Automatic;
+
+        /// <summary>Optional array of client X509Certificate to trust.</summary>
+        public X509Certificate[] ClientCertificates { get; set; }
+
     }
 }

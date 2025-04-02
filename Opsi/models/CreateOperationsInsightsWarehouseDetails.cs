@@ -42,7 +42,7 @@ namespace Oci.OpsiService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Number of OCPUs allocated to OPSI Warehouse ADW.
+        /// Number of CPUs allocated to OPSI Warehouse ADW.
         /// 
         /// </value>
         /// <remarks>
@@ -51,6 +51,13 @@ namespace Oci.OpsiService.Models
         [Required(ErrorMessage = "CpuAllocated is required.")]
         [JsonProperty(PropertyName = "cpuAllocated")]
         public System.Double CpuAllocated { get; set; }
+        
+        /// <value>
+        /// The compute model for the OPSI warehouse ADW (OCPU or ECPU)
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OperationsInsightsWarehouse.ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
         /// Storage allocated to OPSI Warehouse ADW.

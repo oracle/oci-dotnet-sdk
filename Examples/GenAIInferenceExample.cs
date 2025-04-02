@@ -4,16 +4,15 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Net.Http;
 using Newtonsoft.Json;
+using Oci.Common.Auth;
 using Oci.GenerativeaiinferenceService;
+using Oci.GenerativeaiinferenceService.Models;
 using Oci.GenerativeaiinferenceService.Requests;
 using Oci.GenerativeaiinferenceService.Responses;
-
-using Oci.Common.Auth;
-using Oci.Common.Model;
-using System.Net.Http;
-using Oci.CoreService.Requests;
 
 namespace Oci.Examples
 {
@@ -29,66 +28,14 @@ namespace Oci.Examples
             // Create GenerativeAiInferenceClient
             try
             {
-                var modelId = "cohere.command";
-                var prompt = "Tell me a fact about Oracle";
-                var maxTokens = 1000;
-                var temperature = 0.75;
-                var frequencyPenalty = 1.0;
-                var topP = 0.7;
                 var provider = new SessionTokenAuthenticationDetailsProvider(Environment.GetEnvironmentVariable("PROFILE_WITH_SESSION_TOKEN") ?? "DEFAULT");
-
-                using (client = new GenerativeAiInferenceClient(provider, new Common.ClientConfiguration()))
+                var clientConfiguration = new Common.ClientConfiguration
                 {
-                    // client.SetEndpoint("https://ppe.inference.generativeai.us-chicago-1.oci.oraclecloud.com");
-                    var inferenceRequest = new GenerativeaiinferenceService.Models.CohereLlmInferenceRequest
-                    {
-                        Prompt = prompt,
-                        IsStream = true,
-                        MaxTokens = maxTokens,
-                        Temperature = temperature,
-                        FrequencyPenalty = frequencyPenalty,
-                        TopP = topP
-                    };
-
-                    var details = new GenerativeaiinferenceService.Models.GenerateTextDetails
-                    {
-                        CompartmentId = Environment.GetEnvironmentVariable("OCI_COMPARTMENT_ID"),
-                        ServingMode = new GenerativeaiinferenceService.Models.OnDemandServingMode
-                        {
-                            ModelId = modelId
-                        },
-                        InferenceRequest = inferenceRequest
-                    };
-                    var request = new GenerateTextRequest
-                    {
-                        GenerateTextDetails = details
-                    };
-                    try
-                    {
-                        GenerateTextResponse response = await client.GenerateText(request, completionOption: HttpCompletionOption.ResponseHeadersRead);
-
-                        using (var stream = await response.httpResponseMessage.Content.ReadAsStreamAsync())
-                        using (var reader = new System.IO.StreamReader(stream))
-                        {
-                            while (!reader.EndOfStream)
-                            {
-                                string line = await reader.ReadLineAsync();
-                                if (line.StartsWith("data:"))
-                                {
-                                    // Extract the data part of the event by removing the "data: " prefix from the string
-                                    string jsonContent = line.Substring("data: ".Length);
-                                    Data data = JsonConvert.DeserializeObject<Data>(jsonContent);
-                                    Console.Write($"{data.text}");
-                                }
-                            }
-                            Console.WriteLine("");
-                        }
-                    }
-                    catch (OciException ex)
-                    {
-                        logger.Info($"Caught expected exception:{ex}");
-                    }
-
+                    ClientCertificateOption = ClientCertificateOption.Manual
+                };
+                using (client = new GenerativeAiInferenceClient(provider, clientConfiguration))
+                {
+                    await CohereChatSse(client);
                 }
             }
             catch (Exception ex)
@@ -96,13 +43,85 @@ namespace Oci.Examples
                 logger.Info($"Exception occurred with GenerativeAiInferenceClient: {ex}");
                 throw;
             }
+            finally
+            {
+                client.Dispose();
+            }
         }
 
-    }
+        private static async Task CohereChatSse(GenerativeAiInferenceClient client)
+        {
+            var message = "Tell me something about the company's database services.";
 
-    class Data
-    {
-        public string id { get; set; }
-        public string text { get; set; }
+            CohereMessage previousChatMessage = new CohereUserMessage
+            {
+                Message = "Tell me something about Oracle."
+            };
+
+            CohereMessage previousChatReply = new CohereChatBotMessage
+            {
+                Message = "Oracle is one of the largest vendors in the enterprise IT market and the shorthand name of its flagship product. The database software sits at the center of many corporate IT"
+            };
+
+            List<CohereMessage> chatHistory = new List<CohereMessage> { previousChatMessage, previousChatReply };
+
+            var cohereChatRequest = new CohereChatRequest
+            {
+                Message = message,
+                ChatHistory = chatHistory,
+                MaxTokens = 100,
+                Temperature = 0.75,
+                FrequencyPenalty = 0.0,
+                TopP = 0.7,
+                TopK = 1,
+                IsStream = true
+            };
+
+            var chatDetails = new ChatDetails
+            {
+                ServingMode = new OnDemandServingMode
+                {
+                    ModelId = "cohere.command-r-plus-08-2024"
+                },
+                CompartmentId = Environment.GetEnvironmentVariable("OCI_COMPARTMENT_ID"),
+                ChatRequest = cohereChatRequest
+            };
+
+            var request = new ChatRequest
+            {
+                ChatDetails = chatDetails
+            };
+
+            logger.Info($"Request: {JsonConvert.SerializeObject(request)}");
+            Console.WriteLine("Start chatting");
+            try
+            {
+                ChatResponse response = await client.Chat(request, completionOption: HttpCompletionOption.ResponseHeadersRead);
+
+                using (var stream = await response.httpResponseMessage.Content.ReadAsStreamAsync())
+                using (var reader = new System.IO.StreamReader(stream))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        string line = await reader.ReadLineAsync();
+                        if (line.StartsWith("data:"))
+                        {
+                            // Extract the data part of the event by removing the "data: " prefix from the string
+                            // example: data: {"apiFormat":"COHERE","text":"hello"}
+                            string jsonContent = line.Substring("data: ".Length);
+                            CohereChatResponse cohereChatResponse = JsonConvert.DeserializeObject<CohereChatResponse>(jsonContent);
+                            Console.Write($"{cohereChatResponse.Text}");
+                        }
+                    }
+                    Console.WriteLine("");
+                }
+
+                logger.Info($"Response from chat: {JsonConvert.SerializeObject(response)}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
     }
 }
