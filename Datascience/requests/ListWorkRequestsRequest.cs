@@ -82,6 +82,34 @@ namespace Oci.DatascienceService.Requests
             PipelineRunCancel,
             [EnumMember(Value = "PIPELINE_RUN_DELETE")]
             PipelineRunDelete,
+            [EnumMember(Value = "ML_APPLICATION_PACKAGE_UPLOAD")]
+            MlApplicationPackageUpload,
+            [EnumMember(Value = "ML_APPLICATION_TRIGGER_START")]
+            MlApplicationTriggerStart,
+            [EnumMember(Value = "ML_APPLICATION_IMPLEMENTATION_DELETE")]
+            MlApplicationImplementationDelete,
+            [EnumMember(Value = "ML_APPLICATION_IMPLEMENTATION_UPDATE")]
+            MlApplicationImplementationUpdate,
+            [EnumMember(Value = "ML_APPLICATION_IMPLEMENTATION_MOVE")]
+            MlApplicationImplementationMove,
+            [EnumMember(Value = "ML_APPLICATION_INSTANCE_CREATE")]
+            MlApplicationInstanceCreate,
+            [EnumMember(Value = "ML_APPLICATION_INSTANCE_UPDATE")]
+            MlApplicationInstanceUpdate,
+            [EnumMember(Value = "ML_APPLICATION_INSTANCE_DELETE")]
+            MlApplicationInstanceDelete,
+            [EnumMember(Value = "ML_APPLICATION_INSTANCE_MOVE")]
+            MlApplicationInstanceMove,
+            [EnumMember(Value = "ML_APPLICATION_INSTANCE_VIEW_CREATE")]
+            MlApplicationInstanceViewCreate,
+            [EnumMember(Value = "ML_APPLICATION_INSTANCE_VIEW_UPDATE")]
+            MlApplicationInstanceViewUpdate,
+            [EnumMember(Value = "ML_APPLICATION_INSTANCE_VIEW_DELETE")]
+            MlApplicationInstanceViewDelete,
+            [EnumMember(Value = "ML_APPLICATION_INSTANCE_VIEW_UPGRADE")]
+            MlApplicationInstanceViewUpgrade,
+            [EnumMember(Value = "ML_APPLICATION_INSTANCE_VIEW_MOVE")]
+            MlApplicationInstanceViewMove,
             [EnumMember(Value = "PRIVATE_ENDPOINT_CREATE")]
             PrivateEndpointCreate,
             [EnumMember(Value = "PRIVATE_ENDPOINT_DELETE")]

@@ -309,6 +309,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Dblm", "Dblm\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Mngdmac", "Mngdmac\OCI.DotNetSDK.Mngdmac.csproj", "{59C80711-6154-4609-B4E7-DA5813B17958}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Lustrefilestorage", "Lustrefilestorage\OCI.DotNetSDK.Lustrefilestorage.csproj", "{B7402F99-BF34-46F3-93F2-078C778643A1}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2773,5 +2775,17 @@ Global
         {59C80711-6154-4609-B4E7-DA5813B17958}.Release|x64.Build.0 = Release|Any CPU
         {59C80711-6154-4609-B4E7-DA5813B17958}.Release|x86.ActiveCfg = Release|Any CPU
         {59C80711-6154-4609-B4E7-DA5813B17958}.Release|x86.Build.0 = Release|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Debug|x64.Build.0 = Debug|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Debug|x86.Build.0 = Debug|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Release|Any CPU.Build.0 = Release|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Release|x64.ActiveCfg = Release|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Release|x64.Build.0 = Release|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Release|x86.ActiveCfg = Release|Any CPU
+        {B7402F99-BF34-46F3-93F2-078C778643A1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
