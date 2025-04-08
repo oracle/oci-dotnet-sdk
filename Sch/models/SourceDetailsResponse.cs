@@ -16,17 +16,20 @@ using Newtonsoft.Json.Linq;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// An object that represents a task within the flow defined by the connector.
-    /// An example task is a filter for error logs.
+    /// An object that represents the source of the flow defined by the connector.
+    /// An example source is the VCNFlow logs within the NetworkLogs group.
     /// For more information about flows defined by connectors, see
     /// [Overview of Connector Hub](https://docs.cloud.oracle.com/iaas/Content/connector-hub/overview.htm).
     /// For configuration instructions, see
     /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
     /// 
     /// </summary>
-    [JsonConverter(typeof(TaskDetailsModelConverter))]
-    public class TaskDetails 
+    [JsonConverter(typeof(SourceDetailsResponseModelConverter))]
+    public class SourceDetailsResponse 
     {
+        
+        [JsonProperty(PropertyName = "privateEndpointMetadata")]
+        public PrivateEndpointMetadata PrivateEndpointMetadata { get; set; }
                 ///
         /// <value>
         /// The type discriminator.
@@ -34,22 +37,27 @@ namespace Oci.SchService.Models
         /// </value>
         ///
         public enum KindEnum {
-            [EnumMember(Value = "function")]
-            Function,
-            [EnumMember(Value = "logRule")]
-            LogRule
+            [EnumMember(Value = "logging")]
+            Logging,
+            [EnumMember(Value = "monitoring")]
+            Monitoring,
+            [EnumMember(Value = "streaming")]
+            Streaming,
+            [EnumMember(Value = "plugin")]
+            Plugin
         };
 
         
     }
 
-    public class TaskDetailsModelConverter : JsonConverter
+    public class SourceDetailsResponseModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
         {
-            return type == typeof(TaskDetails);
+            return type == typeof(SourceDetailsResponse);
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -59,18 +67,31 @@ namespace Oci.SchService.Models
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jsonObject = JObject.Load(reader);
-            var obj = default(TaskDetails);
+            var obj = default(SourceDetailsResponse);
             var discriminator = jsonObject["kind"].Value<string>();
             switch (discriminator)
             {
-                case "function":
-                    obj = new FunctionTaskDetails();
+                case "logging":
+                    obj = new LoggingSourceDetailsResponse();
                     break;
-                case "logRule":
-                    obj = new LogRuleTaskDetails();
+                case "monitoring":
+                    obj = new MonitoringSourceDetailsResponse();
+                    break;
+                case "streaming":
+                    obj = new StreamingSourceDetailsResponse();
+                    break;
+                case "plugin":
+                    obj = new PluginSourceDetailsResponse();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under SourceDetailsResponse! Returning null value.");
+            }
             return obj;
         }
     }

@@ -112,6 +112,9 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "targetConnectionDetails")]
         public TargetPipelineConnectionDetails TargetConnectionDetails { get; set; }
         
+        [JsonProperty(PropertyName = "pipelineDiagnosticData")]
+        public PipelineDiagnosticData PipelineDiagnosticData { get; set; }
+        
         /// <value>
         /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists
         /// for cross-compatibility only.

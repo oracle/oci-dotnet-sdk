@@ -13,27 +13,25 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.KeymanagementService.Models
+namespace Oci.GoldengateService.Models
 {
     /// <summary>
-    /// Creates a vault replica.
+    /// A list of DeploymentPeers.
+    /// 
     /// </summary>
-    public class CreateVaultReplicaDetails 
+    public class DeploymentPeerCollection 
     {
         
         /// <value>
-        /// The region in the realm to which the vault need to be replicated to
+        /// An array of DeploymentPeers.
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ReplicaRegion is required.")]
-        [JsonProperty(PropertyName = "replicaRegion")]
-        public string ReplicaRegion { get; set; }
-        
-        [JsonProperty(PropertyName = "replicaVaultMetadata")]
-        public ReplicaVaultMetadata ReplicaVaultMetadata { get; set; }
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<DeploymentPeerSummary> Items { get; set; }
         
     }
 }

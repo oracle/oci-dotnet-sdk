@@ -10,31 +10,29 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.SchService.Models
+namespace Oci.GoldengateService.Models
 {
   /// <summary>
-  /// Possible lifecycle states.
+  /// Specifies supported Capabilities or features supported by deployment type.
     /// 
   /// </summary>
-  public enum LifecycleState {
+  public enum SupportedCapabilities {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "CREATING")]
-      Creating,
-      [EnumMember(Value = "UPDATING")]
-      Updating,
-      [EnumMember(Value = "ACTIVE")]
-      Active,
-      [EnumMember(Value = "INACTIVE")]
-      Inactive,
-      [EnumMember(Value = "NEEDS_ATTENTION")]
-      NeedsAttention,
-      [EnumMember(Value = "DELETING")]
-      Deleting,
-      [EnumMember(Value = "DELETED")]
-      Deleted,
-      [EnumMember(Value = "FAILED")]
-      Failed
+      [EnumMember(Value = "PLACEMENT")]
+      Placement,
+      [EnumMember(Value = "DISASTER_RECOVERY")]
+      DisasterRecovery,
+      [EnumMember(Value = "GROUP_TO_ROLE")]
+      GroupToRole,
+      [EnumMember(Value = "BACKUP_RESTORE")]
+      BackupRestore,
+      [EnumMember(Value = "COPY_BACKUP")]
+      CopyBackup,
+      [EnumMember(Value = "MANUAL_BACKUP")]
+      ManualBackup,
+      [EnumMember(Value = "SCHEDULE_MANUAL_BACKUP")]
+      ScheduleManualBackup
   }
 }

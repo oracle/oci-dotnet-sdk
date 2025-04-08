@@ -13,43 +13,36 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 
-namespace Oci.SchService.Models
+namespace Oci.KeymanagementService.Models
 {
     /// <summary>
-    /// An object that represents a task within the flow defined by the connector.
-    /// An example task is a filter for error logs.
-    /// For more information about flows defined by connectors, see
-    /// [Overview of Connector Hub](https://docs.cloud.oracle.com/iaas/Content/connector-hub/overview.htm).
-    /// For configuration instructions, see
-    /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
-    /// 
+    /// Metadata for the replica vault, needed if different from primary vault
     /// </summary>
-    [JsonConverter(typeof(TaskDetailsModelConverter))]
-    public class TaskDetails 
+    [JsonConverter(typeof(ReplicaVaultMetadataModelConverter))]
+    public class ReplicaVaultMetadata 
     {
                 ///
         /// <value>
-        /// The type discriminator.
+        /// The type of vault. Each type of vault stores keys with different
+        /// degrees of isolation and has different options and pricing.
         /// 
         /// </value>
         ///
-        public enum KindEnum {
-            [EnumMember(Value = "function")]
-            Function,
-            [EnumMember(Value = "logRule")]
-            LogRule
+        public enum VaultTypeEnum {
+            [EnumMember(Value = "EXTERNAL")]
+            External
         };
 
         
     }
 
-    public class TaskDetailsModelConverter : JsonConverter
+    public class ReplicaVaultMetadataModelConverter : JsonConverter
     {
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
         {
-            return type == typeof(TaskDetails);
+            return type == typeof(ReplicaVaultMetadata);
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -59,15 +52,12 @@ namespace Oci.SchService.Models
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jsonObject = JObject.Load(reader);
-            var obj = default(TaskDetails);
-            var discriminator = jsonObject["kind"].Value<string>();
+            var obj = default(ReplicaVaultMetadata);
+            var discriminator = jsonObject["vaultType"].Value<string>();
             switch (discriminator)
             {
-                case "function":
-                    obj = new FunctionTaskDetails();
-                    break;
-                case "logRule":
-                    obj = new LogRuleTaskDetails();
+                case "EXTERNAL":
+                    obj = new ReplicaExternalVaultMetadata();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

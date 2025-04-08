@@ -13,27 +13,28 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.KeymanagementService.Models
+namespace Oci.SchService.Models
 {
     /// <summary>
-    /// Creates a vault replica.
+    /// The private endpoint metadata for the connector's source or target.
+    /// 
     /// </summary>
-    public class CreateVaultReplicaDetails 
+    public class PrivateEndpointMetadata 
     {
         
         /// <value>
-        /// The region in the realm to which the vault need to be replicated to
+        /// The reverse connection endpoint (RCE) IP address for primary flow of traffic in the subnet.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ReplicaRegion is required.")]
-        [JsonProperty(PropertyName = "replicaRegion")]
-        public string ReplicaRegion { get; set; }
+        [JsonProperty(PropertyName = "rceTrafficIpAddress")]
+        public string RceTrafficIpAddress { get; set; }
         
-        [JsonProperty(PropertyName = "replicaVaultMetadata")]
-        public ReplicaVaultMetadata ReplicaVaultMetadata { get; set; }
+        /// <value>
+        /// The reverse connection endpoint (RCE) IP address for DNS lookups.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "rceDnsProxyIpAddress")]
+        public string RceDnsProxyIpAddress { get; set; }
         
     }
 }
