@@ -109,5 +109,12 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "defaultUsername")]
         public string DefaultUsername { get; set; }
         
+        /// <value>
+        /// Specifies supported capabilities or features by a deployment type .
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "supportedCapabilities", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<SupportedCapabilities> SupportedCapabilities { get; set; }
+        
     }
 }

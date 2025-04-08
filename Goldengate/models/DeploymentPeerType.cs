@@ -10,31 +10,19 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.SchService.Models
+namespace Oci.GoldengateService.Models
 {
   /// <summary>
-  /// Possible lifecycle states.
+  /// The Possible peer type for the deployment which is either local or regional.
     /// 
   /// </summary>
-  public enum LifecycleState {
+  public enum DeploymentPeerType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "CREATING")]
-      Creating,
-      [EnumMember(Value = "UPDATING")]
-      Updating,
-      [EnumMember(Value = "ACTIVE")]
-      Active,
-      [EnumMember(Value = "INACTIVE")]
-      Inactive,
-      [EnumMember(Value = "NEEDS_ATTENTION")]
-      NeedsAttention,
-      [EnumMember(Value = "DELETING")]
-      Deleting,
-      [EnumMember(Value = "DELETED")]
-      Deleted,
-      [EnumMember(Value = "FAILED")]
-      Failed
+      [EnumMember(Value = "LOCAL")]
+      Local,
+      [EnumMember(Value = "REMOTE")]
+      Remote
   }
 }

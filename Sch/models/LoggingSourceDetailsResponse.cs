@@ -13,27 +13,29 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.KeymanagementService.Models
+namespace Oci.SchService.Models
 {
     /// <summary>
-    /// Creates a vault replica.
+    /// The Logging source.
+    /// For configuration instructions, see
+    /// [Creating a Connector with a Logging Source](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector-logging-source.htm).
+    /// 
     /// </summary>
-    public class CreateVaultReplicaDetails 
+    public class LoggingSourceDetailsResponse : SourceDetailsResponse
     {
         
         /// <value>
-        /// The region in the realm to which the vault need to be replicated to
+        /// The logs for this Logging source.
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ReplicaRegion is required.")]
-        [JsonProperty(PropertyName = "replicaRegion")]
-        public string ReplicaRegion { get; set; }
+        [Required(ErrorMessage = "LogSources is required.")]
+        [JsonProperty(PropertyName = "logSources")]
+        public System.Collections.Generic.List<LogSource> LogSources { get; set; }
         
-        [JsonProperty(PropertyName = "replicaVaultMetadata")]
-        public ReplicaVaultMetadata ReplicaVaultMetadata { get; set; }
-        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "logging";
     }
 }

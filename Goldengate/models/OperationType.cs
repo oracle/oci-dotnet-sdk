@@ -97,6 +97,10 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "GOLDENGATE_PIPELINE_DELETE")]
       GoldengatePipelineDelete,
       [EnumMember(Value = "GOLDENGATE_PIPELINE_MOVE")]
-      GoldengatePipelineMove
+      GoldengatePipelineMove,
+      [EnumMember(Value = "GOLDENGATE_PIPELINE_DIAGNOSTICS_COLLECT")]
+      GoldengatePipelineDiagnosticsCollect,
+      [EnumMember(Value = "GOLDENGATE_SWITCHOVER_DEPLOYMENT_PEER")]
+      GoldengateSwitchoverDeploymentPeer
   }
 }

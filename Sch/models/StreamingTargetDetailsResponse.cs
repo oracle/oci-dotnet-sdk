@@ -13,27 +13,28 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.KeymanagementService.Models
+namespace Oci.SchService.Models
 {
     /// <summary>
-    /// Creates a vault replica.
+    /// The Streaming target response. Private metadata is included when the target is a stream accessed through 
+    /// a [private endpoint](https://docs.cloud.oracle.com/iaas/Content/Streaming/Concepts/streamsecurity.htm#private_endpoints).
+    /// 
     /// </summary>
-    public class CreateVaultReplicaDetails 
+    public class StreamingTargetDetailsResponse : TargetDetailsResponse
     {
         
         /// <value>
-        /// The region in the realm to which the vault need to be replicated to
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the stream.
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ReplicaRegion is required.")]
-        [JsonProperty(PropertyName = "replicaRegion")]
-        public string ReplicaRegion { get; set; }
+        [Required(ErrorMessage = "StreamId is required.")]
+        [JsonProperty(PropertyName = "streamId")]
+        public string StreamId { get; set; }
         
-        [JsonProperty(PropertyName = "replicaVaultMetadata")]
-        public ReplicaVaultMetadata ReplicaVaultMetadata { get; set; }
-        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "streaming";
     }
 }
