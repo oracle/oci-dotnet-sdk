@@ -87,5 +87,12 @@ namespace Oci.FunctionsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Indicates that the request is a dry run, if set to \"true\". A dry run request does not execute the function.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "is-dry-run")]
+        public System.Nullable<bool> IsDryRun { get; set; }
     }
 }

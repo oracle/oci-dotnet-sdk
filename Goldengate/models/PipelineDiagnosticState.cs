@@ -10,30 +10,20 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.SchService.Models
+namespace Oci.GoldengateService.Models
 {
   /// <summary>
-  /// Possible lifecycle states.
+  /// The possible states that applies to a pipeline diagnostics collection.
     /// 
   /// </summary>
-  public enum LifecycleState {
+  public enum PipelineDiagnosticState {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "CREATING")]
-      Creating,
-      [EnumMember(Value = "UPDATING")]
-      Updating,
-      [EnumMember(Value = "ACTIVE")]
-      Active,
-      [EnumMember(Value = "INACTIVE")]
-      Inactive,
-      [EnumMember(Value = "NEEDS_ATTENTION")]
-      NeedsAttention,
-      [EnumMember(Value = "DELETING")]
-      Deleting,
-      [EnumMember(Value = "DELETED")]
-      Deleted,
+      [EnumMember(Value = "IN_PROGRESS")]
+      InProgress,
+      [EnumMember(Value = "SUCCEEDED")]
+      Succeeded,
       [EnumMember(Value = "FAILED")]
       Failed
   }

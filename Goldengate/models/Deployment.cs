@@ -59,6 +59,48 @@ namespace Oci.GoldengateService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The availability domain of a placement.
+        /// </value>
+        [JsonProperty(PropertyName = "availabilityDomain")]
+        public string AvailabilityDomain { get; set; }
+        
+        /// <value>
+        /// The fault domain of a placement.
+        /// </value>
+        [JsonProperty(PropertyName = "faultDomain")]
+        public string FaultDomain { get; set; }
+        
+        /// <value>
+        /// The type of the deployment role.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "deploymentRole")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DeploymentRole> DeploymentRole { get; set; }
+        
+        /// <value>
+        /// The time of the last role change. The format is defined by
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeRoleChanged")]
+        public System.Nullable<System.DateTime> TimeRoleChanged { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the deployment being referenced.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sourceDeploymentId")]
+        public string SourceDeploymentId { get; set; }
+        
+        /// <value>
+        /// An array of local peers of deployment
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "placements")]
+        public System.Collections.Generic.List<DeploymentPlacementInfo> Placements { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the backup being referenced.
         /// 
         /// </value>

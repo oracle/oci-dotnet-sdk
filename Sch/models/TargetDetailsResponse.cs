@@ -16,17 +16,20 @@ using Newtonsoft.Json.Linq;
 namespace Oci.SchService.Models
 {
     /// <summary>
-    /// An object that represents the source of the flow defined by the connector.
-    /// An example source is the VCNFlow logs within the NetworkLogs group.
+    /// An object that represents the target of the flow defined by the connector.
+    /// An example target is a stream (Streaming service).
     /// For more information about flows defined by connectors, see
     /// [Overview of Connector Hub](https://docs.cloud.oracle.com/iaas/Content/connector-hub/overview.htm).
     /// For configuration instructions, see
     /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
     /// 
     /// </summary>
-    [JsonConverter(typeof(SourceDetailsModelConverter))]
-    public class SourceDetails 
+    [JsonConverter(typeof(TargetDetailsResponseModelConverter))]
+    public class TargetDetailsResponse 
     {
+        
+        [JsonProperty(PropertyName = "privateEndpointMetadata")]
+        public PrivateEndpointMetadata PrivateEndpointMetadata { get; set; }
                 ///
         /// <value>
         /// The type discriminator.
@@ -34,26 +37,31 @@ namespace Oci.SchService.Models
         /// </value>
         ///
         public enum KindEnum {
-            [EnumMember(Value = "logging")]
-            Logging,
+            [EnumMember(Value = "functions")]
+            Functions,
+            [EnumMember(Value = "loggingAnalytics")]
+            LoggingAnalytics,
             [EnumMember(Value = "monitoring")]
             Monitoring,
+            [EnumMember(Value = "notifications")]
+            Notifications,
+            [EnumMember(Value = "objectStorage")]
+            ObjectStorage,
             [EnumMember(Value = "streaming")]
-            Streaming,
-            [EnumMember(Value = "plugin")]
-            Plugin
+            Streaming
         };
 
         
     }
 
-    public class SourceDetailsModelConverter : JsonConverter
+    public class TargetDetailsResponseModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
         {
-            return type == typeof(SourceDetails);
+            return type == typeof(TargetDetailsResponse);
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -63,24 +71,37 @@ namespace Oci.SchService.Models
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jsonObject = JObject.Load(reader);
-            var obj = default(SourceDetails);
+            var obj = default(TargetDetailsResponse);
             var discriminator = jsonObject["kind"].Value<string>();
             switch (discriminator)
             {
-                case "logging":
-                    obj = new LoggingSourceDetails();
-                    break;
                 case "monitoring":
-                    obj = new MonitoringSourceDetails();
+                    obj = new MonitoringTargetDetailsResponse();
+                    break;
+                case "loggingAnalytics":
+                    obj = new LoggingAnalyticsTargetDetailsResponse();
+                    break;
+                case "functions":
+                    obj = new FunctionsTargetDetailsResponse();
+                    break;
+                case "objectStorage":
+                    obj = new ObjectStorageTargetDetailsResponse();
                     break;
                 case "streaming":
-                    obj = new StreamingSourceDetails();
+                    obj = new StreamingTargetDetailsResponse();
                     break;
-                case "plugin":
-                    obj = new PluginSourceDetails();
+                case "notifications":
+                    obj = new NotificationsTargetDetailsResponse();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under TargetDetailsResponse! Returning null value.");
+            }
             return obj;
         }
     }

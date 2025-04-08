@@ -62,6 +62,29 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "shouldRestartOnFailure")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ShouldRestartOnFailureEnum> ShouldRestartOnFailure { get; set; }
+                ///
+        /// <value>
+        /// If ENABLED, then the pipeline is started as part of pipeline creation. It uses default mapping. This option applies when creating or updating a pipeline.
+        /// 
+        /// </value>
+        ///
+        public enum StartUsingDefaultMappingEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ENABLED")]
+            Enabled,
+            [EnumMember(Value = "DISABLED")]
+            Disabled
+        };
+
+        /// <value>
+        /// If ENABLED, then the pipeline is started as part of pipeline creation. It uses default mapping. This option applies when creating or updating a pipeline.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "startUsingDefaultMapping")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<StartUsingDefaultMappingEnum> StartUsingDefaultMapping { get; set; }
         
     }
 }

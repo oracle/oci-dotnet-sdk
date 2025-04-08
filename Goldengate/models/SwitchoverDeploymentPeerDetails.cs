@@ -13,27 +13,34 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.KeymanagementService.Models
+namespace Oci.GoldengateService.Models
 {
     /// <summary>
-    /// Creates a vault replica.
+    /// The information about switching to deployment peer.
+    /// 
     /// </summary>
-    public class CreateVaultReplicaDetails 
+    public class SwitchoverDeploymentPeerDetails 
     {
         
         /// <value>
-        /// The region in the realm to which the vault need to be replicated to
-        /// 
+        /// The availability domain of a placement.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ReplicaRegion is required.")]
-        [JsonProperty(PropertyName = "replicaRegion")]
-        public string ReplicaRegion { get; set; }
+        [Required(ErrorMessage = "AvailabilityDomain is required.")]
+        [JsonProperty(PropertyName = "availabilityDomain")]
+        public string AvailabilityDomain { get; set; }
         
-        [JsonProperty(PropertyName = "replicaVaultMetadata")]
-        public ReplicaVaultMetadata ReplicaVaultMetadata { get; set; }
+        /// <value>
+        /// The fault domain of a placement.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "FaultDomain is required.")]
+        [JsonProperty(PropertyName = "faultDomain")]
+        public string FaultDomain { get; set; }
         
     }
 }

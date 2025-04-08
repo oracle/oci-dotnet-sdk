@@ -13,27 +13,29 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.KeymanagementService.Models
+namespace Oci.SchService.Models
 {
     /// <summary>
-    /// Creates a vault replica.
+    /// The log filter task.
+    /// For configuration instructions, see
+    /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
+    /// 
     /// </summary>
-    public class CreateVaultReplicaDetails 
+    public class LogRuleTaskDetailsResponse : TaskDetailsResponse
     {
         
         /// <value>
-        /// The region in the realm to which the vault need to be replicated to
+        /// A filter or mask to limit the source used in the flow defined by the connector.
         /// 
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ReplicaRegion is required.")]
-        [JsonProperty(PropertyName = "replicaRegion")]
-        public string ReplicaRegion { get; set; }
+        [Required(ErrorMessage = "Condition is required.")]
+        [JsonProperty(PropertyName = "condition")]
+        public string Condition { get; set; }
         
-        [JsonProperty(PropertyName = "replicaVaultMetadata")]
-        public ReplicaVaultMetadata ReplicaVaultMetadata { get; set; }
-        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "logRule";
     }
 }

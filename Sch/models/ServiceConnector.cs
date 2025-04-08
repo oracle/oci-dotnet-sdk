@@ -121,17 +121,17 @@ namespace Oci.SchService.Models
         public string LifecyleDetails { get; set; }
         
         [JsonProperty(PropertyName = "source")]
-        public SourceDetails Source { get; set; }
+        public SourceDetailsResponse Source { get; set; }
         
         /// <value>
         /// The list of tasks.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "tasks")]
-        public System.Collections.Generic.List<TaskDetails> Tasks { get; set; }
+        public System.Collections.Generic.List<TaskDetailsResponse> Tasks { get; set; }
         
         [JsonProperty(PropertyName = "target")]
-        public TargetDetails Target { get; set; }
+        public TargetDetailsResponse Target { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

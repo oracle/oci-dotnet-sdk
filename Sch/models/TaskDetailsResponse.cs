@@ -24,9 +24,12 @@ namespace Oci.SchService.Models
     /// [Creating a Connector](https://docs.cloud.oracle.com/iaas/Content/connector-hub/create-service-connector.htm).
     /// 
     /// </summary>
-    [JsonConverter(typeof(TaskDetailsModelConverter))]
-    public class TaskDetails 
+    [JsonConverter(typeof(TaskDetailsResponseModelConverter))]
+    public class TaskDetailsResponse 
     {
+        
+        [JsonProperty(PropertyName = "privateEndpointMetadata")]
+        public PrivateEndpointMetadata PrivateEndpointMetadata { get; set; }
                 ///
         /// <value>
         /// The type discriminator.
@@ -43,13 +46,14 @@ namespace Oci.SchService.Models
         
     }
 
-    public class TaskDetailsModelConverter : JsonConverter
+    public class TaskDetailsResponseModelConverter : JsonConverter
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public override bool CanWrite => false;
         public override bool CanRead => true;
         public override bool CanConvert(System.Type type)
         {
-            return type == typeof(TaskDetails);
+            return type == typeof(TaskDetailsResponse);
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -59,18 +63,25 @@ namespace Oci.SchService.Models
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jsonObject = JObject.Load(reader);
-            var obj = default(TaskDetails);
+            var obj = default(TaskDetailsResponse);
             var discriminator = jsonObject["kind"].Value<string>();
             switch (discriminator)
             {
-                case "function":
-                    obj = new FunctionTaskDetails();
-                    break;
                 case "logRule":
-                    obj = new LogRuleTaskDetails();
+                    obj = new LogRuleTaskDetailsResponse();
+                    break;
+                case "function":
+                    obj = new FunctionTaskDetailsResponse();
                     break;
             }
-            serializer.Populate(jsonObject.CreateReader(), obj);
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under TaskDetailsResponse! Returning null value.");
+            }
             return obj;
         }
     }
