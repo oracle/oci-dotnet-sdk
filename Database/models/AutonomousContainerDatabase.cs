@@ -50,6 +50,13 @@ namespace Oci.DatabaseService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Customer Contacts. Setting this to an empty list removes all customer contacts.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "customerContacts")]
+        public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
+        /// <value>
         /// **Deprecated.** The `DB_UNIQUE_NAME` value is set by Oracle Cloud Infrastructure.  Do not specify a value for this parameter. Specifying a value for this field will cause Terraform operations to fail.
         /// 
         /// </value>
