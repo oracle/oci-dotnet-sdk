@@ -23,6 +23,13 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
+        /// Customer Contacts. Setting this to an empty list removes all customer contacts.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "customerContacts")]
+        public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
+        /// <value>
         /// The display name for the Autonomous Container Database.
         /// </value>
         /// <remarks>

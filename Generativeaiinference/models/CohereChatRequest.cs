@@ -207,6 +207,28 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "citationQuality")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CitationQualityEnum> CitationQuality { get; set; }
+                ///
+        /// <value>
+        /// Used to select the safety instruction inserted into the prompt. When selected CONTEXTUAL mode, It is appropriate for wide-ranging interactions with fewer constraints on output while maintaining core protections by rejecting harmful or illegal suggestions. When selected STRICT mode, it aims to avoid all sensitive topics, such as violent or sexual acts and profanity. When selected OFF, the safety instruction will be omitted. Note: This parameter is only compatible with models Command R 08-2024, Command R+ 08-2024 and newer. Also, command-r7b-12-2024 only supports \"CONTEXTUAL\" and \"STRICT\" modes.
+        /// 
+        /// </value>
+        ///
+        public enum SafetyModeEnum {
+            [EnumMember(Value = "CONTEXTUAL")]
+            Contextual,
+            [EnumMember(Value = "STRICT")]
+            Strict,
+            [EnumMember(Value = "OFF")]
+            Off
+        };
+
+        /// <value>
+        /// Used to select the safety instruction inserted into the prompt. When selected CONTEXTUAL mode, It is appropriate for wide-ranging interactions with fewer constraints on output while maintaining core protections by rejecting harmful or illegal suggestions. When selected STRICT mode, it aims to avoid all sensitive topics, such as violent or sexual acts and profanity. When selected OFF, the safety instruction will be omitted. Note: This parameter is only compatible with models Command R 08-2024, Command R+ 08-2024 and newer. Also, command-r7b-12-2024 only supports \"CONTEXTUAL\" and \"STRICT\" modes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "safetyMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<SafetyModeEnum> SafetyMode { get; set; }
         
         [JsonProperty(PropertyName = "apiFormat")]
         private readonly string apiFormat = "COHERE";

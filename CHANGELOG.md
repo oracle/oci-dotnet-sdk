@@ -30,6 +30,11 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 109.1.0 - 2025-04-15
+### Added
+ - Support for applying guardrails, enabling content moderation and detection of Prompt Injection and Personally Identifiable Information (PII) in the Generative AI Inference service
+ - Support for providing customer contacts for operational notifications in the Database service
+
 ## 109.0.0 - 2025-04-08
 ### Added
  - Support for connector source and targets with private endpoints in the Resource Scheduler service

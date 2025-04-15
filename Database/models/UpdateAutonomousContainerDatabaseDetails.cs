@@ -27,6 +27,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+        
+        /// <value>
+        /// Customer Contacts. Setting this to an empty list removes all customer contacts.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "customerContacts")]
+        public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
                 ///
         /// <value>
         /// Database Patch model preference.
