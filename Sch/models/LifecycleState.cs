@@ -28,8 +28,6 @@ namespace Oci.SchService.Models
       Active,
       [EnumMember(Value = "INACTIVE")]
       Inactive,
-      [EnumMember(Value = "NEEDS_ATTENTION")]
-      NeedsAttention,
       [EnumMember(Value = "DELETING")]
       Deleting,
       [EnumMember(Value = "DELETED")]

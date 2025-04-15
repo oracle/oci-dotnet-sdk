@@ -32,8 +32,5 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "replicaRegion")]
         public string ReplicaRegion { get; set; }
         
-        [JsonProperty(PropertyName = "replicaVaultMetadata")]
-        public ReplicaVaultMetadata ReplicaVaultMetadata { get; set; }
-        
     }
 }

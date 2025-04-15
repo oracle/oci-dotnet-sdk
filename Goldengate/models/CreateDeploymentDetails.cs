@@ -37,6 +37,10 @@ namespace Oci.GoldengateService.Models
         /// The Oracle license model that applies to a Deployment.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "LicenseModel is required.")]
         [JsonProperty(PropertyName = "licenseModel")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LicenseModel> LicenseModel { get; set; }
@@ -66,32 +70,6 @@ namespace Oci.GoldengateService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the deployment being referenced.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "sourceDeploymentId")]
-        public string SourceDeploymentId { get; set; }
-        
-        /// <value>
-        /// The availability domain of a placement.
-        /// </value>
-        [JsonProperty(PropertyName = "availabilityDomain")]
-        public string AvailabilityDomain { get; set; }
-        
-        /// <value>
-        /// The fault domain of a placement.
-        /// </value>
-        [JsonProperty(PropertyName = "faultDomain")]
-        public string FaultDomain { get; set; }
-        
-        /// <value>
-        /// An array of local peers of deployment
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "placements")]
-        public System.Collections.Generic.List<DeploymentPlacementDetails> Placements { get; set; }
         
         /// <value>
         /// A simple key-value pair that is applied without any predefined name, type, or scope. Exists
@@ -170,6 +148,10 @@ namespace Oci.GoldengateService.Models
         /// The Minimum number of OCPUs to be made available for this Deployment.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
         
@@ -177,6 +159,10 @@ namespace Oci.GoldengateService.Models
         /// Indicates if auto scaling is enabled for the Deployment's CPU core count.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsAutoScalingEnabled is required.")]
         [JsonProperty(PropertyName = "isAutoScalingEnabled")]
         public System.Nullable<bool> IsAutoScalingEnabled { get; set; }
         
@@ -186,6 +172,10 @@ namespace Oci.GoldengateService.Models
         ///     Its use is discouraged in favor of 'DATABASE_ORACLE'.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DeploymentType is required.")]
         [JsonProperty(PropertyName = "deploymentType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DeploymentType> DeploymentType { get; set; }

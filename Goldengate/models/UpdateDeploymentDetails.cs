@@ -122,13 +122,6 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "isAutoScalingEnabled")]
         public System.Nullable<bool> IsAutoScalingEnabled { get; set; }
         
-        /// <value>
-        /// An array of local peers of deployment
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "placements")]
-        public System.Collections.Generic.List<DeploymentPlacementDetails> Placements { get; set; }
-        
         [JsonProperty(PropertyName = "oggData")]
         public UpdateOggDeploymentDetails OggData { get; set; }
         
