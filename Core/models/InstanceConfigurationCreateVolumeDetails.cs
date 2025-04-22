@@ -146,5 +146,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "xrcKmsKeyId")]
         public string XrcKmsKeyId { get; set; }
         
+        /// <value>
+        /// Reservations-enabled is a boolean field that allows to enable PR (Persistent Reservation) on a volume.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isReservationsEnabled")]
+        public System.Nullable<bool> IsReservationsEnabled { get; set; }
+        
     }
 }

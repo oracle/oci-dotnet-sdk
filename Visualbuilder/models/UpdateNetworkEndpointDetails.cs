@@ -47,6 +47,9 @@ namespace Oci.VisualbuilderService.Models
             var discriminator = jsonObject["networkEndpointType"].Value<string>();
             switch (discriminator)
             {
+                case "PUBLIC":
+                    obj = new UpdatePublicEndpointDetails();
+                    break;
                 case "PRIVATE":
                     obj = new UpdatePrivateEndpointDetails();
                     break;

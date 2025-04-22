@@ -9,20 +9,20 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace Oci.VisualbuilderService.Models
+
+namespace Oci.ContainerengineService.Models
 {
-  /// <summary>
-  /// Public/Private endpoint access type.
-    /// 
-  /// </summary>
-  public enum NetworkEndpointType {
-      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-      [EnumMember(Value = null)]
-      UnknownEnumValue,
-      [EnumMember(Value = "PUBLIC")]
-      Public,
-      [EnumMember(Value = "PRIVATE")]
-      Private
-  }
+    /// <summary>
+    /// The properties that define a node boot volume replacement action.
+    /// </summary>
+    public class ReplaceBootVolumeClusterNodeDetails 
+    {
+        
+        [JsonProperty(PropertyName = "nodeEvictionSettings")]
+        public NodeEvictionSettings NodeEvictionSettings { get; set; }
+        
+    }
 }

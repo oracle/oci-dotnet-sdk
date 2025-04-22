@@ -30,6 +30,12 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 ### Breaking Changes
  - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
+## 109.2.0 - 2025-04-22
+### Added
+ - Support for patch management in the Database Lifecycle Management service
+ - Support for restricting public network access to service instances in the Visual Builder service
+ - Support for iSCSI-3 persistent reservations on block volume in the Core services (Networking, Compute, Block Volume)
+
 ## 109.1.0 - 2025-04-15
 ### Added
  - Support for applying guardrails, enabling content moderation and detection of Prompt Injection and Personally Identifiable Information (PII) in the Generative AI Inference service

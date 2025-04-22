@@ -14,9 +14,9 @@ using Oci.ContainerengineService.Models;
 namespace Oci.ContainerengineService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/containerengine/GetCluster.cs.html">here</a> to see an example of how to use GetCluster request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/containerengine/RebootClusterNode.cs.html">here</a> to see an example of how to use RebootClusterNode request.
     /// </example>
-    public class GetClusterRequest : Oci.Common.IOciRequest
+    public class RebootClusterNodeRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
@@ -30,6 +30,26 @@ namespace Oci.ContainerengineService.Requests
         public string ClusterId { get; set; }
         
         /// <value>
+        /// The OCID of the compute instance.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "NodeId is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "nodeId")]
+        public string NodeId { get; set; }
+        
+        /// <value>
+        /// The fields to reboot a node.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RebootClusterNodeDetails is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public RebootClusterNodeDetails RebootClusterNodeDetails { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
         /// Oracle about a particular request, please provide the request ID.
         /// 
@@ -38,10 +58,11 @@ namespace Oci.ContainerengineService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// Boolean value to determine if the OpenIdConnectAuth configuration file should be displayed for the provided cluster.
+        /// A token you supply to uniquely identify the request and provide idempotency if
+        /// the request is retried. Idempotency tokens expire after 24 hours.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldIncludeOidcConfigFile")]
-        public System.Nullable<bool> ShouldIncludeOidcConfigFile { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
+        public string OpcRetryToken { get; set; }
     }
 }
