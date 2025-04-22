@@ -16,24 +16,18 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ContainerengineService.Models
 {
     /// <summary>
-    /// Node Eviction Details configuration
+    /// Node Eviction Configuration
     /// </summary>
-    public class NodeEvictionNodePoolSettings 
+    public class NodeEvictionSettings 
     {
         
         /// <value>
-        /// Duration after which OKE will give up eviction of the pods on the node. PT0M will indicate you want to delete the node without cordon and drain.
+        /// Duration after which OKE will give up eviction of the pods on the node. PT0M will indicate you want to perform node action without cordon and drain.
         /// Default PT60M, Min PT0M, Max: PT60M. Format ISO 8601 e.g PT30M
         /// 
         /// </value>
         [JsonProperty(PropertyName = "evictionGraceDuration")]
         public string EvictionGraceDuration { get; set; }
-        
-        /// <value>
-        /// If the underlying compute instance should be deleted if you cannot evict all the pods in grace period
-        /// </value>
-        [JsonProperty(PropertyName = "isForceDeleteAfterGraceDuration")]
-        public System.Nullable<bool> IsForceDeleteAfterGraceDuration { get; set; }
         
         /// <value>
         /// If the node action should be performed if not all the pods can be evicted in the grace period

@@ -32,7 +32,7 @@ namespace Oci.DblmService.Models
         public System.Nullable<int> Total { get; set; }
         
         /// <value>
-        /// Cummulative number of resources that have critical level vulnerabilities.
+        /// Cumulative number of resources that have critical level vulnerabilities.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.DblmService.Models
         public System.Nullable<int> Critical { get; set; }
         
         /// <value>
-        /// Cummulative number of resources that have high level vulnerabilities.
+        /// Cumulative number of resources that have high level vulnerabilities.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.DblmService.Models
         public System.Nullable<int> High { get; set; }
         
         /// <value>
-        /// Cummulative number of resources that have medium level vulnerabilities.
+        /// Cumulative number of resources that have medium level vulnerabilities.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.DblmService.Models
         public System.Nullable<int> Medium { get; set; }
         
         /// <value>
-        /// Cummulative number of resources that have info level vulnerabilities.
+        /// Cumulative number of resources that have info level vulnerabilities.
         /// </value>
         /// <remarks>
         /// Required
@@ -72,7 +72,7 @@ namespace Oci.DblmService.Models
         public System.Nullable<int> Info { get; set; }
         
         /// <value>
-        /// Cummulative number of resources that have low level vulnerabilities.
+        /// Cumulative number of resources that have low level vulnerabilities.
         /// </value>
         /// <remarks>
         /// Required

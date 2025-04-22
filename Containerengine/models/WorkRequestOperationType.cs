@@ -54,6 +54,10 @@ namespace Oci.ContainerengineService.Models
       [EnumMember(Value = "DISABLE_ADDON")]
       DisableAddon,
       [EnumMember(Value = "RECONCILE_ADDON")]
-      ReconcileAddon
+      ReconcileAddon,
+      [EnumMember(Value = "CLUSTER_NODE_REBOOT")]
+      ClusterNodeReboot,
+      [EnumMember(Value = "CLUSTER_NODE_REPLACE_BOOT_VOLUME")]
+      ClusterNodeReplaceBootVolume
   }
 }

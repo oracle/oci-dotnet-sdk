@@ -40,10 +40,17 @@ namespace Oci.ContainerengineService.Models
         public string MaximumSurge { get; set; }
         
         /// <value>
-        /// If nodes in the nodepool will be cycled to have new changes.
+        /// If cycling operation should be performed on the nodes in the node pool.
         /// </value>
         [JsonProperty(PropertyName = "isNodeCyclingEnabled")]
         public System.Nullable<bool> IsNodeCyclingEnabled { get; set; }
+        
+        /// <value>
+        /// An ordered list of cycle modes that should be performed on the OKE nodes. 
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "cycleModes")]
+        public System.Collections.Generic.List<CycleMode> CycleModes { get; set; }
         
     }
 }
