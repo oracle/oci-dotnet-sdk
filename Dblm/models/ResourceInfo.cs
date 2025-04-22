@@ -127,5 +127,11 @@ namespace Oci.DblmService.Models
         [JsonProperty(PropertyName = "licenseType")]
         public string LicenseType { get; set; }
         
+        /// <value>
+        /// The agent Id of the agent managing the resource.
+        /// </value>
+        [JsonProperty(PropertyName = "agentId")]
+        public string AgentId { get; set; }
+        
     }
 }

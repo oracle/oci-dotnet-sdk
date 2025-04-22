@@ -51,6 +51,9 @@ namespace Oci.VisualbuilderService.Models
                 case "PRIVATE":
                     obj = new PrivateEndpointDetails();
                     break;
+                case "PUBLIC":
+                    obj = new PublicEndpointDetails();
+                    break;
             }
             if (obj != null)
             {
