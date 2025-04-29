@@ -188,6 +188,13 @@ namespace Oci.ResourceschedulerService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeNextRun")]
         public System.Nullable<System.DateTime> TimeNextRun { get; set; }
+        
+        /// <value>
+        /// This is the status of the last work request.
+        /// </value>
+        [JsonProperty(PropertyName = "lastRunStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<OperationStatus> LastRunStatus { get; set; }
                 ///
         /// <value>
         /// This is the current state of a schedule.

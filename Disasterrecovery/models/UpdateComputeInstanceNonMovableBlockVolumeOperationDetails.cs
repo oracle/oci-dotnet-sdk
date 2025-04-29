@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
+    /// Deprecated. Use the 'UpdateComputeInstanceNonMovableBlockVolumeAttachAndMountOperationsDetails' definition instead of this.
     /// The details for updating the operations performed on a block volume.
     /// 
     /// </summary>

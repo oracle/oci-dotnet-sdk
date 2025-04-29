@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
+    /// Deprecated. Use the 'ComputeInstanceNonMovableBlockVolumeMountOperationDetails' definition instead of this.
     /// The details for mounting or unmounting the file system on a block volume.
     /// 
     /// </summary>

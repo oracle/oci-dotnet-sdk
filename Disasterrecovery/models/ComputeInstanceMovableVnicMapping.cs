@@ -65,6 +65,14 @@ namespace Oci.DisasterrecoveryService.Models
         public string DestinationPrimaryPrivateIpHostnameLabel { get; set; }
         
         /// <value>
+        /// The OCID of the reserved public IP address to be assigned to the compute instance in the destination region.
+        /// <br/>
+        /// Example: ocid1.publicip.oc1..uniqueID
+        /// </value>
+        [JsonProperty(PropertyName = "destinationReservedPublicIpId")]
+        public string DestinationReservedPublicIpId { get; set; }
+        
+        /// <value>
         /// A list of OCIDs of network security groups (NSG) in the destination region which should be assigned to
         /// the source VNIC.
         /// <br/>

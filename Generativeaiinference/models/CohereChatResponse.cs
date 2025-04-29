@@ -114,6 +114,9 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "prompt")]
         public string Prompt { get; set; }
         
+        [JsonProperty(PropertyName = "usage")]
+        public Usage Usage { get; set; }
+        
         [JsonProperty(PropertyName = "apiFormat")]
         private readonly string apiFormat = "COHERE";
     }

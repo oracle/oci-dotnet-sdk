@@ -31,6 +31,13 @@ namespace Oci.GenerativeaiinferenceService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
+
+        /// <value>
+        /// Provides deprecation details for models, included only when a model is deprecated.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "model-deprecation-info")]
+        public string ModelDeprecationInfo { get; set; }
+
         /// <value>
         /// The returned ChatResult instance.
         /// </value>
