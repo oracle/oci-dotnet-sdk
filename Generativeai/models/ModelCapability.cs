@@ -28,6 +28,8 @@ namespace Oci.GenerativeaiService.Models
       [EnumMember(Value = "FINE_TUNE")]
       FineTune,
       [EnumMember(Value = "CHAT")]
-      Chat
+      Chat,
+      [EnumMember(Value = "TEXT_RERANK")]
+      TextRerank
   }
 }

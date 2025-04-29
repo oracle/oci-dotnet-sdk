@@ -21,6 +21,34 @@ namespace Oci.DisasterrecoveryService.Models
     public class CreateDrProtectionGroupMemberVolumeGroupDetails : CreateDrProtectionGroupMemberDetails
     {
         
+        /// <value>
+        /// The OCID of the backup policy to use in the destination region. This policy will be used to create backups 
+        /// for this volume group after it moves the destination region.
+        /// <br/>
+        /// Example: ocid1.volumebackuppolicy.oc1..uniqueID
+        /// </value>
+        [JsonProperty(PropertyName = "destinationBackupPolicyId")]
+        public string DestinationBackupPolicyId { get; set; }
+        
+        /// <value>
+        /// A list of mappings between source volume IDs in the volume group and customer-managed encryption keys in the 
+        /// destination region which will be used to encrypt the volume after it moves to the destination region.
+        /// <br/>
+        /// If you add the entry for source volumes and its corresponding vault and encryption keys here, you can not use 
+        /// 'commonDestinationKey' for encrypting all volumes with common encryption key. Similarly, if you specify common
+        /// vault and encryption key using 'commonDestinationKey', you cannot specify vaults and encryption keys individually 
+        /// for each volume using 'sourceVolumeToDestinationEncryptionKeyMappings'.
+        /// <br/>
+        /// An entry for each volume in volume group should be added in this list. The encryption key will not be updated 
+        /// for the volumes that are part of volume group but missing in this list.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sourceVolumeToDestinationEncryptionKeyMappings")]
+        public System.Collections.Generic.List<CreateSourceVolumeToDestinationEncryptionKeyMappingDetails> SourceVolumeToDestinationEncryptionKeyMappings { get; set; }
+        
+        [JsonProperty(PropertyName = "commonDestinationKey")]
+        public CreateVaultAndEncryptionKeyDetails CommonDestinationKey { get; set; }
+        
         [JsonProperty(PropertyName = "memberType")]
         private readonly string memberType = "VOLUME_GROUP";
     }

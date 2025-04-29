@@ -36,11 +36,15 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Collections.Generic.List<ComputeInstanceNonMovableFileSystemOperation> FileSystemOperations { get; set; }
         
         /// <value>
+        /// Deprecated. Use the 'blockVolumeAttachAndMountOperations' attribute instead of this.
         /// Operations performed on a list of block volumes used on the non-movable compute instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "blockVolumeOperations")]
         public System.Collections.Generic.List<ComputeInstanceNonMovableBlockVolumeOperation> BlockVolumeOperations { get; set; }
+        
+        [JsonProperty(PropertyName = "blockVolumeAttachAndMountOperations")]
+        public ComputeInstanceNonMovableBlockVolumeAttachAndMountOperationsDetails BlockVolumeAttachAndMountOperations { get; set; }
         
         [JsonProperty(PropertyName = "memberType")]
         private readonly string memberType = "COMPUTE_INSTANCE_NON_MOVABLE";

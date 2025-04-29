@@ -16,10 +16,37 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiService.Models
 {
     /// <summary>
-    /// The configuration details, whether to add the content moderation feature to the model. Content moderation removes toxic and biased content from responses. It's recommended to use content moderation.
+    /// The configuration details, whether to add the content moderation feature to the model. Content moderation removes toxic and biased content from responses.
     /// </summary>
     public class ContentModerationConfig 
     {
+                ///
+        /// <value>
+        /// Enum for the modes of operation for inference protection.
+        /// </value>
+        ///
+        public enum ModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "INFORM")]
+            Inform,
+            [EnumMember(Value = "BLOCK")]
+            Block
+        };
+
+        /// <value>
+        /// Enum for the modes of operation for inference protection.
+        /// </value>
+        [JsonProperty(PropertyName = "mode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ModeEnum> Mode { get; set; }
+        
+        /// <value>
+        /// The OCID of the model used for the feature.
+        /// </value>
+        [JsonProperty(PropertyName = "modelId")]
+        public string ModelId { get; set; }
         
         /// <value>
         /// Whether to enable the content moderation feature.

@@ -37,6 +37,17 @@ namespace Oci.DisasterrecoveryService.Models
         [JsonProperty(PropertyName = "exportMappings")]
         public System.Collections.Generic.List<FileSystemExportMapping> ExportMappings { get; set; }
         
+        [JsonProperty(PropertyName = "destinationEncryptionKey")]
+        public VaultAndEncryptionKey DestinationEncryptionKey { get; set; }
+        
+        /// <value>
+        /// The OCID of the snapshot policy to use in the destination region. This policy will be attached to the file system after it moves to the destination region.
+        /// <br/>
+        /// Example: ocid1.filesystemsnapshotpolicy.oc1..uniqueID
+        /// </value>
+        [JsonProperty(PropertyName = "destinationSnapshotPolicyId")]
+        public string DestinationSnapshotPolicyId { get; set; }
+        
         [JsonProperty(PropertyName = "memberType")]
         private readonly string memberType = "FILE_SYSTEM";
     }

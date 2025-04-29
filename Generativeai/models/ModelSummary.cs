@@ -146,6 +146,18 @@ namespace Oci.GenerativeaiService.Models
         public System.Nullable<System.DateTime> TimeDeprecated { get; set; }
         
         /// <value>
+        /// The timestamp indicating when the base model will no longer be available for on-demand usage.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOnDemandRetired")]
+        public System.Nullable<System.DateTime> TimeOnDemandRetired { get; set; }
+        
+        /// <value>
+        /// The timestamp indicating when the custom model and its associated foundation model will be fully retired.
+        /// </value>
+        [JsonProperty(PropertyName = "timeDedicatedRetired")]
+        public System.Nullable<System.DateTime> TimeDedicatedRetired { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>

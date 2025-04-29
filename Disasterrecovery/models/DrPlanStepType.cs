@@ -40,6 +40,10 @@ namespace Oci.DisasterrecoveryService.Models
     /// - AUTONOMOUS_DATABASE_STOP_DRILL_DELETE_CLONE_STANDBY - A DR plan step to delete an autonomous database clone at standby during a stop drill.
     /// - AUTONOMOUS_DATABASE_START_DRILL_CONVERT_TO_SNAPSHOT_STANDBY - A DR plan step to convert an autonomous database to a snapshot at standby during a start drill.
     /// - AUTONOMOUS_DATABASE_STOP_DRILL_CONVERT_TO_PHYSICAL_STANDBY - A DR plan step to convert an autonomous database to a physical instance at standby during a stop drill.
+    /// - DATABASE_START_DRILL_CONVERT_TO_SNAPSHOT_STANDBY_PRECHECK - A precheck step for validating the conversion of a database to a snapshot at standby during a start drill.
+    /// - DATABASE_STOP_DRILL_CONVERT_TO_PHYSICAL_STANDBY_PRECHECK - A precheck step for validating the conversion of a database to a physical instance at standby during a stop drill.
+    /// - DATABASE_START_DRILL_CONVERT_TO_SNAPSHOT_STANDBY - A DR plan step to convert a database to a snapshot at standby during a start drill.
+    /// - DATABASE_STOP_DRILL_CONVERT_TO_PHYSICAL_STANDBY - A DR plan step to convert a database to a physical instance at standby during a stop drill.
     /// - USER_DEFINED_PRECHECK - A precheck step for validating a user-defined step.
     /// - COMPUTE_INSTANCE_LAUNCH - A DR plan step to launch a compute instance.
     /// - COMPUTE_INSTANCE_STOP - A DR plan step to stop a compute instance.
@@ -56,6 +60,7 @@ namespace Oci.DisasterrecoveryService.Models
     /// - VOLUME_GROUP_REMOVE - A DR plan step to remove a volume group.
     /// - VOLUME_GROUP_TERMINATE - A DR plan step to terminate a volume group.
     /// - USER_DEFINED - User-defined step
+    /// - USER_DEFINED_CUSTOM_PRECHECK - User-defined custom precheck step.
     /// - VOLUME_GROUP_RESTORE_START_DRILL_PRECHECK - A precheck step for validating a volume group restoration during a start drill.
     /// - VOLUME_GROUP_REMOVE_PRECHECK - A precheck step for validating a volume group removal.
     /// - VOLUME_GROUP_TERMINATE_PRECHECK - A precheck step for validating a volume group termination.
@@ -181,6 +186,14 @@ namespace Oci.DisasterrecoveryService.Models
       AutonomousDatabaseStartDrillConvertToSnapshotStandby,
       [EnumMember(Value = "AUTONOMOUS_DATABASE_STOP_DRILL_CONVERT_TO_PHYSICAL_STANDBY")]
       AutonomousDatabaseStopDrillConvertToPhysicalStandby,
+      [EnumMember(Value = "DATABASE_START_DRILL_CONVERT_TO_SNAPSHOT_STANDBY_PRECHECK")]
+      DatabaseStartDrillConvertToSnapshotStandbyPrecheck,
+      [EnumMember(Value = "DATABASE_STOP_DRILL_CONVERT_TO_PHYSICAL_STANDBY_PRECHECK")]
+      DatabaseStopDrillConvertToPhysicalStandbyPrecheck,
+      [EnumMember(Value = "DATABASE_START_DRILL_CONVERT_TO_SNAPSHOT_STANDBY")]
+      DatabaseStartDrillConvertToSnapshotStandby,
+      [EnumMember(Value = "DATABASE_STOP_DRILL_CONVERT_TO_PHYSICAL_STANDBY")]
+      DatabaseStopDrillConvertToPhysicalStandby,
       [EnumMember(Value = "USER_DEFINED_PRECHECK")]
       UserDefinedPrecheck,
       [EnumMember(Value = "COMPUTE_INSTANCE_LAUNCH")]
@@ -213,6 +226,8 @@ namespace Oci.DisasterrecoveryService.Models
       VolumeGroupTerminate,
       [EnumMember(Value = "USER_DEFINED")]
       UserDefined,
+      [EnumMember(Value = "USER_DEFINED_CUSTOM_PRECHECK")]
+      UserDefinedCustomPrecheck,
       [EnumMember(Value = "VOLUME_GROUP_RESTORE_START_DRILL_PRECHECK")]
       VolumeGroupRestoreStartDrillPrecheck,
       [EnumMember(Value = "VOLUME_GROUP_REMOVE_PRECHECK")]
