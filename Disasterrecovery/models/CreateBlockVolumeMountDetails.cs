@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
+    /// Deprecated. Use the 'CreateComputeInstanceNonMovableBlockVolumeMountOperationDetails' definition instead of this.
     /// The details for creating a mount for a file system on a block volume.
     /// 
     /// </summary>
@@ -23,7 +24,7 @@ namespace Oci.DisasterrecoveryService.Models
     {
         
         /// <value>
-        /// The physical mount point used for mounting the file system on the block volume.
+        /// The physical mount point where the file system is mounted on the block volume.
         /// <br/>
         /// Example: /mnt/yourmountpoint
         /// </value>

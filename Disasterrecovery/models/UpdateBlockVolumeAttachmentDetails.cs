@@ -16,6 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DisasterrecoveryService.Models
 {
     /// <summary>
+    /// Deprecated. Use the 'UpdateComputeInstanceNonMovableBlockVolumeAttachOperationDetails' definition instead of this.
     /// The details for attaching or detaching a block volume.
     /// 
     /// </summary>
@@ -23,8 +24,8 @@ namespace Oci.DisasterrecoveryService.Models
     {
         
         /// <value>
-        /// The OCID of the reference compute instance from which to obtain the attachment details for the volume.
-        /// This reference compute instance is from the peer DR protection group.
+        /// The OCID of the reference compute instance needed to obtain the volume attachment details.
+        /// This reference compute instance belongs to the peer DR protection group.
         /// <br/>
         /// Example: ocid1.instance.oc1..uniqueID
         /// </value>

@@ -181,6 +181,18 @@ namespace Oci.GenerativeaiService.Models
         [JsonProperty(PropertyName = "timeDeprecated")]
         public System.Nullable<System.DateTime> TimeDeprecated { get; set; }
         
+        /// <value>
+        /// The timestamp indicating when the base model will no longer be available for on-demand usage.
+        /// </value>
+        [JsonProperty(PropertyName = "timeOnDemandRetired")]
+        public System.Nullable<System.DateTime> TimeOnDemandRetired { get; set; }
+        
+        /// <value>
+        /// The timestamp indicating when the custom model and its associated foundation model will be fully retired.
+        /// </value>
+        [JsonProperty(PropertyName = "timeDedicatedRetired")]
+        public System.Nullable<System.DateTime> TimeDedicatedRetired { get; set; }
+        
         [JsonProperty(PropertyName = "previousState")]
         public Model PreviousState { get; set; }
         

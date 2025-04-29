@@ -69,6 +69,18 @@ namespace Oci.DisasterrecoveryService.Models
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
+        /// <value>
+        /// The display name of the DR Plan step type.
+        /// <br/>
+        /// Example: Database Switchover
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TypeDisplayName is required.")]
+        [JsonProperty(PropertyName = "typeDisplayName")]
+        public string TypeDisplayName { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

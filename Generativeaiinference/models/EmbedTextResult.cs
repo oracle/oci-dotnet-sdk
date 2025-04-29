@@ -59,5 +59,8 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "modelVersion")]
         public string ModelVersion { get; set; }
         
+        [JsonProperty(PropertyName = "usage")]
+        public Usage Usage { get; set; }
+        
     }
 }

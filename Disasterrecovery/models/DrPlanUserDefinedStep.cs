@@ -25,13 +25,14 @@ namespace Oci.DisasterrecoveryService.Models
         /// <value>
         /// The type of the user-defined step.
         /// <br/>
-        ///   **RUN_OBJECTSTORE_SCRIPT_PRECHECK** - A step which performs a precheck on a script stored
-        ///     in OCI object storage.
+        ///   **RUN_OBJECTSTORE_SCRIPT_PRECHECK** - A built-in step which performs a precheck on a script stored
+        ///     in OCI object storage.  This step cannot be added, deleted, or customized by the user.
         /// <br/>
-        ///   **RUN_LOCAL_SCRIPT_PRECHECK** - A step which performs a precheck on a script which resides
-        ///     locally on a compute instance.
+        ///   **RUN_LOCAL_SCRIPT_PRECHECK** - A built-in step which performs a precheck on a script which resides
+        ///     locally on a compute instance.  This step cannot be added, deleted, or customized by the user.
         /// <br/>
-        ///   **INVOKE_FUNCTION_PRECHECK** - A step which performs a precheck on an OCI function.
+        ///   **INVOKE_FUNCTION_PRECHECK** - A built-in step which performs a precheck on an OCI function.  This 
+        ///     step cannot be added, deleted, or customized by the user.
         ///     See https://docs.oracle.com/en-us/iaas/Content/Functions/home.htm.
         /// <br/>
         ///   **RUN_OBJECTSTORE_SCRIPT** - A step which runs a script stored in OCI object storage.
@@ -39,6 +40,15 @@ namespace Oci.DisasterrecoveryService.Models
         ///   **RUN_LOCAL_SCRIPT** - A step which runs a script that resides locally on a compute instance.
         /// <br/>
         ///   **INVOKE_FUNCTION** - A step which invokes an OCI function.
+        ///     See https://docs.oracle.com/en-us/iaas/Content/Functions/home.htm.
+        /// <br/>
+        ///   **RUN_OBJECTSTORE_SCRIPT_USER_DEFINED_CUSTOM_PRECHECK** - A user-defined step which performs a precheck by executing a user-provided script stored
+        ///     in OCI object storage.
+        /// <br/>
+        ///   **RUN_LOCAL_SCRIPT_USER_DEFINED_CUSTOM_PRECHECK** - A user-defined step which performs a precheck by executing a user-provided script which resides
+        ///     locally on a compute instance.
+        /// <br/>
+        ///   **INVOKE_FUNCTION_USER_DEFINED_CUSTOM_PRECHECK** - A user-defined step which performs a precheck by executing a user-provided OCI function.
         ///     See https://docs.oracle.com/en-us/iaas/Content/Functions/home.htm.
         /// 
         /// </value>
@@ -55,7 +65,13 @@ namespace Oci.DisasterrecoveryService.Models
             [EnumMember(Value = "RUN_LOCAL_SCRIPT")]
             RunLocalScript,
             [EnumMember(Value = "INVOKE_FUNCTION")]
-            InvokeFunction
+            InvokeFunction,
+            [EnumMember(Value = "RUN_OBJECTSTORE_SCRIPT_USER_DEFINED_CUSTOM_PRECHECK")]
+            RunObjectstoreScriptUserDefinedCustomPrecheck,
+            [EnumMember(Value = "RUN_LOCAL_SCRIPT_USER_DEFINED_CUSTOM_PRECHECK")]
+            RunLocalScriptUserDefinedCustomPrecheck,
+            [EnumMember(Value = "INVOKE_FUNCTION_USER_DEFINED_CUSTOM_PRECHECK")]
+            InvokeFunctionUserDefinedCustomPrecheck
         };
 
         
@@ -82,11 +98,17 @@ namespace Oci.DisasterrecoveryService.Models
             var discriminator = jsonObject["stepType"].Value<string>();
             switch (discriminator)
             {
+                case "INVOKE_FUNCTION_USER_DEFINED_CUSTOM_PRECHECK":
+                    obj = new InvokeFunctionUserDefinedCustomPrecheckStep();
+                    break;
                 case "INVOKE_FUNCTION":
                     obj = new InvokeFunctionStep();
                     break;
                 case "INVOKE_FUNCTION_PRECHECK":
                     obj = new InvokeFunctionPrecheckStep();
+                    break;
+                case "RUN_OBJECTSTORE_SCRIPT_USER_DEFINED_CUSTOM_PRECHECK":
+                    obj = new RunObjectStoreScriptUserDefinedCustomPrecheckStep();
                     break;
                 case "RUN_LOCAL_SCRIPT":
                     obj = new RunLocalScriptUserDefinedStep();
@@ -96,6 +118,9 @@ namespace Oci.DisasterrecoveryService.Models
                     break;
                 case "RUN_OBJECTSTORE_SCRIPT_PRECHECK":
                     obj = new ObjectStoreScriptPrecheckStep();
+                    break;
+                case "RUN_LOCAL_SCRIPT_USER_DEFINED_CUSTOM_PRECHECK":
+                    obj = new RunLocalScriptUserDefinedCustomPrecheckStep();
                     break;
                 case "RUN_OBJECTSTORE_SCRIPT":
                     obj = new RunObjectStoreScriptUserDefinedStep();

@@ -48,5 +48,52 @@ namespace Oci.ResourceschedulerService.Models
         [JsonProperty(PropertyName = "metadata")]
         public System.Collections.Generic.Dictionary<string, string> Metadata { get; set; }
         
+        /// <value>
+        /// This is the user input parameters to use when acting on the resource.
+        /// <br/>
+        /// {
+        ///     \"parameters\": [
+        ///         {
+        ///             \"parameterType\": \"BODY\",
+        ///             \"value\": {
+        ///                 \"ip\": \"192.168.44.44\",
+        ///                 \"memory\": \"1024\",
+        ///                 \"synced_folders\": [
+        ///                     {
+        ///                         \"host_path\": \"data/\",
+        ///                         \"guest_path\": \"/var/www\",
+        ///                         \"type\": \"default\"
+        ///                     }
+        ///                 ],
+        ///                 \"forwarded_ports\": []
+        ///             }
+        ///         },
+        ///         {
+        ///             \"parameterType\": \"PATH\",
+        ///             \"value\": {
+        ///                 \"compartmentId\": \"ocid1.compartment.oc1..xxxxx\",
+        ///                 \"instanceId\": \"ocid1.vcn.oc1..yyyy\"
+        ///             }
+        ///         },
+        ///         {
+        ///             \"parameterType\": \"QUERY\",
+        ///             \"value\": {
+        ///                 \"limit\": \"10\",
+        ///                 \"tenantId\": \"ocid1.tenant.oc1..zzzz\"
+        ///             }
+        ///         },
+        ///         {
+        ///             \"parameterType\": \"HEADER\",
+        ///             \"value\": {
+        ///               \"token\": \"xxxx\"
+        ///             }
+        ///         }
+        ///     ]
+        /// }
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "parameters")]
+        public System.Collections.Generic.List<Parameter> Parameters { get; set; }
+        
     }
 }

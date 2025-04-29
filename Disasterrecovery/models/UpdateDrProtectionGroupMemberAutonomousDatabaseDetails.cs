@@ -40,6 +40,9 @@ namespace Oci.DisasterrecoveryService.Models
         [JsonProperty(PropertyName = "passwordVaultSecretId")]
         public string PasswordVaultSecretId { get; set; }
         
+        [JsonProperty(PropertyName = "destinationEncryptionKey")]
+        public UpdateVaultAndEncryptionKeyDetails DestinationEncryptionKey { get; set; }
+        
         [JsonProperty(PropertyName = "memberType")]
         private readonly string memberType = "AUTONOMOUS_DATABASE";
     }
