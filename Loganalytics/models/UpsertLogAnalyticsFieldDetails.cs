@@ -52,5 +52,12 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
+        /// <value>
+        /// A flag indicating whether duplicates should be retained while processing multi-valued fields.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isKeepDuplicates")]
+        public System.Nullable<bool> IsKeepDuplicates { get; set; }
+        
     }
 }

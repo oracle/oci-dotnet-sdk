@@ -21,11 +21,8 @@ namespace Oci.FleetappsmanagementService.Models
     public class Preferences 
     {
         
-        /// <value>
-        /// Enables notification on upcoming schedule.
-        /// </value>
-        [JsonProperty(PropertyName = "onUpcomingSchedule")]
-        public System.Nullable<bool> OnUpcomingSchedule { get; set; }
+        [JsonProperty(PropertyName = "upcomingSchedule")]
+        public UpcomingSchedule UpcomingSchedule { get; set; }
         
         /// <value>
         /// Enables or disables notification on Job Failures.
@@ -38,6 +35,36 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "onTopologyModification")]
         public System.Nullable<bool> OnTopologyModification { get; set; }
+        
+        /// <value>
+        /// Enables or disables notification when a task is paused.
+        /// </value>
+        [JsonProperty(PropertyName = "onTaskPause")]
+        public System.Nullable<bool> OnTaskPause { get; set; }
+        
+        /// <value>
+        /// Enables or disables notification on task failure.
+        /// </value>
+        [JsonProperty(PropertyName = "onTaskFailure")]
+        public System.Nullable<bool> OnTaskFailure { get; set; }
+        
+        /// <value>
+        /// Enables or disables notification on task success.
+        /// </value>
+        [JsonProperty(PropertyName = "onTaskSuccess")]
+        public System.Nullable<bool> OnTaskSuccess { get; set; }
+        
+        /// <value>
+        /// Enables or disables notification when fleet resource becomes non compliant.
+        /// </value>
+        [JsonProperty(PropertyName = "onResourceNonCompliance")]
+        public System.Nullable<bool> OnResourceNonCompliance { get; set; }
+        
+        /// <value>
+        /// Enables or disables notification when a newer version of runbook associated with a fleet is available
+        /// </value>
+        [JsonProperty(PropertyName = "onRunbookNewerVersion")]
+        public System.Nullable<bool> OnRunbookNewerVersion { get; set; }
         
     }
 }

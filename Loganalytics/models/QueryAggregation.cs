@@ -37,6 +37,23 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<long> TotalMatchedCount { get; set; }
         
         /// <value>
+        /// Number of groups created by query.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "totalGroupCount")]
+        public System.Nullable<int> TotalGroupCount { get; set; }
+        
+        [JsonProperty(PropertyName = "timeFilter")]
+        public TimeRange TimeFilter { get; set; }
+        
+        /// <value>
+        /// List of recalls in the query.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "recalls")]
+        public System.Collections.Generic.List<RecallDefinition> Recalls { get; set; }
+        
+        /// <value>
         /// True if query did not complete processing all data.
         /// 
         /// </value>

@@ -68,5 +68,19 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "commands")]
         public System.Collections.Generic.List<AbstractCommandDescriptor> Commands { get; set; }
         
+        /// <value>
+        /// Optional list of variables for the query.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "variables")]
+        public System.Collections.Generic.List<VariableDefinition> Variables { get; set; }
+        
+        /// <value>
+        /// Optional list of properties for the query.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "properties")]
+        public System.Collections.Generic.List<PropertyDefinition> Properties { get; set; }
+        
     }
 }

@@ -46,7 +46,11 @@ namespace Oci.FleetappsmanagementService.Models
             [EnumMember(Value = "RETRY")]
             Retry,
             [EnumMember(Value = "RESUME")]
-            Resume
+            Resume,
+            [EnumMember(Value = "IGNORE")]
+            Ignore,
+            [EnumMember(Value = "ABORT")]
+            Abort
         };
 
         /// <value>

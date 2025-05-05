@@ -30,7 +30,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string SchedulerJobId { get; set; }
         
         /// <value>
-        /// The information to be updated.
+        /// Attributes to update a schedule job.
         /// </value>
         /// <remarks>
         /// Required

@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// Tenancy OCID
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -58,15 +58,12 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<bool> IsOutage { get; set; }
         
         /// <value>
-        /// Type of maintenenace window
-        /// </value>
-        [JsonProperty(PropertyName = "maintenanceWindowType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<MaintenanceWindowType> MaintenanceWindowType { get; set; }
-        
-        /// <value>
         /// Specify the date and time of the day that the maintenance window starts.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TimeScheduleStart is required.")]
         [JsonProperty(PropertyName = "timeScheduleStart")]
         public System.Nullable<System.DateTime> TimeScheduleStart { get; set; }
         
@@ -95,12 +92,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "recurrences")]
         public string Recurrences { get; set; }
-        
-        /// <value>
-        /// Task initiation cutoff time for the maintenance window.
-        /// </value>
-        [JsonProperty(PropertyName = "taskInitiationCutoff")]
-        public System.Nullable<int> TaskInitiationCutoff { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

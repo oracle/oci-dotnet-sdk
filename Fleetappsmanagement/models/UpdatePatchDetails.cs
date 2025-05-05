@@ -59,12 +59,6 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Collections.Generic.List<DependentPatchDetails> DependentPatches { get; set; }
         
         /// <value>
-        /// OCID of the compartment to which the resource belongs to.
-        /// </value>
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
-        
-        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

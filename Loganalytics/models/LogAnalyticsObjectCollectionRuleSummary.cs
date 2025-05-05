@@ -159,6 +159,13 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<LogTypes> LogType { get; set; }
         
         /// <value>
+        /// A Stream OCID is required for Object Collection rules of type LIVE or HISTORIC_LIVE, which will be used by Logging Analytics while creating Event Rule and consume the event notifications created by the Object Storage.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "streamId")]
+        public string StreamId { get; set; }
+        
+        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>

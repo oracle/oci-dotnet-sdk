@@ -267,6 +267,41 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<bool> IsForceHistoricCollection { get; set; }
         
         /// <value>
+        /// A Stream OCID is required for Object Collection rules of type LIVE or HISTORIC_LIVE, which will be used by Logging Analytics while creating Event Rule and consume the event notifications created by the Object Storage.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "streamId")]
+        public string StreamId { get; set; }
+        
+        /// <value>
+        /// Cursor type used to fetch messages from stream.
+        /// When the streamCursorType is set to DEFAULT, the existing cursor position will be used if already set by any previous objection collection rule(s) using the same stream. 
+        /// Otherwise, the behaviour is to consume from the oldest available message in the stream. 
+        /// When the streamCursorType is set to TRIM_HORIZON, the behaviour is to start consuming from the oldest available message in the stream. 
+        /// When the streamCursorType is set to LATEST, the behavior is to start consuming messages that were published after the creation of this rule. 
+        /// When the streamCursorType is set to AT_TIME, the behavior is to start consuming from a given time. 
+        /// For more information on cursor types, see [Stream Consumer Groups](https://docs.oracle.com/en-us/iaas/Content/Streaming/Tasks/using_consumer_groups.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "streamCursorType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<StreamCursorTypes> StreamCursorType { get; set; }
+        
+        /// <value>
+        /// The time from which to consume the objects, if streamCursorType is AT_TIME. 
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "streamCursorTime")]
+        public System.Nullable<System.DateTime> StreamCursorTime { get; set; }
+        
+        /// <value>
+        /// Last Collected Object for the rule
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lastCollectedObject")]
+        public string LastCollectedObject { get; set; }
+        
+        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>

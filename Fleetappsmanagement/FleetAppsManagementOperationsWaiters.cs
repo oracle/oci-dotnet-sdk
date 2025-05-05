@@ -105,8 +105,7 @@ namespace Oci.FleetappsmanagementService
             var agent = new WaiterAgent<GetSchedulerJobRequest, GetSchedulerJobResponse>(
                 request,
                 request => client.GetSchedulerJob(request),
-                response => targetStates.Contains(response.SchedulerJob.LifecycleState.Value),
-                targetStates.Contains(SchedulerJob.LifecycleStateEnum.Deleted)
+                response => targetStates.Contains(response.SchedulerJob.LifecycleState.Value)
             );
             return new Waiter<GetSchedulerJobRequest, GetSchedulerJobResponse>(config, agent);
         }

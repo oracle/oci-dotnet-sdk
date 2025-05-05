@@ -22,13 +22,13 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// The OCID of taskRecord assocaited with the step
+        /// The OCID of taskRecord assocaited with the step.
         /// </value>
         [JsonProperty(PropertyName = "taskRecordId")]
         public string TaskRecordId { get; set; }
         
         /// <value>
-        /// Name of the Step
+        /// Name of the Step.
         /// </value>
         /// <remarks>
         /// Required
@@ -38,13 +38,13 @@ namespace Oci.FleetappsmanagementService.Models
         public string StepName { get; set; }
         
         /// <value>
-        /// The sequence of the step
+        /// The sequence of the step.
         /// </value>
         [JsonProperty(PropertyName = "sequence")]
         public string Sequence { get; set; }
         
         /// <value>
-        /// Status of the Task
+        /// Status of the Task.
         /// </value>
         /// <remarks>
         /// Required
@@ -73,7 +73,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<bool> IsRollbackTask { get; set; }
         
         /// <value>
-        /// Description of the step Execution
+        /// Description of the step Execution.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

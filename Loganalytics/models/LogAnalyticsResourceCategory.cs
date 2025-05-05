@@ -47,5 +47,17 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "isSystem")]
         public System.Nullable<bool> IsSystem { get; set; }
         
+        /// <value>
+        /// The resource display name.
+        /// </value>
+        [JsonProperty(PropertyName = "resourceDisplayName")]
+        public string ResourceDisplayName { get; set; }
+        
+        /// <value>
+        /// Compartment ID of the resource
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
+        
     }
 }

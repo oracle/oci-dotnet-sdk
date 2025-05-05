@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// A parameter file detatails
+    /// Details of a parameter file
     /// </summary>
     public class ParameterFileVersionSummary 
     {

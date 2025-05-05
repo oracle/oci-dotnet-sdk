@@ -45,7 +45,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Tenancy OCID
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -98,18 +98,6 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<int> CountOfAffectedTargets { get; set; }
         
         /// <value>
-        /// All Action Group types are part of the schedule.
-        /// </value>
-        [JsonProperty(PropertyName = "actionGroupTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Collections.Generic.List<LifeCycleActionGroupType> ActionGroupTypes { get; set; }
-        
-        /// <value>
-        /// All application types that are part of the schedule for an ENVIRONMENT action group Type.
-        /// </value>
-        [JsonProperty(PropertyName = "applicationTypes")]
-        public System.Collections.Generic.List<string> ApplicationTypes { get; set; }
-        
-        /// <value>
         /// All products that are part of the schedule for a PRODUCT action group type.
         /// </value>
         [JsonProperty(PropertyName = "products")]
@@ -127,8 +115,8 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "actionGroups")]
         public System.Collections.Generic.List<ActionGroupDetails> ActionGroups { get; set; }
         
-        [JsonProperty(PropertyName = "associatedScheduleDefinition")]
-        public AssociatedSchedulerDefinition AssociatedScheduleDefinition { get; set; }
+        [JsonProperty(PropertyName = "schedulerDefinition")]
+        public AssociatedSchedulerDefinition SchedulerDefinition { get; set; }
         
         /// <value>
         /// The current state of the SchedulerJob.
@@ -138,7 +126,7 @@ namespace Oci.FleetappsmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SchedulerJob.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

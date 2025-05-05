@@ -40,10 +40,6 @@ namespace Oci.LoganalyticsService.Models
         /// Note there may only be a single schedule for SAVED_SEARCH and PURGE scheduled tasks.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Schedules is required.")]
         [JsonProperty(PropertyName = "schedules")]
         public System.Collections.Generic.List<Schedule> Schedules { get; set; }
         

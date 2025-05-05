@@ -53,6 +53,12 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<ComplianceState> ComplianceState { get; set; }
         
         /// <value>
+        /// The compliance percentage.
+        /// </value>
+        [JsonProperty(PropertyName = "percentCompliant")]
+        public System.Nullable<float> PercentCompliant { get; set; }
+        
+        /// <value>
         /// Resources associated with the Fleet.
         /// </value>
         [JsonProperty(PropertyName = "resources")]

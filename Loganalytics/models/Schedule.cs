@@ -30,7 +30,9 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "FIXED_FREQUENCY")]
             FixedFrequency,
             [EnumMember(Value = "CRON")]
-            Cron
+            Cron,
+            [EnumMember(Value = "AUTO")]
+            Auto
         };
 
                 ///
@@ -87,6 +89,9 @@ namespace Oci.LoganalyticsService.Models
             {
                 case "CRON":
                     obj = new CronSchedule();
+                    break;
+                case "AUTO":
+                    obj = new AutoSchedule();
                     break;
                 case "FIXED_FREQUENCY":
                     obj = new FixedFrequencySchedule();

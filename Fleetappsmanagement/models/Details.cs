@@ -37,10 +37,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// <value>
         /// The OS for the task
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OsType is required.")]
         [JsonProperty(PropertyName = "osType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsType> OsType { get; set; }
@@ -72,6 +68,12 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "isApplySubjectTask")]
         public System.Nullable<bool> IsApplySubjectTask { get; set; }
+        
+        /// <value>
+        /// The lifecycle operation performed by the runbook.
+        /// </value>
+        [JsonProperty(PropertyName = "operation")]
+        public string Operation { get; set; }
         
     }
 }

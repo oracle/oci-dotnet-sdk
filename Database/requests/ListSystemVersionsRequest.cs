@@ -30,16 +30,6 @@ namespace Oci.DatabaseService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Specifies shape query parameter.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Shape is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shape")]
-        public string Shape { get; set; }
-        
-        /// <value>
         /// Specifies gi version query parameter.
         /// </value>
         /// <remarks>
@@ -85,5 +75,23 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// If provided, filters the results for the given shape.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shape")]
+        public string Shape { get; set; }
+        
+        /// <value>
+        /// If provided, return highest versions from each major version family.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLatest")]
+        public System.Nullable<bool> IsLatest { get; set; }
+        
+        /// <value>
+        /// If provided, filters the results for the specified resource Id.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
+        public string ResourceId { get; set; }
     }
 }

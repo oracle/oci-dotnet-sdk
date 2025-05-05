@@ -39,14 +39,13 @@ namespace Oci.FleetappsmanagementService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Type of runbook structure.
+        /// Does this runbook need SUDO access to execute?
         /// </value>
-        [JsonProperty(PropertyName = "runbookRelevance")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<Runbook.RunbookRelevanceEnum> RunbookRelevance { get; set; }
+        [JsonProperty(PropertyName = "isSudoAccessNeeded")]
+        public System.Nullable<bool> IsSudoAccessNeeded { get; set; }
         
         /// <value>
-        /// The lifecycle operation performed by the task.
+        /// The lifecycle operation performed by the runbook.
         /// </value>
         [JsonProperty(PropertyName = "operation")]
         public string Operation { get; set; }
@@ -71,13 +70,10 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<bool> IsDefault { get; set; }
         
         /// <value>
-        /// Estimated time to successfully complete the runbook execution
+        /// Estimated time to successfully complete the runbook execution.
         /// </value>
         [JsonProperty(PropertyName = "estimatedTime")]
         public string EstimatedTime { get; set; }
-        
-        [JsonProperty(PropertyName = "associations")]
-        public Associations Associations { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

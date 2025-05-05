@@ -65,6 +65,13 @@ namespace Oci.LoganalyticsService.Requests
         public System.Nullable<int> PatternId { get; set; }
         
         /// <value>
+        /// The pattern id (long).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "patternIdLong")]
+        public System.Nullable<long> PatternIdLong { get; set; }
+        
+        /// <value>
         /// The property name used for filtering.
         /// 
         /// </value>

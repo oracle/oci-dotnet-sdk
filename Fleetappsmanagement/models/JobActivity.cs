@@ -63,6 +63,12 @@ namespace Oci.FleetappsmanagementService.Models
         public string RunbookId { get; set; }
         
         /// <value>
+        /// Name of the RunbookVersion associated with the Action Group.
+        /// </value>
+        [JsonProperty(PropertyName = "runbookVersionName")]
+        public string RunbookVersionName { get; set; }
+        
+        /// <value>
         /// Name of the runbook associated with the Action Group.
         /// </value>
         [JsonProperty(PropertyName = "runbookName")]

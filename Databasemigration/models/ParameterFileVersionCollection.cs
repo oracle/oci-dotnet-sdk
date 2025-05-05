@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Results of request for Parameter Files.  Contents is a collection of ParameterFileVersionSummary.
+    /// The result of the request for Parameter Files. It contains a collection of ParameterFileVersionSummary
     /// </summary>
     public class ParameterFileVersionCollection 
     {
         
         /// <value>
-        /// A list of A parameter file metadata
+        /// List of parameter file metadata
         /// </value>
         /// <remarks>
         /// Required

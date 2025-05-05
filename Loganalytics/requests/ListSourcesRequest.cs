@@ -165,6 +165,14 @@ namespace Oci.LoganalyticsService.Requests
         public string Categories { get; set; }
         
         /// <value>
+        /// The pattern text filter. Only sources with a pattern |
+        /// which contains text with the specified string will be returned.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "patternText")]
+        public string PatternText { get; set; }
+        
+        /// <value>
         /// A flag specifying whether or not to return all source information, or a subset of the
         /// information about each source.  A value of true will return only the source unique
         /// identifier and the source name.  A value of false will return all source information

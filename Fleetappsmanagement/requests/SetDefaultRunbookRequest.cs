@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// Details for setting the Runbook as default.
+        /// Details for setting the runbook as default for a platform and operation.
         /// </value>
         /// <remarks>
         /// Required

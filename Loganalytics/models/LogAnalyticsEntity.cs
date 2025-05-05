@@ -215,5 +215,12 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// The count of associated log sources for a given log analytics entity.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "associatedSourcesCount")]
+        public System.Nullable<int> AssociatedSourcesCount { get; set; }
+        
     }
 }

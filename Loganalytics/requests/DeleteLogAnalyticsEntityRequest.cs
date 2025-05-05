@@ -57,5 +57,11 @@ namespace Oci.LoganalyticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Option to delete entity even if the entity is associated with a log source and stop any log collections associated with this entity.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isForceDelete")]
+        public System.Nullable<bool> IsForceDelete { get; set; }
     }
 }

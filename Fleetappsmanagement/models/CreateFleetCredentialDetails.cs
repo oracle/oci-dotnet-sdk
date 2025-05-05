@@ -34,16 +34,6 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
-        /// <value>
-        /// Tenancy OCID
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
-        
         /// <remarks>
         /// Required
         /// </remarks>

@@ -30,29 +30,6 @@ namespace Oci.FleetappsmanagementService.Models
         [Required(ErrorMessage = "StepName is required.")]
         [JsonProperty(PropertyName = "stepName")]
         public string StepName { get; set; }
-                ///
-        /// <value>
-        /// The association type of the task
-        /// </value>
-        ///
-        public enum AssociationTypeEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "TASK")]
-            Task
-        };
-
-        /// <value>
-        /// The association type of the task
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AssociationType is required.")]
-        [JsonProperty(PropertyName = "associationType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<AssociationTypeEnum> AssociationType { get; set; }
         
         /// <remarks>
         /// Required

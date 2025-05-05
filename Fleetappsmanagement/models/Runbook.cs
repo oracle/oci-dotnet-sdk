@@ -18,6 +18,7 @@ namespace Oci.FleetappsmanagementService.Models
     /// <summary>
     /// Runbook definition.
     /// Runbooks allow you to capture procedural tasks for handling a workflow.
+    /// Only active versions of runbook will be available for executions.
     /// 
     /// </summary>
     public class Runbook 
@@ -80,33 +81,6 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-                ///
-        /// <value>
-        /// Relevance of the runbook.
-        /// 
-        /// </value>
-        ///
-        public enum RunbookRelevanceEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "PRODUCT_GROUP")]
-            ProductGroup,
-            [EnumMember(Value = "PRODUCT")]
-            Product
-        };
-
-        /// <value>
-        /// Relevance of the runbook.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "RunbookRelevance is required.")]
-        [JsonProperty(PropertyName = "runbookRelevance")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<RunbookRelevanceEnum> RunbookRelevance { get; set; }
         
         /// <value>
         /// The lifecycle operation performed by the runbook.
@@ -121,10 +95,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// <value>
         /// The OS type for the runbook.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OsType is required.")]
         [JsonProperty(PropertyName = "osType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsType> OsType { get; set; }
@@ -132,10 +102,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// <value>
         /// The platform of the runbook.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Platform is required.")]
         [JsonProperty(PropertyName = "platform")]
         public string Platform { get; set; }
         
@@ -152,13 +118,31 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<bool> IsDefault { get; set; }
         
         /// <value>
+        /// Does this runbook need SUDO access to execute?
+        /// </value>
+        [JsonProperty(PropertyName = "isSudoAccessNeeded")]
+        public System.Nullable<bool> IsSudoAccessNeeded { get; set; }
+        
+        /// <value>
         /// Estimated time to successfully complete the runbook execution.
         /// </value>
         [JsonProperty(PropertyName = "estimatedTime")]
         public string EstimatedTime { get; set; }
+        
+        /// <value>
+        /// Latest runbook version
+        /// </value>
+        [JsonProperty(PropertyName = "latestVersion")]
+        public string LatestVersion { get; set; }
+        
+        /// <value>
+        /// Does this runbook has draft versions?
+        /// </value>
+        [JsonProperty(PropertyName = "hasDraftVersion")]
+        public System.Nullable<bool> HasDraftVersion { get; set; }
                 ///
         /// <value>
-        /// The current state of the Runbook.
+        /// The current state of the runbook.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -182,7 +166,7 @@ namespace Oci.FleetappsmanagementService.Models
         };
 
         /// <value>
-        /// The current state of the Runbook.
+        /// The current state of the runbook.
         /// </value>
         /// <remarks>
         /// Required
@@ -218,8 +202,8 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
-        [JsonProperty(PropertyName = "associations")]
-        public Associations Associations { get; set; }
+        [JsonProperty(PropertyName = "runbookVersion")]
+        public Version RunbookVersion { get; set; }
         
         /// <value>
         /// OCID of the compartment to which the resource belongs to.

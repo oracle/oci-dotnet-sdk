@@ -32,10 +32,14 @@ namespace Oci.FleetappsmanagementService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// OCID of the tenancy to which the resource belongs to.
+        /// The OCID of the resource.
         /// </value>
-        [JsonProperty(PropertyName = "tenancyId")]
-        public string TenancyId { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
         
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
@@ -63,16 +67,10 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<int> CountOfAffectedTargets { get; set; }
         
         /// <value>
-        /// All ActionGroup Types part of the schedule.
+        /// All products part of the schedule.
         /// </value>
-        [JsonProperty(PropertyName = "actionGroupTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Collections.Generic.List<LifeCycleActionGroupType> ActionGroupTypes { get; set; }
-        
-        /// <value>
-        /// All application types part of the schedule.
-        /// </value>
-        [JsonProperty(PropertyName = "applicationTypes")]
-        public System.Collections.Generic.List<string> ApplicationTypes { get; set; }
+        [JsonProperty(PropertyName = "products")]
+        public System.Collections.Generic.List<string> Products { get; set; }
         
         /// <value>
         /// System tags for this resource. Each key is predefined and scoped to a namespace.

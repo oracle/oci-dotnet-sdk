@@ -33,7 +33,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Tenancy OCID
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -84,45 +84,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-                ///
-        /// <value>
-        /// Type of the Fleet.
-        /// PRODUCT - A fleet of product-specific resources for a product type.
-        /// ENVIRONMENT - A fleet of environment-specific resources for a product stack.
-        /// GROUP - A fleet of a fleet of either environment or product fleets.
-        /// GENERIC - A fleet of resources selected dynamically or manually for reporting purposes
-        /// 
-        /// </value>
-        ///
-        public enum FleetTypeEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "PRODUCT")]
-            Product,
-            [EnumMember(Value = "ENVIRONMENT")]
-            Environment,
-            [EnumMember(Value = "GENERIC")]
-            Generic,
-            [EnumMember(Value = "GROUP")]
-            Group
-        };
-
-        /// <value>
-        /// Type of the Fleet.
-        /// PRODUCT - A fleet of product-specific resources for a product type.
-        /// ENVIRONMENT - A fleet of environment-specific resources for a product stack.
-        /// GROUP - A fleet of a fleet of either environment or product fleets.
-        /// GENERIC - A fleet of resources selected dynamically or manually for reporting purposes
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "FleetType is required.")]
-        [JsonProperty(PropertyName = "fleetType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<FleetTypeEnum> FleetType { get; set; }
         
         /// <value>
         /// Products associated with the Fleet.
@@ -130,13 +91,8 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "products")]
         public System.Collections.Generic.List<string> Products { get; set; }
         
-        /// <value>
-        /// Product stack associated with the Fleet.
-        /// Applicable for ENVIRONMENT fleet types.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "applicationType")]
-        public string ApplicationType { get; set; }
+        [JsonProperty(PropertyName = "details")]
+        public FleetDetails Details { get; set; }
         
         /// <value>
         /// Environment Type associated with the Fleet.
@@ -145,62 +101,15 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "environmentType")]
         public string EnvironmentType { get; set; }
-                ///
-        /// <value>
-        /// Group Type associated with Group Fleet.
-        /// Applicable for GROUP fleet types.
-        /// 
-        /// </value>
-        ///
-        public enum GroupTypeEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "ENVIRONMENT")]
-            Environment,
-            [EnumMember(Value = "PRODUCT")]
-            Product
-        };
-
-        /// <value>
-        /// Group Type associated with Group Fleet.
-        /// Applicable for GROUP fleet types.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "groupType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<GroupTypeEnum> GroupType { get; set; }
-                ///
-        /// <value>
-        /// Type of resource selection in a Fleet.
-        /// Select resources manually or select resources based on rules.
-        /// 
-        /// </value>
-        ///
-        public enum ResourceSelectionTypeEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "DYNAMIC")]
-            Dynamic,
-            [EnumMember(Value = "MANUAL")]
-            Manual
-        };
-
-        /// <value>
-        /// Type of resource selection in a Fleet.
-        /// Select resources manually or select resources based on rules.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "resourceSelectionType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<ResourceSelectionTypeEnum> ResourceSelectionType { get; set; }
         
-        [JsonProperty(PropertyName = "ruleSelectionCriteria")]
-        public SelectionCriteria RuleSelectionCriteria { get; set; }
+        [JsonProperty(PropertyName = "resourceSelection")]
+        public ResourceSelection ResourceSelection { get; set; }
         
+        /// <value>
+        /// Notification Preferences associated with the Fleet.
+        /// </value>
         [JsonProperty(PropertyName = "notificationPreferences")]
-        public NotificationPreferences NotificationPreferences { get; set; }
+        public System.Collections.Generic.List<NotificationPreference> NotificationPreferences { get; set; }
         
         /// <value>
         /// Resources associated with the Fleet if resourceSelectionType is MANUAL.
@@ -219,6 +128,13 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "credentials")]
         public System.Collections.Generic.List<AssociatedFleetCredentialDetails> Credentials { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the fleet that would be the parent for this fleet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "parentFleetId")]
+        public string ParentFleetId { get; set; }
         
         /// <value>
         /// A value that represents if auto-confirming of the targets can be enabled.

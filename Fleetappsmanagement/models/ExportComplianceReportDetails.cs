@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Details for generating Compliance Report
+    /// Details for generating Compliance Report.
     /// </summary>
     public class ExportComplianceReportDetails 
     {

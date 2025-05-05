@@ -156,7 +156,9 @@ namespace Oci.LoganalyticsService.Requests
             [EnumMember(Value = "name")]
             Name,
             [EnumMember(Value = "dataType")]
-            DataType
+            DataType,
+            [EnumMember(Value = "timeUpdated")]
+            TimeUpdated
         };
 
         /// <value>

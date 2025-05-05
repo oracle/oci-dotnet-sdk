@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Property to manage fleet metadata details in\u00A0Fleet Application Management.
+    /// Property to manage fleet metadata details in Fleet Application Management.
     /// </summary>
     public class FleetProperty 
     {
@@ -32,7 +32,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Tenancy OCID
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required

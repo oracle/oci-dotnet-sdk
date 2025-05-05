@@ -21,12 +21,14 @@ namespace Oci.FleetappsmanagementService.Requests
         
         /// <value>
         /// The ID of the compartment in which to list resources.
+        /// Empty only if the resource OCID query param is not specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The platform for the Task.
+        /// The platform for the task record.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "platform")]
         public string Platform { get; set; }
@@ -44,7 +46,16 @@ namespace Oci.FleetappsmanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// unique TaskDetail identifier
+        /// A filter to return task records whose operation matches the given lifecycle operation.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operation")]
+        public string Operation { get; set; }
+        
+        /// <value>
+        /// Unique identifier or OCID for listing a single task record by id.
+        /// Either compartmentId or id must be provided.
+        ///             
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
@@ -62,30 +73,17 @@ namespace Oci.FleetappsmanagementService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// The current state of the Task.
+        /// The current state of the task record.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<TaskRecord.LifecycleStateEnum> LifecycleState { get; set; }
         
-        ///
-        /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
-        /// 
-        /// </value>
-        ///
-        public enum SortByEnum {
-            [EnumMember(Value = "timeCreated")]
-            TimeCreated,
-            [EnumMember(Value = "displayName")]
-            DisplayName
-        };
-
         /// <value>
         /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
-        public System.Nullable<SortByEnum> SortBy { get; set; }
+        public System.Nullable<TaskRecordSortBy> SortBy { get; set; }
         
         /// <value>
         /// The sort order to use, either 'ASC' or 'DESC'.

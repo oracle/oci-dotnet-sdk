@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// List of compliancePolicys.
+        /// List of compliance policies.
         /// </value>
         /// <remarks>
         /// Required

@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// unique TaskDetail identifier
+        /// The OCID of the task record.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string TaskRecordId { get; set; }
         
         /// <value>
-        /// The information to be updated.
+        /// Attributes to update a task record.
         /// </value>
         /// <remarks>
         /// Required

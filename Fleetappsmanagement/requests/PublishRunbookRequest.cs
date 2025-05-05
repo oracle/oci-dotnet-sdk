@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// Details for publishing the Runbook.
+        /// Details for publishing the specified version of runbook.
         /// </value>
         /// <remarks>
         /// Required

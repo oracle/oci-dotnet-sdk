@@ -69,9 +69,9 @@ namespace Oci.FleetappsmanagementService.Models
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "PatchType is required.")]
-        [JsonProperty(PropertyName = "patchType")]
-        public System.Collections.Generic.List<string> PatchType { get; set; }
+        [Required(ErrorMessage = "PatchTypeId is required.")]
+        [JsonProperty(PropertyName = "patchTypeId")]
+        public System.Collections.Generic.List<string> PatchTypeId { get; set; }
         
         /// <value>
         /// Severity to which this CompliancePolicyRule applies.

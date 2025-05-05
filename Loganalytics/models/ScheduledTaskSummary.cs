@@ -184,6 +184,27 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeLastExecuted")]
         public System.Nullable<System.DateTime> TimeLastExecuted { get; set; }
+                ///
+        /// <value>
+        /// Type of the task schedule
+        /// </value>
+        ///
+        public enum ScheduleTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "FIXED_FREQUENCY")]
+            FixedFrequency,
+            [EnumMember(Value = "CRON")]
+            Cron
+        };
+
+        /// <value>
+        /// Type of the task schedule
+        /// </value>
+        [JsonProperty(PropertyName = "scheduleType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ScheduleTypeEnum> ScheduleType { get; set; }
         
     }
 }

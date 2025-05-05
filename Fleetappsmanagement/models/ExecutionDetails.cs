@@ -49,6 +49,9 @@ namespace Oci.FleetappsmanagementService.Models
                 case "SCRIPT":
                     obj = new ScriptBasedExecutionDetails();
                     break;
+                case "TERRAFORM":
+                    obj = new TerraformBasedExecutionDetails();
+                    break;
                 case "API":
                     obj = new ApiBasedExecutionDetails();
                     break;

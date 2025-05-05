@@ -71,27 +71,12 @@ namespace Oci.FleetappsmanagementService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
-        ///
-        /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for displayName,product and resourceDisplayName is ascending.
-        /// 
-        /// </value>
-        ///
-        public enum SortByEnum {
-            [EnumMember(Value = "displayName")]
-            DisplayName,
-            [EnumMember(Value = "product")]
-            Product,
-            [EnumMember(Value = "resourceDisplayName")]
-            ResourceDisplayName
-        };
-
         /// <value>
         /// The field to sort by. Only one sort order may be provided. Default order for displayName,product and resourceDisplayName is ascending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
-        public System.Nullable<SortByEnum> SortBy { get; set; }
+        public System.Nullable<TargetSortBy> SortBy { get; set; }
         
         /// <value>
         /// The client request ID for tracing.

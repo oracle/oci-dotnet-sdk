@@ -27,6 +27,9 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "savedSearchId")]
         public string SavedSearchId { get; set; }
         
+        [JsonProperty(PropertyName = "templateDetails")]
+        public TemplateDetails TemplateDetails { get; set; }
+        
         [JsonProperty(PropertyName = "metricExtraction")]
         public MetricExtraction MetricExtraction { get; set; }
         

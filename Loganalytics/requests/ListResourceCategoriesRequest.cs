@@ -52,6 +52,12 @@ namespace Oci.LoganalyticsService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceIds")]
         public string ResourceIds { get; set; }
         
+        /// <value>
+        /// The compartment id
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
+        
         ///
         /// <value>
         /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).

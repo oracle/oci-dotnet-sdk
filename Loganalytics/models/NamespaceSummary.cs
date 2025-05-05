@@ -63,5 +63,11 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "isDataEverIngested")]
         public System.Nullable<bool> IsDataEverIngested { get; set; }
         
+        /// <value>
+        /// This indicates if old data can be archived for a tenancy
+        /// </value>
+        [JsonProperty(PropertyName = "isArchivingEnabled")]
+        public System.Nullable<bool> IsArchivingEnabled { get; set; }
+        
     }
 }
