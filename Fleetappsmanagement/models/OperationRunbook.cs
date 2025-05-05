@@ -27,9 +27,19 @@ namespace Oci.FleetappsmanagementService.Models
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Id is required.")]
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        [Required(ErrorMessage = "RunbookId is required.")]
+        [JsonProperty(PropertyName = "runbookId")]
+        public string RunbookId { get; set; }
+        
+        /// <value>
+        /// The runbook version name
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RunbookVersionName is required.")]
+        [JsonProperty(PropertyName = "runbookVersionName")]
+        public string RunbookVersionName { get; set; }
         
         /// <value>
         /// Input Parameters for the Task

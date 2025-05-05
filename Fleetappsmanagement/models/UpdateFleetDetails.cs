@@ -38,11 +38,13 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
+        /// <value>
+        /// Notification Preferences associated with the Fleet.
+        /// An UPDATE operation replaces the existing notification preferences list entirely
+        /// 
+        /// </value>
         [JsonProperty(PropertyName = "notificationPreferences")]
-        public NotificationPreferences NotificationPreferences { get; set; }
-        
-        [JsonProperty(PropertyName = "ruleSelectionCriteria")]
-        public SelectionCriteria RuleSelectionCriteria { get; set; }
+        public System.Collections.Generic.List<NotificationPreference> NotificationPreferences { get; set; }
         
         /// <value>
         /// A value that represents if auto-confirming of the targets can be enabled.
@@ -51,6 +53,15 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "isTargetAutoConfirm")]
         public System.Nullable<bool> IsTargetAutoConfirm { get; set; }
+        
+        [JsonProperty(PropertyName = "resourceSelection")]
+        public ResourceSelection ResourceSelection { get; set; }
+        
+        /// <value>
+        /// Products associated with the Fleet.
+        /// </value>
+        [JsonProperty(PropertyName = "products")]
+        public System.Collections.Generic.List<string> Products { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

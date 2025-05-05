@@ -41,5 +41,17 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "referenceId")]
         public System.Nullable<long> ReferenceId { get; set; }
         
+        /// <value>
+        /// The name of the dependency object
+        /// </value>
+        [JsonProperty(PropertyName = "referenceName")]
+        public string ReferenceName { get; set; }
+        
+        /// <value>
+        /// The display name of the dependency object
+        /// </value>
+        [JsonProperty(PropertyName = "referenceDisplayName")]
+        public string ReferenceDisplayName { get; set; }
+        
     }
 }

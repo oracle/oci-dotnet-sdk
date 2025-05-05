@@ -141,6 +141,12 @@ namespace Oci.LoganalyticsService.Requests
         public string Categories { get; set; }
         
         /// <value>
+        /// The compartment id
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// A flag indicating whether or not to return OMC annotated or hidden lookups.
         /// 
         /// </value>

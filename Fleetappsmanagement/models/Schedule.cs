@@ -11,13 +11,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
     /// Schedule Information.
     /// </summary>
+    [JsonConverter(typeof(ScheduleModelConverter))]
     public class Schedule 
     {
                 ///
@@ -26,25 +27,12 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         ///
         public enum TypeEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
             [EnumMember(Value = "CUSTOM")]
             Custom,
             [EnumMember(Value = "MAINTENANCE_WINDOW")]
             MaintenanceWindow
         };
 
-        /// <value>
-        /// Schedule Type
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Type is required.")]
-        [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
         /// Start Date for the schedule. An RFC3339 formatted datetime string
@@ -56,23 +44,45 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "executionStartdate")]
         public System.Nullable<System.DateTime> ExecutionStartdate { get; set; }
         
-        /// <value>
-        /// Provide MaintenanceWindowId if Schedule Type is Maintenance Window
-        /// </value>
-        [JsonProperty(PropertyName = "maintenanceWindowId")]
-        public string MaintenanceWindowId { get; set; }
-        
-        /// <value>
-        /// Recurrence rule specification if Schedule Type is Custom and Recurring
-        /// </value>
-        [JsonProperty(PropertyName = "recurrences")]
-        public string Recurrences { get; set; }
-        
-        /// <value>
-        /// Duration if schedule type is Custom
-        /// </value>
-        [JsonProperty(PropertyName = "duration")]
-        public string Duration { get; set; }
-        
+    }
+
+    public class ScheduleModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(Schedule);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(Schedule);
+            var discriminator = jsonObject["type"].Value<string>();
+            switch (discriminator)
+            {
+                case "CUSTOM":
+                    obj = new CustomSchedule();
+                    break;
+                case "MAINTENANCE_WINDOW":
+                    obj = new MaintenanceWindowSchedule();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under Schedule! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

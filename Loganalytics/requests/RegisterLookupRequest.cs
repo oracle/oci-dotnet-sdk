@@ -55,7 +55,10 @@ namespace Oci.LoganalyticsService.Requests
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
-        /// file containing data for lookup creation
+        /// The lookup content to be created, with or without tags. The following formats are supported as binary data:
+        ///   1. If there are no tags: file containing the lookup content.
+        ///   2. If there are tags: JSON file containing the lookup content and tags.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -117,5 +120,11 @@ namespace Oci.LoganalyticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "expect")]
         public string Expect { get; set; }
+        
+        /// <value>
+        /// The compartment id
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
     }
 }

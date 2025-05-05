@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The information about new Task.
+    /// Attributes to create a task record.
     /// </summary>
     public class CreateTaskRecordDetails 
     {
@@ -27,6 +27,10 @@ namespace Oci.FleetappsmanagementService.Models
         /// <br/>
         /// Example: My new resource
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         

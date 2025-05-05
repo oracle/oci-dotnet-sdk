@@ -45,16 +45,6 @@ namespace Oci.FleetappsmanagementService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// OCID of the tenancy to which the resource belongs to.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TenancyId is required.")]
-        [JsonProperty(PropertyName = "tenancyId")]
-        public string TenancyId { get; set; }
-        
-        /// <value>
         /// Is this a recurring schedule?
         /// </value>
         /// <remarks>

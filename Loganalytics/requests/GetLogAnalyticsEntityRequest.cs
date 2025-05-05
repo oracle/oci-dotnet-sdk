@@ -46,5 +46,11 @@ namespace Oci.LoganalyticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Option to return count of associated log sources for log analytics entity(s).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isShowAssociatedSourcesCount")]
+        public System.Nullable<bool> IsShowAssociatedSourcesCount { get; set; }
     }
 }

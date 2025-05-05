@@ -21,6 +21,8 @@ namespace Oci.FleetappsmanagementService.Requests
         
         /// <value>
         /// The ID of the compartment in which to list resources.
+        /// Empty only if the resource OCID query param is not specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -38,7 +40,9 @@ namespace Oci.FleetappsmanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// unique PlatformConfiguration identifier
+        /// Unique identifier or OCID for listing a single Platform Configuration by id.
+        /// Either compartmentId or id must be provided.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
@@ -48,6 +52,20 @@ namespace Oci.FleetappsmanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "configCategory")]
         public System.Nullable<ConfigCategoryDetails.ConfigCategoryEnum> ConfigCategory { get; set; }
+        
+        /// <value>
+        /// If set to true, resources will be returned for not only the provided compartment, but all compartments which
+        /// descend from it. Which resources are returned and their field contents depends on the value of accessLevel.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
+        public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
+        
+        /// <value>
+        /// A filter to return Platform Configurations whose type matches the given type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
+        public System.Nullable<PlatformConfiguration.TypeEnum> Type { get; set; }
         
         /// <value>
         /// The maximum number of items to return.
@@ -67,25 +85,12 @@ namespace Oci.FleetappsmanagementService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
-        ///
-        /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
-        /// 
-        /// </value>
-        ///
-        public enum SortByEnum {
-            [EnumMember(Value = "timeCreated")]
-            TimeCreated,
-            [EnumMember(Value = "displayName")]
-            DisplayName
-        };
-
         /// <value>
         /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
-        public System.Nullable<SortByEnum> SortBy { get; set; }
+        public System.Nullable<PlatformConfigurationSortBy> SortBy { get; set; }
         
         /// <value>
         /// The client request ID for tracing.

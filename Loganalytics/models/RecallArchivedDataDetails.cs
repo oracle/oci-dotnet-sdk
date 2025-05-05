@@ -89,5 +89,13 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "isUseRecommendedDataSet")]
         public System.Nullable<bool> IsUseRecommendedDataSet { get; set; }
         
+        /// <value>
+        /// This is the id for the recalled data collection to be used only for recall new data.
+        /// If specified, only this collection will be eligible for IsRecallNewDataOnly
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "collectionId")]
+        public System.Nullable<long> CollectionId { get; set; }
+        
     }
 }

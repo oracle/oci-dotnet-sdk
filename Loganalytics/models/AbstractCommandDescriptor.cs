@@ -95,6 +95,8 @@ namespace Oci.LoganalyticsService.Models
             Createtable,
             [EnumMember(Value = "SEQUENCE")]
             Sequence,
+            [EnumMember(Value = "UPDATETABLE")]
+            Updatetable,
             [EnumMember(Value = "DELTA")]
             Delta,
             [EnumMember(Value = "DISTINCT")]
@@ -232,6 +234,9 @@ namespace Oci.LoganalyticsService.Models
                     break;
                 case "OUTLIER":
                     obj = new OutlierCommandDescriptor();
+                    break;
+                case "UPDATETABLE":
+                    obj = new UpdateTableCommandDescriptor();
                     break;
                 case "DEMO_MODE":
                     obj = new DemoModeCommandDescriptor();

@@ -21,6 +21,8 @@ namespace Oci.FleetappsmanagementService.Requests
         
         /// <value>
         /// The ID of the compartment in which to list resources.
+        /// Empty only if the resource OCID query param is not specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -44,7 +46,9 @@ namespace Oci.FleetappsmanagementService.Requests
         public string Product { get; set; }
         
         /// <value>
-        /// A filter to return only schedule definitions whose identifier matches the given identifier.
+        /// Unique identifier or OCID for listing a single Schedule Definition by id.
+        /// Either compartmentId or id must be provided.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
@@ -60,6 +64,24 @@ namespace Oci.FleetappsmanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "runbookId")]
         public string RunbookId { get; set; }
+        
+        /// <value>
+        /// RunbookVersion Name filter
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "runbookVersionName")]
+        public string RunbookVersionName { get; set; }
+        
+        /// <value>
+        /// Scheduled Time
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeScheduledGreaterThanOrEqualTo")]
+        public System.Nullable<System.DateTime> TimeScheduledGreaterThanOrEqualTo { get; set; }
+        
+        /// <value>
+        /// Scheduled Time
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeScheduledLessThan")]
+        public System.Nullable<System.DateTime> TimeScheduledLessThan { get; set; }
         
         /// <value>
         /// unique Fleet identifier

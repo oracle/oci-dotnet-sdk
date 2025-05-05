@@ -34,6 +34,10 @@ namespace Oci.FleetappsmanagementService.Models
         /// <value>
         /// product version.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
         

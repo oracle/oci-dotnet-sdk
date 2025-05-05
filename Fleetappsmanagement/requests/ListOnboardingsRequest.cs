@@ -21,6 +21,8 @@ namespace Oci.FleetappsmanagementService.Requests
         
         /// <value>
         /// The ID of the compartment in which to list resources.
+        /// Empty only if the resource OCID query param is not specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -32,7 +34,9 @@ namespace Oci.FleetappsmanagementService.Requests
         public System.Nullable<Onboarding.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// unique onboarding identifier
+        /// Unique identifier or OCID for listing a single onboarding by id.
+        /// Either compartmentId or id must be provided.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
@@ -55,25 +59,12 @@ namespace Oci.FleetappsmanagementService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
-        ///
-        /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
-        /// 
-        /// </value>
-        ///
-        public enum SortByEnum {
-            [EnumMember(Value = "timeCreated")]
-            TimeCreated,
-            [EnumMember(Value = "displayName")]
-            DisplayName
-        };
-
         /// <value>
         /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
-        public System.Nullable<SortByEnum> SortBy { get; set; }
+        public System.Nullable<SortBy> SortBy { get; set; }
         
         /// <value>
         /// The client request ID for tracing.

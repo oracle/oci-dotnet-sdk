@@ -51,10 +51,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// <value>
         /// The OS for the task.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OsType is required.")]
         [JsonProperty(PropertyName = "osType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsType> OsType { get; set; }

@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// Tenancy OCID
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required

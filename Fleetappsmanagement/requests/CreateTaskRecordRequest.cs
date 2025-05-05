@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// Details for the new TaskRecord.
+        /// Attributes to create a task record.
         /// </value>
         /// <remarks>
         /// Required

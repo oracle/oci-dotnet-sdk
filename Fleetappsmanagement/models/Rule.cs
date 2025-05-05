@@ -33,7 +33,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Basis { get; set; }
         
         /// <value>
-        /// Tenancy Id (Root Compartment Id)for which the rule is created.
+        /// Compartment Id for which the rule is created.
         /// 
         /// </value>
         /// <remarks>

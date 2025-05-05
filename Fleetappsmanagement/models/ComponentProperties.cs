@@ -21,21 +21,15 @@ namespace Oci.FleetappsmanagementService.Models
     public class ComponentProperties 
     {
         
-        /// <value>
-        /// The runOn condition for the task/group/container.
-        /// Build task execution conditions if applicable to product and product-specific components.
-        /// This condition is relevant when handling product stack workflows.
-        /// Example: target.product.name = Oracle WebLogic Server OR target.product.name = Oracle HTTP Server
-        /// </value>
         [JsonProperty(PropertyName = "runOn")]
-        public string RunOn { get; set; }
+        public RunOnDetails RunOn { get; set; }
         
         /// <value>
         /// Build control flow conditions that determine the relevance of the task execution.
         /// 
         /// </value>
-        [JsonProperty(PropertyName = "condition")]
-        public string Condition { get; set; }
+        [JsonProperty(PropertyName = "preCondition")]
+        public string PreCondition { get; set; }
                 ///
         /// <value>
         /// The action to be taken in case of a failure.

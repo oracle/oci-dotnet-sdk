@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// count of ComplianceRecord in a Tenancy.
+        /// Count of compliance records in a compartment.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// A parser used by another parser.
+    /// A parser that depends on or uses the resource such as a field or another parser.
     /// </summary>
     public class DependentParser 
     {

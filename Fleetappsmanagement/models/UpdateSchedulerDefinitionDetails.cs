@@ -38,12 +38,6 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
-        /// <value>
-        /// Activity Initiation Cut Off
-        /// </value>
-        [JsonProperty(PropertyName = "activityInitiationCutOff")]
-        public System.Nullable<int> ActivityInitiationCutOff { get; set; }
-        
         [JsonProperty(PropertyName = "schedule")]
         public Schedule Schedule { get; set; }
         

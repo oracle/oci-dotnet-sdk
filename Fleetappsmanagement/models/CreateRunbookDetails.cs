@@ -27,6 +27,10 @@ namespace Oci.FleetappsmanagementService.Models
         /// <br/>
         /// Example: My new resource
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
@@ -37,17 +41,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-        
-        /// <value>
-        /// Type of runbook structure.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "RunbookRelevance is required.")]
-        [JsonProperty(PropertyName = "runbookRelevance")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<Runbook.RunbookRelevanceEnum> RunbookRelevance { get; set; }
         
         /// <value>
         /// The lifecycle operation performed by the task.
@@ -62,10 +55,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// <value>
         /// The OS type for the runbook.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OsType is required.")]
         [JsonProperty(PropertyName = "osType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OsType> OsType { get; set; }
@@ -83,7 +72,13 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<bool> IsDefault { get; set; }
         
         /// <value>
-        /// Estimated time to successfully complete the runbook execution
+        /// Does this runbook need SUDO access to execute?
+        /// </value>
+        [JsonProperty(PropertyName = "isSudoAccessNeeded")]
+        public System.Nullable<bool> IsSudoAccessNeeded { get; set; }
+        
+        /// <value>
+        /// Estimated time to successfully complete the runbook execution.
         /// </value>
         [JsonProperty(PropertyName = "estimatedTime")]
         public string EstimatedTime { get; set; }
@@ -91,9 +86,9 @@ namespace Oci.FleetappsmanagementService.Models
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "Associations is required.")]
-        [JsonProperty(PropertyName = "associations")]
-        public Associations Associations { get; set; }
+        [Required(ErrorMessage = "RunbookVersion is required.")]
+        [JsonProperty(PropertyName = "runbookVersion")]
+        public Version RunbookVersion { get; set; }
         
         /// <value>
         /// OCID of the compartment to which the resource belongs to.

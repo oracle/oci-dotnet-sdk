@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// count of Managed Entities in a Tenancy.
+        /// Count of managed entities in a compartment.
         /// </value>
         /// <remarks>
         /// Required

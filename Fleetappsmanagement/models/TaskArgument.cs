@@ -11,18 +11,31 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// A variable that holds a value
+    /// A Task argument that holds a value.
     /// </summary>
+    [JsonConverter(typeof(TaskArgumentModelConverter))]
     public class TaskArgument 
     {
+                ///
+        /// <value>
+        /// Task argument kind
+        /// </value>
+        ///
+        public enum KindEnum {
+            [EnumMember(Value = "STRING")]
+            String,
+            [EnumMember(Value = "FILE")]
+            File
+        };
+
         
         /// <value>
-        /// Name of the output variable
+        /// Name of the input variable
         /// </value>
         /// <remarks>
         /// Required
@@ -31,11 +44,45 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
-        /// <value>
-        /// The task output
-        /// </value>
-        [JsonProperty(PropertyName = "value")]
-        public string Value { get; set; }
-        
+    }
+
+    public class TaskArgumentModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(TaskArgument);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(TaskArgument);
+            var discriminator = jsonObject["kind"].Value<string>();
+            switch (discriminator)
+            {
+                case "STRING":
+                    obj = new StringTaskArgument();
+                    break;
+                case "FILE":
+                    obj = new FileTaskArgument();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under TaskArgument! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

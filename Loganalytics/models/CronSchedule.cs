@@ -24,20 +24,12 @@ namespace Oci.LoganalyticsService.Models
         /// <value>
         /// Value in cron format.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Expression is required.")]
         [JsonProperty(PropertyName = "expression")]
         public string Expression { get; set; }
         
         /// <value>
         /// Time zone, by default UTC.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TimeZone is required.")]
         [JsonProperty(PropertyName = "timeZone")]
         public string TimeZone { get; set; }
         

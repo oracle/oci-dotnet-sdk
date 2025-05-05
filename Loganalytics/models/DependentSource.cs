@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LoganalyticsService.Models
 {
     /// <summary>
-    /// A source that uses the parser, either directly or indirectly.
+    /// A source that depends on or uses the resource such as a field or a parser
     /// </summary>
     public class DependentSource 
     {

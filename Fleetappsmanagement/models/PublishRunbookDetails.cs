@@ -31,5 +31,15 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "runbookId")]
         public string RunbookId { get; set; }
         
+        /// <value>
+        /// The OCID of the resource.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RunbookVersionId is required.")]
+        [JsonProperty(PropertyName = "runbookVersionId")]
+        public string RunbookVersionId { get; set; }
+        
     }
 }

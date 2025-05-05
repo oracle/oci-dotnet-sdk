@@ -118,5 +118,12 @@ namespace Oci.LoganalyticsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "metadataEquals", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<string> MetadataEquals { get; set; }
+        
+        /// <value>
+        /// A filter to return log analytics entity toplogy whose context matches the specified string.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "context")]
+        public string Context { get; set; }
     }
 }

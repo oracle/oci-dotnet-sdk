@@ -28,10 +28,6 @@ namespace Oci.LoganalyticsService.Models
         /// The value must be at least 5 minutes (PT5M) and at most 3 weeks (P21D or PT30240M).
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "RecurringInterval is required.")]
         [JsonProperty(PropertyName = "recurringInterval")]
         public string RecurringInterval { get; set; }
         

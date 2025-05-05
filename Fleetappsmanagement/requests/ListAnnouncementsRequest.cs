@@ -20,6 +20,16 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
+        /// The ID of the compartment in which to list resources.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// Filter the list of announcements that contains the given summary value.
         /// 
         /// </value>

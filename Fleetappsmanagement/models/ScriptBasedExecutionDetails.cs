@@ -42,6 +42,18 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "credentials")]
         public System.Collections.Generic.List<ConfigAssociationDetails> Credentials { get; set; }
         
+        /// <value>
+        /// Is the script locked to prevent changes directly in Object Storage?
+        /// </value>
+        [JsonProperty(PropertyName = "isLocked")]
+        public System.Nullable<bool> IsLocked { get; set; }
+        
+        /// <value>
+        /// Is the Content an executable file?
+        /// </value>
+        [JsonProperty(PropertyName = "isExecutableContent")]
+        public System.Nullable<bool> IsExecutableContent { get; set; }
+        
         [JsonProperty(PropertyName = "executionType")]
         private readonly string executionType = "SCRIPT";
     }

@@ -25,6 +25,8 @@ namespace Oci.FleetappsmanagementService.Models
       UpdateFleet,
       [EnumMember(Value = "DELETE_FLEET")]
       DeleteFleet,
+      [EnumMember(Value = "MOVE_FLEET")]
+      MoveFleet,
       [EnumMember(Value = "CONFIRM_TARGET")]
       ConfirmTarget,
       [EnumMember(Value = "GENERATE_COMPLIANCE")]
@@ -63,6 +65,18 @@ namespace Oci.FleetappsmanagementService.Models
       DeleteRunbook,
       [EnumMember(Value = "PUBLISH_RUNBOOK")]
       PublishRunbook,
+      [EnumMember(Value = "MOVE_RUNBOOK")]
+      MoveRunbook,
+      [EnumMember(Value = "CREATE_RUNBOOK_VERSION")]
+      CreateRunbookVersion,
+      [EnumMember(Value = "UPDATE_RUNBOOK_VERSION")]
+      UpdateRunbookVersion,
+      [EnumMember(Value = "DELETE_RUNBOOK_VERSION")]
+      DeleteRunbookVersion,
+      [EnumMember(Value = "PUBLISH_RUNBOOK_VERSION")]
+      PublishRunbookVersion,
+      [EnumMember(Value = "MOVE_TASK")]
+      MoveTask,
       [EnumMember(Value = "UPDATE_TASK")]
       UpdateTask,
       [EnumMember(Value = "DELETE_TASK")]
@@ -81,11 +95,37 @@ namespace Oci.FleetappsmanagementService.Models
       UpdatePatch,
       [EnumMember(Value = "DELETE_PATCH")]
       DeletePatch,
+      [EnumMember(Value = "MOVE_PATCH")]
+      MovePatch,
       [EnumMember(Value = "MANAGE_JOB_EXECUTION")]
       ManageJobExecution,
       [EnumMember(Value = "DELETE_PLATFORM_CONFIGURATION")]
       DeletePlatformConfiguration,
       [EnumMember(Value = "UPDATE_PLATFORM_CONFIGURATION")]
-      UpdatePlatformConfiguration
+      UpdatePlatformConfiguration,
+      [EnumMember(Value = "MOVE_PLATFORM_CONFIGURATION")]
+      MovePlatformConfiguration,
+      [EnumMember(Value = "CREATE_PLATFORM_CONFIGURATION")]
+      CreatePlatformConfiguration,
+      [EnumMember(Value = "MOVE_PROPERTY")]
+      MoveProperty,
+      [EnumMember(Value = "CREATE_CATALOG_ITEM")]
+      CreateCatalogItem,
+      [EnumMember(Value = "UPDATE_CATALOG_ITEM")]
+      UpdateCatalogItem,
+      [EnumMember(Value = "DELETE_CATALOG_ITEM")]
+      DeleteCatalogItem,
+      [EnumMember(Value = "MOVE_CATALOG_ITEM")]
+      MoveCatalogItem,
+      [EnumMember(Value = "CLONE_CATALOG_ITEM")]
+      CloneCatalogItem,
+      [EnumMember(Value = "CREATE_PROVISION")]
+      CreateProvision,
+      [EnumMember(Value = "UPDATE_PROVISION")]
+      UpdateProvision,
+      [EnumMember(Value = "DELETE_PROVISION")]
+      DeleteProvision,
+      [EnumMember(Value = "MOVE_PROVISION")]
+      MoveProvision
   }
 }

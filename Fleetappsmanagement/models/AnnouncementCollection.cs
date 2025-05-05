@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// List of AnnouncementSummary items
+        /// List of AnnouncementSummary items.
         /// </value>
         /// <remarks>
         /// Required

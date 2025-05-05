@@ -31,17 +31,6 @@ namespace Oci.LoganalyticsService.Requests
         public string NamespaceName { get; set; }
         
         /// <value>
-        /// The name of the upload. This can be considered as a container name where different kind of logs will be collected and searched together. This upload name/id can further be used for retrieving the details of the upload, including its status or deleting the upload.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "UploadName is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "uploadName")]
-        public string UploadName { get; set; }
-        
-        /// <value>
         /// Name of the log source that will be used to process the files being uploaded.
         /// 
         /// </value>
@@ -83,6 +72,13 @@ namespace Oci.LoganalyticsService.Requests
         [Required(ErrorMessage = "UploadLogFileBody is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
         public System.IO.Stream UploadLogFileBody { get; set; }
+        
+        /// <value>
+        /// The name of the upload. This can be considered as a container name where different kind of logs will be collected and searched together. This upload name/id can further be used for retrieving the details of the upload, including its status or deleting the upload.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "uploadName")]
+        public string UploadName { get; set; }
         
         /// <value>
         /// The entity OCID.

@@ -16,11 +16,33 @@ namespace Oci.FleetappsmanagementService.Responses
     {
 
         /// <value>
+        /// URL for the created PlatformConfiguration, the PlatformConfiguration id will be generated after this request is sent.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "location")]
+        public string Location { get; set; }
+
+
+        /// <value>
+        /// Same as location
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "content-location")]
+        public string ContentLocation { get; set; }
+
+
+        /// <value>
         /// For optimistic concurrency control. See `if-match`.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
         public string Etag { get; set; }
+
+
+        /// <value>
+        /// Unique Oracle-assigned identifier for the asynchronous work. You can use this to query its status.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
+        public string OpcWorkRequestId { get; set; }
 
 
         /// <value>

@@ -45,7 +45,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Tenancy OCID
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -110,18 +110,6 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<int> CountOfAffectedTargets { get; set; }
         
         /// <value>
-        /// All Action Group types are part of the schedule.
-        /// </value>
-        [JsonProperty(PropertyName = "actionGroupTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Collections.Generic.List<LifeCycleActionGroupType> ActionGroupTypes { get; set; }
-        
-        /// <value>
-        /// All application types that are part of the schedule for an ENVIRONMENT action group Type.
-        /// </value>
-        [JsonProperty(PropertyName = "applicationTypes")]
-        public System.Collections.Generic.List<string> ApplicationTypes { get; set; }
-        
-        /// <value>
         /// All products that are part of the schedule for a PRODUCT action group type.
         /// </value>
         [JsonProperty(PropertyName = "products")]
@@ -139,8 +127,8 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "actionGroups")]
         public System.Collections.Generic.List<ActionGroupDetails> ActionGroups { get; set; }
         
-        [JsonProperty(PropertyName = "associatedScheduleDefinition")]
-        public AssociatedSchedulerDefinition AssociatedScheduleDefinition { get; set; }
+        [JsonProperty(PropertyName = "schedulerDefinition")]
+        public AssociatedSchedulerDefinition SchedulerDefinition { get; set; }
                 ///
         /// <value>
         /// The current state of the SchedulerJob.
@@ -150,12 +138,20 @@ namespace Oci.FleetappsmanagementService.Models
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
             [EnumMember(Value = null)]
             UnknownEnumValue,
-            [EnumMember(Value = "ACTIVE")]
-            Active,
-            [EnumMember(Value = "DELETED")]
-            Deleted,
+            [EnumMember(Value = "ACCEPTED")]
+            Accepted,
+            [EnumMember(Value = "IN_PROGRESS")]
+            InProgress,
+            [EnumMember(Value = "WAITING")]
+            Waiting,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "SUCCEEDED")]
+            Succeeded,
+            [EnumMember(Value = "CANCELED")]
+            Canceled,
+            [EnumMember(Value = "NEEDS_ATTENTION")]
+            NeedsAttention
         };
 
         /// <value>

@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// unique Patch identifier
+        /// Unique Patch identifier.
         /// </value>
         /// <remarks>
         /// Required

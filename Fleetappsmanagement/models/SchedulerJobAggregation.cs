@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// Count of jobs in a Tenancy.
+        /// Count of jobs in a Compartment.
         /// </value>
         /// <remarks>
         /// Required

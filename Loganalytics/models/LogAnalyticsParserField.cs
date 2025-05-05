@@ -75,5 +75,12 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "structuredColumnInfo")]
         public string StructuredColumnInfo { get; set; }
         
+        /// <value>
+        /// List of actions/operations to be performed while fetching or parsing the logs.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "actions")]
+        public System.Collections.Generic.List<ParserAction> Actions { get; set; }
+        
     }
 }

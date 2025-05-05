@@ -64,7 +64,9 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "PENDING")]
             Pending,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "PARTIAL_RECALLED")]
+            PartialRecalled
         };
 
         /// <value>
@@ -179,6 +181,12 @@ namespace Oci.LoganalyticsService.Models
         [Required(ErrorMessage = "TimeRecalledDataEnded is required.")]
         [JsonProperty(PropertyName = "timeRecalledDataEnded")]
         public System.Nullable<System.DateTime> TimeRecalledDataEnded { get; set; }
+        
+        /// <value>
+        /// This is the current progress percentage for the recalled data
+        /// </value>
+        [JsonProperty(PropertyName = "percentageComplete")]
+        public System.Nullable<int> PercentageComplete { get; set; }
         
     }
 }

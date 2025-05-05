@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The information to be updated.
+    /// Attributes to update a task record.
     /// </summary>
     public class UpdateTaskRecordDetails 
     {

@@ -116,6 +116,12 @@ namespace Oci.FleetappsmanagementService.Models
         public string ResourceId { get; set; }
         
         /// <value>
+        /// An attribute which tells if further retries are allowed for the task on failure.
+        /// </value>
+        [JsonProperty(PropertyName = "isRetryExceeded")]
+        public System.Nullable<bool> IsRetryExceeded { get; set; }
+        
+        /// <value>
         /// System tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
         /// </value>

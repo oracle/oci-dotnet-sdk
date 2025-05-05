@@ -42,7 +42,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string ResourceName { get; set; }
         
         /// <value>
-        /// TenancyId of the resource.
+        /// Compartment OCID of the resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }

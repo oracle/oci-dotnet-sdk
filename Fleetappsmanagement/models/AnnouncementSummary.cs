@@ -97,7 +97,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Summary { get; set; }
         
         /// <value>
-        /// Announcement Details.
+        /// Announcement details.
         /// </value>
         [JsonProperty(PropertyName = "details")]
         public string Details { get; set; }
@@ -119,7 +119,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<System.DateTime> AnnouncementStart { get; set; }
         
         /// <value>
-        /// Announcement end date
+        /// Announcement end date.
         /// </value>
         /// <remarks>
         /// Required

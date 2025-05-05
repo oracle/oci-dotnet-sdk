@@ -46,5 +46,18 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "destinationEntityId")]
         public string DestinationEntityId { get; set; }
         
+        /// <value>
+        /// Array of log analytics entity relationship context.
+        /// </value>
+        [JsonProperty(PropertyName = "contexts")]
+        public System.Collections.Generic.List<string> Contexts { get; set; }
+        
+        /// <value>
+        /// The date and time the resource was last discovered, in the format defined by RFC3339.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastDiscovered")]
+        public System.Nullable<System.DateTime> TimeLastDiscovered { get; set; }
+        
     }
 }

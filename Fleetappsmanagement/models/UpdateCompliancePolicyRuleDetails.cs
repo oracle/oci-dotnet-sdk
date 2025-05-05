@@ -27,8 +27,8 @@ namespace Oci.FleetappsmanagementService.Models
         /// <value>
         /// PlatformConfiguration OCID for the patch type to which this CompliancePolicyRule applies.
         /// </value>
-        [JsonProperty(PropertyName = "patchType")]
-        public System.Collections.Generic.List<string> PatchType { get; set; }
+        [JsonProperty(PropertyName = "patchTypeId")]
+        public System.Collections.Generic.List<string> PatchTypeId { get; set; }
         
         /// <value>
         /// Severity to which this CompliancePolicyRule applies.

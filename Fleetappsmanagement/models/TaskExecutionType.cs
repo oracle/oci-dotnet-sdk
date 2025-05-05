@@ -22,6 +22,8 @@ namespace Oci.FleetappsmanagementService.Models
       [EnumMember(Value = "SCRIPT")]
       Script,
       [EnumMember(Value = "API")]
-      Api
+      Api,
+      [EnumMember(Value = "TERRAFORM")]
+      Terraform
   }
 }
