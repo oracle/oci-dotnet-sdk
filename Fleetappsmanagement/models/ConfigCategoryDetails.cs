@@ -36,7 +36,11 @@ namespace Oci.FleetappsmanagementService.Models
             [EnumMember(Value = "PATCH_TYPE")]
             PatchType,
             [EnumMember(Value = "CREDENTIAL")]
-            Credential
+            Credential,
+            [EnumMember(Value = "SELF_HOSTED_INSTANCE")]
+            SelfHostedInstance,
+            [EnumMember(Value = "LIFECYCLE_OPERATION")]
+            LifecycleOperation
         };
 
         
@@ -75,8 +79,14 @@ namespace Oci.FleetappsmanagementService.Models
                 case "PATCH_TYPE":
                     obj = new PatchTypeConfigCategoryDetails();
                     break;
+                case "LIFECYCLE_OPERATION":
+                    obj = new LifecycleOperationConfigCategoryDetails();
+                    break;
                 case "PRODUCT":
                     obj = new ProductConfigCategoryDetails();
+                    break;
+                case "SELF_HOSTED_INSTANCE":
+                    obj = new SelfHostedInstanceConfigCategoryDetails();
                     break;
             }
             if (obj != null)

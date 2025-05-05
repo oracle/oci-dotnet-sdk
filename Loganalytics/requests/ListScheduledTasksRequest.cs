@@ -118,6 +118,14 @@ namespace Oci.LoganalyticsService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
+        /// A filter to return only scheduled tasks whose stream action templateId matches the given
+        /// id  exactly.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "templateId")]
+        public string TemplateId { get; set; }
+        
+        /// <value>
         /// A filter to return only scheduled tasks whose stream action savedSearchId matches the given
         /// ManagementSavedSearch id [OCID] exactly.
         /// 

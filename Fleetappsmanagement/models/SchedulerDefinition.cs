@@ -53,7 +53,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Tenancy OCID
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -90,12 +90,6 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "timeOfNextRun")]
         public System.Nullable<System.DateTime> TimeOfNextRun { get; set; }
         
-        /// <value>
-        /// Activity Initiation Cut Off.
-        /// </value>
-        [JsonProperty(PropertyName = "activityInitiationCutOff")]
-        public System.Nullable<int> ActivityInitiationCutOff { get; set; }
-        
         [JsonProperty(PropertyName = "schedule")]
         public Schedule Schedule { get; set; }
         
@@ -116,19 +110,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "countOfAffectedTargets")]
         public System.Nullable<int> CountOfAffectedTargets { get; set; }
-        
-        /// <value>
-        /// All ActionGroup Types that are part of the schedule.
-        /// </value>
-        [JsonProperty(PropertyName = "actionGroupTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Collections.Generic.List<LifeCycleActionGroupType> ActionGroupTypes { get; set; }
-        
-        /// <value>
-        /// All application types that are part of the schedule for ENVIRONMENT ActionGroup Type.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "applicationTypes")]
-        public System.Collections.Generic.List<string> ApplicationTypes { get; set; }
         
         /// <value>
         /// All products that are part of the schedule for PRODUCT ActionGroup Type.

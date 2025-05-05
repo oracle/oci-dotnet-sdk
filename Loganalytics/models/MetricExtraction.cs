@@ -27,10 +27,6 @@ namespace Oci.LoganalyticsService.Models
         /// The compartment OCID (/iaas/Content/General/Concepts/identifiers.htm) of the extracted metric.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
@@ -40,10 +36,6 @@ namespace Oci.LoganalyticsService.Models
         /// alphanumeric characters and underscores (_).
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Namespace is required.")]
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
         
@@ -53,10 +45,6 @@ namespace Oci.LoganalyticsService.Models
         /// alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "MetricName is required.")]
         [JsonProperty(PropertyName = "metricName")]
         public string MetricName { get; set; }
         

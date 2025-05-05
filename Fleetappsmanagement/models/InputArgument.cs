@@ -31,7 +31,9 @@ namespace Oci.FleetappsmanagementService.Models
             [EnumMember(Value = "STRING")]
             String,
             [EnumMember(Value = "OUTPUT_VARIABLE")]
-            OutputVariable
+            OutputVariable,
+            [EnumMember(Value = "FILE")]
+            File
         };
 
         
@@ -79,6 +81,9 @@ namespace Oci.FleetappsmanagementService.Models
                     break;
                 case "STRING":
                     obj = new StringInputArgument();
+                    break;
+                case "FILE":
+                    obj = new FileInputArgument();
                     break;
             }
             if (obj != null)

@@ -52,6 +52,8 @@ namespace Oci.DatabasemigrationService.Models
       OdmsInitialLoadExport,
       [EnumMember(Value = "ODMS_DATA_UPLOAD")]
       OdmsDataUpload,
+      [EnumMember(Value = "ODMS_METADATA_TRANSFER")]
+      OdmsMetadataTransfer,
       [EnumMember(Value = "ODMS_INITIAL_LOAD_EXPORT_DATA_UPLOAD")]
       OdmsInitialLoadExportDataUpload,
       [EnumMember(Value = "ODMS_INITIAL_LOAD_IMPORT")]

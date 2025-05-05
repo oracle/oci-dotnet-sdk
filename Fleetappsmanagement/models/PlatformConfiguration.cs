@@ -32,7 +32,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Tenancy OCID
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -129,7 +129,9 @@ namespace Oci.FleetappsmanagementService.Models
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "UPDATING")]
-            Updating
+            Updating,
+            [EnumMember(Value = "CREATING")]
+            Creating
         };
 
         /// <value>

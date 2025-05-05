@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// unique TaskDetail identifier
+        /// The OCID of the task record.
         /// </value>
         /// <remarks>
         /// Required

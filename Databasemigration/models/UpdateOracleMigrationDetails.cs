@@ -43,7 +43,7 @@ namespace Oci.DatabasemigrationService.Models
         public System.Collections.Generic.List<MigrationParameterDetails> AdvancedParameters { get; set; }
         
         /// <value>
-        /// The OCID of the resource being referenced.
+        /// The OCID of the resource being updated.
         /// </value>
         [JsonProperty(PropertyName = "sourceContainerDatabaseConnectionId")]
         public string SourceContainerDatabaseConnectionId { get; set; }

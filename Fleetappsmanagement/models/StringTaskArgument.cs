@@ -9,17 +9,25 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 
 namespace Oci.FleetappsmanagementService.Models
 {
-  /// <summary>
-  /// Possible maintenance window types
-  /// </summary>
-  public enum MaintenanceWindowType {
-      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-      [EnumMember(Value = null)]
-      UnknownEnumValue,
-      [EnumMember(Value = "OPEN_ENDED")]
-      OpenEnded
-  }
+    /// <summary>
+    /// A string variable that holds a value
+    /// </summary>
+    public class StringTaskArgument : TaskArgument
+    {
+        
+        /// <value>
+        /// The task input
+        /// </value>
+        [JsonProperty(PropertyName = "value")]
+        public string Value { get; set; }
+        
+        [JsonProperty(PropertyName = "kind")]
+        private readonly string kind = "STRING";
+    }
 }

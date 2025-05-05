@@ -21,6 +21,8 @@ namespace Oci.FleetappsmanagementService.Requests
         
         /// <value>
         /// The ID of the compartment in which to list resources.
+        /// Empty only if the resource OCID query param is not specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }

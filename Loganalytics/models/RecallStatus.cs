@@ -25,6 +25,8 @@ namespace Oci.LoganalyticsService.Models
       [EnumMember(Value = "PENDING")]
       Pending,
       [EnumMember(Value = "FAILED")]
-      Failed
+      Failed,
+      [EnumMember(Value = "PARTIAL_RECALLED")]
+      PartialRecalled
   }
 }

@@ -21,6 +21,8 @@ namespace Oci.FleetappsmanagementService.Requests
         
         /// <value>
         /// The ID of the compartment in which to list resources.
+        /// Empty only if the resource OCID query param is not specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -32,7 +34,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string ProductId { get; set; }
         
         /// <value>
-        /// Product version
+        /// Product version.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "version")]
         public string Version { get; set; }
@@ -56,25 +58,27 @@ namespace Oci.FleetappsmanagementService.Requests
         public string Name { get; set; }
         
         /// <value>
-        /// unique Patch identifier
+        /// Unique identifier or OCID for listing a single Patch by id.
+        /// Either compartmentId or id must be provided.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// Patch Released Date
+        /// A filter to return patches whose release date is greater than or equal to the given date.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeReleasedGreaterThanOrEqualTo")]
         public System.Nullable<System.DateTime> TimeReleasedGreaterThanOrEqualTo { get; set; }
         
         /// <value>
-        /// Patch Released Date
+        /// A filter to return patches whose release date is less than the given date.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeReleasedLessThan")]
         public System.Nullable<System.DateTime> TimeReleasedLessThan { get; set; }
         
         /// <value>
-        /// Filter patch based on compliance policy rules for the Product
+        /// Filter patch based on compliance policy rules for the Product.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldCompliancePolicyRulesBeApplied")]
         public System.Nullable<bool> ShouldCompliancePolicyRulesBeApplied { get; set; }
@@ -97,25 +101,12 @@ namespace Oci.FleetappsmanagementService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<Patch.LifecycleStateEnum> LifecycleState { get; set; }
         
-        ///
         /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
-        /// 
-        /// </value>
-        ///
-        public enum SortByEnum {
-            [EnumMember(Value = "timeCreated")]
-            TimeCreated,
-            [EnumMember(Value = "displayName")]
-            DisplayName
-        };
-
-        /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
+        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for name is ascending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
-        public System.Nullable<SortByEnum> SortBy { get; set; }
+        public System.Nullable<PatchSortBy> SortBy { get; set; }
         
         /// <value>
         /// The sort order to use, either 'ASC' or 'DESC'.

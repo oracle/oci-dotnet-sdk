@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// Details for the new FleetProperty.
+        /// Details for the new fleet property.
         /// </value>
         /// <remarks>
         /// Required

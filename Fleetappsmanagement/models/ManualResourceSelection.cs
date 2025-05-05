@@ -9,19 +9,19 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 
 namespace Oci.FleetappsmanagementService.Models
 {
-  /// <summary>
-  /// Possible Action Group types.
-  /// </summary>
-  public enum LifeCycleActionGroupType {
-      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-      [EnumMember(Value = null)]
-      UnknownEnumValue,
-      [EnumMember(Value = "PRODUCT")]
-      Product,
-      [EnumMember(Value = "ENVIRONMENT")]
-      Environment
-  }
+    /// <summary>
+    /// Manual Resource Selection Type
+    /// </summary>
+    public class ManualResourceSelection : ResourceSelection
+    {
+        
+        [JsonProperty(PropertyName = "resourceSelectionType")]
+        private readonly string resourceSelectionType = "MANUAL";
+    }
 }

@@ -21,9 +21,19 @@ namespace Oci.FleetappsmanagementService.Requests
         
         /// <value>
         /// The ID of the compartment in which to list resources.
+        /// Empty only if the resource OCID query param is not specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// If set to true, resources will be returned for not only the provided compartment, but all compartments which
+        /// descend from it. Which resources are returned and their field contents depends on the value of accessLevel.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
+        public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
         
         /// <value>
         /// A filter to return only resources whose lifecycleState matches the given lifecycleState.
@@ -58,8 +68,8 @@ namespace Oci.FleetappsmanagementService.Requests
         /// <value>
         /// A filter to return only resources their subState matches the given subState.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subState")]
-        public string SubState { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "substate")]
+        public string Substate { get; set; }
         
         /// <value>
         /// A filter to return only resources that match the entire display name given.
@@ -68,16 +78,18 @@ namespace Oci.FleetappsmanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// unique SchedulerJob identifier
+        /// Unique identifier or OCID for listing a single Schedule Job by id.
+        /// Either compartmentId or id must be provided.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// SchedulerJob Definition identifier
+        /// SchedulerDefinition identifier
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "defintionId")]
-        public string DefintionId { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "schedulerDefintionId")]
+        public string SchedulerDefintionId { get; set; }
         
         /// <value>
         /// The maximum number of items to return.

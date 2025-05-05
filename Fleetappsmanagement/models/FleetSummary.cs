@@ -33,7 +33,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Tenancy OCID
+        /// compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -77,21 +77,8 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
-        /// <value>
-        /// Type of the Fleet.
-        /// PRODUCT - A fleet of product-specific resources for a product type.
-        /// ENVIRONMENT - A fleet of environment-specific resources for a product stack.
-        /// GROUP - A fleet of a fleet of either environment or product fleets.
-        /// GENERIC - A fleet of resources selected dynamically or manually for reporting purposes
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "FleetType is required.")]
-        [JsonProperty(PropertyName = "fleetType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<Fleet.FleetTypeEnum> FleetType { get; set; }
+        [JsonProperty(PropertyName = "details")]
+        public FleetDetails Details { get; set; }
         
         /// <value>
         /// Environment Type associated with the Fleet.

@@ -21,9 +21,19 @@ namespace Oci.FleetappsmanagementService.Requests
         
         /// <value>
         /// The ID of the compartment in which to list resources.
+        /// Empty only if the resource OCID query param is not specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// If set to true, resources will be returned for not only the provided compartment, but all compartments which
+        /// descend from it. Which resources are returned and their field contents depends on the value of accessLevel.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
+        public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
         
         /// <value>
         /// The client request ID for tracing.

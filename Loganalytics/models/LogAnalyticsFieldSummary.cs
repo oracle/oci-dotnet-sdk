@@ -161,5 +161,18 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "unitType")]
         public string UnitType { get; set; }
         
+        /// <value>
+        /// The last updated date and time.
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// A flag indicating whether or not duplicates would be retained.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isKeepDuplicates")]
+        public System.Nullable<bool> IsKeepDuplicates { get; set; }
+        
     }
 }

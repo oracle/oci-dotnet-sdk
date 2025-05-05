@@ -39,13 +39,6 @@ namespace Oci.FleetappsmanagementService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// MaintenanceWindow Identifier
-        /// </value>
-        [JsonProperty(PropertyName = "maintenanceWindowType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<MaintenanceWindowType> MaintenanceWindowType { get; set; }
-        
-        /// <value>
         /// Does the maintenenace window cause outage?
         /// An outage indicates whether a maintenance window can consider operations that require downtime.
         /// It means a period when the application is not accessible.
@@ -81,12 +74,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "recurrences")]
         public string Recurrences { get; set; }
-        
-        /// <value>
-        /// Task initiation cutoff time for the maintenance window.
-        /// </value>
-        [JsonProperty(PropertyName = "taskInitiationCutoff")]
-        public System.Nullable<int> TaskInitiationCutoff { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

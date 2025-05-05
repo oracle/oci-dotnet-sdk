@@ -16,25 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Notification information to get notified when the fleet status changes.
+    /// The configuration details for the move operation.
     /// </summary>
-    public class NotificationPreferences 
+    public class ChangeTaskRecordCompartmentDetails 
     {
         
         /// <value>
-        /// Topic Id where the notifications will be directed.
-        /// A topic is a communication channel for sending messages on chosen events to subscriptions.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to move the task record to.
         /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TopicId is required.")]
-        [JsonProperty(PropertyName = "topicId")]
-        public string TopicId { get; set; }
-        
-        /// <value>
-        /// Compartment ID the topic belongs to.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,9 +31,6 @@ namespace Oci.FleetappsmanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        
-        [JsonProperty(PropertyName = "preferences")]
-        public Preferences Preferences { get; set; }
         
     }
 }

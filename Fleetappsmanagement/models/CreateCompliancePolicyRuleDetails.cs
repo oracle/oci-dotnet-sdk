@@ -37,6 +37,10 @@ namespace Oci.FleetappsmanagementService.Models
         /// <value>
         /// Unique OCID of the CompliancePolicy this CompliancePolicyRule belongs to.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompliancePolicyId is required.")]
         [JsonProperty(PropertyName = "compliancePolicyId")]
         public string CompliancePolicyId { get; set; }
         
@@ -53,9 +57,9 @@ namespace Oci.FleetappsmanagementService.Models
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "PatchType is required.")]
-        [JsonProperty(PropertyName = "patchType")]
-        public System.Collections.Generic.List<string> PatchType { get; set; }
+        [Required(ErrorMessage = "PatchTypeId is required.")]
+        [JsonProperty(PropertyName = "patchTypeId")]
+        public System.Collections.Generic.List<string> PatchTypeId { get; set; }
         
         /// <value>
         /// Severity to which this CompliancePolicyRule applies.
@@ -77,16 +81,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "gracePeriod")]
         public string GracePeriod { get; set; }
-        
-        /// <value>
-        /// The OCID of the compartment the CompliancePolicyRule belongs to.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

@@ -22,6 +22,34 @@ namespace Oci.LoganalyticsService.Models
     public class ModuleCommandDescriptor : AbstractCommandDescriptor
     {
         
+        /// <value>
+        /// Description of the macro.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
+        /// <value>
+        /// Description of the macro.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "example")]
+        public string Example { get; set; }
+        
+        /// <value>
+        /// Optional list of properties for the macro.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "properties")]
+        public System.Collections.Generic.List<PropertyDefinition> Properties { get; set; }
+        
+        /// <value>
+        /// Optional list of arguments used in the macro.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "arguments")]
+        public System.Collections.Generic.List<VariableDefinition> Arguments { get; set; }
+        
         [JsonProperty(PropertyName = "name")]
         private readonly string name = "MODULE";
     }

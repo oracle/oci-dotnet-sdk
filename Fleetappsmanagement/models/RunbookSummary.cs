@@ -64,17 +64,6 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<Runbook.TypeEnum> Type { get; set; }
         
         /// <value>
-        /// Type of runbook structure.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "RunbookRelevance is required.")]
-        [JsonProperty(PropertyName = "runbookRelevance")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<Runbook.RunbookRelevanceEnum> RunbookRelevance { get; set; }
-        
-        /// <value>
         /// The lifecycle operation performed by the runbook.
         /// </value>
         /// <remarks>
@@ -87,10 +76,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// <value>
         /// The OS type for the runbook.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OsType is required.")]
         [JsonProperty(PropertyName = "osType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OsType> OsType { get; set; }
@@ -98,10 +83,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// <value>
         /// The platform of the runbook.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Platform is required.")]
         [JsonProperty(PropertyName = "platform")]
         public string Platform { get; set; }
         
@@ -122,6 +103,18 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "estimatedTime")]
         public string EstimatedTime { get; set; }
+        
+        /// <value>
+        /// Latest runbook version
+        /// </value>
+        [JsonProperty(PropertyName = "latestVersion")]
+        public string LatestVersion { get; set; }
+        
+        /// <value>
+        /// Does this runbook has draft versions?
+        /// </value>
+        [JsonProperty(PropertyName = "hasDraftVersion")]
+        public System.Nullable<bool> HasDraftVersion { get; set; }
         
         /// <value>
         /// The current state of the Runbook.

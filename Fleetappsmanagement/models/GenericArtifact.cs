@@ -27,7 +27,7 @@ namespace Oci.FleetappsmanagementService.Models
         /// </remarks>
         [Required(ErrorMessage = "Content is required.")]
         [JsonProperty(PropertyName = "content")]
-        public ContentDetails Content { get; set; }
+        public PatchFileContentDetails Content { get; set; }
         
     }
 }

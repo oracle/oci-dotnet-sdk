@@ -22,16 +22,6 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// Tenancy OCID
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
-        
-        /// <value>
         /// Value of the Property.
         /// </value>
         /// <remarks>

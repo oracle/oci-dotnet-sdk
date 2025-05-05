@@ -53,7 +53,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Tenancy OCID
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -112,19 +112,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<int> CountOfAffectedTargets { get; set; }
         
         /// <value>
-        /// All ActionGroup Types part of the schedule.
-        /// </value>
-        [JsonProperty(PropertyName = "actionGroupTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Collections.Generic.List<LifeCycleActionGroupType> ActionGroupTypes { get; set; }
-        
-        /// <value>
-        /// All application types part of the schedule for ENVIRONMENT ActionGroup Type.
-        /// </value>
-        [JsonProperty(PropertyName = "applicationTypes")]
-        public System.Collections.Generic.List<string> ApplicationTypes { get; set; }
-        
-        /// <value>
-        /// All products part of the schedule for PRODUCT ActionGroup Type.
+        /// All products part of the schedule
         /// </value>
         [JsonProperty(PropertyName = "products")]
         public System.Collections.Generic.List<string> Products { get; set; }
@@ -139,7 +127,7 @@ namespace Oci.FleetappsmanagementService.Models
         /// The current state of the SchedulerDefinition.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<SchedulerDefinition.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

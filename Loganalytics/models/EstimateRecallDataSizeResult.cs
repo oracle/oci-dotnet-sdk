@@ -78,5 +78,17 @@ namespace Oci.LoganalyticsService.Models
         [JsonProperty(PropertyName = "sizeLimitInBytes")]
         public System.Nullable<long> SizeLimitInBytes { get; set; }
         
+        /// <value>
+        /// This message shows existing recall overlapping details like collection id, purpose
+        /// </value>
+        [JsonProperty(PropertyName = "message")]
+        public string Message { get; set; }
+        
+        /// <value>
+        /// This is the total number of batches data will be recalled in
+        /// </value>
+        [JsonProperty(PropertyName = "totalBatchSize")]
+        public System.Nullable<int> TotalBatchSize { get; set; }
+        
     }
 }

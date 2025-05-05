@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Patch artifact description and content details which is platform specific     
+    /// Patch artifact description and content details which is platform specific.    
     /// 
     /// </summary>
     public class PlatformSpecificArtifactDetails : ArtifactDetails

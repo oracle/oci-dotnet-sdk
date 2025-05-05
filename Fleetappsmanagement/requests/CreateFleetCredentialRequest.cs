@@ -20,7 +20,7 @@ namespace Oci.FleetappsmanagementService.Requests
     {
         
         /// <value>
-        /// Details for the new FleetCredential.
+        /// Details for the new fleet credential.
         /// </value>
         /// <remarks>
         /// Required

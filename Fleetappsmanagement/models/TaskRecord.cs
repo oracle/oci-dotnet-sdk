@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Details of a task.
+    /// Attributes of a task record.
     /// </summary>
     public class TaskRecord 
     {
@@ -80,7 +80,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
                 ///
         /// <value>
-        /// The current state of the TaskRecord.
+        /// The current state of the task record.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -102,7 +102,7 @@ namespace Oci.FleetappsmanagementService.Models
         };
 
         /// <value>
-        /// The current state of the TaskRecord.
+        /// The current state of the task record.
         /// </value>
         /// <remarks>
         /// Required
@@ -146,7 +146,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The version of the task
+        /// The version of the task record.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }

@@ -39,7 +39,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Tenancy OCID
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -47,12 +47,6 @@ namespace Oci.FleetappsmanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
-        
-        /// <value>
-        /// Activity Initiation Cut Off
-        /// </value>
-        [JsonProperty(PropertyName = "activityInitiationCutOff")]
-        public System.Nullable<int> ActivityInitiationCutOff { get; set; }
         
         /// <remarks>
         /// Required

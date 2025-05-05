@@ -29,7 +29,9 @@ namespace Oci.FleetappsmanagementService.Models
         ///
         public enum SourceTypeEnum {
             [EnumMember(Value = "OBJECT_STORAGE_BUCKET")]
-            ObjectStorageBucket
+            ObjectStorageBucket,
+            [EnumMember(Value = "CATALOG")]
+            Catalog
         };
 
         
@@ -56,6 +58,9 @@ namespace Oci.FleetappsmanagementService.Models
             var discriminator = jsonObject["sourceType"].Value<string>();
             switch (discriminator)
             {
+                case "CATALOG":
+                    obj = new CatalogContentDetails();
+                    break;
                 case "OBJECT_STORAGE_BUCKET":
                     obj = new ObjectStorageBucketContentDetails();
                     break;

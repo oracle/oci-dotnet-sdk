@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Results of a taskRecord search. Contains boh TaskRecordSummary items and other information, such as metadata.
+    /// Results of a task record search. Contains boh TaskRecordSummary items and other information, such as metadata.
     /// </summary>
     public class TaskRecordCollection 
     {
         
         /// <value>
-        /// List of taskRecords.
+        /// List of task records.
         /// </value>
         /// <remarks>
         /// Required

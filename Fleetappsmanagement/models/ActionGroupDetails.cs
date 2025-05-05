@@ -11,48 +11,32 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
     /// Action Group details.
     /// </summary>
+    [JsonConverter(typeof(ActionGroupDetailsModelConverter))]
     public class ActionGroupDetails 
     {
         
         /// <value>
-        /// The ID of the ActionGroup resource.
-        /// Ex:fleetId.
-        /// 
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ResourceId is required.")]
-        [JsonProperty(PropertyName = "resourceId")]
-        public string ResourceId { get; set; }
-        
-        /// <value>
         /// Name of the ActionGroup.
         /// </value>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
-        
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
+                ///
         /// <value>
-        /// Type of the ActionGroup
+        /// Action Group kind
         /// </value>
-        [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LifeCycleActionGroupType> Type { get; set; }
-        
-        /// <value>
-        /// Application Type associated.
-        /// Only applicable if actionGroup type is ENVIRONMENT.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "applicationType")]
-        public string ApplicationType { get; set; }
+        ///
+        public enum KindEnum {
+            [EnumMember(Value = "FLEET_USING_RUNBOOK")]
+            FleetUsingRunbook
+        };
+
         
         /// <value>
         /// Product associated.
@@ -93,15 +77,42 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "timeEnded")]
         public System.Nullable<System.DateTime> TimeEnded { get; set; }
         
-        /// <value>
-        /// OCID of the runbook.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "RunbookId is required.")]
-        [JsonProperty(PropertyName = "runbookId")]
-        public string RunbookId { get; set; }
-        
+    }
+
+    public class ActionGroupDetailsModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(ActionGroupDetails);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(ActionGroupDetails);
+            var discriminator = jsonObject["kind"].Value<string>();
+            switch (discriminator)
+            {
+                case "FLEET_USING_RUNBOOK":
+                    obj = new FleetBasedActionGroupDetails();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under ActionGroupDetails! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

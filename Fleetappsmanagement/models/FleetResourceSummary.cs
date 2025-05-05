@@ -104,6 +104,12 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<ComplianceState> ComplianceState { get; set; }
         
         /// <value>
+        /// The compliance percentage.
+        /// </value>
+        [JsonProperty(PropertyName = "percentCompliant")]
+        public System.Nullable<float> PercentCompliant { get; set; }
+        
+        /// <value>
         /// Resource Tenancy Name.
         /// </value>
         [JsonProperty(PropertyName = "tenancyName")]
@@ -144,14 +150,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "product")]
         public string Product { get; set; }
-        
-        /// <value>
-        /// Application Type associated with the resource when the resource type is fleet.
-        /// Will only be returned for ENVIRONMENT fleets that are part of a GROUP Fleet. 
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "applicationType")]
-        public string ApplicationType { get; set; }
         
         /// <value>
         /// Environment Type associated with the Fleet when the resource type is fleet.

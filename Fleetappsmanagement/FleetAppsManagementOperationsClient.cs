@@ -26,7 +26,7 @@ namespace Oci.FleetappsmanagementService
     public class FleetAppsManagementOperationsClient : RegionalClientBase
     {
         private readonly RetryConfiguration retryConfiguration;
-        private const string basePathWithoutHost = "/20230831";
+        private const string basePathWithoutHost = "/20250228";
 
         public FleetAppsManagementOperationsPaginators Paginators { get; }
 
@@ -73,6 +73,64 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
+        /// Moves a Patch into a different compartment within the same tenancy. For information about moving resources between
+        /// compartments, see [Moving Resources to a Different Compartment](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/fleetappsmanagement/ChangePatchCompartment.cs.html">here</a> to see an example of how to use ChangePatchCompartment API.</example>
+        public async Task<ChangePatchCompartmentResponse> ChangePatchCompartment(ChangePatchCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called changePatchCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/patches/{patchId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "FleetAppsManagementOperations",
+                    OperationName = "ChangePatchCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/Patch/ChangePatchCompartment",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ChangePatchCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangePatchCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Creates a new Patch.
         /// 
         /// </summary>
@@ -110,7 +168,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "CreatePatch",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/Patch/CreatePatch",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/Patch/CreatePatch",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -167,7 +225,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "CreateSchedulerDefinition",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/SchedulerDefinition/CreateSchedulerDefinition",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerDefinition/CreateSchedulerDefinition",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -187,7 +245,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Deletes a Patch resource by identifier
+        /// Deletes the patch specified by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -223,7 +281,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "DeletePatch",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/Patch/DeletePatch",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/Patch/DeletePatch",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -279,7 +337,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "DeleteSchedulerDefinition",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/SchedulerDefinition/DeleteSchedulerDefinition",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerDefinition/DeleteSchedulerDefinition",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -299,7 +357,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Delete a lifecycle operation schedule in Fleet Application Management.
+        /// Deletes the schedule job specified by an identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -335,7 +393,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "DeleteSchedulerJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/SchedulerJob/DeleteSchedulerJob",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerJob/DeleteSchedulerJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -392,7 +450,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "ExportComplianceReport",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/ComplianceRecord/ExportComplianceReport",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/ComplianceRecord/ExportComplianceReport",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -448,7 +506,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "GetExecution",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/Execution/GetExecution",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/Execution/GetExecution",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -504,7 +562,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "GetJobActivity",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/JobActivity/GetJobActivity",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/JobActivity/GetJobActivity",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -524,7 +582,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Gets a Patch by identifier
+        /// Gets a Patch by identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -560,7 +618,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "GetPatch",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/Patch/GetPatch",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/Patch/GetPatch",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -616,7 +674,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "GetSchedulerDefinition",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/SchedulerDefinition/GetSchedulerDefinition",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerDefinition/GetSchedulerDefinition",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -672,7 +730,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "GetSchedulerJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/SchedulerJob/GetSchedulerJob",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerJob/GetSchedulerJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -729,7 +787,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "ListComplianceRecords",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/ComplianceRecordCollection/ListComplianceRecords",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/ComplianceRecordCollection/ListComplianceRecords",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -785,7 +843,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "ListExecutions",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/ExecutionCollection/ListExecutions",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/ExecutionCollection/ListExecutions",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -805,7 +863,65 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Returns a list of Patches.
+        /// Gets a list of inventoryDetails.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/fleetappsmanagement/ListInventoryRecords.cs.html">here</a> to see an example of how to use ListInventoryRecords API.</example>
+        public async Task<ListInventoryRecordsResponse> ListInventoryRecords(ListInventoryRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listInventoryRecords");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/inventoryRecords".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "FleetAppsManagementOperations",
+                    OperationName = "ListInventoryRecords",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/InventoryRecordCollection/ListInventoryRecords",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListInventoryRecordsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListInventoryRecords failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns a list of all the Patches in the specified compartment.
+        /// The query parameter &#x60;compartmentId&#x60; is required unless the query parameter &#x60;id&#x60; is specified.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -842,7 +958,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "ListPatches",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/PatchCollection/ListPatches",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/PatchCollection/ListPatches",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -898,7 +1014,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "ListResources",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/ResourceCollection/ListResources",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/ResourceCollection/ListResources",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -955,7 +1071,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "ListScheduledFleets",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/ScheduledFleetCollection/ListScheduledFleets",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/ScheduledFleetCollection/ListScheduledFleets",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -975,7 +1091,8 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// List all lifecycle management schedules in Fleet Application Management.
+        /// Returns a list of all the Schedule Definitions in the specified compartment.
+        /// The query parameter &#x60;compartmentId&#x60; is required unless the query parameter &#x60;id&#x60; is specified.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1012,7 +1129,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "ListSchedulerDefinitions",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/SchedulerDefinitionCollection/ListSchedulerDefinitions",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerDefinitionCollection/ListSchedulerDefinitions",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1032,7 +1149,65 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// List scheduled lifecycle operation jobs in Fleet Application Management.
+        /// Returns a list of all Fleets that are scheduled.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/fleetappsmanagement/ListSchedulerExecutions.cs.html">here</a> to see an example of how to use ListSchedulerExecutions API.</example>
+        public async Task<ListSchedulerExecutionsResponse> ListSchedulerExecutions(ListSchedulerExecutionsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listSchedulerExecutions");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/schedulerExecutions".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "FleetAppsManagementOperations",
+                    OperationName = "ListSchedulerExecutions",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerExecutionCollection/ListSchedulerExecutions",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListSchedulerExecutionsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListSchedulerExecutions failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Returns a list of all schedule jobs in the specified compartment.
+        /// The query parameter &#x60;compartmentId&#x60; is required unless the query parameter &#x60;id&#x60; is specified.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1069,7 +1244,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "ListSchedulerJobs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/SchedulerJobCollection/ListSchedulerJobs",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerJobCollection/ListSchedulerJobs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1125,7 +1300,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "ListSteps",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/StepCollection/ListSteps",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/StepCollection/ListSteps",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1182,7 +1357,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "ManageJobExecution",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/SchedulerJob/ManageJobExecution",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerJob/ManageJobExecution",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1202,7 +1377,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Retrieve  aggregated summary information of ComplianceRecords within a Tenancy.
+        /// Retrieve  aggregated summary information of ComplianceRecords within a Compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1239,7 +1414,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "SummarizeComplianceRecordCounts",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/ComplianceRecordAggregationCollection/SummarizeComplianceRecordCounts",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/ComplianceRecordAggregationCollection/SummarizeComplianceRecordCounts",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1259,7 +1434,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Retrieve  aggregated summary information of Managed Entities within a Tenancy.
+        /// Retrieve  aggregated summary information of Managed entities within a Compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1296,7 +1471,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "SummarizeManagedEntityCounts",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/ManagedEntityAggregationCollection/SummarizeManagedEntityCounts",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/ManagedEntityAggregationCollection/SummarizeManagedEntityCounts",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1316,7 +1491,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Retrieve aggregated summary information of Scheduler Jobs within a Tenancy.
+        /// Retrieve aggregated summary information of Scheduler Jobs within a Compartment.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1353,7 +1528,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "SummarizeSchedulerJobCounts",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/SchedulerJobAggregationCollection/SummarizeSchedulerJobCounts",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerJobAggregationCollection/SummarizeSchedulerJobCounts",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1373,7 +1548,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Updates the Patch
+        /// Updates the patch specified by the identifier.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1409,7 +1584,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "UpdatePatch",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/Patch/UpdatePatch",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/Patch/UpdatePatch",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1465,7 +1640,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "UpdateSchedulerDefinition",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/SchedulerDefinition/UpdateSchedulerDefinition",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerDefinition/UpdateSchedulerDefinition",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1485,7 +1660,7 @@ namespace Oci.FleetappsmanagementService
         }
 
         /// <summary>
-        /// Update a lifecycle operation job schedule in Fleet Application Management.
+        /// Updates certain attributes for the specified schedule job.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -1521,7 +1696,7 @@ namespace Oci.FleetappsmanagementService
                     ServiceName = "FleetAppsManagementOperations",
                     OperationName = "UpdateSchedulerJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20230831/SchedulerJob/UpdateSchedulerJob",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/fleet-management/20250228/SchedulerJob/UpdateSchedulerJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

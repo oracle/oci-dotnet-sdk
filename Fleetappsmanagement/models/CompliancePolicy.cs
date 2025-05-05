@@ -17,7 +17,7 @@ namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
     /// Define software patch compliance policies for various products running in OCI resources.
-    /// A compliance policy is a configuration you set up for various products to report compliance by defining the schedule and patch baseline
+    /// A compliance policy is a configuration you set up for various products to report compliance by defining the schedule and patch baseline.
     /// 
     /// </summary>
     public class CompliancePolicy 
@@ -62,6 +62,27 @@ namespace Oci.FleetappsmanagementService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+                ///
+        /// <value>
+        /// The type of the Compliance Policy.
+        /// </value>
+        ///
+        public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "USER_DEFINED")]
+            UserDefined,
+            [EnumMember(Value = "ORACLE_DEFINED")]
+            OracleDefined
+        };
+
+        /// <value>
+        /// The type of the Compliance Policy.
+        /// </value>
+        [JsonProperty(PropertyName = "type")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
         /// The date and time the CompliancePolicy was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).

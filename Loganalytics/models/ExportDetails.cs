@@ -62,7 +62,7 @@ namespace Oci.LoganalyticsService.Models
         public System.Nullable<SubSystemName> SubSystem { get; set; }
         
         /// <value>
-        /// List of filters to be applied when the query executes. More than one filter per field is not permitted. 
+        /// List of filters to be applied when the query executes. More than one filter per field is not permitted.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "scopeFilters")]
@@ -105,7 +105,9 @@ namespace Oci.LoganalyticsService.Models
             [EnumMember(Value = "CSV")]
             Csv,
             [EnumMember(Value = "JSON")]
-            Json
+            Json,
+            [EnumMember(Value = "PARQUET")]
+            Parquet
         };
 
         /// <value>

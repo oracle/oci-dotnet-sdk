@@ -32,7 +32,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Tenancy OCID
+        /// Compartment OCID
         /// </value>
         /// <remarks>
         /// Required
@@ -85,13 +85,6 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Type of the MaintenanceWindow.
-        /// </value>
-        [JsonProperty(PropertyName = "maintenanceWindowType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<MaintenanceWindowType> MaintenanceWindowType { get; set; }
-        
-        /// <value>
         /// Does the maintenenace window cause outage?
         /// An outage indicates whether a maintenance window can consider operations that require downtime.
         /// It means a period when the application is not accessible.
@@ -139,16 +132,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "recurrences")]
         public string Recurrences { get; set; }
-        
-        /// <value>
-        /// Task initiation cutoff time for the maintenance window.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "TaskInitiationCutoff is required.")]
-        [JsonProperty(PropertyName = "taskInitiationCutoff")]
-        public System.Nullable<int> TaskInitiationCutoff { get; set; }
                 ///
         /// <value>
         /// The current state of the MaintenanceWindow.

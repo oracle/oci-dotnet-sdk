@@ -27,6 +27,8 @@ namespace Oci.FleetappsmanagementService.Requests
         
         /// <value>
         /// The ID of the compartment in which to list resources.
+        /// Empty only if the resource OCID query param is not specified.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
@@ -35,7 +37,7 @@ namespace Oci.FleetappsmanagementService.Requests
         /// A filter to return fleets whose fleetType matches the given fleetType.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "fleetType")]
-        public System.Nullable<Fleet.FleetTypeEnum> FleetType { get; set; }
+        public System.Nullable<FleetDetails.FleetTypeEnum> FleetType { get; set; }
         
         /// <value>
         /// A filter to return resources that match the Application Type/Product Stack given..
@@ -44,7 +46,7 @@ namespace Oci.FleetappsmanagementService.Requests
         public string ApplicationType { get; set; }
         
         /// <value>
-        /// A filter to return resources that match the Product given.
+        /// A filter to return resources that match the Product/Product Stack given.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "product")]
         public string Product { get; set; }
@@ -62,7 +64,9 @@ namespace Oci.FleetappsmanagementService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return fleets whose id matches the given Fleet identifier
+        /// Unique identifier or OCID for listing a single fleet by id.
+        /// Either compartmentId or id must be provided.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
@@ -85,25 +89,12 @@ namespace Oci.FleetappsmanagementService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
-        ///
-        /// <value>
-        /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
-        /// 
-        /// </value>
-        ///
-        public enum SortByEnum {
-            [EnumMember(Value = "timeCreated")]
-            TimeCreated,
-            [EnumMember(Value = "displayName")]
-            DisplayName
-        };
-
         /// <value>
         /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
-        public System.Nullable<SortByEnum> SortBy { get; set; }
+        public System.Nullable<FleetSortBy> SortBy { get; set; }
         
         /// <value>
         /// The client request ID for tracing.

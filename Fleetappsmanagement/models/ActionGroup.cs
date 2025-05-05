@@ -11,76 +11,72 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
     /// Action Group.
     /// </summary>
+    [JsonConverter(typeof(ActionGroupModelConverter))]
     public class ActionGroup 
     {
         
         /// <value>
-        /// Provide the ID of the resource. Example fleet ID.
+        /// A user-friendly name. Does not have to be unique, and it's changeable.
+        /// Avoid entering confidential information.
+        /// <br/>
+        /// Example: My new resource
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ResourceId is required.")]
-        [JsonProperty(PropertyName = "resourceId")]
-        public string ResourceId { get; set; }
-        
+        [JsonProperty(PropertyName = "displayName")]
+        public string DisplayName { get; set; }
+                ///
         /// <value>
-        /// ActionGroup Type associated.
+        /// Action Group kind
         /// </value>
-        [JsonProperty(PropertyName = "type")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LifeCycleActionGroupType> Type { get; set; }
+        ///
+        public enum KindEnum {
+            [EnumMember(Value = "FLEET_USING_RUNBOOK")]
+            FleetUsingRunbook
+        };
+
         
-        /// <value>
-        /// Application Type associated.
-        /// Only applicable if type is ENVIRONMENT.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "applicationType")]
-        public string ApplicationType { get; set; }
-        
-        /// <value>
-        /// Product associated.
-        /// Only applicable if type is PRODUCT.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "product")]
-        public string Product { get; set; }
-        
-        /// <value>
-        /// LifeCycle Operation
-        /// </value>
-        [JsonProperty(PropertyName = "lifecycleOperation")]
-        public string LifecycleOperation { get; set; }
-        
-        /// <value>
-        /// ID of the runbook
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "RunbookId is required.")]
-        [JsonProperty(PropertyName = "runbookId")]
-        public string RunbookId { get; set; }
-        
-        /// <value>
-        /// Provide the target if schedule is created against the target
-        /// </value>
-        [JsonProperty(PropertyName = "targetId")]
-        public string TargetId { get; set; }
-        
-        /// <value>
-        /// Provide subjects that need to be considered for the schedule.
-        /// </value>
-        [JsonProperty(PropertyName = "subjects")]
-        public System.Collections.Generic.List<string> Subjects { get; set; }
-        
+    }
+
+    public class ActionGroupModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(ActionGroup);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(ActionGroup);
+            var discriminator = jsonObject["kind"].Value<string>();
+            switch (discriminator)
+            {
+                case "FLEET_USING_RUNBOOK":
+                    obj = new FleetBasedActionGroup();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under ActionGroup! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

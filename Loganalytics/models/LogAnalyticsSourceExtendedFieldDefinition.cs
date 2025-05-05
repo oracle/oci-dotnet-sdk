@@ -55,7 +55,7 @@ namespace Oci.LoganalyticsService.Models
         public string ConditionDataType { get; set; }
         
         /// <value>
-        /// The onditional field.
+        /// The conditional field.
         /// </value>
         [JsonProperty(PropertyName = "conditionField")]
         public string ConditionField { get; set; }
@@ -116,6 +116,16 @@ namespace Oci.LoganalyticsService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// String representation of the extended field condition. This supports specifying multiple condition blocks at various nested levels.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "conditionString")]
+        public string ConditionString { get; set; }
+        
+        [JsonProperty(PropertyName = "conditionBlock")]
+        public GenericConditionBlock ConditionBlock { get; set; }
         
     }
 }

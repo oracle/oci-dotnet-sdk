@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Details of the Patch
+    /// Details of the Patch.
     /// </summary>
     public class CompliancePatchDetail 
     {
