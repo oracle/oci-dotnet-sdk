@@ -116,6 +116,18 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "connector")]
         public ExternalDbSystemDiscoveryConnector Connector { get; set; }
         
+        /// <value>
+        /// Indicates whether Diagnostics & Management should be enabled for all the current pluggable databases in the container database.
+        /// </value>
+        [JsonProperty(PropertyName = "canEnableAllCurrentPdbs")]
+        public System.Nullable<bool> CanEnableAllCurrentPdbs { get; set; }
+        
+        /// <value>
+        /// Indicates whether Diagnostics & Management should be enabled automatically for all the pluggable databases in the container database.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoEnablePluggableDatabase")]
+        public System.Nullable<bool> IsAutoEnablePluggableDatabase { get; set; }
+        
         [JsonProperty(PropertyName = "componentType")]
         private readonly string componentType = "DATABASE";
     }

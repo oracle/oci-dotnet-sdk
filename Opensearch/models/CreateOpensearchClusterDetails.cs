@@ -79,6 +79,12 @@ namespace Oci.OpensearchService.Models
         public string MasterNodeHostBareMetalShape { get; set; }
         
         /// <value>
+        /// The node shape for the cluster's master nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "masterNodeHostShape")]
+        public string MasterNodeHostShape { get; set; }
+        
+        /// <value>
         /// The number of OCPUs to configure for the cluser's master nodes.
         /// </value>
         /// <remarks>
@@ -126,6 +132,12 @@ namespace Oci.OpensearchService.Models
         public string DataNodeHostBareMetalShape { get; set; }
         
         /// <value>
+        /// The node shape for the cluster's data nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "dataNodeHostShape")]
+        public string DataNodeHostShape { get; set; }
+        
+        /// <value>
         /// The number of OCPUs to configure for the cluster's data nodes.
         /// </value>
         /// <remarks>
@@ -156,6 +168,12 @@ namespace Oci.OpensearchService.Models
         public System.Nullable<int> DataNodeStorageGB { get; set; }
         
         /// <value>
+        /// The node shape for the cluster's OpenSearch Dashboard nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "opendashboardNodeHostShape")]
+        public string OpendashboardNodeHostShape { get; set; }
+        
+        /// <value>
         /// The number of OpenSearch Dashboard nodes to configure for the cluster.
         /// </value>
         /// <remarks>
@@ -184,6 +202,43 @@ namespace Oci.OpensearchService.Models
         [Required(ErrorMessage = "OpendashboardNodeHostMemoryGB is required.")]
         [JsonProperty(PropertyName = "opendashboardNodeHostMemoryGB")]
         public System.Nullable<int> OpendashboardNodeHostMemoryGB { get; set; }
+        
+        /// <value>
+        /// The number of search nodes configured for the cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "searchNodeCount")]
+        public System.Nullable<int> SearchNodeCount { get; set; }
+        
+        /// <value>
+        /// The instance type for the cluster's search nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "searchNodeHostType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<SearchNodeHostType> SearchNodeHostType { get; set; }
+        
+        /// <value>
+        /// The node shape for the cluster's search nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "searchNodeHostShape")]
+        public string SearchNodeHostShape { get; set; }
+        
+        /// <value>
+        /// The number of OCPUs configured for the cluster's search nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "searchNodeHostOcpuCount")]
+        public System.Nullable<int> SearchNodeHostOcpuCount { get; set; }
+        
+        /// <value>
+        /// The amount of memory in GB, for the cluster's search nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "searchNodeHostMemoryGB")]
+        public System.Nullable<int> SearchNodeHostMemoryGB { get; set; }
+        
+        /// <value>
+        /// The amount of storage in GB, to configure per node for the cluster's search nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "searchNodeStorageGB")]
+        public System.Nullable<int> SearchNodeStorageGB { get; set; }
         
         /// <value>
         /// The OCID of the cluster's VCN.

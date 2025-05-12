@@ -124,6 +124,12 @@ namespace Oci.OpensearchService.Models
         public System.Nullable<int> NodeCount { get; set; }
         
         /// <value>
+        /// The pipeline node shape.
+        /// </value>
+        [JsonProperty(PropertyName = "nodeShape")]
+        public string NodeShape { get; set; }
+        
+        /// <value>
         /// The pipeline configuration in YAML format. The command accepts the pipeline configuration as a string or within a .yaml file. If you provide the configuration as a string, each new line must be escaped with \\.
         /// 
         /// </value>

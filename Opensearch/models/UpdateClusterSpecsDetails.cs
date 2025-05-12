@@ -44,6 +44,12 @@ namespace Oci.OpensearchService.Models
         public System.Nullable<int> MasterNodeHostMemoryGB { get; set; }
         
         /// <value>
+        /// The node shape for the cluster's master nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "masterNodeHostShape")]
+        public string MasterNodeHostShape { get; set; }
+        
+        /// <value>
         /// Updated value of OCPU's configured for data nodes of the cluster.
         /// </value>
         [JsonProperty(PropertyName = "dataNodeHostOcpuCount")]
@@ -56,6 +62,30 @@ namespace Oci.OpensearchService.Models
         public System.Nullable<int> DataNodeHostMemoryGB { get; set; }
         
         /// <value>
+        /// The node shape for the cluster's data nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "dataNodeHostShape")]
+        public string DataNodeHostShape { get; set; }
+        
+        /// <value>
+        /// The node shape for the cluster's search nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "searchNodeHostShape")]
+        public string SearchNodeHostShape { get; set; }
+        
+        /// <value>
+        /// The number of OCPUs configured for the cluster's search nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "searchNodeHostOcpuCount")]
+        public System.Nullable<int> SearchNodeHostOcpuCount { get; set; }
+        
+        /// <value>
+        /// The amount of memory in GB, for the cluster's search nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "searchNodeHostMemoryGB")]
+        public System.Nullable<int> SearchNodeHostMemoryGB { get; set; }
+        
+        /// <value>
         /// Updated version of the software the cluster is currently running.
         /// </value>
         [JsonProperty(PropertyName = "softwareVersion")]
@@ -66,6 +96,12 @@ namespace Oci.OpensearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "dashboardSoftwareVersion")]
         public string DashboardSoftwareVersion { get; set; }
+        
+        /// <value>
+        /// The shape node for the cluster's OpenSearch Dashboard nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "opendashboardNodeHostShape")]
+        public string OpendashboardNodeHostShape { get; set; }
         
         /// <value>
         /// Updated Private endpoint of cluster.

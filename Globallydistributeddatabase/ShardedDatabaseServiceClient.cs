@@ -110,7 +110,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "ChangePrivateEndpointCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/PrivateEndpoint/ChangePrivateEndpointCompartment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/PrivateEndpoint/ChangePrivateEndpointCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -167,7 +167,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "ChangeShardedDatabaseCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/ChangeShardedDatabaseCompartment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/ChangeShardedDatabaseCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -227,7 +227,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "ConfigureShardedDatabaseGsms",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/ConfigureShardedDatabaseGsms",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/ConfigureShardedDatabaseGsms",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -288,7 +288,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "ConfigureSharding",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/ConfigureSharding",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/ConfigureSharding",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -459,7 +459,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "DeletePrivateEndpoint",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/PrivateEndpoint/DeletePrivateEndpoint",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/PrivateEndpoint/DeletePrivateEndpoint",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -516,7 +516,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "DeleteShardedDatabase",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/DeleteShardedDatabase",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/DeleteShardedDatabase",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -576,7 +576,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "DownloadGsmCertificateSigningRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/DownloadGsmCertificateSigningRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/DownloadGsmCertificateSigningRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -633,7 +633,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "FetchConnectionString",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/FetchConnectionString",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/FetchConnectionString",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -690,7 +690,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "FetchShardableCloudAutonomousVmClusters",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/FetchShardableCloudAutonomousVmClusters",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/FetchShardableCloudAutonomousVmClusters",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -749,7 +749,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "GenerateGsmCertificateSigningRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/GenerateGsmCertificateSigningRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/GenerateGsmCertificateSigningRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -806,7 +806,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "GenerateWallet",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/GenerateWallet",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/GenerateWallet",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -863,7 +863,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "GetPrivateEndpoint",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/PrivateEndpoint/GetPrivateEndpoint",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/PrivateEndpoint/GetPrivateEndpoint",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -920,7 +920,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "GetShardedDatabase",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/GetShardedDatabase",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/GetShardedDatabase",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -976,7 +976,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/WorkRequest/GetWorkRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1033,7 +1033,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "ListPrivateEndpoints",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/PrivateEndpointCollection/ListPrivateEndpoints",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/PrivateEndpointCollection/ListPrivateEndpoints",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1090,7 +1090,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "ListShardedDatabases",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabaseCollection/ListShardedDatabases",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabaseCollection/ListShardedDatabases",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1147,7 +1147,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/WorkRequestError/ListWorkRequestErrors",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1204,7 +1204,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/WorkRequestLogEntry/ListWorkRequestLogs",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1261,7 +1261,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/WorkRequest/ListWorkRequests",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/WorkRequest/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1320,7 +1320,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "PatchShardedDatabase",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/PatchShardedDatabase",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/PatchShardedDatabase",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1377,7 +1377,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "PrevalidateShardedDatabase",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/PrevalidateShardedDatabase",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/PrevalidateShardedDatabase",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1434,7 +1434,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "ReinstateProxyInstance",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/PrivateEndpoint/ReinstateProxyInstance",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/PrivateEndpoint/ReinstateProxyInstance",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1490,7 +1490,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "StartShardedDatabase",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/StartShardedDatabase",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/StartShardedDatabase",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1546,7 +1546,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "StopShardedDatabase",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/StopShardedDatabase",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/StopShardedDatabase",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1603,7 +1603,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "UpdatePrivateEndpoint",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/PrivateEndpoint/UpdatePrivateEndpoint",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/PrivateEndpoint/UpdatePrivateEndpoint",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1660,7 +1660,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "UpdateShardedDatabase",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/UpdateShardedDatabase",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/UpdateShardedDatabase",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1719,7 +1719,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "UploadSignedCertificateAndGenerateWallet",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/UploadSignedCertificateAndGenerateWallet",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/UploadSignedCertificateAndGenerateWallet",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1776,7 +1776,7 @@ namespace Oci.GloballydistributeddatabaseService
                     ServiceName = "ShardedDatabaseService",
                     OperationName = "ValidateNetwork",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-autonomous-database/20230301/ShardedDatabase/ValidateNetwork",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20230301/ShardedDatabase/ValidateNetwork",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
