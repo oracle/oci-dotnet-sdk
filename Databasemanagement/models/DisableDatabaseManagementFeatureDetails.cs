@@ -32,5 +32,11 @@ namespace Oci.DatabasemanagementService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DbManagementFeature> Feature { get; set; }
         
+        /// <value>
+        /// Indicates whether Diagnostics & Management should be disabled for the pluggable databases before disabling it for the container database.
+        /// </value>
+        [JsonProperty(PropertyName = "canDisableAllPdbs")]
+        public System.Nullable<bool> CanDisableAllPdbs { get; set; }
+        
     }
 }
