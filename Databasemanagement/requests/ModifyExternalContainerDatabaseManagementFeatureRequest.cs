@@ -14,30 +14,36 @@ using Oci.DatabasemanagementService.Models;
 namespace Oci.DatabasemanagementService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemanagement/DisableExternalMysqlAssociatedService.cs.html">here</a> to see an example of how to use DisableExternalMysqlAssociatedService request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/databasemanagement/ModifyExternalContainerDatabaseManagementFeature.cs.html">here</a> to see an example of how to use ModifyExternalContainerDatabaseManagementFeature request.
     /// </example>
-    public class DisableExternalMysqlAssociatedServiceRequest : Oci.Common.IOciRequest
+    public class ModifyExternalContainerDatabaseManagementFeatureRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
-        /// The OCID of the External MySQL Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the external container database.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "ExternalMySqlDatabaseId is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "externalMySqlDatabaseId")]
-        public string ExternalMySqlDatabaseId { get; set; }
+        [Required(ErrorMessage = "ExternalContainerDatabaseId is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Path, "externalContainerDatabaseId")]
+        public string ExternalContainerDatabaseId { get; set; }
         
         /// <value>
-        /// The details required to disable an Associated Service for an external MySQL database resource.
+        /// The details required to enable a Database Management feature for an external container database.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "DisableExternalMysqlAssociatedServiceDetails is required.")]
+        [Required(ErrorMessage = "EnableExternalContainerDatabaseManagementFeatureDetails is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public DisableExternalMysqlAssociatedServiceDetails DisableExternalMysqlAssociatedServiceDetails { get; set; }
+        public EnableExternalContainerDatabaseManagementFeatureDetails EnableExternalContainerDatabaseManagementFeatureDetails { get; set; }
+        
+        /// <value>
+        /// The client request ID for tracing.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
+        public string OpcRequestId { get; set; }
         
         /// <value>
         /// A token that uniquely identifies a request so it can be retried in case of a timeout or
@@ -60,11 +66,5 @@ namespace Oci.DatabasemanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]
         public string IfMatch { get; set; }
-        
-        /// <value>
-        /// The client request ID for tracing.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
-        public string OpcRequestId { get; set; }
     }
 }

@@ -44,10 +44,16 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<ManagementTypeEnum> ManagementType { get; set; }
         
         /// <value>
-        /// Indicates whether the pluggable database can be enabled automatically.
+        /// Indicates whether Diagnostics & Management should be enabled automatically for all the pluggable databases in the container database.
         /// </value>
         [JsonProperty(PropertyName = "isAutoEnablePluggableDatabase")]
         public System.Nullable<bool> IsAutoEnablePluggableDatabase { get; set; }
+        
+        /// <value>
+        /// Indicates whether Diagnostics & Management should be enabled for all the current pluggable databases in the container database.
+        /// </value>
+        [JsonProperty(PropertyName = "canEnableAllCurrentPdbs")]
+        public System.Nullable<bool> CanEnableAllCurrentPdbs { get; set; }
         
         [JsonProperty(PropertyName = "feature")]
         private readonly string feature = "DIAGNOSTICS_AND_MANAGEMENT";

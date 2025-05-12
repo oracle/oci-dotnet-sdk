@@ -85,6 +85,8 @@ namespace Oci.GenerativeaiService.Models
         /// - LARGE_GENERIC_4
         /// - SMALL_GENERIC_V2
         /// - LARGE_GENERIC_2
+        /// - LARGE_COHERE_V3
+        /// - RERANK_COHERE
         /// 
         /// </value>
         /// <remarks>

@@ -8,11 +8,11 @@
 
 
 using System.Runtime.Serialization;
-using Oci.DatabasemanagementService.Models;
+using Oci.ModeldeploymentService.Models;
 
-namespace Oci.DatabasemanagementService.Responses
+namespace Oci.ModeldeploymentService.Responses
 {
-    public class EnableExternalMysqlAssociatedServiceResponse : Oci.Common.OciResponse
+    public class PredictResponse : Oci.Common.OciResponse
     {
 
         /// <value>
@@ -23,7 +23,11 @@ namespace Oci.DatabasemanagementService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
-
+        /// <value>
+        /// The returned string instance.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public string Value { get; set; }
 
     }
 }

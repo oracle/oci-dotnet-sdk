@@ -10,13 +10,16 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.DatabasemanagementService.Models
+namespace Oci.OpensearchService.Models
 {
   /// <summary>
-  /// The name of the eMysql Associated Service.
+  /// The instance type for the cluster's search nodes.
   /// </summary>
-  public enum ExternalMysqlAssociatedServiceName {
-      [EnumMember(Value = "OPERATIONS_INSIGHTS")]
-      OperationsInsights
+  public enum SearchNodeHostType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
+      [EnumMember(Value = "FLEX")]
+      Flex
   }
 }
