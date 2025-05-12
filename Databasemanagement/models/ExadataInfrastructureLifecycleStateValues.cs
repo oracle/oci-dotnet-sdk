@@ -22,10 +22,10 @@ namespace Oci.DatabasemanagementService.Models
     {
                 ///
         /// <value>
-        /// The current lifecycle state of the database resource.
+        /// The current lifecycle state of the Exadata infrastructure resource.
         /// </value>
         ///
-        public enum LifecycleStateEnum {
+        public enum StateEnum {
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "ACTIVE")]
@@ -39,15 +39,17 @@ namespace Oci.DatabasemanagementService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown
         };
 
         /// <value>
-        /// The current lifecycle state of the database resource.
+        /// The current lifecycle state of the Exadata infrastructure resource.
         /// </value>
-        [JsonProperty(PropertyName = "lifecycleState")]
+        [JsonProperty(PropertyName = "state")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        public System.Nullable<StateEnum> State { get; set; }
         
     }
 }

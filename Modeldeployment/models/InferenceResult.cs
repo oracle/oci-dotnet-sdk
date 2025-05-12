@@ -13,20 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatabasemanagementService.Models
+namespace Oci.ModeldeploymentService.Models
 {
     /// <summary>
-    /// The details required to modify a Database Management feature for an Oracle cloud database.
+    /// A model used in x-related-resource for grouping actions with no returned body.
     /// </summary>
-    public class ModifyDatabaseManagementFeatureDetails 
+    public class InferenceResult 
     {
         
+        /// <value>
+        /// The predict result returned by model
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "FeatureDetails is required.")]
-        [JsonProperty(PropertyName = "featureDetails")]
-        public DatabaseFeatureDetails FeatureDetails { get; set; }
+        [Required(ErrorMessage = "Data is required.")]
+        [JsonProperty(PropertyName = "data")]
+        public System.Byte[] Data { get; set; }
         
     }
 }

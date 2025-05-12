@@ -13,20 +13,19 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatabasemanagementService.Models
+namespace Oci.OpensearchService.Models
 {
     /// <summary>
-    /// The details required to modify a Database Management feature for an Oracle cloud database.
+    /// Shapes for OpenSearch Cluster.
     /// </summary>
-    public class ModifyDatabaseManagementFeatureDetails 
+    public class ShapesDetails 
     {
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "FeatureDetails is required.")]
-        [JsonProperty(PropertyName = "featureDetails")]
-        public DatabaseFeatureDetails FeatureDetails { get; set; }
+        /// <value>
+        /// List of Shapes.
+        /// </value>
+        [JsonProperty(PropertyName = "shapes")]
+        public System.Collections.Generic.List<string> Shapes { get; set; }
         
     }
 }

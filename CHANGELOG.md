@@ -4,31 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
-## 92.0.0 - 09/16/2023
+## 111.0.0 - 2025-05-13
 ### Added
- - Support for calling Oracle Cloud Infrastructure services in the `me-riyadh-1` region
- - Support for vertically scaling a Database system in the PostgreSQL service
- - Support for flex shapes in the PostgreSQL service
- - Support for new fork repository feature in the Source Code Management service
- - Support for Developer Charts in the Source Code Management service
- - Support for pull requests and merge in Source Code Management service
- - Support for limiting custom and versioned custom software source content to the latest package versions in the OS Management service
- - Support for Open Data Hub (ODH) patching in a staged manner in the Big Data service
- - Support for Autoscale Memory Utilization in the Big Data service
- - Support for Resource Principal configuration feature in the Big Data service
- - Support for a new optional parameter compartment ID in the Java Management service
- - Support for Agent Installer in the Java Management service
- - Support for Java migration analysis request of deployed applications in the Java Management service
- - Support for JmsPlugin in the Java Management service
- - Support for improved cryptographic analysis result listing in the Java Management service
- - Support for improved fleet agent configuration setting in the Java Management service
- - Support for improved Java migration analysis result listing in the Java Management service
- - Support for improved library usage summary in the Java Management service
- - Support for improved performance tuning analysis result listing in the Java Management service
- - Support for improved work request listing in the Java Management service    
-
+- Support for the Model Deployment service
+- Support for enabling and monitoring Pluggable Databases(PDB) in the Database Management service
+- Support for additional unit shapes in AI clusters in the Generative AI service
+- Support for node search details and node shape details on create and update cluster operations in the OpenSearch service
+ 
 ### Breaking Changes
- - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
+- The operations `DisableExternalMysqlAssociatedService` and `EnableExternalMysqlAssociatedService` were removed from the `ManagedMySqlDatabasesClient` in the Database Management service
+- The property `LifecycleState` and its enum `LifecycleStateEnum` were removed from the model `ExadataInfrastructureLifecycleStateValues` in the Database Management service
+- The models `DisableExternalMysqlAssociatedServiceDetails`, `EnableExternalMysqlAssociatedServiceDetails`, `DisableExternalMysqlAssociatedServiceRequest`, `EnableExternalMysqlAssociatedServiceRequest`, `DisableExternalMysqlAssociatedServiceResponse`, `EnableExternalMysqlAssociatedServiceResponse`,  and `ExternalMysqlAssociatedServiceName` were removed in the Database Management service
 
 ## 110.0.0 - 2025-05-06
 ### Added
@@ -486,6 +472,32 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
  - Support for viewing subscription limits in the Limits service
  - Support for TCP idle timeout on network load balancer create and update operations in the Network Load Balancing service
  - Support for creating integration instances of type Healthcare in the Integration Cloud service
+
+## 92.0.0 - 2024-08-06
+### Added
+ - Support for calling Oracle Cloud Infrastructure services in the `me-riyadh-1` region
+ - Support for vertically scaling a Database system in the PostgreSQL service
+ - Support for flex shapes in the PostgreSQL service
+ - Support for new fork repository feature in the Source Code Management service
+ - Support for Developer Charts in the Source Code Management service
+ - Support for pull requests and merge in Source Code Management service
+ - Support for limiting custom and versioned custom software source content to the latest package versions in the OS Management service
+ - Support for Open Data Hub (ODH) patching in a staged manner in the Big Data service
+ - Support for Autoscale Memory Utilization in the Big Data service
+ - Support for Resource Principal configuration feature in the Big Data service
+ - Support for a new optional parameter compartment ID in the Java Management service
+ - Support for Agent Installer in the Java Management service
+ - Support for Java migration analysis request of deployed applications in the Java Management service
+ - Support for JmsPlugin in the Java Management service
+ - Support for improved cryptographic analysis result listing in the Java Management service
+ - Support for improved fleet agent configuration setting in the Java Management service
+ - Support for improved Java migration analysis result listing in the Java Management service
+ - Support for improved library usage summary in the Java Management service
+ - Support for improved performance tuning analysis result listing in the Java Management service
+ - Support for improved work request listing in the Java Management service    
+
+### Breaking Changes
+ - The property `Credentials` was made required in the model `CreateDbSystemDetails` in the PostgreSQL service
 
 ## 91.0.0 - 2024-07-30
 ### Added 
