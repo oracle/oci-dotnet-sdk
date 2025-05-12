@@ -40,6 +40,12 @@ namespace Oci.OpensearchService.Models
         public System.Nullable<int> OpendashboardNodeCount { get; set; }
         
         /// <value>
+        /// The number of search nodes configured for the cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "searchNodeCount")]
+        public System.Nullable<int> SearchNodeCount { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
