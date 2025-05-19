@@ -56,5 +56,13 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
+        
+        /// <value>
+        /// Indicates that the request is a dry run, if set to \"true\". A dry run request does not actually 
+        /// creating or updating a resource and is used only to perform validation on the submitted data.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-dry-run")]
+        public System.Nullable<bool> OpcDryRun { get; set; }
     }
 }

@@ -128,7 +128,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU. 
+        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
