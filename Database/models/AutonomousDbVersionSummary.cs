@@ -93,6 +93,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsFreeTierEnabled { get; set; }
         
         /// <value>
+        /// True if this Oracle Database software version can be used for Autonomous Databases for Developers.
+        /// </value>
+        [JsonProperty(PropertyName = "isDevTierEnabled")]
+        public System.Nullable<bool> IsDevTierEnabled { get; set; }
+        
+        /// <value>
         /// True if this version of the Oracle Database software has payments enabled.
         /// </value>
         [JsonProperty(PropertyName = "isPaidEnabled")]
