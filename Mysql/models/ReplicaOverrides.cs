@@ -46,5 +46,11 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "configurationId")]
         public string ConfigurationId { get; set; }
         
+        /// <value>
+        /// Network Security Group OCIDs used for the VNIC attachment.
+        /// </value>
+        [JsonProperty(PropertyName = "nsgIds")]
+        public System.Collections.Generic.List<string> NsgIds { get; set; }
+        
     }
 }

@@ -132,7 +132,8 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
                 ///
         /// <value>
-        /// The Oracle Database edition of the DB system from which the database backup was taken.
+        /// The Oracle Database Edition that applies to all the databases on the DB system.
+        /// Exadata DB systems and 2-node RAC DB systems require ENTERPRISE_EDITION_EXTREME_PERFORMANCE.
         /// 
         /// </value>
         ///
@@ -151,7 +152,8 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Oracle Database edition of the DB system from which the database backup was taken.
+        /// The Oracle Database Edition that applies to all the databases on the DB system.
+        /// Exadata DB systems and 2-node RAC DB systems require ENTERPRISE_EDITION_EXTREME_PERFORMANCE.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "databaseEdition")]
