@@ -38,7 +38,7 @@ namespace Oci.UsageapiService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The maximumimum number of items to return.
+        /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }

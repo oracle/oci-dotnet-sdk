@@ -130,9 +130,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Create Standby Autonomous Container Database.
-        /// For more information about changing Autonomous Container Databases Add Standby, see
-        /// [Create Standby Autonomous Container Database](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-D3B503F1-0032-4B0D-9F00-ACAE8151AB80) and [Convert Snapshot Standby to Physical Standby](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-E8D7E0EE-8244-467D-B33A-1BC6F969A0A4).
+        /// Add a standby Autonomous Container Database. For more information about Autonomous Data Guard,see
+        /// [Protect Critical Databases from Failures and Disasters Using Autonomous Data Guard](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbau/GUID-C57B9A6E-7471-4CDC-8F10-B8386538E31C).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -646,7 +645,7 @@ namespace Oci.DatabaseService
         /// <summary>
         /// Move the Autonomous Container Database and its dependent resources to the specified compartment.
         /// For more information about moving Autonomous Container Databases, see
-        /// [Moving Database Resources to a Different Compartment](https://docs.cloud.oracle.com/Content/Database/Concepts/databaseoverview.htm#moveRes).
+        /// [Moving Database Resources to a Different Compartment](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/raqyy/#articletitle.html).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1395,8 +1394,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Switch the Autonomous Container Database role between Standby and Snapshot Standby.
-        /// For more information about changing Autonomous Container Databases Dataguard Role, see
+        /// **Deprecated.** Use the {@link #convertStandbyAutonomousContainerDatabase(ConvertStandbyAutonomousContainerDatabaseRequest) convertStandbyAutonomousContainerDatabase} operation to switch the Autonomous Container Database (ACD) role between Standby and Snapshot Standby.
+        /// For more information about changing ACD Role, see
         /// [Convert Physical Standby to Snapshot Standby](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-D3B503F1-0032-4B0D-9F00-ACAE8151AB80) and [Convert Snapshot Standby to Physical Standby](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-E8D7E0EE-8244-467D-B33A-1BC6F969A0A4).
         /// 
         /// </summary>
@@ -2779,9 +2778,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Convert between and SnapshotStandby Standby Autonomous Container Database .
-        /// For more information about changing Autonomous Container Databases Add Standby, see
-        /// [Convert Standby Autonomous Container Database](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-D3B503F1-0032-4B0D-9F00-ACAE8151AB80) and [Convert Snapshot Standby to Physical Standby](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-E8D7E0EE-8244-467D-B33A-1BC6F969A0A4).
+        /// Convert the standby Autonomous Container Database (ACD) between physical standby and snapshot standby ACD. For more information about converting standby ACDs, see
+        /// [Convert Physical Standby to Snapshot Standby](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-D3B503F1-0032-4B0D-9F00-ACAE8151AB80) and [Convert Snapshot Standby to Physical Standby](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-E8D7E0EE-8244-467D-B33A-1BC6F969A0A4).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3128,14 +3126,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Create a new Autonomous Data Guard association. An Autonomous Data Guard association represents the replication relationship between the
-        /// specified Autonomous Container database and a peer Autonomous Container database. For more information, see [Using Oracle Data Guard](https://docs.cloud.oracle.com/Content/Database/Tasks/usingdataguard.htm).
-        /// &lt;br/&gt;
-        /// All Oracle Cloud Infrastructure resources, including Data Guard associations, get an Oracle-assigned, unique ID
-        /// called an Oracle Cloud Identifier (OCID). When you create a resource, you can find its OCID in the response.
-        /// You can also retrieve a resource&#39;s OCID by using a List API operation on that resource type, or by viewing the
-        /// resource in the Console. For more information, see
-        /// [Resource Identifiers](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// **Deprecated.** Use the {@link #addStandbyAutonomousContainerDatabase(AddStandbyAutonomousContainerDatabaseRequest) addStandbyAutonomousContainerDatabase} operation to create a new Autonomous Data Guard association. An Autonomous Data Guard association represents the replication relationship between the
+        /// specified Autonomous Container database and a peer Autonomous Container database. For more information, see [Using Oracle Data Guard](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbau/#articletitle.html).        
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -8131,9 +8123,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Edit Autonomous Container Database Dataguard.
-        /// For more information about changing Autonomous Container Databases Add Standby, see
-        /// [Update Autonomous Container Database Dataguard](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-D3B503F1-0032-4B0D-9F00-ACAE8151AB80) and [Convert Snapshot Standby to Physical Standby](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-E8D7E0EE-8244-467D-B33A-1BC6F969A0A4).
+        /// Modify Autonomous Container Database Data Guard settings such as protection mode, automatic failover, and fast start failover lag limit. For more information, see
+        /// [Update Autonomous Container Database Dataguard](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-3A936EC7-7A49-4FD2-9F39-8DB6B22011CE).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -8940,7 +8931,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Failover Autonomous Container Database, identified by the autonomousContainerDatabaseId parameter, to an active standby Autonomous Container Database.
+        /// Performs failover to a standby Autonomous Container Database (ACD) identified by the autonomousContainerDatabaseId parameter. This standby ACD will become the new primary ACD when the failover completes successfully. For more information, see
+        /// [Fail Over to the Standby in an Autonomous Data Guard Configuration](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-C8FFA343-223C-4F41-9656-AEC356AD90A0). 
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -8997,7 +8989,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Fails over the standby Autonomous Container Database identified by the autonomousContainerDatabaseId parameter to the primary Autonomous Container Database after the existing primary Autonomous Container Database fails or becomes unreachable.
+        /// **Deprecated.** Use the {@link #failoverAutonomousContainerDatabaseDataguard(FailoverAutonomousContainerDatabaseDataguardRequest) failoverAutonomousContainerDatabaseDataguard} operation to fail over the standby Autonomous Container Database (ACD) to the primary ACD after the existing primary ACD fails or becomes unreachable.
         /// &lt;br/&gt;
         /// A failover can result in data loss, depending on the protection mode in effect at the time the primary Autonomous Container Database fails.
         /// 
@@ -9406,7 +9398,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets an Autonomous Container Database enabled with Autonomous Data Guard associated with the specified Autonomous Container Database.
+        /// **Deprecated.** Use the {@link #getAutonomousContainerDatabase(GetAutonomousContainerDatabaseRequest) getAutonomousContainerDatabase} operation to get the details of an Autonomous Container Database (ACD) enabled with Autonomous Data Guard associated with the specified ACD.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -9633,7 +9625,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets an Autonomous Data Guard-enabled database associated with the specified Autonomous Database.
+        /// *Deprecated.* Use the {@link #getAutonomousContainerDatabase(GetAutonomousContainerDatabaseRequest) getAutonomousContainerDatabase} operation to gets an Autonomous Data Guard-enabled database associated with the specified Autonomous Database.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -10465,7 +10457,7 @@ namespace Oci.DatabaseService
                     ServiceName = "Database",
                     OperationName = "GetCloudExadataInfrastructureUnallocatedResources",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database/20160918/CloudExadataInfrastructureUnallocatedResources/GetCloudExadataInfrastructureUnallocatedResources",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database/20160918/CloudExadataInfrastructure/GetCloudExadataInfrastructureUnallocatedResources",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -13638,7 +13630,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the Autonomous Container Databases with Autonomous Data Guard-enabled associated with the specified Autonomous Container Database.
+        /// **Deprecated.** Use the {@link #listAutonomousContainerDatabases(ListAutonomousContainerDatabasesRequest) listAutonomousContainerDatabases} operation to get a list of the Autonomous Container Databases (ACDs)with Autonomous Data Guard-enabled associated with the specified ACD.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -13978,7 +13970,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Gets a list of the Autonomous Data Guard-enabled databases associated with the specified Autonomous Database.
+        /// *Deprecated.* Use the {@link #getAutonomousContainerDatabase(GetAutonomousContainerDatabaseRequest) getAutonomousContainerDatabase} operation to get a list of the Autonomous Data Guard-enabled databases associated with the specified Autonomous Database.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -15689,7 +15681,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Lists the database nodes in the specified DB system and compartment. A database node is a server running database software.
+        /// Lists the database nodes in the specified DB system and compartment. In addition to the other required parameters, either &#39;--db-system-id&#39; or &#39;--vm-cluster-id&#39; also must be provided, depending on the service being accessed.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -18825,7 +18817,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Reinstates a disabled standby Autonomous Container Database, identified by the autonomousContainerDatabaseId parameter, to an active standby Autonomous Container Database.
+        /// Reinstates a disabled standby Autonomous Container Database (ACD), identified by the autonomousContainerDatabaseId parameter to an active standby ACD. For more information, see
+        /// [Reinstate the Disabled Standby in an Autonomous Data Guard Configuration](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-B5C6A90D-72E3-4F32-988D-8AECC0A2D947).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -18882,7 +18875,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Reinstates a disabled standby Autonomous Container Database, identified by the autonomousContainerDatabaseId parameter, to an active standby Autonomous Container Database.
+        /// **Deprecated.** Use the {@link #reinstateAutonomousContainerDatabaseDataguard(ReinstateAutonomousContainerDatabaseDataguardRequest) reinstateAutonomousContainerDatabaseDataguard} operation to reinstate a disabled standby Autonomous Container Database (ACD), identified by the autonomousContainerDatabaseId parameter, to an active standby ACD.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -20878,7 +20871,8 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Switchover Autonomous Container Database, identified by the autonomousContainerDatabaseId parameter, to an active standby Autonomous Container Database.
+        /// Switchover an Autonomous Container Database (ACD), identified by the autonomousContainerDatabaseId parameter, to an active standby ACD. This standby ACD will become the new primary ACD when the switchover completes successfully. For more information, see
+        /// [Switch Roles in an Autonomous Data Guard Configuration](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbcl/index.html#ADBCL-GUID-A2AB31F6-D52D-493C-9BA7-D87A0F17078F). 
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -20935,7 +20929,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Switches over the primary Autonomous Container Database of an Autonomous Data Guard peer association to standby role. The standby Autonomous Container Database associated with autonomousContainerDatabaseDataguardAssociationId assumes the primary Autonomous Container Database role.
+        /// **Deprecated.** Use the {@link #switchoverAutonomousContainerDatabaseDataguard(SwitchoverAutonomousContainerDatabaseDataguardRequest) switchoverAutonomousContainerDatabaseDataguard} operation to switches over the primary Autonomous Container Database (ACD) of an Autonomous Data Guard peer association to standby role. The standby ACD associated with autonomousContainerDatabaseDataguardAssociationId assumes the primary ACD role.
         /// &lt;br/&gt;
         /// A switchover incurs no data loss.
         /// 
@@ -21346,7 +21340,7 @@ namespace Oci.DatabaseService
         }
 
         /// <summary>
-        /// Update Autonomous Data Guard association.
+        /// **Deprecated.** Use the {@link #editAutonomousContainerDatabaseDataguard(EditAutonomousContainerDatabaseDataguardRequest) editAutonomousContainerDatabaseDataguard} operation to update an Autonomous Data Guard association.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

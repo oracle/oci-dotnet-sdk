@@ -22,7 +22,7 @@ namespace Oci.UsageapiService.Models
     {
         
         /// <value>
-        /// The ocid representing unique shedule run
+        /// The OCID representing a unique shedule run.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.UsageapiService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The ocid representing unique shedule
+        /// The OCID representing a unique shedule.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.UsageapiService.Models
         public string ScheduleId { get; set; }
         
         /// <value>
-        /// The time when schedule started executing
+        /// The time the schedule started executing.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time when schedule finished executing
+        /// The time the schedule finished executing.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,7 +62,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
         
         /// <value>
-        /// Specifies if the schedule job was run successfully or not.
+        /// Specifies whether or not the schedule job was successfully run.
         /// </value>
         /// <remarks>
         /// Required
@@ -73,7 +73,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<ScheduledRun.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Additional details about scheduled run failure
+        /// Additional details about the scheduled run.
         /// </value>
         /// <remarks>
         /// Required

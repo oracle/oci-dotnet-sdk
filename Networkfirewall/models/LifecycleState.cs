@@ -32,10 +32,6 @@ namespace Oci.NetworkfirewallService.Models
       [EnumMember(Value = "FAILED")]
       Failed,
       [EnumMember(Value = "NEEDS_ATTENTION")]
-      NeedsAttention,
-      [EnumMember(Value = "ATTACHING")]
-      Attaching,
-      [EnumMember(Value = "DETACHING")]
-      Detaching
+      NeedsAttention
   }
 }

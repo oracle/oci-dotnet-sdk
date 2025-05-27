@@ -151,5 +151,12 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "openIdConnectDiscoveryEndpoint")]
         public string OpenIdConnectDiscoveryEndpoint { get; set; }
         
+        /// <value>
+        /// The cluster-specific OpenID Connect Discovery Key to derive the DiscoveryEndpoint
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "openIdConnectDiscoveryKey")]
+        public string OpenIdConnectDiscoveryKey { get; set; }
+        
     }
 }

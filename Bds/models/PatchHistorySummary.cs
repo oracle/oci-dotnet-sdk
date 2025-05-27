@@ -71,8 +71,9 @@ namespace Oci.BdsService.Models
         /// <value>
         /// The type of current patch history.
         /// DP - Data Plane patch(This history type is internal available only)
-        /// ODH - Oracle Distribution of Hadoop patch
-        /// OS - Operating System patch
+        /// ODH - Oracle Distribution of Hadoop update
+        /// OS - Operating System update
+        /// BDS - Big Data Service update
         /// 
         /// </value>
         ///
@@ -83,14 +84,17 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = "ODH")]
             Odh,
             [EnumMember(Value = "OS")]
-            Os
+            Os,
+            [EnumMember(Value = "BDS")]
+            Bds
         };
 
         /// <value>
         /// The type of current patch history.
         /// DP - Data Plane patch(This history type is internal available only)
-        /// ODH - Oracle Distribution of Hadoop patch
-        /// OS - Operating System patch
+        /// ODH - Oracle Distribution of Hadoop update
+        /// OS - Operating System update
+        /// BDS - Big Data Service update
         /// 
         /// </value>
         /// <remarks>

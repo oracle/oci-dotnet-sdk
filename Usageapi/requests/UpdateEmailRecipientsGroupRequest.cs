@@ -30,7 +30,7 @@ namespace Oci.UsageapiService.Requests
         public UpdateEmailRecipientsGroupDetails UpdateEmailRecipientsGroupDetails { get; set; }
         
         /// <value>
-        /// The email recipient group OCID.
+        /// The email recipients group OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.UsageapiService.Requests
         public string EmailRecipientsGroupId { get; set; }
         
         /// <value>
-        /// The UsageStatement Subscription unique OCID.
+        /// The usage statement subscription unique OCID.
         /// </value>
         /// <remarks>
         /// Required

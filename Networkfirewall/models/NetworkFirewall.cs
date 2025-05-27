@@ -92,6 +92,9 @@ namespace Oci.NetworkfirewallService.Models
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
         
+        [JsonProperty(PropertyName = "natConfiguration")]
+        public NatConfigurationResponse NatConfiguration { get; set; }
+        
         /// <value>
         /// An array of network security groups [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) associated with the Network Firewall.
         /// </value>

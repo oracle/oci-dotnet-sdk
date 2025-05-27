@@ -81,6 +81,9 @@ namespace Oci.NetworkfirewallService.Models
         [JsonProperty(PropertyName = "ipv6Address")]
         public string Ipv6Address { get; set; }
         
+        [JsonProperty(PropertyName = "natConfiguration")]
+        public NatConfigurationResponse NatConfiguration { get; set; }
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Network Firewall Policy.
         /// </value>

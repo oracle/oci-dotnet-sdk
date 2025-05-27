@@ -74,6 +74,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
+        [JsonProperty(PropertyName = "placementConstraintDetails")]
+        public PlacementConstraintDetails PlacementConstraintDetails { get; set; }
+        
         /// <value>
         /// The OCID of the cluster placement group of the instance.
         /// </value>
@@ -401,6 +404,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "licensingConfigs")]
         public System.Collections.Generic.List<LicensingConfig> LicensingConfigs { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Customer-unique host group
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "computeHostGroupId")]
+        public string ComputeHostGroupId { get; set; }
         
     }
 }

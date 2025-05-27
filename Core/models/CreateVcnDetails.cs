@@ -142,5 +142,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "isIpv6Enabled")]
         public System.Nullable<bool> IsIpv6Enabled { get; set; }
         
+        /// <value>
+        /// Indicates whether Zpr Only Mode is enforced.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isZprOnly")]
+        public System.Nullable<bool> IsZprOnly { get; set; }
+        
     }
 }

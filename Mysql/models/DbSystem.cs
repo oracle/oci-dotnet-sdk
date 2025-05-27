@@ -75,6 +75,9 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
+        [JsonProperty(PropertyName = "rest")]
+        public RestDetails Rest { get; set; }
+        
         /// <value>
         /// Specifies if the DB System is highly available.
         /// 

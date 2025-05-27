@@ -130,7 +130,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Add a list of email recipients that can receive usage statements for the subscription.
+        /// Creates a list of email recipients that can receive usage statements for the subscription.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -301,7 +301,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Returns the created usage carbon emissions query.
+        /// Returns the created carbon emissions usage query.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -415,7 +415,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Delete the email recipients group for the usage statement subscription.
+        /// Deletes the email recipients group for the usage statement subscription.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -586,7 +586,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Delete a usage carbon emissions saved query by the OCID.
+        /// Delete a carbon emissions usage saved query by the OCID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -700,7 +700,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Return the saved usage statement email recipient group.
+        /// Returns the saved usage statement email recipients group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -928,7 +928,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Returns the usage carbon emissions saved query.
+        /// Returns the carbon emissions usage saved query.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1042,7 +1042,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Return the saved usage statement email recipient group.
+        /// Returns the saved usage statement email recipients group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1156,7 +1156,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Returns schedule history list.
+        /// Returns the schedule history list.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1270,7 +1270,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Returns the usage carbon emissions saved query list.
+        /// Returns the carbon emissions usage saved query list.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1555,7 +1555,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Returns the configuration list for the UI drop-down list of carbon emission console.
+        /// Returns the configuration list for the Console&#39;s carbon emission user interface drop-down list.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1612,7 +1612,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Returns usage carbon emission for the given account.
+        /// Returns carbon emission usage for the given account.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1669,7 +1669,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Update a saved custom table by table id.
+        /// Update a saved custom table by table ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1726,7 +1726,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Update a saved email recipients group.
+        /// Updates a saved email recipients group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1840,7 +1840,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Update a saved schedule
+        /// Update a saved schedule.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1897,7 +1897,7 @@ namespace Oci.UsageapiService
         }
 
         /// <summary>
-        /// Update a usage carbon emissions saved query by the OCID.
+        /// Update a carbon emissions usage saved query by the OCID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

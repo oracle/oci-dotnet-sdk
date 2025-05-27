@@ -44,6 +44,9 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
+        [JsonProperty(PropertyName = "rest")]
+        public CreateRestDetails Rest { get; set; }
+        
         /// <value>
         /// Specifies if the DB System is highly available.
         /// <br/>
