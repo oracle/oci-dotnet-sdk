@@ -44,5 +44,11 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "patchingConfigs")]
         public PatchingConfigs PatchingConfigs { get; set; }
         
+        /// <value>
+        /// Perform dry run for the patch and stop.
+        /// </value>
+        [JsonProperty(PropertyName = "isDryRun")]
+        public System.Nullable<bool> IsDryRun { get; set; }
+        
     }
 }

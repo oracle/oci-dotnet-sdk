@@ -83,7 +83,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<GranularityEnum> Granularity { get; set; }
         
         /// <value>
-        /// Whether aggregated by time. If isAggregateByTime is true, all usage/cost over the query time period will be added up.
+        /// Specifies whether aggregated by time. If isAggregateByTime is true, all usage or cost over the query time period will be added up.
         /// </value>
         [JsonProperty(PropertyName = "isAggregateByTime")]
         public System.Nullable<bool> IsAggregateByTime { get; set; }
@@ -93,11 +93,11 @@ namespace Oci.UsageapiService.Models
                 ///
         /// <value>
         /// The query usage type. COST by default if it is missing.
-        /// Usage - Query the usage data.
-        /// Cost - Query the cost/billing data.
-        /// Credit - Query the credit adjustments data.
-        /// ExpiredCredit - Query the expired credits data
-        /// AllCredit - Query the credit adjustments and expired credit
+        /// * Usage: Query the usage data.
+        /// * Cost: Query the cost/billing data.
+        /// * Credit: Query the credit adjustments data.
+        /// * ExpiredCredit: Query the expired credits data.
+        /// * AllCredit: Query the credit adjustments and expired credit.
         /// 
         /// </value>
         ///
@@ -119,11 +119,11 @@ namespace Oci.UsageapiService.Models
 
         /// <value>
         /// The query usage type. COST by default if it is missing.
-        /// Usage - Query the usage data.
-        /// Cost - Query the cost/billing data.
-        /// Credit - Query the credit adjustments data.
-        /// ExpiredCredit - Query the expired credits data
-        /// AllCredit - Query the credit adjustments and expired credit
+        /// * Usage: Query the usage data.
+        /// * Cost: Query the cost/billing data.
+        /// * Credit: Query the credit adjustments data.
+        /// * ExpiredCredit: Query the expired credits data.
+        /// * AllCredit: Query the credit adjustments and expired credit.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "queryType")]
@@ -131,8 +131,8 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<QueryTypeEnum> QueryType { get; set; }
         
         /// <value>
-        /// Aggregate the result by.
-        /// Example:   [&quot;tagNamespace&quot;, &quot;tagKey&quot;, &quot;tagValue&quot;, &quot;service&quot;, &quot;skuName&quot;, &quot;skuPartNumber&quot;, &quot;unit&quot;,    &quot;compartmentName&quot;, &quot;compartmentPath&quot;, &quot;compartmentId&quot;, &quot;platform&quot;, &quot;region&quot;, &quot;logicalAd&quot;,    &quot;resourceId&quot;, &quot;tenantId&quot;, &quot;tenantName&quot;]
+        /// Specifies what to aggregate the result by.
+        /// For Example:   [&quot;tagNamespace&quot;, &quot;tagKey&quot;, &quot;tagValue&quot;, &quot;service&quot;, &quot;skuName&quot;, &quot;skuPartNumber&quot;, &quot;unit&quot;,    &quot;compartmentName&quot;, &quot;compartmentPath&quot;, &quot;compartmentId&quot;, &quot;platform&quot;, &quot;region&quot;, &quot;logicalAd&quot;,    &quot;resourceId&quot;, &quot;tenantId&quot;, &quot;tenantName&quot;]
         /// </value>
         [JsonProperty(PropertyName = "groupBy")]
         public System.Collections.Generic.List<string> GroupBy { get; set; }

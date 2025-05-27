@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// Email recipients group summary for the list recipients groups.
+    /// The email recipients group summary for the recipients group list.
     /// </summary>
     public class EmailRecipientsGroupSummary 
     {
@@ -42,7 +42,7 @@ namespace Oci.UsageapiService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The list of recipient will receive the usage statement email.
+        /// The list of recipients that will receive usage statement emails.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.UsageapiService.Models
         public System.Collections.Generic.List<EmailRecipient> RecipientsList { get; set; }
         
         /// <value>
-        /// The email recipient group lifecycle state.
+        /// The email recipients group lifecycle state.
         /// </value>
         /// <remarks>
         /// Required

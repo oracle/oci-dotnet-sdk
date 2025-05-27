@@ -804,7 +804,7 @@ namespace Oci.ApmsyntheticsService
         }
 
         /// <summary>
-        /// Gets the results for a specific execution of a monitor identified by OCID. The results are in a HAR file, Screenshot, Console Log or Network details.
+        /// Gets the results for a specific execution of a monitor identified by OCID. The results are in a HAR file, Screenshot, Console Log, Network details, Diagnostics or Script Content.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

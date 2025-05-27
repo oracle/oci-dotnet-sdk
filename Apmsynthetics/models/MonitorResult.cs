@@ -23,7 +23,7 @@ namespace Oci.ApmsyntheticsService.Models
         
         /// <value>
         /// Type of result.
-        /// Example: HAR, Screenshot, Log or Network.
+        /// Example: har, screenshot, log, network, diagnostics or script.
         /// </value>
         [JsonProperty(PropertyName = "resultType")]
         public string ResultType { get; set; }

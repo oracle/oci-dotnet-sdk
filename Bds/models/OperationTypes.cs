@@ -134,6 +134,8 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "ACTIVATE_IAM_USER_SYNC_CONFIG")]
       ActivateIamUserSyncConfig,
       [EnumMember(Value = "DEACTIVATE_IAM_USER_SYNC_CONFIG")]
-      DeactivateIamUserSyncConfig
+      DeactivateIamUserSyncConfig,
+      [EnumMember(Value = "INSTALL_SOFTWARE_UPDATES")]
+      InstallSoftwareUpdates
   }
 }

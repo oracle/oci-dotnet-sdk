@@ -95,6 +95,13 @@ namespace Oci.ApmsyntheticsService.Models
         public string ScriptName { get; set; }
         
         /// <value>
+        /// Content type of the script.
+        /// </value>
+        [JsonProperty(PropertyName = "contentType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ContentTypes> ContentType { get; set; }
+        
+        /// <value>
         /// Enables or disables the monitor.
         /// </value>
         /// <remarks>

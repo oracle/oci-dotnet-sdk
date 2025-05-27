@@ -38,6 +38,30 @@ namespace Oci.DatabaseService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shapeType")]
         public string ShapeType { get; set; }
         
+        ///
+        /// <value>
+        /// The database edition of quota (STANDARD_EDITION/ENTERPRISE_EDITION/ENTERPRISE_EDITION_HIGH_PERFORMANCE/ENTERPRISE_EDITION_EXTREME/ENTERPRISE_EDITION_DEVELOPER)
+        /// </value>
+        ///
+        public enum DatabaseEditionEnum {
+            [EnumMember(Value = "STANDARD_EDITION")]
+            StandardEdition,
+            [EnumMember(Value = "ENTERPRISE_EDITION")]
+            EnterpriseEdition,
+            [EnumMember(Value = "ENTERPRISE_EDITION_HIGH_PERFORMANCE")]
+            EnterpriseEditionHighPerformance,
+            [EnumMember(Value = "ENTERPRISE_EDITION_EXTREME")]
+            EnterpriseEditionExtreme,
+            [EnumMember(Value = "ENTERPRISE_EDITION_DEVELOPER")]
+            EnterpriseEditionDeveloper
+        };
+
+        /// <value>
+        /// The database edition of quota (STANDARD_EDITION/ENTERPRISE_EDITION/ENTERPRISE_EDITION_HIGH_PERFORMANCE/ENTERPRISE_EDITION_EXTREME/ENTERPRISE_EDITION_DEVELOPER)
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseEdition")]
+        public System.Nullable<DatabaseEditionEnum> DatabaseEdition { get; set; }
+        
         /// <value>
         /// Unique identifier for the request.
         /// 

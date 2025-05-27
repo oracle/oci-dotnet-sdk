@@ -50,9 +50,72 @@ namespace Oci.UsageapiService.Models
         [Required(ErrorMessage = "TimeUsageEnded is required.")]
         [JsonProperty(PropertyName = "timeUsageEnded")]
         public System.Nullable<System.DateTime> TimeUsageEnded { get; set; }
+                ///
+        /// <value>
+        /// Specifies the method used for emission calculation, such as POWER_BASED or SPEND_BASED
+        /// </value>
+        ///
+        public enum EmissionCalculationMethodEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "SPEND_BASED")]
+            SpendBased,
+            [EnumMember(Value = "POWER_BASED")]
+            PowerBased
+        };
+
+        /// <value>
+        /// Specifies the method used for emission calculation, such as POWER_BASED or SPEND_BASED
+        /// </value>
+        [JsonProperty(PropertyName = "emissionCalculationMethod")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<EmissionCalculationMethodEnum> EmissionCalculationMethod { get; set; }
+                ///
+        /// <value>
+        /// Specifies the type of emission, such as MARKET_BASED or LOCATION_BASED.
+        /// </value>
+        ///
+        public enum EmissionTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MARKET_BASED")]
+            MarketBased,
+            [EnumMember(Value = "LOCATION_BASED")]
+            LocationBased
+        };
+
+        /// <value>
+        /// Specifies the type of emission, such as MARKET_BASED or LOCATION_BASED.
+        /// </value>
+        [JsonProperty(PropertyName = "emissionType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<EmissionTypeEnum> EmissionType { get; set; }
+                ///
+        /// <value>
+        /// The carbon emission granularity. DAILY - Daily data aggregation. MONTHLY - Monthly data aggregation.
+        /// </value>
+        ///
+        public enum GranularityEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "DAILY")]
+            Daily,
+            [EnumMember(Value = "MONTHLY")]
+            Monthly
+        };
+
+        /// <value>
+        /// The carbon emission granularity. DAILY - Daily data aggregation. MONTHLY - Monthly data aggregation.
+        /// </value>
+        [JsonProperty(PropertyName = "granularity")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<GranularityEnum> Granularity { get; set; }
         
         /// <value>
-        /// Specifies whether aggregated by time. If isAggregateByTime is true, all usage carbon emissions over the query time period will be added up.
+        /// Specifies whether aggregated by time. If isAggregateByTime is true, all carbon emissions usage over the query time period are summed.
         /// </value>
         [JsonProperty(PropertyName = "isAggregateByTime")]
         public System.Nullable<bool> IsAggregateByTime { get; set; }

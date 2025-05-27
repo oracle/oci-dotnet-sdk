@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The usage carbon emissions saved query to filter and aggregate.
+    /// The carbon emissions usage saved query to filter and aggregate.
     /// </summary>
     public class UsageCarbonEmissionsQuery 
     {

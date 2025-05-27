@@ -173,6 +173,9 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "portX")]
         public System.Nullable<int> PortX { get; set; }
         
+        [JsonProperty(PropertyName = "rest")]
+        public RestDetails Rest { get; set; }
+        
         /// <value>
         /// Specifies if the DB System is highly available.
         /// 

@@ -22,19 +22,19 @@ namespace Oci.UsageapiService.Models
     {
         
         /// <value>
-        /// the first name of the recipient.
+        /// The recipient first name.
         /// </value>
         [JsonProperty(PropertyName = "firstName")]
         public string FirstName { get; set; }
         
         /// <value>
-        /// the last name of the recipient.
+        /// The recipient last name.
         /// </value>
         [JsonProperty(PropertyName = "lastName")]
         public string LastName { get; set; }
         
         /// <value>
-        /// the email of the recipient.
+        /// The recipient email address.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The saved email recipient group to receive usage statement email.
+    /// The saved email recipient group to receive usage statement emails.
     /// </summary>
     public class CreateEmailRecipientsGroupDetails 
     {
@@ -32,7 +32,7 @@ namespace Oci.UsageapiService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The list of recipient will receive the usage statement email.
+        /// The list of recipients that will receive usage statement emails.
         /// </value>
         /// <remarks>
         /// Required

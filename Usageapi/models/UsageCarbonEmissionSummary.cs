@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The usage carbon emission store result.
+    /// The carbon emission usage store result.
     /// </summary>
     public class UsageCarbonEmissionSummary 
     {
@@ -120,7 +120,7 @@ namespace Oci.UsageapiService.Models
         public System.Nullable<System.DateTime> TimeUsageEnded { get; set; }
         
         /// <value>
-        /// The carbon emission in MTCO2 unit.
+        /// The carbon emission usage in MTCO2 units.
         /// </value>
         /// <remarks>
         /// Required
@@ -130,7 +130,7 @@ namespace Oci.UsageapiService.Models
         public System.Double ComputedCarbonEmission { get; set; }
         
         /// <value>
-        /// The method used to calculate carbon emission.
+        /// Specifies the approach for calculating carbon emissions, supports both SPEND_BASED (based on expenditure data) and POWER_BASED (based on power consumption, newly introduced in the metering pipeline)
         /// </value>
         /// <remarks>
         /// Required
@@ -138,6 +138,13 @@ namespace Oci.UsageapiService.Models
         [Required(ErrorMessage = "EmissionCalculationMethod is required.")]
         [JsonProperty(PropertyName = "emissionCalculationMethod")]
         public string EmissionCalculationMethod { get; set; }
+        
+        /// <value>
+        /// The emission type, such as MARKET_BASED or LOCATION_BASED.
+        /// </value>
+        [JsonProperty(PropertyName = "emissionType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RequestUsageCarbonEmissionsDetails.EmissionTypeEnum> EmissionType { get; set; }
         
         /// <value>
         /// The subscription ID.

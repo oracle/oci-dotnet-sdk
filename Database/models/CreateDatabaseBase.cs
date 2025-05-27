@@ -28,10 +28,6 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Home.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DbHomeId is required.")]
         [JsonProperty(PropertyName = "dbHomeId")]
         public string DbHomeId { get; set; }
         

@@ -20,7 +20,7 @@ namespace Oci.UsageapiService.Requests
     {
         
         /// <value>
-        /// The information to be updated. Currently supports only tags
+        /// The information to be updated. Currently supports only tags.
         /// </value>
         /// <remarks>
         /// Required

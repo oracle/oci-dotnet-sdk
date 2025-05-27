@@ -30,7 +30,7 @@ namespace Oci.UsageapiService.Requests
         public CreateEmailRecipientsGroupDetails CreateEmailRecipientsGroupDetails { get; set; }
         
         /// <value>
-        /// The UsageStatement Subscription unique OCID.
+        /// The usage statement subscription unique OCID.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// Average carbon emission.
+    /// Average carbon emissions.
     /// </summary>
     public class AverageCarbonEmission 
     {
         
         /// <value>
-        /// The sku part number.
+        /// The SKU part number.
         /// </value>
         /// <remarks>
         /// Required
