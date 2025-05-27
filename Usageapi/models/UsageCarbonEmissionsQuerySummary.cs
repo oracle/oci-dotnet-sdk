@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// Usage carbon emissions query summary in the list request.
+    /// The carbon emissions usage query summary in the list request.
     /// </summary>
     public class UsageCarbonEmissionsQuerySummary 
     {

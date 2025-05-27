@@ -150,5 +150,12 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "computeHostHealth")]
         public string ComputeHostHealth { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compute host group.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "computeHostGroupId")]
+        public string ComputeHostGroupId { get; set; }
     }
 }

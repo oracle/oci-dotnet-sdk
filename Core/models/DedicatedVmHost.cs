@@ -101,6 +101,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
+        [JsonProperty(PropertyName = "placementConstraintDetails")]
+        public PlacementConstraintDetails PlacementConstraintDetails { get; set; }
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the dedicated VM host.
         /// </value>

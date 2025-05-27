@@ -3377,8 +3377,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Creates a secondary private IP for the specified VNIC.
-        /// For more information about secondary private IPs, see
+        /// Creates a private IP.
+        /// For more information about private IPs, see
         /// [IP Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingIPaddresses.htm).
         /// 
         /// </summary>

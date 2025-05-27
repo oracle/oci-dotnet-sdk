@@ -73,6 +73,31 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "RelatedCVEs is required.")]
         [JsonProperty(PropertyName = "relatedCVEs")]
         public System.Collections.Generic.List<string> RelatedCVEs { get; set; }
+                ///
+        /// <value>
+        /// Package type based on package installation manager.
+        /// </value>
+        ///
+        public enum PackageTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "RPM")]
+            Rpm,
+            [EnumMember(Value = "PIP")]
+            Pip,
+            [EnumMember(Value = "PIP3")]
+            Pip3,
+            [EnumMember(Value = "PIP3_8")]
+            Pip38
+        };
+
+        /// <value>
+        /// Package type based on package installation manager.
+        /// </value>
+        [JsonProperty(PropertyName = "packageType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<PackageTypeEnum> PackageType { get; set; }
         
     }
 }

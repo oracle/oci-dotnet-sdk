@@ -71,6 +71,9 @@ namespace Oci.MysqlService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DbSystem.AccessModeEnum> AccessMode { get; set; }
         
+        [JsonProperty(PropertyName = "rest")]
+        public UpdateRestDetails Rest { get; set; }
+        
         /// <value>
         /// Specifies if the DB System is highly available.
         /// <br/>

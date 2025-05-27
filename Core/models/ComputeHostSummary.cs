@@ -82,6 +82,16 @@ namespace Oci.CoreService.Models
         public string HpcIslandId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Customer-unique host group
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "computeHostGroupId")]
+        public string ComputeHostGroupId { get; set; }
+        
+        [JsonProperty(PropertyName = "recycleDetails")]
+        public RecycleDetails RecycleDetails { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for Customer-unique Network Block
         /// 
         /// </value>

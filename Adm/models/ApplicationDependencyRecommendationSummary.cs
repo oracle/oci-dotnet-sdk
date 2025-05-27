@@ -34,7 +34,7 @@ namespace Oci.AdmService.Models
         public string Gav { get; set; }
         
         /// <value>
-        /// Package URL defined in https://github.com/package-url/purl-spec, e.g. pkg:maven/org.graalvm.nativeimage/svm@21.1.0
+        /// Package URL identifier, e.g. pkg:maven/org.graalvm.nativeimage/svm@21.1.0
         /// </value>
         [JsonProperty(PropertyName = "purl")]
         public string Purl { get; set; }
@@ -66,7 +66,7 @@ namespace Oci.AdmService.Models
         public string RecommendedGav { get; set; }
         
         /// <value>
-        /// Recommended application dependency in PURL format, e.g. pkg:maven/org.graalvm.nativeimage/svm@21.2.0
+        /// Recommended application dependency in purl format, e.g. pkg:maven/org.graalvm.nativeimage/svm@21.2.0
         /// </value>
         [JsonProperty(PropertyName = "recommendedPurl")]
         public string RecommendedPurl { get; set; }

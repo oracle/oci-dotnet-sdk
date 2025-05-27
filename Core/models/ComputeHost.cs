@@ -82,6 +82,35 @@ namespace Oci.CoreService.Models
         public string HpcIslandId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Customer-unique host group associated with the Compute Bare Metal Host.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "computeHostGroupId")]
+        public string ComputeHostGroupId { get; set; }
+        
+        /// <value>
+        /// Configuration state of the Compute Bare Metal Host.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "configurationState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ConfigurationState> ConfigurationState { get; set; }
+        
+        /// <value>
+        /// The date and time that the compute bare metal host configuration check was updated, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// <br/>
+        /// Example: 2016-08-25T21:10:29.600Z
+        /// </value>
+        [JsonProperty(PropertyName = "timeConfigurationCheck")]
+        public System.Nullable<System.DateTime> TimeConfigurationCheck { get; set; }
+        
+        [JsonProperty(PropertyName = "configurationData")]
+        public ComputeHostConfigurationData ConfigurationData { get; set; }
+        
+        [JsonProperty(PropertyName = "recycleDetails")]
+        public RecycleDetails RecycleDetails { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for Customer-unique Network Block
         /// 
         /// </value>

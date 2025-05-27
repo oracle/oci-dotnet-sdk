@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// The account (tenant) usage carbon emissions.
+    /// The account (tenant) carbon emissions usage.
     /// </summary>
     public class UsageCarbonEmissionAggregation 
     {
         
         /// <value>
-        /// Aggregate the result by.
+        /// Specifies what to aggregate the result by.
         /// </value>
         [JsonProperty(PropertyName = "groupBy")]
         public System.Collections.Generic.List<string> GroupBy { get; set; }
         
         /// <value>
-        /// A list of usage carbon emission items.
+        /// A list of carbon emission usage items.
         /// </value>
         /// <remarks>
         /// Required

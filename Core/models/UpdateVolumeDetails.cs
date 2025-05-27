@@ -95,7 +95,8 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<AutotunePolicy> AutotunePolicies { get; set; }
         
         /// <value>
-        /// Reservations-enabled is a boolean field that allows to enable PR (Persistent Reservation) on a volume.
+        /// When set to true, enables SCSI Persistent Reservation (SCSI PR) for the volume. For more information, see
+        /// [Persistent Reservations](https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/persistent-reservations.htm).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isReservationsEnabled")]

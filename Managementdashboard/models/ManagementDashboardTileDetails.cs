@@ -156,5 +156,11 @@ namespace Oci.ManagementdashboardService.Models
         [JsonProperty(PropertyName = "parametersMap")]
         public System.Object ParametersMap { get; set; }
         
+        /// <value>
+        /// Description of the tile.
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
     }
 }

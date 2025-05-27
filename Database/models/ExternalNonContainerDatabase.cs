@@ -159,7 +159,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "ENTERPRISE_EDITION_HIGH_PERFORMANCE")]
             EnterpriseEditionHighPerformance,
             [EnumMember(Value = "ENTERPRISE_EDITION_EXTREME_PERFORMANCE")]
-            EnterpriseEditionExtremePerformance
+            EnterpriseEditionExtremePerformance,
+            [EnumMember(Value = "ENTERPRISE_EDITION_DEVELOPER")]
+            EnterpriseEditionDeveloper
         };
 
         /// <value>

@@ -22,6 +22,8 @@ namespace Oci.ApmsyntheticsService.Models
       [EnumMember(Value = "SIDE")]
       Side,
       [EnumMember(Value = "JS")]
-      Js
+      Js,
+      [EnumMember(Value = "PLAYWRIGHT_TS")]
+      PlaywrightTs
   }
 }

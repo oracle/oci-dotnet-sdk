@@ -46,7 +46,7 @@ namespace Oci.UsageapiService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// The maximumimum number of items to return.
+        /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
@@ -90,7 +90,7 @@ namespace Oci.UsageapiService.Requests
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
         
         /// <value>
-        /// Query parameter for filtering by name
+        /// The query parameter for filtering by name.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]

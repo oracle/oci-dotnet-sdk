@@ -140,6 +140,12 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
+        /// The OCID of the compute host group attached to the host where the bare metal instance will be launched.
+        /// </value>
+        [JsonProperty(PropertyName = "computeHostGroupId")]
+        public string ComputeHostGroupId { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the
         /// [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) that the instance will be created in.
         /// 
@@ -308,6 +314,9 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "platformConfig")]
         public LaunchInstancePlatformConfig PlatformConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "placementConstraintDetails")]
+        public PlacementConstraintDetails PlacementConstraintDetails { get; set; }
         
         /// <value>
         /// The OCID of the Instance Configuration containing instance launch details. Any other fields supplied in this instance launch request will override the details stored in the Instance Configuration for this instance launch.

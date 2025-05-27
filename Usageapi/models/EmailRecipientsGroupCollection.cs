@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.UsageapiService.Models
 {
     /// <summary>
-    /// An email recipients groups collection
+    /// The email recipients group collection.
     /// </summary>
     public class EmailRecipientsGroupCollection 
     {
         
         /// <value>
-        /// An email recipients groups list.
+        /// The email recipients group list.
         /// </value>
         /// <remarks>
         /// Required

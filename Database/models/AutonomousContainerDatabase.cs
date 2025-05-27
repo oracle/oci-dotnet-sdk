@@ -547,7 +547,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<NetServicesArchitectureEnum> NetServicesArchitecture { get; set; }
         
         /// <value>
-        /// Whether it is multiple standby Autonomous Dataguard
+        /// Indicates if it is multiple standby Autonomous Dataguard
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isMultipleStandby")]
