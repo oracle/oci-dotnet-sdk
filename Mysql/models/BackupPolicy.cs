@@ -32,6 +32,15 @@ namespace Oci.MysqlService.Models
         public System.Nullable<bool> IsEnabled { get; set; }
         
         /// <value>
+        /// Retains the backup to be deleted due to the retention policy in DELETE SCHEDULED
+        /// state for 7 days before permanently deleting it.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "softDelete")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SoftDelete> SoftDelete { get; set; }
+        
+        /// <value>
         /// List of policies of a DB system to schedule cross-region DB system backup copy.
         /// <br/>
         /// The policy includes the name of the destination region to which the DB system backup will be copied, and

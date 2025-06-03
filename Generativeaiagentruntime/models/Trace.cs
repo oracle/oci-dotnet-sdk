@@ -24,10 +24,31 @@ namespace Oci.GenerativeaiagentruntimeService.Models
     {
         
         /// <value>
+        /// Unique identifier for the event (UUID).
+        /// </value>
+        [JsonProperty(PropertyName = "key")]
+        public string Key { get; set; }
+        
+        /// <value>
+        /// Identifier of the parent event, if applicable (UUID).
+        /// </value>
+        [JsonProperty(PropertyName = "parentKey")]
+        public string ParentKey { get; set; }
+        
+        [JsonProperty(PropertyName = "source")]
+        public SourceDetails Source { get; set; }
+        
+        /// <value>
         /// The date and time that the trace was created in the format of an RFC3339 datetime string.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// Timestamp for when the event ended (In RFC 3339).
+        /// </value>
+        [JsonProperty(PropertyName = "timeFinished")]
+        public System.Nullable<System.DateTime> TimeFinished { get; set; }
                 ///
         /// <value>
         /// The type of the trace.
@@ -39,7 +60,13 @@ namespace Oci.GenerativeaiagentruntimeService.Models
             [EnumMember(Value = "RETRIEVAL_TRACE")]
             RetrievalTrace,
             [EnumMember(Value = "GENERATION_TRACE")]
-            GenerationTrace
+            GenerationTrace,
+            [EnumMember(Value = "TOOL_INVOCATION_TRACE")]
+            ToolInvocationTrace,
+            [EnumMember(Value = "PLANNING_TRACE")]
+            PlanningTrace,
+            [EnumMember(Value = "EXECUTION_TRACE")]
+            ExecutionTrace
         };
 
         
@@ -72,8 +99,17 @@ namespace Oci.GenerativeaiagentruntimeService.Models
                 case "RETRIEVAL_TRACE":
                     obj = new RetrievalTrace();
                     break;
+                case "EXECUTION_TRACE":
+                    obj = new ExecutionTrace();
+                    break;
                 case "GENERATION_TRACE":
                     obj = new GenerationTrace();
+                    break;
+                case "TOOL_INVOCATION_TRACE":
+                    obj = new ToolInvocationTrace();
+                    break;
+                case "PLANNING_TRACE":
+                    obj = new PlanningTrace();
                     break;
             }
             if (obj != null)

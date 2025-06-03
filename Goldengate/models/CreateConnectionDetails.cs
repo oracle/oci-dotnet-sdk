@@ -213,6 +213,9 @@ namespace Oci.GoldengateService.Models
                 case "AZURE_SYNAPSE_ANALYTICS":
                     obj = new CreateAzureSynapseConnectionDetails();
                     break;
+                case "ICEBERG":
+                    obj = new CreateIcebergConnectionDetails();
+                    break;
                 case "MYSQL":
                     obj = new CreateMysqlConnectionDetails();
                     break;

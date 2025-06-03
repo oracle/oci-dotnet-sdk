@@ -50,6 +50,15 @@ namespace Oci.MysqlService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// Retains the backup to be deleted due to the retention policy in DELETE SCHEDULED
+        /// state for 7 days before permanently deleting it.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "softDelete")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SoftDelete> SoftDelete { get; set; }
+        
+        /// <value>
         /// The time the backup was created.
         /// </value>
         /// <remarks>
@@ -67,8 +76,14 @@ namespace Oci.MysqlService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Backup.LifecycleStateEnum> LifecycleState { get; set; }
+        
+        /// <value>
+        /// Additional information about the current lifecycleState.
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleDetails")]
+        public string LifecycleDetails { get; set; }
         
         /// <value>
         /// The type of backup.
@@ -78,7 +93,7 @@ namespace Oci.MysqlService.Models
         /// </remarks>
         [Required(ErrorMessage = "BackupType is required.")]
         [JsonProperty(PropertyName = "backupType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Backup.BackupTypeEnum> BackupType { get; set; }
         
         /// <value>
@@ -89,7 +104,7 @@ namespace Oci.MysqlService.Models
         /// </remarks>
         [Required(ErrorMessage = "CreationType is required.")]
         [JsonProperty(PropertyName = "creationType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Backup.CreationTypeEnum> CreationType { get; set; }
         
         /// <value>

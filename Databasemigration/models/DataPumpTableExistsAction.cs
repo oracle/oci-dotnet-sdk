@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasemigrationService.Models
 {
   /// <summary>
-  /// IMPORT: Specifies the action to be performed when data is loaded into a preexisting table.
+  /// IMPORT: Specifies the action to be performed when data is loaded into a preexisting table, if unspecified ZDM will apply default value.
     /// 
   /// </summary>
   public enum DataPumpTableExistsAction {
@@ -27,6 +27,8 @@ namespace Oci.DatabasemigrationService.Models
       [EnumMember(Value = "APPEND")]
       Append,
       [EnumMember(Value = "SKIP")]
-      Skip
+      Skip,
+      [EnumMember(Value = "UNSPECIFIED")]
+      Unspecified
   }
 }

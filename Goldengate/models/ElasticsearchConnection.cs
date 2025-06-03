@@ -128,6 +128,14 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "passwordSecretId")]
         public string PasswordSecretId { get; set; }
         
+        /// <value>
+        /// Fingerprint required by TLS security protocol.
+        /// Eg.: '6152b2dfbff200f973c5074a5b91d06ab3b472c07c09a1ea57bb7fd406cdce9c'
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "fingerprint")]
+        public string Fingerprint { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "ELASTICSEARCH";
     }

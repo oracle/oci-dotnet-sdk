@@ -63,6 +63,12 @@ namespace Oci.MysqlService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Backup Soft Delete
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "softDelete")]
+        public System.Nullable<SoftDelete> SoftDelete { get; set; }
+        
+        /// <value>
         /// Backup creationType
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "creationType")]

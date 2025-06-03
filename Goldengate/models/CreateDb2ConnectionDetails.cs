@@ -150,6 +150,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The base64 encoded file which contains the self-signed server certificate / Certificate Authority (CA) certificate.
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sslServerCertificate")]

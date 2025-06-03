@@ -54,10 +54,6 @@ namespace Oci.GoldengateService.Models
         /// If the user is not provided, backend will default to the user who is calling the API endpoint.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "UserId is required.")]
         [JsonProperty(PropertyName = "userId")]
         public string UserId { get; set; }
         
