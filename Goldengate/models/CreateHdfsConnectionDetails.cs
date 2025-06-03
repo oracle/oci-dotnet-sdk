@@ -35,6 +35,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The base64 encoded content of the Hadoop Distributed File System configuration file (core-site.xml).
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
         /// 
         /// </value>
         /// <remarks>

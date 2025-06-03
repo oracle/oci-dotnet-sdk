@@ -87,8 +87,9 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<MysqlConnection.SslModeEnum> SslMode { get; set; }
         
         /// <value>
-        /// Database Certificate - The base64 encoded content of a .pem or .crt file.
+        /// Database Certificate - The base64 encoded content of a .pem or .crt file
         /// containing the server public key (for 1 and 2-way SSL).
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sslCa")]
@@ -97,14 +98,16 @@ namespace Oci.GoldengateService.Models
         /// <value>
         /// The base64 encoded list of certificates revoked by the trusted certificate authorities (Trusted CA).
         /// Note: This is an optional property and only applicable if TLS/MTLS option is selected.
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sslCrl")]
         public string SslCrl { get; set; }
         
         /// <value>
-        /// Client Certificate - The base64 encoded content of a .pem or .crt file.
+        /// Client Certificate - The base64 encoded content of a .pem or .crt file
         /// containing the client public key (for 2-way SSL).
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "sslCert")]

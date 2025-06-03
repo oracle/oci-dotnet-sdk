@@ -272,6 +272,9 @@ namespace Oci.GoldengateService.Models
                 case "MICROSOFT_SQLSERVER":
                     obj = new MicrosoftSqlserverConnection();
                     break;
+                case "ICEBERG":
+                    obj = new IcebergConnection();
+                    break;
                 case "GENERIC":
                     obj = new GenericConnection();
                     break;

@@ -52,6 +52,15 @@ namespace Oci.MysqlService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// Retains the backup to be deleted due to the retention policy in DELETE SCHEDULED
+        /// state for 7 days before permanently deleting it.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "softDelete")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SoftDelete> SoftDelete { get; set; }
+        
+        /// <value>
         /// The OCID of the compartment.
         /// </value>
         /// <remarks>
@@ -102,7 +111,9 @@ namespace Oci.MysqlService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "DELETE_SCHEDULED")]
+            DeleteScheduled
         };
 
         /// <value>

@@ -34,6 +34,8 @@ namespace Oci.GoldengateService.Models
       DatabasePostgresql,
       [EnumMember(Value = "DATABASE_DB2ZOS")]
       DatabaseDb2Zos,
+      [EnumMember(Value = "DATABASE_DB2I")]
+      DatabaseDb2I,
       [EnumMember(Value = "GGSA")]
       Ggsa,
       [EnumMember(Value = "DATA_TRANSFORMS")]

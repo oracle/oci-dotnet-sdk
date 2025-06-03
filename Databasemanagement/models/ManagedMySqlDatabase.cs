@@ -80,6 +80,27 @@ namespace Oci.DatabasemanagementService.Models
         [Required(ErrorMessage = "Name is required.")]
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+                ///
+        /// <value>
+        /// The customer's selected type for HeatWave management.
+        /// </value>
+        ///
+        public enum HeatWaveManagementTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "BASIC")]
+            Basic,
+            [EnumMember(Value = "FULL")]
+            Full
+        };
+
+        /// <value>
+        /// The customer's selected type for HeatWave management.
+        /// </value>
+        [JsonProperty(PropertyName = "heatWaveManagementType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<HeatWaveManagementTypeEnum> HeatWaveManagementType { get; set; }
         
         /// <value>
         /// The name of the HeatWave cluster.

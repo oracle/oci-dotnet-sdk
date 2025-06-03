@@ -81,6 +81,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// Database Certificate - The base64 encoded content of a .pem file, containing the server public key (for 1 and 2-way SSL).
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "tlsCaFile")]

@@ -100,5 +100,21 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dbrsPolicyId")]
         public string DbrsPolicyId { get; set; }
         
+        /// <value>
+        /// Indicates whether the backup destination is cross-region or local region.
+        /// </value>
+        [JsonProperty(PropertyName = "isRemote")]
+        public System.Nullable<bool> IsRemote { get; set; }
+        
+        /// <value>
+        /// The name of the remote region where the remote automatic incremental backups will be stored.
+        /// <br/>
+        /// For information about valid region names, see
+        /// [Regions and Availability Domains](https://docs.cloud.oracle.com/Content/General/Concepts/regions.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "remoteRegion")]
+        public string RemoteRegion { get; set; }
+        
     }
 }

@@ -36,5 +36,25 @@ namespace Oci.GoldengateService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        ///
+        /// <value>
+        /// Selects the connection fields returned in connection details.
+        /// 
+        /// </value>
+        ///
+        public enum ViewEnum {
+            [EnumMember(Value = "FULL")]
+            Full,
+            [EnumMember(Value = "COMPACT")]
+            Compact
+        };
+
+        /// <value>
+        /// Selects the connection fields returned in connection details.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "view")]
+        public System.Nullable<ViewEnum> View { get; set; }
     }
 }

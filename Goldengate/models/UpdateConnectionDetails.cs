@@ -201,6 +201,9 @@ namespace Oci.GoldengateService.Models
                 case "DB2":
                     obj = new UpdateDb2ConnectionDetails();
                     break;
+                case "ICEBERG":
+                    obj = new UpdateIcebergConnectionDetails();
+                    break;
                 case "GENERIC":
                     obj = new UpdateGenericConnectionDetails();
                     break;

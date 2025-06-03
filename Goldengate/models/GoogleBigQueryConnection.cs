@@ -47,7 +47,7 @@ namespace Oci.GoldengateService.Models
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the content of the service account key file is stored,
-        /// which containing the credentials required to use Google BigQuery.
+        /// which contains the credentials required to use Google BigQuery.
         /// Note: When provided, 'serviceAccountKeyFile' field must not be provided.
         /// 
         /// </value>

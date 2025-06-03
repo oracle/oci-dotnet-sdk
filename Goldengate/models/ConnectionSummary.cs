@@ -282,6 +282,9 @@ namespace Oci.GoldengateService.Models
                 case "GOOGLE_BIGQUERY":
                     obj = new GoogleBigQueryConnectionSummary();
                     break;
+                case "ICEBERG":
+                    obj = new IcebergConnectionSummary();
+                    break;
                 case "POSTGRESQL":
                     obj = new PostgresqlConnectionSummary();
                     break;

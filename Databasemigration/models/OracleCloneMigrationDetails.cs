@@ -27,6 +27,12 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "sourceContainerDatabaseConnectionId")]
         public string SourceContainerDatabaseConnectionId { get; set; }
         
+        /// <value>
+        /// The OCID of the resource being referenced.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceStandbyDatabaseConnectionId")]
+        public string SourceStandbyDatabaseConnectionId { get; set; }
+        
         [JsonProperty(PropertyName = "databaseCombination")]
         private readonly string databaseCombination = "ORACLE";
     }

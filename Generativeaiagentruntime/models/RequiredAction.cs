@@ -68,6 +68,9 @@ namespace Oci.GenerativeaiagentruntimeService.Models
             var discriminator = jsonObject["requiredActionType"].Value<string>();
             switch (discriminator)
             {
+                case "HUMAN_APPROVAL_REQUIRED_ACTION":
+                    obj = new HumanApprovalRequiredAction();
+                    break;
                 case "FUNCTION_CALLING_REQUIRED_ACTION":
                     obj = new FunctionCallingRequiredAction();
                     break;

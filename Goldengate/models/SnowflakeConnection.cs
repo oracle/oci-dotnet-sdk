@@ -89,6 +89,10 @@ namespace Oci.GoldengateService.Models
         /// This username must already exist and be available by Snowflake platform to be connected to.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Username is required.")]
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
         

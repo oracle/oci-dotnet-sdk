@@ -105,6 +105,13 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<MySqlDatabaseStatus> DatabaseStatus { get; set; }
         
         /// <value>
+        /// The customer's selected type for HeatWave management.
+        /// </value>
+        [JsonProperty(PropertyName = "heatWaveManagementType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ManagedMySqlDatabase.HeatWaveManagementTypeEnum> HeatWaveManagementType { get; set; }
+        
+        /// <value>
         /// Indicates whether HeatWave is enabled for the MySQL Database System or not.
         /// </value>
         [JsonProperty(PropertyName = "isHeatWaveEnabled")]

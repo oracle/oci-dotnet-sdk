@@ -49,6 +49,12 @@ namespace Oci.DatabasemigrationService.Models
         public string SourceContainerDatabaseConnectionId { get; set; }
         
         /// <value>
+        /// The OCID of the resource being referenced.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceStandbyDatabaseConnectionId")]
+        public string SourceStandbyDatabaseConnectionId { get; set; }
+        
+        /// <value>
         /// Database objects to exclude from migration, cannot be specified alongside 'includeObjects'
         /// 
         /// </value>
