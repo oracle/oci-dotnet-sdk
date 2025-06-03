@@ -20,10 +20,6 @@ namespace Oci.GoldengateService.Models
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "PLACEMENT")]
-      Placement,
-      [EnumMember(Value = "DISASTER_RECOVERY")]
-      DisasterRecovery,
       [EnumMember(Value = "GROUP_TO_ROLE")]
       GroupToRole,
       [EnumMember(Value = "BACKUP_RESTORE")]
@@ -32,6 +28,10 @@ namespace Oci.GoldengateService.Models
       CopyBackup,
       [EnumMember(Value = "MANUAL_BACKUP")]
       ManualBackup,
+      [EnumMember(Value = "PLACEMENT")]
+      Placement,
+      [EnumMember(Value = "DISASTER_RECOVERY")]
+      DisasterRecovery,
       [EnumMember(Value = "SCHEDULE_MANUAL_BACKUP")]
       ScheduleManualBackup
   }

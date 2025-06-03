@@ -28,6 +28,18 @@ namespace Oci.GenerativeaiagentruntimeService.Models
         [JsonProperty(PropertyName = "generation")]
         public string Generation { get; set; }
         
+        /// <value>
+        /// The input to the generation operation.
+        /// </value>
+        [JsonProperty(PropertyName = "input")]
+        public string Input { get; set; }
+        
+        /// <value>
+        /// Details of model and its usage.
+        /// </value>
+        [JsonProperty(PropertyName = "usage")]
+        public System.Collections.Generic.List<Usage> Usage { get; set; }
+        
         [JsonProperty(PropertyName = "traceType")]
         private readonly string traceType = "GENERATION_TRACE";
     }

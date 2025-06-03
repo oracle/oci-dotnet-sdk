@@ -53,6 +53,21 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "secretAccessKeySecretId")]
         public string SecretAccessKeySecretId { get; set; }
         
+        /// <value>
+        /// The Amazon Endpoint for S3.
+        /// e.g.: 'https://my-bucket.s3.us-east-1.amazonaws.com'
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "endpoint")]
+        public string Endpoint { get; set; }
+        
+        /// <value>
+        /// The name of the region where the bucket is created.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "region")]
+        public string Region { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "AMAZON_S3";
     }

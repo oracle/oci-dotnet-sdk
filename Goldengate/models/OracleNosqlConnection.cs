@@ -66,10 +66,6 @@ namespace Oci.GoldengateService.Models
         /// If the user is not provided, backend will default to the user who is calling the API endpoint.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "UserId is required.")]
         [JsonProperty(PropertyName = "userId")]
         public string UserId { get; set; }
         
@@ -89,6 +85,14 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateKeyPassphraseSecretId")]
         public string PrivateKeyPassphraseSecretId { get; set; }
+        
+        /// <value>
+        /// The fingerprint of the API Key of the user specified by the userId.
+        /// See documentation: https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "publicKeyFingerprint")]
+        public string PublicKeyFingerprint { get; set; }
         
         /// <value>
         /// Indicates that the user intents to connect to the instance through resource principal.

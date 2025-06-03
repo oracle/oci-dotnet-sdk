@@ -45,6 +45,14 @@ namespace Oci.GoldengateService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<TechnologyTypeEnum> TechnologyType { get; set; }
         
+        /// <value>
+        /// The base64 encoded content of the Hadoop Distributed File System configuration file (core-site.xml).
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "coreSiteXml")]
+        public string CoreSiteXml { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "HDFS";
     }

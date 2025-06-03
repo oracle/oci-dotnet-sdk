@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 113.0.0 - 2025-06-03
+### Added
+ - Support for creating auto Autonomous Container Database backups in a remote region in the Database service
+ - Support for creating new Autonomous Container Databases from a backup in the remote region in the Database service
+ - Support for input/output token usage information in the Generative AI Agent service
+ - Support for standby connection in the Database Management service
+ - Support for additional metrics, including replication metrics, in the Database Management service
+ - Support for replication dashboard in the Database Management service
+ - Support for soft-deleting backups in the HeatWave service
+ - Support for additional connections types for Oracle Rest Data Services (ORDS), Apache Iceberg, and IBM Db2 for i in the Golden Gate service    
+
+### Breaking Changes
+ - The properties `CustomerContacts`, `DisplayName`, `DbUniqueName`, `DbName`, `ServiceLevelAgreementType`, `AutonomousExadataInfrastructureId`, `DbVersion`, `DatabaseSoftwareImageId`, `PeerAutonomousExadataInfrastructureId`, `PeerAutonomousContainerDatabaseDisplayName`, `ProtectionMode`, `FastStartFailOverLagLimitInSeconds`, `IsAutomaticFailoverEnabled`, `PeerCloudAutonomousVmClusterId`, `PeerAutonomousVmClusterId`, `PeerAutonomousContainerDatabaseCompartmentId`, `PeerAutonomousContainerDatabaseBackupConfig`, `PeerDbUniqueName`, `AutonomousVmClusterId`, `CloudAutonomousVmClusterId`, `CompartmentId`, `PatchModel`, `MaintenanceWindowDetails`, `StandbyMaintenanceBufferInDays`, `VersionPreference`, `IsDstFileUpdateEnabled`, `FreeformTags`, `DefinedTags`, `BackupConfig`, `KmsKeyId`, `KmsKeyVersionId`, `VaultId`, `KeyStoreId`, `DbSplitThreshold`, `VmFailoverReservation`, `DistributionAffinity`, `NetServicesArchitecture` and `Source` were moved from model CreateAutonomousContainerDatabaseDetails into the model CreateAutonomousContainerDatabaseBase in the Database service
+ - The enums `ServiceLevelAgreementTypeEnum`, `ProtectionModeEnum`, `PatchModelEnum`, `VersionPreferenceEnum`, `DistributionAffinityEnum` and `NetServicesArchitectureEnum` were moved from model CreateAutonomousContainerDatabaseDetails into CreateAutonomousContainerDatabaseBase in the Database service
+ - The property `UserId` was made required in the model `OracleNosqlConnectionSummary`  in the Golden Gate service
+
 ## 112.0.0 - 2025-05-27
 ### Added
  - Support for List and Get APIs for out-of-box management dashboard resources in the Management Dashboard service

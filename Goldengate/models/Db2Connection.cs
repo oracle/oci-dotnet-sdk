@@ -30,6 +30,8 @@ namespace Oci.GoldengateService.Models
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
             [EnumMember(Value = null)]
             UnknownEnumValue,
+            [EnumMember(Value = "DB2_I")]
+            Db2I,
             [EnumMember(Value = "DB2_ZOS")]
             Db2Zos
         };
@@ -149,6 +151,14 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "sslClientKeystashSecretId")]
         public string SslClientKeystashSecretId { get; set; }
+        
+        /// <value>
+        /// The base64 encoded file which contains the self-signed server certificate / Certificate Authority (CA) certificate.
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sslServerCertificate")]
+        public string SslServerCertificate { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "DB2";

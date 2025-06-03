@@ -39,7 +39,9 @@ namespace Oci.GoldengateService.Models
             [EnumMember(Value = "AMAZON_DOCUMENT_DB")]
             AmazonDocumentDb,
             [EnumMember(Value = "ORACLE_JSON_COLLECTION")]
-            OracleJsonCollection
+            OracleJsonCollection,
+            [EnumMember(Value = "ORACLE_REST_DATA_SERVICES")]
+            OracleRestDataServices
         };
 
         /// <value>
@@ -123,6 +125,14 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "tlsCertificateKeyFilePasswordSecretId")]
         public string TlsCertificateKeyFilePasswordSecretId { get; set; }
+        
+        /// <value>
+        /// Database Certificate - The base64 encoded content of a .pem file, containing the server public key (for 1 and 2-way SSL).
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "tlsCaFile")]
+        public string TlsCaFile { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "MONGODB";

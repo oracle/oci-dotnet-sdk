@@ -73,6 +73,8 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "GOOGLE_PUBSUB")]
       GooglePubsub,
       [EnumMember(Value = "MICROSOFT_FABRIC")]
-      MicrosoftFabric
+      MicrosoftFabric,
+      [EnumMember(Value = "ICEBERG")]
+      Iceberg
   }
 }

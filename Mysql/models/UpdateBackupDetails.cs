@@ -35,6 +35,15 @@ namespace Oci.MysqlService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// Retains the backup to be deleted due to the retention policy in DELETE SCHEDULED
+        /// state for 7 days before permanently deleting it.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "softDelete")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<SoftDelete> SoftDelete { get; set; }
+        
+        /// <value>
         /// The number of days backups are retained.
         /// 
         /// </value>

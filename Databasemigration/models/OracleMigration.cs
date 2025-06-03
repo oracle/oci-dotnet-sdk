@@ -43,6 +43,12 @@ namespace Oci.DatabasemigrationService.Models
         public string SourceContainerDatabaseConnectionId { get; set; }
         
         /// <value>
+        /// The OCID of the resource being referenced.
+        /// </value>
+        [JsonProperty(PropertyName = "sourceStandbyDatabaseConnectionId")]
+        public string SourceStandbyDatabaseConnectionId { get; set; }
+        
+        /// <value>
         /// List of Migration Parameter objects.
         /// </value>
         [JsonProperty(PropertyName = "advancedParameters")]

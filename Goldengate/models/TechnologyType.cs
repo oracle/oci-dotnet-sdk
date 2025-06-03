@@ -58,6 +58,8 @@ namespace Oci.GoldengateService.Models
       OracleAutonomousDatabaseAtAws,
       [EnumMember(Value = "ORACLE_NOSQL")]
       OracleNosql,
+      [EnumMember(Value = "ORACLE_REST_DATA_SERVICES")]
+      OracleRestDataServices,
       [EnumMember(Value = "ORACLE_WEBLOGIC_JMS")]
       OracleWeblogicJms,
       [EnumMember(Value = "AMAZON_RDS_ORACLE")]
@@ -82,6 +84,8 @@ namespace Oci.GoldengateService.Models
       AmazonRdsMysql,
       [EnumMember(Value = "AMAZON_RDS_POSTGRESQL")]
       AmazonRdsPostgresql,
+      [EnumMember(Value = "APACHE_ICEBERG")]
+      ApacheIceberg,
       [EnumMember(Value = "APACHE_KAFKA")]
       ApacheKafka,
       [EnumMember(Value = "AZURE_COSMOS_DB_FOR_MONGODB")]
@@ -108,6 +112,8 @@ namespace Oci.GoldengateService.Models
       ConfluentSchemaRegistry,
       [EnumMember(Value = "DATABRICKS")]
       Databricks,
+      [EnumMember(Value = "DB2_I")]
+      Db2I,
       [EnumMember(Value = "DB2_ZOS")]
       Db2Zos,
       [EnumMember(Value = "ELASTICSEARCH")]

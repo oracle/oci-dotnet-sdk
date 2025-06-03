@@ -34,6 +34,12 @@ namespace Oci.GenerativeaiagentruntimeService.Models
         [JsonProperty(PropertyName = "citations")]
         public System.Collections.Generic.List<Citation> Citations { get; set; }
         
+        /// <value>
+        /// Details of model and its usage.
+        /// </value>
+        [JsonProperty(PropertyName = "usage")]
+        public System.Collections.Generic.List<Usage> Usage { get; set; }
+        
         [JsonProperty(PropertyName = "traceType")]
         private readonly string traceType = "RETRIEVAL_TRACE";
     }

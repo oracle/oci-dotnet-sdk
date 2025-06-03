@@ -205,6 +205,31 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "sslKeySecretId")]
         public string SslKeySecretId { get; set; }
         
+        /// <value>
+        /// The base64 encoded certificate of the trusted certificate authorities (Trusted CA) for PostgreSQL. 
+        /// The supported file formats are .pem and .crt.
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sslCa")]
+        public string SslCa { get; set; }
+        
+        /// <value>
+        /// The base64 encoded list of certificates revoked by the trusted certificate authorities (Trusted CA).
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sslCrl")]
+        public string SslCrl { get; set; }
+        
+        /// <value>
+        /// The base64 encoded certificate of the PostgreSQL server. The supported file formats are .pem and .crt.
+        /// It is not included in GET responses if the `view=COMPACT` query parameter is specified.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "sslCert")]
+        public string SslCert { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "POSTGRESQL";
     }

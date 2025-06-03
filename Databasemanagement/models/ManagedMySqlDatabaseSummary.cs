@@ -104,5 +104,12 @@ namespace Oci.DatabasemanagementService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStates> LifecycleState { get; set; }
         
+        /// <value>
+        /// The customer's selected type for HeatWave management.
+        /// </value>
+        [JsonProperty(PropertyName = "heatWaveManagementType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ManagedMySqlDatabase.HeatWaveManagementTypeEnum> HeatWaveManagementType { get; set; }
+        
     }
 }

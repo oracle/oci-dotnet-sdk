@@ -28,6 +28,12 @@ namespace Oci.GenerativeaiagentruntimeService.Models
         [JsonProperty(PropertyName = "errorMessage")]
         public string ErrorMessage { get; set; }
         
+        /// <value>
+        /// Error code.
+        /// </value>
+        [JsonProperty(PropertyName = "code")]
+        public string Code { get; set; }
+        
         [JsonProperty(PropertyName = "traceType")]
         private readonly string traceType = "ERROR_TRACE";
     }
