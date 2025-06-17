@@ -78,6 +78,13 @@ namespace Oci.Common
                                     requestMessage.Headers.TryAddWithoutValidation(pair.Key, pair.Value);
                                 }
                             }
+                            else if (propertyType.IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(List<>))
+                            {
+                                var headerName = httpRequestAttr.Name;
+                                var csvHeaderValue = string.Join(",", prop.GetValue(request) as IList<string>);
+                                logger.Debug($"Adding header {headerName}: {csvHeaderValue}");
+                                requestMessage.Headers.TryAddWithoutValidation(headerName.ToLower(), csvHeaderValue);
+                            }
                             else
                             {
                                 logger.Debug($"Adding header {httpRequestAttr.Name}: {prop.GetValue(request)}");

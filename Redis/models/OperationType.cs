@@ -36,6 +36,18 @@ namespace Oci.RedisService.Models
       [EnumMember(Value = "DELETE_REDIS_CONFIG_SET")]
       DeleteRedisConfigSet,
       [EnumMember(Value = "MOVE_REDIS_CONFIG_SET")]
-      MoveRedisConfigSet
+      MoveRedisConfigSet,
+      [EnumMember(Value = "MIGRATE_CLUSTER")]
+      MigrateCluster,
+      [EnumMember(Value = "CLUSTER_ROLLBACK")]
+      ClusterRollback,
+      [EnumMember(Value = "ATTACH_OCI_CACHE_USERS")]
+      AttachOciCacheUsers,
+      [EnumMember(Value = "DETACH_OCI_CACHE_USERS")]
+      DetachOciCacheUsers,
+      [EnumMember(Value = "CREATE_OCI_CACHE_USER")]
+      CreateOciCacheUser,
+      [EnumMember(Value = "UPDATE_OCI_CACHE_USER")]
+      UpdateOciCacheUser
   }
 }

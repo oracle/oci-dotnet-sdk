@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// The agent plugin information
+    /// An Oracle Cloud Agent plugin.
     /// </summary>
     public class InstanceAgentPluginSummary 
     {
         
         /// <value>
-        /// The plugin name
+        /// The plugin name.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,20 @@ namespace Oci.ComputeinstanceagentService.Models
         public string Name { get; set; }
                 ///
         /// <value>
-        /// The plugin status Specified the plugin state on the instance * `RUNNING` - The plugin is in running state * `STOPPED` - The plugin is in stopped state * `NOT_SUPPORTED` - The plugin is not supported on this platform * `INVALID` - The plugin state is not recognizable by the service
+        /// The plugin status.
+        /// <br/>
+        /// These are the available statuses:
+        /// * `RUNNING` - The plugin is running.
+        /// * `STOPPED` - The plugin is stopped.
+        /// * `NOT_SUPPORTED` - The plugin is not supported on this platform.
+        /// * `INVALID` - The plugin status is not recognizable by the service.
+        /// <br/>
+        /// To determine whether the plugin is enabled, use the
+        /// {@link #getInstance(GetInstanceRequest) getInstance} operation in the Core
+        /// Services API. To enable or disable the plugin, use the
+        /// {@link #updateInstance(UpdateInstanceRequest) updateInstance} operation
+        /// in the Core Services API.
+        /// 
         /// </value>
         ///
         public enum StatusEnum {
@@ -50,7 +63,20 @@ namespace Oci.ComputeinstanceagentService.Models
         };
 
         /// <value>
-        /// The plugin status Specified the plugin state on the instance * `RUNNING` - The plugin is in running state * `STOPPED` - The plugin is in stopped state * `NOT_SUPPORTED` - The plugin is not supported on this platform * `INVALID` - The plugin state is not recognizable by the service
+        /// The plugin status.
+        /// <br/>
+        /// These are the available statuses:
+        /// * `RUNNING` - The plugin is running.
+        /// * `STOPPED` - The plugin is stopped.
+        /// * `NOT_SUPPORTED` - The plugin is not supported on this platform.
+        /// * `INVALID` - The plugin status is not recognizable by the service.
+        /// <br/>
+        /// To determine whether the plugin is enabled, use the
+        /// {@link #getInstance(GetInstanceRequest) getInstance} operation in the Core
+        /// Services API. To enable or disable the plugin, use the
+        /// {@link #updateInstance(UpdateInstanceRequest) updateInstance} operation
+        /// in the Core Services API.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -61,7 +87,7 @@ namespace Oci.ComputeinstanceagentService.Models
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// The last update time of the plugin in UTC
+        /// The last updated time of the plugin, in UTC.
         /// </value>
         /// <remarks>
         /// Required

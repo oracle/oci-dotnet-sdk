@@ -20,7 +20,7 @@ namespace Oci.ComputeinstanceagentService.Requests
     {
         
         /// <value>
-        /// The OCID of the instance.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the instance.
         /// </value>
         /// <remarks>
         /// Required

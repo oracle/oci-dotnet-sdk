@@ -30,12 +30,11 @@ namespace Oci.ComputeinstanceagentService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OS for which the plugin is supported.
-        /// Examples of OperatingSystemQueryParam:OperatingSystemVersionQueryParam are as follows:
-        /// 'CentOS' '6.10' , 'CentOS Linux' '7', 'CentOS Linux' '8',
-        /// 'Oracle Linux Server' '6.10', 'Oracle Linux Server' '8.0',
-        /// 'Red Hat Enterprise Linux Server' '7.8',
-        /// 'Windows' '10', 'Windows' '2008ServerR2', 'Windows' '2012ServerR2', 'Windows' '7', 'Windows' '8.1'
+        /// The image (OS) for the compute instance.
+        /// <br/>
+        /// If no match is found, all plugins are returned.
+        /// <br/>
+        /// Examples: `CentOS`, `Oracle Linux`, `Oracle Autonomous Linux`, `Canonical Ubuntu`, `Windows Server`
         /// 
         /// </value>
         /// <remarks>
@@ -46,7 +45,13 @@ namespace Oci.ComputeinstanceagentService.Requests
         public string OsName { get; set; }
         
         /// <value>
-        /// The OS version for which the plugin is supported.
+        /// The OS version for the instance.
+        /// <br/>
+        /// If no match is found, all plugins are returned.
+        /// <br/>
+        /// Examples: `7.9`, `8` for CentOS and Oracle Linux. `20.04`, `20.04 Minimal` for Canonical Ubuntu.
+        /// `2012 R2 Datacenter`, `2019 Standard` for Windows Server.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -136,7 +141,7 @@ namespace Oci.ComputeinstanceagentService.Requests
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
         
         /// <value>
-        /// The plugin name
+        /// The plugin name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
         public string Name { get; set; }

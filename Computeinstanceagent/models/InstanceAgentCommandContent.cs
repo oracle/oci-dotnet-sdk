@@ -37,5 +37,12 @@ namespace Oci.ComputeinstanceagentService.Models
         [JsonProperty(PropertyName = "output")]
         public InstanceAgentCommandOutputDetails Output { get; set; }
         
+        /// <value>
+        /// Command String is a fully formed command that runcommand executes.
+        /// Example: main.sh is stored in object storage and user provides the following command with parameters to execute/bin/sh main.sh abc 10 foo.sh
+        /// </value>
+        [JsonProperty(PropertyName = "commandString")]
+        public string CommandString { get; set; }
+        
     }
 }

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Host group id that needs to be launched
+    /// The details for providing placement constraints using the compute host group OCID.
     /// 
     /// </summary>
     public class HostGroupPlacementConstraintDetails : PlacementConstraintDetails
     {
         
         /// <value>
-        /// The OCID of the compute host group.
+        /// The OCID of the compute host group. This is only available for dedicated capacity customers.
         /// </value>
         /// <remarks>
         /// Required

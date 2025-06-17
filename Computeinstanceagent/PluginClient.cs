@@ -70,7 +70,7 @@ namespace Oci.ComputeinstanceagentService
         }
 
         /// <summary>
-        /// The API to get information for a plugin.
+        /// Gets information about a specific Oracle Cloud Agent plugin on a compute instance.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -126,7 +126,9 @@ namespace Oci.ComputeinstanceagentService
         }
 
         /// <summary>
-        /// The API to get one or more plugin information.
+        /// Gets information about the Oracle Cloud Agent plugins that are available on a specific
+        /// compute instance.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
