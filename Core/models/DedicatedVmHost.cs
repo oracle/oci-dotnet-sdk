@@ -197,5 +197,19 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "remainingMemoryInGBs")]
         public System.Nullable<float> RemainingMemoryInGBs { get; set; }
         
+        /// <value>
+        /// A list of total and remaining CPU & memory per capacity bucket.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "capacityBins")]
+        public System.Collections.Generic.List<CapacityBin> CapacityBins { get; set; }
+        
+        /// <value>
+        /// The compute bare metal host OCID of the dedicated virtual machine host.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "computeBareMetalHostId")]
+        public string ComputeBareMetalHostId { get; set; }
+        
     }
 }

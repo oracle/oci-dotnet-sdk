@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// Describes where the plugin is supported
+    /// Information about where a plugin is supported.
     /// </summary>
     public class AvailablePluginSummary 
     {
         
         /// <value>
-        /// The plugin name
+        /// The plugin name.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,13 +32,13 @@ namespace Oci.ComputeinstanceagentService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// A brief description of the plugin functionality
+        /// A brief description of the plugin's functionality.
         /// </value>
         [JsonProperty(PropertyName = "summary")]
         public string Summary { get; set; }
         
         /// <value>
-        /// Is the plugin supported or not
+        /// Whether the plugin is supported.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,7 +48,7 @@ namespace Oci.ComputeinstanceagentService.Models
         public System.Nullable<bool> IsSupported { get; set; }
         
         /// <value>
-        /// Is the plugin enabled or disabled by default
+        /// Whether the plugin is enabled or disabled by default.
         /// </value>
         /// <remarks>
         /// Required

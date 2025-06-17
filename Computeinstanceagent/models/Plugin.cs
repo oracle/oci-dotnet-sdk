@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.ComputeinstanceagentService.Models
 {
     /// <summary>
-    /// The agent plugin
+    /// An Oracle Cloud Agent plugin.
     /// </summary>
     public class Plugin 
     {
         
         /// <value>
-        /// The plugin name
+        /// The plugin name.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.ComputeinstanceagentService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// The plugin version
+        /// The plugin version.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.ComputeinstanceagentService.Models
         public string Version { get; set; }
         
         /// <value>
-        /// The plugin status
+        /// The plugin status.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,13 +52,13 @@ namespace Oci.ComputeinstanceagentService.Models
         public string Status { get; set; }
         
         /// <value>
-        /// The last update time of the plugin
+        /// The last updated time of the plugin, in UTC.
         /// </value>
         [JsonProperty(PropertyName = "lastUpdateTime")]
         public System.Nullable<System.DateTime> LastUpdateTime { get; set; }
         
         /// <value>
-        /// The optional message from the agent plugin
+        /// An optional message from the plugin.
         /// </value>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
