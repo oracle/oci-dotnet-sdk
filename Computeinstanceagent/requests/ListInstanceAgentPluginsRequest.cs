@@ -30,7 +30,7 @@ namespace Oci.ComputeinstanceagentService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the instance.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the instance.
         /// </value>
         /// <remarks>
         /// Required
@@ -49,7 +49,7 @@ namespace Oci.ComputeinstanceagentService.Requests
         
         ///
         /// <value>
-        /// The plugin status
+        /// The plugin status.
         /// </value>
         ///
         public enum StatusEnum {
@@ -64,7 +64,7 @@ namespace Oci.ComputeinstanceagentService.Requests
         };
 
         /// <value>
-        /// The plugin status
+        /// The plugin status.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
         public System.Nullable<StatusEnum> Status { get; set; }
@@ -142,7 +142,7 @@ namespace Oci.ComputeinstanceagentService.Requests
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
         
         /// <value>
-        /// The plugin name
+        /// The plugin name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
         public string Name { get; set; }

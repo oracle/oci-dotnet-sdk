@@ -3,6 +3,7 @@
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
@@ -70,7 +71,8 @@ namespace Oci.Common.Http.Internal
                 // will send two ContentType headers so we override ContentType value instead if provided.
                 if (contentHeader.Key.Equals(Constants.CONTENT_TYPE))
                 {
-                    httpContent.Headers.ContentType = new MediaTypeHeaderValue(contentHeader.Value);
+                    var unescapedHeaderValue = Uri.UnescapeDataString(contentHeader.Value);
+                    httpContent.Headers.ContentType = new MediaTypeHeaderValue(unescapedHeaderValue);
                 }
                 else
                 {

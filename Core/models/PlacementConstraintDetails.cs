@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Generic placement details field which is overloaded with bare metal host id or host group id based on the resource we are targeting to launch.
+    /// The details for providing placement constraints.
     /// 
     /// </summary>
     [JsonConverter(typeof(PlacementConstraintDetailsModelConverter))]
