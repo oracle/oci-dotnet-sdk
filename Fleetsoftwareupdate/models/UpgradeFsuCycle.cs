@@ -9,20 +9,23 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 
 namespace Oci.FleetsoftwareupdateService.Models
 {
-  /// <summary>
-  /// Possible Exadata Fleet Update Cycle types to specify.
+    /// <summary>
+    /// Upgrade Exadata Fleet Update Cycle resource details.
     /// 
-  /// </summary>
-  public enum CycleTypes {
-      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-      [EnumMember(Value = null)]
-      UnknownEnumValue,
-      [EnumMember(Value = "PATCH")]
-      Patch,
-      [EnumMember(Value = "UPGRADE")]
-      Upgrade
-  }
+    /// </summary>
+    public class UpgradeFsuCycle : FsuCycle
+    {
+        
+        [JsonProperty(PropertyName = "upgradeDetails")]
+        public UpgradeDetails UpgradeDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "type")]
+        private readonly string type = "UPGRADE";
+    }
 }

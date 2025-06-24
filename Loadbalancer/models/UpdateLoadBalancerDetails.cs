@@ -32,6 +32,36 @@ namespace Oci.LoadbalancerService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+                ///
+        /// <value>
+        /// Whether the load balancer has an IPv4 or IPv6 IP address.
+        /// <br/>
+        ///   If \"IPV4\", the service assigns an IPv4 address and the load balancer supports IPv4 traffic.
+        /// <br/>
+        ///   If \"IPV6\", the service assigns an IPv6 address and the load balancer supports IPv6 traffic.
+        /// <br/>
+        ///   Example: &quot;ipMode&quot;:&quot;IPV6&quot;
+        /// </value>
+        ///
+        public enum IpModeEnum {
+            [EnumMember(Value = "IPV4")]
+            Ipv4,
+            [EnumMember(Value = "IPV6")]
+            Ipv6
+        };
+
+        /// <value>
+        /// Whether the load balancer has an IPv4 or IPv6 IP address.
+        /// <br/>
+        ///   If \"IPV4\", the service assigns an IPv4 address and the load balancer supports IPv4 traffic.
+        /// <br/>
+        ///   If \"IPV6\", the service assigns an IPv6 address and the load balancer supports IPv6 traffic.
+        /// <br/>
+        ///   Example: &quot;ipMode&quot;:&quot;IPV6&quot;
+        /// </value>
+        [JsonProperty(PropertyName = "ipMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<IpModeEnum> IpMode { get; set; }
         
         /// <value>
         /// Whether or not the load balancer has delete protection enabled.

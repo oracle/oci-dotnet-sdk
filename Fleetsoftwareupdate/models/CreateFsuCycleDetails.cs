@@ -111,6 +111,9 @@ namespace Oci.FleetsoftwareupdateService.Models
                 case "PATCH":
                     obj = new CreatePatchFsuCycle();
                     break;
+                case "UPGRADE":
+                    obj = new CreateUpgradeFsuCycle();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

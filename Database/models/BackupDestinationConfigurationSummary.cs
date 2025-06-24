@@ -62,7 +62,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "LOCAL")]
             Local,
             [EnumMember(Value = "DBRS")]
-            Dbrs
+            Dbrs,
+            [EnumMember(Value = "AWS_S3")]
+            AwsS3
         };
 
         /// <value>

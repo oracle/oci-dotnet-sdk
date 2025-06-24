@@ -276,6 +276,39 @@ namespace Oci.LoadbalancerService.Models
         
         [JsonProperty(PropertyName = "routingPolicies")]
         public System.Collections.Generic.Dictionary<string, RoutingPolicy> RoutingPolicies { get; set; }
+                ///
+        /// <value>
+        /// Whether the load balancer has an IPv4 or IPv6 IP address.
+        /// <br/>
+        ///   If \"IPV4\", the service assigns an IPv4 address and the load balancer supports IPv4 traffic.
+        /// <br/>
+        ///   If \"IPV6\", the service assigns an IPv6 address and the load balancer supports IPv6 traffic.
+        /// <br/>
+        ///   Example: &quot;ipMode&quot;:&quot;IPV6&quot;
+        /// </value>
+        ///
+        public enum IpModeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "IPV4")]
+            Ipv4,
+            [EnumMember(Value = "IPV6")]
+            Ipv6
+        };
+
+        /// <value>
+        /// Whether the load balancer has an IPv4 or IPv6 IP address.
+        /// <br/>
+        ///   If \"IPV4\", the service assigns an IPv4 address and the load balancer supports IPv4 traffic.
+        /// <br/>
+        ///   If \"IPV6\", the service assigns an IPv6 address and the load balancer supports IPv6 traffic.
+        /// <br/>
+        ///   Example: &quot;ipMode&quot;:&quot;IPV6&quot;
+        /// </value>
+        [JsonProperty(PropertyName = "ipMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<IpModeEnum> IpMode { get; set; }
         
     }
 }
