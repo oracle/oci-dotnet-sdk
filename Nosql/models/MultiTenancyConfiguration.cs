@@ -9,20 +9,20 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace Oci.FleetsoftwareupdateService.Models
+
+namespace Oci.NosqlService.Models
 {
-  /// <summary>
-  /// Possible Exadata Fleet Update Cycle types to specify.
+    /// <summary>
+    /// The service-level configuration for a multi-tenancy environment.
     /// 
-  /// </summary>
-  public enum CycleTypes {
-      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-      [EnumMember(Value = null)]
-      UnknownEnumValue,
-      [EnumMember(Value = "PATCH")]
-      Patch,
-      [EnumMember(Value = "UPGRADE")]
-      Upgrade
-  }
+    /// </summary>
+    public class MultiTenancyConfiguration : Configuration
+    {
+        
+        [JsonProperty(PropertyName = "environment")]
+        private readonly string environment = "MULTI_TENANCY";
+    }
 }

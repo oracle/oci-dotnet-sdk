@@ -253,7 +253,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "OBJECT_STORE")]
             ObjectStore,
             [EnumMember(Value = "DBRS")]
-            Dbrs
+            Dbrs,
+            [EnumMember(Value = "AWS_S3")]
+            AwsS3
         };
 
         /// <value>

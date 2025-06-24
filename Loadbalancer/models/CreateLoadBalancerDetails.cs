@@ -128,6 +128,16 @@ namespace Oci.LoadbalancerService.Models
         public System.Nullable<IpModeEnum> IpMode { get; set; }
         
         /// <value>
+        /// Applies to IPV6 LB creation only. 
+        /// <br/>
+        /// Used to disambiguate which subnet prefix should be used to create an IPv6 LB. 
+        /// <br/>
+        /// Example: &quot;2002::1234:abcd:ffff:c0a8:101/64&quot;
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6SubnetCidr")]
+        public string Ipv6SubnetCidr { get; set; }
+        
+        /// <value>
         /// Whether or not the load balancer has the Request Id feature enabled for HTTP listeners.
         /// <br/>
         /// If \"true\", the load balancer will attach a unique request id header to every request

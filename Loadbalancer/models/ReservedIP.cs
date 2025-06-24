@@ -29,7 +29,7 @@ namespace Oci.LoadbalancerService.Models
         /// <br/>
         /// Reserved IPs will not be deleted when the Load balancer is deleted. They will be unattached from the Load balancer.
         /// <br/>
-        /// Example: &quot;ocid1.publicip.oc1.phx.unique_ID&quot;
+        /// Example: &quot;ocid1.publicip.oc1.phx.unique_ID&quot;IPV6
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }

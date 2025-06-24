@@ -34,7 +34,9 @@ namespace Oci.NosqlService.Models
             [EnumMember(Value = "UPDATE_TABLE")]
             UpdateTable,
             [EnumMember(Value = "DELETE_TABLE")]
-            DeleteTable
+            DeleteTable,
+            [EnumMember(Value = "UPDATE_CONFIGURATION")]
+            UpdateConfiguration
         };
 
         /// <value>
