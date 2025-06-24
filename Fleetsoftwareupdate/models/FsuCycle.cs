@@ -222,6 +222,9 @@ namespace Oci.FleetsoftwareupdateService.Models
                 case "PATCH":
                     obj = new PatchFsuCycle();
                     break;
+                case "UPGRADE":
+                    obj = new UpgradeFsuCycle();
+                    break;
             }
             if (obj != null)
             {

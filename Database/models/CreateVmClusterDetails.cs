@@ -54,7 +54,7 @@ namespace Oci.DatabaseService.Models
         public string ExadataInfrastructureId { get; set; }
         
         /// <value>
-        /// The number of CPU cores to enable for the VM cluster.
+        /// The number of ECPUs (X11M and higher) or number of OCPUs (X10M and earlier) to enable for the VM cluster.
         /// </value>
         /// <remarks>
         /// Required
