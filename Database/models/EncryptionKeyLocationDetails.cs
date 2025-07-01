@@ -23,12 +23,16 @@ namespace Oci.DatabaseService.Models
     {
                 ///
         /// <value>
-        /// Use 'EXTERNAL' for creating a new database or migrate database key with External HSM.
+        /// Use 'EXTERNAL' for creating a new database or migrating a database key to an External HSM.
+        /// Use 'AZURE' for creating a new database or migrating a database key to Azure.
+        /// 
         /// </value>
         ///
         public enum ProviderTypeEnum {
             [EnumMember(Value = "EXTERNAL")]
-            External
+            External,
+            [EnumMember(Value = "AZURE")]
+            Azure
         };
 
         
@@ -57,6 +61,9 @@ namespace Oci.DatabaseService.Models
             {
                 case "EXTERNAL":
                     obj = new ExternalHsmEncryptionDetails();
+                    break;
+                case "AZURE":
+                    obj = new AzureEncryptionKeyDetails();
                     break;
             }
             if (obj != null)

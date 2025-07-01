@@ -118,5 +118,8 @@ namespace Oci.Common
         public static readonly Region AP_SEOUL_2 = Register("ap-seoul-2", Realm.OC35, "dtz");
         public static readonly Region AP_SUWON_1 = Register("ap-suwon-1", Realm.OC35, "dln");
         public static readonly Region AP_CHUNCHEON_2 = Register("ap-chuncheon-2", Realm.OC35, "bno");
+
+        // OC42
+        public static readonly Region US_ASHBURN_2 = Register("us-ashburn-2", Realm.OC42, "yxj");
     }
 }

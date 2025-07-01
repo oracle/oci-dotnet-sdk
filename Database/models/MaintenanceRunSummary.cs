@@ -362,6 +362,14 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> EstimatedComponentPatchingStartTime { get; set; }
         
         /// <value>
+        /// System tags for this resource. Each key is predefined and scoped to a namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
+        /// <value>
         /// If `FALSE`, the maintenance run doesn't support granular maintenance.
         /// </value>
         [JsonProperty(PropertyName = "isMaintenanceRunGranular")]

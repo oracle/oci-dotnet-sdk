@@ -211,5 +211,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "securityAttributes")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SecurityAttributes { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subscription with which resource needs to be associated with.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionId")]
+        public string SubscriptionId { get; set; }
+        
     }
 }

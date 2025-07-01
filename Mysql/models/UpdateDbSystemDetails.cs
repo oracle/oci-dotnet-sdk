@@ -249,6 +249,9 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "secureConnections")]
         public SecureConnectionDetails SecureConnections { get; set; }
         
+        [JsonProperty(PropertyName = "encryptData")]
+        public EncryptDataDetails EncryptData { get; set; }
+        
         /// <value>
         /// The list of customer email addresses that receive information from Oracle about the specified OCI DB System resource. 
         /// Oracle uses these email addresses to send notifications about planned and unplanned software maintenance updates, information about system hardware, and other information needed by administrators. 
