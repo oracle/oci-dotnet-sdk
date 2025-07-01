@@ -122,6 +122,9 @@ namespace Oci.DatabasemigrationService.Models
         [JsonProperty(PropertyName = "parameterFileVersions")]
         public System.Collections.Generic.List<ParameterFileVersionSummary> ParameterFileVersions { get; set; }
         
+        [JsonProperty(PropertyName = "collectTracesData")]
+        public CollectTracesData CollectTracesData { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. 
         /// For more information, see Resource Tags. Example: {&quot;Department&quot;: &quot;Finance&quot;}

@@ -34,7 +34,7 @@ namespace Oci.ApmtracesService.Models
         public string AttributeName { get; set; }
                 ///
         /// <value>
-        /// Unit of the attribute to be updated.
+        /// Unit of the attribute to be updated.  If unit is not specified, it defaults to NONE.
         /// 
         /// </value>
         ///
@@ -56,7 +56,7 @@ namespace Oci.ApmtracesService.Models
         };
 
         /// <value>
-        /// Unit of the attribute to be updated.
+        /// Unit of the attribute to be updated.  If unit is not specified, it defaults to NONE.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "unit")]
@@ -72,7 +72,9 @@ namespace Oci.ApmtracesService.Models
             [EnumMember(Value = "TRACES")]
             Traces,
             [EnumMember(Value = "SYNTHETIC")]
-            Synthetic
+            Synthetic,
+            [EnumMember(Value = "LOGS")]
+            Logs
         };
 
         /// <value>

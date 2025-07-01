@@ -202,5 +202,8 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "dbSystemSnapshotSummary")]
         public DbSystemSnapshotSummary DbSystemSnapshotSummary { get; set; }
         
+        [JsonProperty(PropertyName = "encryptData")]
+        public EncryptDataDetails EncryptData { get; set; }
+        
     }
 }

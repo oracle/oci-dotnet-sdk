@@ -24,6 +24,9 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "secureConnections")]
         public SecureConnectionDetails SecureConnections { get; set; }
         
+        [JsonProperty(PropertyName = "encryptData")]
+        public EncryptDataDetails EncryptData { get; set; }
+        
         /// <value>
         /// The OCID of the read replica.
         /// </value>

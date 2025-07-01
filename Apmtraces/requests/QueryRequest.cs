@@ -31,7 +31,8 @@ namespace Oci.ApmtracesService.Requests
         public string ApmDomainId { get; set; }
         
         /// <value>
-        /// Include spans that have a `spanStartTime` equal to or greater than this value.
+        /// Include spans that have a `spanStartTime` equal to or greater than this value.  Also, include logs and traces
+        /// that have startTime greater than this value.
         /// 
         /// </value>
         /// <remarks>
@@ -42,7 +43,8 @@ namespace Oci.ApmtracesService.Requests
         public System.Nullable<System.DateTime> TimeSpanStartedGreaterThanOrEqualTo { get; set; }
         
         /// <value>
-        /// Include spans that have a `spanStartTime`less than this value.
+        /// Include spans that have a `spanStartTime` less than this value.  Also, include traces that have startTime less than this value 
+        /// and logs that have endTime less than this value.
         /// 
         /// </value>
         /// <remarks>
@@ -53,8 +55,8 @@ namespace Oci.ApmtracesService.Requests
         public System.Nullable<System.DateTime> TimeSpanStartedLessThan { get; set; }
         
         /// <value>
-        /// Request body containing the query to be run against the trace data and to filter and
-        /// retrieve trace data results.
+        /// Request body containing the query to be run against the trace, span, services, background queries and other metric data and to filter and
+        /// retrieve the results.
         /// 
         /// </value>
         /// <remarks>

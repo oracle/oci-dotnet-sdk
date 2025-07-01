@@ -277,5 +277,8 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "timeCopyCreated")]
         public System.Nullable<System.DateTime> TimeCopyCreated { get; set; }
         
+        [JsonProperty(PropertyName = "encryptData")]
+        public EncryptDataDetails EncryptData { get; set; }
+        
     }
 }
