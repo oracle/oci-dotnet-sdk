@@ -53,5 +53,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "granularMaintenanceHistory")]
         public System.Collections.Generic.List<GranularMaintenanceHistoryDetails> GranularMaintenanceHistory { get; set; }
         
+        /// <value>
+        /// System tags for this resource. Each key is predefined and scoped to a namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
     }
 }

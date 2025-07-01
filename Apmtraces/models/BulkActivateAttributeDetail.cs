@@ -43,7 +43,9 @@ namespace Oci.ApmtracesService.Models
             [EnumMember(Value = "NUMERIC")]
             Numeric,
             [EnumMember(Value = "STRING")]
-            String
+            String,
+            [EnumMember(Value = "NONE")]
+            None
         };
 
         /// <value>
@@ -57,9 +59,16 @@ namespace Oci.ApmtracesService.Models
         [JsonProperty(PropertyName = "attributeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<AttributeTypeEnum> AttributeType { get; set; }
+        
+        /// <value>
+        /// Attribute expression if this attribute is an alias
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "attributeExpression")]
+        public string AttributeExpression { get; set; }
                 ///
         /// <value>
-        /// Unit of the attribute to be updated.
+        /// Unit of the attribute to be updated.  If unit is not specified, it defaults to NONE.
         /// 
         /// </value>
         ///
@@ -81,7 +90,7 @@ namespace Oci.ApmtracesService.Models
         };
 
         /// <value>
-        /// Unit of the attribute to be updated.
+        /// Unit of the attribute to be updated.  If unit is not specified, it defaults to NONE.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "unit")]
@@ -98,7 +107,9 @@ namespace Oci.ApmtracesService.Models
             [EnumMember(Value = "TRACES")]
             Traces,
             [EnumMember(Value = "SYNTHETIC")]
-            Synthetic
+            Synthetic,
+            [EnumMember(Value = "LOGS")]
+            Logs
         };
 
         /// <value>

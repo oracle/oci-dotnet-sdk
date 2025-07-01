@@ -82,5 +82,8 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "sourceRegion")]
         public string SourceRegion { get; set; }
         
+        [JsonProperty(PropertyName = "encryptData")]
+        public EncryptDataDetails EncryptData { get; set; }
+        
     }
 }

@@ -239,6 +239,9 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "secureConnections")]
         public SecureConnectionDetails SecureConnections { get; set; }
         
+        [JsonProperty(PropertyName = "encryptData")]
+        public EncryptDataDetails EncryptData { get; set; }
+        
         /// <value>
         /// The database mode indicating the types of statements that will be allowed to run in the DB system.
         /// This mode will apply only to statements run by user connections. Replicated write statements will continue 

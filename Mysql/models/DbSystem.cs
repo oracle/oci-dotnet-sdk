@@ -340,6 +340,9 @@ namespace Oci.MysqlService.Models
         
         [JsonProperty(PropertyName = "secureConnections")]
         public SecureConnectionDetails SecureConnections { get; set; }
+        
+        [JsonProperty(PropertyName = "encryptData")]
+        public EncryptDataDetails EncryptData { get; set; }
                 ///
         /// <value>
         /// The database mode indicating the types of statements that are allowed to run in the the DB system.

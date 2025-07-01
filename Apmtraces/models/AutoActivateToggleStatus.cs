@@ -46,7 +46,22 @@ namespace Oci.ApmtracesService.Models
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
-        
+                ///
+        /// <value>
+        /// State of autoactivation in this APM Domain.  If \"ON\" auto-activate is set to true, if \"OFF\" auto-activate is set to false.
+        /// 
+        /// </value>
+        ///
+        public enum StateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ON")]
+            On,
+            [EnumMember(Value = "OFF")]
+            Off
+        };
+
         /// <value>
         /// State of autoactivation in this APM Domain.  If \"ON\" auto-activate is set to true, if \"OFF\" auto-activate is set to false.
         /// 
@@ -56,7 +71,8 @@ namespace Oci.ApmtracesService.Models
         /// </remarks>
         [Required(ErrorMessage = "State is required.")]
         [JsonProperty(PropertyName = "state")]
-        public string State { get; set; }
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<StateEnum> State { get; set; }
                 ///
         /// <value>
         /// Data key type for which auto-activate needs needs to be turned on or off.

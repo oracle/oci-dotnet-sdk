@@ -61,7 +61,7 @@ namespace Oci.ApmtracesService.Models
         public System.Nullable<AttributeTypeEnum> AttributeType { get; set; }
                 ///
         /// <value>
-        /// Unit of the attribute.
+        /// Unit of the attribute.   If unit is not specified, it defaults to NONE.
         /// 
         /// </value>
         ///
@@ -86,7 +86,7 @@ namespace Oci.ApmtracesService.Models
         };
 
         /// <value>
-        /// Unit of the attribute.
+        /// Unit of the attribute.   If unit is not specified, it defaults to NONE.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "unit")]

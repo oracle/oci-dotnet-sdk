@@ -111,7 +111,7 @@ namespace Oci.ApiaccesscontrolService
                     ServiceName = "PrivilegedApiControl",
                     OperationName = "ChangePrivilegedApiControlCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/oracle-api-access-control/20241130/PrivilegedApiControl/ChangePrivilegedApiControlCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -168,7 +168,7 @@ namespace Oci.ApiaccesscontrolService
                     ServiceName = "PrivilegedApiControl",
                     OperationName = "CreatePrivilegedApiControl",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/oracle-api-access-control/20241130/PrivilegedApiControl/CreatePrivilegedApiControl",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -224,7 +224,7 @@ namespace Oci.ApiaccesscontrolService
                     ServiceName = "PrivilegedApiControl",
                     OperationName = "DeletePrivilegedApiControl",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/oracle-api-access-control/20241130/PrivilegedApiControl/DeletePrivilegedApiControl",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -280,7 +280,7 @@ namespace Oci.ApiaccesscontrolService
                     ServiceName = "PrivilegedApiControl",
                     OperationName = "GetPrivilegedApiControl",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/oracle-api-access-control/20241130/PrivilegedApiControl/GetPrivilegedApiControl",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -337,7 +337,7 @@ namespace Oci.ApiaccesscontrolService
                     ServiceName = "PrivilegedApiControl",
                     OperationName = "ListPrivilegedApiControls",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/oracle-api-access-control/20241130/PrivilegedApiControlCollection/ListPrivilegedApiControls",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -393,7 +393,7 @@ namespace Oci.ApiaccesscontrolService
                     ServiceName = "PrivilegedApiControl",
                     OperationName = "UpdatePrivilegedApiControl",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/oracle-api-access-control/20241130/PrivilegedApiControl/UpdatePrivilegedApiControl",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

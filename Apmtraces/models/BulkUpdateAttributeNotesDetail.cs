@@ -54,7 +54,9 @@ namespace Oci.ApmtracesService.Models
             [EnumMember(Value = "TRACES")]
             Traces,
             [EnumMember(Value = "SYNTHETIC")]
-            Synthetic
+            Synthetic,
+            [EnumMember(Value = "LOGS")]
+            Logs
         };
 
         /// <value>

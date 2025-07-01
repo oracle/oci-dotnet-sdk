@@ -50,14 +50,14 @@ namespace Oci.ApmtracesService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// Include traces that have a `minTraceStartTime` equal to or greater than this value.
+        /// Include traces that have a minTraceStartTime equal to or greater than this value.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeTraceStartedGreaterThanOrEqualTo")]
         public System.Nullable<System.DateTime> TimeTraceStartedGreaterThanOrEqualTo { get; set; }
         
         /// <value>
-        /// Include traces that have a `minTraceStartTime` less than this value.
+        /// Include traces that have a minTraceStartTime less than this value.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeTraceStartedLessThan")]

@@ -46,7 +46,7 @@ namespace Oci.ApmtracesService.Models
         public System.Nullable<TagTypeEnum> TagType { get; set; }
                 ///
         /// <value>
-        /// Unit associated with the tag key.
+        /// Unit associated with the tag key.  If unit is not specified, it defaults to NONE.
         /// 
         /// </value>
         ///
@@ -71,7 +71,7 @@ namespace Oci.ApmtracesService.Models
         };
 
         /// <value>
-        /// Unit associated with the tag key.
+        /// Unit associated with the tag key.  If unit is not specified, it defaults to NONE.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "tagUnit")]

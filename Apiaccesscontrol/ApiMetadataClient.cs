@@ -109,7 +109,7 @@ namespace Oci.ApiaccesscontrolService
                     ServiceName = "ApiMetadata",
                     OperationName = "GetApiMetadata",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/oracle-api-access-control/20241130/ApiMetadata/GetApiMetadata",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -166,7 +166,7 @@ namespace Oci.ApiaccesscontrolService
                     ServiceName = "ApiMetadata",
                     OperationName = "ListApiMetadata",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/oracle-api-access-control/20241130/ApiMetadata/ListApiMetadata",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -223,7 +223,7 @@ namespace Oci.ApiaccesscontrolService
                     ServiceName = "ApiMetadata",
                     OperationName = "ListApiMetadataByEntityTypes",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/oracle-api-access-control/20241130/ApiMetadata/ListApiMetadataByEntityTypes",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
