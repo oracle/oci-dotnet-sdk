@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AidocumentService.Models
 {
     /// <summary>
-    /// The Object Storage Location.
+    /// The object storage location where to store analysis results.
     /// </summary>
     public class OutputLocation 
     {

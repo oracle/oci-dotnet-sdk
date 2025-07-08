@@ -24,12 +24,8 @@ namespace Oci.OpsiService.Models
     {
         
         /// <value>
-        /// Credential source name that had been added in Management Agent wallet. This is supplied in the External Database Service.
+        /// Credential source name that had been added in Management Agent wallet. This value is only required when Credential set by CREDENTIALS_BY_SOURCE and is optional properties for ther others.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CredentialSourceName is required.")]
         [JsonProperty(PropertyName = "credentialSourceName")]
         public string CredentialSourceName { get; set; }
                 ///
@@ -44,7 +40,9 @@ namespace Oci.OpsiService.Models
             [EnumMember(Value = "CREDENTIALS_BY_VAULT")]
             CredentialsByVault,
             [EnumMember(Value = "CREDENTIALS_BY_IAM")]
-            CredentialsByIam
+            CredentialsByIam,
+            [EnumMember(Value = "CREDENTIALS_BY_NAMED_CREDS")]
+            CredentialsByNamedCreds
         };
 
         
@@ -71,6 +69,9 @@ namespace Oci.OpsiService.Models
             var discriminator = jsonObject["credentialType"].Value<string>();
             switch (discriminator)
             {
+                case "CREDENTIALS_BY_NAMED_CREDS":
+                    obj = new CredentialByNamedCredentials();
+                    break;
                 case "CREDENTIALS_BY_SOURCE":
                     obj = new CredentialsBySource();
                     break;

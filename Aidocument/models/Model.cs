@@ -64,7 +64,17 @@ namespace Oci.AidocumentService.Models
             [EnumMember(Value = "KEY_VALUE_EXTRACTION")]
             KeyValueExtraction,
             [EnumMember(Value = "DOCUMENT_CLASSIFICATION")]
-            DocumentClassification
+            DocumentClassification,
+            [EnumMember(Value = "PRE_TRAINED_TEXT_EXTRACTION")]
+            PreTrainedTextExtraction,
+            [EnumMember(Value = "PRE_TRAINED_TABLE_EXTRACTION")]
+            PreTrainedTableExtraction,
+            [EnumMember(Value = "PRE_TRAINED_KEY_VALUE_EXTRACTION")]
+            PreTrainedKeyValueExtraction,
+            [EnumMember(Value = "PRE_TRAINED_DOCUMENT_CLASSIFICATION")]
+            PreTrainedDocumentClassification,
+            [EnumMember(Value = "PRE_TRAINED_DOCUMENT_ELEMENTS_EXTRACTION")]
+            PreTrainedDocumentElementsExtraction
         };
 
         /// <value>
@@ -77,6 +87,18 @@ namespace Oci.AidocumentService.Models
         [JsonProperty(PropertyName = "modelType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ModelTypeEnum> ModelType { get; set; }
+        
+        /// <value>
+        /// Applicable to only PRE_TRAINED_KEY_VALUE_EXTRACTION, PRE_TRAINED_DOCUMENT_ELEMENTS_EXTRACTION.
+        /// </value>
+        [JsonProperty(PropertyName = "modelSubType")]
+        public ModelSubType ModelSubType { get; set; }
+        
+        /// <value>
+        /// Number of replicas required for this model.
+        /// </value>
+        [JsonProperty(PropertyName = "inferenceUnits")]
+        public System.Nullable<int> InferenceUnits { get; set; }
         
         /// <value>
         /// The tenancy id of the model.
@@ -107,6 +129,12 @@ namespace Oci.AidocumentService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxTrainingTimeInHours")]
         public System.Double MaxTrainingTimeInHours { get; set; }
+        
+        /// <value>
+        /// The document language for model training, abbreviated according to the BCP 47 syntax.
+        /// </value>
+        [JsonProperty(PropertyName = "language")]
+        public string Language { get; set; }
         
         /// <value>
         /// The total hours actually used for model training.

@@ -49,5 +49,17 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "dbNodesCount")]
         public System.Nullable<int> DbNodesCount { get; set; }
         
+        /// <value>
+        /// The storage allocated on a VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "storageAllocatedInGBs")]
+        public System.Nullable<int> StorageAllocatedInGBs { get; set; }
+        
+        /// <value>
+        /// The OCID of the VM Cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "vmClusterId")]
+        public string VmClusterId { get; set; }
+        
     }
 }

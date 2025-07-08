@@ -70,5 +70,23 @@ namespace Oci.AidocumentService.Models
         [JsonProperty(PropertyName = "documentFields")]
         public System.Collections.Generic.List<DocumentField> DocumentFields { get; set; }
         
+        /// <value>
+        /// The signatures detected on the page.
+        /// </value>
+        [JsonProperty(PropertyName = "signatures")]
+        public System.Collections.Generic.List<Signature> Signatures { get; set; }
+        
+        /// <value>
+        /// The bar codes detected on the page.
+        /// </value>
+        [JsonProperty(PropertyName = "barCodes")]
+        public System.Collections.Generic.List<BarCode> BarCodes { get; set; }
+        
+        /// <value>
+        /// The checkboxes and selection marks detected on the page.
+        /// </value>
+        [JsonProperty(PropertyName = "selectionMarks")]
+        public System.Collections.Generic.List<SelectionMark> SelectionMarks { get; set; }
+        
     }
 }

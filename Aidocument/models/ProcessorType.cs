@@ -20,6 +20,8 @@ namespace Oci.AidocumentService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "GENERAL")]
-      General
+      General,
+      [EnumMember(Value = "INVOICE")]
+      Invoice
   }
 }

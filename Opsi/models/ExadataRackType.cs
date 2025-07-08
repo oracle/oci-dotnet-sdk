@@ -36,6 +36,8 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "ELASTIC_BASE")]
       ElasticBase,
       [EnumMember(Value = "ELASTIC_LARGE")]
-      ElasticLarge
+      ElasticLarge,
+      [EnumMember(Value = "ELASTIC_EXTRA_LARGE")]
+      ElasticExtraLarge
   }
 }

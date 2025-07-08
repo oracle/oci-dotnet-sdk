@@ -50,6 +50,19 @@ namespace Oci.OpsiService.Models
         public System.Collections.Generic.List<CreatePeComanagedDatabaseInsightDetails> MemberDatabaseDetails { get; set; }
         
         /// <value>
+        /// Exadata VMCluster type
+        /// </value>
+        [JsonProperty(PropertyName = "vmClusterType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ExadataVmClusterType> VmClusterType { get; set; }
+        
+        /// <value>
+        /// The autonomous databases that belong to the Autonomous VM Cluster
+        /// </value>
+        [JsonProperty(PropertyName = "memberAutonomousDetails")]
+        public System.Collections.Generic.List<CreateAutonomousDatabaseInsightDetails> MemberAutonomousDetails { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         /// <remarks>

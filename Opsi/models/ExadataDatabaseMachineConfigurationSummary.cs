@@ -81,6 +81,18 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "enterpriseManagerEntityType")]
         public string EnterpriseManagerEntityType { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
+        /// </value>
+        [JsonProperty(PropertyName = "parentId")]
+        public string ParentId { get; set; }
+        
+        /// <value>
+        /// The region the resource resides in.
+        /// </value>
+        [JsonProperty(PropertyName = "region")]
+        public string Region { get; set; }
+        
         [JsonProperty(PropertyName = "entitySource")]
         private readonly string entitySource = "EM_MANAGED_EXTERNAL_EXADATA";
     }

@@ -166,6 +166,9 @@ namespace Oci.OpsiService.Models
                 case "EM_MANAGED_EXTERNAL_DATABASE":
                     obj = new EmManagedExternalDatabaseInsight();
                     break;
+                case "MACS_MANAGED_AUTONOMOUS_DATABASE":
+                    obj = new MacsManagedAutonomousDatabaseInsight();
+                    break;
                 case "MACS_MANAGED_EXTERNAL_DATABASE":
                     obj = new MacsManagedExternalDatabaseInsight();
                     break;

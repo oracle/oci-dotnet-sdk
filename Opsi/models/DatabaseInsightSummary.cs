@@ -188,6 +188,9 @@ namespace Oci.OpsiService.Models
                 case "EXTERNAL_MYSQL_DATABASE_SYSTEM":
                     obj = new ExternalMysqlDatabaseInsightSummary();
                     break;
+                case "MACS_MANAGED_AUTONOMOUS_DATABASE":
+                    obj = new MacsManagedAutonomousDatabaseInsightSummary();
+                    break;
             }
             if (obj != null)
             {

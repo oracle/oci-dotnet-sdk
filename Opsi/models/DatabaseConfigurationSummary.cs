@@ -147,6 +147,9 @@ namespace Oci.OpsiService.Models
                 case "EM_MANAGED_EXTERNAL_DATABASE":
                     obj = new EmManagedExternalDatabaseConfigurationSummary();
                     break;
+                case "MACS_MANAGED_AUTONOMOUS_DATABASE":
+                    obj = new MacsManagedAutonomousDatabaseConfigurationSummary();
+                    break;
                 case "EXTERNAL_MYSQL_DATABASE_SYSTEM":
                     obj = new ExternalMysqlDatabaseConfigurationSummary();
                     break;

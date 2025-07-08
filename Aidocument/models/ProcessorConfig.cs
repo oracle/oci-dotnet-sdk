@@ -46,6 +46,9 @@ namespace Oci.AidocumentService.Models
             var discriminator = jsonObject["processorType"].Value<string>();
             switch (discriminator)
             {
+                case "INVOICE":
+                    obj = new InvoiceProcessorConfig();
+                    break;
                 case "GENERAL":
                     obj = new GeneralProcessorConfig();
                     break;

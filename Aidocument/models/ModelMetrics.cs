@@ -30,7 +30,17 @@ namespace Oci.AidocumentService.Models
             [EnumMember(Value = "KEY_VALUE_EXTRACTION")]
             KeyValueExtraction,
             [EnumMember(Value = "DOCUMENT_CLASSIFICATION")]
-            DocumentClassification
+            DocumentClassification,
+            [EnumMember(Value = "PRE_TRAINED_TEXT_EXTRACTION")]
+            PreTrainedTextExtraction,
+            [EnumMember(Value = "PRE_TRAINED_TABLE_EXTRACTION")]
+            PreTrainedTableExtraction,
+            [EnumMember(Value = "PRE_TRAINED_KEY_VALUE_EXTRACTION")]
+            PreTrainedKeyValueExtraction,
+            [EnumMember(Value = "PRE_TRAINED_DOCUMENT_CLASSIFICATION")]
+            PreTrainedDocumentClassification,
+            [EnumMember(Value = "PRE_TRAINED_DOCUMENT_ELEMENTS_EXTRACTION")]
+            PreTrainedDocumentElementsExtraction
         };
 
         
@@ -60,11 +70,26 @@ namespace Oci.AidocumentService.Models
             var discriminator = jsonObject["modelType"].Value<string>();
             switch (discriminator)
             {
+                case "PRE_TRAINED_DOCUMENT_ELEMENTS_EXTRACTION":
+                    obj = new PreTrainedDocumentElementsExtractionModelDetails();
+                    break;
                 case "DOCUMENT_CLASSIFICATION":
                     obj = new DocumentClassificationModelMetrics();
                     break;
+                case "PRE_TRAINED_DOCUMENT_CLASSIFICATION":
+                    obj = new PretrainedDocumentClassificationModelDetails();
+                    break;
+                case "PRE_TRAINED_TABLE_EXTRACTION":
+                    obj = new PretrainedTableExtractionModelDetails();
+                    break;
                 case "KEY_VALUE_EXTRACTION":
                     obj = new KeyValueDetectionModelMetrics();
+                    break;
+                case "PRE_TRAINED_KEY_VALUE_EXTRACTION":
+                    obj = new PretrainedKeyValueExtractionModelDetails();
+                    break;
+                case "PRE_TRAINED_TEXT_EXTRACTION":
+                    obj = new PretrainedTextExtractionModelDetails();
                     break;
             }
             if (obj != null)
