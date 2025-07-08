@@ -119,7 +119,15 @@ namespace Oci.OpsiService.Requests
             [EnumMember(Value = "MDS-MYSQL")]
             MdsMysql,
             [EnumMember(Value = "EXTERNAL-MYSQL")]
-            ExternalMysql
+            ExternalMysql,
+            [EnumMember(Value = "ATP-EXACC")]
+            AtpExacc,
+            [EnumMember(Value = "ADW-EXACC")]
+            AdwExacc,
+            [EnumMember(Value = "EXTERNAL-ADW")]
+            ExternalAdw,
+            [EnumMember(Value = "EXTERNAL-ATP")]
+            ExternalAtp
         };
 
         /// <value>

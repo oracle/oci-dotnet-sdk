@@ -30,6 +30,7 @@ namespace Oci.AidocumentService.Models
         /// - `TABLE_EXTRACTION`: Detect and extract data in tables.
         /// - `KEY_VALUE_EXTRACTION`: Extract form fields.
         /// - `DOCUMENT_CLASSIFICATION`: Identify the type of document.
+        /// - `DOCUMENT_ELEMENTS_EXTRACTION`: Extract information from bar code
         /// 
         /// </value>
         ///
@@ -43,7 +44,9 @@ namespace Oci.AidocumentService.Models
             [EnumMember(Value = "KEY_VALUE_EXTRACTION")]
             KeyValueExtraction,
             [EnumMember(Value = "DOCUMENT_CLASSIFICATION")]
-            DocumentClassification
+            DocumentClassification,
+            [EnumMember(Value = "DOCUMENT_ELEMENTS_EXTRACTION")]
+            DocumentElementsExtraction
         };
 
         
@@ -70,6 +73,9 @@ namespace Oci.AidocumentService.Models
             var discriminator = jsonObject["featureType"].Value<string>();
             switch (discriminator)
             {
+                case "DOCUMENT_ELEMENTS_EXTRACTION":
+                    obj = new DocumentElementsExtractionFeature();
+                    break;
                 case "DOCUMENT_CLASSIFICATION":
                     obj = new DocumentClassificationFeature();
                     break;

@@ -17,6 +17,8 @@ namespace Oci.OpsiService.Models
   /// </summary>
   public enum ExadataVmClusterType {
       [EnumMember(Value = "vmCluster")]
-      VmCluster
+      VmCluster,
+      [EnumMember(Value = "autonomousVmCluster")]
+      AutonomousVmCluster
   }
 }

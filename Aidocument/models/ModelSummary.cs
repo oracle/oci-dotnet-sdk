@@ -65,6 +65,12 @@ namespace Oci.AidocumentService.Models
         public System.Nullable<Model.ModelTypeEnum> ModelType { get; set; }
         
         /// <value>
+        /// Number of replicas required for this model.
+        /// </value>
+        [JsonProperty(PropertyName = "inferenceUnits")]
+        public System.Nullable<int> InferenceUnits { get; set; }
+        
+        /// <value>
         /// The version of the model.
         /// </value>
         /// <remarks>

@@ -78,6 +78,18 @@ namespace Oci.AidocumentService.Models
         [JsonProperty(PropertyName = "wordIndexes")]
         public System.Collections.Generic.List<int> WordIndexes { get; set; }
         
+        /// <value>
+        /// The normalized value.
+        /// </value>
+        [JsonProperty(PropertyName = "normalizedValue")]
+        public string NormalizedValue { get; set; }
+        
+        /// <value>
+        /// The normalized value confidence score between 0 and 1.
+        /// </value>
+        [JsonProperty(PropertyName = "normalizedConfidence")]
+        public System.Nullable<float> NormalizedConfidence { get; set; }
+        
     }
 
     public class FieldValueModelConverter : JsonConverter

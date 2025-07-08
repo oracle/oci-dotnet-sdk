@@ -27,6 +27,12 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "memberDatabaseDetails")]
         public System.Collections.Generic.List<CreateMacsManagedCloudDatabaseInsightDetails> MemberDatabaseDetails { get; set; }
         
+        /// <value>
+        /// The autonomous databases that belong to the Autonmous VM Cluster
+        /// </value>
+        [JsonProperty(PropertyName = "memberAutonomousDetails")]
+        public System.Collections.Generic.List<CreateMacsManagedAutonomousDatabaseInsightDetails> MemberAutonomousDetails { get; set; }
+        
         [JsonProperty(PropertyName = "vmClusterType")]
         private readonly string vmClusterType = "vmCluster";
     }

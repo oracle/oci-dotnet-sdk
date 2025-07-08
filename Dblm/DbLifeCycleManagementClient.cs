@@ -110,7 +110,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "CreateVulnerabilityScan",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/VulnerabilityScan/CreateVulnerabilityScan",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -167,7 +167,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "GetPatchManagement",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/DblmPatchManagement/GetPatchManagement",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -223,7 +223,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "GetVulnerability",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/DblmVulnerability/GetVulnerability",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -279,7 +279,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "GetVulnerabilityScan",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/VulnerabilityScan/GetVulnerabilityScan",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -335,7 +335,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -391,7 +391,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "ListAggregatedVulnerabilityData",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/DblmVulnerability/ListAggregatedVulnerabilityData",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -448,7 +448,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "ListDatabases",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/PatchDatabasesCollection/ListDatabases",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -504,7 +504,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "ListNotifications",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/NotificationCollection/ListNotifications",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -560,7 +560,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "ListVulnerabilities",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/DblmVulnerability/ListVulnerabilities",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -616,7 +616,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "ListVulnerabilityResources",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/VulnerabilityResourceCollection/ListVulnerabilityResources",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -673,7 +673,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "ListVulnerabilityScans",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/VulnerabilityScanCollection/ListVulnerabilityScans",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -730,7 +730,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -787,7 +787,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -844,7 +844,7 @@ namespace Oci.DblmService
                     ServiceName = "DbLifeCycleManagement",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/dbmgmt/20240102/WorkRequest/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

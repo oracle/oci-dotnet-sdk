@@ -80,6 +80,9 @@ namespace Oci.OpsiService.Models
                 case "EXTERNAL_MYSQL_DATABASE_SYSTEM":
                     obj = new UpdateExternalMysqlDatabaseInsightDetails();
                     break;
+                case "MACS_MANAGED_AUTONOMOUS_DATABASE":
+                    obj = new UpdateMacsManagedAutonomousDatabaseInsightDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

@@ -21,6 +21,12 @@ namespace Oci.AidocumentService.Models
     public class DocumentTableExtractionFeature : DocumentFeature
     {
         
+        /// <value>
+        /// Unique identifier custom model OCID that should be used for inference.
+        /// </value>
+        [JsonProperty(PropertyName = "modelId")]
+        public string ModelId { get; set; }
+        
         [JsonProperty(PropertyName = "featureType")]
         private readonly string featureType = "TABLE_EXTRACTION";
     }

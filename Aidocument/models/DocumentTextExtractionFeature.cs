@@ -27,6 +27,18 @@ namespace Oci.AidocumentService.Models
         [JsonProperty(PropertyName = "generateSearchablePdf")]
         public System.Nullable<bool> GenerateSearchablePdf { get; set; }
         
+        /// <value>
+        /// Unique identifier custom model OCID that should be used for inference.
+        /// </value>
+        [JsonProperty(PropertyName = "modelId")]
+        public string ModelId { get; set; }
+        
+        /// <value>
+        /// Whether checkbox detection feature is enabled or disabled.
+        /// </value>
+        [JsonProperty(PropertyName = "selectionMarkDetection")]
+        public System.Nullable<bool> SelectionMarkDetection { get; set; }
+        
         [JsonProperty(PropertyName = "featureType")]
         private readonly string featureType = "TEXT_EXTRACTION";
     }

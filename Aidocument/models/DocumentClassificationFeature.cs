@@ -28,10 +28,16 @@ namespace Oci.AidocumentService.Models
         public System.Nullable<int> MaxResults { get; set; }
         
         /// <value>
-        /// The custom model ID.
+        /// Unique identifier custom model OCID that should be used for inference.
         /// </value>
         [JsonProperty(PropertyName = "modelId")]
         public string ModelId { get; set; }
+        
+        /// <value>
+        /// The custom model tenancy ID when modelId represents aliasName.
+        /// </value>
+        [JsonProperty(PropertyName = "tenancyId")]
+        public string TenancyId { get; set; }
         
         [JsonProperty(PropertyName = "featureType")]
         private readonly string featureType = "DOCUMENT_CLASSIFICATION";

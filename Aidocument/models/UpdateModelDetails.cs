@@ -34,6 +34,12 @@ namespace Oci.AidocumentService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// Number of replicas required for this model.
+        /// </value>
+        [JsonProperty(PropertyName = "inferenceUnits")]
+        public System.Nullable<int> InferenceUnits { get; set; }
+        
+        /// <value>
         /// A simple key-value pair that is applied without any predefined name, type, or scope. It exists for cross-compatibility only.
         /// For Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

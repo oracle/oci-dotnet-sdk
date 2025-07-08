@@ -51,6 +51,9 @@ namespace Oci.OpsiService.Models
                 case "MDS_MYSQL_DATABASE_SYSTEM":
                     obj = new EnableMdsMySqlDatabaseInsightDetails();
                     break;
+                case "MACS_MANAGED_AUTONOMOUS_DATABASE":
+                    obj = new EnableMacsManagedAutonomousDatabaseInsightDetails();
+                    break;
                 case "EXTERNAL_MYSQL_DATABASE_SYSTEM":
                     obj = new EnableExternalMysqlDatabaseInsightDetails();
                     break;
