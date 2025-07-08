@@ -51,6 +51,18 @@ namespace Oci.AidocumentService.Models
         public System.Nullable<Model.ModelTypeEnum> ModelType { get; set; }
         
         /// <value>
+        /// Applicable to only PRE_TRAINED_KEY_VALUE_EXTRACTION, PRE_TRAINED_DOCUMENT_ELEMENTS_EXTRACTION.
+        /// </value>
+        [JsonProperty(PropertyName = "modelSubType")]
+        public ModelSubType ModelSubType { get; set; }
+        
+        /// <value>
+        /// Number of replicas required for this model.
+        /// </value>
+        [JsonProperty(PropertyName = "inferenceUnits")]
+        public System.Nullable<int> InferenceUnits { get; set; }
+        
+        /// <value>
         /// The compartment identifier.
         /// </value>
         /// <remarks>
@@ -71,6 +83,12 @@ namespace Oci.AidocumentService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxTrainingTimeInHours")]
         public System.Double MaxTrainingTimeInHours { get; set; }
+        
+        /// <value>
+        /// The document language for model training, abbreviated according to the BCP 47 syntax.
+        /// </value>
+        [JsonProperty(PropertyName = "language")]
+        public string Language { get; set; }
         
         [JsonProperty(PropertyName = "trainingDataset")]
         public Dataset TrainingDataset { get; set; }

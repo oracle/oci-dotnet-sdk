@@ -81,6 +81,18 @@ namespace Oci.AidocumentService.Models
         public string TableExtractionModelVersion { get; set; }
         
         /// <value>
+        /// The document signature extraction model version.
+        /// </value>
+        [JsonProperty(PropertyName = "signatureExtractionModelVersion")]
+        public string SignatureExtractionModelVersion { get; set; }
+        
+        /// <value>
+        /// The document bar code extraction model version.
+        /// </value>
+        [JsonProperty(PropertyName = "barCodeExtractionModelVersion")]
+        public string BarCodeExtractionModelVersion { get; set; }
+        
+        /// <value>
         /// The errors encountered during document analysis.
         /// </value>
         [JsonProperty(PropertyName = "errors")]

@@ -31,6 +31,12 @@ namespace Oci.AidocumentService.Models
         [JsonProperty(PropertyName = "data")]
         public System.Byte[] Data { get; set; }
         
+        /// <value>
+        /// The page ranges to be analysed.
+        /// </value>
+        [JsonProperty(PropertyName = "pageRange")]
+        public System.Collections.Generic.List<string> PageRange { get; set; }
+        
         [JsonProperty(PropertyName = "sourceType")]
         private readonly string sourceType = "INLINE_DOCUMENT_CONTENT";
     }

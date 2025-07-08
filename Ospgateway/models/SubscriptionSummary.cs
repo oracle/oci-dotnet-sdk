@@ -89,6 +89,12 @@ namespace Oci.OspgatewayService.Models
         public System.Nullable<bool> IsIntentToPay { get; set; }
         
         /// <value>
+        /// Corporate conversion allowed status
+        /// </value>
+        [JsonProperty(PropertyName = "isCorporateConversionAllowed")]
+        public System.Nullable<bool> IsCorporateConversionAllowed { get; set; }
+        
+        /// <value>
         /// Currency code
         /// </value>
         [JsonProperty(PropertyName = "currencyCode")]
@@ -148,7 +154,9 @@ namespace Oci.OspgatewayService.Models
             [EnumMember(Value = "TAX_ERROR")]
             TaxError,
             [EnumMember(Value = "UPGRADE_ERROR")]
-            UpgradeError
+            UpgradeError,
+            [EnumMember(Value = "P2C_ERROR")]
+            P2CError
         };
 
         /// <value>

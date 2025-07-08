@@ -146,6 +146,12 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "TEST_MACS_MANAGED_CLOUD_DATABASE_INSIGHT_CONNECTION_DETAILS")]
       TestMacsManagedCloudDatabaseInsightConnectionDetails,
       [EnumMember(Value = "CHANGE_EXTERNAL_MYSQL_DATABASE_INSIGHT_CONNECTION_DETAILS")]
-      ChangeExternalMysqlDatabaseInsightConnectionDetails
+      ChangeExternalMysqlDatabaseInsightConnectionDetails,
+      [EnumMember(Value = "CHANGE_MACS_MANAGED_ADB_CONNECTION_DETAILS")]
+      ChangeMacsManagedAdbConnectionDetails,
+      [EnumMember(Value = "TEST_MACS_MANAGED_ADB_CONNECTION_DETAILS")]
+      TestMacsManagedAdbConnectionDetails,
+      [EnumMember(Value = "SYNCHRONIZE_AUTONOMOUS_DATABASE_TO_EXADATA")]
+      SynchronizeAutonomousDatabaseToExadata
   }
 }
