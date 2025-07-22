@@ -82,8 +82,17 @@ namespace Oci.MarketplacepublisherService.Models
             var discriminator = jsonObject["attachmentType"].Value<string>();
             switch (discriminator)
             {
+                case "SUPPORTED_SERVICES":
+                    obj = new CreateSupportedServiceAttachment();
+                    break;
                 case "SCREENSHOT":
                     obj = new CreateScreenShotAttachmentDetails();
+                    break;
+                case "CUSTOMER_SUCCESS":
+                    obj = new CreateCustomerSuccessAttachment();
+                    break;
+                case "REVIEW_SUPPORT_DOCUMENT":
+                    obj = new CreateReviewSupportDocumentAttachment();
                     break;
                 case "VIDEO":
                     obj = new CreateVideoAttachmentDetails();

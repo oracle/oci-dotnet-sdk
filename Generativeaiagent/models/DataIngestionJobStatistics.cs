@@ -35,6 +35,12 @@ namespace Oci.GenerativeaiagentService.Models
         public System.Nullable<int> NumberOfIngestedFiles { get; set; }
         
         /// <value>
+        /// The number of files that have been ignored during the ingestion.
+        /// </value>
+        [JsonProperty(PropertyName = "numberOfIgnoredFiles")]
+        public System.Nullable<int> NumberOfIgnoredFiles { get; set; }
+        
+        /// <value>
         /// The duration of this ingestion job.
         /// </value>
         [JsonProperty(PropertyName = "durationInSeconds")]

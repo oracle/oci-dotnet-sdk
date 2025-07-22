@@ -21,6 +21,18 @@ namespace Oci.DatabasemanagementService.Models
     public class DatabaseSqlWatchFeatureDetails : DatabaseFeatureDetails
     {
         
+        /// <value>
+        /// Indicates whether SQL Watch should be enabled for all the current pluggable databases in the container database.
+        /// </value>
+        [JsonProperty(PropertyName = "canEnableAllCurrentPdbs")]
+        public System.Nullable<bool> CanEnableAllCurrentPdbs { get; set; }
+        
+        /// <value>
+        /// Indicates whether SQL Watch should be enabled automatically for all the pluggable databases in the container database.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoEnablePluggableDatabase")]
+        public System.Nullable<bool> IsAutoEnablePluggableDatabase { get; set; }
+        
         [JsonProperty(PropertyName = "feature")]
         private readonly string feature = "SQLWATCH";
     }

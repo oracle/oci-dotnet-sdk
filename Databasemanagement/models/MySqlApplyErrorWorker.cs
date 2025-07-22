@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// If the replica is multi-threaded, error from worker threads. Otherwise error from the applier thread.
+    /// If the replica is multi-threaded, error from worker threads. Otherwise, error from the applier thread.
     /// </summary>
     public class MySqlApplyErrorWorker 
     {

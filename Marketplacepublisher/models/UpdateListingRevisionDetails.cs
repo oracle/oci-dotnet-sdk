@@ -11,13 +11,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.MarketplacepublisherService.Models
 {
     /// <summary>
     /// The model for an Oracle Cloud Infrastructure Marketplace Publisher listing revision.
     /// </summary>
+    [JsonConverter(typeof(UpdateListingRevisionDetailsModelConverter))]
     public class UpdateListingRevisionDetails 
     {
         
@@ -27,14 +28,12 @@ namespace Oci.MarketplacepublisherService.Models
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
-        [JsonProperty(PropertyName = "versionDetails")]
-        public VersionDetails VersionDetails { get; set; }
-        
         /// <value>
         /// Single line introduction for the listing revision.
         /// </value>
         [JsonProperty(PropertyName = "headline")]
         public string Headline { get; set; }
+        
         
         /// <value>
         /// The tagline for the listing revision.
@@ -66,24 +65,6 @@ namespace Oci.MarketplacepublisherService.Models
         [JsonProperty(PropertyName = "longDescription")]
         public string LongDescription { get; set; }
         
-        /// <value>
-        /// System requirements for the listing revision.
-        /// </value>
-        [JsonProperty(PropertyName = "systemRequirements")]
-        public string SystemRequirements { get; set; }
-        
-        /// <value>
-        /// The categories for the listing revision.
-        /// </value>
-        [JsonProperty(PropertyName = "categories")]
-        public System.Collections.Generic.List<string> Categories { get; set; }
-        
-        /// <value>
-        /// The markets supported by the listing revision.
-        /// </value>
-        [JsonProperty(PropertyName = "markets")]
-        public System.Collections.Generic.List<string> Markets { get; set; }
-        
         [JsonProperty(PropertyName = "contentLanguage")]
         public LanguageItem ContentLanguage { get; set; }
         
@@ -106,13 +87,6 @@ namespace Oci.MarketplacepublisherService.Models
         public System.Collections.Generic.List<NamedLink> SupportLinks { get; set; }
         
         /// <value>
-        /// The pricing model for the listing revision.
-        /// </value>
-        [JsonProperty(PropertyName = "pricingType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<ListingRevision.PricingTypeEnum> PricingType { get; set; }
-        
-        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
@@ -126,5 +100,40 @@ namespace Oci.MarketplacepublisherService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+    }
+
+    public class UpdateListingRevisionDetailsModelConverter : JsonConverter
+    {
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(UpdateListingRevisionDetails);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(UpdateListingRevisionDetails);
+            var discriminator = jsonObject["listingType"].Value<string>();
+            switch (discriminator)
+            {
+                case "SERVICE":
+                    obj = new UpdateServiceListingRevisionDetails();
+                    break;
+                case "OCI_APPLICATION":
+                    obj = new UpdateOciListingRevisionDetails();
+                    break;
+                case "LEAD_GENERATION":
+                    obj = new UpdateLeadGenListingRevisionDetails();
+                    break;
+            }
+            serializer.Populate(jsonObject.CreateReader(), obj);
+            return obj;
+        }
     }
 }

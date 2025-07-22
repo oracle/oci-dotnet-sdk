@@ -57,6 +57,13 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
         
         /// <value>
+        /// The OKV End Point Group name for the Autonomous Container Database.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "okvEndPointGroupName")]
+        public string OkvEndPointGroupName { get; set; }
+        
+        /// <value>
         /// **Deprecated.** The `DB_UNIQUE_NAME` value is set by Oracle Cloud Infrastructure.  Do not specify a value for this parameter. Specifying a value for this field will cause Terraform operations to fail.
         /// 
         /// </value>

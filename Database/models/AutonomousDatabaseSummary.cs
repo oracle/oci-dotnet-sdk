@@ -406,6 +406,27 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeUndeleted { get; set; }
         
         /// <value>
+        /// The earliest(min) date and time the Autonomous Database can be scheduled to upgrade to 23ai.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeEarliestAvailableDbVersionUpgrade")]
+        public System.Nullable<System.DateTime> TimeEarliestAvailableDbVersionUpgrade { get; set; }
+        
+        /// <value>
+        /// The max date and time the Autonomous Database can be scheduled to upgrade to 23ai.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLatestAvailableDbVersionUpgrade")]
+        public System.Nullable<System.DateTime> TimeLatestAvailableDbVersionUpgrade { get; set; }
+        
+        /// <value>
+        /// The date and time the Autonomous Database scheduled to upgrade to 23ai.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeScheduledDbVersionUpgrade")]
+        public System.Nullable<System.DateTime> TimeScheduledDbVersionUpgrade { get; set; }
+        
+        /// <value>
         /// The date and time the Autonomous Database was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]

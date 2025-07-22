@@ -191,6 +191,12 @@ namespace Oci.MarketplacepublisherService.Models
             var discriminator = jsonObject["artifactType"].Value<string>();
             switch (discriminator)
             {
+                case "MACHINE_IMAGE":
+                    obj = new MachineImageArtifact();
+                    break;
+                case "STACK":
+                    obj = new StackArtifact();
+                    break;
                 case "CONTAINER_IMAGE":
                     obj = new ContainerImageArtifact();
                     break;

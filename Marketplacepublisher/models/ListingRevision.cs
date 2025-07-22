@@ -11,13 +11,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-
+using Newtonsoft.Json.Linq;
 
 namespace Oci.MarketplacepublisherService.Models
 {
     /// <summary>
     /// The model for an Oracle Cloud Infrastructure Marketplace Publisher listing revision.
     /// </summary>
+    [JsonConverter(typeof(ListingRevisionModelConverter))]
     public class ListingRevision 
     {
         
@@ -63,9 +64,6 @@ namespace Oci.MarketplacepublisherService.Models
         [JsonProperty(PropertyName = "revisionNumber")]
         public string RevisionNumber { get; set; }
         
-        [JsonProperty(PropertyName = "versionDetails")]
-        public VersionDetails VersionDetails { get; set; }
-        
         /// <value>
         /// Single line introduction for the listing revision.
         /// </value>
@@ -107,12 +105,6 @@ namespace Oci.MarketplacepublisherService.Models
         public string LongDescription { get; set; }
         
         /// <value>
-        /// System requirements for the listing revision.
-        /// </value>
-        [JsonProperty(PropertyName = "systemRequirements")]
-        public string SystemRequirements { get; set; }
-        
-        /// <value>
         /// The time the listing revision was created. An RFC3339 formatted datetime string.
         /// </value>
         /// <remarks>
@@ -131,22 +123,6 @@ namespace Oci.MarketplacepublisherService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-        
-        /// <value>
-        /// The categories for the listing revsion.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Categories is required.")]
-        [JsonProperty(PropertyName = "categories")]
-        public System.Collections.Generic.List<string> Categories { get; set; }
-        
-        /// <value>
-        /// The markets supported by the listing revision.
-        /// </value>
-        [JsonProperty(PropertyName = "markets")]
-        public System.Collections.Generic.List<string> Markets { get; set; }
         
         [JsonProperty(PropertyName = "contentLanguage")]
         public LanguageItem ContentLanguage { get; set; }
@@ -177,9 +153,6 @@ namespace Oci.MarketplacepublisherService.Models
         /// </value>
         ///
         public enum StatusEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
             [EnumMember(Value = "NEW")]
             New,
             [EnumMember(Value = "PENDING_REVIEW")]
@@ -230,9 +203,6 @@ namespace Oci.MarketplacepublisherService.Models
         /// </value>
         ///
         public enum LifecycleStateEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
             [EnumMember(Value = "CREATING")]
             Creating,
             [EnumMember(Value = "UPDATING")]
@@ -261,52 +231,10 @@ namespace Oci.MarketplacepublisherService.Models
         /// <value>
         /// The listing's package type. Populated from the listing.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PackageType is required.")]
         [JsonProperty(PropertyName = "packageType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageType> PackageType { get; set; }
-                ///
-        /// <value>
-        /// The pricing model for the listing revision.
-        /// </value>
-        ///
-        public enum PricingTypeEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "FREE")]
-            Free,
-            [EnumMember(Value = "BYOL")]
-            Byol,
-            [EnumMember(Value = "PAYGO")]
-            Paygo
-        };
-
-        /// <value>
-        /// The pricing model for the listing revision.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PricingType is required.")]
-        [JsonProperty(PropertyName = "pricingType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<PricingTypeEnum> PricingType { get; set; }
         
-        /// <value>
-        /// Allowed tenancies provided when a listing revision is published as private.
-        /// </value>
-        [JsonProperty(PropertyName = "allowedTenancies")]
-        public System.Collections.Generic.List<string> AllowedTenancies { get; set; }
-        
-        /// <value>
-        /// Identifies whether publisher allows internal tenancy launches for the listing revision.
-        /// </value>
-        [JsonProperty(PropertyName = "areInternalTenancyLaunchAllowed")]
-        public System.Nullable<bool> AreInternalTenancyLaunchAllowed { get; set; }
         
         /// <value>
         /// Additional metadata key/value pairs for the listing revision summary.
@@ -336,5 +264,48 @@ namespace Oci.MarketplacepublisherService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+    }
+
+    public class ListingRevisionModelConverter : JsonConverter
+    {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public override bool CanWrite => false;
+        public override bool CanRead => true;
+        public override bool CanConvert(System.Type type)
+        {
+            return type == typeof(ListingRevision);
+        }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new System.InvalidOperationException("Use default serialization.");
+        }
+
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jsonObject = JObject.Load(reader);
+            var obj = default(ListingRevision);
+            var discriminator = jsonObject["listingType"].Value<string>();
+            switch (discriminator)
+            {
+                case "SERVICE":
+                    obj = new ServiceListingRevision();
+                    break;
+                case "LEAD_GENERATION":
+                    obj = new LeadGenListingRevision();
+                    break;
+                case "OCI_APPLICATION":
+                    obj = new OciListingRevision();
+                    break;
+            }
+            if (obj != null)
+            {
+                serializer.Populate(jsonObject.CreateReader(), obj);
+            }
+            else
+            {
+                logger.Warn($"The type {discriminator} is not present under ListingRevision! Returning null value.");
+            }
+            return obj;
+        }
     }
 }

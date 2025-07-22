@@ -22,6 +22,12 @@ namespace Oci.MarketplacepublisherService.Models
       [EnumMember(Value = "CONTAINER_IMAGE")]
       ContainerImage,
       [EnumMember(Value = "HELM_CHART")]
-      HelmChart
+      HelmChart,
+      [EnumMember(Value = "MACHINE_IMAGE")]
+      MachineImage,
+      [EnumMember(Value = "STACK")]
+      Stack,
+      [EnumMember(Value = "NONE")]
+      None
   }
 }

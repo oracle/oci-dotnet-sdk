@@ -16,10 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AutoscalingService.Models
 {
     /// <summary>
-    /// Metric and threshold details for triggering an autoscaling action.
+    /// Metric and threshold details for triggering an autoscaling action based on CPU or memory utilization.
     /// 
     /// </summary>
-    public class Metric 
+    public class Metric : MetricBase
     {
                 ///
         ///
@@ -48,5 +48,7 @@ namespace Oci.AutoscalingService.Models
         [JsonProperty(PropertyName = "threshold")]
         public Threshold Threshold { get; set; }
         
+        [JsonProperty(PropertyName = "metricSource")]
+        private readonly string metricSource = "COMPUTE_AGENT";
     }
 }

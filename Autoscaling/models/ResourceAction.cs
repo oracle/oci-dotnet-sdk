@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.AutoscalingService.Models
 {
     /// <summary>
-    /// An action that can be executed against a resource.
+    /// An action to run on a resource, such as stopping or starting an instance pool.
     /// </summary>
     [JsonConverter(typeof(ResourceActionModelConverter))]
     public class ResourceAction 

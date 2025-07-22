@@ -32,10 +32,18 @@ namespace Oci.GenerativeaiagentruntimeService.Models
         public System.Collections.Generic.List<Trace> Traces { get; set; }
         
         /// <value>
-        /// A map where each key is a toolId and the value contains tool type and additional dynamic results.
+        /// A map where each key is a toolId and the value contains tool type and additional dynamic results. This field is deprecated and will be removed after July 02 2026.
         /// </value>
         [JsonProperty(PropertyName = "toolResults")]
         public System.Collections.Generic.Dictionary<string, string> ToolResults { get; set; }
+        
+        /// <value>
+        /// Array of tool outputs in execution order. Each item includes the tool OCID, output type, 
+        /// and corresponding content. The result structure is defined by the `toolOutputType` discriminator.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "toolOutputs")]
+        public System.Collections.Generic.List<ToolOutput> ToolOutputs { get; set; }
         
         /// <value>
         /// A list of actions the agent requires the user or agent client to perform.

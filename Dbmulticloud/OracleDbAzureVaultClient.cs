@@ -109,7 +109,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVault",
                     OperationName = "ChangeOracleDbAzureVaultCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVault/ChangeOracleDbAzureVaultCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -166,7 +166,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVault",
                     OperationName = "CreateOracleDbAzureVault",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDBAzureVault/CreateOracleDbAzureVault",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -223,7 +223,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVault",
                     OperationName = "DeleteOracleDbAzureVault",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVault/DeleteOracleDbAzureVault",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -280,7 +280,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVault",
                     OperationName = "GetOracleDbAzureVault",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVault/GetOracleDbAzureVault",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -337,7 +337,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVault",
                     OperationName = "ListOracleDbAzureVaults",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVault/ListOracleDbAzureVaults",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -394,7 +394,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVault",
                     OperationName = "RefreshOracleDbAzureVault",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVault/RefreshOracleDbAzureVault",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -451,7 +451,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVault",
                     OperationName = "UpdateOracleDbAzureVault",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVault/UpdateOracleDbAzureVault",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

@@ -68,6 +68,12 @@ namespace Oci.MarketplacepublisherService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
+        /// Product Group
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "productGroup")]
+        public string ProductGroup { get; set; }
+        
+        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// General information about replication of a MySQL server.
+    /// General information about the replication of a MySQL server.
     /// </summary>
     public class ManagedMySqlDatabaseGeneralReplicationInformation 
     {
         
         /// <value>
-        /// The type of the instance. Source, Replica, Primary Group Member, Secondary Group Member, and so on. If the instance is replicating from one or more sources and has one or more replicas, i.e., it belongs to a replication chain, the instance type can be Replica/Source.
+        /// The type of the instance for example, Source, Replica, Primary Group Member, and Secondary Group Member. If the instance is replicating from one or more sources and has one or more replicas, which means, it belongs to a replication chain, the instance type can be Replica/Source.
         /// </value>
         [JsonProperty(PropertyName = "instanceType")]
         public string InstanceType { get; set; }
@@ -107,7 +107,7 @@ namespace Oci.DatabasemanagementService.Models
         public System.Nullable<MySqlReadOnly> ReadOnly { get; set; }
         
         /// <value>
-        /// Global Transaction Identifier (GTID) mode of this server.
+        /// The Global Transaction Identifier (GTID) mode of this server.
         /// </value>
         [JsonProperty(PropertyName = "gtidMode")]
         public string GtidMode { get; set; }
@@ -119,7 +119,7 @@ namespace Oci.DatabasemanagementService.Models
         public string ExecutedGtidSet { get; set; }
         
         /// <value>
-        /// Status of binary logging on this server.
+        /// The status of binary logging on this server.
         /// </value>
         [JsonProperty(PropertyName = "binaryLogging")]
         public string BinaryLogging { get; set; }

@@ -568,6 +568,25 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsBackupRetentionLocked { get; set; }
         
         /// <value>
+        /// The date and time the Autonomous Database scheduled to upgrade to 23ai.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeScheduledDbVersionUpgrade")]
+        public System.Nullable<System.DateTime> TimeScheduledDbVersionUpgrade { get; set; }
+        
+        /// <value>
+        /// True if user wants to disable Autonomous Database scheduled upgrade to 23ai.
+        /// </value>
+        [JsonProperty(PropertyName = "isDisableDbVersionUpgradeSchedule")]
+        public System.Nullable<bool> IsDisableDbVersionUpgradeSchedule { get; set; }
+        
+        /// <value>
+        /// True if user wants to schedule Autonomous Database upgrade to the earliest available time.
+        /// </value>
+        [JsonProperty(PropertyName = "isScheduleDbVersionUpgradeToEarliest")]
+        public System.Nullable<bool> IsScheduleDbVersionUpgradeToEarliest { get; set; }
+        
+        /// <value>
         /// The list of scheduled operations. Consists of values such as dayOfWeek, scheduledStartTime, scheduledStopTime.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Error from fetch operation of a MySQL server replication channel.
+    /// Error from the fetch operation of a MySQL server replication channel.
     /// </summary>
     public class MySqlFetchError 
     {

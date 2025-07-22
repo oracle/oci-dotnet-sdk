@@ -41,10 +41,17 @@ namespace Oci.GenerativeaiagentruntimeService.Models
         public string SessionId { get; set; }
         
         /// <value>
-        /// A map where each key is a toolId and the value contains tool type and additional dynamic parameters.
+        /// A map where each key is a toolId and the value contains tool type and additional dynamic parameters. This field is deprecated and will be removed after July 02 2026.
         /// </value>
         [JsonProperty(PropertyName = "toolParameters")]
         public System.Collections.Generic.Dictionary<string, string> ToolParameters { get; set; }
+        
+        /// <value>
+        /// Array of tool input objects, each specifying a tool's ID, type, and corresponding input parameters required for execution.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "toolInputs")]
+        public System.Collections.Generic.List<ToolInput> ToolInputs { get; set; }
         
         /// <value>
         /// A list of actions that have been performed based on prior required actions.

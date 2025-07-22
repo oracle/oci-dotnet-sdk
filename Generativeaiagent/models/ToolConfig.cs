@@ -25,11 +25,6 @@ namespace Oci.GenerativeaiagentService.Models
                 ///
         /// <value>
         /// The type of the Tool config.
-        /// The allowed values are:
-        /// - `SQL_TOOL_CONFIG`: The config for sql Tool.
-        /// - `RAG_TOOL_CONFIG`: The config for rag Tool.
-        /// - FUNCTION_CALLING_TOOL_CONFIG: The config for Function calling Tool.
-        /// - HTTP_ENDPOINT_TOOL_CONFIG: The config for HTTP endpoint Tool.
         /// 
         /// </value>
         ///
@@ -41,7 +36,9 @@ namespace Oci.GenerativeaiagentService.Models
             [EnumMember(Value = "FUNCTION_CALLING_TOOL_CONFIG")]
             FunctionCallingToolConfig,
             [EnumMember(Value = "HTTP_ENDPOINT_TOOL_CONFIG")]
-            HttpEndpointToolConfig
+            HttpEndpointToolConfig,
+            [EnumMember(Value = "AGENT_TOOL_CONFIG")]
+            AgentToolConfig
         };
 
         
@@ -76,6 +73,9 @@ namespace Oci.GenerativeaiagentService.Models
                     break;
                 case "HTTP_ENDPOINT_TOOL_CONFIG":
                     obj = new HttpEndpointToolConfig();
+                    break;
+                case "AGENT_TOOL_CONFIG":
+                    obj = new AgentToolConfig();
                     break;
                 case "RAG_TOOL_CONFIG":
                     obj = new RagToolConfig();

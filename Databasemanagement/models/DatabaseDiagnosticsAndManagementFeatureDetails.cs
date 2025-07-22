@@ -22,7 +22,7 @@ namespace Oci.DatabasemanagementService.Models
     {
                 ///
         /// <value>
-        /// The management type for the database.
+        /// The management type for the database. Use \"BASIC\" for basic management. Use \"ADVANCED\" for full management.
         /// </value>
         ///
         public enum ManagementTypeEnum {
@@ -33,7 +33,7 @@ namespace Oci.DatabasemanagementService.Models
         };
 
         /// <value>
-        /// The management type for the database.
+        /// The management type for the database. Use \"BASIC\" for basic management. Use \"ADVANCED\" for full management.
         /// </value>
         /// <remarks>
         /// Required

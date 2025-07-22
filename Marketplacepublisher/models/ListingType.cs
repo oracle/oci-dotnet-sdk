@@ -21,6 +21,10 @@ namespace Oci.MarketplacepublisherService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "OCI_APPLICATION")]
-      OciApplication
+      OciApplication,
+      [EnumMember(Value = "LEAD_GENERATION")]
+      LeadGeneration,
+      [EnumMember(Value = "SERVICE")]
+      Service
   }
 }
