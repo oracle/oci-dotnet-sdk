@@ -24,6 +24,14 @@ namespace Oci.MarketplacepublisherService.Responses
         public string OpcRequestId { get; set; }
 
 
+        /// <value>
+        /// Unique Oracle-assigned identifier for the asynchronous work. You can use this to query its status.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
+        public string OpcWorkRequestId { get; set; }
+
+
 
     }
 }

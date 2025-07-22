@@ -33,5 +33,11 @@ namespace Oci.MarketplacepublisherService.Models
         [JsonProperty(PropertyName = "areInternalTenancyLaunchAllowed")]
         public System.Nullable<bool> AreInternalTenancyLaunchAllowed { get; set; }
         
+        /// <value>
+        /// Identifies whether publisher intends to publish the listing automatically upon approval.
+        /// </value>
+        [JsonProperty(PropertyName = "shouldAutoPublishOnApproval")]
+        public System.Nullable<bool> ShouldAutoPublishOnApproval { get; set; }
+        
     }
 }

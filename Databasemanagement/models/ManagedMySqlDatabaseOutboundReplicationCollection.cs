@@ -22,7 +22,7 @@ namespace Oci.DatabasemanagementService.Models
     {
         
         /// <value>
-        /// The number of outbound replications from this server.
+        /// The number of outbound replications from the MySQL server.
         /// </value>
         [JsonProperty(PropertyName = "outboundReplicationsCount")]
         public System.Nullable<int> OutboundReplicationsCount { get; set; }

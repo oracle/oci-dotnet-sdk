@@ -32,6 +32,286 @@ namespace Oci.DatabasemanagementService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudAsmRequest, GetCloudAsmResponse> ForCloudAsm(GetCloudAsmRequest request, params CloudAsm.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForCloudAsm(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudAsmRequest, GetCloudAsmResponse> ForCloudAsm(GetCloudAsmRequest request, WaiterConfiguration config, params CloudAsm.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCloudAsmRequest, GetCloudAsmResponse>(
+                request,
+                request => client.GetCloudAsm(request),
+                response => targetStates.Contains(response.CloudAsm.LifecycleState.Value),
+                targetStates.Contains(CloudAsm.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetCloudAsmRequest, GetCloudAsmResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudAsmInstanceRequest, GetCloudAsmInstanceResponse> ForCloudAsmInstance(GetCloudAsmInstanceRequest request, params CloudAsmInstance.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForCloudAsmInstance(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudAsmInstanceRequest, GetCloudAsmInstanceResponse> ForCloudAsmInstance(GetCloudAsmInstanceRequest request, WaiterConfiguration config, params CloudAsmInstance.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCloudAsmInstanceRequest, GetCloudAsmInstanceResponse>(
+                request,
+                request => client.GetCloudAsmInstance(request),
+                response => targetStates.Contains(response.CloudAsmInstance.LifecycleState.Value),
+                targetStates.Contains(CloudAsmInstance.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetCloudAsmInstanceRequest, GetCloudAsmInstanceResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudClusterRequest, GetCloudClusterResponse> ForCloudCluster(GetCloudClusterRequest request, params CloudCluster.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForCloudCluster(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudClusterRequest, GetCloudClusterResponse> ForCloudCluster(GetCloudClusterRequest request, WaiterConfiguration config, params CloudCluster.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCloudClusterRequest, GetCloudClusterResponse>(
+                request,
+                request => client.GetCloudCluster(request),
+                response => targetStates.Contains(response.CloudCluster.LifecycleState.Value),
+                targetStates.Contains(CloudCluster.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetCloudClusterRequest, GetCloudClusterResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudClusterInstanceRequest, GetCloudClusterInstanceResponse> ForCloudClusterInstance(GetCloudClusterInstanceRequest request, params CloudClusterInstance.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForCloudClusterInstance(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudClusterInstanceRequest, GetCloudClusterInstanceResponse> ForCloudClusterInstance(GetCloudClusterInstanceRequest request, WaiterConfiguration config, params CloudClusterInstance.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCloudClusterInstanceRequest, GetCloudClusterInstanceResponse>(
+                request,
+                request => client.GetCloudClusterInstance(request),
+                response => targetStates.Contains(response.CloudClusterInstance.LifecycleState.Value),
+                targetStates.Contains(CloudClusterInstance.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetCloudClusterInstanceRequest, GetCloudClusterInstanceResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudDbHomeRequest, GetCloudDbHomeResponse> ForCloudDbHome(GetCloudDbHomeRequest request, params CloudDbHome.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForCloudDbHome(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudDbHomeRequest, GetCloudDbHomeResponse> ForCloudDbHome(GetCloudDbHomeRequest request, WaiterConfiguration config, params CloudDbHome.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCloudDbHomeRequest, GetCloudDbHomeResponse>(
+                request,
+                request => client.GetCloudDbHome(request),
+                response => targetStates.Contains(response.CloudDbHome.LifecycleState.Value),
+                targetStates.Contains(CloudDbHome.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetCloudDbHomeRequest, GetCloudDbHomeResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudDbNodeRequest, GetCloudDbNodeResponse> ForCloudDbNode(GetCloudDbNodeRequest request, params CloudDbNode.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForCloudDbNode(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudDbNodeRequest, GetCloudDbNodeResponse> ForCloudDbNode(GetCloudDbNodeRequest request, WaiterConfiguration config, params CloudDbNode.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCloudDbNodeRequest, GetCloudDbNodeResponse>(
+                request,
+                request => client.GetCloudDbNode(request),
+                response => targetStates.Contains(response.CloudDbNode.LifecycleState.Value),
+                targetStates.Contains(CloudDbNode.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetCloudDbNodeRequest, GetCloudDbNodeResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudDbSystemRequest, GetCloudDbSystemResponse> ForCloudDbSystem(GetCloudDbSystemRequest request, params CloudDbSystem.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForCloudDbSystem(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudDbSystemRequest, GetCloudDbSystemResponse> ForCloudDbSystem(GetCloudDbSystemRequest request, WaiterConfiguration config, params CloudDbSystem.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCloudDbSystemRequest, GetCloudDbSystemResponse>(
+                request,
+                request => client.GetCloudDbSystem(request),
+                response => targetStates.Contains(response.CloudDbSystem.LifecycleState.Value),
+                targetStates.Contains(CloudDbSystem.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetCloudDbSystemRequest, GetCloudDbSystemResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudDbSystemConnectorRequest, GetCloudDbSystemConnectorResponse> ForCloudDbSystemConnector(GetCloudDbSystemConnectorRequest request, params CloudDbSystemConnector.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForCloudDbSystemConnector(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudDbSystemConnectorRequest, GetCloudDbSystemConnectorResponse> ForCloudDbSystemConnector(GetCloudDbSystemConnectorRequest request, WaiterConfiguration config, params CloudDbSystemConnector.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCloudDbSystemConnectorRequest, GetCloudDbSystemConnectorResponse>(
+                request,
+                request => client.GetCloudDbSystemConnector(request),
+                response => targetStates.Contains(response.CloudDbSystemConnector.LifecycleState.Value),
+                targetStates.Contains(CloudDbSystemConnector.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetCloudDbSystemConnectorRequest, GetCloudDbSystemConnectorResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudDbSystemDiscoveryRequest, GetCloudDbSystemDiscoveryResponse> ForCloudDbSystemDiscovery(GetCloudDbSystemDiscoveryRequest request, params CloudDbSystemDiscovery.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForCloudDbSystemDiscovery(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudDbSystemDiscoveryRequest, GetCloudDbSystemDiscoveryResponse> ForCloudDbSystemDiscovery(GetCloudDbSystemDiscoveryRequest request, WaiterConfiguration config, params CloudDbSystemDiscovery.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCloudDbSystemDiscoveryRequest, GetCloudDbSystemDiscoveryResponse>(
+                request,
+                request => client.GetCloudDbSystemDiscovery(request),
+                response => targetStates.Contains(response.CloudDbSystemDiscovery.LifecycleState.Value),
+                targetStates.Contains(CloudDbSystemDiscovery.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetCloudDbSystemDiscoveryRequest, GetCloudDbSystemDiscoveryResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudListenerRequest, GetCloudListenerResponse> ForCloudListener(GetCloudListenerRequest request, params CloudListener.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForCloudListener(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetCloudListenerRequest, GetCloudListenerResponse> ForCloudListener(GetCloudListenerRequest request, WaiterConfiguration config, params CloudListener.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetCloudListenerRequest, GetCloudListenerResponse>(
+                request,
+                request => client.GetCloudListener(request),
+                response => targetStates.Contains(response.CloudListener.LifecycleState.Value),
+                targetStates.Contains(CloudListener.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetCloudListenerRequest, GetCloudListenerResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDbManagementPrivateEndpointRequest, GetDbManagementPrivateEndpointResponse> ForDbManagementPrivateEndpoint(GetDbManagementPrivateEndpointRequest request, params LifecycleStates[] targetStates)
         {
             return this.ForDbManagementPrivateEndpoint(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

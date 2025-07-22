@@ -41,7 +41,7 @@ namespace Oci.AutoscalingService.Models
         /// </remarks>
         [Required(ErrorMessage = "Metric is required.")]
         [JsonProperty(PropertyName = "metric")]
-        public Metric Metric { get; set; }
+        public MetricBase Metric { get; set; }
         
     }
 }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// MySQL server replication Channel name and error from its fetch operation.
+    /// MySQL server replication channel name and error from its fetch operation.
     /// </summary>
     public class MySqlChannelFetchError 
     {
         
         /// <value>
-        /// The name of the replication channel
+        /// The name of the replication channel.
         /// </value>
         [JsonProperty(PropertyName = "channelName")]
         public string ChannelName { get; set; }

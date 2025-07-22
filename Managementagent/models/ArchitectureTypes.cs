@@ -32,6 +32,8 @@ namespace Oci.ManagementagentService.Models
       X86,
       [EnumMember(Value = "M1")]
       M1,
+      [EnumMember(Value = "PPC64")]
+      Ppc64,
       [EnumMember(Value = "AARCH64")]
       Aarch64
   }

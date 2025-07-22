@@ -137,6 +137,9 @@ namespace Oci.DatabasemanagementService.Models
                 case "DATABASE_NODE":
                     obj = new DiscoveredExternalDbNode();
                     break;
+                case "DATABASE_INSTANCE":
+                    obj = new DiscoveredExternalDbInstance();
+                    break;
                 case "ASM":
                     obj = new DiscoveredExternalAsm();
                     break;

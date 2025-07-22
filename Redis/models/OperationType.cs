@@ -48,6 +48,18 @@ namespace Oci.RedisService.Models
       [EnumMember(Value = "CREATE_OCI_CACHE_USER")]
       CreateOciCacheUser,
       [EnumMember(Value = "UPDATE_OCI_CACHE_USER")]
-      UpdateOciCacheUser
+      UpdateOciCacheUser,
+      [EnumMember(Value = "DELETE_OCI_CACHE_USER")]
+      DeleteOciCacheUser,
+      [EnumMember(Value = "CREATE_OCI_CACHE_CONFIG_SET")]
+      CreateOciCacheConfigSet,
+      [EnumMember(Value = "UPDATE_OCI_CACHE_CONFIG_SET")]
+      UpdateOciCacheConfigSet,
+      [EnumMember(Value = "DELETE_OCI_CACHE_CONFIG_SET")]
+      DeleteOciCacheConfigSet,
+      [EnumMember(Value = "CHANGE_OCI_CACHE_CONFIG_SET_COMPARTMENT")]
+      ChangeOciCacheConfigSetCompartment,
+      [EnumMember(Value = "CHANGE_OCI_CACHE_USER_COMPARTMENT")]
+      ChangeOciCacheUserCompartment
   }
 }

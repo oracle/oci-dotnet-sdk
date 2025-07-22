@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// An outbound replication record of a MySQL Server.
+    /// An outbound replication record of a MySQL server.
     /// </summary>
     public class ManagedMySqlDatabaseOutboundReplicationSummary 
     {

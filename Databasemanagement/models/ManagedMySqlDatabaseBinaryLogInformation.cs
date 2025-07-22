@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Information pertaining to binary logs of a MySQL server.
+    /// Information pertaining to the binary logs of a MySQL server.
     /// </summary>
     public class ManagedMySqlDatabaseBinaryLogInformation 
     {
         
         /// <value>
-        /// Status of binary logging on this server.
+        /// The status of binary logging on the MySQL server.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,19 +32,19 @@ namespace Oci.DatabasemanagementService.Models
         public string BinaryLogging { get; set; }
         
         /// <value>
-        /// The binary logging format used by this server.
+        /// The binary logging format used by the MySQL server.
         /// </value>
         [JsonProperty(PropertyName = "binaryLogFormat")]
         public string BinaryLogFormat { get; set; }
         
         /// <value>
-        /// Indicates whether compression is enabled for transactions written to binary log files on this server.
+        /// Indicates whether compression is enabled for transactions written to binary log files on the MySQL server.
         /// </value>
         [JsonProperty(PropertyName = "binaryLogCompression")]
         public string BinaryLogCompression { get; set; }
         
         /// <value>
-        /// The compression ratio for binary log expressed as a percentage.
+        /// The compression ratio for the binary log, expressed as a percentage.
         /// </value>
         [JsonProperty(PropertyName = "binaryLogCompressionPercent")]
         public System.Nullable<int> BinaryLogCompressionPercent { get; set; }

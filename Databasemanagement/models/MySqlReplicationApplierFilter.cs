@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Filter configured for a replication channel
+    /// Filter configured for a replication channel.
     /// </summary>
     public class MySqlReplicationApplierFilter 
     {
         
         /// <value>
-        /// Type of replication filter that has been configured for the replication channel.
+        /// The type of replication filter that has been configured for the replication channel.
         /// </value>
         /// <remarks>
         /// Required

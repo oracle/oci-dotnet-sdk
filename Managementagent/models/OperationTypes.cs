@@ -23,6 +23,8 @@ namespace Oci.ManagementagentService.Models
       DeployPlugin,
       [EnumMember(Value = "UPGRADE_PLUGIN")]
       UpgradePlugin,
+      [EnumMember(Value = "CREATE_PLUGIN")]
+      CreatePlugin,
       [EnumMember(Value = "CREATE_UPGRADE_PLUGINS")]
       CreateUpgradePlugins,
       [EnumMember(Value = "AGENTIMAGE_UPGRADE")]
@@ -32,6 +34,14 @@ namespace Oci.ManagementagentService.Models
       [EnumMember(Value = "UPDATE_DATA_SOURCE")]
       UpdateDataSource,
       [EnumMember(Value = "DELETE_DATA_SOURCE")]
-      DeleteDataSource
+      DeleteDataSource,
+      [EnumMember(Value = "CREATE_NAMEDCREDENTIALS")]
+      CreateNamedcredentials,
+      [EnumMember(Value = "UPDATE_NAMEDCREDENTIALS")]
+      UpdateNamedcredentials,
+      [EnumMember(Value = "DELETE_NAMEDCREDENTIALS")]
+      DeleteNamedcredentials,
+      [EnumMember(Value = "AGENT_UPGRADE")]
+      AgentUpgrade
   }
 }

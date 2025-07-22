@@ -20,6 +20,7 @@ namespace Oci.DatabasemanagementService.Models
     /// - CLOUD_RAC: Oracle RAC database in Oracle Cloud.
     /// - SHARED: Autonomous shared database in Oracle Cloud.
     /// - DEDICATED: Autonomous dedicated database in Oracle Cloud.
+    /// - CLOUD_AT_CUSTOMER: Autonomous dedicated database in Cloud at the Customer.
     /// 
   /// </summary>
   public enum DatabaseType {
@@ -37,6 +38,8 @@ namespace Oci.DatabasemanagementService.Models
       [EnumMember(Value = "SHARED")]
       Shared,
       [EnumMember(Value = "DEDICATED")]
-      Dedicated
+      Dedicated,
+      [EnumMember(Value = "CLOUD_AT_CUSTOMER")]
+      CloudAtCustomer
   }
 }

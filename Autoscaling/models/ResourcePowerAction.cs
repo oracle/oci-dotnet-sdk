@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AutoscalingService.Models
 {
     /// <summary>
-    /// A power action against a resource.
+    /// An action that starts, stops, or resets a resource.
     /// </summary>
     public class ResourcePowerAction : ResourceAction
     {
@@ -26,6 +26,8 @@ namespace Oci.AutoscalingService.Models
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
             [EnumMember(Value = null)]
             UnknownEnumValue,
+            [EnumMember(Value = "SOFTSTOP")]
+            Softstop,
             [EnumMember(Value = "STOP")]
             Stop,
             [EnumMember(Value = "START")]

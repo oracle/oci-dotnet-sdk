@@ -87,6 +87,34 @@ namespace Oci.MarketplacepublisherService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetLeadRequest, GetLeadResponse> ForLead(GetLeadRequest request, params Lead.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForLead(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetLeadRequest, GetLeadResponse> ForLead(GetLeadRequest request, WaiterConfiguration config, params Lead.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetLeadRequest, GetLeadResponse>(
+                request,
+                request => client.GetLead(request),
+                response => targetStates.Contains(response.Lead.LifecycleState.Value),
+                targetStates.Contains(Lead.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetLeadRequest, GetLeadResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetListingRequest, GetListingResponse> ForListing(GetListingRequest request, params Listing.LifecycleStateEnum[] targetStates)
         {
             return this.ForListing(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -274,6 +302,33 @@ namespace Oci.MarketplacepublisherService
                 response => targetStates.Contains(response.Product.LifecycleState.Value)
             );
             return new Waiter<GetProductRequest, GetProductResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSupportDocRequest, GetSupportDocResponse> ForSupportDoc(GetSupportDocRequest request, params SupportDoc.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSupportDoc(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSupportDocRequest, GetSupportDocResponse> ForSupportDoc(GetSupportDocRequest request, WaiterConfiguration config, params SupportDoc.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSupportDocRequest, GetSupportDocResponse>(
+                request,
+                request => client.GetSupportDoc(request),
+                response => targetStates.Contains(response.SupportDoc.LifecycleState.Value)
+            );
+            return new Waiter<GetSupportDocRequest, GetSupportDocResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

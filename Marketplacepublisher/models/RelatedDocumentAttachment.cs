@@ -41,8 +41,10 @@ namespace Oci.MarketplacepublisherService.Models
             ProductDocumentation,
             [EnumMember(Value = "USER_GUIDES")]
             UserGuides,
-            [EnumMember(Value = "WEBINAR")]
-            Webinar
+            [EnumMember(Value = "WEBINARS")]
+            Webinars,
+            [EnumMember(Value = "WHITEPAPERS")]
+            Whitepapers
         };
 
         /// <value>

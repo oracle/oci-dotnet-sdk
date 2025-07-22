@@ -25,8 +25,6 @@ namespace Oci.GenerativeaiagentService.Models
                 ///
         /// <value>
         /// The type of Database connection.
-        /// The allowed values are:
-        /// - `DATABASE_TOOL_CONNECTION`: This allows the service to connect to a vector store via a Database Tools Connection.
         /// 
         /// </value>
         ///

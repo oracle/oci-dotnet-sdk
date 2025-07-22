@@ -58,6 +58,20 @@ namespace Oci.GenerativeaiagentService.Models
         [JsonProperty(PropertyName = "dataSourceId")]
         public string DataSourceId { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DataIngestionJobType is required.")]
+        [JsonProperty(PropertyName = "dataIngestionJobType")]
+        public DataIngestionJobType DataIngestionJobType { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DataIngestionJobStatistics is required.")]
+        [JsonProperty(PropertyName = "dataIngestionJobStatistics")]
+        public DataIngestionJobStatistics DataIngestionJobStatistics { get; set; }
+        
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>

@@ -52,6 +52,17 @@ namespace Oci.MarketplacepublisherService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The listing's type. Populated from the listing.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ListingType is required.")]
+        [JsonProperty(PropertyName = "listingType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ListingType> ListingType { get; set; }
+        
+        /// <value>
         /// The name of the listing revision.
         /// </value>
         /// <remarks>
@@ -95,17 +106,6 @@ namespace Oci.MarketplacepublisherService.Models
         public System.Nullable<PackageType> PackageType { get; set; }
         
         /// <value>
-        /// Pricing type of the listing.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PricingType is required.")]
-        [JsonProperty(PropertyName = "pricingType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<ListingRevision.PricingTypeEnum> PricingType { get; set; }
-        
-        /// <value>
         /// A short description of the listing revision.
         /// </value>
         [JsonProperty(PropertyName = "shortDescription")]
@@ -119,23 +119,6 @@ namespace Oci.MarketplacepublisherService.Models
         
         [JsonProperty(PropertyName = "icon")]
         public ListingRevisionIconAttachment Icon { get; set; }
-        
-        /// <value>
-        /// The markets where you can deploy the listing.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "markets")]
-        public System.Collections.Generic.List<string> Markets { get; set; }
-        
-        /// <value>
-        /// Categories that the listing revision belongs to.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Categories is required.")]
-        [JsonProperty(PropertyName = "categories")]
-        public System.Collections.Generic.List<string> Categories { get; set; }
         
         /// <value>
         /// The date and time the listing revision was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).

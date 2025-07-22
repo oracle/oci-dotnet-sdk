@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// The details of Basic authentication configured as in OpenSearch.
+    /// The details of Basic authentication configured using a secret stored in a vault.
     /// 
     /// </summary>
     public class BasicAuthSecret : SecretDetail

@@ -52,7 +52,7 @@ namespace Oci.MarketplacepublisherService.Models
         public string CategoryCode { get; set; }
         
         /// <value>
-        /// Bill to countries for the market.
+        /// bill to countries for the market.
         /// </value>
         /// <remarks>
         /// Required

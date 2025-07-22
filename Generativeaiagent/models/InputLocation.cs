@@ -24,9 +24,6 @@ namespace Oci.GenerativeaiagentService.Models
                 ///
         /// <value>
         /// Type of InputLocation.
-        /// The allowed values are:
-        /// - `INLINE`: The input location is inline.
-        /// - `OBJECT_STORAGE_PREFIX`: The input location is object storage.
         /// 
         /// </value>
         ///

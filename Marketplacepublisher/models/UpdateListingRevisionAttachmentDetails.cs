@@ -75,8 +75,17 @@ namespace Oci.MarketplacepublisherService.Models
                 case "SCREENSHOT":
                     obj = new UpdateScreenShotAttachmentDetails();
                     break;
+                case "CUSTOMER_SUCCESS":
+                    obj = new UpdateCustomerSuccessAttachment();
+                    break;
+                case "REVIEW_SUPPORT_DOCUMENT":
+                    obj = new UpdateReviewSupportDocumentAttachment();
+                    break;
                 case "RELATED_DOCUMENT":
                     obj = new UpdateRelatedDocumentAttachmentDetails();
+                    break;
+                case "SUPPORTED_SERVICES":
+                    obj = new UpdateSupportedServiceAttachment();
                     break;
                 case "VIDEO":
                     obj = new UpdateVideoAttachmentDetails();
