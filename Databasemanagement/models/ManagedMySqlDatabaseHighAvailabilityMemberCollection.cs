@@ -64,7 +64,7 @@ namespace Oci.DatabasemanagementService.Models
         public string ViewId { get; set; }
         
         /// <value>
-        /// Number of transactions that were replicated within the cluster.
+        /// The number of transactions that were replicated within the cluster.
         /// </value>
         [JsonProperty(PropertyName = "transactionsInGtidExecuted")]
         public System.Nullable<long> TransactionsInGtidExecuted { get; set; }

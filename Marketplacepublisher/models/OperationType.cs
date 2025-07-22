@@ -58,6 +58,8 @@ namespace Oci.MarketplacepublisherService.Models
       [EnumMember(Value = "CHANGE_TERM_COMPARTMENT")]
       ChangeTermCompartment,
       [EnumMember(Value = "DELETE_ARTIFACT")]
-      DeleteArtifact
+      DeleteArtifact,
+      [EnumMember(Value = "UPDATE_ARTIFACT")]
+      UpdateArtifact
   }
 }

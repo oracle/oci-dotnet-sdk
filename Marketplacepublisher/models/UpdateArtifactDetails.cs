@@ -75,8 +75,14 @@ namespace Oci.MarketplacepublisherService.Models
                 case "HELM_CHART":
                     obj = new UpdateKubernetesImageArtifactDetails();
                     break;
+                case "STACK":
+                    obj = new UpdateStackArtifactDetails();
+                    break;
                 case "CONTAINER_IMAGE":
                     obj = new UpdateContainerImageArtifactDetails();
+                    break;
+                case "MACHINE_IMAGE":
+                    obj = new UpdateMachineImageArtifactDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

@@ -113,6 +113,12 @@ namespace Oci.DatabasemanagementService.Models
         [JsonProperty(PropertyName = "pluggableDatabases")]
         public System.Collections.Generic.List<DiscoveredExternalPluggableDatabase> PluggableDatabases { get; set; }
         
+        /// <value>
+        /// The list of database instances.
+        /// </value>
+        [JsonProperty(PropertyName = "dbInstances")]
+        public System.Collections.Generic.List<DiscoveredExternalDbInstance> DbInstances { get; set; }
+        
         [JsonProperty(PropertyName = "connector")]
         public ExternalDbSystemDiscoveryConnector Connector { get; set; }
         

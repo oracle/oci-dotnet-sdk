@@ -36,6 +36,12 @@ namespace Oci.MarketplacepublisherService.Requests
         public System.Nullable<Listing.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
+        /// A filter to return listings based on their type
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "listingType")]
+        public System.Nullable<ListingType> ListingType { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that match the entire name given.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]

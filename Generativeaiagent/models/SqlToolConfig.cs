@@ -25,10 +25,6 @@ namespace Oci.GenerativeaiagentService.Models
         [JsonProperty(PropertyName = "iclExamples")]
         public InputLocation IclExamples { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DatabaseSchema is required.")]
         [JsonProperty(PropertyName = "databaseSchema")]
         public InputLocation DatabaseSchema { get; set; }
         

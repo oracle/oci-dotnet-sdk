@@ -131,7 +131,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Retrieves information pertaining to binary log of a specific MySQL server.
+        /// Retrieves information pertaining to the binary log of a specific MySQL server.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -188,7 +188,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Retrieves general information regarding replication of a specific MySQL server.
+        /// Retrieves general information regarding the replication of a specific MySQL server.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -473,7 +473,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Information about high availability members of a specific MySQL server&#39;s replication group.
+        /// Retrieves information about the high availability members of a specific MySQL server&#39;s replication group.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -815,7 +815,7 @@ namespace Oci.DatabasemanagementService
         }
 
         /// <summary>
-        /// Retrieves information pertaining to outbound replications of a specific MySQL server.
+        /// Retrieves information pertaining to the outbound replications of a specific MySQL server.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

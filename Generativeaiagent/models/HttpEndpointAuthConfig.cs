@@ -11,87 +11,29 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
+
 
 namespace Oci.GenerativeaiagentService.Models
 {
     /// <summary>
-    /// Auth related information to be used when invoking external endpoint
+    /// Authentication configuration used for HTTP Endpoint tools. Defines the type of authentication
+    /// and the source of credentials.
     /// 
     /// </summary>
-    [JsonConverter(typeof(HttpEndpointAuthConfigModelConverter))]
     public class HttpEndpointAuthConfig 
     {
-                ///
+        
         /// <value>
-        /// The type of Auth config to be used when invoking an external endpoint.
-        /// The allowed values are:
-        /// - `HTTP_ENDPOINT_NO_AUTH_CONFIG`: Indicates that no authentication is required for invoking the endpoint.
-        /// - `HTTP_ENDPOINT_DELEGATED_BEARER_AUTH_CONFIG`: Specifies Bearer Token Authentication, where the same Bearer token received as part of the Agent Chat
-        /// API request is used to invoke the external endpoint.
-        /// - `HTTP_ENDPOINT_OCI_RESOURCE_PRINCIPAL_AUTH_CONFIG`: Specifies authentication using Oracle Cloud Infrastructure (OCI) Resource Principal, leveraging 
-        /// OCI's identity-based authentication mechanism.
-        /// - `HTTP_ENDPOINT_IDCS_AUTH_CONFIG`: Specifies authentication using Oracle Identity Cloud Service (IDCS), leveraging OAuth 2.0 for token-based authentication.
+        /// A list of credential sources from which authentication credentials can be resolved.
+        /// Only AGENT is supported for HTTP Endpoint Tool.
         /// 
         /// </value>
-        ///
-        public enum HttpEndpointAuthConfigTypeEnum {
-            [EnumMember(Value = "HTTP_ENDPOINT_NO_AUTH_CONFIG")]
-            HttpEndpointNoAuthConfig,
-            [EnumMember(Value = "HTTP_ENDPOINT_DELEGATED_BEARER_AUTH_CONFIG")]
-            HttpEndpointDelegatedBearerAuthConfig,
-            [EnumMember(Value = "HTTP_ENDPOINT_OCI_RESOURCE_PRINCIPAL_AUTH_CONFIG")]
-            HttpEndpointOciResourcePrincipalAuthConfig,
-            [EnumMember(Value = "HTTP_ENDPOINT_IDCS_AUTH_CONFIG")]
-            HttpEndpointIdcsAuthConfig
-        };
-
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "HttpEndpointAuthSources is required.")]
+        [JsonProperty(PropertyName = "httpEndpointAuthSources")]
+        public System.Collections.Generic.List<HttpEndpointAuthSource> HttpEndpointAuthSources { get; set; }
         
-    }
-
-    public class HttpEndpointAuthConfigModelConverter : JsonConverter
-    {
-        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
-        public override bool CanWrite => false;
-        public override bool CanRead => true;
-        public override bool CanConvert(System.Type type)
-        {
-            return type == typeof(HttpEndpointAuthConfig);
-        }
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-        {
-            throw new System.InvalidOperationException("Use default serialization.");
-        }
-
-        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
-        {
-            var jsonObject = JObject.Load(reader);
-            var obj = default(HttpEndpointAuthConfig);
-            var discriminator = jsonObject["httpEndpointAuthConfigType"].Value<string>();
-            switch (discriminator)
-            {
-                case "HTTP_ENDPOINT_IDCS_AUTH_CONFIG":
-                    obj = new HttpEndpointIdcsAuthConfig();
-                    break;
-                case "HTTP_ENDPOINT_DELEGATED_BEARER_AUTH_CONFIG":
-                    obj = new HttpEndpointDelegatedBearerAuthConfig();
-                    break;
-                case "HTTP_ENDPOINT_NO_AUTH_CONFIG":
-                    obj = new HttpEndpointNoAuthConfig();
-                    break;
-                case "HTTP_ENDPOINT_OCI_RESOURCE_PRINCIPAL_AUTH_CONFIG":
-                    obj = new HttpEndpointOciResourcePrincipalAuthConfig();
-                    break;
-            }
-            if (obj != null)
-            {
-                serializer.Populate(jsonObject.CreateReader(), obj);
-            }
-            else
-            {
-                logger.Warn($"The type {discriminator} is not present under HttpEndpointAuthConfig! Returning null value.");
-            }
-            return obj;
-        }
     }
 }

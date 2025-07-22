@@ -31,8 +31,6 @@ namespace Oci.GenerativeaiagentService.Models
                 ///
         /// <value>
         /// The type of the tool.
-        /// The allowed values are:
-        /// - `OCI_OBJECT_STORAGE`: The data source is OCI Object Storage.
         /// 
         /// </value>
         ///

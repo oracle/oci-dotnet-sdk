@@ -26,7 +26,7 @@ namespace Oci.MarketplacepublisherService
     public class MarketplacePublisherClient : RegionalClientBase
     {
         private readonly RetryConfiguration retryConfiguration;
-        private const string basePathWithoutHost = "/20220901";
+        private const string basePathWithoutHost = "/20241201";
 
         public MarketplacePublisherPaginators Paginators { get; }
 
@@ -109,7 +109,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ActivateTermVersion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/TermVersion/ActivateTermVersion",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/TermVersion/ActivateTermVersion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -165,7 +165,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CancelWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/WorkRequest/CancelWorkRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/WorkRequest/CancelWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -221,7 +221,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CascadingDeleteListing",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Listing/CascadingDeleteListing",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Listing/CascadingDeleteListing",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -277,7 +277,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CascadingDeleteListingRevision",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/CascadingDeleteListingRevision",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/CascadingDeleteListingRevision",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -333,7 +333,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ChangeArtifactCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Artifact/ChangeArtifactCompartment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Artifact/ChangeArtifactCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -389,7 +389,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ChangeListingCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Listing/ChangeListingCompartment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Listing/ChangeListingCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -445,7 +445,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ChangeListingRevisionToNewStatus",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/ChangeListingRevisionToNewStatus",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/ChangeListingRevisionToNewStatus",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -501,7 +501,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ChangeTermCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Term/ChangeTermCompartment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Term/ChangeTermCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -557,7 +557,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CloneListingRevision",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/CloneListingRevision",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/CloneListingRevision",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -626,7 +626,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CreateArtifact",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Artifact/CreateArtifact",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Artifact/CreateArtifact",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -691,7 +691,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CreateListing",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Listing/CreateListing",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Listing/CreateListing",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -748,7 +748,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CreateListingRevision",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/CreateListingRevision",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/CreateListingRevision",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -805,7 +805,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CreateListingRevisionAttachment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionAttachment/CreateListingRevisionAttachment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionAttachment/CreateListingRevisionAttachment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -862,7 +862,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CreateListingRevisionNote",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionNote/CreateListingRevisionNote",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionNote/CreateListingRevisionNote",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -919,7 +919,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CreateListingRevisionPackage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionPackage/CreateListingRevisionPackage",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionPackage/CreateListingRevisionPackage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -976,7 +976,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CreateTerm",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Term/CreateTerm",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Term/CreateTerm",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1032,7 +1032,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "CreateTermVersion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/TermVersion/CreateTermVersion",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/TermVersion/CreateTermVersion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1088,7 +1088,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "DeleteArtifact",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Artifact/DeleteArtifact",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Artifact/DeleteArtifact",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1144,7 +1144,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "DeleteListing",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Listing/DeleteListing",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Listing/DeleteListing",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1200,7 +1200,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "DeleteListingRevision",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/DeleteListingRevision",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/DeleteListingRevision",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1256,7 +1256,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "DeleteListingRevisionAttachment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionAttachment/DeleteListingRevisionAttachment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionAttachment/DeleteListingRevisionAttachment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1312,7 +1312,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "DeleteListingRevisionNote",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionNote/DeleteListingRevisionNote",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionNote/DeleteListingRevisionNote",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1368,7 +1368,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "DeleteListingRevisionPackage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionPackage/DeleteListingRevisionPackage",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionPackage/DeleteListingRevisionPackage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1424,7 +1424,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "DeleteTerm",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Term/DeleteTerm",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Term/DeleteTerm",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1480,7 +1480,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "DeleteTermVersion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/TermVersion/DeleteTermVersion",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/TermVersion/DeleteTermVersion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1536,7 +1536,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetArtifact",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Artifact/GetArtifact",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Artifact/GetArtifact",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1592,7 +1592,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetCategory",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Category/GetCategory",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Category/GetCategory",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1607,6 +1607,63 @@ namespace Oci.MarketplacepublisherService
             catch (Exception e)
             {
                 logger.Error($"GetCategory failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the details for a lead.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/GetLead.cs.html">here</a> to see an example of how to use GetLead API.</example>
+        public async Task<GetLeadResponse> GetLead(GetLeadRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getLead");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/leads/{leadId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "GetLead",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Lead/GetLead",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetLeadResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetLead failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1649,7 +1706,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetListing",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Listing/GetListing",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Listing/GetListing",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1706,7 +1763,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetListingRevision",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/GetListingRevision",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/GetListingRevision",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1763,7 +1820,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetListingRevisionAttachment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionAttachment/GetListingRevisionAttachment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionAttachment/GetListingRevisionAttachment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1778,6 +1835,120 @@ namespace Oci.MarketplacepublisherService
             catch (Exception e)
             {
                 logger.Error($"GetListingRevisionAttachment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Get the attachment content by identifier.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/GetListingRevisionAttachmentContent.cs.html">here</a> to see an example of how to use GetListingRevisionAttachmentContent API.</example>
+        public async Task<GetListingRevisionAttachmentContentResponse> GetListingRevisionAttachmentContent(GetListingRevisionAttachmentContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getListingRevisionAttachmentContent");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/listingRevisionAttachments/{listingRevisionAttachmentId}/content".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "GetListingRevisionAttachmentContent",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionAttachment/GetListingRevisionAttachmentContent",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetListingRevisionAttachmentContentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetListingRevisionAttachmentContent failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets the content for a listing revision icon.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/GetListingRevisionIconContent.cs.html">here</a> to see an example of how to use GetListingRevisionIconContent API.</example>
+        public async Task<GetListingRevisionIconContentResponse> GetListingRevisionIconContent(GetListingRevisionIconContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getListingRevisionIconContent");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/listingRevisions/{listingRevisionId}/icon/content".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "GetListingRevisionIconContent",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/GetListingRevisionIconContent",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetListingRevisionIconContentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetListingRevisionIconContent failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1819,7 +1990,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetListingRevisionNote",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionNote/GetListingRevisionNote",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionNote/GetListingRevisionNote",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1876,7 +2047,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetListingRevisionPackage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionPackage/GetListingRevisionPackage",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionPackage/GetListingRevisionPackage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1932,7 +2103,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetMarket",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Market/GetMarket",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Market/GetMarket",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1988,7 +2159,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetProduct",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Product/GetProduct",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Product/GetProduct",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2044,7 +2215,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetPublisher",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Publisher/GetPublisher",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Publisher/GetPublisher",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2059,6 +2230,118 @@ namespace Oci.MarketplacepublisherService
             catch (Exception e)
             {
                 logger.Error($"GetPublisher failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a SupportDoc by code identifier
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/GetSupportDoc.cs.html">here</a> to see an example of how to use GetSupportDoc API.</example>
+        public async Task<GetSupportDocResponse> GetSupportDoc(GetSupportDocRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getSupportDoc");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/supportDocs/{supportDocCode}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "GetSupportDoc",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/SupportDoc/GetSupportDoc",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetSupportDocResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetSupportDoc failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a Support Doc content by supportDocCode
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/GetSupportDocContent.cs.html">here</a> to see an example of how to use GetSupportDocContent API.</example>
+        public async Task<GetSupportDocContentResponse> GetSupportDocContent(GetSupportDocContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getSupportDocContent");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/supportDocs/{supportDocCode}/content".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "GetSupportDocContent",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/SupportDoc/GetSupportDocContent",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetSupportDocContentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetSupportDocContent failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2100,7 +2383,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetTerm",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Term/GetTerm",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Term/GetTerm",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2156,7 +2439,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetTermVersion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/TermVersion/GetTermVersion",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/TermVersion/GetTermVersion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2171,6 +2454,62 @@ namespace Oci.MarketplacepublisherService
             catch (Exception e)
             {
                 logger.Error($"GetTermVersion failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets a Term Version content by the identifier.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/GetTermVersionContent.cs.html">here</a> to see an example of how to use GetTermVersionContent API.</example>
+        public async Task<GetTermVersionContentResponse> GetTermVersionContent(GetTermVersionContentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getTermVersionContent");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/termVersions/{termVersionId}/content".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "GetTermVersionContent",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/TermVersion/GetTermVersionContent",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetTermVersionContentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetTermVersionContent failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2212,7 +2551,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/WorkRequest/GetWorkRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2271,7 +2610,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListArtifacts",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ArtifactCollection/ListArtifacts",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ArtifactCollection/ListArtifacts",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2286,6 +2625,63 @@ namespace Oci.MarketplacepublisherService
             catch (Exception e)
             {
                 logger.Error($"ListArtifacts failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// List all published service listing revisions
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/ListAvailableServices.cs.html">here</a> to see an example of how to use ListAvailableServices API.</example>
+        public async Task<ListAvailableServicesResponse> ListAvailableServices(ListAvailableServicesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listAvailableServices");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/availableServices".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "ListAvailableServices",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/AvailableServiceCollection/ListAvailableServices",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListAvailableServicesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListAvailableServices failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2330,7 +2726,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListCategories",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/CategoryCollection/ListCategories",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/CategoryCollection/ListCategories",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2345,6 +2741,179 @@ namespace Oci.MarketplacepublisherService
             catch (Exception e)
             {
                 logger.Error($"ListCategories failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// List customer instance report records
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/ListCustomerInstanceReportRecords.cs.html">here</a> to see an example of how to use ListCustomerInstanceReportRecords API.</example>
+        public async Task<ListCustomerInstanceReportRecordsResponse> ListCustomerInstanceReportRecords(ListCustomerInstanceReportRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listCustomerInstanceReportRecords");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/customerInstanceReportRecords".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "ListCustomerInstanceReportRecords",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/CustomerInstanceReportRecordCollection/ListCustomerInstanceReportRecords",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListCustomerInstanceReportRecordsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListCustomerInstanceReportRecords failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// List disbursement report records
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/ListDisbursementReportRecords.cs.html">here</a> to see an example of how to use ListDisbursementReportRecords API.</example>
+        public async Task<ListDisbursementReportRecordsResponse> ListDisbursementReportRecords(ListDisbursementReportRecordsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listDisbursementReportRecords");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/disbursementReportRecords".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "ListDisbursementReportRecords",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/DisbursementReportRecordCollection/ListDisbursementReportRecords",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListDisbursementReportRecordsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListDisbursementReportRecords failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the leads in your compartment that belong to a listing. You must specify your listing&#39;s OCID as the value for
+        /// the listing ID.
+        /// For information about OCIDs, see Resource Identifiers (Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/ListLeads.cs.html">here</a> to see an example of how to use ListLeads API.</example>
+        public async Task<ListLeadsResponse> ListLeads(ListLeadsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listLeads");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/leads".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "ListLeads",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/LeadCollection/ListLeads",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListLeadsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListLeads failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2387,7 +2956,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListListingRevisionAttachments",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionAttachmentCollection/ListListingRevisionAttachments",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionAttachmentCollection/ListListingRevisionAttachments",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2444,7 +3013,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListListingRevisionNotes",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionNoteCollection/ListListingRevisionNotes",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionNoteCollection/ListListingRevisionNotes",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2501,7 +3070,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListListingRevisionPackages",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionPackageCollection/ListListingRevisionPackages",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionPackageCollection/ListListingRevisionPackages",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2561,7 +3130,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListListingRevisions",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionCollection/ListListingRevisions",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionCollection/ListListingRevisions",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2620,7 +3189,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListListings",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingCollection/ListListings",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingCollection/ListListings",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2679,7 +3248,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListMarkets",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/MarketCollection/ListMarkets",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/MarketCollection/ListMarkets",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2738,7 +3307,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListProducts",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ProductCollection/ListProducts",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ProductCollection/ListProducts",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2794,7 +3363,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListPublishers",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/PublisherCollection/ListPublishers",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/PublisherCollection/ListPublishers",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2809,6 +3378,181 @@ namespace Oci.MarketplacepublisherService
             catch (Exception e)
             {
                 logger.Error($"ListPublishers failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the supportDocs in your compartment. You must specify your compartment&#39;s OCID as the value for
+        /// the compartment ID.
+        /// For information about OCIDs, see Resource Identifiers (Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/ListSupportDocs.cs.html">here</a> to see an example of how to use ListSupportDocs API.</example>
+        public async Task<ListSupportDocsResponse> ListSupportDocs(ListSupportDocsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listSupportDocs");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/supportDocs".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "ListSupportDocs",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/SupportDocCollection/ListSupportDocs",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListSupportDocsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListSupportDocs failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the currencies supported by the Marketplace Publisher Service. You must specify your compartment&#39;s OCID as the value for
+        /// the compartment ID.
+        /// For information about OCIDs, see Resource Identifiers (Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/ListSupportedCurrencies.cs.html">here</a> to see an example of how to use ListSupportedCurrencies API.</example>
+        public async Task<ListSupportedCurrenciesResponse> ListSupportedCurrencies(ListSupportedCurrenciesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listSupportedCurrencies");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/supportedCurrencies".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "ListSupportedCurrencies",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/SupportedCurrencyCollection/ListSupportedCurrencies",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListSupportedCurrenciesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListSupportedCurrencies failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the shapes available to select from.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/ListSupportedShapes.cs.html">here</a> to see an example of how to use ListSupportedShapes API.</example>
+        public async Task<ListSupportedShapesResponse> ListSupportedShapes(ListSupportedShapesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listSupportedShapes");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/supportedShapes".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "ListSupportedShapes",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/SupportedShapeCollection/ListSupportedShapes",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListSupportedShapesResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListSupportedShapes failed with error: {e.Message}");
                 throw;
             }
         }
@@ -2850,7 +3594,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListTermVersions",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/TermVersionCollection/ListTermVersions",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/TermVersionCollection/ListTermVersions",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2906,7 +3650,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListTerms",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/TermCollection/ListTerms",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/TermCollection/ListTerms",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2963,7 +3707,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/WorkRequestError/ListWorkRequestErrors",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3020,7 +3764,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/WorkRequestLogEntry/ListWorkRequestLogs",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3077,7 +3821,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/WorkRequest/ListWorkRequests",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/WorkRequest/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3133,7 +3877,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "MarkListingRevisionPackageAsDefault",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionPackage/MarkListingRevisionPackageAsDefault",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionPackage/MarkListingRevisionPackageAsDefault",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3189,7 +3933,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "PublishListingRevision",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/PublishListingRevision",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/PublishListingRevision",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3245,7 +3989,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "PublishListingRevisionAsPrivate",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/PublishListingRevisionAsPrivate",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/PublishListingRevisionAsPrivate",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3301,7 +4045,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "PublishListingRevisionPackage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionPackage/PublishListingRevisionPackage",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionPackage/PublishListingRevisionPackage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3357,7 +4101,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "SubmitListingRevisionForReview",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/SubmitListingRevisionForReview",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/SubmitListingRevisionForReview",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3413,7 +4157,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "UnPublishListingRevisionPackage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionPackage/UnPublishListingRevisionPackage",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionPackage/UnPublishListingRevisionPackage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3469,7 +4213,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "UpdateArtifact",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Artifact/UpdateArtifact",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Artifact/UpdateArtifact",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3525,7 +4269,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "UpdateListing",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Listing/UpdateListing",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Listing/UpdateListing",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3581,7 +4325,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "UpdateListingRevision",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/UpdateListingRevision",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/UpdateListingRevision",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3637,7 +4381,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "UpdateListingRevisionAttachment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionAttachment/UpdateListingRevisionAttachment",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionAttachment/UpdateListingRevisionAttachment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3693,7 +4437,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "UpdateListingRevisionAttachmentContent",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionAttachment/UpdateListingRevisionAttachmentContent",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionAttachment/UpdateListingRevisionAttachmentContent",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3749,7 +4493,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "UpdateListingRevisionIconContent",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/UpdateListingRevisionIconContent",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/UpdateListingRevisionIconContent",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3764,6 +4508,62 @@ namespace Oci.MarketplacepublisherService
             catch (Exception e)
             {
                 logger.Error($"UpdateListingRevisionIconContent failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the Listing Revision Note tag data
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/marketplacepublisher/UpdateListingRevisionNote.cs.html">here</a> to see an example of how to use UpdateListingRevisionNote API.</example>
+        public async Task<UpdateListingRevisionNoteResponse> UpdateListingRevisionNote(UpdateListingRevisionNoteRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called updateListingRevisionNote");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/listingRevisionNotes/{listingRevisionNoteId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "MarketplacePublisher",
+                    OperationName = "UpdateListingRevisionNote",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionNote/UpdateListingRevisionNote",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<UpdateListingRevisionNoteResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateListingRevisionNote failed with error: {e.Message}");
                 throw;
             }
         }
@@ -3805,7 +4605,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "UpdateListingRevisionPackage",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevisionPackage/UpdateListingRevisionPackage",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevisionPackage/UpdateListingRevisionPackage",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3861,7 +4661,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "UpdateTerm",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Term/UpdateTerm",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Term/UpdateTerm",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3917,7 +4717,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "UpdateTermVersion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/TermVersion/UpdateTermVersion",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/TermVersion/UpdateTermVersion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -3973,7 +4773,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "UpdateTermVersionContent",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/TermVersion/UpdateTermVersionContent",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/TermVersion/UpdateTermVersionContent",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -4029,7 +4829,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "ValidateAndPublishArtifact",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/Artifact/ValidateAndPublishArtifact",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/Artifact/ValidateAndPublishArtifact",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -4085,7 +4885,7 @@ namespace Oci.MarketplacepublisherService
                     ServiceName = "MarketplacePublisher",
                     OperationName = "WithdrawListingRevision",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20220901/ListingRevision/WithdrawListingRevision",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/publisher/20241201/ListingRevision/WithdrawListingRevision",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

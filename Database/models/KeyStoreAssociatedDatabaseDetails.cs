@@ -33,5 +33,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dbName")]
         public string DbName { get; set; }
         
+        /// <value>
+        /// The unique name of the database that is associated with the key store.
+        /// </value>
+        [JsonProperty(PropertyName = "dbUniqueName")]
+        public string DbUniqueName { get; set; }
+        
     }
 }

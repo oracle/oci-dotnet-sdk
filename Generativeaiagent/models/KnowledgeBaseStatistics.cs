@@ -27,5 +27,11 @@ namespace Oci.GenerativeaiagentService.Models
         [JsonProperty(PropertyName = "sizeInBytes")]
         public System.Nullable<long> SizeInBytes { get; set; }
         
+        /// <value>
+        /// Total number of ingested files in Knowledge Base.
+        /// </value>
+        [JsonProperty(PropertyName = "totalIngestedFiles")]
+        public System.Nullable<long> TotalIngestedFiles { get; set; }
+        
     }
 }

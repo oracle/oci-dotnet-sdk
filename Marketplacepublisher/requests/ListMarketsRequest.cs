@@ -78,5 +78,11 @@ namespace Oci.MarketplacepublisherService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
         public string Name { get; set; }
+        
+        /// <value>
+        /// Listing OCID to query resource against.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "listingId")]
+        public string ListingId { get; set; }
     }
 }

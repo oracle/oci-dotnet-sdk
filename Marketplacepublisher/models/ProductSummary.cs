@@ -55,6 +55,12 @@ namespace Oci.MarketplacepublisherService.Models
         public System.Nullable<Product.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
+        /// Additional filter properties for product
+        /// </value>
+        [JsonProperty(PropertyName = "additionalFilters")]
+        public System.Collections.Generic.List<AdditionalFilter> AdditionalFilters { get; set; }
+        
+        /// <value>
         /// The date and time the product was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2022-09-15T21:10:29.600Z

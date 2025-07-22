@@ -25,10 +25,6 @@ namespace Oci.GenerativeaiagentService.Models
                 ///
         /// <value>
         /// The type of index.
-        /// The allowed values are:
-        /// - `DEFAULT_INDEX_CONFIG`: DefaultIndexConfig allows the service to create and manage vector store on behalf of the customer.
-        /// - `OCI_OPEN_SEARCH_INDEX_CONFIG`: OciOpenSearchIndexConfig allows customer to configure their OpenSearch cluster.
-        /// - `OCI_DATABASE_CONFIG`: OciDatabaseConfig allows customer to configure their Database.
         /// 
         /// </value>
         ///

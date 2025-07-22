@@ -257,8 +257,14 @@ namespace Oci.MarketplacepublisherService.Models
             var discriminator = jsonObject["packageType"].Value<string>();
             switch (discriminator)
             {
+                case "STACK":
+                    obj = new StackPackage();
+                    break;
                 case "HELM_CHART":
                     obj = new HelmChartPackage();
+                    break;
+                case "MACHINE_IMAGE":
+                    obj = new MachineImagePackage();
                     break;
                 case "CONTAINER_IMAGE":
                     obj = new ContainerPackage();

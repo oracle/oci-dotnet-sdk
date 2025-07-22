@@ -79,7 +79,13 @@ namespace Oci.MarketplacepublisherService.Models
             [EnumMember(Value = "SCREENSHOT")]
             Screenshot,
             [EnumMember(Value = "VIDEO")]
-            Video
+            Video,
+            [EnumMember(Value = "REVIEW_SUPPORT_DOCUMENT")]
+            ReviewSupportDocument,
+            [EnumMember(Value = "CUSTOMER_SUCCESS")]
+            CustomerSuccess,
+            [EnumMember(Value = "SUPPORTED_SERVICES")]
+            SupportedServices
         };
 
                 ///
@@ -177,8 +183,17 @@ namespace Oci.MarketplacepublisherService.Models
                 case "SCREENSHOT":
                     obj = new ScreenShotAttachment();
                     break;
+                case "REVIEW_SUPPORT_DOCUMENT":
+                    obj = new ReviewSupportDocumentAttachment();
+                    break;
+                case "SUPPORTED_SERVICES":
+                    obj = new SupportedServiceAttachment();
+                    break;
                 case "VIDEO":
                     obj = new VideoAttachment();
+                    break;
+                case "CUSTOMER_SUCCESS":
+                    obj = new CustomerSuccessAttachment();
                     break;
             }
             if (obj != null)

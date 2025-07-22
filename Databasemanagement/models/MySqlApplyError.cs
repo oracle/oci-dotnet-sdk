@@ -16,25 +16,25 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemanagementService.Models
 {
     /// <summary>
-    /// Error from apply operation of a MySQL server replication channel.
+    /// Error from the apply operation of a MySQL server replication channel.
     /// </summary>
     public class MySqlApplyError 
     {
         
         /// <value>
-        /// The error number of the most recent error that caused the SQL/coordinator thread to stop.
+        /// The error number of the most recent error that caused the SQL or coordinator thread to stop.
         /// </value>
         [JsonProperty(PropertyName = "lastErrorNumber")]
         public System.Nullable<int> LastErrorNumber { get; set; }
         
         /// <value>
-        /// The error message of the most recent error that caused the SQL/coordinator thread to stop.
+        /// The error message of the most recent error that caused the SQL or coordinator thread to stop.
         /// </value>
         [JsonProperty(PropertyName = "lastErrorMessage")]
         public string LastErrorMessage { get; set; }
         
         /// <value>
-        /// The timestamp when the most recent SQL/coordinator error occurred.
+        /// The timestamp when the most recent SQL or coordinator error occurred.
         /// </value>
         [JsonProperty(PropertyName = "timeLastError")]
         public System.Nullable<System.DateTime> TimeLastError { get; set; }

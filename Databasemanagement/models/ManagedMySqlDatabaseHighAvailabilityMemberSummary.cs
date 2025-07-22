@@ -22,7 +22,7 @@ namespace Oci.DatabasemanagementService.Models
     {
         
         /// <value>
-        /// The host name of the group member which clients use to connect to it.
+        /// The host name of the group member that clients use to connect to it.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,7 @@ namespace Oci.DatabasemanagementService.Models
         public string MemberHost { get; set; }
         
         /// <value>
-        /// The port number of the group member which clients to connect to it.
+        /// The port number of the group member that clients use to connect to it.
         /// </value>
         /// <remarks>
         /// Required

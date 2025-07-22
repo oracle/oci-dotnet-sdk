@@ -26,6 +26,8 @@ namespace Oci.ManagementagentService.Models
       [EnumMember(Value = "SOLARIS")]
       Solaris,
       [EnumMember(Value = "MACOSX")]
-      Macosx
+      Macosx,
+      [EnumMember(Value = "AIX")]
+      Aix
   }
 }

@@ -69,8 +69,41 @@ namespace Oci.MarketplacepublisherService.Models
         /// </remarks>
         [Required(ErrorMessage = "AttachmentType is required.")]
         [JsonProperty(PropertyName = "attachmentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ListingRevisionAttachment.AttachmentTypeEnum> AttachmentType { get; set; }
+                ///
+        /// <value>
+        /// Possible lifecycle states.
+        /// </value>
+        ///
+        public enum DocumentCategoryEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "CASE_STUDIES")]
+            CaseStudies,
+            [EnumMember(Value = "CUSTOMIZATION_GUIDES")]
+            CustomizationGuides,
+            [EnumMember(Value = "DATA_SHEETS")]
+            DataSheets,
+            [EnumMember(Value = "PRESS_RELEASE")]
+            PressRelease,
+            [EnumMember(Value = "PRODUCT_DOCUMENTATION")]
+            ProductDocumentation,
+            [EnumMember(Value = "USER_GUIDES")]
+            UserGuides,
+            [EnumMember(Value = "WEBINARS")]
+            Webinars,
+            [EnumMember(Value = "WHITEPAPERS")]
+            Whitepapers
+        };
+
+        /// <value>
+        /// Possible lifecycle states.
+        /// </value>
+        [JsonProperty(PropertyName = "documentCategory")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DocumentCategoryEnum> DocumentCategory { get; set; }
         
         /// <value>
         /// The URL of the specified attachment.
@@ -92,7 +125,7 @@ namespace Oci.MarketplacepublisherService.Models
         /// The current state of the document.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ListingRevisionAttachment.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

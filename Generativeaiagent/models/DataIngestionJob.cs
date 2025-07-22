@@ -79,6 +79,13 @@ namespace Oci.GenerativeaiagentService.Models
         /// <remarks>
         /// Required
         /// </remarks>
+        [Required(ErrorMessage = "DataIngestionJobType is required.")]
+        [JsonProperty(PropertyName = "dataIngestionJobType")]
+        public DataIngestionJobType DataIngestionJobType { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
         [Required(ErrorMessage = "DataIngestionJobStatistics is required.")]
         [JsonProperty(PropertyName = "dataIngestionJobStatistics")]
         public DataIngestionJobStatistics DataIngestionJobStatistics { get; set; }

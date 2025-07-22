@@ -34,6 +34,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "customerContacts")]
         public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
+        
+        /// <value>
+        /// The OKV End Point Group name for the Autonomous Container Database.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "okvEndPointGroupName")]
+        public string OkvEndPointGroupName { get; set; }
                 ///
         /// <value>
         /// Database Patch model preference.

@@ -24,9 +24,6 @@ namespace Oci.GenerativeaiagentService.Models
                 ///
         /// <value>
         /// Type of Api Schema InputLocation.
-        /// The allowed values are:
-        /// - `INLINE`: The Api schema input location is inline.
-        /// - `OBJECT_STORAGE_LOCATION`: The Api schema input location is object storage.
         /// 
         /// </value>
         ///

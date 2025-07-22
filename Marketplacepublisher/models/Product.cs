@@ -42,6 +42,12 @@ namespace Oci.MarketplacepublisherService.Models
         public string Code { get; set; }
         
         /// <value>
+        /// Additional filter properties for product
+        /// </value>
+        [JsonProperty(PropertyName = "additionalFilters")]
+        public System.Collections.Generic.List<AdditionalFilter> AdditionalFilters { get; set; }
+        
+        /// <value>
         /// The product group for the product.
         /// </value>
         /// <remarks>
