@@ -321,6 +321,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Wlms", "Wlms\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Dbmulticloud", "Dbmulticloud\OCI.DotNetSDK.Dbmulticloud.csproj", "{DBB452C5-F77C-4A01-92D8-4139183145A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Apiplatform", "Apiplatform\OCI.DotNetSDK.Apiplatform.csproj", "{A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2857,5 +2859,17 @@ Global
         {DBB452C5-F77C-4A01-92D8-4139183145A9}.Release|x64.Build.0 = Release|Any CPU
         {DBB452C5-F77C-4A01-92D8-4139183145A9}.Release|x86.ActiveCfg = Release|Any CPU
         {DBB452C5-F77C-4A01-92D8-4139183145A9}.Release|x86.Build.0 = Release|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Debug|x64.Build.0 = Debug|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Debug|x86.Build.0 = Debug|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Release|Any CPU.Build.0 = Release|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Release|x64.ActiveCfg = Release|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Release|x64.Build.0 = Release|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Release|x86.ActiveCfg = Release|Any CPU
+        {A4B30CB9-E7C2-4CF2-8C73-E8921D4BF2C9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

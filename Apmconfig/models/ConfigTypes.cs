@@ -26,6 +26,10 @@ namespace Oci.ApmconfigService.Models
       [EnumMember(Value = "APDEX")]
       Apdex,
       [EnumMember(Value = "OPTIONS")]
-      Options
+      Options,
+      [EnumMember(Value = "AGENT")]
+      Agent,
+      [EnumMember(Value = "MACS_APM_EXTENSION")]
+      MacsApmExtension
   }
 }

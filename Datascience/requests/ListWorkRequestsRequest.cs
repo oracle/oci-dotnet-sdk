@@ -133,7 +133,15 @@ namespace Oci.DatascienceService.Requests
             [EnumMember(Value = "REGISTER_MODEL_ARTIFACT")]
             RegisterModelArtifact,
             [EnumMember(Value = "RESTORE_ARCHIVED_MODEL")]
-            RestoreArchivedModel
+            RestoreArchivedModel,
+            [EnumMember(Value = "MODEL_GROUP_CREATE")]
+            ModelGroupCreate,
+            [EnumMember(Value = "MODEL_GROUP_UPDATE")]
+            ModelGroupUpdate,
+            [EnumMember(Value = "MODEL_GROUP_DELETE")]
+            ModelGroupDelete,
+            [EnumMember(Value = "MODEL_GROUP_VERSION_HISTORY_DELETE")]
+            ModelGroupVersionHistoryDelete
         };
 
         /// <value>

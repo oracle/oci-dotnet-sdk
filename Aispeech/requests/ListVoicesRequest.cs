@@ -26,10 +26,16 @@ namespace Oci.AispeechService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The model the user wants to run the inference on.
+        /// The model name to filter voices for given model name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "modelName")]
         public System.Nullable<TtsOracleModelDetails.ModelNameEnum> ModelName { get; set; }
+        
+        /// <value>
+        /// The Code or Id of the language to filter voices for given language code.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "languageCode")]
+        public string LanguageCode { get; set; }
         
         /// <value>
         /// The name of the speaker voice in which the user wants tts inference to be.

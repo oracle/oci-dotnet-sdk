@@ -22,6 +22,9 @@ namespace Oci.ApigatewayService.Models
     public class OAuth2LogoutBackend : ApiSpecificationRouteBackend
     {
         
+        /// <value>
+        /// A list of allowed post-logout URLs to which a request can be redirected after revoke access
+        /// </value>
         [JsonProperty(PropertyName = "allowedPostLogoutUris")]
         public System.Collections.Generic.List<string> AllowedPostLogoutUris { get; set; }
         

@@ -56,5 +56,27 @@ namespace Oci.ManagementdashboardService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// By default, if a resource with the same OCID exists in the target compartment, it is updated during the import process, otherwise, a new resource is created.
+        /// However, if this attribute is set to true, then during the import process if a resource with the same displayName exists in the compartment, then it is updated even if the OCIDs are different. This is useful when importing the same resource multiple times. If the compartment and displayName remain the same, the resource is only updated and multiple copies of a resource are not created.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "overrideSameName")]
+        public string OverrideSameName { get; set; }
+        
+        /// <value>
+        /// If this attribute is set, the dashboard resources are created or updated in the compartment specified by OCID. If this attribute is not set, the compartment specified in the JSON metadata is used.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "overrideDashboardCompartmentOcid")]
+        public string OverrideDashboardCompartmentOcid { get; set; }
+        
+        /// <value>
+        /// If this attribute is set, the saved search resources are created or updated in the compartment specified by OCID. If this attribute is not set, the compartment specified in the JSON metadata is used.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "overrideSavedSearchCompartmentOcid")]
+        public string OverrideSavedSearchCompartmentOcid { get; set; }
     }
 }

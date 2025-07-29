@@ -40,7 +40,7 @@ namespace Oci.ApmconfigService.Requests
         
         /// <value>
         /// A filter to match configuration items of a given type.
-        /// Supported values are SPAN_FILTER, METRIC_GROUP, and APDEX.
+        /// Supported values are SPAN_FILTER, METRIC_GROUP, APDEX, AGENT and MACS_APM_EXTENSION.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "configType")]

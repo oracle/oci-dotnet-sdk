@@ -107,8 +107,14 @@ namespace Oci.ApmconfigService.Models
             var discriminator = jsonObject["configType"].Value<string>();
             switch (discriminator)
             {
+                case "AGENT":
+                    obj = new AgentConfig();
+                    break;
                 case "OPTIONS":
                     obj = new Options();
+                    break;
+                case "MACS_APM_EXTENSION":
+                    obj = new MacsApmExtension();
                     break;
                 case "METRIC_GROUP":
                     obj = new MetricGroup();

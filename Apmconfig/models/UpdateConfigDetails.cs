@@ -63,6 +63,12 @@ namespace Oci.ApmconfigService.Models
                 case "METRIC_GROUP":
                     obj = new UpdateMetricGroupDetails();
                     break;
+                case "AGENT":
+                    obj = new UpdateAgentConfigDetails();
+                    break;
+                case "MACS_APM_EXTENSION":
+                    obj = new UpdateMacsApmExtensionDetails();
+                    break;
                 case "APDEX":
                     obj = new UpdateApdexRulesDetails();
                     break;

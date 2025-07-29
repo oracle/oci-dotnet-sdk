@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// The model deployment instance configuration
+    /// The model deployment instance configuration.
     /// </summary>
     public class InstanceConfiguration 
     {
