@@ -21,6 +21,9 @@ namespace Oci.ApigatewayService.Models
     public class HeaderValidationRequestPolicy 
     {
         
+        /// <value>
+        /// The List of Headers
+        /// </value>
         [JsonProperty(PropertyName = "headers")]
         public System.Collections.Generic.List<HeaderValidationItem> Headers { get; set; }
                 ///

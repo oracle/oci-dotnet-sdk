@@ -16,8 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.PsqlService.Models
 {
     /// <summary>
-    /// Restoring to a new database system from the backup. 
-    /// The database system details that are part of the CreateDbSystem request are not required, but if present will override the details from the backup's database system snapshot.
+    /// Details of the database system backup.
     /// 
     /// </summary>
     public class BackupSourceDetails : SourceDetails

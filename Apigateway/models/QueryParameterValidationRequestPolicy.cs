@@ -21,6 +21,9 @@ namespace Oci.ApigatewayService.Models
     public class QueryParameterValidationRequestPolicy 
     {
         
+        /// <value>
+        /// The List of Query Parameters
+        /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.List<QueryParameterValidationItem> Parameters { get; set; }
                 ///

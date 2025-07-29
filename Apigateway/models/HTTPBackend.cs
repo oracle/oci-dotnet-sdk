@@ -22,6 +22,9 @@ namespace Oci.ApigatewayService.Models
     public class HTTPBackend : ApiSpecificationRouteBackend
     {
         
+        /// <value>
+        /// The url of the HTTP Backend
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>

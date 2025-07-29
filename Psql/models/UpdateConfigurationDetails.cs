@@ -47,5 +47,12 @@ namespace Oci.PsqlService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// Indicates the collection of compatible shapes for this configuration.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "compatibleShapes")]
+        public System.Collections.Generic.List<string> CompatibleShapes { get; set; }
+        
     }
 }

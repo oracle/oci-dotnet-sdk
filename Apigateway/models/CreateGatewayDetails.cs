@@ -76,7 +76,8 @@ namespace Oci.ApigatewayService.Models
         public System.Collections.Generic.List<string> NetworkSecurityGroupIds { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resource which can be
+        /// empty string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "certificateId")]
@@ -84,6 +85,12 @@ namespace Oci.ApigatewayService.Models
         
         [JsonProperty(PropertyName = "responseCacheDetails")]
         public ResponseCacheDetails ResponseCacheDetails { get; set; }
+        
+        /// <value>
+        /// Locks associated with this resource.
+        /// </value>
+        [JsonProperty(PropertyName = "locks")]
+        public System.Collections.Generic.List<AddResourceLockDetails> Locks { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair

@@ -38,11 +38,23 @@ namespace Oci.PsqlService.Requests
         public string DbVersion { get; set; }
         
         /// <value>
-        /// The name of the shape for the configuration.
-        /// Example: VM.Standard.E4.Flex
+        /// The compute name of the shape for the configuration.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shape")]
         public string Shape { get; set; }
+        
+        /// <value>
+        /// The instance ocpu count for the configuration.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "instanceOcpuCount")]
+        public System.Nullable<int> InstanceOcpuCount { get; set; }
+        
+        /// <value>
+        /// The instance memory size in GBs for the configuration.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "instanceMemorySizeInGBs")]
+        public System.Nullable<int> InstanceMemorySizeInGBs { get; set; }
         
         /// <value>
         /// A unique identifier for the configuration.

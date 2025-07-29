@@ -113,11 +113,17 @@ namespace Oci.ApmconfigService.Models
             var discriminator = jsonObject["configType"].Value<string>();
             switch (discriminator)
             {
+                case "MACS_APM_EXTENSION":
+                    obj = new MacsApmExtensionSummary();
+                    break;
                 case "METRIC_GROUP":
                     obj = new MetricGroupSummary();
                     break;
                 case "APDEX":
                     obj = new ApdexRulesSummary();
+                    break;
+                case "AGENT":
+                    obj = new AgentConfigSummary();
                     break;
                 case "SPAN_FILTER":
                     obj = new SpanFilterSummary();

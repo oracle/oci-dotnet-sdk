@@ -20,7 +20,7 @@ namespace Oci.ApigatewayService.Requests
     {
         
         /// <value>
-        /// The ocid of the SDK.
+        /// The ocid of the SDK. This value must be present unless apiId is present.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sdkId")]
         public string SdkId { get; set; }
@@ -98,7 +98,7 @@ namespace Oci.ApigatewayService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// The ocid of the API.
+        /// The ocid of the API. This value must be present unless sdkId is present.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "apiId")]
         public string ApiId { get; set; }

@@ -20,6 +20,8 @@ namespace Oci.DatascienceService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "SINGLE_MODEL")]
-      SingleModel
+      SingleModel,
+      [EnumMember(Value = "MODEL_GROUP")]
+      ModelGroup
   }
 }
