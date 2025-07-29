@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.AispeechService.Models
 {
     /// <summary>
-    /// Customization details.
+    /// Details of the base ASR model to train a Customization for.
     /// </summary>
     public class CustomizationModelDetails 
     {
                 ///
         /// <value>
-        /// Customization Domain
+        /// Domain of the ASR model
         /// </value>
         ///
         public enum DomainEnum {
@@ -36,7 +36,7 @@ namespace Oci.AispeechService.Models
         };
 
         /// <value>
-        /// Customization Domain
+        /// Domain of the ASR model
         /// </value>
         [JsonProperty(PropertyName = "domain")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

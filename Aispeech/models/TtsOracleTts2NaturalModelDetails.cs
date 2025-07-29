@@ -29,6 +29,22 @@ namespace Oci.AispeechService.Models
         [JsonProperty(PropertyName = "voiceId")]
         public string VoiceId { get; set; }
         
+        /// <value>
+        /// Locale value as per given in [https://datatracker.ietf.org/doc/html/rfc5646]. Default en-US
+        /// - en-US: English - United States
+        /// - en-GB: English - Great Britain
+        /// - es-ES: Spanish - Spain
+        /// - pt-BR: Portuguese - Brazil
+        /// - hi-IN: Hindi - India
+        /// - fr-FR: French - France
+        /// - it-IT: Italian - Italy
+        /// - ja-JP: Japanese - Japan
+        /// - zh-CN: Mandarin - China
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "languageCode")]
+        public string LanguageCode { get; set; }
+        
         [JsonProperty(PropertyName = "modelName")]
         private readonly string modelName = "TTS_2_NATURAL";
     }

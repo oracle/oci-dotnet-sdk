@@ -24,7 +24,7 @@ namespace Oci.AispeechService.Models
         /// <value>
         /// The format in which the input text has been supplied i.e., Text or SSML. The supported text types are:
         /// - TEXT
-        /// - SSML
+        /// - SSML : This is only supported for en-US language.
         /// 
         /// </value>
         ///
@@ -38,7 +38,7 @@ namespace Oci.AispeechService.Models
         /// <value>
         /// The format in which the input text has been supplied i.e., Text or SSML. The supported text types are:
         /// - TEXT
-        /// - SSML
+        /// - SSML : This is only supported for en-US language.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "textType")]

@@ -45,6 +45,9 @@ namespace Oci.DatascienceService.Models
             var discriminator = jsonObject["deploymentType"].Value<string>();
             switch (discriminator)
             {
+                case "MODEL_GROUP":
+                    obj = new UpdateModelGroupDeploymentConfigurationDetails();
+                    break;
                 case "SINGLE_MODEL":
                     obj = new UpdateSingleModelDeploymentConfigurationDetails();
                     break;

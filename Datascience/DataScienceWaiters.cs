@@ -309,6 +309,62 @@ namespace Oci.DatascienceService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetModelGroupRequest, GetModelGroupResponse> ForModelGroup(GetModelGroupRequest request, params ModelGroupLifecycleState[] targetStates)
+        {
+            return this.ForModelGroup(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetModelGroupRequest, GetModelGroupResponse> ForModelGroup(GetModelGroupRequest request, WaiterConfiguration config, params ModelGroupLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetModelGroupRequest, GetModelGroupResponse>(
+                request,
+                request => client.GetModelGroup(request),
+                response => targetStates.Contains(response.ModelGroup.LifecycleState.Value),
+                targetStates.Contains(ModelGroupLifecycleState.Deleted)
+            );
+            return new Waiter<GetModelGroupRequest, GetModelGroupResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetModelGroupVersionHistoryRequest, GetModelGroupVersionHistoryResponse> ForModelGroupVersionHistory(GetModelGroupVersionHistoryRequest request, params ModelGroupVersionHistoryLifecycleState[] targetStates)
+        {
+            return this.ForModelGroupVersionHistory(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetModelGroupVersionHistoryRequest, GetModelGroupVersionHistoryResponse> ForModelGroupVersionHistory(GetModelGroupVersionHistoryRequest request, WaiterConfiguration config, params ModelGroupVersionHistoryLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetModelGroupVersionHistoryRequest, GetModelGroupVersionHistoryResponse>(
+                request,
+                request => client.GetModelGroupVersionHistory(request),
+                response => targetStates.Contains(response.ModelGroupVersionHistory.LifecycleState.Value),
+                targetStates.Contains(ModelGroupVersionHistoryLifecycleState.Deleted)
+            );
+            return new Waiter<GetModelGroupVersionHistoryRequest, GetModelGroupVersionHistoryResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetModelVersionSetRequest, GetModelVersionSetResponse> ForModelVersionSet(GetModelVersionSetRequest request, params ModelVersionSetLifecycleState[] targetStates)
         {
             return this.ForModelVersionSet(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

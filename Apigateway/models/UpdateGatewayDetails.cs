@@ -38,7 +38,8 @@ namespace Oci.ApigatewayService.Models
         public System.Collections.Generic.List<string> NetworkSecurityGroupIds { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resource which can be
+        /// empty string.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "certificateId")]

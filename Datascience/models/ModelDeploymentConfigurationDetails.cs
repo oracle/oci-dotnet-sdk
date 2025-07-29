@@ -49,6 +49,9 @@ namespace Oci.DatascienceService.Models
                 case "SINGLE_MODEL":
                     obj = new SingleModelDeploymentConfigurationDetails();
                     break;
+                case "MODEL_GROUP":
+                    obj = new ModelGroupDeploymentConfigurationDetails();
+                    break;
             }
             if (obj != null)
             {

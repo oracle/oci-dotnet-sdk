@@ -34,6 +34,39 @@ namespace Oci.DatascienceService.Models
         /// </value>
         [JsonProperty(PropertyName = "memoryInGBs")]
         public System.Nullable<float> MemoryInGBs { get; set; }
+                ///
+        /// <value>
+        /// The baseline OCPU utilization for a subcore burstable VM instance. If this attribute is left blank, it will default to `BASELINE_1_1`.
+        /// The following values are supported:
+        ///   BASELINE_1_8 - baseline usage is 1/8 of an OCPU.
+        ///   BASELINE_1_2 - baseline usage is 1/2 of an OCPU.
+        ///   BASELINE_1_1 - baseline usage is an entire OCPU. This represents a non-burstable instance.
+        /// 
+        /// </value>
+        ///
+        public enum CpuBaselineEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "BASELINE_1_8")]
+            Baseline18,
+            [EnumMember(Value = "BASELINE_1_2")]
+            Baseline12,
+            [EnumMember(Value = "BASELINE_1_1")]
+            Baseline11
+        };
+
+        /// <value>
+        /// The baseline OCPU utilization for a subcore burstable VM instance. If this attribute is left blank, it will default to `BASELINE_1_1`.
+        /// The following values are supported:
+        ///   BASELINE_1_8 - baseline usage is 1/8 of an OCPU.
+        ///   BASELINE_1_2 - baseline usage is 1/2 of an OCPU.
+        ///   BASELINE_1_1 - baseline usage is an entire OCPU. This represents a non-burstable instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "cpuBaseline")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<CpuBaselineEnum> CpuBaseline { get; set; }
         
     }
 }

@@ -77,25 +77,12 @@ namespace Oci.AispeechService.Models
         /// </value>
         [JsonProperty(PropertyName = "supportedModels")]
         public System.Collections.Generic.List<string> SupportedModels { get; set; }
-                ///
-        /// <value>
-        /// An abbreviated notation of region to which the language and accent of the speaker belongs to.
-        /// </value>
-        ///
-        public enum LanguageCodeEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "en-US")]
-            EnUs
-        };
-
+        
         /// <value>
         /// An abbreviated notation of region to which the language and accent of the speaker belongs to.
         /// </value>
         [JsonProperty(PropertyName = "languageCode")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LanguageCodeEnum> LanguageCode { get; set; }
+        public string LanguageCode { get; set; }
         
         /// <value>
         /// A description of region to which the language and accent of the speaker belongs to.

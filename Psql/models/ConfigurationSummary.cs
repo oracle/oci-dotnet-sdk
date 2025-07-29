@@ -92,8 +92,10 @@ namespace Oci.PsqlService.Models
         public string DbVersion { get; set; }
         
         /// <value>
-        /// The name of the shape for the configuration.
-        /// Example: VM.Standard.E4.Flex
+        /// The name of the shape for the configuration. 
+        /// <br/>
+        /// For multi-shape enabled configurations, it is set to PostgreSQL. Please use compatibleShapes property to get list of supported shapes for such configurations.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -133,6 +135,27 @@ namespace Oci.PsqlService.Models
         [Required(ErrorMessage = "InstanceMemorySizeInGBs is required.")]
         [JsonProperty(PropertyName = "instanceMemorySizeInGBs")]
         public System.Nullable<int> InstanceMemorySizeInGBs { get; set; }
+        
+        /// <value>
+        /// Indicates the collection of compatible shapes for this configuration.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompatibleShapes is required.")]
+        [JsonProperty(PropertyName = "compatibleShapes")]
+        public System.Collections.Generic.List<string> CompatibleShapes { get; set; }
+        
+        /// <value>
+        /// The Default configuration used for this configuration.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DefaultConfigId is required.")]
+        [JsonProperty(PropertyName = "defaultConfigId")]
+        public string DefaultConfigId { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

@@ -123,6 +123,18 @@ namespace Oci.VaultService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
+        [JsonProperty(PropertyName = "replicationConfig")]
+        public ReplicationConfig ReplicationConfig { get; set; }
+        
+        /// <value>
+        /// A Boolean value that indicates whether the secret is a source or replica secret.
+        /// </value>
+        [JsonProperty(PropertyName = "isReplica")]
+        public System.Nullable<bool> IsReplica { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceRegionInformation")]
+        public SourceRegionInformation SourceRegionInformation { get; set; }
+        
         [JsonProperty(PropertyName = "rotationConfig")]
         public RotationConfig RotationConfig { get; set; }
         
