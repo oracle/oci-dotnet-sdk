@@ -13,22 +13,24 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.AispeechService.Models
+namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Processes to perform on the generated transcription.
+    /// External location information from OCI primitives to any CSP
+    /// 
     /// </summary>
-    public class TranscriptionSettings 
+    public class ExternalLocationsMetadatumCollection 
     {
         
-        [JsonProperty(PropertyName = "diarization")]
-        public Diarization Diarization { get; set; }
-        
         /// <value>
-        /// Simple key-value pair for setting model specific properties. For more details, refer the documentation.
+        /// List of ExternalLocationsMetadatumSummary
         /// </value>
-        [JsonProperty(PropertyName = "additionalSettings")]
-        public System.Collections.Generic.Dictionary<string, string> AdditionalSettings { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<ExternalLocationsMetadatumSummary> Items { get; set; }
         
     }
 }

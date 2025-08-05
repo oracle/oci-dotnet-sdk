@@ -54,7 +54,6 @@ namespace Oci.Common
         public static readonly Region AP_SINGAPORE_2 = Register("ap-singapore-2", Realm.OC1, "xsp");
         public static readonly Region ME_RIYADH_1 = Register("me-riyadh-1", Realm.OC1, "ruh");
         public static readonly Region AP_DELHI_1 = Register("ap-delhi-1", Realm.OC1, "onm");
-        public static readonly Region AP_KULAI_1 = Register("ap-kulai-1", Realm.OC1, "fyv");
         public static readonly Region AP_BATAM_1 = Register("ap-batam-1", Realm.OC1, "hsg");
 
         // OC2

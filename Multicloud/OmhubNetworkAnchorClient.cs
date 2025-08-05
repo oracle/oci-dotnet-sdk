@@ -17,16 +17,20 @@ using Oci.Common.DeveloperToolConfigurations;
 using Oci.Common.Model;
 using Oci.Common.Auth;
 using Oci.Common.Retry;
-using Oci.EmaildataplaneService.Requests;
-using Oci.EmaildataplaneService.Responses;
+using Oci.MulticloudService.Requests;
+using Oci.MulticloudService.Responses;
 
-namespace Oci.EmaildataplaneService
+namespace Oci.MulticloudService
 {
-    /// <summary>Service client instance for EmailDP.</summary>
-    public class EmailDPClient : RegionalClientBase
+    /// <summary>Service client instance for OmhubNetworkAnchor.</summary>
+    public class OmhubNetworkAnchorClient : RegionalClientBase
     {
         private readonly RetryConfiguration retryConfiguration;
-        private const string basePathWithoutHost = "/20220926";
+        private const string basePathWithoutHost = "/20180828";
+
+        public OmhubNetworkAnchorPaginators Paginators { get; }
+
+        public OmhubNetworkAnchorWaiters Waiters { get; }
 
         /// <summary>
         /// Creates a new service instance using the given authentication provider and/or client configuration and/or endpoint.
@@ -35,18 +39,18 @@ namespace Oci.EmaildataplaneService
         /// <param name="authenticationDetailsProvider">The authentication details provider. Required.</param>
         /// <param name="clientConfiguration">The client configuration that contains settings to adjust REST client behaviors. Optional.</param>
         /// <param name="endpoint">The endpoint of the service. If not provided and the client is a regional client, the endpoint will be constructed based on region information. Optional.</param>
-        public EmailDPClient(IBasicAuthenticationDetailsProvider authenticationDetailsProvider, ClientConfiguration clientConfiguration = null, string endpoint = null)
+        public OmhubNetworkAnchorClient(IBasicAuthenticationDetailsProvider authenticationDetailsProvider, ClientConfiguration clientConfiguration = null, string endpoint = null)
             : base(authenticationDetailsProvider, clientConfiguration)
         {
-            if (!DeveloperToolConfiguration.IsServiceEnabled("emaildataplane"))
+            if (!DeveloperToolConfiguration.IsServiceEnabled("multicloud"))
             {
                 throw new ArgumentException("The DeveloperToolConfiguration disabled this service, this behavior is controlled by DeveloperToolConfiguration.OciEnabledServiceSet variable. Please check if your local DeveloperToolConfiguration file has configured the service you're targeting or contact the cloud provider on the availability of this service");
             }
             service = new Service
             {
-                ServiceName = "EMAILDP",
+                ServiceName = "OMHUBNETWORKANCHOR",
                 ServiceEndpointPrefix = "",
-                ServiceEndpointTemplate = "https://cell0.submit.email.{region}.oci.{secondLevelDomain}"
+                ServiceEndpointTemplate = "https://multicloud.{region}.oci.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
@@ -64,22 +68,24 @@ namespace Oci.EmaildataplaneService
             }
 
             this.retryConfiguration = clientConfigurationToUse.RetryConfiguration;
+            Paginators = new OmhubNetworkAnchorPaginators(this);
+            Waiters = new OmhubNetworkAnchorWaiters(this);
         }
 
         /// <summary>
-        /// Submits a formatted email.
+        /// Gets information about a NetworkAnchor.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/emaildataplane/SubmitEmail.cs.html">here</a> to see an example of how to use SubmitEmail API.</example>
-        public async Task<SubmitEmailResponse> SubmitEmail(SubmitEmailRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/multicloud/GetNetworkAnchor.cs.html">here</a> to see an example of how to use GetNetworkAnchor API.</example>
+        public async Task<GetNetworkAnchorResponse> GetNetworkAnchor(GetNetworkAnchorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
-            logger.Trace("Called submitEmail");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/actions/submitEmail".Trim('/')));
-            HttpMethod method = new HttpMethod("POST");
+            logger.Trace("Called getNetworkAnchor");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/networkAnchors/{networkAnchorId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -100,15 +106,15 @@ namespace Oci.EmaildataplaneService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmailDP",
-                    OperationName = "SubmitEmail",
+                    ServiceName = "OmhubNetworkAnchor",
+                    OperationName = "GetNetworkAnchor",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/emaildeliverysubmission/20220926/EmailSubmittedResponse/SubmitEmail",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
                 logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<SubmitEmailResponse>(responseMessage);
+                return Converter.FromHttpResponseMessage<GetNetworkAnchorResponse>(responseMessage);
             }
             catch (OciException e)
             {
@@ -117,25 +123,26 @@ namespace Oci.EmaildataplaneService
             }
             catch (Exception e)
             {
-                logger.Error($"SubmitEmail failed with error: {e.Message}");
+                logger.Error($"GetNetworkAnchor failed with error: {e.Message}");
                 throw;
             }
         }
 
         /// <summary>
-        /// Submits a raw email.
+        /// Gets a list of NetworkAnchors.
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
         /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
         /// <param name="completionOption">The completion option for this operation. Optional.</param>
         /// <returns>A response object containing details about the completed operation</returns>
-        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/emaildataplane/SubmitRawEmail.cs.html">here</a> to see an example of how to use SubmitRawEmail API.</example>
-        public async Task<SubmitRawEmailResponse> SubmitRawEmail(SubmitRawEmailRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/multicloud/ListNetworkAnchors.cs.html">here</a> to see an example of how to use ListNetworkAnchors API.</example>
+        public async Task<ListNetworkAnchorsResponse> ListNetworkAnchors(ListNetworkAnchorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
-            logger.Trace("Called submitRawEmail");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/actions/submitRawEmail".Trim('/')));
-            HttpMethod method = new HttpMethod("POST");
+            logger.Trace("Called listNetworkAnchors");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/networkAnchors".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
             GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
@@ -156,15 +163,15 @@ namespace Oci.EmaildataplaneService
                 stopWatch.Stop();
                 ApiDetails apiDetails = new ApiDetails
                 {
-                    ServiceName = "EmailDP",
-                    OperationName = "SubmitRawEmail",
+                    ServiceName = "OmhubNetworkAnchor",
+                    OperationName = "ListNetworkAnchors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/emaildeliverysubmission/20220926/EmailRawSubmittedResponse/SubmitRawEmail",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
                 logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
-                return Converter.FromHttpResponseMessage<SubmitRawEmailResponse>(responseMessage);
+                return Converter.FromHttpResponseMessage<ListNetworkAnchorsResponse>(responseMessage);
             }
             catch (OciException e)
             {
@@ -173,7 +180,7 @@ namespace Oci.EmaildataplaneService
             }
             catch (Exception e)
             {
-                logger.Error($"SubmitRawEmail failed with error: {e.Message}");
+                logger.Error($"ListNetworkAnchors failed with error: {e.Message}");
                 throw;
             }
         }
