@@ -13,22 +13,19 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.AispeechService.Models
+namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Processes to perform on the generated transcription.
+    /// Oracle Cloud Infrastructure network anchor related meta data items
     /// </summary>
-    public class TranscriptionSettings 
+    public class OciDns 
     {
         
-        [JsonProperty(PropertyName = "diarization")]
-        public Diarization Diarization { get; set; }
-        
         /// <value>
-        /// Simple key-value pair for setting model specific properties. For more details, refer the documentation.
+        /// Full custom domain name. If this field is passed dnsLabel will be ignored
         /// </value>
-        [JsonProperty(PropertyName = "additionalSettings")]
-        public System.Collections.Generic.Dictionary<string, string> AdditionalSettings { get; set; }
+        [JsonProperty(PropertyName = "customDomainName")]
+        public string CustomDomainName { get; set; }
         
     }
 }

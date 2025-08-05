@@ -18,17 +18,13 @@ namespace Oci.EmaildataplaneService.Models
     /// <summary>
     /// Response object that is returned to sender upon successfully submitting the email request.
     /// </summary>
-    public class EmailSubmittedResponse 
+    public class EmailRawSubmittedResponse 
     {
         
         /// <value>
         /// The unique ID for the email's Message-ID header used for service log correlation.
         /// Example: sdiofu234qwermls24fd@mail.example.com
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "MessageId is required.")]
         [JsonProperty(PropertyName = "messageId")]
         public string MessageId { get; set; }
         
@@ -50,7 +46,7 @@ namespace Oci.EmaildataplaneService.Models
         /// </remarks>
         [Required(ErrorMessage = "SuppressedRecipients is required.")]
         [JsonProperty(PropertyName = "suppressedRecipients")]
-        public System.Collections.Generic.List<EmailAddress> SuppressedRecipients { get; set; }
+        public System.Collections.Generic.List<string> SuppressedRecipients { get; set; }
         
     }
 }

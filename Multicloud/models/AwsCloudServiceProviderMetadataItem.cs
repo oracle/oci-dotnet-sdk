@@ -13,22 +13,26 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.AispeechService.Models
+namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Processes to perform on the generated transcription.
+    /// Aws Cloud Service Provider metadata item.
+    /// 
     /// </summary>
-    public class TranscriptionSettings 
+    public class AwsCloudServiceProviderMetadataItem : CloudServiceProviderMetadataItem
     {
         
-        [JsonProperty(PropertyName = "diarization")]
-        public Diarization Diarization { get; set; }
-        
         /// <value>
-        /// Simple key-value pair for setting model specific properties. For more details, refer the documentation.
+        /// AWS accountId that was used for creating this resource anchor resource.
         /// </value>
-        [JsonProperty(PropertyName = "additionalSettings")]
-        public System.Collections.Generic.Dictionary<string, string> AdditionalSettings { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "AccountId is required.")]
+        [JsonProperty(PropertyName = "accountId")]
+        public string AccountId { get; set; }
         
+        [JsonProperty(PropertyName = "subscriptionType")]
+        private readonly string subscriptionType = "ORACLEDBATAWS";
     }
 }
