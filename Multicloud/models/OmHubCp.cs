@@ -13,22 +13,20 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.AispeechService.Models
+namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Processes to perform on the generated transcription.
+    /// OmHubCp service resource.
     /// </summary>
-    public class TranscriptionSettings 
+    public class OmHubCp 
     {
         
-        [JsonProperty(PropertyName = "diarization")]
-        public Diarization Diarization { get; set; }
-        
-        /// <value>
-        /// Simple key-value pair for setting model specific properties. For more details, refer the documentation.
-        /// </value>
-        [JsonProperty(PropertyName = "additionalSettings")]
-        public System.Collections.Generic.Dictionary<string, string> AdditionalSettings { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Properties is required.")]
+        [JsonProperty(PropertyName = "properties")]
+        public Properties Properties { get; set; }
         
     }
 }

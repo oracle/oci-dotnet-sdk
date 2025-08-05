@@ -65,6 +65,7 @@ namespace Oci.AispeechService.Models
         /// - it-IT: Italian - Italy
         /// <br/>
         /// Whisper supported language codes are (Whisper models are locale agnostic).
+        /// - auto: Auto-detect language
         /// - af: Afrikaans
         /// - ar: Arabic
         /// - az: Azerbaijani
@@ -149,6 +150,8 @@ namespace Oci.AispeechService.Models
             DeDe,
             [EnumMember(Value = "it-IT")]
             ItIt,
+            [EnumMember(Value = "auto")]
+            Auto,
             [EnumMember(Value = "af")]
             Af,
             [EnumMember(Value = "ar")]
@@ -280,6 +283,7 @@ namespace Oci.AispeechService.Models
         /// - it-IT: Italian - Italy
         /// <br/>
         /// Whisper supported language codes are (Whisper models are locale agnostic).
+        /// - auto: Auto-detect language
         /// - af: Afrikaans
         /// - ar: Arabic
         /// - az: Azerbaijani

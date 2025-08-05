@@ -13,22 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.AispeechService.Models
+namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Processes to perform on the generated transcription.
+    /// Object containing the message to send.
     /// </summary>
-    public class TranscriptionSettings 
+    public class Properties 
     {
         
-        [JsonProperty(PropertyName = "diarization")]
-        public Diarization Diarization { get; set; }
-        
         /// <value>
-        /// Simple key-value pair for setting model specific properties. For more details, refer the documentation.
+        /// Message to send
         /// </value>
-        [JsonProperty(PropertyName = "additionalSettings")]
-        public System.Collections.Generic.Dictionary<string, string> AdditionalSettings { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Message is required.")]
+        [JsonProperty(PropertyName = "message")]
+        public string Message { get; set; }
         
     }
 }
