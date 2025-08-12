@@ -25,12 +25,15 @@ namespace Oci.DatasafeService.Models
         /// <value>
         /// The security policy entry type. Allowed values:
         /// - FIREWALL_POLICY - The SQL Firewall policy entry type.
+        /// - AUDIT_POLICY - The audit policy entry type.
         /// 
         /// </value>
         ///
         public enum EntryTypeEnum {
             [EnumMember(Value = "FIREWALL_POLICY")]
-            FirewallPolicy
+            FirewallPolicy,
+            [EnumMember(Value = "AUDIT_POLICY")]
+            AuditPolicy
         };
 
         
@@ -57,6 +60,9 @@ namespace Oci.DatasafeService.Models
             var discriminator = jsonObject["entryType"].Value<string>();
             switch (discriminator)
             {
+                case "AUDIT_POLICY":
+                    obj = new AuditPolicyEntryDetails();
+                    break;
                 case "FIREWALL_POLICY":
                     obj = new FirewallPolicyEntryDetails();
                     break;

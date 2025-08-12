@@ -16,8 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details about the issue that the technical support ticket relates to. Avoid entering confidential information.
-    /// For information about `TECH` support tickets, see [Creating a Technical Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-technical.htm).
+    /// Details about the issue that the technical support request relates to. Avoid entering confidential information.
+    /// For information about `TECH` support requests, see [Creating a Technical Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-technical.htm).
     /// 
     /// </summary>
     public class CreateTechSupportItemDetails : CreateItemDetails

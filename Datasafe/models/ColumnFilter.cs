@@ -66,7 +66,13 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "NOT")]
             Not,
             [EnumMember(Value = "NOT_IN")]
-            NotIn
+            NotIn,
+            [EnumMember(Value = "PR")]
+            Pr,
+            [EnumMember(Value = "IN_SET")]
+            InSet,
+            [EnumMember(Value = "NOT_IN_SET")]
+            NotInSet
         };
 
         /// <value>

@@ -123,5 +123,9 @@ namespace Oci.Common
 
         // OC42
         public static readonly Region US_ASHBURN_2 = Register("us-ashburn-2", Realm.OC42, "yxj");
+        public static readonly Region US_NEWARK_1 = Register("us-newark-1", Realm.OC42, "pgc");
+
+        // OC51
+        public static readonly Region EU_BUDAPEST_1 = Register("eu-budapest-1", Realm.OC51, "jsk");
     }
 }

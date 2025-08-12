@@ -27,5 +27,11 @@ namespace Oci.AivisionService.Models
         [JsonProperty(PropertyName = "axleCount")]
         public System.Nullable<int> AxleCount { get; set; }
         
+        /// <value>
+        /// Object IDs of the trailers associated with the tracked vehicle.
+        /// </value>
+        [JsonProperty(PropertyName = "trailerIds")]
+        public System.Collections.Generic.List<int> TrailerIds { get; set; }
+        
     }
 }

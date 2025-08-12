@@ -22,6 +22,12 @@ namespace Oci.RedisService.Models
     {
         
         /// <value>
+        /// The ID of the corresponding OCI Cache Config Set for the cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "ociCacheConfigSetId")]
+        public string OciCacheConfigSetId { get; set; }
+        
+        /// <value>
         /// Specifies whether the cluster is sharded or non-sharded.
         /// </value>
         [JsonProperty(PropertyName = "clusterMode")]

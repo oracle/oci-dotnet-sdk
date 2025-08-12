@@ -44,10 +44,57 @@ namespace Oci.DatasafeService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the target database on which security assessment is to be run.
+        /// The OCID of the target database or target database group on which security assessment is to be run.
         /// </value>
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }
+        
+        /// <value>
+        /// The type of security assessment resource whether it is individual or group resource. For individual target use type TARGET_DATABASE and for group resource use type TARGET_DATABASE_GROUP. If not provided, TARGET_DATABASE would be used as default value.
+        /// </value>
+        [JsonProperty(PropertyName = "targetType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<SecurityAssessmentTargetType> TargetType { get; set; }
+                ///
+        /// <value>
+        /// The type of the security assessment
+        /// </value>
+        ///
+        public enum TypeEnum {
+            [EnumMember(Value = "LATEST")]
+            Latest,
+            [EnumMember(Value = "SAVED")]
+            Saved,
+            [EnumMember(Value = "SAVE_SCHEDULE")]
+            SaveSchedule,
+            [EnumMember(Value = "COMPARTMENT")]
+            Compartment,
+            [EnumMember(Value = "TEMPLATE")]
+            Template,
+            [EnumMember(Value = "TEMPLATE_BASELINE")]
+            TemplateBaseline
+        };
+
+        /// <value>
+        /// The type of the security assessment
+        /// </value>
+        [JsonProperty(PropertyName = "type")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<TypeEnum> Type { get; set; }
+        
+        /// <value>
+        /// The OCID of the template assessment. It will be required while creating the template baseline assessment.
+        /// </value>
+        [JsonProperty(PropertyName = "templateAssessmentId")]
+        public string TemplateAssessmentId { get; set; }
+        
+        /// <value>
+        /// The OCID of the security assessment. The assessment should be of type SAVED. 
+        /// It will be required while creating the template baseline assessment for individual targets to fetch the detailed information from an existing security assessment.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "baseSecurityAssessmentId")]
+        public string BaseSecurityAssessmentId { get; set; }
         
         /// <value>
         /// Indicates whether the assessment is scheduled to run.

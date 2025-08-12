@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details gathered during the creation of the support ticket.
+    /// Details gathered during the creation of the support request.
     /// 
     /// </summary>
     public class CreateIncident 
@@ -40,7 +40,7 @@ namespace Oci.CimsService.Models
         public CreateTicketDetails Ticket { get; set; }
         
         /// <value>
-        /// The Customer Support Identifier (CSI) number associated with the support account.
+        /// Deprecated. The Customer Support Identifier (CSI) number associated with the support account.
         /// The CSI is optional for all support request types.
         /// 
         /// </value>
@@ -48,19 +48,23 @@ namespace Oci.CimsService.Models
         public string Csi { get; set; }
         
         /// <value>
-        /// Technical support type (`TECH`) only: The identifier of the support request's user group in My Oracle Cloud Support portal.
+        /// Technical support type (`TECH`) only: Identifier of the user group to assign the new support request to.
+        /// To find identifiers of user groups that you have access to, run the
+        /// {@link #validateUser(ValidateUserRequest) validateUser} operation.
+        /// Note: The Customer User Administrator (CUA) can manage user groups by name using
+        /// [My Oracle Cloud Support portal](https://support.oracle.com).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "userGroupId")]
         public string UserGroupId { get; set; }
         
         /// <value>
-        /// The kind of support ticket (type of support request).
-        /// For information about `ACCOUNT` support tickets, see 
+        /// The kind of support request (type of support request).
+        /// For information about `ACCOUNT` support requests, see 
         /// [Creating a Billing Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-billing.htm).
-        /// For information about `LIMIT` support tickets, see 
+        /// For information about `LIMIT` support requests, see 
         /// [Creating a Service Limit Increase Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-limit.htm).
-        /// For information about `TECH` support tickets, see 
+        /// For information about `TECH` support requests, see 
         /// [Creating a Technical Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-technical.htm).
         /// 
         /// </value>
@@ -79,7 +83,7 @@ namespace Oci.CimsService.Models
         public System.Collections.Generic.List<Contact> Contacts { get; set; }
         
         /// <value>
-        /// The incident referrer. This value is often the URL that the customer used when creating the support ticket.
+        /// The incident referrer. This value is often the URL that the customer used when creating the support request.
         /// </value>
         [JsonProperty(PropertyName = "referrer")]
         public string Referrer { get; set; }

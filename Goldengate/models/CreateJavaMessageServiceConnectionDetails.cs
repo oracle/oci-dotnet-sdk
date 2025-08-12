@@ -95,7 +95,7 @@ namespace Oci.GoldengateService.Models
         public string JndiSecurityCredentialsSecretId { get; set; }
         
         /// <value>
-        /// Connectin URL of the Java Message Service, specifying the protocol, host, and port.
+        /// Connection URL of the Java Message Service, specifying the protocol, host, and port.
         /// e.g.: 'mq://myjms.host.domain:7676'
         /// 
         /// </value>

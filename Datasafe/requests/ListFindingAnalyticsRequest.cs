@@ -78,7 +78,9 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "findingKeyAndTopFindingStatus")]
             FindingKeyAndTopFindingStatus,
             [EnumMember(Value = "findingKeyAndSeverity")]
-            FindingKeyAndSeverity
+            FindingKeyAndSeverity,
+            [EnumMember(Value = "severity")]
+            Severity
         };
 
         /// <value>
@@ -144,5 +146,69 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
+        
+        /// <value>
+        /// A filter to return the target database group that matches the specified OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
+        
+        /// <value>
+        /// An optional filter to return only findings that match the specified references. Use containsReferences param if need to filter by multiple references.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "containsReferences", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<SecurityAssessmentReferences> ContainsReferences { get; set; }
+        
+        /// <value>
+        /// An optional filter to return only findings that match the specified target ids. Use this parameter to filter by multiple target ids.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetIds", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> TargetIds { get; set; }
+        
+        /// <value>
+        /// The category of the finding.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "category")]
+        public string Category { get; set; }
+        
+        ///
+        /// <value>
+        /// A filter to return only findings that match the specified risk level(s). Use containsSeverity parameter if need to filter by multiple risk levels.
+        /// </value>
+        ///
+        public enum ContainsSeverityEnum {
+            [EnumMember(Value = "HIGH")]
+            High,
+            [EnumMember(Value = "MEDIUM")]
+            Medium,
+            [EnumMember(Value = "LOW")]
+            Low,
+            [EnumMember(Value = "EVALUATE")]
+            Evaluate,
+            [EnumMember(Value = "ADVISORY")]
+            Advisory,
+            [EnumMember(Value = "PASS")]
+            Pass,
+            [EnumMember(Value = "DEFERRED")]
+            Deferred
+        };
+
+        /// <value>
+        /// A filter to return only findings that match the specified risk level(s). Use containsSeverity parameter if need to filter by multiple risk levels.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "containsSeverity", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ContainsSeverityEnum> ContainsSeverity { get; set; }
+        
+        /// <value>
+        /// The scimQuery query parameter accepts filter expressions that use the syntax described in Section 3.2.2.2
+        /// of the System for Cross-Domain Identity Management (SCIM) specification, which is available
+        /// at [RFC3339](https://tools.ietf.org/html/draft-ietf-scim-api-12). In SCIM filtering expressions,
+        /// text, date, and time values must be enclosed in quotation marks, with date and time values using ISO-8601 format.
+        /// (Numeric and boolean values should not be quoted.)
+        /// <br/>
+        /// **Example: ** |scimQuery=(severity eq 'high')scimQuery=(category eq &quot;Users&quot;) and (reference eq 'CIS')Supported fields:severityreferencetitlecategory
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scimQuery")]
+        public string ScimQuery { get; set; }
     }
 }

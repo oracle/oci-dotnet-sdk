@@ -111,6 +111,18 @@ namespace Oci.DatasafeService.Models
         public string TargetVersion { get; set; }
         
         /// <value>
+        /// The ocid of a security assessment which is of type TEMPLATE, this will be null or empty when type is TEMPLATE.
+        /// </value>
+        [JsonProperty(PropertyName = "templateAssessmentId")]
+        public string TemplateAssessmentId { get; set; }
+        
+        /// <value>
+        /// The ocid of a security assessment which is of type TEMPLATE_BASELINE, this will be null or empty when type is TEMPLATE_BASELINE.
+        /// </value>
+        [JsonProperty(PropertyName = "baselineAssessmentId")]
+        public string BaselineAssessmentId { get; set; }
+        
+        /// <value>
         /// Indicates whether or not the security assessment is set as a baseline. This is applicable only for saved security assessments.
         /// </value>
         [JsonProperty(PropertyName = "isBaseline")]
@@ -185,6 +197,25 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<bool> IsAssessmentScheduled { get; set; }
         
         /// <value>
+        /// The OCID of the target database group that the group assessment is created for.
+        /// </value>
+        [JsonProperty(PropertyName = "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
+        
+        /// <value>
+        /// Indicates whether the security assessment is for a target database or a target database group.
+        /// </value>
+        [JsonProperty(PropertyName = "targetType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SecurityAssessmentTargetType> TargetType { get; set; }
+        
+        /// <value>
+        /// The security checks to be evaluated for type template.
+        /// </value>
+        [JsonProperty(PropertyName = "checks")]
+        public System.Collections.Generic.List<Check> Checks { get; set; }
+        
+        /// <value>
         /// Schedule to save the assessment periodically in the specified format:
         /// <version-string>;<version-specific-schedule>
         /// <br/>
@@ -234,7 +265,11 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "SAVE_SCHEDULE")]
             SaveSchedule,
             [EnumMember(Value = "COMPARTMENT")]
-            Compartment
+            Compartment,
+            [EnumMember(Value = "TEMPLATE")]
+            Template,
+            [EnumMember(Value = "TEMPLATE_BASELINE")]
+            TemplateBaseline
         };
 
         /// <value>

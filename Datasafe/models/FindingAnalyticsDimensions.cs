@@ -36,6 +36,12 @@ namespace Oci.DatasafeService.Models
         public string TopFindingCategory { get; set; }
         
         /// <value>
+        /// The category of the top finding.
+        /// </value>
+        [JsonProperty(PropertyName = "category")]
+        public string Category { get; set; }
+        
+        /// <value>
         /// The short title of the finding.
         /// </value>
         [JsonProperty(PropertyName = "title")]
@@ -108,10 +114,22 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<SeverityEnum> Severity { get; set; }
         
         /// <value>
+        /// The explanation of the issue in this finding. It explains the reason for the rule and, if a risk is reported, it may also explain the recommended actions for remediation.
+        /// </value>
+        [JsonProperty(PropertyName = "remarks")]
+        public string Remarks { get; set; }
+        
+        /// <value>
         /// The OCID of the target database.
         /// </value>
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }
+        
+        /// <value>
+        /// Provides information on whether the finding is related to a CIS Oracle Database Benchmark recommendation, STIG rule, or related to a GDPR Article/Recital.
+        /// </value>
+        [JsonProperty(PropertyName = "references")]
+        public References References { get; set; }
         
     }
 }

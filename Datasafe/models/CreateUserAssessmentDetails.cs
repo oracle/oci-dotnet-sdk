@@ -72,7 +72,7 @@ namespace Oci.DatasafeService.Models
         public string Schedule { get; set; }
         
         /// <value>
-        /// The OCID of the target database on which the user assessment is to be run.
+        /// The OCID of the target database or target database group on which user assessment is to be run.
         /// </value>
         /// <remarks>
         /// Required
@@ -80,6 +80,13 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "TargetId is required.")]
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }
+        
+        /// <value>
+        /// The type of user assessment resource whether it is individual or group resource. For individual target use type TARGET_DATABASE and for group resource use type TARGET_DATABASE_GROUP. If not provided, TARGET_DATABASE would be used as default value.
+        /// </value>
+        [JsonProperty(PropertyName = "targetType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<UserAssessmentTargetType> TargetType { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)

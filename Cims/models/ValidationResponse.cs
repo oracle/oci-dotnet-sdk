@@ -29,7 +29,10 @@ namespace Oci.CimsService.Models
         public System.Nullable<bool> IsValidUser { get; set; }
         
         /// <value>
-        /// Technical support type (`TECH`) only: Identifier and name of the support request's user group (`userGroupId` and `userGroupName`).
+        /// Array of user groups that the user has access to for creating technical support type (`TECH`) support requests.
+        /// Each user group is indicated by its identifier and name (`userGroupId` and `userGroupName`).
+        /// Note: The Customer User Administrator (CUA) can manage user groups by name using
+        /// [My Oracle Cloud Support portal](https://support.oracle.com).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "writePermittedUserGroupInfos")]

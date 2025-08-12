@@ -69,5 +69,11 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<long> Count { get; set; }
         
+        /// <value>
+        /// The date and time when data discovery was last done on the target database, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastDiscovered")]
+        public System.Nullable<System.DateTime> TimeLastDiscovered { get; set; }
+        
     }
 }

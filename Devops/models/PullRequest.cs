@@ -185,6 +185,12 @@ namespace Oci.DevopsService.Models
         [JsonProperty(PropertyName = "reviewers")]
         public System.Collections.Generic.List<Reviewer> Reviewers { get; set; }
         
+        /// <value>
+        /// The commit ID when the Pull Request was merged.
+        /// </value>
+        [JsonProperty(PropertyName = "mergedCommitId")]
+        public string MergedCommitId { get; set; }
+        
         [JsonProperty(PropertyName = "mergeChecks")]
         public MergeCheckCollection MergeChecks { get; set; }
         

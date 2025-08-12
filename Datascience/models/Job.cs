@@ -110,6 +110,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "jobStorageMountConfigurationDetailsList")]
         public System.Collections.Generic.List<StorageMountConfigurationDetails> JobStorageMountConfigurationDetailsList { get; set; }
         
+        [JsonProperty(PropertyName = "jobNodeConfigurationDetails")]
+        public JobNodeConfigurationDetails JobNodeConfigurationDetails { get; set; }
+        
         /// <value>
         /// The state of the job.
         /// </value>

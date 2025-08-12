@@ -20,7 +20,7 @@ namespace Oci.CimsService.Requests
     {
         
         /// <value>
-        /// Unique identifier for the support ticket.
+        /// Unique identifier for the support request.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.CimsService.Requests
         public string IncidentKey { get; set; }
         
         /// <value>
-        /// Details about the support ticket being updated.
+        /// Details about the support request being updated.
         /// </value>
         /// <remarks>
         /// Required

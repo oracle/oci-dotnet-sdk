@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details about the support ticket.
+    /// Details about the support request.
     /// </summary>
     public class IncidentSummary 
     {
@@ -48,6 +48,13 @@ namespace Oci.CimsService.Models
         
         [JsonProperty(PropertyName = "incidentType")]
         public IncidentResourceType IncidentType { get; set; }
+        
+        /// <value>
+        /// Technical support type (`TECH`) only: The pre-migration identifier of the support request in My Oracle Support (MOS).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "migratedSrNumber")]
+        public string MigratedSrNumber { get; set; }
         
         /// <value>
         /// Technical support type (`TECH`) only: The identifier of the support request's user group in My Oracle Cloud Support portal.
@@ -93,12 +100,12 @@ namespace Oci.CimsService.Models
         public string WarnMessage { get; set; }
         
         /// <value>
-        /// The kind of support ticket (type of support request).
-        /// For information about `ACCOUNT` support tickets, see 
+        /// The kind of support request (type of support request).
+        /// For information about `ACCOUNT` support requests, see 
         /// [Creating a Billing Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-billing.htm).
-        /// For information about `LIMIT` support tickets, see 
+        /// For information about `LIMIT` support requests, see 
         /// [Creating a Service Limit Increase Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-limit.htm).
-        /// For information about `TECH` support tickets, see 
+        /// For information about `TECH` support requests, see 
         /// [Creating a Technical Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident-technical.htm).
         /// 
         /// </value>

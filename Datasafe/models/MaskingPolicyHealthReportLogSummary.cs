@@ -99,6 +99,7 @@ namespace Oci.DatasafeService.Models
         /// ACTIVE_MASK_JOB_CHECK checks if there is any active masking job running on the target database.
         /// DETERMINISTIC_ENCRYPTION_FORMAT_CHECK checks if any masking column has deterministic encryption masking format.
         /// COLUMN_EXIST_CHECK checks if the masking columns are available in the target database.
+        /// TIME_TRAVEL_CHECK checks if the masking tables have Time Travel enabled.
         /// 
         /// </value>
         ///
@@ -135,7 +136,9 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "DETERMINISTIC_ENCRYPTION_FORMAT_CHECK")]
             DeterministicEncryptionFormatCheck,
             [EnumMember(Value = "COLUMN_EXIST_CHECK")]
-            ColumnExistCheck
+            ColumnExistCheck,
+            [EnumMember(Value = "TIME_TRAVEL_CHECK")]
+            TimeTravelCheck
         };
 
         /// <value>
@@ -152,6 +155,7 @@ namespace Oci.DatasafeService.Models
         /// ACTIVE_MASK_JOB_CHECK checks if there is any active masking job running on the target database.
         /// DETERMINISTIC_ENCRYPTION_FORMAT_CHECK checks if any masking column has deterministic encryption masking format.
         /// COLUMN_EXIST_CHECK checks if the masking columns are available in the target database.
+        /// TIME_TRAVEL_CHECK checks if the masking tables have Time Travel enabled.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "healthCheckType")]

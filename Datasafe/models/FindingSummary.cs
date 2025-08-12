@@ -83,6 +83,12 @@ namespace Oci.DatasafeService.Models
         public string Title { get; set; }
         
         /// <value>
+        /// The category to which the finding belongs to.
+        /// </value>
+        [JsonProperty(PropertyName = "category")]
+        public string Category { get; set; }
+        
+        /// <value>
         /// The explanation of the issue in this finding. It explains the reason for the rule and, if a risk is reported, it may also explain the recommended actions for remediation.
         /// </value>
         [JsonProperty(PropertyName = "remarks")]
@@ -105,6 +111,12 @@ namespace Oci.DatasafeService.Models
         /// </value>
         [JsonProperty(PropertyName = "oneline")]
         public string Oneline { get; set; }
+        
+        /// <value>
+        /// Documentation link provided by Oracle that explains a specific security finding or check.
+        /// </value>
+        [JsonProperty(PropertyName = "doclink")]
+        public string Doclink { get; set; }
         
         /// <value>
         /// Provides information on whether the finding is related to a CIS Oracle Database Benchmark recommendation, a STIG rule, or a GDPR Article/Recital.

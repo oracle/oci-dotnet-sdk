@@ -47,7 +47,11 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "SUCCEEDED")]
             Succeeded,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            [EnumMember(Value = "DELETING")]
+            Deleting
         };
 
         /// <value>

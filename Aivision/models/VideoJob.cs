@@ -96,7 +96,7 @@ namespace Oci.AivisionService.Models
         public OutputLocation OutputLocation { get; set; }
                 ///
         /// <value>
-        /// The current state of the batch document job.
+        /// The current state of the video job.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -118,7 +118,7 @@ namespace Oci.AivisionService.Models
         };
 
         /// <value>
-        /// The current state of the batch document job.
+        /// The current state of the video job.
         /// </value>
         /// <remarks>
         /// Required

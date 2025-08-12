@@ -57,6 +57,27 @@ namespace Oci.DatasafeService.Models
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+                ///
+        /// <value>
+        /// The type of the security policy.
+        /// </value>
+        ///
+        public enum SecurityPolicyTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "DATASAFE_MANAGED")]
+            DatasafeManaged,
+            [EnumMember(Value = "SEEDED_POLICY")]
+            SeededPolicy
+        };
+
+        /// <value>
+        /// The type of the security policy.
+        /// </value>
+        [JsonProperty(PropertyName = "securityPolicyType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SecurityPolicyTypeEnum> SecurityPolicyType { get; set; }
         
         /// <value>
         /// The time that the security policy was created, in the format defined by RFC3339.

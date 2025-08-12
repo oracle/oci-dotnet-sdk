@@ -29,6 +29,7 @@ namespace Oci.AivisionService.Models
         /// - `OBJECT_DETECTION`: Identify objects in the image with bounding boxes.
         /// - `TEXT_DETECTION`: Recognize text at the word and line level.
         /// - `FACE_DETECTION`: Identify faces in the image with bounding boxes and face landmarks.
+        /// - `FACE_EMBEDDING`: Extract facial features in image as vectors with information on bounding boxes and face landmarks.
         /// 
         /// </value>
         ///
@@ -40,7 +41,9 @@ namespace Oci.AivisionService.Models
             [EnumMember(Value = "TEXT_DETECTION")]
             TextDetection,
             [EnumMember(Value = "FACE_DETECTION")]
-            FaceDetection
+            FaceDetection,
+            [EnumMember(Value = "FACE_EMBEDDING")]
+            FaceEmbedding
         };
 
         
@@ -72,6 +75,9 @@ namespace Oci.AivisionService.Models
                     break;
                 case "FACE_DETECTION":
                     obj = new FaceDetectionFeature();
+                    break;
+                case "FACE_EMBEDDING":
+                    obj = new FaceEmbeddingFeature();
                     break;
                 case "OBJECT_DETECTION":
                     obj = new ImageObjectDetectionFeature();

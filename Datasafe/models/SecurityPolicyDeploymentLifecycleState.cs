@@ -25,6 +25,8 @@ namespace Oci.DatasafeService.Models
       Updating,
       [EnumMember(Value = "DEPLOYED")]
       Deployed,
+      [EnumMember(Value = "PENDING_DEPLOYMENT")]
+      PendingDeployment,
       [EnumMember(Value = "NEEDS_ATTENTION")]
       NeedsAttention,
       [EnumMember(Value = "FAILED")]

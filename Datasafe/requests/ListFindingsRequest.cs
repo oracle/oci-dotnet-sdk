@@ -69,6 +69,40 @@ namespace Oci.DatasafeService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "severity")]
         public System.Nullable<SeverityEnum> Severity { get; set; }
         
+        ///
+        /// <value>
+        /// A filter to return only findings that match the specified risk level(s). Use containsSeverity parameter if need to filter by multiple risk levels.
+        /// </value>
+        ///
+        public enum ContainsSeverityEnum {
+            [EnumMember(Value = "HIGH")]
+            High,
+            [EnumMember(Value = "MEDIUM")]
+            Medium,
+            [EnumMember(Value = "LOW")]
+            Low,
+            [EnumMember(Value = "EVALUATE")]
+            Evaluate,
+            [EnumMember(Value = "ADVISORY")]
+            Advisory,
+            [EnumMember(Value = "PASS")]
+            Pass,
+            [EnumMember(Value = "DEFERRED")]
+            Deferred
+        };
+
+        /// <value>
+        /// A filter to return only findings that match the specified risk level(s). Use containsSeverity parameter if need to filter by multiple risk levels.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "containsSeverity", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ContainsSeverityEnum> ContainsSeverity { get; set; }
+        
+        /// <value>
+        /// The category of the finding.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "category")]
+        public string Category { get; set; }
+        
         /// <value>
         /// A filter to return only the findings that match the specified lifecycle states.
         /// </value>
@@ -80,6 +114,12 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "references")]
         public System.Nullable<SecurityAssessmentReferences> References { get; set; }
+        
+        /// <value>
+        /// An optional filter to return only findings that match the specified references. Use containsReferences param if need to filter by multiple references.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "containsReferences", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<SecurityAssessmentReferences> ContainsReferences { get; set; }
         
         /// <value>
         /// For list pagination. The maximum number of items to return per page in a paginated \"List\" call. For details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/usingapi.htm#nine).
@@ -132,6 +172,12 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetId")]
         public string TargetId { get; set; }
+        
+        /// <value>
+        /// An optional filter to return only findings that match the specified target ids. Use this parameter to filter by multiple target ids.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetIds", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> TargetIds { get; set; }
         
         /// <value>
         /// The scimQuery query parameter accepts filter expressions that use the syntax described in Section 3.2.2.2
@@ -202,6 +248,24 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        ///
+        /// <value>
+        /// The sort order to use, either ascending (ASC) or descending (DESC).
+        /// </value>
+        ///
+        public enum SortOrderEnum {
+            [EnumMember(Value = "ASC")]
+            Asc,
+            [EnumMember(Value = "DESC")]
+            Desc
+        };
+
+        /// <value>
+        /// The sort order to use, either ascending (ASC) or descending (DESC).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
+        public System.Nullable<SortOrderEnum> SortOrder { get; set; }
         
         /// <value>
         /// Each finding in security assessment has an associated key (think of key as a finding's name).

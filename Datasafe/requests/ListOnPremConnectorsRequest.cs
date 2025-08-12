@@ -45,8 +45,8 @@ namespace Oci.DatasafeService.Requests
         /// <value>
         /// A filter to return only on-premises connector resources that match the specified lifecycle state.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "onPremConnectorLifecycleState")]
-        public System.Nullable<OnPremConnectorLifecycleState> OnPremConnectorLifecycleState { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        public System.Nullable<OnPremConnectorLifecycleState> LifecycleState { get; set; }
         
         /// <value>
         /// For list pagination. The maximum number of items to return per page in a paginated \"List\" call. For details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/usingapi.htm#nine).

@@ -86,6 +86,18 @@ namespace Oci.DatasafeService.Models
             Expired,
             [EnumMember(Value = "EXPIRED_AND_LOCKED")]
             ExpiredAndLocked,
+            [EnumMember(Value = "OPEN_AND_IN_ROLLOVER")]
+            OpenAndInRollover,
+            [EnumMember(Value = "EXPIRED_AND_IN_ROLLOVER")]
+            ExpiredAndInRollover,
+            [EnumMember(Value = "LOCKED_AND_IN_ROLLOVER")]
+            LockedAndInRollover,
+            [EnumMember(Value = "EXPIRED_AND_LOCKED_AND_IN_ROLLOVER")]
+            ExpiredAndLockedAndInRollover,
+            [EnumMember(Value = "LOCKED_TIMED_AND_IN_ROLLOVER")]
+            LockedTimedAndInRollover,
+            [EnumMember(Value = "EXPIRED_AND_LOCKED_TIMED_AND_IN_ROL")]
+            ExpiredAndLockedTimedAndInRol,
             [EnumMember(Value = "NONE")]
             None
         };
