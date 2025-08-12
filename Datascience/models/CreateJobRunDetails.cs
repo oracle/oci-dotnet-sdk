@@ -67,6 +67,12 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "jobEnvironmentConfigurationOverrideDetails")]
         public JobEnvironmentConfigurationDetails JobEnvironmentConfigurationOverrideDetails { get; set; }
         
+        [JsonProperty(PropertyName = "jobInfrastructureConfigurationOverrideDetails")]
+        public JobInfrastructureConfigurationDetails JobInfrastructureConfigurationOverrideDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "jobNodeConfigurationOverrideDetails")]
+        public JobNodeConfigurationDetails JobNodeConfigurationOverrideDetails { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

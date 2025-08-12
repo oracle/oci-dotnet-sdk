@@ -45,6 +45,24 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "secretAccessKeySecretId")]
         public string SecretAccessKeySecretId { get; set; }
         
+        /// <value>
+        /// The endpoint URL of the Amazon Kinesis service.
+        /// e.g.: 'https://kinesis.us-east-1.amazonaws.com'
+        /// If not provided, GoldenGate will default to 'https://kinesis.<region>.amazonaws.com'.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "endpoint")]
+        public string Endpoint { get; set; }
+        
+        /// <value>
+        /// The name of the AWS region.
+        /// If not provided, GoldenGate will default to 'us-west-1'.
+        /// Note: this property will become mandatory after July 30, 2026.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "region")]
+        public string Region { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "AMAZON_KINESIS";
     }

@@ -160,7 +160,7 @@ namespace Oci.DatasafeService.Requests
         /// text, date, and time values must be enclosed in quotation marks, with date and time values using ISO-8601 format.
         /// (Numeric and boolean values should not be quoted.)
         /// <br/>
-        /// **Example: ** |query=(timeCreated ge '2021-06-04T01-00-26') and (targetNames eq 'target_1')query=(featureDetails.userName eq &quot;user&quot;) and (targetNames eq &quot;target_1&quot;)Supported fields:severitystatusalertTypetargetIdstargetNamesoperationTimelifecycleStatedisplayNametimeCreatedtimeUpdatedfeatureDetails.* (* can be any field in nestedStrMap in Feature Attributes in Alert Summary. For example - userName,object,clientHostname,osUserName,clientIPs,clientId,commandText,commandParam,clientProgram,objectType,targetOwner)
+        /// **Example: ** |query=(timeCreated ge &quot;2021-06-04T01:00:26.000Z&quot;) and (targetNames eq &quot;target_1&quot;)query=(featureDetails.userName eq &quot;user&quot;) and (targetNames eq &quot;target_1&quot;)Supported fields:severitystatusalertTypetargetIdstargetNamesoperationTimelifecycleStatedisplayNametimeCreatedtimeUpdatedfeatureDetails.* (* can be any field in nestedStrMap in Feature Attributes in Alert Summary. For example - userName,object,clientHostname,osUserName,clientIPs,clientId,commandText,commandParam,clientProgram,objectType,targetOwner)
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scimQuery")]
         public string ScimQuery { get; set; }

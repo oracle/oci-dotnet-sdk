@@ -59,6 +59,13 @@ namespace Oci.DatasafeService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// The type of the security policy.
+        /// </value>
+        [JsonProperty(PropertyName = "securityPolicyType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SecurityPolicy.SecurityPolicyTypeEnum> SecurityPolicyType { get; set; }
+        
+        /// <value>
         /// The time that the security policy was created, in the format defined by RFC3339.
         /// </value>
         /// <remarks>

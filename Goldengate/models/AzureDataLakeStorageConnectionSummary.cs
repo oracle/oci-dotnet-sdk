@@ -104,6 +104,17 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "clientSecretSecretId")]
         public string ClientSecretSecretId { get; set; }
         
+        /// <value>
+        /// The endpoint used for authentication with Microsoft Entra ID (formerly Azure Active Directory).
+        /// Default value: https://login.microsoftonline.com
+        /// When connecting to a non-public Azure Cloud, the endpoint must be provided, eg:
+        /// * Azure China: https://login.chinacloudapi.cn/
+        /// * Azure US Government: https://login.microsoftonline.us/
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "azureAuthorityHost")]
+        public string AzureAuthorityHost { get; set; }
+        
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "AZURE_DATA_LAKE_STORAGE";
     }

@@ -195,10 +195,6 @@ namespace Oci.CoreService.Models
         /// <br/>
         /// Example: 10.0.1.0/24
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "StaticRoutes is required.")]
         [JsonProperty(PropertyName = "staticRoutes")]
         public System.Collections.Generic.List<string> StaticRoutes { get; set; }
         

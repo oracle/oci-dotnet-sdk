@@ -30,5 +30,29 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "isPaidUsageEnabled")]
         public System.Nullable<bool> IsPaidUsageEnabled { get; set; }
         
+        /// <value>
+        /// The resource type that is represented by the audit profile.
+        /// </value>
+        [JsonProperty(PropertyName = "targetType")]
+        public string TargetType { get; set; }
+        
+        /// <value>
+        /// The name or the OCID of the resource from which the online month retention setting is sourced. For example a target database group OCID or global.
+        /// </value>
+        [JsonProperty(PropertyName = "onlineMonthsSource")]
+        public string OnlineMonthsSource { get; set; }
+        
+        /// <value>
+        /// The name or the OCID of the resource from which the offline month retention setting is sourced. For example a target database group OCID or global.
+        /// </value>
+        [JsonProperty(PropertyName = "offlineMonthsSource")]
+        public string OfflineMonthsSource { get; set; }
+        
+        /// <value>
+        /// The name or the OCID of the resource from which the paid usage setting is sourced. For example a target database group OCID or global.
+        /// </value>
+        [JsonProperty(PropertyName = "paidUsageSource")]
+        public string PaidUsageSource { get; set; }
+        
     }
 }

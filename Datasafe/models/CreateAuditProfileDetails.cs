@@ -22,7 +22,7 @@ namespace Oci.DatasafeService.Models
     {
         
         /// <value>
-        /// The display name of the audit profile. The name does not have to be unique, and it's changeable.
+        /// The display name of the audit profile. The name does not have to be unique, and it's updatable.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -38,7 +38,7 @@ namespace Oci.DatasafeService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The OCID of the Data Safe target for which the audit profile is created.
+        /// The OCID of the target database or target database group for which the audit profile is created.
         /// </value>
         /// <remarks>
         /// Required
@@ -54,6 +54,17 @@ namespace Oci.DatasafeService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// The resource type that is represented by the audit profile.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TargetType is required.")]
+        [JsonProperty(PropertyName = "targetType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AuditProfileTargetType> TargetType { get; set; }
+        
+        /// <value>
         /// Indicates if you want to continue collecting audit records beyond the free limit of one million audit records per month per target database,
         /// potentially incurring additional charges. The default value is inherited from the global settings. 
         /// You can change at the global level or at the target level.
@@ -61,6 +72,32 @@ namespace Oci.DatasafeService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPaidUsageEnabled")]
         public System.Nullable<bool> IsPaidUsageEnabled { get; set; }
+        
+        /// <value>
+        /// Number of months the audit records will be stored online in the audit repository for immediate reporting and analysis.
+        /// Minimum: 1; Maximum: 12 months
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "onlineMonths")]
+        public System.Nullable<int> OnlineMonths { get; set; }
+        
+        /// <value>
+        /// Number of months the audit records will be stored offline in the offline archive.
+        /// Minimum: 0; Maximum: 72 months.
+        /// If you have a requirement to store the audit data even longer in the offline archive, please contact the Oracle Support.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "offlineMonths")]
+        public System.Nullable<int> OfflineMonths { get; set; }
+        
+        /// <value>
+        /// Indicates whether audit paid usage settings specified at the target database level override both the global and the target database group level paid usage settings.
+        /// Enabling paid usage continues the collection of audit records beyond the free limit of one million audit records per month per target database,
+        /// potentially incurring additional charges. For more information, see [Data Safe Price List](https://www.oracle.com/cloud/price-list/#data-safe).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isOverrideGlobalPaidUsage")]
+        public System.Nullable<bool> IsOverrideGlobalPaidUsage { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
@@ -72,7 +109,6 @@ namespace Oci.DatasafeService.Models
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
-        /// <br/>
         /// Example: {&quot;Operations&quot;: {&quot;CostCenter&quot;: &quot;42&quot;}}
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]

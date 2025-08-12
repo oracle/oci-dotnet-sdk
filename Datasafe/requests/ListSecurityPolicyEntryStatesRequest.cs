@@ -54,6 +54,18 @@ namespace Oci.DatasafeService.Requests
         public string SecurityPolicyEntryId { get; set; }
         
         /// <value>
+        /// The type of the security policy deployment.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "securityPolicyEntryType")]
+        public System.Nullable<SecurityPolicyEntryStateSummary.EntryTypeEnum> SecurityPolicyEntryType { get; set; }
+        
+        /// <value>
+        /// An optional filter to return only resources that match the specified target id.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetId")]
+        public string TargetId { get; set; }
+        
+        /// <value>
         /// Unique identifier for the request.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

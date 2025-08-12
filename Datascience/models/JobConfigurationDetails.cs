@@ -29,7 +29,9 @@ namespace Oci.DatascienceService.Models
         ///
         public enum JobTypeEnum {
             [EnumMember(Value = "DEFAULT")]
-            Default
+            Default,
+            [EnumMember(Value = "EMPTY")]
+            Empty
         };
 
         
@@ -56,6 +58,9 @@ namespace Oci.DatascienceService.Models
             var discriminator = jsonObject["jobType"].Value<string>();
             switch (discriminator)
             {
+                case "EMPTY":
+                    obj = new EmptyJobConfigurationDetails();
+                    break;
                 case "DEFAULT":
                     obj = new DefaultJobConfigurationDetails();
                     break;

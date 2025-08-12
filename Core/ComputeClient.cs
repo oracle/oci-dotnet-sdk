@@ -5376,7 +5376,7 @@ namespace Oci.CoreService
                     ServiceName = "Compute",
                     OperationName = "ListComputeGpuMemoryClusters",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/ComputeGpuMemoryClusterCollection/ListComputeGpuMemoryClusters",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/ComputeGpuMemoryCluster/ListComputeGpuMemoryClusters",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

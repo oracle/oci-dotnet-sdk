@@ -306,5 +306,11 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
+        
+        /// <value>
+        /// A filter to return the target database group that matches the specified OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
     }
 }

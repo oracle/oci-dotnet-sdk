@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details for updating the support ticket activity.
+    /// Details for updating the support request activity.
     /// 
     /// </summary>
     public class UpdateActivityItemDetails : UpdateItemDetails
@@ -30,6 +30,13 @@ namespace Oci.CimsService.Models
                 ///
         /// <value>
         /// The type of activity occurring.
+        /// `NOTES` is the activity associated to attachments. 
+        /// `PROBLEM_DESCRIPTION` is the activity associated to customer problem description.
+        /// `UPDATE` is the activity associated to adding comments.
+        /// `CLOSE` is the activity associated to closing the support request.
+        /// `REOPEN` is the activity associated to reopening the support request.
+        /// `ADD_CONTACT` is the activity associated to adding additional contact to the support request.
+        /// 
         /// </value>
         ///
         public enum ActivityTypeEnum {
@@ -42,11 +49,20 @@ namespace Oci.CimsService.Models
             [EnumMember(Value = "CLOSE")]
             Close,
             [EnumMember(Value = "REOPEN")]
-            Reopen
+            Reopen,
+            [EnumMember(Value = "ADD_CONTACT")]
+            AddContact
         };
 
         /// <value>
         /// The type of activity occurring.
+        /// `NOTES` is the activity associated to attachments. 
+        /// `PROBLEM_DESCRIPTION` is the activity associated to customer problem description.
+        /// `UPDATE` is the activity associated to adding comments.
+        /// `CLOSE` is the activity associated to closing the support request.
+        /// `REOPEN` is the activity associated to reopening the support request.
+        /// `ADD_CONTACT` is the activity associated to adding additional contact to the support request.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "activityType")]
         [JsonConverter(typeof(StringEnumConverter))]

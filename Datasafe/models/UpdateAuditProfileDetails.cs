@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// The details used to update a audit profile.
+    /// The details used to update the audit profile.
     /// </summary>
     public class UpdateAuditProfileDetails 
     {
@@ -41,6 +41,15 @@ namespace Oci.DatasafeService.Models
         /// </value>
         [JsonProperty(PropertyName = "isPaidUsageEnabled")]
         public System.Nullable<bool> IsPaidUsageEnabled { get; set; }
+        
+        /// <value>
+        /// Indicates whether audit paid usage settings specified at the target database level override both the global settings and the target group level paid usage settings.
+        /// Enabling paid usage continues the collection of audit records beyond the free limit of one million audit records per month per target database,
+        /// potentially incurring additional charges. For more information, see [Data Safe Price List](https://www.oracle.com/cloud/price-list/#data-safe).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isOverrideGlobalPaidUsage")]
+        public System.Nullable<bool> IsOverrideGlobalPaidUsage { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)

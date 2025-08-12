@@ -33,6 +33,8 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "DISASTER_RECOVERY")]
       DisasterRecovery,
       [EnumMember(Value = "SCHEDULE_MANUAL_BACKUP")]
-      ScheduleManualBackup
+      ScheduleManualBackup,
+      [EnumMember(Value = "MULTICLOUD")]
+      Multicloud
   }
 }

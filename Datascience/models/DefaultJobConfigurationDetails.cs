@@ -42,6 +42,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "maximumRuntimeInMinutes")]
         public System.Nullable<long> MaximumRuntimeInMinutes { get; set; }
         
+        [JsonProperty(PropertyName = "startupProbeDetails")]
+        public JobProbeDetails StartupProbeDetails { get; set; }
+        
         [JsonProperty(PropertyName = "jobType")]
         private readonly string jobType = "DEFAULT";
     }

@@ -39,10 +39,6 @@ namespace Oci.GoldengateService.Models
         /// Deprecated: This field is deprecated and replaced by \"serviceAccountKeyFileSecretId\". This field will be removed after February 15 2026.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ServiceAccountKeyFile is required.")]
         [JsonProperty(PropertyName = "serviceAccountKeyFile")]
         public string ServiceAccountKeyFile { get; set; }
         

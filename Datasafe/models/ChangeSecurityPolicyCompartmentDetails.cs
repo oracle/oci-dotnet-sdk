@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatasafeService.Models
 {
     /// <summary>
-    /// Details for which compartment to move the resource to.
+    /// Details of the compartment the security policy will be moved to.
     /// </summary>
     public class ChangeSecurityPolicyCompartmentDetails 
     {

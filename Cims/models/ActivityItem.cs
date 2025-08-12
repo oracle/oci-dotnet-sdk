@@ -22,7 +22,13 @@ namespace Oci.CimsService.Models
     {
         
         /// <value>
-        /// Comments added with the activity on the support ticket.
+        /// Identifier of the activity on the support request.
+        /// </value>
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
+        
+        /// <value>
+        /// Comments or file attachments added with the activity on the support request.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +58,7 @@ namespace Oci.CimsService.Models
         public System.Nullable<int> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// The type of activity occuring on the support ticket.
+        /// The type of activity occuring on the support request.
         /// </value>
         ///
         public enum ActivityTypeEnum {
@@ -72,7 +78,7 @@ namespace Oci.CimsService.Models
         };
 
         /// <value>
-        /// The type of activity occuring on the support ticket.
+        /// The type of activity occuring on the support request.
         /// </value>
         /// <remarks>
         /// Required
@@ -117,7 +123,7 @@ namespace Oci.CimsService.Models
         public System.Nullable<ItemTypeEnum> ItemType { get; set; }
                 ///
         /// <value>
-        /// Who updates the activity on the support ticket.
+        /// Who updates the activity on the support request.
         /// </value>
         ///
         public enum ItemStatusEnum {
@@ -131,11 +137,15 @@ namespace Oci.CimsService.Models
             [EnumMember(Value = "REMOVED")]
             Removed,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "REJECTED")]
+            Rejected,
+            [EnumMember(Value = "RECEIVED")]
+            Received
         };
 
         /// <value>
-        /// Who updates the activity on the support ticket.
+        /// Who updates the activity on the support request.
         /// </value>
         [JsonProperty(PropertyName = "itemStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

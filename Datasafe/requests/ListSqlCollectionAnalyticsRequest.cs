@@ -88,6 +88,12 @@ namespace Oci.DatasafeService.Requests
         public string TargetId { get; set; }
         
         /// <value>
+        /// A filter to return the target database group that matches the specified OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
+        
+        /// <value>
         /// Unique identifier for the request.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

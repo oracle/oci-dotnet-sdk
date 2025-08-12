@@ -148,7 +148,7 @@ namespace Oci.DatasafeService.Requests
         /// text, date, and time values must be enclosed in quotation marks, with date and time values using ISO-8601 format.
         /// (Numeric and boolean values should not be quoted.)
         /// <br/>
-        /// **Example: ** query=(operationTime ge '2021-06-04T01-00-26') and (violationAction eq 'BLOCKED')
+        /// **Example: ** query=(operationTime ge &quot;2021-06-04T01:00:26.000Z&quot;) and (violationAction eq &quot;BLOCKED&quot;)
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scimQuery")]
         public string ScimQuery { get; set; }

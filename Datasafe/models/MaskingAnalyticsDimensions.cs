@@ -33,5 +33,11 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "policyId")]
         public string PolicyId { get; set; }
         
+        /// <value>
+        /// The OCID of the sensitive type masked.
+        /// </value>
+        [JsonProperty(PropertyName = "sensitiveTypeId")]
+        public string SensitiveTypeId { get; set; }
+        
     }
 }

@@ -83,7 +83,11 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "SAVE_SCHEDULE")]
             SaveSchedule,
             [EnumMember(Value = "COMPARTMENT")]
-            Compartment
+            Compartment,
+            [EnumMember(Value = "TEMPLATE")]
+            Template,
+            [EnumMember(Value = "TEMPLATE_BASELINE")]
+            TemplateBaseline
         };
 
         /// <value>
@@ -107,7 +111,7 @@ namespace Oci.DatasafeService.Requests
         
         ///
         /// <value>
-        /// A filter to return only security asessments that were created by either user or system.
+        /// A filter to return only security assessments that were created by either user or system.
         /// </value>
         ///
         public enum TriggeredByEnum {
@@ -118,7 +122,7 @@ namespace Oci.DatasafeService.Requests
         };
 
         /// <value>
-        /// A filter to return only security asessments that were created by either user or system.
+        /// A filter to return only security assessments that were created by either user or system.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "triggeredBy")]
         public System.Nullable<TriggeredByEnum> TriggeredBy { get; set; }
@@ -163,7 +167,11 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "timeCreated")]
             TimeCreated,
             [EnumMember(Value = "displayName")]
-            DisplayName
+            DisplayName,
+            [EnumMember(Value = "timeLastAssessed")]
+            TimeLastAssessed,
+            [EnumMember(Value = "timeUpdated")]
+            TimeUpdated
         };
 
         /// <value>
@@ -217,5 +225,23 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<SecurityAssessmentLifecycleState> LifecycleState { get; set; }
+        
+        /// <value>
+        /// A filter to return only only target database resources or target database group resources.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetType")]
+        public System.Nullable<SecurityAssessmentTargetType> TargetType { get; set; }
+        
+        /// <value>
+        /// A filter to return the target database group that matches the specified OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
+        
+        /// <value>
+        /// The OCID of the security assessment of type TEMPLATE.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "templateAssessmentId")]
+        public string TemplateAssessmentId { get; set; }
     }
 }

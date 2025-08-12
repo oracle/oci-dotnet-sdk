@@ -42,6 +42,14 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<bool> IsAutoPurgeEnabled { get; set; }
         
         /// <value>
+        /// Indicates if the Datasafe updates last archive time on target database. If isAutoPurgeEnabled field
+        /// is enabled, this field must be true.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "canUpdateLastArchiveTimeOnTarget")]
+        public System.Nullable<bool> CanUpdateLastArchiveTimeOnTarget { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

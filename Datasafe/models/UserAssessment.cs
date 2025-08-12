@@ -119,6 +119,19 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<bool> IsAssessmentScheduled { get; set; }
         
         /// <value>
+        /// The OCID of target database group.
+        /// </value>
+        [JsonProperty(PropertyName = "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
+        
+        /// <value>
+        /// Indicates whether the user assessment is for a target database or a target database group.
+        /// </value>
+        [JsonProperty(PropertyName = "targetType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<UserAssessmentTargetType> TargetType { get; set; }
+        
+        /// <value>
         /// Schedule of the assessment that runs periodically in this specified format:
         ///   <version-string>;<version-specific-schedule>
         /// <br/>

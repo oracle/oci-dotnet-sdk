@@ -73,6 +73,8 @@ namespace Oci.DatasafeService.Requests
             SchemaName,
             [EnumMember(Value = "objectName")]
             ObjectName,
+            [EnumMember(Value = "columnName")]
+            ColumnName,
             [EnumMember(Value = "dataType")]
             DataType
         };

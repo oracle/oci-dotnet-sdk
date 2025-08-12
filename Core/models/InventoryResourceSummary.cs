@@ -47,6 +47,12 @@ namespace Oci.CoreService.Models
         public System.Nullable<ResourceTypeEnum> ResourceType { get; set; }
         
         /// <value>
+        /// Mac Address of IP Resource
+        /// </value>
+        [JsonProperty(PropertyName = "macAddress")]
+        public string MacAddress { get; set; }
+        
+        /// <value>
         /// Lists the 'IpAddressCollection' object.
         /// 
         /// </value>

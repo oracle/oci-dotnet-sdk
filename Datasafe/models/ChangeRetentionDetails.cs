@@ -22,25 +22,24 @@ namespace Oci.DatasafeService.Models
     {
         
         /// <value>
-        /// Indicates the number of months the audit records will be stored online in Oracle Data Safe audit repository for
-        /// immediate reporting and analysis. Minimum: 1; Maximum: 12 months
+        /// Number of months the audit records will be stored online in the audit repository for immediate reporting and analysis. Minimum: 1; Maximum: 12 months
         /// 
         /// </value>
         [JsonProperty(PropertyName = "onlineMonths")]
         public System.Nullable<int> OnlineMonths { get; set; }
         
         /// <value>
-        /// Indicates the number of months the audit records will be stored offline in the Data Safe audit archive.
-        /// Minimum: 0; Maximum: 72 months.
-        /// If you have a requirement to store the audit data even longer in archive, please contact the Oracle Support.
+        /// Number of months the audit records will be stored offline in the offline archive.
+        ///    Minimum: 0; Maximum: 72 months.
+        ///    If you have a requirement to store the audit data even longer in the offline archive, please contact the Oracle Support.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "offlineMonths")]
         public System.Nullable<int> OfflineMonths { get; set; }
         
         /// <value>
-        /// Indicates whether audit retention settings like online and offline months is set at the
-        /// target level overriding the global audit retention settings.
+        /// Indicates whether audit retention settings like online and offline months set at the 
+        /// target level override both the global settings and the target group level audit retention settings.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isOverrideGlobalRetentionSetting")]

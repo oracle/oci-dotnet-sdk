@@ -140,12 +140,6 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The OCID of the compute host group attached to the host where the bare metal instance will be launched.
-        /// </value>
-        [JsonProperty(PropertyName = "computeHostGroupId")]
-        public string ComputeHostGroupId { get; set; }
-        
-        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the
         /// [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) that the instance will be created in.
         /// 

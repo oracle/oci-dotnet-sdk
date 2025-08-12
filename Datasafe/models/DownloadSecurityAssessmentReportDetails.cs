@@ -22,18 +22,20 @@ namespace Oci.DatasafeService.Models
     {
                 ///
         /// <value>
-        /// Format of the report.
+        /// Format of the Security Assessment report.
         /// </value>
         ///
         public enum FormatEnum {
             [EnumMember(Value = "PDF")]
             Pdf,
             [EnumMember(Value = "XLS")]
-            Xls
+            Xls,
+            [EnumMember(Value = "STIGXLS")]
+            Stigxls
         };
 
         /// <value>
-        /// Format of the report.
+        /// Format of the Security Assessment report.
         /// </value>
         /// <remarks>
         /// Required

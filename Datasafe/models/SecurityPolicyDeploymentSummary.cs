@@ -59,7 +59,7 @@ namespace Oci.DatasafeService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the target where the security policy is deployed.
+        /// The OCID of the target/target group where the security policy is deployed.
         /// </value>
         /// <remarks>
         /// Required
@@ -67,6 +67,19 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "TargetId is required.")]
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }
+        
+        /// <value>
+        /// Indicates whether the security policy deployment is for a target database or a target database group.
+        /// </value>
+        [JsonProperty(PropertyName = "targetType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SecurityPolicyDeployment.TargetTypeEnum> TargetType { get; set; }
+        
+        /// <value>
+        /// The last date and time the security policy was deployed, in the format defined by RFC3339.
+        /// </value>
+        [JsonProperty(PropertyName = "timeDeployed")]
+        public System.Nullable<System.DateTime> TimeDeployed { get; set; }
         
         /// <value>
         /// The OCID of the security policy corresponding to the security policy deployment.

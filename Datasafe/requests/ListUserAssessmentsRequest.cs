@@ -217,5 +217,17 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to return only only target database resources or target database group resources.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetType")]
+        public System.Nullable<UserAssessmentTargetType> TargetType { get; set; }
+        
+        /// <value>
+        /// A filter to return the target database group that matches the specified OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
     }
 }

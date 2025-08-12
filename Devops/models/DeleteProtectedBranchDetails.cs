@@ -22,7 +22,7 @@ namespace Oci.DevopsService.Models
     {
         
         /// <value>
-        /// Name of a protected branch.
+        /// The branchName can either be exact branch name or branch pattern.
         /// </value>
         /// <remarks>
         /// Required

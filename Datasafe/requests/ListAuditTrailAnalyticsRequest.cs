@@ -104,6 +104,35 @@ namespace Oci.DatasafeService.Requests
         public string TargetId { get; set; }
         
         /// <value>
+        /// An optional filter to return audit events whose creation time in the database is greater than and equal to the date-time specified,
+        /// in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeStarted")]
+        public System.Nullable<System.DateTime> TimeStarted { get; set; }
+        
+        /// <value>
+        /// An optional filter to return audit events whose creation time in the database is less than and equal to the date-time specified,
+        /// in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeEnded")]
+        public System.Nullable<System.DateTime> TimeEnded { get; set; }
+        
+        /// <value>
+        /// Default time zone is UTC if no time zone provided. The date-time considerations of the resource will be in accordance with the specified time zone.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "queryTimeZone")]
+        public string QueryTimeZone { get; set; }
+        
+        /// <value>
+        /// A filter to return the target database group that matches the specified OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
+        
+        /// <value>
         /// Unique identifier for the request.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

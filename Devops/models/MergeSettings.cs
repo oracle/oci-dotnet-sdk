@@ -24,10 +24,6 @@ namespace Oci.DevopsService.Models
         /// <value>
         /// Default type of merge strategy associated with the a Project or Repository.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DefaultMergeStrategy is required.")]
         [JsonProperty(PropertyName = "defaultMergeStrategy")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MergeStrategy> DefaultMergeStrategy { get; set; }
@@ -35,10 +31,6 @@ namespace Oci.DevopsService.Models
         /// <value>
         /// List of merge strategies which are allowed for a Project or Repository.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AllowedMergeStrategies is required.")]
         [JsonProperty(PropertyName = "allowedMergeStrategies")]
         public System.Collections.Generic.List<MergeStrategy> AllowedMergeStrategies { get; set; }
         

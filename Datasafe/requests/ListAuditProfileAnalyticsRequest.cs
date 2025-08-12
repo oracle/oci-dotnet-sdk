@@ -82,7 +82,15 @@ namespace Oci.DatasafeService.Requests
         ///
         public enum GroupByEnum {
             [EnumMember(Value = "isPaidUsageEnabled")]
-            IsPaidUsageEnabled
+            IsPaidUsageEnabled,
+            [EnumMember(Value = "targetType")]
+            TargetType,
+            [EnumMember(Value = "paidUsageSource")]
+            PaidUsageSource,
+            [EnumMember(Value = "onlineMonthsSource")]
+            OnlineMonthsSource,
+            [EnumMember(Value = "offlineMonthsSource")]
+            OfflineMonthsSource
         };
 
         /// <value>
@@ -90,6 +98,12 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "groupBy", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<GroupByEnum> GroupBy { get; set; }
+        
+        /// <value>
+        /// A optional filter to return only resources that belong to the specified audit profile type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetType")]
+        public System.Nullable<AuditProfileTargetType> TargetType { get; set; }
         
         /// <value>
         /// Unique identifier for the request.

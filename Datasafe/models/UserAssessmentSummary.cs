@@ -90,6 +90,19 @@ namespace Oci.DatasafeService.Models
         public string LastComparedBaselineId { get; set; }
         
         /// <value>
+        /// The OCID of target database group.
+        /// </value>
+        [JsonProperty(PropertyName = "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
+        
+        /// <value>
+        /// Indicates whether the user assessment is for a target database or a target database group.
+        /// </value>
+        [JsonProperty(PropertyName = "targetType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<UserAssessmentTargetType> TargetType { get; set; }
+        
+        /// <value>
         /// The current state of the user assessment.
         /// </value>
         /// <remarks>

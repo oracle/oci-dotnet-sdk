@@ -31,7 +31,11 @@ namespace Oci.DatascienceService.Models
             [EnumMember(Value = "STANDALONE")]
             Standalone,
             [EnumMember(Value = "ME_STANDALONE")]
-            MeStandalone
+            MeStandalone,
+            [EnumMember(Value = "MULTI_NODE")]
+            MultiNode,
+            [EnumMember(Value = "EMPTY")]
+            Empty
         };
 
         
@@ -58,6 +62,12 @@ namespace Oci.DatascienceService.Models
             var discriminator = jsonObject["jobInfrastructureType"].Value<string>();
             switch (discriminator)
             {
+                case "MULTI_NODE":
+                    obj = new MultiNodeJobInfrastructureConfigurationDetails();
+                    break;
+                case "EMPTY":
+                    obj = new EmptyJobInfrastructureConfigurationDetails();
+                    break;
                 case "ME_STANDALONE":
                     obj = new ManagedEgressStandaloneJobInfrastructureConfigurationDetails();
                     break;

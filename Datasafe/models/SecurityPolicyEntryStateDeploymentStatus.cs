@@ -25,6 +25,12 @@ namespace Oci.DatasafeService.Models
       Modified,
       [EnumMember(Value = "CONFLICT")]
       Conflict,
+      [EnumMember(Value = "CONNECTIVITY_ISSUE")]
+      ConnectivityIssue,
+      [EnumMember(Value = "UNSUPPORTED_SYNTAX")]
+      UnsupportedSyntax,
+      [EnumMember(Value = "UNKNOWN_ERROR")]
+      UnknownError,
       [EnumMember(Value = "UNAUTHORIZED")]
       Unauthorized,
       [EnumMember(Value = "DELETED")]

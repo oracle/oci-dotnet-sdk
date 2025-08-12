@@ -405,12 +405,5 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "licensingConfigs")]
         public System.Collections.Generic.List<LicensingConfig> LicensingConfigs { get; set; }
         
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Customer-unique host group
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "computeHostGroupId")]
-        public string ComputeHostGroupId { get; set; }
-        
     }
 }

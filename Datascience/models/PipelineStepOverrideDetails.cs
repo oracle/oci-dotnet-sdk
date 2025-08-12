@@ -44,5 +44,8 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "stepDataflowConfigurationDetails")]
         public PipelineDataflowConfigurationDetails StepDataflowConfigurationDetails { get; set; }
         
+        [JsonProperty(PropertyName = "stepInfrastructureConfigurationDetails")]
+        public PipelineInfrastructureConfigurationDetails StepInfrastructureConfigurationDetails { get; set; }
+        
     }
 }

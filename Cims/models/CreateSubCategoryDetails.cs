@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details for creating the service subcategory of the support ticket.
+    /// Details for creating the service subcategory of the support request.
     /// 
     /// </summary>
     public class CreateSubCategoryDetails 

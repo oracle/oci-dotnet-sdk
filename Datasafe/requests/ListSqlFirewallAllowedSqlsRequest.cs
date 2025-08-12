@@ -82,7 +82,7 @@ namespace Oci.DatasafeService.Requests
         /// text, date, and time values must be enclosed in quotation marks, with date and time values using ISO-8601 format.
         /// (Numeric and boolean values should not be quoted.)
         /// <br/>
-        /// **Example: ** query=(currentUser eq 'SCOTT') and (topLevel eq 'YES')
+        /// **Example: ** query=(currentUser eq &quot;SCOTT&quot;) and (topLevel eq &quot;YES&quot;)
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scimQuery")]
         public string ScimQuery { get; set; }

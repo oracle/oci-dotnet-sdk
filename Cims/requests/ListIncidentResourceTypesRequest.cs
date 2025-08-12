@@ -72,7 +72,7 @@ namespace Oci.CimsService.Requests
         public System.Nullable<SortOrder> SortOrder { get; set; }
         
         /// <value>
-        /// The user-friendly name of the support ticket type.
+        /// The user-friendly name of the support request type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
         public string Name { get; set; }

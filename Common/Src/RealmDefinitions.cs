@@ -30,5 +30,6 @@ namespace Oci.Common
         public static readonly Realm OC23 = new Realm("oc23", "oraclecloud23.com");
         public static readonly Realm OC35 = new Realm("oc35", "oraclecloud35.com");
         public static readonly Realm OC42 = new Realm("oc42", "oraclecloud42.com");
+        public static readonly Realm OC51 = new Realm("oc51", "oraclecloud51.com");
     }
 }

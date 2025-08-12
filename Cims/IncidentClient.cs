@@ -70,7 +70,7 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// Creates a support ticket in the specified tenancy.
+        /// Creates a support request in the specified tenancy.
         /// For more information, see [Creating Support Requests](https://docs.cloud.oracle.com/iaas/Content/GSG/support/create-incident.htm).
         /// 
         /// </summary>
@@ -128,7 +128,7 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// Gets the specified support ticket.
+        /// Gets the specified support request.
         /// For more information, see [Getting Details for a Support Request](https://docs.cloud.oracle.com/iaas/Content/GSG/support/get-incident.htm).
         /// 
         /// </summary>
@@ -187,7 +187,7 @@ namespace Oci.CimsService
 
         /// <summary>
         /// Depending on the selected &#x60;productType&#x60;, either
-        /// lists available products (service groups, services, service categories, and subcategories) for technical support tickets or
+        /// lists available products (service groups, services, service categories, and subcategories) for technical support requests or
         /// lists limits and current usage for limit increase tickets.
         /// This operation is called during creation of technical support and limit increase tickets.
         /// For more information about listing products, see
@@ -250,7 +250,7 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// Lists support tickets for the specified tenancy.
+        /// Lists support requests for the specified tenancy.
         /// For more information, see [Listing Support Requests](https://docs.cloud.oracle.com/iaas/Content/GSG/support/list-incidents.htm).
         /// 
         /// </summary>
@@ -308,7 +308,63 @@ namespace Oci.CimsService
         }
 
         /// <summary>
-        /// Updates the specified support ticket.
+        /// Uploads the file and attaches it to the support request.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/cims/PutAttachment.cs.html">here</a> to see an example of how to use PutAttachment API.</example>
+        public async Task<PutAttachmentResponse> PutAttachment(PutAttachmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called putAttachment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/v2/incidents/{incidentKey}/attachment".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "Incident",
+                    OperationName = "PutAttachment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/incidentmanagement/20181231/Incident/PutAttachment",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<PutAttachmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"PutAttachment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Updates the specified support request.
         /// For more information, see [Updating Support Requests](https://docs.cloud.oracle.com/iaas/Content/GSG/support/update-incident.htm).
         /// 
         /// </summary>

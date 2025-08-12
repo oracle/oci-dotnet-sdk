@@ -95,7 +95,8 @@ namespace Oci.GoldengateService.Models
         public string PublicKeyFingerprint { get; set; }
         
         /// <value>
-        /// Indicates that the user intents to connect to the instance through resource principal.
+        /// Specifies that the user intends to authenticate to the instance using a resource principal.
+        /// Default: false
         /// 
         /// </value>
         [JsonProperty(PropertyName = "shouldUseResourcePrincipal")]

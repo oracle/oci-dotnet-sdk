@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Information about the support ticket classifier.
+    /// Information about the support request classifier.
     /// </summary>
     public class ServiceCategory 
     {

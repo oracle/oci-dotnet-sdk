@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatasafeService.Models
 {
   /// <summary>
-  /// The current state of security policies available on the target.
+  /// The current state of the security policies available on the target.
   /// </summary>
   public enum SecurityPolicyLifecycleState {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

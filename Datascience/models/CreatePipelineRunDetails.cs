@@ -59,6 +59,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "logConfigurationOverrideDetails")]
         public PipelineLogConfigurationDetails LogConfigurationOverrideDetails { get; set; }
         
+        [JsonProperty(PropertyName = "infrastructureConfigurationOverrideDetails")]
+        public PipelineInfrastructureConfigurationDetails InfrastructureConfigurationOverrideDetails { get; set; }
+        
         /// <value>
         /// Array of step override details. Only Step Configuration is allowed to be overridden.
         /// </value>

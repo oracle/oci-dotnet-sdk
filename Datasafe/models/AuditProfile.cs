@@ -32,7 +32,7 @@ namespace Oci.DatasafeService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The OCID of the compartment that contains the audit.
+        /// The OCID of the compartment that contains the audit profile.
         /// </value>
         /// <remarks>
         /// Required
@@ -89,7 +89,7 @@ namespace Oci.DatasafeService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The OCID of the Data Safe target for which the audit profile is created.
+        /// The OCID of the target database or target database group for which the audit profile is created.
         /// </value>
         /// <remarks>
         /// Required
@@ -105,7 +105,7 @@ namespace Oci.DatasafeService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Indicates the list of available audit trails on the target.
+        /// Contains the list of available audit trails on the target database.
         /// </value>
         [JsonProperty(PropertyName = "auditTrails")]
         public System.Collections.Generic.List<AuditTrail> AuditTrails { get; set; }
@@ -124,7 +124,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<bool> IsPaidUsageEnabled { get; set; }
         
         /// <value>
-        /// Indicates the number of months the audit records will be stored online in Oracle Data Safe audit repository for immediate reporting and analysis. 
+        /// Number of months the audit records will be stored online in the audit repository for immediate reporting and analysis. 
         /// Minimum: 1; Maximum: 12 months
         /// 
         /// </value>
@@ -136,9 +136,9 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<int> OnlineMonths { get; set; }
         
         /// <value>
-        /// Indicates the number of months the audit records will be stored offline in the Data Safe audit archive.
+        /// Number of months the audit records will be stored offline in the offline archive.
         /// Minimum: 0; Maximum: 72 months.
-        /// If you have a requirement to store the audit data even longer in archive, please contact the Oracle Support.
+        /// If you have a requirement to store the audit data even longer in the offline archive, please contact the Oracle Support.
         /// 
         /// </value>
         /// <remarks>
@@ -149,7 +149,7 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<int> OfflineMonths { get; set; }
         
         /// <value>
-        /// Indicates number of audit records collected by Data Safe in the current calendar month. 
+        /// Number of audit records collected in the current calendar month. 
         /// Audit records for the Data Safe service account are excluded and are not counted towards your monthly free limit.
         /// 
         /// </value>
@@ -157,8 +157,8 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<long> AuditCollectedVolume { get; set; }
         
         /// <value>
-        /// Indicates whether audit retention settings like online and offline months is set at the
-        /// target level overriding the global audit retention settings.
+        /// Indicates whether audit retention settings like online and offline months set at the 
+        /// target level override both the global settings and the target group level audit retention settings.
         /// 
         /// </value>
         /// <remarks>
@@ -167,6 +167,40 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "IsOverrideGlobalRetentionSetting is required.")]
         [JsonProperty(PropertyName = "isOverrideGlobalRetentionSetting")]
         public System.Nullable<bool> IsOverrideGlobalRetentionSetting { get; set; }
+        
+        /// <value>
+        /// Indicates whether audit paid usage settings specified at the target database level override both the global settings and the target group level paid usage settings.
+        /// Enabling paid usage continues the collection of audit records beyond the free limit of one million audit records per month per target database,
+        /// potentially incurring additional charges. For more information, see [Data Safe Price List](https://www.oracle.com/cloud/price-list/#data-safe).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isOverrideGlobalPaidUsage")]
+        public System.Nullable<bool> IsOverrideGlobalPaidUsage { get; set; }
+        
+        /// <value>
+        /// The name or the OCID of the resource from which the online month retention setting is sourced. For example, a global setting or a target database group OCID.
+        /// </value>
+        [JsonProperty(PropertyName = "onlineMonthsSource")]
+        public string OnlineMonthsSource { get; set; }
+        
+        /// <value>
+        /// The name or the OCID of the resource from which the offline month retention setting is sourced. For example, a global setting or a target database group OCID.
+        /// </value>
+        [JsonProperty(PropertyName = "offlineMonthsSource")]
+        public string OfflineMonthsSource { get; set; }
+        
+        /// <value>
+        /// The name or the OCID of the resource from which the paid usage setting is sourced. For example, a global setting or a target database group OCID.
+        /// </value>
+        [JsonProperty(PropertyName = "paidUsageSource")]
+        public string PaidUsageSource { get; set; }
+        
+        /// <value>
+        /// The resource type that is represented by the audit profile.
+        /// </value>
+        [JsonProperty(PropertyName = "targetType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AuditProfileTargetType> TargetType { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)

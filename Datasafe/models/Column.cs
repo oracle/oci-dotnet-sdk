@@ -67,5 +67,56 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "displayOrder")]
         public System.Nullable<int> DisplayOrder { get; set; }
         
+        /// <value>
+        /// Specifies if column is virtual and can only be used as column filter.
+        /// </value>
+        [JsonProperty(PropertyName = "isVirtual")]
+        public System.Nullable<bool> IsVirtual { get; set; }
+                ///
+        ///
+        public enum ApplicableOperatorsEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "IN")]
+            In,
+            [EnumMember(Value = "EQ")]
+            Eq,
+            [EnumMember(Value = "EQ_CS")]
+            EqCs,
+            [EnumMember(Value = "GT")]
+            Gt,
+            [EnumMember(Value = "GE")]
+            Ge,
+            [EnumMember(Value = "LT")]
+            Lt,
+            [EnumMember(Value = "LE")]
+            Le,
+            [EnumMember(Value = "AND")]
+            And,
+            [EnumMember(Value = "OR")]
+            Or,
+            [EnumMember(Value = "NE")]
+            Ne,
+            [EnumMember(Value = "CO")]
+            Co,
+            [EnumMember(Value = "CO_CS")]
+            CoCs,
+            [EnumMember(Value = "NOT")]
+            Not,
+            [EnumMember(Value = "NOT_IN")]
+            NotIn,
+            [EnumMember(Value = "IN_SET")]
+            InSet,
+            [EnumMember(Value = "NOT_IN_SET")]
+            NotInSet
+        };
+
+        /// <value>
+        /// An array of operators that can be supported by column fieldName.
+        /// </value>
+        [JsonProperty(PropertyName = "applicableOperators", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<ApplicableOperatorsEnum> ApplicableOperators { get; set; }
+        
     }
 }
