@@ -76,7 +76,7 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        public System.Nullable<OnPremConnectorLifecycleState> LifecycleState { get; set; }
         
         /// <value>
         /// Details about the current state of the on-premises connector.

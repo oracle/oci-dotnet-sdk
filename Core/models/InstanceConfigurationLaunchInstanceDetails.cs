@@ -39,6 +39,17 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "capacityReservationId")]
         public string CapacityReservationId { get; set; }
         
+        [JsonProperty(PropertyName = "placementConstraintDetails")]
+        public InstanceConfigurationPlacementConstraintDetails PlacementConstraintDetails { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the
+        /// [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) that the instance will be created in.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "computeClusterId")]
+        public string ComputeClusterId { get; set; }
+        
         /// <value>
         /// The OCID of the compartment containing the instance.
         /// Instances created from instance configurations are placed in the same compartment

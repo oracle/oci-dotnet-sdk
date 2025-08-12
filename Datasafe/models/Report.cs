@@ -97,6 +97,18 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeGenerated { get; set; }
         
         /// <value>
+        /// Specifies the time at which the report was created.
+        /// </value>
+        [JsonProperty(PropertyName = "timeCreated")]
+        public System.Nullable<System.DateTime> TimeCreated { get; set; }
+        
+        /// <value>
+        /// The date and time of the report update in Data Safe.
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
         /// The current state of the audit report.
         /// </value>
         /// <remarks>
@@ -113,6 +125,13 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ReportType> Type { get; set; }
+        
+        /// <value>
+        /// Specifies the name of a resource that provides data for the report. For example alerts, events.
+        /// </value>
+        [JsonProperty(PropertyName = "dataSource")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ReportDefinitionDataSource> DataSource { get; set; }
         
         /// <value>
         /// Details about the current state of the report in Data Safe.

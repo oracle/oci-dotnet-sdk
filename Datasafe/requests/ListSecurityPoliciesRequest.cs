@@ -89,6 +89,12 @@ namespace Oci.DatasafeService.Requests
         public System.Nullable<SecurityPolicyLifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// The type of the security policy.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "securityPolicyType")]
+        public System.Nullable<SecurityPolicy.SecurityPolicyTypeEnum> SecurityPolicyType { get; set; }
+        
+        /// <value>
         /// An optional filter to return only resources that match the specified OCID of the security policy resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "securityPolicyId")]

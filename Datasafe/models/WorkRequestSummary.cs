@@ -125,6 +125,12 @@ namespace Oci.DatasafeService.Models
             UnsetSecurityAssessmentBaseline,
             [EnumMember(Value = "GENERATE_SECURITY_ASSESSMENT_REPORT")]
             GenerateSecurityAssessmentReport,
+            [EnumMember(Value = "PATCH_CHECKS")]
+            PatchChecks,
+            [EnumMember(Value = "UPDATE_FINDING_SEVERITY")]
+            UpdateFindingSeverity,
+            [EnumMember(Value = "APPLY_TEMPLATE")]
+            ApplyTemplate,
             [EnumMember(Value = "DELETE_SQL_FIREWALL_ALLOWED_SQL")]
             DeleteSqlFirewallAllowedSql,
             [EnumMember(Value = "BULK_CREATE_SQL_FIREWALL_ALLOWED_SQL")]
@@ -171,6 +177,10 @@ namespace Oci.DatasafeService.Models
             RefreshViolations,
             [EnumMember(Value = "CREATE_ARCHIVAL")]
             CreateArchival,
+            [EnumMember(Value = "CREATE_SECURITY_POLICY")]
+            CreateSecurityPolicy,
+            [EnumMember(Value = "DELETE_SECURITY_POLICY")]
+            DeleteSecurityPolicy,
             [EnumMember(Value = "UPDATE_SECURITY_POLICY")]
             UpdateSecurityPolicy,
             [EnumMember(Value = "CHANGE_SECURITY_POLICY_COMPARTMENT")]
@@ -215,6 +225,50 @@ namespace Oci.DatasafeService.Models
             UpdateAlert,
             [EnumMember(Value = "TARGET_ALERT_POLICY_ASSOCIATION")]
             TargetAlertPolicyAssociation,
+            [EnumMember(Value = "CREATE_TARGET_DATABASE_GROUP")]
+            CreateTargetDatabaseGroup,
+            [EnumMember(Value = "UPDATE_TARGET_DATABASE_GROUP")]
+            UpdateTargetDatabaseGroup,
+            [EnumMember(Value = "DELETE_TARGET_DATABASE_GROUP")]
+            DeleteTargetDatabaseGroup,
+            [EnumMember(Value = "CHANGE_TARGET_DATABASE_GROUP_COMPARTMENT")]
+            ChangeTargetDatabaseGroupCompartment,
+            [EnumMember(Value = "CREATE_SECURITY_POLICY_CONFIG")]
+            CreateSecurityPolicyConfig,
+            [EnumMember(Value = "UPDATE_SECURITY_POLICY_CONFIG")]
+            UpdateSecurityPolicyConfig,
+            [EnumMember(Value = "DELETE_SECURITY_POLICY_CONFIG")]
+            DeleteSecurityPolicyConfig,
+            [EnumMember(Value = "CHANGE_SECURITY_POLICY_CONFIG_COMPARTMENT")]
+            ChangeSecurityPolicyConfigCompartment,
+            [EnumMember(Value = "CREATE_UNIFIED_AUDIT_POLICY")]
+            CreateUnifiedAuditPolicy,
+            [EnumMember(Value = "UPDATE_UNIFIED_AUDIT_POLICY")]
+            UpdateUnifiedAuditPolicy,
+            [EnumMember(Value = "DELETE_UNIFIED_AUDIT_POLICY")]
+            DeleteUnifiedAuditPolicy,
+            [EnumMember(Value = "CHANGE_UNIFIED_AUDIT_POLICY_COMPARTMENT")]
+            ChangeUnifiedAuditPolicyCompartment,
+            [EnumMember(Value = "UPDATE_UNIFIED_AUDIT_POLICY_DEFINITION")]
+            UpdateUnifiedAuditPolicyDefinition,
+            [EnumMember(Value = "DELETE_UNIFIED_AUDIT_POLICY_DEFINITION")]
+            DeleteUnifiedAuditPolicyDefinition,
+            [EnumMember(Value = "CHANGE_UNIFIED_AUDIT_POLICY_DEFINITION_COMPARTMENT")]
+            ChangeUnifiedAuditPolicyDefinitionCompartment,
+            [EnumMember(Value = "FLEET_GENERATE_SECURITY_ASSESSMENT_REPORT")]
+            FleetGenerateSecurityAssessmentReport,
+            [EnumMember(Value = "FLEET_GENERATE_USER_ASSESSMENT_REPORT")]
+            FleetGenerateUserAssessmentReport,
+            [EnumMember(Value = "REFRESH_TARGET_DATABASE_GROUP_WITH_CHANGES")]
+            RefreshTargetDatabaseGroupWithChanges,
+            [EnumMember(Value = "FETCH_AUDIT_POLICY_DETAILS")]
+            FetchAuditPolicyDetails,
+            [EnumMember(Value = "BULK_CREATE_UNIFIED_AUDIT_POLICY")]
+            BulkCreateUnifiedAuditPolicy,
+            [EnumMember(Value = "SECURITY_POLICY_DEPLOYMENT_ACTIONS")]
+            SecurityPolicyDeploymentActions,
+            [EnumMember(Value = "PROVISION_SECURITY_POLICY_DEPLOYMENT")]
+            ProvisionSecurityPolicyDeployment,
             [EnumMember(Value = "CREATE_SENSITIVE_DATA_MODEL")]
             CreateSensitiveDataModel,
             [EnumMember(Value = "UPDATE_SENSITIVE_DATA_MODEL")]
@@ -281,6 +335,8 @@ namespace Oci.DatasafeService.Models
             PatchDifference,
             [EnumMember(Value = "APPLY_DIFFERENCE")]
             ApplyDifference,
+            [EnumMember(Value = "DELETE_MASKING_REPORT")]
+            DeleteMaskingReport,
             [EnumMember(Value = "MASK_POLICY_GENERATE_HEALTH_REPORT")]
             MaskPolicyGenerateHealthReport,
             [EnumMember(Value = "MASK_POLICY_DELETE_HEALTH_REPORT")]
@@ -291,6 +347,20 @@ namespace Oci.DatasafeService.Models
             UpdateSensitiveTypesExport,
             [EnumMember(Value = "BULK_CREATE_SENSITIVE_TYPES")]
             BulkCreateSensitiveTypes,
+            [EnumMember(Value = "CREATE_SENSITIVE_TYPE_GROUP")]
+            CreateSensitiveTypeGroup,
+            [EnumMember(Value = "UPDATE_SENSITIVE_TYPE_GROUP")]
+            UpdateSensitiveTypeGroup,
+            [EnumMember(Value = "DELETE_SENSITIVE_TYPE_GROUP")]
+            DeleteSensitiveTypeGroup,
+            [EnumMember(Value = "DELETE_SENSITIVE_TYPE")]
+            DeleteSensitiveType,
+            [EnumMember(Value = "PATCH_GROUPED_SENSITIVE_TYPES")]
+            PatchGroupedSensitiveTypes,
+            [EnumMember(Value = "CREATE_RELATION")]
+            CreateRelation,
+            [EnumMember(Value = "DELETE_RELATION")]
+            DeleteRelation,
             [EnumMember(Value = "ABORT_MASKING")]
             AbortMasking,
             [EnumMember(Value = "CREATE_SECURITY_POLICY_REPORT")]
@@ -320,7 +390,17 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "DELETE_ALERT_POLICY_RULE")]
             DeleteAlertPolicyRule,
             [EnumMember(Value = "CHANGE_ALERT_POLICY_COMPARTMENT")]
-            ChangeAlertPolicyCompartment
+            ChangeAlertPolicyCompartment,
+            [EnumMember(Value = "UPDATE_TARGET_GROUP_AUDIT_PROFILE")]
+            UpdateTargetGroupAuditProfile,
+            [EnumMember(Value = "CREATE_ATTRIBUTE_SET")]
+            CreateAttributeSet,
+            [EnumMember(Value = "UPDATE_ATTRIBUTE_SET")]
+            UpdateAttributeSet,
+            [EnumMember(Value = "DELETE_ATTRIBUTE_SET")]
+            DeleteAttributeSet,
+            [EnumMember(Value = "CHANGE_ATTRIBUTE_SET_COMPARTMENT")]
+            ChangeAttributeSetCompartment
         };
 
         /// <value>

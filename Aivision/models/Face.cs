@@ -54,5 +54,11 @@ namespace Oci.AivisionService.Models
         [JsonProperty(PropertyName = "landmarks")]
         public System.Collections.Generic.List<Landmark> Landmarks { get; set; }
         
+        /// <value>
+        /// The facial feature vectors of detected faces
+        /// </value>
+        [JsonProperty(PropertyName = "embeddings")]
+        public System.Collections.Generic.List<float> Embeddings { get; set; }
+        
     }
 }

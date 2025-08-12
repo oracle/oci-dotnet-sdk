@@ -34,6 +34,40 @@ namespace Oci.AivisionService.Models
       [EnumMember(Value = "DELETE_MODEL")]
       DeleteModel,
       [EnumMember(Value = "MOVE_MODEL")]
-      MoveModel
+      MoveModel,
+      [EnumMember(Value = "ADD_STREAM_SOURCE")]
+      AddStreamSource,
+      [EnumMember(Value = "UPDATE_STREAM_SOURCE")]
+      UpdateStreamSource,
+      [EnumMember(Value = "DELETE_STREAM_SOURCE")]
+      DeleteStreamSource,
+      [EnumMember(Value = "MOVE_STREAM_SOURCE")]
+      MoveStreamSource,
+      [EnumMember(Value = "CREATE_STREAM_JOB")]
+      CreateStreamJob,
+      [EnumMember(Value = "DELETE_STREAM_JOB")]
+      DeleteStreamJob,
+      [EnumMember(Value = "UPDATE_STREAM_JOB")]
+      UpdateStreamJob,
+      [EnumMember(Value = "START_STREAM_JOB")]
+      StartStreamJob,
+      [EnumMember(Value = "STOP_STREAM_JOB")]
+      StopStreamJob,
+      [EnumMember(Value = "MOVE_STREAM_JOB")]
+      MoveStreamJob,
+      [EnumMember(Value = "ADD_STREAM_GROUP")]
+      AddStreamGroup,
+      [EnumMember(Value = "UPDATE_STREAM_GROUP")]
+      UpdateStreamGroup,
+      [EnumMember(Value = "DELETE_STREAM_GROUP")]
+      DeleteStreamGroup,
+      [EnumMember(Value = "CREATE_VISION_PRIVATE_ENDPOINT")]
+      CreateVisionPrivateEndpoint,
+      [EnumMember(Value = "UPDATE_VISION_PRIVATE_ENDPOINT")]
+      UpdateVisionPrivateEndpoint,
+      [EnumMember(Value = "DELETE_VISION_PRIVATE_ENDPOINT")]
+      DeleteVisionPrivateEndpoint,
+      [EnumMember(Value = "MOVE_VISION_PRIVATE_ENDPOINT")]
+      MoveVisionPrivateEndpoint
   }
 }

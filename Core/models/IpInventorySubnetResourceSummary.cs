@@ -120,6 +120,12 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "assignedResourceName")]
         public string AssignedResourceName { get; set; }
+        
+        /// <value>
+        /// Primary flag for IP Resource
+        /// </value>
+        [JsonProperty(PropertyName = "isPrimary")]
+        public System.Nullable<bool> IsPrimary { get; set; }
                 ///
         /// <value>
         /// Type of the resource.

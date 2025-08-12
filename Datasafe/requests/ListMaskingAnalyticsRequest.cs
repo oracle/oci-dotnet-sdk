@@ -46,7 +46,11 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "targetId")]
             TargetId,
             [EnumMember(Value = "policyId")]
-            PolicyId
+            PolicyId,
+            [EnumMember(Value = "targetIdAndPolicyId")]
+            TargetIdAndPolicyId,
+            [EnumMember(Value = "sensitiveTypeId")]
+            SensitiveTypeId
         };
 
         /// <value>
@@ -66,6 +70,54 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "maskingPolicyId")]
         public string MaskingPolicyId { get; set; }
+        
+        /// <value>
+        /// A filter to return only items related to a specific sensitive type OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sensitiveTypeId")]
+        public string SensitiveTypeId { get; set; }
+        
+        /// <value>
+        /// A filter to return the target database group that matches the specified OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
+        
+        ///
+        /// <value>
+        /// The field to sort by. You can specify only one sorting parameter (sortOrder). The default order for all the fields is ascending.
+        /// 
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "timeLastMasked")]
+            TimeLastMasked
+        };
+
+        /// <value>
+        /// The field to sort by. You can specify only one sorting parameter (sortOrder). The default order for all the fields is ascending.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        ///
+        /// <value>
+        /// The sort order to use, either ascending (ASC) or descending (DESC).
+        /// </value>
+        ///
+        public enum SortOrderEnum {
+            [EnumMember(Value = "ASC")]
+            Asc,
+            [EnumMember(Value = "DESC")]
+            Desc
+        };
+
+        /// <value>
+        /// The sort order to use, either ascending (ASC) or descending (DESC).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
+        public System.Nullable<SortOrderEnum> SortOrder { get; set; }
         
         /// <value>
         /// For list pagination. The maximum number of items to return per page in a paginated \"List\" call. For details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/usingapi.htm#nine).

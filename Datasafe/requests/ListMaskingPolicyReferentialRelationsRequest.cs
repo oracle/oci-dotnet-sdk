@@ -118,10 +118,8 @@ namespace Oci.DatasafeService.Requests
             RelationType,
             [EnumMember(Value = "schemaName")]
             SchemaName,
-            [EnumMember(Value = "tableName")]
-            TableName,
-            [EnumMember(Value = "columnName")]
-            ColumnName
+            [EnumMember(Value = "objectName")]
+            ObjectName
         };
 
         /// <value>

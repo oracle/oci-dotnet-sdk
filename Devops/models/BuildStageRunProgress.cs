@@ -39,7 +39,9 @@ namespace Oci.DevopsService.Models
             [EnumMember(Value = null)]
             UnknownEnumValue,
             [EnumMember(Value = "OL7_X86_64_STANDARD_10")]
-            Ol7X8664Standard10
+            Ol7X8664Standard10,
+            [EnumMember(Value = "OL8_X86_64_STANDARD_10")]
+            Ol8X8664Standard10
         };
 
         /// <value>

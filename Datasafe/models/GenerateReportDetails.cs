@@ -38,6 +38,12 @@ namespace Oci.DatasafeService.Models
         public System.Collections.Generic.List<string> TargetIds { get; set; }
         
         /// <value>
+        /// Array of target group OCIDs.
+        /// </value>
+        [JsonProperty(PropertyName = "targetGroupIds")]
+        public System.Collections.Generic.List<string> TargetGroupIds { get; set; }
+        
+        /// <value>
         /// The description of the report to be generated
         /// </value>
         [JsonProperty(PropertyName = "description")]

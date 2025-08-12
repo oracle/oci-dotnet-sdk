@@ -339,6 +339,18 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<AuditTypeEnum> AuditType { get; set; }
         
         /// <value>
+        /// The user ID of the external user of the audit event.
+        /// </value>
+        [JsonProperty(PropertyName = "externalUserId")]
+        public string ExternalUserId { get; set; }
+        
+        /// <value>
+        /// The user on whom the GRANT/REVOKE/AUDIT/NOAUDIT statement was executed.
+        /// </value>
+        [JsonProperty(PropertyName = "targetUser")]
+        public string TargetUser { get; set; }
+        
+        /// <value>
         /// The secondary id assigned for the peer database registered with Data Safe.
         /// </value>
         [JsonProperty(PropertyName = "peerTargetDatabaseKey")]

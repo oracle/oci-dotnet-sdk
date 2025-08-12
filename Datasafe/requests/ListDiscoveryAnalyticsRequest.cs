@@ -70,6 +70,48 @@ namespace Oci.DatasafeService.Requests
         public string TargetId { get; set; }
         
         /// <value>
+        /// A filter to return the target database group that matches the specified OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
+        
+        ///
+        /// <value>
+        /// The field to sort by. You can specify only one sorting parameter (sortOrder). The default order for all the fields is ascending.
+        /// 
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "timeLastDiscovered")]
+            TimeLastDiscovered
+        };
+
+        /// <value>
+        /// The field to sort by. You can specify only one sorting parameter (sortOrder). The default order for all the fields is ascending.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        ///
+        /// <value>
+        /// The sort order to use, either ascending (ASC) or descending (DESC).
+        /// </value>
+        ///
+        public enum SortOrderEnum {
+            [EnumMember(Value = "ASC")]
+            Asc,
+            [EnumMember(Value = "DESC")]
+            Desc
+        };
+
+        /// <value>
+        /// The sort order to use, either ascending (ASC) or descending (DESC).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
+        public System.Nullable<SortOrderEnum> SortOrder { get; set; }
+        
+        /// <value>
         /// A filter to return only the resources that match the specified sensitive data model OCID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sensitiveDataModelId")]
@@ -106,5 +148,11 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isCommon")]
         public System.Nullable<bool> IsCommon { get; set; }
+        
+        /// <value>
+        /// An optional filter to return only resources that match the specified OCID of the sensitive type group resource.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sensitiveTypeGroupId")]
+        public string SensitiveTypeGroupId { get; set; }
     }
 }

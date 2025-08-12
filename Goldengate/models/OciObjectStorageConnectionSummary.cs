@@ -79,7 +79,16 @@ namespace Oci.GoldengateService.Models
         public string PrivateKeyPassphraseSecretId { get; set; }
         
         /// <value>
-        /// Indicates that the user intents to connect to the instance through resource principal.
+        /// The fingerprint of the API Key of the user specified by the userId.
+        /// See documentation: https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "publicKeyFingerprint")]
+        public string PublicKeyFingerprint { get; set; }
+        
+        /// <value>
+        /// Specifies that the user intends to authenticate to the instance using a resource principal.
+        /// Default: false
         /// 
         /// </value>
         [JsonProperty(PropertyName = "shouldUseResourcePrincipal")]

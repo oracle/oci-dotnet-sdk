@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details relevant to the support ticket.
+    /// Details relevant to the support request.
     /// 
     /// </summary>
     public class CreateTicketDetails 
     {
                 ///
         /// <value>
-        /// The severity of the support ticket.
+        /// The severity of the support request.
         /// </value>
         ///
         public enum SeverityEnum {
@@ -38,7 +38,7 @@ namespace Oci.CimsService.Models
         };
 
         /// <value>
-        /// The severity of the support ticket.
+        /// The severity of the support request.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,7 +55,7 @@ namespace Oci.CimsService.Models
         public System.Collections.Generic.List<CreateResourceDetails> ResourceList { get; set; }
         
         /// <value>
-        /// The title of the support ticket. Avoid entering confidential information.
+        /// The title of the support request. Avoid entering confidential information.
         /// </value>
         /// <remarks>
         /// Required
@@ -65,7 +65,9 @@ namespace Oci.CimsService.Models
         public string Title { get; set; }
         
         /// <value>
-        /// The description of the support ticket. Avoid entering confidential information.
+        /// <b>Important</b>: On January 27, 2026, the <b>Max Length</b> value will change to 1500.
+        /// The description of the support request. Avoid entering confidential information.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

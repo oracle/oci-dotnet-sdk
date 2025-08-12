@@ -49,6 +49,51 @@ namespace Oci.DatasafeService.Models
         public string SecurityPolicyDeploymentId { get; set; }
         
         /// <value>
+        /// The OCID of the target on which the security policy is deployed.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TargetId is required.")]
+        [JsonProperty(PropertyName = "targetId")]
+        public string TargetId { get; set; }
+                ///
+        /// <value>
+        /// The security policy entry type. Allowed values:
+        /// - FIREWALL_POLICY - The SQL Firewall policy entry type.
+        /// - AUDIT_POLICY - The audit policy entry type.
+        /// - CONFIG - Config changes deployment.
+        /// 
+        /// </value>
+        ///
+        public enum EntryTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "FIREWALL_POLICY")]
+            FirewallPolicy,
+            [EnumMember(Value = "AUDIT_POLICY")]
+            AuditPolicy,
+            [EnumMember(Value = "CONFIG")]
+            Config
+        };
+
+        /// <value>
+        /// The security policy entry type. Allowed values:
+        /// - FIREWALL_POLICY - The SQL Firewall policy entry type.
+        /// - AUDIT_POLICY - The audit policy entry type.
+        /// - CONFIG - Config changes deployment.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "EntryType is required.")]
+        [JsonProperty(PropertyName = "entryType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<EntryTypeEnum> EntryType { get; set; }
+        
+        /// <value>
         /// The current deployment status of the security policy deployment and the security policy entry associated.
         /// </value>
         /// <remarks>
@@ -58,6 +103,12 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "deploymentStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SecurityPolicyEntryStateDeploymentStatus> DeploymentStatus { get; set; }
+        
+        /// <value>
+        /// Details about the current deployment status.
+        /// </value>
+        [JsonProperty(PropertyName = "deploymentStatusDetails")]
+        public string DeploymentStatusDetails { get; set; }
         
     }
 }

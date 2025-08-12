@@ -59,7 +59,7 @@ namespace Oci.DatasafeService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// The OCID of the target where the security policy is deployed.
+        /// The OCID of the target/target group where the security policy is deployed.
         /// </value>
         /// <remarks>
         /// Required
@@ -67,6 +67,33 @@ namespace Oci.DatasafeService.Models
         [Required(ErrorMessage = "TargetId is required.")]
         [JsonProperty(PropertyName = "targetId")]
         public string TargetId { get; set; }
+                ///
+        /// <value>
+        /// Indicates whether the security policy deployment is for a target database or a target database group.
+        /// </value>
+        ///
+        public enum TargetTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "TARGET_DATABASE")]
+            TargetDatabase,
+            [EnumMember(Value = "TARGET_DATABASE_GROUP")]
+            TargetDatabaseGroup
+        };
+
+        /// <value>
+        /// Indicates whether the security policy deployment is for a target database or a target database group.
+        /// </value>
+        [JsonProperty(PropertyName = "targetType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<TargetTypeEnum> TargetType { get; set; }
+        
+        /// <value>
+        /// The last date and time the security policy was deployed, in the format defined by RFC3339.
+        /// </value>
+        [JsonProperty(PropertyName = "timeDeployed")]
+        public System.Nullable<System.DateTime> TimeDeployed { get; set; }
         
         /// <value>
         /// The OCID of the security policy corresponding to the security policy deployment.

@@ -54,17 +54,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "JobConfigurationDetails is required.")]
         [JsonProperty(PropertyName = "jobConfigurationDetails")]
         public JobConfigurationDetails JobConfigurationDetails { get; set; }
         
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "JobInfrastructureConfigurationDetails is required.")]
         [JsonProperty(PropertyName = "jobInfrastructureConfigurationDetails")]
         public JobInfrastructureConfigurationDetails JobInfrastructureConfigurationDetails { get; set; }
         
@@ -79,6 +71,9 @@ namespace Oci.DatascienceService.Models
         /// </value>
         [JsonProperty(PropertyName = "jobStorageMountConfigurationDetailsList")]
         public System.Collections.Generic.List<StorageMountConfigurationDetails> JobStorageMountConfigurationDetailsList { get; set; }
+        
+        [JsonProperty(PropertyName = "jobNodeConfigurationDetails")]
+        public JobNodeConfigurationDetails JobNodeConfigurationDetails { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).

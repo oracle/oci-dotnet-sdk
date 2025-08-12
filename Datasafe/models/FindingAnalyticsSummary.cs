@@ -17,7 +17,7 @@ namespace Oci.DatasafeService.Models
 {
     /// <summary>
     /// The summary of information about the analytics data of findings or top findings. 
-    /// It includes details such as metric name, findinKey, 
+    /// It includes details such as metric name, findingKey, 
     /// title (topFindingCategory for top finding), severity (topFindingStatus for top finding) and targetId.
     /// 
     /// </summary>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details about the resource that the support ticket relates to.
+    /// Details about the resource that the support request relates to.
     /// 
     /// </summary>
     public class CreateResourceDetails 

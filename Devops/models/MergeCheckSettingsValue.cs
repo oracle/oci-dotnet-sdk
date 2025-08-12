@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DevopsService.Models
 {
   /// <summary>
-  /// Value for a given merge check setting. Can be ENABLED or DISABLED.
+  /// Value for a given merge check setting. Can be ENABLED or DISABLED. Can be INHERITED at repositoryLevel.
   /// </summary>
   public enum MergeCheckSettingsValue {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

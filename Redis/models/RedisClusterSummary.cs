@@ -159,6 +159,12 @@ namespace Oci.RedisService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// The ID of the corresponding OCI Cache Config Set for the cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "ociCacheConfigSetId")]
+        public string OciCacheConfigSetId { get; set; }
+        
+        /// <value>
         /// Specifies whether the cluster is sharded or non-sharded.
         /// </value>
         [JsonProperty(PropertyName = "clusterMode")]

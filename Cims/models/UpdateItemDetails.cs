@@ -49,6 +49,9 @@ namespace Oci.CimsService.Models
                 case "activity":
                     obj = new UpdateActivityItemDetails();
                     break;
+                case "contact":
+                    obj = new UpdateContactItemDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

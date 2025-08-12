@@ -66,6 +66,12 @@ namespace Oci.DevopsService.Models
         public string CommitterEmail { get; set; }
         
         /// <value>
+        /// Id of the PullRequest that this commit was merged with.
+        /// </value>
+        [JsonProperty(PropertyName = "mergedPullRequestId")]
+        public string MergedPullRequestId { get; set; }
+        
+        /// <value>
         /// An array of parent commit IDs of created commit.
         /// </value>
         [JsonProperty(PropertyName = "parentCommitIds")]

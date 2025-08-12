@@ -54,5 +54,27 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "preserveDataVolumesCreatedAtLaunch")]
         public System.Nullable<bool> PreserveDataVolumesCreatedAtLaunch { get; set; }
+        
+        ///
+        /// <value>
+        /// This optional parameter overrides recycle level for hosts. The parameter can be used when hosts are associated
+        /// with a Capacity Reservation.
+        /// * `FULL_RECYCLE` - Does not skip host wipe. This is the default behavior.
+        /// 
+        /// </value>
+        ///
+        public enum RecycleLevelEnum {
+            [EnumMember(Value = "FULL_RECYCLE")]
+            FullRecycle
+        };
+
+        /// <value>
+        /// This optional parameter overrides recycle level for hosts. The parameter can be used when hosts are associated
+        /// with a Capacity Reservation.
+        /// * `FULL_RECYCLE` - Does not skip host wipe. This is the default behavior.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "recycleLevel")]
+        public System.Nullable<RecycleLevelEnum> RecycleLevel { get; set; }
     }
 }

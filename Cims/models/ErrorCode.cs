@@ -33,8 +33,6 @@ namespace Oci.CimsService.Models
       AuthFailed,
       [EnumMember(Value = "AUTHZ_FAILED")]
       AuthzFailed,
-      [EnumMember(Value = "CSI_NOT_AUTHORIZED")]
-      CsiNotAuthorized,
       [EnumMember(Value = "USER_POLICY_NOT_AUTHORIZED")]
       UserPolicyNotAuthorized,
       [EnumMember(Value = "EMAIL_NOT_VERIFIED")]
@@ -43,8 +41,6 @@ namespace Oci.CimsService.Models
       EmailNotFound,
       [EnumMember(Value = "OCI_EMAIL_NOT_FOUND")]
       OciEmailNotFound,
-      [EnumMember(Value = "MOS_EMAIL_NOT_FOUND")]
-      MosEmailNotFound,
       [EnumMember(Value = "IDCS_EMAIL_NOT_VALID")]
       IdcsEmailNotValid,
       [EnumMember(Value = "INVALID_PATH")]
@@ -65,8 +61,6 @@ namespace Oci.CimsService.Models
       IdpScimNotSetup,
       [EnumMember(Value = "INCIDENT_NOT_FOUND")]
       IncidentNotFound,
-      [EnumMember(Value = "INVALID_USER_CSI")]
-      InvalidUserCsi,
       [EnumMember(Value = "DATA_ALREADY_EXISTS")]
       DataAlreadyExists,
       [EnumMember(Value = "AUTH_USER_NOT_MATCHING")]
@@ -85,19 +79,27 @@ namespace Oci.CimsService.Models
       ProfileAccountNotVerified,
       [EnumMember(Value = "SUPPORT_ACCOUNT_NOT_FOUND")]
       SupportAccountNotFound,
-      [EnumMember(Value = "SUPPORT_ACCOUNT_PENDING_CSI_APPROVAL")]
-      SupportAccountPendingCsiApproval,
       [EnumMember(Value = "FREE_TIER_CUSTOMER_SLI_UNSUPPORTED")]
       FreeTierCustomerSliUnsupported,
       [EnumMember(Value = "PROFILE_ACCOUNT_VERIFIED")]
       ProfileAccountVerified,
-      [EnumMember(Value = "PROFILE_VERIFIED_CSI_REQUEST_PENDING")]
-      ProfileVerifiedCsiRequestPending,
-      [EnumMember(Value = "PROFILE_VERIFIED_CSI_REQUEST_NOT_FOUND")]
-      ProfileVerifiedCsiRequestNotFound,
       [EnumMember(Value = "CREATE_PROFILE_ORGANIZATION_NAME_INVALID")]
       CreateProfileOrganizationNameInvalid,
       [EnumMember(Value = "CREATE_PROFILE_EMAIL_INVALID")]
-      CreateProfileEmailInvalid
+      CreateProfileEmailInvalid,
+      [EnumMember(Value = "NOTAUTHENTICATED")]
+      Notauthenticated,
+      [EnumMember(Value = "CMOS_UNAUTHORIZED_PERMISSION")]
+      CmosUnauthorizedPermission,
+      [EnumMember(Value = "CMOS_SUPPORT_ACCOUNT_EXISTS")]
+      CmosSupportAccountExists,
+      [EnumMember(Value = "CMOS_INVALID_USER_GROUP_ID")]
+      CmosInvalidUserGroupId,
+      [EnumMember(Value = "UNSUPPORTED_OPERATION")]
+      UnsupportedOperation,
+      [EnumMember(Value = "NOTAUTHORIZEDORNOTFOUND")]
+      Notauthorizedornotfound,
+      [EnumMember(Value = "LIST_SUBSCRIPTION_FAILURE")]
+      ListSubscriptionFailure
   }
 }

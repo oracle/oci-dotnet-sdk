@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CimsService.Models
 {
     /// <summary>
-    /// Details about the status of the support ticket.
+    /// Details about the status of the support request.
     /// </summary>
     public class Status 
     {

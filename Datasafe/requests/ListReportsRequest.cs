@@ -183,5 +183,11 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
         public System.Nullable<ReportType> Type { get; set; }
+        
+        /// <value>
+        /// Specifies the name of a resource that provides data for the report. For example  alerts, events.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dataSource")]
+        public System.Nullable<ReportDefinitionDataSource> DataSource { get; set; }
     }
 }

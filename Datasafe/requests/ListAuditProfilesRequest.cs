@@ -76,6 +76,18 @@ namespace Oci.DatasafeService.Requests
         public string TargetId { get; set; }
         
         /// <value>
+        /// A filter to return the target database group that matches the specified OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
+        
+        /// <value>
+        /// A optional filter to return only resources that belong to the specified audit profile type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetType")]
+        public System.Nullable<AuditProfileTargetType> TargetType { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that match the specified display name.
         /// 
         /// </value>

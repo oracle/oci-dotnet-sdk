@@ -102,7 +102,7 @@ namespace Oci.DatasafeService.Requests
         /// text, date, and time values must be enclosed in quotation marks, with date and time values using ISO-8601 format.
         /// (Numeric and boolean values should not be quoted.)
         /// <br/>
-        /// **Example: ** (operationTime ge &quot;2021-06-04T01-00-26&quot;) and (eventName eq &quot;LOGON&quot;)The attrExp or the field (for example, operationTime and eventName in above example) which is used to filter can be any of the fields returned by AuditEventSummary.adminUser, commonUser, sensitiveActivity, dsActivity can only have eq operation and value 1.These define admin user activity, common user activity, sensitive data activity and data safe activity**
+        /// **Example: ** (auditEventTime ge &quot;2021-06-04T01:00:26.000Z&quot;) and (eventName eq &quot;LOGON&quot;)The attrExp or the field (for example, operationTime and eventName in above example) which is used to filter can be any of the fields returned by AuditEventSummary.adminUser, commonUser, sensitiveActivity, dsActivity can only have eq operation and value 1.These define admin user activity, common user activity, sensitive data activity and data safe activity**
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "scimQuery")]
         public string ScimQuery { get; set; }
@@ -176,7 +176,21 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "grants")]
             Grants,
             [EnumMember(Value = "revokes")]
-            Revokes
+            Revokes,
+            [EnumMember(Value = "objectOwner")]
+            ObjectOwner,
+            [EnumMember(Value = "auditPolicies")]
+            AuditPolicies,
+            [EnumMember(Value = "objectName")]
+            ObjectName,
+            [EnumMember(Value = "osUserName")]
+            OsUserName,
+            [EnumMember(Value = "errorCode")]
+            ErrorCode,
+            [EnumMember(Value = "clientIp")]
+            ClientIp,
+            [EnumMember(Value = "externalUserId")]
+            ExternalUserId
         };
 
         /// <value>
@@ -237,7 +251,21 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "auditType")]
             AuditType,
             [EnumMember(Value = "eventName")]
-            EventName
+            EventName,
+            [EnumMember(Value = "objectOwner")]
+            ObjectOwner,
+            [EnumMember(Value = "auditPolicies")]
+            AuditPolicies,
+            [EnumMember(Value = "objectName")]
+            ObjectName,
+            [EnumMember(Value = "osUserName")]
+            OsUserName,
+            [EnumMember(Value = "errorCode")]
+            ErrorCode,
+            [EnumMember(Value = "clientIp")]
+            ClientIp,
+            [EnumMember(Value = "externalUserId")]
+            ExternalUserId
         };
 
         /// <value>
@@ -303,7 +331,21 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "clientId")]
             ClientId,
             [EnumMember(Value = "auditType")]
-            AuditType
+            AuditType,
+            [EnumMember(Value = "objectOwner")]
+            ObjectOwner,
+            [EnumMember(Value = "auditPolicies")]
+            AuditPolicies,
+            [EnumMember(Value = "objectName")]
+            ObjectName,
+            [EnumMember(Value = "osUserName")]
+            OsUserName,
+            [EnumMember(Value = "errorCode")]
+            ErrorCode,
+            [EnumMember(Value = "clientIp")]
+            ClientIp,
+            [EnumMember(Value = "externalUserId")]
+            ExternalUserId
         };
 
         /// <value>

@@ -39,5 +39,13 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "isAutoPurgeEnabled")]
         public System.Nullable<bool> IsAutoPurgeEnabled { get; set; }
         
+        /// <value>
+        /// Indicates if the Datasafe updates last archive time on target database. If isAutoPurgeEnabled field
+        /// is enabled, this field must be true.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "canUpdateLastArchiveTimeOnTarget")]
+        public System.Nullable<bool> CanUpdateLastArchiveTimeOnTarget { get; set; }
+        
     }
 }

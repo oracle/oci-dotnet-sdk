@@ -71,5 +71,11 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "count")]
         public System.Nullable<long> Count { get; set; }
         
+        /// <value>
+        /// The date and time the target database was last masked using a masking policy, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastMasked")]
+        public System.Nullable<System.DateTime> TimeLastMasked { get; set; }
+        
     }
 }

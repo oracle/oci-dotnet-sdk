@@ -128,6 +128,18 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "logDetails")]
         public JobRunLogDetails LogDetails { get; set; }
         
+        [JsonProperty(PropertyName = "jobInfrastructureConfigurationOverrideDetails")]
+        public JobInfrastructureConfigurationDetails JobInfrastructureConfigurationOverrideDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "jobNodeConfigurationOverrideDetails")]
+        public JobNodeConfigurationDetails JobNodeConfigurationOverrideDetails { get; set; }
+        
+        /// <value>
+        /// Collection of NodeGroupDetails
+        /// </value>
+        [JsonProperty(PropertyName = "nodeGroupDetailsList")]
+        public System.Collections.Generic.List<NodeGroupDetails> NodeGroupDetailsList { get; set; }
+        
         /// <value>
         /// The state of the job run.
         /// </value>

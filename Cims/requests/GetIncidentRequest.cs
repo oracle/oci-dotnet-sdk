@@ -20,7 +20,7 @@ namespace Oci.CimsService.Requests
     {
         
         /// <value>
-        /// Unique identifier for the support ticket.
+        /// Unique identifier for the support request.
         /// </value>
         /// <remarks>
         /// Required

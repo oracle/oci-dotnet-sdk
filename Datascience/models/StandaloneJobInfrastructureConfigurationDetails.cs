@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// The standalone job infrastructure configuration.
+    /// This type should only be used at the top level infrastructure configuration field for configuring single-node jobs.
     /// </summary>
     public class StandaloneJobInfrastructureConfigurationDetails : JobInfrastructureConfigurationDetails
     {

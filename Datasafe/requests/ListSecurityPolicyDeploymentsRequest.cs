@@ -101,6 +101,12 @@ namespace Oci.DatasafeService.Requests
         public string TargetId { get; set; }
         
         /// <value>
+        /// A optional filter to return only resources that belong to the specified target type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetType")]
+        public System.Nullable<SecurityPolicyDeployment.TargetTypeEnum> TargetType { get; set; }
+        
+        /// <value>
         /// An optional filter to return only resources that match the specified OCID of the security policy resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "securityPolicyId")]
