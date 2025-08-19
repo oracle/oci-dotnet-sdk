@@ -54,5 +54,8 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "logprobs")]
         public Logprobs Logprobs { get; set; }
         
+        [JsonProperty(PropertyName = "usage")]
+        public Usage Usage { get; set; }
+        
     }
 }
