@@ -213,7 +213,7 @@ namespace Oci.MulticloudService
                     ServiceName = "Metadata",
                     OperationName = "ListExternalLocationDetailsMetadata",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/multicloud-omhub-cp/20180828/ExternalLocationsMetadatumCollection/ListExternalLocationDetailsMetadata",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -318,7 +318,7 @@ namespace Oci.MulticloudService
                     ServiceName = "Metadata",
                     OperationName = "ListExternalLocationMappingMetadata",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/multicloud-omhub-cp/20180828/ExternalLocationMappingMetadatumSummaryCollection/ListExternalLocationMappingMetadata",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -397,7 +397,7 @@ namespace Oci.MulticloudService
                     ServiceName = "Metadata",
                     OperationName = "ListExternalLocationSummariesMetadata",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/multicloud-omhub-cp/20180828/ExternalLocationSummariesMetadatumSummaryCollection/ListExternalLocationSummariesMetadata",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

@@ -37,6 +37,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "isThinClone")]
         public System.Nullable<bool> IsThinClone { get; set; }
         
+        /// <value>
+        /// The OCID of the Source Pluggable Database Snapshot id.
+        /// </value>
+        [JsonProperty(PropertyName = "sourcePluggableDatabaseSnapshotId")]
+        public string SourcePluggableDatabaseSnapshotId { get; set; }
+        
         [JsonProperty(PropertyName = "creationType")]
         private readonly string creationType = "LOCAL_CLONE_PDB";
     }

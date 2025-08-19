@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// The tool choice for a function.
+    /// The tool choice for a function. The model will generate the parameters for user to call the function.
     /// </summary>
     public class ToolChoiceFunction : ToolChoice
     {

@@ -41,6 +41,9 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "choices")]
         public System.Collections.Generic.List<ChatChoice> Choices { get; set; }
         
+        [JsonProperty(PropertyName = "usage")]
+        public Usage Usage { get; set; }
+        
         [JsonProperty(PropertyName = "apiFormat")]
         private readonly string apiFormat = "GENERIC";
     }

@@ -26,12 +26,70 @@ namespace Oci.GenerativeaiinferenceService.Models
         /// </value>
         [JsonProperty(PropertyName = "messages")]
         public System.Collections.Generic.List<Message> Messages { get; set; }
+                ///
+        /// <value>
+        /// Constrains effort on reasoning for reasoning models. Currently supported values are minimal, low, medium, and high. Reducing reasoning effort can result in faster responses and fewer tokens used on reasoning in a response.
+        /// 
+        /// </value>
+        ///
+        public enum ReasoningEffortEnum {
+            [EnumMember(Value = "MINIMAL")]
+            Minimal,
+            [EnumMember(Value = "LOW")]
+            Low,
+            [EnumMember(Value = "MEDIUM")]
+            Medium,
+            [EnumMember(Value = "HIGH")]
+            High
+        };
+
+        /// <value>
+        /// Constrains effort on reasoning for reasoning models. Currently supported values are minimal, low, medium, and high. Reducing reasoning effort can result in faster responses and fewer tokens used on reasoning in a response.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "reasoningEffort")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ReasoningEffortEnum> ReasoningEffort { get; set; }
+                ///
+        /// <value>
+        /// Constrains the verbosity of the model's response. Lower values will result in more concise responses, while higher values will result in more verbose responses.
+        /// 
+        /// </value>
+        ///
+        public enum VerbosityEnum {
+            [EnumMember(Value = "LOW")]
+            Low,
+            [EnumMember(Value = "MEDIUM")]
+            Medium,
+            [EnumMember(Value = "HIGH")]
+            High
+        };
+
+        /// <value>
+        /// Constrains the verbosity of the model's response. Lower values will result in more concise responses, while higher values will result in more verbose responses.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "verbosity")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<VerbosityEnum> Verbosity { get; set; }
+        
+        /// <value>
+        /// Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format, and querying for objects via API or the dashboard.
+        /// <br/>
+        /// Keys are strings with a maximum length of 64 characters. Values are strings with a maximum length of 512 characters.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "metadata")]
+        public System.Object Metadata { get; set; }
         
         /// <value>
         /// Whether to stream back partial progress. If set to true, as tokens become available, they are sent as data-only server-sent events.
         /// </value>
         [JsonProperty(PropertyName = "isStream")]
         public System.Nullable<bool> IsStream { get; set; }
+        
+        [JsonProperty(PropertyName = "streamOptions")]
+        public StreamOptions StreamOptions { get; set; }
         
         /// <value>
         /// The number of of generated texts that will be returned.
@@ -110,12 +168,18 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Nullable<int> LogProbs { get; set; }
         
         /// <value>
-        /// The maximum number of tokens that can be generated per output sequence. The token count of your prompt plus `maxTokens` must not exceed the model's context length.
-        /// Not setting a value for maxTokens results in the possible use of model's full context length.
+        /// The maximum number of tokens that can be generated per output sequence. The token count of your prompt plus maxTokens must not exceed the model's context length. For on-demand inferencing, the response length is capped at 4,000 tokens for each run.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "maxTokens")]
         public System.Nullable<int> MaxTokens { get; set; }
+        
+        /// <value>
+        /// An upper bound for the number of tokens that can be generated for a completion, including visible output tokens and reasoning tokens.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maxCompletionTokens")]
+        public System.Nullable<int> MaxCompletionTokens { get; set; }
         
         /// <value>
         /// Modifies the likelihood of specified tokens that appear in the completion.
@@ -125,8 +189,20 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "logitBias")]
         public System.Object LogitBias { get; set; }
         
+        [JsonProperty(PropertyName = "prediction")]
+        public Prediction Prediction { get; set; }
+        
+        [JsonProperty(PropertyName = "responseFormat")]
+        public ResponseFormat ResponseFormat { get; set; }
+        
         [JsonProperty(PropertyName = "toolChoice")]
         public ToolChoice ToolChoice { get; set; }
+        
+        /// <value>
+        /// Whether to enable parallel function calling during tool use.
+        /// </value>
+        [JsonProperty(PropertyName = "isParallelToolCalls")]
+        public System.Nullable<bool> IsParallelToolCalls { get; set; }
         
         /// <value>
         /// A list of tools the model may call. Use this to provide a list of functions the model may generate JSON inputs for. A max of 128 functions are supported.

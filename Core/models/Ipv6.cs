@@ -93,6 +93,12 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "IpAddress is required.")]
         [JsonProperty(PropertyName = "ipAddress")]
         public string IpAddress { get; set; }
+        
+        /// <value>
+        /// Length of cidr range. Optional field to specify flexible cidr.
+        /// </value>
+        [JsonProperty(PropertyName = "cidrPrefixLength")]
+        public System.Nullable<int> CidrPrefixLength { get; set; }
                 ///
         /// <value>
         /// The IPv6's current state.

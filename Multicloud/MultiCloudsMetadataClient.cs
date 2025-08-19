@@ -106,7 +106,7 @@ namespace Oci.MulticloudService
                     ServiceName = "MultiCloudsMetadata",
                     OperationName = "GetMultiCloudMetadata",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/multicloud-omhub-cp/20180828/MultiCloudMetadata/GetMultiCloudMetadata",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -163,7 +163,7 @@ namespace Oci.MulticloudService
                     ServiceName = "MultiCloudsMetadata",
                     OperationName = "ListMultiCloudMetadata",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/multicloud-omhub-cp/20180828/MultiCloudMetadataCollection/ListMultiCloudMetadata",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
