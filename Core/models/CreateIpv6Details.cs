@@ -57,6 +57,12 @@ namespace Oci.CoreService.Models
         public string IpAddress { get; set; }
         
         /// <value>
+        /// Length of cidr range. Optional field to specify flexible cidr.
+        /// </value>
+        [JsonProperty(PropertyName = "cidrPrefixLength")]
+        public System.Nullable<int> CidrPrefixLength { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC to assign the IPv6 to. The
         /// IPv6 will be in the VNIC's subnet.
         /// 

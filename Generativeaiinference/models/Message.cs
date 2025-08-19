@@ -29,12 +29,14 @@ namespace Oci.GenerativeaiinferenceService.Models
         public enum RoleEnum {
             [EnumMember(Value = "SYSTEM")]
             System,
-            [EnumMember(Value = "USER")]
-            User,
             [EnumMember(Value = "ASSISTANT")]
             Assistant,
+            [EnumMember(Value = "USER")]
+            User,
             [EnumMember(Value = "TOOL")]
-            Tool
+            Tool,
+            [EnumMember(Value = "DEVELOPER")]
+            Developer
         };
 
         
@@ -78,6 +80,9 @@ namespace Oci.GenerativeaiinferenceService.Models
                     break;
                 case "TOOL":
                     obj = new ToolMessage();
+                    break;
+                case "DEVELOPER":
+                    obj = new DeveloperMessage();
                     break;
             }
             if (obj != null)

@@ -109,7 +109,7 @@ namespace Oci.MulticloudService
                     ServiceName = "OmhubResourceAnchor",
                     OperationName = "GetResourceAnchor",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/multicloud-omhub-cp/20180828/ResourceAnchor/GetResourceAnchor",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -166,7 +166,7 @@ namespace Oci.MulticloudService
                     ServiceName = "OmhubResourceAnchor",
                     OperationName = "ListResourceAnchors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/multicloud-omhub-cp/20180828/ResourceAnchorCollection/ListResourceAnchors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
