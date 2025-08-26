@@ -113,6 +113,18 @@ namespace Oci.CoreService.Models
         public System.Nullable<long> TotalHostCount { get; set; }
         
         /// <value>
+        /// The total number of available bare metal hosts located in this compute GPU memory fabric.
+        /// </value>
+        [JsonProperty(PropertyName = "availableHostCount")]
+        public System.Nullable<long> AvailableHostCount { get; set; }
+        
+        /// <value>
+        /// The total number of healthy bare metal hosts located in this compute GPU memory fabric.
+        /// </value>
+        [JsonProperty(PropertyName = "healthyHostCount")]
+        public System.Nullable<long> HealthyHostCount { get; set; }
+        
+        /// <value>
         /// The date and time that the compute GPU memory fabric record was created, in the format defined by [RFC3339]
         /// (https://tools.ietf.org/html/rfc3339).
         /// <br/>

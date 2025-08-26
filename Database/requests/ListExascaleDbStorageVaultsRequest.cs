@@ -92,6 +92,30 @@ namespace Oci.DatabaseService.Requests
         public string ClusterPlacementGroupId { get; set; }
         
         /// <value>
+        /// A filter to return only Exadata Database Storage Vaults which do not match the given attachedShapeAttributes
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "attachedShapeAttributesNotEqualTo")]
+        public string AttachedShapeAttributesNotEqualTo { get; set; }
+        
+        /// <value>
+        /// A filter to return only Exadata Database Storage Vaults which match the given attachedShapeAttributes or has null attachedShapeAttributes
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "attachedShapeAttributes")]
+        public string AttachedShapeAttributes { get; set; }
+        
+        /// <value>
+        /// A filter to return only Exadata Database Storage Vaults with associated Exadata VM Clusters less than or equal to the given count
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vmClusterCountLessThanOrEqualTo")]
+        public System.Nullable<int> VmClusterCountLessThanOrEqualTo { get; set; }
+        
+        /// <value>
+        /// A filter to return only Exadata Database Storage Vaults with associated Exadata VM Clusters greater than or equal to the given count
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "vmClusterCountGreaterThanOrEqualTo")]
+        public System.Nullable<int> VmClusterCountGreaterThanOrEqualTo { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that match the entire display name given. The match is not case sensitive.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]

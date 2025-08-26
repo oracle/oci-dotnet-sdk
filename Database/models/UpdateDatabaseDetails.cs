@@ -51,6 +51,9 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "newTdeWalletPassword")]
         public string NewTdeWalletPassword { get; set; }
         
+        [JsonProperty(PropertyName = "storageSizeDetails")]
+        public DatabaseStorageSizeDetails StorageSizeDetails { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).

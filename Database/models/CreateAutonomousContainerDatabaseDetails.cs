@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details to create an Oracle Autonomous Container Database.
+    /// Details to create an Autonomous Container Database (ACD).
     /// 
     /// </summary>
     public class CreateAutonomousContainerDatabaseDetails : CreateAutonomousContainerDatabaseBase

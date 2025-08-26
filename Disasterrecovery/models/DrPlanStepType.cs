@@ -128,6 +128,14 @@ namespace Oci.DisasterrecoveryService.Models
     /// - OBJECT_STORAGE_BUCKET_SWITCHOVER_SETUP_REVERSE_REPLICATION_STANDBY - A DR plan step to set up an object storage bucket reverse replication in the standby region during a switchover.
     /// - OBJECT_STORAGE_BUCKET_FAILOVER_DELETE_REPLICATION_STANDBY - A DR plan step to delete an object storage bucket replication in the standby region during a failover.
     /// - OBJECT_STORAGE_BUCKET_FAILOVER_SETUP_REVERSE_REPLICATION_STANDBY - A DR plan step to set up an object storage bucket reverse replication in the standby region during a failover.
+    /// - MYSQL_DB_SYSTEM_SWITCHOVER_PRECHECK - A precheck step for validating HeatWave MySQL DB System switchover.
+    /// - MYSQL_DB_SYSTEM_SWITCHOVER - A DR plan step to perform a HeatWave MySQL DB System switchover.
+    /// - MYSQL_DB_SYSTEM_FAILOVER_PRECHECK - A precheck step for validating HeatWave MySQL DB System failover.
+    /// - MYSQL_DB_SYSTEM_FAILOVER -  A DR plan step to perform a HeatWave MySQL DB System failover.
+    /// - MYSQL_DB_SYSTEM_START_DRILL_PRECHECK - A precheck step for validating HeatWave MySQL DB System start drill.
+    /// - MYSQL_DB_SYSTEM_START_DRILL - A DR plan step to perform a HeatWave MySQL DB System start drill.
+    /// - MYSQL_DB_SYSTEM_STOP_DRILL_PRECHECK - A precheck step for validating HeatWave MySQL DB System stop drill.
+    /// - MYSQL_DB_SYSTEM_STOP_DRILL - A DR plan step to perform a HeatWave MySQL DB System stop drill.
     /// 
   /// </summary>
   public enum DrPlanStepType {
@@ -361,6 +369,22 @@ namespace Oci.DisasterrecoveryService.Models
       [EnumMember(Value = "OBJECT_STORAGE_BUCKET_FAILOVER_DELETE_REPLICATION_STANDBY")]
       ObjectStorageBucketFailoverDeleteReplicationStandby,
       [EnumMember(Value = "OBJECT_STORAGE_BUCKET_FAILOVER_SETUP_REVERSE_REPLICATION_STANDBY")]
-      ObjectStorageBucketFailoverSetupReverseReplicationStandby
+      ObjectStorageBucketFailoverSetupReverseReplicationStandby,
+      [EnumMember(Value = "MYSQL_DB_SYSTEM_SWITCHOVER_PRECHECK")]
+      MysqlDbSystemSwitchoverPrecheck,
+      [EnumMember(Value = "MYSQL_DB_SYSTEM_SWITCHOVER")]
+      MysqlDbSystemSwitchover,
+      [EnumMember(Value = "MYSQL_DB_SYSTEM_FAILOVER_PRECHECK")]
+      MysqlDbSystemFailoverPrecheck,
+      [EnumMember(Value = "MYSQL_DB_SYSTEM_FAILOVER")]
+      MysqlDbSystemFailover,
+      [EnumMember(Value = "MYSQL_DB_SYSTEM_START_DRILL_PRECHECK")]
+      MysqlDbSystemStartDrillPrecheck,
+      [EnumMember(Value = "MYSQL_DB_SYSTEM_START_DRILL")]
+      MysqlDbSystemStartDrill,
+      [EnumMember(Value = "MYSQL_DB_SYSTEM_STOP_DRILL_PRECHECK")]
+      MysqlDbSystemStopDrillPrecheck,
+      [EnumMember(Value = "MYSQL_DB_SYSTEM_STOP_DRILL")]
+      MysqlDbSystemStopDrill
   }
 }

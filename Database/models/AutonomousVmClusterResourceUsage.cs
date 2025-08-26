@@ -88,6 +88,7 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// The amount of memory (in GBs) to be enabled per each CPU core.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }

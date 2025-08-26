@@ -38,7 +38,7 @@ namespace Oci.DatabaseService.Models
         public string OkvEndPointGroupName { get; set; }
                 ///
         /// <value>
-        /// The source of the database: Use `NONE` for creating a new Autonomous Container Database. Use `BACKUP_FROM_ID` for creating a new Autonomous Container Database from a specified backup.
+        /// The source of the database. Use `NONE` to create a new Autonomous Container Database (ACD). Use `BACKUP_FROM_ID` to create a new ACD from a specified backup.
         /// 
         /// </value>
         ///

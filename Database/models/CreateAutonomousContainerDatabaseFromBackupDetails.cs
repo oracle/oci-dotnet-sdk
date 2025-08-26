@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details to create an Oracle Autonomous Container Database by cloning from a backup of an existing Autonomous Container Database.
+    /// Details to create an Autonomous Container Database (ACD) by cloning a backup of an existing ACD.
     /// 
     /// </summary>
     public class CreateAutonomousContainerDatabaseFromBackupDetails : CreateAutonomousContainerDatabaseBase
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous Container Database Backup that you will clone to create a new Autonomous Container Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source ACD backup that you will clone to create a new ACD.
         /// </value>
         /// <remarks>
         /// Required

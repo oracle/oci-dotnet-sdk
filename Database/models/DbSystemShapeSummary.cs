@@ -57,7 +57,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "INTEL_FLEX_X9")]
             IntelFlexX9,
             [EnumMember(Value = "AMPERE_FLEX_A1")]
-            AmpereFlexA1
+            AmpereFlexA1,
+            [EnumMember(Value = "STANDARD_X86")]
+            StandardX86
         };
 
         /// <value>
@@ -217,6 +219,13 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "availableCoreCountPerNode")]
         public System.Nullable<int> AvailableCoreCountPerNode { get; set; }
+        
+        /// <value>
+        /// The shapeAttributes of the DB system shape.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shapeAttributes")]
+        public System.Collections.Generic.List<string> ShapeAttributes { get; set; }
         
     }
 }

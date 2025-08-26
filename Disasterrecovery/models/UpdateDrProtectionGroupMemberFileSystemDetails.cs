@@ -47,6 +47,14 @@ namespace Oci.DisasterrecoveryService.Models
         [JsonProperty(PropertyName = "destinationSnapshotPolicyId")]
         public string DestinationSnapshotPolicyId { get; set; }
         
+        /// <value>
+        /// The OCID of a compartment in the destination region in which the file system should be launched.
+        /// <br/>
+        /// Example: ocid1.compartment.oc1..uniqueID
+        /// </value>
+        [JsonProperty(PropertyName = "destinationCompartmentId")]
+        public string DestinationCompartmentId { get; set; }
+        
         [JsonProperty(PropertyName = "memberType")]
         private readonly string memberType = "FILE_SYSTEM";
     }

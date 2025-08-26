@@ -135,6 +135,14 @@ namespace Oci.GoldengateService.Models
         [Required(ErrorMessage = "TimeRoleChanged is required.")]
         [JsonProperty(PropertyName = "timeRoleChanged")]
         public System.Nullable<System.DateTime> TimeRoleChanged { get; set; }
+        
+        /// <value>
+        /// The time of the last data synchronization from the primary to the standby peer.
+        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastSynced")]
+        public System.Nullable<System.DateTime> TimeLastSynced { get; set; }
                 ///
         /// <value>
         /// Possible lifecycle states for deployment peer.

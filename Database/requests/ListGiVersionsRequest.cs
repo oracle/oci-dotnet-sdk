@@ -76,5 +76,11 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceId")]
         public string ResourceId { get; set; }
+        
+        /// <value>
+        /// If provided and applicable, return DB System shape parameters based on the shapeAttribute provided
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shapeAttribute")]
+        public string ShapeAttribute { get; set; }
     }
 }

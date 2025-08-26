@@ -57,6 +57,27 @@ namespace Oci.DisasterrecoveryService.Models
             var discriminator = jsonObject["memberType"].Value<string>();
             switch (discriminator)
             {
+                case "DATABASE":
+                    obj = new CreateDrProtectionGroupMemberDatabaseDetails();
+                    break;
+                case "AUTONOMOUS_DATABASE":
+                    obj = new CreateDrProtectionGroupMemberAutonomousDatabaseDetails();
+                    break;
+                case "NETWORK_LOAD_BALANCER":
+                    obj = new CreateDrProtectionGroupMemberNetworkLoadBalancerDetails();
+                    break;
+                case "MYSQL_DB_SYSTEM":
+                    obj = new CreateDrProtectionGroupMemberMySqlDbSystemDetails();
+                    break;
+                case "FILE_SYSTEM":
+                    obj = new CreateDrProtectionGroupMemberFileSystemDetails();
+                    break;
+                case "OBJECT_STORAGE_BUCKET":
+                    obj = new CreateDrProtectionGroupMemberObjectStorageBucketDetails();
+                    break;
+                case "LOAD_BALANCER":
+                    obj = new CreateDrProtectionGroupMemberLoadBalancerDetails();
+                    break;
                 case "COMPUTE_INSTANCE_MOVABLE":
                     obj = new CreateDrProtectionGroupMemberComputeInstanceMovableDetails();
                     break;
@@ -69,29 +90,11 @@ namespace Oci.DisasterrecoveryService.Models
                 case "COMPUTE_INSTANCE":
                     obj = new CreateDrProtectionGroupMemberComputeInstanceDetails();
                     break;
-                case "DATABASE":
-                    obj = new CreateDrProtectionGroupMemberDatabaseDetails();
-                    break;
-                case "AUTONOMOUS_DATABASE":
-                    obj = new CreateDrProtectionGroupMemberAutonomousDatabaseDetails();
-                    break;
-                case "NETWORK_LOAD_BALANCER":
-                    obj = new CreateDrProtectionGroupMemberNetworkLoadBalancerDetails();
-                    break;
                 case "VOLUME_GROUP":
                     obj = new CreateDrProtectionGroupMemberVolumeGroupDetails();
                     break;
                 case "OKE_CLUSTER":
                     obj = new CreateDrProtectionGroupMemberOkeClusterDetails();
-                    break;
-                case "FILE_SYSTEM":
-                    obj = new CreateDrProtectionGroupMemberFileSystemDetails();
-                    break;
-                case "OBJECT_STORAGE_BUCKET":
-                    obj = new CreateDrProtectionGroupMemberObjectStorageBucketDetails();
-                    break;
-                case "LOAD_BALANCER":
-                    obj = new CreateDrProtectionGroupMemberLoadBalancerDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

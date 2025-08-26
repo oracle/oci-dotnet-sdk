@@ -156,6 +156,12 @@ namespace Oci.CoreService.Models
         public System.Nullable<long> HealthyHostCount { get; set; }
         
         /// <value>
+        /// The total number of available bare metal hosts located in this compute GPU memory fabric.
+        /// </value>
+        [JsonProperty(PropertyName = "availableHostCount")]
+        public System.Nullable<long> AvailableHostCount { get; set; }
+        
+        /// <value>
         /// The total number of bare metal hosts located in this compute GPU memory fabric.
         /// </value>
         /// <remarks>
