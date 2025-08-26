@@ -166,5 +166,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "encryptionKeyLocationDetails")]
         public EncryptionKeyLocationDetails EncryptionKeyLocationDetails { get; set; }
         
+        [JsonProperty(PropertyName = "storageSizeDetails")]
+        public DatabaseStorageSizeDetails StorageSizeDetails { get; set; }
+        
     }
 }

@@ -296,6 +296,26 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "subscriptionId")]
         public string SubscriptionId { get; set; }
+                ///
+        /// <value>
+        /// The type of Exascale storage used for Exadata VM cluster. The default is SMART_STORAGE which supports Oracle Database 23ai and later
+        /// 
+        /// </value>
+        ///
+        public enum ShapeAttributeEnum {
+            [EnumMember(Value = "SMART_STORAGE")]
+            SmartStorage,
+            [EnumMember(Value = "BLOCK_STORAGE")]
+            BlockStorage
+        };
+
+        /// <value>
+        /// The type of Exascale storage used for Exadata VM cluster. The default is SMART_STORAGE which supports Oracle Database 23ai and later
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shapeAttribute")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ShapeAttributeEnum> ShapeAttribute { get; set; }
         
     }
 }

@@ -402,7 +402,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> DbNodeStorageSizeInGBs { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) enabled per OCPU or ECPU.
+        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]

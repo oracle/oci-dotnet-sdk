@@ -425,6 +425,7 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// The amount of memory (in GBs) enabled per ECPU or OCPU in the Autonomous VM Cluster.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }

@@ -49,6 +49,14 @@ namespace Oci.DisasterrecoveryService.Models
         [JsonProperty(PropertyName = "commonDestinationKey")]
         public VaultAndEncryptionKey CommonDestinationKey { get; set; }
         
+        /// <value>
+        /// The OCID of a compartment in the destination region in which the volume group should be launched.
+        /// <br/>
+        /// Example: ocid1.compartment.oc1..uniqueID
+        /// </value>
+        [JsonProperty(PropertyName = "destinationCompartmentId")]
+        public string DestinationCompartmentId { get; set; }
+        
         [JsonProperty(PropertyName = "memberType")]
         private readonly string memberType = "VOLUME_GROUP";
     }
