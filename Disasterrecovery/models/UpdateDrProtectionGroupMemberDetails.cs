@@ -60,11 +60,11 @@ namespace Oci.DisasterrecoveryService.Models
                 case "COMPUTE_INSTANCE":
                     obj = new UpdateDrProtectionGroupMemberComputeInstanceDetails();
                     break;
+                case "MYSQL_DB_SYSTEM":
+                    obj = new UpdateDrProtectionGroupMemberMySqlDbSystemDetails();
+                    break;
                 case "NETWORK_LOAD_BALANCER":
                     obj = new UpdateDrProtectionGroupMemberNetworkLoadBalancerDetails();
-                    break;
-                case "OKE_CLUSTER":
-                    obj = new UpdateDrProtectionGroupMemberOkeClusterDetails();
                     break;
                 case "AUTONOMOUS_DATABASE":
                     obj = new UpdateDrProtectionGroupMemberAutonomousDatabaseDetails();
@@ -75,23 +75,26 @@ namespace Oci.DisasterrecoveryService.Models
                 case "VOLUME_GROUP":
                     obj = new UpdateDrProtectionGroupMemberVolumeGroupDetails();
                     break;
+                case "LOAD_BALANCER":
+                    obj = new UpdateDrProtectionGroupMemberLoadBalancerDetails();
+                    break;
+                case "DATABASE":
+                    obj = new UpdateDrProtectionGroupMemberDatabaseDetails();
+                    break;
+                case "OKE_CLUSTER":
+                    obj = new UpdateDrProtectionGroupMemberOkeClusterDetails();
+                    break;
                 case "COMPUTE_INSTANCE_NON_MOVABLE":
                     obj = new UpdateDrProtectionGroupMemberComputeInstanceNonMovableDetails();
                     break;
                 case "AUTONOMOUS_CONTAINER_DATABASE":
                     obj = new UpdateDrProtectionGroupMemberAutonomousContainerDatabaseDetails();
                     break;
-                case "LOAD_BALANCER":
-                    obj = new UpdateDrProtectionGroupMemberLoadBalancerDetails();
-                    break;
                 case "OBJECT_STORAGE_BUCKET":
                     obj = new UpdateDrProtectionGroupMemberObjectStorageBucketDetails();
                     break;
                 case "COMPUTE_INSTANCE_MOVABLE":
                     obj = new UpdateDrProtectionGroupMemberComputeInstanceMovableDetails();
-                    break;
-                case "DATABASE":
-                    obj = new UpdateDrProtectionGroupMemberDatabaseDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

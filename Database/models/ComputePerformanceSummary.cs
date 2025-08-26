@@ -25,10 +25,6 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The number of CPU cores available.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
         
@@ -45,32 +41,47 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The network bandwidth of the VMDB system in gbps.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NetworkBandwidthInGbps is required.")]
         [JsonProperty(PropertyName = "networkBandwidthInGbps")]
         public System.Nullable<float> NetworkBandwidthInGbps { get; set; }
         
         /// <value>
         /// IOPS for the VMDB System.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NetworkIops is required.")]
         [JsonProperty(PropertyName = "networkIops")]
         public System.Nullable<float> NetworkIops { get; set; }
         
         /// <value>
         /// Network throughput for the VMDB System.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "NetworkThroughputInMbps is required.")]
         [JsonProperty(PropertyName = "networkThroughputInMbps")]
         public System.Nullable<float> NetworkThroughputInMbps { get; set; }
+                ///
+        /// <value>
+        /// The compute model for Base Database Service. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. The ECPU compute model is the recommended model, and the OCPU compute model is legacy.
+        /// </value>
+        ///
+        public enum ComputeModelEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ECPU")]
+            Ecpu,
+            [EnumMember(Value = "OCPU")]
+            Ocpu
+        };
+
+        /// <value>
+        /// The compute model for Base Database Service. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. The ECPU compute model is the recommended model, and the OCPU compute model is legacy.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
+        
+        /// <value>
+        /// The number of compute servers for the DB system.
+        /// </value>
+        [JsonProperty(PropertyName = "computeCount")]
+        public System.Nullable<int> ComputeCount { get; set; }
         
     }
 }

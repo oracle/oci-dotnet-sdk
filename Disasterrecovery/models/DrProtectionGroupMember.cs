@@ -61,38 +61,41 @@ namespace Oci.DisasterrecoveryService.Models
                 case "VOLUME_GROUP":
                     obj = new DrProtectionGroupMemberVolumeGroup();
                     break;
+                case "FILE_SYSTEM":
+                    obj = new DrProtectionGroupMemberFileSystem();
+                    break;
+                case "MYSQL_DB_SYSTEM":
+                    obj = new DrProtectionGroupMemberMySqlDbSystem();
+                    break;
+                case "AUTONOMOUS_DATABASE":
+                    obj = new DrProtectionGroupMemberAutonomousDatabase();
+                    break;
+                case "COMPUTE_INSTANCE":
+                    obj = new DrProtectionGroupMemberComputeInstance();
+                    break;
+                case "AUTONOMOUS_CONTAINER_DATABASE":
+                    obj = new DrProtectionGroupMemberAutonomousContainerDatabase();
+                    break;
+                case "OKE_CLUSTER":
+                    obj = new DrProtectionGroupMemberOkeCluster();
+                    break;
                 case "NETWORK_LOAD_BALANCER":
                     obj = new DrProtectionGroupMemberNetworkLoadBalancer();
                     break;
                 case "OBJECT_STORAGE_BUCKET":
                     obj = new DrProtectionGroupMemberObjectStorageBucket();
                     break;
-                case "FILE_SYSTEM":
-                    obj = new DrProtectionGroupMemberFileSystem();
-                    break;
                 case "COMPUTE_INSTANCE_MOVABLE":
                     obj = new DrProtectionGroupMemberComputeInstanceMovable();
-                    break;
-                case "AUTONOMOUS_DATABASE":
-                    obj = new DrProtectionGroupMemberAutonomousDatabase();
                     break;
                 case "LOAD_BALANCER":
                     obj = new DrProtectionGroupMemberLoadBalancer();
                     break;
-                case "COMPUTE_INSTANCE":
-                    obj = new DrProtectionGroupMemberComputeInstance();
-                    break;
                 case "COMPUTE_INSTANCE_NON_MOVABLE":
                     obj = new DrProtectionGroupMemberComputeInstanceNonMovable();
                     break;
-                case "AUTONOMOUS_CONTAINER_DATABASE":
-                    obj = new DrProtectionGroupMemberAutonomousContainerDatabase();
-                    break;
                 case "DATABASE":
                     obj = new DrProtectionGroupMemberDatabase();
-                    break;
-                case "OKE_CLUSTER":
-                    obj = new DrProtectionGroupMemberOkeCluster();
                     break;
             }
             if (obj != null)

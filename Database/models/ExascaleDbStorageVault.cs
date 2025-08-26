@@ -191,6 +191,24 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "subscriptionId")]
         public string SubscriptionId { get; set; }
+                ///
+        ///
+        public enum AttachedShapeAttributesEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "SMART_STORAGE")]
+            SmartStorage,
+            [EnumMember(Value = "BLOCK_STORAGE")]
+            BlockStorage
+        };
+
+        /// <value>
+        /// The shapeAttribute of the Exadata VM cluster(s) associated with the Exadata Database Storage Vault.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "attachedShapeAttributes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<AttachedShapeAttributesEnum> AttachedShapeAttributes { get; set; }
         
     }
 }

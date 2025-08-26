@@ -180,7 +180,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> TotalContainerDatabases { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU.
+        /// The amount of memory (in GBs) to be enabled per each CPU core.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]

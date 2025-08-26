@@ -129,6 +129,30 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "dataCollectionOptions")]
         public DataCollectionOptions DataCollectionOptions { get; set; }
+                ///
+        /// <value>
+        /// The compute model for Base Database Service. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. The ECPU compute model is the recommended model, and the OCPU compute model is legacy.
+        /// </value>
+        ///
+        public enum ComputeModelEnum {
+            [EnumMember(Value = "ECPU")]
+            Ecpu,
+            [EnumMember(Value = "OCPU")]
+            Ocpu
+        };
+
+        /// <value>
+        /// The compute model for Base Database Service. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. The ECPU compute model is the recommended model, and the OCPU compute model is legacy.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
+        
+        /// <value>
+        /// The number of compute servers for the DB system.
+        /// </value>
+        [JsonProperty(PropertyName = "computeCount")]
+        public System.Nullable<int> ComputeCount { get; set; }
         
     }
 }

@@ -222,10 +222,6 @@ namespace Oci.DatabaseService.Models
         /// For information about the number of cores for a virtual machine DB system shape, see [Virtual Machine DB Systems](https://docs.cloud.oracle.com/Content/Database/Concepts/overview.htm#virtualmachine)
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CpuCoreCount is required.")]
         [JsonProperty(PropertyName = "cpuCoreCount")]
         public System.Nullable<int> CpuCoreCount { get; set; }
         
@@ -246,7 +242,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> DataStoragePercentage { get; set; }
         
         /// <value>
-        /// Size (in GB) of the initial data volume that will be created and attached to a virtual machine DB system. You can scale up storage after provisioning, as needed. Note that the total storage size attached will be more than the amount you specify to allow for REDO/RECO space and software volume.
+        /// Size (in GB) of the initial data volume that will be created and attached to a virtual machine DB system. You can scale up storage after provisioning, as needed. Note that the total storage size attached will be more than the amount you specify to allow for REDO/RECO space and software volume. By default this will be set to 256.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "initialDataStorageSizeInGB")]
@@ -266,7 +262,7 @@ namespace Oci.DatabaseService.Models
         public string KmsKeyVersionId { get; set; }
         
         /// <value>
-        /// The number of nodes to launch for a 2-node RAC virtual machine DB system. Specify either 1 or 2.
+        /// The number of nodes to launch for a virtual machine DB system. Specify either 1 or 2. By default this will be set to 1.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nodeCount")]
@@ -334,6 +330,30 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "dataCollectionOptions")]
         public DataCollectionOptions DataCollectionOptions { get; set; }
+                ///
+        /// <value>
+        /// The compute model for Base Database Service. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. The ECPU compute model is the recommended model, and the OCPU compute model is legacy.
+        /// </value>
+        ///
+        public enum ComputeModelEnum {
+            [EnumMember(Value = "ECPU")]
+            Ecpu,
+            [EnumMember(Value = "OCPU")]
+            Ocpu
+        };
+
+        /// <value>
+        /// The compute model for Base Database Service. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. The ECPU compute model is the recommended model, and the OCPU compute model is legacy.
+        /// </value>
+        [JsonProperty(PropertyName = "computeModel")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
+        
+        /// <value>
+        /// The number of compute servers for the DB system.
+        /// </value>
+        [JsonProperty(PropertyName = "computeCount")]
+        public System.Nullable<int> ComputeCount { get; set; }
         
     }
 

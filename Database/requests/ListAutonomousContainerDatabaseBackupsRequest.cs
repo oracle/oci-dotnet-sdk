@@ -51,7 +51,7 @@ namespace Oci.DatabaseService.Requests
         
         ///
         /// <value>
-        /// The field to sort by.  You can provide one sort order (`sortOrder`).  Default order for TIMECREATED is descending.  Default order for DISPLAYNAME is ascending. The DISPLAYNAME sort order is case sensitive.
+        /// The field to sort by. You can provide one sort order (`sortOrder`). Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. The DISPLAYNAME sort order is case sensitive.
         /// <br/>
         /// **Note:** If you do not include the availability domain filter, the resources are grouped by availability domain, then sorted.
         /// 
@@ -65,7 +65,7 @@ namespace Oci.DatabaseService.Requests
         };
 
         /// <value>
-        /// The field to sort by.  You can provide one sort order (`sortOrder`).  Default order for TIMECREATED is descending.  Default order for DISPLAYNAME is ascending. The DISPLAYNAME sort order is case sensitive.
+        /// The field to sort by. You can provide one sort order (`sortOrder`). Default order for TIMECREATED is descending. Default order for DISPLAYNAME is ascending. The DISPLAYNAME sort order is case sensitive.
         /// <br/>
         /// **Note:** If you do not include the availability domain filter, the resources are grouped by availability domain, then sorted.
         /// 

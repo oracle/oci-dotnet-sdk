@@ -21,6 +21,12 @@ namespace Oci.DatabaseService.Models
     /// </summary>
     public class DbSystemStoragePerformanceSummary 
     {
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentId")]
+        public string CompartmentId { get; set; }
                 ///
         /// <value>
         /// ShapeType of the DbSystems INTEL , AMD, INTEL_FLEX_X9 or AMPERE_FLEX_A1
@@ -37,7 +43,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "INTEL_FLEX_X9")]
             IntelFlexX9,
             [EnumMember(Value = "AMPERE_FLEX_A1")]
-            AmpereFlexA1
+            AmpereFlexA1,
+            [EnumMember(Value = "STANDARD_X86")]
+            StandardX86
         };
 
         /// <value>

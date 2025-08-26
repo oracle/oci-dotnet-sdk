@@ -227,6 +227,22 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<LicenseModel> LicenseModel { get; set; }
         
         /// <value>
+        /// Flag to allow to configure the 'Bring Your Own License' (BYOL) license type CPU limit.
+        /// If enabled, the exact number of CPUs must be provided via byolCpuCoreCountLimit.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isByolCpuCoreCountLimitEnabled")]
+        public System.Nullable<bool> IsByolCpuCoreCountLimitEnabled { get; set; }
+        
+        /// <value>
+        /// The maximum number of CPUs allowed with a 'Bring Your Own License' (BYOL) license type.
+        /// Any CPU usage above this limit is considered as License Included and billed.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "byolCpuCoreCountLimit")]
+        public System.Nullable<int> ByolCpuCoreCountLimit { get; set; }
+        
+        /// <value>
         /// Specifies whether the deployment is used in a production or development/testing environment.
         /// 
         /// </value>

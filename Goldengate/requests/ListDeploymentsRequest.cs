@@ -69,6 +69,13 @@ namespace Oci.GoldengateService.Requests
         public System.Nullable<LifecycleSubState> LifecycleSubState { get; set; }
         
         /// <value>
+        /// A filter that returns only the resources matching the specified 'deploymentType'.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "deploymentType")]
+        public System.Nullable<DeploymentType> DeploymentType { get; set; }
+        
+        /// <value>
         /// A filter to return only the resources that match the entire 'displayName' given.
         /// 
         /// </value>

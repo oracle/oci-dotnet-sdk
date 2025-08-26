@@ -23,14 +23,26 @@ namespace Oci.DisasterrecoveryService.Models
     {
         
         /// <value>
-        /// A list of namespaces that need to be backed up. 
-        /// The default value is null. If a list of namespaces is not provided, all namespaces will be backed up.
+        /// A list of namespaces to be included in the backup. 
+        /// The default value is null. If a list of namespaces to include is not provided, all namespaces will be backed up.
+        /// Specify either the `namespaces` or the `excludeNamespaces` parameter, but not both.
         /// This property applies to the OKE cluster member in primary region.
         /// <br/>
         /// Example: [&quot;default&quot;, &quot;pv-nginx&quot;]
         /// </value>
         [JsonProperty(PropertyName = "namespaces")]
         public System.Collections.Generic.List<string> Namespaces { get; set; }
+        
+        /// <value>
+        /// A list of namespaces to be excluded from the backup. 
+        /// The default value is null. If a list of namespaces to exclude is not provided, all namespaces will be backed up.
+        /// Specify either the `namespaces` or the `excludeNamespaces` parameter, but not both.
+        /// This property applies to OKE cluster members in the primary region.
+        /// <br/>
+        /// Example: [&quot;namespace_string_3&quot;, &quot;namespace_string_4&quot;]
+        /// </value>
+        [JsonProperty(PropertyName = "excludeNamespaces")]
+        public System.Collections.Generic.List<string> ExcludeNamespaces { get; set; }
         
         /// <value>
         /// The schedule for backing up namespaces to the destination region. If a backup schedule is not specified, only a single backup will be created. This format of the string specifying the backup schedule must conform with RFC-5545.

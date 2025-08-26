@@ -40,18 +40,24 @@ namespace Oci.AispeechService.Models
         
         /// <value>
         /// Silence threshold for Realtime Speech partial results in milliseconds.
+        /// Currently supported only for Oracle model.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "partialSilenceThresholdInMs")]
         public System.Nullable<int> PartialSilenceThresholdInMs { get; set; }
         
         /// <value>
         /// Silence threshold for Realtime Speech final results in milliseconds.
+        /// Currently supported only for Oracle model.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "finalSilenceThresholdInMs")]
         public System.Nullable<int> FinalSilenceThresholdInMs { get; set; }
                 ///
         /// <value>
         /// When enabled sets the amount of confidence required for latest tokens before returning them as part of a new partial result
+        /// Currently supported only for Oracle model.
+        /// 
         /// </value>
         ///
         public enum StabilizePartialResultsEnum {
@@ -67,10 +73,21 @@ namespace Oci.AispeechService.Models
 
         /// <value>
         /// When enabled sets the amount of confidence required for latest tokens before returning them as part of a new partial result
+        /// Currently supported only for Oracle model.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "stabilizePartialResults")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<StabilizePartialResultsEnum> StabilizePartialResults { get; set; }
+        
+        /// <value>
+        /// Select a model to use for generating transcriptions. Currently supported models are:
+        /// - ORACLE
+        /// - WHISPER
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "modelType")]
+        public string ModelType { get; set; }
                 ///
         /// <value>
         /// Model Domain.
@@ -91,8 +108,10 @@ namespace Oci.AispeechService.Models
         public System.Nullable<ModelDomainEnum> ModelDomain { get; set; }
         
         /// <value>
-        /// Locale value as per given in [https://datatracker.ietf.org/doc/html/rfc5646].
-        /// - en-US: English - United States
+        /// 
+        /// Oracle model supported language codes are locale specific. 
+        /// Locale value as per given in [https://datatracker.ietf.org/doc/html/rfc5646]
+        /// - en-US: English - United States (default)
         /// - es-ES: Spanish - Spain
         /// - pt-BR: Portuguese - Brazil
         /// - en-GB: English - Great Britain
@@ -102,6 +121,107 @@ namespace Oci.AispeechService.Models
         /// - fr-FR: French - France
         /// - de-DE: German - Germany
         /// - it-IT: Italian - Italy
+        /// Whisper model supported language codes are locale agnostic
+        /// - auto: Auto-detect language
+        /// - af: Afrikaans
+        /// - am: Amharic
+        /// - ar: Arabic
+        /// - as: Assamese
+        /// - az: Azerbaijani
+        /// - ba: Bashkir
+        /// - be: Belarusian
+        /// - bg: Bulgarian
+        /// - bn: Bengali
+        /// - bo: Tibetan
+        /// - br: Breton
+        /// - bs: Bosnian
+        /// - ca: Catalan
+        /// - cs: Czech
+        /// - cy: Welsh
+        /// - da: Danish
+        /// - de: German
+        /// - el: Greek
+        /// - en: English (default)
+        /// - es: Spanish
+        /// - et: Estonian
+        /// - eu: Basque
+        /// - fa: Persian
+        /// - fi: Finnish
+        /// - fo: Faroese
+        /// - fr: French
+        /// - gl: Galician
+        /// - gu: Gujarati
+        /// - ha: Hausa
+        /// - haw: Hawaiian
+        /// - he: Hebrew
+        /// - hi: Hindi
+        /// - hr: Croatian
+        /// - ht: Haitian Creole
+        /// - hu: Hungarian
+        /// - hy: Armenian
+        /// - id: Indonesian
+        /// - is: Icelandic
+        /// - it: Italian
+        /// - ja: Japanese
+        /// - jv: Javanese
+        /// - ka: Georgian
+        /// - kk: Kazakh
+        /// - km: Khmer
+        /// - kn: Kannada
+        /// - ko: Korean
+        /// - la: Latin
+        /// - lb: Luxembourgish
+        /// - ln: Lingala
+        /// - lo: Lao
+        /// - lt: Lithuanian
+        /// - lv: Latvian
+        /// - mg: Malagasy
+        /// - mi: Maori
+        /// - mk: Macedonian
+        /// - ml: Malayalam
+        /// - mn: Mongolian
+        /// - mr: Marathi
+        /// - ms: Malay
+        /// - mt: Maltese
+        /// - my: Burmese
+        /// - ne: Nepali
+        /// - nl: Dutch
+        /// - nn: Norwegian Nynorsk
+        /// - no: Norwegian
+        /// - oc: Occitan
+        /// - pa: Punjabi
+        /// - pl: Polish
+        /// - ps: Pashto
+        /// - pt: Portuguese
+        /// - ro: Romanian
+        /// - ru: Russian
+        /// - sa: Sanskrit
+        /// - sd: Sindhi
+        /// - si: Sinhala
+        /// - sk: Slovak
+        /// - sl: Slovenian
+        /// - sn: Shona
+        /// - so: Somali
+        /// - sq: Albanian
+        /// - sr: Serbian
+        /// - su: Sundanese
+        /// - sv: Swedish
+        /// - sw: Swahili
+        /// - ta: Tamil
+        /// - te: Telugu
+        /// - tg: Tajik
+        /// - th: Thai
+        /// - tk: Turkmen
+        /// - tl: Tagalog
+        /// - tr: Turkish
+        /// - tt: Tatar
+        /// - uk: Ukrainian
+        /// - ur: Urdu
+        /// - uz: Uzbek
+        /// - vi: Vietnamese
+        /// - yi: Yiddish
+        /// - yo: Yoruba
+        /// - zh: Chinese
         /// 
         /// </value>
         [JsonProperty(PropertyName = "languageCode")]
@@ -110,6 +230,7 @@ namespace Oci.AispeechService.Models
         /// <value>
         /// If set to true, the service will not fail connection attempt if it encounters any issues that prevent the loading of all specified user customizations. Any invalid customizations will simply be ignored and connection will continue being established with the default base model and any remaining valid customizations.
         /// If set to false, if the service is unable to load any of the specified customizations, an error detailing why will be returned and the session will end.
+        /// Currently supported only for Oracle model.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "shouldIgnoreInvalidCustomizations")]
@@ -117,6 +238,8 @@ namespace Oci.AispeechService.Models
         
         /// <value>
         /// Array of customization objects.
+        /// Currently supported only for Oracle model.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "customizations")]
         public System.Collections.Generic.List<CustomizationInference> Customizations { get; set; }
@@ -126,6 +249,7 @@ namespace Oci.AispeechService.Models
         /// - NONE: No punctuation in the transcription response
         /// - SPOKEN: Punctuations in response only when verbally spoken
         /// - AUTO: Automatic punctuation in the response, spoken punctuations are disabled
+        /// Spoken punctuation is currently supported only for the Oracle model in the Medical domain.
         /// 
         /// </value>
         ///
@@ -143,6 +267,7 @@ namespace Oci.AispeechService.Models
         /// - NONE: No punctuation in the transcription response
         /// - SPOKEN: Punctuations in response only when verbally spoken
         /// - AUTO: Automatic punctuation in the response, spoken punctuations are disabled
+        /// Spoken punctuation is currently supported only for the Oracle model in the Medical domain.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "punctuation")]
