@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// Details for to patch Oracle DB Azure Connector Resource.
+    /// Details for to patch Oracle DB Azure Connector resource.
     /// </summary>
     public class PatchOracleDbAzureConnectorDetails 
     {

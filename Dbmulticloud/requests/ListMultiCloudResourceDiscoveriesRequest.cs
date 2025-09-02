@@ -30,36 +30,41 @@ namespace Oci.DbmulticloudService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Display Name of the Multi Cloud Discovery Resource.
+        /// A filter to return Oracle DB Multicloud Discovery resources that match the specified display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Multi Cloud Discovery Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Multicloud Discovery resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "multiCloudResourceDiscoveryId")]
         public string MultiCloudResourceDiscoveryId { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the given lifecycle state. The
-        /// state value is case-insensitive.
+        /// A filter to return only resources that match the specified lifecycle state. The state value is case-insensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<MultiCloudResourceDiscovery.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Blob Mount Resources.
+        /// A filter to return Oracle DB Azure Azure Identity Connector resources.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureConnectorId")]
         public string OracleDbAzureConnectorId { get; set; }
         
         /// <value>
-        /// The type of Multi Cloud Resource.
+        /// The type of Multicloud Resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]
         public System.Nullable<MultiCloudResourceDiscovery.ResourceTypeEnum> ResourceType { get; set; }
+        
+        /// <value>
+        /// Specifies the type(s) of resources to discover in the target cloud provider.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourcesFilter", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<string> ResourcesFilter { get; set; }
         
         /// <value>
         /// The maximum number of items to return.

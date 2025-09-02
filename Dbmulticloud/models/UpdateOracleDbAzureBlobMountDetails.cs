@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// This object is about to provide input params to mount Azure Container in OCI Database Resource.
+    /// This object is about to provide input params to mount Azure Container in OCI Database resource.
     /// 
     /// </summary>
     public class UpdateOracleDbAzureBlobMountDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment that contains where to create Oracle DB Azure Blob Mount resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains Oracle DB Azure Blob Mount resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -35,13 +35,13 @@ namespace Oci.DbmulticloudService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the Oracle DB Azure Connector Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Connector resource that contains Oracle DB Azure Blob Mount resource.
         /// </value>
         [JsonProperty(PropertyName = "oracleDbAzureConnectorId")]
         public string OracleDbAzureConnectorId { get; set; }
         
         /// <value>
-        /// The OCID of the Oracle DB Azure Blob Container Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Blob Container resource that contains Oracle DB Azure Blob Mount resource.
         /// </value>
         [JsonProperty(PropertyName = "oracleDbAzureBlobContainerId")]
         public string OracleDbAzureBlobContainerId { get; set; }

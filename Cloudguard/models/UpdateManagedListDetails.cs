@@ -44,6 +44,12 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<string> ListItems { get; set; }
         
         /// <value>
+        /// Managed list type group
+        /// </value>
+        [JsonProperty(PropertyName = "group")]
+        public string Group { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}Avoid entering confidential information.
         /// </value>

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// Azure Arc Agent Node Details.
+    /// Azure Arc Agent node details.
     /// 
     /// </summary>
     public class ArcAgentNodes 
     {
         
         /// <value>
-        /// Host Name or Azure Arc Agent Name.
+        /// Host name or Azure Arc Agent name.
         /// </value>
         [JsonProperty(PropertyName = "hostName")]
         public string HostName { get; set; }
@@ -35,13 +35,13 @@ namespace Oci.DbmulticloudService.Models
         public string HostId { get; set; }
         
         /// <value>
-        /// Current Arc Agent Version installed on this node of VM Cluster.
+        /// Current Arc Agent Version installed on this node of Oracle Cloud VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "currentArcAgentVersion")]
         public string CurrentArcAgentVersion { get; set; }
                 ///
         /// <value>
-        /// The current status of the Azure Arc Agent Resource.
+        /// The current status of the Azure Arc Agent resource.
         /// </value>
         ///
         public enum StatusEnum {
@@ -57,14 +57,14 @@ namespace Oci.DbmulticloudService.Models
         };
 
         /// <value>
-        /// The current status of the Azure Arc Agent Resource.
+        /// The current status of the Azure Arc Agent resource.
         /// </value>
         [JsonProperty(PropertyName = "status")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<StatusEnum> Status { get; set; }
         
         /// <value>
-        /// time when the Azure Arc Agent's status was checked [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
+        /// Time when the Azure Arc Agent's status was checked [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeLastChecked")]

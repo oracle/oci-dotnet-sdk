@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// This object is about to provide input params to create Oracle DB Azure Blob Container.
+    /// Create Oracle DB Azure Blob Container object.
     /// 
     /// </summary>
     public class CreateOracleDbAzureBlobContainerDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment that contains Oracle DB Azure Blob Container Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of Oracle DB Azure Blob Container resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DbmulticloudService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Display name of Oracle DB Azure Blob Container.
+        /// Oracle DB Azure Blob Container resource name.
         /// </value>
         /// <remarks>
         /// Required
@@ -49,13 +49,13 @@ namespace Oci.DbmulticloudService.Models
         public string PrivateEndpointIpAddress { get; set; }
         
         /// <value>
-        /// Private endpoint DNS Alias.
+        /// Private endpoint's DNS alias.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointDnsAlias")]
         public string PrivateEndpointDnsAlias { get; set; }
         
         /// <value>
-        /// Azure Storage Account Name.
+        /// Azure Storage account name.
         /// </value>
         /// <remarks>
         /// Required
@@ -65,7 +65,7 @@ namespace Oci.DbmulticloudService.Models
         public string AzureStorageAccountName { get; set; }
         
         /// <value>
-        /// Azure Storage Container Name.
+        /// Azure Storage container name.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,37 +16,37 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// Details of Oracle DB Azure Connector Resource.
+    /// Details of Oracle DB Azure Connector resource.
     /// </summary>
     public class OracleDbAzureConnectorSummary 
     {
         
         /// <value>
-        /// Oracle DB Azure Connector Resource ID.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Connector resource.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The ID of the compartment that contains Oracle DB Azure Connector Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains Oracle DB Azure Connector resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The ID of the DB Cluster Resource where this Azure Arc Agent Identity to configure.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Cloud VM Cluster resource where this Azure Arc Agent Identity to configure.
         /// </value>
         [JsonProperty(PropertyName = "dbClusterResourceId")]
         public string DbClusterResourceId { get; set; }
         
         /// <value>
-        /// Oracle DB Azure Connector Resource Name.
+        /// Oracle DB Azure Connector resource name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// List of All VMs where Arc Agent Identity is configure under VMCluster.
+        /// List of all VMs where Arc Agent Identity is configure under Oracle Cloud VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "arcAgentNodes")]
         public System.Collections.Generic.List<ArcAgentNodes> ArcAgentNodes { get; set; }
@@ -64,7 +64,7 @@ namespace Oci.DbmulticloudService.Models
         public string AzureSubscriptionId { get; set; }
         
         /// <value>
-        /// Azure Resource Group Name.
+        /// Azure Resource group name.
         /// </value>
         [JsonProperty(PropertyName = "azureResourceGroup")]
         public string AzureResourceGroup { get; set; }
@@ -76,13 +76,13 @@ namespace Oci.DbmulticloudService.Models
         public string PrivateEndpointIpAddress { get; set; }
         
         /// <value>
-        /// Private endpoint DNS Alias.
+        /// Private endpoint's DNS alias.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointDnsAlias")]
         public string PrivateEndpointDnsAlias { get; set; }
         
         /// <value>
-        /// The current lifecycle state of the Oracle DB Azure Connector Resource.
+        /// The current lifecycle state of the Oracle DB Azure Connector resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -95,28 +95,35 @@ namespace Oci.DbmulticloudService.Models
         public string LifecycleStateDetails { get; set; }
         
         /// <value>
-        /// Azure Identity Mechanism.
+        /// Azure Identity mechanism.
         /// </value>
         [JsonProperty(PropertyName = "azureIdentityMechanism")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OracleDbAzureConnector.AzureIdentityMechanismEnum> AzureIdentityMechanism { get; set; }
         
         /// <value>
-        /// Time when the Oracle DB Azure Connector Resource was created expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
+        /// The current lifecycle state of the Oracle DB Azure Identity Connector resource.
+        /// </value>
+        [JsonProperty(PropertyName = "azureIdentityConnectivityStatus")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OracleDbAzureConnector.AzureIdentityConnectivityStatusEnum> AzureIdentityConnectivityStatus { get; set; }
+        
+        /// <value>
+        /// Time when the Oracle DB Azure Connector resource was created expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Time when the Oracle DB Azure Connector Resource was last modified expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
+        /// Time when the Oracle DB Azure Connector resource was last modified expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Description of the latest modification of the Oracle DB Azure Connector Resource.
+        /// Description of the latest modification of the Oracle DB Azure Connector resource.
         /// </value>
         [JsonProperty(PropertyName = "lastModification")]
         public string LastModification { get; set; }

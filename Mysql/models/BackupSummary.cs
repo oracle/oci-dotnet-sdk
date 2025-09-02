@@ -59,6 +59,21 @@ namespace Oci.MysqlService.Models
         public System.Nullable<SoftDelete> SoftDelete { get; set; }
         
         /// <value>
+        /// Indicates whether the backup has been prepared successfully.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "backupPreparationStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<BackupValidationDetails.BackupPreparationStatusEnum> BackupPreparationStatus { get; set; }
+        
+        /// <value>
+        /// Status of the backup validation.
+        /// </value>
+        [JsonProperty(PropertyName = "validationStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<BackupValidationDetails.ValidationStatusEnum> ValidationStatus { get; set; }
+        
+        /// <value>
         /// The time the backup was created.
         /// </value>
         /// <remarks>

@@ -210,6 +210,9 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "tools")]
         public System.Collections.Generic.List<ToolDefinition> Tools { get; set; }
         
+        [JsonProperty(PropertyName = "webSearchOptions")]
+        public WebSearchOptions WebSearchOptions { get; set; }
+        
         [JsonProperty(PropertyName = "apiFormat")]
         private readonly string apiFormat = "GENERIC";
     }

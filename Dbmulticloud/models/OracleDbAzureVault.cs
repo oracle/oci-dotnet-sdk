@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// Oracle DB Azure Vault Resource Object.
+    /// Oracle DB Azure Vault resource object.
     /// 
     /// </summary>
     public class OracleDbAzureVault 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DB Azure Vault Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the oracle DB Azure Vault resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,13 +33,13 @@ namespace Oci.DbmulticloudService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DB Connector Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Connector resource that contains Oracle DB Azure Vault resource.
         /// </value>
         [JsonProperty(PropertyName = "oracleDbConnectorId")]
         public string OracleDbConnectorId { get; set; }
         
         /// <value>
-        /// Display name of DB Azure Vault.
+        /// Oracle DB Azure Vault resource name.
         /// </value>
         /// <remarks>
         /// Required
@@ -49,7 +49,7 @@ namespace Oci.DbmulticloudService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Display name of Azure Resource Group.
+        /// Oracle DB Azure resource group name.
         /// </value>
         /// <remarks>
         /// Required
@@ -59,13 +59,13 @@ namespace Oci.DbmulticloudService.Models
         public string OracleDbAzureResourceGroup { get; set; }
         
         /// <value>
-        /// Azure Vault Id.
+        /// Azure Vault ID.
         /// </value>
         [JsonProperty(PropertyName = "azureVaultId")]
         public string AzureVaultId { get; set; }
         
         /// <value>
-        /// The Compartment [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) that has this DB Azure Vault Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains this Oracle DB Azure Vault resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -75,25 +75,25 @@ namespace Oci.DbmulticloudService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Vault Resource Type.
+        /// Oracle DB Azure Vault resource type.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
         /// <value>
-        /// Vault Resource Location.
+        /// Oracle DB Azure Vault resource location.
         /// </value>
         [JsonProperty(PropertyName = "location")]
         public string Location { get; set; }
         
         /// <value>
-        /// Resource's properties.
+        /// Oracle DB Azure Vault resource's properties.
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, string> Properties { get; set; }
                 ///
         /// <value>
-        /// The lifecycle state of the DB Azure Vault Resource.
+        /// The lifecycle state of the Oracle DB Azure Vault resource.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -115,7 +115,7 @@ namespace Oci.DbmulticloudService.Models
         };
 
         /// <value>
-        /// The lifecycle state of the DB Azure Vault Resource.
+        /// The lifecycle state of the Oracle DB Azure Vault resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -128,21 +128,21 @@ namespace Oci.DbmulticloudService.Models
         public string LifecycleStateDetails { get; set; }
         
         /// <value>
-        /// Time when the DB Azure Vault was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-23T21:10:29.600Z'
+        /// Time when the DB Azure Vault resource was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-23T21:10:29.600Z'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Time when the DB Azure Vault was last modified, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-23T21:10:29.600Z'
+        /// Time when the DB Azure Vault resource was last modified, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-23T21:10:29.600Z'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Description of the latest modification of the DB Azure Vault Resource.
+        /// Description of the latest modification of the Oracle DB Azure Vault resource.
         /// </value>
         [JsonProperty(PropertyName = "lastModification")]
         public string LastModification { get; set; }

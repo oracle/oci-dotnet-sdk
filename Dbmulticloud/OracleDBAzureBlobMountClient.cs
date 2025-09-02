@@ -73,7 +73,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Moves the Oracle DbAzure Blob Mount resource into a different compartment. When provided, &#39;If-Match&#39; is checked against &#39;ETag&#39; values of the resource.
+        /// Moves the Oracle DB Azure Blob Mount resource into a different compartment. When provided, &#39;If-Match&#39; is checked against &#39;ETag&#39; values of the resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -109,7 +109,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobMount",
                     OperationName = "ChangeOracleDbAzureBlobMountCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobMount/ChangeOracleDbAzureBlobMountCompartment",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -129,8 +129,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Creates Oracle DB Azure Blob Mount resource and mounts Azure Container in OCI Database Resource,
-        /// based on provided Azure Container details and Database Resource ID.
+        /// Creates Oracle DB Azure Blob Mount resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -167,7 +166,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobMount",
                     OperationName = "CreateOracleDbAzureBlobMount",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobMount/CreateOracleDbAzureBlobMount",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -187,7 +186,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Unmount Azure Container Resource from ExaCS VM Cluster and Delete resource.
+        /// Unmounts Oracle DB Azure Blob Mount resource from an Exadata VM cluster in Oracle Exadata Database Service on Dedicated Infrastructure (ExaDB-D) and deletes Oracle DB Azure Blob Mount resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -224,7 +223,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobMount",
                     OperationName = "DeleteOracleDbAzureBlobMount",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobMount/DeleteOracleDbAzureBlobMount",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -244,7 +243,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Get Oracle DB Azure Blob Mount Details form a particular Container Resource ID.
+        /// Retrieves the Oracle DB Azure Blob Mount resource for a specified resource [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -281,7 +280,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobMount",
                     OperationName = "GetOracleDbAzureBlobMount",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobMount/GetOracleDbAzureBlobMount",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -301,7 +300,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Lists the all Oracle DB Azure Blob Mounts based on filters.
+        /// Lists all Oracle DB Azure Blob Mount resources based on the specified filters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -338,7 +337,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobMount",
                     OperationName = "ListOracleDbAzureBlobMounts",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobMount/ListOracleDbAzureBlobMounts",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -358,7 +357,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Modifies the existing Oracle DB Azure Blob Mount resource for a given ID.
+        /// Modifies the existing Oracle DB Azure Blob Mount resource for a given [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -395,7 +394,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobMount",
                     OperationName = "UpdateOracleDbAzureBlobMount",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobMount/UpdateOracleDbAzureBlobMount",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

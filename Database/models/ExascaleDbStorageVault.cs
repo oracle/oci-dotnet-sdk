@@ -191,6 +191,18 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "subscriptionId")]
         public string SubscriptionId { get; set; }
+        
+        /// <value>
+        /// Indicates if autoscale feature is enabled for the Database Storage Vault. The default value is `FALSE`.
+        /// </value>
+        [JsonProperty(PropertyName = "isAutoscaleEnabled")]
+        public System.Nullable<bool> IsAutoscaleEnabled { get; set; }
+        
+        /// <value>
+        /// Maximum limit storage size in gigabytes, that is applicable for the Database Storage Vault.
+        /// </value>
+        [JsonProperty(PropertyName = "autoscaleLimitInGBs")]
+        public System.Nullable<int> AutoscaleLimitInGBs { get; set; }
                 ///
         ///
         public enum AttachedShapeAttributesEnum {

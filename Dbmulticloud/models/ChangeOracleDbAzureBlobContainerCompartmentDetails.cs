@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// Details of the new compartment to contain the Oracle DB Azure Blob Container Resource.
+    /// Details of the new compartment to contain the Oracle DB Azure Blob Container resource.
     /// </summary>
     public class ChangeOracleDbAzureBlobContainerCompartmentDetails 
     {
         
         /// <value>
-        /// The ID of the new compartment to contain the Oracle DB Azure Blob Container Resource.
+        /// he [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the Oracle DB Azure Blob Container resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }

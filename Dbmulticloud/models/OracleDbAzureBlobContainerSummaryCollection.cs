@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// List of OracleDbAzureBlobContainerSummary resources.
+    /// Oracle DB Azure Blob Container change compartment object.
     /// </summary>
     public class OracleDbAzureBlobContainerSummaryCollection 
     {

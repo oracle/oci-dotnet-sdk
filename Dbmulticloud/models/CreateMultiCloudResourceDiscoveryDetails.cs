@@ -23,7 +23,7 @@ namespace Oci.DbmulticloudService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains Discovered Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains Multicloud Resource Discovery resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DbmulticloudService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Display name of Discovered Resource.
+        /// Display name of the Multicloud Resource Discovery resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DbmulticloudService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of Oracle DB Connector.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Connector resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -62,6 +62,21 @@ namespace Oci.DbmulticloudService.Models
         [JsonProperty(PropertyName = "resourceType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<MultiCloudResourceDiscovery.ResourceTypeEnum> ResourceType { get; set; }
+        
+        /// <value>
+        /// Discover resource using attributes as key-value pair.
+        /// For GCP supported attributes (keyRing)
+        /// For Azure supported attributes (keyVault)
+        /// GCP Example
+        /// `{\"keyRing\": \"projects/db-mc-dataplane/locations/global/keyRings/dbmci-keyring\"}` or
+        /// `{\"keyRing\": \"dbmci-keyring\"}`
+        /// Azure Example
+        /// `{\"keyVault\": \"/subscriptions/fd42b73d-5f28-4a23-ae7c-ca08c625fe07/resourceGroups/yumfei0808Test/providers/Microsoft.KeyVault/managedHSMs/orp7HSM001\"}` or
+        /// `{\"keyVault\": \"orp7HSM001\"}`
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourcesFilter")]
+        public System.Collections.Generic.Dictionary<string, string> ResourcesFilter { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

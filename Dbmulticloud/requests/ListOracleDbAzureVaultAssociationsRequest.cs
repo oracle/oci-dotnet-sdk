@@ -30,33 +30,32 @@ namespace Oci.DbmulticloudService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Vault Resources.
+        /// A filter to return Oracle DB Azure Vault resources that match the specified [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Vault resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureVaultId")]
         public string OracleDbAzureVaultId { get; set; }
         
         /// <value>
-        /// A filter to return Azure Vault Association.
+        /// A filter to return Oracle DB Azure Vault Association resources that match the specified display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Vault Association Resources.
+        /// A filter to return Oracle DB Azure Vault resources that match the specified OCID](/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Vault Association resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureVaultAssociationId")]
         public string OracleDbAzureVaultAssociationId { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the given lifecycle state. The
-        /// state value is case-insensitive.
+        /// A filter to return only resources that match the given lifecycle state. The state value is case-insensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<OracleDbAzureVaultAssociation.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Blob Mount Resources.
+        /// A filter to return Oracle DB Azure Azure Identity Connector resources.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureConnectorId")]
         public string OracleDbAzureConnectorId { get; set; }

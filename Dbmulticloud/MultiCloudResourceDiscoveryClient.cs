@@ -73,7 +73,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Moves the Oracle Azure Vault resource into a different compartment. When provided, &#39;If-Match&#39; is checked against &#39;ETag&#39; values of the resource.
+        /// Moves the Multicloud Resource Discovery resource into a different compartment. When provided, &#39;If-Match&#39; is checked against &#39;ETag&#39; values of the resource.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -109,7 +109,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "MultiCloudResourceDiscovery",
                     OperationName = "ChangeMultiCloudResourceDiscoveryCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/MultiCloudResourceDiscovery/ChangeMultiCloudResourceDiscoveryCompartment",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -129,7 +129,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Discover Azure Vaults and Keys based on the provided information.
+        /// Discovers Multicloud Resource and their associated resources based on the information provided.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -166,7 +166,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "MultiCloudResourceDiscovery",
                     OperationName = "CreateMultiCloudResourceDiscovery",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/MultiCloudResourceDiscovery/CreateMultiCloudResourceDiscovery",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -186,7 +186,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Delete Multi Cloud Discovery resource.
+        /// Deletes the Multicloud Resource Discovery resource and removes its associated metadata from Oracle Cloud Infrastructure.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -223,7 +223,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "MultiCloudResourceDiscovery",
                     OperationName = "DeleteMultiCloudResourceDiscovery",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/MultiCloudResourceDiscovery/DeleteMultiCloudResourceDiscovery",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -243,7 +243,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Get Multi Cloud Discovered Resource Details form a particular resource ID.
+        /// Retrieves detailed information about a Multicloud discovered resource by specifying its unique resource [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -280,7 +280,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "MultiCloudResourceDiscovery",
                     OperationName = "GetMultiCloudResourceDiscovery",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/MultiCloudResourceDiscovery/GetMultiCloudResourceDiscovery",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -300,7 +300,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Lists the all Multi Cloud Resource Discovery based on filters.
+        /// Lists all Multicloud Resource Discovery resources based on the specified filters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -337,7 +337,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "MultiCloudResourceDiscovery",
                     OperationName = "ListMultiCloudResourceDiscoveries",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/MultiCloudResourceDiscovery/ListMultiCloudResourceDiscoveries",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -357,7 +357,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Modifies the existing Azure Discovered Resource for a given ID.
+        /// Modifies the properties of an Azure discovered resource identified by the specified resource [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -394,7 +394,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "MultiCloudResourceDiscovery",
                     OperationName = "UpdateMultiCloudResourceDiscovery",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/MultiCloudResourceDiscovery/UpdateMultiCloudResourceDiscovery",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
