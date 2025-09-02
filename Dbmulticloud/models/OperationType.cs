@@ -27,6 +27,8 @@ namespace Oci.DbmulticloudService.Models
       UpdateAzureConnector,
       [EnumMember(Value = "MOVE_AZURE_CONNECTOR")]
       MoveAzureConnector,
+      [EnumMember(Value = "REFRESH_AZURE_CONNECTOR")]
+      RefreshAzureConnector,
       [EnumMember(Value = "CREATE_AZURE_BLOB_CONTAINER")]
       CreateAzureBlobContainer,
       [EnumMember(Value = "DELETE_AZURE_BLOB_CONTAINER")]
@@ -72,6 +74,28 @@ namespace Oci.DbmulticloudService.Models
       [EnumMember(Value = "PATCH_DB_RESOURCE")]
       PatchDbResource,
       [EnumMember(Value = "CREATE_GCP_IDENTITY_CONFIGURATION")]
-      CreateGcpIdentityConfiguration
+      CreateGcpIdentityConfiguration,
+      [EnumMember(Value = "CREATE_GCP_CONNECTOR")]
+      CreateGcpConnector,
+      [EnumMember(Value = "DELETE_GCP_CONNECTOR")]
+      DeleteGcpConnector,
+      [EnumMember(Value = "UPDATE_GCP_CONNECTOR")]
+      UpdateGcpConnector,
+      [EnumMember(Value = "MOVE_GCP_CONNECTOR")]
+      MoveGcpConnector,
+      [EnumMember(Value = "REFRESH_GCP_CONNECTOR")]
+      RefreshGcpConnector,
+      [EnumMember(Value = "GCP_DISCOVERY")]
+      GcpDiscovery,
+      [EnumMember(Value = "CREATE_GCP_KEY_RING")]
+      CreateGcpKeyRing,
+      [EnumMember(Value = "DELETE_GCP_KEY_RING")]
+      DeleteGcpKeyRing,
+      [EnumMember(Value = "UPDATE_GCP_KEY_RING")]
+      UpdateGcpKeyRing,
+      [EnumMember(Value = "MOVE_GCP_KEY_RING")]
+      MoveGcpKeyRing,
+      [EnumMember(Value = "REFRESH_GCP_KEY_RING")]
+      RefreshGcpKeyRing
   }
 }

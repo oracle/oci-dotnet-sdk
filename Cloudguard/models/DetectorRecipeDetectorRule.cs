@@ -80,6 +80,18 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
         
+        /// <value>
+        /// Detector rule type
+        /// </value>
+        [JsonProperty(PropertyName = "ruleType")]
+        public System.Collections.Generic.List<RuleType> RuleType { get; set; }
+        
+        /// <value>
+        /// Is the rule cloneable?
+        /// </value>
+        [JsonProperty(PropertyName = "isCloneable")]
+        public System.Nullable<bool> IsCloneable { get; set; }
+        
         [JsonProperty(PropertyName = "details")]
         public DetectorDetails Details { get; set; }
                 ///
@@ -115,7 +127,11 @@ namespace Oci.CloudguardService.Models
             [EnumMember(Value = "FUSION_APPS_ROLE")]
             FusionAppsRole,
             [EnumMember(Value = "FUSION_APPS_PERMISSION")]
-            FusionAppsPermission
+            FusionAppsPermission,
+            [EnumMember(Value = "NAMESPACE_SELECTOR")]
+            NamespaceSelector,
+            [EnumMember(Value = "POD_RESOURCE_SELECTOR")]
+            PodResourceSelector
         };
 
         /// <value>

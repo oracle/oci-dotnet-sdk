@@ -73,7 +73,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Delete Oracle DB Azure Vault Association details.
+        /// Deletes the Oracle DB Azure Vault Association resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -110,7 +110,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVaultAssociation",
                     OperationName = "CascadingDeleteOracleDbAzureVaultAssociation",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVaultAssociation/CascadingDeleteOracleDbAzureVaultAssociation",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -166,7 +166,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVaultAssociation",
                     OperationName = "ChangeOracleDbAzureVaultAssociationCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVaultAssociation/ChangeOracleDbAzureVaultAssociationCompartment",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -186,7 +186,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Create Oracle DB Azure Vault Association based on the provided information.
+        /// Creates Oracle DB Azure Vault Association resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -223,7 +223,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVaultAssociation",
                     OperationName = "CreateOracleDbAzureVaultAssociation",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVaultAssociation/CreateOracleDbAzureVaultAssociation",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -243,7 +243,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Delete Oracle DB Azure Vault Association details.
+        /// Deletes the Oracle DB Azure Vault Association resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -280,7 +280,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVaultAssociation",
                     OperationName = "DeleteOracleDbAzureVaultAssociation",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVaultAssociation/DeleteOracleDbAzureVaultAssociation",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -300,7 +300,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Get Oracle DB Azure Vault Details Association form a particular Container Resource ID.
+        /// Retrieves the details of an Oracle DB Azure Vault Association using the specified association resource [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -337,7 +337,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVaultAssociation",
                     OperationName = "GetOracleDbAzureVaultAssociation",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVaultAssociation/GetOracleDbAzureVaultAssociation",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -357,7 +357,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Lists the all Oracle DB Azure Associations based on filters.
+        /// Lists all Oracle DB Azure Associations based on the specified filters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -394,7 +394,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVaultAssociation",
                     OperationName = "ListOracleDbAzureVaultAssociations",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVaultAssociation/ListOracleDbAzureVaultAssociations",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -414,7 +414,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Modifies the existing Oracle DB Azure Vault Association Details for a given ID.
+        /// Modifies the properties of an Oracle DB Azure Vault Association resource identified by the specified resource [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -451,7 +451,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureVaultAssociation",
                     OperationName = "UpdateOracleDbAzureVaultAssociation",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureVaultAssociation/UpdateOracleDbAzureVaultAssociation",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

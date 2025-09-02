@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// Details of the new compartment to contain the Multi Cloud Resource Discovery.
+    /// Details of the new compartment to contain the Multicloud Resource Discovery.
     /// </summary>
     public class ChangeMultiCloudResourceDiscoveryCompartmentDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the new compartment to contain the Multi Cloud Resource Discovery.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the new compartment that contains Multicloud Resource Discovery resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }

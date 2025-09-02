@@ -16,20 +16,20 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// This object is about to provide input params to update Oracle DB Azure Blob Container.
+    /// Oracle DB Azure Blob Container resource's update object.
     /// 
     /// </summary>
     public class UpdateOracleDbAzureBlobContainerDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment that contains Oracle DB Azure Blob Container Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Blob Container resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Display name of Oracle DB Azure Blob Container Resource.
+        /// Oracle DB Azure Blob Container resource name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -41,19 +41,19 @@ namespace Oci.DbmulticloudService.Models
         public string PrivateEndpointIpAddress { get; set; }
         
         /// <value>
-        /// Private endpoint DNS Alias.
+        /// Private endpoint's DNS alias.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointDnsAlias")]
         public string PrivateEndpointDnsAlias { get; set; }
         
         /// <value>
-        /// Azure Storage Account Name.
+        /// Azure Storage account name.
         /// </value>
         [JsonProperty(PropertyName = "azureStorageAccountName")]
         public string AzureStorageAccountName { get; set; }
         
         /// <value>
-        /// Azure Storage Container Name.
+        /// Azure Storage container name.
         /// </value>
         [JsonProperty(PropertyName = "azureStorageContainerName")]
         public string AzureStorageContainerName { get; set; }

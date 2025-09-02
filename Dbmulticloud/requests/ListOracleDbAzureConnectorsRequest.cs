@@ -30,27 +30,26 @@ namespace Oci.DbmulticloudService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Connector Resource that match the given display name.
+        /// A filter to return Oracle DB Azure Connector resources that match the specified display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Blob Mount Resources.
+        /// A filter to return Oracle DB Azure Azure Identity Connector resources.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureConnectorId")]
         public string OracleDbAzureConnectorId { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the given lifecycle state. The
-        /// state value is case-insensitive.
+        /// A filter to return only resources that match the given lifecycle state. The state value is case-insensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<OracleDbAzureConnector.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The [ID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database Resource.
+        /// The [ID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dbClusterResourceId")]
         public string DbClusterResourceId { get; set; }

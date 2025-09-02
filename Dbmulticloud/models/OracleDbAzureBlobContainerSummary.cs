@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// Oracle DB Azure Blob Container Resource Summary.
+    /// Oracle DB Azure Blob Container resource's summary object.
     /// 
     /// </summary>
     public class OracleDbAzureBlobContainerSummary 
     {
         
         /// <value>
-        /// The ID for the new mount resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DB Azure Blob Container resource.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
@@ -35,7 +35,7 @@ namespace Oci.DbmulticloudService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The ID of the compartment contains Oracle DB Azure Blob Container Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment contains Oracle DB Azure Blob Container resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
@@ -47,25 +47,25 @@ namespace Oci.DbmulticloudService.Models
         public string PrivateEndpointIpAddress { get; set; }
         
         /// <value>
-        /// Private Endpoint DNS Alias.
+        /// Private Endpoint's DNS alias.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointDnsAlias")]
         public string PrivateEndpointDnsAlias { get; set; }
         
         /// <value>
-        /// Azure Storage Account Name.
+        /// Azure Storage account name.
         /// </value>
         [JsonProperty(PropertyName = "azureStorageAccountName")]
         public string AzureStorageAccountName { get; set; }
         
         /// <value>
-        /// Azure Storage Container Name.
+        /// Azure Storage container name.
         /// </value>
         [JsonProperty(PropertyName = "azureStorageContainerName")]
         public string AzureStorageContainerName { get; set; }
         
         /// <value>
-        /// The current lifecycle state of the Azure Arc Agent Resource.
+        /// The current lifecycle state of the DB Azure Blob Container resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -92,7 +92,7 @@ namespace Oci.DbmulticloudService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Description of the latest modification of the Oracle DB Azure Blob Container Resource.
+        /// Description of the latest modification of the Oracle DB Azure Blob Container resource.
         /// </value>
         [JsonProperty(PropertyName = "lastModification")]
         public string LastModification { get; set; }

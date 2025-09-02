@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// Details of the new compartment to contain the Oracle DB Azure Vault Association Resource.
+    /// Details of the new compartment to contain the Oracle DB Azure Vault Association resource.
     /// </summary>
     public class ChangeOracleDbAzureVaultAssociationCompartmentDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the new compartment to contain the Oracle DB Azure Vault Association Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the new compartment to contain the Oracle DB Azure Vault Association resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }

@@ -23,7 +23,7 @@ namespace Oci.DbmulticloudService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Discovered Resource.
+        /// The ID of the Discovered Resource.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }

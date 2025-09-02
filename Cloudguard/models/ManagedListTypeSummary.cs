@@ -38,6 +38,12 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// Managed list type group
+        /// </value>
+        [JsonProperty(PropertyName = "group")]
+        public string Group { get; set; }
+        
+        /// <value>
         /// The current lifecycle state of the resource
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]

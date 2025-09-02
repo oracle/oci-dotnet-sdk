@@ -30,33 +30,32 @@ namespace Oci.DbmulticloudService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return Azure Vaults.
+        /// A filter to return Oracle DB Azure Vault resources that match the specified display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Vault Resources.
+        /// A filter to return Oracle DB Azure Vault resources that match the specified [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Vault resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureVaultId")]
         public string OracleDbAzureVaultId { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the given lifecycle state. The
-        /// state value is case-insensitive.
+        /// A filter to return only resources that match the given lifecycle state. The state value is case-insensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<OracleDbAzureVault.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A filter to return Azure Vaults.
+        /// A filter to return Oracle DB Azure Vault resources that match the specified Oracle DB Azure resource group name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureResourceGroup")]
         public string OracleDbAzureResourceGroup { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Blob Mount Resources.
+        /// A filter to return Oracle DB Azure Azure Identity Connector resources.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureConnectorId")]
         public string OracleDbAzureConnectorId { get; set; }

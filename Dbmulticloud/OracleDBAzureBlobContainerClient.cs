@@ -109,7 +109,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobContainer",
                     OperationName = "ChangeOracleDbAzureBlobContainerCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobContainer/ChangeOracleDbAzureBlobContainerCompartment",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -129,7 +129,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Capture Azure Container details for mounting Azure Container on multiple OCI Database Resource.
+        /// Creates Oracle DB Azure Blob Container resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -166,7 +166,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobContainer",
                     OperationName = "CreateOracleDbAzureBlobContainer",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobContainer/CreateOracleDbAzureBlobContainer",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -186,7 +186,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Delete Oracle DB Azure Blob Container details.
+        /// Delete Oracle DB Azure Blob Container resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -223,7 +223,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobContainer",
                     OperationName = "DeleteOracleDbAzureBlobContainer",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobContainer/DeleteOracleDbAzureBlobContainer",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -243,7 +243,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Get Oracle DB Azure Blob Container Details form a particular Container Resource ID.
+        /// Retrieves the details of an Oracle DB\u2013associated Azure Blob Container using the specified container resource [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -280,7 +280,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobContainer",
                     OperationName = "GetOracleDbAzureBlobContainer",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobContainer/GetOracleDbAzureBlobContainer",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -300,7 +300,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Lists the all Oracle DB Azure Blob Container based on filter.
+        /// Lists all Oracle DB Azure Blob Container resources based on the specified filters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -337,7 +337,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobContainer",
                     OperationName = "ListOracleDbAzureBlobContainers",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobContainer/ListOracleDbAzureBlobContainers",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -357,7 +357,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Modifies the existing Oracle DB Azure Blob Container for a given ID.
+        /// Modifies the existing Oracle DB Azure Blob Container resource for a given [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -394,7 +394,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureBlobContainer",
                     OperationName = "UpdateOracleDbAzureBlobContainer",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureBlobContainer/UpdateOracleDbAzureBlobContainer",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

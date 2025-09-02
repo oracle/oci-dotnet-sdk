@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// Multi Cloud Resource Discovery Object.
+    /// Multicloud Resource Discovery resource object
     /// 
     /// </summary>
     public class MultiCloudResourceDiscovery 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Multi Cloud Discovery Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Multicloud Resource Discovery resource
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DbmulticloudService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains Multi Cloud Discovery Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains Multicloud Resource Discovery resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DbmulticloudService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Display name of Multi Cloud Discovery Resource.
+        /// Display name of the Multicloud Resource Discovery resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.DbmulticloudService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Connector Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Connector resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -61,6 +61,21 @@ namespace Oci.DbmulticloudService.Models
         [Required(ErrorMessage = "OracleDbConnectorId is required.")]
         [JsonProperty(PropertyName = "oracleDbConnectorId")]
         public string OracleDbConnectorId { get; set; }
+        
+        /// <value>
+        /// Discover resource using attributes as key-value pair.
+        /// For GCP supported attributes (keyRing)
+        /// For Azure supported attributes (keyVault)
+        /// GCP Example
+        /// `{\"keyRing\": \"projects/db-mc-dataplane/locations/global/keyRings/dbmci-keyring\"}` or
+        /// `{\"keyRing\": \"dbmci-keyring\"}`
+        /// Azure Example
+        /// `{\"keyVault\": \"/subscriptions/fd42b73d-5f28-4a23-ae7c-ca08c625fe07/resourceGroups/yumfei0808Test/providers/Microsoft.KeyVault/managedHSMs/orp7HSM001\"}` or
+        /// `{\"keyVault\": \"orp7HSM001\"}`
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourcesFilter")]
+        public System.Collections.Generic.Dictionary<string, string> ResourcesFilter { get; set; }
         
         /// <value>
         /// List of All Discovered resources.
@@ -79,7 +94,9 @@ namespace Oci.DbmulticloudService.Models
             [EnumMember(Value = "VAULTS")]
             Vaults,
             [EnumMember(Value = "STORAGE")]
-            Storage
+            Storage,
+            [EnumMember(Value = "GCP_KEY_RINGS")]
+            GcpKeyRings
         };
 
         /// <value>
@@ -135,21 +152,21 @@ namespace Oci.DbmulticloudService.Models
         public string LifecycleStateDetails { get; set; }
         
         /// <value>
-        /// Time when the Multi Cloud Discovery Resource was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
+        /// Time when the Multicloud Discovery Resource was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Time when the Multi Cloud Discovery Resource was last modified, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
+        /// Time when the Multicloud Discovery Resource was last modified, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Description of the latest modification of the Multi Cloud Discovery Resource.
+        /// Description of the latest modification of the Multicloud Resource Discovery resource.
         /// </value>
         [JsonProperty(PropertyName = "lastModification")]
         public string LastModification { get; set; }

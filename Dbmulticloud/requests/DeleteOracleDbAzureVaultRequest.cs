@@ -20,7 +20,7 @@ namespace Oci.DbmulticloudService.Requests
     {
         
         /// <value>
-        /// The ID of the Oracle DB Azure Vault Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Vault resource.
         /// </value>
         /// <remarks>
         /// Required

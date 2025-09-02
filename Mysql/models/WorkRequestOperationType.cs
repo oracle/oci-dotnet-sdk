@@ -66,6 +66,8 @@ namespace Oci.MysqlService.Models
       [EnumMember(Value = "CREATE_BACKUP")]
       CreateBackup,
       [EnumMember(Value = "DELETE_BACKUP")]
-      DeleteBackup
+      DeleteBackup,
+      [EnumMember(Value = "UPDATE_BACKUP")]
+      UpdateBackup
   }
 }
