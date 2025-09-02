@@ -20,7 +20,7 @@ namespace Oci.DbmulticloudService.Requests
     {
         
         /// <value>
-        /// The ID of the Oracle DB Azure Connector Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Connector resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DbmulticloudService.Requests
         public string OracleDbAzureConnectorId { get; set; }
         
         /// <value>
-        /// Patch Azure Arc Agent on VM Cluster with new version.
+        /// Patch Azure Arc Agent on Oracle Cloud VM Cluster with new version.
         /// </value>
         /// <remarks>
         /// Required

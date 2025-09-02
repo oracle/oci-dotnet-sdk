@@ -46,6 +46,10 @@ namespace Oci.CloudguardService.Models
       [EnumMember(Value = "FUSION_APPS_ROLE")]
       FusionAppsRole,
       [EnumMember(Value = "FUSION_APPS_PERMISSION")]
-      FusionAppsPermission
+      FusionAppsPermission,
+      [EnumMember(Value = "NAMESPACE_SELECTOR")]
+      NamespaceSelector,
+      [EnumMember(Value = "POD_RESOURCE_SELECTOR")]
+      PodResourceSelector
   }
 }

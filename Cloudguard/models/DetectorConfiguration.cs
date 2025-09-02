@@ -71,5 +71,11 @@ namespace Oci.CloudguardService.Models
         [JsonProperty(PropertyName = "allowedValues")]
         public System.Collections.Generic.List<PropertyTuple> AllowedValues { get; set; }
         
+        /// <value>
+        /// Map of additional property values for configuration
+        /// </value>
+        [JsonProperty(PropertyName = "additionalProperties")]
+        public System.Collections.Generic.List<AdditionalConfigPropertyDefinition> AdditionalProperties { get; set; }
+        
     }
 }

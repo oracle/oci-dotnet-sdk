@@ -16,56 +16,56 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// This object is about to provide input params to update Oracle DB Azure Vault Resource.
+    /// This object is about to provide input params to update Oracle DB Azure Vault resource.
     /// 
     /// </summary>
     public class UpdateOracleDbAzureVaultDetails 
     {
         
         /// <value>
-        /// The compartment [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) that contains DB Azure Vault Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains this Oracle DB Azure Vault resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the DB Connector Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Connector resource that contains Oracle DB Azure Vault resource.
         /// </value>
         [JsonProperty(PropertyName = "oracleDbConnectorId")]
         public string OracleDbConnectorId { get; set; }
         
         /// <value>
-        /// Display name of DB Azure Vault.
+        /// Oracle DB Azure Vault resource name.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Display name of Azure Resource Group.
+        /// Oracle DB Azure resource group name.
         /// </value>
         [JsonProperty(PropertyName = "oracleDbAzureResourceGroup")]
         public string OracleDbAzureResourceGroup { get; set; }
         
         /// <value>
-        /// Azure Vault Id.
+        /// Azure Vault ID.
         /// </value>
         [JsonProperty(PropertyName = "azureVaultId")]
         public string AzureVaultId { get; set; }
         
         /// <value>
-        /// Vault Resource Type.
+        /// Oracle DB Azure Vault resource type.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
         /// <value>
-        /// Vault Resource Location.
+        /// Oracle DB Azure Vault resource location.
         /// </value>
         [JsonProperty(PropertyName = "location")]
         public string Location { get; set; }
         
         /// <value>
-        /// Resource's properties.
+        /// Oracle DB Azure Vault resource's properties.
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, string> Properties { get; set; }

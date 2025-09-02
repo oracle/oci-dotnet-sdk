@@ -22,7 +22,7 @@ namespace Oci.DbmulticloudService.Models
     {
         
         /// <value>
-        /// This list contains the summary of Multi Cloud Resource Discovery.
+        /// This list contains the summary of Multicloud Resource Discovery.
         /// </value>
         /// <remarks>
         /// Required

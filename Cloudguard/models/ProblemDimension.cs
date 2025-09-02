@@ -23,6 +23,10 @@ namespace Oci.CloudguardService.Models
       [EnumMember(Value = "COMPARTMENT_ID")]
       CompartmentId,
       [EnumMember(Value = "RISK_LEVEL")]
-      RiskLevel
+      RiskLevel,
+      [EnumMember(Value = "DETECTOR_ID")]
+      DetectorId,
+      [EnumMember(Value = "TARGET_ID")]
+      TargetId
   }
 }

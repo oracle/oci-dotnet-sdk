@@ -23,7 +23,7 @@ namespace Oci.DbmulticloudService.Models
     {
         
         /// <value>
-        /// The ID for the new Oracle DB Azure Blob Mount resource.
+        /// TThe The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Blob Mount resource.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
@@ -35,19 +35,19 @@ namespace Oci.DbmulticloudService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The ID of the compartment that contains VM where to install Azure Arc Agent.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains Oracle DB Azure Blob Mount resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The ID of the Oracle DB Azure Connector Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Connector resource that contains Oracle DB Azure Blob Mount resource.
         /// </value>
         [JsonProperty(PropertyName = "oracleDbAzureConnectorId")]
         public string OracleDbAzureConnectorId { get; set; }
         
         /// <value>
-        /// The ID of the Oracle DB Azure Blob Container Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Blob Container resource that contains Oracle DB Azure Blob Mount resource.
         /// </value>
         [JsonProperty(PropertyName = "oracleDbAzureBlobContainerId")]
         public string OracleDbAzureBlobContainerId { get; set; }
@@ -59,7 +59,7 @@ namespace Oci.DbmulticloudService.Models
         public string MountPath { get; set; }
         
         /// <value>
-        /// The current lifecycle state of the Oracle DB Azure Blob Mount Resource.
+        /// The current lifecycle state of the Oracle DB Azure Blob Mount resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -86,7 +86,7 @@ namespace Oci.DbmulticloudService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Description of the latest modification of the Oracle DB Azure Blob Mount Resource.
+        /// Description of the latest modification of the Oracle DB Azure Blob Mount resource.
         /// </value>
         [JsonProperty(PropertyName = "lastModification")]
         public string LastModification { get; set; }

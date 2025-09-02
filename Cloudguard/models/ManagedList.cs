@@ -81,6 +81,12 @@ namespace Oci.CloudguardService.Models
         public System.Collections.Generic.List<string> ListItems { get; set; }
         
         /// <value>
+        /// Managed list type group
+        /// </value>
+        [JsonProperty(PropertyName = "group")]
+        public string Group { get; set; }
+        
+        /// <value>
         /// Provider of the managed list feed
         /// </value>
         [JsonProperty(PropertyName = "feedProvider")]

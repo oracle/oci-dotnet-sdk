@@ -75,6 +75,12 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<ManagedListType> ListType { get; set; }
         
         /// <value>
+        /// Managed list type group
+        /// </value>
+        [JsonProperty(PropertyName = "group")]
+        public string Group { get; set; }
+        
+        /// <value>
         /// Provider of the feed
         /// </value>
         /// <remarks>

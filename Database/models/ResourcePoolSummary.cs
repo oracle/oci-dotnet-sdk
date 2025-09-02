@@ -28,6 +28,18 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> PoolSize { get; set; }
         
         /// <value>
+        /// Resource Pool total capacity, it's currently 4x of pool size
+        /// </value>
+        [JsonProperty(PropertyName = "totalComputeCapacity")]
+        public System.Nullable<int> TotalComputeCapacity { get; set; }
+        
+        /// <value>
+        /// Available capacity left for new elastic pool members provision
+        /// </value>
+        [JsonProperty(PropertyName = "availableComputeCapacity")]
+        public System.Nullable<int> AvailableComputeCapacity { get; set; }
+        
+        /// <value>
         /// Indicates if the resource pool should be deleted for the Autonomous Database. 
         /// 
         /// </value>

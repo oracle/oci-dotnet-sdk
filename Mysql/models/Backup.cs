@@ -60,6 +60,9 @@ namespace Oci.MysqlService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SoftDelete> SoftDelete { get; set; }
         
+        [JsonProperty(PropertyName = "backupValidationDetails")]
+        public BackupValidationDetails BackupValidationDetails { get; set; }
+        
         /// <value>
         /// The OCID of the compartment.
         /// </value>

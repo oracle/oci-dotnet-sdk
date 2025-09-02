@@ -73,7 +73,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Moves the Oracle DB Azure Connector Resource into a different compartment. When provided, &#39;If-Match&#39; is checked against &#39;ETag&#39; values of the resource.
+        /// Moves the Oracle DB Azure Connector resource into a different compartment. When provided, &#39;If-Match&#39; is checked against &#39;ETag&#39; values of the resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -110,7 +110,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureConnector",
                     OperationName = "ChangeOracleDbAzureConnectorCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureConnector/ChangeOracleDbAzureConnectorCompartment",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -130,7 +130,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Creates Oracle DB Azure Connector Resource and configured Azure Identity in OCI Database Resource.
+        /// Creates Oracle DB Azure Connector resource and configured Azure Identity in Oracle Database resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -167,7 +167,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureConnector",
                     OperationName = "CreateOracleDbAzureConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureConnector/CreateOracleDbAzureConnector",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -187,7 +187,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Delete Oracle DB Azure Connector Resource and delete Azure Arc Identity too from Database Resource.
+        /// Deletes the Oracle DB Azure Identity Connector resource.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -224,7 +224,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureConnector",
                     OperationName = "DeleteOracleDbAzureConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureConnector/DeleteOracleDbAzureConnector",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -244,7 +244,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Get Oracle DB Azure Connector Resource form a particular Resource ID.
+        /// Retrieves the Oracle DB Azure Identity Connector for a specified resource [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -281,7 +281,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureConnector",
                     OperationName = "GetOracleDbAzureConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureConnector/GetOracleDbAzureConnector",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -301,7 +301,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Lists the all Oracle DB Azure Connector Resource based on filters.
+        /// Lists all Oracle DB Azure Connector resources based on the specified filters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -338,7 +338,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureConnector",
                     OperationName = "ListOracleDbAzureConnectors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureConnector/ListOracleDbAzureConnectors",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -358,7 +358,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Patch Azure Arc Agent on VM Cluster with new version.
+        /// Patch Azure Arc Agent on Oracle Cloud VM Cluster with new version.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -395,7 +395,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureConnector",
                     OperationName = "PatchOracleDbAzureConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureConnector/PatchOracleDbAzureConnector",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -415,7 +415,64 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Modifies the existing Oracle DB Azure Connector Resource for a given ID.
+        /// Refreshes the Oracle DB Azure Connector resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dbmulticloud/RefreshOracleDbAzureConnector.cs.html">here</a> to see an example of how to use RefreshOracleDbAzureConnector API.</example>
+        public async Task<RefreshOracleDbAzureConnectorResponse> RefreshOracleDbAzureConnector(RefreshOracleDbAzureConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called refreshOracleDbAzureConnector");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/oracleDbAzureConnector/{oracleDbAzureConnectorId}/actions/refresh".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "OracleDBAzureConnector",
+                    OperationName = "RefreshOracleDbAzureConnector",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<RefreshOracleDbAzureConnectorResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RefreshOracleDbAzureConnector failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Modifies the existing Oracle DB Azure Connector resource for a given [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -452,7 +509,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDBAzureConnector",
                     OperationName = "UpdateOracleDbAzureConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureConnector/UpdateOracleDbAzureConnector",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

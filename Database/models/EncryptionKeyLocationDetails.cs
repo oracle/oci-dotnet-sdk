@@ -25,6 +25,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// Use 'EXTERNAL' for creating a new database or migrating a database key to an External HSM.
         /// Use 'AZURE' for creating a new database or migrating a database key to Azure.
+        /// Use 'GCP' for creating a new database or migrating a database key to Google Cloud Provider.
         /// 
         /// </value>
         ///
@@ -32,7 +33,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "EXTERNAL")]
             External,
             [EnumMember(Value = "AZURE")]
-            Azure
+            Azure,
+            [EnumMember(Value = "GCP")]
+            Gcp
         };
 
         
@@ -61,6 +64,9 @@ namespace Oci.DatabaseService.Models
             {
                 case "EXTERNAL":
                     obj = new ExternalHsmEncryptionDetails();
+                    break;
+                case "GCP":
+                    obj = new GoogleCloudProviderEncryptionKeyDetails();
                     break;
                 case "AZURE":
                     obj = new AzureEncryptionKeyDetails();

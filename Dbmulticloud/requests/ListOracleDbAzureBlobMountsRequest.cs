@@ -30,33 +30,32 @@ namespace Oci.DbmulticloudService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Blob Mount Resources.
+        /// A filter to return Oracle DB Azure Blob Mount resources that match the specified display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// ID of Oracle DB Azure Blob Mount Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Blob Mount resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureBlobMountId")]
         public string OracleDbAzureBlobMountId { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the given lifecycle state. The
-        /// state value is case-insensitive.
+        /// A filter to return only resources that match the given lifecycle state. The state value is case-insensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<OracleDbAzureBlobMount.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Blob Mount Resources.
+        /// A filter to return Oracle DB Azure Blob Container resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureBlobContainerId")]
         public string OracleDbAzureBlobContainerId { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Blob Mount Resources.
+        /// A filter to return Oracle DB Azure Azure Identity Connector resources.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureConnectorId")]
         public string OracleDbAzureConnectorId { get; set; }

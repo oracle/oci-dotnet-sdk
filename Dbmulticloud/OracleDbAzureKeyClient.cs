@@ -73,7 +73,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Get Oracle DB Azure Key Details form a particular Container Resource ID.
+        /// Retrieves detailed information about a Oracle DB Azure Key resource by specifying its unique resource [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -110,7 +110,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureKey",
                     OperationName = "GetOracleDbAzureKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureKey/GetOracleDbAzureKey",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -130,7 +130,7 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
-        /// Lists the all Oracle DB Azure Keys based on filters.
+        /// Lists all Oracle DB Azure Keys based on the specified filters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -167,7 +167,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureKey",
                     OperationName = "ListOracleDbAzureKeys",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureKey/ListOracleDbAzureKeys",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

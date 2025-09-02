@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// This object is about to provide input params to mount Azure Container in OCI Database Resource.
+    /// This object is about to provide input params to mount Azure Container in OCI Database resource.
     /// 
     /// </summary>
     public class CreateOracleDbAzureBlobMountDetails 
     {
         
         /// <value>
-        /// The OCID of the compartment that contains VMs where to mount Azure Container.
+        /// TThe [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains Oracle DB Azure Blob Mount resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DbmulticloudService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Oracle DB Azure Blob Mount Resource name.
+        /// Oracle DB Azure Blob Mount resource name.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DbmulticloudService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The OCID of the Oracle DB Azure Connector Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Connector resource that contains Oracle DB Azure Blob Mount resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.DbmulticloudService.Models
         public string OracleDbAzureConnectorId { get; set; }
         
         /// <value>
-        /// The OCID of the Oracle DB Azure Blob Container Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Blob Container resource that contains Oracle DB Azure Blob Mount resource.
         /// </value>
         /// <remarks>
         /// Required

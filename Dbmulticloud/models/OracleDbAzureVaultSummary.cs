@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// Oracle DB Azure Vault Resource Summary.
+    /// Oracle DB Azure Vault resource summary.
     /// 
     /// </summary>
     public class OracleDbAzureVaultSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the new mount resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the oracle DB Azure Vault resource.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
@@ -35,49 +35,49 @@ namespace Oci.DbmulticloudService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment contains DB Azure Vault Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment contains DB Azure Vault resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Connector Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Connector resource that contains Oracle DB Azure Vault resource.
         /// </value>
         [JsonProperty(PropertyName = "oracleDbConnectorId")]
         public string OracleDbConnectorId { get; set; }
         
         /// <value>
-        /// Azure Vault Id.
+        /// Azure Vault ID.
         /// </value>
         [JsonProperty(PropertyName = "azureVaultId")]
         public string AzureVaultId { get; set; }
         
         /// <value>
-        /// Azure Resource Group Name.
+        /// Oracle DB Azure resource group name.
         /// </value>
         [JsonProperty(PropertyName = "oracleDbAzureResourceGroup")]
         public string OracleDbAzureResourceGroup { get; set; }
         
         /// <value>
-        /// Vault Resource Type.
+        /// Oracle DB Azure Vault resource type.
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
         /// <value>
-        /// Vault Resource Location.
+        /// Oracle DB Azure Vault resource location.
         /// </value>
         [JsonProperty(PropertyName = "location")]
         public string Location { get; set; }
         
         /// <value>
-        /// Resource's properties.
+        /// Oracle DB Azure Vault resource's properties.
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, string> Properties { get; set; }
         
         /// <value>
-        /// The current lifecycle state of the Azure Arc Agent Resource.
+        /// The current lifecycle state of the Azure Arc Agent resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -90,21 +90,21 @@ namespace Oci.DbmulticloudService.Models
         public string LifecycleStateDetails { get; set; }
         
         /// <value>
-        /// Time when the Oracle DB Azure Vault was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-23T21:10:29.600Z'
+        /// Time when the Oracle DB Azure Vault resource was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-23T21:10:29.600Z'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Time when the Oracle DB Azure Vault was last modified, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-23T21:10:29.600Z'
+        /// Time when the Oracle DB Azure Vault resource was last modified, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-23T21:10:29.600Z'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Description of the latest modification of the DB Azure Vault Resource.
+        /// Description of the latest modification of the DB Azure Vault resource.
         /// </value>
         [JsonProperty(PropertyName = "lastModification")]
         public string LastModification { get; set; }

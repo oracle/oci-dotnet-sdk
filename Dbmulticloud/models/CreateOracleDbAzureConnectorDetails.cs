@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// This object is about to provide input params to create Oracle DB Azure Connector Resource.
+    /// Create Oracle DB Azure Connector resource object.
     /// 
     /// </summary>
     public class CreateOracleDbAzureConnectorDetails 
     {
         
         /// <value>
-        /// The ID of the compartment that contains Oracle DB Azure Connector Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains Oracle DB Azure Connector resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DbmulticloudService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Oracle DB Azure Connector Resource name.
+        /// Oracle DB Azure Connector resource name.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DbmulticloudService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The ID of the DB Cluster Resource where this Azure Arc Agent Identity to configure.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB Cloud VM Cluster resource where this Azure Arc Agent Identity to configure.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.DbmulticloudService.Models
         public string DbClusterResourceId { get; set; }
         
         /// <value>
-        /// Azure Identity Mechanism.
+        /// Azure Identity mechanism.
         /// </value>
         /// <remarks>
         /// Required
@@ -84,7 +84,7 @@ namespace Oci.DbmulticloudService.Models
         public string AzureSubscriptionId { get; set; }
         
         /// <value>
-        /// Azure Resource Group Name.
+        /// Azure Resource group name.
         /// </value>
         /// <remarks>
         /// Required
@@ -94,7 +94,7 @@ namespace Oci.DbmulticloudService.Models
         public string AzureResourceGroup { get; set; }
         
         /// <value>
-        /// Azure bearer access token. If bearer access token is provided then Service Principal details are not requires.
+        /// Azure bearer access token.
         /// </value>
         [JsonProperty(PropertyName = "accessToken")]
         public string AccessToken { get; set; }
@@ -106,7 +106,7 @@ namespace Oci.DbmulticloudService.Models
         public string PrivateEndpointIpAddress { get; set; }
         
         /// <value>
-        /// Private endpoint DNS Alias.
+        /// Private endpoint's DNS alias.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointDnsAlias")]
         public string PrivateEndpointDnsAlias { get; set; }

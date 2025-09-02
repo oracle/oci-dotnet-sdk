@@ -69,6 +69,19 @@ namespace Oci.MysqlService.Requests
         public System.Nullable<SoftDelete> SoftDelete { get; set; }
         
         /// <value>
+        /// Indicates whether the backup has been prepared successfully.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "backupPreparationStatus")]
+        public System.Nullable<BackupValidationDetails.BackupPreparationStatusEnum> BackupPreparationStatus { get; set; }
+        
+        /// <value>
+        /// Backup validation status
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "validationStatus")]
+        public System.Nullable<BackupValidationDetails.ValidationStatusEnum> ValidationStatus { get; set; }
+        
+        /// <value>
         /// Backup creationType
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "creationType")]

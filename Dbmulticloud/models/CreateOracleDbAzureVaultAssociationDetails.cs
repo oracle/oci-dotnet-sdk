@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// This object is about to provide input params to create Oracle DB Azure Vault Association.
+    /// Create Oracle DB Azure Vault Association object.
     /// 
     /// </summary>
     public class CreateOracleDbAzureVaultAssociationDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains Oracle DB Azure Vault Association Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment that contains Oracle DB Azure Vault Association resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DbmulticloudService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Display name of Oracle DB Azure Vault Association.
+        /// Oracle DB Azure Vault Association resource name.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DbmulticloudService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Vault.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Vault that contains Oracle DB Azure Vault Association resource.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.DbmulticloudService.Models
         public string OracleDbAzureVaultId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Connector.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Connector that contains Oracle DB Azure Vault Association resource.
         /// </value>
         /// <remarks>
         /// Required

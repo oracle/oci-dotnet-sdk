@@ -30,33 +30,32 @@ namespace Oci.DbmulticloudService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// A filter to return Azure Containers.
+        /// A filter to return Oracle DB Azure Blob Container resources that match the specified display name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// A filter to return Oracle DB Azure Blob Mount Resources.
+        /// A filter to return Oracle DB Azure Blob Container resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAzureBlobContainerId")]
         public string OracleDbAzureBlobContainerId { get; set; }
         
         /// <value>
-        /// A filter to return only resources that match the given lifecycle state. The
-        /// state value is case-insensitive.
+        /// A filter to return only resources that match the given lifecycle state. The state value is case-insensitive.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<OracleDbAzureBlobContainer.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A filter to return Azure Blob Containers.
+        /// A filter to return Oracle DB Azure Blob Container resources that match the specified Azure Account name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "azureStorageAccountName")]
         public string AzureStorageAccountName { get; set; }
         
         /// <value>
-        /// A filter to return Azure Blob containers.
+        /// A filter to return Oracle DB Azure Blob Container resources that match the specified Azure Storage name.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "azureStorageContainerName")]
         public string AzureStorageContainerName { get; set; }

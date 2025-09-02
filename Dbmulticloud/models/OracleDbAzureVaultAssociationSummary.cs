@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DbmulticloudService.Models
 {
     /// <summary>
-    /// Oracle DB Azure Vault Association Resource Summary.
+    /// Oracle DB Azure Vault Association resource summary.
     /// 
     /// </summary>
     public class OracleDbAzureVaultAssociationSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the Oracle DB Azure Vault Association.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the Oracle DB Azure Vault Association resource.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
@@ -35,31 +35,31 @@ namespace Oci.DbmulticloudService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment contains Oracle DB Azure Vault Association Resource.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment contains Oracle DB Azure Vault Association resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Vault.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Vault that contains Oracle DB Azure Vault Association resource.
         /// </value>
         [JsonProperty(PropertyName = "oracleDbAzureVaultId")]
         public string OracleDbAzureVaultId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Connector.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle DB Azure Connector that contains Oracle DB Azure Vault Association resource.
         /// </value>
         [JsonProperty(PropertyName = "oracleDbAzureConnectorId")]
         public string OracleDbAzureConnectorId { get; set; }
         
         /// <value>
-        /// The Associated Resources are accessible or not.
+        /// The Associated resource is accessible or not.
         /// </value>
         [JsonProperty(PropertyName = "isResourceAccessible")]
         public System.Nullable<bool> IsResourceAccessible { get; set; }
         
         /// <value>
-        /// The current lifecycle state of the Oracle DB Azure Vault Association Resource.
+        /// The current lifecycle state of the Oracle DB Azure Vault Association resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -72,21 +72,21 @@ namespace Oci.DbmulticloudService.Models
         public string LifecycleStateDetails { get; set; }
         
         /// <value>
-        /// Time when the Oracle DB Azure Vault Association was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
+        /// Time when the Oracle DB Azure Vault Association resource was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Time when the Oracle DB Azure Vault Association was last modified, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
+        /// Time when the Oracle DB Azure Vault Association resource was last modified, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format, e.g. '2020-05-22T21:10:29.600Z'
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Description of the latest modification of the Oracle DB Azure Vault Association Resource.
+        /// Description of the latest modification of the Oracle DB Azure Vault Association resource.
         /// </value>
         [JsonProperty(PropertyName = "lastModification")]
         public string LastModification { get; set; }

@@ -22,7 +22,7 @@ namespace Oci.DbmulticloudService.Models
     {
         
         /// <value>
-        /// contains OracleDbAzureConnectorSummary
+        /// OracleDbAzureConnectorSummary object.
         /// </value>
         /// <remarks>
         /// Required
