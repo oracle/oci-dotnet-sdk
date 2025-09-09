@@ -104,6 +104,24 @@ namespace Oci.DatabaseService.Requests
         public string Type { get; set; }
         
         /// <value>
+        /// A filter to return only resources that have the given backup destination id.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "backupDestinationId")]
+        public string BackupDestinationId { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that have the given key store id.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "keyStoreId")]
+        public string KeyStoreId { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources that match the given Infrastructure Type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "infrastructureType")]
+        public System.Nullable<AutonomousDatabaseBackupSummary.InfrastructureTypeEnum> InfrastructureType { get; set; }
+        
+        /// <value>
         /// Unique identifier for the request.
         /// 
         /// </value>

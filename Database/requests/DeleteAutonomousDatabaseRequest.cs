@@ -46,6 +46,12 @@ namespace Oci.DatabaseService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
+        /// If set to true, terminating the Autonomous Database also deletes its associated long-term backups if the retention lock is not enabled.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "mustDeleteAssociatedLongTermBackups")]
+        public System.Nullable<bool> MustDeleteAssociatedLongTermBackups { get; set; }
+        
+        /// <value>
         /// Indicates that the request is a dry run, if set to \"true\". A dry run request does not actually 
         /// creating or updating a resource and is used only to perform validation on the submitted data.
         /// 
