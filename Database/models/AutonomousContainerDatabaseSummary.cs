@@ -424,11 +424,18 @@ namespace Oci.DatabaseService.Models
         public string KeyStoreWalletName { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) enabled per ECPU or OCPU in the Autonomous VM Cluster.
+        /// The amount of memory (in GBs rounded off to nearest integer value) enabled per ECPU or OCPU in the Autonomous VM Cluster. This is deprecated. Please refer to memoryPerComputeUnitInGBs for accurate value.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
+        
+        /// <value>
+        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "memoryPerComputeUnitInGBs")]
+        public System.Nullable<float> MemoryPerComputeUnitInGBs { get; set; }
         
         /// <value>
         /// Sum of CPUs available on the Autonomous VM Cluster + Sum of reclaimable CPUs available in the Autonomous Container Database.

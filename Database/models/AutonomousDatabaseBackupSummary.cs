@@ -229,6 +229,36 @@ namespace Oci.DatabaseService.Models
         
         [JsonProperty(PropertyName = "backupDestinationDetails")]
         public BackupDestinationDetails BackupDestinationDetails { get; set; }
+                ///
+        /// <value>
+        /// The infrastructure type this resource belongs to.
+        /// </value>
+        ///
+        public enum InfrastructureTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "CLOUD")]
+            Cloud,
+            [EnumMember(Value = "CLOUD_AT_CUSTOMER")]
+            CloudAtCustomer
+        };
+
+        /// <value>
+        /// The infrastructure type this resource belongs to.
+        /// </value>
+        [JsonProperty(PropertyName = "infrastructureType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<InfrastructureTypeEnum> InfrastructureType { get; set; }
+        
+        /// <value>
+        /// Name of the region in which backup is taken in.
+        /// </value>
+        [JsonProperty(PropertyName = "region")]
+        public string Region { get; set; }
+        
+        [JsonProperty(PropertyName = "sourceDatabaseDetails")]
+        public SourceDatabaseDetails SourceDatabaseDetails { get; set; }
         
     }
 }

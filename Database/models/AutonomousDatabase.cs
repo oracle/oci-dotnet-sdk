@@ -333,11 +333,18 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> DataStorageSizeInTBs { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU.
+        /// The amount of memory (in GBs rounded off to nearest integer value) enabled per ECPU or OCPU. This is deprecated. Please refer to memoryPerComputeUnitInGBs for accurate value.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
+        
+        /// <value>
+        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "memoryPerComputeUnitInGBs")]
+        public System.Nullable<float> MemoryPerComputeUnitInGBs { get; set; }
         
         /// <value>
         /// The quantity of data in the database, in gigabytes.

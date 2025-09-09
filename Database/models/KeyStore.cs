@@ -105,6 +105,18 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<KeyStoreAssociatedDatabaseDetails> AssociatedDatabases { get; set; }
         
         /// <value>
+        /// List of long term backups of Autonomous Databases associated with this backup destination.The maximum associated number of long term backup listed here would be 1024.
+        /// </value>
+        [JsonProperty(PropertyName = "associatedLongTermBackups")]
+        public System.Collections.Generic.List<AssociatedLongTermBackup> AssociatedLongTermBackups { get; set; }
+        
+        /// <value>
+        /// Indicates the number of long term backups of Autonomous Databases associated with this backup destination.
+        /// </value>
+        [JsonProperty(PropertyName = "associatedLongTermBackupCount")]
+        public System.Nullable<int> AssociatedLongTermBackupCount { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

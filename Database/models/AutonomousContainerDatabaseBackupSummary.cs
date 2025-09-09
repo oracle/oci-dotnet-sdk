@@ -82,7 +82,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "INCREMENTAL")]
             Incremental,
             [EnumMember(Value = "FULL")]
-            Full
+            Full,
+            [EnumMember(Value = "VIRTUAL_FULL")]
+            VirtualFull
         };
 
         /// <value>
