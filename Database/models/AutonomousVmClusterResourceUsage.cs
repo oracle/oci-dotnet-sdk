@@ -87,11 +87,18 @@ namespace Oci.DatabaseService.Models
         public System.Double ExadataStorageInTBs { get; set; }
         
         /// <value>
-        /// The amount of memory (in GBs) to be enabled per each CPU core.
+        /// The amount of memory (in GBs rounded off to nearest integer value) enabled per ECPU or OCPU. This is deprecated. Please refer to memoryPerComputeUnitInGBs for accurate value.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
         public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
+        
+        /// <value>
+        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "memoryPerComputeUnitInGBs")]
+        public System.Nullable<float> MemoryPerComputeUnitInGBs { get; set; }
         
         /// <value>
         /// The number of CPU cores enabled on the Autonomous VM cluster.

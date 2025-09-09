@@ -40,7 +40,7 @@ namespace Oci.DatabaseService.Requests
         
         ///
         /// <value>
-        /// The database edition of quota (STANDARD_EDITION/ENTERPRISE_EDITION/ENTERPRISE_EDITION_HIGH_PERFORMANCE/ENTERPRISE_EDITION_EXTREME/ENTERPRISE_EDITION_DEVELOPER)
+        /// The database edition of quota (STANDARD_EDITION/ENTERPRISE_EDITION/ENTERPRISE_EDITION_HIGH_PERFORMANCE/ENTERPRISE_EDITION_EXTREME_PERFORMANCE/ENTERPRISE_EDITION_DEVELOPER)
         /// </value>
         ///
         public enum DatabaseEditionEnum {
@@ -50,14 +50,14 @@ namespace Oci.DatabaseService.Requests
             EnterpriseEdition,
             [EnumMember(Value = "ENTERPRISE_EDITION_HIGH_PERFORMANCE")]
             EnterpriseEditionHighPerformance,
-            [EnumMember(Value = "ENTERPRISE_EDITION_EXTREME")]
-            EnterpriseEditionExtreme,
+            [EnumMember(Value = "ENTERPRISE_EDITION_EXTREME_PERFORMANCE")]
+            EnterpriseEditionExtremePerformance,
             [EnumMember(Value = "ENTERPRISE_EDITION_DEVELOPER")]
             EnterpriseEditionDeveloper
         };
 
         /// <value>
-        /// The database edition of quota (STANDARD_EDITION/ENTERPRISE_EDITION/ENTERPRISE_EDITION_HIGH_PERFORMANCE/ENTERPRISE_EDITION_EXTREME/ENTERPRISE_EDITION_DEVELOPER)
+        /// The database edition of quota (STANDARD_EDITION/ENTERPRISE_EDITION/ENTERPRISE_EDITION_HIGH_PERFORMANCE/ENTERPRISE_EDITION_EXTREME_PERFORMANCE/ENTERPRISE_EDITION_DEVELOPER)
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "databaseEdition")]
         public System.Nullable<DatabaseEditionEnum> DatabaseEdition { get; set; }

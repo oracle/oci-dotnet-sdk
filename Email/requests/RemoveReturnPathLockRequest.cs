@@ -14,9 +14,9 @@ using Oci.EmailService.Models;
 namespace Oci.EmailService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/UpdateEmailReturnPath.cs.html">here</a> to see an example of how to use UpdateEmailReturnPath request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/email/RemoveReturnPathLock.cs.html">here</a> to see an example of how to use RemoveReturnPathLock request.
     /// </example>
-    public class UpdateEmailReturnPathRequest : Oci.Common.IOciRequest
+    public class RemoveReturnPathLockRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
@@ -30,14 +30,20 @@ namespace Oci.EmailService.Requests
         public string EmailReturnPathId { get; set; }
         
         /// <value>
-        /// The new email return path attributes to apply.
+        /// Details for removing a lock from a resource.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "UpdateEmailReturnPathDetails is required.")]
+        [Required(ErrorMessage = "RemoveLockDetails is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public UpdateEmailReturnPathDetails UpdateEmailReturnPathDetails { get; set; }
+        public RemoveLockDetails RemoveLockDetails { get; set; }
+        
+        /// <value>
+        /// The request ID for tracing from the system
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
+        public string OpcRequestId { get; set; }
         
         /// <value>
         /// Used for optimistic concurrency control. In the update or delete call for a resource, set the `if-match`
@@ -47,17 +53,5 @@ namespace Oci.EmailService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]
         public string IfMatch { get; set; }
-        
-        /// <value>
-        /// The request ID for tracing from the system
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
-        public string OpcRequestId { get; set; }
-        
-        /// <value>
-        /// Whether to override locks (if any exist).
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLockOverride")]
-        public System.Nullable<bool> IsLockOverride { get; set; }
     }
 }

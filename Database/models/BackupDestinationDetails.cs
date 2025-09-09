@@ -85,6 +85,43 @@ namespace Oci.DatabaseService.Models
         public string DbrsPolicyId { get; set; }
         
         /// <value>
+        /// Indicates if backup retention is locked for all the database backups in the Autonomous Container Database (ACD). The retention window cannot be decreased if the backup retention lock is enabled.
+        /// Once applied on the Autonomous Container Database, the retention lock cannot be removed, or the retention period cannot be decreased after a 14-day period.
+        /// If the backup is a Long Term Backup and retention lock is enabled, the backup cannot be deleted and must expire.
+        /// The retention lock set on the Autonomous Container Database is not applicable for cross region remote backups and backups hosted on recovery Appliance backup destination.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isRetentionLockEnabled")]
+        public System.Nullable<bool> IsRetentionLockEnabled { get; set; }
+                ///
+        /// <value>
+        /// Defines the automatic and manual backup retention policy for the Autonomous Database termination. 
+        /// The retention policy set on the Autonomous Container Database is not applicable for cross region remote backups and backups hosted on recovery Appliance backup destination.
+        /// Options are 'RETAIN_PER_RETENTION_WINDOW' or 'RETAIN_FOR_72_HOURS'.The default value is 'RETAIN_FOR_72_HOURS'.
+        /// 
+        /// </value>
+        ///
+        public enum BackupRetentionPolicyOnTerminateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "RETAIN_PER_RETENTION_WINDOW")]
+            RetainPerRetentionWindow,
+            [EnumMember(Value = "RETAIN_FOR_72_HOURS")]
+            RetainFor72Hours
+        };
+
+        /// <value>
+        /// Defines the automatic and manual backup retention policy for the Autonomous Database termination. 
+        /// The retention policy set on the Autonomous Container Database is not applicable for cross region remote backups and backups hosted on recovery Appliance backup destination.
+        /// Options are 'RETAIN_PER_RETENTION_WINDOW' or 'RETAIN_FOR_72_HOURS'.The default value is 'RETAIN_FOR_72_HOURS'.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "backupRetentionPolicyOnTerminate")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<BackupRetentionPolicyOnTerminateEnum> BackupRetentionPolicyOnTerminate { get; set; }
+        
+        /// <value>
         /// Indicates whether the backup destination is cross-region or local.
         /// </value>
         [JsonProperty(PropertyName = "isRemote")]
