@@ -50,7 +50,7 @@ namespace Oci.FilestorageService
             {
                 ServiceName = "FILESTORAGE",
                 ServiceEndpointPrefix = "filestorage",
-                ServiceEndpointTemplate = "https://filestorage.{region}.{dualStack?ds.:}oci.{secondLevelDomain}",
+                ServiceEndpointTemplate = "https://filestorage.{region}.{secondLevelDomain}",
                 EndpointServiceName = "filestorage"
             };
 
@@ -85,8 +85,7 @@ namespace Oci.FilestorageService
         public async Task<AddExportLockResponse> AddExportLock(AddExportLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called addExportLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "exportId", request.ExportId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/exports/{exportId}/actions/addLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exports/{exportId}/actions/addLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -142,8 +141,7 @@ namespace Oci.FilestorageService
         public async Task<AddFileSystemLockResponse> AddFileSystemLock(AddFileSystemLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called addFileSystemLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/addLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/addLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -199,8 +197,7 @@ namespace Oci.FilestorageService
         public async Task<AddFilesystemSnapshotPolicyLockResponse> AddFilesystemSnapshotPolicyLock(AddFilesystemSnapshotPolicyLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called addFilesystemSnapshotPolicyLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "filesystemSnapshotPolicyId", request.FilesystemSnapshotPolicyId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}/actions/addLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}/actions/addLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -256,8 +253,7 @@ namespace Oci.FilestorageService
         public async Task<AddMountTargetLockResponse> AddMountTargetLock(AddMountTargetLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called addMountTargetLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "mountTargetId", request.MountTargetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/addLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/addLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -313,8 +309,7 @@ namespace Oci.FilestorageService
         public async Task<AddOutboundConnectorLockResponse> AddOutboundConnectorLock(AddOutboundConnectorLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called addOutboundConnectorLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "outboundConnectorId", request.OutboundConnectorId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}/actions/addLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}/actions/addLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -370,8 +365,7 @@ namespace Oci.FilestorageService
         public async Task<AddReplicationLockResponse> AddReplicationLock(AddReplicationLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called addReplicationLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "replicationId", request.ReplicationId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}/actions/addLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}/actions/addLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -427,8 +421,7 @@ namespace Oci.FilestorageService
         public async Task<AddSnapshotLockResponse> AddSnapshotLock(AddSnapshotLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called addSnapshotLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "snapshotId", request.SnapshotId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/snapshots/{snapshotId}/actions/addLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/snapshots/{snapshotId}/actions/addLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -485,8 +478,7 @@ namespace Oci.FilestorageService
         public async Task<CancelDowngradeShapeMountTargetResponse> CancelDowngradeShapeMountTarget(CancelDowngradeShapeMountTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called cancelDowngradeShapeMountTarget");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "mountTargetId", request.MountTargetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/cancelShapeDowngrade".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/cancelShapeDowngrade".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -543,8 +535,7 @@ namespace Oci.FilestorageService
         public async Task<ChangeFileSystemCompartmentResponse> ChangeFileSystemCompartment(ChangeFileSystemCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called changeFileSystemCompartment");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/changeCompartment".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/changeCompartment".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -601,8 +592,7 @@ namespace Oci.FilestorageService
         public async Task<ChangeFilesystemSnapshotPolicyCompartmentResponse> ChangeFilesystemSnapshotPolicyCompartment(ChangeFilesystemSnapshotPolicyCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called changeFilesystemSnapshotPolicyCompartment");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "filesystemSnapshotPolicyId", request.FilesystemSnapshotPolicyId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}/actions/changeCompartment".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}/actions/changeCompartment".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -659,8 +649,7 @@ namespace Oci.FilestorageService
         public async Task<ChangeMountTargetCompartmentResponse> ChangeMountTargetCompartment(ChangeMountTargetCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called changeMountTargetCompartment");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "mountTargetId", request.MountTargetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/changeCompartment".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/changeCompartment".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -719,8 +708,7 @@ namespace Oci.FilestorageService
         public async Task<ChangeOutboundConnectorCompartmentResponse> ChangeOutboundConnectorCompartment(ChangeOutboundConnectorCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called changeOutboundConnectorCompartment");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "outboundConnectorId", request.OutboundConnectorId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}/actions/changeCompartment".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}/actions/changeCompartment".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -778,8 +766,7 @@ namespace Oci.FilestorageService
         public async Task<ChangeReplicationCompartmentResponse> ChangeReplicationCompartment(ChangeReplicationCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called changeReplicationCompartment");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "replicationId", request.ReplicationId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}/actions/changeCompartment".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}/actions/changeCompartment".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -837,8 +824,7 @@ namespace Oci.FilestorageService
         public async Task<CreateExportResponse> CreateExport(CreateExportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createExport");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/exports".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exports".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -923,8 +909,7 @@ namespace Oci.FilestorageService
         public async Task<CreateFileSystemResponse> CreateFileSystem(CreateFileSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createFileSystem");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -985,8 +970,7 @@ namespace Oci.FilestorageService
         public async Task<CreateFilesystemSnapshotPolicyResponse> CreateFilesystemSnapshotPolicy(CreateFilesystemSnapshotPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createFilesystemSnapshotPolicy");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1074,8 +1058,7 @@ namespace Oci.FilestorageService
         public async Task<CreateMountTargetResponse> CreateMountTarget(CreateMountTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createMountTarget");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1151,8 +1134,7 @@ namespace Oci.FilestorageService
         public async Task<CreateOutboundConnectorResponse> CreateOutboundConnector(CreateOutboundConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createOutboundConnector");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1210,8 +1192,7 @@ namespace Oci.FilestorageService
         public async Task<CreateQuotaRuleResponse> CreateQuotaRule(CreateQuotaRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createQuotaRule");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/quotaRules".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/quotaRules".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1294,8 +1275,7 @@ namespace Oci.FilestorageService
         public async Task<CreateReplicationResponse> CreateReplication(CreateReplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createReplication");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/replications".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/replications".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1353,8 +1333,7 @@ namespace Oci.FilestorageService
         public async Task<CreateSnapshotResponse> CreateSnapshot(CreateSnapshotRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createSnapshot");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/snapshots".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/snapshots".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1411,8 +1390,7 @@ namespace Oci.FilestorageService
         public async Task<DeleteExportResponse> DeleteExport(DeleteExportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteExport");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "exportId", request.ExportId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/exports/{exportId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exports/{exportId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1471,8 +1449,7 @@ namespace Oci.FilestorageService
         public async Task<DeleteFileSystemResponse> DeleteFileSystem(DeleteFileSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteFileSystem");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1529,8 +1506,7 @@ namespace Oci.FilestorageService
         public async Task<DeleteFilesystemSnapshotPolicyResponse> DeleteFilesystemSnapshotPolicy(DeleteFilesystemSnapshotPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteFilesystemSnapshotPolicy");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "filesystemSnapshotPolicyId", request.FilesystemSnapshotPolicyId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1588,8 +1564,7 @@ namespace Oci.FilestorageService
         public async Task<DeleteMountTargetResponse> DeleteMountTarget(DeleteMountTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteMountTarget");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "mountTargetId", request.MountTargetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1646,8 +1621,7 @@ namespace Oci.FilestorageService
         public async Task<DeleteOutboundConnectorResponse> DeleteOutboundConnector(DeleteOutboundConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteOutboundConnector");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "outboundConnectorId", request.OutboundConnectorId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1704,8 +1678,7 @@ namespace Oci.FilestorageService
         public async Task<DeleteQuotaRuleResponse> DeleteQuotaRule(DeleteQuotaRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteQuotaRule");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId }, { "quotaRuleId", request.QuotaRuleId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/quotaRules/{quotaRuleId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/quotaRules/{quotaRuleId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1762,8 +1735,7 @@ namespace Oci.FilestorageService
         public async Task<DeleteReplicationResponse> DeleteReplication(DeleteReplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteReplication");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "replicationId", request.ReplicationId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1823,8 +1795,7 @@ namespace Oci.FilestorageService
         public async Task<DeleteReplicationTargetResponse> DeleteReplicationTarget(DeleteReplicationTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteReplicationTarget");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "replicationTargetId", request.ReplicationTargetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/replicationTargets/{replicationTargetId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/replicationTargets/{replicationTargetId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1881,8 +1852,7 @@ namespace Oci.FilestorageService
         public async Task<DeleteSnapshotResponse> DeleteSnapshot(DeleteSnapshotRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteSnapshot");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "snapshotId", request.SnapshotId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/snapshots/{snapshotId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/snapshots/{snapshotId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1939,8 +1909,7 @@ namespace Oci.FilestorageService
         public async Task<DetachCloneResponse> DetachClone(DetachCloneRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called detachClone");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/detachClone".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/detachClone".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1997,8 +1966,7 @@ namespace Oci.FilestorageService
         public async Task<EstimateReplicationResponse> EstimateReplication(EstimateReplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called estimateReplication");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/estimateReplication".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/estimateReplication".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2054,8 +2022,7 @@ namespace Oci.FilestorageService
         public async Task<GetExportResponse> GetExport(GetExportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getExport");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "exportId", request.ExportId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/exports/{exportId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exports/{exportId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2111,8 +2078,7 @@ namespace Oci.FilestorageService
         public async Task<GetExportSetResponse> GetExportSet(GetExportSetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getExportSet");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "exportSetId", request.ExportSetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/exportSets/{exportSetId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exportSets/{exportSetId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2168,8 +2134,7 @@ namespace Oci.FilestorageService
         public async Task<GetFileSystemResponse> GetFileSystem(GetFileSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getFileSystem");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2225,8 +2190,7 @@ namespace Oci.FilestorageService
         public async Task<GetFilesystemSnapshotPolicyResponse> GetFilesystemSnapshotPolicy(GetFilesystemSnapshotPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getFilesystemSnapshotPolicy");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "filesystemSnapshotPolicyId", request.FilesystemSnapshotPolicyId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2282,8 +2246,7 @@ namespace Oci.FilestorageService
         public async Task<GetMountTargetResponse> GetMountTarget(GetMountTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getMountTarget");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "mountTargetId", request.MountTargetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2339,8 +2302,7 @@ namespace Oci.FilestorageService
         public async Task<GetOutboundConnectorResponse> GetOutboundConnector(GetOutboundConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getOutboundConnector");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "outboundConnectorId", request.OutboundConnectorId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2397,8 +2359,7 @@ namespace Oci.FilestorageService
         public async Task<GetQuotaRuleResponse> GetQuotaRule(GetQuotaRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getQuotaRule");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId }, { "quotaRuleId", request.QuotaRuleId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/quotaRules/{quotaRuleId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/quotaRules/{quotaRuleId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2454,8 +2415,7 @@ namespace Oci.FilestorageService
         public async Task<GetReplicationResponse> GetReplication(GetReplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getReplication");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "replicationId", request.ReplicationId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2511,8 +2471,7 @@ namespace Oci.FilestorageService
         public async Task<GetReplicationTargetResponse> GetReplicationTarget(GetReplicationTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getReplicationTarget");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "replicationTargetId", request.ReplicationTargetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/replicationTargets/{replicationTargetId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/replicationTargets/{replicationTargetId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2568,8 +2527,7 @@ namespace Oci.FilestorageService
         public async Task<GetSnapshotResponse> GetSnapshot(GetSnapshotRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getSnapshot");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "snapshotId", request.SnapshotId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/snapshots/{snapshotId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/snapshots/{snapshotId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2626,8 +2584,7 @@ namespace Oci.FilestorageService
         public async Task<ListExportSetsResponse> ListExportSets(ListExportSetsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listExportSets");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "compartmentId", request.CompartmentId }, { "availabilityDomain", request.AvailabilityDomain } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/exportSets".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exportSets".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2686,8 +2643,7 @@ namespace Oci.FilestorageService
         public async Task<ListExportsResponse> ListExports(ListExportsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listExports");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/exports".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exports".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2745,8 +2701,7 @@ namespace Oci.FilestorageService
         public async Task<ListFileSystemsResponse> ListFileSystems(ListFileSystemsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listFileSystems");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "compartmentId", request.CompartmentId }, { "availabilityDomain", request.AvailabilityDomain } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2803,8 +2758,7 @@ namespace Oci.FilestorageService
         public async Task<ListFilesystemSnapshotPoliciesResponse> ListFilesystemSnapshotPolicies(ListFilesystemSnapshotPoliciesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listFilesystemSnapshotPolicies");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "compartmentId", request.CompartmentId }, { "availabilityDomain", request.AvailabilityDomain } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2861,8 +2815,7 @@ namespace Oci.FilestorageService
         public async Task<ListMountTargetsResponse> ListMountTargets(ListMountTargetsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listMountTargets");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "compartmentId", request.CompartmentId }, { "availabilityDomain", request.AvailabilityDomain } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2919,8 +2872,7 @@ namespace Oci.FilestorageService
         public async Task<ListOutboundConnectorsResponse> ListOutboundConnectors(ListOutboundConnectorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listOutboundConnectors");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "compartmentId", request.CompartmentId }, { "availabilityDomain", request.AvailabilityDomain } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -2977,8 +2929,7 @@ namespace Oci.FilestorageService
         public async Task<ListQuotaRulesResponse> ListQuotaRules(ListQuotaRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listQuotaRules");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId }, { "principalType", request.PrincipalType } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/quotaRules".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/quotaRules".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3035,8 +2986,7 @@ namespace Oci.FilestorageService
         public async Task<ListReplicationTargetsResponse> ListReplicationTargets(ListReplicationTargetsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listReplicationTargets");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "compartmentId", request.CompartmentId }, { "availabilityDomain", request.AvailabilityDomain } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/replicationTargets".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/replicationTargets".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3093,8 +3043,7 @@ namespace Oci.FilestorageService
         public async Task<ListReplicationsResponse> ListReplications(ListReplicationsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listReplications");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "compartmentId", request.CompartmentId }, { "availabilityDomain", request.AvailabilityDomain } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/replications".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/replications".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3157,8 +3106,7 @@ namespace Oci.FilestorageService
         public async Task<ListSnapshotsResponse> ListSnapshots(ListSnapshotsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listSnapshots");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/snapshots".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/snapshots".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3220,8 +3168,7 @@ namespace Oci.FilestorageService
         public async Task<PauseFilesystemSnapshotPolicyResponse> PauseFilesystemSnapshotPolicy(PauseFilesystemSnapshotPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called pauseFilesystemSnapshotPolicy");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "filesystemSnapshotPolicyId", request.FilesystemSnapshotPolicyId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}/actions/pause".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}/actions/pause".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3277,8 +3224,7 @@ namespace Oci.FilestorageService
         public async Task<RemoveExportLockResponse> RemoveExportLock(RemoveExportLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called removeExportLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "exportId", request.ExportId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/exports/{exportId}/actions/removeLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exports/{exportId}/actions/removeLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3334,8 +3280,7 @@ namespace Oci.FilestorageService
         public async Task<RemoveFileSystemLockResponse> RemoveFileSystemLock(RemoveFileSystemLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called removeFileSystemLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/removeLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/removeLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3391,8 +3336,7 @@ namespace Oci.FilestorageService
         public async Task<RemoveFilesystemSnapshotPolicyLockResponse> RemoveFilesystemSnapshotPolicyLock(RemoveFilesystemSnapshotPolicyLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called removeFilesystemSnapshotPolicyLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "filesystemSnapshotPolicyId", request.FilesystemSnapshotPolicyId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}/actions/removeLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}/actions/removeLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3448,8 +3392,7 @@ namespace Oci.FilestorageService
         public async Task<RemoveMountTargetLockResponse> RemoveMountTargetLock(RemoveMountTargetLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called removeMountTargetLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "mountTargetId", request.MountTargetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/removeLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/removeLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3505,8 +3448,7 @@ namespace Oci.FilestorageService
         public async Task<RemoveOutboundConnectorLockResponse> RemoveOutboundConnectorLock(RemoveOutboundConnectorLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called removeOutboundConnectorLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "outboundConnectorId", request.OutboundConnectorId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}/actions/removeLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}/actions/removeLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3562,8 +3504,7 @@ namespace Oci.FilestorageService
         public async Task<RemoveReplicationLockResponse> RemoveReplicationLock(RemoveReplicationLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called removeReplicationLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "replicationId", request.ReplicationId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}/actions/removeLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}/actions/removeLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3619,8 +3560,7 @@ namespace Oci.FilestorageService
         public async Task<RemoveSnapshotLockResponse> RemoveSnapshotLock(RemoveSnapshotLockRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called removeSnapshotLock");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "snapshotId", request.SnapshotId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/snapshots/{snapshotId}/actions/removeLock".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/snapshots/{snapshotId}/actions/removeLock".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3677,8 +3617,7 @@ namespace Oci.FilestorageService
         public async Task<ScheduleDowngradeShapeMountTargetResponse> ScheduleDowngradeShapeMountTarget(ScheduleDowngradeShapeMountTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called scheduleDowngradeShapeMountTarget");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "mountTargetId", request.MountTargetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/scheduleShapeDowngrade".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/scheduleShapeDowngrade".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3737,8 +3676,7 @@ namespace Oci.FilestorageService
         public async Task<ToggleQuotaRulesResponse> ToggleQuotaRules(ToggleQuotaRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called toggleQuotaRules");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/toggleQuotaRules".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/actions/toggleQuotaRules".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3783,7 +3721,7 @@ namespace Oci.FilestorageService
         }
 
         /// <summary>
-        /// This operation unpauses a paused file system snapshot policy and updates the lifecycle state of the file system snapshot policy from 
+        /// This operation unpauses a paused file system snapshot policy and updates the lifecycle state of the file system snapshot policy from
         /// INACTIVE to ACTIVE. By default, file system snapshot policies are in the ACTIVE state. When a file system snapshot policy is not paused, or in the ACTIVE state, file systems that are associated with the
         /// policy will have snapshots created and deleted according to the schedules defined in the policy.
         /// &lt;br/&gt;
@@ -3799,8 +3737,7 @@ namespace Oci.FilestorageService
         public async Task<UnpauseFilesystemSnapshotPolicyResponse> UnpauseFilesystemSnapshotPolicy(UnpauseFilesystemSnapshotPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called unpauseFilesystemSnapshotPolicy");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "filesystemSnapshotPolicyId", request.FilesystemSnapshotPolicyId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}/actions/unpause".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}/actions/unpause".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3856,8 +3793,7 @@ namespace Oci.FilestorageService
         public async Task<UpdateExportResponse> UpdateExport(UpdateExportRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateExport");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "exportId", request.ExportId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/exports/{exportId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exports/{exportId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3913,8 +3849,7 @@ namespace Oci.FilestorageService
         public async Task<UpdateExportSetResponse> UpdateExportSet(UpdateExportSetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateExportSet");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "exportSetId", request.ExportSetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/exportSets/{exportSetId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/exportSets/{exportSetId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -3972,8 +3907,7 @@ namespace Oci.FilestorageService
         public async Task<UpdateFileSystemResponse> UpdateFileSystem(UpdateFileSystemRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateFileSystem");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -4029,8 +3963,7 @@ namespace Oci.FilestorageService
         public async Task<UpdateFilesystemSnapshotPolicyResponse> UpdateFilesystemSnapshotPolicy(UpdateFilesystemSnapshotPolicyRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateFilesystemSnapshotPolicy");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "filesystemSnapshotPolicyId", request.FilesystemSnapshotPolicyId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/filesystemSnapshotPolicies/{filesystemSnapshotPolicyId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -4086,8 +4019,7 @@ namespace Oci.FilestorageService
         public async Task<UpdateMountTargetResponse> UpdateMountTarget(UpdateMountTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateMountTarget");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "mountTargetId", request.MountTargetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -4143,8 +4075,7 @@ namespace Oci.FilestorageService
         public async Task<UpdateOutboundConnectorResponse> UpdateOutboundConnector(UpdateOutboundConnectorRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateOutboundConnector");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "outboundConnectorId", request.OutboundConnectorId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/outboundConnectors/{outboundConnectorId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -4201,8 +4132,7 @@ namespace Oci.FilestorageService
         public async Task<UpdateQuotaRuleResponse> UpdateQuotaRule(UpdateQuotaRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateQuotaRule");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "fileSystemId", request.FileSystemId }, { "quotaRuleId", request.QuotaRuleId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/quotaRules/{quotaRuleId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/fileSystems/{fileSystemId}/quotaRules/{quotaRuleId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -4259,8 +4189,7 @@ namespace Oci.FilestorageService
         public async Task<UpdateReplicationResponse> UpdateReplication(UpdateReplicationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateReplication");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "replicationId", request.ReplicationId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/replications/{replicationId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -4316,8 +4245,7 @@ namespace Oci.FilestorageService
         public async Task<UpdateSnapshotResponse> UpdateSnapshot(UpdateSnapshotRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateSnapshot");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "snapshotId", request.SnapshotId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/snapshots/{snapshotId}".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/snapshots/{snapshotId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -4374,8 +4302,7 @@ namespace Oci.FilestorageService
         public async Task<UpgradeShapeMountTargetResponse> UpgradeShapeMountTarget(UpgradeShapeMountTargetRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called upgradeShapeMountTarget");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "mountTargetId", request.MountTargetId } };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/upgradeShape".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/{mountTargetId}/actions/upgradeShape".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -4434,8 +4361,7 @@ namespace Oci.FilestorageService
         public async Task<ValidateKeyTabsResponse> ValidateKeyTabs(ValidateKeyTabsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called validateKeyTabs");
-            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
-            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/actions/validateKeyTabs".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/mountTargets/actions/validateKeyTabs".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");

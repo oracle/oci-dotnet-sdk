@@ -117,12 +117,6 @@ namespace Oci.FilestorageService.Models
         public System.Collections.Generic.List<string> PrivateIpIds { get; set; }
         
         /// <value>
-        /// The OCIDs of the IPv6 addresses associated with this mount target.
-        /// </value>
-        [JsonProperty(PropertyName = "mountTargetIpv6Ids")]
-        public System.Collections.Generic.List<string> MountTargetIpv6Ids { get; set; }
-        
-        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet the mount target is in.
         /// </value>
         /// <remarks>

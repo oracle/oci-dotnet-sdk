@@ -319,6 +319,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Multicloud", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Managedkafka", "Managedkafka\OCI.DotNetSDK.Managedkafka.csproj", "{5F5F190F-6D43-48F4-A704-8551926B398B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Aidataplatform", "Aidataplatform\OCI.DotNetSDK.Aidataplatform.csproj", "{C52D3CEB-8527-4500-8ED2-52CC69391580}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2843,5 +2845,17 @@ Global
         {5F5F190F-6D43-48F4-A704-8551926B398B}.Release|x64.Build.0 = Release|Any CPU
         {5F5F190F-6D43-48F4-A704-8551926B398B}.Release|x86.ActiveCfg = Release|Any CPU
         {5F5F190F-6D43-48F4-A704-8551926B398B}.Release|x86.Build.0 = Release|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Debug|x64.Build.0 = Debug|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Debug|x86.Build.0 = Debug|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Release|Any CPU.Build.0 = Release|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Release|x64.ActiveCfg = Release|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Release|x64.Build.0 = Release|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Release|x86.ActiveCfg = Release|Any CPU
+        {C52D3CEB-8527-4500-8ED2-52CC69391580}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
