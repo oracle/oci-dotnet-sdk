@@ -63,23 +63,13 @@ namespace Oci.FilestorageService.Models
         /// <br/>
         /// Note:
         /// <br/>
-        /// If the IP address is IPv4, this attribute value is stored in the
-        /// [PrivateIp](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/20160918/PrivateIp/) resource,
+        /// This attribute value is stored in the [PrivateIp](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/20160918/PrivateIp/) resource,
         /// not in the `mountTarget` resource.
         /// To update the `hostnameLabel`, use `GetMountTarget` to obtain the
         /// [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the mount target's
         /// private IPs (`privateIpIds`). Then, you can use
         /// [UpdatePrivateIp](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/20160918/PrivateIp/UpdatePrivateIp)
         /// to update the `hostnameLabel` value.
-        /// <br/>
-        /// If the IP address is IPv6, it is stored in the
-        /// [Ipv6] (https://docs.oracle.com/en-us/iaas/api/#/en/iaas/20160918/Ipv6) resource
-        /// To update the `hostnameLabel`, use `GetMountTarget` to obtain the
-        /// [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the mount target's
-        /// IPv6 address (`mountTargetIpv6Ids`). Then, you can use
-        /// [UpdateIpv6](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/20160918/Ipv6/UpdateIpv6)
-        /// to update the `hostnameLabel` value.
-        /// <br/>
         /// For more information, see
         /// [DNS in Your Virtual Cloud Network](https://docs.cloud.oracle.com/Content/Network/Concepts/dns.htm).
         /// <br/>

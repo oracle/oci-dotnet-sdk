@@ -28,7 +28,7 @@ namespace Oci.FilestorageService.Models
         
         /// <value>
         /// Clients these options should apply to. Must be a either
-        /// single IPv4/IPv6 address or single IPv4/IPv6 CIDR block.
+        /// single IPv4 address or single IPv4 CIDR block.
         /// <br/>
         /// **Note:** Access will also be limited by any applicable VCN
         /// security rules and the ability to route IP packets to the

@@ -109,7 +109,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "CancelWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/WorkRequest/CancelWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -167,7 +167,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "ChangeKafkaClusterCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaCluster/ChangeKafkaClusterCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -225,7 +225,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "ChangeKafkaClusterConfigCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaClusterConfig/ChangeKafkaClusterConfigCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -282,7 +282,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "CreateKafkaCluster",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaCluster/CreateKafkaCluster",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -339,7 +339,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "CreateKafkaClusterConfig",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaClusterConfig/CreateKafkaClusterConfig",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -395,7 +395,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "DeleteKafkaCluster",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaCluster/DeleteKafkaCluster",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -451,7 +451,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "DeleteKafkaClusterConfig",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaClusterConfig/DeleteKafkaClusterConfig",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -507,7 +507,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "DeleteKafkaClusterConfigVersion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaClusterConfigVersion/DeleteKafkaClusterConfigVersion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -564,7 +564,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "DisableSuperuser",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaCluster/DisableSuperuser",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -621,7 +621,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "EnableSuperuser",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaCluster/EnableSuperuser",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -677,7 +677,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "GetKafkaCluster",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaCluster/GetKafkaCluster",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -733,7 +733,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "GetKafkaClusterConfig",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaClusterConfig/GetKafkaClusterConfig",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -789,7 +789,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "GetKafkaClusterConfigVersion",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaClusterConfigVersion/GetKafkaClusterConfigVersion",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -845,7 +845,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -902,7 +902,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "ListKafkaClusterConfigVersions",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaClusterConfigVersionCollection/ListKafkaClusterConfigVersions",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -959,7 +959,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "ListKafkaClusterConfigs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaClusterConfig/ListKafkaClusterConfigs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1016,7 +1016,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "ListKafkaClusters",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaCluster/ListKafkaClusters",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1073,7 +1073,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1130,7 +1130,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1187,7 +1187,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/WorkRequest/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1243,7 +1243,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "UpdateKafkaCluster",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaCluster/UpdateKafkaCluster",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1299,7 +1299,7 @@ namespace Oci.ManagedkafkaService
                     ServiceName = "KafkaCluster",
                     OperationName = "UpdateKafkaClusterConfig",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/kafka/20240901/KafkaClusterConfig/UpdateKafkaClusterConfig",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

@@ -256,6 +256,18 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dataCollectionOptions")]
         public DataCollectionOptions DataCollectionOptions { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the cluster placement group of the Exadata Infrastructure or Db System.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subscription with which resource needs to be associated with.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionId")]
+        public string SubscriptionId { get; set; }
+        
         [JsonProperty(PropertyName = "creationType")]
         private readonly string creationType = "NewDbSystem";
     }
