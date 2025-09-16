@@ -110,7 +110,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureKey",
                     OperationName = "GetOracleDbAzureKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureKey/GetOracleDbAzureKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -167,7 +167,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "OracleDbAzureKey",
                     OperationName = "ListOracleDbAzureKeys",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAzureKey/ListOracleDbAzureKeys",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

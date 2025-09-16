@@ -109,7 +109,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "ChangeOracleDbGcpIdentityConnectorCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/ChangeOracleDbGcpIdentityConnectorCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -165,7 +165,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "ChangeOracleDbGcpKeyRingCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/ChangeOracleDbGcpKeyRingCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -222,7 +222,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "CreateOracleDbGcpIdentityConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/CreateOracleDbGcpIdentityConnector",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -279,7 +279,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "CreateOracleDbGcpKeyRing",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/CreateOracleDbGcpKeyRing",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -336,7 +336,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "DeleteOracleDbGcpIdentityConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/DeleteOracleDbGcpIdentityConnector",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -393,7 +393,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "DeleteOracleDbGcpKeyRing",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/DeleteOracleDbGcpKeyRing",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -450,7 +450,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "GetOracleDbGcpIdentityConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/GetOracleDbGcpIdentityConnector",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -507,7 +507,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "GetOracleDbGcpKey",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKey/GetOracleDbGcpKey",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -564,7 +564,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "GetOracleDbGcpKeyRing",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/GetOracleDbGcpKeyRing",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -621,7 +621,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "ListOracleDbGcpIdentityConnectors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/ListOracleDbGcpIdentityConnectors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -678,7 +678,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "ListOracleDbGcpKeyRings",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/ListOracleDbGcpKeyRings",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -735,7 +735,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "ListOracleDbGcpKeys",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKey/ListOracleDbGcpKeys",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -792,7 +792,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "RefreshOracleDbGcpIdentityConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/RefreshOracleDbGcpIdentityConnector",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -849,7 +849,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "RefreshOracleDbGcpKeyRing",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/RefreshOracleDbGcpKeyRing",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -906,7 +906,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "UpdateOracleDbGcpIdentityConnector",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpIdentityConnector/UpdateOracleDbGcpIdentityConnector",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -963,7 +963,7 @@ namespace Oci.DbmulticloudService
                     ServiceName = "DbMulticloudGCPProvider",
                     OperationName = "UpdateOracleDbGcpKeyRing",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbGcpKeyRing/UpdateOracleDbGcpKeyRing",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

@@ -1323,6 +1323,29 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "cloneTableSpaceList")]
         public System.Collections.Generic.List<int> CloneTableSpaceList { get; set; }
+                ///
+        /// <value>
+        /// The Autonomous Database clone type.
+        /// </value>
+        ///
+        public enum CloneTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "FULL")]
+            Full,
+            [EnumMember(Value = "METADATA")]
+            Metadata,
+            [EnumMember(Value = "PARTIAL")]
+            Partial
+        };
+
+        /// <value>
+        /// The Autonomous Database clone type.
+        /// </value>
+        [JsonProperty(PropertyName = "cloneType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<CloneTypeEnum> CloneType { get; set; }
         
     }
 }

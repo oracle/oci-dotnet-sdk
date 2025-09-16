@@ -91,6 +91,26 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "openMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<OpenModeEnum> OpenMode { get; set; }
+                ///
+        /// <value>
+        /// The Autonomous Database clone type.
+        /// </value>
+        ///
+        public enum CloneTypeEnum {
+            [EnumMember(Value = "FULL")]
+            Full,
+            [EnumMember(Value = "METADATA")]
+            Metadata,
+            [EnumMember(Value = "PARTIAL")]
+            Partial
+        };
+
+        /// <value>
+        /// The Autonomous Database clone type.
+        /// </value>
+        [JsonProperty(PropertyName = "cloneType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<CloneTypeEnum> CloneType { get; set; }
         
         [JsonProperty(PropertyName = "source")]
         private readonly string source = "CLONE_TO_REFRESHABLE";
