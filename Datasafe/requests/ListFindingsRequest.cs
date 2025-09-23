@@ -134,6 +134,12 @@ namespace Oci.DatasafeService.Requests
         public string Page { get; set; }
         
         /// <value>
+        /// A filter to return only resources that match the specified compartment OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// Default is false.
         /// When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the 'accessLevel' setting.
         /// 

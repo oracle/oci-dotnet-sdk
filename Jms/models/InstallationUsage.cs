@@ -60,6 +60,13 @@ namespace Oci.JmsService.Models
         public string JreVersion { get; set; }
         
         /// <value>
+        /// The security status of the Java Runtime.
+        /// </value>
+        [JsonProperty(PropertyName = "securityStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<JreSecurityStatus> SecurityStatus { get; set; }
+        
+        /// <value>
         /// The file system path of the Java installation.
         /// </value>
         /// <remarks>

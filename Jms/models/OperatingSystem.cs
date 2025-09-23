@@ -75,5 +75,11 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "managedInstanceCount")]
         public System.Nullable<int> ManagedInstanceCount { get; set; }
         
+        /// <value>
+        /// Number of containers running the operating system.
+        /// </value>
+        [JsonProperty(PropertyName = "containerCount")]
+        public System.Nullable<int> ContainerCount { get; set; }
+        
     }
 }

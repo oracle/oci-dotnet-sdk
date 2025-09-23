@@ -68,6 +68,12 @@ namespace Oci.MulticloudService.Models
         public string VcnId { get; set; }
         
         /// <value>
+        /// The CPG ID in which Network Anchor will be created.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
+        /// <value>
         /// The date and time the NetworkAnchor was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z

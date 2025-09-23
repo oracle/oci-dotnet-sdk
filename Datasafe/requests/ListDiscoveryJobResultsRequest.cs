@@ -83,6 +83,15 @@ namespace Oci.DatasafeService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrderEnum> SortOrder { get; set; }
         
+        /// <value>
+        /// A filter to return the discovery job results with the specified confidence level. 
+        /// Confidence level of discovery job result associated with a seeded sensitive type can either be HIGH or LOW. 
+        /// While the confidence level of discovery job result associated with a user defined sensitive will be NONE.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "confidenceLevel", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ConfidenceLevelEnum> ConfidenceLevel { get; set; }
+        
         ///
         /// <value>
         /// The field to sort by. You can specify only one sorting parameter (sortOrder). The default order for timeFinished is descending.
@@ -102,7 +111,9 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "columnName")]
             ColumnName,
             [EnumMember(Value = "plannedAction")]
-            PlannedAction
+            PlannedAction,
+            [EnumMember(Value = "confidenceLevel")]
+            ConfidenceLevel
         };
 
         /// <value>

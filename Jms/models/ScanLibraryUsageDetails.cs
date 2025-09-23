@@ -29,5 +29,19 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "managedInstanceIds")]
         public System.Collections.Generic.List<string> ManagedInstanceIds { get; set; }
         
+        /// <value>
+        /// Indicates whether the scan is dynamic or static.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDynamicScan")]
+        public System.Nullable<bool> IsDynamicScan { get; set; }
+        
+        /// <value>
+        /// The duration of the dynamic scan in minutes.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dynamicScanDurationInMinutes")]
+        public System.Nullable<int> DynamicScanDurationInMinutes { get; set; }
+        
     }
 }

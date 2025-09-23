@@ -60,11 +60,32 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "hostId")]
         public string HostId { get; set; }
         
+        /// <value>
+        /// Captured IP addresses of the managed instance.
+        /// </value>
+        [JsonProperty(PropertyName = "ipAddresses")]
+        public System.Collections.Generic.List<string> IpAddresses { get; set; }
+        
+        /// <value>
+        /// Captured hostnames of the managed instance.
+        /// </value>
+        [JsonProperty(PropertyName = "hostnames")]
+        public System.Collections.Generic.List<string> Hostnames { get; set; }
+        
+        /// <value>
+        /// Captured fully qualify domain names of the managed instance.
+        /// </value>
+        [JsonProperty(PropertyName = "fqdns")]
+        public System.Collections.Generic.List<string> Fqdns { get; set; }
+        
         [JsonProperty(PropertyName = "operatingSystem")]
         public OperatingSystem OperatingSystem { get; set; }
         
         [JsonProperty(PropertyName = "agent")]
         public Agent Agent { get; set; }
+        
+        [JsonProperty(PropertyName = "clusterDetails")]
+        public ClusterDetails ClusterDetails { get; set; }
         
         /// <value>
         /// The approximate count of applications reported by this managed instance.

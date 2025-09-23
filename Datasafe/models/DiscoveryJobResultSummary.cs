@@ -220,5 +220,14 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "discoveryJobId")]
         public string DiscoveryJobId { get; set; }
         
+        /// <value>
+        /// The confidence level of the discovery job result associated with the sensitive type.
+        /// The confidence level for discovery job results can be either HIGH, MEDIUM or LOW.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "confidenceLevel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ConfidenceLevelEnum> ConfidenceLevel { get; set; }
+        
     }
 }

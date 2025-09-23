@@ -112,5 +112,8 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "timeLastModified")]
         public System.Nullable<System.DateTime> TimeLastModified { get; set; }
         
+        [JsonProperty(PropertyName = "exportDataFilters")]
+        public ExportDataFilters ExportDataFilters { get; set; }
+        
     }
 }

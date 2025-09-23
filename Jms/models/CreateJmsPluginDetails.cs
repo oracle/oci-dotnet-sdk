@@ -22,7 +22,9 @@ namespace Oci.JmsService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Management Agent (OMA) or the Oracle Cloud Agent (OCA) instance where the JMS plugin is deployed.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Management Agent (OMA), the Oracle Cloud Agent (OCA), 
+        /// or the Oracle Container Management Agent (OCMA) instance where the JMS plugin is deployed.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +34,7 @@ namespace Oci.JmsService.Models
         public string AgentId { get; set; }
         
         /// <value>
-        /// The OMA/OCA agent's compartment [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The OMA/OCA/OCMA agent's compartment [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required
@@ -40,6 +42,13 @@ namespace Oci.JmsService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The agent type.
+        /// </value>
+        [JsonProperty(PropertyName = "agentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AgentType> AgentType { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the fleet.

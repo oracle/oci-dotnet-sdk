@@ -22,6 +22,8 @@ namespace Oci.JmsService.Models
       [EnumMember(Value = "ORACLE_MANAGEMENT_AGENT")]
       OracleManagementAgent,
       [EnumMember(Value = "ORACLE_CLOUD_AGENT")]
-      OracleCloudAgent
+      OracleCloudAgent,
+      [EnumMember(Value = "ORACLE_CONTAINER_MANAGEMENT_AGENT")]
+      OracleContainerManagementAgent
   }
 }

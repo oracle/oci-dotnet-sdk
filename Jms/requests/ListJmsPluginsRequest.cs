@@ -46,7 +46,9 @@ namespace Oci.JmsService.Requests
         public string FleetId { get; set; }
         
         /// <value>
-        /// The ManagementAgent (OMA) or Instance (OCA) [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) that identifies the Agent.
+        /// The ManagementAgent (OMA), Oracle Cloud Agent (OCA), or the Oracle Container Management Agent (OCMA) [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) 
+        /// that identifies the Agent.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "agentId")]
         public string AgentId { get; set; }

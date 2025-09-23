@@ -72,6 +72,20 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "isCollectingUsernamesEnabled")]
         public System.Nullable<bool> IsCollectingUsernamesEnabled { get; set; }
         
+        /// <value>
+        /// Collect network addresses of managed instances in the fleet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCapturingIpAddressAndFqdnEnabled")]
+        public System.Nullable<bool> IsCapturingIpAddressAndFqdnEnabled { get; set; }
+        
+        /// <value>
+        /// Enable libraries scan on all managed instances in the fleet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isLibrariesScanEnabled")]
+        public System.Nullable<bool> IsLibrariesScanEnabled { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

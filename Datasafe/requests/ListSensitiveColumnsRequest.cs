@@ -78,6 +78,38 @@ namespace Oci.DatasafeService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sensitiveColumnLifecycleState")]
         public System.Nullable<SensitiveColumnLifecycleState> SensitiveColumnLifecycleState { get; set; }
         
+        ///
+        /// <value>
+        /// Filters the sensitive columns with respect to the estimated row count.
+        /// 
+        /// </value>
+        ///
+        public enum ColumnDataCountFilterEnum {
+            [EnumMember(Value = "SHOW_ALL_COLUMNS")]
+            ShowAllColumns,
+            [EnumMember(Value = "SHOW_COLUMNS_WITH_DATA")]
+            ShowColumnsWithData,
+            [EnumMember(Value = "SHOW_COLUMNS_WITHOUT_DATA")]
+            ShowColumnsWithoutData
+        };
+
+        /// <value>
+        /// Filters the sensitive columns with respect to the estimated row count.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "columnDataCountFilter")]
+        public System.Nullable<ColumnDataCountFilterEnum> ColumnDataCountFilter { get; set; }
+        
+        /// <value>
+        /// A filter to return the sensitive columns with the specified confidence level. 
+        /// Confidence level of sensitive column associated with a seeded sensitive type can either be HIGH or LOW.
+        /// While the confidence level of sensitive column associated with a user defined sensitive will be NONE. 
+        /// For sensitive columns added manually the confidence level will also be NONE.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "confidenceLevel", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<ConfidenceLevelEnum> ConfidenceLevel { get; set; }
+        
         /// <value>
         /// A filter to return only items related to specific schema name.
         /// </value>
@@ -235,7 +267,9 @@ namespace Oci.DatasafeService.Requests
             [EnumMember(Value = "columnName")]
             ColumnName,
             [EnumMember(Value = "dataType")]
-            DataType
+            DataType,
+            [EnumMember(Value = "confidenceLevel")]
+            ConfidenceLevel
         };
 
         /// <value>

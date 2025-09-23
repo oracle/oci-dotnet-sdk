@@ -13,7 +13,8 @@ using System.Runtime.Serialization;
 namespace Oci.JmsService.Models
 {
   /// <summary>
-  /// The agent can be of two type, either Oracle Management Agent(OMA) or Oracle Cloud Agent(OCA).
+  /// The agent can be of three types, Oracle Management Agent (OMA), Oracle Cloud Agent (OCA), or Oracle Container Management Agent (OCMA).
+    /// 
   /// </summary>
   public enum AgentType {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
@@ -22,6 +23,8 @@ namespace Oci.JmsService.Models
       [EnumMember(Value = "OMA")]
       Oma,
       [EnumMember(Value = "OCA")]
-      Oca
+      Oca,
+      [EnumMember(Value = "OCMA")]
+      Ocma
   }
 }

@@ -197,6 +197,55 @@ namespace Oci.JmsService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListContainers operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListContainersResponse> ListContainersResponseEnumerator(ListContainersRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListContainersRequest, ListContainersResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListContainers(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ContainerSummary objects
+        /// contained in responses from the ListContainers operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ContainerSummary> ListContainersRecordEnumerator(ListContainersRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListContainersRequest, ListContainersResponse, ContainerSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListContainers(request, retryConfiguration, cancellationToken),
+                response => response.ContainerCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListCryptoAnalysisResults operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -736,6 +785,104 @@ namespace Oci.JmsService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListLibraryApplicationUsage operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListLibraryApplicationUsageResponse> ListLibraryApplicationUsageResponseEnumerator(ListLibraryApplicationUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListLibraryApplicationUsageRequest, ListLibraryApplicationUsageResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListLibraryApplicationUsage(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the LibraryApplicationUsageSummary objects
+        /// contained in responses from the ListLibraryApplicationUsage operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<LibraryApplicationUsageSummary> ListLibraryApplicationUsageRecordEnumerator(ListLibraryApplicationUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListLibraryApplicationUsageRequest, ListLibraryApplicationUsageResponse, LibraryApplicationUsageSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListLibraryApplicationUsage(request, retryConfiguration, cancellationToken),
+                response => response.LibraryApplicationUsageCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListLibraryManagedInstanceUsage operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListLibraryManagedInstanceUsageResponse> ListLibraryManagedInstanceUsageResponseEnumerator(ListLibraryManagedInstanceUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListLibraryManagedInstanceUsageRequest, ListLibraryManagedInstanceUsageResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListLibraryManagedInstanceUsage(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the LibraryManagedInstanceUsageSummary objects
+        /// contained in responses from the ListLibraryManagedInstanceUsage operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<LibraryManagedInstanceUsageSummary> ListLibraryManagedInstanceUsageRecordEnumerator(ListLibraryManagedInstanceUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListLibraryManagedInstanceUsageRequest, ListLibraryManagedInstanceUsageResponse, LibraryManagedInstanceUsageSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListLibraryManagedInstanceUsage(request, retryConfiguration, cancellationToken),
+                response => response.LibraryManagedInstanceUsageCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListPerformanceTuningAnalysisResults operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -830,6 +977,202 @@ namespace Oci.JmsService
                 },
                 request => client.ListPluginErrors(request, retryConfiguration, cancellationToken),
                 response => response.PluginErrorCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListTaskSchedules operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListTaskSchedulesResponse> ListTaskSchedulesResponseEnumerator(ListTaskSchedulesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListTaskSchedulesRequest, ListTaskSchedulesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListTaskSchedules(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the TaskScheduleSummary objects
+        /// contained in responses from the ListTaskSchedules operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<TaskScheduleSummary> ListTaskSchedulesRecordEnumerator(ListTaskSchedulesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListTaskSchedulesRequest, ListTaskSchedulesResponse, TaskScheduleSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListTaskSchedules(request, retryConfiguration, cancellationToken),
+                response => response.TaskScheduleCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListUncorrelatedPackageApplicationUsage operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListUncorrelatedPackageApplicationUsageResponse> ListUncorrelatedPackageApplicationUsageResponseEnumerator(ListUncorrelatedPackageApplicationUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListUncorrelatedPackageApplicationUsageRequest, ListUncorrelatedPackageApplicationUsageResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListUncorrelatedPackageApplicationUsage(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the UncorrelatedPackageApplicationUsageSummary objects
+        /// contained in responses from the ListUncorrelatedPackageApplicationUsage operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<UncorrelatedPackageApplicationUsageSummary> ListUncorrelatedPackageApplicationUsageRecordEnumerator(ListUncorrelatedPackageApplicationUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListUncorrelatedPackageApplicationUsageRequest, ListUncorrelatedPackageApplicationUsageResponse, UncorrelatedPackageApplicationUsageSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListUncorrelatedPackageApplicationUsage(request, retryConfiguration, cancellationToken),
+                response => response.UncorrelatedPackageApplicationUsageCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListUncorrelatedPackageManagedInstanceUsage operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListUncorrelatedPackageManagedInstanceUsageResponse> ListUncorrelatedPackageManagedInstanceUsageResponseEnumerator(ListUncorrelatedPackageManagedInstanceUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListUncorrelatedPackageManagedInstanceUsageRequest, ListUncorrelatedPackageManagedInstanceUsageResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListUncorrelatedPackageManagedInstanceUsage(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the UncorrelatedPackageManagedInstanceUsageSummary objects
+        /// contained in responses from the ListUncorrelatedPackageManagedInstanceUsage operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<UncorrelatedPackageManagedInstanceUsageSummary> ListUncorrelatedPackageManagedInstanceUsageRecordEnumerator(ListUncorrelatedPackageManagedInstanceUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListUncorrelatedPackageManagedInstanceUsageRequest, ListUncorrelatedPackageManagedInstanceUsageResponse, UncorrelatedPackageManagedInstanceUsageSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListUncorrelatedPackageManagedInstanceUsage(request, retryConfiguration, cancellationToken),
+                response => response.UncorrelatedPackageManagedInstanceUsageCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListUncorrelatedPackageUsage operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListUncorrelatedPackageUsageResponse> ListUncorrelatedPackageUsageResponseEnumerator(ListUncorrelatedPackageUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListUncorrelatedPackageUsageRequest, ListUncorrelatedPackageUsageResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListUncorrelatedPackageUsage(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the UncorrelatedPackageUsageSummary objects
+        /// contained in responses from the ListUncorrelatedPackageUsage operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<UncorrelatedPackageUsageSummary> ListUncorrelatedPackageUsageRecordEnumerator(ListUncorrelatedPackageUsageRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListUncorrelatedPackageUsageRequest, ListUncorrelatedPackageUsageResponse, UncorrelatedPackageUsageSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListUncorrelatedPackageUsage(request, retryConfiguration, cancellationToken),
+                response => response.UncorrelatedPackageUsageCollection.Items
             );
         }
 
