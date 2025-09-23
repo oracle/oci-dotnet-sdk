@@ -112,5 +112,11 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "releaseDate")]
         public System.Nullable<System.DateTime> ReleaseDate { get; set; }
         
+        /// <value>
+        /// The license type(s) associated with the Java family.
+        /// </value>
+        [JsonProperty(PropertyName = "licenseTypes")]
+        public System.Collections.Generic.List<LicenseType> LicenseTypes { get; set; }
+        
     }
 }

@@ -53,6 +53,27 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "applicationInstallationPath")]
         public string ApplicationInstallationPath { get; set; }
         
+        /// <value>
+        /// The Object Storage namespace of the JFR upload result.
+        /// </value>
+        [JsonProperty(PropertyName = "namespace")]
+        public string Namespace { get; set; }
+        
+        /// <value>
+        /// The Object Storage bucket name of the JFR upload result.
+        /// </value>
+        [JsonProperty(PropertyName = "bucketName")]
+        public string BucketName { get; set; }
+        
+        /// <value>
+        /// The Object Storage object name of the JFR upload result.
+        /// </value>
+        [JsonProperty(PropertyName = "objectName")]
+        public string ObjectName { get; set; }
+        
+        [JsonProperty(PropertyName = "containerInfo")]
+        public ContainerSummary ContainerInfo { get; set; }
+        
         [JsonProperty(PropertyName = "kind")]
         private readonly string kind = "APPLICATION";
     }

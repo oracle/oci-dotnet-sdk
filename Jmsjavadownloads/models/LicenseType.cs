@@ -23,6 +23,8 @@ namespace Oci.JmsjavadownloadsService.Models
       Otn,
       [EnumMember(Value = "NFTC")]
       Nftc,
+      [EnumMember(Value = "BCL")]
+      Bcl,
       [EnumMember(Value = "RESTRICTED")]
       Restricted
   }

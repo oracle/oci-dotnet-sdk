@@ -16,10 +16,11 @@ using Newtonsoft.Json.Converters;
 namespace Oci.JmsService.Models
 {
     /// <summary>
-    /// The target to collect JFR data. A target is a managed instance, with options to further limit to specific application and/or Java Runtime.
+    /// The target to collect JFR data. A target is a managed instance, with options to further limit to specific container and/or application and/or Java Runtime.
     /// When the applicationKey isn't specified, then all applications are selected.
     /// When the jreKey isn't specified, then all supported Java Runtime versions are selected.
     /// When the applicationInstallationKey isn't specified, then all application installations are selected.
+    /// When the containerKey isn't specified, then all containers are selected.
     /// Keys applicationKey and applicationInstallationKey are mutually exclusive.
     /// 
     /// </summary>
@@ -53,6 +54,12 @@ namespace Oci.JmsService.Models
         /// </value>
         [JsonProperty(PropertyName = "jreKey")]
         public string JreKey { get; set; }
+        
+        /// <value>
+        /// Unique key that identifies the container for JFR data collection.
+        /// </value>
+        [JsonProperty(PropertyName = "containerKey")]
+        public string ContainerKey { get; set; }
         
     }
 }

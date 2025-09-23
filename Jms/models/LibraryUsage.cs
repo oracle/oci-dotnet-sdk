@@ -63,6 +63,7 @@ namespace Oci.JmsService.Models
         public string LibraryVersion { get; set; }
         
         /// <value>
+        /// Deprecated, use `vulnerabilities` instead.
         /// The Common Vulnerabilities and Exposures (CVE) ID.
         /// 
         /// </value>
@@ -70,11 +71,43 @@ namespace Oci.JmsService.Models
         public string CveId { get; set; }
         
         /// <value>
-        /// The Common Vulnerability Scoring System (CVSS) score.
+        /// Deprecated, use `highestVulnerabilityScore` instead.
+        /// The Common Vulnerability Scoring System (CVSS) score. If `cvssScore` is not available, it will be set to -1.0. It is set to 0.0 when `cveId` is null.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "cvssScore")]
         public System.Nullable<float> CvssScore { get; set; }
+        
+        /// <value>
+        /// Indicates whether the library was dynamically detected.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsDynamicallyDetected is required.")]
+        [JsonProperty(PropertyName = "isDynamicallyDetected")]
+        public System.Nullable<bool> IsDynamicallyDetected { get; set; }
+        
+        /// <value>
+        /// Highest CVSS score among the all vulnerabilities. If highest CVSS score is not available, it will be set to -1.0. It is set to 0.0 when there is no associated vulnerabilities.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "highestVulnerabilityScore")]
+        public System.Nullable<float> HighestVulnerabilityScore { get; set; }
+        
+        /// <value>
+        /// The list of library vulnerabilities.
+        /// </value>
+        [JsonProperty(PropertyName = "vulnerabilities")]
+        public System.Collections.Generic.List<LibraryVulnerability> Vulnerabilities { get; set; }
+        
+        /// <value>
+        /// Confidence level of the assessed library's vulnerabilities.
+        /// </value>
+        [JsonProperty(PropertyName = "confidenceLevel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ConfidenceLevel> ConfidenceLevel { get; set; }
         
         /// <value>
         /// The approximate count of applications using the library.
@@ -137,6 +170,7 @@ namespace Oci.JmsService.Models
         public System.Nullable<System.DateTime> TimeLastSeen { get; set; }
         
         /// <value>
+        /// Deprecated.
         /// The date and time of the last CVEs refresh was completed.
         /// 
         /// </value>

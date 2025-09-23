@@ -60,25 +60,12 @@ namespace Oci.MarketplaceService.Models
         [JsonProperty(PropertyName = "packageType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageTypeEnum> PackageType { get; set; }
-                ///
-        ///
-        public enum PricingTypesEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "FREE")]
-            Free,
-            [EnumMember(Value = "BYOL")]
-            Byol,
-            [EnumMember(Value = "PAYGO")]
-            Paygo
-        };
-
+        
         /// <value>
         /// Summary of the pricing types available across all packages in the listing.
         /// </value>
-        [JsonProperty(PropertyName = "pricingTypes", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Collections.Generic.List<PricingTypesEnum> PricingTypes { get; set; }
+        [JsonProperty(PropertyName = "pricingTypes")]
+        public System.Collections.Generic.List<PricingTypeEnum> PricingTypes { get; set; }
                 ///
         ///
         public enum CompatibleArchitecturesEnum {

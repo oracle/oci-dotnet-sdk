@@ -34,6 +34,10 @@ namespace Oci.JmsService.Models
       [EnumMember(Value = "timeFirstSeen")]
       TimeFirstSeen,
       [EnumMember(Value = "timeLastSeen")]
-      TimeLastSeen
+      TimeLastSeen,
+      [EnumMember(Value = "highestVulnerabilityScore")]
+      HighestVulnerabilityScore,
+      [EnumMember(Value = "confidenceLevel")]
+      ConfidenceLevel
   }
 }

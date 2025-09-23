@@ -68,6 +68,9 @@ namespace Oci.JmsService.Models
             var discriminator = jsonObject["kind"].Value<string>();
             switch (discriminator)
             {
+                case "JAVA_MIGRATION_DEPLOYED_APPLICATION":
+                    obj = new JavaMigrationDeployedApplicationWorkItemDetails();
+                    break;
                 case "DEPLOYED_APPLICATION":
                     obj = new DeployedApplicationWorkItemDetails();
                     break;
@@ -79,6 +82,9 @@ namespace Oci.JmsService.Models
                     break;
                 case "APPLICATION":
                     obj = new ApplicationWorkItemDetails();
+                    break;
+                case "JAVA_MIGRATION_APPLICATION":
+                    obj = new JavaMigrationApplicationWorkItemDetails();
                     break;
             }
             if (obj != null)

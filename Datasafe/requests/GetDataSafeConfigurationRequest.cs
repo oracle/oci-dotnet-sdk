@@ -20,7 +20,7 @@ namespace Oci.DatasafeService.Requests
     {
         
         /// <value>
-        /// A filter to return only resources that match the specified compartment OCID.
+        /// A filter to return the Data Safe configuration for the specified tenancy OCID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }

@@ -188,6 +188,12 @@ namespace Oci.MulticloudService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SetupModeEnum> SetupMode { get; set; }
         
+        /// <value>
+        /// The CPG ID in which Network Anchor will be created.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
         [JsonProperty(PropertyName = "ociMetadataItem")]
         public OciNetworkMetadata OciMetadataItem { get; set; }
         

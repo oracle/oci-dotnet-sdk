@@ -83,5 +83,8 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
+        [JsonProperty(PropertyName = "exportDataFilters")]
+        public ExportDataFilters ExportDataFilters { get; set; }
+        
     }
 }

@@ -46,7 +46,7 @@ namespace Oci.JmsService.Models
         /// Artifact content type for the Java version.
         /// </value>
         [JsonProperty(PropertyName = "artifactContentType")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ArtifactContentType> ArtifactContentType { get; set; }
         
         /// <value>

@@ -246,6 +246,55 @@ namespace Oci.MarketplaceService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListMarketplaceMetadataPublicKeys operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListMarketplaceMetadataPublicKeysResponse> ListMarketplaceMetadataPublicKeysResponseEnumerator(ListMarketplaceMetadataPublicKeysRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListMarketplaceMetadataPublicKeysRequest, ListMarketplaceMetadataPublicKeysResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMarketplaceMetadataPublicKeys(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the MarketplaceMetadataPublicKeySummary objects
+        /// contained in responses from the ListMarketplaceMetadataPublicKeys operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<MarketplaceMetadataPublicKeySummary> ListMarketplaceMetadataPublicKeysRecordEnumerator(ListMarketplaceMetadataPublicKeysRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListMarketplaceMetadataPublicKeysRequest, ListMarketplaceMetadataPublicKeysResponse, MarketplaceMetadataPublicKeySummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListMarketplaceMetadataPublicKeys(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListPackages operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
