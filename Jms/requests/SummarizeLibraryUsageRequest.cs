@@ -74,13 +74,13 @@ namespace Oci.JmsService.Requests
         /// Total Common Vulnerability Scoring System (CVSS) Score reported by the analysis.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "cvssScoreGreaterThan")]
-        public System.Nullable<int> CvssScoreGreaterThan { get; set; }
+        public System.Nullable<float> CvssScoreGreaterThan { get; set; }
         
         /// <value>
         /// Total Common Vulnerability Scoring System (CVSS) Score reported by the analysis.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "cvssScoreLessThan")]
-        public System.Nullable<int> CvssScoreLessThan { get; set; }
+        public System.Nullable<float> CvssScoreLessThan { get; set; }
         
         /// <value>
         /// The start of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).

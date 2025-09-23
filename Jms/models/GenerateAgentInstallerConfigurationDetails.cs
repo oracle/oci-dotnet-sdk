@@ -41,5 +41,12 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "fleetId")]
         public string FleetId { get; set; }
         
+        /// <value>
+        /// The JMS plugin type.
+        /// </value>
+        [JsonProperty(PropertyName = "agentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<AgentType> AgentType { get; set; }
+        
     }
 }

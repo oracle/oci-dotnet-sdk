@@ -288,5 +288,21 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "modifiedAttributes")]
         public ModifiedAttributes ModifiedAttributes { get; set; }
         
+        /// <value>
+        /// The confidence level of the discovery job result associated with the sensitive type.
+        /// The confidence level for discovery job results can be either HIGH, MEDIUM or LOW.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "confidenceLevel")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ConfidenceLevelEnum> ConfidenceLevel { get; set; }
+        
+        /// <value>
+        /// List containing maps as values.
+        /// Example: {&quot;Operations&quot;: [ {&quot;CostCenter&quot;: &quot;42&quot;} ] }
+        /// </value>
+        [JsonProperty(PropertyName = "confidenceLevelDetails")]
+        public System.Collections.Generic.List<System.Object> ConfidenceLevelDetails { get; set; }
+        
     }
 }

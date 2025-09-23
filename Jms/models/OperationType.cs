@@ -47,6 +47,8 @@ namespace Oci.JmsService.Models
       ScanJavaServerUsage,
       [EnumMember(Value = "SCAN_LIBRARY_USAGE")]
       ScanLibraryUsage,
+      [EnumMember(Value = "SCAN_LIBRARY_DYNAMIC_USAGE")]
+      ScanLibraryDynamicUsage,
       [EnumMember(Value = "EXPORT_DATA_CSV")]
       ExportDataCsv,
       [EnumMember(Value = "CREATE_DRS_FILE")]

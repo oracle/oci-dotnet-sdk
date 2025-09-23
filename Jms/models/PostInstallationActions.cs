@@ -16,6 +16,9 @@ namespace Oci.JmsService.Models
   /// list of post installation actions
   /// </summary>
   public enum PostInstallationActions {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "CHANGE_MINIMUM_KEY_LENGTH_FOR_EC")]
       ChangeMinimumKeyLengthForEc,
       [EnumMember(Value = "CHANGE_MINIMUM_KEY_LENGTH_FOR_DSA")]

@@ -35,6 +35,10 @@ namespace Oci.DatasafeService.Requests
         /// </value>
         ///
         public enum StepNameEnum {
+            [EnumMember(Value = "VALIDATE")]
+            Validate,
+            [EnumMember(Value = "GENERATE_SCRIPT")]
+            GenerateScript,
             [EnumMember(Value = "EXECUTE_MASKING")]
             ExecuteMasking,
             [EnumMember(Value = "PRE_MASKING")]

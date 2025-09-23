@@ -37,6 +37,8 @@ namespace Oci.JmsService.Models
       AdvUsageServerLibraries,
       [EnumMember(Value = "ADV_USAGE_JAVA_LIBRARIES")]
       AdvUsageJavaLibraries,
+      [EnumMember(Value = "ADV_USAGE_JAVA_LIBRARIES_DYNAMIC")]
+      AdvUsageJavaLibrariesDynamic,
       [EnumMember(Value = "PERFORMANCE_TUNING")]
       PerformanceTuning,
       [EnumMember(Value = "JMIGRATE_ANALYSIS")]

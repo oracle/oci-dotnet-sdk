@@ -145,6 +145,18 @@ namespace Oci.RedisService.Models
         [Required(ErrorMessage = "ReplicasEndpointIpAddress is required.")]
         [JsonProperty(PropertyName = "replicasEndpointIpAddress")]
         public string ReplicasEndpointIpAddress { get; set; }
+        
+        /// <value>
+        /// The fully qualified domain name (FQDN) of the API endpoint for sharded cluster discovery.
+        /// </value>
+        [JsonProperty(PropertyName = "discoveryFqdn")]
+        public string DiscoveryFqdn { get; set; }
+        
+        /// <value>
+        /// The private IP address of the API endpoint for sharded cluster discovery.
+        /// </value>
+        [JsonProperty(PropertyName = "discoveryEndpointIpAddress")]
+        public string DiscoveryEndpointIpAddress { get; set; }
                 ///
         /// <value>
         /// The OCI Cache engine version that the cluster is running.

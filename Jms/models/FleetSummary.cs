@@ -124,6 +124,30 @@ namespace Oci.JmsService.Models
         [JsonProperty(PropertyName = "approximateJavaServerCount")]
         public System.Nullable<int> ApproximateJavaServerCount { get; set; }
         
+        /// <value>
+        /// The approximate count of all unique libraries in the Fleet in the past seven days.
+        /// This metric is provided on a best-effort manner, and isn't taken into account when computing the resource ETag.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ApproximateLibraryCount is required.")]
+        [JsonProperty(PropertyName = "approximateLibraryCount")]
+        public System.Nullable<int> ApproximateLibraryCount { get; set; }
+        
+        /// <value>
+        /// The approximate count of all unique library vulnerabilities in the Fleet in the past seven days.
+        /// This metric is provided on a best-effort manner, and isn't taken into account when computing the resource ETag.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ApproximateLibraryVulnerabilityCount is required.")]
+        [JsonProperty(PropertyName = "approximateLibraryVulnerabilityCount")]
+        public System.Nullable<int> ApproximateLibraryVulnerabilityCount { get; set; }
+        
         [JsonProperty(PropertyName = "inventoryLog")]
         public CustomLog InventoryLog { get; set; }
         

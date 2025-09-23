@@ -53,6 +53,12 @@ namespace Oci.DatasafeService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetId")]
         public string TargetId { get; set; }
         
+        /// <value>
+        /// A filter to return the target database group that matches the specified OCID.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseGroupId")]
+        public string TargetDatabaseGroupId { get; set; }
+        
         ///
         /// <value>
         /// The sort order to use, either ascending (ASC) or descending (DESC).
