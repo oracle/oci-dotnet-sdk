@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.FleetsoftwareupdateService.Models
 {
     /// <summary>
-    /// Exadata Fleet Update Cycle resource creation details.
+    /// Details to create an Exadata Fleet Update Cycle.
     /// 
     /// </summary>
     [JsonConverter(typeof(CreateFsuCycleDetailsModelConverter))]
@@ -24,14 +24,14 @@ namespace Oci.FleetsoftwareupdateService.Models
     {
         
         /// <value>
-        /// Exadata Fleet Update Cycle display name.
+        /// The user-friendly name for the Exadata Fleet Update Cycle.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Compartment.
         /// 
         /// </value>
         /// <remarks>
@@ -43,7 +43,7 @@ namespace Oci.FleetsoftwareupdateService.Models
         
         
         /// <value>
-        /// OCID identifier for the Collection ID the Exadata Fleet Update Cycle will be assigned to.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata Fleet Update Collection which will be updated by the Exadata Fleet Update Cycle being created.
         /// 
         /// </value>
         /// <remarks>

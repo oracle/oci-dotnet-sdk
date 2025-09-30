@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.FleetsoftwareupdateService.Models
 {
   /// <summary>
-  /// Possible Exadata Fleet Update Cycle types to specify.
+  /// Possible Exadata Fleet Update Cycle types.
     /// 
   /// </summary>
   public enum CycleTypes {

@@ -65,6 +65,12 @@ namespace Oci.FleetsoftwareupdateService.Models
                 case "DB":
                     obj = new DbDiscoveryDetails();
                     break;
+                case "EXADB_STACK":
+                    obj = new ExadbStackDiscoveryDetails();
+                    break;
+                case "GUEST_OS":
+                    obj = new GuestOsDiscoveryDetails();
+                    break;
             }
             if (obj != null)
             {

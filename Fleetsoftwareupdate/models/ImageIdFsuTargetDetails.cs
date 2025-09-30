@@ -26,7 +26,7 @@ namespace Oci.FleetsoftwareupdateService.Models
     {
         
         /// <value>
-        /// Target database software image OCID.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the goal database software image.
         /// 
         /// </value>
         /// <remarks>

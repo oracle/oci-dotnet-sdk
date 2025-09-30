@@ -74,6 +74,12 @@ namespace Oci.GenerativeaiService.Models
         public string DedicatedAiClusterId { get; set; }
         
         /// <value>
+        /// The OCID of the Generative AI private endpoint to which this endpoint is attached to.
+        /// </value>
+        [JsonProperty(PropertyName = "generativeAiPrivateEndpointId")]
+        public string GenerativeAiPrivateEndpointId { get; set; }
+        
+        /// <value>
         /// The date and time that the endpoint was created in the format of an RFC3339 datetime string.
         /// </value>
         /// <remarks>

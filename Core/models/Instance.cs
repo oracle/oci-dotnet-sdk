@@ -78,6 +78,13 @@ namespace Oci.CoreService.Models
         public PlacementConstraintDetails PlacementConstraintDetails { get; set; }
         
         /// <value>
+        /// Whether AI enterprise is enabled on the instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAIEnterpriseEnabled")]
+        public System.Nullable<bool> IsAIEnterpriseEnabled { get; set; }
+        
+        /// <value>
         /// The OCID of the cluster placement group of the instance.
         /// </value>
         [JsonProperty(PropertyName = "clusterPlacementGroupId")]

@@ -313,6 +313,13 @@ namespace Oci.CoreService.Models
         public PlacementConstraintDetails PlacementConstraintDetails { get; set; }
         
         /// <value>
+        /// Whether to enable AI enterprise on the instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAIEnterpriseEnabled")]
+        public System.Nullable<bool> IsAIEnterpriseEnabled { get; set; }
+        
+        /// <value>
         /// The OCID of the Instance Configuration containing instance launch details. Any other fields supplied in this instance launch request will override the details stored in the Instance Configuration for this instance launch.
         /// </value>
         [JsonProperty(PropertyName = "instanceConfigurationId")]

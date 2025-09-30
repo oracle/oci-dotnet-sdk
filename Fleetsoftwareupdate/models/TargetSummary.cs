@@ -74,5 +74,12 @@ namespace Oci.FleetsoftwareupdateService.Models
         [JsonProperty(PropertyName = "progress")]
         public TargetProgressSummary Progress { get; set; }
         
+        /// <value>
+        /// List of Exadata Fleet Update Collections containing this target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "memberships")]
+        public System.Collections.Generic.List<MembershipSummary> Memberships { get; set; }
+        
     }
 }
