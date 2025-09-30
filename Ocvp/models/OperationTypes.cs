@@ -70,6 +70,18 @@ namespace Oci.OcvpService.Models
       [EnumMember(Value = "ADD_DATASTORE_TO_DATASTORE_CLUSTER")]
       AddDatastoreToDatastoreCluster,
       [EnumMember(Value = "REMOVE_DATASTORE_FROM_DATASTORE_CLUSTER")]
-      RemoveDatastoreFromDatastoreCluster
+      RemoveDatastoreFromDatastoreCluster,
+      [EnumMember(Value = "CREATE_MANAGEMENT_APPLIANCE")]
+      CreateManagementAppliance,
+      [EnumMember(Value = "UPDATE_MANAGEMENT_APPLIANCE")]
+      UpdateManagementAppliance,
+      [EnumMember(Value = "DELETE_MANAGEMENT_APPLIANCE")]
+      DeleteManagementAppliance,
+      [EnumMember(Value = "ABANDON_MANAGEMENT_APPLIANCE_JOBS")]
+      AbandonManagementApplianceJobs,
+      [EnumMember(Value = "MANAGEMENT_APPLIANCE_ESXI_HOST_PROVISIONING")]
+      ManagementApplianceEsxiHostProvisioning,
+      [EnumMember(Value = "MANAGEMENT_APPLIANCE_DATASTORE_PROVISIONING")]
+      ManagementApplianceDatastoreProvisioning
   }
 }

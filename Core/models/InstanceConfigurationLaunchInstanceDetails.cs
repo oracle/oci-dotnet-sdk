@@ -34,6 +34,13 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
+        /// Whether to enable AI enterprise on the instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAIEnterpriseEnabled")]
+        public System.Nullable<bool> IsAIEnterpriseEnabled { get; set; }
+        
+        /// <value>
         /// The OCID of the compute capacity reservation this instance is launched under.
         /// </value>
         [JsonProperty(PropertyName = "capacityReservationId")]

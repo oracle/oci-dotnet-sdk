@@ -17,6 +17,7 @@ namespace Oci.FleetsoftwareupdateService.Models
 {
     /// <summary>
     /// Details to create a 'DB' type Exadata Fleet Update Collection.
+    /// Targets belonging to another 'DB' type Exadata Fleet Update Collection will be rejected.
     /// 
     /// </summary>
     public class CreateDbFsuCollectionDetails : CreateFsuCollectionDetails

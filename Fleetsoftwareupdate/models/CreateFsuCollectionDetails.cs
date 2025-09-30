@@ -16,7 +16,8 @@ using Newtonsoft.Json.Linq;
 namespace Oci.FleetsoftwareupdateService.Models
 {
     /// <summary>
-    /// The information about new Exadata Fleet Update Collection.
+    /// Details to create a new Exadata Fleet Update Collection.
+    /// Targets belonging to another Exadata Fleet Update Collection of the same type will be rejected.
     /// 
     /// </summary>
     [JsonConverter(typeof(CreateFsuCollectionDetailsModelConverter))]
@@ -24,7 +25,7 @@ namespace Oci.FleetsoftwareupdateService.Models
     {
         
         /// <value>
-        /// Exadata Fleet Update Collection Identifier.
+        /// The user-friendly name for the Exadata Fleet Update Collection.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
@@ -44,7 +45,7 @@ namespace Oci.FleetsoftwareupdateService.Models
         public System.Nullable<CollectionServiceTypes> ServiceType { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Compartment.
         /// </value>
         /// <remarks>
         /// Required
@@ -94,6 +95,12 @@ namespace Oci.FleetsoftwareupdateService.Models
                     break;
                 case "GI":
                     obj = new CreateGiFsuCollectionDetails();
+                    break;
+                case "GUEST_OS":
+                    obj = new CreateGuestOsFsuCollectionDetails();
+                    break;
+                case "EXADB_STACK":
+                    obj = new CreateExadbStackFsuCollectionDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

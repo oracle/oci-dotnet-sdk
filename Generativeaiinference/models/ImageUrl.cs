@@ -16,19 +16,27 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// Provide a base64 encoded image.
+    /// Provide a base64 encoded image or an image uri if it's supported.
     /// </summary>
     public class ImageUrl 
     {
         
         /// <value>
-        /// The base64 encoded image data.
+        /// The base64 encoded image data or an image uri if it's supported.
         /// <br/>
         /// Example for a png image:
         ///   `{
         ///     \"type\": \"IMAGE\",
         ///     \"imageUrl\": {
         ///       \"url\": \"data:image/png;base64,<base64 encoded image content>\"
+        ///     }
+        ///   }`
+        /// <br/>
+        /// Example with an image uri:
+        ///   `{
+        ///     \"type\": \"IMAGE\",
+        ///     \"imageUrl\": {
+        ///       \"url\": \"data:image/png;uri,<image uri>\"
         ///     }
         ///   }`
         /// 

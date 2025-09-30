@@ -36,7 +36,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "NPS2")]
             Nps2,
             [EnumMember(Value = "NPS4")]
-            Nps4
+            Nps4,
+            [EnumMember(Value = "NPS6")]
+            Nps6
         };
 
         /// <value>

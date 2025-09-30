@@ -17,6 +17,7 @@ namespace Oci.FleetsoftwareupdateService.Models
 {
     /// <summary>
     /// Update Exadata Fleet Update Cycle resource details.
+    /// If automated maintenance is enabled for the associated Exadata Fleet Update Collection, updating Exadata Fleet Update Cycle will not affect the Exadata Fleet Update Collection.
     /// 
     /// </summary>
     [JsonConverter(typeof(UpdateFsuCycleDetailsModelConverter))]

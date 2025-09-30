@@ -24,7 +24,7 @@ namespace Oci.FleetsoftwareupdateService.Models
     {
         
         /// <value>
-        /// OCID identifier for the Exadata Fleet Update Cycle.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata Fleet Update Cycle.
         /// 
         /// </value>
         /// <remarks>
@@ -35,14 +35,14 @@ namespace Oci.FleetsoftwareupdateService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Exadata Fleet Update Cycle display name.
+        /// The user-friendly name for the Exadata Fleet Update Cycle.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Compartment.
         /// 
         /// </value>
         /// <remarks>
@@ -54,7 +54,7 @@ namespace Oci.FleetsoftwareupdateService.Models
         
         
         /// <value>
-        /// OCID identifier for the Collection ID the Exadata Fleet Update Cycle is assigned to.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata Fleet Update Collection being updated by this Exadata Fleet Update Cycle.
         /// 
         /// </value>
         /// <remarks>
@@ -65,7 +65,7 @@ namespace Oci.FleetsoftwareupdateService.Models
         public string FsuCollectionId { get; set; }
         
         /// <value>
-        /// Type of Collection this Exadata Fleet Update Cycle belongs to.
+        /// Type of the Exadata Fleet Update Collection being updated by this Exadata Fleet Update Cycle.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "collectionType")]
@@ -73,14 +73,14 @@ namespace Oci.FleetsoftwareupdateService.Models
         public System.Nullable<CollectionTypes> CollectionType { get; set; }
         
         /// <value>
-        /// OCID identifier for the Action that is currently in execution, if applicable.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata Fleet Update Action that is currently in progress, if applicable.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "executingFsuActionId")]
         public string ExecutingFsuActionId { get; set; }
         
         /// <value>
-        /// In this array all the possible actions will be listed. The first element is the suggested Action.
+        /// All possible Exadata Fleet Update Actions will be listed. The first element is the suggested Exadata Fleet Update Action.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nextActionToExecute")]

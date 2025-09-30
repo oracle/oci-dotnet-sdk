@@ -46,7 +46,7 @@ namespace Oci.OcvpService.Models
         
         /// <value>
         /// A descriptive name for the Cluster.
-        /// Cluster name requirements are 1-16 character length limit, Must start with a letter, Must be English letters, numbers, - only, No repeating hyphens, Must be unique within the region.
+        /// Cluster name requirements are 1-22 character length limit, Must start with a letter, Must be English letters, numbers, - only, No repeating hyphens, Must be unique within the region.
         /// Avoid entering confidential information.
         /// 
         /// </value>
@@ -142,6 +142,13 @@ namespace Oci.OcvpService.Models
         /// </value>
         [JsonProperty(PropertyName = "datastores")]
         public System.Collections.Generic.List<DatastoreInfo> Datastores { get; set; }
+        
+        /// <value>
+        /// A list of datastore clusters.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "datastoreClusterIds")]
+        public System.Collections.Generic.List<string> DatastoreClusterIds { get; set; }
         
     }
 }

@@ -1288,5 +1288,12 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<CloneTypeEnum> CloneType { get; set; }
         
+        /// <value>
+        /// Additional attributes for this resource. Each attribute is a simple key-value pair with no predefined name, type, or namespace.
+        /// Example: { &quot;gcpAccountName&quot;: &quot;gcpName&quot; }
+        /// </value>
+        [JsonProperty(PropertyName = "additionalAttributes")]
+        public System.Collections.Generic.Dictionary<string, string> AdditionalAttributes { get; set; }
+        
     }
 }

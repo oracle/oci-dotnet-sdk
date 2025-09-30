@@ -23,22 +23,22 @@ namespace Oci.FleetsoftwareupdateService.Models
     {
         
         /// <value>
-        /// Exadata Fleet Update Cycle display name.
+        /// The user-friendly name for the Exadata Fleet Update Cycle.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// Compartment Identifier.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Compartment.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// OCID identifier for the Collection ID the Exadata Fleet Update Cycle will be assigned to.
-        /// If not specified, it will be assigned to the same Collection as the source Exadata Fleet Update Cycle.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata Fleet Update Collection which will be updated by the Exadata Fleet Update Cycle being created.
+        /// If not specified, the cloned Exadata Fleet Update Cycle will be assigned to the same Exadata Fleet Update Collection as the source Exadata Fleet Update Cycle.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "fsuCollectionId")]
