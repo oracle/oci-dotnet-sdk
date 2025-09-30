@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetsoftwareupdateService.Models
 {
     /// <summary>
-    /// Details to specify a target to add or remove from a Exadata Fleet Update Collection.
+    /// Details to specify a target to add or remove from an Exadata Fleet Update Collection.
     /// 
     /// </summary>
     public class TargetEntry 

@@ -253,6 +253,13 @@ namespace Oci.OcvpService.Models
         public System.Nullable<bool> IsBillingSwappingInProgress { get; set; }
         
         /// <value>
+        /// A list of datastore clusters.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "datastoreClusterIds")]
+        public System.Collections.Generic.List<string> DatastoreClusterIds { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

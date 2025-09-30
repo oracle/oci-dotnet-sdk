@@ -109,7 +109,7 @@ namespace Oci.AidataplatformService
                     ServiceName = "AiDataPlatform",
                     OperationName = "CancelWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ai-data-platform/20240831/WorkRequest/CancelWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -167,7 +167,7 @@ namespace Oci.AidataplatformService
                     ServiceName = "AiDataPlatform",
                     OperationName = "ChangeAiDataPlatformCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ai-data-platform/20240831/AiDataPlatform/ChangeAiDataPlatformCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -224,7 +224,7 @@ namespace Oci.AidataplatformService
                     ServiceName = "AiDataPlatform",
                     OperationName = "CreateAiDataPlatform",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ai-data-platform/20240831/AiDataPlatform/CreateAiDataPlatform",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -280,7 +280,7 @@ namespace Oci.AidataplatformService
                     ServiceName = "AiDataPlatform",
                     OperationName = "DeleteAiDataPlatform",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ai-data-platform/20240831/AiDataPlatform/DeleteAiDataPlatform",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -336,7 +336,7 @@ namespace Oci.AidataplatformService
                     ServiceName = "AiDataPlatform",
                     OperationName = "GetAiDataPlatform",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ai-data-platform/20240831/AiDataPlatform/GetAiDataPlatform",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -392,7 +392,7 @@ namespace Oci.AidataplatformService
                     ServiceName = "AiDataPlatform",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ai-data-platform/20240831/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -449,7 +449,7 @@ namespace Oci.AidataplatformService
                     ServiceName = "AiDataPlatform",
                     OperationName = "ListAiDataPlatforms",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ai-data-platform/20240831/AiDataPlatformCollection/ListAiDataPlatforms",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -506,7 +506,7 @@ namespace Oci.AidataplatformService
                     ServiceName = "AiDataPlatform",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ai-data-platform/20240831/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -563,7 +563,7 @@ namespace Oci.AidataplatformService
                     ServiceName = "AiDataPlatform",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ai-data-platform/20240831/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -620,7 +620,7 @@ namespace Oci.AidataplatformService
                     ServiceName = "AiDataPlatform",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ai-data-platform/20240831/WorkRequest/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -676,7 +676,7 @@ namespace Oci.AidataplatformService
                     ServiceName = "AiDataPlatform",
                     OperationName = "UpdateAiDataPlatform",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ai-data-platform/20240831/AiDataPlatform/UpdateAiDataPlatform",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

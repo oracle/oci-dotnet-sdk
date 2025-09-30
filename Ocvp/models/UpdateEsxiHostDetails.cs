@@ -23,7 +23,7 @@ namespace Oci.OcvpService.Models
         
         /// <value>
         /// A descriptive name for the ESXi host. It's changeable.
-        /// Esxi Host name requirements are 1-16 character length limit, Must start with a letter, Must be English letters, numbers, - only, No repeating hyphens, Must be unique within the Cluster.
+        /// Esxi Host name requirements are 1-25 character length limit, Must start with a letter, Must be English letters, numbers, - only, No repeating hyphens, Must be unique within the Cluster.
         /// <br/>
         /// Avoid entering confidential information.
         /// 
@@ -42,7 +42,10 @@ namespace Oci.OcvpService.Models
         public System.Nullable<Commitment> NextCommitment { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the deleted ESXi Host with LeftOver billing cycle.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the deleted ESXi Host with leftover billing cycle.
+        /// <br/>
+        /// **Note:** This option also requires the `nextCommitment` parameter to be populated with a value other than `HOUR`. Otherwise, 
+        /// any update request fails with the error \u201CNext SKU can\u2019t be NULL or Hourly.\u201D
         /// 
         /// </value>
         [JsonProperty(PropertyName = "billingDonorHostId")]

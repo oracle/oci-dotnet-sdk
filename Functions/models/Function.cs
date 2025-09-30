@@ -154,6 +154,20 @@ namespace Oci.FunctionsService.Models
         [JsonProperty(PropertyName = "provisionedConcurrencyConfig")]
         public FunctionProvisionedConcurrencyConfig ProvisionedConcurrencyConfig { get; set; }
         
+        /// <value>
+        /// Timeout for detached function invocations. Value in seconds.
+        /// <br/>
+        /// Example: {&quot;detachedModeTimeoutInSeconds&quot;: 900}
+        /// </value>
+        [JsonProperty(PropertyName = "detachedModeTimeoutInSeconds")]
+        public System.Nullable<int> DetachedModeTimeoutInSeconds { get; set; }
+        
+        [JsonProperty(PropertyName = "failureDestination")]
+        public FailureDestinationDetails FailureDestination { get; set; }
+        
+        [JsonProperty(PropertyName = "successDestination")]
+        public SuccessDestinationDetails SuccessDestination { get; set; }
+        
         [JsonProperty(PropertyName = "traceConfig")]
         public FunctionTraceConfig TraceConfig { get; set; }
         

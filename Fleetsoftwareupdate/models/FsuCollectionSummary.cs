@@ -24,7 +24,7 @@ namespace Oci.FleetsoftwareupdateService.Models
     {
         
         /// <value>
-        /// OCID identifier for the Exadata Fleet Update Collection.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Exadata Fleet Update Collection.
         /// 
         /// </value>
         /// <remarks>
@@ -35,7 +35,7 @@ namespace Oci.FleetsoftwareupdateService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Exadata Fleet Update Collection resource display name.
+        /// The user-friendly name for the Exadata Fleet Update Collection.
         /// 
         /// </value>
         /// <remarks>
@@ -59,7 +59,7 @@ namespace Oci.FleetsoftwareupdateService.Models
         public System.Nullable<CollectionServiceTypes> ServiceType { get; set; }
         
         /// <value>
-        /// Compartment Identifier
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Compartment.
         /// 
         /// </value>
         /// <remarks>
@@ -171,8 +171,14 @@ namespace Oci.FleetsoftwareupdateService.Models
                 case "GI":
                     obj = new GiFsuCollectionSummary();
                     break;
+                case "EXADB_STACK":
+                    obj = new ExadbStackFsuCollectionSummary();
+                    break;
                 case "DB":
                     obj = new DbFsuCollectionSummary();
+                    break;
+                case "GUEST_OS":
+                    obj = new GuestOsFsuCollectionSummary();
                     break;
             }
             if (obj != null)

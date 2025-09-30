@@ -114,6 +114,12 @@ namespace Oci.FusionappsService.Models
         public System.Collections.Generic.List<string> AdditionalLanguagePacks { get; set; }
         
         /// <value>
+        /// Enable IPv4/IPv6 dual stack support for the environment.  Setting to true will assign an IPv6 address to the environment in addition to an IPv4 address.
+        /// </value>
+        [JsonProperty(PropertyName = "isIPv6DualStackEnabled")]
+        public System.Nullable<bool> IsIPv6DualStackEnabled { get; set; }
+        
+        /// <value>
         /// The lockbox Id of this fusion environment. If there's no lockbox id, this field will be null
         /// </value>
         [JsonProperty(PropertyName = "lockboxId")]

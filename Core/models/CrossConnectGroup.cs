@@ -71,6 +71,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
+        
+        /// <value>
+        /// Usage of system tag keys. These predefined keys are scoped to namespaces.
+        /// Example: { &quot;orcl-cloud&quot;: { &quot;free-tier-retained&quot;: &quot;true&quot; } }
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
                 ///
         /// <value>
         /// The cross-connect group's current state.

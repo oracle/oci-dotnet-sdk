@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetsoftwareupdateService.Models
 {
     /// <summary>
-    /// Progress details of the executing job for a Database target.
+    /// Progress details of the executing job for a target.
     /// 
     /// </summary>
     public class TargetProgressSummary 

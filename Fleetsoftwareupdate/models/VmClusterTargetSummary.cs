@@ -38,6 +38,13 @@ namespace Oci.FleetsoftwareupdateService.Models
         [JsonProperty(PropertyName = "softwareImageId")]
         public string SoftwareImageId { get; set; }
         
+        /// <value>
+        /// Exadata Image (Guest OS) version.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "systemVersion")]
+        public string SystemVersion { get; set; }
+        
         [JsonProperty(PropertyName = "entityType")]
         private readonly string entityType = "VMCLUSTER";
     }

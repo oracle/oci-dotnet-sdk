@@ -33,6 +33,12 @@ namespace Oci.GenerativeaiService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
+        /// <value>
+        /// The OCID of the Generative AI private endpoint to which this endpoint will be attached.
+        /// </value>
+        [JsonProperty(PropertyName = "generativeAiPrivateEndpointId")]
+        public string GenerativeAiPrivateEndpointId { get; set; }
+        
         [JsonProperty(PropertyName = "contentModerationConfig")]
         public ContentModerationConfig ContentModerationConfig { get; set; }
         
