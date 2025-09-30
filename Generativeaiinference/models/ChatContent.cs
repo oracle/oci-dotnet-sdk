@@ -57,8 +57,14 @@ namespace Oci.GenerativeaiinferenceService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "VIDEO":
+                    obj = new VideoContent();
+                    break;
                 case "IMAGE":
                     obj = new ImageContent();
+                    break;
+                case "AUDIO":
+                    obj = new AudioContent();
                     break;
                 case "TEXT":
                     obj = new TextContent();

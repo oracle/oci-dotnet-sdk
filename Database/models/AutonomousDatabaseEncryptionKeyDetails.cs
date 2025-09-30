@@ -75,6 +75,9 @@ namespace Oci.DatabaseService.Models
                 case "OCI":
                     obj = new OciKeyDetails();
                     break;
+                case "GCP":
+                    obj = new GcpKeyDetails();
+                    break;
                 case "ORACLE_MANAGED":
                     obj = new OracleManagedKeyDetails();
                     break;

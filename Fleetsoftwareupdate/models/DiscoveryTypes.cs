@@ -22,6 +22,10 @@ namespace Oci.FleetsoftwareupdateService.Models
       [EnumMember(Value = "DB")]
       Db,
       [EnumMember(Value = "GI")]
-      Gi
+      Gi,
+      [EnumMember(Value = "GUEST_OS")]
+      GuestOs,
+      [EnumMember(Value = "EXADB_STACK")]
+      ExadbStack
   }
 }

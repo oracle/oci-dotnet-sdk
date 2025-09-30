@@ -311,5 +311,18 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        /// <value>
+        /// A list of datastore clusters.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "datastoreClusterIds")]
+        public System.Collections.Generic.List<string> DatastoreClusterIds { get; set; }
+        
+        /// <value>
+        /// List of DatastoreAttachment objects containing information about attachment details
+        /// </value>
+        [JsonProperty(PropertyName = "datastoreAttachments")]
+        public System.Collections.Generic.List<DatastoreAttachment> DatastoreAttachments { get; set; }
+        
     }
 }

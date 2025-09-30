@@ -263,6 +263,13 @@ namespace Oci.OcvpService.Models
         public System.Collections.Generic.List<DatastoreDetails> Datastores { get; set; }
         
         /// <value>
+        /// A list of datastore clusters.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "datastoreClusterIds")]
+        public System.Collections.Generic.List<string> DatastoreClusterIds { get; set; }
+        
+        /// <value>
         /// vSphere Cluster types.
         /// 
         /// </value>

@@ -16,14 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetsoftwareupdateService.Models
 {
     /// <summary>
-    /// The information to Update Exadata Fleet Update Collection.
+    /// Updates specified fields for the specified Exadata Fleet Update Collection.
+    /// Fields that are not specified in the request will not be updated.
     /// 
     /// </summary>
     public class UpdateFsuCollectionDetails 
     {
         
         /// <value>
-        /// Exadata Fleet Update Collection display name.
+        /// The user-friendly name for the Exadata Fleet Update Collection.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]

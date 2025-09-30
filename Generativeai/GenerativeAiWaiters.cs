@@ -88,6 +88,34 @@ namespace Oci.GenerativeaiService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetGenerativeAiPrivateEndpointRequest, GetGenerativeAiPrivateEndpointResponse> ForGenerativeAiPrivateEndpoint(GetGenerativeAiPrivateEndpointRequest request, params GenerativeAiPrivateEndpoint.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForGenerativeAiPrivateEndpoint(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetGenerativeAiPrivateEndpointRequest, GetGenerativeAiPrivateEndpointResponse> ForGenerativeAiPrivateEndpoint(GetGenerativeAiPrivateEndpointRequest request, WaiterConfiguration config, params GenerativeAiPrivateEndpoint.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetGenerativeAiPrivateEndpointRequest, GetGenerativeAiPrivateEndpointResponse>(
+                request,
+                request => client.GetGenerativeAiPrivateEndpoint(request),
+                response => targetStates.Contains(response.GenerativeAiPrivateEndpoint.LifecycleState.Value),
+                targetStates.Contains(GenerativeAiPrivateEndpoint.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetGenerativeAiPrivateEndpointRequest, GetGenerativeAiPrivateEndpointResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetModelRequest, GetModelResponse> ForModel(GetModelRequest request, params Model.LifecycleStateEnum[] targetStates)
         {
             return this.ForModel(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

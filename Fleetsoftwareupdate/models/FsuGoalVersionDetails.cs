@@ -24,7 +24,7 @@ namespace Oci.FleetsoftwareupdateService.Models
     {
                 ///
         /// <value>
-        /// Type of goal target version specified
+        /// Type of goal version specified
         /// 
         /// </value>
         ///
@@ -32,7 +32,9 @@ namespace Oci.FleetsoftwareupdateService.Models
             [EnumMember(Value = "VERSION")]
             Version,
             [EnumMember(Value = "IMAGE_ID")]
-            ImageId
+            ImageId,
+            [EnumMember(Value = "EXADB_STACK")]
+            ExadbStack
         };
 
                 ///
@@ -98,6 +100,9 @@ namespace Oci.FleetsoftwareupdateService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "EXADB_STACK":
+                    obj = new ExadbStackFsuGoalVersionDetails();
+                    break;
                 case "VERSION":
                     obj = new VersionFsuTargetDetails();
                     break;

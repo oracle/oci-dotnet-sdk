@@ -20,6 +20,13 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
+        /// Whether to enable AI enterprise on the instance.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAIEnterpriseEnabled")]
+        public System.Nullable<bool> IsAIEnterpriseEnabled { get; set; }
+        
+        /// <value>
         /// The OCID of the compute capacity reservation this instance is launched under.
         /// You can remove the instance from a reservation by specifying an empty string as input for this field.
         /// For more information, see [Capacity Reservations](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/reserve-capacity.htm#default).

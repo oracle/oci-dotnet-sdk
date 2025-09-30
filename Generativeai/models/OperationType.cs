@@ -40,6 +40,14 @@ namespace Oci.GenerativeaiService.Models
       [EnumMember(Value = "UPDATE_ENDPOINT")]
       UpdateEndpoint,
       [EnumMember(Value = "MOVE_ENDPOINT")]
-      MoveEndpoint
+      MoveEndpoint,
+      [EnumMember(Value = "CREATE_PRIVATE_ENDPOINT")]
+      CreatePrivateEndpoint,
+      [EnumMember(Value = "DELETE_PRIVATE_ENDPOINT")]
+      DeletePrivateEndpoint,
+      [EnumMember(Value = "UPDATE_PRIVATE_ENDPOINT")]
+      UpdatePrivateEndpoint,
+      [EnumMember(Value = "MOVE_PRIVATE_ENDPOINT")]
+      MovePrivateEndpoint
   }
 }

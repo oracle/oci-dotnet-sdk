@@ -57,5 +57,8 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "usage")]
         public Usage Usage { get; set; }
         
+        [JsonProperty(PropertyName = "groundingMetadata")]
+        public GroundingMetadata GroundingMetadata { get; set; }
+        
     }
 }

@@ -22,7 +22,7 @@ namespace Oci.FusionappsService.Models
     {
                 ///
         /// <value>
-        /// A string that describeds whether the change is applied hot or cold
+        /// A string that describes whether the change is applied hot or cold
         /// </value>
         ///
         public enum ModeEnum {
@@ -36,7 +36,7 @@ namespace Oci.FusionappsService.Models
         };
 
         /// <value>
-        /// A string that describeds whether the change is applied hot or cold
+        /// A string that describes whether the change is applied hot or cold
         /// </value>
         [JsonProperty(PropertyName = "mode")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

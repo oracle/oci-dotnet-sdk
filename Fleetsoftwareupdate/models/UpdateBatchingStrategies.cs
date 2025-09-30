@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.FleetsoftwareupdateService.Models
 {
   /// <summary>
-  /// Possible Batching Strategy types to specify during an update Exadata Fleet Update Cycle operation.
+  /// Possible strategies for rolling or non-rolling update.
     /// 
   /// </summary>
   public enum UpdateBatchingStrategies {

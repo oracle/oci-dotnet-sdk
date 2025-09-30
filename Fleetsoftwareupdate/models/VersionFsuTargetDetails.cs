@@ -16,14 +16,15 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetsoftwareupdateService.Models
 {
     /// <summary>
-    /// Exadata Fleet Update Cycle Target version string details.
+    /// Exadata Fleet Update Cycle goal version string details.
     /// 
     /// </summary>
     public class VersionFsuTargetDetails : FsuGoalVersionDetails
     {
         
         /// <value>
-        /// Target DB or GI version string for the Exadata Fleet Update Cycle.
+        /// Goal version string for the Exadata Fleet Update Cycle.
+        /// Applicable to Database, Grid Infrastructure, or Exadata Image software updates.
         /// 
         /// </value>
         /// <remarks>

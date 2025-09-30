@@ -16,36 +16,37 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetsoftwareupdateService.Models
 {
     /// <summary>
-    /// Patch Exadata Fleet Update Cycle resource creation details.
+    /// Details to create an Exadata Fleet Update Cycle for a single maintenance update for an Exadata Fleet Update Collection.
     /// 
     /// </summary>
     public class CreatePatchFsuCycle : CreateFsuCycleDetails
     {
         
         /// <value>
-        /// Ignore all patches between the source and target homes during patching.
+        /// Ignore patch conflicts or missing patches between the source and goal homes.
+        /// This attribute will be ignored for Exadata Image (Guest OS) maintenance update.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isIgnorePatches")]
         public System.Nullable<bool> IsIgnorePatches { get; set; }
         
         /// <value>
-        /// List of patch IDs to ignore.
+        /// List of identifiers of patches to ignore.
+        /// This attribute will be ignored for Exadata Image (Guest OS) maintenance update.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isIgnoreMissingPatches")]
         public System.Collections.Generic.List<string> IsIgnoreMissingPatches { get; set; }
         
         /// <value>
-        /// Service drain timeout specified in seconds.
+        /// Timeout for session draining for database services specified in seconds.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "maxDrainTimeoutInSeconds")]
         public System.Nullable<int> MaxDrainTimeoutInSeconds { get; set; }
         
         /// <value>
-        /// Ensure that services of administrator-managed Oracle RAC or Oracle RAC One databases are running on the same
-        /// instances before and after the move operation.
+        /// Ensure that database services are online on the same VMs before and after the maintenance update.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isKeepPlacement")]
