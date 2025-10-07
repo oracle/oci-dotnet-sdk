@@ -18,5 +18,15 @@ namespace Oci.OpensearchService.Requests
     /// </example>
     public class ListOpensearchClusterShapesRequest : Oci.Common.IOciRequest
     {
+        
+        /// <value>
+        /// The ID of the compartment in which to list resources.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "CompartmentId is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
     }
 }

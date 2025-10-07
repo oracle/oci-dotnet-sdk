@@ -35,7 +35,7 @@ namespace Oci.DatabasetoolsService.Models
         public string ConnectionString { get; set; }
         
         /// <value>
-        /// The user name.
+        /// The database user name.
         /// </value>
         /// <remarks>
         /// Required

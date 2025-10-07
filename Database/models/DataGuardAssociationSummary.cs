@@ -63,7 +63,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "STANDBY")]
             Standby,
             [EnumMember(Value = "DISABLED_STANDBY")]
-            DisabledStandby
+            DisabledStandby,
+            [EnumMember(Value = "SNAPSHOT_STANDBY")]
+            SnapshotStandby
         };
 
         /// <value>
@@ -163,7 +165,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "STANDBY")]
             Standby,
             [EnumMember(Value = "DISABLED_STANDBY")]
-            DisabledStandby
+            DisabledStandby,
+            [EnumMember(Value = "SNAPSHOT_STANDBY")]
+            SnapshotStandby
         };
 
         /// <value>

@@ -37,6 +37,17 @@ namespace Oci.DatabasetoolsService.Models
         [JsonProperty(PropertyName = "databaseVersion")]
         public string DatabaseVersion { get; set; }
         
+        /// <value>
+        /// The DBMS_CLOUD package installation status.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DbmsCloudStatus is required.")]
+        [JsonProperty(PropertyName = "dbmsCloudStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DbmsCloudStatus> DbmsCloudStatus { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "ORACLE_DATABASE";
     }

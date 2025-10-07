@@ -20,7 +20,7 @@ namespace Oci.DatabasetoolsService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required
@@ -55,7 +55,9 @@ namespace Oci.DatabasetoolsService.Requests
         ///
         public enum SortByEnum {
             [EnumMember(Value = "timeAccepted")]
-            TimeAccepted
+            TimeAccepted,
+            [EnumMember(Value = "timeUpdated")]
+            TimeUpdated
         };
 
         /// <value>

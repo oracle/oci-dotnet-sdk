@@ -20,7 +20,7 @@ namespace Oci.DatabasetoolsService.Requests
     {
         
         /// <value>
-        /// Details for the new DatabaseToolsPrivateEndpoint.
+        /// Details for the new Database Tools private endpoint.
         /// </value>
         /// <remarks>
         /// Required

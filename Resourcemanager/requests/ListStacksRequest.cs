@@ -46,13 +46,6 @@ namespace Oci.ResourcemanagerService.Requests
         /// lifecycle state. The state value is case-insensitive.
         /// For more information about stack lifecycle states, see
         /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts__StackStates).
-        /// <br/>
-        /// Allowable values:
-        /// - CREATING
-        /// - ACTIVE
-        /// - DELETING
-        /// - DELETED
-        /// - FAILED
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

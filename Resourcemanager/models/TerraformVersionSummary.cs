@@ -23,7 +23,7 @@ namespace Oci.ResourcemanagerService.Models
     {
         
         /// <value>
-        /// A supported Terraform version. Example: 0.12.x
+        /// A supported Terraform version. Example: 1.5.x
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }

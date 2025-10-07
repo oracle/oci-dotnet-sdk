@@ -48,6 +48,8 @@ namespace Oci.GoldengateService.Models
       AmazonS3,
       [EnumMember(Value = "HDFS")]
       Hdfs,
+      [EnumMember(Value = "ORACLE_AI_DATA_PLATFORM")]
+      OracleAiDataPlatform,
       [EnumMember(Value = "ORACLE_NOSQL")]
       OracleNosql,
       [EnumMember(Value = "MONGODB")]

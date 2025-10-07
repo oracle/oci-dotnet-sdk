@@ -105,5 +105,13 @@ namespace Oci.DatabasetoolsService.Models
         [JsonProperty(PropertyName = "timeFinished")]
         public System.Nullable<System.DateTime> TimeFinished { get; set; }
         
+        /// <value>
+        /// The date and time the work request was last updated,
+        /// in the format defined by RFC3339.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
     }
 }

@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Oci.DatabasetoolsService.Models
 {
   /// <summary>
-  /// Specifies whether a connection is supported by the Database Tools Runtime.
+  /// The runtime support status. Must be set to UNSUPPORTED for Generic JDBC and PostgreSQL connections.
   /// </summary>
   public enum RuntimeSupport {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

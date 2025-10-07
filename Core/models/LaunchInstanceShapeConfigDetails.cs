@@ -92,6 +92,26 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "nvmes")]
         public System.Nullable<int> Nvmes { get; set; }
+                ///
+        /// <value>
+        /// This field is reserved for internal use.
+        /// 
+        /// </value>
+        ///
+        public enum ResourceManagementEnum {
+            [EnumMember(Value = "DYNAMIC")]
+            Dynamic,
+            [EnumMember(Value = "STATIC")]
+            Static
+        };
+
+        /// <value>
+        /// This field is reserved for internal use.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceManagement")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ResourceManagementEnum> ResourceManagement { get; set; }
         
     }
 }

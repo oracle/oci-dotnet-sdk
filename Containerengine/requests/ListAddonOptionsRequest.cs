@@ -83,5 +83,11 @@ namespace Oci.ContainerengineService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
         public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
+        /// Whether to show all add-on versions
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldShowAllVersions")]
+        public System.Nullable<bool> ShouldShowAllVersions { get; set; }
     }
 }

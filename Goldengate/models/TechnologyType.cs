@@ -38,6 +38,8 @@ namespace Oci.GoldengateService.Models
       OciPostgresql,
       [EnumMember(Value = "OCI_STREAMING")]
       OciStreaming,
+      [EnumMember(Value = "OCI_STREAMING_WITH_APACHE_KAFKA")]
+      OciStreamingWithApacheKafka,
       [EnumMember(Value = "ORACLE_DATABASE")]
       OracleDatabase,
       [EnumMember(Value = "ORACLE_EXADATA")]
@@ -56,6 +58,8 @@ namespace Oci.GoldengateService.Models
       OracleExadataDatabaseAtAws,
       [EnumMember(Value = "ORACLE_AUTONOMOUS_DATABASE_AT_AWS")]
       OracleAutonomousDatabaseAtAws,
+      [EnumMember(Value = "ORACLE_AI_DATA_PLATFORM")]
+      OracleAiDataPlatform,
       [EnumMember(Value = "ORACLE_NOSQL")]
       OracleNosql,
       [EnumMember(Value = "ORACLE_REST_DATA_SERVICES")]
