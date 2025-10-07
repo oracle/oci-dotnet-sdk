@@ -40,7 +40,8 @@ namespace Oci.ResourcemanagerService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Human-readable name of the stack.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -119,7 +120,7 @@ namespace Oci.ResourcemanagerService.Models
         public System.Collections.Generic.Dictionary<string, string> Variables { get; set; }
         
         /// <value>
-        /// The version of Terraform specified for the stack. Example: 0.12.x
+        /// The version of Terraform specified for the stack. Example: 1.5.x
         /// </value>
         [JsonProperty(PropertyName = "terraformVersion")]
         public string TerraformVersion { get; set; }
@@ -174,6 +175,14 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// The system tags associated with this resource, if any. The system tags are set by Oracle cloud infrastructure services. Each key is predefined and scoped to namespaces.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// Example: {orcl-cloud: {free-tier-retain: true}}
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
     }
 }

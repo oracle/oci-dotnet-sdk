@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// The user password.
+    /// The database user password.
     /// </summary>
     [JsonConverter(typeof(DatabaseToolsUserPasswordSummaryModelConverter))]
     public class DatabaseToolsUserPasswordSummary 

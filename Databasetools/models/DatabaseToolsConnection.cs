@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// Description of the Database Tools connection.
+    /// Provides connectivity details required to establish a connection to a database.
     /// </summary>
     [JsonConverter(typeof(DatabaseToolsConnectionModelConverter))]
     public class DatabaseToolsConnection 
@@ -80,7 +80,7 @@ namespace Oci.DatabasetoolsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The time the DatabaseToolsConnection was updated. An RFC3339 formatted datetime string.
+        /// The time the Database Tools connection was updated. An RFC3339 formatted datetime string.
         /// </value>
         /// <remarks>
         /// Required

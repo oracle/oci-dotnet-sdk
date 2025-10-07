@@ -38,7 +38,9 @@ namespace Oci.GoldengateService.Models
             [EnumMember(Value = "CONFLUENT_KAFKA")]
             ConfluentKafka,
             [EnumMember(Value = "OCI_STREAMING")]
-            OciStreaming
+            OciStreaming,
+            [EnumMember(Value = "OCI_STREAMING_WITH_APACHE_KAFKA")]
+            OciStreamingWithApacheKafka
         };
 
         /// <value>
@@ -59,6 +61,14 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "streamPoolId")]
         public string StreamPoolId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Kafka cluster
+        /// being referenced from OCI Streaming with Apache Kafka.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "clusterId")]
+        public string ClusterId { get; set; }
         
         /// <value>
         /// Kafka bootstrap. Equivalent of bootstrap.servers configuration property in Kafka:
@@ -169,6 +179,17 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "producerProperties")]
         public string ProducerProperties { get; set; }
+        
+        /// <value>
+        /// Specifies that the user intends to authenticate to the instance using a resource principal.
+        /// Applicable only for OCI Streaming connections.
+        /// Only available from 23.9.0.0.0 GoldenGate versions.
+        /// Note: When specified, 'username'/'password'/'passwordSecretId' fields must not be provided.
+        /// Default: false
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "shouldUseResourcePrincipal")]
+        public System.Nullable<bool> ShouldUseResourcePrincipal { get; set; }
         
         [JsonProperty(PropertyName = "connectionType")]
         private readonly string connectionType = "KAFKA";

@@ -23,7 +23,7 @@ namespace Oci.DatabasetoolsService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `DatabaseToolsConnection`.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Tools connection.
         /// </value>
         /// <remarks>
         /// Required

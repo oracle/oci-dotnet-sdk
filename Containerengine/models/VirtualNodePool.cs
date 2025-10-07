@@ -86,6 +86,10 @@ namespace Oci.ContainerengineService.Models
         /// <value>
         /// The number of Virtual Nodes that should be in the Virtual Node Pool. The placement configurations determine where these virtual nodes are placed.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Size is required.")]
         [JsonProperty(PropertyName = "size")]
         public System.Nullable<int> Size { get; set; }
         

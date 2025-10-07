@@ -35,7 +35,8 @@ namespace Oci.ResourcemanagerService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Human-readable display name for the stack.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -58,13 +59,6 @@ namespace Oci.ResourcemanagerService.Models
         /// The current lifecycle state of the stack.
         /// For more information about stack lifecycle states in Resource Manager, see
         /// [Key Concepts](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm#concepts__StackStates).
-        /// <br/>
-        /// Allowable values:
-        /// - CREATING
-        /// - ACTIVE
-        /// - DELETING
-        /// - DELETED
-        /// - FAILED
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
@@ -72,13 +66,13 @@ namespace Oci.ResourcemanagerService.Models
         public System.Nullable<Stack.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The version of Terraform specified for the stack. Example: 0.12.x
+        /// The version of Terraform specified for the stack. Example: 1.5.x
         /// </value>
         [JsonProperty(PropertyName = "terraformVersion")]
         public string TerraformVersion { get; set; }
         
         /// <value>
-        /// Free-form tags associated with this resource. Each tag is a key-value pair with no predefined name, type, or namespace.
+        /// Free-form tags associated with the resource. Each tag is a key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>
@@ -92,6 +86,14 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// The system tags associated with this resource, if any. The system tags are set by Oracle cloud infrastructure services. Each key is predefined and scoped to namespaces.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// Example: {orcl-cloud: {free-tier-retain: true}}
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
     }
 }

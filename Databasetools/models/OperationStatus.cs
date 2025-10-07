@@ -32,6 +32,8 @@ namespace Oci.DatabasetoolsService.Models
       [EnumMember(Value = "CANCELED")]
       Canceled,
       [EnumMember(Value = "WAITING")]
-      Waiting
+      Waiting,
+      [EnumMember(Value = "NEEDS_ATTENTION")]
+      NeedsAttention
   }
 }

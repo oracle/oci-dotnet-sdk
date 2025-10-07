@@ -28,7 +28,7 @@ namespace Oci.DatabasetoolsService.Models
         public string Url { get; set; }
         
         /// <value>
-        /// The user name.
+        /// The database user name.
         /// </value>
         [JsonProperty(PropertyName = "userName")]
         public string UserName { get; set; }

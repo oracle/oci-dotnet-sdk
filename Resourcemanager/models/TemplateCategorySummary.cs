@@ -34,7 +34,7 @@ namespace Oci.ResourcemanagerService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The name of the template category.
+        /// The name of the template category. Not changeable.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

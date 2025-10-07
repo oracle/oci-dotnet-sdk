@@ -51,14 +51,6 @@ namespace Oci.ResourcemanagerService.Requests
         /// <value>
         /// A filter that returns all resources that match the specified lifecycle state.
         /// The state value is case-insensitive.
-        /// <br/>
-        /// Allowable values:
-        /// - ACCEPTED
-        /// - IN_PROGRESS
-        /// - FAILED
-        /// - SUCCEEDED
-        /// - CANCELING
-        /// - CANCELED
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

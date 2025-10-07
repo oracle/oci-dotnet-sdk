@@ -450,5 +450,29 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "ingressIps")]
         public System.Collections.Generic.List<IngressIpDetails> IngressIps { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subscription with which resource needs to be associated with.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionId")]
+        public string SubscriptionId { get; set; }
+        
+        /// <value>
+        /// The OCID(/Content/General/Concepts/identifiers.htm) of the cluster placement group for the resource.
+        /// Only applicable for multicloud subscriptions. The cluster placement group id must be provided when a multicloud
+        /// subscription id is provided. Otherwise the cluster placement group must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
+        /// <value>
+        /// Security attributes for this resource. Each key is predefined and scoped to a namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
+        /// Example: {&quot;Oracle-ZPR&quot;: {&quot;MaxEgressCount&quot;: {&quot;value&quot;: &quot;42&quot;, &quot;mode&quot;: &quot;enforce&quot;}}}
+        /// </value>
+        [JsonProperty(PropertyName = "securityAttributes")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SecurityAttributes { get; set; }
+        
     }
 }
