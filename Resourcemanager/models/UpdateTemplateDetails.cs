@@ -23,7 +23,8 @@ namespace Oci.ResourcemanagerService.Models
     {
         
         /// <value>
-        /// The template's display name. Avoid entering confidential information.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

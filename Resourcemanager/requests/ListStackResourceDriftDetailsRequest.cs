@@ -45,11 +45,6 @@ namespace Oci.ResourcemanagerService.Requests
         
         /// <value>
         /// A filter that returns only resources that match the given drift status. The value is case-insensitive.
-        /// Allowable values -
-        ///   - NOT_CHECKED
-        ///   - MODIFIED
-        ///   - IN_SYNC
-        ///   - DELETED
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceDriftStatus", Oci.Common.Http.CollectionFormatType.Multi)]

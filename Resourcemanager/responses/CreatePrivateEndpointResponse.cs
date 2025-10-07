@@ -23,6 +23,13 @@ namespace Oci.ResourcemanagerService.Responses
 
 
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the work request.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
+        public string OpcWorkRequestId { get; set; }
+
+
+        /// <value>
         /// For optimistic concurrency control. See `if-match`.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]

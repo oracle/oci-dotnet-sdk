@@ -23,7 +23,8 @@ namespace Oci.ResourcemanagerService.Models
     {
         
         /// <value>
-        /// The name of the stack.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
@@ -63,7 +64,7 @@ namespace Oci.ResourcemanagerService.Models
         public System.Collections.Generic.Dictionary<string, string> Variables { get; set; }
         
         /// <value>
-        /// The version of Terraform to use with the stack. Example: 0.12.x
+        /// The version of Terraform to use with the stack. Example: 1.5.x
         /// </value>
         [JsonProperty(PropertyName = "terraformVersion")]
         public string TerraformVersion { get; set; }

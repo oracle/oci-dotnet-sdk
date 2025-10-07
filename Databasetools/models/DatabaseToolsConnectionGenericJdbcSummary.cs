@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// DatabaseToolsConnectionSummary of a Generic JDBC database system.
+    /// Database Tools connection summary of a Generic JDBC database system.
     /// </summary>
     public class DatabaseToolsConnectionGenericJdbcSummary : DatabaseToolsConnectionSummary
     {
@@ -32,7 +32,7 @@ namespace Oci.DatabasetoolsService.Models
         public string Url { get; set; }
         
         /// <value>
-        /// The user name.
+        /// The database user name.
         /// </value>
         [JsonProperty(PropertyName = "userName")]
         public string UserName { get; set; }

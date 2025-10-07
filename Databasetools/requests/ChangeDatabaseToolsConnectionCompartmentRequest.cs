@@ -30,7 +30,7 @@ namespace Oci.DatabasetoolsService.Requests
         public string DatabaseToolsConnectionId { get; set; }
         
         /// <value>
-        /// Request to change the compartment of the DatabaseToolsConnection.
+        /// Request to change the compartment of the Database Tools connection.
         /// </value>
         /// <remarks>
         /// Required

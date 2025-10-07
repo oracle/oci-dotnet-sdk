@@ -47,7 +47,7 @@ namespace Oci.DatabasetoolsService.Models
         public System.Nullable<ActionType> ActionType { get; set; }
         
         /// <value>
-        /// The identifier of the resource the work request affects.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resource the work request affects.
         /// </value>
         /// <remarks>
         /// Required

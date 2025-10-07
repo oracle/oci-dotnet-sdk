@@ -30,7 +30,7 @@ namespace Oci.DatabasetoolsService.Requests
         public string DatabaseToolsConnectionId { get; set; }
         
         /// <value>
-        /// Request to validate a DatabaseToolsConnection.
+        /// Request to validate a Database Tools connection.
         /// </value>
         /// <remarks>
         /// Required

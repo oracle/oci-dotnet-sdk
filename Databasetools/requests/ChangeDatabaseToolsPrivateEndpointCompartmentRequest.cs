@@ -30,7 +30,7 @@ namespace Oci.DatabasetoolsService.Requests
         public string DatabaseToolsPrivateEndpointId { get; set; }
         
         /// <value>
-        /// Request to change the compartment of the DatabaseToolsPrivateEndpoint.
+        /// Request to change the compartment of the Database Tools private endpoint.
         /// </value>
         /// <remarks>
         /// Required

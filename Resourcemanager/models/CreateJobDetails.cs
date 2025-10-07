@@ -33,7 +33,8 @@ namespace Oci.ResourcemanagerService.Models
         public string StackId { get; set; }
         
         /// <value>
-        /// Description of the job.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

@@ -20,7 +20,7 @@ namespace Oci.DatabasetoolsService.Requests
     {
         
         /// <value>
-        /// The ID of the compartment in which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
         /// </value>
         /// <remarks>
         /// Required
@@ -48,13 +48,13 @@ namespace Oci.DatabasetoolsService.Requests
         public System.Collections.Generic.List<ConnectionType> Type { get; set; }
         
         /// <value>
-        /// A filter to return only resources with one of the specified runtimeSupport values.
+        /// A filter to return only resources with one of the specified type values.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "runtimeSupport", Oci.Common.Http.CollectionFormatType.Multi)]
         public System.Collections.Generic.List<RuntimeSupport> RuntimeSupport { get; set; }
         
         /// <value>
-        /// A filter to return only resources associated to the related resource identifier OCID passed in the query string.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the related resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "relatedResourceIdentifier")]
         public string RelatedResourceIdentifier { get; set; }

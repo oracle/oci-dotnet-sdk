@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasetoolsService.Models
 {
     /// <summary>
-    /// DatabaseToolsConnectionSummary of a PostgreSQL Server.
+    /// Database Tools connection summary of a PostgreSQL Server.
     /// </summary>
     public class DatabaseToolsConnectionPostgresqlSummary : DatabaseToolsConnectionSummary
     {
@@ -35,7 +35,7 @@ namespace Oci.DatabasetoolsService.Models
         public string ConnectionString { get; set; }
         
         /// <value>
-        /// The user name.
+        /// The database user name.
         /// </value>
         [JsonProperty(PropertyName = "userName")]
         public string UserName { get; set; }
@@ -58,7 +58,7 @@ namespace Oci.DatabasetoolsService.Models
         public System.Collections.Generic.List<DatabaseToolsKeyStorePostgresqlSummary> KeyStores { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the `DatabaseToolsPrivateEndpoint` used to access the database in the customer VCN.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Database Tools private endpoint used to access the database in the customer VCN.
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointId")]
         public string PrivateEndpointId { get; set; }

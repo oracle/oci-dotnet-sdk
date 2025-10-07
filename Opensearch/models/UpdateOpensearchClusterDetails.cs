@@ -73,6 +73,9 @@ namespace Oci.OpensearchService.Models
         [JsonProperty(PropertyName = "maintenanceDetails")]
         public UpdateMaintenanceDetails MaintenanceDetails { get; set; }
         
+        [JsonProperty(PropertyName = "certificateConfig")]
+        public CertificateConfig CertificateConfig { get; set; }
+        
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
@@ -86,6 +89,15 @@ namespace Oci.OpensearchService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// Security attributes for this resource. Each key is predefined and scoped to a namespace.
+        /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
+        /// <br/>
+        /// Example: {&quot;Oracle-ZPR&quot;: {&quot;MaxEgressCount&quot;: {&quot;value&quot;: &quot;42&quot;, &quot;mode&quot;: &quot;enforce&quot;}}}
+        /// </value>
+        [JsonProperty(PropertyName = "securityAttributes")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SecurityAttributes { get; set; }
         
     }
 }

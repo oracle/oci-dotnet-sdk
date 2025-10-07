@@ -33,7 +33,8 @@ namespace Oci.ResourcemanagerService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The private endpoint display name. Avoid entering confidential information.
+        /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -106,6 +107,14 @@ namespace Oci.ResourcemanagerService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// [Security attributes](https://docs.cloud.oracle.com/iaas/Content/zero-trust-packet-routing/zpr-artifacts.htm) are labels for a resource that can be referenced in a [Zero Trust Packet Routing](https://docs.cloud.oracle.com/iaas/Content/zero-trust-packet-routing/overview.htm) (ZPR) policy to control access to ZPR-supported resources.
+        /// <br/>
+        /// Example: {&quot;Oracle-ZPR&quot;: {&quot;MaxEgressCount&quot;: {&quot;value&quot;: &quot;42&quot;, &quot;mode&quot;: &quot;enforce&quot;}}}
+        /// </value>
+        [JsonProperty(PropertyName = "securityAttributes")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SecurityAttributes { get; set; }
         
     }
 }

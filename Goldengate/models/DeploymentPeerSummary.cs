@@ -143,6 +143,21 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeLastSynced")]
         public System.Nullable<System.DateTime> TimeLastSynced { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subscription with which resource needs to be associated with.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionId")]
+        public string SubscriptionId { get; set; }
+        
+        /// <value>
+        /// The OCID(/Content/General/Concepts/identifiers.htm) of the cluster placement group for the resource.
+        /// Only applicable for multicloud subscriptions. The cluster placement group id must be provided when a multicloud
+        /// subscription id is provided. Otherwise the cluster placement group must not be provided.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
                 ///
         /// <value>
         /// Possible lifecycle states for deployment peer.

@@ -32,7 +32,7 @@ namespace Oci.DatabasetoolsService.Models
         public string Url { get; set; }
         
         /// <value>
-        /// The user name.
+        /// The database user name.
         /// </value>
         /// <remarks>
         /// Required

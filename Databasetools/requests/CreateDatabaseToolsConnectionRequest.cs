@@ -20,7 +20,7 @@ namespace Oci.DatabasetoolsService.Requests
     {
         
         /// <value>
-        /// Details for the new `DatabaseToolsConnection`.
+        /// Details for the new Database Tools connection.
         /// </value>
         /// <remarks>
         /// Required
