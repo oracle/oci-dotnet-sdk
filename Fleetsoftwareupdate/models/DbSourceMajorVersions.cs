@@ -31,6 +31,8 @@ namespace Oci.FleetsoftwareupdateService.Models
       [EnumMember(Value = "DB_19")]
       Db19,
       [EnumMember(Value = "DB_23")]
-      Db23
+      Db23,
+      [EnumMember(Value = "DB_26")]
+      Db26
   }
 }

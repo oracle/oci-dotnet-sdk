@@ -16,31 +16,32 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// The type of step where the job is pre-created by the user.
+    /// Pipeline JSON output parameter details
     /// </summary>
-    public class PipelineMLJobStepDetails : PipelineStepDetails
+    public class PipelineJsonStepOutputParameterDetails : PipelineStepOutputParameterDetails
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the job to be used as a step.
+        /// The list of parameter names that will be output by this step
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "JobId is required.")]
-        [JsonProperty(PropertyName = "jobId")]
-        public string JobId { get; set; }
+        [Required(ErrorMessage = "ParameterNames is required.")]
+        [JsonProperty(PropertyName = "parameterNames")]
+        public System.Collections.Generic.List<string> ParameterNames { get; set; }
         
         /// <value>
-        /// Name used when creating the steprun.
+        /// Output file name
         /// </value>
-        [JsonProperty(PropertyName = "stepRunName")]
-        public string StepRunName { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "OutputFile is required.")]
+        [JsonProperty(PropertyName = "outputFile")]
+        public string OutputFile { get; set; }
         
-        [JsonProperty(PropertyName = "stepParameters")]
-        public PipelineStepParameterDetails StepParameters { get; set; }
-        
-        [JsonProperty(PropertyName = "stepType")]
-        private readonly string stepType = "ML_JOB";
+        [JsonProperty(PropertyName = "outputParameterType")]
+        private readonly string outputParameterType = "JSON";
     }
 }

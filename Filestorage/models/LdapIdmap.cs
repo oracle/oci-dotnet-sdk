@@ -31,7 +31,9 @@ namespace Oci.FilestorageService.Models
             [EnumMember(Value = null)]
             UnknownEnumValue,
             [EnumMember(Value = "RFC2307")]
-            Rfc2307
+            Rfc2307,
+            [EnumMember(Value = "RFC2307BIS")]
+            Rfc2307Bis
         };
 
         /// <value>

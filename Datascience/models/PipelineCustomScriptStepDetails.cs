@@ -36,6 +36,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "isArtifactUploaded")]
         public System.Nullable<bool> IsArtifactUploaded { get; set; }
         
+        [JsonProperty(PropertyName = "stepParameters")]
+        public PipelineStepParameterDetails StepParameters { get; set; }
+        
         [JsonProperty(PropertyName = "stepType")]
         private readonly string stepType = "CUSTOM_SCRIPT";
     }

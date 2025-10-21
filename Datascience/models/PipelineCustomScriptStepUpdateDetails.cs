@@ -30,6 +30,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "stepStorageMountConfigurationDetailsList")]
         public System.Collections.Generic.List<StorageMountConfigurationDetails> StepStorageMountConfigurationDetailsList { get; set; }
         
+        [JsonProperty(PropertyName = "stepParameters")]
+        public PipelineStepParameterDetails StepParameters { get; set; }
+        
         [JsonProperty(PropertyName = "stepType")]
         private readonly string stepType = "CUSTOM_SCRIPT";
     }

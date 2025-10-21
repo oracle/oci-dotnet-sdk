@@ -13,24 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatascienceService.Models
+namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The type of step where the job is pre-created by the user.
+    /// Details about helm diff command execution.
     /// </summary>
-    public class PipelineMLJobStepUpdateDetails : PipelineStepUpdateDetails
+    public class TriggerDryRunResult 
     {
         
         /// <value>
-        /// Name used when creating the steprun.
+        /// Helm Diff Deployment OCID
         /// </value>
-        [JsonProperty(PropertyName = "stepRunName")]
-        public string StepRunName { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DeploymentId is required.")]
+        [JsonProperty(PropertyName = "deploymentId")]
+        public string DeploymentId { get; set; }
         
-        [JsonProperty(PropertyName = "stepParameters")]
-        public PipelineStepParameterDetails StepParameters { get; set; }
-        
-        [JsonProperty(PropertyName = "stepType")]
-        private readonly string stepType = "ML_JOB";
     }
 }

@@ -122,6 +122,18 @@ namespace Oci.DatascienceService.Models
         public PipelineInfrastructureConfigurationDetails InfrastructureConfigurationOverrideDetails { get; set; }
         
         /// <value>
+        /// The storage mount override details to mount to the instance running the pipeline step.
+        /// </value>
+        [JsonProperty(PropertyName = "storageMountConfigurationOverrideDetailsList")]
+        public System.Collections.Generic.List<StorageMountConfigurationDetails> StorageMountConfigurationOverrideDetailsList { get; set; }
+        
+        /// <value>
+        /// Parameters override used in the pipeline run.
+        /// </value>
+        [JsonProperty(PropertyName = "parametersOverride")]
+        public System.Collections.Generic.Dictionary<string, string> ParametersOverride { get; set; }
+        
+        /// <value>
         /// Array of step override details. Only Step Configuration is allowed to be overridden.
         /// </value>
         [JsonProperty(PropertyName = "stepOverrideDetails")]

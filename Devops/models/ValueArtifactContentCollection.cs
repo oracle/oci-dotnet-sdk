@@ -13,24 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatascienceService.Models
+namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The type of step where the job is pre-created by the user.
+    /// Specifies the name and value pairs for values artifact
     /// </summary>
-    public class PipelineMLJobStepUpdateDetails : PipelineStepUpdateDetails
+    public class ValueArtifactContentCollection 
     {
         
         /// <value>
-        /// Name used when creating the steprun.
+        /// List of parameters defined to set helm value.
         /// </value>
-        [JsonProperty(PropertyName = "stepRunName")]
-        public string StepRunName { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Items is required.")]
+        [JsonProperty(PropertyName = "items")]
+        public System.Collections.Generic.List<ValueArtifactContent> Items { get; set; }
         
-        [JsonProperty(PropertyName = "stepParameters")]
-        public PipelineStepParameterDetails StepParameters { get; set; }
-        
-        [JsonProperty(PropertyName = "stepType")]
-        private readonly string stepType = "ML_JOB";
     }
 }
