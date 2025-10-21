@@ -13,24 +13,25 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DatascienceService.Models
+namespace Oci.DevopsService.Models
 {
     /// <summary>
-    /// The type of step where the job is pre-created by the user.
+    /// Stage specific values along with the helm chart injected by Shepherd
     /// </summary>
-    public class PipelineMLJobStepUpdateDetails : PipelineStepUpdateDetails
+    public class HelmStageContent 
     {
         
         /// <value>
-        /// Name used when creating the steprun.
+        /// Helm Stage parameter name
         /// </value>
-        [JsonProperty(PropertyName = "stepRunName")]
-        public string StepRunName { get; set; }
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
         
-        [JsonProperty(PropertyName = "stepParameters")]
-        public PipelineStepParameterDetails StepParameters { get; set; }
+        /// <value>
+        /// Helm stage parameter value
+        /// </value>
+        [JsonProperty(PropertyName = "value")]
+        public string Value { get; set; }
         
-        [JsonProperty(PropertyName = "stepType")]
-        private readonly string stepType = "ML_JOB";
     }
 }

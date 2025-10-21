@@ -27,6 +27,12 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "jobRunId")]
         public string JobRunId { get; set; }
         
+        /// <value>
+        /// Name used when creating the steprun.
+        /// </value>
+        [JsonProperty(PropertyName = "stepRunName")]
+        public string StepRunName { get; set; }
+        
         [JsonProperty(PropertyName = "stepType")]
         private readonly string stepType = "ML_JOB";
     }

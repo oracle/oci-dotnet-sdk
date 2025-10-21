@@ -16,21 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// The type of step where the job is pre-created by the user.
+    /// Pipeline Default step parameter details
     /// </summary>
-    public class PipelineMLJobStepUpdateDetails : PipelineStepUpdateDetails
+    public class PipelineDefaultStepParameterDetails : PipelineStepParameterDetails
     {
         
-        /// <value>
-        /// Name used when creating the steprun.
-        /// </value>
-        [JsonProperty(PropertyName = "stepRunName")]
-        public string StepRunName { get; set; }
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Output is required.")]
+        [JsonProperty(PropertyName = "output")]
+        public PipelineStepOutputParameterDetails Output { get; set; }
         
-        [JsonProperty(PropertyName = "stepParameters")]
-        public PipelineStepParameterDetails StepParameters { get; set; }
-        
-        [JsonProperty(PropertyName = "stepType")]
-        private readonly string stepType = "ML_JOB";
+        [JsonProperty(PropertyName = "parameterType")]
+        private readonly string parameterType = "DEFAULT";
     }
 }

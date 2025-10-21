@@ -52,5 +52,13 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "shapeConfigDetails")]
         public PipelineShapeConfigDetails ShapeConfigDetails { get; set; }
         
+        /// <value>
+        /// The size of the block storage volume to attach to the pipeline step run instance specified as a parameter. This overrides the blockStorageSizeInGBs value.
+        /// The request will fail if the parameters used are null or invalid.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "blockStorageSizeInGBsParameterized")]
+        public string BlockStorageSizeInGBsParameterized { get; set; }
+        
     }
 }
