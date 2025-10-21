@@ -10,23 +10,22 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.FleetsoftwareupdateService.Models
+namespace Oci.MysqlService.Models
 {
   /// <summary>
-  /// Possible source major versions for a GI Exadata Fleet Update Collection.
+  /// How the maintenance event was triggered.
+    /// <br/>
+    /// AUTOMATIC: maintenance event triggered as part of scheduled maintenance.
+    /// MANUAL:    maintenance event triggered manually.
+    /// SHAPE:     maintenance event triggered by a shape update.
     /// 
   /// </summary>
-  public enum GiSourceMajorVersions {
-      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-      [EnumMember(Value = null)]
-      UnknownEnumValue,
-      [EnumMember(Value = "GI_18")]
-      Gi18,
-      [EnumMember(Value = "GI_19")]
-      Gi19,
-      [EnumMember(Value = "GI_23")]
-      Gi23,
-      [EnumMember(Value = "GI_26")]
-      Gi26
+  public enum MaintenanceType {
+      [EnumMember(Value = "AUTOMATIC")]
+      Automatic,
+      [EnumMember(Value = "MANUAL")]
+      Manual,
+      [EnumMember(Value = "SHAPE")]
+      Shape
   }
 }

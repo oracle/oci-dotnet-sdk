@@ -28,7 +28,9 @@ namespace Oci.FilestorageService.Models
         ///
         public enum SchemaTypeEnum {
             [EnumMember(Value = "RFC2307")]
-            Rfc2307
+            Rfc2307,
+            [EnumMember(Value = "RFC2307BIS")]
+            Rfc2307Bis
         };
 
         /// <value>

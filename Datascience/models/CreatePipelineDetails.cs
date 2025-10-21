@@ -69,6 +69,12 @@ namespace Oci.DatascienceService.Models
         public System.Collections.Generic.List<StorageMountConfigurationDetails> StorageMountConfigurationDetailsList { get; set; }
         
         /// <value>
+        /// Parameters used in the pipeline.
+        /// </value>
+        [JsonProperty(PropertyName = "parameters")]
+        public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }
+        
+        /// <value>
         /// Array of step details for each step.
         /// </value>
         /// <remarks>

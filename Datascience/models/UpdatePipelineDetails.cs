@@ -55,6 +55,12 @@ namespace Oci.DatascienceService.Models
         public System.Collections.Generic.List<PipelineStepUpdateDetails> StepDetails { get; set; }
         
         /// <value>
+        /// Parameters used in the pipeline.
+        /// </value>
+        [JsonProperty(PropertyName = "parameters")]
+        public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
         /// </value>

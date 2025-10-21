@@ -22,14 +22,14 @@ namespace Oci.DatascienceService.Models
     {
         
         /// <value>
-        /// A pipeline step run instance of type VM.Standard.E3.Flex allows the ocpu count to be specified.
+        /// The total number of OCPUs available to the pipeline step run instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ocpus")]
         public System.Nullable<float> Ocpus { get; set; }
         
         /// <value>
-        /// A pipeline step run instance of type VM.Standard.E3.Flex allows memory to be specified. This specifies the size of the memory in GBs.
+        /// The total amount of memory available to the pipeline step run instance GBs.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "memoryInGBs")]
@@ -67,6 +67,22 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "cpuBaseline")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CpuBaselineEnum> CpuBaseline { get; set; }
+        
+        /// <value>
+        /// The total number of OCPUs available to the pipeline step run instance specified as a parameter. This overrides the ocpus value.
+        /// The request will fail if the parameters used are null or invalid.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ocpusParameterized")]
+        public string OcpusParameterized { get; set; }
+        
+        /// <value>
+        /// The total amount of memory available to the pipeline step run instance in GBs specified as a parameter. This overrides the memoryInGBs value.
+        /// The request will fail if the parameters used are null or invalid.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "memoryInGBsParameterized")]
+        public string MemoryInGBsParameterized { get; set; }
         
     }
 }

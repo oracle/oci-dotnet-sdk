@@ -37,5 +37,53 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "windowStartTime")]
         public string WindowStartTime { get; set; }
         
+        /// <value>
+        /// The preferred version to target when performing an automatic MySQL upgrade.
+        /// <br/>
+        /// OLDEST: Choose the oldest available MySQL version based on the current version of the DB System.
+        /// SECOND_NEWEST: Choose the MySQL version before the newest for auto-upgrade.
+        /// NEWEST: Choose the latest and greatest MySQL version available for auto-upgrade.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "versionPreference")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<VersionPreference> VersionPreference { get; set; }
+        
+        /// <value>
+        /// The preferred version track to target when performing an automatic MySQL upgrade.
+        /// LONG_TERM_SUPPORT: No MySQL database behavior changes.
+        /// INNOVATION:        Provides access to the latest features and all bug fixes.
+        /// FOLLOW:            Follows the track of the current MySQL version.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "versionTrackPreference")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<VersionTrackPreference> VersionTrackPreference { get; set; }
+        
+        /// <value>
+        /// The maintenance schedule type of the DB system.
+        /// EARLY:   Maintenance schedule follows a cycle where upgrades are performed when versions become deprecated.
+        /// REGULAR: Maintenance schedule follows the normal cycle where upgrades are performed when versions become unavailable.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "maintenanceScheduleType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<MaintenanceScheduleType> MaintenanceScheduleType { get; set; }
+        
+        /// <value>
+        /// The time the scheduled maintenance is expected to start,
+        /// as described by [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeScheduled")]
+        public System.Nullable<System.DateTime> TimeScheduled { get; set; }
+        
+        /// <value>
+        /// The version that is expected to be targeted during the next scheduled maintenance run.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "targetVersion")]
+        public string TargetVersion { get; set; }
+        
     }
 }

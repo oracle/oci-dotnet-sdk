@@ -10,23 +10,25 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.FleetsoftwareupdateService.Models
+namespace Oci.MysqlService.Models
 {
   /// <summary>
-  /// Possible source major versions for a GI Exadata Fleet Update Collection.
+  /// The preferred version to target when performing an automatic MySQL upgrade.
+    /// <br/>
+    /// OLDEST: Choose the oldest available MySQL version based on the current version of the DB System.
+    /// SECOND_NEWEST: Choose the MySQL version before the newest for auto-upgrade.
+    /// NEWEST: Choose the latest and greatest MySQL version available for auto-upgrade.
     /// 
   /// </summary>
-  public enum GiSourceMajorVersions {
+  public enum VersionPreference {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "GI_18")]
-      Gi18,
-      [EnumMember(Value = "GI_19")]
-      Gi19,
-      [EnumMember(Value = "GI_23")]
-      Gi23,
-      [EnumMember(Value = "GI_26")]
-      Gi26
+      [EnumMember(Value = "OLDEST")]
+      Oldest,
+      [EnumMember(Value = "SECOND_NEWEST")]
+      SecondNewest,
+      [EnumMember(Value = "NEWEST")]
+      Newest
   }
 }

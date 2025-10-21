@@ -10,23 +10,24 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Oci.FleetsoftwareupdateService.Models
+namespace Oci.MysqlService.Models
 {
   /// <summary>
-  /// Possible source major versions for a GI Exadata Fleet Update Collection.
+  /// The preferred version track to target when performing an automatic MySQL upgrade.
+    /// LONG_TERM_SUPPORT: No MySQL database behavior changes.
+    /// INNOVATION: Provides access to the latest features and all bug fixes.
+    /// FOLLOW: Follows the track of the DB System's MySQL version.
     /// 
   /// </summary>
-  public enum GiSourceMajorVersions {
+  public enum VersionTrackPreference {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
-      [EnumMember(Value = "GI_18")]
-      Gi18,
-      [EnumMember(Value = "GI_19")]
-      Gi19,
-      [EnumMember(Value = "GI_23")]
-      Gi23,
-      [EnumMember(Value = "GI_26")]
-      Gi26
+      [EnumMember(Value = "LONG_TERM_SUPPORT")]
+      LongTermSupport,
+      [EnumMember(Value = "INNOVATION")]
+      Innovation,
+      [EnumMember(Value = "FOLLOW")]
+      Follow
   }
 }
