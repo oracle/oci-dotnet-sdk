@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// An Oracle Autonomous Database.
+    /// An Oracle Autonomous AI Database.
     ///     
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
@@ -25,7 +25,7 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database.
         /// </value>
         /// <remarks>
         /// Required
@@ -51,7 +51,7 @@ namespace Oci.DatabaseService.Models
         public string SubscriptionId { get; set; }
                 ///
         /// <value>
-        /// The current state of the Autonomous Database.
+        /// The current state of the Autonomous AI Database.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -103,7 +103,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The current state of the Autonomous Database.
+        /// The current state of the Autonomous AI Database.
         /// </value>
         /// <remarks>
         /// Required
@@ -141,7 +141,7 @@ namespace Oci.DatabaseService.Models
         public AutonomousDatabaseEncryptionKeyDetails EncryptionKey { get; set; }
         
         /// <value>
-        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation. Autonomous Database Serverless does not use key versions, hence is not applicable for Autonomous Database Serverless instances.
+        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation. Autonomous AI Database Serverless does not use key versions, hence is not applicable for Autonomous AI Database Serverless instances.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyVersionId")]
@@ -158,7 +158,7 @@ namespace Oci.DatabaseService.Models
         public string DbName { get; set; }
         
         /// <value>
-        /// The character set for the autonomous database.  The default is AL32UTF8. Allowed values are:
+        /// The character set for the Autonomous AI Database.  The default is AL32UTF8. Allowed values are:
         /// <br/>
         /// AL32UTF8, AR8ADOS710, AR8ADOS720, AR8APTEC715, AR8ARABICMACS, AR8ASMO8X, AR8ISO8859P6, AR8MSWIN1256, AR8MUSSAD768, AR8NAFITHA711, AR8NAFITHA721, AR8SAKHR706, AR8SAKHR707, AZ8ISO8859P9E, BG8MSWIN, BG8PC437S, BLT8CP921, BLT8ISO8859P13, BLT8MSWIN1257, BLT8PC775, BN8BSCII, CDN8PC863, CEL8ISO8859P14, CL8ISO8859P5, CL8ISOIR111, CL8KOI8R, CL8KOI8U, CL8MACCYRILLICS, CL8MSWIN1251, EE8ISO8859P2, EE8MACCES, EE8MACCROATIANS, EE8MSWIN1250, EE8PC852, EL8DEC, EL8ISO8859P7, EL8MACGREEKS, EL8MSWIN1253, EL8PC437S, EL8PC851, EL8PC869, ET8MSWIN923, HU8ABMOD, HU8CWI2, IN8ISCII, IS8PC861, IW8ISO8859P8, IW8MACHEBREWS, IW8MSWIN1255, IW8PC1507, JA16EUC, JA16EUCTILDE, JA16SJIS, JA16SJISTILDE, JA16VMS, KO16KSC5601, KO16KSCCS, KO16MSWIN949, LA8ISO6937, LA8PASSPORT, LT8MSWIN921, LT8PC772, LT8PC774, LV8PC1117, LV8PC8LR, LV8RST104090, N8PC865, NE8ISO8859P10, NEE8ISO8859P4, RU8BESTA, RU8PC855, RU8PC866, SE8ISO8859P3, TH8MACTHAIS, TH8TISASCII, TR8DEC, TR8MACTURKISHS, TR8MSWIN1254, TR8PC857, US7ASCII, US8PC437, UTF8, VN8MSWIN1258, VN8VN3, WE8DEC, WE8DG, WE8ISO8859P1, WE8ISO8859P15, WE8ISO8859P9, WE8MACROMAN8S, WE8MSWIN1252, WE8NCR4970, WE8NEXTSTEP, WE8PC850, WE8PC858, WE8PC860, WE8ROMAN8, ZHS16CGB231280, ZHS16GBK, ZHT16BIG5, ZHT16CCDC, ZHT16DBT, ZHT16HKSCS, ZHT16MSWIN950, ZHT32EUC, ZHT32SOPS, ZHT32TRIS
         /// 
@@ -167,7 +167,7 @@ namespace Oci.DatabaseService.Models
         public string CharacterSet { get; set; }
         
         /// <value>
-        /// The national character set for the autonomous database.  The default is AL16UTF16. Allowed values are:
+        /// The national character set for the Autonomous AI Database.  The default is AL16UTF16. Allowed values are:
         /// AL16UTF16 or UTF8.
         /// 
         /// </value>
@@ -175,13 +175,13 @@ namespace Oci.DatabaseService.Models
         public string NcharacterSet { get; set; }
         
         /// <value>
-        /// The percentage of the System Global Area(SGA) assigned to In-Memory tables in Autonomous Database. This property is applicable only to Autonomous Databases on the Exadata Cloud@Customer platform.
+        /// The percentage of the System Global Area(SGA) assigned to In-Memory tables in Autonomous AI Database. This property is applicable only to Autonomous AI Databases on the Exadata Cloud@Customer platform.
         /// </value>
         [JsonProperty(PropertyName = "inMemoryPercentage")]
         public System.Nullable<int> InMemoryPercentage { get; set; }
         
         /// <value>
-        /// The area assigned to In-Memory tables in Autonomous Database.
+        /// The area assigned to In-Memory tables in Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "inMemoryAreaInGBs")]
         public System.Nullable<int> InMemoryAreaInGBs { get; set; }
@@ -196,7 +196,7 @@ namespace Oci.DatabaseService.Models
         public LongTermBackUpScheduleDetails LongTermBackupSchedule { get; set; }
         
         /// <value>
-        /// Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled.
+        /// Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous AI Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isLocalDataGuardEnabled
         /// 
@@ -242,7 +242,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<AutonomousDatabaseEncryptionKeyHistoryEntry> EncryptionKeyHistoryEntry { get; set; }
         
         /// <value>
-        /// The number of CPU cores to be made available to the database. When the ECPU is selected, the value for cpuCoreCount is 0. For Autonomous Database on Dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-database&id=ATPFG-GUID-B0F033C1-CC5A-42F0-B2E7-3CECFEDA1FD1) for shape details.
+        /// The number of CPU cores to be made available to the database. When the ECPU is selected, the value for cpuCoreCount is 0. For Autonomous AI Database on Dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbde/) for shape details.
         /// <br/>
         /// **Note:** This parameter cannot be used with the `ocpuCount` parameter.
         /// 
@@ -257,7 +257,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> LocalAdgAutoFailoverMaxDataLossLimit { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. ECPU compute model is the recommended model and OCPU compute model is legacy.
+        /// The compute model of the Autonomous AI Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. ECPU compute model is the recommended model and OCPU compute model is legacy.
         /// </value>
         ///
         public enum ComputeModelEnum {
@@ -271,14 +271,14 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. ECPU compute model is the recommended model and OCPU compute model is legacy.
+        /// The compute model of the Autonomous AI Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value. ECPU compute model is the recommended model and OCPU compute model is legacy.
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
         /// <value>
-        /// The compute amount (CPUs) available to the database. Minimum and maximum values depend on the compute model and whether the database is an Autonomous Database Serverless instance or an Autonomous Database on Dedicated Exadata Infrastructure. 
+        /// The compute amount (CPUs) available to the database. Minimum and maximum values depend on the compute model and whether the database is an Autonomous AI Database Serverless instance or an Autonomous AI Database on Dedicated Exadata Infrastructure. 
         /// The 'ECPU' compute model requires a minimum value of one, for databases in the elastic resource pool and minimum value of two, otherwise. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value. Providing `computeModel` and `computeCount` is the preferred method for both OCPU and ECPU.
         /// 
         /// </value>
@@ -301,11 +301,11 @@ namespace Oci.DatabaseService.Models
         /// The number of OCPU cores to be made available to the database.
         /// <br/>
         /// The following points apply:
-        /// - For Autonomous Databases on Dedicated Exadata Infrastructure, to provision less than 1 core, enter a fractional value in an increment of 0.1. For example, you can provision 0.3 or 0.4 cores, but not 0.35 cores. (Note that fractional OCPU values are not supported for Autonomous Database Serverless instances.)
-        /// - To provision cores, enter an integer between 1 and the maximum number of cores available for the infrastructure shape. For example, you can provision 2 cores or 3 cores, but not 2.5 cores. This applies to Autonomous Databases on both serverless and dedicated Exadata infrastructure.
-        /// - For Autonomous Database Serverless instances, this parameter is not used.
+        /// - For Autonomous AI Databases on Dedicated Exadata Infrastructure, to provision less than 1 core, enter a fractional value in an increment of 0.1. For example, you can provision 0.3 or 0.4 cores, but not 0.35 cores. (Note that fractional OCPU values are not supported for Autonomous AI Database Serverless instances.)
+        /// - To provision cores, enter an integer between 1 and the maximum number of cores available for the infrastructure shape. For example, you can provision 2 cores or 3 cores, but not 2.5 cores. This applies to Autonomous AI Databases on both serverless and dedicated Exadata infrastructure.
+        /// - For Autonomous AI Database Serverless instances, this parameter is not used.
         /// <br/>
-        /// For Autonomous Databases on Dedicated Exadata Infrastructure, the maximum number of cores is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbde/index.html) for shape details.
+        /// For Autonomous AI Databases on Dedicated Exadata Infrastructure, the maximum number of cores is determined by the infrastructure shape. See [Characteristics of Infrastructure Shapes](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbde/index.html) for shape details.
         /// <br/>
         /// **Note:** This parameter cannot be used with the `cpuCoreCount` parameter.
         /// 
@@ -314,7 +314,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> OcpuCount { get; set; }
         
         /// <value>
-        /// An array of CPU values that an Autonomous Database can be scaled to.
+        /// An array of CPU values that an Autonomous AI Database can be scaled to.
         /// </value>
         [JsonProperty(PropertyName = "provisionableCpus")]
         public System.Collections.Generic.List<float> ProvisionableCpus { get; set; }
@@ -322,9 +322,9 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The quantity of data in the database, in terabytes.
         /// <br/>
-        /// The following points apply to Autonomous Databases on Serverless Infrastructure:
+        /// The following points apply to Autonomous AI Databases on Serverless Infrastructure:
         /// - This is an integer field whose value remains null when the data size is in GBs and cannot be converted to TBs (by dividing the GB value by 1024) without rounding error.
-        /// - To get the exact value of data storage size without rounding error, please see `dataStorageSizeInGBs` of Autonomous Database.
+        /// - To get the exact value of data storage size without rounding error, please see `dataStorageSizeInGBs` of Autonomous AI Database.
         /// 
         /// </value>
         /// <remarks>
@@ -351,14 +351,14 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The quantity of data in the database, in gigabytes.
         /// <br/>
-        /// For Autonomous Transaction Processing databases using ECPUs on Serverless Infrastructure, this value is always populated. In all the other cases, this value will be null and `dataStorageSizeInTBs` will be populated instead.
+        /// For Autonomous AI Transaction Processing databases using ECPUs on Serverless Infrastructure, this value is always populated. In all the other cases, this value will be null and `dataStorageSizeInTBs` will be populated instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dataStorageSizeInGBs")]
         public System.Nullable<int> DataStorageSizeInGBs { get; set; }
         
         /// <value>
-        /// The storage space consumed by Autonomous Database in GBs.
+        /// The storage space consumed by Autonomous AI Database in GBs.
         /// </value>
         [JsonProperty(PropertyName = "usedDataStorageSizeInGBs")]
         public System.Nullable<int> UsedDataStorageSizeInGBs { get; set; }
@@ -394,65 +394,65 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsDedicated { get; set; }
         
         /// <value>
-        /// The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm). Used only by Autonomous Database on Dedicated Exadata Infrastructure.
+        /// The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm). Used only by Autonomous AI Database on Dedicated Exadata Infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "autonomousContainerDatabaseId")]
         public string AutonomousContainerDatabaseId { get; set; }
         
         /// <value>
-        /// Indicates if the Autonomous Database is backup retention locked.
+        /// Indicates if the Autonomous AI Database is backup retention locked.
         /// </value>
         [JsonProperty(PropertyName = "isBackupRetentionLocked")]
         public System.Nullable<bool> IsBackupRetentionLocked { get; set; }
         
         /// <value>
-        /// The date and time the Autonomous Database was most recently undeleted.
+        /// The date and time the Autonomous AI Database was most recently undeleted.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUndeleted")]
         public System.Nullable<System.DateTime> TimeUndeleted { get; set; }
         
         /// <value>
-        /// The earliest(min) date and time the Autonomous Database can be scheduled to upgrade to 23ai.
+        /// The earliest(min) date and time the Autonomous AI Database can be scheduled to upgrade to 26ai.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeEarliestAvailableDbVersionUpgrade")]
         public System.Nullable<System.DateTime> TimeEarliestAvailableDbVersionUpgrade { get; set; }
         
         /// <value>
-        /// The max date and time the Autonomous Database can be scheduled to upgrade to 23ai.
+        /// The max date and time the Autonomous AI Database can be scheduled to upgrade to 26ai.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeLatestAvailableDbVersionUpgrade")]
         public System.Nullable<System.DateTime> TimeLatestAvailableDbVersionUpgrade { get; set; }
         
         /// <value>
-        /// The date and time the Autonomous Database scheduled to upgrade to 23ai.
+        /// The date and time the Autonomous AI Database scheduled to upgrade to 26ai.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeScheduledDbVersionUpgrade")]
         public System.Nullable<System.DateTime> TimeScheduledDbVersionUpgrade { get; set; }
         
         /// <value>
-        /// The date and time the Autonomous Database was created.
+        /// The date and time the Autonomous AI Database was created.
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The user-friendly name for the Autonomous Database. The name does not have to be unique.
+        /// The user-friendly name for the Autonomous AI Database. The name does not have to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The URL of the Service Console for the Autonomous Database.
+        /// The URL of the Service Console for the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "serviceConsoleUrl")]
         public string ServiceConsoleUrl { get; set; }
         
         /// <value>
-        /// The connection string used to connect to the Autonomous Database. The username for the Service Console is ADMIN. Use the password you entered when creating the Autonomous Database for the password value.
+        /// The connection string used to connect to the Autonomous AI Database. The username for the Service Console is ADMIN. Use the password you entered when creating the Autonomous AI Database for the password value.
         /// </value>
         [JsonProperty(PropertyName = "connectionStrings")]
         public AutonomousDatabaseConnectionStrings ConnectionStrings { get; set; }
@@ -465,12 +465,15 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "publicConnectionUrls")]
         public AutonomousDatabaseConnectionUrls PublicConnectionUrls { get; set; }
+        
+        [JsonProperty(PropertyName = "vanityConnectionUrls")]
+        public AutonomousDatabaseConnectionUrls VanityConnectionUrls { get; set; }
                 ///
         /// <value>
-        /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
-        /// License Included allows you to subscribe to new Oracle Database software licenses and the Oracle Database service.
-        /// Note that when provisioning an [Autonomous Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
-        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
+        /// The Oracle license model that applies to the Oracle Autonomous AI Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
+        /// License Included allows you to subscribe to new Oracle AI Database software licenses and the Oracle AI Database service.
+        /// Note that when provisioning an [Autonomous AI Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
+        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous AI Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
@@ -487,10 +490,10 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
-        /// License Included allows you to subscribe to new Oracle Database software licenses and the Oracle Database service.
-        /// Note that when provisioning an [Autonomous Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
-        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
+        /// The Oracle license model that applies to the Oracle Autonomous AI Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
+        /// License Included allows you to subscribe to new Oracle AI Database software licenses and the Oracle AI Database service.
+        /// Note that when provisioning an [Autonomous AI Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
+        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous AI Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
@@ -506,7 +509,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> ByolComputeCountLimit { get; set; }
         
         /// <value>
-        /// The amount of storage that has been used for Autonomous Databases in dedicated infrastructure, in terabytes.
+        /// The amount of storage that has been used for Autonomous AI Databases in dedicated infrastructure, in terabytes.
         /// </value>
         [JsonProperty(PropertyName = "usedDataStorageSizeInTBs")]
         public System.Nullable<int> UsedDataStorageSizeInTBs { get; set; }
@@ -542,7 +545,7 @@ namespace Oci.DatabaseService.Models
         /// **Subnet Restrictions:**
         /// - For bare metal DB systems and for single node virtual machine DB systems, do not use a subnet that overlaps with 192.168.16.16/28.
         /// - For Exadata and virtual machine 2-node RAC systems, do not use a subnet that overlaps with 192.168.128.0/20.
-        /// - For Autonomous Database, setting this will disable public secure access to the database.
+        /// - For Autonomous AI Database, setting this will disable public secure access to the database.
         /// <br/>
         /// These subnets are used by the Oracle Clusterware private interconnect on the database instance.
         /// Specifying an overlapping subnet will cause the private interconnect to malfunction.
@@ -555,7 +558,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The list of [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the network security groups (NSGs) to which this resource belongs. Setting this to an empty list removes all resources from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
-        /// - A network security group (NSG) is optional for Autonomous Databases with private access. The nsgIds list can be empty.
+        /// - A network security group (NSG) is optional for Autonomous AI Databases with private access. The nsgIds list can be empty.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
@@ -592,25 +595,26 @@ namespace Oci.DatabaseService.Models
         public string PrivateEndpointIp { get; set; }
         
         /// <value>
-        /// A valid Oracle Database version for Autonomous Database.
+        /// A valid Oracle AI Database version for Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
         
         /// <value>
-        /// Indicates if the Autonomous Database version is a preview version.
+        /// Indicates if the Autonomous AI Database version is a preview version.
         /// </value>
         [JsonProperty(PropertyName = "isPreview")]
         public System.Nullable<bool> IsPreview { get; set; }
                 ///
         /// <value>
-        /// The Autonomous Database workload type. The following values are valid:
+        /// The Autonomous AI Database workload type. The following values are valid:
+        /// - OLTP - indicates an Autonomous AI Transaction Processing database
+        /// - DW - indicates an Autonomous AI Lakehouse database
+        /// - AJD - indicates an Autonomous AI JSON Database
+        /// - APEX - indicates an Autonomous AI Database with the Oracle APEX AI Application Development workload type.
+        /// - LH - indicates an Oracle Autonomous AI Lakehouse database
         /// <br/>
-        /// - OLTP - indicates an Autonomous Transaction Processing database
-        /// - DW - indicates an Autonomous Data Warehouse database
-        /// - AJD - indicates an Autonomous JSON Database
-        /// - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
-        /// <br/>
+        /// 
         /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
         /// </value>
@@ -626,17 +630,20 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "AJD")]
             Ajd,
             [EnumMember(Value = "APEX")]
-            Apex
+            Apex,
+            [EnumMember(Value = "LH")]
+            Lh
         };
 
         /// <value>
-        /// The Autonomous Database workload type. The following values are valid:
+        /// The Autonomous AI Database workload type. The following values are valid:
+        /// - OLTP - indicates an Autonomous AI Transaction Processing database
+        /// - DW - indicates an Autonomous AI Lakehouse database
+        /// - AJD - indicates an Autonomous AI JSON Database
+        /// - APEX - indicates an Autonomous AI Database with the Oracle APEX AI Application Development workload type.
+        /// - LH - indicates an Oracle Autonomous AI Lakehouse database
         /// <br/>
-        /// - OLTP - indicates an Autonomous Transaction Processing database
-        /// - DW - indicates an Autonomous Data Warehouse database
-        /// - AJD - indicates an Autonomous JSON Database
-        /// - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
-        /// <br/>
+        /// 
         /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
         /// </value>
@@ -645,7 +652,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<DbWorkloadEnum> DbWorkload { get; set; }
         
         /// <value>
-        /// Autonomous Database for Developers are fixed-shape Autonomous Databases that developers can use to build and test new applications. On Serverless, these are low-cost and billed per instance, on Dedicated and Cloud@Customer there is no additional cost to create Developer databases. Developer databases come with limited resources and is not intended for large-scale testing and production deployments. When you need more compute or storage resources, you may upgrade to a full paid production database.
+        /// Autonomous AI Database for Developers are fixed-shape Autonomous AI Databases that developers can use to build and test new applications. On Serverless, these are low-cost and billed per instance, on Dedicated and Cloud@Customer there is no additional cost to create Developer databases. Developer databases come with limited resources and is not intended for large-scale testing and production deployments. When you need more compute or storage resources, you may upgrade to a full paid production database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDevTier")]
@@ -658,18 +665,18 @@ namespace Oci.DatabaseService.Models
         ///  if database-level access control is enabled and no rules are specified, the database will become inaccessible. The rules can be added later using the `UpdateAutonomousDatabase` API operation or edit option in console.
         /// When creating a database clone, the desired access control setting should be specified. By default, database-level access control will be disabled for the clone.
         /// <br/>
-        /// This property is applicable only to Autonomous Databases on the Exadata Cloud@Customer platform. For Autonomous Database Serverless instances, `whitelistedIps` is used.
+        /// This property is applicable only to Autonomous AI Databases on the Exadata Cloud@Customer platform. For Autonomous AI Database Serverless instances, `whitelistedIps` is used.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAccessControlEnabled")]
         public System.Nullable<bool> IsAccessControlEnabled { get; set; }
         
         /// <value>
-        /// The client IP access control list (ACL). This feature is available for [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) and on Exadata Cloud@Customer.
-        /// Only clients connecting from an IP address included in the ACL may access the Autonomous Database instance.
-        /// If `arePrimaryWhitelistedIpsUsed` is 'TRUE' then Autonomous Database uses this primary's IP access control list (ACL) for the disaster recovery peer called `standbywhitelistedips`.
+        /// The client IP access control list (ACL). This feature is available for [Autonomous AI Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) and on Exadata Cloud@Customer.
+        /// Only clients connecting from an IP address included in the ACL may access the Autonomous AI Database instance.
+        /// If `arePrimaryWhitelistedIpsUsed` is 'TRUE' then Autonomous AI Database uses this primary's IP access control list (ACL) for the disaster recovery peer called `standbywhitelistedips`.
         /// <br/>
-        /// For Autonomous Database Serverless, this is an array of CIDR (classless inter-domain routing) notations for a subnet or VCN OCID (virtual cloud network Oracle Cloud ID).
+        /// For Autonomous AI Database Serverless, this is an array of CIDR (classless inter-domain routing) notations for a subnet or VCN OCID (virtual cloud network Oracle Cloud ID).
         /// Multiple IPs and VCN OCIDs should be separate strings separated by commas, but if it\u2019s other configurations that need multiple pieces of information then its each piece is connected with semicolon (;) as a delimiter.
         /// Example: [&quot;1.1.1.1&quot;,&quot;1.1.1.0/24&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id>&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id1>;1.1.1.1&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id2>;1.1.0.0/16&quot;]For Exadata Cloud@Customer, this is an array of IP addresses or CIDR notations.
         /// </value>
@@ -677,20 +684,20 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> WhitelistedIps { get; set; }
         
         /// <value>
-        /// This field will be null if the Autonomous Database is not Data Guard enabled or Access Control is disabled.
-        /// It's value would be `TRUE` if Autonomous Database is Data Guard enabled and Access Control is enabled and if the Autonomous Database uses primary IP access control list (ACL) for standby.
-        /// It's value would be `FALSE` if Autonomous Database is Data Guard enabled and Access Control is enabled and if the Autonomous Database uses different IP access control list (ACL) for standby compared to primary.
+        /// This field will be null if the Autonomous AI Database is not Data Guard enabled or Access Control is disabled.
+        /// It's value would be `TRUE` if Autonomous AI Database is Data Guard enabled and Access Control is enabled and if the Autonomous AI Database uses primary IP access control list (ACL) for standby.
+        /// It's value would be `FALSE` if Autonomous AI Database is Data Guard enabled and Access Control is enabled and if the Autonomous AI Database uses different IP access control list (ACL) for standby compared to primary.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "arePrimaryWhitelistedIpsUsed")]
         public System.Nullable<bool> ArePrimaryWhitelistedIpsUsed { get; set; }
         
         /// <value>
-        /// The client IP access control list (ACL). This feature is available for [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) and on Exadata Cloud@Customer.
-        /// Only clients connecting from an IP address included in the ACL may access the Autonomous Database instance.
-        /// If `arePrimaryWhitelistedIpsUsed` is 'TRUE' then Autonomous Database uses this primary's IP access control list (ACL) for the disaster recovery peer called `standbywhitelistedips`.
+        /// The client IP access control list (ACL). This feature is available for [Autonomous AI Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) and on Exadata Cloud@Customer.
+        /// Only clients connecting from an IP address included in the ACL may access the Autonomous AI Database instance.
+        /// If `arePrimaryWhitelistedIpsUsed` is 'TRUE' then Autonomous AI Database uses this primary's IP access control list (ACL) for the disaster recovery peer called `standbywhitelistedips`.
         /// <br/>
-        /// For Autonomous Database Serverless, this is an array of CIDR (classless inter-domain routing) notations for a subnet or VCN OCID (virtual cloud network Oracle Cloud ID).
+        /// For Autonomous AI Database Serverless, this is an array of CIDR (classless inter-domain routing) notations for a subnet or VCN OCID (virtual cloud network Oracle Cloud ID).
         /// Multiple IPs and VCN OCIDs should be separate strings separated by commas, but if it\u2019s other configurations that need multiple pieces of information then its each piece is connected with semicolon (;) as a delimiter.
         /// Example: [&quot;1.1.1.1&quot;,&quot;1.1.1.0/24&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id>&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id1>;1.1.1.1&quot;,&quot;ocid1.vcn.oc1.sea.<unique_id2>;1.1.0.0/16&quot;]For Exadata Cloud@Customer, this is an array of IP addresses or CIDR notations.
         /// </value>
@@ -698,20 +705,20 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> StandbyWhitelistedIps { get; set; }
         
         /// <value>
-        /// Information about Oracle APEX Application Development.
+        /// Information about Oracle APEX AI Application Development.
         /// </value>
         [JsonProperty(PropertyName = "apexDetails")]
         public AutonomousDatabaseApex ApexDetails { get; set; }
         
         /// <value>
-        /// Indicates if auto scaling is enabled for the Autonomous Database CPU core count. The default value is `TRUE`.
+        /// Indicates if auto scaling is enabled for the Autonomous AI Database CPU core count. The default value is `TRUE`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoScalingEnabled")]
         public System.Nullable<bool> IsAutoScalingEnabled { get; set; }
                 ///
         /// <value>
-        /// Status of the Data Safe registration for this Autonomous Database.
+        /// Status of the Data Safe registration for this Autonomous AI Database.
         /// </value>
         ///
         public enum DataSafeStatusEnum {
@@ -731,14 +738,14 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Status of the Data Safe registration for this Autonomous Database.
+        /// Status of the Data Safe registration for this Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "dataSafeStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataSafeStatusEnum> DataSafeStatus { get; set; }
                 ///
         /// <value>
-        /// Status of Operations Insights for this Autonomous Database.
+        /// Status of Operations Insights for this Autonomous AI Database.
         /// </value>
         ///
         public enum OperationsInsightsStatusEnum {
@@ -760,14 +767,14 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Status of Operations Insights for this Autonomous Database.
+        /// Status of Operations Insights for this Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "operationsInsightsStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<OperationsInsightsStatusEnum> OperationsInsightsStatus { get; set; }
                 ///
         /// <value>
-        /// Status of Database Management for this Autonomous Database.
+        /// Status of Database Management for this Autonomous AI Database.
         /// </value>
         ///
         public enum DatabaseManagementStatusEnum {
@@ -789,7 +796,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Status of Database Management for this Autonomous Database.
+        /// Status of Database Management for this Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "databaseManagementStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -814,7 +821,7 @@ namespace Oci.DatabaseService.Models
         public string MaintenanceTargetComponent { get; set; }
         
         /// <value>
-        /// Indicates if the Autonomous Database is a refreshable clone.
+        /// Indicates if the Autonomous AI Database is a refreshable clone.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
@@ -841,7 +848,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeOfNextRefresh { get; set; }
                 ///
         /// <value>
-        /// Indicates the Autonomous Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
+        /// Indicates the Autonomous AI Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
@@ -858,7 +865,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Indicates the Autonomous Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
+        /// Indicates the Autonomous AI Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
@@ -868,7 +875,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<OpenModeEnum> OpenMode { get; set; }
                 ///
         /// <value>
-        /// The refresh status of the clone. REFRESHING indicates that the clone is currently being refreshed with data from the source Autonomous Database.
+        /// The refresh status of the clone. REFRESHING indicates that the clone is currently being refreshed with data from the source Autonomous AI Database.
         /// </value>
         ///
         public enum RefreshableStatusEnum {
@@ -882,14 +889,14 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The refresh status of the clone. REFRESHING indicates that the clone is currently being refreshed with data from the source Autonomous Database.
+        /// The refresh status of the clone. REFRESHING indicates that the clone is currently being refreshed with data from the source Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "refreshableStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RefreshableStatusEnum> RefreshableStatus { get; set; }
                 ///
         /// <value>
-        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous Database.
+        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous AI Database.
         /// </value>
         ///
         public enum RefreshableModeEnum {
@@ -903,20 +910,20 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous Database.
+        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "refreshableMode")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RefreshableModeEnum> RefreshableMode { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous Database that was cloned to create the current Autonomous Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous AI Database that was cloned to create the current Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "sourceId")]
         public string SourceId { get; set; }
                 ///
         /// <value>
-        /// The Autonomous Database permission level. Restricted mode allows access only by admin users.
+        /// The Autonomous AI Database permission level. Restricted mode allows access only by admin users.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
@@ -933,7 +940,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Autonomous Database permission level. Restricted mode allows access only by admin users.
+        /// The Autonomous AI Database permission level. Restricted mode allows access only by admin users.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
@@ -943,7 +950,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<PermissionLevelEnum> PermissionLevel { get; set; }
         
         /// <value>
-        /// The timestamp of the last switchover operation for the Autonomous Database.
+        /// The timestamp of the last switchover operation for the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "timeOfLastSwitchover")]
         public System.Nullable<System.DateTime> TimeOfLastSwitchover { get; set; }
@@ -955,7 +962,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeOfLastFailover { get; set; }
         
         /// <value>
-        /// **Deprecated.** Indicates whether the Autonomous Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to Autonomous Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
+        /// **Deprecated.** Indicates whether the Autonomous AI Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to Autonomous AI Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDataGuardEnabled")]
@@ -975,13 +982,13 @@ namespace Oci.DatabaseService.Models
         public AutonomousDatabaseStandbySummary StandbyDb { get; set; }
         
         /// <value>
-        /// Indicates whether the Autonomous Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to Autonomous Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
+        /// Indicates whether the Autonomous AI Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to Autonomous AI Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "isLocalDataGuardEnabled")]
         public System.Nullable<bool> IsLocalDataGuardEnabled { get; set; }
         
         /// <value>
-        /// Indicates whether the Autonomous Database has Cross Region Data Guard enabled. Not applicable to Autonomous Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
+        /// Indicates whether the Autonomous AI Database has Cross Region Data Guard enabled. Not applicable to Autonomous AI Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
         /// </value>
         [JsonProperty(PropertyName = "isRemoteDataGuardEnabled")]
         public System.Nullable<bool> IsRemoteDataGuardEnabled { get; set; }
@@ -990,7 +997,7 @@ namespace Oci.DatabaseService.Models
         public AutonomousDatabaseStandbySummary LocalStandbyDb { get; set; }
                 ///
         /// <value>
-        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous AI Database, if Autonomous Data Guard is enabled.
         /// 
         /// </value>
         ///
@@ -1011,7 +1018,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous AI Database, if Autonomous Data Guard is enabled.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "role")]
@@ -1019,7 +1026,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<RoleEnum> Role { get; set; }
         
         /// <value>
-        /// List of Oracle Database versions available for a database upgrade. If there are no version upgrades available, this list is empty.
+        /// List of Oracle AI Database versions available for a database upgrade. If there are no version upgrades available, this list is empty.
         /// </value>
         [JsonProperty(PropertyName = "availableUpgradeVersions")]
         public System.Collections.Generic.List<string> AvailableUpgradeVersions { get; set; }
@@ -1049,13 +1056,13 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> AutoRefreshPointLagInSeconds { get; set; }
         
         /// <value>
-        /// The the date and time that auto-refreshing will begin for an Autonomous Database refreshable clone. This value controls only the start time for the first refresh operation. Subsequent (ongoing) refresh operations have start times controlled by the value of the `autoRefreshFrequencyInSeconds` parameter.
+        /// The the date and time that auto-refreshing will begin for an Autonomous AI Database refreshable clone. This value controls only the start time for the first refresh operation. Subsequent (ongoing) refresh operations have start times controlled by the value of the `autoRefreshFrequencyInSeconds` parameter.
         /// </value>
         [JsonProperty(PropertyName = "timeOfAutoRefreshStart")]
         public System.Nullable<System.DateTime> TimeOfAutoRefreshStart { get; set; }
         
         /// <value>
-        /// The list of regions that support the creation of an Autonomous Database clone or an Autonomous Data Guard standby database.
+        /// The list of regions that support the creation of an Autonomous AI Database clone or an Autonomous Data Guard standby database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "supportedRegionsToCloneTo")]
@@ -1068,13 +1075,13 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<CustomerContact> CustomerContacts { get; set; }
         
         /// <value>
-        /// The date and time that Autonomous Data Guard was enabled for an Autonomous Database where the standby was provisioned in the same region as the primary database.
+        /// The date and time that Autonomous Data Guard was enabled for an Autonomous AI Database where the standby was provisioned in the same region as the primary database.
         /// </value>
         [JsonProperty(PropertyName = "timeLocalDataGuardEnabled")]
         public System.Nullable<System.DateTime> TimeLocalDataGuardEnabled { get; set; }
                 ///
         /// <value>
-        /// **Deprecated.** The Autonomous Data Guard region type of the Autonomous Database. For Autonomous Database Serverless, Autonomous Data Guard associations have designated primary and standby regions, and these region types do not change when the database changes roles. The standby regions in Autonomous Data Guard associations can be the same region designated as the primary region, or they can be remote regions. Certain database administrative operations may be available only in the primary region of the Autonomous Data Guard association, and cannot be performed when the database using the primary role is operating in a remote Autonomous Data Guard standby region.
+        /// **Deprecated.** The Autonomous Data Guard region type of the Autonomous AI Database. For Autonomous AI Database Serverless, Autonomous Data Guard associations have designated primary and standby regions, and these region types do not change when the database changes roles. The standby regions in Autonomous Data Guard associations can be the same region designated as the primary region, or they can be remote regions. Certain database administrative operations may be available only in the primary region of the Autonomous Data Guard association, and cannot be performed when the database using the primary role is operating in a remote Autonomous Data Guard standby region.
         /// 
         /// </value>
         ///
@@ -1089,7 +1096,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// **Deprecated.** The Autonomous Data Guard region type of the Autonomous Database. For Autonomous Database Serverless, Autonomous Data Guard associations have designated primary and standby regions, and these region types do not change when the database changes roles. The standby regions in Autonomous Data Guard associations can be the same region designated as the primary region, or they can be remote regions. Certain database administrative operations may be available only in the primary region of the Autonomous Data Guard association, and cannot be performed when the database using the primary role is operating in a remote Autonomous Data Guard standby region.
+        /// **Deprecated.** The Autonomous Data Guard region type of the Autonomous AI Database. For Autonomous AI Database Serverless, Autonomous Data Guard associations have designated primary and standby regions, and these region types do not change when the database changes roles. The standby regions in Autonomous Data Guard associations can be the same region designated as the primary region, or they can be remote regions. Certain database administrative operations may be available only in the primary region of the Autonomous Data Guard association, and cannot be performed when the database using the primary role is operating in a remote Autonomous Data Guard standby region.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dataguardRegionType")]
@@ -1097,19 +1104,19 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<DataguardRegionTypeEnum> DataguardRegionType { get; set; }
         
         /// <value>
-        /// The date and time the Autonomous Data Guard role was switched for the Autonomous Database. For databases that have standbys in both the primary Data Guard region and a remote Data Guard standby region, this is the latest timestamp of either the database using the \"primary\" role in the primary Data Guard region, or database located in the remote Data Guard standby region.
+        /// The date and time the Autonomous Data Guard role was switched for the Autonomous AI Database. For databases that have standbys in both the primary Data Guard region and a remote Data Guard standby region, this is the latest timestamp of either the database using the \"primary\" role in the primary Data Guard region, or database located in the remote Data Guard standby region.
         /// </value>
         [JsonProperty(PropertyName = "timeDataGuardRoleChanged")]
         public System.Nullable<System.DateTime> TimeDataGuardRoleChanged { get; set; }
         
         /// <value>
-        /// The list of [OCIDs](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of standby databases located in Autonomous Data Guard remote regions that are associated with the source database. Note that for Autonomous Database Serverless instances, standby databases located in the same region as the source primary database do not have OCIDs.
+        /// The list of [OCIDs](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of standby databases located in Autonomous Data Guard remote regions that are associated with the source database. Note that for Autonomous AI Database Serverless instances, standby databases located in the same region as the source primary database do not have OCIDs.
         /// </value>
         [JsonProperty(PropertyName = "peerDbIds")]
         public System.Collections.Generic.List<string> PeerDbIds { get; set; }
         
         /// <value>
-        /// Specifies if the Autonomous Database requires mTLS connections.
+        /// Specifies if the Autonomous AI Database requires mTLS connections.
         /// <br/>
         /// This may not be updated in parallel with any of the following: licenseModel, databaseEdition, cpuCoreCount, computeCount, dataStorageSizeInTBs, whitelistedIps, openMode, permissionLevel, db-workload, privateEndpointLabel, nsgIds, customerContacts, dbVersion, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// <br/>
@@ -1117,7 +1124,7 @@ namespace Oci.DatabaseService.Models
         /// - CreateAutonomousDatabase
         /// - GetAutonomousDatabase
         /// - UpdateAutonomousDatabase
-        /// Details: Prior to the July 1, 2023 change, the isMTLSConnectionRequired attribute default value was true. This applies to Autonomous Database Serverless.
+        /// Details: Prior to the July 1, 2023 change, the isMTLSConnectionRequired attribute default value was true. This applies to Autonomous AI Database Serverless.
         /// Does this impact me? If you use or maintain custom scripts or Terraform scripts referencing the CreateAutonomousDatabase, GetAutonomousDatabase, or UpdateAutonomousDatabase APIs, you want to check, and possibly modify, the scripts for the changed default value of the attribute. Should you choose not to leave your scripts unchanged, the API calls containing this attribute will continue to work, but the default value will switch from true to false.
         /// How do I make this change? Using either OCI SDKs or command line tools, update your custom scripts to explicitly set the isMTLSConnectionRequired attribute to true.
         /// 
@@ -1132,7 +1139,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeOfJoiningResourcePool { get; set; }
         
         /// <value>
-        /// The unique identifier for leader autonomous database OCID [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The unique identifier for leader Autonomous AI Database OCID [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         [JsonProperty(PropertyName = "resourcePoolLeaderId")]
         public string ResourcePoolLeaderId { get; set; }
@@ -1153,7 +1160,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeUntilReconnectCloneEnabled { get; set; }
                 ///
         /// <value>
-        /// The maintenance schedule type of the Autonomous Database Serverless. An EARLY maintenance schedule
+        /// The maintenance schedule type of the Autonomous AI Database Serverless. An EARLY maintenance schedule
         /// follows a schedule applying patches prior to the REGULAR schedule. A REGULAR maintenance schedule follows the normal cycle
         /// 
         /// </value>
@@ -1169,7 +1176,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The maintenance schedule type of the Autonomous Database Serverless. An EARLY maintenance schedule
+        /// The maintenance schedule type of the Autonomous AI Database Serverless. An EARLY maintenance schedule
         /// follows a schedule applying patches prior to the REGULAR schedule. A REGULAR maintenance schedule follows the normal cycle
         /// 
         /// </value>
@@ -1187,7 +1194,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<ScheduledOperationDetails> ScheduledOperations { get; set; }
         
         /// <value>
-        /// Indicates if auto scaling is enabled for the Autonomous Database storage. The default value is `FALSE`.
+        /// Indicates if auto scaling is enabled for the Autonomous AI Database storage. The default value is `FALSE`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoScalingForStorageEnabled")]
@@ -1210,7 +1217,7 @@ namespace Oci.DatabaseService.Models
         public System.Double ActualUsedDataStorageSizeInTBs { get; set; }
                 ///
         /// <value>
-        /// The Oracle Database Edition that applies to the Autonomous databases.
+        /// The Oracle AI Database Edition that applies to the Autonomous AI Databases.
         /// 
         /// </value>
         ///
@@ -1225,7 +1232,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Oracle Database Edition that applies to the Autonomous databases.
+        /// The Oracle AI Database Edition that applies to the Autonomous AI Databases.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "databaseEdition")]
@@ -1241,8 +1248,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "dbToolsDetails")]
         public System.Collections.Generic.List<DatabaseTool> DbToolsDetails { get; set; }
         
+        [JsonProperty(PropertyName = "vanityUrlDetails")]
+        public VanityUrlDetails VanityUrlDetails { get; set; }
+        
         /// <value>
-        /// Indicates the local disaster recovery (DR) type of the Autonomous Database Serverless instance.
+        /// Indicates the local disaster recovery (DR) type of the Autonomous AI Database Serverless instance.
         /// Autonomous Data Guard (ADG) DR type provides business critical DR with a faster recovery time objective (RTO) during failover or switchover.
         /// Backup-based DR type provides lower cost DR with a slower RTO during failover or switchover.
         /// 
@@ -1252,7 +1262,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<DisasterRecoveryConfiguration.DisasterRecoveryTypeEnum> LocalDisasterRecoveryType { get; set; }
                 ///
         /// <value>
-        /// **Deprecated.** The disaster recovery (DR) region type of the Autonomous Database. For Autonomous Database Serverless instances, DR associations have designated primary and standby regions. These region types do not change when the database changes roles. The standby region in DR associations can be the same region as the primary region, or they can be in a remote regions. Some database administration operations may be available only in the primary region of the DR association, and cannot be performed when the database using the primary role is operating in a remote region.
+        /// **Deprecated.** The disaster recovery (DR) region type of the Autonomous AI Database. For Autonomous AI Database Serverless instances, DR associations have designated primary and standby regions. These region types do not change when the database changes roles. The standby region in DR associations can be the same region as the primary region, or they can be in a remote regions. Some database administration operations may be available only in the primary region of the DR association, and cannot be performed when the database using the primary role is operating in a remote region.
         /// 
         /// </value>
         ///
@@ -1267,7 +1277,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// **Deprecated.** The disaster recovery (DR) region type of the Autonomous Database. For Autonomous Database Serverless instances, DR associations have designated primary and standby regions. These region types do not change when the database changes roles. The standby region in DR associations can be the same region as the primary region, or they can be in a remote regions. Some database administration operations may be available only in the primary region of the DR association, and cannot be performed when the database using the primary role is operating in a remote region.
+        /// **Deprecated.** The disaster recovery (DR) region type of the Autonomous AI Database. For Autonomous AI Database Serverless instances, DR associations have designated primary and standby regions. These region types do not change when the database changes roles. The standby region in DR associations can be the same region as the primary region, or they can be in a remote regions. Some database administration operations may be available only in the primary region of the DR association, and cannot be performed when the database using the primary role is operating in a remote region.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "disasterRecoveryRegionType")]
@@ -1275,7 +1285,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<DisasterRecoveryRegionTypeEnum> DisasterRecoveryRegionType { get; set; }
         
         /// <value>
-        /// The date and time the Disaster Recovery role was switched for the standby Autonomous Database.
+        /// The date and time the Disaster Recovery role was switched for the standby Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "timeDisasterRecoveryRoleChanged")]
         public System.Nullable<System.DateTime> TimeDisasterRecoveryRoleChanged { get; set; }
@@ -1307,7 +1317,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<NetServicesArchitectureEnum> NetServicesArchitecture { get; set; }
         
         /// <value>
-        /// The availability domain where the Autonomous Database Serverless instance is located.
+        /// The availability domain where the Autonomous AI Database Serverless instance is located.
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
@@ -1319,13 +1329,13 @@ namespace Oci.DatabaseService.Models
         public string ClusterPlacementGroupId { get; set; }
         
         /// <value>
-        /// A list of the source Autonomous Database's table space number(s) used to create this partial clone from the backup.
+        /// A list of the source Autonomous AI Database's table space number(s) used to create this partial clone from the backup.
         /// </value>
         [JsonProperty(PropertyName = "cloneTableSpaceList")]
         public System.Collections.Generic.List<int> CloneTableSpaceList { get; set; }
                 ///
         /// <value>
-        /// The Autonomous Database clone type.
+        /// The Autonomous AI Database clone type.
         /// </value>
         ///
         public enum CloneTypeEnum {
@@ -1341,7 +1351,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Autonomous Database clone type.
+        /// The Autonomous AI Database clone type.
         /// </value>
         [JsonProperty(PropertyName = "cloneType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

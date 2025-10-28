@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details to update an Autonomous Database wallet.
+    /// Details to update an Autonomous AI Database wallet.
     /// 
     /// </summary>
     public class UpdateAutonomousDatabaseWalletDetails 

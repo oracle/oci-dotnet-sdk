@@ -128,6 +128,27 @@ namespace Oci.DatabasetoolsService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RuntimeSupport> RuntimeSupport { get; set; }
         
+        /// <value>
+        /// Specifies the Database Tools Runtime endpoint.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RuntimeEndpoint is required.")]
+        [JsonProperty(PropertyName = "runtimeEndpoint")]
+        public string RuntimeEndpoint { get; set; }
+        
+        /// <value>
+        /// Specifies the identity used by the Database Tools service to issue requests to other OCI services (e.g., Secrets in Vault).
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RuntimeIdentity is required.")]
+        [JsonProperty(PropertyName = "runtimeIdentity")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<RuntimeIdentity> RuntimeIdentity { get; set; }
+        
     }
 
     public class DatabaseToolsConnectionModelConverter : JsonConverter

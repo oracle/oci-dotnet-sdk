@@ -108,13 +108,13 @@ namespace Oci.DatabaseService.Requests
         public System.Nullable<AutonomousDatabaseSummary.LifecycleStateEnum> LifecycleStateNotEqualTo { get; set; }
         
         /// <value>
-        /// A filter to return only autonomous database resources that match the specified workload type.
+        /// A filter to return only Autonomous AI Database resources that match the specified workload type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dbWorkload")]
         public System.Nullable<AutonomousDatabaseSummary.DbWorkloadEnum> DbWorkload { get; set; }
         
         /// <value>
-        /// A filter to return only autonomous database resources that match the specified dbVersion.
+        /// A filter to return only Autonomous AI Database resources that match the specified dbVersion.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dbVersion")]
         public string DbVersion { get; set; }
@@ -162,7 +162,7 @@ namespace Oci.DatabaseService.Requests
         public System.Nullable<bool> IsResourcePoolLeader { get; set; }
         
         /// <value>
-        /// The database [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resourcepool Leader Autonomous Database.
+        /// The database [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the resourcepool Leader Autonomous AI Database.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourcePoolLeaderId")]
         public string ResourcePoolLeaderId { get; set; }

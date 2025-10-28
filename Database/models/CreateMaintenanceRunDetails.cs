@@ -105,7 +105,7 @@ namespace Oci.DatabaseService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The Autonomous Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
+        /// The Autonomous AI Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm)
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
         public string DatabaseSoftwareImageId { get; set; }

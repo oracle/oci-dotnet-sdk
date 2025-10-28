@@ -20,7 +20,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to move Autonomous Database to a different compartment
+        /// Request to move Autonomous AI Database to a different compartment
         /// </value>
         /// <remarks>
         /// Required

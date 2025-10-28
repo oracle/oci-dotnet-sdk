@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The supported Autonomous Database version.
+    /// The supported Autonomous AI Database version.
     /// 
     /// </summary>
     public class AutonomousDbVersionSummary 
     {
         
         /// <value>
-        /// A valid Oracle Database version for Autonomous Database.
+        /// A valid Oracle AI Database version for Autonomous AI Database.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,13 +33,14 @@ namespace Oci.DatabaseService.Models
         public string Version { get; set; }
                 ///
         /// <value>
-        /// The Autonomous Database workload type. The following values are valid:
+        /// The Autonomous AI Database workload type. The following values are valid:
+        /// - OLTP - indicates an Autonomous AI Transaction Processing database
+        /// - DW - indicates an Autonomous AI Lakehouse database
+        /// - AJD - indicates an Autonomous AI JSON Database
+        /// - APEX - indicates an Autonomous AI Database with the Oracle APEX AI Application Development workload type.
+        /// - LH - indicates an Oracle Autonomous AI Lakehouse database
         /// <br/>
-        /// - OLTP - indicates an Autonomous Transaction Processing database
-        /// - DW - indicates an Autonomous Data Warehouse database
-        /// - AJD - indicates an Autonomous JSON Database
-        /// - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
-        /// <br/>
+        /// 
         /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
         /// </value>
@@ -55,17 +56,20 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "AJD")]
             Ajd,
             [EnumMember(Value = "APEX")]
-            Apex
+            Apex,
+            [EnumMember(Value = "LH")]
+            Lh
         };
 
         /// <value>
-        /// The Autonomous Database workload type. The following values are valid:
+        /// The Autonomous AI Database workload type. The following values are valid:
+        /// - OLTP - indicates an Autonomous AI Transaction Processing database
+        /// - DW - indicates an Autonomous AI Lakehouse database
+        /// - AJD - indicates an Autonomous AI JSON Database
+        /// - APEX - indicates an Autonomous AI Database with the Oracle APEX AI Application Development workload type.
+        /// - LH - indicates an Oracle Autonomous AI Lakehouse database
         /// <br/>
-        /// - OLTP - indicates an Autonomous Transaction Processing database
-        /// - DW - indicates an Autonomous Data Warehouse database
-        /// - AJD - indicates an Autonomous JSON Database
-        /// - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
-        /// <br/>
+        /// 
         /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
         /// </value>
@@ -81,37 +85,37 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsDedicated { get; set; }
         
         /// <value>
-        /// A URL that points to a detailed description of the Autonomous Database version.
+        /// A URL that points to a detailed description of the Autonomous AI Database version.
         /// </value>
         [JsonProperty(PropertyName = "details")]
         public string Details { get; set; }
         
         /// <value>
-        /// True if this version of the Oracle Database software can be used for Always-Free Autonomous Databases.
+        /// True if this version of the Oracle AI Database software can be used for Always-Free Autonomous AI Databases.
         /// </value>
         [JsonProperty(PropertyName = "isFreeTierEnabled")]
         public System.Nullable<bool> IsFreeTierEnabled { get; set; }
         
         /// <value>
-        /// True if this Oracle Database software version can be used for Autonomous Databases for Developers.
+        /// True if this Oracle AI Database software version can be used for Autonomous AI Databases for Developers.
         /// </value>
         [JsonProperty(PropertyName = "isDevTierEnabled")]
         public System.Nullable<bool> IsDevTierEnabled { get; set; }
         
         /// <value>
-        /// True if this version of the Oracle Database software has payments enabled.
+        /// True if this version of the Oracle AI Database software has payments enabled.
         /// </value>
         [JsonProperty(PropertyName = "isPaidEnabled")]
         public System.Nullable<bool> IsPaidEnabled { get; set; }
         
         /// <value>
-        /// True if this version of the Oracle Database software's default is free.
+        /// True if this version of the Oracle AI Database software's default is free.
         /// </value>
         [JsonProperty(PropertyName = "isDefaultForFree")]
         public System.Nullable<bool> IsDefaultForFree { get; set; }
         
         /// <value>
-        /// True if this version of the Oracle Database software's default is paid.
+        /// True if this version of the Oracle AI Database software's default is paid.
         /// </value>
         [JsonProperty(PropertyName = "isDefaultForPaid")]
         public System.Nullable<bool> IsDefaultForPaid { get; set; }

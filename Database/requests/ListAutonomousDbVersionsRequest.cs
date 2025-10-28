@@ -49,7 +49,7 @@ namespace Oci.DatabaseService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// A filter to return only autonomous database resources that match the specified workload type.
+        /// A filter to return only Autonomous AI Database resources that match the specified workload type.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dbWorkload")]
         public System.Nullable<AutonomousDatabaseSummary.DbWorkloadEnum> DbWorkload { get; set; }

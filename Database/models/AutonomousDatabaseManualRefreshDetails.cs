@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details of manual refresh for an Autonomous Database refreshable clone.
+    /// Details of manual refresh for an Autonomous AI Database refreshable clone.
     /// 
     /// </summary>
     public class AutonomousDatabaseManualRefreshDetails 
     {
         
         /// <value>
-        /// The timestamp to which the Autonomous Database refreshable clone will be refreshed. Changes made in the primary database after this timestamp are not part of the data refresh.
+        /// The timestamp to which the Autonomous AI Database refreshable clone will be refreshed. Changes made in the primary database after this timestamp are not part of the data refresh.
         /// </value>
         [JsonProperty(PropertyName = "timeRefreshCutoff")]
         public System.Nullable<System.DateTime> TimeRefreshCutoff { get; set; }

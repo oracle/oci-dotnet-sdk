@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details to create an Oracle Autonomous Database refreshable clone.
+    /// Details to create an Oracle Autonomous AI Database refreshable clone.
     /// 
     /// </summary>
     public class CreateRefreshableAutonomousDatabaseCloneDetails : CreateAutonomousDatabaseBase
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous Database that you will clone to create a new Autonomous Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous AI Database that you will clone to create a new Autonomous AI Database.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DatabaseService.Models
         public string SourceId { get; set; }
                 ///
         /// <value>
-        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous Database.
+        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous AI Database.
         /// </value>
         ///
         public enum RefreshableModeEnum {
@@ -44,7 +44,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous Database.
+        /// The refresh mode of the clone. AUTOMATIC indicates that the clone is automatically being refreshed with data from the source Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "refreshableMode")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -63,13 +63,13 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> AutoRefreshPointLagInSeconds { get; set; }
         
         /// <value>
-        /// The the date and time that auto-refreshing will begin for an Autonomous Database refreshable clone. This value controls only the start time for the first refresh operation. Subsequent (ongoing) refresh operations have start times controlled by the value of the `autoRefreshFrequencyInSeconds` parameter.
+        /// The the date and time that auto-refreshing will begin for an Autonomous AI Database refreshable clone. This value controls only the start time for the first refresh operation. Subsequent (ongoing) refresh operations have start times controlled by the value of the `autoRefreshFrequencyInSeconds` parameter.
         /// </value>
         [JsonProperty(PropertyName = "timeOfAutoRefreshStart")]
         public System.Nullable<System.DateTime> TimeOfAutoRefreshStart { get; set; }
                 ///
         /// <value>
-        /// Indicates the Autonomous Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
+        /// Indicates the Autonomous AI Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
@@ -83,7 +83,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Indicates the Autonomous Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
+        /// Indicates the Autonomous AI Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
@@ -93,7 +93,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<OpenModeEnum> OpenMode { get; set; }
                 ///
         /// <value>
-        /// The Autonomous Database clone type.
+        /// The Autonomous AI Database clone type.
         /// </value>
         ///
         public enum CloneTypeEnum {
@@ -106,7 +106,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Autonomous Database clone type.
+        /// The Autonomous AI Database clone type.
         /// </value>
         [JsonProperty(PropertyName = "cloneType")]
         [JsonConverter(typeof(StringEnumConverter))]

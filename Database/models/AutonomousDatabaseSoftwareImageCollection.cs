@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Result of List Autonomous Database Software Images.
+    /// Result of List Autonomous AI Database Software Images.
     /// </summary>
     public class AutonomousDatabaseSoftwareImageCollection 
     {
         
         /// <value>
-        /// List of Autonomous Database Software Images.
+        /// List of Autonomous AI Database Software Images.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Key details provided by the user for rotate key operation for Autonomous Database.
+    /// Key details provided by the user for rotate key operation for Autonomous AI Database.
     /// </summary>
     public class RotateAutonomousDatabaseEncryptionKeyDetails 
     {

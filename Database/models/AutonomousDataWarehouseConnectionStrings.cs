@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// **Deprecated.** For information about connection strings to connect to an Oracle Autonomous Data Warehouse, see {@link #autonomousDatabaseConnectionStrings(AutonomousDatabaseConnectionStringsRequest) autonomousDatabaseConnectionStrings}.
+    /// **Deprecated.** For information about connection strings to connect to an Oracle Autonomous AI Lakehouse, see {@link #autonomousDatabaseConnectionStrings(AutonomousDatabaseConnectionStringsRequest) autonomousDatabaseConnectionStrings}.
     /// 
     /// </summary>
     public class AutonomousDataWarehouseConnectionStrings 
@@ -41,8 +41,8 @@ namespace Oci.DatabaseService.Models
         public string Low { get; set; }
         
         /// <value>
-        /// Returns all connection strings that can be used to connect to the Autonomous Data Warehouse.
-        /// For more information, please see [Predefined Database Service Names for Autonomous Transaction Processing](https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/connect-predefined.html#GUID-9747539B-FD46-44F1-8FF8-F5AC650F15BE)
+        /// Returns all connection strings that can be used to connect to the Autonomous AI Lakehouse.
+        /// For more information, please see [Predefined Database Service Names for Autonomous AI Transaction Processing](https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/connect-predefined.html#GUID-9747539B-FD46-44F1-8FF8-F5AC650F15BE)
         /// 
         /// </value>
         [JsonProperty(PropertyName = "allConnectionStrings")]

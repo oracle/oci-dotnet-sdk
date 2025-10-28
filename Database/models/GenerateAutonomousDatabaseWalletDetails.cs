@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details to create and download an Oracle Autonomous Database wallet.
+    /// Details to create and download an Oracle Autonomous AI Database wallet.
     /// 
     /// </summary>
     public class GenerateAutonomousDatabaseWalletDetails 

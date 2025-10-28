@@ -22,13 +22,13 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database backup.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database backup.
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
-        /// The display name for the long term backup for the autonomous database.
+        /// The display name for the long term backup for the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }

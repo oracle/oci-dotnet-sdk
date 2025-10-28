@@ -23,6 +23,8 @@ namespace Oci.DatabasetoolsService.Models
       JavaKeyStore,
       [EnumMember(Value = "JAVA_TRUST_STORE")]
       JavaTrustStore,
+      [EnumMember(Value = "PEM")]
+      Pem,
       [EnumMember(Value = "PKCS12")]
       Pkcs12,
       [EnumMember(Value = "SSO")]

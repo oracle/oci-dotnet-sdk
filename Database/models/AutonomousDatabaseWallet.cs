@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The Autonomous Database wallet details.
+    /// The Autonomous AI Database wallet details.
     /// 
     /// </summary>
     public class AutonomousDatabaseWallet 
     {
                 ///
         /// <value>
-        /// The current lifecycle state of the Autonomous Database wallet.
+        /// The current lifecycle state of the Autonomous AI Database wallet.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -37,7 +37,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The current lifecycle state of the Autonomous Database wallet.
+        /// The current lifecycle state of the Autonomous AI Database wallet.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

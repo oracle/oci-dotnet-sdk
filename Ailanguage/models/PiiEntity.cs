@@ -58,6 +58,12 @@ namespace Oci.AilanguageService.Models
         public string Text { get; set; }
         
         /// <value>
+        /// Redacted entity text
+        /// </value>
+        [JsonProperty(PropertyName = "relexifyText")]
+        public string RelexifyText { get; set; }
+        
+        /// <value>
         /// Entity type supported
         /// PERSON
         /// ADDRESS

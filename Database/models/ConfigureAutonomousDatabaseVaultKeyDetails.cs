@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Configuration details for the Autonomous Database [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts) key.
+    /// Configuration details for the Autonomous AI Database [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts) key.
     /// </summary>
     public class ConfigureAutonomousDatabaseVaultKeyDetails 
     {

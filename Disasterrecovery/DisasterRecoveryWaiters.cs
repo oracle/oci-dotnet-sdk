@@ -32,6 +32,34 @@ namespace Oci.DisasterrecoveryService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAutomaticDrConfigurationRequest, GetAutomaticDrConfigurationResponse> ForAutomaticDrConfiguration(GetAutomaticDrConfigurationRequest request, params AutomaticDrConfigurationLifecycleState[] targetStates)
+        {
+            return this.ForAutomaticDrConfiguration(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetAutomaticDrConfigurationRequest, GetAutomaticDrConfigurationResponse> ForAutomaticDrConfiguration(GetAutomaticDrConfigurationRequest request, WaiterConfiguration config, params AutomaticDrConfigurationLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetAutomaticDrConfigurationRequest, GetAutomaticDrConfigurationResponse>(
+                request,
+                request => client.GetAutomaticDrConfiguration(request),
+                response => targetStates.Contains(response.AutomaticDrConfiguration.LifecycleState.Value),
+                targetStates.Contains(AutomaticDrConfigurationLifecycleState.Deleted)
+            );
+            return new Waiter<GetAutomaticDrConfigurationRequest, GetAutomaticDrConfigurationResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDrPlanRequest, GetDrPlanResponse> ForDrPlan(GetDrPlanRequest request, params DrPlanLifecycleState[] targetStates)
         {
             return this.ForDrPlan(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details to create an Oracle Autonomous Database backup.
+    /// Details to create an Oracle Autonomous AI Database backup.
     /// <br/>
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     /// 
@@ -31,7 +31,7 @@ namespace Oci.DatabaseService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database backup.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database backup.
         /// </value>
         /// <remarks>
         /// Required

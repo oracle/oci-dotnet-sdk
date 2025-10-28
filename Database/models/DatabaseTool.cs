@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Summary of database tools of autonomous database.
+    /// Summary of database tools of Autonomous AI Database.
     /// </summary>
     public class DatabaseTool 
     {

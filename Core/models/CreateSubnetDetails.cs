@@ -45,12 +45,18 @@ namespace Oci.CoreService.Models
         /// <br/>
         /// Example: 10.0.1.0/24
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CidrBlock is required.")]
         [JsonProperty(PropertyName = "cidrBlock")]
         public string CidrBlock { get; set; }
+        
+        /// <value>
+        /// The list of all IPv4 CIDR blocks for the subnet that meets the following criteria:
+        /// - Ipv4 CIDR blocks must be valid.
+        /// - Multiple Ipv4 CIDR blocks must not overlap each other or the on-premises network CIDR block.
+        /// - The number of prefixes must not exceed the limit of IPv4 prefixes allowed to a subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv4CidrBlocks")]
+        public System.Collections.Generic.List<string> Ipv4CidrBlocks { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment to contain the subnet.

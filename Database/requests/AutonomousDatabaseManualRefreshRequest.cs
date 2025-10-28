@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Requests
         public string AutonomousDatabaseId { get; set; }
         
         /// <value>
-        /// Request details for manually refreshing an Autonomous Database refreshable clone.
+        /// Request details for manually refreshing an Autonomous AI Database refreshable clone.
         /// </value>
         /// <remarks>
         /// Required

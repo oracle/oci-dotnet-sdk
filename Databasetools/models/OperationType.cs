@@ -36,6 +36,14 @@ namespace Oci.DatabasetoolsService.Models
       [EnumMember(Value = "UPDATE_DATABASE_TOOLS_PRIVATE_ENDPOINT")]
       UpdateDatabaseToolsPrivateEndpoint,
       [EnumMember(Value = "DELETE_DATABASE_TOOLS_PRIVATE_ENDPOINT")]
-      DeleteDatabaseToolsPrivateEndpoint
+      DeleteDatabaseToolsPrivateEndpoint,
+      [EnumMember(Value = "CREATE_DATABASE_TOOLS_IDENTITY")]
+      CreateDatabaseToolsIdentity,
+      [EnumMember(Value = "DELETE_DATABASE_TOOLS_IDENTITY")]
+      DeleteDatabaseToolsIdentity,
+      [EnumMember(Value = "UPDATE_DATABASE_TOOLS_IDENTITY")]
+      UpdateDatabaseToolsIdentity,
+      [EnumMember(Value = "REFRESH_DATABASE_TOOLS_IDENTITY_CREDENTIAL")]
+      RefreshDatabaseToolsIdentityCredential
   }
 }

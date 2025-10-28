@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Parameters for creating a Autonomous Database Software Image
+    /// Parameters for creating a Autonomous AI Database Software Image
     /// 
     /// </summary>
     public class CreateAutonomousDatabaseSoftwareImageDetails 
@@ -33,7 +33,7 @@ namespace Oci.DatabaseService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The user-friendly name for the Autonomous Database Software Image. The name does not have to be unique.
+        /// The user-friendly name for the Autonomous AI Database Software Image. The name does not have to be unique.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DatabaseService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The source Autonomous Container Database [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) from which to create Autonomous Database Software Image.
+        /// The source Autonomous Container Database [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) from which to create Autonomous AI Database Software Image.
         /// </value>
         /// <remarks>
         /// Required

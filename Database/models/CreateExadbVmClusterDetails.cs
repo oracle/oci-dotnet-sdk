@@ -230,7 +230,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The list of [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the network security groups (NSGs) to which this resource belongs. Setting this to an empty list removes all resources from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
-        /// - A network security group (NSG) is optional for Autonomous Databases with private access. The nsgIds list can be empty.
+        /// - A network security group (NSG) is optional for Autonomous AI Databases with private access. The nsgIds list can be empty.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]

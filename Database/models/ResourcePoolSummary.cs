@@ -40,7 +40,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> AvailableComputeCapacity { get; set; }
         
         /// <value>
-        /// Indicates if the resource pool should be deleted for the Autonomous Database. 
+        /// Indicates if the resource pool should be deleted for the Autonomous AI Database. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDisabled")]

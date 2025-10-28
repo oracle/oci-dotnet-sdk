@@ -213,6 +213,21 @@ namespace Oci.DisasterrecoveryService.Models
         public string LifeCycleDetails { get; set; }
         
         /// <value>
+        /// A flag indicating whether execution was submitted automatically by Automatic DR Configuration.
+        /// <br/>
+        /// Example: false
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsAutomatic is required.")]
+        [JsonProperty(PropertyName = "isAutomatic")]
+        public System.Nullable<bool> IsAutomatic { get; set; }
+        
+        [JsonProperty(PropertyName = "automaticExecutionDetails")]
+        public AutomaticExecutionDetails AutomaticExecutionDetails { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}
