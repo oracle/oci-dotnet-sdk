@@ -104,7 +104,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ServiceLevelAgreementTypeEnum> ServiceLevelAgreementType { get; set; }
         
         /// <value>
-        /// **No longer used.** For Autonomous Database on dedicated Exadata infrastructure, the container database is created within a specified `cloudAutonomousVmCluster`.
+        /// **No longer used.** For Autonomous AI Database on dedicated Exadata infrastructure, the container database is created within a specified `cloudAutonomousVmCluster`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "autonomousExadataInfrastructureId")]
@@ -156,7 +156,7 @@ namespace Oci.DatabaseService.Models
         public string VaultId { get; set; }
         
         /// <value>
-        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation. Autonomous Database Serverless does not use key versions, hence is not applicable for Autonomous Database Serverless instances.
+        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation. Autonomous AI Database Serverless does not use key versions, hence is not applicable for Autonomous AI Database Serverless instances.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyVersionId")]
@@ -350,7 +350,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
                 ///
         /// <value>
-        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous AI Database, if Autonomous Data Guard is enabled.
         /// 
         /// </value>
         ///
@@ -371,7 +371,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous AI Database, if Autonomous Data Guard is enabled.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "role")]
@@ -385,7 +385,7 @@ namespace Oci.DatabaseService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// Oracle Database version of the Autonomous Container Database.
+        /// Oracle AI Database version of the Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
@@ -449,14 +449,14 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> TotalCpus { get; set; }
         
         /// <value>
-        /// CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
+        /// CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous AI Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "reclaimableCpus")]
         public System.Nullable<float> ReclaimableCpus { get; set; }
         
         /// <value>
-        /// An array of CPU values that can be used to successfully provision a single Autonomous Database.
+        /// An array of CPU values that can be used to successfully provision a single Autonomous AI Database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "provisionableCpus")]
@@ -469,7 +469,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<string> ListOneOffPatches { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Autonomous Container Database. For Autonomous Database on Dedicated Exadata Infrastructure, the CPU type (ECPUs or OCPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// The compute model of the Autonomous Container Database. For Autonomous AI Database on Dedicated Exadata Infrastructure, the CPU type (ECPUs or OCPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous AI Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// 
         /// </value>
         ///
@@ -484,7 +484,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Autonomous Container Database. For Autonomous Database on Dedicated Exadata Infrastructure, the CPU type (ECPUs or OCPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// The compute model of the Autonomous Container Database. For Autonomous AI Database on Dedicated Exadata Infrastructure, the CPU type (ECPUs or OCPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous AI Database on Dedicated Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]
@@ -504,7 +504,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> ReservedCpus { get; set; }
         
         /// <value>
-        /// The largest Autonomous Database (CPU) that can be created in a new Autonomous Container Database.
+        /// The largest Autonomous AI Database (CPU) that can be created in a new Autonomous Container Database.
         /// </value>
         [JsonProperty(PropertyName = "largestProvisionableAutonomousDatabaseInCpus")]
         public System.Nullable<float> LargestProvisionableAutonomousDatabaseInCpus { get; set; }
@@ -516,7 +516,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeOfLastBackup { get; set; }
         
         /// <value>
-        /// The CPU value beyond which an Autonomous Database will be opened across multiple nodes. The default value of this attribute is 16 for OCPUs and 64 for ECPUs.
+        /// The CPU value beyond which an Autonomous AI Database will be opened across multiple nodes. The default value of this attribute is 16 for OCPUs and 64 for ECPUs.
         /// </value>
         [JsonProperty(PropertyName = "dbSplitThreshold")]
         public System.Nullable<int> DbSplitThreshold { get; set; }
@@ -528,7 +528,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> VmFailoverReservation { get; set; }
                 ///
         /// <value>
-        /// Determines whether an Autonomous Database must be opened across the maximum number of nodes or the least number of nodes. By default, Minimum nodes is selected.
+        /// Determines whether an Autonomous AI Database must be opened across the maximum number of nodes or the least number of nodes. By default, Minimum nodes is selected.
         /// </value>
         ///
         public enum DistributionAffinityEnum {
@@ -542,7 +542,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Determines whether an Autonomous Database must be opened across the maximum number of nodes or the least number of nodes. By default, Minimum nodes is selected.
+        /// Determines whether an Autonomous AI Database must be opened across the maximum number of nodes or the least number of nodes. By default, Minimum nodes is selected.
         /// </value>
         [JsonProperty(PropertyName = "distributionAffinity")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -577,7 +577,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsMultipleStandby { get; set; }
         
         /// <value>
-        /// **Deprecated.** Indicates whether the Autonomous Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to Autonomous Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
+        /// **Deprecated.** Indicates whether the Autonomous AI Database has local (in-region) Data Guard enabled. Not applicable to cross-region Autonomous Data Guard associations, or to Autonomous AI Databases using dedicated Exadata infrastructure or Exadata Cloud@Customer infrastructure.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isDataGuardEnabled")]

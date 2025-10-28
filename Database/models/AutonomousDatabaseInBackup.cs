@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details of Autonomous Database in Autonomous Container Database
+    /// Details of Autonomous AI Database in Autonomous Container Database
     /// 
     /// </summary>
     public class AutonomousDatabaseInBackup 
@@ -33,7 +33,7 @@ namespace Oci.DatabaseService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The user-friendly name for the Autonomous Database. The name does not have to be unique.
+        /// The user-friendly name for the Autonomous AI Database. The name does not have to be unique.
         /// </value>
         /// <remarks>
         /// Required

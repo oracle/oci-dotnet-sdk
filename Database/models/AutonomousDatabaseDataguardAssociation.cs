@@ -16,8 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The properties that define dataguard association between two different Autonomous Databases.
-    /// Note that Autonomous Databases inherit DataGuard association from parent Autonomous Container Database.
+    /// The properties that define dataguard association between two different Autonomous AI Databases.
+    /// Note that Autonomous AI Databases inherit DataGuard association from parent Autonomous Container Database.
     /// No actions can be taken on AutonomousDatabaseDataguardAssociation, usage is strictly informational.
     /// 
     /// </summary>
@@ -25,7 +25,7 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
-        /// The OCID of the Autonomous Dataguard created for Autonomous Container Database where given Autonomous Database resides in.
+        /// The OCID of the Autonomous Dataguard created for Autonomous Container Database where given Autonomous AI Database resides in.
         /// </value>
         /// <remarks>
         /// Required
@@ -35,7 +35,7 @@ namespace Oci.DatabaseService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database that has a relationship with the peer Autonomous Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database that has a relationship with the peer Autonomous AI Database.
         /// 
         /// </value>
         /// <remarks>
@@ -46,7 +46,7 @@ namespace Oci.DatabaseService.Models
         public string AutonomousDatabaseId { get; set; }
                 ///
         /// <value>
-        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous AI Database, if Autonomous Data Guard is enabled.
         /// 
         /// </value>
         ///
@@ -67,7 +67,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous AI Database, if Autonomous Data Guard is enabled.
         /// 
         /// </value>
         /// <remarks>
@@ -123,7 +123,7 @@ namespace Oci.DatabaseService.Models
         public string LifecycleDetails { get; set; }
                 ///
         /// <value>
-        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous AI Database, if Autonomous Data Guard is enabled.
         /// 
         /// </value>
         ///
@@ -144,7 +144,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
+        /// The Data Guard role of the Autonomous Container Database or Autonomous AI Database, if Autonomous Data Guard is enabled.
         /// 
         /// </value>
         /// <remarks>
@@ -156,14 +156,14 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<PeerRoleEnum> PeerRole { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the peer Autonomous Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the peer Autonomous AI Database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "peerAutonomousDatabaseId")]
         public string PeerAutonomousDatabaseId { get; set; }
                 ///
         /// <value>
-        /// The current state of the Autonomous Database.
+        /// The current state of the Autonomous AI Database.
         /// </value>
         ///
         public enum PeerAutonomousDatabaseLifeCycleStateEnum {
@@ -215,7 +215,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The current state of the Autonomous Database.
+        /// The current state of the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "peerAutonomousDatabaseLifeCycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

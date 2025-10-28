@@ -79,7 +79,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// The list of [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) for the network security groups (NSGs) to which this resource belongs. Setting this to an empty list removes all resources from all NSGs. For more information about NSGs, see [Security Rules](https://docs.cloud.oracle.com/Content/Network/Concepts/securityrules.htm).
         /// **NsgIds restrictions:**
-        /// - A network security group (NSG) is optional for Autonomous Databases with private access. The nsgIds list can be empty.
+        /// - A network security group (NSG) is optional for Autonomous AI Databases with private access. The nsgIds list can be empty.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "nsgIds")]
@@ -221,7 +221,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> OcpuCount { get; set; }
                 ///
         /// <value>
-        /// The compute model of the Cloud Autonomous VM Cluster. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous Database on Dedicated Exadata #Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// The compute model of the Cloud Autonomous VM Cluster. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous AI Database on Dedicated Exadata #Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// 
         /// </value>
         ///
@@ -236,7 +236,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The compute model of the Cloud Autonomous VM Cluster. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous Database on Dedicated Exadata #Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
+        /// The compute model of the Cloud Autonomous VM Cluster. ECPU compute model is the recommended model and OCPU compute model is legacy. See [Compute Models in Autonomous AI Database on Dedicated Exadata #Infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak) for more details.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeModel")]
@@ -262,10 +262,10 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> MemorySizeInGBs { get; set; }
                 ///
         /// <value>
-        /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
-        /// License Included allows you to subscribe to new Oracle Database software licenses and the Oracle Database service.
-        /// Note that when provisioning an [Autonomous Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
-        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
+        /// The Oracle license model that applies to the Oracle Autonomous AI Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
+        /// License Included allows you to subscribe to new Oracle AI Database software licenses and the Oracle AI Database service.
+        /// Note that when provisioning an [Autonomous AI Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
+        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous AI Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
@@ -282,10 +282,10 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Oracle license model that applies to the Oracle Autonomous Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
-        /// License Included allows you to subscribe to new Oracle Database software licenses and the Oracle Database service.
-        /// Note that when provisioning an [Autonomous Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
-        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
+        /// The Oracle license model that applies to the Oracle Autonomous AI Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.
+        /// License Included allows you to subscribe to new Oracle AI Database software licenses and the Oracle AI Database service.
+        /// Note that when provisioning an [Autonomous AI Database on dedicated Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html), this attribute must be null. It is already set at the
+        /// Autonomous Exadata Infrastructure level. When provisioning an [Autonomous AI Database Serverless] (https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html) database, if a value is not specified, the system defaults the value to `BRING_YOUR_OWN_LICENSE`. Bring your own license (BYOL) also allows you to select the DB edition using the optional parameter.
         /// <br/>
         /// This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
         /// 
@@ -359,13 +359,13 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeOrdsCertificateExpires { get; set; }
         
         /// <value>
-        /// CPU cores available for allocation to Autonomous Databases.
+        /// CPU cores available for allocation to Autonomous AI Databases.
         /// </value>
         [JsonProperty(PropertyName = "availableCpus")]
         public System.Nullable<float> AvailableCpus { get; set; }
         
         /// <value>
-        /// CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
+        /// CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous AI Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "reclaimableCpus")]
@@ -384,13 +384,13 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> TotalContainerDatabases { get; set; }
         
         /// <value>
-        /// The data disk group size available for Autonomous Databases, in TBs.
+        /// The data disk group size available for Autonomous AI Databases, in TBs.
         /// </value>
         [JsonProperty(PropertyName = "availableAutonomousDataStorageSizeInTBs")]
         public System.Double AvailableAutonomousDataStorageSizeInTBs { get; set; }
         
         /// <value>
-        /// The data disk group size allocated for Autonomous Databases, in TBs.
+        /// The data disk group size allocated for Autonomous AI Databases, in TBs.
         /// </value>
         [JsonProperty(PropertyName = "autonomousDataStorageSizeInTBs")]
         public System.Double AutonomousDataStorageSizeInTBs { get; set; }
@@ -428,7 +428,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> CpuPercentage { get; set; }
         
         /// <value>
-        /// The percentage of the data storage used for the Autonomous Databases in an Autonomous VM Cluster.
+        /// The percentage of the data storage used for the Autonomous AI Databases in an Autonomous VM Cluster.
         /// </value>
         [JsonProperty(PropertyName = "autonomousDataStoragePercentage")]
         public System.Nullable<float> AutonomousDataStoragePercentage { get; set; }
@@ -446,7 +446,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<float> TotalCpus { get; set; }
         
         /// <value>
-        /// The total data disk group size for Autonomous Databases, in TBs.
+        /// The total data disk group size for Autonomous AI Databases, in TBs.
         /// </value>
         [JsonProperty(PropertyName = "totalAutonomousDataStorageInTBs")]
         public System.Nullable<float> TotalAutonomousDataStorageInTBs { get; set; }

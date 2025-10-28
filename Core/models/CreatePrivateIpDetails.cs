@@ -72,6 +72,18 @@ namespace Oci.CoreService.Models
         public string IpAddress { get; set; }
         
         /// <value>
+        /// An optional field that when combined with the ipAddress field, will be used to allocate secondary IPv4 CIDRs.
+        /// The CIDR range created by this combination must be within the subnet's CIDR 
+        /// and the CIDR range should not collide with any existing IPv4 address allocation.
+        /// The VNIC ID specified in the request object should not already been assigned more than the max IPv4 addresses.
+        /// If you don't specify a value, this option will be ignored.
+        /// <br/>
+        /// Example: 18
+        /// </value>
+        [JsonProperty(PropertyName = "cidrPrefixLength")]
+        public System.Nullable<int> CidrPrefixLength { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC to assign the private IP to. The VNIC and private IP
         /// must be in the same subnet.
         /// 
@@ -96,6 +108,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+        
+        /// <value>
+        /// Any one of the IPv4 CIDRs allocated to the subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv4SubnetCidrAtCreation")]
+        public string Ipv4SubnetCidrAtCreation { get; set; }
                 ///
         /// <value>
         /// Lifetime of the IP address.

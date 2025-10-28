@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Requests
         public string AutonomousDatabaseId { get; set; }
         
         /// <value>
-        /// Request to create a new Autonomous Database wallet.
+        /// Request to create a new Autonomous AI Database wallet.
         /// </value>
         /// <remarks>
         /// Required

@@ -144,6 +144,17 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<Ipv6AddressIpv6SubnetCidrPairDetails> Ipv6AddressIpv6SubnetCidrPairDetails { get; set; }
         
         /// <value>
+        /// One of the IPv4 CIDR blocks allocated to the subnet. Represents the IP range
+        /// from which the VNIC's private IP address will be assigned if `privateIp` or
+        /// `privateIpId` is not specified.
+        /// Either this field or the `privateIp` (or `privateIpId`, if applicable) field
+        /// must be provided, but not both simultaneously.
+        /// Example: 192.168.1.0/28
+        /// </value>
+        [JsonProperty(PropertyName = "subnetCidr")]
+        public string SubnetCidr { get; set; }
+        
+        /// <value>
         /// A list of the OCIDs of the network security groups (NSGs) to add the VNIC to. For more
         /// information about NSGs, see
         /// {@link NetworkSecurityGroup}.

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The following are the details necessary to create a cross-tenancy disaster recovery (DR) association for an existing Autonomous Database. This may be in the same region, or in another.
+    /// The following are the details necessary to create a cross-tenancy disaster recovery (DR) association for an existing Autonomous AI Database. This may be in the same region, or in another.
     /// *IMPORTANT*
     /// For creating a standby databases in a cross-tenancy local DR association:
     ///   - To create the standby database in different tenancy, use the compartment OCID in the tenancy where the standby is located.
@@ -24,7 +24,7 @@ namespace Oci.DatabaseService.Models
     ///   - Creating a ADG DR in the same tenancy and region is not allowed. Use changeDisasterRecoveryConfiguration instead.
     /// The following parameters are required for the cross-tenancy standby database
     ///   - disasterRecoveryType
-    /// The following parameters are optional for the cross-tenancy standby database. If included in the request, these parameters must contain the same values as the source Autonomous Database:
+    /// The following parameters are optional for the cross-tenancy standby database. If included in the request, these parameters must contain the same values as the source Autonomous AI Database:
     ///   - dbName
     ///   - dbVersion
     ///   - ecpuCount
@@ -43,7 +43,7 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous Database that will be used to create a new peer database for the DR association.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous AI Database that will be used to create a new peer database for the DR association.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.DatabaseService.Models
         public string SourceId { get; set; }
         
         /// <value>
-        /// Indicates the disaster recovery (DR) type of the standby Autonomous Database Serverless instance.
+        /// Indicates the disaster recovery (DR) type of the standby Autonomous AI Database Serverless instance.
         /// Autonomous Data Guard (ADG) DR type provides business critical DR with a faster recovery time objective (RTO) during failover or switchover.
         /// Backup-based DR type provides lower cost DR with a slower RTO during failover or switchover.
         /// 

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// **Deprecated.** See {@link AutonomousDatabase} for reference information about Autonomous Databases with the warehouse workload type.
+    /// **Deprecated.** See {@link AutonomousDatabase} for reference information about Autonomous AI Databases with the warehouse workload type.
     /// 
     /// </summary>
     public class AutonomousDataWarehouse 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Data Warehouse.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Lakehouse.
         /// </value>
         /// <remarks>
         /// Required
@@ -129,25 +129,25 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The user-friendly name for the Autonomous Data Warehouse. The name does not have to be unique.
+        /// The user-friendly name for the Autonomous AI Lakehouse. The name does not have to be unique.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The URL of the Service Console for the Data Warehouse.
+        /// The URL of the Service Console for the AI Lakehouse.
         /// </value>
         [JsonProperty(PropertyName = "serviceConsoleUrl")]
         public string ServiceConsoleUrl { get; set; }
         
         /// <value>
-        /// The connection string used to connect to the Data Warehouse. The username for the Service Console is ADMIN. Use the password you entered when creating the Autonomous Data Warehouse for the password value.
+        /// The connection string used to connect to the AI Lakehouse. The username for the Service Console is ADMIN. Use the password you entered when creating the Autonomous AI Lakehouse for the password value.
         /// </value>
         [JsonProperty(PropertyName = "connectionStrings")]
         public AutonomousDataWarehouseConnectionStrings ConnectionStrings { get; set; }
                 ///
         /// <value>
-        /// The Oracle license model that applies to the Oracle Autonomous Data Warehouse. The default is BRING_YOUR_OWN_LICENSE.
+        /// The Oracle license model that applies to the Oracle Autonomous AI Lakehouse. The default is BRING_YOUR_OWN_LICENSE.
         /// 
         /// </value>
         ///
@@ -159,7 +159,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Oracle license model that applies to the Oracle Autonomous Data Warehouse. The default is BRING_YOUR_OWN_LICENSE.
+        /// The Oracle license model that applies to the Oracle Autonomous AI Lakehouse. The default is BRING_YOUR_OWN_LICENSE.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "licenseModel")]
@@ -184,7 +184,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
-        /// A valid Oracle Database version for Autonomous Data Warehouse.
+        /// A valid Oracle AI Database version for Autonomous AI Lakehouse.
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }

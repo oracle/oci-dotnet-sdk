@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Autonomous Database Software Images created from Autonomous Container Database
+    /// Autonomous AI Database Software Images created from Autonomous Container Database
     /// 
     /// </summary>
     public class AutonomousDatabaseSoftwareImage 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database Software Image.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database Software Image.
         /// </value>
         /// <remarks>
         /// Required
@@ -43,7 +43,7 @@ namespace Oci.DatabaseService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The database version with which the Autonomous Database Software Image is to be built.
+        /// The database version with which the Autonomous AI Database Software Image is to be built.
         /// </value>
         /// <remarks>
         /// Required
@@ -53,7 +53,7 @@ namespace Oci.DatabaseService.Models
         public string DatabaseVersion { get; set; }
         
         /// <value>
-        /// The user-friendly name for the Autonomous Database Software Image. The name does not have to be unique.
+        /// The user-friendly name for the Autonomous AI Database Software Image. The name does not have to be unique.
         /// </value>
         /// <remarks>
         /// Required
@@ -63,7 +63,7 @@ namespace Oci.DatabaseService.Models
         public string DisplayName { get; set; }
                 ///
         /// <value>
-        /// The current state of the Autonomous Database Software Image.
+        /// The current state of the Autonomous AI Database Software Image.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -87,7 +87,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The current state of the Autonomous Database Software Image.
+        /// The current state of the Autonomous AI Database Software Image.
         /// </value>
         /// <remarks>
         /// Required
@@ -104,7 +104,7 @@ namespace Oci.DatabaseService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The date and time the Autonomous Database Software Image was created.
+        /// The date and time the Autonomous AI Database Software Image was created.
         /// </value>
         /// <remarks>
         /// Required
@@ -149,7 +149,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
-        /// One-off patches included in the Autonomous Database Software Image
+        /// One-off patches included in the Autonomous AI Database Software Image
         /// </value>
         [JsonProperty(PropertyName = "autonomousDsiOneOffPatches")]
         public System.Collections.Generic.List<string> AutonomousDsiOneOffPatches { get; set; }

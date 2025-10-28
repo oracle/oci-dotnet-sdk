@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// A list of Autonomous Database resource pool member OCIDs.
+    /// A list of Autonomous AI Database resource pool member OCIDs.
     /// </summary>
     public class ResourcePoolMemberCollection 
     {

@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Requests
         public string AutonomousDatabaseId { get; set; }
         
         /// <value>
-        /// Request to update SaaS administrative user configuration of the Autonomous Database.
+        /// Request to update SaaS administrative user configuration of the Autonomous AI Database.
         /// </value>
         /// <remarks>
         /// Required

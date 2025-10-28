@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// An Autonomous Database backup.
+    /// An Autonomous AI Database backup.
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized, talk to an administrator. If you're an administrator who needs to write policies to give users access, see [Getting Started with Policies](https://docs.cloud.oracle.com/Content/Identity/Concepts/policygetstarted.htm).
     ///     
     /// **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
@@ -26,7 +26,7 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database backup.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database backup.
         /// </value>
         /// <remarks>
         /// Required
@@ -46,7 +46,7 @@ namespace Oci.DatabaseService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database.
         /// </value>
         /// <remarks>
         /// Required
@@ -167,7 +167,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Indicates whether the backup can be used to restore the associated Autonomous Database.
+        /// Indicates whether the backup can be used to restore the associated Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "isRestorable")]
         public System.Nullable<bool> IsRestorable { get; set; }
@@ -197,7 +197,7 @@ namespace Oci.DatabaseService.Models
         public string VaultId { get; set; }
         
         /// <value>
-        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation. Autonomous Database Serverless does not use key versions, hence is not applicable for Autonomous Database Serverless instances.
+        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation. Autonomous AI Database Serverless does not use key versions, hence is not applicable for Autonomous AI Database Serverless instances.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyVersionId")]
@@ -216,7 +216,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<System.DateTime> TimeAvailableTill { get; set; }
         
         /// <value>
-        /// A valid Oracle Database version for Autonomous Database.
+        /// A valid Oracle AI Database version for Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }

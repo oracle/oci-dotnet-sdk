@@ -45,7 +45,7 @@ namespace Oci.DatabaseService.Requests
         public System.Nullable<bool> OpcDryRun { get; set; }
         
         /// <value>
-        /// Details for deregistering an Autonomous Database with Data Safe.
+        /// Details for deregistering an Autonomous AI Database with Data Safe.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
         public DeregisterAutonomousDatabaseDataSafeDetails DeregisterAutonomousDatabaseDataSafeDetails { get; set; }

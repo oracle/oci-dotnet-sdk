@@ -32,7 +32,9 @@ namespace Oci.AilanguageService.Models
             [EnumMember(Value = "MASK")]
             Mask,
             [EnumMember(Value = "REMOVE")]
-            Remove
+            Remove,
+            [EnumMember(Value = "RELEXIFY")]
+            Relexify
         };
 
         
@@ -70,6 +72,9 @@ namespace Oci.AilanguageService.Models
             var discriminator = jsonObject["mode"].Value<string>();
             switch (discriminator)
             {
+                case "RELEXIFY":
+                    obj = new PiiEntityRelexify();
+                    break;
                 case "REPLACE":
                     obj = new PiiEntityReplace();
                     break;

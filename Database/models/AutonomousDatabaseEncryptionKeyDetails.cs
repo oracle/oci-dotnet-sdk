@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details of the Autonomous Database encryption key.
+    /// Details of the Autonomous AI Database encryption key.
     /// </summary>
     [JsonConverter(typeof(AutonomousDatabaseEncryptionKeyDetailsModelConverter))]
     public class AutonomousDatabaseEncryptionKeyDetails 
     {
                 ///
         /// <value>
-        /// The provider for the Autonomous Database encryption key.
+        /// The provider for the Autonomous AI Database encryption key.
         /// </value>
         ///
         public enum ProviderEnum {

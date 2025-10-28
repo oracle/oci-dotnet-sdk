@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details to undelete an Oracle Autonomous Database.
+    /// Details to undelete an Oracle Autonomous AI Database.
     /// 
     /// </summary>
     public class UndeleteAutonomousDatabaseDetails : CreateAutonomousDatabaseBase
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database that you want to undelete.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database that you want to undelete.
         /// </value>
         /// <remarks>
         /// Required

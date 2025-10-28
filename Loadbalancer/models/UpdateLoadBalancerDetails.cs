@@ -64,6 +64,21 @@ namespace Oci.LoadbalancerService.Models
         public System.Nullable<IpModeEnum> IpMode { get; set; }
         
         /// <value>
+        /// Used to disambiguate which subnet prefix should be used to create an IPv6 LB.
+        /// <br/>
+        /// Example: &quot;2002::1234:abcd:ffff:c0a8:101/64&quot;
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6SubnetCidr")]
+        public string Ipv6SubnetCidr { get; set; }
+        
+        /// <value>
+        /// An array of reserved Ips.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "reservedIps")]
+        public System.Collections.Generic.List<ReservedIP> ReservedIps { get; set; }
+        
+        /// <value>
         /// Whether or not the load balancer has delete protection enabled.
         /// <br/>
         /// If \"true\", the loadbalancer will be protected against deletion if configured to accept traffic.

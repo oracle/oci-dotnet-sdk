@@ -20,7 +20,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to create Autonomous Database Software Image.
+        /// Request to create Autonomous AI Database Software Image.
         /// </value>
         /// <remarks>
         /// Required

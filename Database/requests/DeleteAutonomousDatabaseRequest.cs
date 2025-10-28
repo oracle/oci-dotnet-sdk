@@ -46,7 +46,7 @@ namespace Oci.DatabaseService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// If set to true, terminating the Autonomous Database also deletes its associated long-term backups if the retention lock is not enabled.
+        /// If set to true, terminating the Autonomous AI Database also deletes its associated long-term backups if the retention lock is not enabled.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "mustDeleteAssociatedLongTermBackups")]
         public System.Nullable<bool> MustDeleteAssociatedLongTermBackups { get; set; }

@@ -88,6 +88,34 @@ namespace Oci.DatabasetoolsService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDatabaseToolsIdentityRequest, GetDatabaseToolsIdentityResponse> ForDatabaseToolsIdentity(GetDatabaseToolsIdentityRequest request, params DatabaseToolsIdentityLifecycleState[] targetStates)
+        {
+            return this.ForDatabaseToolsIdentity(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDatabaseToolsIdentityRequest, GetDatabaseToolsIdentityResponse> ForDatabaseToolsIdentity(GetDatabaseToolsIdentityRequest request, WaiterConfiguration config, params DatabaseToolsIdentityLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetDatabaseToolsIdentityRequest, GetDatabaseToolsIdentityResponse>(
+                request,
+                request => client.GetDatabaseToolsIdentity(request),
+                response => targetStates.Contains(response.DatabaseToolsIdentity.LifecycleState.Value),
+                targetStates.Contains(DatabaseToolsIdentityLifecycleState.Deleted)
+            );
+            return new Waiter<GetDatabaseToolsIdentityRequest, GetDatabaseToolsIdentityResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDatabaseToolsPrivateEndpointRequest, GetDatabaseToolsPrivateEndpointResponse> ForDatabaseToolsPrivateEndpoint(GetDatabaseToolsPrivateEndpointRequest request, params LifecycleState[] targetStates)
         {
             return this.ForDatabaseToolsPrivateEndpoint(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

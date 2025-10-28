@@ -70,6 +70,13 @@ namespace Oci.DatabasetoolsService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<RuntimeSupport> RuntimeSupport { get; set; }
         
+        /// <value>
+        /// Specifies the identity used by the Database Tools service to issue requests to other OCI services (e.g., Secrets in Vault).
+        /// </value>
+        [JsonProperty(PropertyName = "runtimeIdentity")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<RuntimeIdentity> RuntimeIdentity { get; set; }
+        
     }
 
     public class CreateDatabaseToolsConnectionDetailsModelConverter : JsonConverter

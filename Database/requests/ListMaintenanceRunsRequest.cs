@@ -60,7 +60,7 @@ namespace Oci.DatabaseService.Requests
         public string Page { get; set; }
         
         /// <value>
-        /// A filter to return the maintenance history results for the local standby Autonomous Database Serverless only.
+        /// A filter to return the maintenance history results for the local standby Autonomous AI Database Serverless only.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isLocalAdg")]
         public System.Nullable<bool> IsLocalAdg { get; set; }

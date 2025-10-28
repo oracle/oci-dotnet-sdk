@@ -16,6 +16,9 @@ namespace Oci.DatabasetoolsService.Models
   /// The Database Tools Identity type.
   /// </summary>
   public enum IdentityType {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "ORACLE_DATABASE_RESOURCE_PRINCIPAL")]
       OracleDatabaseResourcePrincipal
   }

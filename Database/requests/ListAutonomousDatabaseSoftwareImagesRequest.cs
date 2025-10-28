@@ -71,7 +71,7 @@ namespace Oci.DatabaseService.Requests
         
         ///
         /// <value>
-        /// parameter according to which Autonomous Database Software Images will be sorted.
+        /// parameter according to which Autonomous AI Database Software Images will be sorted.
         /// 
         /// </value>
         ///
@@ -83,7 +83,7 @@ namespace Oci.DatabaseService.Requests
         };
 
         /// <value>
-        /// parameter according to which Autonomous Database Software Images will be sorted.
+        /// parameter according to which Autonomous AI Database Software Images will be sorted.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

@@ -26,6 +26,8 @@ namespace Oci.LustrefilestorageService.Models
       [EnumMember(Value = "DELETE_LUSTRE_FILE_SYSTEM")]
       DeleteLustreFileSystem,
       [EnumMember(Value = "MOVE_LUSTRE_FILE_SYSTEM")]
-      MoveLustreFileSystem
+      MoveLustreFileSystem,
+      [EnumMember(Value = "DELETE_OBJECT_STORAGE_LINK")]
+      DeleteObjectStorageLink
   }
 }
