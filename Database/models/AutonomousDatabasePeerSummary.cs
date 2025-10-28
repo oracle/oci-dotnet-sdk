@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The object holds details about a peer Autonomous Database for Oracle Autonomous Database.
+    /// The object holds details about a peer Autonomous AI Database for Oracle Autonomous AI Database.
     /// 
     /// </summary>
     public class AutonomousDatabasePeerSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DatabaseService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The name of the region where this peer Autonomous Database clone exists.
+        /// The name of the region where this peer Autonomous AI Database clone exists.
         /// </value>
         [JsonProperty(PropertyName = "region")]
         public string Region { get; set; }

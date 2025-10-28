@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details to create an Oracle Autonomous Database by cloning an existing Autonomous Database.
+    /// Details to create an Oracle Autonomous AI Database by cloning an existing Autonomous AI Database.
     /// 
     /// </summary>
     public class CreateAutonomousDatabaseCloneDetails : CreateAutonomousDatabaseBase
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous Database that you will clone to create a new Autonomous Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous AI Database that you will clone to create a new Autonomous AI Database.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +33,7 @@ namespace Oci.DatabaseService.Models
         public string SourceId { get; set; }
                 ///
         /// <value>
-        /// The Autonomous Database clone type.
+        /// The Autonomous AI Database clone type.
         /// </value>
         ///
         public enum CloneTypeEnum {
@@ -46,7 +46,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Autonomous Database clone type.
+        /// The Autonomous AI Database clone type.
         /// </value>
         /// <remarks>
         /// Required

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The supported Autonomous Database version.
+    /// The supported Autonomous AI Database version.
     /// 
     /// </summary>
     public class AutonomousContainerDatabaseVersionSummary 
     {
         
         /// <value>
-        /// A valid Oracle Database version for provisioning an Autonomous Container Database.
+        /// A valid Oracle AI Database version for provisioning an Autonomous Container Database.
         /// </value>
         /// <remarks>
         /// Required

@@ -34,6 +34,42 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<AddIpv4SubnetCidrRequest, AddIpv4SubnetCidrResponse> ForAddIpv4SubnetCidr(AddIpv4SubnetCidrRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForAddIpv4SubnetCidr(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<AddIpv4SubnetCidrRequest, AddIpv4SubnetCidrResponse> ForAddIpv4SubnetCidr(AddIpv4SubnetCidrRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<AddIpv4SubnetCidrRequest, AddIpv4SubnetCidrResponse>(() =>
+            {
+                var response = client.AddIpv4SubnetCidr(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<AddIpv6SubnetCidrRequest, AddIpv6SubnetCidrResponse> ForAddIpv6SubnetCidr(AddIpv6SubnetCidrRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForAddIpv6SubnetCidr(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1397,6 +1433,42 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ModifyIpv4SubnetCidrRequest, ModifyIpv4SubnetCidrResponse> ForModifyIpv4SubnetCidr(ModifyIpv4SubnetCidrRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForModifyIpv4SubnetCidr(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ModifyIpv4SubnetCidrRequest, ModifyIpv4SubnetCidrResponse> ForModifyIpv4SubnetCidr(ModifyIpv4SubnetCidrRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ModifyIpv4SubnetCidrRequest, ModifyIpv4SubnetCidrResponse>(() =>
+            {
+                var response = client.ModifyIpv4SubnetCidr(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<ModifyVcnCidrRequest, ModifyVcnCidrResponse> ForModifyVcnCidr(ModifyVcnCidrRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForModifyVcnCidr(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1414,6 +1486,42 @@ namespace Oci.CoreService
             return new Waiter<ModifyVcnCidrRequest, ModifyVcnCidrResponse>(() =>
             {
                 var response = client.ModifyVcnCidr(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RemoveIpv4SubnetCidrRequest, RemoveIpv4SubnetCidrResponse> ForRemoveIpv4SubnetCidr(RemoveIpv4SubnetCidrRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForRemoveIpv4SubnetCidr(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RemoveIpv4SubnetCidrRequest, RemoveIpv4SubnetCidrResponse> ForRemoveIpv4SubnetCidr(RemoveIpv4SubnetCidrRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<RemoveIpv4SubnetCidrRequest, RemoveIpv4SubnetCidrResponse>(() =>
+            {
+                var response = client.RemoveIpv4SubnetCidr(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;

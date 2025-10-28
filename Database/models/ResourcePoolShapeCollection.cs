@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Results of an Autonomous Database resouce pool shape collection that contains ResourcePoolShapeSummary items.
+    /// Results of an Autonomous AI Database resouce pool shape collection that contains ResourcePoolShapeSummary items.
     /// </summary>
     public class ResourcePoolShapeCollection 
     {
         
         /// <value>
-        /// List of Autonomous Database resource pools Shapes.
+        /// List of Autonomous AI Database resource pools Shapes.
         /// </value>
         [JsonProperty(PropertyName = "items")]
         public System.Collections.Generic.List<ResourcePoolShapeSummary> Items { get; set; }

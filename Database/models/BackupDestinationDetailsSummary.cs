@@ -113,7 +113,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsRetentionLockEnabled { get; set; }
                 ///
         /// <value>
-        /// Defines the automatic and manual backup retention policy for the Autonomous Database termination. 
+        /// Defines the automatic and manual backup retention policy for the Autonomous AI Database termination. 
         /// The retention policy set on the Autonomous Container Database is not applicable for cross region remote backups and backups hosted on recovery Appliance backup destination.
         /// Options are 'RETAIN_PER_RETENTION_WINDOW' or 'RETAIN_FOR_72_HOURS'.The default value is 'RETAIN_FOR_72_HOURS'.
         /// 
@@ -130,7 +130,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Defines the automatic and manual backup retention policy for the Autonomous Database termination. 
+        /// Defines the automatic and manual backup retention policy for the Autonomous AI Database termination. 
         /// The retention policy set on the Autonomous Container Database is not applicable for cross region remote backups and backups hosted on recovery Appliance backup destination.
         /// Options are 'RETAIN_PER_RETENTION_WINDOW' or 'RETAIN_FOR_72_HOURS'.The default value is 'RETAIN_FOR_72_HOURS'.
         /// 

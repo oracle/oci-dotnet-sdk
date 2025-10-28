@@ -20,7 +20,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Associate an Autonomous Database with a different subscription.
+        /// Associate an Autonomous AI Database with a different subscription.
         /// </value>
         /// <remarks>
         /// Required

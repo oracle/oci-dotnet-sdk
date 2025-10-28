@@ -20,7 +20,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to update the properties of Autonomous Database regional wallet.
+        /// Request to update the properties of Autonomous AI Database regional wallet.
         /// </value>
         /// <remarks>
         /// Required

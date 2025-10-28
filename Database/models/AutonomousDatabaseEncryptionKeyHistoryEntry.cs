@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The Autonomous Database encryption key history entry.
+    /// The Autonomous AI Database encryption key history entry.
     /// </summary>
     public class AutonomousDatabaseEncryptionKeyHistoryEntry 
     {

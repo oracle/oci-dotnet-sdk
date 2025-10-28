@@ -157,5 +157,14 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "computeHostGroupId")]
         public string ComputeHostGroupId { get; set; }
+        
+        /// <value>
+        /// When set to true, all the compartments in the tenancy are traversed
+        /// and the hosts in the specified tenancy and its compartments are fetched.
+        /// Default is false.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "computeHostInSubtree")]
+        public System.Nullable<bool> ComputeHostInSubtree { get; set; }
     }
 }

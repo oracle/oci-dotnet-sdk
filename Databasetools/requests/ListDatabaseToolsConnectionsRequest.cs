@@ -54,6 +54,12 @@ namespace Oci.DatabasetoolsService.Requests
         public System.Collections.Generic.List<RuntimeSupport> RuntimeSupport { get; set; }
         
         /// <value>
+        /// A filter to return only resources with one of the specified runtimeIdentity values.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "runtimeIdentity", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<RuntimeIdentity> RuntimeIdentity { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the related resource.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "relatedResourceIdentifier")]

@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Requests
         public string AutonomousDatabaseId { get; set; }
         
         /// <value>
-        /// Request to update the cross-region disaster recovery (DR) details of the standby Autonomous Database Serverless database.
+        /// Request to update the cross-region disaster recovery (DR) details of the standby Autonomous AI Database Serverless database.
         /// </value>
         /// <remarks>
         /// Required

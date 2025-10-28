@@ -58,6 +58,12 @@ namespace Oci.DisasterrecoveryService.Models
       [EnumMember(Value = "PAUSE_DR_PLAN_EXECUTION")]
       PauseDrPlanExecution,
       [EnumMember(Value = "RESUME_DR_PLAN_EXECUTION")]
-      ResumeDrPlanExecution
+      ResumeDrPlanExecution,
+      [EnumMember(Value = "CREATE_AUTOMATIC_DR_CONFIGURATION")]
+      CreateAutomaticDrConfiguration,
+      [EnumMember(Value = "DELETE_AUTOMATIC_DR_CONFIGURATION")]
+      DeleteAutomaticDrConfiguration,
+      [EnumMember(Value = "UPDATE_AUTOMATIC_DR_CONFIGURATION")]
+      UpdateAutomaticDrConfiguration
   }
 }

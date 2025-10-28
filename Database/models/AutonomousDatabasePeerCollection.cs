@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The object holds details about the peer Autonomous Databases for an Oracle Autonomous Database.
+    /// The object holds details about the peer Autonomous AI Databases for an Oracle Autonomous AI Database.
     /// 
     /// </summary>
     public class AutonomousDatabasePeerCollection 
     {
         
         /// <value>
-        /// This array holds details about Autonomous Database Peers for Oracle an Autonomous Database.
+        /// This array holds details about Autonomous AI Database Peers for Oracle an Autonomous AI Database.
         /// </value>
         /// <remarks>
         /// Required

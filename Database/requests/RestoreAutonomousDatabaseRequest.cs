@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Requests
         public string AutonomousDatabaseId { get; set; }
         
         /// <value>
-        /// Request to perform an Autonomous Database restore.
+        /// Request to perform an Autonomous AI Database restore.
         /// </value>
         /// <remarks>
         /// Required

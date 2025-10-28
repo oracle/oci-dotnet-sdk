@@ -15,6 +15,8 @@ namespace Oci.DisasterrecoveryService.Models
   /// <summary>
   /// The secondary lifecycle states of a DR protection group.  Provides information in addition to the lifecycle state.
     /// - DR_DRILL_IN_PROGRESS - A DR Drill is in progress.
+    /// - DR_PLAN_EXECUTION_IN_PROGRESS - DR Plan Execution is in progress.
+    /// - AUTOMATIC_DR_PLAN_EXECUTION_IN_PROGRESS - Automatic DR Plan Execution is in progress.
     /// 
   /// </summary>
   public enum DrProtectionGroupLifecycleSubState {
@@ -22,6 +24,10 @@ namespace Oci.DisasterrecoveryService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "DR_DRILL_IN_PROGRESS")]
-      DrDrillInProgress
+      DrDrillInProgress,
+      [EnumMember(Value = "DR_PLAN_EXECUTION_IN_PROGRESS")]
+      DrPlanExecutionInProgress,
+      [EnumMember(Value = "AUTOMATIC_DR_PLAN_EXECUTION_IN_PROGRESS")]
+      AutomaticDrPlanExecutionInProgress
   }
 }

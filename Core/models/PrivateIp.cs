@@ -132,6 +132,12 @@ namespace Oci.CoreService.Models
         public string IpAddress { get; set; }
         
         /// <value>
+        /// The secondary IPv4 CIDR prefix length.
+        /// </value>
+        [JsonProperty(PropertyName = "cidrPrefixLength")]
+        public System.Nullable<int> CidrPrefixLength { get; set; }
+        
+        /// <value>
         /// Whether this private IP is the primary one on the VNIC. Primary private IPs
         /// are unassigned and deleted automatically when the VNIC is terminated.
         /// <br/>
@@ -236,6 +242,13 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]
         public string RouteTableId { get; set; }
+        
+        /// <value>
+        /// Ipv4 Subnet CIDR specified whn creating the PrivateIP.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv4SubnetCidrAtCreation")]
+        public string Ipv4SubnetCidrAtCreation { get; set; }
         
     }
 }

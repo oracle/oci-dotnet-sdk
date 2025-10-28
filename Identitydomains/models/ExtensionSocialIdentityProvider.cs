@@ -336,6 +336,42 @@ namespace Oci.IdentitydomainsService.Models
         public string ConsumerSecret { get; set; }
         
         /// <value>
+        /// Apple Developer ID
+        /// <br/>
+        /// **Added In:** 2311180004
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: true
+        ///  - idcsSearchable: false
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "appleDevId")]
+        public string AppleDevId { get; set; }
+        
+        /// <value>
+        /// Apple Private Key ID
+        /// <br/>
+        /// **Added In:** 2311180004
+        /// <br/>
+        /// **SCIM++ Properties:**
+        ///  - caseExact: true
+        ///  - idcsSearchable: false
+        ///  - multiValued: false
+        ///  - mutability: readWrite
+        ///  - required: false
+        ///  - returned: default
+        ///  - type: string
+        ///  - uniqueness: none
+        /// </value>
+        [JsonProperty(PropertyName = "appleKeyId")]
+        public string AppleKeyId { get; set; }
+        
+        /// <value>
         /// Service Provider Name
         /// <br/>
         /// **Added In:** 20.1.3

@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// An Autonomous Database backup.
+    /// An Autonomous AI Database backup.
     /// 
     /// </summary>
     public class AutonomousContainerDatabaseBackup 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database backup.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database backup.
         /// </value>
         /// <remarks>
         /// Required
@@ -204,7 +204,7 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
-        /// List of Autonomous Databases that is part of this Autonomous Container Database Backup
+        /// List of Autonomous AI Databases that is part of this Autonomous Container Database Backup
         /// </value>
         [JsonProperty(PropertyName = "autonomousDatabases")]
         public System.Collections.Generic.List<AutonomousDatabaseInBackup> AutonomousDatabases { get; set; }

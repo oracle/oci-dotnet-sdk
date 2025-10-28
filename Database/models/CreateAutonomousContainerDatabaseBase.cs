@@ -92,7 +92,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<ServiceLevelAgreementTypeEnum> ServiceLevelAgreementType { get; set; }
         
         /// <value>
-        /// **No longer used.** This parameter is no longer used for Autonomous Database on dedicated Exadata infrasture. Specify a `cloudAutonomousVmClusterId` instead. Using this parameter will cause the operation to fail.
+        /// **No longer used.** This parameter is no longer used for Autonomous AI Database on dedicated Exadata infrasture. Specify a `cloudAutonomousVmClusterId` instead. Using this parameter will cause the operation to fail.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "autonomousExadataInfrastructureId")]
@@ -105,13 +105,13 @@ namespace Oci.DatabaseService.Models
         public string DbVersion { get; set; }
         
         /// <value>
-        /// The Autonomous Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The Autonomous AI Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageId")]
         public string DatabaseSoftwareImageId { get; set; }
         
         /// <value>
-        /// *No longer used.* This parameter is no longer used for Autonomous Database on dedicated Exadata infrasture. Specify a `peerCloudAutonomousVmClusterId` instead. Using this parameter will cause the operation to fail.
+        /// *No longer used.* This parameter is no longer used for Autonomous AI Database on dedicated Exadata infrasture. Specify a `peerCloudAutonomousVmClusterId` instead. Using this parameter will cause the operation to fail.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "peerAutonomousExadataInfrastructureId")]
@@ -295,7 +295,7 @@ namespace Oci.DatabaseService.Models
         public string KmsKeyId { get; set; }
         
         /// <value>
-        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation. Autonomous Database Serverless does not use key versions, hence is not applicable for Autonomous Database Serverless instances.
+        /// The OCID of the key container version that is used in database transparent data encryption (TDE) operations KMS Key can have multiple key versions. If none is specified, the current key version (latest) of the Key Id is used for the operation. Autonomous AI Database Serverless does not use key versions, hence is not applicable for Autonomous AI Database Serverless instances.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "kmsKeyVersionId")]
@@ -314,7 +314,7 @@ namespace Oci.DatabaseService.Models
         public string KeyStoreId { get; set; }
         
         /// <value>
-        /// The CPU value beyond which an Autonomous Database will be opened across multiple nodes. The default value of this attribute is 16 for OCPUs and 64 for ECPUs.
+        /// The CPU value beyond which an Autonomous AI Database will be opened across multiple nodes. The default value of this attribute is 16 for OCPUs and 64 for ECPUs.
         /// </value>
         [JsonProperty(PropertyName = "dbSplitThreshold")]
         public System.Nullable<int> DbSplitThreshold { get; set; }
@@ -326,7 +326,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> VmFailoverReservation { get; set; }
                 ///
         /// <value>
-        /// Determines whether an Autonomous Database must be opened across a minimum or maximum of nodes. By default, Minimum nodes is selected.
+        /// Determines whether an Autonomous AI Database must be opened across a minimum or maximum of nodes. By default, Minimum nodes is selected.
         /// </value>
         ///
         public enum DistributionAffinityEnum {
@@ -337,7 +337,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// Determines whether an Autonomous Database must be opened across a minimum or maximum of nodes. By default, Minimum nodes is selected.
+        /// Determines whether an Autonomous AI Database must be opened across a minimum or maximum of nodes. By default, Minimum nodes is selected.
         /// </value>
         [JsonProperty(PropertyName = "distributionAffinity")]
         [JsonConverter(typeof(StringEnumConverter))]

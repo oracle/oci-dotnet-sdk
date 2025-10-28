@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The Oracle Database connection string.
+    /// The Oracle AI Database connection string.
     /// 
     /// </summary>
     public class DatabaseConnectionString 

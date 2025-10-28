@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// An Autonomous Database Resource Pool. This object provides all the information related to the resource pool.
+    /// An Autonomous AI Database Resource Pool. This object provides all the information related to the resource pool.
     /// 
     /// </summary>
     public class ResourcePoolShapeSummary 

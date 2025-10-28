@@ -42,31 +42,31 @@ namespace Oci.DatabaseService.Models
         public string MachineLearningUserManagementUrl { get; set; }
         
         /// <value>
-        /// The URL of the Graph Studio for the Autonomous Database.
+        /// The URL of the Graph Studio for the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "graphStudioUrl")]
         public string GraphStudioUrl { get; set; }
         
         /// <value>
-        /// The URL of the MongoDB API for the Autonomous Database.
+        /// The URL of the MongoDB API for the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "mongoDbUrl")]
         public string MongoDbUrl { get; set; }
         
         /// <value>
-        /// The URL of the Oracle Machine Learning (OML) Notebook for the Autonomous Database.
+        /// The URL of the Oracle Machine Learning (OML) Notebook for the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "machineLearningNotebookUrl")]
         public string MachineLearningNotebookUrl { get; set; }
         
         /// <value>
-        /// The Oracle REST Data Services (ORDS) URL of the Web Access for the Autonomous Database.
+        /// The Oracle REST Data Services (ORDS) URL of the Web Access for the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "ordsUrl")]
         public string OrdsUrl { get; set; }
         
         /// <value>
-        /// The URL of the Database Transforms for the Autonomous Database.
+        /// The URL of the Database Transforms for the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "databaseTransformsUrl")]
         public string DatabaseTransformsUrl { get; set; }

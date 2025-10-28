@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The configuration details for associating the Autonomous Database with a different subscription.
+    /// The configuration details for associating the Autonomous AI Database with a different subscription.
     /// 
     /// </summary>
     public class ChangeAutonomousDatabaseSubscriptionDetails 

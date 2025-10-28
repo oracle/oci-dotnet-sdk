@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// An Autonomous Database resource pool member summary.
+    /// An Autonomous AI Database resource pool member summary.
     /// </summary>
     public class ResourcePoolMemberSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database.
         /// </value>
         /// <remarks>
         /// Required

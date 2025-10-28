@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// A list of Autonomous Database RefreshableClone containing RefreshableCloneSummary items.
+    /// A list of Autonomous AI Database RefreshableClone containing RefreshableCloneSummary items.
     /// </summary>
     public class RefreshableCloneCollection 
     {

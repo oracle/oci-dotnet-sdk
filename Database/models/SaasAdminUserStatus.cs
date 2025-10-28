@@ -22,7 +22,7 @@ namespace Oci.DatabaseService.Models
     {
         
         /// <value>
-        /// Indicates if the SaaS administrative user is enabled for the Autonomous Database.
+        /// Indicates if the SaaS administrative user is enabled for the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
@@ -51,7 +51,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<AccessTypeEnum> AccessType { get; set; }
         
         /// <value>
-        /// The date and time the SaaS administrative user was enabled at, for the Autonomous Database.
+        /// The date and time the SaaS administrative user was enabled at, for the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "timeSaasAdminUserEnabled")]
         public System.Nullable<System.DateTime> TimeSaasAdminUserEnabled { get; set; }

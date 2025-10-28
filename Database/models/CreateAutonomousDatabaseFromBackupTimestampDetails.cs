@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details to create a point-in-time clone of an Oracle Autonomous Database by specifying a timestamp. Point-in-time clones use backups as the source of the data for the clone.
+    /// Details to create a point-in-time clone of an Oracle Autonomous AI Database by specifying a timestamp. Point-in-time clones use backups as the source of the data for the clone.
     /// 
     /// </summary>
     public class CreateAutonomousDatabaseFromBackupTimestampDetails : CreateAutonomousDatabaseBase
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous Database that you will clone to create a new Autonomous Database.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the source Autonomous AI Database that you will clone to create a new Autonomous AI Database.
         /// </value>
         /// <remarks>
         /// Required
@@ -33,13 +33,13 @@ namespace Oci.DatabaseService.Models
         public string AutonomousDatabaseId { get; set; }
         
         /// <value>
-        /// The timestamp specified for the point-in-time clone of the source Autonomous Database. The timestamp must be in the past.
+        /// The timestamp specified for the point-in-time clone of the source Autonomous AI Database. The timestamp must be in the past.
         /// </value>
         [JsonProperty(PropertyName = "timestamp")]
         public System.Nullable<System.DateTime> Timestamp { get; set; }
                 ///
         /// <value>
-        /// The Autonomous Database clone type.
+        /// The Autonomous AI Database clone type.
         /// </value>
         ///
         public enum CloneTypeEnum {
@@ -52,7 +52,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The Autonomous Database clone type.
+        /// The Autonomous AI Database clone type.
         /// </value>
         /// <remarks>
         /// Required
@@ -70,7 +70,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> UseLatestAvailableBackupTimeStamp { get; set; }
         
         /// <value>
-        /// A list of the source Autonomous Database's table space number(s) used to create this partial clone from the backup.
+        /// A list of the source Autonomous AI Database's table space number(s) used to create this partial clone from the backup.
         /// </value>
         [JsonProperty(PropertyName = "cloneTableSpaceList")]
         public System.Collections.Generic.List<int> CloneTableSpaceList { get; set; }

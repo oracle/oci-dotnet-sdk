@@ -48,6 +48,18 @@ namespace Oci.DatabasetoolsService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DbmsCloudStatus> DbmsCloudStatus { get; set; }
         
+        /// <value>
+        /// Displays the CLOUD_SERVICE value within the USERENV context
+        /// </value>
+        [JsonProperty(PropertyName = "cloudService")]
+        public string CloudService { get; set; }
+        
+        /// <value>
+        /// Status on whether a Database Tools identity type can be used with this connection or not.
+        /// </value>
+        [JsonProperty(PropertyName = "databaseToolsIdentityStatuses")]
+        public System.Collections.Generic.List<ValidationIdentityStatus> DatabaseToolsIdentityStatuses { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "ORACLE_DATABASE";
     }

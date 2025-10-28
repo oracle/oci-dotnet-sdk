@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details for registering an Autonomous Database with Data Safe.
+    /// Details for registering an Autonomous AI Database with Data Safe.
     /// 
     /// </summary>
     public class RegisterAutonomousDatabaseDataSafeDetails 

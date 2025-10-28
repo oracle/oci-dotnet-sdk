@@ -60,6 +60,61 @@ namespace Oci.LustrefilestorageService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetObjectStorageLinkRequest, GetObjectStorageLinkResponse> ForObjectStorageLink(GetObjectStorageLinkRequest request, params ObjectStorageLink.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForObjectStorageLink(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetObjectStorageLinkRequest, GetObjectStorageLinkResponse> ForObjectStorageLink(GetObjectStorageLinkRequest request, WaiterConfiguration config, params ObjectStorageLink.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetObjectStorageLinkRequest, GetObjectStorageLinkResponse>(
+                request,
+                request => client.GetObjectStorageLink(request),
+                response => targetStates.Contains(response.ObjectStorageLink.LifecycleState.Value),
+                targetStates.Contains(ObjectStorageLink.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetObjectStorageLinkRequest, GetObjectStorageLinkResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSyncJobRequest, GetSyncJobResponse> ForSyncJob(GetSyncJobRequest request, params SyncJob.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSyncJob(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSyncJobRequest, GetSyncJobResponse> ForSyncJob(GetSyncJobRequest request, WaiterConfiguration config, params SyncJob.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSyncJobRequest, GetSyncJobResponse>(
+                request,
+                request => client.GetSyncJob(request),
+                response => targetStates.Contains(response.SyncJob.LifecycleState.Value)
+            );
+            return new Waiter<GetSyncJobRequest, GetSyncJobResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetWorkRequestRequest, GetWorkRequestResponse> ForWorkRequest(GetWorkRequestRequest request, params OperationStatus[] targetStates)
         {
             return this.ForWorkRequest(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

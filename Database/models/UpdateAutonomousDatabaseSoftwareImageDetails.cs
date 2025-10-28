@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Describes the parameters for updating the Autonomous Database Software Image
+    /// Describes the parameters for updating the Autonomous AI Database Software Image
     /// 
     /// </summary>
     public class UpdateAutonomousDatabaseSoftwareImageDetails 

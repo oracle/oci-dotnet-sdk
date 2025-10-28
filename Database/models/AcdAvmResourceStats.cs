@@ -34,7 +34,7 @@ namespace Oci.DatabaseService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// CPUs/cores assigned to Autonomous Databases for the ACD instance in given Autonomus VM.
+        /// CPUs/cores assigned to Autonomous AI Databases for the ACD instance in given Autonomus VM.
         /// </value>
         [JsonProperty(PropertyName = "provisionedCpus")]
         public System.Nullable<float> ProvisionedCpus { get; set; }
@@ -58,7 +58,7 @@ namespace Oci.DatabaseService.Models
         /// <value>
         /// CPUs/cores that continue to be included in the count of OCPUs available to the
         /// Autonomous Container Database in given Autonomous VM, even after one of its
-        /// Autonomous Database is terminated or scaled down. You can release them to the available
+        /// Autonomous AI Database is terminated or scaled down. You can release them to the available
         /// OCPUs at its parent AVMC level by restarting the Autonomous Container Database.
         /// 
         /// </value>

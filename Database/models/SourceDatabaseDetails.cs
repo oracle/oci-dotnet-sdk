@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Source Autonomous Database details.
+    /// Source Autonomous AI Database details.
     /// </summary>
     public class SourceDatabaseDetails 
     {
@@ -53,25 +53,26 @@ namespace Oci.DatabaseService.Models
         public string AutonomousContainerDatabaseDstFileVersion { get; set; }
         
         /// <value>
-        /// Autonomous Database's name.
+        /// Autonomous AI Database's name.
         /// </value>
         [JsonProperty(PropertyName = "autonomousDatabaseName")]
         public string AutonomousDatabaseName { get; set; }
         
         /// <value>
-        /// Customer Contacts for the Autonomous database.
+        /// Customer Contacts for the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "autonomousDatabaseCustomerContacts")]
         public System.Collections.Generic.List<CustomerContact> AutonomousDatabaseCustomerContacts { get; set; }
                 ///
         /// <value>
-        /// The Autonomous Database workload type. The following values are valid:
+        /// The Autonomous AI Database workload type. The following values are valid:
+        /// - OLTP - indicates an Autonomous AI Transaction Processing database
+        /// - DW - indicates an Autonomous AI Lakehouse database
+        /// - AJD - indicates an Autonomous AI JSON Database
+        /// - APEX - indicates an Autonomous AI Database with the Oracle APEX AI Application Development workload type.
+        /// - LH - indicates an Oracle Autonomous AI Lakehouse database
         /// <br/>
-        /// - OLTP - indicates an Autonomous Transaction Processing database
-        /// - DW - indicates an Autonomous Data Warehouse database
-        /// - AJD - indicates an Autonomous JSON Database
-        /// - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
-        /// <br/>
+        /// 
         /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
         /// </value>
@@ -87,17 +88,20 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "AJD")]
             Ajd,
             [EnumMember(Value = "APEX")]
-            Apex
+            Apex,
+            [EnumMember(Value = "LH")]
+            Lh
         };
 
         /// <value>
-        /// The Autonomous Database workload type. The following values are valid:
+        /// The Autonomous AI Database workload type. The following values are valid:
+        /// - OLTP - indicates an Autonomous AI Transaction Processing database
+        /// - DW - indicates an Autonomous AI Lakehouse database
+        /// - AJD - indicates an Autonomous AI JSON Database
+        /// - APEX - indicates an Autonomous AI Database with the Oracle APEX AI Application Development workload type.
+        /// - LH - indicates an Oracle Autonomous AI Lakehouse database
         /// <br/>
-        /// - OLTP - indicates an Autonomous Transaction Processing database
-        /// - DW - indicates an Autonomous Data Warehouse database
-        /// - AJD - indicates an Autonomous JSON Database
-        /// - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
-        /// <br/>
+        /// 
         /// This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
         /// 
         /// </value>

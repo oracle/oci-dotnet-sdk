@@ -20,7 +20,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous Database backup.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Autonomous AI Database backup.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Requests
         public string AutonomousDatabaseBackupId { get; set; }
         
         /// <value>
-        /// Request to update an existing Autonomous Database backup.
+        /// Request to update an existing Autonomous AI Database backup.
         /// </value>
         /// <remarks>
         /// Required

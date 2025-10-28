@@ -105,13 +105,13 @@ namespace Oci.DatabaseService.Models
         public System.Collections.Generic.List<KeyStoreAssociatedDatabaseDetails> AssociatedDatabases { get; set; }
         
         /// <value>
-        /// List of long term backups of Autonomous Databases associated with this backup destination.The maximum associated number of long term backup listed here would be 1024.
+        /// List of long term backups of Autonomous AI Databases associated with this backup destination.The maximum associated number of long term backup listed here would be 1024.
         /// </value>
         [JsonProperty(PropertyName = "associatedLongTermBackups")]
         public System.Collections.Generic.List<AssociatedLongTermBackup> AssociatedLongTermBackups { get; set; }
         
         /// <value>
-        /// Indicates the number of long term backups of Autonomous Databases associated with this backup destination.
+        /// Indicates the number of long term backups of Autonomous AI Databases associated with this backup destination.
         /// </value>
         [JsonProperty(PropertyName = "associatedLongTermBackupCount")]
         public System.Nullable<int> AssociatedLongTermBackupCount { get; set; }

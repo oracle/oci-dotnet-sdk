@@ -16,19 +16,19 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// The token that allows the OCI Console to access the Autonomous Database Service Console.
+    /// The token that allows the OCI Console to access the Autonomous AI Database Service Console.
     /// </summary>
     public class AutonomousDatabaseConsoleTokenDetails 
     {
         
         /// <value>
-        /// The token that allows the OCI Console to access the Autonomous Transaction Processing Service Console.
+        /// The token that allows the OCI Console to access the Autonomous AI Transaction Processing Service Console.
         /// </value>
         [JsonProperty(PropertyName = "token")]
         public string Token { get; set; }
         
         /// <value>
-        /// The login URL that allows the OCI Console to access the Autonomous Transaction Processing Service Console.
+        /// The login URL that allows the OCI Console to access the Autonomous AI Transaction Processing Service Console.
         /// </value>
         [JsonProperty(PropertyName = "loginUrl")]
         public string LoginUrl { get; set; }

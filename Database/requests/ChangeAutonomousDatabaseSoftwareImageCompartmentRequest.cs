@@ -20,7 +20,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// Request to move Autonomous Database Software Image to a different compartment
+        /// Request to move Autonomous AI Database Software Image to a different compartment
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Requests
         public ChangeAutonomousDatabaseSoftwareImageCompartmentDetails ChangeAutonomousDatabaseSoftwareImageCompartmentDetails { get; set; }
         
         /// <value>
-        /// The Autonomous Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The Autonomous AI Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required

@@ -20,7 +20,7 @@ namespace Oci.DatabaseService.Requests
     {
         
         /// <value>
-        /// The Autonomous Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
+        /// The Autonomous AI Database Software Image [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm).
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.DatabaseService.Requests
         public string AutonomousDatabaseSoftwareImageId { get; set; }
         
         /// <value>
-        /// Request to update the properties of an Autonomous Database Software Image.
+        /// Request to update the properties of an Autonomous AI Database Software Image.
         /// </value>
         /// <remarks>
         /// Required

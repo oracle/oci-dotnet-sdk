@@ -29,7 +29,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> LagTimeInSeconds { get; set; }
                 ///
         /// <value>
-        /// The current state of the Autonomous Database.
+        /// The current state of the Autonomous AI Database.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -81,7 +81,7 @@ namespace Oci.DatabaseService.Models
         };
 
         /// <value>
-        /// The current state of the Autonomous Database.
+        /// The current state of the Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
@@ -94,13 +94,13 @@ namespace Oci.DatabaseService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
-        /// The date and time the Autonomous Data Guard role was switched for the standby Autonomous Database.
+        /// The date and time the Autonomous Data Guard role was switched for the standby Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "timeDataGuardRoleChanged")]
         public System.Nullable<System.DateTime> TimeDataGuardRoleChanged { get; set; }
         
         /// <value>
-        /// The date and time the Disaster Recovery role was switched for the standby Autonomous Database.
+        /// The date and time the Disaster Recovery role was switched for the standby Autonomous AI Database.
         /// </value>
         [JsonProperty(PropertyName = "timeDisasterRecoveryRoleChanged")]
         public System.Nullable<System.DateTime> TimeDisasterRecoveryRoleChanged { get; set; }
@@ -124,7 +124,7 @@ namespace Oci.DatabaseService.Models
         public string MaintenanceTargetComponent { get; set; }
         
         /// <value>
-        /// The availability domain of a local Autonomous Data Guard standby database of an Autonomous Database Serverless instance.
+        /// The availability domain of a local Autonomous Data Guard standby database of an Autonomous AI Database Serverless instance.
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }

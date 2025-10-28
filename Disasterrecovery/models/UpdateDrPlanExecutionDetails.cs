@@ -22,7 +22,7 @@ namespace Oci.DisasterrecoveryService.Models
     {
         
         /// <value>
-        /// The display name of the DR protection group to update.
+        /// The display name of the DR plan execution to update.
         /// <br/>
         /// Example: EBS IAD Group
         /// </value>

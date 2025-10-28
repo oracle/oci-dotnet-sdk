@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabaseService.Models
 {
     /// <summary>
-    /// Details to restore an Oracle Autonomous Database.
+    /// Details to restore an Oracle Autonomous AI Database.
     /// 
     /// </summary>
     public class RestoreAutonomousDatabaseDetails 
