@@ -72,84 +72,15 @@ namespace Oci.VnmonitoringService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// Your identifier for your CPE device. Can be either an IP address or a hostname (specifically, the
-        /// fully qualified domain name (FQDN)). The type of identifier you provide here must correspond
-        /// to the value for `cpeLocalIdentifierType`.
-        /// <br/>
-        /// If you don't provide a value, the `ipAddress` attribute for the {@link Cpe}
-        /// object specified by `cpeId` is used as the `cpeLocalIdentifier`.
-        /// <br/>
-        /// For information about why you'd provide this value, see
-        /// [If Your CPE Is Behind a NAT Device](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/overviewIPsec.htm#nat).
-        /// <br/>
-        /// Example IP address: `10.0.3.3`
-        /// <br/>
-        /// Example hostname: `cpe.example.com`
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "cpeLocalIdentifier")]
-        public string CpeLocalIdentifier { get; set; }
-                ///
-        /// <value>
-        /// The type of identifier for your CPE device. The value you provide here must correspond to the value
-        /// for `cpeLocalIdentifier`.
-        /// 
-        /// </value>
-        ///
-        public enum CpeLocalIdentifierTypeEnum {
-            [EnumMember(Value = "IP_ADDRESS")]
-            IpAddress,
-            [EnumMember(Value = "HOSTNAME")]
-            Hostname
-        };
-
-        /// <value>
-        /// The type of identifier for your CPE device. The value you provide here must correspond to the value
-        /// for `cpeLocalIdentifier`.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "cpeLocalIdentifierType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<CpeLocalIdentifierTypeEnum> CpeLocalIdentifierType { get; set; }
-        
-        /// <value>
         /// Static routes to the CPE. A static route's CIDR must not be a
         /// multicast address or class E address.
         /// <br/>
-        /// Used for routing a given IPSec tunnel's traffic only if the tunnel
-        /// is using static routing. If you configure at least one tunnel to use static routing, then
-        /// you must provide at least one valid static route. If you configure both
-        /// tunnels to use BGP dynamic routing, you can provide an empty list for the static routes.
-        /// For more information, see the important note in {@link IPSecConnection}.
-        /// <br/>
-        /// The CIDR can be either IPv4 or IPv6. IPv6 addressing is supported for all commercial and government regions.
-        /// See [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
+        /// 
         /// <br/>
         /// Example: 10.0.1.0/24
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "StaticRoutes is required.")]
         [JsonProperty(PropertyName = "staticRoutes")]
         public System.Collections.Generic.List<string> StaticRoutes { get; set; }
-        
-        /// <value>
-        /// Information for creating the individual tunnels in the IPSec connection. You can provide a
-        /// maximum of 2 `tunnelConfiguration` objects in the array (one for each of the
-        /// two tunnels).
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "tunnelConfiguration")]
-        public System.Collections.Generic.List<CreateIPSecConnectionTunnelDetails> TunnelConfiguration { get; set; }
-        
-        /// <value>
-        /// The count of tunnels in the IPsec connection. This value should be equal to the number of
-        /// `tunnelConfiguration` objects specified in the `CreateIPSecConnection` request.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "tunnelCount")]
-        public System.Nullable<int> TunnelCount { get; set; }
         
     }
 }

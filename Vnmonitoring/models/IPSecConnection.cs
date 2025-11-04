@@ -18,21 +18,7 @@ namespace Oci.VnmonitoringService.Models
     /// <summary>
     /// A connection between a DRG and CPE. This connection consists of multiple IPSec
     /// tunnels. Creating this connection is one of the steps required when setting up
-    /// a Site-to-Site VPN.
-    /// <br/>
-    /// **Important:**  Each tunnel in an IPSec connection can use either static routing or BGP dynamic
-    /// routing (see the {@link IPSecConnectionTunnel} object's
-    /// `routing` attribute). Originally only static routing was supported and
-    /// every IPSec connection was required to have at least one static route configured.
-    /// To maintain backward compatibility in the API when support for BPG dynamic routing was introduced,
-    /// the API accepts an empty list of static routes if you configure both of the IPSec tunnels to use
-    /// BGP dynamic routing. If you switch a tunnel's routing from `BGP` to `STATIC`, you must first
-    /// ensure that the IPSec connection is configured with at least one valid CIDR block static route.
-    /// Oracle uses the IPSec connection's static routes when routing a tunnel's traffic *only*
-    /// if that tunnel's `routing` attribute = `STATIC`. Otherwise the static routes are ignored.
-    /// <br/>
-    /// For more information about the workflow for setting up an IPSec connection, see
-    /// [Site-to-Site VPN Overview](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/overviewIPsec.htm).
+    /// a Site-to-Site VPN. For more information, see [Site-to-Site VPN Overview](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/overviewIPsec.htm).
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized,
     /// talk to an administrator. If you're an administrator who needs to write policies to give users access, see
@@ -131,64 +117,13 @@ namespace Oci.VnmonitoringService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// Your identifier for your CPE device. Can be either an IP address or a hostname (specifically,
-        /// the fully qualified domain name (FQDN)). The type of identifier here must correspond
-        /// to the value for `cpeLocalIdentifierType`.
-        /// <br/>
-        /// If you don't provide a value when creating the IPSec connection, the `ipAddress` attribute
-        /// for the {@link Cpe} object specified by `cpeId` is used as the `cpeLocalIdentifier`.
-        /// <br/>
-        /// For information about why you'd provide this value, see
-        /// [If Your CPE Is Behind a NAT Device](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/overviewIPsec.htm#nat).
-        /// <br/>
-        /// Example IP address: `10.0.3.3`
-        /// <br/>
-        /// Example hostname: `cpe.example.com`
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "cpeLocalIdentifier")]
-        public string CpeLocalIdentifier { get; set; }
-                ///
-        /// <value>
-        /// The type of identifier for your CPE device. The value here must correspond to the value
-        /// for `cpeLocalIdentifier`.
-        /// 
-        /// </value>
-        ///
-        public enum CpeLocalIdentifierTypeEnum {
-            [EnumMember(Value = "IP_ADDRESS")]
-            IpAddress,
-            [EnumMember(Value = "HOSTNAME")]
-            Hostname
-        };
-
-        /// <value>
-        /// The type of identifier for your CPE device. The value here must correspond to the value
-        /// for `cpeLocalIdentifier`.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "cpeLocalIdentifierType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<CpeLocalIdentifierTypeEnum> CpeLocalIdentifierType { get; set; }
-        
-        /// <value>
         /// Static routes to the CPE. The CIDR must not be a
         /// multicast address or class E address.
         /// <br/>
-        /// Used for routing a given IPSec tunnel's traffic only if the tunnel
-        /// is using static routing. If you configure at least one tunnel to use static routing, then
-        /// you must provide at least one valid static route. If you configure both
-        /// tunnels to use BGP dynamic routing, you can provide an empty list for the static routes.
-        /// <br/>
-        /// The CIDR can be either IPv4 or IPv6. IPv6 addressing is supported for all commercial and government regions.
-        /// See [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).
+        /// 
         /// <br/>
         /// Example: 10.0.1.0/24
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "StaticRoutes is required.")]
         [JsonProperty(PropertyName = "staticRoutes")]
         public System.Collections.Generic.List<string> StaticRoutes { get; set; }
         

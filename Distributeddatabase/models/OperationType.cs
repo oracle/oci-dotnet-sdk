@@ -82,6 +82,10 @@ namespace Oci.DistributeddatabaseService.Models
       [EnumMember(Value = "ADD_GDSCONTROL_NODE")]
       AddGdscontrolNode,
       [EnumMember(Value = "CHANGE_DISTRIBUTED_DB_BACKUP_CONFIG")]
-      ChangeDistributedDbBackupConfig
+      ChangeDistributedDbBackupConfig,
+      [EnumMember(Value = "ADD_DISTRIBUTED_DB_DG")]
+      AddDistributedDbDg,
+      [EnumMember(Value = "REMOVE_DISTRIBUTED_DB_DG")]
+      RemoveDistributedDbDg
   }
 }

@@ -94,5 +94,8 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "instanceHostnameFormatter")]
         public string InstanceHostnameFormatter { get; set; }
         
+        [JsonProperty(PropertyName = "lifecycleManagement")]
+        public InstancePoolLifecycleManagementDetails LifecycleManagement { get; set; }
+        
     }
 }

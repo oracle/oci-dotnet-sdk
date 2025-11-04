@@ -327,6 +327,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Jmsutils", "J
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Iot", "Iot\OCI.DotNetSDK.Iot.csproj", "{1E0DBC9B-631A-422A-A83C-DFC55542481A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Psa", "Psa\OCI.DotNetSDK.Psa.csproj", "{EDCBCA80-7284-4B86-B317-C0714A26F6FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCI.DotNetSDK.Dif", "Dif\OCI.DotNetSDK.Dif.csproj", "{C1BD124A-EF26-4D99-89C8-13B8D34B0B99}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2899,5 +2903,29 @@ Global
         {1E0DBC9B-631A-422A-A83C-DFC55542481A}.Release|x64.Build.0 = Release|Any CPU
         {1E0DBC9B-631A-422A-A83C-DFC55542481A}.Release|x86.ActiveCfg = Release|Any CPU
         {1E0DBC9B-631A-422A-A83C-DFC55542481A}.Release|x86.Build.0 = Release|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Debug|x64.Build.0 = Debug|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Debug|x86.Build.0 = Debug|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Release|x64.ActiveCfg = Release|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Release|x64.Build.0 = Release|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Release|x86.ActiveCfg = Release|Any CPU
+        {EDCBCA80-7284-4B86-B317-C0714A26F6FE}.Release|x86.Build.0 = Release|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Debug|x64.ActiveCfg = Debug|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Debug|x64.Build.0 = Debug|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Debug|x86.ActiveCfg = Debug|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Debug|x86.Build.0 = Debug|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Release|Any CPU.Build.0 = Release|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Release|x64.ActiveCfg = Release|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Release|x64.Build.0 = Release|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Release|x86.ActiveCfg = Release|Any CPU
+        {C1BD124A-EF26-4D99-89C8-13B8D34B0B99}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

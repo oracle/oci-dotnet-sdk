@@ -30,7 +30,21 @@ namespace Oci.VnmonitoringService.Models
             [EnumMember(Value = "ALLOWED")]
             Allowed,
             [EnumMember(Value = "DENIED")]
-            Denied
+            Denied,
+            [EnumMember(Value = "ZPR_DENIED")]
+            ZprDenied,
+            [EnumMember(Value = "ZPR_ALLOWED")]
+            ZprAllowed,
+            [EnumMember(Value = "ZPR_CIDR_UNSUPPORTED")]
+            ZprCidrUnsupported,
+            [EnumMember(Value = "ZPR_NSG_UNSUPPORTED")]
+            ZprNsgUnsupported,
+            [EnumMember(Value = "ZPR_POLICY_NOT_EVALUATED_MISSING_ROUTE")]
+            ZprPolicyNotEvaluatedMissingRoute,
+            [EnumMember(Value = "ZPR_POLICY_NOT_EVALUATED_SL_NSG_DENIED")]
+            ZprPolicyNotEvaluatedSlNsgDenied,
+            [EnumMember(Value = "ZPR_MISSING_POLICY")]
+            ZprMissingPolicy
         };
 
                 ///
@@ -82,8 +96,29 @@ namespace Oci.VnmonitoringService.Models
                 case "ALLOWED":
                     obj = new AllowedSecurityAction();
                     break;
+                case "ZPR_MISSING_POLICY":
+                    obj = new ZprMissingPolicySecurityAction();
+                    break;
+                case "ZPR_DENIED":
+                    obj = new ZprDeniedSecurityAction();
+                    break;
+                case "ZPR_POLICY_NOT_EVALUATED_MISSING_ROUTE":
+                    obj = new ZprPolicyNotEvaluatedMissingRouteSecurityAction();
+                    break;
+                case "ZPR_NSG_UNSUPPORTED":
+                    obj = new ZprNsgUnsupportedSecurityAction();
+                    break;
+                case "ZPR_ALLOWED":
+                    obj = new ZprAllowedSecurityAction();
+                    break;
                 case "DENIED":
                     obj = new DeniedSecurityAction();
+                    break;
+                case "ZPR_CIDR_UNSUPPORTED":
+                    obj = new ZprCidrUnsupportedSecurityAction();
+                    break;
+                case "ZPR_POLICY_NOT_EVALUATED_SL_NSG_DENIED":
+                    obj = new ZprPolicyNotEvaluatedSlNsgDeniedSecurityAction();
                     break;
             }
             if (obj != null)

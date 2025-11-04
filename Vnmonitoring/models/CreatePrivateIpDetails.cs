@@ -72,18 +72,12 @@ namespace Oci.VnmonitoringService.Models
         /// must be in the same subnet.
         /// 
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "VnicId is required.")]
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }
-        
-        /// <value>
-        /// Use this attribute only with the Oracle Cloud VMware Solution.
-        /// <br/>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN from which the private IP is to be drawn. The IP address,
-        /// *if supplied*, must be valid for the given VLAN. See {@link Vlan}.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "vlanId")]
-        public string VlanId { get; set; }
         
     }
 }

@@ -72,7 +72,7 @@ namespace Oci.DistributeddatabaseService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// Status of the gsm for the Globally ditributed database.
+        /// Status of the gsm.
         /// </value>
         ///
         public enum StatusEnum {
@@ -100,7 +100,7 @@ namespace Oci.DistributeddatabaseService.Models
         };
 
         /// <value>
-        /// Status of the gsm for the Globally ditributed database.
+        /// Status of the gsm.
         /// </value>
         /// <remarks>
         /// Required

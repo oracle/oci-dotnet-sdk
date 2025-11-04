@@ -33,7 +33,7 @@ namespace Oci.VnmonitoringService.Models
         public System.Nullable<bool> IsRestrictedOrPartial { get; set; }
         
         /// <value>
-        /// The list of [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of evaluated security lists associcated
+        /// The list of [OCIDs](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of evaluated security lists associated
         /// with the OCI resource's subnet.
         /// 
         /// </value>

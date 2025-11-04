@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.VnmonitoringService.Models
 {
     /// <summary>
-    /// Details used to create a route distribution.
+    /// Details used to create an import route distribution. You can't create a new export route distribution.
     /// 
     /// </summary>
     public class CreateDrgRouteDistributionDetails 
@@ -56,7 +56,7 @@ namespace Oci.VnmonitoringService.Models
         public string DrgId { get; set; }
                 ///
         /// <value>
-        /// Whether this distribution defines how routes get imported into route tables or exported through DRG Attachments
+        /// States that this distribution defines how routes get imported into route tables.
         /// 
         /// </value>
         ///
@@ -66,7 +66,7 @@ namespace Oci.VnmonitoringService.Models
         };
 
         /// <value>
-        /// Whether this distribution defines how routes get imported into route tables or exported through DRG Attachments
+        /// States that this distribution defines how routes get imported into route tables.
         /// 
         /// </value>
         /// <remarks>

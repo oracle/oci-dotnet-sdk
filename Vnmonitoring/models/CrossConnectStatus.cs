@@ -94,54 +94,6 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "lightLevelIndicator")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<LightLevelIndicatorEnum> LightLevelIndicator { get; set; }
-                ///
-        /// <value>
-        /// Encryption status of this cross connect.
-        /// <br/>
-        /// Possible values:
-        /// * **UP:** Traffic is encrypted over this cross-connect
-        /// * **DOWN:** Traffic is not encrypted over this cross-connect
-        /// * **CIPHER_MISMATCH:** The MACsec encryption cipher doesn't match the cipher on the CPE
-        /// * **CKN_MISMATCH:** The MACsec Connectivity association Key Name (CKN) doesn't match the CKN on the CPE
-        /// * **CAK_MISMATCH:** The MACsec Connectivity Association Key (CAK) doesn't match the CAK on the CPE
-        /// 
-        /// </value>
-        ///
-        public enum EncryptionStatusEnum {
-            [EnumMember(Value = "UP")]
-            Up,
-            [EnumMember(Value = "DOWN")]
-            Down,
-            [EnumMember(Value = "CIPHER_MISMATCH")]
-            CipherMismatch,
-            [EnumMember(Value = "CKN_MISMATCH")]
-            CknMismatch,
-            [EnumMember(Value = "CAK_MISMATCH")]
-            CakMismatch
-        };
-
-        /// <value>
-        /// Encryption status of this cross connect.
-        /// <br/>
-        /// Possible values:
-        /// * **UP:** Traffic is encrypted over this cross-connect
-        /// * **DOWN:** Traffic is not encrypted over this cross-connect
-        /// * **CIPHER_MISMATCH:** The MACsec encryption cipher doesn't match the cipher on the CPE
-        /// * **CKN_MISMATCH:** The MACsec Connectivity association Key Name (CKN) doesn't match the CKN on the CPE
-        /// * **CAK_MISMATCH:** The MACsec Connectivity Association Key (CAK) doesn't match the CAK on the CPE
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "encryptionStatus")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<EncryptionStatusEnum> EncryptionStatus { get; set; }
-        
-        /// <value>
-        /// The light levels of the cross-connect (in dBm).
-        /// <br/>
-        /// Example: [14.0, -14.0, 2.1, -10.1]
-        /// </value>
-        [JsonProperty(PropertyName = "lightLevelsInDBm")]
-        public System.Collections.Generic.List<float> LightLevelsInDBm { get; set; }
         
     }
 }

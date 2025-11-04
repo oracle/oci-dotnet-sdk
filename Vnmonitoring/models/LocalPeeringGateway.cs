@@ -115,25 +115,15 @@ namespace Oci.VnmonitoringService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The smallest aggregate CIDR that contains all the CIDR routes advertised by the VCN
-        /// at the other end of the peering from this LPG. See `peerAdvertisedCidrDetails` for
-        /// the individual CIDRs. The value is `null` if the LPG is not peered.
+        /// The range of IP addresses available on the VCN at the other
+        /// end of the peering from this LPG. The value is `null` if the LPG is not peered.
+        /// You can use this as the destination CIDR for a route rule to route a subnet's
+        /// traffic to this LPG.
         /// <br/>
-        /// Example: 192.168.0.0/16, or if aggregated with 172.16.0.0/24 then 128.0.0.0/1
+        /// Example: 192.168.0.0/16
         /// </value>
         [JsonProperty(PropertyName = "peerAdvertisedCidr")]
         public string PeerAdvertisedCidr { get; set; }
-        
-        /// <value>
-        /// The specific ranges of IP addresses available on or via the VCN at the other
-        /// end of the peering from this LPG. The value is `null` if the LPG is not peered.
-        /// You can use these as destination CIDRs for route rules to route a subnet's
-        /// traffic to this LPG.
-        /// <br/>
-        /// Example: [192.168.0.0/16, 172.16.0.0/24]
-        /// </value>
-        [JsonProperty(PropertyName = "peerAdvertisedCidrDetails")]
-        public System.Collections.Generic.List<string> PeerAdvertisedCidrDetails { get; set; }
                 ///
         /// <value>
         /// Whether the LPG is peered with another LPG. `NEW` means the LPG has not yet been
@@ -174,26 +164,6 @@ namespace Oci.VnmonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "peeringStatusDetails")]
         public string PeeringStatusDetails { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the peered LPG.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PeerId is required.")]
-        [JsonProperty(PropertyName = "peerId")]
-        public string PeerId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the LPG is using.
-        /// <br/>
-        /// For information about why you would associate a route table with an LPG, see
-        /// [Transit Routing: Access to Multiple VCNs in Same Region](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitrouting.htm).
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "routeTableId")]
-        public string RouteTableId { get; set; }
         
         /// <value>
         /// The date and time the LPG was created, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).

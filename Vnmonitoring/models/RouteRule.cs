@@ -30,7 +30,7 @@ namespace Oci.VnmonitoringService.Models
         /// A destination IP address range in CIDR notation. Matching packets will
         /// be routed to the indicated network entity (the target).
         /// <br/>
-        /// Cannot be an IPv6 CIDR.
+        /// Cannot be an IPv6 prefix.
         /// <br/>
         /// Example: 0.0.0.0/0
         /// </value>
@@ -43,7 +43,7 @@ namespace Oci.VnmonitoringService.Models
         /// <br/>
         /// Allowed values:
         /// <br/>
-        ///   * IP address range in CIDR notation. Can be an IPv4 or IPv6 CIDR. For Example: 192.168.1.0/24  or 2001:0db8:0123:45::/56. If you set this to an IPv6 CIDR, the route rule's target  can only be a DRG or internet gateway.  IPv6 addressing is supported for all commercial and government regions.  See [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).  * The cidrBlock value for a {@link Service}, if you're    setting up a route rule for traffic destined for a particular Service through    a service gateway. For
+        ///   * IP address range in CIDR notation. Can be an IPv4 CIDR block or IPv6 prefix. For Example: 192.168.1.0/24  or 2001:0db8:0123:45::/56. If you set this to an IPv6 prefix, the route rule's target  can only be a DRG or internet gateway.  IPv6 addressing is supported for all commercial and government regions.  See [IPv6 Addresses](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/ipv6.htm).  * The cidrBlock value for a {@link Service}, if you're    setting up a route rule for traffic destined for a particular Service through    a service gateway. For
         /// </value>
         [JsonProperty(PropertyName = "destination")]
         public string Destination { get; set; }
@@ -95,36 +95,6 @@ namespace Oci.VnmonitoringService.Models
         [Required(ErrorMessage = "NetworkEntityId is required.")]
         [JsonProperty(PropertyName = "networkEntityId")]
         public string NetworkEntityId { get; set; }
-        
-        /// <value>
-        /// An optional description of your choice for the rule.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "description")]
-        public string Description { get; set; }
-                ///
-        /// <value>
-        /// A route rule can be STATIC if manually added to the route table, LOCAL if added by OCI to the route table.
-        /// 
-        /// </value>
-        ///
-        public enum RouteTypeEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "STATIC")]
-            Static,
-            [EnumMember(Value = "LOCAL")]
-            Local
-        };
-
-        /// <value>
-        /// A route rule can be STATIC if manually added to the route table, LOCAL if added by OCI to the route table.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "routeType")]
-        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<RouteTypeEnum> RouteType { get; set; }
         
     }
 }

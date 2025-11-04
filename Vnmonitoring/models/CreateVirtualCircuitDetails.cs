@@ -47,55 +47,6 @@ namespace Oci.VnmonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "crossConnectMappings")]
         public System.Collections.Generic.List<CrossConnectMapping> CrossConnectMappings { get; set; }
-                ///
-        ///
-        public enum RoutingPolicyEnum {
-            [EnumMember(Value = "ORACLE_SERVICE_NETWORK")]
-            OracleServiceNetwork,
-            [EnumMember(Value = "REGIONAL")]
-            Regional,
-            [EnumMember(Value = "MARKET_LEVEL")]
-            MarketLevel,
-            [EnumMember(Value = "GLOBAL")]
-            Global
-        };
-
-        /// <value>
-        /// The routing policy sets how routing information about the Oracle cloud is shared over a public virtual circuit.
-        /// Policies available are: `ORACLE_SERVICE_NETWORK`, `REGIONAL`, `MARKET_LEVEL`, and `GLOBAL`.
-        /// See [Route Filtering](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/routingonprem.htm#route_filtering) for details.
-        /// By default, routing information is shared for all routes in the same market.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "routingPolicy", ItemConverterType = typeof(StringEnumConverter))]
-        public System.Collections.Generic.List<RoutingPolicyEnum> RoutingPolicy { get; set; }
-                ///
-        /// <value>
-        /// Set to `ENABLED` (the default) to activate the BGP session of the virtual circuit, set to `DISABLED` to deactivate the virtual circuit.
-        /// 
-        /// </value>
-        ///
-        public enum BgpAdminStateEnum {
-            [EnumMember(Value = "ENABLED")]
-            Enabled,
-            [EnumMember(Value = "DISABLED")]
-            Disabled
-        };
-
-        /// <value>
-        /// Set to `ENABLED` (the default) to activate the BGP session of the virtual circuit, set to `DISABLED` to deactivate the virtual circuit.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "bgpAdminState")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<BgpAdminStateEnum> BgpAdminState { get; set; }
-        
-        /// <value>
-        /// Set to `true` to enable BFD for IPv4 BGP peering, or set to `false` to disable BFD. If this is not set, the default is `false`.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "isBfdEnabled")]
-        public System.Nullable<bool> IsBfdEnabled { get; set; }
         
         /// <value>
         /// Set to `true` for the virtual circuit to carry only encrypted traffic, or set to `false` for the virtual circuit to carry unencrypted traffic. If this is not set, the default is `false`.
@@ -105,30 +56,13 @@ namespace Oci.VnmonitoringService.Models
         public System.Nullable<bool> IsTransportMode { get; set; }
         
         /// <value>
-        /// Deprecated. Instead use `customerAsn`.
-        /// If you specify values for both, the request will be rejected.
+        /// Your BGP ASN (either public or private). Provide this value only if
+        /// there's a BGP session that goes from your edge router to Oracle.
+        /// Otherwise, leave this empty or null.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "customerBgpAsn")]
         public System.Nullable<int> CustomerBgpAsn { get; set; }
-        
-        /// <value>
-        /// Your BGP ASN (either public or private). Provide this value only if
-        /// there's a BGP session that goes from your edge router to Oracle.
-        /// Otherwise, leave this empty or null.
-        /// Can be a 2-byte or 4-byte ASN. Uses \"asplain\" format.
-        /// <br/>
-        /// Example: 12345 (2-byte) or 1587232876 (4-byte)
-        /// </value>
-        [JsonProperty(PropertyName = "customerAsn")]
-        public System.Nullable<long> CustomerAsn { get; set; }
-        
-        /// <value>
-        /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
-        /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
-        /// </value>
-        [JsonProperty(PropertyName = "definedTags")]
-        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
@@ -137,13 +71,6 @@ namespace Oci.VnmonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
-        
-        /// <value>
-        /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
-        /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
-        /// </value>
-        [JsonProperty(PropertyName = "freeformTags")]
-        public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
         /// For private virtual circuits only. The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the {@link Drg}
@@ -170,13 +97,6 @@ namespace Oci.VnmonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "providerServiceId")]
         public string ProviderServiceId { get; set; }
-        
-        /// <value>
-        /// The service key name offered by the provider (if the customer is connecting via a provider).
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "providerServiceKeyName")]
-        public string ProviderServiceKeyName { get; set; }
         
         /// <value>
         /// Deprecated. Instead use `providerServiceId`.
@@ -230,13 +150,6 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "type")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<TypeEnum> Type { get; set; }
-        
-        /// <value>
-        /// The layer 3 IP MTU to use with this virtual circuit.
-        /// </value>
-        [JsonProperty(PropertyName = "ipMtu")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<VirtualCircuitIpMtu> IpMtu { get; set; }
         
     }
 }

@@ -81,10 +81,18 @@ namespace Oci.DistributeddatabaseService.Models
         public string CloudAutonomousVmClusterId { get; set; }
         
         /// <value>
-        /// The collection of [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the peer cloudAutonomousExadataVMClusters.
+        /// This field is deprecated. This should not be used while creation of new distributed autonomous database. To set the peers
+        /// on new shards of distributed autonomous database please use peerDetails.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "peerCloudAutonomousVmClusterIds")]
         public System.Collections.Generic.List<string> PeerCloudAutonomousVmClusterIds { get; set; }
+        
+        /// <value>
+        /// The details required for creation of the peer for the autonomous dedicated infrastructure based shard.
+        /// </value>
+        [JsonProperty(PropertyName = "peerDetails")]
+        public System.Collections.Generic.List<CreateShardPeerWithDedicatedInfraDetails> PeerDetails { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Oracle Cloud Infrastructure [vault](https://docs.cloud.oracle.com/Content/KeyManagement/Concepts/keyoverview.htm#concepts). This parameter and `kmsKeyId` are required for Customer Managed Keys.

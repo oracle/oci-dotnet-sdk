@@ -72,7 +72,7 @@ namespace Oci.DistributeddatabaseService.Models
         public string CloudAutonomousVmClusterId { get; set; }
         
         /// <value>
-        /// The collection of [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the peer cloudAutonomousVmClusters.
+        /// This field is deprecated. For shard peer details please refer peerDetails attribute.
         /// </value>
         [JsonProperty(PropertyName = "peerCloudAutonomousVmClusterIds")]
         public System.Collections.Generic.List<string> PeerCloudAutonomousVmClusterIds { get; set; }

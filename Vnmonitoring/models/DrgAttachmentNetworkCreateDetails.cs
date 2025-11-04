@@ -23,7 +23,19 @@ namespace Oci.VnmonitoringService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "VCN")]
-            Vcn
+            Vcn,
+            [EnumMember(Value = "VIRTUAL_CIRCUIT")]
+            VirtualCircuit,
+            [EnumMember(Value = "REMOTE_PEERING_CONNECTION")]
+            RemotePeeringConnection,
+            [EnumMember(Value = "IPSEC_TUNNEL")]
+            IpsecTunnel,
+            [EnumMember(Value = "LOOPBACK")]
+            Loopback,
+            [EnumMember(Value = "FLEX_TUNNEL")]
+            FlexTunnel,
+            [EnumMember(Value = "INTERNET")]
+            Internet
         };
 
         
@@ -56,8 +68,26 @@ namespace Oci.VnmonitoringService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "IPSEC_TUNNEL":
+                    obj = new IpsecTunnelDrgAttachmentNetworkCreateDetails();
+                    break;
+                case "LOOPBACK":
+                    obj = new LoopBackDrgAttachmentNetworkCreateDetails();
+                    break;
+                case "VIRTUAL_CIRCUIT":
+                    obj = new VirtualCircuitDrgAttachmentNetworkCreateDetails();
+                    break;
+                case "REMOTE_PEERING_CONNECTION":
+                    obj = new RemotePeeringConnectionDrgAttachmentNetworkCreateDetails();
+                    break;
+                case "INTERNET":
+                    obj = new InternetDrgAttachmentNetworkCreateDetails();
+                    break;
                 case "VCN":
                     obj = new VcnDrgAttachmentNetworkCreateDetails();
+                    break;
+                case "FLEX_TUNNEL":
+                    obj = new FlexTunnelDrgAttachmentNetworkCreateDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

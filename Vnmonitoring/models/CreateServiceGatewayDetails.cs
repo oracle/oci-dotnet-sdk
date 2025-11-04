@@ -20,7 +20,7 @@ namespace Oci.VnmonitoringService.Models
     {
         
         /// <value>
-        /// The [OCID] (https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to contain the service gateway.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment to contain the service gateway.
         /// 
         /// </value>
         /// <remarks>
@@ -51,20 +51,6 @@ namespace Oci.VnmonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the service gateway will use.
-        /// <br/>
-        /// If you don't specify a route table here, the service gateway is created without an associated route
-        /// table. The Networking service does NOT automatically associate the attached VCN's default route table
-        /// with the service gateway.
-        /// <br/>
-        /// For information about why you would associate a route table with a service gateway, see
-        /// [Transit Routing: Private Access to Oracle Services](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitroutingoracleservices.htm).
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "routeTableId")]
-        public string RouteTableId { get; set; }
         
         /// <value>
         /// List of the OCIDs of the {@link Service} objects to

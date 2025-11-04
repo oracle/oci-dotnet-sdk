@@ -95,11 +95,5 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "privateIpId")]
         public string PrivateIpId { get; set; }
         
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the public IP pool.
-        /// </value>
-        [JsonProperty(PropertyName = "publicIpPoolId")]
-        public string PublicIpPoolId { get; set; }
-        
     }
 }

@@ -179,7 +179,7 @@ namespace Oci.DistributeddatabaseService.Models
         public System.Nullable<ShardingMethodEnum> ShardingMethod { get; set; }
                 ///
         /// <value>
-        /// Possible workload types.
+        /// Possible workload types. Currently only OLTP workload type is supported.
         /// </value>
         ///
         public enum DbWorkloadEnum {
@@ -193,7 +193,7 @@ namespace Oci.DistributeddatabaseService.Models
         };
 
         /// <value>
-        /// Possible workload types.
+        /// Possible workload types. Currently only OLTP workload type is supported.
         /// </value>
         /// <remarks>
         /// Required
@@ -300,7 +300,9 @@ namespace Oci.DistributeddatabaseService.Models
         public System.Nullable<int> ReplicationFactor { get; set; }
         
         /// <value>
-        /// For RAFT replication based Globally distributed autonomous database, the value should be atleast twice the number of shards.
+        /// The replication unit count for RAFT based distributed autonomous database. For RAFT replication based
+        /// Globally distributed autonomous database, the value should be at least twice the number of shards.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "replicationUnit")]
         public System.Nullable<int> ReplicationUnit { get; set; }
@@ -350,6 +352,9 @@ namespace Oci.DistributeddatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "gsmDetails")]
         public System.Collections.Generic.List<DistributedAutonomousDatabaseGsm> GsmDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "dbBackupConfig")]
+        public DistributedAutonomousDbBackupConfig DbBackupConfig { get; set; }
         
         [JsonProperty(PropertyName = "metadata")]
         public DistributedAutonomousDbMetadata Metadata { get; set; }
