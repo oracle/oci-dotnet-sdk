@@ -70,26 +70,6 @@ namespace Oci.VnmonitoringService.Models
         [Required(ErrorMessage = "VcnId is required.")]
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
-                ///
-        /// <value>
-        /// The search domain name type of DHCP options
-        /// </value>
-        ///
-        public enum DomainNameTypeEnum {
-            [EnumMember(Value = "SUBNET_DOMAIN")]
-            SubnetDomain,
-            [EnumMember(Value = "VCN_DOMAIN")]
-            VcnDomain,
-            [EnumMember(Value = "CUSTOM_DOMAIN")]
-            CustomDomain
-        };
-
-        /// <value>
-        /// The search domain name type of DHCP options
-        /// </value>
-        [JsonProperty(PropertyName = "domainNameType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<DomainNameTypeEnum> DomainNameType { get; set; }
         
     }
 }

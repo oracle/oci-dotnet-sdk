@@ -27,6 +27,28 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "ids")]
         public System.Collections.Generic.List<string> Ids { get; set; }
         
+        /// <value>
+        /// The MPLS label of the DRG attachment.
+        /// </value>
+        [JsonProperty(PropertyName = "mplsLabel")]
+        public System.Nullable<int> MplsLabel { get; set; }
+        
+        /// <value>
+        /// Routes which may be imported from the attachment (subject to import policy) appear in the route reflectors
+        /// tagged with the attachment's import route target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "importRouteTarget")]
+        public string ImportRouteTarget { get; set; }
+        
+        /// <value>
+        /// Routes which are exported to the attachment are exported to the route reflectors
+        /// with the route target set to the value of the attachment's export route target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "exportRouteTarget")]
+        public string ExportRouteTarget { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "LOOPBACK";
     }

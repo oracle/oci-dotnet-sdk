@@ -23,7 +23,13 @@ namespace Oci.VnmonitoringService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "VCN")]
-            Vcn
+            Vcn,
+            [EnumMember(Value = "VIRTUAL_CIRCUIT")]
+            VirtualCircuit,
+            [EnumMember(Value = "LOOPBACK")]
+            Loopback,
+            [EnumMember(Value = "INTERNET")]
+            Internet
         };
 
         
@@ -49,6 +55,15 @@ namespace Oci.VnmonitoringService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "INTERNET":
+                    obj = new InternetDrgAttachmentNetworkUpdateDetails();
+                    break;
+                case "VIRTUAL_CIRCUIT":
+                    obj = new VirtualCircuitDrgAttachmentNetworkUpdateDetails();
+                    break;
+                case "LOOPBACK":
+                    obj = new LoopbackDrgAttachmentNetworkUpdateDetails();
+                    break;
                 case "VCN":
                     obj = new VcnDrgAttachmentNetworkUpdateDetails();
                     break;

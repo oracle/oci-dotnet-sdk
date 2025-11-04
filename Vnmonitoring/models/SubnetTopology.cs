@@ -16,7 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.VnmonitoringService.Models
 {
     /// <summary>
-    /// Defines the visualization of a subnet in a VCN.
+    /// Defines the visualization of a subnet in a VCN. 
+    /// See [Network Visualizer Documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/network_visualizer.htm) for more information, including
+    /// conventions and pictures of symbols.
+    /// 
     /// </summary>
     public class SubnetTopology : Topology
     {

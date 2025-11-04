@@ -65,17 +65,5 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "exportDrgRouteDistributionId")]
         public string ExportDrgRouteDistributionId { get; set; }
         
-        /// <value>
-        /// This is the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table that is used to route the traffic as it enters a VCN through this attachment.
-        /// <br/>
-        /// For information about why you would associate a route table with a DRG attachment, see:
-        /// <br/>
-        ///   * [Transit Routing: Access to Multiple VCNs in Same Region](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitrouting.htm)
-        ///   * [Transit Routing: Private Access to Oracle Services](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/transitroutingoracleservices.htm)
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "routeTableId")]
-        public string RouteTableId { get; set; }
-        
     }
 }

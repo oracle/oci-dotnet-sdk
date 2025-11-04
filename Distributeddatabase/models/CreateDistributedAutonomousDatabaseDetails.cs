@@ -96,7 +96,7 @@ namespace Oci.DistributeddatabaseService.Models
         public System.Nullable<ShardingMethodEnum> ShardingMethod { get; set; }
                 ///
         /// <value>
-        /// Possible workload types.
+        /// Possible workload types. Currently only OLTP workload type is supported.
         /// </value>
         ///
         public enum DbWorkloadEnum {
@@ -107,7 +107,7 @@ namespace Oci.DistributeddatabaseService.Models
         };
 
         /// <value>
-        /// Possible workload types.
+        /// Possible workload types. Currently only OLTP workload type is supported.
         /// </value>
         /// <remarks>
         /// Required
@@ -138,15 +138,20 @@ namespace Oci.DistributeddatabaseService.Models
         public string NcharacterSet { get; set; }
         
         /// <value>
-        /// The default number of unique chunks in a shardspace. The value of chunks must be
-        /// greater than 2 times the size of the largest shardgroup in any shardspace.
+        /// Number of chunks in a shardspace. The value of chunks must be
+        /// greater than 2 times the size of the largest shardgroup in any shardspace. Chunks is
+        /// required to be provided for distributed autonomous databases being created with
+        /// SYSTEM shardingMethod. For USER shardingMethod, chunks should not be set in create payload.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "chunks")]
         public System.Nullable<int> Chunks { get; set; }
         
         /// <value>
-        /// The listener port number for the Globally distributed autonomous database.
+        /// The listener port number for the Globally distributed autonomous database. The listener port number
+        /// has to be unique for a customer tenancy across all distributed autonomous databases. Same port number
+        /// should not be re-used for any other distributed autonomous database.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -156,13 +161,20 @@ namespace Oci.DistributeddatabaseService.Models
         public System.Nullable<int> ListenerPort { get; set; }
         
         /// <value>
-        /// The TLS listener port number for Globally distributed autonomous database.
+        /// The TLS listener port number for Globally distributed autonomous database. The TLS listener port number
+        /// has to be unique for a customer tenancy across all distributed autonomous databases. Same port number
+        /// should not be re-used for any other distributed autonomous database. The listenerPortTls is mandatory
+        /// for dedicated infrastructure based distributed autonomous databases.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "listenerPortTls")]
         public System.Nullable<int> ListenerPortTls { get; set; }
         
         /// <value>
-        /// Ons local port number.
+        /// Ons local port number for Globally distributed autonomous database. The onsPortLocal has to be unique for
+        /// a customer tenancy across all distributed autonomous databases. Same port number should not be re-used for
+        /// any other distributed autonomous database.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -172,7 +184,10 @@ namespace Oci.DistributeddatabaseService.Models
         public System.Nullable<int> OnsPortLocal { get; set; }
         
         /// <value>
-        /// Ons remote port number.
+        /// Ons remote port number for Globally distributed autonomous database. The onsPortRemote has to be unique for
+        /// a customer tenancy across all distributed autonomous databases. Same port number should not be re-used for
+        /// any other distributed autonomous database.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -182,8 +197,10 @@ namespace Oci.DistributeddatabaseService.Models
         public System.Nullable<int> OnsPortRemote { get; set; }
                 ///
         /// <value>
-        /// The Replication method for Globally distributed autonomous database. Use RAFT for Raft replication, and DG for
-        /// DataGuard. If replicationMethod is not provided, it defaults to DG.
+        /// The Replication method for Globally distributed autonomous database. Use RAFT for Raft based replication.
+        /// With RAFT replication, shards cannot have peers details set on them. In case shards need to
+        /// have peers, please do not set RAFT replicationMethod. For all non RAFT replication cases (with or
+        /// without peers), please set replicationMethod as DG or do not set any value for replicationMethod.
         /// 
         /// </value>
         ///
@@ -195,8 +212,10 @@ namespace Oci.DistributeddatabaseService.Models
         };
 
         /// <value>
-        /// The Replication method for Globally distributed autonomous database. Use RAFT for Raft replication, and DG for
-        /// DataGuard. If replicationMethod is not provided, it defaults to DG.
+        /// The Replication method for Globally distributed autonomous database. Use RAFT for Raft based replication.
+        /// With RAFT replication, shards cannot have peers details set on them. In case shards need to
+        /// have peers, please do not set RAFT replicationMethod. For all non RAFT replication cases (with or
+        /// without peers), please set replicationMethod as DG or do not set any value for replicationMethod.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "replicationMethod")]
@@ -211,7 +230,9 @@ namespace Oci.DistributeddatabaseService.Models
         public System.Nullable<int> ReplicationFactor { get; set; }
         
         /// <value>
-        /// For RAFT replication based Globally distributed autonomous database, the value should be atleast twice the number of shards.
+        /// The replication unit count for RAFT based distributed autonomous database. For RAFT replication based
+        /// Globally distributed autonomous database, the value should be at least twice the number of shards.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "replicationUnit")]
         public System.Nullable<int> ReplicationUnit { get; set; }
@@ -257,6 +278,9 @@ namespace Oci.DistributeddatabaseService.Models
         [Required(ErrorMessage = "CatalogDetails is required.")]
         [JsonProperty(PropertyName = "catalogDetails")]
         public System.Collections.Generic.List<CreateDistributedAutonomousDatabaseCatalogDetails> CatalogDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "dbBackupConfig")]
+        public DistributedAutonomousDbBackupConfig DbBackupConfig { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

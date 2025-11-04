@@ -825,7 +825,7 @@ namespace Oci.DistributeddatabaseService
         }
 
         /// <summary>
-        /// Rotate passwords for different components of the Globally distributed database.
+        /// Rotate the gsmuser and gsmcatuser passwords for shards and catalog of the Globally distributed database.  This operation will also remove GdsCtlNodes if present.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

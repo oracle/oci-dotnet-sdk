@@ -33,9 +33,7 @@ namespace Oci.VnmonitoringService.Models
             [EnumMember(Value = "DRG_ATTACHMENT_TYPE")]
             DrgAttachmentType,
             [EnumMember(Value = "DRG_ATTACHMENT_ID")]
-            DrgAttachmentId,
-            [EnumMember(Value = "MATCH_ALL")]
-            MatchAll
+            DrgAttachmentId
         };
 
         
@@ -66,9 +64,6 @@ namespace Oci.VnmonitoringService.Models
                     break;
                 case "DRG_ATTACHMENT_TYPE":
                     obj = new DrgAttachmentTypeDrgRouteDistributionMatchCriteria();
-                    break;
-                case "MATCH_ALL":
-                    obj = new DrgAttachmentMatchAllDrgRouteDistributionMatchCriteria();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

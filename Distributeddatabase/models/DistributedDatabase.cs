@@ -278,7 +278,9 @@ namespace Oci.DistributeddatabaseService.Models
         public System.Nullable<int> ReplicationFactor { get; set; }
         
         /// <value>
-        /// For RAFT replication based Globally distributed database, the value should be atleast twice the number of shards.
+        /// The replication unit count for RAFT based distributed database. For RAFT replication based
+        /// Globally distributed database, the value should be at least twice the number of shards.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "replicationUnit")]
         public System.Nullable<int> ReplicationUnit { get; set; }

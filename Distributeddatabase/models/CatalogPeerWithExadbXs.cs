@@ -42,7 +42,7 @@ namespace Oci.DistributeddatabaseService.Models
         public string ShardGroup { get; set; }
                 ///
         /// <value>
-        /// Status of catalog with VmCluster for the Globally ditributed database.
+        /// Status of EXADB_XS based catalog peer.
         /// </value>
         ///
         public enum StatusEnum {
@@ -70,7 +70,7 @@ namespace Oci.DistributeddatabaseService.Models
         };
 
         /// <value>
-        /// Status of catalog with VmCluster for the Globally ditributed database.
+        /// Status of EXADB_XS based catalog peer.
         /// </value>
         /// <remarks>
         /// Required
@@ -111,6 +111,20 @@ namespace Oci.DistributeddatabaseService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The protectionMode for the catalog peer.
+        /// </value>
+        [JsonProperty(PropertyName = "protectionMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DistributedDbProtectionMode> ProtectionMode { get; set; }
+        
+        /// <value>
+        /// The redo transport type to use for this Data Guard association.
+        /// </value>
+        [JsonProperty(PropertyName = "transportType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DistributedDbTransportType> TransportType { get; set; }
         
         [JsonProperty(PropertyName = "metadata")]
         public DistributedDbMetadata Metadata { get; set; }

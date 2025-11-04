@@ -112,6 +112,34 @@ namespace Oci.DistributeddatabaseService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        /// <value>
+        /// The protectionMode for the shard peer.
+        /// </value>
+        [JsonProperty(PropertyName = "protectionMode")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DistributedAutonomousDbProtectionMode> ProtectionMode { get; set; }
+        
+        /// <value>
+        /// The lag time for my preference based on data loss tolerance in seconds.
+        /// </value>
+        [JsonProperty(PropertyName = "fastStartFailOverLagLimitInSeconds")]
+        public System.Nullable<int> FastStartFailOverLagLimitInSeconds { get; set; }
+        
+        /// <value>
+        /// Indicates whether Automatic Failover is enabled for Autonomous Container Database Dataguard Association
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAutomaticFailoverEnabled")]
+        public System.Nullable<bool> IsAutomaticFailoverEnabled { get; set; }
+        
+        /// <value>
+        /// The scheduling detail for the quarterly maintenance window of the standby Autonomous Container Database.
+        /// This value represents the number of days before schedlued maintenance of the primary database.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "standbyMaintenanceBufferInDays")]
+        public System.Nullable<int> StandbyMaintenanceBufferInDays { get; set; }
+        
         [JsonProperty(PropertyName = "metadata")]
         public DistributedAutonomousDbMetadata Metadata { get; set; }
         

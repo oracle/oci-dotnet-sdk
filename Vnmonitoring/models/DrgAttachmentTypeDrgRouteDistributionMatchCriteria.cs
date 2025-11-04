@@ -37,7 +37,11 @@ namespace Oci.VnmonitoringService.Models
             [EnumMember(Value = "REMOTE_PEERING_CONNECTION")]
             RemotePeeringConnection,
             [EnumMember(Value = "IPSEC_TUNNEL")]
-            IpsecTunnel
+            IpsecTunnel,
+            [EnumMember(Value = "FLEX_TUNNEL")]
+            FlexTunnel,
+            [EnumMember(Value = "LOOPBACK")]
+            Loopback
         };
 
         /// <value>

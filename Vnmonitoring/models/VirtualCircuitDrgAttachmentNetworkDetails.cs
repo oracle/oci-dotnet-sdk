@@ -22,6 +22,92 @@ namespace Oci.VnmonitoringService.Models
     {
         
         /// <value>
+        /// Whether the Fast Connect is an FFAB VirtualCircuit.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isFFAB")]
+        public System.Nullable<bool> IsFFAB { get; set; }
+        
+        /// <value>
+        /// This indicates whether FastConnect extends through an edge POP region.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isEdgePop")]
+        public System.Nullable<bool> IsEdgePop { get; set; }
+        
+        /// <value>
+        /// Routes which may be imported from the attachment (subject to import policy) appear in the route reflectors
+        /// tagged with the attachment's import route target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "importRouteTarget")]
+        public string ImportRouteTarget { get; set; }
+        
+        /// <value>
+        /// Routes which are exported to the attachment are exported to the route reflectors
+        /// with the route target set to the value of the attachment's export route target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "exportRouteTarget")]
+        public string ExportRouteTarget { get; set; }
+        
+        /// <value>
+        /// The MPLS label of the DRG attachment.
+        /// </value>
+        [JsonProperty(PropertyName = "mplsLabel")]
+        public System.Nullable<int> MplsLabel { get; set; }
+        
+        /// <value>
+        /// The BGP ASN to use for the IPSec connection's route target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "regionalOciAsn")]
+        public string RegionalOciAsn { get; set; }
+        
+        /// <value>
+        /// The Oracle Cloud Infrastructure region name.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "regionName")]
+        public string RegionName { get; set; }
+        
+        /// <value>
+        /// Common Export route target to use for the DRG Attachment instead of per-attachment route target.
+        /// This is applicable to DRG attachments that are assigned to a DRG route table which is whitelisted for high
+        /// throughput mode.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "commonExportRT")]
+        public string CommonExportRT { get; set; }
+        
+        /// <value>
+        /// Common Import route target to use for the DRG attachment instead of per-attachment import route target.
+        /// This is applicable to DRG attachments that are assigned to a DRG route table which is whitelisted for high
+        /// throughput mode.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "commonImportRT")]
+        public string CommonImportRT { get; set; }
+        
+        /// <value>
+        /// This indicates whether the DRG route table associated with the DRG attachment is whitelisted for High Throughput mode.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isIngressDisintermediationEnabled")]
+        public System.Nullable<bool> IsIngressDisintermediationEnabled { get; set; }
+        
+        /// <value>
+        /// This indicates whether the DRG route table associated with the DRG attachment is whitelisted for route unification.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isRouteUnificationEnabled")]
+        public System.Nullable<bool> IsRouteUnificationEnabled { get; set; }
+        
+        /// <value>
         /// Boolean flag that determines wether all traffic over the virtual circuits is encrypted.
         /// <br/>
         /// Example: true
