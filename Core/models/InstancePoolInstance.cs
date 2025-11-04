@@ -64,7 +64,11 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "ACTIVE")]
             Active,
             [EnumMember(Value = "DETACHING")]
-            Detaching
+            Detaching,
+            [EnumMember(Value = "TERMINATION_AWAIT")]
+            TerminationAwait,
+            [EnumMember(Value = "TERMINATION_PROCEED")]
+            TerminationProceed
         };
 
         /// <value>

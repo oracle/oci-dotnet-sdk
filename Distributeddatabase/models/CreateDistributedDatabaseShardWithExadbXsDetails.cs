@@ -42,10 +42,18 @@ namespace Oci.DistributeddatabaseService.Models
         public string AdminPassword { get; set; }
         
         /// <value>
-        /// The collection of [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the peer VmClusterIds.
+        /// This field is deprecated. This should not be used while creation of new distributed database. To set the peers
+        /// on new shards of distributed database please use peerDetails.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "peerVmClusterIds")]
         public System.Collections.Generic.List<string> PeerVmClusterIds { get; set; }
+        
+        /// <value>
+        /// The details required for creation of the peer for the ExadbXs infrastructure based shard.
+        /// </value>
+        [JsonProperty(PropertyName = "peerDetails")]
+        public System.Collections.Generic.List<CreateShardPeerWithExadbXsDetails> PeerDetails { get; set; }
         
         /// <value>
         /// The shard space name for the Globally distributed database. Shard space for existing shard cannot be changed, once shard is created.

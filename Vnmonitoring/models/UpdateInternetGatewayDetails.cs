@@ -47,11 +47,5 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "isEnabled")]
         public System.Nullable<bool> IsEnabled { get; set; }
         
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route table the Internet Gateway is using.
-        /// </value>
-        [JsonProperty(PropertyName = "routeTableId")]
-        public string RouteTableId { get; set; }
-        
     }
 }

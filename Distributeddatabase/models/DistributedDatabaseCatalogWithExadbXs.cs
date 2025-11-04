@@ -67,7 +67,7 @@ namespace Oci.DistributeddatabaseService.Models
         public string KmsKeyVersionId { get; set; }
                 ///
         /// <value>
-        /// Status of catalog with VmCluster for the Globally ditributed database.
+        /// Status of EXADB_XS based catalog.
         /// </value>
         ///
         public enum StatusEnum {
@@ -95,7 +95,7 @@ namespace Oci.DistributeddatabaseService.Models
         };
 
         /// <value>
-        /// Status of catalog with VmCluster for the Globally ditributed database.
+        /// Status of EXADB_XS based catalog.
         /// </value>
         /// <remarks>
         /// Required

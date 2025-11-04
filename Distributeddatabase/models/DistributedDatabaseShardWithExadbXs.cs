@@ -75,7 +75,7 @@ namespace Oci.DistributeddatabaseService.Models
         public string KmsKeyVersionId { get; set; }
                 ///
         /// <value>
-        /// Status of shard based on exadbxs for the Globally ditributed database.
+        /// Status of EXADB_XS based shard.
         /// </value>
         ///
         public enum StatusEnum {
@@ -103,7 +103,7 @@ namespace Oci.DistributeddatabaseService.Models
         };
 
         /// <value>
-        /// Status of shard based on exadbxs for the Globally ditributed database.
+        /// Status of EXADB_XS based shard.
         /// </value>
         /// <remarks>
         /// Required

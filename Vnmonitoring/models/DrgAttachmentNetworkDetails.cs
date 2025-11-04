@@ -29,7 +29,13 @@ namespace Oci.VnmonitoringService.Models
             [EnumMember(Value = "VIRTUAL_CIRCUIT")]
             VirtualCircuit,
             [EnumMember(Value = "REMOTE_PEERING_CONNECTION")]
-            RemotePeeringConnection
+            RemotePeeringConnection,
+            [EnumMember(Value = "FLEX_TUNNEL")]
+            FlexTunnel,
+            [EnumMember(Value = "LOOPBACK")]
+            Loopback,
+            [EnumMember(Value = "INTERNET")]
+            Internet
         };
 
         
@@ -65,6 +71,9 @@ namespace Oci.VnmonitoringService.Models
                 case "VCN":
                     obj = new VcnDrgAttachmentNetworkDetails();
                     break;
+                case "INTERNET":
+                    obj = new InternetDrgAttachmentNetworkDetails();
+                    break;
                 case "LOOPBACK":
                     obj = new LoopBackDrgAttachmentNetworkDetails();
                     break;
@@ -73,6 +82,9 @@ namespace Oci.VnmonitoringService.Models
                     break;
                 case "VIRTUAL_CIRCUIT":
                     obj = new VirtualCircuitDrgAttachmentNetworkDetails();
+                    break;
+                case "FLEX_TUNNEL":
+                    obj = new FlexTunnelDrgAttachmentNetworkDetails();
                     break;
                 case "REMOTE_PEERING_CONNECTION":
                     obj = new RemotePeeringConnectionDrgAttachmentNetworkDetails();

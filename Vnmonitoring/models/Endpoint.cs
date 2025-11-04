@@ -47,7 +47,9 @@ namespace Oci.VnmonitoringService.Models
             [EnumMember(Value = "VLAN")]
             Vlan,
             [EnumMember(Value = "ON_PREM")]
-            OnPrem
+            OnPrem,
+            [EnumMember(Value = "PRIVATE_SERVICE_ACCESS")]
+            PrivateServiceAccess
         };
 
         
@@ -85,6 +87,9 @@ namespace Oci.VnmonitoringService.Models
                     break;
                 case "ON_PREM":
                     obj = new OnPremEndpoint();
+                    break;
+                case "PRIVATE_SERVICE_ACCESS":
+                    obj = new PrivateServiceAccessEndpoint();
                     break;
                 case "LOAD_BALANCER":
                     obj = new LoadBalancerEndpoint();

@@ -16,9 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.VnmonitoringService.Models
 {
     /// <summary>
-    /// Deprecated. For tunnel information, instead see
-    /// {@link IPSecConnectionTunnel}.
-    /// 
+    /// Status of the IPSec connection.
     /// </summary>
     public class IPSecConnectionDeviceStatus 
     {

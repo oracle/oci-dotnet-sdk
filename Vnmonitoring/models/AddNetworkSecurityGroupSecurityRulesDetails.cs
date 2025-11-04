@@ -20,7 +20,10 @@ namespace Oci.VnmonitoringService.Models
     {
         
         /// <value>
-        /// The NSG security rules to add.
+        /// An array of security rules to add to the NSG. You can add up to 25 rules in a single
+        /// `AddNetworkSecurityGroupSecurityRules` operation.
+        /// Adding more than 25 rules requires multiple operations.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "securityRules")]
         public System.Collections.Generic.List<AddSecurityRuleDetails> SecurityRules { get; set; }

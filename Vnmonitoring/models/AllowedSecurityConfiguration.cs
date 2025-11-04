@@ -38,7 +38,11 @@ namespace Oci.VnmonitoringService.Models
             [EnumMember(Value = "EGRESS_SECURITY_LIST")]
             EgressSecurityList,
             [EnumMember(Value = "STATEFUL_EGRESS_SECURITY_LIST")]
-            StatefulEgressSecurityList
+            StatefulEgressSecurityList,
+            [EnumMember(Value = "ZPR")]
+            Zpr,
+            [EnumMember(Value = "STATEFUL_ZPR")]
+            StatefulZpr
         };
 
         
@@ -68,8 +72,14 @@ namespace Oci.VnmonitoringService.Models
                 case "STATEFUL_EGRESS_SECURITY_LIST":
                     obj = new StatefulEgressSecurityListConfiguration();
                     break;
+                case "STATEFUL_ZPR":
+                    obj = new StatefulZprConfiguration();
+                    break;
                 case "NSG":
                     obj = new NsgConfiguration();
+                    break;
+                case "ZPR":
+                    obj = new ZprConfiguration();
                     break;
                 case "INGRESS_SECURITY_LIST":
                     obj = new IngressSecurityListConfiguration();

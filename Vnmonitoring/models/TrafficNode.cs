@@ -47,6 +47,12 @@ namespace Oci.VnmonitoringService.Models
         [JsonProperty(PropertyName = "ingressSecurityAction")]
         public SecurityAction IngressSecurityAction { get; set; }
         
+        [JsonProperty(PropertyName = "zprEgressSecurityAction")]
+        public SecurityAction ZprEgressSecurityAction { get; set; }
+        
+        [JsonProperty(PropertyName = "zprIngressSecurityAction")]
+        public SecurityAction ZprIngressSecurityAction { get; set; }
+        
     }
 
     public class TrafficNodeModelConverter : JsonConverter

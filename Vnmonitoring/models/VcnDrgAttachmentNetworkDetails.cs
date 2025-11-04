@@ -32,28 +32,6 @@ namespace Oci.VnmonitoringService.Models
         /// </value>
         [JsonProperty(PropertyName = "routeTableId")]
         public string RouteTableId { get; set; }
-                ///
-        /// <value>
-        /// Indicates whether the VCN CIDRs or the individual subnet CIDRs are imported from the attachment.
-        /// Routes from the VCN ingress route table are always imported.
-        /// 
-        /// </value>
-        ///
-        public enum VcnRouteTypeEnum {
-            [EnumMember(Value = "VCN_CIDRS")]
-            VcnCidrs,
-            [EnumMember(Value = "SUBNET_CIDRS")]
-            SubnetCidrs
-        };
-
-        /// <value>
-        /// Indicates whether the VCN CIDRs or the individual subnet CIDRs are imported from the attachment.
-        /// Routes from the VCN ingress route table are always imported.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "vcnRouteType")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<VcnRouteTypeEnum> VcnRouteType { get; set; }
         
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "VCN";

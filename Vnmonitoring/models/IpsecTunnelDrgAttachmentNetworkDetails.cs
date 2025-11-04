@@ -28,6 +28,74 @@ namespace Oci.VnmonitoringService.Models
         public string IpsecConnectionId { get; set; }
         
         /// <value>
+        /// Routes which may be imported from the attachment (subject to import policy) appear in the route reflectors
+        /// tagged with the attachment's import route target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "importRouteTarget")]
+        public string ImportRouteTarget { get; set; }
+        
+        /// <value>
+        /// Routes which are exported to the attachment are exported to the route reflectors
+        /// with the route target set to the value of the attachment's export route target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "exportRouteTarget")]
+        public string ExportRouteTarget { get; set; }
+        
+        /// <value>
+        /// The MPLS label of the DRG attachment.
+        /// </value>
+        [JsonProperty(PropertyName = "mplsLabel")]
+        public System.Nullable<int> MplsLabel { get; set; }
+        
+        /// <value>
+        /// The BGP ASN to use for the IPSec connection's route target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "regionalOciAsn")]
+        public string RegionalOciAsn { get; set; }
+        
+        /// <value>
+        /// IPv4 address used to encapsulate ingress traffic to the DRG through this attachment
+        /// </value>
+        [JsonProperty(PropertyName = "ingressVip")]
+        public string IngressVip { get; set; }
+        
+        /// <value>
+        /// Whether traffic from this network is forwarded to the El Paso Gamma VIPs (or not)
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isGammaDrg")]
+        public System.Nullable<bool> IsGammaDrg { get; set; }
+        
+        /// <value>
+        /// Common Export route target to use for the DRG Attachment instead of per-attachment route target.
+        /// This is applicable to DRG attachments that are assigned to a DRG route table which is whitelisted for 
+        /// route unification.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "commonExportRT")]
+        public string CommonExportRT { get; set; }
+        
+        /// <value>
+        /// Common Import route target to use for the DRG attachment instead of per-attachment import route target.
+        /// This is applicable to DRG attachments that are assigned to a DRG route table which is whitelisted for 
+        /// route unification.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "commonImportRT")]
+        public string CommonImportRT { get; set; }
+        
+        /// <value>
+        /// This indicates whether the DRG route table associated with the DRG attachment is whitelisted for route unification.
+        /// <br/>
+        /// Example: true
+        /// </value>
+        [JsonProperty(PropertyName = "isRouteUnificationEnabled")]
+        public System.Nullable<bool> IsRouteUnificationEnabled { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the virtual circuit's DRG attachment.
         /// </value>
         [JsonProperty(PropertyName = "transportAttachmentId")]
