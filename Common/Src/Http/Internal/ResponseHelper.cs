@@ -114,10 +114,10 @@ namespace Oci.Common.Http.Internal
             }
             catch (Exception e)
             {
-                logger.Warn($"Failed to parse response body: \n{e.StackTrace}");
+                logger.Warn($"Failed to parse response body: \n{content}");
                 // Throw the exception instead of wrapping it with OciException.
                 // This is to differentiate errors coming from service side and errors from SDK serialization/deserialization.
-                throw e;
+                throw;
 
             }
         }
