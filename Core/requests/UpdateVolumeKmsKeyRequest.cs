@@ -47,5 +47,13 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "if-match")]
         public string IfMatch { get; set; }
+        
+        /// <value>
+        /// The endpoint that will be used to get the resource principal token 
+        /// of the parent resource.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-parent-resource-principal-token-url")]
+        public string OpcParentResourcePrincipalTokenUrl { get; set; }
     }
 }

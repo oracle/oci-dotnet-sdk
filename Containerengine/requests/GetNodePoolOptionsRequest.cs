@@ -36,6 +36,56 @@ namespace Oci.ContainerengineService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// Option to show all kubernetes patch versions
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldListAllPatchVersions")]
+        public System.Nullable<bool> ShouldListAllPatchVersions { get; set; }
+        
+        ///
+        /// <value>
+        /// Filter node pool options by OS type.
+        /// </value>
+        ///
+        public enum NodePoolOsTypeEnum {
+            [EnumMember(Value = "OL7")]
+            Ol7,
+            [EnumMember(Value = "OL8")]
+            Ol8,
+            [EnumMember(Value = "UBUNTU")]
+            Ubuntu
+        };
+
+        /// <value>
+        /// Filter node pool options by OS type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nodePoolOsType")]
+        public System.Nullable<NodePoolOsTypeEnum> NodePoolOsType { get; set; }
+        
+        ///
+        /// <value>
+        /// Filter node pool options by OS architecture.
+        /// </value>
+        ///
+        public enum NodePoolOsArchEnum {
+            [EnumMember(Value = "X86_64")]
+            X8664,
+            [EnumMember(Value = "AARCH64")]
+            Aarch64
+        };
+
+        /// <value>
+        /// Filter node pool options by OS architecture.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nodePoolOsArch")]
+        public System.Nullable<NodePoolOsArchEnum> NodePoolOsArch { get; set; }
+        
+        /// <value>
+        /// Filter node pool options by Kubernetes version.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "nodePoolK8sVersion")]
+        public string NodePoolK8sVersion { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
         /// Oracle about a particular request, please provide the request ID.
         /// 

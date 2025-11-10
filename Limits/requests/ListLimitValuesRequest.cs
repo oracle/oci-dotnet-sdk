@@ -41,11 +41,18 @@ namespace Oci.LimitsService.Requests
         public string ServiceName { get; set; }
         
         /// <value>
-        /// The OCID of the subscription assigned to tenant
+        /// The subscription OCID assigned to the tenant.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionId")]
         public string SubscriptionId { get; set; }
+        
+        /// <value>
+        /// External cloud provider location
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "externalLocation")]
+        public string ExternalLocation { get; set; }
         
         ///
         /// <value>

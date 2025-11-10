@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The details of the task
+    /// The details of the task.
     /// </summary>
     public class Task 
     {

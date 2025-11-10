@@ -131,7 +131,9 @@ namespace Oci.FleetappsmanagementService.Models
             [EnumMember(Value = "UPDATING")]
             Updating,
             [EnumMember(Value = "CREATING")]
-            Creating
+            Creating,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive
         };
 
         /// <value>

@@ -192,7 +192,45 @@ namespace Oci.GenerativeaiService.Models
             [EnumMember(Value = "MEDIUM_GENERIC_V1")]
             MediumGenericV1,
             [EnumMember(Value = "LARGE_GENERIC_V1")]
-            LargeGenericV1
+            LargeGenericV1,
+            [EnumMember(Value = "A10_X1")]
+            A10X1,
+            [EnumMember(Value = "A10_X2")]
+            A10X2,
+            [EnumMember(Value = "A10_X4")]
+            A10X4,
+            [EnumMember(Value = "A100_40G_X1")]
+            A10040GX1,
+            [EnumMember(Value = "A100_40G_X2")]
+            A10040GX2,
+            [EnumMember(Value = "A100_40G_X4")]
+            A10040GX4,
+            [EnumMember(Value = "A100_40G_X8")]
+            A10040GX8,
+            [EnumMember(Value = "A100_80G_X1")]
+            A10080GX1,
+            [EnumMember(Value = "A100_80G_X2")]
+            A10080GX2,
+            [EnumMember(Value = "A100_80G_X4")]
+            A10080GX4,
+            [EnumMember(Value = "A100_80G_X8")]
+            A10080GX8,
+            [EnumMember(Value = "H100_X1")]
+            H100X1,
+            [EnumMember(Value = "H100_X2")]
+            H100X2,
+            [EnumMember(Value = "H100_X4")]
+            H100X4,
+            [EnumMember(Value = "H100_X8")]
+            H100X8,
+            [EnumMember(Value = "H200_X1")]
+            H200X1,
+            [EnumMember(Value = "H200_X2")]
+            H200X2,
+            [EnumMember(Value = "H200_X4")]
+            H200X4,
+            [EnumMember(Value = "H200_X8")]
+            H200X8
         };
 
         /// <value>

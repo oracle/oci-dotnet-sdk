@@ -36,6 +36,12 @@ namespace Oci.ContainerengineService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// Option to show all kubernetes patch versions
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldListAllPatchVersions")]
+        public System.Nullable<bool> ShouldListAllPatchVersions { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
         /// Oracle about a particular request, please provide the request ID.
         /// 

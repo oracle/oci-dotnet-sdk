@@ -17,6 +17,8 @@ namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
     /// Version for the runbook.
+    /// Versioning runbooks in Fleet Application Management involve assigning unique identifiers or version numbers to different iterations of the runbook to track changes, improvements, and updates over time.
+    /// 
     /// </summary>
     public class RunbookVersion 
     {
@@ -85,7 +87,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string Name { get; set; }
                 ///
         /// <value>
-        /// The current state of the FleetResource.
+        /// The current state of the runbook version.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -111,7 +113,7 @@ namespace Oci.FleetappsmanagementService.Models
         };
 
         /// <value>
-        /// The current state of the FleetResource.
+        /// The current state of the runbook version.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

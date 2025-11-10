@@ -95,6 +95,14 @@ namespace Oci.FleetappsmanagementService.Requests
         public System.Nullable<CatalogListingVersionCriteriaEnum> CatalogListingVersionCriteria { get; set; }
         
         /// <value>
+        /// A filter to return only resources that match the given package type. The
+        /// state value is case-insensitive.      
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "packageType")]
+        public System.Nullable<CatalogItem.PackageTypeEnum> PackageType { get; set; }
+        
+        /// <value>
         /// The indicator to append Public Items from the root compartment to any query, when set to TRUE.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldListPublicItems")]

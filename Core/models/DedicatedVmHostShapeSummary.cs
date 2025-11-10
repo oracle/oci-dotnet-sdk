@@ -31,7 +31,7 @@ namespace Oci.CoreService.Models
         
         /// <value>
         /// The name of the dedicated VM host shape. You can enumerate all available shapes by calling
-        /// {@link DedicatedVmHostShapes}.
+        /// {@link #listDedicatedVmHostShapes(ListDedicatedVmHostShapesRequest) listDedicatedVmHostShapes}.
         /// 
         /// </value>
         /// <remarks>
@@ -40,6 +40,13 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "DedicatedVmHostShape is required.")]
         [JsonProperty(PropertyName = "dedicatedVmHostShape")]
         public string DedicatedVmHostShape { get; set; }
+        
+        /// <value>
+        /// A list of capacity configs that are supported by this dedicated VM host shape.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "capacityConfigs")]
+        public System.Collections.Generic.List<CapacityConfig> CapacityConfigs { get; set; }
         
     }
 }

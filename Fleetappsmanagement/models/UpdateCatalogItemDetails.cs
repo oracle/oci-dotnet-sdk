@@ -47,6 +47,12 @@ namespace Oci.FleetappsmanagementService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// Indicates if the CatalogItem is immutable or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isItemLocked")]
+        public System.Nullable<bool> IsItemLocked { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

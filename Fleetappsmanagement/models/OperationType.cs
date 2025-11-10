@@ -77,6 +77,14 @@ namespace Oci.FleetappsmanagementService.Models
       PublishRunbookVersion,
       [EnumMember(Value = "MOVE_TASK")]
       MoveTask,
+      [EnumMember(Value = "EXPORT_RUNBOOK")]
+      ExportRunbook,
+      [EnumMember(Value = "IMPORT_RUNBOOK")]
+      ImportRunbook,
+      [EnumMember(Value = "EXPORT_RUNBOOK_VERSION")]
+      ExportRunbookVersion,
+      [EnumMember(Value = "IMPORT_RUNBOOK_VERSION")]
+      ImportRunbookVersion,
       [EnumMember(Value = "UPDATE_TASK")]
       UpdateTask,
       [EnumMember(Value = "DELETE_TASK")]

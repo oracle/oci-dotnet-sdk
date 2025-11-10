@@ -53,6 +53,12 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "isReadOutputVariableEnabled")]
         public System.Nullable<bool> IsReadOutputVariableEnabled { get; set; }
         
+        /// <value>
+        /// The list of system variables.
+        /// </value>
+        [JsonProperty(PropertyName = "systemVariables")]
+        public System.Collections.Generic.List<string> SystemVariables { get; set; }
+        
         [JsonProperty(PropertyName = "executionType")]
         private readonly string executionType = "TERRAFORM";
     }

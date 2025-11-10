@@ -40,5 +40,8 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "instanceShapeName")]
         public string InstanceShapeName { get; set; }
         
+        [JsonProperty(PropertyName = "supportedCapabilities")]
+        public SupportedCapabilities SupportedCapabilities { get; set; }
+        
     }
 }

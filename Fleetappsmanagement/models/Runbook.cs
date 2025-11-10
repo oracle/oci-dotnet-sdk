@@ -130,7 +130,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string EstimatedTime { get; set; }
         
         /// <value>
-        /// Latest runbook version
+        /// Latest runbook version.
         /// </value>
         [JsonProperty(PropertyName = "latestVersion")]
         public string LatestVersion { get; set; }

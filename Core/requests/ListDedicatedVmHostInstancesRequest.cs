@@ -48,6 +48,13 @@ namespace Oci.CoreService.Requests
         public string AvailabilityDomain { get; set; }
         
         /// <value>
+        /// A filter to return only confidential Dedicated VM hosts (DVMH) or confidential VM instances on DVMH.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isMemoryEncryptionEnabled")]
+        public System.Nullable<bool> IsMemoryEncryptionEnabled { get; set; }
+        
+        /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a paginated
         /// \"List\" call. For important details about how pagination works, see
         /// [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).

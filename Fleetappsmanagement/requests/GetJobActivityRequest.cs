@@ -40,6 +40,13 @@ namespace Oci.FleetappsmanagementService.Requests
         public string JobActivityId { get; set; }
         
         /// <value>
+        /// If set to true, inventory details will be returned.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isDetailsRequired")]
+        public System.Nullable<bool> IsDetailsRequired { get; set; }
+        
+        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

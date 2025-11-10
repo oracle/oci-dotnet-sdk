@@ -22,7 +22,7 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// The OCID of the Inventory target.
+        /// The id of the Inventory target.
         /// </value>
         /// <remarks>
         /// Required
