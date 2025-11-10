@@ -39,10 +39,6 @@ namespace Oci.ContainerengineService.Models
         /// The OCIDs of the subnets in which to place pods for this node pool. This can be one of the node pool subnet IDs
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PodSubnetIds is required.")]
         [JsonProperty(PropertyName = "podSubnetIds")]
         public System.Collections.Generic.List<string> PodSubnetIds { get; set; }
         

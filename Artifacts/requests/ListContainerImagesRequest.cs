@@ -92,6 +92,14 @@ namespace Oci.ArtifactsService.Requests
         public string LifecycleState { get; set; }
         
         /// <value>
+        /// The digest of the container image.
+        /// <br/>
+        /// Example: sha256:e7d38b3517548a1c71e41bffe9c8ae6d6d29546ce46bf62159837aad072c90aa
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "imageDigest")]
+        public string ImageDigest { get; set; }
+        
+        /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a paginated
         /// \"List\" call. For important details about how pagination works, see
         /// [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).

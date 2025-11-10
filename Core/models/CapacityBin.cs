@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Total and remaining CPU & memory capacity for each capacity bucket.
+    /// Total and remaining CPU and memory capacity for each capacity bucket.
     /// 
     /// </summary>
     public class CapacityBin 

@@ -66,5 +66,29 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "onRunbookNewerVersion")]
         public System.Nullable<bool> OnRunbookNewerVersion { get; set; }
         
+        /// <value>
+        /// Enables or disables notification on job success.
+        /// </value>
+        [JsonProperty(PropertyName = "onJobSuccess")]
+        public System.Nullable<bool> OnJobSuccess { get; set; }
+        
+        /// <value>
+        /// Enables or disables notification on job start.
+        /// </value>
+        [JsonProperty(PropertyName = "onJobStart")]
+        public System.Nullable<bool> OnJobStart { get; set; }
+        
+        /// <value>
+        /// Enables or disables notification on job canceled.
+        /// </value>
+        [JsonProperty(PropertyName = "onJobCanceled")]
+        public System.Nullable<bool> OnJobCanceled { get; set; }
+        
+        /// <value>
+        /// Enables or disables notification on job schedule change.
+        /// </value>
+        [JsonProperty(PropertyName = "onJobScheduleChange")]
+        public System.Nullable<bool> OnJobScheduleChange { get; set; }
+        
     }
 }

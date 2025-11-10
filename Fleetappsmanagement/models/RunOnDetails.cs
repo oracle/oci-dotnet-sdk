@@ -33,7 +33,9 @@ namespace Oci.FleetappsmanagementService.Models
             [EnumMember(Value = "SELF_HOSTED_INSTANCES")]
             SelfHostedInstances,
             [EnumMember(Value = "PREVIOUS_TASK_INSTANCES")]
-            PreviousTaskInstances
+            PreviousTaskInstances,
+            [EnumMember(Value = "SCHEDULE_INSTANCE_TARGETS")]
+            ScheduleInstanceTargets
         };
 
         
@@ -68,6 +70,9 @@ namespace Oci.FleetappsmanagementService.Models
                     break;
                 case "PREVIOUS_TASK_INSTANCES":
                     obj = new PreviousTaskInstanceRunOnDetails();
+                    break;
+                case "SCHEDULE_INSTANCE_TARGETS":
+                    obj = new ScheduleInstanceTargetRunOnDetails();
                     break;
             }
             if (obj != null)

@@ -117,6 +117,12 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<bool> HasDraftVersion { get; set; }
         
         /// <value>
+        /// Original runbook version. This version belongs to original runbook using which new runbook was exported.
+        /// </value>
+        [JsonProperty(PropertyName = "originalVersion")]
+        public string OriginalVersion { get; set; }
+        
+        /// <value>
         /// The current state of the Runbook.
         /// </value>
         /// <remarks>

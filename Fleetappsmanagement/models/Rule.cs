@@ -64,6 +64,42 @@ namespace Oci.FleetappsmanagementService.Models
         [Required(ErrorMessage = "Conditions is required.")]
         [JsonProperty(PropertyName = "conditions")]
         public System.Collections.Generic.List<Condition> Conditions { get; set; }
+                ///
+        /// <value>
+        /// Match condition for the rule selection.
+        /// Include resources that match all rules or any of the rules.
+        /// Default value for `matchCondition` is ANY
+        /// 
+        /// </value>
+        ///
+        public enum MatchConditionEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MATCH_ALL")]
+            MatchAll,
+            [EnumMember(Value = "ANY")]
+            Any
+        };
+
+        /// <value>
+        /// Match condition for the rule selection.
+        /// Include resources that match all rules or any of the rules.
+        /// Default value for `matchCondition` is ANY
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "matchCondition")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<MatchConditionEnum> MatchCondition { get; set; }
+        
+        /// <value>
+        /// If set to true, resources will be returned for not only the provided compartment, but all compartments which
+        /// descend from it. Which resources are returned and their field contents depends on the value of accessLevel.
+        /// Default value for `compartmentIdInSubtree` is false
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentIdInSubtree")]
+        public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
         
     }
 }

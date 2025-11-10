@@ -113,6 +113,21 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
+        
+        /// <value>
+        /// The capacity configuration selected to be configured for the Dedicated Virtual Machine host. 
+        /// Run {@link #listDedicatedVmHostShapes(ListDedicatedVmHostShapesRequest) listDedicatedVmHostShapes} API to see details of this capacity configuration.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "capacityConfig")]
+        public string CapacityConfig { get; set; }
+        
+        /// <value>
+        /// Specifies if the Dedicated Virtual Machine Host (DVMH) is restricted to running only Confidential VMs. If `true`, only Confidential VMs can be launched. If `false`, Confidential VMs cannot be launched.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isMemoryEncryptionEnabled")]
+        public System.Nullable<bool> IsMemoryEncryptionEnabled { get; set; }
                 ///
         /// <value>
         /// The current state of the dedicated VM host.
@@ -198,7 +213,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<float> RemainingMemoryInGBs { get; set; }
         
         /// <value>
-        /// A list of total and remaining CPU & memory per capacity bucket.
+        /// A list of total and remaining CPU and memory per capacity bucket.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "capacityBins")]

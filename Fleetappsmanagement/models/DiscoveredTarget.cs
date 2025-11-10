@@ -67,6 +67,30 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
+                ///
+        /// <value>
+        /// Type of operation to be done against given target.
+        /// ADD - Add target.
+        /// REMOVE - Delete target.
+        /// 
+        /// </value>
+        ///
+        public enum OperationEnum {
+            [EnumMember(Value = "ADD")]
+            Add,
+            [EnumMember(Value = "REMOVE")]
+            Remove
+        };
+
+        /// <value>
+        /// Type of operation to be done against given target.
+        /// ADD - Add target.
+        /// REMOVE - Delete target.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "operation")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OperationEnum> Operation { get; set; }
         
     }
 }

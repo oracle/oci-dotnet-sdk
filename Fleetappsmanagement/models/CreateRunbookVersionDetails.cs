@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// The information about new Runbook.
+    /// The information about new runbook version.
+    /// Versioning runbooks in Fleet Application Management involve assigning unique identifiers or version numbers to different iterations of the runbook to track changes, improvements, and updates over time.
+    /// 
     /// </summary>
     public class CreateRunbookVersionDetails 
     {
@@ -42,7 +44,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Collections.Generic.List<Task> Tasks { get; set; }
         
         /// <value>
-        /// The groups of the runbook.
+        /// The groups of the runbook version.
         /// 
         /// </value>
         /// <remarks>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.LimitsService.Models
 {
     /// <summary>
-    /// Request payload to add lock to the resource. The FULL lock type allows no modifications (delete, create, update). 
+    /// Request payload to add lock to the resource. The FULL lock type allows no modifications (delete, create, update).
     ///   The DELETE lock type allows all modifications, but delete is not allowed.
     /// 
     /// </summary>

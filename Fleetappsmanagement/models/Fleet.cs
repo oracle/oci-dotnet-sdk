@@ -87,6 +87,8 @@ namespace Oci.FleetappsmanagementService.Models
         
         /// <value>
         /// Products associated with the Fleet.
+        /// PlatformConfiguration Ids corresponding to the Products.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "products")]
         public System.Collections.Generic.List<string> Products { get; set; }

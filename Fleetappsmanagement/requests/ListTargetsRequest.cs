@@ -65,5 +65,12 @@ namespace Oci.FleetappsmanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// If set to true, confirmed targets will be returned.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isConfirmedTargets")]
+        public System.Nullable<bool> IsConfirmedTargets { get; set; }
     }
 }
