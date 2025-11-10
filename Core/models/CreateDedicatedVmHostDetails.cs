@@ -99,5 +99,20 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "placementConstraintDetails")]
         public PlacementConstraintDetails PlacementConstraintDetails { get; set; }
         
+        /// <value>
+        /// The capacity configuration selected to be configured for the Dedicated Virtual Machine host. 
+        /// Run {@link #listDedicatedVmHostShapes(ListDedicatedVmHostShapesRequest) listDedicatedVmHostShapes} API first to see the capacity configuration options.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "capacityConfig")]
+        public string CapacityConfig { get; set; }
+        
+        /// <value>
+        /// Specifies if the Dedicated Virtual Machine Host (DVMH) is restricted to running only Confidential VMs. If `true`, only Confidential VMs can be launched. If `false`, Confidential VMs cannot be launched.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isMemoryEncryptionEnabled")]
+        public System.Nullable<bool> IsMemoryEncryptionEnabled { get; set; }
+        
     }
 }

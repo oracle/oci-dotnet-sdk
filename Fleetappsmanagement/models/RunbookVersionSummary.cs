@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FleetappsmanagementService.Models
 {
     /// <summary>
-    /// Summary of the FleetResource.
+    /// Summary of the runbook version.
     /// </summary>
     public class RunbookVersionSummary 
     {
@@ -84,7 +84,7 @@ namespace Oci.FleetappsmanagementService.Models
         public System.Nullable<bool> IsLatest { get; set; }
         
         /// <value>
-        /// The current state of the Runbook.
+        /// The current state of the Runbook version.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(StringEnumConverter))]

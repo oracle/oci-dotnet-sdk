@@ -59,6 +59,8 @@ namespace Oci.FleetappsmanagementService.Models
         
         /// <value>
         /// Products associated with the Fleet.
+        /// Provide PlatformConfiguration Ids corresponding to all the Products that need to be managed.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "products")]
         public System.Collections.Generic.List<string> Products { get; set; }
@@ -76,6 +78,14 @@ namespace Oci.FleetappsmanagementService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// Environment Type associated with the Fleet.
+        /// Applicable for ENVIRONMENT fleet types.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "environmentType")]
+        public string EnvironmentType { get; set; }
         
     }
 }

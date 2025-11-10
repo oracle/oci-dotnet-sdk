@@ -85,8 +85,6 @@ namespace Oci.FleetappsmanagementService.Requests
         
         /// <value>
         /// The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending.
-        /// <br/>
-        ///   
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]

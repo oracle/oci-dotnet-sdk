@@ -68,7 +68,7 @@ namespace Oci.ArtifactsService.Models
         /// <value>
         /// A user-defined path to describe the location of an artifact. Slashes do not create a directory structure, but you can use slashes to organize the repository. An artifact path does not include an artifact version.
         /// <br/>
-        /// Example: project01/my-web-app/artifact-abc 
+        /// Example: project01/my-web-app/artifact-abc
         /// </value>
         /// <remarks>
         /// Required

@@ -67,5 +67,17 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "patchType")]
         public string PatchType { get; set; }
         
+        /// <value>
+        /// The date on which patch was released.
+        /// </value>
+        [JsonProperty(PropertyName = "timeReleased")]
+        public System.Nullable<System.DateTime> TimeReleased { get; set; }
+        
+        /// <value>
+        /// Patch Level.
+        /// </value>
+        [JsonProperty(PropertyName = "patchLevel")]
+        public string PatchLevel { get; set; }
+        
     }
 }

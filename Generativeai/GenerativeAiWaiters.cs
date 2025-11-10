@@ -116,6 +116,34 @@ namespace Oci.GenerativeaiService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetImportedModelRequest, GetImportedModelResponse> ForImportedModel(GetImportedModelRequest request, params ImportedModel.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForImportedModel(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetImportedModelRequest, GetImportedModelResponse> ForImportedModel(GetImportedModelRequest request, WaiterConfiguration config, params ImportedModel.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetImportedModelRequest, GetImportedModelResponse>(
+                request,
+                request => client.GetImportedModel(request),
+                response => targetStates.Contains(response.ImportedModel.LifecycleState.Value),
+                targetStates.Contains(ImportedModel.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetImportedModelRequest, GetImportedModelResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetModelRequest, GetModelResponse> ForModel(GetModelRequest request, params Model.LifecycleStateEnum[] targetStates)
         {
             return this.ForModel(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

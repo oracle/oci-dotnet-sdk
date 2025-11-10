@@ -55,6 +55,12 @@ namespace Oci.FleetappsmanagementService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// Name of the compartment in which resource exist.
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentName")]
+        public string CompartmentName { get; set; }
+        
+        /// <value>
         /// The time this resource was created. An RFC3339 formatted datetime string.
         /// </value>
         /// <remarks>
@@ -83,19 +89,19 @@ namespace Oci.FleetappsmanagementService.Models
         public string ActivityId { get; set; }
         
         /// <value>
-        /// ResourceId associated with the Schedule.
+        /// FleetId associated with the Schedule.
         /// </value>
         [JsonProperty(PropertyName = "resourceId")]
         public string ResourceId { get; set; }
         
         /// <value>
-        /// jobId associated with the Schedule.
+        /// SchedulerJobId associated with the Schedule.
         /// </value>
         [JsonProperty(PropertyName = "schedulerJobId")]
         public string SchedulerJobId { get; set; }
         
         /// <value>
-        /// Resource DsiplayName associated with the Schedule.
+        /// Display Name of the Fleet associated with the Schedule.
         /// </value>
         [JsonProperty(PropertyName = "resourceDisplayName")]
         public string ResourceDisplayName { get; set; }
@@ -113,7 +119,7 @@ namespace Oci.FleetappsmanagementService.Models
         public string RunbookVersionName { get; set; }
         
         /// <value>
-        /// DsiplayName of Runbook associated with the Schedule.
+        /// Display name of Runbook associated with the Schedule.
         /// </value>
         [JsonProperty(PropertyName = "runbookDisplayName")]
         public string RunbookDisplayName { get; set; }
@@ -189,10 +195,6 @@ namespace Oci.FleetappsmanagementService.Models
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// Example: {&quot;foo-namespace&quot;: {&quot;bar-key&quot;: &quot;value&quot;}}
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DefinedTags is required.")]
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         

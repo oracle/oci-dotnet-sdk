@@ -102,7 +102,14 @@ namespace Oci.LimitsService.Models
         public System.Nullable<bool> IsDynamic { get; set; }
         
         /// <value>
-        /// An array of subscription types supported by the limit. e,g The type of subscription, such as 'SAAS', 'ERP', 'CRM'.
+        /// An array of subscription types that support ExternalLocations.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "externalLocationSupportedSubscriptions")]
+        public System.Collections.Generic.List<string> ExternalLocationSupportedSubscriptions { get; set; }
+        
+        /// <value>
+        /// An array of subscription types supported by the limit. For example, the type of subscription, such as SAAS, ERP, or CRM.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "supportedSubscriptions")]

@@ -31,6 +31,12 @@ namespace Oci.FleetappsmanagementService.Models
         [JsonProperty(PropertyName = "endpoint")]
         public string Endpoint { get; set; }
         
+        /// <value>
+        /// The list of system variables.
+        /// </value>
+        [JsonProperty(PropertyName = "systemVariables")]
+        public System.Collections.Generic.List<string> SystemVariables { get; set; }
+        
         [JsonProperty(PropertyName = "executionType")]
         private readonly string executionType = "API";
     }

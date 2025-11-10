@@ -57,6 +57,13 @@ namespace Oci.CoreService.Models
         public string InstanceId { get; set; }
         
         /// <value>
+        /// Specifies whether the VM instance is confidential.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isMemoryEncryptionEnabled")]
+        public System.Nullable<bool> IsMemoryEncryptionEnabled { get; set; }
+        
+        /// <value>
         /// The shape of the VM instance.
         /// 
         /// </value>

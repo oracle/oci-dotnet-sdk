@@ -83,5 +83,11 @@ namespace Oci.FleetappsmanagementService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// A filter to return fleets whose lifecycleState matches the given lifecycleState.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
+        public System.Nullable<FleetTarget.LifecycleStateEnum> LifecycleState { get; set; }
     }
 }

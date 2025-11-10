@@ -85,7 +85,9 @@ namespace Oci.ContainerengineService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// Whether to show all add-on versions
+        /// Specifies whether all add-on versions should be displayed. The default value is false. If set to true, the API will return all available add-on versions, including deprecated versions and detailed build numbers.
+        /// Please note that the use of deprecated versions, as well as the specification of a particular build of a supported version, is not recommended for standard operations.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldShowAllVersions")]
         public System.Nullable<bool> ShouldShowAllVersions { get; set; }

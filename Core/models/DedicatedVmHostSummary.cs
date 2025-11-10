@@ -92,6 +92,13 @@ namespace Oci.CoreService.Models
         [Required(ErrorMessage = "Id is required.")]
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
+        
+        /// <value>
+        /// Specifies if the Dedicated Virtual Machine Host is restricted to running only Confidential VMs. If `true`, only Confidential VMs can be launched. If `false`, Confidential VMs cannot be launched.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isMemoryEncryptionEnabled")]
+        public System.Nullable<bool> IsMemoryEncryptionEnabled { get; set; }
                 ///
         /// <value>
         /// The current state of the dedicated VM host.
